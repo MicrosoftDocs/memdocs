@@ -1,18 +1,10 @@
 ---
 title: General Configuration Item Example 1
 description: The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 4c27ec03-c358-4244-a5c5-d0784e5b4713
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # General Configuration Item Example 1
 The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.
@@ -87,8 +79,8 @@ A simple setting.
 
                 <SimpleSetting LogicalName="RegSetting_60d3f52e-5afa-4864-bbcf-83953c806275" DataType="String">
                     <Annotation>
-                        <DisplayName Text="Remote control registry value" ResourceId="ID-29d49a44-436a-4dbe-bc15-0db78557a4a6" />
-                        <Description Text="Contains the value obtained from the remote control registry key." ResourceId="ID-bfe89599-45fc-4413-8a17-5fea1ced7bea" />
+                        <DisplayName Text="Remote control registry value" ResourceId="ID-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" />
+                        <Description Text="Contains the value obtained from the remote control registry key." ResourceId="ID-b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2" />
                     </Annotation>
 
 <!--
@@ -113,8 +105,8 @@ Rules defined against the value of the setting.
                     <Rules>
                         <Rule xmlns="http://schemas.microsoft.com/SystemsCenterConfigurationManager/2009/06/14/Rules" NonCompliantWhenSettingIsNotFound="false" Severity="Warning" id="Rule_2849425d-0f2b-4d8f-bf63-8113f39c1618">
                             <Annotation>
-                                <DisplayName ResourceId="ID-91baba67-94bc-4b97-b3da-69ab7ba92235" Text="Remote control is enabled."/>
-                                <Description ResourceId="ID-87277341-e734-42ad-87e3-a89e87e9c320" Text="This checks the registry setting HKEY_LOCAL_MACHINE\software\microsoft\sms\client\clientcomponents\remotecontrol\enabled registry value to identify whether it is enabled (set to "1")."/>
+                                <DisplayName ResourceId="ID-c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3" Text="Remote control is enabled."/>
+                                <Description ResourceId="ID-d3d3d3d3-eeee-ffff-aaaa-b4b4b4b4b4b4" Text="This checks the registry setting HKEY_LOCAL_MACHINE\software\microsoft\sms\client\clientcomponents\remotecontrol\enabled registry value to identify whether it is enabled (set to "1")."/>
                             </Annotation>
                             <Expression> <Operator>Equals</Operator>
                                 <Operands>

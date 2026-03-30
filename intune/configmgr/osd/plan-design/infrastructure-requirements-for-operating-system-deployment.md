@@ -1,16 +1,9 @@
 ---
 title: OSD infrastructure requirements
-titleSuffix: Configuration Manager
 description: Learn the external and product dependencies and requirements for OS deployment in Configuration Manager
 ms.date: 09/08/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

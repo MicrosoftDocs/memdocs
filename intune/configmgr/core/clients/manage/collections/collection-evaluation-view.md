@@ -1,17 +1,10 @@
 ---
 title: How to view collection evaluation
-titleSuffix: Configuration Manager
 description: View collection evaluation queues and evaluation-related information.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # <a name="bkmk_colleval"></a> How to view collection evaluation

@@ -1,18 +1,10 @@
 ---
 title: Configure Mobile Device Client Agent Settings
-titleSuffix: Configuration Manager
 description: How to Configure Mobile Device Client Agent Settings
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: bb2e1e0a-095f-4b7d-92ba-29a89c8d8f69
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Configure Mobile Device Client Agent Settings
 You configure the Mobile Device Client Agent settings, in Configuration Manager, by modifying the site control file.

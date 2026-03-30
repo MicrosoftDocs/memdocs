@@ -1,17 +1,10 @@
 ---
 title: Supported SQL Server versions
-titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
 ms.date: 12/04/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -48,7 +41,7 @@ The site database can use the default instance of a full installation of SQL Ser
 SQL Server must be located on the site server computer.
 
 > [!IMPORTANT]
-> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. VC++ need to be upgraded to latest version on Secondary site [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. Visual C++ Redistributable need to be upgraded to latest version on Secondary site: [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ### Limitations to support
 
@@ -77,43 +70,15 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 > [!IMPORTANT]
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](size-and-scale-numbers.md).
 
-### SQL Server 2022: Standard, Enterprise
+### Standard / Enterprise SQL Editions
 
-Starting with current branch 2303, support is added for SQL server 2022 with Compatibility Level/Cardinality Estimation set to 150 on the Configuration Manager database.  SQL 2022 native (160) is not currently supported.
-
-You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
-
-
-### SQL Server 2019: Standard, Enterprise
-
-You can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL Server lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
-
-You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
-
-### SQL Server 2017: Standard, Enterprise
-
-You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
-  <!--SMS.498506-->
-
-### SQL Server 2016: Standard, Enterprise
-<!--514985-->
-You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
+| SQL Version | Minimum Required Update | Supported Site Types | Notes |
+|------------|-------------------------|--------------------------|-------|
+| **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. SQL 2022 Compatibility Level (160) is not currently supported. CU must be supported by SQL lifecycle. |
+| **SQL Server 2019** | Cumulative Update 5 (CU5) or later | CAS, Primary, Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
+| **SQL Server 2017** | Cumulative Update 2 (CU2) or later | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
+| **SQL Server 2016** | Minimum Service Pack supported by  [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | CAS, Primary, Secondary |  |
+| ~~**SQL Server 2014**~~ | Deprecated | CAS, Primary, Secondary | Deprecated in **version 2409**. SQL 2014 support ended July 2024. |
 
 <!--### SQL Server 2014: Standard, Enterprise
 
@@ -129,23 +94,19 @@ You can use this version with the minimum service pack and cumulative update sup
 
 - A central administration site
 - A primary site
-- A secondary site-->
+- A secondary site
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
+### Express Editions (Secondary Sites Only)
 
-### SQL Server 2017 Express
-
-You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A secondary site
-<!--SMS.498506-->
-
-### SQL Server 2016 Express
-
-You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A secondary site
+| SQL Version | Minimum Required Update | Supported Site Types | Notes |
+|------------|-------------------------|--------------------------|-------|
+| **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. SQL 2022 Compatibility Level (160) is not currently supported. |
+| **SQL Server 2019 Express** | Cumulative Update 5 (CU5) or later | Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
+| **SQL Server 2017 Express** | Cumulative Update 2 (CU2) or later | Secondary | CU must be supported by SQL lifecycle. |
+| **SQL Server 2016 Express** | Minimum Service Pack supported by [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | Secondary |  |
+| ~~**SQL Server 2014 Express**~~ | Deprecated | Secondary | Deprecated in **version 2409**. SQL 2014 support ended July 2024.  |
 
 <!--### SQL Server 2014 Express
 
@@ -157,10 +118,10 @@ You can use this version with the minimum service pack and cumulative update sup
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
-- A secondary site-->
+- A secondary site
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
@@ -170,35 +131,11 @@ The following configurations are required by all installations of SQL Server tha
 
 Configuration Manager requires a 64-bit version of SQL Server to host the site database.
 
-### Database collation
+### SQL Instance and Database collations
 
 At each site, both the instance of SQL Server that's used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.
 
 Configuration Manager supports two exceptions to this collation for the China GB18030 standard. For more information, see [International support](../hierarchy/international-support.md).
-
-### Database compatibility level
-
-Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
-
-When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
-
-The following table identifies the recommended compatibility levels for Configuration Manager site databases:
-
-|SQL Server version | Supported compatibility levels | Recommended level |
-|----------------|--------------------|--------|
-| SQL Server 2022 | **150**, 140, 130, 120, 110 | 150 |
-| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
-| SQL Server 2017 | 140, 130, 120, 110 | 140 |
-| SQL Server 2016 | 130, 120, 110 | 130 |
-<!--| SQL Server 2014 | 120, 110 | 110 |-->
-
-To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:
-
-```SQL
-SELECT name, compatibility_level FROM sys.databases
-```
-
-For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 
@@ -228,21 +165,65 @@ Reserve memory for SQL Server by using SQL Server Management Studio. Set the **M
   - For a primary site: Set a minimum of 8 GB.
   - For a secondary site: Set a minimum of 4 GB.
 
-### SQL Server nested triggers
+### Other required SQL Server configurations
 
-SQL Server nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+Configuration Manager sets the below SQL Server configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios. Do not alter them unless instructed by Microsoft support.
 
-### SQL Server CLR integration
+| Display name | Canonical name | Required value | More information link |
+|--------------|---------------|----------------|------------------|
+| CLR integration | `clr enabled` | True | [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration). |
+| Allow Triggers to Fire Others | `nested triggers` | True | [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option). |
+| Max Text Replication Size | `max text repl size (B)` | 2147483647 | [Configure the max text repl size server configuration option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option). |
 
-The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
+## <a name="bkmk_DBConfig"></a>Required SQL database configurations
 
-### SQL Server Service Broker (SSB)
+### Database compatibility level
 
-The SQL Server Service Broker is required both for intersite replication as well as for a single primary site.
+Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
 
-### TRUSTWORTHY setting
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
 
-Configuration Manager automatically enables the SQL [TRUSTWORTHY database property](/sql/relational-databases/security/trustworthy-database-property). This property is required by Configuration Manager to be **ON**.
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2022 | **150**, 140, 130, 120, 110 | 150 |
+| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
+| SQL Server 2017 | 140, 130, 120, 110 | 140 |
+| SQL Server 2016 | 130, 120, 110 | 130 |
+<!--| SQL Server 2014 | 120, 110 | 110 |-->
+
+To identify the compatibility level in use for your site database, run the following SQL query on the site database server:
+
+```SQL
+SELECT name, compatibility_level FROM sys.databases
+```
+
+For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
+
+### Other required database configurations
+
+Configuration Manager sets the below database configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios - as well as for SQL Always On configurations.
+
+Do not alter them unless instructed by Microsoft support. The [Support policies for manual database changes](/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes) article applies for database options.
+
+| Display name | Canonical name | Required value | More information link |
+|--------------|---------------|----------------|------------------|
+| Database owner | `owner_sid` | `sa` | [ALTER AUTHORIZATION for databases](/sql/t-sql/statements/alter-authorization-transact-sql#alter-authorization-for-databases) |
+| Change tracking | `CHANGE_TRACKING` | True (ON) | [Enable change tracking](/sql/relational-databases/track-changes/about-change-tracking-sql-server) |
+| Recursive Triggers Enabled | `RECURSIVE_TRIGGERS` | True (ON) | [Recursive Triggers](/sql/relational-databases/triggers/create-nested-triggers#recursive-triggers) |
+| Broker Enabled | `ENABLE_BROKER` | True (ON) | [Activate Service Broker in a database](/sql/database-engine/service-broker/how-to-activate-service-broker-message-delivery-in-databases-transact-sql#activate-service-broker-in-a-database) |
+| Honor Broker Priority | `HONOR_BROKER_PRIORITY` | True (ON) | [Enable conversation priorities](/sql/database-engine/service-broker/managing-conversation-priorities#enable-conversation-priorities) |
+| Trustworthy | `TRUSTWORTHY` | True (ON) | [TRUSTWORTHY database property](/sql/relational-databases/security/trustworthy-database-property) |
+| Allow Snapshot Isolation | `ALLOW_SNAPSHOT_ISOLATION` | True (ON) | [Snapshot Isolation in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) |
+| Is Read Committed Snapshot On | `READ_COMMITTED_SNAPSHOT` | True (ON) | [Set Transaction Isolation Level](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql) |
+| ANSI Nulls Enabled | `ANSI_NULLS` | True (ON) | [SET ANSI_NULLS](/sql/t-sql/statements/set-ansi-nulls-transact-sql) |
+| ANSI Padding Enabled | `ANSI_PADDING` | True (ON) | [SET ANSI_PADDING](/sql/t-sql/statements/set-ansi-padding-transact-sql) |
+| ANSI Warnings Enabled | `ANSI_WARNINGS` | True (ON) | [SET ANSI_WARNINGS](/sql/t-sql/statements/set-ansi-warnings-transact-sql) |
+| Arithmetic Abort Enabled | `ARITHABORT` | True (ON) | [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) |
+| Concatenate Null Yields Null | `CONCAT_NULL_YIELDS_NULL` | True (ON) | [SET CONCAT_NULL_YIELDS_NULL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql) |
+| Quoted Identifiers Enabled | `QUOTED_IDENTIFIER` | True (ON) | [SET QUOTED_IDENTIFIER](/sql/t-sql/statements/set-quoted-identifier-transact-sql) |
+| Numeric Round-abort | `NUMERIC_ROUNDABORT` | False (OFF) | [SET NUMERIC_ROUNDABORT](/sql/t-sql/statements/set-numeric-roundabort-transact-sql) |
 
 ## <a name="bkmk_optional"></a> Optional configurations for SQL Server
 
@@ -267,6 +248,13 @@ When the computer running SQL Server doesn't use its local system account to run
 For information about SPNs for the site database, see [Manage the SPN for the site database server](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).
 
 For information about how to change the account that is used by the SQL Server service, see [SCM Services - Change the service startup account](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).
+
+### SQL Extended Protection for Authentication
+<!--24501008-->
+
+Starting from version 2409, Configuration Manager supports SQL extended protection for authentication. It's a security feature that enhances protection against MITM attacks, making SQL server more secure when connections are made using extended protection. These enhancements collectively reduce the risk of unauthorized access and protect sensitive data managed by the SQL Server database engine.
+
+For more information, see [Connect to the Database Engine Using Extended Protection](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection).
 
 ### SQL Server Reporting Services
 

@@ -1,13 +1,7 @@
 ---
-author: Banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
-ms.localizationpriority: high
 ms.date: 07/11/2022
-manager: apoorvseth
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
@@ -29,7 +23,7 @@ From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-mana
 
 > [!Important]
 > - The App ID URI must use one of the following formats:<!-- 10617402 -->
->    - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+>    - `api://{tenantId}/{string}`, for example, `api://aaaabbbb-0000-cccc-1111-dddd2222eeee/ConfigMgrService`
 >    - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 >
 >   For more information on creating a Microsoft Entra app, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md).

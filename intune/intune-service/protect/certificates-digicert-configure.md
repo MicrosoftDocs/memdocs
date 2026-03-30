@@ -133,7 +133,7 @@ The following are requirements to support use of a DigiCert CA:
 
    g. Record a copy the RA certificate thumbprint without any spaces. For example:
 
-      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
+      `RA Cert Thumbprint: "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"`
 
       Later, you'll use this value to update three .config files for the Certificate Connector for Microsoft Intune, after installing the connector.
 
@@ -157,7 +157,7 @@ The following are requirements to support use of a DigiCert CA:
       - Microsoft.Intune.ConnectorsPkiRevoke.exe.config
       - Microsoft.Intune.ConnectorsPkiCreateLegacy.exe.config
 
-      For example, locate the entry in each file that is similar to `<add key="RACertThumbprint" value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>`, and replace `EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5` with the new *RA Cert Thumbprint* value.
+      For example, locate the entry in each file that is similar to `<add key="RACertThumbprint" value="AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"/>`, and replace `AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00` with the new *RA Cert Thumbprint* value.
 
    3. Run **services.msc** and stop and then restart the following three services:
 

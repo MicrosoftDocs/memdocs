@@ -1,18 +1,10 @@
 ---
 title: Deprecated functions
-titleSuffix: Configuration Manager
 description: These functions, which worked in previous product version, might not be available in future releases of Configuration Manager.
 ms.date: 08/02/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e77a6a9a-c133-4484-901a-222983d39b88
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configuration Manager deprecated functions

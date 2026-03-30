@@ -1,18 +1,10 @@
 ---
 title: SMS_SDMPackageLocalizedData Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_SDMPackageLocalizedData Windows Management Instrumentation class is an SMS Provider server class that represents localized data for a System Definition Model package.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c62cd280-81b8-46ee-9f92-0c063b1d2870
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SDMPackageLocalizedData Server WMI Class
 The `SMS_SDMPackageLocalizedData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents localized data for a System Definition Model (SDM) package.

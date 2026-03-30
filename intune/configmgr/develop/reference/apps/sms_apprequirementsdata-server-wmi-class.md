@@ -1,18 +1,10 @@
 ---
 title: SMS_AppRequirementsData Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents the requirements data of an application.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ce91d315-6baa-40aa-a944-2458131e5087
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_AppRequirementsData Server WMI Class
 The `SMS_AppRequirementsData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the requirements data of an application.

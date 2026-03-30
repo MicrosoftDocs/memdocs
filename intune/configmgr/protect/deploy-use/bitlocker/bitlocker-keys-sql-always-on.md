@@ -1,16 +1,9 @@
 ---
 title: Using SQL Always On when BitLocker recovery data is encrypted in the database
-titleSuffix: Configuration Manager
 description: Describes how to use SQL Always On when BitLocker recovery data is encrypted in the database
 ms.date: 06/12/2025
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: frankroj
-ms.author: frankroj
-manager: bpardi
-ms.localizationpriority: medium
-ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 

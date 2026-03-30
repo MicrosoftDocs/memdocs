@@ -148,5 +148,3 @@ Use Apple Migration Assistant to back up and restore a macOS device. You can use
 ## Next steps
 
 * For user-help documentation, which provides step-by-step enrollment instructions for device users, see [Enroll your macOS device in Intune](../user-help/enroll-your-device-in-intune-macos-cp.md). You can also create your own instructions if you prefer to capture your organization's branded or customized enrollment experience.
-
-* After macOS devices are enrolled, you can [create custom settings for macOS devices](../configuration/custom-settings-macos.md).

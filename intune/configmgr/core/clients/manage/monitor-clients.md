@@ -1,17 +1,10 @@
 ---
 title: Monitor clients
-titleSuffix: Configuration Manager
 description: Learn how to monitor the health and activity of clients in Configuration Manager.
 ms.date: 11/15/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to monitor clients in Configuration Manager

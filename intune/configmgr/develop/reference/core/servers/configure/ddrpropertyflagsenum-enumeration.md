@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the DDRPropertyFlagsEnum enumeration in Configuration Manager which specifies flags that are used by ISMSResGen.
 title: DDRPropertyFlagsEnum Enumeration
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ab94d236-9868-4feb-a75d-5be49758b394
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # DDRPropertyFlagsEnum Enumeration
 The `DDRPropertyFlagsEnum` enumeration, in Configuration Manager, specifies flags that are used by `ISMSResGen`.

@@ -82,7 +82,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
     - **Microsoft Entra Premium P1**
     - **Microsoft Intune for Education**
 
-  To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md).
+  To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
   > [!NOTE]
   > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of Microsoft 365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
@@ -461,7 +461,7 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 
 For more information, go to:
 
-- [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/configure.md)
+- [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/index.md)
 - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).

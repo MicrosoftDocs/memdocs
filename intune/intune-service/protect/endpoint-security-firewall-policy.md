@@ -1,5 +1,5 @@
 ---
-title: Manage firewall settings with endpoint security policies in Microsoft Intune | Microsoft Docs
+title: Manage firewall settings with endpoint security policies in Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security firewall policy in Microsoft Intune.
 author: brenduns
 ms.author: brenduns

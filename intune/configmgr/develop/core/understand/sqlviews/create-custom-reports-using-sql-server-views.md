@@ -1,18 +1,11 @@
 ---
 title: Creating custom reports by using SQL Server views
-titleSuffix: Configuration Manager
 description: Information about how to create reports directly from the Configuration Manager console.
 ms.date: 06/03/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 ms: "assetid: 5741ada8-449c-45af-85e1-2e68abf96440"
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Creating custom reports by using SQL Server views in Configuration Manager

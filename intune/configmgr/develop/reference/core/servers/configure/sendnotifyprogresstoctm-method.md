@@ -1,18 +1,10 @@
 ---
 title: SendNotifyProgressToCTM Method
-titleSuffix: Configuration Manager
 description: The SendNotifyProgressToCTM method notifies Content Transfer Manager of the progress of a job.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 4adf2263-faa3-444b-b331-bb5ca4acfb4d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SendNotifyProgressToCTM Method
 The **SendNotifyProgressToCTM** method notifies Content Transfer Manager of the progress of a job.

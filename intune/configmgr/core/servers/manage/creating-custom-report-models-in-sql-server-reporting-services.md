@@ -1,17 +1,10 @@
 ---
 title: Create custom reports
-titleSuffix: Configuration Manager
 description: Define report models to meet your business requirements, and then deploy the report models to Configuration Manager.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Creating custom report models for Configuration Manager in SQL Server Reporting Services
 

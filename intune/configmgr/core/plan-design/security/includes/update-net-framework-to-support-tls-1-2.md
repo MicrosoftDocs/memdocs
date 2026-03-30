@@ -1,10 +1,6 @@
 ---
-author: banreet
-ms.author: banreetkaur
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 09/01/2021
-ms.localizationpriority: medium
 ---
 
 <!-- ## Update and configure the .NET Framework to support TLS 1.2 Note: the heading in in the 2 articles (enable-tls-1-2-client & enable-tls-1-2-server) to better facilitate linking. -->

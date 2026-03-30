@@ -1,10 +1,6 @@
 ---
-ms.author: gokarthi
-author: gowdhamankarthikeyan
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/02/2021
-ms.localizationpriority: medium
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Intune tenant attach and Configuration Manager-->
 

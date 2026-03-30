@@ -6,8 +6,6 @@ ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
-  - highpri
-  - tier1
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---

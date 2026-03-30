@@ -1,18 +1,10 @@
 ---
 title: SMS_TargetingAgentConfig Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_TargetingAgentConfig Windows Management Instrumentation class is an SMS Provider server class that represents how the client is configured for user and device affinity.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9d7e244d-549e-4a3e-9a04-2033b960e29f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TargetingAgentConfig Server WMI Class
 The `SMS_TargetingAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents how the client is configured for user and device affinity.

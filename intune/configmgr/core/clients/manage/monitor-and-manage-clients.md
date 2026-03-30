@@ -1,17 +1,10 @@
 ---
 title: Monitor and manage clients
-titleSuffix: Configuration Manager
 description: Learn how to monitor and manage clients in Configuration Manager.
 ms.date: 10/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Monitor and manage clients in Configuration Manager

@@ -3,9 +3,6 @@ title: Windows Autopilot device preparation in automatic mode for Windows 365 (p
 description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 4 of 6 - Create a Windows Autopilot device preparation policy.
 ms.date: 06/11/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---

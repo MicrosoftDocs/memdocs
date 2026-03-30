@@ -1,17 +1,10 @@
 ---
 title: Enable cloud attach
-titleSuffix: Configuration Manager
 description: Enable cloud attach for Configuration Manager
 ms.date: 08/15/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Enable cloud attach for Configuration Manager

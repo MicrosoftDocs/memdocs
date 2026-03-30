@@ -1,17 +1,10 @@
 ---
 title: MDT samples
-titleSuffix: Microsoft Deployment Toolkit
 description: Microsoft Deployment Toolkit (MDT) samples
 ms.date: 09/09/2016
 ms.subservice: mdt
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # Microsoft Deployment Toolkit Samples Guide
@@ -133,7 +126,7 @@ You can deploy Windows 8 applications using UDI like any other application that 
 
 ## Managing MDT Using Windows PowerShell
 
-You can manage MDT deployment shares using the Deployment Workbench and Windows PowerShell. MDT includes a Windows PowerShell™ snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT-specific features in Windows PowerShell. The MDT Windows PowerShell snap-in includes:
+You can manage MDT deployment shares using the Deployment Workbench and Windows PowerShell. MDT includes a Windows PowerShell&trade; snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT-specific features in Windows PowerShell. The MDT Windows PowerShell snap-in includes:
 
 - A Windows PowerShell provider—MDTProvider—that provides access to the contents of a deployment share
 
@@ -1117,7 +1110,7 @@ SkipDomainMembership=YES
 JoinDomain=DomainName
 DomainAdmin=Administrator
 DomainAdminDomain=DomainName
-DomainAdminPassword=a_secure_password
+DomainAdminPassword=<complex_password>
 
 SkipUserData=yes
 UserDataLocation=AUTO
@@ -1152,7 +1145,7 @@ Applications001={a26c6358-8db9-4615-90ff-d4511dc2feff}
 Applications002={7e9d10a0-42ef-4a0a-9ee2-90eb2f4e4b98}
 UserID=Administrator
 UserDomain=DomainName
-UserPassword=P@ssw0rd
+UserPassword=<complex_password>
 
 SkipBitLocker=YES
 SkipSummary=YES
@@ -1184,7 +1177,7 @@ SkipDomainMembership=YES
 JoinDomain=WOODGROVEBANK
 DomainAdmin=Administrator
 DomainAdminDomain=WOODGROVEBANK
-DomainAdminPassword=P@ssw0rd
+DomainAdminPassword=<complex_password>
 
 SkipUserData=Yes
 UserDataLocation=\\WDG-MDT-01\UserData$\Directory\usmtdata
@@ -1309,16 +1302,16 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 6. Complete the **Properties** tab of the new task using the following information:
 
-   | **In this box** |                                                                **Do this**                                                                |
-   |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-   |    **Name**     |                         Type **Connect to server** (where server is the name of the server to which to connect).                          |
-   | **Description** |                                       Type text that explains why the connection needs to be made.                                        |
+   | **In this box** |  **Do this**   |
+   |---|---|
+   |    **Name**     | Type **Connect to server** (where server is the name of the server to which to connect).   |
+   | **Description** | Type text that explains why the connection needs to be made.   |
    |   **Command**   | Type **cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server). |
 
 7. Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then select **OK**.
 
    |**In this box** |**Do this** |
-   |-|-|
+   |---|---|
    |**Success codes** |Type **0 3010**. (The ZTIConnect.wsf script returns these codes upon successful completion.)|
    |**Conditions list box** |Add any conditions that might be necessary. (In most instances this task requires no conditions.)|
 
@@ -1328,7 +1321,7 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 Variations on model numbers and names can exist with virtually no difference in the driver set. These variations in model numbers and names can unnecessarily increase time spent making multiple database entries for a given model. The following procedure shows how to define a new property using a user exit function call that returns a substring of the model number.
 
- **To create model aliases**
+**To create model aliases**
 
 1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 

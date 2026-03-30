@@ -1,18 +1,10 @@
 ---
 title: "IDCMSDK::SetEvaluationCallback"
-titleSuffix: Configuration Manager
 description: "In Configuration Manager, the IDCMSDK::SetEvaluationCallback method associates a callback object with an existing evaluation job specified by job ID."
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: f7d77efb-c9ed-4d3b-80c9-ba792c72d6a8
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IDCMSDK::SetEvaluationCallback Method
 The `IDCMSDK::SetEvaluationCallback` method, in Configuration Manager, associates a callback object with an existing evaluation job, specified by job ID.

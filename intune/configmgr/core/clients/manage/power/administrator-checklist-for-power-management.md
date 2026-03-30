@@ -1,17 +1,10 @@
 ---
 title: Administrator checklist for power management
-titleSuffix: Configuration Manager
 description: Use the administrator checklist to help you plan for and implement power management in Configuration Manager.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Administrator checklist for power management in Configuration Manager
 

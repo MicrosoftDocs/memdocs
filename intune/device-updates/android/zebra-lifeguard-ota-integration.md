@@ -5,9 +5,6 @@ ms.date: 08/01/2024
 ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 # Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 

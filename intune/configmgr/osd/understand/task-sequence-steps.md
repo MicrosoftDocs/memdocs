@@ -1,16 +1,9 @@
 ---
 title: Task sequence steps
-titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
 ms.date: 04/30/2024
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart,frankroj
 ms.collection: tier3
 ---
 
@@ -1591,7 +1584,7 @@ Select this option to install all available software updates. First deploy these
 
 #### Evaluate software updates from cached scan results
 
-By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Enable this option when using a task sequence to [capture and build an OS image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).
+By default, this step uses cached scan results from the Windows Update Agent. Disable this option to instruct the Windows Update Agent to download the latest catalog from the software update point. Disable this option when using a task sequence to [capture and build an OS image](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md).
 
 Many updates have dependencies. For example, install update ABC before update XYZ appears as applicable. When you disable this setting, and deploy the task sequence to many clients, they all connect to the software update point at the same time. This behavior might result in performance issues during the process and download of the update catalog. If deploying to many clients at once, use the default setting to use cached scan results. If deploying to a small number of clients at once, uncheck this option to ensure all software updates are installed on the client.
 

@@ -6,8 +6,6 @@ ms.date: 05/29/2025
 ms.topic: how-to
 ms.collection:
   - M365-identity-device-management
-  - highpri
-  - tier1
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -210,6 +208,8 @@ The following VPN solutions are **known** not to work with Windows Autopilot and
 - UWP-based VPN plug-ins
 - Anything that requires a user cert
 - DirectAccess
+
+In addition, any bring-your-own (BYO) VPN configurations are not supported for use during Windows Autopilot in pre-provisioning mode.
 
 > [!NOTE]
 >

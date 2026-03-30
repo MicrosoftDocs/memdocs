@@ -1,16 +1,9 @@
 ---
 title: Endpoint Protection malware definitions
-titleSuffix: Configuration Manager
 description: Learn to configure Configuration Manager software updates to deliver definition updates to client computers.
 ms.date: 04/23/2020
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

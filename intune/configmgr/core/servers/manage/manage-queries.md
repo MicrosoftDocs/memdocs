@@ -1,17 +1,10 @@
 ---
 title: Manage queries
-titleSuffix: Configuration Manager
 description: Learn how to manage your queries. Includes a table for detailed reference.
 ms.date: 04/29/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to manage queries in Configuration Manager
 

@@ -1,5 +1,5 @@
 ---
-title: Manage antivirus settings with endpoint security policies in Microsoft Intune | Microsoft Docs
+title: Manage antivirus settings with endpoint security policies in Microsoft Intune
 description: Configure and deploy policies and use reports for devices you manage with endpoint security antivirus policy in Microsoft Intune.
 author: brenduns
 ms.author: brenduns

@@ -56,7 +56,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 :::column span="3":::
 > To use Security Copilot agents in Microsoft Intune, the following licenses are required:
 >
-> - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
+> - [Microsoft Intune Plan 1 subscription](../fundamentals/licensing/index.md)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::

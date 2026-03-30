@@ -1,18 +1,11 @@
 ---
 title: What's new in version 2010
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2010 of Configuration Manager current branch.
 ms.date: 03/09/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in version 2010 of Configuration Manager current branch

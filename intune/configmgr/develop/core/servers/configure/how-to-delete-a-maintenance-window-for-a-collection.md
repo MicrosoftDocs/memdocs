@@ -1,18 +1,10 @@
 ---
 description: Learn how to delete a maintenance window for a collection in Configuration Manager with the following example.
 title: Delete a Maintenance Window for a Collection
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 257a15d2-4408-41ae-9277-77acca0cc914
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Delete a Maintenance Window for a Collection
 You can delete maintenance window, in Configuration Manager, by using the [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) and [SMS_ServiceWindow Server WMI Class](../../../../develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class.md) classes and properties.

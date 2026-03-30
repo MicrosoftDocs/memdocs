@@ -1,16 +1,9 @@
 ---
 title: Prepare for software updates management
-titleSuffix: Configuration Manager
 description: To prepare to manage updates, complete these tasks to display compliance assessment data in the Configuration Manager console.
 ms.date: 10/06/2016
 ms.topic: how-to
-ms.service: configuration-manager
 ms.subservice: software-updates
-manager: apoorvseth
-author: LauraWi
-ms.author: laurawi
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

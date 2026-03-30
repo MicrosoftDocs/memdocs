@@ -1,18 +1,10 @@
 ---
 description: Learn how to notify the Content Transfer Manager of the success of a job with SentNotifySuccessToCTM method.
 title: SendNotifySuccessToCTM Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 574ffb2f-b576-473e-b60f-8caf7f635f96
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SendNotifySuccessToCTM Method
 The **SendNotifySuccessToCTM** method notifies Content Transfer Manager of the success of a job.

@@ -1,17 +1,10 @@
 ---
 title: Client health with co-management
-titleSuffix: Configuration Manager
 description: Maintain visibility of Configuration Manager client health from the Microsoft Intune admin center.
 ms.date: 11/08/2021
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Client health with co-management

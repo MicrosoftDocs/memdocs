@@ -1,17 +1,10 @@
 ---
 title: Online Documentation
-titleSuffix: Configuration Manager
 ms.date: 02/17/2021
 ms.topic: article
 ms.subservice: other
-ms.service: configuration-manager
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 description: Additional links for Configuration Manager help documentation
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Online documentation for Configuration Manager

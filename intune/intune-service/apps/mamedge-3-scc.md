@@ -1,7 +1,7 @@
 ---
 title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
 description: Step 3. Integrate Mobile Threat Defense signals with Microsoft Edge for Business app protection policies in Microsoft Intune.
-ms.date: 12/05/2025
+ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -64,13 +64,13 @@ Use the conditional launch settings to maintain progressive security across the 
 
 - **Offline grace period (Block access)**: Set to **10080** minutes.
 - **Offline grace period (Wipe data)**: Set to **90** days.
-- **Max allowed device threat level**: Select **Low**, with the **Block access** action.
+- **Max allowed device threat level**: Select **High**, with the **Block access** action.
 
 #### Level 2 – Enhanced
 
 - **Disabled account**: Set to **Block access**.
 - **Min OS version**: Enter **10.0.22621.2506** and select **Block access**.
-- **Max allowed device threat level**: Select **Medium**, with the **Block access** action.
+- **Max allowed device threat level**: Select **Low**, with the **Block access** action.
 - **Offline grace period (Wipe data)**: Set to **30** days.
 
 #### Level 3 – High
@@ -117,7 +117,5 @@ Use the following steps to configure the MTD Connector.
 > The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. For more information, see [Connector status](../protect/mobile-threat-defense.md#connector-status).
 
 ## Next step
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-04.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-4-acp-edge.md)
 
 Continue with [Step 4](mamedge-4-acp-edge.md) to create app configuration policies for Microsoft Edge for Business.

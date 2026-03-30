@@ -42,7 +42,7 @@ Additional prerequisites for custom device scopes:
 >
 >> [!NOTE]
 >> After custom device scopes are created, other users with access to endpoint analytics can use them.\
->> Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes.
+>> Only the user who created the custom device scopes or a Global Administrator can delete the custom device scopes.
 :::column-end:::
 :::row-end:::
 

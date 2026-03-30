@@ -1,18 +1,10 @@
 ---
 title: Delete Updates from a Deployment Package
-titleSuffix: Configuration Manager
 description: Remove update content from the existing software updates management package by using the RemoveContent method.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: b8a24372-4e7a-4565-8dda-96e912fd2fd4
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Delete Updates from a Deployment Package
 You remove updates from a software updates deployment package, in Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and using the [RemoveContent](../../develop/reference/sum/removecontent-method-in-class-sms_softwareupdatespackage.md) method.

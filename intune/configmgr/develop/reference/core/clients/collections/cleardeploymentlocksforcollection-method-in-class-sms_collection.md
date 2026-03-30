@@ -1,18 +1,10 @@
 ---
 description: Article describing the use of ClearDeploymentLocksForCollection class method in Configuration Manager.
 title: ClearDeploymentLocksForCollection Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d7c2626e-b99c-48ab-bde2-429e1763d48f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ClearDeploymentLocksForCollection Method in Class SMS_Collection
 The `ClearDeploymentLocksForCollection` Windows Management Instrumentation (WMI) class method, in Configuration Manager, clears deployment locks for a selected collection.  For example, if the server group option is selected for a collection, and an administrator sees that the deployments to the collection are stuck, then the administrator can use this method to release the deployment lock from a non-responsive client, allowing the other members of the collection to acquire a deployment lock.

@@ -1,18 +1,10 @@
 ---
 description: Learn how to store a compound expression that evaluates to either true or false in Configuration Manager using CCM_Policy_Operator.
 title: CCM_Policy_Operator Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 509e390b-cd50-44ae-8ed4-dacf59c512ea
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_Policy_Operator Client WMI Class
 In Configuration Manager, the `CCM_Policy_Operator` class is a client Windows Management Instrumentation (WMI) class that stores a compound expression that evaluates to either `true` or `false`.

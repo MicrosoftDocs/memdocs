@@ -1,17 +1,10 @@
 ---
 title: Create child configuration items
-titleSuffix: Configuration Manager
 description: Create child configuration items in Configuration Manager.
 ms.date: 05/07/2019
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to create child configuration items in Configuration Manager
 

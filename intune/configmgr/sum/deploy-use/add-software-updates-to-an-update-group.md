@@ -1,16 +1,9 @@
 ---
 title: Add updates to an update group
-titleSuffix: Configuration Manager
 description: Manually or automatically add software updates to a software update group in your environment.
 ms.date: 07/12/2022
 ms.topic: how-to
-ms.service: configuration-manager
 ms.subservice: software-updates
-manager: apoorvseth
-author: LauraWi
-ms.author: laurawi
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

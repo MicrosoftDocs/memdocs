@@ -1,17 +1,10 @@
 ---
 title: Plan for PKI certificates
-titleSuffix: Configuration Manager
 description: Plan for the use of PKI digital certificates in Configuration Manager.
 ms.date: 03/23/2023
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Plan for PKI certificates in Configuration Manager

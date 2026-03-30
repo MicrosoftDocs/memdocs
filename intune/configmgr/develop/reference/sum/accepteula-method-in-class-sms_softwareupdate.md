@@ -1,18 +1,10 @@
 ---
 title: AcceptEULA Method in SMS_SoftwareUpdate
-titleSuffix: Configuration Manager
 description: The AcceptEULA WMI class method accepts or declines the Microsoft Software License Terms of a configuration item.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6edc5abf-0b72-43be-a5ee-5dda07fb90e8
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # AcceptEULA Method in Class SMS_SoftwareUpdate
 The `AcceptEULA` Windows Management Instrumentation (WMI) class method, in Configuration Manager, accepts or declines the Microsoft Software License Terms of a configuration item.

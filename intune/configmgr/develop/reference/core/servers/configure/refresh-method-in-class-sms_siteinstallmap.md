@@ -1,18 +1,10 @@
 ---
 description: Learn how to reload the install map from the database, which repopulates the classes using Refresh class method.
 title: Refresh method in class SMS_SiteInstallMap
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Refresh Method in Class SMS_SiteInstallMap
 The `Refresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reloads the install map from the database, which repopulates the classes.

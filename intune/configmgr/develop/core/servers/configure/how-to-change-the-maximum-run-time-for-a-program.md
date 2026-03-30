@@ -1,18 +1,10 @@
 ---
 title: Change the Maximum Run Time for a Program
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the following example shows how to modify a program by using the SMS_Package and SMS_Program classes and properties.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: af806aee-a8da-499b-9d46-86d888c6ddc4
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Change the Maximum Run Time for a Program
 The following example shows how to modify a program, in Configuration Manager, by using the `SMS_Package` and `SMS_Program` classes and properties.

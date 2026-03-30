@@ -1,17 +1,10 @@
 ---
 title: About log files
-titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
 ms.date: 08/02/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About log files in Configuration Manager
@@ -24,7 +17,7 @@ This article provides general information about the Configuration Manager log fi
 
 ## How it works
 
-Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by `.log` or `.lo_` file extensions. Configuration Manager writes to a `.log` file until that log reaches its maximum size. When the log is full, the `.log` file is copied to a file of the same name but with the `.lo_` extension, and the process or component continues to write to the `.log` file. When the `.log` file again reaches its maximum size, the `.lo_` file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by keeping the `.log` extension.
+Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files have `.log` or `.lo_` file extensions. Configuration Manager writes to a `.log` file until that log reaches its maximum size. When the log is full, the `.log` file is copied to a file of the same name but with the `.lo_` extension, and the process or component continues to write to the `.log` file. When the `.log` file again reaches its maximum size, the `.lo_` file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by keeping the `.log` extension.
 
 ## Log viewer tools
 
@@ -150,6 +143,11 @@ This setting causes the client to log low-level information for troubleshooting.
 #### Site server logging options
 
 You can configure settings globally or for a specific component on the Configuration Manager site server.
+
+<!--13817527-->
+
+> [!NOTE]
+> The settings in this section don't apply to modern components like `SMS_MESSAGE_PROCESSING_ENGINE` or `SMS_ISVUPDATES_SYNCAGENT`. The later components log names are usually longer than eight characters and may contain underscores.
 
 Configure these values under the following Windows Registry key:
 

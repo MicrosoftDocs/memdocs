@@ -1,18 +1,10 @@
 ---
 description: Article detailing the use of the Sync class method in Configuration Manager to synchronize the entities on the source site.
 title: Sync Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 372a0ba8-4a3c-4dbc-ac41-9c87ce96c0ba
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Sync Method in Class SMS_MigrationSiteMapping
 The `Sync` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronizes the entities on the source site.

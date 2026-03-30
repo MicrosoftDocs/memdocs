@@ -1,16 +1,9 @@
 ---
 description: Learn how your application can delete a collection in Configuration Manager by using the SMS_Collection Server WMI Class and class properties. 
 title: "Delete a Collection"
-titleSuffix: "Configuration Manager"
 ms.date: 12/06/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 18161bed-17b9-49df-bb83-20082f519bd8
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 
 

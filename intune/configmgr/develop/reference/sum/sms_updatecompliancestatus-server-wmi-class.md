@@ -1,16 +1,9 @@
 ---
 description: Learn how to represent the client computer compliance status for software updates using SMS_UpdateComplianceStatus class.
 title: "SMS_UpdateComplianceStatus Class"
-titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: f7789fb5-fa96-4e88-8737-9adcb0498c4f
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 
 

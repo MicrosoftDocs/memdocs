@@ -1,18 +1,10 @@
 ---
 title: SMS_ConfigurationItemLatestBaseClass Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents the latest version of Configuration Items in the system.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c31f0f2e-09f6-41e6-ac20-622080053b73
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ConfigurationItemLatestBaseClass Server WMI Class
 The `SMS_ConfigurationItemLatestBaseClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the latest version of Configuration Items in the system.

@@ -1,17 +1,10 @@
 ---
 title: Deprecated features
-titleSuffix: Configuration Manager
 description: Learn about the features that Configuration Manager no longer supports.
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
 ms.date: 12/04/2024
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Removed and deprecated features for Configuration Manager

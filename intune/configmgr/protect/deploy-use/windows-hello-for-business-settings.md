@@ -1,16 +1,9 @@
 ---
 title: Windows Hello for Business settings
-titleSuffix: Configuration Manager
 description: Learn how to integrate Windows Hello for Business with Configuration Manager.
 ms.date: 03/29/2022
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

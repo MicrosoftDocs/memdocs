@@ -1,17 +1,10 @@
 ---
 title: Configure discovery
-titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Microsoft Entra ID.
 ms.date: 04/25/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure discovery methods for Configuration Manager
@@ -235,7 +228,10 @@ If you use Configuration Manager to *create* the Azure app, it configures the ap
 
 If you create the app in Azure first, and then *import* it into Configuration Manager, you need to manually configure the app. This configuration includes granting the server app permission to read directory data.
 
-1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Microsoft Entra ID**, and select **App registrations**. Switch to **All applications** if necessary.
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Administrator* permissions. Go to **Microsoft Entra ID**, and select **App registrations**. Switch to **All applications** if necessary.
+
+    > [!IMPORTANT]
+    > [!INCLUDE [global-administrator](../../../../includes/global-administrator-configmgr.md)]
 
 1. Select the target application.
 

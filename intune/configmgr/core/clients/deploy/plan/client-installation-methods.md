@@ -1,17 +1,10 @@
 ---
 title: Client installation methods
-titleSuffix: Configuration Manager
 description: Learn about the methods of installing the Configuration Manager client.
 ms.date: 10/18/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Client installation methods in Configuration Manager

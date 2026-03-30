@@ -1,18 +1,10 @@
 ---
 title: CheckDuplicateSourceName Method
-titleSuffix: Configuration Manager
 description: The CheckDuplicateSourceName Windows Management Instrumentation (WMI) class method determines if the specified source name is used by another package.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 214c1768-0200-4ecf-b871-cbdc61f8348c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CheckDuplicateSourceName Method in Class SMS_Package
 The `CheckDuplicateSourceName` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the specified source name is used by another package.

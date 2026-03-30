@@ -1,18 +1,10 @@
 ---
 description: To determine advertisement status in Configuration Manager, you can use the queries described in this section.
 title: Determine Advertisement Status
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 6ec6a9fd-0f61-4ad5-b7ec-4c5c877a3a27
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Determine Advertisement Status
 To determine advertisement status in Configuration Manager, you can use the queries described in this section.

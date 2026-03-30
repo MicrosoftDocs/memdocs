@@ -1,7 +1,7 @@
 ---
 title: Win32 App Management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
-ms.date: 01/14/2026
+ms.date: 02/06/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -12,8 +12,6 @@ ms.collection:
 ---
 
 # Win32 app management in Microsoft Intune
-
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Microsoft Intune enables Windows Win32 app management. Win32 app management in Intune allows you to install, configure, protect, and monitor your Windows applications on devices at your organization. Win32 apps are deployed using the Microsoft Intune management extension (IME), which is installed automatically when a PowerShell script or a Win32 app is assigned to the user or device using Intune.
 
@@ -33,11 +31,14 @@ Although it's possible for cloud-connected customers to use Microsoft Configurat
 > [!IMPORTANT]
 > When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Windows Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported.
 
+> [!IMPORTANT]
+> Microsoft Intune does not support interactive application installations. Applications deployed through Intune must install silently and cannot require user interaction, such as dialog boxes, prompts, or UI input during installation. Techniques that attempt to force interaction with the signed-in user session (for example, using tools like serviceui.exe or similar workarounds) are not supported and may result in inconsistent or unpredictable behavior.
+
 ## Prerequisites
 
 To use Win32 app management, be sure the following criteria are met:
 
-- Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
+- Use a [supported Windows version](../fundamentals/supported-devices-browsers.md) (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
   - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)
@@ -95,7 +96,7 @@ After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepar
 
 ## Delivery optimization
 
-Windows 10 1709 and later clients will download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
+Windows devices can download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
 
 You can configure Delivery Optimization to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured using Intune device configuration (or by group policy). For more information, see [Delivery Optimization for Windows](/windows/deployment/update/waas-delivery-optimization).
 

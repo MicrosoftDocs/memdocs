@@ -1,17 +1,10 @@
 ---
 title: Failover cluster instance
-titleSuffix: Configuration Manager
 description: Use a SQL Server Always On failover cluster instance to host the Configuration Manager site database
 ms.date: 10/08/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use a SQL Server Always On failover cluster instance for the site database

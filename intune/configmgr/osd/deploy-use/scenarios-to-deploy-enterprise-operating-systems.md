@@ -1,16 +1,9 @@
 ---
 title: Scenarios to deploy enterprise operating systems
-titleSuffix: Configuration Manager
 description: Learn about several scenarios to deploy enterprise operating systems with Configuration Manager.
 ms.date: 10/01/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

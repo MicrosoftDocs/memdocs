@@ -1,18 +1,10 @@
 ---
 title: EvaluateAllAutoDeployment Method
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the EvaluateAllAutoDeployment WMI class method evaluates all automatic deployments.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 220576b6-489f-4d84-b4ad-3663ac77e67c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # EvaluateAllAutoDeployment Method in Class SMS_AutoDeployment
 The `EvaluateAllAutoDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, evaluates all automatic deployments.

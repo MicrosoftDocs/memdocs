@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the basic properties of the site control file in Configuration Manager using SMS_SCI_FileDefinition.
 title: SMS_SCI_FileDefinition Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d8a6be76-8006-4237-881e-547b757bce7c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SCI_FileDefinition Server WMI Class
 The `SMS_SCI_FileDefinition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the basic properties of the site control file.

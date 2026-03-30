@@ -1,17 +1,10 @@
 ---
 title: Prerequisites for reporting
-titleSuffix: Configuration Manager
 description: Understand various dependencies that impact your use of reporting in Configuration Manager.
 ms.date: 04/01/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Prerequisites for reporting in Configuration Manager

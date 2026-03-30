@@ -1,17 +1,10 @@
 ---
 title: Monitor content
-titleSuffix: Configuration Manager
 description: Understand how to monitor distributed content by using the Configuration Manager console.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Monitor content you distribute with Configuration Manager

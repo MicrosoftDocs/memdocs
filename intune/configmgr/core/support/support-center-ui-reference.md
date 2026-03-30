@@ -1,17 +1,10 @@
 ---
 title: Support Center UI reference
-titleSuffix: Configuration Manager
 description: Learn how to use the Support Center tools.
 ms.date: 12/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Support Center user interface reference

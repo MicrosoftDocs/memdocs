@@ -1,17 +1,10 @@
 ---
 title: Introduction to the LTSB
-titleSuffix: Configuration Manager
 description: Learn about the long-term servicing branch of Configuration Manager.
 ms.date: 08/23/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Introduction to the long-term servicing branch of Configuration Manager
@@ -21,6 +14,8 @@ ms.reviewer: mstewart
 The long-term servicing branch (LTSB) of Configuration Manager is a distinct branch that's designed as an install option available to all customers. However, it's the only option for customers who let lapse their Software Assurance (SA) or equivalent subscription rights for Configuration Manager.
 
 Based on Configuration Manager version 1606, the LTSB has reduced functionality when compared to the current branch of Configuration Manager.
+
+In some cases, the support lifecycle of a dependent component may end before the end of support for the Configuration Manager LTSB itself. In such scenarios, Configuration Manager LTSB continues to be supported through its defined end of support, provided that the reported issue is not caused by the out-of-support dependent component.
 
 > [!TIP]
 > The Configuration Manager LTSB isn't related to the System Center suite long-term servicing channel (LTSC). For more information, see [Overview of System Center release options](/system-center/ltsc-and-sac-overview).

@@ -1,17 +1,10 @@
 ---
 title: Service connection tool
-titleSuffix: Configuration Manager
 description: Learn about this tool that enables you to connect to the Configuration Manager cloud service to manually upload usage information.
 ms.date: 03/10/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use the service connection tool for Configuration Manager

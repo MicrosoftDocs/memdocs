@@ -1,10 +1,6 @@
 ---
-author: banreet
-ms.author: banreetkaur
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 12/01/2021
-ms.localizationpriority: medium
 ---
 <!--This file is shared. Currently it's in use by the admin-console-extensions.md file and the import-admin-console-extensions.md file. Some headings may be context driven by the article-->
 ## <a name="bkmk_allow-unsigned"></a> Allow unsigned console extensions for the hierarchy

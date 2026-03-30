@@ -1,17 +1,10 @@
 ---
 title: Setup downloader tool
-titleSuffix: Configuration Manager
 description: Use the standalone tool to download current versions of key installation files for setup.
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Setup Downloader for Configuration Manager

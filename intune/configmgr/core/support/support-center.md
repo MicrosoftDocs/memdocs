@@ -1,17 +1,10 @@
 ---
 title: Support Center
-titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
 ms.date: 12/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Support Center for Configuration Manager

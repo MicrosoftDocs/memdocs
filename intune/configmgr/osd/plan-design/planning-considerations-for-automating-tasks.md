@@ -1,16 +1,9 @@
 ---
 title: Plan for automating tasks
-titleSuffix: Configuration Manager
 description: Plan before you create task sequences to automate tasks with Configuration Manager.
 ms.date: 03/10/2022
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

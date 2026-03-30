@@ -10,6 +10,8 @@ ms.reviewer: rishitasarin
 
 # Get started with the Device Offboarding Agent
 
+[!INCLUDE [device-offboarding-agent-deprecation](includes/device-offboarding-agent-deprecation.md)]
+
 The *Device Offboarding Agent* identifies stale or misaligned devices across Intune and Entra ID, providing actionable insights and requiring admin approval before offboarding any devices. The Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice.
 
 ## Prerequisites
@@ -35,7 +37,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 >Required licenses:
 >
-> - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
+> - [Microsoft Intune Plan 1 subscription](../fundamentals/licensing/index.md)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::

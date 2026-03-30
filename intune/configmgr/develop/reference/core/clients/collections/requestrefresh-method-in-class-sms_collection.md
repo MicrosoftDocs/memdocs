@@ -1,18 +1,10 @@
 ---
 description: Learn how to trigger a re-evaluation of collection membership by the Configuration Manager collection evaluator component.
 title: RequestRefresh Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: fd7b5351-a3ed-40c2-a629-156f22507f88
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RequestRefresh Method in Class SMS_Collection
 The `RequestRefresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.

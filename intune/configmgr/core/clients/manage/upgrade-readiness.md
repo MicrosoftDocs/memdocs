@@ -1,17 +1,10 @@
 ---
 title: Upgrade Readiness
-titleSuffix: Configuration Manager
 description: Integrate Upgrade Readiness with Configuration Manager to access Windows upgrade compatibility data and target devices for upgrade or remediation.
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 01/31/2020
 ms.topic: integration
 ms.subservice: core-infra
-ms.service: configuration-manager
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager

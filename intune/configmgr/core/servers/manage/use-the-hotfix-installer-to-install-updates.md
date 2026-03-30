@@ -1,17 +1,10 @@
 ---
 title: Hotfix installer
-titleSuffix: Configuration Manager
 description: Find out when and how to install updates via the Hotfix Installer for Configuration Manager.
 ms.date: 07/15/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use the Hotfix Installer to install updates for Configuration Manager

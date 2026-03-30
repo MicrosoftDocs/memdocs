@@ -1,17 +1,10 @@
 ---
 title: Setup command-line options
-titleSuffix: Configuration Manager
 description: Create automation scripts to install Configuration Manager from a command line.
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Command-line options for Configuration Manager setup

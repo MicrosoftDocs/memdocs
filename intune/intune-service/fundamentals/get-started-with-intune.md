@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 02/19/2025
 ms.topic: overview
-ms.reviewer: dougeby
+ms.reviewer:
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -23,8 +23,6 @@ This article provides an overview of the steps to start your Intune deployment.
 
 > [!TIP]
 > As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
->
-> To review best practices without signing in and activating the automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
@@ -35,11 +33,13 @@ This article provides an overview of the steps to start your Intune deployment.
   - [Move to cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+  - [Protection and configuration levels](protection-configuration-levels.md)
+  - [Zero Trust deployment approach](deployment-plan-zero-trust.md)
   - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/)
 
 - Determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
 
-  - **[Intune subscription](licenses.md)**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
+  - **[Intune subscription](../../fundamentals/licensing/index.md)**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
   - **[Microsoft 365 apps](https://www.microsoft.com/licensing/product-licensing/microsoft-365-apps)**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
   - **[Microsoft Entra ID](https://www.microsoft.com/security/business/microsoft-entra-pricing)**: Microsoft Entra ID is used for the identity management for users, groups, and devices. It comes with your Intune subscription and possibly your Microsoft 365 subscription.
 
@@ -63,7 +63,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
 In this step:
 
-✅ **Confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
 
 This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Microsoft Entra ID, including your domain, your users, and your groups.
 
@@ -73,9 +73,9 @@ For more information, go to [Step 1 - Set up Microsoft Intune](deployment-plan-s
 
 In this step:
 
-✅ **On devices that will enroll** in Intune, create a baseline of apps that devices must have, and then assign these app policies during enrollment. On apps that need extra security, also use app protection policies.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **On devices that will enroll** in Intune, create a baseline of apps that devices must have, and then assign these app policies during enrollment. On apps that need extra security, also use app protection policies.
 
-✅ **On devices that won't enroll** in Intune, use app protection policies and multifactor authentication (MFA):
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **On devices that won't enroll** in Intune, use app protection policies and multifactor authentication (MFA):
 
 - App protection policies help protect organization data on personal devices.
 - MFA helps protect your organization's data from unauthorized access.
@@ -98,9 +98,9 @@ If users with their own personal devices access organization resources, then you
 
 In this step:
 
-✅ **Create a baseline of compliance policies** that devices must have, and then assign these compliance policies during enrollment.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Create a baseline of compliance policies** that devices must have, and then assign these compliance policies during enrollment.
 
-✅ **Enable Conditional Access** to enforce your compliance policies.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Enable Conditional Access** to enforce your compliance policies.
 
 For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
@@ -121,7 +121,7 @@ If you prefer, you can enroll your devices before checking compliance. It's your
 
 In this step:
 
-✅ **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
 
 For more information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
 
@@ -142,7 +142,7 @@ The following articles are good resources:
 
 In this step:
 
-✅ **Enroll your devices** in Intune.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Enroll your devices** in Intune.
 
 For more specific information, go to [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 

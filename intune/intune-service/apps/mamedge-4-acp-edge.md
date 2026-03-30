@@ -1,7 +1,7 @@
 ---
 title: Step 4. Create App Configuration Policies for Microsoft Edge for Business
 description: Step 4. Create app configuration policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
-ms.date: 12/05/2025
+ms.date: 01/23/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -20,6 +20,29 @@ This step defines three progressive ACP configurations per platform, Level 1 (Ba
 
 > [!NOTE]
 > App configuration policies customize browser features and behavior. They complement app protection policies that focus on data protection.
+
+## Policy Selection Based on Device Enrollment
+
+App Configuration Policies (this step) are designed for non-enrolled devices using the Managed Apps configuration channel, while Settings Catalog policies (Step 5) are designed for enrolled devices with device-level controls.
+
+> [!IMPORTANT]
+> Choose the appropriate policy type based on device enrollment status to avoid policy conflicts.
+
+## Security Level Selection
+
+The three security levels (Level 1, 2, 3) are not cumulative - they represent progressively stricter configurations designed for different user roles and data sensitivity requirements.
+
+### Implementation Guidance
+
+- Evaluate your scenarios and user roles to determine which level is appropriate for each user group
+- Deploy only one level per user/device, not all three levels simultaneously
+- Align security level assignment with business role and data access requirements
+
+### Example Assignments
+
+- **Level 1 (Basic)**: General users, standard productivity workflows (~80% of users)
+- **Level 2 (Enhanced)**: Finance, HR, IT staff handling sensitive data (~15% of users)
+- **Level 3 (High)**: Executives, SecOps, Legal, users with access to highly confidential data (~5% of users)
 
 ::: zone pivot="windows"
 
@@ -802,8 +825,6 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 ::: zone-end
 
-## Next steps
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-05.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-5-settings-catalog.md)
+## Next step
 
 Continue to [Step 5](mamedge-5-settings-catalog.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.

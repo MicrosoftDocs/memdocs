@@ -1,17 +1,10 @@
 ---
 title: Licensing and branches
-titleSuffix: Configuration Manager
 description: Learn about the licensing requirements for the installation options available with Configuration Manager
 ms.date: 06/04/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Licensing and branches for Configuration Manager

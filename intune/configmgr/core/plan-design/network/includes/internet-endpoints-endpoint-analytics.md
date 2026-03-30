@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: desktop-analytics
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/11/2020
-ms.localizationpriority: medium
 ---
 
 ### Endpoints required for Configuration Manager-managed devices

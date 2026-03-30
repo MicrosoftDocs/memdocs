@@ -1,17 +1,10 @@
 ---
 title: Ensure device compliance
-titleSuffix: Configuration Manager
 description: Manage the configuration and compliance of devices in your organization by using Configuration Manager.
 ms.date: 10/06/2016
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: article
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Ensure device compliance with Configuration Manager
 

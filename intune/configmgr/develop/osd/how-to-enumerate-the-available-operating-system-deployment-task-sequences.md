@@ -1,18 +1,10 @@
 ---
 title: Enumerate the Available OS Deployment Task Sequences
 description: You enumerate the available operating system deployment task sequences, in Configuration Manager, by querying the available task sequence packages.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 0ea07b95-7474-4294-8c17-37e7a9e6957a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Enumerate the Available Operating System Deployment Task Sequences
 You enumerate the available operating system deployment task sequences, in Configuration Manager, by querying the available task sequence packages. Configuration Manager does not maintain instances of the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class for task sequences, but there is one instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class for each task sequence.

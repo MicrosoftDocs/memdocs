@@ -1,17 +1,10 @@
 ---
 title: Plan for CMG
-titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Plan for the CMG in Configuration Manager
@@ -146,7 +139,10 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
   - When you integrate the site with Microsoft Entra ID for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
 
-  - When you create the CMG, you need an account that is an Azure **Subscription Owner** and a Microsoft Entra ID **Global Administrator**.
+  - When you create the CMG, you need an account that is an **[Azure subscription Owner](/azure/role-based-access-control/built-in-roles#privileged)** and a **[Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)**.
+
+  > [!IMPORTANT]
+  > [!INCLUDE [global-administrator](../../../../includes/global-administrator-configmgr.md)]
 
 - Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 

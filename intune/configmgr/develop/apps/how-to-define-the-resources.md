@@ -1,18 +1,10 @@
 ---
 title: How to Define the Resources
-titleSuffix: Configuration Manager
 description: To support the Installer, a custom XML schema should be included as part of the assembly and the schema XSD file must be included as a resource in the assembly.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 29a19b45-0413-4cb1-a74a-4c38cdc84118
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Define the Resources
 To support the Installer, a custom XML schema should be included as part of the assembly. The schema file (XSD) file must be included as a resource in the assembly.

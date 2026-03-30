@@ -40,8 +40,8 @@ Microsoft Intune supports a subset of device management options for devices enro
 
 <!-- P2 For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)
-   * [iOS and iPadOS device features](../configuration/ios-device-features-settings.md)
+   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
    * List others.... -->
 
 ## User experience

@@ -111,7 +111,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         >
         > If you changed app install intents of Apple VPP apps from **Required** to **Available**, the apps that are already installed stop updating automatically. Manually installing the app after you change the intent to Available resumes automatic updates.
 
-    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
+    - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../../privacy/data-sharing/intune-to-apple.md).
 7. Select **Next** to display the **Scope tags** page.
 8. Select **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 9. Select **Next** to display the **Review + create** page. Review the values and settings you entered for the VPP token.
@@ -255,7 +255,7 @@ Access to Apple Business Manager location token and apps (Apple VPP tokens and V
 
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation.
 
-If a token’s status is **Duplicate**, you uploaded multiple tokens with the same **Token Location.** Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased might not be reflected once a token is marked as duplicate.
+If a token's status is **Duplicate**, you uploaded multiple tokens with the same **Token Location.** Remove the duplicate token to begin syncing the token again. You can still assign and revoke licenses for tokens that are marked as duplicate. However, licenses for new apps and books purchased might not be reflected once a token is marked as duplicate.
 
 ## Frequently asked questions
 

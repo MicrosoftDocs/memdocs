@@ -1,18 +1,10 @@
 ---
 title: SMS_DPContentInfo Class
 description: Learn how to use the SMS_DPContentInfo class in Configuration Manager to describe package information for a given distribution point.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 95e54f24-0e0e-4b64-88ae-572393c964ad
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_DPContentInfo Server WMI Class
 The `SMS_DPContentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes package information for a given distribution point.

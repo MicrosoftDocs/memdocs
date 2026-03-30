@@ -1,18 +1,11 @@
 ---
 title: Sample queries for mobile device management
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join mobile device management views to other views when the device is managed by Configuration Manager.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 03f6d6c0-6ef3-4de9-9ae4-a3ad8142ac57
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

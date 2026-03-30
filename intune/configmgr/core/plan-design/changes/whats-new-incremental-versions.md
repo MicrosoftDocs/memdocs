@@ -1,17 +1,10 @@
 ---
 title: Incremental versions
-titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
 ms.date: 03/31/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in Configuration Manager incremental versions

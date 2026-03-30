@@ -1,5 +1,5 @@
 ---
-title: Intune Graph API - Reports and Properties | Microsoft Docs
+title: Intune Graph API - Reports and Properties
 description: Learn about Intune reports and properties provided via Graph API.
 author: nicholasswhite
 ms.author: nwhite

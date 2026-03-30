@@ -1,15 +1,9 @@
 ---
 title: Checklist for 2211
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2211.
 ms.date: 12/05/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2211 for Configuration Manager
@@ -356,4 +350,4 @@ For more information, see [Configuration Manager PowerShell cmdlets: Update help
 
 ## Next steps
 
-Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../use-docs.md#notifications).
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../fundamentals/use-docs.md#notifications).

@@ -1,18 +1,10 @@
 ---
 title: Admin service release notes
-titleSuffix: Configuration Manager
 description: Information about changes to the administration service with each Configuration Manager release
 ms.date: 08/11/2020
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: release-notes
-ms.assetid: 0a3dea00-39c9-49f2-ba07-19b70994a2b5
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Administration service release notes

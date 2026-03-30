@@ -1,16 +1,9 @@
 ---
 title: Deploy a task sequence over the internet
-titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to remote computers.
 ms.date: 07/15/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

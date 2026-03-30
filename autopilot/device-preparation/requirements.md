@@ -4,8 +4,6 @@ description: Software, Networking, Licensing, Configuration, and RBAC requiremen
 ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier1
 ms.topic: article
 ms.custom:
   - CI 116757

@@ -1,17 +1,10 @@
 ---
 title: Unicode and ASCII support
-titleSuffix: Configuration Manager
 description: Learn about support for Unicode and ASCII characters in Configuration Manager objects.
 ms.date: 12/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Unicode and ASCII support in Configuration Manager

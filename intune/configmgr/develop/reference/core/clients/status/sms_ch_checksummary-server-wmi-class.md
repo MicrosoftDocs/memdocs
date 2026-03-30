@@ -1,18 +1,10 @@
 ---
 title: SMS_CH_CheckSummary Class
-titleSuffix: Configuration Manager
 description: A provider server class that represents the client check summary.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 21544fbd-26da-4357-a714-69437ca3a7d0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CH_CheckSummary Server WMI Class
 The `SMS_CH_CheckSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the client check summary.

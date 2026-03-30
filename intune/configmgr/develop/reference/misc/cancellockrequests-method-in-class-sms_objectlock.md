@@ -1,18 +1,10 @@
 ---
 title: CancelLockRequests Method
-titleSuffix: Configuration Manager
 description: The CancelLockRequests WMI class method, in Configuration Manager, cancels multiple lock requests.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 2385927c-5439-489f-a3e1-b3d7a6e4a24a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CancelLockRequests Method in Class SMS_ObjectLock
 The `CancelLockRequests` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels multiple lock requests.

@@ -1,18 +1,10 @@
 ---
 title: ImportMachineEntryToMultipleCollections method
-titleSuffix: Configuration Manager
 description: ImportMachineEntryToMultipleCollections method
 ms.date: 04/03/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 3f516dae-a958-440e-9e7c-28de24bf2803
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # ImportMachineEntryToMultipleCollections method in class SMS_Site

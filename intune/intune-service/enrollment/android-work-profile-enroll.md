@@ -67,7 +67,7 @@ For more information and screenshots of the end user experience, see [Enroll dev
 
 ## Data shared with Google
 
-Microsoft Intune shares certain user and device information with Google when Android Enterprise device management is enabled. For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).
+Microsoft Intune shares certain user and device information with Google when Android Enterprise device management is enabled. For more information, see [Data Intune sends to Google](../../privacy/data-sharing/intune-to-google.md).
 
 ## Limitations
 

@@ -1,17 +1,10 @@
 ---
 title: Client health checks
-titleSuffix: Configuration Manager
 description: The checks that the Configuration Manager client runs regularly to keep healthy.
 ms.date: 04/01/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Client health checks

@@ -70,7 +70,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 ### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
-- **Unattended access**: Helpers can connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.
+- **Unattended access**: Helpers can connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as an Android Enterprise dedicated device.
   
   :::image type="content" source="media/remote-help/remote-help-android-unattended.png" alt-text="Screenshot of an unattended Remote Help session on Android" lightbox="media/remote-help/remote-help-android-unattended-expanded.png":::
 

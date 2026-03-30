@@ -1,17 +1,10 @@
 ---
 title: Create and apply power plans
-titleSuffix: Configuration Manager
 description: Create and apply power plans in Configuration Manager.
 ms.date: 10/12/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to create and apply power plans in Configuration Manager

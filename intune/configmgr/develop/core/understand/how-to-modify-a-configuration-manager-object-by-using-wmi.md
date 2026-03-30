@@ -1,18 +1,10 @@
 ---
 description: Learn how to modify an Object by using WMI.
 title: Modify an Object by Using WMI
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 6101f903-172b-4e59-8801-4a9c5975e3c9
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Modify a Configuration Manager Object by Using WMI
 You modify a Configuration Manager object, in Configuration Manager, by using the object's [SWbemObject](/windows/win32/wmisdk/swbemobject) object to change its properties.

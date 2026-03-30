@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: client-mgt
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 03/15/2022
-ms.localizationpriority: medium
 ---
 
 This section covers the following features:

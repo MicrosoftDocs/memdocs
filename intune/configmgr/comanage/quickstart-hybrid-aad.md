@@ -1,17 +1,10 @@
 ---
 title: Use Microsoft Entra ID for co-management
-titleSuffix: Configuration Manager
 description: With Microsoft Entra ID you can take advantage of improved productivity for your users and security for your resources, across both cloud and on-prem environments
 ms.date: 11/08/2021
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use Microsoft Entra ID for co-management

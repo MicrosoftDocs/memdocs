@@ -1,17 +1,10 @@
 ---
 title: Supported Configurations for the LTSB
-titleSuffix: Configuration Manager
 description: Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager.
 ms.date: 10/11/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager
@@ -129,6 +122,7 @@ The LTSB supports the following versions of SQL Server to host the site database
 **Supported versions:**
 
 - SQL Server 2016: Standard, Enterprise
+   - Configuration Manager LTSB will continue to be supported when the site database is hosted SQL Server 2016 ESU licensed servers.
 - SQL Server 2014 SP2: Standard, Enterprise
 - SQL Server 2014 SP1: Standard, Enterprise
 - SQL Server 2012 SP3: Standard, Enterprise

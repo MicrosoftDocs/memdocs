@@ -1,18 +1,10 @@
 ---
 title: Context Qualifiers
-titleSuffix: Configuration Manager
 description: Use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 0b4faf3c-edff-4874-b998-3fc34810cf34
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Configuration Manager Context Qualifiers
 Context objects are used, in Configuration Manager, to provide additional information to the SMS Provider. Typically, you use context qualifiers to give the SMS Provider contextual information, such as your application's name. You can use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.

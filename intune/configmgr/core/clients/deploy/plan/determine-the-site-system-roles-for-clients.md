@@ -1,17 +1,10 @@
 ---
 title: Site system roles for clients
-titleSuffix: Configuration Manager
 description: Determine site system roles for clients in Configuration Manager.
 ms.date: 01/04/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Determine the site system roles for Configuration Manager clients

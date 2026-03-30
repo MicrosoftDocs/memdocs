@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a policy condition in Configuration Manager using CCM_Policy_Condition.
 title: CCM_Policy_Condition Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6a7f9c94-ccbd-43ef-9adb-ed620ba3fe5f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_Policy_Condition Client WMI Class
 In Configuration Manager, the `CCM_Policy_Condition` class is a client Windows Management Instrumentation (WMI) class that represents a policy condition.

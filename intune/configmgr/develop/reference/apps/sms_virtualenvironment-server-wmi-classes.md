@@ -1,18 +1,10 @@
 ---
 description: Learn how to track the history of a request each time a request is updated using SMS_VirtualEnvironment in Configuration Manager.
 title: SMS_VirtualEnvironment Classes
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b6e5fec6-6d2f-442e-8f06-ac9269165a23
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_VirtualEnvironment Server WMI Classes
 The `SMS_VirtualEnvironment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents

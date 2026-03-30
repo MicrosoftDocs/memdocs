@@ -1,17 +1,10 @@
 ---
 title: Toolkit reference
-titleSuffix: Microsoft Deployment Toolkit
 description: Reference details for Microsoft Deployment Toolkit (MDT)
 ms.date: 09/09/2016
 ms.subservice: mdt
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # Toolkit Reference for the Microsoft Deployment Toolkit

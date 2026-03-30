@@ -1,17 +1,10 @@
 ---
 title: Site failure impacts
-titleSuffix: Configuration Manager
 description: Understand the effects of various failures in a Configuration Manager site.
 ms.date: 07/30/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Site failure impacts in Configuration Manager

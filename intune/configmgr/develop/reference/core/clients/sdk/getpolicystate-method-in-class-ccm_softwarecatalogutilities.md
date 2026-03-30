@@ -1,18 +1,10 @@
 ---
 title: GetPolicyState Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation (WMI) class method that returns the state of a policy object.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 8f5ac399-40bb-4133-9d87-da7f5f3ec46d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetPolicyState Method in Class CCM_SoftwareCatalogUtilities
 The `GetPolicyState` Windows Management Instrumentation (WMI) class method in Configuration Manager that returns the state of a policy object.

@@ -1,17 +1,10 @@
 ---
 title: Switch co-management workloads
-titleSuffix: Configuration Manager
 description: Learn how to switch workloads currently managed by Configuration Manager to Microsoft Intune.
 ms.subservice: co-management
-ms.service: configuration-manager
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 10/05/2021
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to switch Configuration Manager workloads to Intune

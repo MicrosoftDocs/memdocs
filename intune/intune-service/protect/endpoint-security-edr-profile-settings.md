@@ -1,5 +1,5 @@
 ---
-title: Intune endpoint security Endpoint detection and response settings | Microsoft Docs
+title: Intune endpoint security Endpoint detection and response settings
 description: Endpoint security Endpoint detection and response policy settings for deprecated profiles in Microsoft Intune
 author: brenduns
 ms.author: brenduns

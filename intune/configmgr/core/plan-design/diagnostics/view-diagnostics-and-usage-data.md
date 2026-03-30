@@ -1,17 +1,10 @@
 ---
 title: View diagnostics data
-titleSuffix: Configuration Manager
 description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
 ms.date: 11/15/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to view diagnostics and usage data for Configuration Manager

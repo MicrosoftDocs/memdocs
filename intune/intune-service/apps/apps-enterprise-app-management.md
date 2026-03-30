@@ -18,6 +18,8 @@ Microsoft Intune Enterprise App Management enables you to easily discover and de
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 ## Benefits of Enterprise App Management
 
 The Enterprise App Management provides the following benefits:

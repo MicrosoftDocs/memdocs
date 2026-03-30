@@ -1,17 +1,10 @@
 ---
 title: Diagnostic and usage data for 2309
-titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2309.
 ms.date: 09/30/2023
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Diagnostic and usage data for version 2309

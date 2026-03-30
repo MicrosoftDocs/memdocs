@@ -1,8 +1,6 @@
 ---
 title: iOS/iPadOS bundle IDs for built-in apps in Microsoft Intune
 description: See a list of the bundle IDs for the built-in iOS and iPadOS apps. Use these bundle IDs to explicitly allow apps in device configuration profiles and policies in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/22/2025
 ms.topic: reference
 ms.collection:
@@ -86,4 +84,4 @@ This feature applies to:
 
 ## Next steps
 
-Use these bundle IDs to configure [device features](ios-device-features-settings.md) and to [allow or restrict some settings](device-restrictions-ios.md) on iOS/iPadOS devices.
+Use these bundle IDs to configure [device features](device-features-apple.md) and to [allow or restrict some settings](device-restrictions-apple.md) on iOS/iPadOS devices.

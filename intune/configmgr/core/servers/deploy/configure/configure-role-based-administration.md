@@ -1,17 +1,10 @@
 ---
 title: Configure role-based administration
-titleSuffix: Configuration Manager
 description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user.
 ms.date: 07/17/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,frankroj
 ---
 
 # Configure role-based administration for Configuration Manager

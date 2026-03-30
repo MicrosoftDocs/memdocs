@@ -1,16 +1,9 @@
 ---
 title: Associate users with a computer
-titleSuffix: Configuration Manager
 description: Configure Configuration Manager to associate users with destination computers when deploying operating systems.
 ms.date: 07/17/2025
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: article
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
-ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 

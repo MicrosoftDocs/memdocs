@@ -1,18 +1,10 @@
 ---
 description: Learn how to run a synchronous discovery operation for the provided synclet in Configuration Manager.
 title: "IAppManagementHandler::EnumerateApps"
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0e4b2ecd-ebc1-4a38-af80-e3d198d6a1a7
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IAppManagementHandler::EnumerateApps Method
 The `IAppManagementHandler::EnumerateApps` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.

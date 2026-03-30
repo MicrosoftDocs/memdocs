@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent compliance policy settings using SMS_CompliancePolicySettings class in Configuration Manager.
 title: SMS_CompliancePolicySettings Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 2ad890c4-6c22-4c65-a0fc-b4906a4e92d0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CompliancePolicySettings Server WMI Class
 The `SMS_CompliancePolicySettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents compliance policy settings.

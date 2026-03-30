@@ -38,11 +38,6 @@ Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructio
 
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
 
-If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
-
-> [!CAUTION]
-> [!INCLUDE [global-admin](../includes/global-admin.md)]
-
 ## Set up Slack for EMM on iOS devices
 
 Add the iOS/iPadOS app Slack for EMM to your Intune tenant and create an app configuration policy to enable your organizations' iOS/iPadOS users to access Slack with Intune as an EMM provider.

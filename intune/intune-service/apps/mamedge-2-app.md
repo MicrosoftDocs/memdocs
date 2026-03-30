@@ -1,7 +1,7 @@
 ---
 title: Step 2. Create App Protection Policies for Microsoft Edge for Business
 description: Step 2. Create app protection policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
-ms.date: 12/05/2025
+ms.date: 01/23/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -613,7 +613,5 @@ Level 3 configuration provides the highest level of data protection and is recom
 - [Require an app protection policy on Windows devices](/entra/identity/conditional-access/policy-all-users-windows-app-protection)
 
 ## Next step
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-03.png" alt-text="Step 3 to integrate Mobile Threat Defense with Microsoft Edge for Business.":::](mamedge-3-scc.md)
 
 Continue with [Step 3](mamedge-3-scc.md) to integrate Mobile Threat Defense with Microsoft Edge for Business.

@@ -1,17 +1,10 @@
 ---
 title: Levels of diagnostic usage data
-titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
 ms.date: 12/04/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Levels of diagnostic usage data
@@ -61,9 +54,9 @@ To change the data collection level, you need **Modify** permissions on the **Si
 
 The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
 
+- [Diagnostic and usage data for 2509](levels-of-diagnostic-usage-data-collection-2509.md)
+- [Diagnostic and usage data for 2503](levels-of-diagnostic-usage-data-collection-2503.md)
 - [Diagnostic and usage data for 2409](levels-of-diagnostic-usage-data-collection-2409.md)
-- [Diagnostic and usage data for 2403](levels-of-diagnostic-usage-data-collection-2403.md)
-- [Diagnostic and usage data for 2309](levels-of-diagnostic-usage-data-collection-2309.md)
 
 ## Next steps
 

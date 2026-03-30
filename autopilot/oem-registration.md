@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
-  - tier2
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -32,13 +31,12 @@ Microsoft manages and maintains Windows Autopilot. This service provides the bac
 
 ### Customer consent
 
-Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM begins this process with approval granted by a Microsoft Entra Global Administrator from the organization. For more information, see [OEM authorization](registration-auth.md#oem-authorization).
+Before an OEM can register devices for an organization, the organization's Microsoft Entra Global Administrator must approve the OEM. For more information, see [OEM authorization](registration-auth.md#oem-authorization).
 
 <!-- MAXADO-9048730 -->
 
 > [!IMPORTANT]
->
-> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
+> [!INCLUDE [global-administrator](../autopilot/includes/global-administrator.md)]
 
 ## Microsoft Surface registration
 

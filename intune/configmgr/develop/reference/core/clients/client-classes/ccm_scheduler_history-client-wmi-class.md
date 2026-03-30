@@ -1,18 +1,10 @@
 ---
 title: CCM_Scheduler_History Class
-titleSuffix: Configuration Manager
 description: A client Windows Management Instrumentation class that represents the history for a schedule.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 19fb3c27-e46c-43c3-bdce-ded0d40911f2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_Scheduler_History Client WMI Class
 In Configuration Manager, the `CCM_Scheduler_History` class is a client Windows Management Instrumentation (WMI) class that represents the history for a schedule.

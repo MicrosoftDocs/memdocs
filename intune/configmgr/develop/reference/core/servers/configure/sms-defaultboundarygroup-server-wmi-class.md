@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a default boundary group using SMS_DefaultBoundaryGroup Windows Management Instrumentation (WMI) class.
 title: SMS_DefaultBoundaryGroup Class
-titleSuffix: Configuration Manager
 ms.date: 03/13/2017
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 07f6c724-edef-4518-a975-81cc009ca23b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_DefaultBoundaryGroup Server WMI Class
 

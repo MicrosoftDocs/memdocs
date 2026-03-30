@@ -1,11 +1,9 @@
 ---
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 11/10/2025
+ms.date: 02/05/2026
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier2
 ms.topic: troubleshooting
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -35,9 +33,12 @@ This article describes known issues that can often be resolved with:
 
 ### Device preparation deployments on Windows 365 devices time out after 60 minutes 
 
-Date added: *November 10, 2025*
+Date added: *November 10, 2025*  
+Date updated: *February 5, 2026*  
 
 There is a known issue for Windows 365 devices where the value set for **Minutes allowed before device preparation fails** in the Cloud PC provisioning policy does not get configured correctly during Autopilot device preparation provisioning. As a result, deployments time out if they require more than 60 minutes to install all configurations selected in the Device preparation policy. To avoid unexpected failures, we recommend that admins limit the number of blocking apps configured for the Device preparation policy in automatic mode until the issue is resolved. This issue will be fixed in the future.  
+
+**This issue was resolved in February 2026.**
 
 ### Exporting logs during the out-of-box experience (OOBE) doesn't show result
 

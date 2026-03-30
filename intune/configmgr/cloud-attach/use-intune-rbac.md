@@ -1,17 +1,10 @@
 ---
 title: Intune role-based access control for tenant-attached devices
-titleSuffix: Configuration Manager
 description: Enable Intune role-based access control for Configuration Manager tenant-attached clients
 ms.date: 08/24/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Intune role-based access control for tenant-attached clients
@@ -37,7 +30,7 @@ The three high-level steps to configure Intune as the role-based access control 
 
 ## Limitations
 
-- Currently [scoping](../../intune-service/fundamentals/scope-tags.md) isn't supported when using only Intune role-based access control for for displaying and taking actions on tenant-attached devices from the Microsoft Intune admin center.
+- Currently [scoping](../../intune-service/fundamentals/scope-tags.md) isn't supported when using only Intune role-based access control for displaying and taking actions on tenant-attached devices from the Microsoft Intune admin center.
 - Currently, the [**Software updates** page](../tenant-attach/software-updates.md) isn't available for cloud-only users when using the early update ring of Configuration Manager version 2207.  <!--15287859-->
 
 ## <a name="bkmk_disable-configmgr"></a> Disable enforcement of Configuration Manager role-based access control for cloud-attached clients

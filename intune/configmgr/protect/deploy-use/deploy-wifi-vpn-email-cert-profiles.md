@@ -1,16 +1,9 @@
 ---
 title: Deploy resource access profiles
-titleSuffix: Configuration Manager
 description: Learn how to deploy Wi-Fi, VPN, and certificate profiles in Configuration Manager.
 ms.date: 03/29/2022
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

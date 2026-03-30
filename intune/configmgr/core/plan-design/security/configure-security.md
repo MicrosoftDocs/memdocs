@@ -1,17 +1,10 @@
 ---
 title: Configure security
-titleSuffix: Configuration Manager
 description: How to configure security-related options for Configuration Manager.
 ms.date: 12/21/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure security in Configuration Manager

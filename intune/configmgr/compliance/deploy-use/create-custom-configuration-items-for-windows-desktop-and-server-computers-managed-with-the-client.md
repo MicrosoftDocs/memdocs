@@ -1,17 +1,10 @@
 ---
 title: Create custom configuration items
-titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
 ms.date: 08/12/2022
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client

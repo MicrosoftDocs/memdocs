@@ -1,18 +1,11 @@
 ---
 title: What's new in version 1910
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1910 of Configuration Manager current branch.
 ms.date: 01/22/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
