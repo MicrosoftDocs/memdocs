@@ -280,8 +280,10 @@ The following list provides the end-user requirements to use app protection poli
 
 ## Follow the minimum recommended baseline policies
 
+This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
+
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
-2. 🡺 **Add, configure, and protect apps** (*You are here*)
+2. 🡺 **Add, configure, and protect apps** (this article)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Configure device features](deployment-plan-configuration-profile.md)
 5. [Enroll devices](deployment-guide-enroll.md)

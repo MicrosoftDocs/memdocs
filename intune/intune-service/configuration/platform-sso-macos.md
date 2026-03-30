@@ -3,7 +3,7 @@ title: Configure Platform SSO for macOS devices
 description: Use Microsoft Intune to configure Platform SSO and deploy the configuration to your macOS devices. Platform SSO enables single sign-on (SSO) using Microsoft Entra ID with the Secure Enclave, smart card, or password authentication methods. You create a settings catalog policy to configure the settings. This article is a step-by-step guide to configure Platform SSO for macOS devices using Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/24/2025
+ms.date: 03/26/2026
 ms.topic: how-to
 appliesto:
 - ✅ macOS
@@ -63,6 +63,7 @@ You configure Platform SSO using the Intune [settings catalog](settings-catalog.
     > There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
 
   - Safari
+  - Firefox - Configure the [MicrosoftEntraSSO policy](https://mozilla.github.io/policy-templates/#microsoftentrasso) (opens Mozilla's web site).
 
   You can use Intune to add web browser apps, including [package (`.pkg`)](../apps/lob-apps-macos.md) and [disk image (`.dmg`)](../apps/lob-apps-macos-dmg.md) files, and deploy the app to your macOS devices. To get started, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
 
@@ -350,7 +351,7 @@ When you configure Platform SSO, you might see the following errors:
 ## Related articles
 
 - [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md)
-- [macOS Platform Single Sign-on overview (preview)](/entra/identity/devices/macos-psso)
+- [macOS Platform Single Sign-on overview](/entra/identity/devices/macos-psso)
 - [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin)
 - [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
 - [What is a Primary Refresh Token (PRT)?](/entra/identity/devices/concept-primary-refresh-token)

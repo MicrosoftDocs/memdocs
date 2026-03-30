@@ -3,7 +3,7 @@ title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/11/2026
+ms.date: 03/26/2026
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
 ms.reviewer:
@@ -178,7 +178,9 @@ For more information on dynamic groups, go to:
 
 ## Unassigned device compliance policy still assigned and enforced
 
-When you unassign a compliance policy from a device with an associated user, the policy continues to be assigned and enforced until the device syncs with the Intune service. This behavior is by design.
+When you unassign a compliance policy from a device and its associated user, the policy might still show as being assigned in the Intune admin center > Devices > Compliance.
+
+The policy continues to be assigned and in effect until the device syncs with the Intune service. This behavior is by design.
 
 You can also manually sync the device.
 
