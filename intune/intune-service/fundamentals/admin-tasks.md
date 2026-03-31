@@ -27,9 +27,9 @@ Access to tasks in the admin tasks node is based on your Intune role-based acces
 
 - **Organization** > **Read**
 
-When viewing Admin tasks, you can only see and manage tasks permitted by your assigned roles within the task’s original source node. For RBAC requirements and related prerequisites specific to each capability, see:
+When viewing Admin tasks, you can only see and manage tasks permitted by your assigned roles within the task's original source node. For RBAC requirements and related prerequisites specific to each capability, see:
 
-- [Device Offboarding tasks](/intune/copilot/agents/device-offboarding-agent#prerequisites)
+- [Device Offboarding tasks](../../copilot/agents/device-offboarding-agent.md#prerequisites)
 - [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#rbac-permissions-for-elevation-requests)
 - [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#prerequisites)
 - [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#prerequisites-for-access-policies-and-approvers)
