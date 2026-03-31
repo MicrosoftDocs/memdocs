@@ -91,6 +91,9 @@ On the **Program** page, configure the app installation and removal commands for
     - **Command line**: Specify a command line to install the app
     - **PowerShell script**: Upload a PowerShell script to serve as the installer
 
+    > [!NOTE]
+    > When **Installer type** is set to **Command line**, the **Install command** and **Uninstall command** fields appear read-only until you select the text box. This is expected behavior and does not indicate that the field is disabled.
+
     For command line installations, add the complete installation command line to install the app.
 
     For example, if your app's file name is **MyApp123**, add the following:
