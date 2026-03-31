@@ -56,3 +56,8 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
    sudo rm -rf /etc/opt/microsoft/mdatp
    sudo rm -rf /opt/microsoft/mdatp
    ```
+
+## Related articles  
+For more information about Linux device management, see:  
+- [Microsoft single sign-on for Linux](/entra/identity/devices/sso-linux)
+- [Troubleshoot device registration command tool](/entra/identity/devices/troubleshoot-device-registration-tool-linux?tabs=debian-dsreginstall)  
