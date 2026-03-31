@@ -37,7 +37,7 @@ Run the following commands to uninstall the Microsoft Intune app and remove loca
     sudo apt purge intune-portal
     ```
 ## Install Microsoft Intune app for RedHat Enterprise Linux
-A sample script to install the Microsoft Intune app and its dependencies on your device is available on [GitHub](https://go.microsoft.com/fwlink/?linkid=2358529). Review the instructions carefully before deploying.  
+A sample script to install the Microsoft Intune app and its dependencies on your device is available on [GitHub](https://go.microsoft.com/fwlink/?linkid=2358529). Review the instructions carefully before installing.  
 
 ### Uninstall app for RedHat Enterprise Linux
 

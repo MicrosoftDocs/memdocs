@@ -69,7 +69,7 @@ Employees assigned Intune licenses can enroll their personal Linux devices into 
 
 As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#step-1-prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
 
->[IMPORTANT]
+>[!IMPORTANT]
 > Versions 2.0.2 and later of the Microsoft Identity Broker included with the Microsoft Intune app for Linux introduce a major architectural change from the previous Java-based broker. When Linux devices update from earlier broker versions, Intune automatically re‑registers and re‑enrolls those devices and creates new Intune device IDs and Microsoft Entra device IDs for them. After devices update, be sure to review device‑based assignments, filters, and Microsoft Entra ID group memberships that rely on device IDs to ensure that policies apply correctly.  
 
 >[!TIP]
