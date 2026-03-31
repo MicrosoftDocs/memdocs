@@ -68,7 +68,7 @@ Only devices that need the update receive it:
 - For devices on earlier builds, Windows Update verifies that the update remains applicable before installation.
 
   > [!IMPORTANT]
-  > In some scenarios, Windows Update might install a newer update than the one specified in the expedite policy. This behavior ensures that devices receive the latest applicable security update. For more information, see About installing the latest applicable update.
+  > In some scenarios, Windows Update might install a newer update than the one specified in the expedite policy. This behavior ensures that devices receive the latest applicable security update.
 
 Expedited updates begin installing after the device completes its next update scan and communicates with the service. The time required for installation to start can vary based on factors such as device connectivity, scan timing, and service processing.
 
@@ -98,7 +98,7 @@ Expedite policies don't affect how future quality updates are deployed. To manag
 
    **Non-security expedited updates**: These are quality fixes released after the previous security (B) release. Admins can expedite installation of the latest applicable quality update on devices, without waiting for the deferral period.
 
-   - Updates without the word **SecurityUpdate** indicate that it is not a security update. Updates that include the letter **D** in their name identify updates that are released since the latest *patch Tuesday* security week. You might also see 2024.01 OOB Update (*out-of-band* patch releases). [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
+   - Updates without the word **SecurityUpdate** indicate that it is not a security update. Updates that include the letter **D** in their name identify updates that are released since the latest *patch Tuesday* security week. You might also see 2024.01 OOB Update (*out-of-band* patch releases). See [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544).
    - The drop-down list is updated to display the two most recent security updates, including if one is an out-of-band update. If the most recent non-security update is newer than the newest security update, then the non-security update is also included in the drop-down list. Two non-security releases also appear in the drop-down list only if the penultimate non-security release is an OOB update. Non-security updates only appear when no newer security update exists. Once a security update is released, no non-security updates (D or OOB) should appear in the drop-down list. If the latest released update is a non-security update, then the latest non-security update and penultimate non-security update both appear (only if that non-security update is OOB).
 
      > [!TIP]
