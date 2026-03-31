@@ -1,6 +1,56 @@
 {
   "redirections": [
     {
+      "source_path": "intune/agents/change-review-agent.md",
+      "redirect_url": "/intune/copilot/agents/change-review-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/change-review-agent-use.md",
+      "redirect_url": "/intune/copilot/agents/manage-change-review-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/device-offboarding-agent.md",
+      "redirect_url": "/intune/copilot/agents/device-offboarding-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/device-offboarding-agent-use.md",
+      "redirect_url": "/intune/copilot/agents/manage-device-offboarding-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/index.md",
+      "redirect_url": "/intune/copilot/agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/policy-configuration-agent.md",
+      "redirect_url": "/intune/copilot/agents/policy-configuration-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/policy-configuration-agent-use.md",
+      "redirect_url": "/intune/copilot/agents/manage-policy-configuration-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/security-copilot-agents-intune.md",
+      "redirect_url": "/intune/copilot/agents/ref-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/vulnerability-remediation-agent.md",
+      "redirect_url": "/intune/copilot/agents/vulnerability-remediation-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/agents/vulnerability-remediation-agent-use.md",
+      "redirect_url": "/intune/copilot/agents/manage-vulnerability-remediation-agent",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/fundamentals/device-cleanup-rules.md",
       "redirect_url": "/intune/governance/device-cleanup-rules",
       "redirect_document_id": false
@@ -532,7 +582,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/vulnerability-remediation-agent.md",
-      "redirect_url": "/intune/agents/vulnerability-remediation-agent",
+      "redirect_url": "/intune/copilot/agents/vulnerability-remediation-agent",
       "redirect_document_id": false
     },
     {
@@ -557,7 +607,7 @@
     },
     {
       "source_path": "intune/intune-service/copilot/security-copilot-agents-intune.md",
-      "redirect_url": "/intune/agents/",
+      "redirect_url": "/intune/copilot/agents",
       "redirect_document_id": false
     },
     {

@@ -12,7 +12,7 @@ ms.reviewer: aanavath, jubaptis
 
 The Intune Policy Configuration Agent uses the generative AI-powered features in Security Copilot. It helps IT admins translate complex requirements and industry standard documents into actionable Intune settings.
 
-Admins can quickly generate Intune [settings catalog](../device-configuration/settings-catalog/index.md) policies that align with organizational or regulatory baselines, including any hardening initiatives.
+Admins can quickly generate Intune [settings catalog](../../device-configuration/settings-catalog/index.md) policies that align with organizational or regulatory baselines, including any hardening initiatives.
 
 With the agent, you:
 
@@ -33,13 +33,13 @@ This article:
 - Shows you how to set up the agent
 - Shows you how to renew or remove the agent
 
-To learn how to use the agent, see [Use the Policy Configuration Agent](policy-configuration-agent-use.md).
+To learn how to use the agent, see [Use the Policy Configuration Agent](manage-policy-configuration-agent.md).
 
 ## Prerequisites
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -50,20 +50,20 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/licensing.md)]
+[!INCLUDE [platform](../../includes/requirements/licensing.md)]
 
 :::column-end:::
 :::column span="3":::
 > To use Security Copilot agents in Microsoft Intune, the following licenses are required:
 >
-> - [Microsoft Intune Plan 1 subscription](../fundamentals/licensing/index.md)
+> - [Microsoft Intune Plan 1 subscription](../../fundamentals/licensing/index.md)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/plugins.md)]
+[!INCLUDE [platform](../../includes/requirements/plugins.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -78,7 +78,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -90,41 +90,41 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
 > To **enable and configure** the agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles)
 >
 >   To learn about the Security Copilot roles, see [Security Copilot roles and permissions](/copilot/security/authentication).
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
-> - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
+> - [Read only operator](../../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
 > ---
 >
 > To **use the agent**, **generate suggestions**, and **get policy recommendations**, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
-> - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
+> - [Read only operator](../../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
 > ---
 >
 > To **use the agent**, **generate suggestions**, **get policy recommendations**, and **create policies**, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
-> - [Policy and Profile manager](../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
+> - [Policy and Profile manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) or a [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Create
 >   - Device configurations/Update
 
@@ -133,7 +133,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 
 ## How the agent works
 
-:::image type="content" source="./media/policy-agent-workflow-svg.png" alt-text="Diagram that shows different steps and stages of the policy configuration agent workflow in Microsoft Intune." lightbox="./media/policy-agent-workflow-svg.png":::
+:::image type="content" source="./media/policy-configuration-agent/policy-agent-workflow-svg.png" alt-text="Diagram that shows different steps and stages of the policy configuration agent workflow in Microsoft Intune." lightbox="./media/policy-configuration-agent/policy-agent-workflow-svg.png":::
 
 At a high level, the agent does the following steps.
 
@@ -189,11 +189,11 @@ We recommend you sign in with the **Security Copilot Owner** role to set up the 
 
 1. Select **Set up agent**.
 
-When it completes, the agent is ready to use. To learn more about using the agent, see [Use the Policy Configuration Agent](policy-configuration-agent-use.md).
+When it completes, the agent is ready to use. To learn more about using the agent, see [Use the Policy Configuration Agent](manage-policy-configuration-agent.md).
 
 [!INCLUDE [renew](includes/renew.md)]
 
-:::image type="content" source="./media/policy-configuration-agent-change-identity.png" alt-text="Screenshot of the Policy Configuration Agent change identity screen in Microsoft Intune." lightbox="./media/policy-configuration-agent-change-identity.png":::
+:::image type="content" source="./media/policy-configuration-agent/change-identity.png" alt-text="Screenshot of the Policy Configuration Agent change identity screen in Microsoft Intune." lightbox="./media/policy-configuration-agent/change-identity.png":::
 
 [!INCLUDE [remove](includes/remove.md)]
 
@@ -201,6 +201,6 @@ When it completes, the agent is ready to use. To learn more about using the agen
 
 ## Related content
 
-- [Use the Policy Configuration Agent](policy-configuration-agent-use.md)
+- [Use the Policy Configuration Agent](manage-policy-configuration-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
-- [Security Copilot in Intune - An overview](../copilot/index.md)
+- [Security Copilot in Intune - An overview](../index.md)

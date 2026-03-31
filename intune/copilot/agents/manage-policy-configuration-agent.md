@@ -27,7 +27,7 @@ This feature applies to:
 
 ## Before you begin
 
-- This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
+- This feature is in [public preview](../../intune-service/fundamentals/public-preview.md).
 - Make sure you meet the [Policy Configuration Agent](policy-configuration-agent.md#prerequisites) prerequisites, including signing in with an appropriate account.
 - You can upload one knowledge source file at a time. If you have multiple baseline documents, run them separately through the agent.
 - Well-structured, well-written input results in better mappings. If a document is poorly formatted or uses unclear language, the agent can produce low-confidence matches. We recommend you review your source documents for clarity.
@@ -101,7 +101,7 @@ You can save the agent suggestions so you can create device configuration polici
 
 4. Select **Review**. The agent runs immediately and analyzes the knowledge source you uploaded. Select the link to open it.
 
-    :::image type="content" source="./media/policy-configuration-agent-suggestion.png" alt-text="Diagram that shows a sample policy draft created with the Copilot Policy Configuration Agent in Microsoft Intune." lightbox="./media/policy-configuration-agent-suggestion.png":::
+    :::image type="content" source="./media/manage-policy-configuration-agent/suggestion.png" alt-text="Diagram that shows a sample policy draft created with the Copilot Policy Configuration Agent in Microsoft Intune." lightbox="./media/manage-policy-configuration-agent/suggestion.png":::
 
     You see suggested settings mapped to the knowledge source you uploaded.
 
@@ -189,4 +189,4 @@ To update any settings and their values in the policy draft, you must create a d
 
 - [Policy Configuration Agent in Intune - Overview and set up](policy-configuration-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
-- [Security Copilot in Intune - An overview](../copilot/index.md)
+- [Security Copilot in Intune - An overview](../index.md)

@@ -95,14 +95,14 @@ Security Copilot agents in Intune are AI-powered assistants that help strengthen
 
 Intune includes specialized agents for the following scenarios:
 
-- **[Change Review Agent](../agents/change-review-agent.md)** – Evaluates Multi Admin Approval requests and recommends actions.
-- **[Device Offboarding Agent](../agents/device-offboarding-agent.md)** – Identifies stale or misaligned devices and provides insights before offboarding the devices.
-- **[Policy Configuration Agent](../agents/policy-configuration-agent.md)** – Converts plain-language documents and common industry baselines into recommended settings and policies.
-- **[Vulnerability Remediation Agent](../agents/vulnerability-remediation-agent.md)** – Uses Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments.
+- **[Change Review Agent](agents/change-review-agent.md)** – Evaluates Multi Admin Approval requests and recommends actions.
+- **[Device Offboarding Agent](agents/device-offboarding-agent.md)** – Identifies stale or misaligned devices and provides insights before offboarding the devices.
+- **[Policy Configuration Agent](agents/policy-configuration-agent.md)** – Converts plain-language documents and common industry baselines into recommended settings and policies.
+- **[Vulnerability Remediation Agent](agents/vulnerability-remediation-agent.md)** – Uses Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments.
 
 These agents can help IT teams quickly address vulnerabilities, policy gaps, and emerging threats.
 
-To learn more, see [Security Copilot agents in Intune overview](../agents/index.md).
+To learn more, see [Security Copilot agents in Intune overview](agents/index.md).
 
 ## Data exploration
 

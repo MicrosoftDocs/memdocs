@@ -41,7 +41,7 @@ The Overview tab includes:
 
 After the agent completes a run, the Overview tab updates with its top suggestions for Multi Admin Approval requests. This tab shows only a few suggestions at a time; the full list is available on the Suggestions tab. Use either tab to drill down and review or manage recommendations.
 
-:::image type="content" source="./media/change-review-agent-use/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." :::
+:::image type="content" source="./media/manage-change-review-agent/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." :::
 
 # [**Suggestions**](#tab/suggestions)
 
@@ -55,7 +55,7 @@ Each suggestion includes columns with these details:
 - **Approval expiration** - The Date when the request expires if no action is taken.
 - **Status** - Current status of the request. Requests that require no further action are marked as *Completed*.
 
-:::image type="content" source="./media/change-review-agent-use/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." :::
+:::image type="content" source="./media/manage-change-review-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." :::
 
 # [**Settings**](#tab/settings)
 
@@ -66,7 +66,7 @@ Use the Settings tab to view details about the agent's identity, current configu
 - **Required permissions** – Role-based access controls required to configure or use the agent.
 - **Plugins** – Components the agent uses during evaluation.
 
-:::image type="content" source="./media/change-review-agent-use/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." :::
+:::image type="content" source="./media/manage-change-review-agent/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." :::
 
 ---
 
@@ -90,7 +90,7 @@ Use the Change Review Agent node to review and manage (approve or reject) Multi 
 
 To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent's review for that request. The detailed view is named after the selected suggestion and includes the agent's recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
 
-:::image type="content" source="./media/change-review-agent-use/reject.png" alt-text="Screenshot of the details for a rejected request." :::
+:::image type="content" source="./media/manage-change-review-agent/reject.png" alt-text="Screenshot of the details for a rejected request." :::
 
  The following are the agent recommendations you might see:
 
@@ -149,4 +149,4 @@ The agent cannot proceed because the request violates Microsoft's Responsible AI
 
 - [Change Review Agent in Intune](change-review-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
-- [Security Copilot in Intune - An overview](../copilot/index.md)
+- [Security Copilot in Intune - An overview](../index.md)
