@@ -93,7 +93,7 @@ Expedite policies don't affect how future quality updates are deployed. To manag
 
    - You can select only one update per policy.
    - Updates are identified by their release date. Updates that include the letter **B** in their name are released as part of a *patch Tuesday* event. These updates are released on the second Tuesday of the month.
-   - You can expedite security updates for Windows that are release out of band from a *patch Tuesday*. Instead of the letter B, *out-of-band (OOB)* patch releases have different identifiers. They have the OOB suffix.
+   - You can expedite security updates for Windows that are released out of band from a *patch Tuesday*. Instead of the letter B, *out-of-band (OOB)* patch releases use the OOB suffix.
    - Windows Update ensures that updates are deployed correctly. After receiving the policy, each device installs a version of the update that applies to that device's architecture and its current Windows version (for example, Windows 11, version 24H2, 25H2, and so on).
 
    **Non-security expedited updates**: These are quality fixes released after the previous security (B) release. Admins can expedite installation of the latest applicable quality update on devices, without waiting for the deferral period.
