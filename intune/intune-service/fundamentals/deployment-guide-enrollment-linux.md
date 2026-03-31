@@ -3,7 +3,7 @@ title: Linux device enrollment guide for Microsoft Intune
 description: Enroll Linux devices in Intune using the Intune app. Set an overview of the administrator and end user tasks to enroll devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 01/09/2025
+ms.date: 03/31/2026
 ms.topic: article
 ms.reviewer: arnab
 ms.collection:
@@ -32,7 +32,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 | --- | --- |
 | You use Ubuntu Desktop (24.04 LTS or 22.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
-| You use RedHat Enterprise Linux 8 or 9. |✅ |
+| You use RedHat Enterprise Linux 9 or 10. |✅ |
 | Devices are owned by the organization or school. | ✅ |
 | Devices are personal or BYOD. | ✅  |
 | You have new or existing devices. | ✅ |
@@ -49,7 +49,8 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Linux**.
+- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Linux**.  
+- Versions 2.0.2 and later of the Microsoft Identity Broker included with the Microsoft Intune app for Linux introduce a major architectural change from the previous Java‑based broker. When Linux devices update from earlier broker versions, Intune automatically re‑registers and re‑enrolls the devices and creates new Intune device IDs and Microsoft Entra device IDs for them. This behavior requires no user action, but we recommend that admins review device‑based assignments, filters, and Microsoft Entra ID group memberships that rely on device IDs to ensure that policies apply correctly.  
 
 ## End user tasks
 
@@ -63,7 +64,13 @@ The following steps provide an overview. For the specific steps, go to [Enroll a
 3. Users open the Intune app, and sign in with their organization account (`user@contoso.com`). After they sign in, the enrollment process starts. It's possible users might be prompted to configure other settings based on your compliance policies.
 4. Users open Microsoft Edge and sign in with their organization account (`user@contoso.com`). After they sign in, they can access your organization's resources, like internal websites and Microsoft 365 apps.
 
-## Related articles
+## Related articles  
+
+For more information about Linux device management, see:  
+- [Microsoft single sign-on for Linux](/entra/identity/devices/sso-linux)
+- [Troubleshoot device registration command tool](/entra/identity/devices/troubleshoot-device-registration-tool-linux?tabs=debian-dsreginstall)  
+
+For more device enrollment guides, see:  
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
