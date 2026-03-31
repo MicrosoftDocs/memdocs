@@ -3,7 +3,7 @@ title: Prerequisites the Microsoft Tunnel VPN for Microsoft Intune
 description: Review the prerequisites for installation and use of the Microsoft Tunnel Gateway. These include Linux servers, network, and firewall configurations.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/15/2025
+ms.date: 03/27/2026
 ms.topic: how-to
 ms.reviewer: ochukwunyere
 ms.collection:
@@ -297,10 +297,6 @@ You can use a proxy server with Microsoft Tunnel.
 
 > [!NOTE]
 >
-> Proxy server configurations are not supported with versions of Android prior to version 10. For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
-
-> [!NOTE]
->
 > Make sure your Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
 
 > [!NOTE]
@@ -412,6 +408,9 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
   > [!NOTE]
   > *Android Enterprise dedicated* devices aren't supported by the Microsoft Tunnel.
 
+  > [!IMPORTANT]
+  > Support for Android 10 on Microsoft Tunnel ended March 31, 2026. Devices running Android 10 must upgrade to Android 11 or later to continue using Microsoft Tunnel.
+
 All platforms support the following functionality:
 
 - Microsoft Entra authentication to the Tunnel using username and password.
@@ -422,7 +421,7 @@ All platforms support the following functionality:
 
 Support for a Proxy is limited to the following platforms:
 
-- Android 10 and later
+- Android 11 and later
 - iOS/iPadOS
 
 ## Permissions
