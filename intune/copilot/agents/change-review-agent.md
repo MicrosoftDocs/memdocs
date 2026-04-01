@@ -25,7 +25,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 <!-- start cloud -->
 :::row:::
 :::column span="1":::
-[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 :::column-end:::
 
 :::column span="3":::
@@ -37,13 +37,13 @@ The agent analyzes these signals to assess the potential risk associated with ea
 <!-- start license -->
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/licensing.md)]
+[!INCLUDE [platform](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
 > To use Security Copilot agents in Microsoft Intune, your organization must meet specific licensing requirements.
 >
 > Required licenses:
-> - [Microsoft Intune Plan 1 subscription](../fundamentals/licensing/index.md)
+> - [Microsoft Intune Plan 1 subscription](../../fundamentals/licensing/index.md)
 > - [Microsoft Entra ID P2](/entra/fundamentals/licensing)
 > - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-prerequisites)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
@@ -54,7 +54,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 <!-- stat plugin -->
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/plugins.md)]
+[!INCLUDE [platform](../../includes/requirements/plugins.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -73,10 +73,10 @@ The agent analyzes these signals to assess the potential risk associated with ea
 :::row-end:::
 <!-- end plugin -->
 
-<!-- start platform ../../media/icons/16/devices.svg  -->
+<!-- start platform ../../../media/icons/16/devices.svg  -->
 :::row:::
 :::column span="1":::
-:::image type="icon" source="../media/icons/16/devices.svg" border="false"::: **Platform requirements and scenarios**
+:::image type="icon" source="../../media/icons/16/devices.svg" border="false"::: **Platform requirements and scenarios**
 :::column-end:::
 :::column span="3":::
 > The agent supports evaluation and recommendations for the following platforms and scenarios:
@@ -89,7 +89,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 <!-- start rbac -->
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -99,12 +99,12 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 > To **enable and configure** the Change Review Agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/16/entra.svg" border="false"::: Entra roles:
+> :::image type="icon" source="../../media/icons/16/entra.svg" border="false"::: Entra roles:
 > - [*Intune Administrator*](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 > - [*Security Reader*](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - *Entra/Identity risky user (read)* - This permission maps to the Unified RBAC permission *Security posture / Identity risk / Risky users (read)*.
 >
-> :::image type="icon" source="../media/icons/16/defender.svg" border="false"::: Defender roles - Defender role-based access control (RBAC) roles depend on your Defender XDR implementation:
+> :::image type="icon" source="../../media/icons/16/defender.svg" border="false"::: Defender roles - Defender role-based access control (RBAC) roles depend on your Defender XDR implementation:
 > - [*Unified RBAC*](/defender-xdr/manage-rbac): Assign the Microsoft Entra ID Security Reader to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
 > - [*Granular RBAC*](/defender-endpoint/rbac): Assign a custom RBAC role with permissions equivalent to the Unified RBAC Security Reader role. For example: 
 >   - *View data – Defender Vulnerability Management* - This permission maps to the Unified RBAC permission *Security posture / Posture management / Vulnerability management (read)*.
@@ -113,23 +113,23 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 >    Ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
 > ---
 >
 > To **use** the agent and perform offboarding actions, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
+> :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
 >
-> :::image type="icon" source="../media/icons/16/entra.svg" border="false"::: Entra roles:
+> :::image type="icon" source="../../media/icons/16/entra.svg" border="false"::: Entra roles:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > 
-> :::image type="icon" source="../media/icons/16/defender.svg" border="false"::: Defender roles
+> :::image type="icon" source="../../media/icons/16/defender.svg" border="false"::: Defender roles
 > - Use of the agent requires the same access as *enabling and configuring* the agent.
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot contributor](/copilot/security/authentication#security-copilot-roles)
 
 :::column-end:::
@@ -194,7 +194,7 @@ The agent operates under the identity and permissions of the Intune admin accoun
 
 The agent operates until it completes its evaluation and displays results in the Overview tab. When the run finishes, the agent is ready to use.
 
-To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
+To learn more about using the agent, see [Use the Change Review Agent](manage-change-review-agent.md).
 
 <!--  ## Remove the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [remove](includes/remove.md)]
@@ -203,4 +203,4 @@ To learn more about using the agent, see [Use the Change Review Agent](change-re
 
 ## Related content
 
-- [Use the Change Review Agent](/intune/agents/change-review-agent-use)
+- [Use the Change Review Agent](/intune/copilot/agents/manage-change-review-agent)

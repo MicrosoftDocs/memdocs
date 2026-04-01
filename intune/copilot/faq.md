@@ -12,7 +12,7 @@ ms.collection:
 
 # Microsoft Copilot in Intune FAQ
 
-This article answers common questions about using Microsoft Copilot in Intune. To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune overview](copilot-intune-overview.md).
+This article answers common questions about using Microsoft Copilot in Intune. To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune overview](index.md).
 
 ## Access to Copilot
 
@@ -22,7 +22,7 @@ When you set up Security Copilot, you determine the Copilot role that your admin
 
 The Security Copilot roles or the Microsoft Entra roles that you configure control access to Copilot in Intune. There aren't any Intune-specific roles-based access controls (RBAC) for Copilot in Intune.
 
-After you enable Intune in Security Copilot, your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) that are assigned to your admins.
+After you enable Intune in Security Copilot, your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../intune-service/fundamentals/role-based-access-control.md) and [Intune scope tags](../intune-service/fundamentals/scope-tags.md) that are assigned to your admins.
 
 So, if an admin tries to access Intune data that they don't have permissions to, they get the following error message:
 
@@ -42,9 +42,9 @@ If you're an admin for Intune and have the correct Security Copilot or Microsoft
 
 Security Copilot is scoped to all your embedded services.
 
-If you're an Intune admin or IT admin and only want Intune data, you should use [Copilot in Intune](copilot-intune-overview.md). Its scope is only Intune data, and its capabilities are integrated into the relevant areas of the Intune admin center.
+If you're an Intune admin or IT admin and only want Intune data, you should use [Copilot in Intune](index.md). Its scope is only Intune data, and its capabilities are integrated into the relevant areas of the Intune admin center.
 
-If you're a security admin, you can use [Copilot in Intune](copilot-intune-overview.md) if you only want insights into your Intune data.
+If you're a security admin, you can use [Copilot in Intune](index.md) if you only want insights into your Intune data.
 
 ## Capabilities and cost
 
@@ -100,7 +100,7 @@ If you think that the output is incorrect, submit feedback in your Copilot Chat 
 
 Every Copilot response has two feedback buttons – a thumbs up when the response is what you expect, and a thumbs down when the response isn't what you expect. This feedback helps improve the Copilot experience.
 
-:::image type="content" source="./media/copilot-intune-faq/thumbs-up-thumbs-down.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/faq/thumbs-up-thumbs-down.png" alt-text="Screenshot that shows how to provide Copilot feedback in Microsoft Intune and Intune admin center.":::
 
 Other things you can try:
 
@@ -117,11 +117,11 @@ To learn more about privacy and data security, what data is collected as part of
 
 In the admin center, if you select the three dots (...) in the top right corner, you see the **Give Feedback** option. This option is for general feedback about Microsoft Azure, not for Copilot in Intune. Don't use this option to provide any feedback related to Security Copilot in Intune.
 
-:::image type="content" source="./media/copilot-intune-faq/azure-give-feedback.png" alt-text="Screenshot that shows how the Azure feedback option in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/faq/azure-give-feedback.png" alt-text="Screenshot that shows how the Azure feedback option in Microsoft Intune and Intune admin center.":::
 
 To disable the Microsoft Azure **Give Feedback** form, see [Manage access to Microsoft Copilot in Azure](/azure/copilot/manage-access).
 
 ## Related articles
 
 - [Security Copilot FAQ](/copilot/security/faq-security-copilot)
-- [Copilot in Intune](copilot-intune-overview.md)
+- [Copilot in Intune](index.md)

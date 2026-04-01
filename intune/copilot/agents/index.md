@@ -79,7 +79,7 @@ Before you begin, make sure you have:
 1. Sign in to the [Microsoft Intune admin center][INT-AC] using the least privileged role required for the agent you want to configure.
 1. Browse to **Agents** and select **View details** for the agent you want to configure.
 
-:::image type="content" source="images/security-copilot-agents.png" alt-text="Screenshot of the security copilot feature in the Intune admin center." lightbox="images/security-copilot-agents.png" border="false":::
+:::image type="content" source="media/index/security-copilot-agents.png" alt-text="Screenshot of the security copilot feature in the Intune admin center." lightbox="media/index/security-copilot-agents.png" border="false":::
 
 ## Agents in the Microsoft ecosystem
 
