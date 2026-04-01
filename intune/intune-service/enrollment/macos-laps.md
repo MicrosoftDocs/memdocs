@@ -1,7 +1,7 @@
 ---
 title: Set up local admin account creation and password management for macOS devices
 description: Set up macOS account configuration with LAPS through automatic device enrollment for macOS devices in Intune.
-ms.date: 11/17/2025
+ms.date: 04/01/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
@@ -19,7 +19,7 @@ With *macOS local account configuration with LAPS*, devices are provisioned with
 
 The Intune generated password for the admin account is 15 characters with a mixture of lowercase and uppercase letters, numbers, and special symbols.
 
-Because *macOS local account configuration with LAPS* is enabled only during automated device enrollment (ADE), a previously enrolled device must reenroll with Intune using a LAPS enabled ADE profile to be supported for LAPS for the administrator account.
+Because *macOS local account configuration with LAPS* is enabled only during automated device enrollment (ADE) after a factory reset, a previously enrolled device must reenroll with Intune using a LAPS enabled ADE profile to be supported for LAPS for the administrator account.
 
 > [!IMPORTANT]
 > There is a known issue that affects devices running macOS versions earlier than macOS 26.4. When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if **Change at next auth** is not enabled or if a value is set for Max Age (days). This does not affect the standard account.
@@ -39,7 +39,10 @@ The following are device requirements for the macOS local account configuration 
 
 - macOS 12 and later
 - Devices must be synced over to Intune from Apple Business/School Manager
-- Devices must enroll with Intune through a macOS ADE enrollment profile
+- Devices must enroll with Intune through a macOS ADE enrollment profile after a factory reset.
+
+> [!IMPORTANT]
+> macOS LAPS supports ADE enrollments that occur as part of the initial device setup experience. Enrollment scenarios that re‑initiate ADE from an existing macOS installation (for example, by using the `profiles renew` command) aren’t supported.  
 
 ## Role-based access controls for macOS LAPS
 
