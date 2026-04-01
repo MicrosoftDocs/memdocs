@@ -139,33 +139,6 @@ After the defined time elapses, or when the *restore managed home screen* action
 
 ## Device security
 
-### New settings in the Windows settings catalog <!-- 34444997 -->
-
-There will be new maintenance window settings for OS, drivers, and updates in the Windows settings catalog. You'll be able configure the type of updates that should take place (Download, install, restart), start date, time, duration and repeat schedule.
-
-To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices > Configuration profiles > Create profile > Windows 10 and later > Settings catalog**).
-
-The new policies will include:
-
-- Enable Maintenance windows (On/Off)
-- Update action (Download, install, restart options)
-- Start date
-- Start time
-- Duration (hours)
-- Repeat schedule
-- Weekly – Day selection
-- Monthly – schedule type
-- Monthly – Day of the month
-- Monthly – Occurrence in month - Week
-- Monthly – Occurrence in month - Day of the week
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
-
 ### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
 
 We're working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
