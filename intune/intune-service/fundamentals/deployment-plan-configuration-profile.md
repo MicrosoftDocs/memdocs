@@ -124,10 +124,10 @@ Your policy options:
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise | [Intune settings catalog](../configuration/settings-catalog-android.md) for Corporate owned, Fully Managed, and Dedicated devices to manage the: <br/>- **Device password**<br/>- **Work profile password**<br/><br/>[Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) for Corporate owned and Personally owned devices to manage the: <br/>- **Device password**<br/>- **Work profile password** <br/>- **Password**|
-| Android Open-Source Project (AOSP) | - [Intune settings catalog](../configuration/settings-catalog-android.md) > **Device password** <br/>- [Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) > **Device password** |
-| iOS/iPadOS | - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../configuration/device-restrictions-apple.md) > **Password** |
-| macOS | - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../configuration/device-restrictions-apple.md) > **Password** |
+| Android Enterprise | [Intune settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md) for Corporate owned, Fully Managed, and Dedicated devices to manage the: <br/>- **Device password**<br/>- **Work profile password**<br/><br/>[Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) for Corporate owned and Personally owned devices to manage the: <br/>- **Device password**<br/>- **Work profile password** <br/>- **Password**|
+| Android Open-Source Project (AOSP) | - [Intune settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md) > **Device password** <br/>- [Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) > **Device password** |
+| iOS/iPadOS | - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../configuration/device-restrictions-apple.md) > **Password** |
+| macOS | - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../configuration/device-restrictions-apple.md) > **Password** |
 | Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended) </br>- [Intune device restrictions template](../configuration/device-restrictions-windows-10.md) > **Password** </br>- [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md) </br>- [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md) |
 
 ### Software updates
@@ -307,7 +307,7 @@ Microsoft recommends the following level 2 security policies:
 
   For a list of the password and lock screen settings you can configure, see:
 
-  - [Android settings catalog settings](../configuration/settings-catalog-android.md) for Fully Managed and Dedicated devices > **Device password** and **Work profile password** settings
+  - [Android settings catalog settings](../../device-configuration/settings-catalog/ref-android-settings.md) for Fully Managed and Dedicated devices > **Device password** and **Work profile password** settings
   - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md) for Corporate-owned and Personally owned devices > **Device password** and **Work profile password** settings
 
   # [iOS/iPadOS](#tab/ios-disk)
@@ -332,43 +332,43 @@ Microsoft recommends the following level 2 security policies:
 
 - **Expire passwords and regulate reusing old passwords**. In Level 1, you created a strong PIN or password policy. If you didn't already, be sure you configure your PINs and passwords to expire and set some password-reuse rules.
 
-  Use Intune to create a [settings catalog](../configuration/settings-catalog.md) policy or a [device restrictions template](../configuration/device-restrictions-configure.md) that configures these settings. For more information on the password settings you can configure, see the following articles:
+  Use Intune to create a [settings catalog](../../device-configuration/settings-catalog/index.md) policy or a [device restrictions template](../configuration/device-restrictions-configure.md) that configures these settings. For more information on the password settings you can configure, see the following articles:
 
   # [Android](#tab/android-password)
 
   On Android devices, use a settings catalog policy or a device restrictions template profile to set password rules. For a list of the password and lock screen settings you can configure, see:
 
-  - [Android settings catalog settings](../configuration/settings-catalog-android.md) for Fully Managed and Dedicated devices > Review the **Device password** and **Work profile password** settings.
+  - [Android settings catalog settings](../../device-configuration/settings-catalog/ref-android-settings.md) for Fully Managed and Dedicated devices > Review the **Device password** and **Work profile password** settings.
   - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md) for Corporate-owned and Personally owned devices > Review the **Device password** and **Work profile password** settings.
 
   # [iOS/iPadOS](#tab/ios-password)
 
   On iOS/iPadOS devices, use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md) > Search for `Passcode`
   - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
 
   # [macOS](#tab/macos-password)
 
     On macOS devices, use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md) > Search for `Passcode`
   - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
 
   # [Windows](#tab/windows-password)
 
     On Windows devices, use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Settings catalog](../configuration/settings-catalog.md) > Search for `Device lock`
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md) > Search for `Device lock`
   - [Device restrictions template > Password settings](../configuration/device-restrictions-windows-10.md#password)
 
 ---
 
 - Intune includes **hundreds of settings that can manage device features** and settings, like disabling the built-in camera, controlling notifications, allowing Bluetooth, blocking games, and more.
 
-  Use the [settings catalog](../configuration/settings-catalog.md) or the [built-in templates](../configuration/device-profiles.md) to see and configure the settings.
+  Use the [settings catalog](../../device-configuration/settings-catalog/index.md) or the [built-in templates](../configuration/device-profiles.md) to see and configure the settings.
 
-  - **[Use the settings catalog](../configuration/settings-catalog.md)** to see and configure all the available settings. You can use the settings catalog on the following platforms:
+  - **[Use the settings catalog](../../device-configuration/settings-catalog/index.md)** to see and configure all the available settings. You can use the settings catalog on the following platforms:
 
     - Android
     - iOS/iPadOS
@@ -477,7 +477,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   For more information on this feature, search for Common Criteria mode at:
 
-  - [Android settings catalog settings](../configuration/settings-catalog-android.md)
+  - [Android settings catalog settings](../../device-configuration/settings-catalog/ref-android-settings.md)
   - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md)
 
 - Create policies that **apply to the firmware layer**:
@@ -515,12 +515,12 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   **Autonomous single app mode** (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
 
-  - [Settings catalog](../configuration/settings-catalog.md) > Restrictions > Autonomous single app mode (ASAM)
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md) > Restrictions > Autonomous single app mode (ASAM)
   - [Device restrictions template](../configuration/device-restrictions-apple.md) > Autonomous single app mode (ASAM)
 
   **App Lock** locks the device into running one app. You can choose any app, and admins can exit out of App Lock mode. Commonly used for kiosks and signage.
 
-  - [Settings catalog](../configuration/settings-catalog.md) > App management > App Lock
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md) > App management > App Lock
   - [Device restrictions template](../configuration/device-restrictions-apple.md) > Kiosk
 
   **Shared iPads** are designed for use by multiple people, most commonly in education environments like classrooms or labs. Each user signs in to the same physical iPad and gets their own data and settings.
@@ -531,7 +531,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   **Autonomous single app mode** (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
 
-  - [Settings catalog](../configuration/settings-catalog.md) > App management > Autonomous single app mode
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md) > App management > Autonomous single app mode
 
   # [Windows](#tab/windows-kiosk)
 

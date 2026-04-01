@@ -34,7 +34,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker.
 
-  For more information, see [Settings catalog](/mem/intune-service/configuration/settings-catalog).
+  For more information, see [Settings catalog](../../../../device-configuration/settings-catalog/index.md).
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
@@ -65,7 +65,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to Networking, and create a policy that just focuses on Network.
 
-  For more information, see [Settings catalog](/mem/intune-service/configuration/settings-catalog).
+  For more information, see [Settings catalog](../../../../device-configuration/settings-catalog/index.md).
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
@@ -99,7 +99,7 @@ To create a device configuration profile in Microsoft Intune, you need to follow
 - Go to **Devices** > **Manage devices** > **Configuration** > **+ Create profile**.
 - Select **Platform** as **Windows 10 and later**.
 - Select **Profile type**:
-  - For general settings, select [**Settings Catalog**](/mem/intune-service/configuration/settings-catalog).
+  - For general settings, select [**Settings Catalog**](../../../../device-configuration/settings-catalog/index.md).
   - For templates including certificates, Wi-Fi, and VPN, select **Templates** and     then choose the required template.
 - Follow the steps to create and configure the profile as necessary.
 

@@ -1096,7 +1096,7 @@ The restricted apps settings don't prevent users from installing and opening spe
 > [!NOTE]
 > These settings create lists of approved and prohibited apps. They don't block users from installing or running apps. Instead, if a user installs or runs an app on either list, it's reported in Intune. You can use this information to help inform your app management strategy.
 >
-> To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
+> To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](../../device-configuration/settings-catalog/index.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
 
 ::: zone-end
 

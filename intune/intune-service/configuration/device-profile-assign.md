@@ -106,7 +106,7 @@ For example:
 
 - You create a [Device Firmware Configuration Interface (DFCI) Intune profile](device-firmware-configuration-interface-windows.md) that updates settings in the BIOS. For example, you configure this policy to disable the device camera, or lock down the boot options to prevent users from booting up another OS. This policy is a good scenario to assign to a devices group.
 
-- On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create a [settings catalog policy in Intune](settings-catalog.md), add these device settings, and then assign this policy to the devices group.
+- On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create a [settings catalog policy in Intune](../../device-configuration/settings-catalog/index.md), add these device settings, and then assign this policy to the devices group.
 
 To summarize, use device groups when you don't care who's signed in on the device, or if anyone signs in. You want your settings to always be on the device.
 
@@ -124,7 +124,7 @@ For example:
 - A user receives a new organization-owned device. The user signs in to the device with their domain account. The device is automatically registered in Microsoft Entra ID, and automatically managed by Intune. This policy is a good scenario to assign to a users group.
 - Whenever a user signs in to a device, you want to control features in apps, such as OneDrive or Office. In this scenario, assign your OneDrive or Office policy settings to a users group.
 
-  For example, you want to disable all ActiveX controls in your Office apps. You can create a [settings catalog policy in Intune](settings-catalog.md), configure this setting, and then assign this policy to a users group.
+  For example, you want to disable all ActiveX controls in your Office apps. You can create a [settings catalog policy in Intune](../../device-configuration/settings-catalog/index.md), configure this setting, and then assign this policy to a users group.
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use.
 
@@ -140,9 +140,9 @@ The policy settings for Windows devices are based on the [configuration service 
 
 Here's what you need to know about Windows CSPs:
 
-- Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you see that some settings apply to the user scope and some settings apply to the device scope.
+- Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](../../device-configuration/settings-catalog/index.md). In the settings catalog, you see that some settings apply to the user scope and some settings apply to the device scope.
 
-  For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
+  For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](../../device-configuration/settings-catalog/index.md#device-scope-vs-user-scope-settings).
 
 - When a policy is removed or no longer assigned to a device, different things can happen, depending on the settings in the policy. Each CSP can handle the policy removal differently.
 

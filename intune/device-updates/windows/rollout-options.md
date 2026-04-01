@@ -64,7 +64,7 @@ You only need to deploy this profile once per device. After it's enabled, Intell
 
 Here are the steps to enable intelligent rollouts for gradual feature update deployments.
 
-1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
+1. [Create a Settings catalog policy](../../device-configuration/settings-catalog/index.md) for the Windows platform and use the following setting:
 
     | Category | Setting name | Value |
     |--|--|--|

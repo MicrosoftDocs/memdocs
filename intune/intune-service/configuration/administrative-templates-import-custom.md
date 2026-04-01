@@ -23,8 +23,8 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 > [!TIP]
 > The settings catalog has many settings natively built-in to Intune, including Google Chrome. For more information, go to:
 >
-> - [Use the settings catalog to configure settings](settings-catalog.md)
-> - [Common tasks you can complete using the Settings Catalog](settings-catalog-common-features.md)
+> - [Use the settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)
+> - [Common tasks you can complete using the Settings Catalog](../../device-configuration/settings-catalog/common-tasks.md)
 
 ## What you need to know
 
@@ -75,7 +75,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 - ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs).
 
-  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](settings-catalog.md) or a [custom profile](custom-settings-configure.md).
+  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](../../device-configuration/settings-catalog/index.md) or a [custom profile](custom-settings-configure.md).
   - Do import these built-in settings if they're a required parent namespace of another file.
 
   For a list of the ADMX backed CSP settings, go to [ADMX-backed policies in Policy CSP](/windows/client-management/mdm/policies-in-policy-csp-admx-backed).
@@ -172,4 +172,4 @@ To update existing ADMX files that are imported, you have the following options:
 
 ## Related articles
 
-[Use the settings catalog to configure settings](settings-catalog.md)
+[Use the settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)

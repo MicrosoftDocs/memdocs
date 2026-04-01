@@ -270,7 +270,7 @@ This setting blocks AI features from accessing on-screen content, but also disab
 
     This setting blocks AI features from accessing on-screen content. End users can't take screenshots on the device.
 
-7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../../intune-service/configuration/settings-catalog.md).
+7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 # [Corporate owned with work profile](#tab/screen-corporate-owned)
 
@@ -307,7 +307,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
     - **Block screen capture**: Set to **True**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the personal profile.
 
-8. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../../intune-service/configuration/settings-catalog.md).
+8. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 9. Create a device restrictions profile to block specific AI apps. This setting isn't available in the settings catalog. So, that's why you create a separate device restrictions profile.
 
