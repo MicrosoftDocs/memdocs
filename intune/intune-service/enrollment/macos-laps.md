@@ -1,7 +1,7 @@
 ---
 title: Set up local admin account creation and password management for macOS devices
 description: Set up macOS account configuration with LAPS through automatic device enrollment for macOS devices in Intune.
-ms.date: 11/17/2025
+ms.date: 04/01/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
@@ -42,7 +42,7 @@ The following are device requirements for the macOS local account configuration 
 - Devices must enroll with Intune through a macOS ADE enrollment profile after a factory reset.
 
 > [!IMPORTANT]
-> ADE enrollments initiated from terminal "Sudo profiles renew" are not supported for this feature.
+> macOS LAPS supports ADE enrollments that occur as part of the initial device setup experience. Enrollment scenarios that re‑initiate ADE from an existing macOS installation (for example, by using the `profiles renew` command) aren’t supported.  
 
 ## Role-based access controls for macOS LAPS
 
