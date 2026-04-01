@@ -58,7 +58,7 @@ For more specific information on this enrollment type, go to:
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
 | You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using [Apple Configurator](#apple-configurator-enrollment) (in this article). |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specific apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -93,7 +93,7 @@ This task list provides an overview. For more specific information, go to [Apple
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
     - You want users to use the device, even when the Company Portal app isn't installed.
 
-    - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
+  - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
 
     - You want to wipe the device.
     - You don't want to use modern authentication features, like MFA.
@@ -233,7 +233,7 @@ For more specific information on this enrollment type, go to [Apple Configurator
 | Devices are associated with a single user. | ✅ |
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specific apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -364,7 +364,7 @@ This list provides an overview of the tasks required of administrators.
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment profile. When you create the enrollment profile, you have the following options:
 
-  - **Device enrollment with Company Portal**: This option is a typical enrollment in the Company Portal app for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
+  - **Device enrollment with Company Portal**: This option is a typical enrollment in the Company Portal app for personal devices. The device is managed, not just specific apps or features. With this option, consider the following information:
 
     - You can deploy certificates that apply to the whole device.
     - Users must install updates. Only devices enrolled using Automated Device Enrollment (ADE) can receive updates using MDM policies or profiles.

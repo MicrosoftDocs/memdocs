@@ -3,7 +3,7 @@ title: Configure Platform SSO for macOS devices
 description: Use Microsoft Intune to configure Platform SSO and deploy the configuration to your macOS devices. Platform SSO enables single sign-on (SSO) using Microsoft Entra ID with the Secure Enclave, smart card, or password authentication methods. You create a settings catalog policy to configure the settings. This article is a step-by-step guide to configure Platform SSO for macOS devices using Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/24/2025
+ms.date: 03/26/2026
 ms.topic: how-to
 appliesto:
 - ✅ macOS
@@ -36,7 +36,7 @@ Some benefits of Platform SSO include:
 - It helps minimize the number of times users need to enter their Microsoft Entra ID credentials.
 - It helps reduce the number of passwords users need to remember.
 - You get the benefits of Microsoft Entra join, which allows any organization user to sign into the device.
-- It's included with all [Microsoft Intune licensing plans](../fundamentals/licenses.md).
+- It's included with all [Microsoft Intune licensing plans](../../fundamentals/licensing/index.md).
 
 ## How it works
 
@@ -44,7 +44,7 @@ When Mac devices join a Microsoft Entra ID tenant, the devices get a workplace j
 
 With Platform SSO configured, the SSO app extension acts as the broker for Microsoft Entra ID authentication and Conditional Access.
 
-You configure Platform SSO using the Intune [settings catalog](settings-catalog.md). When the settings catalog policy is ready, you assign the policy. Microsoft recommends you assign the policy when the user enrolls the device in Intune. But, it can be assigned at any time, including on existing devices.
+You configure Platform SSO using the Intune [settings catalog](../../device-configuration/settings-catalog/index.md). When the settings catalog policy is ready, you assign the policy. Microsoft recommends you assign the policy when the user enrolls the device in Intune. But, it can be assigned at any time, including on existing devices.
 
 ## Prerequisites
 
@@ -63,6 +63,7 @@ You configure Platform SSO using the Intune [settings catalog](settings-catalog.
     > There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
 
   - Safari
+  - Firefox - Configure the [MicrosoftEntraSSO policy](https://mozilla.github.io/policy-templates/#microsoftentrasso) (opens Mozilla's web site).
 
   You can use Intune to add web browser apps, including [package (`.pkg`)](../apps/lob-apps-macos.md) and [disk image (`.dmg`)](../apps/lob-apps-macos-dmg.md) files, and deploy the app to your macOS devices. To get started, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
 
@@ -162,7 +163,7 @@ When using password sync authentication, you can enable keyvault recovery to ens
 
 ## Step 2 - Create the Platform SSO policy in Intune
 
-To configure the Platform SSO policy, use the steps in this section to create an [Intune settings catalog](settings-catalog.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
+To configure the Platform SSO policy, use the steps in this section to create an [Intune settings catalog](../../device-configuration/settings-catalog/index.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
@@ -350,7 +351,7 @@ When you configure Platform SSO, you might see the following errors:
 ## Related articles
 
 - [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md)
-- [macOS Platform Single Sign-on overview (preview)](/entra/identity/devices/macos-psso)
+- [macOS Platform Single Sign-on overview](/entra/identity/devices/macos-psso)
 - [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin)
 - [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
 - [What is a Primary Refresh Token (PRT)?](/entra/identity/devices/concept-primary-refresh-token)

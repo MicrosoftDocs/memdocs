@@ -161,4 +161,4 @@ For Windows devices, the following are known issues with Remote Help when using 
 
 ## Next steps
 
-[Get support in Microsoft Intune admin center.](../../get-support.md)
+[Get support in Microsoft Intune admin center.](../../fundamentals/it-pro-support/get-support-admin-center.md)

@@ -254,7 +254,7 @@ As a best practice, always assume data will leave the device. Be sure your track
 
 Intune can manage desktop computers running Windows. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
 
-For more information, go to [Guided scenario - Cloud-managed Modern Desktop](guided-scenarios-cloud-managed-pc.md).
+For more information, go to [Windows client cloud config setup guide](cloud-configuration-setup-guide.md).
 
 If your Windows devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called **co-management**. Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), Conditional Access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
@@ -273,7 +273,7 @@ The [setup deployment guide](deployment-guide-intune-setup.md) has some good inf
 Some considerations:
 
 - If you currently don't use any MDM service or solution, then going straight to Intune might be best.
-- If you currently use on-premises Group Policy Objects (GPO), then going to Intune and using the [Intune settings catalog](../configuration/settings-catalog.md) is similar, and can be an easier transition to cloud-based device policy. The settings catalog also includes settings for Apple devices and Google Chrome.
+- If you currently use on-premises Group Policy Objects (GPO), then going to Intune and using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) is similar, and can be an easier transition to cloud-based device policy. The settings catalog also includes settings for Apple devices and Google Chrome.
 - For new devices not enrolled in Configuration Manager, or any MDM solution, then going straight to Intune might be best.
 - If you currently use Configuration Manager, then your options include:
 
@@ -320,7 +320,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 For more information, go to:
 
-- [Microsoft Intune licensing](licenses.md)
+- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
 - [Microsoft 365 for business](https://www.microsoft.com/licensing/product-licensing/microsoft-365-business)
 - [Microsoft 365 enterprise licensing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
 - [Microsoft Intune Suite](intune-add-ons.md)
@@ -333,7 +333,7 @@ Some considerations:
 
   - Intune
 
-  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](licenses.md).
+  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
   You currently use Configuration Manager, and want to set up co-management for your devices. Intune is already included in your Configuration Manager license. If you want Intune to fully manage new devices or existing co-managed devices, then you need a separate Intune license.
 
@@ -396,12 +396,10 @@ Some considerations:
 
     [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
 
-  - **Settings catalog**: The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
+  - **Settings catalog**: The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
     You can also create an Intune policy based on your imported settings. For more information, go to [Create a settings catalog policy using your imported GPOs](../configuration/group-policy-analytics-migrate.md).
-
-  - **Guided scenarios**: [Guided scenarios](guided-scenarios-overview.md) are a customized series of steps focused on end-to-end use cases. These scenarios automatically include policies, apps, assignments, and other management configurations.
 
 - **Create a policy baseline** that includes the minimum of your goals. For example:
 
@@ -570,7 +568,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Determine who will support end users**. Organizations can have different tiers or levels (1-3). For example, tier 1 and 2 might be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
 
-  Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](../../get-support.md) might be considered as tier 4.
+  Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md) might be considered as tier 4.
 
   - In the initial rollout phases, be sure all tiers in your support team document issues and resolutions. Look for patterns, and adjust your communications for the next rollout phase. For example:
     - If different users or groups are hesitant about enrolling their personal devices, consider a Teams calls to answer common questions.
@@ -594,7 +592,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-settings-catalog-group-policy.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../../device-configuration/settings-catalog/tutorial-group-policy-migration.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 

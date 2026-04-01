@@ -82,7 +82,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
     - **Microsoft Entra Premium P1**
     - **Microsoft Intune for Education**
 
-  To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md).
+  To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
   > [!NOTE]
   > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of Microsoft 365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
@@ -189,7 +189,7 @@ The sync takes several minutes and continues in the background. When the sync is
 
 ### Step 8 - Configure settings for an optimal Microsoft 365 experience
 
-We've selected a few settings to configure. These settings demonstrate an optimal Microsoft 365 end-user experience on your Windows cloud-native device. These settings are configured using a device configuration settings catalog profile. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
+We've selected a few settings to configure. These settings demonstrate an optimal Microsoft 365 end-user experience on your Windows cloud-native device. These settings are configured using a device configuration settings catalog profile. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../device-configuration/settings-catalog/index.md).
 
 After you created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
@@ -533,7 +533,7 @@ You can customize and set a standard start and taskbar layout using Intune.
 
 ### Settings catalog
 
-The settings catalog is a single location where all configurable Windows settings are listed. This feature simplifies how you create a policy, and how you see all the available settings. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
+The settings catalog is a single location where all configurable Windows settings are listed. This feature simplifies how you create a policy, and how you see all the available settings. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../device-configuration/settings-catalog/index.md).
 
 > [!TIP]
 > Many of the settings you're familiar with from group policy are built into the settings catalog. If settings aren't available in the settings catalog, then check the device configuration profiles templates.
@@ -653,7 +653,7 @@ For printing solutions, consider Universal Print. For more information, go to:
 
 - [What is Universal Print?](/universal-print/fundamentals/universal-print-whatis)
 - [Announcing general availability of Universal Print](https://techcommunity.microsoft.com/t5/universal-print-blog/announcing-general-availability-of-universal-print/ba-p/2176759)
-- [Tasks you can complete using the Settings Catalog in Intune](../../intune-service/configuration/settings-catalog-common-features.md)
+- [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md)
 
 ### Applications
 

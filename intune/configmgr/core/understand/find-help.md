@@ -23,7 +23,7 @@ There are several resources that you can use to find help with Configuration Man
 
 For help with product accessibility, see [Accessibility features](accessibility-features.md).
 
-To get support for co-management, tenant attach, and analytics features, see [How to get support in Microsoft Intune admin center](../../../get-support.md).
+To get support for co-management, tenant attach, and analytics features, see [How to get support in Microsoft Intune admin center](../../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 ## Product feedback
 
@@ -43,7 +43,7 @@ For more information, see [Product feedback](product-feedback.md).
 
 To access the most current product documentation, start at the [library index](../../index.yml).
 
-For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](../../../use-docs.md).
+For tips on searching, providing feedback, and more information about using the product documentation, see [How to use the docs](../../../fundamentals/use-docs.md).
 
 ## Configuration Manager team blog
 
@@ -65,10 +65,10 @@ The following links provide information about support options and community reso
 
 [Accessibility features](accessibility-features.md)
 
-[How to use the docs](../../../use-docs.md)
+[How to use the docs](../../../fundamentals/use-docs.md)
 
 [How to use the console](../servers/manage/admin-console.md)
 
 [Software Center user guide](software-center.md)
 
-[How to get support in Microsoft Intune admin center](../../../get-support.md)
+[How to get support in Microsoft Intune admin center](../../../fundamentals/it-pro-support/get-support-admin-center.md)

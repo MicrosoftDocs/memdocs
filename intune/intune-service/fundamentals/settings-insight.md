@@ -37,7 +37,7 @@ Settings insight is informational. You remain responsible for evaluating each se
 
 ## Prerequisites
 
-- **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../fundamentals/licenses.md).
+- **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../../fundamentals/licensing/index.md).
 - **Permissions**: Endpoint Security Administrators can create a profile using Baselines.
 
   To learn more about this Intune built-in role, see [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).

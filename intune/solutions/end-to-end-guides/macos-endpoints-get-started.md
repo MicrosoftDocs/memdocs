@@ -91,7 +91,7 @@ Specifically:
 
 - **Licensing**
 
-  Users enrolling macOS devices require a Microsoft Intune or Microsoft Intune for Education license. To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md). Assign the licenses to the test accounts you created.
+  Users enrolling macOS devices require a Microsoft Intune or Microsoft Intune for Education license. To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md). Assign the licenses to the test accounts you created.
 
   > [!NOTE]
   > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. For more information, go to [Compare Microsoft 365 Enterprise Plans](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
@@ -231,7 +231,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   ---
 
-- **Part 2** - Use the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) to configure the following settings that reduce sign-in prompts, including Microsoft AutoUpdate (MAU) and Microsoft Office.
+- **Part 2** - Use the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) to configure the following settings that reduce sign-in prompts, including Microsoft AutoUpdate (MAU) and Microsoft Office.
 
   - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Microsoft AutoUpdate (MAU)**: Add and configure the following settings:
 
@@ -250,7 +250,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
     These settings streamline the sign in process when opening Office apps for the first time. For more information on these settings, go to [Set suite-wide preferences for Office for Mac](/deployoffice/mac/preferences-office).
 
-  For more information on the settings catalog, including how to create a policy, go to [Use the settings catalog to configure settings in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
+  For more information on the settings catalog, including how to create a policy, go to [Use the settings catalog to configure settings in Microsoft Intune](../../device-configuration/settings-catalog/index.md).
 
 ### Step 7 - Add and assign must-have apps
 
@@ -410,7 +410,7 @@ To create these policies, in the [Intune admin center](https://go.microsoft.com/
 
 For more information about Gatekeeper, go to:
 
-- [Use the settings catalog to configure settings in Microsoft Intune](../../intune-service/configuration/settings-catalog.md)
+- [Use the settings catalog to configure settings in Microsoft Intune](../../device-configuration/settings-catalog/index.md)
 - [Gatekeeper and runtime protection in macOS](https://support.apple.com/guide/security/sec5599b66df/web) (opens Apple's website)
 
 ### Software Updates
@@ -421,7 +421,7 @@ On devices, software updates are critical and you must determine how the updates
 
 When you configure these settings, you enforce and restrict the behavior in the **Settings** app > **Software Update** node on the device.
 
-- **Option 1 - macOS 14.0 and newer devices (recommended)** - On macOS 14.0 and newer devices, use the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) to create a [managed software updates policy](../../device-updates/apple/index.md). This feature uses Apple's declarative device management (DDM), and is the recommended approach to update macOS devices.
+- **Option 1 - macOS 14.0 and newer devices (recommended)** - On macOS 14.0 and newer devices, use the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) to create a [managed software updates policy](../../device-updates/apple/index.md). This feature uses Apple's declarative device management (DDM), and is the recommended approach to update macOS devices.
 
   Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you configure the following settings:
 
@@ -435,7 +435,7 @@ When you configure these settings, you enforce and restrict the behavior in the 
 
     The **Settings Catalog > Declarative Device Management > Software Update** settings take precedence over the **Settings Catalog > Restrictions** settings.
 
-- **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) and an Intune [software updates policy](../../device-updates/apple/index.md). These features use Apple's MDM settings.
+- **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) and an Intune [software updates policy](../../device-updates/apple/index.md). These features use Apple's MDM settings.
 
   Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can configure the following settings:
 
@@ -453,7 +453,7 @@ For more information on planning your macOS update strategy, go to [Software upd
 
 ✅ **Disable the guest account**
 
-You should disable the guest account on macOS endpoints. You can disable the guest account using the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md):
+You should disable the guest account on macOS endpoints. You can disable the guest account using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md):
 
 - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Accounts > Accounts**:
   - **Disable Guest Account**: Select **True**.
@@ -462,7 +462,7 @@ You should disable the guest account on macOS endpoints. You can disable the gue
 
 ✅ **Set an idle timeout**
 
-Using the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md), you control the time period after idle that macOS prompts for a password:
+Using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md), you control the time period after idle that macOS prompts for a password:
 
 - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > System Configuration > Screensaver**:
 
@@ -528,7 +528,7 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
   You can deploy Microsoft Edge to macOS endpoints using the built-in deployment type. For more information, go to [Add Microsoft Edge to macOS devices using Microsoft Intune](../../intune-service/apps/apps-edge-macos.md).
 
-  You can also configure Microsoft Edge settings using the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md):
+  You can also configure Microsoft Edge settings using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md):
 
   - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Microsoft Edge**
 
@@ -536,7 +536,7 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
   In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you added Microsoft 365 apps, which include Microsoft OneDrive. So, if you previously added Microsoft OneDrive, then you don't need to add it again. If you didn't previously add it, then you can also deploy Microsoft OneDrive separately using a [downloaded app package (`.pkg`)](/sharepoint/deploy-and-configure-on-macos).
 
-  You can also configure the [Microsoft OneDrive settings](/sharepoint/deploy-and-configure-on-macos) using the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md). For example, the following settings might apply to your organization:
+  You can also configure the [Microsoft OneDrive settings](/sharepoint/deploy-and-configure-on-macos) using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md). For example, the following settings might apply to your organization:
 
   - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Microsoft Office > Microsoft OneDrive**:
 
@@ -554,7 +554,7 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
 ### Device Configuration
 
-The settings catalog simplifies how you create a policy, and how you can see all the available settings. In different phases and steps in this guide, you use the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) to configure device features and settings.
+The settings catalog simplifies how you create a policy, and how you can see all the available settings. In different phases and steps in this guide, you use the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) to configure device features and settings.
 
 For example, we used the settings catalog to configure the following feature areas:
 
@@ -582,7 +582,7 @@ For more information, go to [Notifications MDM payload settings for Apple device
 
 ✅ **Preference files and custom policies**
 
-- **Preference files** define app properties or settings that you want to preconfigure. In the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md), there are many built-in settings for apps, like Microsoft Edge and Microsoft Office. So, you might not need a preference file.
+- **Preference files** define app properties or settings that you want to preconfigure. In the [Intune settings catalog](../../device-configuration/settings-catalog/index.md), there are many built-in settings for apps, like Microsoft Edge and Microsoft Office. So, you might not need a preference file.
 
   Microsoft recommends you use the built-in settings in the settings catalog. If the settings catalog doesn't have the settings you need, then add a preference file to Intune.
 

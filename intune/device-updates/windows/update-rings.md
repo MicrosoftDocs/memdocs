@@ -25,7 +25,7 @@ In Microsoft Intune, update rings are configured through **update ring policies*
 
 :::column-end:::
 :::column span="3":::
-> - [Microsoft Intune Plan 1](../../intune-service/fundamentals/licenses.md)
+> - [Microsoft Intune Plan 1](../../fundamentals/licensing/index.md)
 :::column-end:::
 :::row-end:::
 
@@ -92,7 +92,7 @@ In Microsoft Intune, update rings are configured through **update ring policies*
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates**
 1. Select the **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
 
-   :::image type="content" source="./images/update-rings.png" alt-text="Screen capture of the default view for Update ring policy." lightbox="./images/update-rings.png":::
+   :::image type="content" source="./media/shared/update-rings.png" alt-text="Screen capture of the default view for Update ring policy." lightbox="./media/shared/update-rings.png":::
 
 This view includes:
 

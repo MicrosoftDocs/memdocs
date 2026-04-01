@@ -63,7 +63,7 @@ DDM is the modern way to manage settings. The independent nature of DDM provides
 
 Don't use the MDM-based software update policy settings on these devices, as Apple deprecated the MDM policies.
 
-The DDM settings are configurable in the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md). For more information, go to [Managed software updates with the settings catalog](index.md).
+The DDM settings are configurable in the [Intune settings catalog](../../device-configuration/settings-catalog/index.md). For more information, go to [Managed software updates with the settings catalog](index.md).
 
 ### ✅ Use MDM on macOS 13 and older
 
@@ -121,7 +121,7 @@ With these settings, this policy locks these settings so users can't change them
 
 #### Step 2 - Use a settings catalog policy to manage how updates are installed
 
-The [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) includes settings to help manage software updates. In this step, you create a policy that:
+The [Intune settings catalog](../../device-configuration/settings-catalog/index.md) includes settings to help manage software updates. In this step, you create a policy that:
 
 - Configures the device to automatically install updates when they're available, including app updates.
 - Prevents end users from disabling update checks.
@@ -141,7 +141,7 @@ This settings catalog policy works with [Step 1 - Use a software update policy t
     - **Automatically Install MacOS Updates**: True
     - **Automatic Check Enabled**: True
 
-For more information on the settings catalog, including how to create a settings catalog policy, go to [Use the settings catalog to configure settings](../../intune-service/configuration/settings-catalog.md).
+For more information on the settings catalog, including how to create a settings catalog policy, go to [Use the settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 ##### End user experience
 

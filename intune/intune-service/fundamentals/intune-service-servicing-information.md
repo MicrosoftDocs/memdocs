@@ -47,7 +47,7 @@ Keeping up to date about releases and changes is an important part of your Intun
 
 - **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
 - **[Microsoft 365 Message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message center at `admin.microsoft.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
-- **[Microsoft Intune tenant status](tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
+- **[Microsoft Intune tenant status](../../governance/tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
 
   To see the hub, use the following steps:
 
@@ -68,11 +68,11 @@ You should understand how Intune collects, stores, retains, processes, secures, 
 
 The following resources can help you understand privacy and personal data in Intune:
 
-- [Privacy and personal data in Intune](../protect/privacy-personal-data.md)
-- [Optional diagnostic data from Intune Client apps](../protect/client-apps-optional-data.md)
-- [Data collection in Intune](../protect/privacy-data-collect.md)
-- [Data storage and processing in Intune](../protect/privacy-data-store-process.md)
-- [Audit, export, or delete personal data in Intune](../protect/privacy-data-audit-export-delete.md)
+- [Privacy and personal data in Intune](../../privacy/index.md)
+- [Optional diagnostic data from Intune Client apps](../../privacy/data-handling/optional-diagnostic-data.md)
+- [Data collection in Intune](../../privacy/data-handling/data-collection.md)
+- [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
+- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/audit-export-delete.md)
 
 ## Related content
 

@@ -19,7 +19,7 @@ Intune supports the mobile device management (MDM) of Android devices to give pe
 Before you begin, complete these prerequisites to enable Android device management in Intune. For more detailed information about how to set up, onboard, or move to Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 
 * [Add users](users-add.md) and [groups](groups-add.md)
-* [Assign licenses to users](licenses-assign.md)
+* [Assign licenses to users](../../fundamentals/licensing/assign-licenses.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.

@@ -29,7 +29,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
  Complete the following prerequisites as an Intune administrator to enable your tenant's endpoint management capabilities:
 
 * [Add users](users-add.md) and [groups](groups-add.md)
-* [Assign licenses to users](licenses-assign.md)
+* [Assign licenses to users](../../fundamentals/licensing/assign-licenses.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
@@ -62,12 +62,15 @@ You can enforce device compliance policies based on Linux distribution type, ver
 Enrollment is supported on Linux desktops running:
 
 * Ubuntu LTS, version 24.04, 22.04 or 20.04.
-* RedHat Enterprise Linux 8
 * RedHat Enterprise Linux 9
+* RedHat Enterprise Linux 10
 
 Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Microsoft Entra ID and evaluated for compliance. If you've applied a Conditional Access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.
 
-As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#step-1-prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.
+As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#step-1-prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
+
+>[!IMPORTANT]
+> Versions 2.0.2 and later of the Microsoft Identity Broker included with the Microsoft Intune app for Linux introduce a major architectural change from the previous Java-based broker. When Linux devices update from earlier broker versions, Intune automatically re‑registers and re‑enrolls those devices and creates new Intune device IDs and Microsoft Entra device IDs for them. After devices update, be sure to review device‑based assignments, filters, and Microsoft Entra ID group memberships that rely on device IDs to ensure that policies apply correctly.  
 
 >[!TIP]
 > If you require device encryption, tell your employees prior to device enrollment so that, when possible, they can opt to encrypt their device during OS installation. It's easier and faster than encrypting the device after OS installation. Additionally, make your organization's operating system requirements and password complexity requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information.
@@ -75,7 +78,7 @@ As an Intune administrator, you don't need to do anything to enable enrollment f
 | Task | Detail |
 | ---- | ------ |
 |[Install Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md)| Employees must install the Microsoft Intune app on their personal device for enrollment. This article describes how to install, update, and remove the Microsoft Intune app for Linux in the Terminal app. |
-|[Install Microsoft Edge web browser)](https://www.microsoft.com/edge)| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |
+|[Install Microsoft Edge web browser](https://www.microsoft.com/edge)| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |
 |[Enroll Linux device in Intune](../user-help/enroll-device-linux.md)| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. During this step, Microsoft Intune registers the device with Microsoft Entra ID and creates a device record in Intune. After registration is complete, device compliance checks begin.  |
 |[Check device status and resolve compliance issues](../user-help/check-status-linux.md)| This article is for device users and describes how to resolve compliance issues in the Microsoft Intune app. Compliance checks happen during enrollment and thereafter when the device checks in with Intune. The Intune app notifies employees when they have a noncompliant setting on their device. Intune determines compliance and actions for noncompliance by using your device compliance and Conditional Access policies.  |
 
@@ -83,7 +86,7 @@ As an Intune administrator, you don't need to do anything to enable enrollment f
 
 * Check out [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.
 
-* Check out the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/increase-security-enable-quality-collaboration-for-linux/ba-p/3640485) for the latest information and blogs about Linux desktop management.
+* Check out the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/increase-security-enable-quality-collaboration-for-linux/ba-p/3640485) for the latest information and blogs about Linux desktop management.  
 
 * For other versions of this guide, see:
 

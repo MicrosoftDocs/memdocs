@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/05/2026
+ms.date: 03/31/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -38,7 +38,7 @@ You can also read:
 > - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new)
 > - [Windows Autopilot: What's new](/autopilot/whats-new)
 
-You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories - in this order:
@@ -56,6 +56,307 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of March 30, 2026 (Service release 2603)
+
+### App management
+
+#### Declarative Device Management for Apple line-of-business apps on iOS/iPadOS<!-- 30457044 -->
+
+Microsoft Intune now supports Apple Declarative Device Management (DDM) for required line-of-business apps on devices running iOS/iPadOS 18 and later. By changing the management type to DDM in App information, you can deploy and configure apps using Apple's policy-based model, which improves delivery efficiency, provides real-time app status, and expands per-app options such as associated domains.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+
+### Device configuration
+
+#### Recovery lock features available for macOS devices <!-- 28675745 32541429 -->
+
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management. Admins can also rotate this password.
+
+There are two ways to use this feature:
+
+- **Settings catalog policy** - In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+
+  - Turn on the recovery lock feature
+  - Configure a password rotation schedule
+
+- **Remote device action** - Use the [Recovery Lock device action](../remote-actions/rotate-recovery-lock-passcode.md) to manually rotate the recovery lock password for a specific device.
+
+The Recovery Lock password can be viewed in the per-setting status report > **Passwords and keys**. To view the Recovery Lock password, the signed-in administrator needs the **Remote tasks/View macOS recovery lock password** permission.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by late April 2026.
+
+#### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
+
+The following OEMConfig app is available in Intune for Android Enterprise:
+
+- Inventus | `com.inventus.oemconfig.gen`
+
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+#### New settings in the Windows settings catalog <!-- 36922863 -->
+
+There are new settings in the Windows settings catalog. To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices > Configuration profiles > Create profile > Windows 10 and later > Settings catalog**).
+
+The new policies include:
+
+- **Connectivity > Disable Cross Device Resume**: This feature lets Windows suggest continuing an activity users start on a device, like a phone, to a PC. IT admins can use this policy to turn off this feature and prevent users from continuing tasks, like browsing files or continuing to use supported apps that require linking between a phone and PC. 
+
+  When set to **CrossDeviceResume is Disabled**, the Windows device doesn't receive any CrossDeviceResume notification. Users won't see any "resume from your phone" prompts. When you select **CrossDeviceResume is Enabled**, the Windows device does receive notification to resume activity from linked devices. If you don't configure this policy setting, the default behavior is that the CrossDeviceResume feature is turned on, which means users see the notification. Changes to this policy take effect on reboot.
+
+  This policy:
+
+  - Is available to Windows Insiders.
+  - Uses the [DisableCrossDeviceResume](/windows/client-management/mdm/policy-csp-Connectivity#disablecrossdeviceresume) CSP.
+
+- **Windows AI > Remove Microsoft Copilot App**: This policy setting allows you to uninstall the Microsoft Copilot app from devices. It applies to devices and users that meet the following conditions:
+
+  - The Microsoft 365 Copilot and Microsoft Copilot apps are both installed.
+  - The Microsoft Copilot app was not installed by the user.
+  - The Microsoft Copilot app was not opened in the last 14 days.
+
+  If this policy is enabled, the Microsoft Copilot app is uninstalled. Users can still re-install if they choose to.
+
+  [RemoveMicrosoftCopilotApp](/windows/client-management/mdm/policy-csp-WindowsAI#removemicrosoftcopilotapp) CSP
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+
+#### New updates to the Apple settings catalog <!-- 36630003 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type. 
+
+##### iOS/iPadOS
+
+**Declarative Device Management (DDM) > External Intelligence Settings**:
+
+- Allow Sign In
+- Allowed Workspace IDs
+
+**Declarative Device Management (DDM) > Intelligence Settings**:
+
+- Allow Apple Intelligence Report
+- Allow Genmoji
+- Allow Image Playground
+- Allow Image Wand
+- Allow Personalized Handwriting Results
+- Allow Visual Intelligence Summary
+- Allow Writing Tools
+- Mail > Allow Smart Replies
+- Mail > Allow Summary
+- Notes > Allow Transcription
+- Notes > Allow Transcription Summary
+- Safari > Allow Summary
+- Force On Device Only Dictation
+- Force On Device Only Translation
+
+**Declarative Device Management (DDM) > Keyboard Settings**:
+
+- Allow Definition Lookup
+- Allow Auto Correction
+- Allow Dictation
+- Allow Predictive Text
+- Allow Slide To Type
+- Allow Spell Check
+- Allow Text Replacement
+- Allow Math Keyboard Suggestions
+
+**Declarative Device Management (DDM) > Siri Settings**:
+
+- Allow User Generated Content
+- Allow While Locked
+- Force Profanity Filter
+
+##### macOS
+
+**Declarative Device Management (DDM) > External Intelligence Settings**:
+
+- Allow Sign In
+- Allowed Workspace IDs
+
+**Declarative Device Management (DDM) > Intelligence Settings**:
+
+- Allow Apple Intelligence Report
+- Allow Genmoji
+- Allow Image Playground
+- Allow Writing Tools
+- Mail > Allow Smart Replies
+- Mail > Allow Summary
+- Notes > Allow Transcription
+- Notes > Allow Transcription Summary
+- Safari > Allow Summary
+- Force On Device Only Dictation
+
+**Declarative Device Management (DDM) > Keyboard Settings**:
+
+- Allow Definition Lookup
+- Allow Dictation
+- Allow Math Keyboard Suggestions
+
+**Declarative Device Management (DDM) > Siri Settings**:
+
+- Force Profanity Filter
+
+**System Configuration > File Provider**:
+
+- Management Allows Remote Syncing
+- Management Remote Syncing Allow List
+- Management Allows External Volume Syncing
+- Management External Volume Syncing Allow List
+- Management Domain Auto Enablement List
+
+**Restrictions**:
+
+- Allow Rosetta Usage Awareness
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+### Device management
+
+#### Remote Help connectivity update for Windows devices<!-- 29252975 -->
+
+We've improved connectivity when using the [Launch Remote Help](../fundamentals/remote-help-use.md#provide-help) capability in the Intune admin center for Windows devices. For the best experience, we recommend updating firewall rules to include this new endpoint:
+
+- `*.trouter.communications.svc.cloud.microsoft`
+
+For the current list of required network endpoints, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md?tabs=north-america#network-requirements-for-powershell-scripts-and-win32-apps) and [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in the Intune endpoints documentation.
+
+With this endpoint addition, we've also added a new [Intune Management Extension log](../apps/intune-management-extension.md#ime-log-files), NotificationInfra.log, which tracks notifications sent through the Microsoft real-time communication channel.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows  
+
+#### Support for Red Hat Enterprise Linux 9 and later<!-- 36124475 --> 
+Microsoft Intune supports Red Hat Enterprise Linux (RHEL) 9 LTS and RHEL 10 LTS. Support for RHEL 8 LTS has ended, but devices already enrolled on RHEL 8 remain enrolled. You can identify devices running RHEL 8 in the Intune admin center by going to Devices > All devices, filtering OS by Linux, and adding OS version columns. Notify users to upgrade their devices to a supported RHEL version.  For more information about enrolling Linux devices, see [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
+
+#### Microsoft Intune app for Linux now supports the Microsoft Identity Broker<!-- 36124475 -->
+
+The Microsoft Intune app for Linux now uses the Microsoft Identity Broker on supported Ubuntu and Red Hat Enterprise Linux (RHEL) distributions. Broker version 2.0.2 and later introduces a major architectural change from the previous Java-based broker. This update enables new single sign-on (SSO) experiences using phish-resistant MFA, smart card authentication, and certificate-based authentication with Microsoft Entra ID. For more information, see [Enabling Phish-Resistant MFA (PRMFA) on Linux devices](/entra/identity/devices/sso-linux?tabs=debian-install%2Cdebian-update%2Cdebian-uninstall#enabling-phish-resistant-mfa-prmfa-on-linux-devices-preview).  
+
+### Device security
+
+#### Hotpatching default enablement in Windows Autopatch<!--36869440-->
+
+Starting with the May 2026 Windows security update, hotpatch updates are enabled by default for all eligible devices managed through Windows Autopatch. Hotpatch updates install faster and require fewer restarts, helping devices get
+secure sooner.
+
+If your organization isn't ready for this change, you can opt out using either of the following options:
+
+- **Tenant-level setting**: Opt out of hotpatch updates across all eligible devices in your tenant. This option becomes available April 1, 2026 in the Intune admin center.
+- **Quality update policy**: Control hotpatch behavior for a specific group of devices. Hotpatch settings configured in a quality update policy override the tenant-level setting for devices assigned to that policy.
+
+Key dates:
+
+- **April 1, 2026**: Tenant-level opt-out setting available in the Intune admin center.
+- **May 2026 security update**: Hotpatch updates enabled by default.
+
+For more information, see the Windows IT Pro Blog (https://aka.ms/HotpatchByDefault).
+
+### Intune apps
+
+#### Newly available protected apps for Intune <!-- 36620792, 36620880, 36621194, 36621352, 36627824 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- PerfectServe Clinical Collab by PerfectServe
+- Synigo Pulse by Synigo B.V.
+- DeepL for Intune by DeepL SE
+- Foxit PDF Editor by Foxit Software Inc.
+- EasyPlant QC Inspections by Technip Energies (Android)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshooting
+
+#### Support for system proxy settings in endpoint analytics and Advanced Analytics<!--30148318 -->
+
+Devices configured with system-level (WinHTTP) proxy settings can now send telemetry to endpoint analytics and Advanced Analytics, enabling more comprehensive reporting. Endpoint Privilege Management (EPM) will also include elevation usage data from these devices.
+
+No admin action is required. If endpoint analytics or EPM is enabled for a device, telemetry and events will automatically appear in the User Experience (Device blade), endpoint Analytics reports, and EPM.
+
+For more details about displaying advanced proxy settings, see [Netsh.exe commands](/windows/win32/winhttp/netsh-exe-commands#show-advproxy).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### Improvements to device query for multiple devices<!-- 32041372, 29800657, 33412956 -->
+
+Device query for multiple devices now includes new capabilities to help you work with query results more efficiently.
+
+You can use a search text box to search across all resulting rows of a query, use column headers to add filters for specific values, and create Microsoft Entra security groups directly from a query's device results.
+
+For more information, see [Device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md).
+
+### Role-based access control
+
+#### Scoped permissions for Role-based access control (public preview)<!-- 37134761 -->
+
+Intune now includes an opt-in public preview to enable **Scoped permissions**, making your role-based access control (RBAC) configuration more precise. Enabling Scoped permissions is a one-time choice that can't be undone. In the future, this will become the default behavior for all tenants.
+
+Previously, when an admin had multiple role assignments using different scope tags for the same permission category, Intune merged permissions across those assignments, which could unintentionally grant broader access than intended. With Scoped permissions enabled, each role assignment's permissions apply only within its own scope tag context, so admins receive exactly the access you intended.
+
+To help you prepare before enabling this change, Intune includes a new **Permissions Assessment Report**. The report details your tenant's current permissions and shows how they will change after enabling Scoped permissions. You can rerun the report as often as needed, adjust role assignments, and communicate any changes to affected admins before opting in.
+
+For more information about the current default behavior, the Scoped permissions opt-in public preview, and the new report, see [Permission behavior across role assignments](../fundamentals/scope-tags.md#permission-behavior-across-role-assignments).
+
+## Week of March 24, 2026
+
+### Tenant administration
+
+#### Guided scenarios being removed from the Intune admin center<!-- 29654118 -->
+
+All guided scenarios except Windows 365 Boot are removed from the Microsoft Intune admin center. You can no longer access the guided scenario wizards, but any Intune objects previously created by these wizards remain available and manageable. The Windows 365 Boot guided scenario remains available from the Windows 365 overview page in the Intune admin center. No action is required.
+
+For alternative step-by-step guidance, see the following resources:
+
+- [Microsoft Intune documentation](https://go.microsoft.com/fwlink/?linkid=2310495)
+- [Intune prescriptive guides](https://go.microsoft.com/fwlink/?linkid=2300666)
+- Intune administration guides: [https://m365accelerator.microsoft.com/intune](https://m365accelerator.microsoft.com/intune)
+  - [Securing apps for mobile | Android](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-android)
+  - [Securing apps for mobile | iOS](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-ios)
+  - [Configuring Intune and Configuration Manager to co-manage devices](https://m365accelerator.microsoft.com/intune/microsoft-intune-and-configuration-manager-co-management-setup-guide)
+  - [Manage and secure devices for Windows](https://m365accelerator.microsoft.com/intune/windows-device-management)
+- [Microsoft Copilot in Intune](/intune/intune-service/copilot/copilot-intune-overview)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
+> - iOS/iPadOS
+> - Android
+
+## Week of March 16, 2026  
+
+### Device management
+
+#### Improved Remote Help update reporting on macOS<!-- 35705883 -->  
+
+We've improved the update and reporting experience for Remote Help on macOS to make version management more reliable and transparent for IT admins.  
+ 
+After you deploy the latest Remote Help client (version 1.0.26012221) through Microsoft Intune, you can now view the full client version in your device inventory and during app upgrades. This improvement makes it easier to verify deployments. Remote Help installations deployed through Intune are also registered with Microsoft AutoUpdate (MAU), allowing Intune-managed macOS devices to automatically receive future Remote Help updates. For more information, see [Deploy Remote Help with Microsoft Intune](remote-help-deploy.md).
 
 ## Week of March 2, 2026 (Service release 2602)
 
@@ -75,6 +376,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
 
 You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+> [!NOTE]
+> This feature is rolling out slowly and should be available for all customers by late March 2026.
 
 To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
 
@@ -135,11 +439,11 @@ The new policies include:
 >
 > - Windows
 
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 #### New updates to the Apple settings catalog <!-- 36180374 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
@@ -164,6 +468,12 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 >
 > - iOS/iPadOS
 > - macOS
+
+### Device enrollment  
+
+#### New setting controls MDM enrollment during account registration on Windows (public preview)<!-- 14724061 --> 
+
+A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
 ### Device management
 
@@ -310,7 +620,7 @@ The new policies include:
 >
 > - Windows
 
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 #### New supported OEMConfig apps for Android Enterprise<!-- 35178386 -->
 
@@ -324,7 +634,7 @@ For more information about OEMConfig, see [Use and manage Android Enterprise dev
 
 #### Filter by Android management mode in the settings catalog<!-- 31844205 -->
 
-The [settings catalog](../configuration/settings-catalog.md) includes hundreds of settings that you can configure. There are built-in features that help filter the available settings.
+The [settings catalog](../../device-configuration/settings-catalog/index.md) includes hundreds of settings that you can configure. There are built-in features that help filter the available settings.
 
 When you create an Android settings catalog policy, there's a management mode filter option that filters the available settings by their enrollment type, including:
 
@@ -334,12 +644,12 @@ When you create an Android settings catalog policy, there's a management mode fi
 
 To learn more about the settings catalog, see:
 
-- [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
-- [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md)
+- [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)
+- [Android Intune settings catalog settings list](../../device-configuration/settings-catalog/ref-android-settings.md)
 
 #### New updates to the Apple settings catalog<!-- 35787099 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
 
@@ -476,7 +786,7 @@ The *Windows feature update compatibility risks report* and *Windows feature upd
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
 
-**Admin tasks** in the Intune admin center are out of public preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
+**Admin tasks** in the Intune admin center are out of preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
 
 The following task types are supported:
 
@@ -544,7 +854,6 @@ The screens you can skip during macOS enrollment include:
    - **Additional privacy settings** (macOS 26+)
    - **OS Showcase** (macOS 26.1+)
    - **Update completed** (macOS 26.1+)
-   - **Get Started** (macOS 15+)
 
 For more information about available Setup Assistant skipkeys, see:
 
@@ -682,7 +991,7 @@ These options extend familiar mobile APP data-transfer controls to Windows, help
 
 Some settings that were only available in Templates are now also supported in the settings catalog.
 
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
 
@@ -710,7 +1019,7 @@ The following settings are available in the settings catalog:
   - Number of uppercase characters required
 - Required unlock frequency
 
-To learn more about these settings, see [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+To learn more about these settings, see [Android Intune settings catalog settings list](../../device-configuration/settings-catalog/ref-android-settings.md).
 
 Applies to:
 
@@ -718,7 +1027,7 @@ Applies to:
 
 #### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
 
@@ -906,9 +1215,9 @@ There are new settings in the Android settings catalog. To create a new settings
   - Block screen capture (work profile-level)
   - Block Wi-Fi setting changes
 
-To learn more about these settings, see [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+To learn more about these settings, see [Android Intune settings catalog settings list](../../device-configuration/settings-catalog/ref-android-settings.md).
 
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -925,14 +1234,14 @@ Now you can edit the managed Google Play organization name directly in the Micro
 
 #### Settings catalog supports Windows 11 25H2 settings <!--35412243-->
 
-The release of Windows 11 25H2 includes new policy configuration service providers (CSPs). These settings are available in the [settings catalog](../configuration/settings-catalog-common-features.md) for you to configure.
+The release of Windows 11 25H2 includes new policy configuration service providers (CSPs). These settings are available in the [settings catalog](../../device-configuration/settings-catalog/common-tasks.md) for you to configure.
 
 To learn more, see the [Microsoft Intune Settings Catalog Updated to Support New Windows 11, version 25H2 Settings](https://aka.ms/Intune/Windows25H2-settings) blog post.
 
 To get started with the settings catalog, see:
 
-- [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
-- [Common tasks you can complete using the settings catalog](../configuration/settings-catalog-common-features.md)
+- [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)
+- [Common tasks you can complete using the settings catalog](../../device-configuration/settings-catalog/common-tasks.md)
 
 > [!div class="checklist"]
 > Applies to:
@@ -1073,7 +1382,7 @@ To learn more about viewing and monitoring existing profiles, see [View and moni
 
 #### New day zero settings available in the Apple settings catalog <!-- 33806647 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
@@ -1115,7 +1424,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 Some settings that were only available in Templates are now also supported in the settings catalog.
 
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
 
@@ -1154,7 +1463,7 @@ The following settings are in the settings catalog:
 - User can configure credentials (work profile-level)
 - Block account changes
 
-To learn more about these settings, see [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+To learn more about these settings, see [Android Intune settings catalog settings list](../../device-configuration/settings-catalog/ref-android-settings.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1171,7 +1480,7 @@ For more information on multiple administrative approval, see [Use multiple admi
 
 #### New Private Space and USB access settings in the Android Enterprise settings catalog <!-- 30802944 24213820 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
 
@@ -1191,7 +1500,7 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
   > - Android Enterprise corporate owned fully managed (COBO)
   > - Android Enterprise corporate owned dedicated devices (COSU)
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md).
 
 #### New prompts available to explore your Intune data<!-- 34601881 -->
 
@@ -1416,7 +1725,7 @@ For more information about configuring and using managed installers, see [Get st
 
 #### New Windows settings in the settings catalog <!-- 34345586 34545262-->
 
-The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place. There are new settings in the Windows settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
+The Intune [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure, and all in one place. There are new settings in the Windows settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
 
 **Microsoft Edge Administrative Templates policy updates**:
 
@@ -1473,7 +1782,7 @@ The Intune [settings catalog](../configuration/settings-catalog.md) lists all th
 
 #### New day zero settings available in the Apple settings catalog<!-- 33437616 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
@@ -1528,11 +1837,11 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### New setting in the Android settings catalog<!-- 32864836 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../../device-configuration/settings-catalog/index.md).
 
 There's a new **Hide organization name** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the enterprise name isn't shown on the device, such as lock screen.
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md).
 
 > [!div class="checklist"]
 > Applies to:

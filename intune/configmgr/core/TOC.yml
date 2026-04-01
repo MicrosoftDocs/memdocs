@@ -14,7 +14,7 @@ items:
     - name: Product feedback
       href: understand/product-feedback.md
     - name: How to use the docs
-      href: ../../use-docs.md
+      href: ../../fundamentals/use-docs.md
     - name: Accessibility features
       href: understand/accessibility-features.md
     - name: Software Center user guide

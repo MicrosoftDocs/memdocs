@@ -13,7 +13,7 @@ ms.reviewer:
 Browse and install work apps in the Intune Company Portal app for Windows. This article describes how to install, view, and share work apps from Company Portal.
 
 > [!TIP]
-> As a companion to this article, see our [Intune app protection for Windows setup guide](https://go.microsoft.com/fwlink/?linkid=2309605) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the [Intune app protection for Windows guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.
+> As a companion to this article, see our [Intune app protection for Windows setup guide](/intune/intune-service/apps/protect-mam-windows) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the [Intune app protection for Windows guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.
 
 ## Types of apps
 

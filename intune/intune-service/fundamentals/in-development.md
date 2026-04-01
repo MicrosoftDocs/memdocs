@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/02/2026
+ms.date: 03/30/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -25,7 +25,7 @@ This article and the [What's new](whats-new.md) article are updated periodically
 > [!NOTE]
 > This article reflects our current expectations about Intune capabilities in an upcoming release. Dates and individual features might change. This article doesn't describe all features in development. It was last updated on the date shown under the title.
 
-You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
 
 <!-- Common categories: use this order:
@@ -46,57 +46,117 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
+### Scope tags support for Endpoint Privilege Management reports<!-- 34630681 -->
+
+We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
+
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
 ## App management
 
-### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
+### Multiple managed accounts for app protection policies <!-- 3182632 -->
 
-To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
+The Multiple Managed Accounts (MMA) feature for Intune mobile application management (MAM) will enable users to add and manage more than one managed account within a single app. With MMA, app protection policies will be enforced independently for each account, as defined by the admin. This capability will be especially useful for scenarios such as consultants working across organizations, company acquisitions, or users managing multiple mailboxes within the same tenant.
 
 > [!div class="checklist"]
 > Applies to:
 >
 > - iOS/iPadOS
+> - Android
 
 <!-- *********************************************** -->
 
-## Device configuration
+<!-- ## Device configuration -->
 
-### Recovery Lock settings catalog settings for macOS<!-- 32541429 -->
+<!-- *********************************************** -->
 
-On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
+## Device enrollment
 
-In a [settings catalog](../configuration/settings-catalog.md) policy, you can soon use the Recovery Lock settings to:
+### Access management for Apple services<!-- 31209876  -->
 
-- Set a recovery lock password
-- Configure a password rotation schedule
-- Clear a recovery lock password
+You will be able to use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls will let you choose what devices users can sign in to and which apps and services are available to them. For more information about how Apple defines service access and Apple account permissions, see the [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).
 
 > [!div class="checklist"]
 > Applies to:
 >
+> - iOS/iPadOS
 > - macOS
 
+### Microsoft Intune will support userless ADE for visionOS and tvOS devices<!-- 29219451 -->
+
+Microsoft Intune will be adding support for userless automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability will support ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and remote device actions. The feature will be available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite. Enrolled visionOS and tvOS devices will appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support will require tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
+
 <!-- *********************************************** -->
 
- <!--## Device enrollment -->
+## Device management
 
-<!-- *********************************************** -->
+### Device page in the Intune admin center is updated (public preview) <!-- 3646300 16532161 -->
 
-<!-- ## Device management -->
+In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
+
+- Track device activity
+- Access tools and reports
+- Manage device information
+
+The single device page has the following tabs:
+
+- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You'll be able to quickly understand what actions are running or have completed without leaving the device view.
+- **Tools + reports**: This tab was previously called **Overview**. It shows monitoring reports, lists, and tools, like remediations, that were previously accessed in another part of the admin center.
+- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
+- **Device details**: This was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
+
+Other features:
+
+- Device actions are grouped, ordered, and labeled consistently across platforms and device types, with improved logic to show only relevant and permitted actions. Destructive actions are clearly separated and require confirmation, reducing unintentional actions.
+
+- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
+
+- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. **Essentials** elevates important device information and is accessible from any tab.
+
+All existing device management capabilities remain available. This update focuses on making them easier to find and use.
+
+### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
+
+Microsoft Intune will update its TeamViewer integration to simplify onboarding and improve reliability for remote assistance workflows. The new connector will replace the existing TeamViewer connector experience and provide a more streamlined experience in the Intune admin center. After the older experience is retired, organizations using that TeamViewer connector will need to migrate to the new connector within 12 months to maintain functionality.
+
+### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
+
+Intune will soon include two new remote actions that let admins temporarily suspend and later restore managed home screen (MHS) on Android devices. These actions allow users to exit MHS and access the device's default launcher for a specified duration, without removing policies or requiring a PIN.
+
+After the defined time elapses, or when the *restore managed home screen* action is triggered, MHS is automatically restored, helping maintain device security while minimizing disruption.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
 
 <!-- *********************************************** -->
 
 ## Device security
 
+### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
+
+We're working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
+
+When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won't automatically update to the new version.
+
+For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 11
+
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
+
+The new baseline will be available for [US Government Community Cloud High (GCC High)](/intune/intune-service/fundamentals/intune-govt-service-description) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:

@@ -26,7 +26,7 @@ This article describes how to prevent Microsoft from collecting data about your 
 
 When set to **Yes**, your in-app performance and usage data is automatically collected and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. If you disable the usage data collection, your organization cannot change your preferences.
 
-For more information about the data we collect, see [Optional diagnostic data from Intune Client apps](../protect/client-apps-optional-data.md).
+For more information about the data we collect, see [Optional diagnostic data from Intune Client apps](../../privacy/data-handling/optional-diagnostic-data.md).
 
 ## Next steps
 

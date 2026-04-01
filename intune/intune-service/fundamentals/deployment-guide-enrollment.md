@@ -69,7 +69,7 @@ Microsoft Intune automatically marks devices that meet certain criteria as corpo
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
   - The [MDM Authority](mdm-authority-set.md) is set to Intune, even when using [co-management](../../configmgr/comanage/overview.md) with Intune + Configuration Manager.
-  - [Intune licenses are assigned](licenses-assign.md).
+  - [Intune licenses are assigned](../../fundamentals/licensing/assign-licenses.md).
 
   For more information, go to the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 

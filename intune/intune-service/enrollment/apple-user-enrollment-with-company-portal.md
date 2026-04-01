@@ -1,5 +1,5 @@
 ---
-title: Set up user enrollment with Company Portal for iOS | Microsoft Docs
+title: Set up user enrollment with Company Portal for iOS
 description: Set up the profile based Apple User Enrollment option for personal devices enrolling in Microsoft Intune.
 ms.date: 12/06/2024
 ms.topic: how-to

@@ -54,7 +54,7 @@ Profiles:
 
   To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
-  The settings in this profile are also available in the [Settings catalog](../configuration/settings-catalog.md).
+  The settings in this profile are also available in the [Settings catalog](../../device-configuration/settings-catalog/index.md).
 
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 

@@ -203,4 +203,4 @@ After you terminate the integration, your organization's macOS devices will be r
 ## Next steps
 
 - [Apply compliance policies to Jamf-managed devices](conditional-access-assign-jamf.md)
-- [Data Jamf sends to Intune](data-jamf-sends-to-intune.md)
+- [Data Jamf sends to Intune](../../privacy/data-sharing/jamf-to-intune.md)

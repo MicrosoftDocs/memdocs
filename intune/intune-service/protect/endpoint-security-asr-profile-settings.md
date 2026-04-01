@@ -1,5 +1,5 @@
 ---
-title: Intune endpoint security Attack surface reduction settings | Microsoft Docs
+title: Intune endpoint security Attack surface reduction settings
 description: Details about the settings in the endpoint security Attack surface reduction policies in Microsoft Intune.
 author: brenduns
 ms.author: brenduns

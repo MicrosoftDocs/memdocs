@@ -145,7 +145,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 :::column span="3":::
 ::: zone pivot="intune"
 
-> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
+> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../fundamentals/licensing/index.md).
 
 ::: zone-end
 

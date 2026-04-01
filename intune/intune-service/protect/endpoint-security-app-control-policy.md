@@ -1,5 +1,5 @@
 ---
-title: Manage approved apps for Windows devices with App Control for Business policy and Managed Installers in Microsoft Intune | Microsoft Docs
+title: Manage approved apps for Windows devices with App Control for Business policy and Managed Installers in Microsoft Intune
 description: Use App Control for Business policies and a managed installer to manage which apps are approved to run on Windows devices that you manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns

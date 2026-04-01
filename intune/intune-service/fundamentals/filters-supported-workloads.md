@@ -3,7 +3,7 @@ title: Platforms and policy types supported by assignment filters
 description: Learn which apps, compliance policies, and device configuration profiles and their platforms support assignment filters in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/02/2026
+ms.date: 03/31/2026
 ms.topic: reference
 ms.reviewer: mattcall
 ms.collection:
@@ -336,11 +336,11 @@ You can use assignment filters for some common app policies on the following pla
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
-| Antivirus | ❌ |
+| Antivirus | ✅ |
 | Attack surface reduction | N/A |
-| Disk encryption | ❌ |
+| Disk encryption | ✅ |
 | Endpoint detection and response | N/A |
-| Firewall | ❌ |
+| Firewall | ✅ |
 | Security baselines | N/A |
 
 ---

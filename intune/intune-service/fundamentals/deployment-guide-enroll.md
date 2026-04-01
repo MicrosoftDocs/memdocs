@@ -225,8 +225,10 @@ Additional enrollment guides are available throughout the Microsoft Intune docum
 
 ## Next steps
 
+This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
+
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
-5. 🡺 **Enroll devices** (*You are here*)
+5. 🡺 **Enroll devices** (this article)

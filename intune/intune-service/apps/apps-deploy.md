@@ -54,7 +54,7 @@ The following table lists the various options when *assigning* apps to users and
 6. Select **Add Group** to open the **Add group** pane that relates to the app.
 7. For the specific app, select an **assignment type**:
    - **Available for enrolled devices**: Assign the app to groups of users who can install the app from the Company Portal app or website.
-   - **Available with or without enrollment**: Assign this setting to groups of users whose devices aren't enrolled with Intune. Users must be assigned an Intune license, see [Intune Licenses](../fundamentals/licenses.md).
+   - **Available with or without enrollment**: Assign this setting to groups of users whose devices aren't enrolled with Intune. Users must be assigned an Intune license, see [Intune Licenses](../../fundamentals/licensing/index.md).
    - **Required**: The app is installed on devices in the selected groups. Some platforms might have more prompts for the end user to acknowledge before app installation begins.
    - **Uninstall**: The app is uninstalled from devices in the selected groups if Intune previously installed the application. This applies only to apps installed via an "Available for enrolled devices" or "Required" assignment using the same deployment.
 
