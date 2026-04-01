@@ -54,7 +54,7 @@ sections:
           - The end user must sign into the app using their Microsoft Entra account.
 
       - question: What if I want to enable an app with Intune App Protection but it isn't using a supported app development platform?
-        answer: The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. Some customers successfully integrate the Intune SDK with other platforms, such as React Native and NativeScript. However, Microsoft doesn't provide guidance or plugins for platforms other than the supported ones.
+        answer: The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), .NET and MAUI platforms. Some customers successfully integrate the Intune SDK with other platforms, such as React Native and NativeScript. However, Microsoft doesn't provide guidance or plugins for platforms other than the supported ones.
 
       - question: Does the Intune APP SDK support Microsoft Authentication Library (MSAL)?
         answer: The Intune App SDK can use the Microsoft Authentication Library for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
