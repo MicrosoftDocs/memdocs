@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/30/2026
+ms.date: 03/31/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -245,7 +245,14 @@ With this endpoint addition, we've also added a new [Intune Management Extension
 > [!div class="checklist"]
 > Applies to:
 >
-> - Windows
+> - Windows  
+
+#### Support for Red Hat Enterprise Linux 9 and later<!-- 36124475 --> 
+Microsoft Intune supports Red Hat Enterprise Linux (RHEL) 9 LTS and RHEL 10 LTS. Support for RHEL 8 LTS has ended, but devices already enrolled on RHEL 8 remain enrolled. You can identify devices running RHEL 8 in the Intune admin center by going to Devices > All devices, filtering OS by Linux, and adding OS version columns. Notify users to upgrade their devices to a supported RHEL version.  For more information about enrolling Linux devices, see [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
+
+#### Microsoft Intune app for Linux now supports the Microsoft Identity Broker<!-- 36124475 -->
+
+The Microsoft Intune app for Linux now uses the Microsoft Identity Broker on supported Ubuntu and Red Hat Enterprise Linux (RHEL) distributions. Broker version 2.0.2 and later introduces a major architectural change from the previous Java-based broker. This update enables new single sign-on (SSO) experiences using phish-resistant MFA, smart card authentication, and certificate-based authentication with Microsoft Entra ID. For more information, see [Enabling Phish-Resistant MFA (PRMFA) on Linux devices](/entra/identity/devices/sso-linux?tabs=debian-install%2Cdebian-update%2Cdebian-uninstall#enabling-phish-resistant-mfa-prmfa-on-linux-devices-preview).  
 
 ### Intune apps
 
