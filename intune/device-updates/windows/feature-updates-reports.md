@@ -40,12 +40,12 @@ To access the report:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Windows Updates**. The default view displays the **Summary** tab:
      > [!div class="mx-imgBorder"]
-     > ![Enable data collection for Intune](./images/reports/windows-updates-summary.png)
+     > ![Enable data collection for Intune](./media/feature-updates-reports/windows-updates-summary.png)
 1. Select **Windows Feature Update Report**.
    - Select on **Select a feature update profile**, select a profile, and then **Generate report**.
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
-     > ![Review ownership](./images/reports/windows-feature-updates-by-policy.png)
+     > ![Review ownership](./media/feature-updates-reports/windows-feature-updates-by-policy.png)
 
    The following list identifies the columns that are available in the view:
    - **Devices**: The name of the device.
@@ -121,7 +121,7 @@ To access the report:
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
 
      > [!div class="mx-imgBorder"]
-     > ![Per-profile view](./images/reports/update-failures-summary.png)
+     > ![Per-profile view](./media/feature-updates-reports/update-failures-summary.png)
 
    - Selecting a profile opens a dedicated view that contains all active Alerts for that profile.
 
@@ -129,11 +129,11 @@ To access the report:
 
      - Select an *Alert Message* to open a pane that displays more details for that alert:
        > [!div class="mx-imgBorder"]
-       > ![Alert message details](./images/reports/alert-message-details.png)
+       > ![Alert message details](./media/feature-updates-reports/alert-message-details.png)
 
      - Select the device name to open the Device page:
        > [!div class="mx-imgBorder"]
-       > ![View the device page](./images/reports/device-details.png)
+       > ![View the device page](./media/feature-updates-reports/device-details.png)
 
 The following list identifies Alert Messages, and suggested remediation actions:
 
