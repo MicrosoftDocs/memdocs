@@ -16,7 +16,7 @@ You can configure if hotpatch is enabled for you devices using either a tenant l
 
 ### Key benefits
 
-- **Faster Security**: Hotpatch security fixes take effect without requiring a restart, getting devices secure much more quickly.  
+- **Faster security**: Hotpatch security fixes take effect without requiring a restart, getting devices secure much more quickly.  
 - **Reduced disruption**: Hotpatch installs eligible security updates without requiring an immediate device restart, helping users stay productive.
 - **Smaller payloads**: Hotpatch package size is significantly smaller than the standard cumulative updates. 
 - **No changes to existing update rings**: Existing update ring configurations remain in effect and are honored alongside hotpatch configurations.
@@ -86,7 +86,7 @@ For more information about the release calendar for hotpatch updates, see [Relea
 During a hotpatch month, if a device has hotpatch updates enabled but isn't on the latest baseline update, the device will receive both the latest baseline update (restart required) and the latest hotpatch update.
 
 > [!NOTE]
-> Upgrading a hotpatch enrolled device to the latest Windows version (e.g. upgrading from Windows 11 24H2 to Windows 11 25H2) during a baseline month keeps the device on the hotpatch cycle and the device keeps receiving the hotpatch updates seamlessly. However, upgrading a device to the latest Windows version in a hotpatch month switches the device to standard updates; you must restart the device to apply the update until the next baseline release. 
+> Upgrading a hotpatch enrolled device to the latest Windows version (e.g. upgrading from Windows 11, version 24H2 to Windows 11, version 25H2) during a baseline month keeps the device on the hotpatch cycle, and the device keeps receiving the hotpatch updates seamlessly. However, upgrading a device to the latest Windows version in a hotpatch month switches the device to standard updates; you must restart the device to apply the update until the next baseline release. 
 
 ## Hotpatch on Windows 11 Enterprise or Windows Server 2025
 
@@ -116,9 +116,9 @@ Configure the default hotpatch update behavior for your tenant as follows:
 1. Select the **Tenant settings** tab. 
 1. Toggle the **When available, apply updates without restarting the device ("hotpatch")** setting to either **Allow** or **Block**.
 
-### Configure hotpatch using Quality Update policies.
+### Configure hotpatch using quality update policies.
 
-Windows Autopatch respects your configuration of the hotpatch setting in quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied not the tenant default setting.  
+Windows Autopatch respects your configuration of the hotpatch setting in quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied, not the tenant default setting.  
 
 To enroll devices to receive hotpatch updates:
 
@@ -156,9 +156,9 @@ To access the report:
 
 ### Step 1: Verify the device is eligible for hotpatch updates and on a hotpatch baseline before the hotpatch update is installed 
 
-Hotpatching follows the hotpatch release cycle. Review the prerequisites to ensure the device is eligible for hotpatch updates. For information on devices that don't meet the prerequisites, see Ineligible devices. 
+Hotpatching follows the hotpatch release cycle. Review the prerequisites to ensure the device is eligible for hotpatch updates. For information on devices that don't meet the prerequisites, see [Ineligible devices](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates#ineligible-devices). 
 
-For the latest release schedule, see the hotpatch release notes. For information on Windows update history, see Windows 11, version 24H2 update history. 
+For the latest release schedule, see the [hotpatch release notes](https://support.microsoft.com/topic/release-notes-for-hotpatch-public-preview-on-windows-11-version-24h2-enterprise-clients-c117ee02-fd35-4612-8ea9-949c5d0ba6d1). For information on Windows update history, see [Windows 11, version 24H2 update history](https://support.microsoft.com/topic/windows-11-version-24h2-update-history-0929c747-1815-4543-8461-0160d16f15e5). 
 
 ### Step 2: Verify the device has Virtualization-based security (VBS) turned on 
 
@@ -169,9 +169,9 @@ For the latest release schedule, see the hotpatch release notes. For information
 
 ### Step 3: Verify the device is properly configured to turn on hotpatch updates 
 
-1. In Intune, review your configured policies within Autopatch to see which groups of devices are targeted with a hotpatch policy by going to the **Windows Update** > **Quality Updates** page. 
+1. In Intune, review your configured policies within Windows Autopatch to see which groups of devices are targeted with a hotpatch policy by going to the **Windows Update** > **Quality Updates** page. 
 1. Ensure the hotpatch update policy is set to **Allow**. 
-1. On the device, select **Start** > **Settings** > **Windows Update** > **Advanced options** > **Configured update policies** > find **Enable hotpatching when available**. This setting indicates that the device is enrolled in hotpatch updates as configured by Autopatch. 
+1. On the device, select **Start** > **Settings** > **Windows Update** > **Advanced options** > **Configured update policies** > find **Enable hotpatching when available**. This setting indicates that the device is enrolled in hotpatch updates as configured by Windows Autopatch. 
 
 ### Step 4: Disable compiled hybrid PE usage (CHPE) (Arm64 CPU only) 
 
@@ -180,7 +180,7 @@ For more information, see [Arm 64 devices must disable compiled hybrid PE usage 
 ### Step 5: Use Event viewer to verify the device has hotpatch updates turned on 
 
 1. Right-click on the Start menu, and select **Event viewer**. 
-1. Search for *AllowRebootlessUpdates* in the filter. If *AllowRebootlessUpdates* is set to `1`, the device is enrolled in the Autopatch update policy and has hotpatch updates turned on:
+1. Search for *AllowRebootlessUpdates* in the filter. If *AllowRebootlessUpdates* is set to `1`, the device is enrolled in the Windows Autopatch update policy and has hotpatch updates turned on:
     `"data": { "payload": "{\"Orchestrator\":{\"UpdatePolicy\":{\"Update/AllowRebootlessUpdates\":true}}}", "isEnrolled": 1, "isCached": 1, "vbsState": 2,`
 
 ### Step 6: Check Windows Logs for any hotpatch errors 
