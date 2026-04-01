@@ -33,7 +33,7 @@ To access the Windows Driver updates summary report:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Windows Updates**.
 1. Select the **Summary** tab and find the **Windows Driver updates** section:
-   :::image type="content" source="./images/reports/report-driver-updates-summary.png" alt-text="Screen capture of the Windows Driver Updates summary page." lightbox="./images/reports/report-driver-updates-summary.png":::
+   :::image type="content" source="./media/driver-updates-reports/report-driver-updates-summary.png" alt-text="Screen capture of the Windows Driver Updates summary page." lightbox="./media/driver-updates-reports/report-driver-updates-summary.png":::
 
 This report shows the status of driver updates for each policy. It displays the number of devices that are up-to-date (*Success*), failed (*Error*), paused (*Paused*), etc. for the driver updates in that policy. However, each device is only represented once in a single status column, based on the worst status across all of the updates that apply to that device.
 
@@ -61,7 +61,7 @@ To access the Windows Driver updates report:
 
 In the following screen capture, the report shows details for the driver update *Microsoft: APPLIANCES: 1.0.0.1*.
 
-:::image type="content" source="./images/reports/report-driver-updates-drivers.png" alt-text="Screen capture of the Windows Driver updates report." lightbox="./images/reports/report-driver-updates-drivers.png":::
+:::image type="content" source="./media/driver-updates-reports/report-driver-updates-drivers.png" alt-text="Screen capture of the Windows Driver updates report." lightbox="./media/driver-updates-reports/report-driver-updates-drivers.png":::
 
 To change the focus of this report to a different driver:
 
@@ -71,7 +71,7 @@ To change the focus of this report to a different driver:
 
 In the following screen capture, only four drivers remain applicable to devices with driver update policies, and those four updates are different versions of the same driver update.
 
-:::image type="content" source="./images/reports/report-driver-updates-pane.png" alt-text="Screen capture of Driver Updates pane of a driver update policy." lightbox="./images/reports/report-driver-updates-pane.png":::
+:::image type="content" source="./media/driver-updates-reports/report-driver-updates-pane.png" alt-text="Screen capture of Driver Updates pane of a driver update policy." lightbox="./media/driver-updates-reports/report-driver-updates-pane.png":::
 
 ### Column details
 
