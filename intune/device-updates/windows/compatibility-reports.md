@@ -36,7 +36,7 @@ To use this report:
 > [!IMPORTANT]
 > The data in this report is made available on-demand only. You must configure the Target OS and Scope (Tags) settings, and then click **Generate report** for data to appear in the report.
 
-[:::image type="content" source="./images/compatibility-reports/device-readiness-report.png" alt-text="Screen shot of the Windows feature update device readiness report." lightbox="./images/compatibility-reports/device-readiness-report.png" border="false":::](./images/compatibility-reports/device-readiness-report.png#lightbox)
+[:::image type="content" source="./media/compatibility-reports/device-readiness-report.png" alt-text="Screen shot of the Windows feature update device readiness report." lightbox="./media/compatibility-reports/device-readiness-report.png" border="false":::](./media/compatibility-reports/device-readiness-report.png#lightbox)
 
 
 >[!NOTE]
@@ -86,7 +86,7 @@ To use this report:
    - Optionally select **Asset type** and **Risk status** to refine the report.
    - Select **Generate report**. This process can take several minutes. You're notified when report generation is complete.
 
-[:::image type="content" source="./images/compatibility-reports/compatibility-risks-report.png" alt-text="Screen shot of the Windows feature update compatibility risks report." lightbox="./images/compatibility-reports/compatibility-risks-report.png" border="false":::](./images/compatibility-reports/compatibility-risks-report.png#lightbox)
+[:::image type="content" source="./media/compatibility-reports/compatibility-risks-report.png" alt-text="Screen shot of the Windows feature update compatibility risks report." lightbox="./media/compatibility-reports/compatibility-risks-report.png" border="false":::](./media/compatibility-reports/compatibility-risks-report.png#lightbox)
 
 
 > [!NOTE]
