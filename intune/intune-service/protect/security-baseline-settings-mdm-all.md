@@ -191,7 +191,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 
 - **Include command line in process creation events**\
   Baseline default: *Enabled*\
-  [Learn more](windows/client-management/mdm/policy-csp-admx-auditsettings?WT.mc_id=Portal-fx#includecmdline)
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-auditsettings?WT.mc_id=Portal-fx#includecmdline)
   
 #### System > Credentials Delegation
 
@@ -1336,7 +1336,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block process creations originating from PSExec and WMI commands**
     Baseline default: *Audit*\
-    [Learn more](https://learn.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office applications from creating executable content**\
     Baseline default: *Block*\
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
@@ -3220,7 +3220,7 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block process creations originating from PSExec and WMI commands**
     Baseline default: *Audit*\
-    [Learn more](https://learn.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office applications from creating executable content**\
     Baseline default: *Block*\
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
