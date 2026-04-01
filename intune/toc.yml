@@ -94,23 +94,23 @@ items:
     items:
     - name: Copilot in Intune
       displayName: ai, copilot
-      href: ./intune-service/copilot/copilot-intune-overview.md
+      href: ./copilot/index.md
     - name: Explore your Intune data
       displayName: ai, copilot, explore, data, query
-      href: ./intune-service/copilot/copilot-intune-explorer.md
+      href: ./copilot/explorer.md
     - name: Troubleshoot a device using Copilot
-      href: ./intune-service/copilot/copilot-devices.md
+      href: ./copilot/troubleshoot-devices.md
     - name: Copilot in Intune FAQ
-      href: ./intune-service/copilot/copilot-intune-faq.md
+      href: ./copilot/faq.md
     - name: Intune plugin in Security Copilot
-      href: ./intune-service/copilot/security-copilot.md
+      href: ./copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
       href: /surface/security-copilot-surface-management-portal?context=/intune/context
     - name: Copilot in Windows 365 Cloud PCs
       href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
     - name: Security Copilot agents in Microsoft Intune
-      href: ./agents/toc.yml
+      href: ./copilot/agents/toc.yml
 
   - name: Intune Suite
     items:

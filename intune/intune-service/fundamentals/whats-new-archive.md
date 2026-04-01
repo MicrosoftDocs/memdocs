@@ -198,7 +198,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
 
   Data coverage, querying capabilities, and actionability will evolve over time as we make improvements to how you explore your data.
 
-  To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+  To learn more about this feature, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 - **Conversational chat experience** - Use the Copilot in Intune chat experience to interact with your data using natural language to manage tasks, get insights, and troubleshoot issues. Here's what you can do with the chat experience:
 
@@ -395,7 +395,7 @@ When run, this agent uses data from Microsoft Defender Vulnerability Management 
 
 This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
 
-For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../agents/vulnerability-remediation-agent.md).
+For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../copilot/agents/vulnerability-remediation-agent.md).
 
 ## Week of May 26, 2025 (Service release 2505)
 
@@ -846,7 +846,7 @@ For more information, see:
 
 #### Copilot assistant for device query<!-- 26933762 -->
 
-You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+You can now use Copilot to generate a KQL query to help you get data from across multiple devices in Intune. This capability is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Device query** > **Query with Copilot**. For more information, see [Query with Copilot in device query](../../copilot/index.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 ### Intune apps
 
@@ -1083,7 +1083,7 @@ With this capability, while reviewing the properties of a file elevation request
 - The risk score for the user requesting the file elevation
 - The risk score of the device from which the elevation was submitted
 
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../../copilot/index.md).
 
 To learn more about Microsoft Security Copilot, see, [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot).
 
@@ -2234,7 +2234,7 @@ This setting controls whether the user is allowed to use the storage card for de
 When you use Copilot in Intune, there's a new device query feature that uses KQL.
 Use this feature to ask questions about your devices using a natural language. If device query can answer your question, Copilot generates the KQL query you can run to get the data you want.
 
-To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../../copilot/index.md).
 
 ### Monitor and Troubleshoot
 
@@ -2853,8 +2853,8 @@ As a SOC analyst that's investigating a suspicious or potentially compromised us
 
 For more information on these features, see:
 
-- [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)
-- [Access your Microsoft Intune data in Copilot for Security](../copilot/security-copilot.md)
+- [Microsoft Copilot in Intune](../../copilot/index.md)
+- [Access your Microsoft Intune data in Copilot for Security](../../copilot/security-copilot.md)
 
 Applies to:
 

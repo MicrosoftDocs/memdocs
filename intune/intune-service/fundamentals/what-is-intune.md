@@ -105,7 +105,7 @@ Copilot in Intune is available and has capabilities that are powered by Security
 
 Copilot can summarize existing policies, give you more setting information, including recommended values and potential conflicts. You can also get device details and troubleshoot a device.
 
-For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+For more information, go to [Microsoft Copilot in Intune](../../copilot/index.md).
 
 ## Integrates with other Microsoft services and apps
 
