@@ -247,8 +247,8 @@ With this endpoint addition, we've also added a new [Intune Management Extension
 >
 > - Windows  
 
-#### Support for Red Hat Enterprise Linux 9 and later<!-- 36124475 --> 
-Microsoft Intune supports Red Hat Enterprise Linux (RHEL) 9 LTS and RHEL 10 LTS. Support for RHEL 8 LTS will end in July 2026. Devices already enrolled on RHEL 8 will remain enrolled. You can identify devices running RHEL 8 in the Intune admin center by going to Devices > All devices, filtering OS by Linux, and adding OS version columns. Notify users to upgrade their devices to a supported RHEL version.  For more information about enrolling Linux devices, see [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
+#### Support for Red Hat Enterprise Linux 9 and later<!-- 33087035 --> 
+Microsoft Intune supports Red Hat Enterprise Linux (RHEL) 9 LTS and RHEL 10 LTS. Support for RHEL 8 LTS will end in July 2026. Devices already enrolled on RHEL 8 will remain enrolled. You can identify devices running RHEL 8 in the Intune admin center by going to **Devices** > **All devices**, filtering OS by Linux, and adding OS version columns. Notify users to upgrade their devices to a supported RHEL version.  For more information about enrolling Linux devices, see [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
 
 #### Microsoft Intune app for Linux now supports the Microsoft Identity Broker<!-- 36124475 -->
 
@@ -839,7 +839,7 @@ You can hide or show 12 new Setup Assistant screens during automated device enro
 
 The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
 
- - **App Store** (iOS/iPadOS 14.3+)
+- **App Store** (iOS/iPadOS 14.3+)
  - **Camera button** (iOS/iPadOS 18+)
  - **Web content filtering** (iOS/iPadOS 18.2+)
  - **Safety and handling** (iOS/iPadOS 18.4+)
@@ -848,7 +848,7 @@ The screens you can skip during iOS/iPadOS enrollment, and the applicable versio
 
 The screens you can skip during macOS enrollment include:
 
-   - **App Store** (macOS 11.1+)
+- **App Store** (macOS 11.1+)
    - **Get Started** (macOS 15+)
    - **Software update** (macOS 15.4+)
    - **Additional privacy settings** (macOS 26+)
