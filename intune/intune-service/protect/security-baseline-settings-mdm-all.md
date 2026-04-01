@@ -1858,7 +1858,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 
 - **Impersonate Client**\
   Baseline default: *Configured*\
-  Values: *Administrators* (*S-1-5-32-544), *Service* (*S-1-5-6), *Local Service* (*S-1-5-19), *Network Service* (*S-1-5-20), *Windows restricted services* (*S-1-5-99-216390572-1995538116-3857911515-2404958512-2623887229)
+  Values: *Administrators* (*S-1-5-32-544), *Service* (*S-1-5-6), *Local Service* (*S-1-5-19), *Network Service* (*S-1-5-20), *Windows restricted services* (*S-1-5-99-216390572-1995538116-3857911515-2404958512-2623887229)\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#impersonateclient)
 
 - **Load Unload Device Drivers**\
