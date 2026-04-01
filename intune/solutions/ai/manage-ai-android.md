@@ -134,7 +134,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
 1. Determine if the **Allow access to all apps in Google Play store** setting is set to allow.
 
-    If you use [Copilot](../../intune-service/copilot/copilot-intune-overview.md), you can ask Copilot to check this setting for you. You can also create a new device restrictions profile to configure this setting.
+    If you use [Copilot](../../copilot/index.md), you can ask Copilot to check this setting for you. You can also create a new device restrictions profile to configure this setting.
 
     1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **New Policy**
 

@@ -63,7 +63,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Declarative Device Management for Apple line-of-business apps on iOS/iPadOS<!-- 30457044 -->
 
-Microsoft Intune now supports Apple Declarative Device Management (DDM) for required line-of-business apps on devices running iOS/iPadOS 18 and later. By changing the management type to DDM in App information, you can deploy and configure apps using Apple’s policy-based model, which improves delivery efficiency, provides real-time app status, and expands per-app options such as associated domains.
+Microsoft Intune now supports Apple Declarative Device Management (DDM) for required line-of-business apps on devices running iOS/iPadOS 18 and later. By changing the management type to DDM in App information, you can deploy and configure apps using Apple's policy-based model, which improves delivery efficiency, provides real-time app status, and expands per-app options such as associated domains.
 
 > [!div class="checklist"]
 > Applies to:
@@ -111,7 +111,7 @@ The new policies include:
 
 - **Connectivity > Disable Cross Device Resume**: This feature lets Windows suggest continuing an activity users start on a device, like a phone, to a PC. IT admins can use this policy to turn off this feature and prevent users from continuing tasks, like browsing files or continuing to use supported apps that require linking between a phone and PC. 
 
-  When set to **CrossDeviceResume is Disabled**, the Windows device doesn't receive any CrossDeviceResume notification. Users won’t see any "resume from your phone" prompts. When you select **CrossDeviceResume is Enabled**, the Windows device does receive notification to resume activity from linked devices. If you don't configure this policy setting, the default behavior is that the CrossDeviceResume feature is turned on, which means users see the notification. Changes to this policy take effect on reboot.
+  When set to **CrossDeviceResume is Disabled**, the Windows device doesn't receive any CrossDeviceResume notification. Users won't see any "resume from your phone" prompts. When you select **CrossDeviceResume is Enabled**, the Windows device does receive notification to resume activity from linked devices. If you don't configure this policy setting, the default behavior is that the CrossDeviceResume feature is turned on, which means users see the notification. Changes to this policy take effect on reboot.
 
   This policy:
 
@@ -247,12 +247,31 @@ With this endpoint addition, we've also added a new [Intune Management Extension
 >
 > - Windows  
 
-#### Support for Red Hat Enterprise Linux 9 and later<!-- 36124475 --> 
-Microsoft Intune supports Red Hat Enterprise Linux (RHEL) 9 LTS and RHEL 10 LTS. Support for RHEL 8 LTS has ended, but devices already enrolled on RHEL 8 remain enrolled. You can identify devices running RHEL 8 in the Intune admin center by going to Devices > All devices, filtering OS by Linux, and adding OS version columns. Notify users to upgrade their devices to a supported RHEL version.  For more information about enrolling Linux devices, see [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
+#### Support for Red Hat Enterprise Linux 9 and later<!-- 33087035 --> 
+Microsoft Intune supports Red Hat Enterprise Linux (RHEL) 9 LTS and RHEL 10 LTS. Support for RHEL 8 LTS will end in July 2026. Devices already enrolled on RHEL 8 will remain enrolled. You can identify devices running RHEL 8 in the Intune admin center by going to **Devices** > **All devices**, filtering OS by Linux, and adding OS version columns. Notify users to upgrade their devices to a supported RHEL version.  For more information about enrolling Linux devices, see [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
 
 #### Microsoft Intune app for Linux now supports the Microsoft Identity Broker<!-- 36124475 -->
 
 The Microsoft Intune app for Linux now uses the Microsoft Identity Broker on supported Ubuntu and Red Hat Enterprise Linux (RHEL) distributions. Broker version 2.0.2 and later introduces a major architectural change from the previous Java-based broker. This update enables new single sign-on (SSO) experiences using phish-resistant MFA, smart card authentication, and certificate-based authentication with Microsoft Entra ID. For more information, see [Enabling Phish-Resistant MFA (PRMFA) on Linux devices](/entra/identity/devices/sso-linux?tabs=debian-install%2Cdebian-update%2Cdebian-uninstall#enabling-phish-resistant-mfa-prmfa-on-linux-devices-preview).  
+
+### Device security
+
+#### Hotpatching default enablement in Windows Autopatch<!--36869440-->
+
+Starting with the May 2026 Windows security update, hotpatch updates are enabled by default for all eligible devices managed through Windows Autopatch. Hotpatch updates install faster and require fewer restarts, helping devices get
+secure sooner.
+
+If your organization isn't ready for this change, you can opt out using either of the following options:
+
+- **Tenant-level setting**: Opt out of hotpatch updates across all eligible devices in your tenant. This option becomes available April 1, 2026 in the Intune admin center.
+- **Quality update policy**: Control hotpatch behavior for a specific group of devices. Hotpatch settings configured in a quality update policy override the tenant-level setting for devices assigned to that policy.
+
+Key dates:
+
+- **April 1, 2026**: Tenant-level opt-out setting available in the Intune admin center.
+- **May 2026 security update**: Hotpatch updates enabled by default.
+
+For more information, see the Windows IT Pro Blog (https://aka.ms/HotpatchByDefault).
 
 ### Intune apps
 
@@ -320,7 +339,7 @@ For alternative step-by-step guidance, see the following resources:
   - [Securing apps for mobile | iOS](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-ios)
   - [Configuring Intune and Configuration Manager to co-manage devices](https://m365accelerator.microsoft.com/intune/microsoft-intune-and-configuration-manager-co-management-setup-guide)
   - [Manage and secure devices for Windows](https://m365accelerator.microsoft.com/intune/windows-device-management)
-- [Microsoft Copilot in Intune](/intune/intune-service/copilot/copilot-intune-overview)
+- [Microsoft Copilot in Intune](../../copilot/index.md)
 
 > [!div class="checklist"]
 > Applies to:
@@ -820,7 +839,7 @@ You can hide or show 12 new Setup Assistant screens during automated device enro
 
 The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
 
- - **App Store** (iOS/iPadOS 14.3+)
+- **App Store** (iOS/iPadOS 14.3+)
  - **Camera button** (iOS/iPadOS 18+)
  - **Web content filtering** (iOS/iPadOS 18.2+)
  - **Safety and handling** (iOS/iPadOS 18.4+)
@@ -829,7 +848,7 @@ The screens you can skip during iOS/iPadOS enrollment, and the applicable versio
 
 The screens you can skip during macOS enrollment include:
 
-   - **App Store** (macOS 11.1+)
+- **App Store** (macOS 11.1+)
    - **Get Started** (macOS 15+)
    - **Software update** (macOS 15.4+)
    - **Additional privacy settings** (macOS 26+)
@@ -867,21 +886,21 @@ Security Copilot agents in Intune are AI-powered assistants that specialize in s
 
 The following Intune agents are available:
 
-- The **[Change Review Agent](../../agents/change-review-agent.md)** evaluates Multi Admin Approval requests for Windows PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help admins understand script behavior and associated risks.
+- The **[Change Review Agent](../../copilot/agents/change-review-agent.md)** evaluates Multi Admin Approval requests for Windows PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help admins understand script behavior and associated risks.
 
   These insights can help Intune admins make informed decisions more quickly about whether to approve or deny requests. This agent supports Intune-managed devices running Windows.
 
-- The **[Device Offboarding Agent](../../agents/device-offboarding-agent.md)** identifies stale or misaligned devices across Intune and Microsoft Entra ID. It provides actionable insights and requires admin approval before offboarding any devices. This agent complements existing Intune automation by showing insights and handling ambiguous cases where automated cleanup isn't enough.
+- The **[Device Offboarding Agent](../../copilot/agents/device-offboarding-agent.md)** identifies stale or misaligned devices across Intune and Microsoft Entra ID. It provides actionable insights and requires admin approval before offboarding any devices. This agent complements existing Intune automation by showing insights and handling ambiguous cases where automated cleanup isn't enough.
 
   The agent supports Intune-managed devices running Windows, iOS/iPadOS, macOS, Android, and Linux. During public preview, admins can directly disable Microsoft Entra ID objects, with additional remediation steps provided as guidance.
 
-- The **[Policy Configuration Agent](../../agents/policy-configuration-agent.md)** analyzes uploaded documents or industry benchmarks and automatically identifies matching Intune settings. Admins can upload their requirements, like compliance standards or internal policy documents, and the agent intelligently shows relevant settings from the Intune settings catalog.
+- The **[Policy Configuration Agent](../../copilot/agents/policy-configuration-agent.md)** analyzes uploaded documents or industry benchmarks and automatically identifies matching Intune settings. Admins can upload their requirements, like compliance standards or internal policy documents, and the agent intelligently shows relevant settings from the Intune settings catalog.
 
   The agent also guides you through policy creation and helps you configure each setting that best suits your organization's needs. This agent supports devices running Windows.
 
 To learn more, see:
 
-- [Security Copilot agents in Intune](../../agents/index.md)
+- [Security Copilot agents in Intune](../../copilot/agents/index.md)
 
 #### Intune support for iVerify as a mobile threat defense partner<!-- 35838315 -->
 
@@ -1045,7 +1064,7 @@ Scripts or automation using these Graph APIs will stop working now that the repo
 
 #### Query and results improvements to Explorer feature with Security Copilot in Intune <!--33987602-->
 
-With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../copilot/copilot-intune-explorer.md)** feature. 
+With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../../copilot/explorer.md)** feature. 
 
 When you create your queries, you have more filter options. For example:
 
@@ -1054,7 +1073,7 @@ When you create your queries, you have more filter options. For example:
 
 In the query results, there are also more columns available to view your data.
 
-To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+To learn more about this feature, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 #### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
 
@@ -1094,7 +1113,7 @@ Each query returns a Copilot summary to help you understand the results and offe
 - Add devices or users from the results to a group so you can target apps and policies to this group.
 - Filter example queries to find or build requests that match your needs.
 
-To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+To learn more, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 ### Device security
 
@@ -1339,15 +1358,15 @@ To keep devices registered and compliant, users must download the latest version
 
 We've updated the Vulnerability Remediation Agent for Security Copilot, adding the following changes to the ongoing limited public preview:
 
-- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../../agents/vulnerability-remediation-agent.md#prerequisites) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
+- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../../copilot/agents/vulnerability-remediation-agent.md#prerequisites) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
 
   When using granular RBAC configurations, ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../agents/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../copilot/agents/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent's identity won't affect the agent's run history, which remains available.
 
-These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../agents/vulnerability-remediation-agent.md).
+These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../copilot/agents/vulnerability-remediation-agent.md).
 
 ## Week of September 15, 2025 (Service release 2509)
 
@@ -1499,7 +1518,7 @@ Each query returns a Copilot summary to help you understand the results and offe
 - Add devices or users from the results to a group so you can target apps and policies to this group.
 - Filter example queries to find or build requests that match your needs.
 
-To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+To learn more, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 #### Intel vPro Fleet Services integration in Intune partner portal <!-- 33964910 -->
 
@@ -1538,7 +1557,7 @@ References in Intune documentation and the Intune admin center are updated to re
 
 - **Expanded support for Windows 365 Cloud PC** - With this general availability update, Copilot now supports Windows 365 Cloud PC management. IT admins can access important info, like licensing status, connection quality, configuration details, and performance metrics. This feature makes it easier for admins to monitor and manage Cloud PCs directly from the Intune admin center.
 
-To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune](../../copilot/index.md).
 
 #### Intune supports iOS/iPadOS 17.x as the minimum version<!--33405397-->
 
@@ -1653,7 +1672,7 @@ If the Intune settings catalog contains relevant settings for the reported vulne
 
 If there are no recommended device configuration settings to deploy, the Configurations section indicates that no recommended settings catalog policy configurations are available.
 
-To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../../agents/vulnerability-remediation-agent-use.md#manage-agent-suggestions) in *Use the Vulnerability Remediation Agent*.
+To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../../copilot/agents/manage-vulnerability-remediation-agent.md#manage-agent-suggestions) in *Use the Vulnerability Remediation Agent*.
 
 
 ## Week of August 25, 2025

@@ -92,7 +92,7 @@ For related information, see  [Sync enrolled device for Windows](../user-help/sy
 
 Conflicts can happen when different policies update the same setting to different values. For example, you have two policies that update the copy/paste setting to different values. The conflict is handled differently depending on the type of policy.
 
-If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../copilot/copilot-intune-overview.md#policy-and-setting-management).
+If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../../copilot/index.md#policy-and-setting-management).
 
 You can also use Microsoft Copilot in Intune to get more information about your policies and the settings configured in your policies.
 

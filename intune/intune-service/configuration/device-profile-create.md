@@ -221,7 +221,7 @@ When creating profiles, consider the following recommendations:
 
 - Use Microsoft Copilot in Intune to evaluate your policies, learn more about a policy setting & its effect on your users & security, and compare policies between two devices.
 
-  For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+  For more information, go to [Microsoft Copilot in Intune](../../copilot/index.md).
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 
