@@ -306,7 +306,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/security-copilot.md",
-      "redirect_url": "/intune/intune-service/copilot/security-copilot",
+      "redirect_url": "/intune/copilot/security-copilot",
       "redirect_document_id": true
     },
     {

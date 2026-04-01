@@ -16,7 +16,7 @@ ms.collection:
 
 The settings catalog lists all the settings you can configure and all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
-You can also use [Microsoft Copilot in Intune](../../intune-service/copilot/copilot-intune-overview.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
+You can also use [Microsoft Copilot in Intune](../../copilot/index.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
 - Learn more about each setting and find potential conflicts.
 - Summarize existing policies and get impact analysis on users and security.
@@ -326,4 +326,4 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 - [Tasks you can complete using the settings catalog in Intune](common-tasks.md)
 - [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md)
 - [Assign the profile](../../intune-service/configuration/device-profile-assign.md), and [monitor its status](../../intune-service/configuration/device-profile-monitor.md).
-- [Overview of Microsoft Copilot for Intune](../../intune-service/copilot/copilot-intune-overview.md)
+- [Overview of Microsoft Copilot for Intune](../../copilot/index.md)
