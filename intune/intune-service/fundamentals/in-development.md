@@ -311,7 +311,11 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
+
+We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
 
 <!-- *********************************************** -->
 
