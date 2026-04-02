@@ -1,8 +1,8 @@
 {
   "redirections": [
     {
-      "source_path": "intune/agents/change-review-agent.md",
-      "redirect_url": "/intune/copilot/agents/change-review-agent",
+      "source_path": "intune/advanced-analytics/data-platform-schema.md",
+      "redirect_url": "/intune/advanced-analytics/ref-data-platform-schema",
       "redirect_document_id": false
     },
     {
@@ -11,8 +11,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/agents/device-offboarding-agent.md",
-      "redirect_url": "/intune/copilot/agents/device-offboarding-agent",
+      "source_path": "intune/agents/change-review-agent.md",
+      "redirect_url": "/intune/copilot/agents/change-review-agent",
       "redirect_document_id": false
     },
     {
@@ -21,13 +21,13 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/agents/index.md",
-      "redirect_url": "/intune/copilot/agents",
+      "source_path": "intune/agents/device-offboarding-agent.md",
+      "redirect_url": "/intune/copilot/agents/device-offboarding-agent",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/agents/policy-configuration-agent.md",
-      "redirect_url": "/intune/copilot/agents/policy-configuration-agent",
+      "source_path": "intune/agents/index.md",
+      "redirect_url": "/intune/copilot/agents",
       "redirect_document_id": false
     },
     {
@@ -36,13 +36,13 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/agents/security-copilot-agents-intune.md",
-      "redirect_url": "/intune/copilot/agents/ref-requirements",
+      "source_path": "intune/agents/policy-configuration-agent.md",
+      "redirect_url": "/intune/copilot/agents/policy-configuration-agent",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/agents/vulnerability-remediation-agent.md",
-      "redirect_url": "/intune/copilot/agents/vulnerability-remediation-agent",
+      "source_path": "intune/agents/security-copilot-agents-intune.md",
+      "redirect_url": "/intune/copilot/agents/ref-requirements",
       "redirect_document_id": false
     },
     {
@@ -51,38 +51,178 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "source_path": "intune/agents/vulnerability-remediation-agent.md",
+      "redirect_url": "/intune/copilot/agents/vulnerability-remediation-agent",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/licenses-assign.md",
-      "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
+      "source_path": "intune/analytics/adoption-score.md",
+      "redirect_url": "/intune/endpoint-analytics/adoption-score",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/licenses.md",
-      "redirect_url": "/intune/fundamentals/licensing",
+      "source_path": "intune/analytics/advanced-analytics-deploy.md",
+      "redirect_url": "/intune/advanced-analytics/deploy",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/unlicensed-admins.md",
-      "redirect_url": "/intune/fundamentals/licensing/unlicensed-admins",
+      "source_path": "intune/analytics/advanced-analytics-plan.md",
+      "redirect_url": "/intune/advanced-analytics/plan",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/get-support.md",
-      "redirect_url": "/intune/fundamentals/it-pro-support/get-support-admin-center",
+      "source_path": "intune/analytics/advanced-analytics-troubleshooting-faqs.md",
+      "redirect_url": "/intune/advanced-analytics/troubleshoot",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/tenant-status.md",
-      "redirect_url": "/intune/fundamentals/tenant-status",
+      "source_path": "intune/analytics/advanced-analytics.md",
+      "redirect_url": "/intune/advanced-analytics",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "source_path": "intune/analytics/anomaly-detection.md",
+      "redirect_url": "/intune/advanced-analytics/anomalies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/app-reliability.md",
+      "redirect_url": "/intune/endpoint-analytics/app-reliability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/battery-health.md",
+      "redirect_url": "/intune/advanced-analytics/battery-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/configure.md",
+      "redirect_url": "/intune/endpoint-analytics/configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/data-collection.md",
+      "redirect_url": "/intune/endpoint-analytics/data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/data-platform-schema.md",
+      "redirect_url": "/intune/advanced-analytics/ref-data-platform-schema",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/device-query-multiple-devices.md",
+      "redirect_url": "/intune/advanced-analytics/device-query-multiple-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/device-query.md",
+      "redirect_url": "/intune/advanced-analytics/device-query",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/device-scopes.md",
+      "redirect_url": "/intune/advanced-analytics/device-scopes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/enhanced-device-timeline.md",
+      "redirect_url": "/intune/advanced-analytics/device-timeline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/enroll-configmgr.md",
+      "redirect_url": "/intune/endpoint-analytics/configure?pivots=cm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/enroll-intune.md",
+      "redirect_url": "/intune/endpoint-analytics/configure?pivots=intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/get-support.md",
+      "redirect_url": "/intune/endpoint-analytics/get-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/index.md",
+      "redirect_url": "/intune/endpoint-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/overview.md",
+      "redirect_url": "/intune/endpoint-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/resource-performance-report.md",
+      "redirect_url": "/intune/advanced-analytics/resource-performance-report",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/restart-frequency.md",
+      "redirect_url": "/intune/endpoint-analytics/startup-perfomance#restart-frequency",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/scores.md",
+      "redirect_url": "/intune/endpoint-analytics/scores",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/settings.md",
+      "redirect_url": "/intune/endpoint-analytics/configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/startup-performance.md",
+      "redirect_url": "/intune/endpoint-analytics/startup-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/troubleshoot.md",
+      "redirect_url": "/intune/endpoint-analytics/faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/work-from-anywhere.md",
+      "redirect_url": "/intune/endpoint-analytics/work-from-anywhere",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/configure.md",
+      "redirect_url": "/intune/device-updates/windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates-overview.md",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/expedite-updates.md",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/quality-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/expedite-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/reports.md",
+      "redirect_url": "/intune/device-updates/windows/feature-updates-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/settings.md",
+      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
       "redirect_document_id": false
     },
     {
@@ -91,83 +231,43 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/use-docs.md",
-      "redirect_url": "/intune/fundamentals/use-docs",
+      "source_path": "intune/fundamentals/device-cleanup-rules.md",
+      "redirect_url": "/intune/governance/device-cleanup-rules",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/compliance-in-intune.md",
-      "redirect_url": "/intune/governance/compliance-and-regulatory-alignment",
+      "source_path": "intune/get-support.md",
+      "redirect_url": "/intune/fundamentals/it-pro-support/get-support-admin-center",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/privacy-data-collect.md",
-      "redirect_url": "/intune/privacy/data-handling/data-collection",
+      "source_path": "intune/intune-service/apps/mamedge-5-end-user-experience.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/privacy-data-store-process.md",
-      "redirect_url": "/intune/privacy/data-handling/data-storage-processing",
+      "source_path": "intune/intune-service/apps/mamedge-6-security-baseline.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/client-apps-optional-data.md",
-      "redirect_url": "/intune/privacy/data-handling/optional-diagnostic-data",
+      "source_path": "intune/intune-service/apps/mamedge-6-troubleshoot.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/data-apple-sends-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/apple-to-intune",
+      "source_path": "intune/intune-service/apps/mamedge-7-end-user-experience.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/data-google-sends-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/google-to-intune",
+      "source_path": "intune/intune-service/apps/mamedge-8-troubleshoot.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/privacy-data-secure-share.md",
-      "redirect_url": "/intune/privacy/data-sharing",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/data-intune-sends-to-apple.md",
-      "redirect_url": "/intune/privacy/data-sharing/intune-to-apple",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/data-intune-sends-to-google.md",
-      "redirect_url": "/intune/privacy/data-sharing/intune-to-google",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/data-intune-sends-to-zebra.md",
-      "redirect_url": "/intune/privacy/data-sharing/intune-to-zebra",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/data-jamf-sends-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/jamf-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/privacy-personal-data.md",
-      "redirect_url": "/intune/privacy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/privacy-data-audit-export-delete.md",
-      "redirect_url": "/intune/privacy/personal-data/audit-export-delete",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/privacy-data-view-correct.md",
-      "redirect_url": "/intune/privacy/personal-data/view-correct",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/data-enable-windows-data.md",
-      "redirect_url": "/intune/privacy/windows-diagnostic-data",
+      "source_path": "intune/intune-service/configuration/apple-settings-catalog-configurations.md",
+      "redirect_url": "/intune/device-configuration/settings-catalog/ref-apple-settings",
       "redirect_document_id": false
     },
     {
@@ -181,16 +281,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/configuration/ios-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/configuration/macos-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune-service/configuration/device-restrictions-ios.md",
       "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
@@ -201,13 +291,13 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/configuration/apple-settings-catalog-configurations.md",
-      "redirect_url": "/intune/device-configuration/settings-catalog/ref-apple-settings",
+      "source_path": "intune/intune-service/configuration/ios-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/configuration/settings-catalog.md",
-      "redirect_url": "/intune/device-configuration/settings-catalog",
+      "source_path": "intune/intune-service/configuration/macos-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -246,6 +336,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/configuration/settings-catalog.md",
+      "redirect_url": "/intune/device-configuration/settings-catalog",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/configuration/tutorial-settings-catalog-group-policy.md",
       "redirect_url": "/intune/device-configuration/settings-catalog/tutorial-group-policy-migration",
       "redirect_document_id": false
@@ -271,43 +366,163 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/copilot/copilot-devices.md",
+      "redirect_url": "/intune/copilot/troubleshoot-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/copilot-intune-explorer.md",
+      "redirect_url": "/intune/copilot/explorer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/copilot-intune-faq.md",
+      "redirect_url": "/intune/copilot/faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/copilot-intune-overview.md",
+      "redirect_url": "/intune/copilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/security-copilot-agents-intune.md",
+      "redirect_url": "/intune/copilot/agents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/security-copilot.md",
+      "redirect_url": "/intune/copilot/security-copilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-xamarin.md",
+      "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
+      "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-enroll.md",
+      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/autopilot-hybrid-connector-proxy.md",
+      "redirect_url": "/autopilot/autopilot-hybrid-connector-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/compliance-in-intune.md",
+      "redirect_url": "/intune/governance/compliance-and-regulatory-alignment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/device-cleanup-rules.md",
+      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md",
+      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-edge.md",
+      "redirect_url": "/intune/intune-service/apps/manage-microsoft-edge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-office-mobile.md",
+      "redirect_url": "/intune/intune-service/apps/app-protection-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-overview.md",
+      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/licenses-assign.md",
+      "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/licenses.md",
+      "redirect_url": "/intune/fundamentals/licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/tenant-status.md",
+      "redirect_url": "/intune/fundamentals/tenant-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/unlicensed-admins.md",
+      "redirect_url": "/intune/fundamentals/licensing/unlicensed-admins",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/index.yml",
       "redirect_url": "/intune",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "source_path": "intune/intune-service/protect/client-apps-optional-data.md",
+      "redirect_url": "/intune/privacy/data-handling/optional-diagnostic-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/quality-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/expedite-policy",
+      "source_path": "intune/intune-service/protect/create-conditional-access-intune.md",
+      "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/settings.md",
-      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
+      "source_path": "intune/intune-service/protect/data-apple-sends-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/apple-to-intune",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "source_path": "intune/intune-service/protect/data-enable-windows-data.md",
+      "redirect_url": "/intune/privacy/windows-diagnostic-data",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/driver-updates-overview.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "source_path": "intune/intune-service/protect/data-google-sends-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/google-to-intune",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/configure.md",
-      "redirect_url": "/intune/device-updates/windows",
+      "source_path": "intune/intune-service/protect/data-intune-sends-to-apple.md",
+      "redirect_url": "/intune/privacy/data-sharing/intune-to-apple",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/device-updates/windows/reports.md",
-      "redirect_url": "/intune/device-updates/windows/feature-updates-reports",
+      "source_path": "intune/intune-service/protect/data-intune-sends-to-google.md",
+      "redirect_url": "/intune/privacy/data-sharing/intune-to-google",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-intune-sends-to-zebra.md",
+      "redirect_url": "/intune/privacy/data-sharing/intune-to-zebra",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-jamf-sends-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/jamf-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-leak-prevention.md",
+      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/fota-updates-android.md",
+      "redirect_url": "/intune/device-updates/android/fota-updates",
       "redirect_document_id": false
     },
     {
@@ -336,11 +551,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-overview.md",
-      "redirect_url": "/intune/cloud-pki",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals.md",
       "redirect_url": "/intune/cloud-pki/fundamentals",
       "redirect_document_id": false
@@ -351,8 +561,38 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/fota-updates-android.md",
-      "redirect_url": "/intune/device-updates/android/fota-updates",
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-overview.md",
+      "redirect_url": "/intune/cloud-pki",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-audit-export-delete.md",
+      "redirect_url": "/intune/privacy/personal-data/audit-export-delete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-collect.md",
+      "redirect_url": "/intune/privacy/data-handling/data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-secure-share.md",
+      "redirect_url": "/intune/privacy/data-sharing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-store-process.md",
+      "redirect_url": "/intune/privacy/data-handling/data-storage-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-view-correct.md",
+      "redirect_url": "/intune/privacy/personal-data/view-correct",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-personal-data.md",
+      "redirect_url": "/intune/privacy",
       "redirect_document_id": false
     },
     {
@@ -371,13 +611,13 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/updates/apple.md",
-      "redirect_url": "/intune/device-updates/apple/index",
+      "source_path": "intune/intune-service/protect/updates/apple-reports.md",
+      "redirect_url": "/intune/device-updates/apple/reports",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/updates/apple-reports.md",
-      "redirect_url": "/intune/device-updates/apple/reports",
+      "source_path": "intune/intune-service/protect/updates/apple.md",
+      "redirect_url": "/intune/device-updates/apple/index",
       "redirect_document_id": false
     },
     {
@@ -398,6 +638,11 @@
     {
       "source_path": "intune/intune-service/protect/updates/software-updates-macos.md",
       "redirect_url": "/intune/device-updates/apple/software-updates-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/vulnerability-remediation-agent.md",
+      "redirect_url": "/intune/copilot/agents/vulnerability-remediation-agent",
       "redirect_document_id": false
     },
     {
@@ -423,6 +668,11 @@
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-policy.md",
       "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-information-protection-configure.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
       "redirect_document_id": false
     },
     {
@@ -461,208 +711,173 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/advanced-analytics/data-platform-schema.md",
-      "redirect_url": "/intune/advanced-analytics/ref-data-platform-schema",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/adoption-score.md",
-      "redirect_url": "/intune/endpoint-analytics/adoption-score",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/app-reliability.md",
-      "redirect_url": "/intune/endpoint-analytics/app-reliability",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/configure.md",
-      "redirect_url": "/intune/endpoint-analytics/configure",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/data-collection.md",
-      "redirect_url": "/intune/endpoint-analytics/data-collection",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/get-support.md",
-      "redirect_url": "/intune/endpoint-analytics/get-support",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/index.md",
-      "redirect_url": "/intune/endpoint-analytics",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/restart-frequency.md",
-      "redirect_url": "/intune/endpoint-analytics/startup-perfomance#restart-frequency",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/scores.md",
-      "redirect_url": "/intune/endpoint-analytics/scores",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/startup-performance.md",
-      "redirect_url": "/intune/endpoint-analytics/startup-performance",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/troubleshoot.md",
-      "redirect_url": "/intune/endpoint-analytics/faq",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/work-from-anywhere.md",
-      "redirect_url": "/intune/endpoint-analytics/work-from-anywhere",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/advanced-analytics.md",
-      "redirect_url": "/intune/advanced-analytics",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/data-platform-schema.md",
-      "redirect_url": "/intune/advanced-analytics/ref-data-platform-schema",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/anomaly-detection.md",
-      "redirect_url": "/intune/advanced-analytics/anomalies",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/battery-health.md",
-      "redirect_url": "/intune/advanced-analytics/battery-health",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/advanced-analytics-deploy.md",
-      "redirect_url": "/intune/advanced-analytics/deploy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/device-query-multiple-devices.md",
-      "redirect_url": "/intune/advanced-analytics/device-query-multiple-devices",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/device-query.md",
-      "redirect_url": "/intune/advanced-analytics/device-query",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/device-scopes.md",
-      "redirect_url": "/intune/advanced-analytics/device-scopes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/enhanced-device-timeline.md",
-      "redirect_url": "/intune/advanced-analytics/device-timeline",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/advanced-analytics-plan.md",
-      "redirect_url": "/intune/advanced-analytics/plan",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/resource-performance-report.md",
-      "redirect_url": "/intune/advanced-analytics/resource-performance-report",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/advanced-analytics-troubleshooting-faqs.md",
-      "redirect_url": "/intune/advanced-analytics/troubleshoot",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/vulnerability-remediation-agent.md",
-      "redirect_url": "/intune/copilot/agents/vulnerability-remediation-agent",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/copilot/copilot-devices.md",
-      "redirect_url": "/intune/copilot/troubleshoot-devices",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/copilot/copilot-intune-explorer.md",
-      "redirect_url": "/intune/copilot/explorer",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/copilot/copilot-intune-faq.md",
-      "redirect_url": "/intune/copilot/faq",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/copilot/copilot-intune-overview.md",
-      "redirect_url": "/intune/copilot",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/copilot/security-copilot-agents-intune.md",
-      "redirect_url": "/intune/copilot/agents",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/copilot/security-copilot.md",
-      "redirect_url": "/intune/copilot/security-copilot",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/protect/create-conditional-access-intune.md",
-      "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/enroll-configmgr.md",
-      "redirect_url": "/intune/endpoint-analytics/configure?pivots=cm",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/enroll-intune.md",
-      "redirect_url": "/intune/endpoint-analytics/configure?pivots=intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/analytics/settings.md",
-      "redirect_url": "/intune/endpoint-analytics/configure",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune-service/remote-actions/bulk-device-actions.md",
-      "redirect_url": "/intune/intune-service/remote-actions",
+      "redirect_url": "/intune/device-management/actions",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/analytics/overview.md",
-      "redirect_url": "/intune/endpoint-analytics",
+      "source_path": "intune/intune-service/remote-actions/collect-diagnostics.md",
+      "redirect_url": "/intune/device-management/actions/collect-diagnostics",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/windows-information-protection-configure.md",
-      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
+      "source_path": "intune/intune-service/remote-actions/custom-notifications.md",
+      "redirect_url": "/intune/device-management/actions/send-custom-notifications",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
-      "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
+      "source_path": "intune/intune-service/remote-actions/device-activation-lock-disable.md",
+      "redirect_url": "/intune/device-management/actions/disable-activation-lock",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/developer/app-sdk-xamarin.md",
-      "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
+      "source_path": "intune/intune-service/remote-actions/device-autopilot-reset.md",
+      "redirect_url": "/intune/device-management/actions/autopilot-reset",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune/copilot/security-copilot-surface-portal.md",
-      "redirect_url": "/surface/security-copilot-surface-management-portal",
+      "source_path": "intune/intune-service/remote-actions/device-delete.md",
+      "redirect_url": "/intune/device-management/actions/delete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-deprovision.md",
+      "redirect_url": "/intune/device-management/actions/deprovision",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-fresh-start.md",
+      "redirect_url": "/intune/device-management/actions/fresh-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-full-scan.md",
+      "redirect_url": "/intune/device-management/actions/full-scan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-locate.md",
+      "redirect_url": "/intune/device-management/actions/locate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-logout-user.md",
+      "redirect_url": "/intune/device-management/actions/logout-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-lost-mode.md",
+      "redirect_url": "/intune/device-management/actions/lost-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-passcode-reset.md",
+      "redirect_url": "/intune/device-management/actions/reset-passcode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-play-lost-mode-sound.md",
+      "redirect_url": "/intune/device-management/actions/play-lost-mode-sound",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-quick-scan.md",
+      "redirect_url": "/intune/device-management/actions/quick-scan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-remote-assist.md",
+      "redirect_url": "/intune/device-management/actions/remote-assist",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-remote-lock.md",
+      "redirect_url": "/intune/device-management/actions/remote-lock",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-remove-passcode.md",
+      "redirect_url": "/intune/device-management/actions/remove-passcode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-remove-user.md",
+      "redirect_url": "/intune/device-management/actions/remove-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-rename.md",
+      "redirect_url": "/intune/device-management/actions/rename",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-restart.md",
+      "redirect_url": "/intune/device-management/actions/restart",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-retire.md",
+      "redirect_url": "/intune/device-management/actions/retire",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-rotate-bitlocker-keys.md",
+      "redirect_url": "/intune/device-management/actions/rotate-bitlocker-keys",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-rotate-filevault.md",
+      "redirect_url": "/intune/device-management/actions/rotate-filevault-recovery-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-rotate-local-admin-password.md",
+      "redirect_url": "/intune/device-management/actions/rotate-local-admin-password",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-run-remediation.md",
+      "redirect_url": "/intune/device-management/actions/run-remediation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-shutdown.md",
+      "redirect_url": "/intune/device-management/actions/shutdown",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-sync.md",
+      "redirect_url": "/intune/device-management/actions/sync",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-wipe.md",
+      "redirect_url": "/intune/device-management/actions/wipe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/index.md",
+      "redirect_url": "/intune/device-management/actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/pause-config-refresh.md",
+      "redirect_url": "/intune/device-management/actions/pause-config-refresh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/remove-apps-config.md",
+      "redirect_url": "/intune/device-management/actions/remove-apps-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/rotate-recovery-lock-passcode.md",
+      "redirect_url": "/intune/device-management/actions/rotate-recovery-lock-passcode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/update-cellular-data-plan.md",
+      "redirect_url": "/intune/device-management/actions/update-cellular-data-plan",
       "redirect_document_id": false
     },
     {
@@ -1056,37 +1271,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/apps/mamedge-5-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/apps/mamedge-6-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune/apps/mamedge-7-end-user-experience.md",
       "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-8-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/apps/mamedge-6-security-baseline.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/apps/mamedge-7-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/apps/mamedge-8-troubleshoot.md",
       "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
@@ -1726,6 +1916,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/surface/security-copilot-surface-management-portal",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune/copilot/security-copilot.md",
       "redirect_url": "/intune/copilot/security-copilot",
       "redirect_document_id": false
@@ -2076,11 +2271,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/enrollment/autopilot-hybrid-connector-proxy.md",
-      "redirect_url": "/autopilot/autopilot-hybrid-connector-proxy",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune/enrollment/backup-restore-ios.md",
       "redirect_url": "/intune/intune-service/enrollment/backup-restore-ios",
       "redirect_document_id": false
@@ -2198,11 +2388,6 @@
     {
       "source_path": "intune/intune/enrollment/multi-factor-authentication.md",
       "redirect_url": "/intune/intune-service/enrollment/multi-factor-authentication",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/enrollment/android-enroll.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-android",
       "redirect_document_id": false
     },
     {
@@ -3316,11 +3501,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/intune/protect/derived-credentials.md",
       "redirect_url": "/intune/intune-service/protect/derived-credentials",
       "redirect_document_id": false
@@ -3987,7 +4167,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/bulk-device-actions.md",
-      "redirect_url": "/intune/intune-service/remote-actions/bulk-device-actions",
+      "redirect_url": "/intune/device-management/actions",
       "redirect_document_id": false
     },
     {
@@ -3997,27 +4177,27 @@
     },
     {
       "source_path": "intune/intune/remote-actions/chrome-enterprise-remote-actions.md",
-      "redirect_url": "/intune/intune-service/remote-actions/chrome-enterprise-remote-actions",
+      "redirect_url": "/intune/device-management/actions",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/collect-diagnostics.md",
-      "redirect_url": "/intune/intune-service/remote-actions/collect-diagnostics",
+      "redirect_url": "/intune/device-management/actions/collect-diagnostics",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/custom-notifications.md",
-      "redirect_url": "/intune/intune-service/remote-actions/custom-notifications",
+      "redirect_url": "/intune/device-management/actions/send-custom-notifications",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-activation-lock-disable.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-activation-lock-disable",
+      "redirect_url": "/intune/device-management/actions/disable-activation-lock",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-fresh-start.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-fresh-start",
+      "redirect_url": "/intune/device-management/actions/fresh-start",
       "redirect_document_id": false
     },
     {
@@ -4027,72 +4207,72 @@
     },
     {
       "source_path": "intune/intune/remote-actions/device-locate.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-locate",
+      "redirect_url": "/intune/device-management/actions/locate",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-logout-user.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-logout-user",
+      "redirect_url": "/intune/device-management/actions/logout-user",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-lost-mode.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-lost-mode",
+      "redirect_url": "/intune/device-management/actions/lost-mode",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-management.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-management",
+      "redirect_url": "/intune/device-management/actions",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-passcode-reset.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-passcode-reset",
+      "redirect_url": "/intune/device-management/actions/reset-passcode",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-remote-lock.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-remote-lock",
+      "redirect_url": "/intune/device-management/actions/remote-lock",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-remove-user.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-remove-user",
+      "redirect_url": "/intune/device-management/actions/remove-user",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-rename.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-rename",
+      "redirect_url": "/intune/device-management/actions/rename",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-restart.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-restart",
+      "redirect_url": "/intune/device-management/actions/restart",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-shutdown.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-shutdown",
+      "redirect_url": "/intune/device-management/actions/shutdown",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-supervised-mode.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-supervised-mode",
+      "redirect_url": "/intune/device-management/actions",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-sync.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-sync",
+      "redirect_url": "/intune/device-management/actions/sync",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/device-wipe-macos.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-wipe-macos",
+      "redirect_url": "/intune/device-management/actions/wipe",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/devices-wipe.md",
-      "redirect_url": "/intune/intune-service/remote-actions/devices-wipe",
+      "redirect_url": "/intune/device-management/actions/wipe",
       "redirect_document_id": false
     },
     {
@@ -4107,12 +4287,12 @@
     },
     {
       "source_path": "intune/intune/remote-actions/pause-config-refresh.md",
-      "redirect_url": "/intune/intune-service/remote-actions/pause-config-refresh",
+      "redirect_url": "/intune/device-management/actions/pause-config-refresh",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/remove-apps-config.md",
-      "redirect_url": "/intune/intune-service/remote-actions/remove-apps-config",
+      "redirect_url": "/intune/device-management/actions/remove-apps-config",
       "redirect_document_id": false
     },
     {
@@ -4122,7 +4302,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/update-cellular-data-plan.md",
-      "redirect_url": "/intune/intune-service/remote-actions/update-cellular-data-plan",
+      "redirect_url": "/intune/device-management/actions/update-cellular-data-plan",
       "redirect_document_id": false
     },
     {
@@ -4586,23 +4766,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/guided-scenarios-overview.md",
-      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/fundamentals/guided-scenarios-edge.md",
-      "redirect_url": "/intune/intune-service/apps/manage-microsoft-edge",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/fundamentals/guided-scenarios-office-mobile.md",
-      "redirect_url": "/intune/intune-service/apps/app-protection-policy",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md",
-      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "source_path": "intune/use-docs.md",
+      "redirect_url": "/intune/fundamentals/use-docs",
       "redirect_document_id": false
     }
   ]

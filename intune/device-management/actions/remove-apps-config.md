@@ -53,7 +53,7 @@ Admins can use the **Remove apps and configuration** remote action to:
 
 ##### Scope tags
 
-Scope tags limit which apps and configurations an admin can view and manage. The visibility is based on the scope tag assignments defined in the admin's role. For more information, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
+Scope tags limit which apps and configurations an admin can view and manage. The visibility is based on the scope tag assignments defined in the admin's role. For more information, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
 ## Supported apps and configuration profiles
 
