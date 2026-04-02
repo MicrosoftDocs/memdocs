@@ -58,6 +58,22 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 ## App management
 
+### Direct Android line-of-business app management<!-- 25065436, 29267431 -->
+
+You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned devices.
+
+Direct LOB app management enables you to:
+
+- Deploy in-house LOB APKs directly to Android Enterprise fully managed and dedicated devices
+- Manage app updates without a Managed Google Play account
+- Simplify deployment for organizations that don't use Managed Google Play
+- Create app configuration policies for directly deployed LOB apps, giving you the same configuration flexibility you have for Managed Google Play apps
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+
 ### Multiple managed accounts for app protection policies <!-- 3182632 -->
 
 The Multiple Managed Accounts (MMA) feature for Intune mobile application management (MAM) will enable users to add and manage more than one managed account within a single app. With MMA, app protection policies will be enforced independently for each account, as defined by the admin. This capability will be especially useful for scenarios such as consultants working across organizations, company acquisitions, or users managing multiple mailboxes within the same tenant.
@@ -71,6 +87,28 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 <!-- *********************************************** -->
 
 ## Device configuration
+
+### Configure credential manager permissions for Android Enterprise devices<!-- 31358911 -->
+
+Android's Credential Provider capability will allow you to control which applications can act as system-level credential providers, responsible for password autofill and passkey storage on corporate-owned work profile, fully managed, dedicated, or personally owned work profile Android devices.
+
+To configure credential manager permissions, you'll go to **Apps** > **Android** > **Configuration** > **Managed Devices**. Choose **Android Enterprise** as the platform type.
+
+By default, Android blocks third-party credential providers on managed devices. This new configuration setting will let you:
+
+- Allow specific apps (such as Microsoft Authenticator or a third-party password manager) to act as credential providers
+- Enable passkey-based sign-in across managed Android Enterprise devices
+- Maintain control over which credential sources are trusted on corporate devices
+
+A known limitation from the Intune side is that Google Password Manager will not be allowed to act as Credential Provider on corporate owned work profile devices or personally owned work profile devices. It will be blocked on the end user's device. Use a different credential app as a workaround.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android fully managed devices (COBO)
+> - Android dedicated devices (COSU)
+> - Android corporate-owned devices with a work profile (COPE)
+> - Android personally owned devices with a work profile (BYOD) using Android Management API (AM API)
 
 ### Block location setting for Android Enterprise can keep Location services enabled<!-- 36703827 -->
 
@@ -136,6 +174,15 @@ Microsoft Intune will be adding support for userless automated device enrollment
 <!-- *********************************************** -->
 
 ## Device management
+
+### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
+
+For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
 
 ### Android Enterprise personally owned devices with a work profile will use Android Management API (AMAPI)<!-- 36840128 -->
 
