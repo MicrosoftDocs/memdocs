@@ -287,7 +287,11 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-### Monitor and troubleshooting
+### Monitor and troubleshooting  
+
+#### Support Assistant access expanded to all authenticated users<!-- 35992187 -->  
+
+All authenticated users can now access Support Assistant in the Intune admin center to find solutions and troubleshooting guidance. Creating and managing support tickets still requires a Microsoft Entra role that includes the *microsoft.office365.supportTickets* permission. For more information, see [How to get support in the Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md).  
 
 #### Support for system proxy settings in endpoint analytics and Advanced Analytics<!--30148318 -->
 
