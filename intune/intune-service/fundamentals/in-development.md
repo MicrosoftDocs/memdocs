@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/30/2026
+ms.date: 04/02/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -70,7 +70,24 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### Block location setting for Android Enterprise can keep Location services enabled<!-- 36703827 -->
+
+On Android Enterprise devices, you can use the **General > Block location** in the [settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md) to disable the location services on the device and prevent users from turning it on.
+
+This setting is changing. It will be called **Location** and will have three options you can configure:
+
+- Device default - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
+- Location enabled - Requires location services to be on and prevents end users from turning them off.
+- Location disabled - Requires location services to be off and prevents end users from turning them on.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
+> - Android Enterprise corporate owned fully managed (COBO)
+> - Android Enterprise corporate owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
@@ -86,6 +103,32 @@ You will be able to use Apple access management settings in Apple Business Manag
 > - iOS/iPadOS
 > - macOS
 
+### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
+
+On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:
+
+- In a settings catalog policy, add and configure the `EnableRegistrationDuringSetup` setting, and save your policy.
+- In Setup Assistant > **Await final configuration**, add the settings catalog policy.
+- During enrollment, users sign in twice:
+  - The first sign-in starts the regular enrollment process.
+  - The second sign-in authenticates the user identity in Company Portal and gets the SSO extension.
+
+  In a future update (no ETA), there will be updates that reduce number of sign-ins for PSSO during the Setup Assistant flow.
+
+When this feature is enabled, users have access to resources immediately when they arrive at desktop.
+
+Prerequisites:
+
+- Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
+- The ADE enrollment profile must be configured to use Setup Assistant with modern authentication.
+- Before you enroll, create a [settings catalog policy](../../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting. In the **[Await final configuration](../enrollment/device-enrollment-program-enroll-macos.md)** in Setup Assistant, add the settings catalog policy.
+- Before you enroll, deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS Automated Device Enrollment (ADE)
+
 ### Microsoft Intune will support userless ADE for visionOS and tvOS devices<!-- 29219451 -->
 
 Microsoft Intune will be adding support for userless automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability will support ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and remote device actions. The feature will be available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite. Enrolled visionOS and tvOS devices will appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support will require tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
@@ -93,6 +136,30 @@ Microsoft Intune will be adding support for userless automated device enrollment
 <!-- *********************************************** -->
 
 ## Device management
+
+### Android Enterprise personally owned devices with a work profile will use Android Management API (AMAPI)<!-- 36840128 -->
+
+When users enroll their personally owned Android devices in Intune, a work profile is created with a separate partition on the device for the user's work account. These devices are referred to as personally owned devices with a work profile.
+
+As part of the Intune move to the [Android Management API](https://developers.google.com/android/management) (opens Android's web site), there will be some updates for personally owned devices that enroll in Intune:
+
+- Web based enrollment for an improved enrollment flow and experience - Users won't have to install an app to enroll in Intune. Web enrollment will be tenant wide.
+- New implementation for how Intune delivers policies - Modern update on how Intune delivers and monitors policies on Android personally owned devices with a work profile. This change also aligns with how Intune manages policies on corporate owned devices with a work profile, fully managed, and dedicated devices. You can scale your migration to targeted groups.
+
+To use these features, you will need to opt-in:
+
+- Web based enrollment: **Devices > Device Onboarding > Enrollment > Android > Personally owned devices with a work profile > Use web enrollment for all users enrolling into Android personally-owned work profile management**
+- Policy: **Devices > Manage devices > Configuration > Create > New policy > Android Enterprise > Move to Android Management API**
+
+To learn more, see:
+
+- [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
+- [Android Enterprise work profile management overview](../enrollment/android-enterprise-overview.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise personally owned devices with a work profile
 
 ### Device page in the Intune admin center is updated (public preview) <!-- 3646300 16532161 -->
 
