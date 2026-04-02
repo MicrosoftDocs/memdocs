@@ -16,7 +16,7 @@ ms.collection:
 
 Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy. These capabilities extend to the profiles for your [endpoint security policies](../protect/endpoint-security-manage-devices.md#review-your-profiles-for-endpoint-security-policies) for macOS and Windows devices.
 
-You can also use [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md) to get more information about your policies and the settings configured in your policies.
+You can also use [Microsoft Copilot in Intune](../../copilot/index.md) to get more information about your policies and the settings configured in your policies.
 
 This article shows you how to check the assignment status of existing device configuration policies, make changes, troubleshoot conflicts, and how to use Copilot for some of these features.
 
@@ -112,13 +112,13 @@ After you create your device configuration policy, Intune provides reporting dat
 
     The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
 
-    For more information on the different ways you can use Copilot in Intune, go to [Copilot in Intune overview](../copilot/copilot-intune-overview.md).
+    For more information on the different ways you can use Copilot in Intune, go to [Copilot in Intune overview](../../copilot/index.md).
 
 3. Go to **Devices** > **All devices** > select an existing device.
 
 4. Select **Summarize with Copilot**. Copilot shows device-specific information, like the device properties, group membership, and more.
 
-    For information on using Copilot to troubleshoot devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
+    For information on using Copilot to troubleshoot devices, go to [Use Copilot in Intune to troubleshoot devices](../../copilot/troubleshoot-devices.md).
 
 ---
 

@@ -18,7 +18,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -29,7 +29,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/licensing.md)]
+[!INCLUDE [platform](../../includes/requirements/licensing.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -37,14 +37,14 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 >Required licenses:
 >
-> - [Microsoft Intune Plan 1 subscription](../fundamentals/licensing/index.md)
+> - [Microsoft Intune Plan 1 subscription](../../fundamentals/licensing/index.md)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/plugins.md)]
+[!INCLUDE [platform](../../includes/requirements/plugins.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -61,7 +61,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -78,7 +78,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -88,31 +88,31 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 > To **enable**, **configure**, and **delete** the Device Offboarding Agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles, either:
+> :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles, either:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
 > - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
-> :::image type="icon" source="../media/icons/16/entra.svg" border="false"::: Entra roles, either:
+> :::image type="icon" source="../../media/icons/16/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Security Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
 > ---
 >
 > To **use** the agent and perform offboarding actions, use an account with at least the following roles:
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles, either:
+> :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles, either:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
 > - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
-> :::image type="icon" source="../media/icons/16/entra.svg" border="false"::: Entra roles, either:
+> :::image type="icon" source="../../media/icons/16/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions\
 >     To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the **[Disable devices](/entra/identity/role-based-access-control/custom-device-permissions#enable-or-disable-devices)** permission. You don't need this permission to run or view results from the agent.
 >
-> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Security Copilot contributor](/copilot/security/authentication#security-copilot-roles)
 
 :::column-end:::
@@ -195,7 +195,7 @@ Before running the Device Offboarding Agent, note the following:
 
 [!INCLUDE [enable](includes/enable.md)]
 
-:::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::
+:::image type="content" source="media/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="media/device-offboarding-agent/set-up.png":::
 
 ## Configure custom instructions
 
@@ -267,7 +267,7 @@ Include only devices with last activity before […]
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn how to use the Device Offboarding Agent](device-offboarding-agent-use.md)
+> [Learn how to use the Device Offboarding Agent](manage-device-offboarding-agent.md)
 
 <!--links-->
 

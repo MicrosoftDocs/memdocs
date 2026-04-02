@@ -19,7 +19,7 @@ Microsoft Security Copilot is a cloud-based AI platform that provides a natural 
 
 **Security Copilot integrates with Microsoft Intune**.
 
-If you use [Microsoft Intune](../fundamentals/what-is-intune.md) in the same tenant as Security Copilot, then you can use Security Copilot to get insights about your Intune data.
+If you use [Microsoft Intune](../intune-service/fundamentals/what-is-intune.md) in the same tenant as Security Copilot, then you can use Security Copilot to get insights about your Intune data.
 
 There are Intune capabilities built into Security Copilot, and you can use prompts to get more information, including:
 
@@ -44,10 +44,10 @@ If you're new to Security Copilot, you should familiarize yourself with it by re
 
 There are several ways to use Copilot in Intune:
 
-- [Data exploration using natural language](../copilot/copilot-intune-overview.md#data-exploration)
-- [Copilot Chat prompt suggestions](../copilot/copilot-intune-overview.md#copilot-chat-prompt-suggestions)
-- [Policy and setting management](../copilot/copilot-intune-overview.md#policy-and-setting-management)
-- [Device details and troubleshooting](../copilot/copilot-intune-overview.md#device-details-and-troubleshooting)
+- [Data exploration using natural language](index.md#data-exploration)
+- [Copilot Chat prompt suggestions](index.md#copilot-chat-prompt-suggestions)
+- [Policy and setting management](index.md#policy-and-setting-management)
+- [Device details and troubleshooting](index.md#device-details-and-troubleshooting)
 - [Windows 365 Cloud PC insights](/windows-365/enterprise/copilot-in-intune-for-windows365)
 
 ### Security admin focus
@@ -68,7 +68,7 @@ In Microsoft Defender, you can use this information, including the device type, 
 
 ### What you need to know
 
-- When an admin submits a prompt, Copilot can only access the data that the admin has permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to them.
+- When an admin submits a prompt, Copilot can only access the data that the admin has permissions to, which includes the [RBAC roles](../intune-service/fundamentals/role-based-access-control.md) and [Intune scope tags](../intune-service/fundamentals/scope-tags.md) assigned to them.
 
   If you want your admins to access all your Intune data in Security Copilot, then use the following role in Microsoft Entra ID:
 
@@ -77,10 +77,10 @@ In Microsoft Defender, you can use this information, including the device type, 
   For more information on roles and authentication, go to:
 
   - [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication)
-  - [Role based access control (RBAC) in Intune](../fundamentals/role-based-access-control.md)
-  - [Use RBAC and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md)
+  - [Role based access control (RBAC) in Intune](../intune-service/fundamentals/role-based-access-control.md)
+  - [Use RBAC and scope tags for distributed IT in Intune](../intune-service/fundamentals/scope-tags.md)
 
-- You can access your Intune data in the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and Copilot in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on Copilot in Intune vs. Security Copilot, and other common questions, go to the [Microsoft Copilot in Intune FAQ](copilot-intune-faq.md).
+- You can access your Intune data in the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and Copilot in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on Copilot in Intune vs. Security Copilot, and other common questions, go to the [Microsoft Copilot in Intune FAQ](faq.md).
 
 ## Enable the Security Copilot integration in Intune
 
@@ -208,10 +208,10 @@ For more information about data privacy in Security Copilot, go to [Privacy and 
 
 When you interact with the Security Copilot to get Intune data, the Security Copilot pulls that data from Intune. The prompts, the Intune data that's retrieved, and the output shown in the prompt results is processed and stored within the Security Copilot service.
 
-When you use Security Copilot to get Intune data, Security Copilot also has access to the data and permissions defined by the [RBAC roles](../fundamentals/role-based-access-control.md) and [Intune scope tags](../fundamentals/scope-tags.md) assigned to you.
+When you use Security Copilot to get Intune data, Security Copilot also has access to the data and permissions defined by the [RBAC roles](../intune-service/fundamentals/role-based-access-control.md) and [Intune scope tags](../intune-service/fundamentals/scope-tags.md) assigned to you.
 
 ## Related articles
 
 - [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
 - [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security)
-- [Use Microsoft Copilot in Intune](copilot-intune-overview.md)
+- [Use Microsoft Copilot in Intune](index.md)
