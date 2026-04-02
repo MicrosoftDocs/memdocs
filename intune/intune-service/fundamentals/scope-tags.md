@@ -129,7 +129,7 @@ To enable Scoped permissions, go to **Tenant administration** > **Roles** > **Se
 
 Before enabling Scoped permissions, use the **Permissions Assessment Report** to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings**, and can be run as often as needed, before or after enabling the setting.
 
-The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled.
+The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled.  Security groups with no members are not listed, and security groups with no unioned scope tags are not listed.
 
 To review the impact on your tenant and enable Scoped permissions:
 
