@@ -3,7 +3,7 @@ title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/11/2025
+ms.date: 04/27/2026
 ms.topic: reference
 params:
   siblings_only: true
@@ -331,11 +331,15 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Block location**: If **True**, disables the Location setting on the device and prevents users from turning it on. When this setting is disabled, any other setting that depends on the device location is affected, including the `[Locate device](../../intune-service/remote-actions/device-locate.md)` remote action that admins use. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+- **Location**: Contols the location services on the device. Your options:
+
+  - **Device default** - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
+  - **Location enabled** - Requires location services to be on and prevents end users from turning them off.
+  - **Location disabled** - Requires location services to be off and prevents end users from turning them on. When this setting is disabled, any other setting that depends on the device location is affected, including the [Locate device](../../intune-service/remote-actions/device-locate.md) remote action that admins use.
 
   Applies to:
 
-  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
