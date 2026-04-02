@@ -8,7 +8,7 @@ items:
     href: change-review-agent.md
     displayName: Change Review Agent
   - name: Use the agent
-    href: change-review-agent-use.md
+    href: manage-change-review-agent.md
     displayName: Change Review Agent
 - name: Device Offboarding Agent
   items:
@@ -16,7 +16,7 @@ items:
     href: device-offboarding-agent.md
     displayName: Device Offboarding Agent
   - name: Use the agent
-    href: device-offboarding-agent-use.md
+    href: manage-device-offboarding-agent.md
     displayName: Device Offboarding Agent
 - name: Policy Configuration Agent
   items:
@@ -24,7 +24,7 @@ items:
     href: policy-configuration-agent.md
     displayName: Policy Configuration Agent
   - name: Use the agent
-    href: policy-configuration-agent-use.md
+    href: manage-policy-configuration-agent.md
     displayName: Policy Configuration Agent
 - name: Vulnerability Remediation Agent
   items:
@@ -32,5 +32,5 @@ items:
     href: vulnerability-remediation-agent.md
     displayName: Vulnerability Remediation Agent
   - name: Use the agent
-    href: vulnerability-remediation-agent-use.md
+    href: manage-vulnerability-remediation-agent.md
     displayName: Vulnerability Remediation Agent
