@@ -77,7 +77,7 @@ items:
     href: rotate-local-admin-password.md
     displayName: remote action
   - name: Rotate FileVault recovery key
-    href: rotate-filevault.md
+    href: rotate-filevault-recovery-key.md
     displayName: remote action
   - name: Rotate Recovery Lock passcode
     href: rotate-recovery-lock-passcode.md

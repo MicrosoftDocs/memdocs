@@ -826,7 +826,7 @@
       "source_path": "intune/intune-service/remote-actions/device-rotate-bitlocker-keys.md"
     },
     {
-      "redirect_url": "/intune/device-management/actions/rotate-filevault",
+      "redirect_url": "/intune/device-management/actions/rotate-filevault-recovery-key",
       "redirect_document_id": false,
       "source_path": "intune/intune-service/remote-actions/device-rotate-filevault.md"
     },
