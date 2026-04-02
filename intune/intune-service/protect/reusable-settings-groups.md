@@ -58,10 +58,6 @@ The following profiles support use of reusable settings groups:
 
 - Windows elevation rules policy
 
-> [!NOTE]
->
-> Reusable settings groups are not currently supported for use with [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
-
 ## Create a reusable group
 
 Each reusable settings group includes a subset of settings from the full profile you're creating the group for. Use the following links to view the settings you can configure in a settings group for each profile:
