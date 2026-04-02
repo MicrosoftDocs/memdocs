@@ -3,7 +3,7 @@ title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/12/2026
+ms.date: 04/02/2026
 ms.topic: how-to
 ms.reviewer: davidra
 ms.collection:
@@ -41,7 +41,11 @@ To use multi administrative approval, your tenant must have at least two adminis
 
 - **Intune Administrator** [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (also known as **Intune Service Administrator**): This Microsoft Entra role provides full read/write access to Intune. Because it's a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), Microsoft recommends using a least-privileged custom Intune role for routine access policy management instead of this role. To learn more, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
-**To approve or reject requests**, an account must be in the approver group that's assigned to the access policy for a specific type of resource. Approver accounts require the *Approval for Multi Admin Approval* permission in their Intune role.
+**To approve or reject requests**, an account must meet the following requirements:
+
+- **Approver group membership**: The account must be a member of the approver group that's assigned to the access policy for the specific type of resource.
+
+- **Intune role permission**: The account must have the *Approval for Multi Admin Approval* permission in their Intune role.
 
 All approver groups must also be a member group of one or more Intune role assignments. There's no specific requirement for which role assignment the approver group must be added to. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
