@@ -299,7 +299,7 @@ The *collect diagnostics* remote action is enabled by default. You can disable t
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
-     :::image type="content" source="images/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="images/disable-device-diagnostics.png":::
+     :::image type="content" source="media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="media/collect-diagnostics/disable-device-diagnostics.png":::
 
 ### Disable Windows Autopilot automatic collection of diagnostics
 <!--1895390-->
@@ -310,7 +310,7 @@ Windows Autopilot automatic diagnostic capture is enabled by default. You can di
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
-     :::image type="content" source="images/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Windows Autopilot automatic diagnostics collection set to Disabled." lightbox="images/disable-autopilot-diagnostics.png":::
+     :::image type="content" source="media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Windows Autopilot automatic diagnostics collection set to Disabled." lightbox="media/collect-diagnostics/disable-autopilot-diagnostics.png":::
 
 ### Known issues with device diagnostics
 

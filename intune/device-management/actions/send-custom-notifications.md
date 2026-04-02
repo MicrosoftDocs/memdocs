@@ -144,7 +144,7 @@ When a custom notification is sent, users receive it as a push alert from the Co
 
 :::column-end:::
 :::column span="1":::
-:::image type="content" source="images/ios-custom-notification.png" lightbox="images/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
+:::image type="content" source="media/send-custom-notifications/ios-custom-notification.png" lightbox="media/send-custom-notifications/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
 :::column-end:::
 :::row-end:::
 
@@ -162,7 +162,7 @@ When a custom notification is sent, users receive it as a push alert from the Co
 
 :::column-end:::
 :::column span="1":::
-:::image type="content" source="images/android-custom-notification.png" lightbox="images/android-custom-notification.png" alt-text="Locked device Android custom notification.":::
+:::image type="content" source="media/send-custom-notifications/android-custom-notification.png" lightbox="media/send-custom-notifications/android-custom-notification.png" alt-text="Locked device Android custom notification.":::
 
 :::column-end:::
 :::row-end:::

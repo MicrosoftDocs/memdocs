@@ -126,7 +126,7 @@ For more information about device restrictions, see [Android template device set
 
 ::: zone-end
 
-   ![Screenshot of Locate device using Intune in Azure](images/locate-device.png)
+   ![Screenshot of Locate device using Intune in Azure](media/locate/locate-device.png)
 
 ::: zone pivot="android"
 
