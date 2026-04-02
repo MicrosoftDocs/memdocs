@@ -208,7 +208,7 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
-### Device page in the Intune admin center is updated (public preview) <!-- 3646300 16532161 -->
+### Device page in the Intune admin center is updated (public preview) <!-- 36646300 16532161 -->
 
 In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
 
