@@ -335,7 +335,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
   - **Device default** - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
   - **Location enabled** - Requires location services to be on and prevents end users from turning them off.
-  - **Location disabled** - Requires location services to be off and prevents end users from turning them on. When this setting is disabled, any other setting that depends on the device location is affected, including the `[Locate device](../../intune-service/remote-actions/device-locate.md)` remote action that admins use.
+  - **Location disabled** - Requires location services to be off and prevents end users from turning them on. When this setting is disabled, any other setting that depends on the device location is affected, including the [Locate device](../../intune-service/remote-actions/device-locate.md) remote action that admins use.
 
   Applies to:
 
