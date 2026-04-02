@@ -120,7 +120,7 @@ Requirements to collect diagnostics from an M365 application:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the third setting is enabled.
-3. Create and deploy an Intune App Protection policy to a user, more information [here](../apps/app-protection-policies.md).
+3. Create and deploy an Intune App Protection policy to a user, more information [here](../../intune-service/apps/app-protection-policies.md).
 4. Confirm the application has been managed by Intune App Protection policy. You can check locally on the device and/or by loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:
@@ -156,7 +156,7 @@ The collect diagnostics remote action can also be configured to automatically co
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
-*Collect diagnostics* is also available as a [bulk device action](../remote-actions/index.md#bulk-device-actions) that collects diagnostic logs from up to 25 Windows devices at a time.
+*Collect diagnostics* is also available as a [bulk device action](index.md#bulk-device-actions) that collects diagnostic logs from up to 25 Windows devices at a time.
 
 > [!NOTE]
 > Microsoft personnel might access device diagnostics to help troubleshooting and resolving incidents.

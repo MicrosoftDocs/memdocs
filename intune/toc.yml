@@ -1822,7 +1822,7 @@ items:
         href: ./intune-service/fundamentals/chrome-enterprise-device-details.md
 
     - name: Remote device actions
-      href: ./intune-service/remote-actions/toc.yml
+      href: ./device-management/actions/toc.yml
 
   - name: Support your end users
     items:

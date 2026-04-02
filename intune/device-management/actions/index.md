@@ -120,7 +120,7 @@ Select one of the following tabs to learn more about the available remote action
 # [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 > [!NOTE]
-> To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md) and enroll devices by using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
+> To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../../intune-service/enrollment/chrome-enterprise-connector-configure.md) and enroll devices by using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
 
 | Icon | Action | Description |
 |--|--|--|
