@@ -46,7 +46,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Scope tags support for Endpoint Privilege Management reports<!-- 34630681 -->
+### Scope tags support for Endpoint Privilege Management reports<!-- 34639681 -->
 
 We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
