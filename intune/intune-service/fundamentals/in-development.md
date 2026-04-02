@@ -175,6 +175,17 @@ Microsoft Intune will be adding support for userless automated device enrollment
 
 ## Device management
 
+### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
+
+Windows devices managed by Intune will need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions will no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
+
+The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
+
 ### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
 
 For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.
@@ -299,7 +310,34 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### Enhanced app inventory with faster data updates<!-- 27117584 -->
+
+Intune enhanced app inventory will bring faster, more detailed visibility into the apps in your environment to support identification of outdated or risky software. Improved data freshness and richer app metadata will provide clearer insight into installed applications, while new controls will let you specify which devices are included in inventory collection.
+
+This feature will be initially available for Windows, with additional platforms to follow.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
+
+### Intune Data Warehouse (beta) connector deprecation in Power BI<!-- 37106409 -->
+
+The Intune Data Warehouse (beta) connector in Power BI will be retired. If you use Power BI reports that rely on this connector, you'll need to transition to Intune connector v2 or the OData Feed connector before the retirement completes.
+
+Power BI reports created after November 2025 already use connector v2. Reports created before November 2025 may still use the beta connector and will need to be updated.
+
+The transition will begin in late April 2026 and occur gradually over two weeks. After the transition completes, data access through the beta connector will no longer be available.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+> - iOS/iPadOS
+> - macOS
+> - Android
 
 <!-- *********************************************** -->
 
