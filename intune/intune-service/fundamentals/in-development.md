@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/30/2026
+ms.date: 04/02/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -138,19 +138,6 @@ After the defined time elapses, or when the *restore managed home screen* action
 <!-- *********************************************** -->
 
 ## Device security
-
-### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
-
-We're working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
-
-When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won't automatically update to the new version.
-
-For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 11
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
