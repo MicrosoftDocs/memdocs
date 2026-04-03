@@ -31,7 +31,7 @@ This feature applies to:
 An eligible TeamViewer license is required in order to use the TeamViewer integration. Visit the [TeamViewer Integration web page](https://www.teamviewer.com/en/integrations/microsoft-intune/) or contact the TeamViewer sales team for more information about required licenses.  
 
 > [!NOTE]
-> TeamViewer is not supported on GCC or GCC High environments.
+> TeamViewer isn't supported on GCC or GCC High environments.
 
 ## Prerequisites
 
@@ -44,12 +44,12 @@ Before you configure the TeamViewer connector in Intune, make sure the following
   Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions (or the Intune Administrator or Global Administrator role) in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 - **TeamViewer account and license:**  
-  A licensed [TeamViewer](https://www.teamviewer.com/) account. Only some TeamViewer licenses support integration with Intune. For more information, see the [TeamViewer Intune Integration overview](https://www.teamviewer.com/integrations/microsoft-intune/)(opens the Teamviewer website).  
+  A licensed [TeamViewer](https://www.teamviewer.com/) account. Only some TeamViewer licenses support integration with Intune. For more information, see the [TeamViewer Intune Integration overview](https://www.teamviewer.com/integrations/microsoft-intune/)(opens the TeamViewer website).  
 
-The integration supports connections to TeamViewer Managed Devices that have been managed by your TeamViewer company with an installed TeamViewer Host or Full Client. Any connection settings, policies or TeamViewer Conditional Access rules you have configured will also apply to connections started from the integration. For more information, see [Getting Started with Intune Integration](https://www.teamviewer.com/link/?url=178709)(opens the Teamviewer website).
+The integration supports connections to TeamViewer Managed Devices that have been managed by your TeamViewer company with an installed TeamViewer Host or Full Client. Any connection settings, policies or TeamViewer Conditional Access rules you have configured will also apply to connections started from the integration. For more information, see [Getting Started with Intune Integration](https://www.teamviewer.com/link/?url=178709)(opens the TeamViewer website).
 
 >[!TIP]
-> To ensure a seamless setup, you can configure Intune Sync in your TeamViewer company settings to match your Intune and TeamViewer device group setups. For more information, see [TeamViewer Intune Device Sync](https://www.teamviewer.com/link/?url=737977)(opens the Teamviewer website).  
+> To ensure a seamless setup, you can configure Intune Sync in your TeamViewer company settings to match your Intune and TeamViewer device group setups. For more information, see [TeamViewer Intune Device Sync](https://www.teamviewer.com/link/?url=737977)(opens the TeamViewer website).  
 
 >[!TIP]
 > To get the best experience while using the integration, we recommend you enable single sign-on (SSO) between TeamViewer and Microsoft Entra identity provider.  
@@ -60,7 +60,8 @@ To enable remote assistance through TeamViewer, an Intune administrator must con
 
 ### Before you begin  
 
-- Ensure you are signed in with an account that has permissions and confirm that your organization has an active TeamViewer license that supports the new Microsoft Intune integration.  
+- Confirm that your organization has an active TeamViewer license that supports the new Microsoft Intune integration.  
+- Ensure you're signed in with an account that has permissions.
 - Users with **Remote assistance connectors / Read** permission can view the connector status.
 - Users with **Remote assistance connectors / Read** and **Remote Tasks/Offer Remote assistance** permissions can view the connector status and initiate TeamViewer sessions.
 - Users with **Remote assistance connectors / Read** and **Remote assistance connectors / Update** permissions can view and modify the connector configuration.
@@ -76,7 +77,7 @@ To enable remote assistance through TeamViewer, an Intune administrator must con
    > The new TeamViewer connector is named **TeamViewer connector** and the previous one has changed to **TeamViewer connector (old)**.
 3. On the TeamViewer connector page, flip the **Turn on TeamViewer connector** toggle to **On**. This toggle enables TeamViewer as a remote assistance option for your tenant.
 4. Review the [Data shared with TeamViewer](#data-shared-with-teamviewer) section later in this article to understand the data that will be sent to TeamViewer when this connector is enabled.
-5. When the toggle is enabled, configure the TeamViewer base URL. It is automatically prefilled with `https://web.teamviewer.com/`, which is the correct choice for most companies. If your organization uses a specific TeamViewer region, enter the appropriate subdomain of the URL. This URL determines which TeamViewer environment Intune launches when a helpdesk user starts a remote assistance session.
+5. When the toggle is enabled, configure the TeamViewer base URL. It's automatically prefilled with `https://web.teamviewer.com/`, which is the correct choice for most companies. If your organization uses a specific TeamViewer region, enter the appropriate subdomain of the URL. This URL determines which TeamViewer environment Intune launches when a helpdesk user starts a remote assistance session.
 6. Select **Save** to apply the configuration. When the configuration is saved successfully, a confirmation message appears and the connector status is updated.
 
 After the TeamViewer connector is enabled and saved:  
@@ -110,7 +111,7 @@ When a helpdesk agent launches a new remote assistance session to a device, Intu
 | Data element              | Description                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------|
 | Microsoft Entra Device ID | A tenant unique identifier for the device, used by TeamViewer to look up the device record. |
-| Device Name               | The device name of the Intune registered device, used as a fallback if Entra Device ID is not available. |
+| Device Name               | The device name of the Intune registered device, used as a fallback if Entra Device ID isn't available. |
 
 ## Migration from the previous TeamViewer connector
 
@@ -120,9 +121,4 @@ If both connectors are enabled, helpdesk agents will see two TeamViewer options 
 
 ## Where to get help
 
-Microsoft Intune supports the setup of TeamViewer Remote assistance from the Intune admin center. After a remote assistance session is launched the experience is owned and supported by TeamViewer.
-
-## Next steps
-
-- Learn about Remote Help.  
-
+Microsoft Intune supports the setup of TeamViewer Remote assistance from the Intune admin center. After you launch a remote assistance session, the experience is owned and supported by TeamViewer.  
