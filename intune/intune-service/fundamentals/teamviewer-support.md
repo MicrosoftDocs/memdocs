@@ -1,6 +1,6 @@
 ---
 title: Remotely administer devices in Microsoft Intune
-description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
+description: Install the old TeamViewer connector to remotely administer devices using Microsoft Intune.    
 author: lenewsad
 ms.author: lanewsad
 ms.date: 03/04/2025
@@ -9,7 +9,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Use TeamViewer to remotely administer Intune devices
+# Use TeamViewer to remotely administer Intune devices 
+
+> [!IMPORTANT]
+> A new TeamViewer remote assistance experience is available in Intune and replaces the connector described in this article.  
+>
+> This article describes the previous TeamViewer connector, which is being deprecated. We recommend using the new TeamViewer integration for the latest experience and ongoing support. For more information and setup guidance, see [the new TeamViewer integration article](team-viewer-integration.md).  
 
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This article shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
 
