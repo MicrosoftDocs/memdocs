@@ -40,7 +40,7 @@ This Win32 app supersedence permission is added to the following built-in roles:
 The following steps help you create a supersedence relationship between apps:
 
 1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com).
-2. Select **Apps** > **All apps**, and then select a Win32 app from the list. To add a Win32 app, see [add a Win32 app to Intune](apps-win32-add.md).
+2. Select **Apps** > **All Apps**, and then select a Win32 app from the list. To add a Win32 app, see [add a Win32 app to Intune](apps-win32-add.md).
 3. After you select the existing Win32 app, select **Properties**.
 4. In the **Supersedence** section, select **Edit** > **Add** to choose apps that should be superseded.
 
