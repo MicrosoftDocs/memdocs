@@ -14,11 +14,11 @@ ms.collection:
 > [!IMPORTANT]
 > A new TeamViewer remote assistance experience is available in Intune and is described in this article. 
 >
-> Your existing TeamViewer configurations remain available in the Microsoft Intune admin center under **TeamViewer connector (old)**. To use the latest experience, you must set up the new connector under **TeamViewer connector**.  
+> Your old TeamViewer configurations remain available in the Microsoft Intune admin center under **TeamViewer connector (old)**. To use the new experience, you must set up the new connector under **TeamViewer connector**.  
 >
 > If both connectors are enabled, helpdesk agents see two options when starting a remote assistance session:  
-> - **TeamViewer (old)**: Existing experience  
-> - **TeamViewer**: New experience  
+> - **TeamViewer (old)**: Previous remote assistance experience  
+> - **TeamViewer**: New remote assistance experience  
 >
 > For information about the previous connector, see [Use TeamViewer to remotely administer Intune devices](teamviewer-support.md).  
 
@@ -76,7 +76,7 @@ Complete these steps to integrate the TeamViewer connector with Microsoft Intune
 1. Sign in to the Intune admin center as an Intune administrator or user with [sufficient permissions](#role-based-access-control).  
 1. Go to **Tenant administration** > **Connectors and tokens** > **TeamViewer connector**.  
    > [!NOTE]
-   > The new TeamViewer connector appears as **TeamViewer connector** in the admin center. The existing connector is now called **TeamViewer connector (old)**.  
+   > The new TeamViewer connector appears as **TeamViewer connector** in the admin center. The previous connector is now called **TeamViewer connector (old)**.  
 1. On the TeamViewer connector page, flip the **Turn on TeamViewer connector** toggle to **On**. This toggle enables TeamViewer as a remote assistance option for your tenant.
 1. Review the [Data shared with TeamViewer](#data-shared-with-teamviewer) section later in this article to understand the data that's sent to TeamViewer when the connector is enabled. 
 1. The TeamViewer base URL is prefilled with `https://web.teamviewer.com/`, which is the appropriate URL for most companies. If your organization uses a specific TeamViewer region, enter the appropriate subdomain of the URL. This URL determines which TeamViewer environment Intune launches when a helpdesk user starts a remote assistance session.  
