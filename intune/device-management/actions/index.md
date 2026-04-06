@@ -250,7 +250,7 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-LOCK]: remote-lock.md
 [RA-LOGOUT]: logout-user.md
 [RA-LOSTMODE]: lost-mode.md
-[RA-NOTIFY]: send-custom-notifications.md
+[RA-NOTIFY]: send-custom-notification.md
 [RA-PAUSECR]: pause-config-refresh.md
 [RA-PLAY]: play-lost-mode-sound.md
 [RA-PREM]: remove-passcode.md

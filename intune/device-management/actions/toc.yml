@@ -85,8 +85,8 @@ items:
   - name: Run remediation
     href: run-remediation.md
     displayName: remote action
-  - name: Send custom notifications
-    href: send-custom-notifications.md
+  - name: Send custom notification
+    href: send-custom-notification.md
     displayName: remote action
   - name: Shutdown
     href: shutdown.md
