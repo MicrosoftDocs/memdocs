@@ -19,6 +19,8 @@ After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to 
 
 Supersedence relationships can be created when adding or modifying a Win32 app within Intune. The **Supersedence** step allows you to specify any supersedence relationships related to the Win32 app.
 
+:::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-01.png" alt-text="Screenshot of the Add App wizard for a Win32 app in Microsoft Intune admin center, showing the Supersedence step in the wizard navigation.":::
+
 ## Prerequisites
 
 App supersedence can only be applied to Win32 apps. For more information, see [Add a Win32 app](apps-win32-add.md) to Intune.
