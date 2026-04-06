@@ -17,9 +17,7 @@ After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to 
 > [!IMPORTANT]
 > Supersedence, which enables you to update and replace a version of a Win32 app, doesn't currently allow you to interchange the Win32 app with an app dependency. For more information about app dependencies, see [Dependencies](../apps/apps-win32-add.md#step-5-dependencies).
 
-Supersedence relationships can be created when adding or modifying a Win32 app within Intune. The **Supersedence** steps allow you to specify any supersedence relationships related to the Win32 app.
-
-:::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-01.png" alt-text="Screenshot of the Supersedence step when adding a Win32 app in Microsoft Intune admin center.":::
+Supersedence relationships can be created when adding or modifying a Win32 app within Intune. The **Supersedence** step allows you to specify any supersedence relationships related to the Win32 app.
 
 ## Prerequisites
 
