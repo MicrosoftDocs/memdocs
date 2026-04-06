@@ -74,7 +74,7 @@ Windows Enterprise multi-session VMs are treated as a separate OS edition and so
 
 ## Create the configuration profile
 
-To configure configuration policies for Windows Enterprise multi-session VMs, use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Intune admin center.
+To configure configuration policies for Windows Enterprise multi-session VMs, use the [Settings catalog](../../device-configuration/settings-catalog/index.md) in the Microsoft Intune admin center.
 
 Only the following configuration profile templates are supported for Windows Enterprise multi-session VMs:
 
@@ -111,7 +111,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 ### Administrative templates
 
-Administrative Templates in the [Intune settings catalog](../configuration/settings-catalog.md) are supported for Windows Enterprise multi-session with some limitations:
+Administrative Templates in the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) are supported for Windows Enterprise multi-session with some limitations:
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
 - ADMX-ingested policies are supported. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows Enterprise multi-session.
@@ -169,7 +169,7 @@ Scripts configured to run in the user context and assigned to users are supporte
 ## Windows Update client policies
 <a name="windows-update-for-business"></a>
 
-You can use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
+You can use the [settings catalog](../../device-configuration/settings-catalog/index.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
 
 The following settings are available in the catalog, with the links opening the Windows CSP documentation:
 
@@ -203,7 +203,7 @@ For more information, see:
 
 ## Security baselines
 
-Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../configuration/settings-catalog.md).
+Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../../device-configuration/settings-catalog/index.md).
 
 ## Additional configurations that aren't supported on Windows Enterprise multi-session VMs
 
@@ -234,7 +234,7 @@ The following sections provide troubleshooting guidance for common issues.
 Configuration policy reports as Not applicable|Some policies aren't applicable to Azure Virtual Desktop VMs.|
 |Microsoft Edge/Microsoft Office ADMX policy doesn't show up when I apply the filter for Windows Enterprise multi-session edition|Applicability for these settings isn't based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
 |App configured to install in system context didn't apply|Confirm the app doesn't have a dependency or supersedence relationship on any apps configured to install in user context. User context apps aren't currently supported on Windows Enterprise multi-session.|
-|Update rings for Windows policy didn't apply|Windows update rings policies aren't currently supported. Quality updates can be managed via settings available in the [settings catalog](../configuration/settings-catalog.md).|
+|Update rings for Windows policy didn't apply|Windows update rings policies aren't currently supported. Quality updates can be managed via settings available in the [settings catalog](../../device-configuration/settings-catalog/index.md).|
 
 ## Next steps
 

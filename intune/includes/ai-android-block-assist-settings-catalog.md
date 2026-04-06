@@ -22,4 +22,4 @@ This setting blocks assist content, like screenshots and app details, from being
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
 5. Select **Add settings**.
 6. Select the **General** category > **Block assist content sharing with privileged apps** setting. Set its value to **True**.
-7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../intune-service/configuration/settings-catalog.md).
+7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../device-configuration/settings-catalog/index.md).

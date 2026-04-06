@@ -3,7 +3,7 @@ title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/11/2026
+ms.date: 03/26/2026
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
 ms.reviewer:
@@ -92,7 +92,7 @@ For related information, see  [Sync enrolled device for Windows](../user-help/sy
 
 Conflicts can happen when different policies update the same setting to different values. For example, you have two policies that update the copy/paste setting to different values. The conflict is handled differently depending on the type of policy.
 
-If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../copilot/copilot-intune-overview.md#policy-and-setting-management).
+If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../../copilot/index.md#policy-and-setting-management).
 
 You can also use Microsoft Copilot in Intune to get more information about your policies and the settings configured in your policies.
 
@@ -178,7 +178,9 @@ For more information on dynamic groups, go to:
 
 ## Unassigned device compliance policy still assigned and enforced
 
-When you unassign a compliance policy from a device with an associated user, the policy continues to be assigned and enforced until the device syncs with the Intune service. This behavior is by design.
+When you unassign a compliance policy from a device and its associated user, the policy might still show as being assigned in the Intune admin center > Devices > Compliance.
+
+The policy continues to be assigned and in effect until the device syncs with the Intune service. This behavior is by design.
 
 You can also manually sync the device.
 

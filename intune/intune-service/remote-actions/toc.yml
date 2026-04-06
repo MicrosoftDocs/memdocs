@@ -79,6 +79,9 @@ items:
   - name: Rotate FileVault recovery key
     href: device-rotate-filevault.md
     displayName: remote action
+  - name: Rotate Recovery Lock passcode
+    href: rotate-recovery-lock-passcode.md
+    displayName: remote action
   - name: Run remediation
     href: device-run-remediation.md
     displayName: remote action

@@ -121,7 +121,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   Policy and security management is core in endpoint management. Endpoint policies allow your organization to enforce a specific security baseline and a standard configuration on your managed endpoints. There are many settings you can manage and control on your endpoints. **DO** create policies that only configure what's required in your baseline. **DON'T** create policies that control common user preferences.
 
-  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../intune-service/configuration/settings-catalog.md).
+  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../device-configuration/settings-catalog/index.md).
 
     You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
 
@@ -434,11 +434,11 @@ Intune also has built-in features that can help you configure your cloud-native 
 
   For more information, go to [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md).
 
-- **[Settings catalog](../../intune-service/configuration/settings-catalog.md)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](../../intune-service/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration.
+- **[Settings catalog](../../device-configuration/settings-catalog/index.md)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration.
 
   When combined with [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
 
-  For more information, go to [Settings catalog in Intune](../../intune-service/configuration/settings-catalog.md).
+  For more information, go to [Settings catalog in Intune](../../device-configuration/settings-catalog/index.md).
 
 - **[Security baselines](../../intune-service/protect/security-baselines.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
 

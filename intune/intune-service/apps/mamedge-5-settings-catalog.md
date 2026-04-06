@@ -52,7 +52,7 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 
 > **Microsoft Documentation:**
 >
-> - [Settings Catalog Overview](../configuration/settings-catalog.md)
+> - [Settings Catalog Overview](../../device-configuration/settings-catalog/index.md)
 > - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
 > - [Microsoft Edge Update Policies](/deployedge/microsoft-edge-update-policies)
 
@@ -330,7 +330,7 @@ For extra confirmation, monitor **edge://policy** and the **Device configuration
 Settings Catalog for macOS provides foundational browser security for enrolled Mac devices.
 
 > **Microsoft Documentation:**
-> - [Settings Catalog for macOS](../configuration/settings-catalog.md)
+> - [Settings Catalog for macOS](../../device-configuration/settings-catalog/index.md)
 > - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
 
 > [!IMPORTANT]

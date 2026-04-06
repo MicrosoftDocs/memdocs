@@ -1,7 +1,7 @@
 ---
-title: Remote Device Actions – Wipe, Lock, Locate, and More
+title: Remote Device Actions - Wipe, Lock, Locate, and More
 description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, macOS, Windows, and ChromeOS devices. Learn about available remote actions, prerequisites, and bulk actions for IT admins.
-ms.date: 10/27/2025
+ms.date: 03/09/2026
 ms.topic: overview
 ---
 
@@ -94,7 +94,8 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
 | :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
 | :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
-| :::image type="icon" source="icons/rotate-filevault-recovery.svg" border="false"::: | [Rotate FileVault recovery key][RA-FV] | Rotates the FileVault recovery key for a device. |
+| :::image type="icon" source="icons/rotate-filevault-recovery.svg" border="false"::: | [Rotate FileVault recovery key][RA-FV] | Rotates the FileVault recovery key. |
+| :::image type="icon" source="icons/rotate-recovery-lock.svg" border="false"::: | [Rotate Recovery Lock passcode][RA-RL] | Rotates the Recovery Lock passcode.|
 | :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
 | :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
 
@@ -126,7 +127,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="icons/retire.svg" border="false"::: | [Deprovision][RA-DEPR] | Removes Google Admin policies from a ChromeOS device that you no longer use. |
 | :::image type="icon" source="icons/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
 | :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire][RA-WIPE] | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment. |
+| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment. |
 
 ---
 
@@ -208,7 +209,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Deprovision][RA-DEPR]   | Removes Google Admin policies from a ChromeOS device that you no longer use.                                                                                                                    |
 | [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
 | [Restart][RA-RESTART]    | Restarts a device.                                                                                                                                                                              |
-| [Retire][RA-WIPE]        | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment.                         |
+| [Wipe][RA-WIPE]        | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment.                         |
 
 ---
 
@@ -259,10 +260,13 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-REN]: device-rename.md
 [RA-RESTART]: device-restart.md
 [RA-RETIRE]: device-retire.md
+[RA-RL]: rotate-recovery-lock-passcode.md 
+[RA-RMHS]: device-restore-managed-home-screen.md
 [RA-ROTLAP]: ../protect/windows-laps-policy.md#manually-rotate-passwords
 [RA-SCAN]: device-scan-defender.md
 [RA-SCANF]: device-full-scan.md
 [RA-SCANQ]: device-quick-scan.md
+[RA-SMHS]: device-suspend-managed-home-screen.md 
 [RA-SYNC]: device-sync.md
 [RA-TVIEW]: ../fundamentals/teamviewer-support.md
 [RA-WIPE]: device-wipe.md

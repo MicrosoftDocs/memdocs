@@ -32,7 +32,7 @@ Select a tab to learn more about each report.
 The report displays the distribution of devices against different quality updates for the selected scope. It shows the counts of devices corresponding to the displayed quality updates.\
 Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user's assigned scope tags.
 
-:::image type="content" source="./images/reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./images/reports/windows-quality-updates-page1.png":::
+:::image type="content" source="./media/quality-updates-reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./media/quality-updates-reports/windows-quality-updates-page1.png":::
 
 The report shows the number of devices under each QU level corresponding to the current month and the last 3 months from the day of reporting. The top rows typically represent the last three months, followed by other device data distributions.
 
@@ -58,7 +58,7 @@ All QUs from this page are hyperlinked:
 
 The report provides the distribution of devices against Windows feature releases. The distribution of devices that are eligible to receive the selected quality update shown based on the Windows feature versions that are generally available. The report aids IT administrators in making informed decisions for devices and managing devices that need attention.
 
-:::image type="content" source="./images/reports/windows-quality-updates-page2.png" alt-text="Screen capture of the Windows quality update distribution per feature version." lightbox="./images/reports/windows-quality-updates-page2.png":::
+:::image type="content" source="./media/quality-updates-reports/windows-quality-updates-page2.png" alt-text="Screen capture of the Windows quality update distribution per feature version." lightbox="./media/quality-updates-reports/windows-quality-updates-page2.png":::
 
 The stacked chart displays the counts of devices that are up to date, those that need updates, and those for which the chosen quality update does not apply. Together, these counts make up the total Windows devices that Intune manages, including co-managed devices.
 
@@ -83,7 +83,7 @@ When you select any device count, the *Windows quality update device version* re
 The report presents a list of devices based on the selections from the previous 2 reports. The  criteria that you selected in the previous reports are displayed at the top of the page.\
 The report offers sortable columns and search options, along with an export feature allowing high volume data to be downloaded in CSV format.
 
-:::image type="content" source="./images/reports/windows-quality-updates-page3.png" alt-text="Screen capture of the Windows quality update device version." lightbox="./images/reports/windows-quality-updates-page3.png":::
+:::image type="content" source="./media/quality-updates-reports/windows-quality-updates-page3.png" alt-text="Screen capture of the Windows quality update device version." lightbox="./media/quality-updates-reports/windows-quality-updates-page3.png":::
 
 **Column details**:
 

@@ -87,30 +87,30 @@ items:
         - name: Use automated device enrollment to enroll iOS/iPadOS devices
           href: ./intune-service/enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
         - name: Create settings catalog policy and compare with on-premises ADMX
-          href: ./intune-service/configuration/tutorial-settings-catalog-group-policy.md
+          href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
           displayName: admx, administrative template, gpo, windows
 
   - name: Microsoft Copilot + Intune
     items:
     - name: Copilot in Intune
       displayName: ai, copilot
-      href: ./intune-service/copilot/copilot-intune-overview.md
+      href: ./copilot/index.md
     - name: Explore your Intune data
       displayName: ai, copilot, explore, data, query
-      href: ./intune-service/copilot/copilot-intune-explorer.md
+      href: ./copilot/explorer.md
     - name: Troubleshoot a device using Copilot
-      href: ./intune-service/copilot/copilot-devices.md
+      href: ./copilot/troubleshoot-devices.md
     - name: Copilot in Intune FAQ
-      href: ./intune-service/copilot/copilot-intune-faq.md
+      href: ./copilot/faq.md
     - name: Intune plugin in Security Copilot
-      href: ./intune-service/copilot/security-copilot.md
+      href: ./copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
       href: /surface/security-copilot-surface-management-portal?context=/intune/context
     - name: Copilot in Windows 365 Cloud PCs
       href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
     - name: Security Copilot agents in Microsoft Intune
-      href: ./agents/toc.yml
+      href: ./copilot/agents/toc.yml
 
   - name: Intune Suite
     items:
@@ -1179,27 +1179,30 @@ items:
           items:
           - name: Overview and get started
             displayName: gpo, admx, ios, ipados, macos, windows
-            href: ./intune-service/configuration/settings-catalog.md
+            href: ./device-configuration/settings-catalog/index.md
           - name: Common tasks for the settings catalog
             items:
             - name: Sample tasks
               displayName: gpo, admx, ios, ipados, macos, windows
-              href: ./intune-service/configuration/settings-catalog-common-features.md
+              href: ./device-configuration/settings-catalog/common-tasks.md
             - name: Create Universal Print policy
               displayName: printers, gpo, admx, windows
-              href: ./intune-service/configuration/settings-catalog-printer-provisioning.md
+              href: ./device-configuration/settings-catalog/configure-universal-print.md
             - name: Configure Microsoft Edge
               displayName: gpo, windows, macos, admx
-              href: ./intune-service/configuration/settings-catalog-configure-edge.md
+              href: ./device-configuration/settings-catalog/configure-edge.md
             - name: Update Microsoft 365
               displayName: gpo, windows, admx, update channel
-              href: ./intune-service/configuration/settings-catalog-update-office.md
+              href: ./device-configuration/settings-catalog/update-office.md
             - name: Restrict USB devices
               displayName: gpo, windows
-              href: ./intune-service/configuration/settings-catalog-restrict-usb.md
+              href: ./device-configuration/settings-catalog/restrict-usb.md
             - name: Configure ADMX
-              displayName: gpo, admx, windows
+              displayName: gpo, admx, windows, settings catalog
               href: ./intune-service/configuration/administrative-templates-windows.md
+            - name: Configure Recovery Lock on macOS
+              displayName: gpo, admx, macos
+              href: ./device-configuration/settings-catalog/configure-recovery-lock-macos.md
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./intune-service/configuration/administrative-templates-import-custom.md
@@ -1332,10 +1335,10 @@ items:
         items:
         - name: Apple
           displayName: ios, ipados, macos
-          href: ./intune-service/configuration/apple-settings-catalog-configurations.md
+          href: ./device-configuration/settings-catalog/ref-apple-settings.md
         - name: Android
           displayName: Android
-          href: ./intune-service/configuration/settings-catalog-android.md
+          href: ./device-configuration/settings-catalog/ref-android-settings.md
 
       - name: Device Configuration template settings lists
         items:
@@ -1977,24 +1980,14 @@ items:
       - name: Windows FLW
         displayName: kiosk, multi-app, single-app
         href: ./solutions/frontline-worker/frontline-worker-overview-windows.md
-    - name: Guided scenarios
+    - name: Windows in cloud configuration
       items:
-      - name: Guided scenarios overview
-        href: ./intune-service/fundamentals/guided-scenarios-overview.md
-      - name: Deploy Microsoft Edge for Mobile
-        href: ./intune-service/fundamentals/guided-scenarios-edge.md
-      - name: Cloud-managed Modern Desktop
-        href: ./intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md
-      - name: Secure Microsoft Office mobile apps
-        href: ./intune-service/fundamentals/guided-scenarios-office-mobile.md
-      - name: Windows in cloud configuration
-        items:
-        - name: Overview
-          displayName: cloud config, flw, windows
-          href: ./intune-service/fundamentals/cloud-configuration.md
-        - name: Step-by-step guide
-          displayName: cloud config, flw, windows
-          href: ./intune-service/fundamentals/cloud-configuration-setup-guide.md
+      - name: Overview
+        displayName: cloud config, flw, windows
+        href: ./intune-service/fundamentals/cloud-configuration.md
+      - name: Step-by-step guide
+        displayName: cloud config, flw, windows
+        href: ./intune-service/fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits
@@ -2020,7 +2013,7 @@ items:
     - name: End-to-end macOS endpoint guide
       href: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
     - name: Create settings catalog policy and compare with on-premises ADMX
-      href: ./intune-service/configuration/tutorial-settings-catalog-group-policy.md
+      href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
       displayName: admx, administrative template, windows, gpo
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview

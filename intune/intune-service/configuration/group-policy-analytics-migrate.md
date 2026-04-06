@@ -15,7 +15,7 @@ ms.collection:
 
 You can import your on-premises Group Policy Objects (GPOs), and create an Intune policy using these imported settings. This policy can be deployed to users and devices managed by your organization.
 
-With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a [Settings Catalog policy](settings-catalog.md), and then deploy the policy to your managed devices.
+With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a [Settings Catalog policy](../../device-configuration/settings-catalog/index.md), and then deploy the policy to your managed devices.
 
 This feature applies to:
 
@@ -153,4 +153,4 @@ When you create the Settings Catalog profile, any settings that can be included 
 ## Related articles
 
 - [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md)
-- [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](../../device-configuration/settings-catalog/index.md)

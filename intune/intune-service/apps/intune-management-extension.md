@@ -1,7 +1,7 @@
 ---
 title: Understand Microsoft Intune Management Extension
 description: Understand Microsoft Intune management extension for Windows.
-ms.date: 10/02/2025
+ms.date: 03/24/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -77,7 +77,7 @@ For devices meeting the prerequisites, the Intune management extension installs 
 - [Discovery scripts for custom compliance](../protect/compliance-custom-script.md)
 - [Win32 apps](../apps/apps-win32-add.md)
 - [Endpoint analytics](../../endpoint-analytics/index.md)
-- [Remote Help](../fundamentals/remote-help-windows.md)
+- [Remote Help](../fundamentals/remote-help.md)
 - [Managed Installers in Intune](../protect/endpoint-security-app-control-policy.md)
 - [Update Windows BIOS using configuration MDM policy](../configuration/bios-configuration.md)
 
@@ -172,6 +172,7 @@ Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app m
 | ClientHealth.log | Tracks the health of the Intune management extension. |
 | DeviceHealthMonitoring.log | Tracks the health of hardware readiness, device inventory, and other data collectors. |
 | HealthScripts.log | Tracks the health of remediations that run on a regular schedule. |
+| NotificationInfra.log | Tracks notifications sent through the Microsoft real-time communication channel. |
 | Sensor.log | Tracks the health of the Endpoint analytics data collector, including boot performance, app reliability, and more. |
 | Win32AppInventory.log | Tracks the health of the app inventory collector. |
 
