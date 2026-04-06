@@ -147,7 +147,7 @@ sections:
 
       - question: How does Intune remotely wipe data?
         answer: |
-          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
       - question: What is wipe?
         answer: |
@@ -157,7 +157,7 @@ sections:
 
       - question: What is selective wipe for MDM?
         answer: |
-           Selective wipe for MDM removes only company data from the device without affecting personal data. For more information, see [Remove devices - retire](../../device-management/actions/wipe.md#retire).
+           Selective wipe for MDM removes only company data from the device without affecting personal data. For more information, see [Remove devices - retire](../../device-management/actions/retire.md).
 
       - question: What is selective wipe for MAM?
         answer: |

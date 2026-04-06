@@ -80,7 +80,7 @@ sections:
 
           - MDM enrollment issues: Is the device able to [enroll in Microsoft Intune](#troubleshooting-windows-autopilot-device-import-and-enrollment) or non-Microsoft MDM service?
 
-          - Review logs that are automatically collected upon Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/device-management/actions/collect-diagnostics). <!-- MAXADO-1895390 -->
+          - Review logs that are automatically collected upon Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/intune/device-management/actions/collect-diagnostics). <!-- MAXADO-1895390 -->
 
       - question: |
           How can additional detailed troubleshooting information be enabled?
@@ -101,7 +101,7 @@ sections:
 
           > [!NOTE]
           >
-          > - By default diagnostics are automatically collected upon a Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/device-management/actions/collect-diagnostics).
+          > - By default diagnostics are automatically collected upon a Windows Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/intune/device-management/actions/collect-diagnostics).
           >
           > - For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network.
 
@@ -522,4 +522,4 @@ additionalContent: |
 
     - [Windows Autopilot - known issues](known-issues.md).
     - [Collect MDM logs](/windows/client-management/mdm-collect-logs).
-    - [Collect diagnostics from a Windows device](/mem/device-management/actions/collect-diagnostics).
+    - [Collect diagnostics from a Windows device](/intune/device-management/actions/collect-diagnostics).

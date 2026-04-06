@@ -129,7 +129,7 @@ Consider using Windows Autopilot reset in the following example scenarios:
 
 There are scenarios that require a device to be deleted from your tenant, for example:
 
-- The device is lost or stolen (for iOS devices, you may consider using [Lost Mode](/mem/device-management/actions/lost-mode) instead).
+- The device is lost or stolen (for iOS devices, you may consider using [Lost Mode](/intune/device-management/actions/lost-mode) instead).
 - It's the end of the life of the device.
 - The device is replaced or has a new hardware components.
 
@@ -160,6 +160,6 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 
-[MEM-1]: /mem/device-management/actions/wipe#delete-devices-from-the-intune-portal
-[MEM-2]: /mem/device-management/actions/wipe#delete-devices-from-the-intune-portal
-[MEM-3]: /mem/device-management/actions/wipe#delete-devices-from-the-azure-active-directory-portal
+[MEM-1]: /intune/device-management/actions/wipe#delete-devices-from-the-intune-portal
+[MEM-2]: /intune/device-management/actions/wipe#delete-devices-from-the-intune-portal
+[MEM-3]: /intune/device-management/actions/wipe#delete-devices-from-the-azure-active-directory-portal
