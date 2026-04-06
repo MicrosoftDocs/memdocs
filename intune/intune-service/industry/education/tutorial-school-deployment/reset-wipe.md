@@ -160,6 +160,6 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/device-management/actions/wipe#delete-devices-from-the-intune-portal
-[MEM-2]: /intune/device-management/actions/wipe#delete-devices-from-the-intune-portal
-[MEM-3]: /intune/device-management/actions/wipe#delete-devices-from-the-azure-active-directory-portal
+[MEM-1]: ../../../../device-management/actions/wipe#delete-devices-from-the-intune-portal
+[MEM-2]: ../../../../device-management/actions/wipe#delete-devices-from-the-intune-portal
+[MEM-3]: ../../../../device-management/actions/wipe#delete-devices-from-microsoft-enra-id
