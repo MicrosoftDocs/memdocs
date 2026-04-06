@@ -722,7 +722,7 @@
     },
     {
       "source_path": "intune/intune-service/remote-actions/custom-notifications.md",
-      "redirect_url": "/intune/device-management/actions/send-custom-notifications",
+      "redirect_url": "/intune/device-management/actions/send-custom-notification",
       "redirect_document_id": false
     },
     {
@@ -4187,7 +4187,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/custom-notifications.md",
-      "redirect_url": "/intune/device-management/actions/send-custom-notifications",
+      "redirect_url": "/intune/device-management/actions/send-custom-notification",
       "redirect_document_id": false
     },
     {
