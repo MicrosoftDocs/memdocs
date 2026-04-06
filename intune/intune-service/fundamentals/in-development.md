@@ -175,6 +175,12 @@ Microsoft Intune will be adding support for userless automated device enrollment
 
 ## Device management
 
+### Agentic identity for the Policy Configuration Agent (public preview)<!-- 37369520 -->
+
+The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
+
+For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
+ 
 ### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
 
 For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.
@@ -252,19 +258,6 @@ After the defined time elapses, or when the *restore managed home screen* action
 <!-- *********************************************** -->
 
 ## Device security
-
-### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
-
-We're working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
-
-When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won't automatically update to the new version.
-
-For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 11
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 

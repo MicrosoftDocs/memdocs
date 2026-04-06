@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/31/2026
+ms.date: 04/02/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -256,6 +256,30 @@ The Microsoft Intune app for Linux now uses the Microsoft Identity Broker on sup
 
 ### Device security
 
+#### Intune security baseline for Windows 11, version 25H2<!-- 34955665  -->
+
+The Windows security baseline for *Windows 11, version 25H2* is now available in Microsoft Intune. This baseline reflects current Microsoft security recommendations for supported Windows devices and is the latest available Windows security baseline in Intune.
+
+The Windows 11, version 25H2 security baseline includes new settings, updated default values, retired settings, and revised security guidance. Existing security baseline profiles don’t automatically update to the new version.
+
+To use the Windows 11, version 25H2 security baseline, Intune admins can [create a new baseline profile](../protect/security-baselines-configure.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
+
+The following two settings aren’t included in this baseline release and will be added in a future baseline update. Each change will be communicated to customers when available:
+
+- **Disable Internet Explorer 11 launch via COM automation** – This setting isn’t included at release due to a known issue. The Windows client team is addressing the issue, and the setting will be added in a future baseline update.
+- **Configure NetBIOS settings** – This setting is pending availability in the Settings Catalog and will be added to the baseline in a future update.
+
+We recommend carefully reviewing the settings in the new baseline before moving from a previous baseline version, especially if existing profiles include customizations.
+
+For a detailed breakdown of setting changes, see the Windows blog post [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231).
+
+To view the default configuration of the Intune baseline for Windows 11, version 25H2, see [Windows MDM baseline settings](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-25h2#security-baseline-for-windows-version-25h2).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 11
+
 #### Hotpatching default enablement in Windows Autopatch<!--36869440-->
 
 Starting with the May 2026 Windows security update, hotpatch updates are enabled by default for all eligible devices managed through Windows Autopatch. Hotpatch updates install faster and require fewer restarts, helping devices get
@@ -287,7 +311,11 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-### Monitor and troubleshooting
+### Monitor and troubleshooting  
+
+#### Support Assistant access expanded to all authenticated users<!-- 35992187 -->  
+
+All authenticated users can now access Support Assistant in the Intune admin center to find solutions and troubleshooting guidance. Creating and managing support tickets still requires a Microsoft Entra role that includes the *microsoft.office365.supportTickets* permission. For more information, see [How to get support in the Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md).  
 
 #### Support for system proxy settings in endpoint analytics and Advanced Analytics<!--30148318 -->
 
