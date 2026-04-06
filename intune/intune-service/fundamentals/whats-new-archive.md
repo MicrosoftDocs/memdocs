@@ -1375,7 +1375,7 @@ Userless methods of Android device management (Dedicated and AOSP userless) and 
 
 #### Collection of additional device inventory details<!-- 29460196 -->
 
-Intune now collects additional files and registry keys to assist in troubleshooting the [Device Hardware Inventory](../remote-actions/collect-diagnostics.md) feature.
+Intune now collects additional files and registry keys to assist in troubleshooting the [Device Hardware Inventory](../../device-management/actions/collect-diagnostics.md) feature.
 
 Applies to:
 
@@ -2242,7 +2242,7 @@ To learn more about how you can currently use Copilot in Intune, see [Microsoft 
 
 You can now remove, reinstall, and reapply individual policies, profiles, and apps for iOS/iPadOS devices and Android corporate owned devices. You can apply these actions without changing assignments or group membership. These actions are intended to help resolve customer challenges that are external to Intune. Also, these actions can help to quickly restore end user productivity.
 
-For more information, see [Remove apps and configuration](../remote-actions/remove-apps-config.md)
+For more information, see [Remove apps and configuration](../../device-management/actions/remove-apps-config.md)
 
 ### App management
 
@@ -2794,7 +2794,7 @@ Applies to:
 
 The Microsoft 365 remote application diagnostics allows Intune admins to request Intune app protection logs and Microsoft 365 application logs (where applicable) directly from the Intune console. You can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
 
-For more information, see [Collect diagnostics from an Intune managed device](../remote-actions/collect-diagnostics.md).
+For more information, see [Collect diagnostics from an Intune managed device](../../device-management/actions/collect-diagnostics.md).
 
 #### Remote Help supports full control of a macOS device<!--22985205 -->
 
@@ -3105,8 +3105,8 @@ The remote action **Pause configuration refresh** can be accessed from the devic
 
 For more information, see:
 
-- [Remote actions](../remote-actions/index.md)
-- [Pause Config Refresh Remote action](../remote-actions/pause-config-refresh.md)
+- [Remote actions](../../device-management/actions/index.md)
+- [Pause Config Refresh Remote action](../../device-management/actions/pause-config-refresh.md)
 
 ### Device security
 
@@ -4852,7 +4852,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Monitor and troubleshoot
 
 #### CloudDesktop log now collected with Windows diagnostics data<!-- 24541366 -->
-The Intune remote action to [collect diagnostics](../remote-actions/collect-diagnostics.md) from a Windows device now includes data in a log file.
+The Intune remote action to [collect diagnostics](../../device-management/actions/collect-diagnostics.md) from a Windows device now includes data in a log file.
 
 Log file:
 - %temp%\CloudDesktop\*.log

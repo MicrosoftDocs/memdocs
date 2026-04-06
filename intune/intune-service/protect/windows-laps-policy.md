@@ -151,7 +151,7 @@ The following are considerations for viewing a devices account and password info
 
 ## Manually rotate passwords
 
-LAPS policy includes a schedule for automatically rotating account passwords. In addition to a scheduled rotation, you can use the Intune [device action](../remote-actions/index.md) of **Rotate local admin password** to manually rotate a devices password independent of the rotation schedule set by the devices LAPS Policy.
+LAPS policy includes a schedule for automatically rotating account passwords. In addition to a scheduled rotation, you can use the Intune [device action](../../device-management/actions/index.md) of **Rotate local admin password** to manually rotate a devices password independent of the rotation schedule set by the devices LAPS Policy.
 
 To use this device action, your account must have the following three Intune permissions:
 

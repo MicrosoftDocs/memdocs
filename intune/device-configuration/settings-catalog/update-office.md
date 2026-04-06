@@ -53,7 +53,7 @@ Use an Intune policy to set the update channel for Microsoft 365 apps. The updat
 
 3. When the policy is ready, [assign the policy](../../intune-service/configuration/device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
 
-    - [Sync the policy in Intune](../../intune-service/remote-actions/device-sync.md)
+    - [Sync the policy in Intune](../../device-management/actions/sync.md)
     - [Manually sync the policy on the device](../../intune-service/user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## Check the Intune registry keys

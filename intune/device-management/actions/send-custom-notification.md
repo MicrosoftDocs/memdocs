@@ -1,5 +1,5 @@
 ---
-title: "Remote Device Action: Send Custom Notifications"
+title: "Remote Device Action: Send Custom Notification"
 description: Use Intune to create and send custom notifications to users of iOS/iPadOS and Android devices.
 ms.date: 10/27/2025
 ms.topic: how-to
@@ -7,9 +7,9 @@ ms.reviewer: petermt
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remote device action: send custom notifications
+# Remote device action: send custom notification
 
-Use the *send custom notifications* remote action in Intune to deliver short messages directly to users of managed devices. Notifications appear as standard push alerts from the Company Portal or Intune app, similar to messages from other mobile applications.
+Use the *send custom notification* remote action in Intune to deliver short messages directly to users of managed devices. Notifications appear as standard push alerts from the Company Portal or Intune app, similar to messages from other mobile applications.
 
 You can send notifications to individual devices or to users in groups. Custom notifications are useful for general communication, such as:
 
@@ -144,7 +144,7 @@ When a custom notification is sent, users receive it as a push alert from the Co
 
 :::column-end:::
 :::column span="1":::
-:::image type="content" source="images/ios-custom-notification.png" lightbox="images/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
+:::image type="content" source="media/send-custom-notifications/ios-custom-notification.png" lightbox="media/send-custom-notifications/ios-custom-notification.png" alt-text="Locked device iOS/iPadOS custom notification." border="false":::
 :::column-end:::
 :::row-end:::
 
@@ -162,7 +162,7 @@ When a custom notification is sent, users receive it as a push alert from the Co
 
 :::column-end:::
 :::column span="1":::
-:::image type="content" source="images/android-custom-notification.png" lightbox="images/android-custom-notification.png" alt-text="Locked device Android custom notification.":::
+:::image type="content" source="media/send-custom-notifications/android-custom-notification.png" lightbox="media/send-custom-notifications/android-custom-notification.png" alt-text="Locked device Android custom notification.":::
 
 :::column-end:::
 :::row-end:::
