@@ -160,6 +160,6 @@ ________________________________________________________
 
 <!-- Reference links in article -->
 
-[MEM-1]: ../../../../device-management/actions/wipe#delete-devices-from-the-intune-portal
-[MEM-2]: ../../../../device-management/actions/wipe#delete-devices-from-the-intune-portal
-[MEM-3]: ../../../../device-management/actions/wipe#delete-devices-from-microsoft-enra-id
+[MEM-1]: ../../../../device-management/actions/wipe.md
+[MEM-2]: ../../../../device-management/actions/delete.md
+[MEM-3]: /entra/identity/devices/manage-stale-devices
