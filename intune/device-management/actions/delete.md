@@ -19,15 +19,15 @@ When you use the **Delete** remote action in Intune, the command that triggers d
 
 | Platform   | Enrollment Type                      | Action Triggered           |
 |------------|--------------------------------------|----------------------------|
-| Windows    | Any                                  | [Retire](device-retire.md) |
-| iOS/iPadOS | Any                                  | [Retire](device-retire.md) |
-| macOS      | Any                                  | [Retire](device-retire.md) |
-| Android    | Device administrator                 | [Retire](device-retire.md) |
-| Android    | Personally-owned work profile (BYOD) | [Retire](device-retire.md) |
-| Android    | Corporate-owned Fully managed (COBO) | [Wipe](device-wipe.md)     |
-| Android    | Corporate-owned Dedicated (COSU)     | [Wipe](device-wipe.md)     |
-| Android    | Corporate-owned Work profile (COPE)  | [Wipe](device-wipe.md)     |
-| Android    | Open Source Project (AOSP)           | [Wipe](device-wipe.md)     |
+| Windows    | Any                                  | [Retire](retire.md) |
+| iOS/iPadOS | Any                                  | [Retire](retire.md) |
+| macOS      | Any                                  | [Retire](retire.md) |
+| Android    | Device administrator                 | [Retire](retire.md) |
+| Android    | Personally-owned work profile (BYOD) | [Retire](retire.md) |
+| Android    | Corporate-owned Fully managed (COBO) | [Wipe](wipe.md)     |
+| Android    | Corporate-owned Dedicated (COSU)     | [Wipe](wipe.md)     |
+| Android    | Corporate-owned Work profile (COPE)  | [Wipe](wipe.md)     |
+| Android    | Open Source Project (AOSP)           | [Wipe](wipe.md)     |
 
 ::: zone pivot="windows"
 

@@ -79,7 +79,7 @@ productDirectory:
     - title: Remote actions and support
       imageSrc: ./media/icons/hub-page/remote-actions.svg
       summary: Take actions on devices and help users remotely.
-      url: ./intune-service/remote-actions/index.md
+      url: device-management/actions/index.md
 
     - title: Administration and governance
       imageSrc: ./media/icons/hub-page/administration.svg

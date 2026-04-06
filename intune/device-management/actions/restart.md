@@ -73,7 +73,7 @@ A passcode-locked device can't reconnect to Wi-Fi until the user unlocks it. App
 ::: zone pivot="windows"
 When the 5‑minute restart timer starts, Windows attempts to show the notification: *Your device administrator has scheduled a reboot.* Delivering the restart command requires Windows Notification Services (WNS).
 
-For more information about WNS, see [Network endpoint requirements](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
+For more information about WNS, see [Network endpoint requirements](../../intune-service/fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
 ::: zone-end
 
 ## Reference links

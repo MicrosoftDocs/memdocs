@@ -11,7 +11,7 @@ zone_pivot_groups: 46b8d067-28e2-43a6-97b2-ffcc8414e503
 The *Lost Mode* device action in Microsoft Intune allows IT administrators to remotely lock and track lost or stolen devices. When activated, Lost Mode displays a custom message and contact phone number on the device's lock screen—helping facilitate recovery while protecting corporate data.
 
 ::: zone pivot="ios"
-Once enabled, the device is locked and can't be accessed until Lost Mode is disabled by an administrator. While in Lost Mode, the device's location can also be tracked with the **[Locate device](device-locate.md)** action, making it easier to recover.
+Once enabled, the device is locked and can't be accessed until Lost Mode is disabled by an administrator. While in Lost Mode, the device's location can also be tracked with the **[Locate device](locate.md)** action, making it easier to recover.
 ::: zone-end
 
 ::: zone pivot="chromeos"
@@ -68,7 +68,7 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 When you enable Lost Mode, the device is locked. The custom message and phone number you specify are displayed on the lock screen, helping facilitate recovery. While Lost Mode is active, the user can't access the device.
 
 ::: zone pivot="ios"
-To locate the device during this time, use the [Locate device](device-locate.md) action in the admin center.
+To locate the device during this time, use the [Locate device](locate.md) action in the admin center.
 
 > [!NOTE]
 > Some built-in device functionalities might still work. For example, Siri might still be used to make calls unless it's disabled.

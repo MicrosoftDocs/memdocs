@@ -83,7 +83,7 @@ There are two ways to use this feature:
   - Turn on the recovery lock feature
   - Configure a password rotation schedule
 
-- **Remote device action** - Use the [Recovery Lock device action](../remote-actions/rotate-recovery-lock-passcode.md) to manually rotate the recovery lock password for a specific device.
+- **Remote device action** - Use the [Recovery Lock device action](../../device-management/actions/rotate-recovery-lock-passcode.md) to manually rotate the recovery lock password for a specific device.
 
 The Recovery Lock password can be viewed in the per-setting status report > **Passwords and keys**. To view the Recovery Lock password, the signed-in administrator needs the **Remote tasks/View macOS recovery lock password** permission.
 
@@ -1892,7 +1892,7 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 When you use the Multi Admin Approval feature, you require a second admin account to approve a change before the change is applied.
 
-The **[Wipe](../remote-actions/device-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
+The **[Wipe](../../device-management/actions/wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
 For more information on Multi Admin Approval, see [Use Multi Admin Approval in Intune](../fundamentals/multi-admin-approval.md).
 

@@ -11,7 +11,7 @@ zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 
 The *locate device* device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
-Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or [display custom messages](device-lost-mode.md).
+Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](play-lost-mode-sound.md), or [display custom messages](lost-mode.md).
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Depending on the platform, Intune can also report the last known location if the
 
 > To use this remote action, make sure devices meet the following requirements:
 >
-> - Enable [Lost Mode](device-lost-mode.md)
+> - Enable [Lost Mode](lost-mode.md)
 
 ::: zone-end
 
@@ -126,7 +126,7 @@ For more information about device restrictions, see [Android template device set
 
 ::: zone-end
 
-   ![Screenshot of Locate device using Intune in Azure](images/locate-device.png)
+   ![Screenshot of Locate device using Intune in Azure](media/locate/locate-device.png)
 
 ::: zone pivot="android"
 
@@ -158,7 +158,7 @@ Intune is designed to respect user privacy while providing powerful device manag
 - All location data is encrypted in transit and at rest, ensuring secure handling.
 - Data is stored for 24 hours and automatically deleted. Manual deletion is not supported.
 - The last known location might be retained for up to seven days before being removed.
-- On iOS/iPadOS devices, you can enable [Lost Mode](device-lost-mode.md) to remotely lock the device and display a custom message on the lock screen—helpful for recovery.
+- On iOS/iPadOS devices, you can enable [Lost Mode](lost-mode.md) to remotely lock the device and display a custom message on the lock screen—helpful for recovery.
 - In Android fully managed and corporate-owned work profile scenarios, users receive a notification when the Locate Device action is used—if notifications are enabled on the device.
 
 ## Reference links

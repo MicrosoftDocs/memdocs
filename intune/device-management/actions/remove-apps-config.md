@@ -53,7 +53,7 @@ Admins can use the **Remove apps and configuration** remote action to:
 
 ##### Scope tags
 
-Scope tags limit which apps and configurations an admin can view and manage. The visibility is based on the scope tag assignments defined in the admin's role. For more information, see [Use role-based access control and scope tags for distributed IT]( ../fundamentals/scope-tags.md).
+Scope tags limit which apps and configurations an admin can view and manage. The visibility is based on the scope tag assignments defined in the admin's role. For more information, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
 ## Supported apps and configuration profiles
 
@@ -95,7 +95,7 @@ This remote action supports the following items:
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of remote action icons. Select **Remove apps and configuration**.
 
-  :::image type="content" alt-text="Remove apps and configuration" source="images/remove-apps-config.png" lightbox="images/remove-apps-config.png":::
+  :::image type="content" alt-text="Remove apps and configuration" source="media/remove-apps-config/remove-apps-config.png" lightbox="media/remove-apps-config/remove-apps-config.png":::
 
 1. Select **+ Add**, then select the type of item to remove; **Configuration Item** or **App**.
 1. A list of applicable items is displayed with its current state on the device. Select an item to remove, and then use **Select**.
@@ -112,7 +112,7 @@ After you initiate the **Remove apps and configuration** action on a device, the
 
 You can manually restore the removed items using the **Restore** action. If no restore is initiated, Intune automatically reapplies the apps and configurations within 8-24 hours to ensure the device remains aligned with assignment intent.
 
-:::image type="content" alt-text="Monitor the device action - Remove apps and configuration" source="images/remove-apps-config-monitor.png" lightbox="images/remove-apps-config-monitor.png":::
+:::image type="content" alt-text="Monitor the device action - Remove apps and configuration" source="media/remove-apps-config/remove-apps-config-monitor.png" lightbox="media/remove-apps-config/remove-apps-config-monitor.png":::
 
 > [!IMPORTANT]
 > Removed items are reflected with an assignment status of *Removed*, but this status is not included in the count. Removals are temporary and will be automatically restored to devices.  The total count is not inclusive of devices with an active *Removed* status.
