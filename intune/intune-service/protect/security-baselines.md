@@ -3,7 +3,7 @@ title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/12/2025
+ms.date: 04/03/2026
 ms.topic: overview
 ms.reviewer: juidaewo
   - intune-azure
@@ -71,6 +71,7 @@ For example, the default settings for firewall configuration might not merge con
 The following security baseline instances are available for use with Intune. Use the links to view the settings for recent instances of each baseline.
 
 - **Security Baseline for Windows 10 and later**:
+  - [Version 25H2](security-baseline-settings-mdm-all.md?pivots=mdm-25h2)
   - [Version 24H2](security-baseline-settings-mdm-all.md?pivots=mdm-24h2)
   - [Version 23H2](security-baseline-settings-mdm-all.md?pivots=mdm-23h2)
   - [November 2021](security-baseline-settings-mdm-all.md?pivots=november-2021)
