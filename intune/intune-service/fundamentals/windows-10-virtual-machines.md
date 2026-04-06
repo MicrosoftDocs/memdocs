@@ -40,7 +40,7 @@ Deallocated virtual machines may contribute to noncompliant device reports becau
 
 ## Retirement
 
-If you only have RDP access, don't use the [Wipe action](../remote-actions/device-wipe.md). The Wipe action deletes the virtual machine's RDP settings and prevents you from ever connecting again.
+If you only have RDP access, don't use the [Wipe action](../../device-management/actions/wipe.md). The Wipe action deletes the virtual machine's RDP settings and prevents you from ever connecting again.
 
 ## Limitations
 

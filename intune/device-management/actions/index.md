@@ -120,7 +120,7 @@ Select one of the following tabs to learn more about the available remote action
 # [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 > [!NOTE]
-> To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md) and enroll devices by using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
+> To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../../intune-service/enrollment/chrome-enterprise-connector-configure.md) and enroll devices by using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
 
 | Icon | Action | Description |
 |--|--|--|
@@ -233,43 +233,43 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 
 <!--links-->
 
-[RA-ACTLOCK]: device-activation-lock-disable.md
+[RA-ACTLOCK]: disable-activation-lock.md
 [RA-APPCON]: remove-apps-config.md
-[RA-APRESET]: device-autopilot-reset.md
-[RA-ASSIST]: device-remote-assist.md
-[RA-BL]: device-rotate-bitlocker-keys.md
+[RA-APRESET]: autopilot-reset.md
+[RA-ASSIST]: remote-assist.md
+[RA-BL]: rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
-[RA-DELETE]: device-delete.md
-[RA-DEPR]: device-deprovision.md
+[RA-DELETE]: delete.md
+[RA-DEPR]: deprovision.md
 [RA-DIAG]: collect-diagnostics.md
-[RA-FRESHSTART]: device-fresh-start.md
-[RA-FV]: device-rotate-filevault.md
-[RA-HELP]: ../fundamentals/remote-help.md
-[RA-LOCATE]: device-locate.md
-[RA-LOCK]: device-remote-lock.md
-[RA-LOGOUT]: device-logout-user.md
-[RA-LOSTMODE]: device-lost-mode.md
-[RA-NOTIFY]: custom-notifications.md
+[RA-FRESHSTART]: fresh-start.md
+[RA-FV]: rotate-filevault-recovery-key.md
+[RA-HELP]: ../../intune-service/fundamentals/remote-help.md
+[RA-LOCATE]: locate.md
+[RA-LOCK]: remote-lock.md
+[RA-LOGOUT]: logout-user.md
+[RA-LOSTMODE]: lost-mode.md
+[RA-NOTIFY]: send-custom-notification.md
 [RA-PAUSECR]: pause-config-refresh.md
-[RA-PLAY]: device-play-lost-mode-sound.md
-[RA-PREM]: device-remove-passcode.md
-[RA-PREST]: device-passcode-reset.md
-[RA-REMED]: device-run-remediation.md
-[RA-REMOVEUSER]: device-remove-user.md
-[RA-REN]: device-rename.md
-[RA-RESTART]: device-restart.md
-[RA-RETIRE]: device-retire.md
+[RA-PLAY]: play-lost-mode-sound.md
+[RA-PREM]: remove-passcode.md
+[RA-PREST]: reset-passcode.md
+[RA-REMED]: run-remediation.md
+[RA-REMOVEUSER]: remove-user.md
+[RA-REN]: rename.md
+[RA-RESTART]: restart.md
+[RA-RETIRE]: retire.md
 [RA-RL]: rotate-recovery-lock-passcode.md 
 [RA-RMHS]: device-restore-managed-home-screen.md
-[RA-ROTLAP]: ../protect/windows-laps-policy.md#manually-rotate-passwords
+[RA-ROTLAP]: ../../intune-service/protect/windows-laps-policy.md#manually-rotate-passwords
 [RA-SCAN]: device-scan-defender.md
-[RA-SCANF]: device-full-scan.md
-[RA-SCANQ]: device-quick-scan.md
+[RA-SCANF]: full-scan.md
+[RA-SCANQ]: quick-scan.md
 [RA-SMHS]: device-suspend-managed-home-screen.md 
-[RA-SYNC]: device-sync.md
-[RA-TVIEW]: ../fundamentals/teamviewer-support.md
-[RA-WIPE]: device-wipe.md
+[RA-SYNC]: sync.md
+[RA-TVIEW]: ../../intune-service/fundamentals/teamviewer-support.md
+[RA-WIPE]: wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade

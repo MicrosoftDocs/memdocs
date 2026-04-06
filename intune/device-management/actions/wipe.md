@@ -133,7 +133,7 @@ To factory reset a Zebra Android device, use one of the following methods:
 4. Select on of the following options:
 
     - **Remove user profiles only**: To remove all user account data. Device and enrollment policies remain on the device.
-    - **Factory reset (powerwash)**: To restore a device to its factory state, removing all personal and work data. Before using this action, [deprovision](device-deprovision.md) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.
+    - **Factory reset (powerwash)**: To restore a device to its factory state, removing all personal and work data. Before using this action, [deprovision](deprovision.md) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.
 
 For more information about wiping ChromeOS devices, see [Wipe ChromeOS device data](https://support.google.com/chrome/a/answer/1360642).
 

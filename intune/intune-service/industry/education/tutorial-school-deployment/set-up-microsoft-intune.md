@@ -174,7 +174,7 @@ This table provides the settings most commonly set by customers, but can be cust
 | Device diagnostics are available for corporate-managed devices running Windows. Diagnostics can include user identifiable information such as user or device name. | Enabled |
 | Automatically capture diagnostics when devices experience a failure during the Windows Autopilot process on Windows. Diagnostics can include user identifiable information such as user or device name. | Enabled |
 
-For more information, see [Collect diagnostics from a Windows device](/intune/intune-service/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/intune/device-management/actions/collect-diagnostics).
 
 ### (Optional) Configure the Enrollment Status Page
 

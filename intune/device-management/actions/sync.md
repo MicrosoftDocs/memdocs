@@ -10,7 +10,7 @@ zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 
 The *sync* device action forces a device to check in with Intune. When a device checks in, it receives any pending actions or policies assigned to it. This action is useful for validating and troubleshooting policy deployment without waiting for the next scheduled check-in.
 
-For more information about the standard Intune policy check-in frequencies, see [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+For more information about the standard Intune policy check-in frequencies, see [Refresh cycle times](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 ## Prerequisites
 

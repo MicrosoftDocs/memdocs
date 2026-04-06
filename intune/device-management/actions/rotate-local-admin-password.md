@@ -81,7 +81,7 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 
 <!--links-->
 
-[more info](../protect/windows-laps-policy.md#manually-rotate-passwords)
+[more info](../../intune-service/protect/windows-laps-policy.md#manually-rotate-passwords)
 
 <!-- admin center links -->
 

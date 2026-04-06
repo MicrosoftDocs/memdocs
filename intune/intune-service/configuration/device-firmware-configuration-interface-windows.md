@@ -119,9 +119,9 @@ The next time the device syncs with Intune, Windows receives the DFCI settings. 
 If you want to change existing DFCI settings on devices that are in use, you can. In your existing DFCI profile, change the settings, and save your changes. Since the profile is already assigned, the new DFCI settings take effect when:
 
 1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, go to [when devices get a policy, profile, or app updates](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
-2. To enforce the new settings, reboot the device [remotely](../remote-actions/device-restart.md) or locally.
+2. To enforce the new settings, reboot the device [remotely](../../device-management/actions/restart.md) or locally.
 
-You can also [signal devices to check in](../remote-actions/device-sync.md). After a successful sync, [signal to reboot](../remote-actions/device-restart.md).
+You can also [signal devices to check in](../../device-management/actions/sync.md). After a successful sync, [signal to reboot](../../device-management/actions/restart.md).
 
 >[!NOTE]
 > Deleting the DFCI profile, or removing a device from the group assigned to the profile doesn't remove DFCI settings or re-enable the UEFI (BIOS) menus. If you want to stop using DFCI, then update the settings in your existing DFCI profile. For more information on the steps, go to [retire the device](#retire) in this article.
@@ -150,7 +150,7 @@ For example, you want to only allow Wi-Fi radios. In this scenario, you:
 
 ### Reuse
 
-If you plan to reset Windows to repurpose the device, then [wipe the device](../remote-actions/device-wipe.md). Do **not** remove the Windows Autopilot device record.
+If you plan to reset Windows to repurpose the device, then [wipe the device](../../device-management/actions/wipe.md). Do **not** remove the Windows Autopilot device record.
 
 After wiping the device, move the device to the group assigned the new DFCI and Windows Autopilot profiles. Be sure to reboot the device to rerun Windows setup.
 
