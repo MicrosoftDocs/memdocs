@@ -101,6 +101,6 @@ The Mac is now enrolled in Microsoft Intune and ready-to-manage. Other profiles 
 Start managing enrolled devices in the Microsoft Intune admin center.
 
 - [Tutorial - Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Remote Device Actions In Microsoft Intune](../remote-actions/index.md)
+- [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md)
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
 

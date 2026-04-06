@@ -150,7 +150,7 @@ In Intune, create a device configuration profile:
 
     You can also [monitor its status](device-profile-monitor.md).
 
-The next time the device checks for configuration updates, the MX profile is deployed to the device. Devices sync with Intune when devices enroll, and then approximately every 8 hours. You can also [force a sync in Intune](../remote-actions/device-sync.md) using a remote action. Or, on the device, open the **Company Portal app** > **Settings** > **Sync**.
+The next time the device checks for configuration updates, the MX profile is deployed to the device. Devices sync with Intune when devices enroll, and then approximately every 8 hours. You can also [force a sync in Intune](../../device-management/actions/sync.md) using a remote action. Or, on the device, open the **Company Portal app** > **Settings** > **Sync**.
 
 ## Update a Zebra MX configuration after it's assigned
 

@@ -130,7 +130,7 @@ You can use the rotate Recovery Lock passcode device action to reset the Recover
 2. Select **Rotate recovery lock passcode**.
 3. Confirm the action.
 
-To learn more, see [Rotate Recovery Lock passcode device action](../../intune-service/remote-actions/rotate-recovery-lock-passcode.md).
+To learn more, see [Rotate Recovery Lock passcode device action](../../device-management/actions/rotate-recovery-lock-passcode.md).
 
 ## Remove the Recovery Lock password
 

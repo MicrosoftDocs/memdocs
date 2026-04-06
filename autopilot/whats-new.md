@@ -243,7 +243,7 @@ Date added: *September 23, 2022*
 
 Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Windows Autopilot process on currently supported versions of Windows. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics might include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/device-management/actions/collect-diagnostics).
 
 ## Updates to Windows Autopilot device targeting infrastructure
 

@@ -25,7 +25,7 @@ Access policies are supported for the following resources:
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.  
 - Compliance policies - Applies to creating and managing [compliance policies](../protect/create-compliance-policy.md).  
 - Configuration policies - Applies to creating and managing policies via the [settings catalog](../../device-configuration/settings-catalog/index.md).  
-- Device actions - Applies to [wipe](../remote-actions/device-wipe.md), [retire](../remote-actions/device-retire.md) and [delete](../remote-actions/device-delete.md) device actions.
+- Device actions - Applies to [wipe](../../device-management/actions/wipe.md), [retire](../../device-management/actions/retire.md) and [delete](../../device-management/actions/delete.md) device actions.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.

@@ -102,7 +102,7 @@ Remote actions display across the top of the devices *Overview* page. Actions th
 
 The remote actions that are available depend on how the device is managed:
 
-- **Intune**: All [Intune remote actions](../remote-actions/index.md) that apply to the device platform are available.
+- **Intune**: All [Intune remote actions](../../device-management/actions/index.md) that apply to the device platform are available.
 - **Configuration Manager**: You can use the following Configuration Manager actions:
 
   - Sync Machine Policy
@@ -123,9 +123,9 @@ Some of the Intune remote actions can help secure devices or safeguard data that
 
 The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../fundamentals/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
 
-- [Synchronize device](../remote-actions/device-sync.md) – Have the device immediately check-in with Intune. When a device checks in, it receives any pending actions or policies that are assigned to it.
+- [Synchronize device](../../device-management/actions/sync.md) – Have the device immediately check-in with Intune. When a device checks in, it receives any pending actions or policies that are assigned to it.
 
-- [Restart](../remote-actions/device-restart.md) – Force a Windows device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
+- [Restart](../../device-management/actions/restart.md) – Force a Windows device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
 
 - [Quick Scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
 
@@ -138,7 +138,7 @@ The following Intune remote actions are of interest to the security admin, and a
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-You can also use *bulk device actions* to manage some actions like *Retire* and *Wipe* for multiple devices at the same time. To learn more, see [bulk device actions](../remote-actions/index.md#bulk-device-actions).
+You can also use *bulk device actions* to manage some actions like *Retire* and *Wipe* for multiple devices at the same time. To learn more, see [bulk device actions](../../device-management/actions/index.md#bulk-device-actions).
 
 ![Select bulk actions](./media/endpoint-security-manage-devices/select-bulk-actions.png)
 

@@ -331,7 +331,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Block location**: If **True**, disables the Location setting on the device and prevents users from turning it on. When this setting is disabled, any other setting that depends on the device location is affected, including the `[Locate device](../../intune-service/remote-actions/device-locate.md)` remote action that admins use. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+- **Block location**: If **True**, disables the Location setting on the device and prevents users from turning it on. When this setting is disabled, any other setting that depends on the device location is affected, including the `[Locate device](../../device-management/actions/locate.md)` remote action that admins use. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
 
   Applies to:
 
