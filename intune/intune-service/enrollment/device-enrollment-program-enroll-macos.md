@@ -322,4 +322,4 @@ Complete these steps to renew a server token that's about to expire. This proced
 
 ## Next steps
 
-Use [Remote Device Actions In Microsoft Intune](../remote-actions/index.md) to remotely manage enrolled Macs.
+Use [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md) to remotely manage enrolled Macs.

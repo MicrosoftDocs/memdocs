@@ -434,7 +434,7 @@ Validating and testing that your solution is properly integrated with Intune is 
 5. [Create a Trusted Root Certificate profile](certificates-scep-configure.md) for your test Certificate Authority.
 6. Create SCEP profiles to test the scenarios listed in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
 7. [Assign the profiles](../configuration/device-profile-assign.md) to users that enrolled their devices.
-8. Wait for the devices to sync with Intune. Or, manually [sync the devices](../remote-actions/device-sync.md).
+8. Wait for the devices to sync with Intune. Or, manually [sync the devices](../../device-management/actions/sync.md).
 9. Confirm the Trusted Root Certificate and SCEP [profiles are deployed to the devices](../configuration/device-profile-monitor.md).
 10. Confirm the Trusted Root Certificate are installed on all the devices.
 11. Confirm the SCEP Certificates for the assigned profiles are installed on all the devices.

@@ -118,7 +118,7 @@ To use the bulk rename action:
 
 ## Next steps
 
-To learn how to change the Device name shown in the Company Portal, see [Rename device from the Company Portal](../user-help/rename-your-device-cpapp.md).
+To learn how to change the Device name shown in the Company Portal, see [Rename device from the Company Portal](../../intune-service/user-help/rename-your-device-cpapp.md).
 
 <!--links-->
 
