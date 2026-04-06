@@ -3,7 +3,7 @@ title: Use role-based access control (RBAC) and scope tags for distributed IT
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/24/2026
+ms.date: 04/02/2026
 ms.topic: how-to
 ai-assisted: true
 ms.collection:
@@ -129,7 +129,7 @@ To enable Scoped permissions, go to **Tenant administration** > **Roles** > **Se
 
 Before enabling Scoped permissions, use the **Permissions Assessment Report** to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings**, and can be run as often as needed, before or after enabling the setting.
 
-The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled.  Security groups with no members are not listed, and security groups with no unioned scope tags are not listed.
+The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled. Security groups with no members are not listed, and security groups not affected by permission merging are not listed.
 
 To review the impact on your tenant and enable Scoped permissions:
 
