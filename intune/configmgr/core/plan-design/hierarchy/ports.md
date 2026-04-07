@@ -101,7 +101,7 @@ For more information, see [Windows PE Peer Cache](../../../osd/get-started/prepa
 |-----------------|---------|---------|
 |HTTPS|--|443|
 
-For more information, see [Ports and data flow](use-a-cloud-based-distribution-point.md#bkmk_dataflow).
+For more information, see [Ports and data flow](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point#bkmk_dataflow).
 
 ### <a name="bkmk_client-cmg"></a> Client `-->` Cloud management gateway (CMG)
 
@@ -423,7 +423,7 @@ For more information, see [External notifications](../../servers/manage/external
 |-----------------|---------|---------|
 |HTTPS|--|443|
 
-For more information, see [Ports and data flow](use-a-cloud-based-distribution-point.md#bkmk_dataflow).
+For more information, see [Ports and data flow](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point#bkmk_dataflow).
 
 ### <a name="BKMK_PortsSite-DP"></a> Site server `-->` Distribution point, both standard and pull
 

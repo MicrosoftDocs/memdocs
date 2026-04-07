@@ -187,7 +187,7 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 > - **System instability** and boot failures
 > - **Complex recovery scenarios** with multiple encryption layers
 >
-> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../remote-actions/device-inventory.md) to identify devices with existing encryption software.
+> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../fundamentals/device-inventory.md) to identify devices with existing encryption software.
 
 > [!IMPORTANT]
 > After setting **Allow Warning For Other Disk Encryption** to *Disabled*, another setting becomes available:

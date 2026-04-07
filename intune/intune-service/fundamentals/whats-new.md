@@ -78,7 +78,7 @@ On macOS devices, you can configure a recovery OS password that prevents users f
 
 There are two ways to use this feature:
 
-- **Settings catalog policy** - In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+- **Settings catalog policy** - In a [settings catalog](/intune/device-configuration/settings-catalog) policy, you can use the Recovery Lock settings to:
 
   - Turn on the recovery lock feature
   - Configure a password rotation schedule
@@ -133,11 +133,11 @@ The new policies include:
 >
 > - Windows
 
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](/intune/device-configuration/settings-catalog).
 
 #### New updates to the Apple settings catalog <!-- 36630003 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](/intune/device-configuration/settings-catalog) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](/intune/device-configuration/settings-catalog).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type. 
 

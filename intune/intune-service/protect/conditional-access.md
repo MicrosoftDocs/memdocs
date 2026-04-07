@@ -45,7 +45,7 @@ Conditional Access works with Intune device configuration and compliance policie
 
   - Conditional Access for Exchange on-premises
 
-  Learn more about [device-based Conditional Access with Intune](../protect/create-conditional-access-intune.md)
+  Learn more about [device-based Conditional Access with Intune](/entra/identity/conditional-access/policy-all-users-device-compliance)
 
 - **App-based Conditional Access**
 
