@@ -89,7 +89,7 @@ The following example shows how the integration automatically contains a threat,
 
 Different platforms offer unique configuration options when integrating with Microsoft Defender for Endpoint:
 
-**Android**: Use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md) settings, including the ability to enable or disable VPN-based scanning.
+**Android**: Deploy Defender for Endpoint to Android devices through Managed Google Play using Intune app deployment and app configuration policies. See [Deploy Microsoft Defender for Endpoint on Android](microsoft-defender-deploy-android.md) for the complete deployment guide. After deployment, use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](microsoft-defender-configure-android.md) settings, including the ability to enable or disable VPN-based scanning.
 
 **iOS/iPadOS**: Enable [vulnerability assessment of apps](/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps) to allow Defender to scan installed apps for known vulnerabilities.
 

@@ -1,8 +1,6 @@
 ---
 title: APIs to onboard third party certificate authorities
 description: Add or integrate the SCEP GitHub solution for third party certificate authorities (CA) to issue SCEP certificates to devices in Microsoft Intune. This solution includes Java and C# APIs that validate, send success and failure notifications to Intune, and use SSL socket factory when communicating with Intune. Also view an overview of the steps to test your SCEP CA configuration.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 07/03/2025
 ms.topic: reference
 ms.collection:
@@ -13,7 +11,7 @@ ms.collection:
 
 # Use APIs to add third-party CAs for SCEP to Intune
 
-In Microsoft Intune, you can add third-party certificate authorities (CA), and have these CAs issue and validate certificates using the Simple Certificate Enrollment Protocol (SCEP). [Add third-party certification authority](certificate-authority-add-scep-overview.md) provides an overview of this feature, and describes the Administrator tasks in Intune.
+In Microsoft Intune, you can add third-party certificate authorities (CA), and have these CAs issue and validate certificates using the Simple Certificate Enrollment Protocol (SCEP). [Add third-party certification authority](./third-party-ca-scep.md) provides an overview of this feature, and describes the Administrator tasks in Intune.
 
 There are also some developer tasks that use an open-source library that Microsoft published in GitHub.com. The library includes an API that:
 
@@ -24,7 +22,7 @@ Using this API, your third-party SCEP server integrates with the Intune SCEP man
 
 ## SCEP management solution
 
-![How third party certification authority SCEP integrates with Microsoft Intune](./media/scep-libraries-apis/scep-certificate-vendor-integration.png)
+![How third party certification authority SCEP integrates with Microsoft Intune](./media/ref-scep-api/scep-certificate-vendor-integration.png)
 
 Using Intune, administrators create SCEP profiles, and then assign these profiles to MDM devices. The SCEP profiles include parameters, such as:
 
@@ -314,7 +312,7 @@ String  transactionId = UUID.randomUUID.toString();
 
 **Security notes**:
 
-API permissions are required. For more information and app registration permissions, see [Onboard SCEP server in Azure](scep-libraries-apis.md#onboard-scep-server-in-azure) in this article.
+API permissions are required. For more information and app registration permissions, see [Onboard SCEP server in Azure](./ref-scep-api.md#onboard-scep-server-in-azure) in this article.
 
 ##### UploadRevocationResults method
 **Signature**:
@@ -394,7 +392,7 @@ var transactionId = Guid.NewGuid().ToString();
 
 **Security notes**:
 
-API permissions are required. For more information and app registration permissions, see [Onboard SCEP server in Azure](scep-libraries-apis.md#onboard-scep-server-in-azure) in this article.
+API permissions are required. For more information and app registration permissions, see [Onboard SCEP server in Azure](./ref-scep-api.md#onboard-scep-server-in-azure) in this article.
 
 ##### UploadRevocationResults method
 **Signature**:
@@ -427,15 +425,15 @@ Uploads a list of revocation results from a third party CA to Intune.
 
 Validating and testing that your solution is properly integrated with Intune is a must. The following lists an overview of the steps:
 
-1. Set up an [Intune trial account](../fundamentals/account-sign-up.md).
+1. Set up an [Intune trial account](../../intune-service/fundamentals/account-sign-up.md).
 2. Onboard the [SCEP Server in the Azure portal](#onboard-scep-server-in-azure) (in this article).
-3. [Configure the SCEP Server](certificates-scep-configure.md) with the IDs and key created when onboarding your SCEP server.
-4. [Enroll devices](../fundamentals/deployment-guide-enrollment.md) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
-5. [Create a Trusted Root Certificate profile](certificates-scep-configure.md) for your test Certificate Authority.
+3. [Configure the SCEP Server](./scep-infrastructure.md) with the IDs and key created when onboarding your SCEP server.
+4. [Enroll devices](../../intune-service/fundamentals/deployment-guide-enrollment.md) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
+5. [Create a Trusted Root Certificate profile](./scep-infrastructure.md) for your test Certificate Authority.
 6. Create SCEP profiles to test the scenarios listed in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
-7. [Assign the profiles](../configuration/device-profile-assign.md) to users that enrolled their devices.
+7. [Assign the profiles](../../intune-service/configuration/device-profile-assign.md) to users that enrolled their devices.
 8. Wait for the devices to sync with Intune. Or, manually [sync the devices](../../device-management/actions/sync.md).
-9. Confirm the Trusted Root Certificate and SCEP [profiles are deployed to the devices](../configuration/device-profile-monitor.md).
+9. Confirm the Trusted Root Certificate and SCEP [profiles are deployed to the devices](../../intune-service/configuration/device-profile-monitor.md).
 10. Confirm the Trusted Root Certificate are installed on all the devices.
 11. Confirm the SCEP Certificates for the assigned profiles are installed on all the devices.
 12. Confirm the properties of the installed certificates match the properties set in the SCEP profile.
@@ -443,7 +441,7 @@ Validating and testing that your solution is properly integrated with Intune is 
 
 ## See also
 
-- [Add third party CA overview](certificate-authority-add-scep-overview.md)
-- [Set up Intune](../fundamentals/deployment-plan-setup.md)
-- [Device enrollment](../fundamentals/deployment-guide-enrollment.md)
-- [Configure SCEP certificate profiles](certificates-profile-scep.md) (the Microsoft Network Device Enrollment Service server\connector setup isn't used for this scenario)
+- [Add third party CA overview](./third-party-ca-scep.md)
+- [Set up Intune](../../intune-service/fundamentals/deployment-plan-setup.md)
+- [Device enrollment](../../intune-service/fundamentals/deployment-guide-enrollment.md)
+- [Configure SCEP certificate profiles](../../device-configuration/certificates/scep-profiles.md) (the Microsoft Network Device Enrollment Service server\connector setup isn't used for this scenario)

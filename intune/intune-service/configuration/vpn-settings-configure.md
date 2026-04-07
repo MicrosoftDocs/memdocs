@@ -33,7 +33,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
 - VPN profiles for a device tunnel are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
-- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, go to [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+- If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, go to [How to configure certificates with Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 - User enrollment for iOS/iPadOS and macOS only support [per-app VPN](vpn-setting-configure-per-app.md).
 
@@ -230,14 +230,14 @@ When you create the VPN profile, you choose a SCEP or PKCS certificate profile t
 
 If you use certificate-based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This assignment makes sure each device recognizes the legitimacy of your certificate authority.
 
-For more information about how to create and use certificate profiles in Intune, go to [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+For more information about how to create and use certificate profiles in Intune, go to [How to configure certificates with Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 > [!NOTE]
 > Certificates added using the **PKCS imported certificate** profile aren't supported for VPN authentication. Certificates added using the **PKCS certificates** profile are supported for VPN authentication.
 
 ### User name and password
 
-The user authenticates to the VPN server by providing a user name and password, or [derived credentials](../protect/derived-credentials.md).
+The user authenticates to the VPN server by providing a user name and password, or [derived credentials](../../device-security/certificates/derived-credentials.md).
 
 ## Next steps
 

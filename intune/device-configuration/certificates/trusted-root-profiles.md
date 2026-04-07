@@ -1,11 +1,8 @@
 ---
 title: Create trusted certificate profiles in Microsoft Intune
 description: Create and deploy trusted certificate profiles to deploy a trusted root certificate to managed devices in Intune. Trusted certificate profiles support use of Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles with Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/23/2024
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -20,7 +17,7 @@ When using Intune to provision devices with certificates to access your corporat
 You deploy the trusted certificate profile to the same devices and users that receive the certificate profiles for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS), and imported PKCS.
 
 > [!TIP]
-> *Trusted certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+> *Trusted certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Export the trusted root CA certificate
 
@@ -48,7 +45,7 @@ Create a separate trusted certificate profile for each device platform you want 
 
 ### Trusted certificate profiles for Android device administrator
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 This feature applies to:
 
@@ -94,13 +91,13 @@ After you name the certificate, it can be saved.
 
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
-   ![Navigate to Intune and create a new profile for a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-new.png)
+   ![Navigate to Intune and create a new profile for a trusted certificate](./media/trusted-root-profiles/certificates-configure-profile-new.png)
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that should receive this profile.
    - **Profile**: Depending on your chosen platform, select **Trusted certificate** or select **Templates** > **Trusted certificate**.
 
-   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
 
 4. Select **Create**.
 
@@ -118,24 +115,24 @@ After you name the certificate, it can be saved.
    - **Computer certificate store - Intermediate**
    - **User certificate store - Intermediate**
 
-   ![Create a profile and upload a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-fill.png)
+   ![Create a profile and upload a trusted certificate](./media/trusted-root-profiles/certificates-configure-profile-fill.png)
 
 8. Select **Next**.
 
 
-9. In **Assignments**, select the user or groups that should receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or groups that should receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
 
    Select **Next**.
 
 10. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
-    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+    For more information, see [Applicability rules](../../intune-service/configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
 11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Next steps
 
 Create certificate profiles:
-- [Configure infrastructure to support SCEP certificates with Intune](../protect/certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](../protect/certificates-pfx-configure.md)
-- [Create a PKCS imported certificate profile](../protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [Configure infrastructure to support SCEP certificates with Intune](../../fundamentals/certificates/scep-infrastructure.md)
+- [Configure and manage PKCS certificates with Intune](./pkcs-profiles.md)
+- [Create a PKCS imported certificate profile](./imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile)

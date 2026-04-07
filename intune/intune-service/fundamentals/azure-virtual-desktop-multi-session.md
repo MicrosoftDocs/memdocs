@@ -78,9 +78,9 @@ To configure configuration policies for Windows Enterprise multi-session VMs, us
 
 Only the following configuration profile templates are supported for Windows Enterprise multi-session VMs:
 
-- [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
-- [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
-- [PKCS certificate](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
+- [Trusted certificate](../../device-configuration/certificates/trusted-root-profiles.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
+- [SCEP certificate](../../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
+- [PKCS certificate](../../device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
 - [VPN](../configuration/vpn-settings-configure.md#step-2---create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.

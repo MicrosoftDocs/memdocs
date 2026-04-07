@@ -1,11 +1,8 @@
 ---
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 11/19/2024
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -26,10 +23,10 @@ Microsoft Intune supports the use of private and public key pair (PKCS) certific
 
 Microsoft Intune includes built-in settings to use PKCS certificates for access and authentication to your organizations resources. Certificates authenticate and secure access to your corporate resources like a VPN or a WiFi network. You deploy these settings to devices using device configuration profiles in Intune.
 
-For information about using imported PKCS certificates, see [Imported PFX Certificates](certificates-imported-pfx-configure.md).
+For information about using imported PKCS certificates, see [Imported PFX Certificates](./imported-pfx-profiles.md).
 
 > [!TIP]
-> *PKCS certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+> *PKCS certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Requirements
 
@@ -52,9 +49,9 @@ To use PKCS certificates with Intune, you need the following infrastructure:
 
 - Certificate Connector for Microsoft Intune: For information about the certificate connector, see:
 
-  - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md)
-  - [Prerequisites](certificate-connector-prerequisites.md)
-  - [Installation and configuration](certificate-connector-install.md)
+  - Overview of the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/overview.md)
+  - [Prerequisites](../../fundamentals/certificates/connector/prerequisites.md)
+  - [Installation and configuration](../../fundamentals/certificates/connector/setup-connector.md)
 
 ## Update certificate connector: Strong mapping requirements for KB5014754
 
@@ -68,7 +65,7 @@ In the Microsoft Intune Certificate Connector, version 6.2406.0.1001, we release
 
  To ensure that certficate-based authentication continues working, you must take the following actions:
 
-- Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](certificate-connector-overview.md).
+- Update the Microsoft Intune Certificate Connector to version 6.2406.0.1001. For information about the latest version and how to update the certificate connector, see [Certificate connector for Microsoft Intune](../../fundamentals/certificates/connector/overview.md).
 
 - Make changes to registry key information on the Windows server that hosts the certificate connector.
 
@@ -190,7 +187,7 @@ Use a command line to complete these steps:
 
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 
-For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/setup-connector.md).
 
 ## Create a trusted certificate profile
 
@@ -224,7 +221,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    > [!NOTE]
    > Depending on the platform you chose in **Step 3**, you may or may not have an option to choose the **Destination store** for the certificate.
 
-   ![Create a profile and upload a trusted certificate](./media/certificates-pfx-configure/certificates-pfx-configure-profile-fill.png)
+   ![Create a profile and upload a trusted certificate](./media/pkcs-profiles/certificates-pfx-configure-profile-fill.png)
 
 8. Select **Next**.
 
@@ -236,20 +233,20 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
    - A configuration profile, such as a Wi-Fi profile that makes use of the certificate.
 
-   For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   For more information about assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
 
    Select **Next**.
 
 10. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
-    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+    For more information, see [Applicability rules](../../intune-service/configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Create a PKCS certificate profile
 
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -315,7 +312,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
    - A configuration profile, such as a Wi-Fi profile that makes use of the certificate.
 
-   For more information about assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   For more information about assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
 
 11. Select **Next**.
 
@@ -333,7 +330,7 @@ Platforms:
 - Windows
 
 > [!NOTE]
-> There is a known issue for using PKCS to get certificates [which is the same issue as seen for SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
+> There is a known issue for using PKCS to get certificates [which is the same issue as seen for SCEP](./scep-profiles.md#avoid-certificate-signing-requests-with-escaped-special-characters) when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
 >
 > - \+
 > - ;
@@ -404,6 +401,6 @@ Platforms:
 
 ## Next steps
 
-- [Use SCEP for certificates](certificates-scep-configure.md)
-- [Issue PKCS certificates from a Symantec PKI manager web service](certificates-digicert-configure.md).
+- [Use SCEP for certificates](../../fundamentals/certificates/scep-infrastructure.md)
+- [Issue PKCS certificates from a Symantec PKI manager web service](../../fundamentals/certificates/digicert-pkcs.md).
 - [Troubleshoot PKCS certificate profiles](/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles)

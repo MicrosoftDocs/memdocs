@@ -146,7 +146,7 @@ These settings apply to the following Android Enterprise enrollment types where 
       > A good practice is to enter the **Radius server name** and add a **Root certificate for server validation**.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
     - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel​​.​
@@ -169,7 +169,7 @@ These settings apply to the following Android Enterprise enrollment types where 
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
         - **Non-EAP method (inner identity)**: Choose how you authenticate the connection. Be sure you select the same protocol that's configured on your Wi-Fi network. Your options:
 
@@ -197,7 +197,7 @@ These settings apply to the following Android Enterprise enrollment types where 
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
         - **Non-EAP method for authentication (inner identity)**: Choose how you authenticate the connection. Be sure you select the same protocol that's configured on your Wi-Fi network. Your options:
 
