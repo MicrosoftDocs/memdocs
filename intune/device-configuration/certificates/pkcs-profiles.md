@@ -50,7 +50,7 @@ To use PKCS certificates with Intune, you need the following infrastructure:
 - Certificate Connector for Microsoft Intune: For information about the certificate connector, see:
 
   - Overview of the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/overview.md)
-  - [Prerequisites](../../fundamentals/certificates/prerequisites.md)
+  - [Prerequisites](../../fundamentals/certificates/connector/prerequisites.md)
   - [Installation and configuration](../../fundamentals/certificates/connector/setup-connector.md)
 
 ## Update certificate connector: Strong mapping requirements for KB5014754

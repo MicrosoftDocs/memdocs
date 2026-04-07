@@ -41,7 +41,7 @@ To support SCEP, the following on-premises infrastructure must run on servers th
   For information about the certificate connector, see:
 
   - Overview of the [Certificate Connector for Microsoft Intune](./connector/overview.md).
-  - [Prerequisites](./prerequisites.md).
+  - [Prerequisites](./connector/prerequisites.md).
   - [Installation and configuration](./connector/setup-connector.md).
 
 - **Certification Authority** – Use a Microsoft Active Directory Certificate Services Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 with service pack 1, or later. The version of Windows Server you use must remain in support by Microsoft. A Standalone CA isn't supported. For more information, see [Install the Certification Authority](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)).
@@ -90,11 +90,11 @@ The Intune policy module works to secure NDES in the following ways:
 
 ### Accounts
 
-To configure the connector to support SCEP, use an account that has permissions to configure NDES on the Windows Server and to manage your Certification Authority. For details, see [Accounts](./prerequisites.md#accounts) in the *Prerequisites for the Certificate Connector for Microsoft Intune* article.
+To configure the connector to support SCEP, use an account that has permissions to configure NDES on the Windows Server and to manage your Certification Authority. For details, see [Accounts](./connector/prerequisites.md#accounts) in the *Prerequisites for the Certificate Connector for Microsoft Intune* article.
 
 ### Network requirements
 
-In addition to the [network requirements](./prerequisites.md) for the certificate connector, we recommend publishing the NDES service through a reverse proxy, such as the [Microsoft Entra application proxy, Web Access Proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application), or a third-party proxy. If you don't use a reverse proxy, then allow TCP traffic on port 443 from all hosts and IP addresses on the internet to the NDES service.
+In addition to the [network requirements](./connector/prerequisites.md) for the certificate connector, we recommend publishing the NDES service through a reverse proxy, such as the [Microsoft Entra application proxy, Web Access Proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application), or a third-party proxy. If you don't use a reverse proxy, then allow TCP traffic on port 443 from all hosts and IP addresses on the internet to the NDES service.
 
 Allow all ports and protocols necessary for communication between the NDES service and any supporting infrastructure in your environment. For example, the computer that hosts the NDES service needs to communicate with the CA, DNS servers, domain controllers, and possibly other services or servers within your environment, like Configuration Manager.
 
@@ -284,7 +284,7 @@ On the CA, run the following commands:
 
 ## Set up NDES
 
-The following procedures can help you configure the Network Device Enrollment Service (NDES) for use with Intune. These are provided as examples as the actual configuration might vary depending on your version of Windows Server. Ensure required configurations you add like those for .NET Framework meet the [prerequisites for the Certificate Connector for Microsoft Intune](./prerequisites.md).
+The following procedures can help you configure the Network Device Enrollment Service (NDES) for use with Intune. These are provided as examples as the actual configuration might vary depending on your version of Windows Server. Ensure required configurations you add like those for .NET Framework meet the [prerequisites for the Certificate Connector for Microsoft Intune](./connector/prerequisites.md).
 
 For more information about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 

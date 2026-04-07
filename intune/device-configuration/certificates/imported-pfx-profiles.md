@@ -59,12 +59,12 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
 
   For information about the certificate connector, see:
   - Overview of the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/overview.md).
-  - [Prerequisites](../../fundamentals/certificates/prerequisites.md).
+  - [Prerequisites](../../fundamentals/certificates/connector/prerequisites.md).
   - [Installation and configuration](../../fundamentals/certificates/connector/setup-connector.md).
 
 - **Windows Server**:
 
-  The certificate connector installs on a Windows Server that meets the connectors [prerequisites](../../fundamentals/certificates/prerequisites.md).
+  The certificate connector installs on a Windows Server that meets the connectors [prerequisites](../../fundamentals/certificates/connector/prerequisites.md).
 
 - **Visual Studio 2015 or above** (optional):
 

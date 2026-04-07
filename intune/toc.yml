@@ -968,65 +968,7 @@ items:
         - name: Microsoft Cloud PKI
           href: ./cloud-pki/toc.yml
         - name: Certificates
-          items:
-          - name: Use certificates for authentication
-            href: ./fundamentals/certificates/overview.md
-          - name: Trusted certificate profiles
-            href: ./device-configuration/certificates/trusted-root-profiles.md
-          - name: Certificate Connector
-            items:
-            - name: Certificate Connector
-              href: ./fundamentals/certificates/connector/overview.md
-            - name: Connector prerequisites
-              href: ./fundamentals/certificates/prerequisites.md
-            - name: Install the connector
-              href: ./fundamentals/certificates/connector/setup-connector.md
-            - name: Troubleshoot certificate connector
-              href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
-
-          - name: SCEP
-            items:
-            - name: SCEP infrastructure
-              href: ./fundamentals/certificates/scep-infrastructure.md
-              displayName: ksp
-            - name: SCEP certificate profiles
-              href: ./device-configuration/certificates/scep-profiles.md
-            - name: Use third-party certificate authority with SCEP
-              href: ./fundamentals/certificates/third-party-ca-scep.md
-            - name: Troubleshoot SCEP certificate profiles
-              items:
-              - name: Troubleshoot SCEP certificate profiles
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles?context=/intune/context
-              - name: Profile deployment to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment?context=/intune/context
-              - name: Device to NDES communication
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes?context=/intune/context
-              - name: NDES operations
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module?context=/intune/context
-              - name: Certificate delivery to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery?context=/intune/context
-              - name: Reporting for certificate deployment
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting?context=/intune/context
-
-          - name: PKCS
-            items:
-            - name: PKCS
-              href: ./device-configuration/certificates/pkcs-profiles.md
-              displayName: ksp
-            - name: Imported PKCS
-              href: ./device-configuration/certificates/imported-pfx-profiles.md
-            - name: Use S/MIME to encrypt email
-              href: ./device-security/certificates/s-mime.md
-              displayName: csr
-            - name: Troubleshoot PKCS certificate profiles
-              href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles?context=/intune/context
-          - name: Use DigiCert PKI
-            href: ./fundamentals/certificates/digicert-pkcs.md
-            displayName: ca; pkcs; pki; ra; registration authority
-          - name: Remove SCEP or PKCS certificates
-            href: ./device-configuration/certificates/remove-profiles.md
-        - name: Derived credentials
-          href: ./device-security/certificates/derived-credentials.md
+          href: ./fundamentals/certificates/toc.yml
         - name: Microsoft Tunnel VPN gateway
           items:
           - name: Microsoft Tunnel overview
@@ -1157,8 +1099,6 @@ items:
           items:
           - name: Software update errors
             href: ./device-updates/windows/software-update-agent-error-codes.md
-        - name: Deprecated certificate connectors
-          href: ./fundamentals/certificates/connector/overview.md
 
     - name: Configure devices
       items:

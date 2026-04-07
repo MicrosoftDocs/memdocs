@@ -3282,7 +3282,7 @@
     },
     {
       "source_path": "intune/intune/protect/certificate-connector-prerequisites.md",
-      "redirect_url": "/intune/fundamentals/certificates/prerequisites",
+      "redirect_url": "/intune/fundamentals/certificates/connector/prerequisites",
       "redirect_document_id": false
     },
     {
@@ -4777,7 +4777,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/certificate-connector-prerequisites.md",
-      "redirect_url": "/intune/fundamentals/certificates/prerequisites",
+      "redirect_url": "/intune/fundamentals/certificates/connector/prerequisites",
       "redirect_document_id": false
     },
     {

@@ -14,7 +14,7 @@ ms.collection:
 
 # Install the Certificate Connector for Microsoft Intune
 
-To support your use of certificates with Intune, you can install the Certificate Connector for Microsoft Intune on any Windows Server that meets the [connector prerequisites](../prerequisites.md). The following sections help you install and then configure the connector. This article also explains how to modify a previously installed connector, and how to remove the connector from a server.
+To support your use of certificates with Intune, you can install the Certificate Connector for Microsoft Intune on any Windows Server that meets the [connector prerequisites](prerequisites.md). The following sections help you install and then configure the connector. This article also explains how to modify a previously installed connector, and how to remove the connector from a server.
 
 ## Download and install the connector software
 
@@ -26,7 +26,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
    :::image type="content" source="./media/setup-connector/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 
-4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](../prerequisites.md) are installed.
+4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](prerequisites.md) are installed.
 
    To use the Simple Certificate Enrollment Protocol (SCEP) with a Microsoft Certification Authority (CA), confirm that the Network Device Enrollment Service (NDES) role is installed.
 
@@ -83,7 +83,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
    - **Certificate revocation**: Select this option to enable automatic certificate revocation for certificates issued from a Microsoft Active Directory Certification Authority.
 
-3. On *Service Account*, select the type of account to use for the service account of this connector. The account you select must have the permissions described in prerequisites for the [certificate connector service account](../prerequisites.md#certificate-connector-service-account).
+3. On *Service Account*, select the type of account to use for the service account of this connector. The account you select must have the permissions described in prerequisites for the [certificate connector service account](prerequisites.md#certificate-connector-service-account).
 
    Options include:
 

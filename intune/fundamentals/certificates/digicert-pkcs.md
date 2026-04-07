@@ -34,7 +34,7 @@ The following are requirements to support use of a DigiCert CA:
 - **Certificate Connector for Microsoft Intune** - Later in this article there are instructions for installing and configuring the certificate connector. To help you plan for the connectors prerequisites in advance, see the following articles:
 
   - Overview of the [Certificate Connector for Microsoft Intune](./connector/overview.md)
-  - [Prerequisites](./prerequisites.md)
+  - [Prerequisites](./connector/prerequisites.md)
   - [Installation and configuration](./connector/setup-connector.md)
 
 ## Install the DigiCert RA certificate

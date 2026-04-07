@@ -118,7 +118,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 1. On the Windows Server that hosts the connector, run the connector installation program to uninstall the connector.
 
-2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisites](../prerequisites.md) when installing a newer version of a connector.
+2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisites](prerequisites.md) when installing a newer version of a connector.
 
 ## Connector status
 
@@ -494,4 +494,4 @@ This connector is a unified connector in that it includes the capabilities of bo
 
 ## Next steps
 
-[Review prerequisites for the Certificate Connector for Microsoft Intune](../prerequisites.md)
+[Review prerequisites for the Certificate Connector for Microsoft Intune](prerequisites.md)
