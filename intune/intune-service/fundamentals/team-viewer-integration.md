@@ -61,7 +61,7 @@ Before you configure the TeamViewer connector in Intune, make sure these require
 > - Remote assistance connectors/Read  
 > - Remote assistance connectors/Update  
 >
-> Alternatively, you can sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the built-in **[Intune Adminstrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.  
+> Alternatively, you can sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.  
 :::column-end:::
 :::row-end:::
 
