@@ -207,9 +207,7 @@ To verify from the Intune admin center:
 
 To verify from the Defender portal:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), go to the **Device inventory** page and confirm that your Android devices appear there.
-
-   :::image type="content" source="./media/microsoft-defender-deploy-android/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="The Microsoft Defender for Endpoint portal" lightbox="./media/microsoft-defender-deploy-android/9fe378a1dce0f143005c3aa53d8c4f51.png":::
+1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endpoints** > **Device inventory** and confirm that your Android devices appear there.
 
 For more detail on using Intune to monitor onboarding status across platforms, see [Monitor device onboarding status](microsoft-defender-integrate.md#monitor-device-onboarding-status).
 
