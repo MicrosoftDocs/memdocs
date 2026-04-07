@@ -71,7 +71,7 @@ The integration supports connections to TeamViewer‑managed devices that have t
 
 To enable remote assistance through TeamViewer, an Intune administrator must configure the TeamViewer connector in the Intune admin center. This connector establishes the connection between your Intune tenant and your TeamViewer environment.  
 
-### Role based access control  
+### Role-based access control  
 
 These Intune permissions allow you to delegate connector management and session initiation without granting full administrative access to Intune:  
 
