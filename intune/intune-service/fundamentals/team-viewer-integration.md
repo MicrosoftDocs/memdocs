@@ -40,13 +40,30 @@ This feature applies to:
 
 ## Prerequisites  
 
-Before you configure the TeamViewer connector in Intune, make sure the following requirements are met:
+Before you configure the TeamViewer connector in Intune, make sure these requirements are met.   
 
-- TeamViewer account and license: Visit the [TeamViewer integration docs](https://www.teamviewer.com/en/integrations/microsoft-intune/)(opens the TeamViewer website) or contact the TeamViewer sales team for more information about account setup and required licenses.  
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+:::column-end:::
+:::column span="3":::
+> - The administrator configuring the TeamViewer connector must have a Microsoft Intune license. You can give administrators access to Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
+> - A TeamViewer account and license is required. Visit the [TeamViewer integration docs](https://www.teamviewer.com/en/integrations/microsoft-intune/)(opens the TeamViewer website) or contact the TeamViewer sales team for more information about account setup and required licenses.  
+:::column-end:::
+:::row-end:::
 
-- Intune administrator license: The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
-
-- Intune roles and permissions: To onboard TeamViewer in the Microsoft Intune admin center, you must be assigned the *Remote assistance connectors/Read* permission and *Remote assistance connectors/Update* permission, or be an Intune Administrator. For more information, see [Role based access control](#role-based-access-control) in this article.  
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To onboard TeamViewer, you must be assigned the following built-in Intune permissions:
+> - Remote assistance connectors/Read  
+> - Remote assistance connectors/Update  
+>
+> Alternatively, you can sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the built-in **[Intune Adminstrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.  
+:::column-end:::
+:::row-end:::
 
 The integration supports connections to TeamViewer‑managed devices that have the TeamViewer host or full client installed and are managed by your Intune tenant. Any connection settings, policies, or TeamViewer conditional access rules you configured will also apply to connections started from the integration. For more information, see [Getting started with Intune integration](https://www.teamviewer.com/link/?url=178709)(opens the TeamViewer website).  
 
