@@ -60,7 +60,7 @@ If you'll use Conditional Access policy to limit user access, we recommend confi
 
 7. Select **Create**.
 
-For more information about creating policies for Conditional Access, see [Create a device-based Conditional Access policy](../protect/create-conditional-access-intune.md).
+For more information about creating policies for Conditional Access, see [Create a device-based Conditional Access policy](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
 ## Related content
 

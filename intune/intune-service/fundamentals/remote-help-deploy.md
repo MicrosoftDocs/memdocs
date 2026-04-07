@@ -163,7 +163,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 The macOS Remote Help native app is available to download from Microsoft and must be installed on the device to use full control.
 
 > [!TIP]
-> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help-webapp.md).
+> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help.md).
 
 #### Deploy macOS Remote Help
 

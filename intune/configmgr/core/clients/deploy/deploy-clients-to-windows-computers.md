@@ -16,7 +16,7 @@ This article provides details on how to deploy the Configuration Manager client 
 - [Client installation methods](plan/client-installation-methods.md)
 - [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md)
 - [Security and privacy for Configuration Manager clients](plan/security-and-privacy-for-clients.md)
-- [Best practices for client deployment](plan/best-practices-for-client-deployment.md)
+- [Best practices for client deployment](/previous-versions/troubleshoot/configmgr/best-practices-for-client-deployment)
 
 
 ## <a name="BKMK_ClientPush"></a> Client push installation

@@ -72,4 +72,4 @@ You can create dynamic device groups based on a [Google Admin organizational uni
 
 
 ## Next steps
-Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for ChromeOS](../remote-actions/chrome-enterprise-remote-actions.md).
+Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for ChromeOS](/intune/device-management/actions).

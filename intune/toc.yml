@@ -2225,13 +2225,13 @@ items:
         - name: Appendix
           href: ./intune-service/developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
-        href: ./intune-service/developer/app-sdk-xamarin.md
+        href: ./intune-service/developer/app-sdk-get-started.md
       - name: Microsoft Tunnel for MAM SDK
         items:
         - name: Microsoft Tunnel for MAM iOS SDK
           href: ./intune-service/developer/tunnel-mam-ios-sdk.md
         - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
-          href: ./intune-service/developer/mam-tunnel-ios-xamarin-bindings.md
+          href: ./intune-service/developer/app-sdk-get-started.md
     - name: Use the Intune Data Warehouse
       href: ./intune-service/developer/reports-nav-create-intune-reports.md
       items:

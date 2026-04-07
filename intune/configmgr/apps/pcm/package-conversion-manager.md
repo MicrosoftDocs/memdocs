@@ -19,7 +19,7 @@ A Configuration Manager application contains files and programs that you deploy 
 
 For more information, see the following articles:
 
-- [Introduction to application management](../understand/introduction-to-application-management.md)
+- [Introduction to application management](/previous-versions/troubleshoot/configmgr/introduction-to-application-management)
 - [Packages and programs](../deploy-use/packages-and-programs.md)
 
 > [!Important]

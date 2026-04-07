@@ -210,7 +210,7 @@ There are other Windows enrollment options in Intune to help improve or simplify
 * [Enrollment Status Page](../enrollment/windows-enrollment-status.md): Enable the Enrollment Status Page so that people going through device setup can view and track installation progress.
 
 ## Report and troubleshoot
-Track [incomplete and abandoned user enrollments](../enrollment/enrollment-report-company-portal-abandon.md). This Microsoft Intune report tells you where in the Company Portal users failed to complete the enrollment process.
+Track [incomplete and abandoned user enrollments](../enrollment/view-enrollment-reports.md). This Microsoft Intune report tells you where in the Company Portal users failed to complete the enrollment process.
 
 For troubleshooting docs, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune).
 

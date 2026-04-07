@@ -66,7 +66,7 @@ For more information, see the **Group** delivery mode option in [Delivery Optimi
 
 The Windows 10 [in-place upgrade task sequence](../../osd/deploy-use/upgrade-windows-to-the-latest-version.md) now supports deployment to internet-based clients managed through the [cloud management gateway](../clients/manage/cmg/overview.md). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the corporate network.
 
-Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md). Otherwise devices cannot run the task sequence.
+Ensure all of the content referenced by the in-place upgrade task sequence is distributed to a [cloud distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point). Otherwise devices cannot run the task sequence.
 
 When you deploy an upgrade task sequence, use the following settings:
 - **Allow task sequence to run for client on the Internet**, on the User Experience tab of the deployment.
@@ -275,7 +275,7 @@ If you deploy applications as available to users, they can now browse and instal
 - Enable HTTPS on the management point
 - Integrate the site with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md)
 - Deploy an application as available to a user collection
-- Distribute any application content to a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- Distribute any application content to a [cloud distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point)
 - Enable the client setting **Use new Software Center** in the [Computer agent](../clients/deploy/about-client-settings.md#computer-agent) group
 - The client must be:
    - Windows 10
