@@ -26,7 +26,7 @@ Depending on the platform, Intune can also report the last known location if the
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
+> - iOS/iPadOS in [Supervised Mode](../../intune-service/enrollment/device-supervised-mode.md)
 > - Windows
 :::column-end:::
 :::row-end:::

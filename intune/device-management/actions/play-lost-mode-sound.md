@@ -29,7 +29,7 @@ These remote actions are especially useful in environments where devices are sha
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
+> - iOS/iPadOS in [Supervised Mode](../../intune-service/enrollment/device-supervised-mode.md)
 :::column-end:::
 :::row-end:::
 :::row:::
