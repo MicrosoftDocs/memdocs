@@ -54,7 +54,7 @@ In the **Troubleshooting** pane provides specific details for each Intune end-us
 
 You can use the **Troubleshooting + support** pane to review a variety of managed user and device information.
 
-![Intune troubleshooting dashboard](./media/help-desk-operators/help-desk-operators-01.png)
+:::image type="content" source="./media/help-desk-operators/help-desk-operators-01.png" alt-text="Screenshot of the Intune troubleshooting dashboard." lightbox="./media/help-desk-operators/help-desk-operators-01.png":::
 
 ### Summary
 
