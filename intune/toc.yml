@@ -825,6 +825,8 @@ items:
             href: ./intune-service/protect/microsoft-defender-with-intune.md
           - name: Configure Defender for Endpoint
             href: ./intune-service/protect/microsoft-defender-integrate.md
+          - name: Deploy Defender for Endpoint on Android
+            href: ./intune-service/protect/microsoft-defender-deploy-android.md
           - name: Android web protection
             href: ./intune-service/protect/microsoft-defender-configure-android.md
           - name: Monitor Defender for Endpoint
