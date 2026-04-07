@@ -121,7 +121,7 @@ When a support technician starts a remote assistance session via Intune and Team
 
 The TeamViewer integration requires Intune to exchange a limited set of data with the TeamViewer service on behalf of your tenant. Data sharing is strictly to enable the remote assistance sessions that you initiate. This section describes the type of data shared.  
 
-When a helpdesk agent launches a new remote assistance session to a device, Intune passes specific device identification data to TeamViewer as query parameters in the session URL,  which includes the base URL you configured for TeamViewer.  
+When a helpdesk agent launches a new remote assistance session to a device, Intune passes specific device identification data to TeamViewer as query parameters in the session URL, which includes the base URL you configured for TeamViewer.  
 
 | Data element              | Description                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------|
