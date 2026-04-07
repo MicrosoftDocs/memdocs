@@ -129,8 +129,8 @@
         "intune-service/developer/**/*": "nicholasswhite",
         "intune-service/enrollment/**/*": "lenewsad",
         "intune-service/user-help/**/*": "lenewsad",
-        "intune/fundamentals/certificates/**/*": "paolomatarazzo",
-        "intune/device-security/certificates/**/*": "paolomatarazzo",
+        "fundamentals/certificates/**/*": "paolomatarazzo",
+        "device-security/certificates/**/*": "paolomatarazzo",
         "privacy/**/*": "paolomatarazzo",
         "solutions/**/*": "mandiohlinger"
       },
@@ -150,8 +150,8 @@
         "intune-service/developer/**/*": "nwhite",
         "intune-service/enrollment/**/*": "lanewsad",
         "intune-service/user-help/**/*": "lanewsad",
-        "intune/device-security/certificates/**/*": "paoloma",
-        "intune/fundamentals/certificates/**/*": "paoloma",
+        "device-security/certificates/**/*": "paoloma",
+        "fundamentals/certificates/**/*": "paoloma",
         "privacy/**/*": "paoloma",
         "solutions/**/*": "mandia"
       },
@@ -165,8 +165,8 @@
         "configmgr/**/*": ["umaikhan", "brianhun", "payur"],
         "device-configuration/certificates/**/*": "wicale",
         "device-management/actions/**/*": "mattcall",
-        "intune/device-security/certificates/**/*": "wicale",
-        "intune/fundamentals/certificates/**/*": "wicale"
+        "device-security/certificates/**/*": "wicale",
+        "fundamentals/certificates/**/*": "wicale"
       },
       "ms.service": {
         "configmgr/**/*": "configuration-manager"
