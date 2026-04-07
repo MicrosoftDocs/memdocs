@@ -131,8 +131,8 @@ When a helpdesk agent launches a new remote assistance session to a device, Intu
 ## TeamViewer license and privacy terms  
 For the TeamViewer license and privacy terms, see:  
 
-- [TeamViewer End User License Agreement (EULA)](https://www.teamviewer.com/en/legal/eula/)(opens TeamViewer website)
-- [TeamViewer Privacy Terms](https://www.teamviewer.com/en/legal/privacy-and-cookies/)(opens TeamViewer website)
+- [TeamViewer End User License Agreement (EULA)](https://www.teamviewer.com/en/legal/eula/) (opens TeamViewer website)  
+- [TeamViewer Privacy Terms](https://www.teamviewer.com/en/legal/privacy-and-cookies/) (opens TeamViewer website)  
 
 ## Get help  
 

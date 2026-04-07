@@ -60,9 +60,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management  
 
-### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 wndraft   -->
+### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
 
-We updated the TeamViewer integration in Microsoft Intune to simplify onboarding and improve reliability for remote assistance workflows. The new, improved connector replaces the existing TeamViewer connector experience and provides a more streamlined experience in the Intune admin center. If you're using the previous TeamViewer connector, you must migrate to the new connector within 12 months to maintain functionality. For more information about the new connector, see [Use the TeamViewer integration in Microsoft Intune](team-viewer-integration.md).  
+There is a new TeamViewer integration in Microsoft Intune that simplifies onboarding and improves reliability for remote assistance workflows. The new connector replaces the existing TeamViewer connector experience and provides a more streamlined experience in the Intune admin center. If you're using the previous TeamViewer connector, you must migrate to the new connector within 12 months to maintain functionality. For more information about the new connector, see [Use the TeamViewer integration in Microsoft Intune](team-viewer-integration.md).  
 
 ## Week of March 30, 2026 (Service release 2603)
 
