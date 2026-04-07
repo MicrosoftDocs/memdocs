@@ -117,11 +117,7 @@ Other features:
 
 - Improved labeling, hierarchy, and formatting make device information easier to scan and understand. **Essentials** elevates important device information and is accessible from any tab.
 
-All existing device management capabilities remain available. This update focuses on making them easier to find and use.
-
-### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
-
-Microsoft Intune will update its TeamViewer integration to simplify onboarding and improve reliability for remote assistance workflows. The new connector will replace the existing TeamViewer connector experience and provide a more streamlined experience in the Intune admin center. After the older experience is retired, organizations using that TeamViewer connector will need to migrate to the new connector within 12 months to maintain functionality.
+All existing device management capabilities remain available. This update focuses on making them easier to find and use.  
 
 ### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
 
