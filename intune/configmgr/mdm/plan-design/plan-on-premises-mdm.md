@@ -71,4 +71,4 @@ For more information, see [Set up device enrollment for on-premises MDM](../get-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Install site system roles](../get-started/install-site-system-roles-for-on-premises-mdm.md)
+> [Install site system roles](/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm)

@@ -15,7 +15,7 @@ Headings are driven by article context. -->
 > The following type of devices shouldn't be registered as a Windows Autopilot device:
 >
 > - [Microsoft Entra registered](/entra/identity/devices/concept-device-registration) devices, also known as "workplace joined" devices.
-> - [Intune MDM-only enrollment](/mem/intune-service/fundamentals/deployment-guide-enroll?tabs=byod-enrollment#windows-enrollment-methods) devices.
+> - [Intune MDM-only enrollment](/intune/intune-service/fundamentals/deployment-guide-enroll?tabs=byod-enrollment#windows-enrollment-methods) devices.
 >
 > These options are intended for users to join personally owned devices to their organization's network. Windows Autopilot registered devices are registered as corporate owned devices.
 >

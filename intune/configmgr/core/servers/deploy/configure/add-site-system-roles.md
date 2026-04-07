@@ -24,7 +24,7 @@ The following articles detail procedures and related details for installing site
 
 - [Set up checklist for CMG](../../../clients/manage/cmg/set-up-checklist.md): Set up a cloud management gateway (CMG) to manage clients on the internet.
 
-- [Install site system roles for on-premises mobile device management (MDM)](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md): Set up your site system roles to support managing modern devices by using Configuration Manager on-premises MDM.
+- [Install site system roles for on-premises mobile device management (MDM)](/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm): Set up your site system roles to support managing modern devices by using Configuration Manager on-premises MDM.
 
 - [Configuration options for site system roles](configuration-options-for-site-system-roles.md): Some site system roles support configurations that require more details than the user interface can explain.
 

@@ -57,7 +57,7 @@ For more information on the error code and troubleshooting steps, see [Applicati
 
 ## Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../desktop-analytics/whats-new.md).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports).
  -->
 
 ## Site infrastructure

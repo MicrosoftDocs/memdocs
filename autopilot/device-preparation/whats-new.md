@@ -21,7 +21,7 @@ appliesto:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.  
+> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
 
 ## Admins can configure up to 25 apps to install during Autopilot device preparation 
 
@@ -91,7 +91,7 @@ Admins can now download diagnostics logs for failed Autopilot device preparation
 
 Date added: *September 18, 2024*
 
-As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/mem/intune-service/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
+As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/intune/intune-service/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
 
 <!-- MAXADO-9313795 / INADO-28687730 -->
 
@@ -117,7 +117,7 @@ In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports
 
 Date added: *July 8, 2024*
 
-Customers who are blocking personal device enrollments can now use Windows Autopilot device preparation by pre-uploading the model, manufacturer, and serial number for all devices which deploys with Windows Autopilot device preparation. For more information, see [Add Windows corporate identifiers](/mem/intune-service/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
+Customers who are blocking personal device enrollments can now use Windows Autopilot device preparation by pre-uploading the model, manufacturer, and serial number for all devices which deploys with Windows Autopilot device preparation. For more information, see [Add Windows corporate identifiers](/intune/intune-service/enrollment/corporate-identifiers-add#add-windows-corporate-identifiers).
 
 ## Additional role-based access control (RBAC) permissions for Managed apps and Mobile apps
 
@@ -134,5 +134,5 @@ Windows Autopilot device preparation is generally available. For an overview, se
 ## Related content
 
 - [What's new in Windows Autopilot](../whats-new.md).
-- [What's new in Microsoft Intune](/mem/intune-service/fundamentals/whats-new).
+- [What's new in Microsoft Intune](/intune/intune-service/fundamentals/whats-new).
 - [What's new in Windows client](/windows/whats-new/).
