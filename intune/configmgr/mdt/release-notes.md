@@ -16,7 +16,7 @@ This article provides details on the latest release of the Microsoft Deployment 
 > ### **Microsoft Deployment Toolkit (MDT) is retired.**
 > > **Microsoft Deployment Toolkit (MDT) is retired.** MDT integration with Configuration Manager and MDT Standalone are **no longer supported**. Customers should **remove all MDT task sequence steps** and then **remove MDT integration** to prevent task sequence corruption and modification failures. **Consider moving to modern provisioning solutions such as Windows Autopilot**, which provides cloud‑driven, zero‑touch provisioning for Windows devices.  Learn more about Autopilot: [here](/windows/deployment/windows-autopilot/windows-autopilot). For customers with on-premises infrastructure and existing Configuration Manager environments, **OSD** remains a fully supported option.
 
->For full details on this retirement, see the **[Removed and Deprecated Features](/intune/configmgr/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)** page.
+>For full details on this retirement, see the **[Removed and Deprecated Features](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)** page.
 
 ## Latest release
 

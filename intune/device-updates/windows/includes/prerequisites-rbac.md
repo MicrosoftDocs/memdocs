@@ -29,8 +29,8 @@ ms.date: 01/08/2026
 
 <!-- role links -->
 
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#policy-and-profile-manager
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-R3]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: ../../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager
+[INT-R2]: ../../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-R3]: ../../../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator
+[INT-R4]: ../../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-RC]: ../../../intune-service/fundamentals/create-custom-role.md
