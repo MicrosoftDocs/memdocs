@@ -1,7 +1,7 @@
 ---
-title: Add Win32 App Supersedence
-description: Learn how to use Win32 app supersedence with Microsoft Intune.
-ms.date: 02/20/2025
+title: Add Win32 app supersedence
+description: Learn how to create supersedence relationships between Win32 apps in Microsoft Intune to update or replace existing apps with newer versions.
+ms.date: 04/06/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.custom:
@@ -10,22 +10,22 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Add Win32 App Supersedence
+# Add Win32 app supersedence
 
 After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This article provides an overview of the supersedence feature.
 
 > [!IMPORTANT]
 > Supersedence, which enables you to update and replace a version of a Win32 app, doesn't currently allow you to interchange the Win32 app with an app dependency. For more information about app dependencies, see [Dependencies](../apps/apps-win32-add.md#step-5-dependencies).
 
-Supersedence relationships can be created when adding or modifying a Win32 app within Intune. The **Supersedence** steps allow you to specify any supersedence relationships related to the Win32 app.
+Supersedence relationships can be created when adding or modifying a Win32 app within Intune. The **Supersedence** step allows you to specify any supersedence relationships related to the Win32 app.
 
-   ![Screenshot of Win32 app supersedence step](./media/apps-win32-supersedence/apps-win32-supersedence-01.png)
+:::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-01.png" alt-text="Screenshot of the Add App wizard for a Win32 app in Microsoft Intune admin center, showing the Supersedence step in the wizard navigation.":::
 
 ## Prerequisites
 
 App supersedence can only be applied to Win32 apps. For more information, see [Add a Win32 app](apps-win32-add.md) to Intune.
 
-A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune administrators need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
+A Microsoft Intune permission is required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune administrators need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://intune.microsoft.com), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
 This Win32 app supersedence permission is added to the following built-in roles:
 
@@ -35,12 +35,12 @@ This Win32 app supersedence permission is added to the following built-in roles:
 > [!NOTE]
 > To use auto-update to automatically update a superseded app, see [Use auto-update with app supersedence](#use-auto-update-with-app-supersedence).
 
-## Create a Supersedence relationship in Intune
+## Create a supersedence relationship in Intune
 
 The following steps help you create a supersedence relationship between apps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All apps**, and then select a Win32 app from the list. To add a Win32 app, see [add a Win32 app to Intune](apps-win32-add.md).
+1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **All Apps**, and then select a Win32 app from the list. To add a Win32 app, see [add a Win32 app to Intune](apps-win32-add.md).
 3. After you select the existing Win32 app, select **Properties**.
 4. In the **Supersedence** section, select **Edit** > **Add** to choose apps that should be superseded.
 
@@ -56,7 +56,7 @@ The following steps help you create a supersedence relationship between apps:
 
 ## Supersedence behavior
 
-A *superseding app* is an app that updates or replaces other apps. A *superseded app* is an app that is being updated or replaced. Supersedence behavior can be illustrated based on the following scenarios.
+A *superseding app* is an app that updates or replaces other apps. A *superseded app* is an app that's being updated or replaced.
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
@@ -64,7 +64,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 | **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app is installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app's installer. | Only superseding apps are shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app doesn't exist on the device. | The superseding app is   installed. | The new app appears in the   Company Portal. |
 
-### Understand app update versus app replacement within supersedence
+### Understand app update versus app replacement
 
 Given that an app could have multiple superseded apps, it's possible for an app to update a set of apps while replacing another set of apps at the same time.
 
@@ -80,7 +80,7 @@ Understanding how supersedence is applied when updating an app versus replacing 
 
 ### Understand in-place app update versus supersedence app update
 
-In the following scenarios, you should review app detection rules after performing either type of the following updates.
+Review app detection rules after performing either type of the following updates.
 
 | Update   type | Update description and details |
 |-|-|
@@ -89,8 +89,6 @@ In the following scenarios, you should review app detection rules after performi
 
 ### Understand interactions between dependencies and supersedence
 
-Interactions between dependencies and supersedence include the following:
-
 - Supersedence and dependency relationships can be created in the same app subgraph.
 - Enforcement prefers supersedence over dependency, but if there's a conflict state, Intune will report it.
     - **Specific example:** A depends on B, C supersedes B. A will report a conflict state.
@@ -98,35 +96,35 @@ Interactions between dependencies and supersedence include the following:
 - Supersedence won't go through in specific scenarios.
     - **Example:** A depends on B and C, and B supersedes C.
 
-## Basic Supersedence Examples
+## Basic supersedence examples
 
-For the purposes of this document, we assume that all apps are targeted (either device or user targeting) and are applicable.
+For these examples, assume that all apps are targeted (either device or user targeting) and are applicable.
 
 ### Legend for supersedence example scenarios
 
 | Legend | Definition |
 |-|-|
-| ![Legend supersedence example scenario 1](./media/apps-win32-supersedence/apps-win32-supersedence-02a.png)  | A is superseded by B via app update. |
-| ![Legend supersedence example scenario 2](./media/apps-win32-supersedence/apps-win32-supersedence-02b.png)  | A is superseded by B via app   replacement. |
-| ![Legend supersedence example scenario 3](./media/apps-win32-supersedence/apps-win32-supersedence-02c.png)  | A is present on the device,   fully installed, and   passes the defined detection rules. |
-| ![Legend supersedence example scenario 4](./media/apps-win32-supersedence/apps-win32-supersedence-02d.png)  | A isn't present on the device. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-02a.png" alt-text="Legend: A is superseded by B via app update."::: | A is superseded by B via app update. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-02b.png" alt-text="Legend: A is superseded by B via app replacement."::: | A is superseded by B via app replacement. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-02c.png" alt-text="Legend: A is present on the device, fully installed, and passes the defined detection rules."::: | A is present on the device, fully installed, and passes the defined detection rules. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-02d.png" alt-text="Legend: A isn't present on the device."::: | A isn't present on the device. |
 
 ### Case and resolution supersedence examples
 
 | Case | Resolution | Notes |
 |-|-|-|
-| ![Case supersedence example scenario 1](./media/apps-win32-supersedence/apps-win32-supersedence-03a.png) | **Scenario:** Neither app is   detected  on the device. A is superseded by B via app   update.<p>**Result:** Install B. | App   update means that admin chose not to uninstall the superseded app during the   configuration stage. See above in the Supersedence Step   in App Deployment. |
-| ![Case supersedence example scenario 2](./media/apps-win32-supersedence/apps-win32-supersedence-03b.png) | **Scenario:** Only A is detected   on the device. A is superseded by B via app update.<p>**Result:**   Install B. | Since admin   chose not to uninstall the previous version during configuration, A isn't   explicitly uninstalled by Intune. A may be uninstalled based on the behavior   of B's installer. |
-| ![Case supersedence example scenario 3](./media/apps-win32-supersedence/apps-win32-supersedence-03c.png) | **Scenario:** Only B is detected   on the device. A is superseded by B via app update.<p>**Result:**   Nothing. | Since B is   already detected on the device, no action is taken. |
-| ![Case supersedence example scenario 4](./media/apps-win32-supersedence/apps-win32-supersedence-03d.png) | **Scenario:** Both apps are   detected on the device. A is superseded by B via app   update.<p>**Result:** Nothing. | Since B is   already detected on the device, no action is taken. Admin chose not to   uninstall the previous version when configuring, hence A isn't uninstalled. |
-| ![Case supersedence example scenario 5](./media/apps-win32-supersedence/apps-win32-supersedence-03e.png) | **Scenario:** Neither apps are   detected on the device. A is superseded by B via app   replacement.<p>**Result:** Install B. | App replacement   means that admin chose to uninstall the superseded app during the   configuration stage. See above in the Supersedence Step   in App Deployment. |
-| ![Case supersedence example scenario 6](./media/apps-win32-supersedence/apps-win32-supersedence-03f.png) | **Scenario:** Only A is detected   on the device. A is superseded by B via app replacement.<p>**Result:**   Uninstall A, then install B. | A will be   uninstalled and once the agent detects that A is no longer present on the   device, it installs B. If the detection continues to detect A as present,   then the agent won't install B. Whether B is installed on the device is   predicated on whether A is detected on the device. |
-| ![Case supersedence example scenario 7](./media/apps-win32-supersedence/apps-win32-supersedence-03g.png) | **Scenario:** Only B is detected   on the device. A is superseded by B via app replacement.<p>**Result:**   None | No actions are   taken because B is already installed and A doesn't exist on the device. |
-| ![Case supersedence example scenario 8](./media/apps-win32-supersedence/apps-win32-supersedence-03h.png) | **Scenario:** Both apps are   detected on the device. A is superseded by B via app   replacement.<p>**Result:** Uninstall A. | A is   uninstalled as part of the app replacement process.  Detection of a replaced app after the replacing app is already   installed will incur a remediation enforcement. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03a.png" alt-text="Case 1: Neither app detected, app update."::: | **Scenario:** Neither app is   detected  on the device. A is superseded by B via app   update.<p>**Result:** Install B. | App   update means that admin chose not to uninstall the superseded app during the   configuration stage. See above in the Supersedence Step   in App Deployment. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03b.png" alt-text="Case 2: Only A detected, app update."::: | **Scenario:** Only A is detected   on the device. A is superseded by B via app update.<p>**Result:**   Install B. | Since admin   chose not to uninstall the previous version during configuration, A isn't   explicitly uninstalled by Intune. A may be uninstalled based on the behavior   of B's installer. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03c.png" alt-text="Case 3: Only B detected, app update."::: | **Scenario:** Only B is detected   on the device. A is superseded by B via app update.<p>**Result:**   Nothing. | Since B is   already detected on the device, no action is taken. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03d.png" alt-text="Case 4: Both apps detected, app update."::: | **Scenario:** Both apps are   detected on the device. A is superseded by B via app   update.<p>**Result:** Nothing. | Since B is   already detected on the device, no action is taken. Admin chose not to   uninstall the previous version when configuring, hence A isn't uninstalled. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03e.png" alt-text="Case 5: Neither app detected, app replacement."::: | **Scenario:** Neither apps are   detected on the device. A is superseded by B via app   replacement.<p>**Result:** Install B. | App replacement   means that admin chose to uninstall the superseded app during the   configuration stage. See above in the Supersedence Step   in App Deployment. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03f.png" alt-text="Case 6: Only A detected, app replacement."::: | **Scenario:** Only A is detected   on the device. A is superseded by B via app replacement.<p>**Result:**   Uninstall A, then install B. | A will be   uninstalled and once the agent detects that A is no longer present on the   device, it installs B. If the detection continues to detect A as present,   then the agent won't install B. Whether B is installed on the device is   predicated on whether A is detected on the device. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03g.png" alt-text="Case 7: Only B detected, app replacement."::: | **Scenario:** Only B is detected   on the device. A is superseded by B via app replacement.<p>**Result:**   None | No actions are   taken because B is already installed and A doesn't exist on the device. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-03h.png" alt-text="Case 8: Both apps detected, app replacement."::: | **Scenario:** Both apps are   detected on the device. A is superseded by B via app   replacement.<p>**Result:** Uninstall A. | A is   uninstalled as part of the app replacement process.  Detection of a replaced app after the replacing app is already   installed will incur a remediation enforcement. |
 
-## Behavior for Chained Supersedence Scenarios
+## Behavior for chained supersedence scenarios
 
-Supersedence chains occur when multiple apps are part of a supersedence relationship. For example, an IT admin could configure App A to be superseded by App B, and then later configure App B to be superseded by App C. In this scenario, a supersedence chain is created between App A, B, and C (as shown in the first case below). Supersedence chains can have a maximum of 10 related nodes in the chain. For more information about this maximum, see [Supersedence Limitations](#supersedence-limitations).
+Supersedence chains occur when multiple apps are part of a supersedence relationship. For example, an IT admin could configure App A to be superseded by App B, and then later configure App B to be superseded by App C. In this scenario, a supersedence chain is created between App A, B, and C (as shown in the first case below). Supersedence chains can have a maximum of 10 related nodes in the chain. For more information about this maximum, see [Supersedence limitations](#supersedence-limitations).
 
 >The behavior for supersedence chains can summarized as the following:
 >
@@ -136,21 +134,21 @@ To better understand the behavior of a supersedence chain, the following table p
 
 | Case | Resolution | Notes |
 |-|-|-|
-| ![Case supersedence scenario 1](./media/apps-win32-supersedence/apps-win32-supersedence-04a.png) | **Scenario:**   None of the apps exist on the device. The relationship between apps is one of   app update.<p>**Result:** Install C. | Since   none of the apps exist on the device, we install the superseding app: App C.   The superseding app refers to the app that supersedes all other apps in the   chain. |
-| ![Case supersedence scenario 2](./media/apps-win32-supersedence/apps-win32-supersedence-04b.png) | **Scenario:**   Only Apps A and C exist on the device. The relationship between apps is one   of app update.<p>**Result:** None. | Since App C   already exists on the device and this is an app update scenario, App A isn't   uninstalled. |
-| ![Case supersedence scenario 3](./media/apps-win32-supersedence/apps-win32-supersedence-04c.png) | **Scenario:**   Only App A exists on the device. The relationship between apps is one of app   update.<p>**Result:** Install C. | Install App C. App A isn't uninstalled because it's an app update scenario.  C's installer may or may not   have behavior to remove A, where "remove" means A is no longer detected via   its detection rules (due to version detection). |
-| ![Case supersedence scenario 4](./media/apps-win32-supersedence/apps-win32-supersedence-04d.png) | **Scenario:** Only App C exists   on the device. The relationship between apps is one of app   update.<p>**Result:** None. | Since App C,   the superseding app, already exists on the device, and this case is an app update   scenario, no action is taken. |
-| ![Case supersedence scenario 5](./media/apps-win32-supersedence/apps-win32-supersedence-04e.png) | **Scenario:** None of the apps   exist on the device. The relationship between apps is one of app   replacement.<p>**Result:** Install C. | Since none of   the apps exist on the device, install the superseding app, App C. |
-| ![Case supersedence scenario 6](./media/apps-win32-supersedence/apps-win32-supersedence-04f.png) | **Scenario:** Apps A and C exist   on the device. The relationship between apps is one of app   replacement.<p>**Result:** Uninstall A. | Since App C   exists on the device and this case is an app replacement scenario, uninstall App A. |
-| ![Case supersedence scenario 7](./media/apps-win32-supersedence/apps-win32-supersedence-04g.png) | **Scenario:** Only App A exists   on the device. The relationship between apps is one of app   replacement.<p>**Result:** Uninstall A, then install C. | Since this case is   an app replacement scenario, App A is uninstalled and App C, the superseding   app, is installed. |
-| ![Case supersedence scenario 8](./media/apps-win32-supersedence/apps-win32-supersedence-04h.png) | **Scenario:** Only App C exists   on the device. The relationship between apps is one of app   replacement.<p>**Result:** None. | Since the   superseding app, App C, exists on the device and none of the other superseded   apps exist, no action is taken. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04a.png" alt-text="Chained case 1: No apps detected, app update."::: | **Scenario:**   None of the apps exist on the device. The relationship between apps is one of   app update.<p>**Result:** Install C. | Since   none of the apps exist on the device, we install the superseding app: App C.   The superseding app refers to the app that supersedes all other apps in the   chain. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04b.png" alt-text="Chained case 2: Apps A and C detected, app update."::: | **Scenario:**   Only Apps A and C exist on the device. The relationship between apps is one   of app update.<p>**Result:** None. | Since App C   already exists on the device and this is an app update scenario, App A isn't   uninstalled. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04c.png" alt-text="Chained case 3: Only App A detected, app update."::: | **Scenario:**   Only App A exists on the device. The relationship between apps is one of app   update.<p>**Result:** Install C. | Install App C. App A isn't uninstalled because it's an app update scenario.  C's installer may or may not   have behavior to remove A, where "remove" means A is no longer detected via   its detection rules (due to version detection). |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04d.png" alt-text="Chained case 4: Only App C detected, app update."::: | **Scenario:** Only App C exists   on the device. The relationship between apps is one of app   update.<p>**Result:** None. | Since App C,   the superseding app, already exists on the device, and this case is an app update   scenario, no action is taken. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04e.png" alt-text="Chained case 5: No apps detected, app replacement."::: | **Scenario:** None of the apps   exist on the device. The relationship between apps is one of app   replacement.<p>**Result:** Install C. | Since none of   the apps exist on the device, install the superseding app, App C. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04f.png" alt-text="Chained case 6: Apps A and C detected, app replacement."::: | **Scenario:** Apps A and C exist   on the device. The relationship between apps is one of app   replacement.<p>**Result:** Uninstall A. | Since App C   exists on the device and this case is an app replacement scenario, uninstall App A. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04g.png" alt-text="Chained case 7: Only App A detected, app replacement."::: | **Scenario:** Only App A exists   on the device. The relationship between apps is one of app   replacement.<p>**Result:** Uninstall A, then install C. | Since this case is   an app replacement scenario, App A is uninstalled and App C, the superseding   app, is installed. |
+| :::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-04h.png" alt-text="Chained case 8: Only App C detected, app replacement."::: | **Scenario:** Only App C exists   on the device. The relationship between apps is one of app   replacement.<p>**Result:** None. | Since the   superseding app, App C, exists on the device and none of the other superseded   apps exist, no action is taken. |
 
-## Supersedence Limitations
+## Supersedence limitations
 
 There can only be a maximum of 11 nodes in a single supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps.
-In the following Supersedence diagram, there are five nodes in total. Hence, five more nodes could be created until the max node count is reached.
+In the following diagram, there are five nodes in total, so five more nodes could be created until the max node count is reached.
 
-![Supersedence maximum node count example](./media/apps-win32-supersedence/apps-win32-supersedence-05.png)
+:::image type="content" source="./media/apps-win32-supersedence/apps-win32-supersedence-05.png" alt-text="Diagram showing the supersedence maximum node count example with five nodes.":::
 
 Other supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
@@ -165,7 +163,7 @@ Users who had the superseded app installed from the Company Portal will automati
 The following steps help you create an auto-update supersedence relationship between apps:
 
 1. Add a Win32 app to supersede another Win32 app using the following steps:
-   [Create a Supersedence relationship in Intune](#create-a-supersedence-relationship-in-intune)
+   [Create a supersedence relationship in Intune](#create-a-supersedence-relationship-in-intune)
 2. On the **Supersedence** step, add the app that is updated.
 
    :::image type="content" alt-text="Screenshot of the Add Apps pane when superseding an app" source="./media/apps-win32-supersedence/apps-win32-supersedence-06.png" :::
@@ -187,13 +185,13 @@ The first available check-in will commonly happen between 1-8 hours after the as
 
 ### Auto-update limitations
 
-A Win32 app can have a maximum of 10 superseding apps. User must be logged in to the device to receive the superseding app.
+A Win32 app can have a maximum of 10 superseding apps. The user must be signed in to the device to receive the superseding app.
 
-When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device based assignment to track both the user consent and internal targeting to process the app during check-in. This device based assignment is used to install the app on the devices. However, in situations where the targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions once the app is already installed on the device, Intune will remove user consent, and the app will no longer be targeted with available intent:
+When an app is targeted with available intent to a group that contains the user, and the user requested the app install from the Company Portal, Intune creates a device-based assignment to track both user consent and internal targeting to process the app during check-in. This device-based assignment is used to install the app on the devices. However, in situations where targeting changes during the lifecycle of the app, a few scenarios can occur. If you take any of the following actions after the app is already installed on the device, Intune removes user consent, and the app is no longer targeted with available intent:
 
-1.	You remove the user from the Group membership of the targeted group in the Microsoft Entra admin center.
-2.	You removed the assignment to the targeted group.
-3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**.
+1.	You remove the user from the group membership of the targeted group in the Microsoft Entra admin center.
+2.	You remove the assignment to the targeted group.
+3.	You change the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**.
 
 It’s important to note that even if you retarget the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed.
 
@@ -202,11 +200,11 @@ It’s important to note that even if you retarget the app with **Available** in
 
 ### Auto-update retry behavior
 
-If the superseding app failed to auto-update and install for any reason, Intune will retry indefinitely until the user requests an install of the app from the Company Portal. When the user requests to install the app, Intune will change the request type in the backend to reflect that the user installed and stop installation retries from continuing.
+If the superseding app fails to auto-update and install for any reason, Intune retries indefinitely until the user requests an install of the app from the Company Portal. When the user requests to install the app, Intune changes the request type in the backend to reflect that the user installed and stops installation retries from continuing.
 
 ### Auto-update scenarios
 
-Below are specific cases where app B has been created to supersede app A.
+The following list describes specific cases where app B supersedes app A.
 
 | Case | Scenario | Result |
 |---|---|---|
@@ -217,13 +215,11 @@ Below are specific cases where app B has been created to supersede app A.
 | Upgrade   failure  | Intune attempts to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users won't be able to   reinstall app A from the Company Portal as it's superseded by app B, but are   able to try to reinstall app B from the Company Portal. |
 
 
-Limitations:
+Other limitations:
 
-- Any Application Assignment Changes will result in deleting the component that's responsible of auto-updating the App.
-
-- This Component can't be manually configured, it's created once App is installed via Company Portal by End-User.
-
-- App Assignment Must be well-studied prior deployment to avoid any changes in assignment after installation and breaking the auto-update eventually.
+- Any application assignment changes delete the component responsible for auto-updating the app.
+- This component can't be manually configured. It's created when the app is installed via Company Portal by the end user.
+- Study app assignments before deployment to avoid changes in assignment after installation that break auto-update.
 
 ## Next steps
 
