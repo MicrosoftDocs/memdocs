@@ -251,7 +251,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### Android onboarding quick start
 
-1. **Deploy the app**: Follow the [Deploy and configure Microsoft Defender for Endpoint on Android](../apps/apps-defender-android.md) deployment guide.
+1. **Deploy the app**: Follow the [Deploy and configure Microsoft Defender for Endpoint on Android](microsoft-defender-deploy-android.md) deployment guide.
 2. **Configure web protection**: Use [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md) policies for additional security.
 3. **Verify onboarding**: Confirm device registration in the Microsoft Defender portal.
 
