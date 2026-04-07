@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/31/2026
+ms.date: 04/02/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -78,12 +78,12 @@ On macOS devices, you can configure a recovery OS password that prevents users f
 
 There are two ways to use this feature:
 
-- **Settings catalog policy** - In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+- **Settings catalog policy** - In a [settings catalog](/intune/device-configuration/settings-catalog) policy, you can use the Recovery Lock settings to:
 
   - Turn on the recovery lock feature
   - Configure a password rotation schedule
 
-- **Remote device action** - Use the [Recovery Lock device action](../remote-actions/rotate-recovery-lock-passcode.md) to manually rotate the recovery lock password for a specific device.
+- **Remote device action** - Use the [Recovery Lock device action](../../device-management/actions/rotate-recovery-lock-passcode.md) to manually rotate the recovery lock password for a specific device.
 
 The Recovery Lock password can be viewed in the per-setting status report > **Passwords and keys**. To view the Recovery Lock password, the signed-in administrator needs the **Remote tasks/View macOS recovery lock password** permission.
 
@@ -133,11 +133,11 @@ The new policies include:
 >
 > - Windows
 
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](/intune/device-configuration/settings-catalog).
 
 #### New updates to the Apple settings catalog <!-- 36630003 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](/intune/device-configuration/settings-catalog) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](/intune/device-configuration/settings-catalog).
 
 There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type. 
 
@@ -256,6 +256,30 @@ The Microsoft Intune app for Linux now uses the Microsoft Identity Broker on sup
 
 ### Device security
 
+#### Intune security baseline for Windows 11, version 25H2<!-- 34955665  -->
+
+The Windows security baseline for *Windows 11, version 25H2* is now available in Microsoft Intune. This baseline reflects current Microsoft security recommendations for supported Windows devices and is the latest available Windows security baseline in Intune.
+
+The Windows 11, version 25H2 security baseline includes new settings, updated default values, retired settings, and revised security guidance. Existing security baseline profiles don't automatically update to the new version.
+
+To use the Windows 11, version 25H2 security baseline, Intune admins can [create a new baseline profile](../protect/security-baselines-configure.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
+
+The following two settings aren't included in this baseline release and will be added in a future baseline update. Each change will be communicated to customers when available:
+
+- **Disable Internet Explorer 11 launch via COM automation** – This setting isn't included at release due to a known issue. The Windows client team is addressing the issue, and the setting will be added in a future baseline update.
+- **Configure NetBIOS settings** – This setting is pending availability in the Settings Catalog and will be added to the baseline in a future update.
+
+We recommend carefully reviewing the settings in the new baseline before moving from a previous baseline version, especially if existing profiles include customizations.
+
+For a detailed breakdown of setting changes, see the Windows blog post [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231).
+
+To view the default configuration of the Intune baseline for Windows 11, version 25H2, see [Windows MDM baseline settings](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-25h2#security-baseline-for-windows-version-25h2).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 11
+
 #### Hotpatching default enablement in Windows Autopatch<!--36869440-->
 
 Starting with the May 2026 Windows security update, hotpatch updates are enabled by default for all eligible devices managed through Windows Autopatch. Hotpatch updates install faster and require fewer restarts, helping devices get
@@ -287,7 +311,11 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-### Monitor and troubleshooting
+### Monitor and troubleshooting  
+
+#### Support Assistant access expanded to all authenticated users<!-- 35992187 -->  
+
+All authenticated users can now access Support Assistant in the Intune admin center to find solutions and troubleshooting guidance. Creating and managing support tickets still requires a Microsoft Entra role that includes the *microsoft.office365.supportTickets* permission. For more information, see [How to get support in the Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md).  
 
 #### Support for system proxy settings in endpoint analytics and Advanced Analytics<!--30148318 -->
 
@@ -933,7 +961,7 @@ For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
 
 #### Scope tag enforcement for Endpoint Privilege Management elevation requests<!-- 33479826  -->
 
-When viewing Endpoint Privilege Management [elevation requests](/intune/intune-service/protect/epm-support-approved#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
+When viewing Endpoint Privilege Management [elevation requests](../protect/epm-support-approved.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
 
@@ -1033,7 +1061,7 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
 
 - **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
 
-For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](/intune/solutions/ai/manage-ai-android).
+For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](../../solutions/ai/manage-ai-android.md).
 
 Applies to:
 
@@ -1128,7 +1156,7 @@ Microsoft Tunnel uses the Microsoft Defender client app to provide Android devic
 
 This capability is a feature of the Defender client on Android and doesn't replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
 
-For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](/intune/intune-service/protect/microsoft-tunnel-overview#capabiltities).
+For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#capabilities).
 
 ### Tenant administration
 
@@ -1271,7 +1299,7 @@ With the release of iOS 26, iPadOS 26, and macOS 26, Apple has deprecated legacy
   - macOS update installation failures
   - macOS per-device software updates
 
-These functionalities [are now available through declarative device management (DDM)](/intune/intune-service/protect/managed-software-updates-ios-macos), which provides a more modern and reliable approach to managing Apple software updates. For more information about this transition, see the Intune Customer Success blog [Move to declarative device management for Apple software updates](https://aka.ms/Intune/Apple-DDM-software-updates).
+These functionalities [are now available through declarative device management (DDM)](../../device-updates/apple/index.md), which provides a more modern and reliable approach to managing Apple software updates. For more information about this transition, see the Intune Customer Success blog [Move to declarative device management for Apple software updates](https://aka.ms/Intune/Apple-DDM-software-updates).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1545,7 +1573,7 @@ References in Intune documentation and the Intune admin center are updated to re
 > - Windows
 
 > [!NOTE]
-> The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](/intune/configmgr/tenant-attach/resource-explorer) still retains its original name.
+> The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](../../configmgr/tenant-attach/resource-explorer.md) still retains its original name.
 
 #### New features in Copilot for Microsoft Intune <!-- 32549162 -->
 
@@ -1649,7 +1677,7 @@ The new setting is **Install Windows quality updates**. These security updates, 
 
 By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles, this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates, which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
 
-For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status). For information about Windows quality updates, see [Windows quality update policy](/intune/intune-service/protect/windows-quality-update-policy).
+For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](../enrollment/windows-enrollment-status.md). For information about Windows quality updates, see [Windows quality update policy](../../device-updates/windows/quality-updates.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1864,7 +1892,7 @@ For more information about Linux enrollment, see [Linux device enrollment guide 
 
 When you use the Multi Admin Approval feature, you require a second admin account to approve a change before the change is applied.
 
-The **[Wipe](../remote-actions/device-wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
+The **[Wipe](../../device-management/actions/wipe.md)** remote action supports Multi Admin Approval. Use Multi Admin Approval with the **Wipe** action to help mitigate the risk of unauthorized or compromised remote actions by a single admin account.
 
 For more information on Multi Admin Approval, see [Use Multi Admin Approval in Intune](../fundamentals/multi-admin-approval.md).
 

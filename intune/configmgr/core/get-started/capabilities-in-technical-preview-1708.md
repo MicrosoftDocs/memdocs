@@ -115,4 +115,4 @@ To modify Software Center:
 
 ### Next steps
 
-To learn more about application management in Configuration Manager, see [Introduction to application management](../../apps/understand/introduction-to-application-management.md).
+To learn more about application management in Configuration Manager, see [Introduction to application management](/previous-versions/troubleshoot/configmgr/introduction-to-application-management).

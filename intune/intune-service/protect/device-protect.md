@@ -99,7 +99,7 @@ When you require managed apps (for example, by using app-based Conditional Acces
 
 ## Use device actions to protect devices and data
 
-Run immediate [device actions](../remote-actions/index.md) to respond to security incidents or maintain device security. Unlike policies that maintain ongoing configurations, device actions execute once when invoked. Actions take effect immediately for online devices, or at next check-in for offline devices. [Bulk device actions](../remote-actions/index.md#bulk-device-actions) can target multiple devices simultaneously.
+Run immediate [device actions](../../device-management/actions/index.md) to respond to security incidents or maintain device security. Unlike policies that maintain ongoing configurations, device actions execute once when invoked. Actions take effect immediately for online devices, or at next check-in for offline devices. [Bulk device actions](../../device-management/actions/index.md#bulk-device-actions) can target multiple devices simultaneously.
 
 **Common security actions:**
 
@@ -162,7 +162,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 **Conditional Access with Intune enables:**
 
-- [Device-based policies](../protect/create-conditional-access-intune.md) - Require devices to meet compliance requirements before accessing organizational resources.
+- [Device-based policies](/entra/identity/conditional-access/policy-all-users-device-compliance) - Require devices to meet compliance requirements before accessing organizational resources.
 - [App-based policies](../protect/app-based-conditional-access-intune.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services.
 - Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners.
 

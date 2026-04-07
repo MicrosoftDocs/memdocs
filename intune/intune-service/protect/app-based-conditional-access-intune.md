@@ -25,7 +25,7 @@ Microsoft Intune app protection policies work with Microsoft Entra Conditional A
 App-based Conditional Access with client app management adds a security layer that makes sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
 
 > [!TIP]
-> In addition to app-based Conditional Access policies, you can use [device-based Conditional Access with Intune](create-conditional-access-intune.md).
+> In addition to app-based Conditional Access policies, you can use [device-based Conditional Access with Intune](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
 ## Prerequisites
 

@@ -52,7 +52,7 @@ We're fixing how scope tags work with Endpoint Privilege Management (EPM) report
 
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../protect/epm-support-approved.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
@@ -264,24 +264,11 @@ After the defined time elapses, or when the *restore managed home screen* action
 
 ## Device security
 
-### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
-
-We're working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
-
-When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won't automatically update to the new version.
-
-For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 11
-
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
 
-The new baseline will be available for [US Government Community Cloud High (GCC High)](/intune/intune-service/fundamentals/intune-govt-service-description) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+The new baseline will be available for [US Government Community Cloud High (GCC High)](intune-govt-service-description.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:
