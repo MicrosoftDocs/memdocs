@@ -130,7 +130,7 @@ In Intune, some common security tasks include:
 
 - **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, and restore a device to its factory settings. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
-  For more information, go to [Remote actions in Intune](../remote-actions/index.md).
+  For more information, go to [Remote actions in Intune](../../device-management/actions/index.md).
 
 ## Related articles
 

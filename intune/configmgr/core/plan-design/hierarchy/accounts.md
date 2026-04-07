@@ -349,7 +349,7 @@ For more information, see [Client push installation](../../clients/deploy/plan/c
 
 The enrollment point uses the **Enrollment point connection account** to connect to the Configuration Manager site database. It uses its computer account by default, but you can configure a user account instead. When the enrollment point is in an untrusted domain from the site server, you must specify a user account. This account requires **Read** and **Write** access to the site database.
 
-For more information, see [Install site system roles for on-premises MDM](../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md).
+For more information, see [Install site system roles for on-premises MDM](/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm).
 
 ### Exchange Server connection account
 

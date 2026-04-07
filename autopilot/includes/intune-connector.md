@@ -70,7 +70,7 @@ Starting with version **6.2504.2001.8**, the updated Intune Connector for Active
 
 1. Sign into the server where the Intune Connector for Active Directory is being installed with an account that has local administrator rights.
 
-1. If the previous legacy Intune Connector for Active Directory is installed, uninstall it first before installing the updated Intune Connector for Active Directory. For more information, see [Uninstall the Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid#uninstall-the-intune-connector-for-active-directory).
+1. If the previous legacy Intune Connector for Active Directory is installed, uninstall it first before installing the updated Intune Connector for Active Directory. For more information, see [Uninstall the Intune Connector for Active Directory](../windows-autopilot-hybrid.md#uninstall-the-intune-connector-for-active-directory).
 
     > [!IMPORTANT]
     >

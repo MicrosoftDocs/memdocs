@@ -79,7 +79,7 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 
 ## Related content
 
-- [Deployment guide for Microsoft Intune](/intune/intune-service/fundamentals/get-started-with-intune)
-- [Protect data and devices with Microsoft Intune](/intune/intune-service/protect/device-protect)
+- [Deployment guide for Microsoft Intune](../fundamentals/get-started-with-intune.md)
+- [Protect data and devices with Microsoft Intune](device-protect.md)
 - [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)
-- [Configure Microsoft Intune for increased security (preview)](/intune/intune-service/protect/zero-trust-configure-security)
+- [Configure Microsoft Intune for increased security (preview)](zero-trust-configure-security.md)

@@ -103,11 +103,11 @@ You can add one static Microsoft Entra security group per enrollment profile. As
 
    - Windows: [Create Windows Autopilot device preparation policy](/autopilot/device-preparation/tutorial/user-driven/entra-join-autopilot-policy)
 
-   - Android Enterprise with work profile: [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](/intune/intune-service/enrollment/android-corporate-owned-work-profile-enroll)
+   - Android Enterprise with work profile: [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](android-corporate-owned-work-profile-enroll.md)
 
-   - Android Enterprise dedicated: [Set up Intune enrollment of Android Enterprise dedicated devices](/intune/intune-service/enrollment/android-kiosk-enroll)
+   - Android Enterprise dedicated: [Set up Intune enrollment of Android Enterprise dedicated devices](android-kiosk-enroll.md)
 
-   - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](/intune/intune-service/enrollment/android-fully-managed-enroll)
+   - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](android-fully-managed-enroll.md)
 
     >[!TIP]
     > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token or the corporate owned work profile (default) token.

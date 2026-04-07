@@ -170,7 +170,7 @@ The following remote actions are available for Android (AOSP) devices:
 * Wipe
 * Delete
 
-You can take action on one device at a time. For more information, see [Remote Device Actions In Microsoft Intune](../remote-actions/index.md).
+You can take action on one device at a time. For more information, see [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md).
 
 > [!NOTE]
 > After you wipe an Android (AOSP) device, the device remains in a **Pending** state until it's fully restored to its factory default settings. Then Intune removes it from the device list. When you delete a device, the device is removed from the device list immediately, with no pending status, and the factory reset happens the next time the device checks in.

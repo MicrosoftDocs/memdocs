@@ -21,7 +21,7 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 
 *Factory reset protection* helps prevent unauthorized access to your device after it's been factory reset. If the device is reset without your permission, in some situations, only the Google email addresses you enter can unlock the device. When the **Factory reset protection emails** setting is configured, there is different factory reset protection behavior:
 
-| Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../remote-actions/device-wipe.md) |
+| Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../../device-management/actions/wipe.md) |
 | --- | --- | --- | --- |
 | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
 | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
