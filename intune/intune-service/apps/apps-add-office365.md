@@ -46,7 +46,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
 3. Select **Windows 10 and later** in the **Microsoft 365 Apps** section of the **Select app type** pane.
-4. Select **Select**. The **Add Microsoft 365 Apps** steps are displayed.
+4. Choose **Select**. The **Add Microsoft 365 Apps** steps are displayed.
 
 ## Step 1 - App suite information
 
