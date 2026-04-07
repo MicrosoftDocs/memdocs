@@ -46,7 +46,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Firewall profiles
 
-Find guidance for creating endpoint security profiles at [Create an endpoint security policy](endpoint-security-policy.md#create-an-endpoint-security-policy).
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](endpoint-security-policy.md).
 
 ### Devices managed by Intune
 

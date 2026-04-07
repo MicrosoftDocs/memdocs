@@ -260,13 +260,13 @@ The Microsoft Intune app for Linux now uses the Microsoft Identity Broker on sup
 
 The Windows security baseline for *Windows 11, version 25H2* is now available in Microsoft Intune. This baseline reflects current Microsoft security recommendations for supported Windows devices and is the latest available Windows security baseline in Intune.
 
-The Windows 11, version 25H2 security baseline includes new settings, updated default values, retired settings, and revised security guidance. Existing security baseline profiles don’t automatically update to the new version.
+The Windows 11, version 25H2 security baseline includes new settings, updated default values, retired settings, and revised security guidance. Existing security baseline profiles don't automatically update to the new version.
 
 To use the Windows 11, version 25H2 security baseline, Intune admins can [create a new baseline profile](../protect/security-baselines-configure.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
 
-The following two settings aren’t included in this baseline release and will be added in a future baseline update. Each change will be communicated to customers when available:
+The following two settings aren't included in this baseline release and will be added in a future baseline update. Each change will be communicated to customers when available:
 
-- **Disable Internet Explorer 11 launch via COM automation** – This setting isn’t included at release due to a known issue. The Windows client team is addressing the issue, and the setting will be added in a future baseline update.
+- **Disable Internet Explorer 11 launch via COM automation** – This setting isn't included at release due to a known issue. The Windows client team is addressing the issue, and the setting will be added in a future baseline update.
 - **Configure NetBIOS settings** – This setting is pending availability in the Settings Catalog and will be added to the baseline in a future update.
 
 We recommend carefully reviewing the settings in the new baseline before moving from a previous baseline version, especially if existing profiles include customizations.
@@ -1156,7 +1156,7 @@ Microsoft Tunnel uses the Microsoft Defender client app to provide Android devic
 
 This capability is a feature of the Defender client on Android and doesn't replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
 
-For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#capabiltities).
+For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#capabilities).
 
 ### Tenant administration
 
