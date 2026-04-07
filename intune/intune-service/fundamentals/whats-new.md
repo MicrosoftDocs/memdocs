@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/02/2026
+ms.date: 04/07/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of April 6, 2026 
+
+### Device management  
+
+### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 wndraft   -->
+
+We updated the TeamViewer integration in Microsoft Intune to simplify onboarding and improve reliability for remote assistance workflows. The new, improved connector replaces the existing TeamViewer connector experience and provides a more streamlined experience in the Intune admin center. If you're using the previous TeamViewer connector, you must migrate to the new connector within 12 months to maintain functionality. For more information about the new connector, see [Use the TeamViewer integration in Microsoft Intune](team-viewer-integration.md).  
 
 ## Week of March 30, 2026 (Service release 2603)
 
@@ -230,7 +237,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 > - iOS/iPadOS
 > - macOS
 
-### Device management
+### Device management  
 
 #### Remote Help connectivity update for Windows devices<!-- 29252975 -->
 

@@ -48,7 +48,7 @@ Before you configure the TeamViewer connector in Intune, make sure these require
 :::column-end:::
 :::column span="3":::
 > - The administrator configuring the TeamViewer connector must have a Microsoft Intune license. You can give administrators access to Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
-> - A TeamViewer account and license is required. Visit the [TeamViewer integration docs](https://www.teamviewer.com/en/integrations/microsoft-intune/)(opens the TeamViewer website) or contact the TeamViewer sales team for more information about account setup and required licenses.  
+> - A TeamViewer account and license is required. Visit the [TeamViewer integration docs](https://www.teamviewer.com/en/integrations/microsoft-intune/) (opens the TeamViewer website) or contact the TeamViewer sales team for more information about account setup and required licenses.  
 :::column-end:::
 :::row-end:::
 
@@ -65,7 +65,7 @@ Before you configure the TeamViewer connector in Intune, make sure these require
 :::column-end:::
 :::row-end:::
 
-The integration supports connections to TeamViewer‑managed devices that have the TeamViewer host or full client installed and are managed by your Intune tenant. Any connection settings, policies, or TeamViewer conditional access rules you configured will also apply to connections started from the integration. For more information, see [Getting started with Intune integration](https://www.teamviewer.com/link/?url=178709)(opens the TeamViewer website).  
+The integration supports connections to TeamViewer‑managed devices that have the TeamViewer host or full client installed and are managed by your Intune tenant. Any connection settings, policies, or TeamViewer conditional access rules you configured will also apply to connections started from the integration. For more information, see [Getting started with Intune integration](https://www.teamviewer.com/link/?url=178709) (opens the TeamViewer website).  
 
 ## Configure the TeamViewer connector  
 
@@ -83,7 +83,7 @@ If a user has *read* permission without *update* permission, they can still view
 
 ### Optimize setup  
 
-To ensure a seamless setup, you can configure Intune Sync in your TeamViewer company settings to match your Intune and TeamViewer device group setups. For more information, see [TeamViewer Intune Device Sync](https://www.teamviewer.com/link/?url=737977)(opens the TeamViewer website).  
+To ensure a seamless setup, you can configure Intune Sync in your TeamViewer company settings to match your Intune and TeamViewer device group setups. For more information, see [TeamViewer Intune Device Sync](https://www.teamviewer.com/link/?url=737977) (opens the TeamViewer website).  
 
 To get the best experience while using the integration, we recommend you enable single sign-on (SSO) between TeamViewer and the Microsoft Entra identity provider.  
 
