@@ -54,7 +54,7 @@ sections:
           - The end user must sign into the app using their Microsoft Entra account.
 
       - question: What if I want to enable an app with Intune App Protection but it isn't using a supported app development platform?
-        answer: The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. Some customers successfully integrate the Intune SDK with other platforms, such as React Native and NativeScript. However, Microsoft doesn't provide guidance or plugins for platforms other than the supported ones.
+        answer: The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS/iPadOS (Obj-C, Swift), .NET and MAUI platforms. Some customers successfully integrate the Intune SDK with other platforms, such as React Native and NativeScript. However, Microsoft doesn't provide guidance or plugins for platforms other than the supported ones.
 
       - question: Does the Intune APP SDK support Microsoft Authentication Library (MSAL)?
         answer: The Intune App SDK can use the Microsoft Authentication Library for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
@@ -147,17 +147,17 @@ sections:
 
       - question: How does Intune remotely wipe data?
         answer: |
-          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../remote-actions/devices-wipe.md). For more information about selective wipe using MAM, see [the Retire action](../remote-actions/devices-wipe.md#retire) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
       - question: What is wipe?
         answer: |
-           [Wipe](../remote-actions/device-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
+           [Wipe](../../device-management/actions/wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
             >[!NOTE]
             > Wipe can only be achieved on devices enrolled with Intune mobile device management (MDM).
 
       - question: What is selective wipe for MDM?
         answer: |
-           Selective wipe for MDM removes only company data from the device without affecting personal data. For more information, see [Remove devices - retire](../remote-actions/devices-wipe.md#retire).
+           Selective wipe for MDM removes only company data from the device without affecting personal data. For more information, see [Remove devices - retire](../../device-management/actions/retire.md).
 
       - question: What is selective wipe for MAM?
         answer: |

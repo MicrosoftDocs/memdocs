@@ -119,7 +119,7 @@ For more information, see [Create collections](../../clients/manage/collections/
 
 You can now get more detailed insights for your desktop applications including line-of-business apps. The former App Health Analyzer toolkit is now integrated with the Configuration Manager client. This integration simplifies deployment and manageability of app readiness insights in the Desktop Analytics portal.
 
-For more information, see [Compatibility assessment in Desktop Analytics](../../../desktop-analytics/compat-assessment.md#advanced-insights).
+For more information, see [Compatibility assessment in Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports#advanced-insights).
 
 
 ### DALogsCollector tool
@@ -127,7 +127,7 @@ For more information, see [Compatibility assessment in Desktop Analytics](../../
 <!--4622989-->
 Use the DesktopAnalyticsLogsCollector.ps1 tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory.
 
-For more information, see [Logs collector](../../../desktop-analytics/log-collector.md).
+For more information, see [Logs collector](/intune/intune-service/protect/windows-update-compatibility-reports).
 
 
 ## <a name="bkmk_real"></a> Real-time management

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - App Participation Features
 description: Understand App participation features when incorporating Intune mobile app management (MAM) into your Android app.
-ms.date: 11/17/2025
+ms.date: 03/27/2026
 ms.topic: reference
 ms.reviewer: jamiesil
 ms.collection:
@@ -658,7 +658,7 @@ In the example, replace `R.style.AppTheme` with the style theme that the SDK sho
 If the application requires SSL/TLS certificates issued by an on-premises or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK has added support for certificate trust management with the API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient].
 
 > [!NOTE]
-> [MAMCertTrustWebViewClient] supports Android 10 or later.
+> [MAMCertTrustWebViewClient] supports Android 11 or later.
 
 Trusted Root Certificates Management provides support for:
 

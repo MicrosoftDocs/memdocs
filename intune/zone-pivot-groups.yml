@@ -4,6 +4,8 @@ groups:
   title: Security Baselines for Windows 10 and later
   prompt: Choose a version
   pivots:
+    - id: mdm-25h2
+      title: Version 25H2
     - id: mdm-24h2
       title: Version 24H2
     - id: mdm-23h2

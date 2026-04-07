@@ -61,7 +61,7 @@ If you currently don't use any MDM or mobile application management (MAM) provid
   - Manage [on-premises Windows Server and some client devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
   - Manage [partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
   - Create [custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
-  - [Deploy and manage many app types](../../configmgr/apps/understand/introduction-to-application-management.md).
+  - [Deploy and manage many app types](/previous-versions/troubleshoot/configmgr/introduction-to-application-management).
 
 ## Currently use a third party MDM provider
 

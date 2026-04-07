@@ -23,7 +23,7 @@ Device configuration profiles allow you to add and configure device settings, an
 
 - **Settings catalog**: On your Apple, Android, and Windows devices, you can use the settings catalog to configure device features and settings. The settings catalog has all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
-  More settings are continually being added to the settings catalog. For more information, go to [Settings catalog](settings-catalog.md).
+  More settings are continually being added to the settings catalog. For more information, go to [Settings catalog](../../device-configuration/settings-catalog/index.md).
 
 - **Templates**: On your devices, you can use the built-in templates. Each template includes a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
@@ -76,7 +76,7 @@ Then, choose your profile type. Depending on the platform you choose, the profil
 
 # [Settings catalog](#tab/sc)
 
-- [Settings catalog](settings-catalog.md) - Includes a list of all available settings for Android Enterprise, iOS/iPadOS, macOS, and Windows. You can search and filter on specific settings and areas, like OneDrive or Microsoft Edge.
+- [Settings catalog](../../device-configuration/settings-catalog/index.md) - Includes a list of all available settings for Android Enterprise, iOS/iPadOS, macOS, and Windows. You can search and filter on specific settings and areas, like OneDrive or Microsoft Edge.
 
 # [Properties catalog](#tab/prop)
 
@@ -89,7 +89,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [BIOS configuration and other settings](bios-configuration.md)
 - [Custom](custom-settings-configure.md)
 - [Delivery Optimization (Windows)](delivery-optimization-windows.md)
-- [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
+- [Derived credential (Android Enterprise, iOS, iPadOS)](../../device-security/certificates/derived-credentials.md)
 - [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
 - [Device firmware configuration interface (DFCI) (Windows)](device-firmware-configuration-interface-windows.md)
 - [Device restrictions](device-restrictions-configure.md)
@@ -104,13 +104,13 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
 - [Network boundary (Windows)](network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
-- [PKCS certificate](../protect/certificates-pfx-configure.md)
-- [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
+- [PKCS certificate](../../device-configuration/certificates/pkcs-profiles.md)
+- [PKCS imported certificate](../../device-configuration/certificates/imported-pfx-profiles.md)
 - [Preference file (macOS)](preference-file-settings-macos.md)
-- [SCEP certificate](../protect/certificates-scep-configure.md)
+- [SCEP certificate](../../fundamentals/certificates/scep-infrastructure.md)
 - [Secure assessment (Education) (Windows)](education-settings-configure.md)
 - [Shared multi-user device (Windows)](shared-user-device-settings.md)
-- [Trusted certificate](../protect/certificates-configure.md)
+- [Trusted certificate](../../fundamentals/certificates/overview.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 - [Windows health monitoring](windows-health-monitoring.md)
@@ -213,7 +213,7 @@ When creating profiles, consider the following recommendations:
 
 - Separate user policies from device policies.
 
-  For example, the [Intune settings catalog](settings-catalog.md) has thousands of settings. These settings show if a setting applies to users or devices. When creating the policy, assign your user settings to a users group, and assign your device settings to a devices group.
+  For example, the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) has thousands of settings. These settings show if a setting applies to users or devices. When creating the policy, assign your user settings to a users group, and assign your device settings to a devices group.
 
   The following image shows an example of some settings that can apply to users, apply to devices, or apply to both:
 
@@ -221,7 +221,7 @@ When creating profiles, consider the following recommendations:
 
 - Use Microsoft Copilot in Intune to evaluate your policies, learn more about a policy setting & its effect on your users & security, and compare policies between two devices.
 
-  For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+  For more information, go to [Microsoft Copilot in Intune](../../copilot/index.md).
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 

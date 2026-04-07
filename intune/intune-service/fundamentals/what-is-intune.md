@@ -105,7 +105,7 @@ Copilot in Intune is available and has capabilities that are powered by Security
 
 Copilot can summarize existing policies, give you more setting information, including recommended values and potential conflicts. You can also get device details and troubleshoot a device.
 
-For more information, go to [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+For more information, go to [Microsoft Copilot in Intune](../../copilot/index.md).
 
 ## Integrates with other Microsoft services and apps
 
@@ -280,7 +280,7 @@ In the VPN policy, you can use certificates to authenticate the VPN connection. 
 For more information, go to:
 
 - [Create VPN profiles to connect to VPN servers in Intune](../configuration/vpn-settings-configure.md)
-- [Use certificates for authentication in Intune](../protect/certificates-configure.md)
+- [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - [Learn more about Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md)
 - [Use Microsoft Tunnel for MAM](../protect/microsoft-tunnel-mam.md)
 
@@ -295,7 +295,7 @@ When the policy is ready, you deploy this policy to your on-premises users and d
 For more information, go to:
 
 - [Create Wi-Fi policy to connect to Wi-Fi networks in Intune](../configuration/wi-fi-settings-configure.md)
-- [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md)
+- [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
 
 ### Enable single sign-on (SSO) to your apps and services
 

@@ -189,7 +189,7 @@ The sync takes several minutes and continues in the background. When the sync is
 
 ### Step 8 - Configure settings for an optimal Microsoft 365 experience
 
-We've selected a few settings to configure. These settings demonstrate an optimal Microsoft 365 end-user experience on your Windows cloud-native device. These settings are configured using a device configuration settings catalog profile. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
+We've selected a few settings to configure. These settings demonstrate an optimal Microsoft 365 end-user experience on your Windows cloud-native device. These settings are configured using a device configuration settings catalog profile. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../device-configuration/settings-catalog/index.md).
 
 After you created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
@@ -533,7 +533,7 @@ You can customize and set a standard start and taskbar layout using Intune.
 
 ### Settings catalog
 
-The settings catalog is a single location where all configurable Windows settings are listed. This feature simplifies how you create a policy, and how you see all the available settings. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
+The settings catalog is a single location where all configurable Windows settings are listed. This feature simplifies how you create a policy, and how you see all the available settings. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../device-configuration/settings-catalog/index.md).
 
 > [!TIP]
 > Many of the settings you're familiar with from group policy are built into the settings catalog. If settings aren't available in the settings catalog, then check the device configuration profiles templates.
@@ -653,7 +653,7 @@ For printing solutions, consider Universal Print. For more information, go to:
 
 - [What is Universal Print?](/universal-print/fundamentals/universal-print-whatis)
 - [Announcing general availability of Universal Print](https://techcommunity.microsoft.com/t5/universal-print-blog/announcing-general-availability-of-universal-print/ba-p/2176759)
-- [Tasks you can complete using the Settings Catalog in Intune](../../intune-service/configuration/settings-catalog-common-features.md)
+- [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md)
 
 ### Applications
 
@@ -697,7 +697,7 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - Configure an Intune [device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
 - Add [Store Apps](../../intune-service/apps/store-apps-microsoft.md)
 - Add [Win32 apps](../../intune-service/apps/apps-win32-app-management.md)
-- [Use certificates for authentication in Intune](../../intune-service/protect/certificates-configure.md)
+- [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
 - Security baseline for [Microsoft Edge](../../intune-service/protect/security-baseline-settings-edge.md)

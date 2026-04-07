@@ -25,7 +25,7 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 
 - [**Security baselines**](../protect/security-baselines.md): Some settings for Windows Hello can be managed by security baselines like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
 
-- [**Settings catalog**](../configuration/settings-catalog.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
+- [**Settings catalog**](../../device-configuration/settings-catalog/index.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
 
 > [!IMPORTANT]
 > Prior to the Anniversary Update (Windows version 1607), you could set two different PINS that could be used to authenticate to resources:

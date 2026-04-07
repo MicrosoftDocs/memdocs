@@ -101,9 +101,9 @@ Some considerations:
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 
-  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, like connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
+  - Use [certificates](../../fundamentals/certificates/overview.md) on devices to authenticate features and apps, like connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
 
-    If you're planning to use certificates, use a supported [public key infrastructure (PKI) infrastructure](../protect/certificates-configure.md) to create and deploy certificate profiles.
+    If you're planning to use certificates, use a supported [public key infrastructure (PKI) infrastructure](../../fundamentals/certificates/overview.md) to create and deploy certificate profiles.
 
   - Use [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) for an extra layer of authentication on organization-owned devices. Or, use MFA to authenticate apps on personal devices. Biometrics, like face recognition and fingerprints, can also be used.
 
@@ -167,7 +167,7 @@ When data is stored on mobile devices, the data should be protected from acciden
 Some sample scenarios:
 
 - A device is lost or stolen, or no longer being used. A user leaves the organization.
-  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../remote-actions/device-wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
+  - In Intune, you can [remove devices by using wipe, retire, or manually unenroll them](../../device-management/actions/wipe.md). You can also automatically remove devices that haven't checked in with Intune for *x* number of days.
   - At the app level, you can [remove organization data from Intune-managed apps](../apps/apps-selective-wipe.md). A selective wipe is great for personal devices, as it keeps personal data on the device, and only removes organization data.
 
 - On personal devices, you might want to prevent users from copy/paste, taking screenshots, or forwarding emails. [App protection policies](../apps/app-protection-policy.md) can block these features on devices you don't manage.
@@ -273,7 +273,7 @@ The [setup deployment guide](deployment-guide-intune-setup.md) has some good inf
 Some considerations:
 
 - If you currently don't use any MDM service or solution, then going straight to Intune might be best.
-- If you currently use on-premises Group Policy Objects (GPO), then going to Intune and using the [Intune settings catalog](../configuration/settings-catalog.md) is similar, and can be an easier transition to cloud-based device policy. The settings catalog also includes settings for Apple devices and Google Chrome.
+- If you currently use on-premises Group Policy Objects (GPO), then going to Intune and using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) is similar, and can be an easier transition to cloud-based device policy. The settings catalog also includes settings for Apple devices and Google Chrome.
 - For new devices not enrolled in Configuration Manager, or any MDM solution, then going straight to Intune might be best.
 - If you currently use Configuration Manager, then your options include:
 
@@ -312,7 +312,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Microsoft Purview** (included in the **Microsoft 365 E5** license) classifies and protects documents and emails by applying labels. On Microsoft 365 apps, you can use this service to [prevent unauthorized access to organization data](/microsoft-365/compliance/information-protection), including apps on personal devices.
 
-- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
+- **[Microsoft Copilot in Intune](../../copilot/index.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
   Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
@@ -396,7 +396,7 @@ Some considerations:
 
     [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
 
-  - **Settings catalog**: The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
+  - **Settings catalog**: The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
     You can also create an Intune policy based on your imported settings. For more information, go to [Create a settings catalog policy using your imported GPOs](../configuration/group-policy-analytics-migrate.md).
@@ -592,7 +592,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-settings-catalog-group-policy.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../../device-configuration/settings-catalog/tutorial-group-policy-migration.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 

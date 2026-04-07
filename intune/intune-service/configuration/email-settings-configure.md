@@ -309,7 +309,7 @@ There are different ways to remove an email profile from devices, even when ther
 
 - **Option 1**: Open the email profile (**Devices** > **Manage devices** > **Configuration** > select your profile), and select **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
 
-- **Option 2**: [Wipe or retire the device](../remote-actions/device-wipe.md). You can use these actions to selectively or fully remove data and settings.
+- **Option 2**: [Wipe or retire the device](../../device-management/actions/wipe.md). You can use these actions to selectively or fully remove data and settings.
 
 ## Secure email access
 
@@ -319,7 +319,7 @@ You can help secure email profiles using the following options:
 
   If you use certificate-based authentication for your email profile, then deploy the email profile, certificate profile, and trusted root profile to the same groups. This deployment makes sure each device can recognize the legitimacy of your certificate authority.
 
-  For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
+  For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../../fundamentals/certificates/overview.md).
 
 - **User name and password**: The end user authenticates to the native mail server by entering a user name and password. The password doesn't exist in the email profile. So, the end user enters the password when connecting to email.
 

@@ -15,7 +15,7 @@ Using Microsoft Intune, you can add or create custom settings for your iOS/iPadO
 
 This article describes the properties you can configure and provides some guidance on the Apple tools, like Apple Configurator.
 
-The Intune settings catalog has many settings, and more are continually added. Before you create this template profile, look for the settings in the [Intune settings catalog](../configuration/settings-catalog.md). It's possible you don't need a custom profile.
+The Intune settings catalog has many settings, and more are continually added. Before you create this template profile, look for the settings in the [Intune settings catalog](../../device-configuration/settings-catalog/index.md). It's possible you don't need a custom profile.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ The Intune settings catalog has many settings, and more are continually added. B
 
 - Don't use custom configuration profiles for sensitive information, such as Wi-Fi connections or authenticating apps, sites, and more. Instead, use the built-in profiles for sensitive information, as they're designed and configured to handle sensitive information.
 
-  For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../protect/certificates-configure.md) for authentication.
+  For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../../fundamentals/certificates/overview.md) for authentication.
 
 ::: zone pivot="ios-ipados"
 

@@ -3,7 +3,7 @@ title: Learn about the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/11/2025
+ms.date: 03/27/2026
 ms.topic: article
 ms.reviewer: ochukwunyere
 ms.collection:
@@ -45,12 +45,12 @@ Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. 
 - For iOS devices that have Microsoft Defender configured to support per-app VPNs and *TunnelOnly* mode set to *True*, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. *(iOS/iPadOS)*
-- Proxy support. *(iOS/iPadOS, Android 10+)*
+- Proxy support. *(iOS/iPadOS, Android 11+)*
 - Android root detection. The Microsoft Defender client automatically blocks a device's access to Microsoft Tunnel if it identifies that the device is rooted.
 
   When a device is identified as rooted, the client immediately marks the device's risk category as *High*, drops active Tunnel connections, and continues to block access until the device is determined to be compliant. The device user receives a notification about this status from the Defender client.
 
-  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](/intune/intune-service/protect/android-personally-owned-security-configurations#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](/intune/intune-service/protect/android-fully-managed-security-configurations#fully-managed-basic-security-level-1) devices.
+  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](android-personally-owned-security-configurations.md#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](android-fully-managed-security-configurations.md#fully-managed-basic-security-level-1) devices.
 
 ### Setup Overview
 

@@ -78,7 +78,7 @@ Admins or end users initiate these check-ins when they run certain actions on a 
 
 - **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/check-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/manage-apps-cpweb.md#available-and-required-apps).
 
-- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../remote-actions/device-sync.md), [remote lock](../remote-actions/device-remote-lock.md), or [reset passcode](../remote-actions/device-passcode-reset.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) don't cause a device check-in.
+- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../../device-management/actions/sync.md), [remote lock](../../device-management/actions/remote-lock.md), or [reset passcode](../../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) don't cause a device check-in.
 
 ## Company portal
 
@@ -92,7 +92,7 @@ For related information, see  [Sync enrolled device for Windows](../user-help/sy
 
 Conflicts can happen when different policies update the same setting to different values. For example, you have two policies that update the copy/paste setting to different values. The conflict is handled differently depending on the type of policy.
 
-If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../copilot/copilot-intune-overview.md#policy-and-setting-management).
+If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../../copilot/index.md#policy-and-setting-management).
 
 You can also use Microsoft Copilot in Intune to get more information about your policies and the settings configured in your policies.
 
@@ -187,7 +187,7 @@ You can also manually sync the device.
 To learn more, see:
 
 - [Policy refresh intervals](#policy-refresh-intervals) (this article)
-- [Remote device action: sync](../remote-actions/device-sync.md)
+- [Remote device action: sync](../../device-management/actions/sync.md)
 
 ## "The sync could not be initiated (0x80072f9a)" error
 

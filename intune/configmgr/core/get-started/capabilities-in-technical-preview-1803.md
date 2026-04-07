@@ -33,14 +33,14 @@ Review the [Technical Preview](technical-preview.md) article before installing t
 
 ## Pull-distribution points support cloud distribution points as source
 <!--1321554-->
-Many customers use [pull-distribution points](../plan-design/hierarchy/use-a-pull-distribution-point.md) in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a [cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise.
+Many customers use [pull-distribution points](../plan-design/hierarchy/use-a-pull-distribution-point.md) in remote or branch offices, which download content from a source distribution point across the WAN. If your remote offices have a better connection to the internet, or to reduce load on your WAN links, you can now use a [cloud distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point) in Microsoft Azure as the source. When you add a source on the **Pull Distribution Point** tab of the distribution point properties, any cloud distribution point in the site is now listed as an available distribution point. The behavior of both site system roles remains the same otherwise.
 
 ### Prerequisites
 - The pull-distribution point needs internet access to communicate with Microsoft Azure.
 - The content must be distributed to the source cloud distribution point.
 
 > [!Note]
-> This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_cost).
+> This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using cloud-based distribution](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point#bkmk_cost).
 
 
 

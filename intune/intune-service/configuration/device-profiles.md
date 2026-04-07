@@ -37,7 +37,7 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 ## Use templates or the settings catalog
 
-In Intune, for most platforms, when you create a device configuration profile, you have two policy types: **Templates** or the **[Settings Catalog](settings-catalog.md)**.
+In Intune, for most platforms, when you create a device configuration profile, you have two policy types: **Templates** or the **[Settings Catalog](../../device-configuration/settings-catalog/index.md)**.
 
 The settings catalog lists all the settings you can configure, and all in one place. Templates include a logical grouping of settings that configure a feature or concept, like email, kiosk devices, and device firmware.
 
@@ -49,7 +49,7 @@ This article gives an overview of the different types of profiles you can create
 
 ## Certificates
 
-You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
+You use [certificates in Intune](../../fundamentals/certificates/overview.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
 
 Certificates are also used for signing and encrypting email using S/MIME. Common types of certificates used in Intune include trusted root certificates, Simple Certificate Enrollment Protocol (SCEP) certificates, and Public Key Cryptography Standards (PKCS) certificates.
 
@@ -85,9 +85,9 @@ This feature supports:
 
 ## Derived credential
 
-If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../protect/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
+If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../../device-security/certificates/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
 
-Intune [supports several derived credential issuers](../protect/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
+Intune [supports several derived credential issuers](../../device-security/certificates/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
 
 This feature supports:
 
@@ -166,7 +166,7 @@ This feature supports:
 > [!IMPORTANT]
 > This template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
 >
-> Instead, use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. To learn more, go to [macOS settings catalog](settings-catalog.md).
+> Instead, use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. To learn more, go to [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
 
 [Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
@@ -190,7 +190,7 @@ This feature supports:
 > [!IMPORTANT]
 > This template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
 >
-> Instead, use the settings catalog to create new policies that configure the System Extensions payload. To learn more, go to [macOS settings catalog](settings-catalog.md).
+> Instead, use the settings catalog to create new policies that configure the System Extensions payload. To learn more, go to [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
 
 [macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
@@ -253,15 +253,15 @@ This feature supports:
 - macOS
 
 > [!TIP]
-> macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
+> macOS settings are continually being added to the [settings catalog](../../device-configuration/settings-catalog/index.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md).
 
 ## Settings catalog and Group Policy analytics
 
-The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
+The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
 On Windows, there are thousands of settings available, including many settings not found in the templates. When you want a complete list of all the settings, use the settings catalog to create your policy. If you want to use a logical grouping of settings, then continue to use the templates.
 
-[Tasks you can complete using the Intune settings catalog](settings-catalog-common-features.md) is a good resource.
+[Tasks you can complete using the Intune settings catalog](../../device-configuration/settings-catalog/common-tasks.md) is a good resource.
 
 This feature supports:
 

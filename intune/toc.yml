@@ -87,30 +87,30 @@ items:
         - name: Use automated device enrollment to enroll iOS/iPadOS devices
           href: ./intune-service/enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
         - name: Create settings catalog policy and compare with on-premises ADMX
-          href: ./intune-service/configuration/tutorial-settings-catalog-group-policy.md
+          href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
           displayName: admx, administrative template, gpo, windows
 
   - name: Microsoft Copilot + Intune
     items:
     - name: Copilot in Intune
       displayName: ai, copilot
-      href: ./intune-service/copilot/copilot-intune-overview.md
+      href: ./copilot/index.md
     - name: Explore your Intune data
       displayName: ai, copilot, explore, data, query
-      href: ./intune-service/copilot/copilot-intune-explorer.md
+      href: ./copilot/explorer.md
     - name: Troubleshoot a device using Copilot
-      href: ./intune-service/copilot/copilot-devices.md
+      href: ./copilot/troubleshoot-devices.md
     - name: Copilot in Intune FAQ
-      href: ./intune-service/copilot/copilot-intune-faq.md
+      href: ./copilot/faq.md
     - name: Intune plugin in Security Copilot
-      href: ./intune-service/copilot/security-copilot.md
+      href: ./copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
       href: /surface/security-copilot-surface-management-portal?context=/intune/context
     - name: Copilot in Windows 365 Cloud PCs
       href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
     - name: Security Copilot agents in Microsoft Intune
-      href: ./agents/toc.yml
+      href: ./copilot/agents/toc.yml
 
   - name: Intune Suite
     items:
@@ -825,6 +825,8 @@ items:
             href: ./intune-service/protect/microsoft-defender-with-intune.md
           - name: Configure Defender for Endpoint
             href: ./intune-service/protect/microsoft-defender-integrate.md
+          - name: Deploy Defender for Endpoint on Android
+            href: ./intune-service/protect/microsoft-defender-deploy-android.md
           - name: Android web protection
             href: ./intune-service/protect/microsoft-defender-configure-android.md
           - name: Monitor Defender for Endpoint
@@ -968,65 +970,7 @@ items:
         - name: Microsoft Cloud PKI
           href: ./cloud-pki/toc.yml
         - name: Certificates
-          items:
-          - name: Use certificates for authentication
-            href: ./intune-service/protect/certificates-configure.md
-          - name: Trusted certificate profiles
-            href: ./intune-service/protect/certificates-trusted-root.md
-          - name: Certificate Connector
-            items:
-            - name: Certificate Connector
-              href: ./intune-service/protect/certificate-connector-overview.md
-            - name: Connector prerequisites
-              href: ./intune-service/protect/certificate-connector-prerequisites.md
-            - name: Install the connector
-              href: ./intune-service/protect/certificate-connector-install.md
-            - name: Troubleshoot certificate connector
-              href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
-
-          - name: SCEP
-            items:
-            - name: SCEP infrastructure
-              href: ./intune-service/protect/certificates-scep-configure.md
-              displayName: ksp
-            - name: SCEP certificate profiles
-              href: ./intune-service/protect/certificates-profile-scep.md
-            - name: Use third-party certificate authority with SCEP
-              href: ./intune-service/protect/certificate-authority-add-scep-overview.md
-            - name: Troubleshoot SCEP certificate profiles
-              items:
-              - name: Troubleshoot SCEP certificate profiles
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles?context=/intune/context
-              - name: Profile deployment to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment?context=/intune/context
-              - name: Device to NDES communication
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes?context=/intune/context
-              - name: NDES operations
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module?context=/intune/context
-              - name: Certificate delivery to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery?context=/intune/context
-              - name: Reporting for certificate deployment
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting?context=/intune/context
-
-          - name: PKCS
-            items:
-            - name: PKCS
-              href: ./intune-service/protect/certificates-pfx-configure.md
-              displayName: ksp
-            - name: Imported PKCS
-              href: ./intune-service/protect/certificates-imported-pfx-configure.md
-            - name: Use S/MIME to encrypt email
-              href: ./intune-service/protect/certificates-s-mime-encryption-sign.md
-              displayName: csr
-            - name: Troubleshoot PKCS certificate profiles
-              href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles?context=/intune/context
-          - name: Use DigiCert PKI
-            href: ./intune-service/protect/certificates-digicert-configure.md
-            displayName: ca; pkcs; pki; ra; registration authority
-          - name: Remove SCEP or PKCS certificates
-            href: ./intune-service/protect/remove-certificates.md
-        - name: Derived credentials
-          href: ./intune-service/protect/derived-credentials.md
+          href: ./fundamentals/certificates/toc.yml
         - name: Microsoft Tunnel VPN gateway
           items:
           - name: Microsoft Tunnel overview
@@ -1075,7 +1019,7 @@ items:
       - name: Settings lists reference
         items:
         - name: API to add third-party certificate authority
-          href: ./intune-service/protect/scep-libraries-apis.md
+          href: ./fundamentals/certificates/ref-scep-api.md
         - name: Compliance policy settings
           items:
           - name: Compliance settings - Android device administrator
@@ -1157,8 +1101,6 @@ items:
           items:
           - name: Software update errors
             href: ./device-updates/windows/software-update-agent-error-codes.md
-        - name: Deprecated certificate connectors
-          href: ./intune-service/protect/certificate-connectors.md
 
     - name: Configure devices
       items:
@@ -1179,27 +1121,30 @@ items:
           items:
           - name: Overview and get started
             displayName: gpo, admx, ios, ipados, macos, windows
-            href: ./intune-service/configuration/settings-catalog.md
+            href: ./device-configuration/settings-catalog/index.md
           - name: Common tasks for the settings catalog
             items:
             - name: Sample tasks
               displayName: gpo, admx, ios, ipados, macos, windows
-              href: ./intune-service/configuration/settings-catalog-common-features.md
+              href: ./device-configuration/settings-catalog/common-tasks.md
             - name: Create Universal Print policy
               displayName: printers, gpo, admx, windows
-              href: ./intune-service/configuration/settings-catalog-printer-provisioning.md
+              href: ./device-configuration/settings-catalog/configure-universal-print.md
             - name: Configure Microsoft Edge
               displayName: gpo, windows, macos, admx
-              href: ./intune-service/configuration/settings-catalog-configure-edge.md
+              href: ./device-configuration/settings-catalog/configure-edge.md
             - name: Update Microsoft 365
               displayName: gpo, windows, admx, update channel
-              href: ./intune-service/configuration/settings-catalog-update-office.md
+              href: ./device-configuration/settings-catalog/update-office.md
             - name: Restrict USB devices
               displayName: gpo, windows
-              href: ./intune-service/configuration/settings-catalog-restrict-usb.md
+              href: ./device-configuration/settings-catalog/restrict-usb.md
             - name: Configure ADMX
-              displayName: gpo, admx, windows
+              displayName: gpo, admx, windows, settings catalog
               href: ./intune-service/configuration/administrative-templates-windows.md
+            - name: Configure Recovery Lock on macOS
+              displayName: gpo, admx, macos
+              href: ./device-configuration/settings-catalog/configure-recovery-lock-macos.md
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./intune-service/configuration/administrative-templates-import-custom.md
@@ -1332,10 +1277,10 @@ items:
         items:
         - name: Apple
           displayName: ios, ipados, macos
-          href: ./intune-service/configuration/apple-settings-catalog-configurations.md
+          href: ./device-configuration/settings-catalog/ref-apple-settings.md
         - name: Android
           displayName: Android
-          href: ./intune-service/configuration/settings-catalog-android.md
+          href: ./device-configuration/settings-catalog/ref-android-settings.md
 
       - name: Device Configuration template settings lists
         items:
@@ -1357,15 +1302,15 @@ items:
             displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./intune-service/configuration/wi-fi-settings-android-enterprise.md
           - name: Trusted certificate
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: PKCS certificate
-            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
-            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Derived credential
-            href: ./intune-service/protect/derived-credentials.md
+            href: ./device-security/certificates/derived-credentials.md
           - name: SCEP certificate
-            href: ./intune-service/protect/certificates-profile-scep.md
+            href: ./device-configuration/certificates/scep-profiles.md
 
           - name: Android device administrator
             items:
@@ -1397,7 +1342,7 @@ items:
             href: ./intune-service/configuration/custom-settings-apple.md
           - name: Derived credentials
             displayName: apple, ios, ipados
-            href: ./intune-service/protect/derived-credentials.md
+            href: ./device-security/certificates/derived-credentials.md
           - name: Device features
             displayName: apple, ios, ipados, macos
             href: ./intune-service/configuration/device-features-apple.md
@@ -1415,19 +1360,19 @@ items:
             href: ./intune-service/configuration/kernel-extensions-settings-macos.md
           - name: PKCS certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Preference file
             displayName: apple, macos
             href: ./intune-service/configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-profile-scep.md
+            href: ./device-configuration/certificates/scep-profiles.md
           - name: Trusted certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: VPN
             displayName: apple, ios, ipados, macos
             href: ./intune-service/configuration/vpn-settings-apple.md
@@ -1819,7 +1764,7 @@ items:
         href: ./intune-service/fundamentals/chrome-enterprise-device-details.md
 
     - name: Remote device actions
-      href: ./intune-service/remote-actions/toc.yml
+      href: ./device-management/actions/toc.yml
 
   - name: Support your end users
     items:
@@ -1829,7 +1774,9 @@ items:
       href: ./intune-service/fundamentals/service-now-integration.md
     - name: Remote Help with the Intune Suite
       href: ./intune-service/fundamentals/remote-help.md
-    - name: Use TeamViewer for remote administration
+    - name: Use the TeamViewer integration 
+      href: ./intune-service/fundamentals/team-viewer-integration.md    
+    - name: TeamViewer for remote administration (old)
       href: ./intune-service/fundamentals/teamviewer-support.md
     - name: Remediations that fix common support issues
       items:
@@ -2012,7 +1959,7 @@ items:
     - name: End-to-end macOS endpoint guide
       href: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
     - name: Create settings catalog policy and compare with on-premises ADMX
-      href: ./intune-service/configuration/tutorial-settings-catalog-group-policy.md
+      href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
       displayName: admx, administrative template, windows, gpo
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
@@ -2224,13 +2171,13 @@ items:
         - name: Appendix
           href: ./intune-service/developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
-        href: ./intune-service/developer/app-sdk-xamarin.md
+        href: ./intune-service/developer/app-sdk-get-started.md
       - name: Microsoft Tunnel for MAM SDK
         items:
         - name: Microsoft Tunnel for MAM iOS SDK
           href: ./intune-service/developer/tunnel-mam-ios-sdk.md
         - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
-          href: ./intune-service/developer/mam-tunnel-ios-xamarin-bindings.md
+          href: ./intune-service/developer/app-sdk-get-started.md
     - name: Use the Intune Data Warehouse
       href: ./intune-service/developer/reports-nav-create-intune-reports.md
       items:

@@ -64,6 +64,9 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
     You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
 
+> [!IMPORTANT]
+> If both platform-specific and *All platforms* rules exist, the one with fewer days will be applied.
+
 1. Select **Next**.
 1. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
 
@@ -91,7 +94,7 @@ The [Intune audit logs](../intune-service/fundamentals/monitor-audit-logs.md) sh
 
 <!-- role links -->
 
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R2]: ../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
+[INT-R4]: ../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-RC]: ../intune-service/fundamentals/create-custom-role.md

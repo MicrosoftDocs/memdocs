@@ -150,7 +150,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
-      - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
@@ -175,7 +175,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       ::: zone pivot="ios-ipados"
 
-      - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
       ::: zone-end
 
@@ -199,7 +199,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       ::: zone pivot="ios-ipados"
 
-      - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
       ::: zone-end
 
