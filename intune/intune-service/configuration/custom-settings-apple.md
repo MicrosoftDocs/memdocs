@@ -53,7 +53,7 @@ The Intune settings catalog has many settings, and more are continually added. B
 
 - Don't use custom configuration profiles for sensitive information, such as Wi-Fi connections or authenticating apps, sites, and more. Instead, use the built-in profiles for sensitive information, as they're designed and configured to handle sensitive information.
 
-  For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../protect/certificates-configure.md) for authentication.
+  For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../../fundamentals/certificates/overview.md) for authentication.
 
 ::: zone pivot="ios-ipados"
 

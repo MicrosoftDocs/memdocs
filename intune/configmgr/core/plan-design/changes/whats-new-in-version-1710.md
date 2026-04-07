@@ -43,7 +43,7 @@ Version 1710 drops support for the following products:
 Beginning with this release, Peer Cache is no longer a pre-release feature.  No other changes for Peer Cache are introduced with this release. For more information, see  [Peer Cache for Configuration Manager clients](../hierarchy/client-peer-cache.md).
 
 ### Cloud distribution point support for Azure Government Cloud   <!-- sms491428 -->
-You can now use [cloud-based distribution points](../hierarchy/use-a-cloud-based-distribution-point.md) in the Azure Government cloud.
+You can now use [cloud-based distribution points](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point) in the Azure Government cloud.
 
 ### Inventory default unit revision <!-- sms503697 -->
 As devices now include hard drives with sizes in the gigabyte (GB), terabyte (TB) and larger scales, this release changes the default unit (SMS_Units) used in many views from megabytes (MB) to GB. For example, the v_gs_LogicalDisk.FreeSpace value now reports GB units.

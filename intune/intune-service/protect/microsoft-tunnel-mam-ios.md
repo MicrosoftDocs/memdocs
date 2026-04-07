@@ -218,7 +218,7 @@ Tunnel for MAM uses the public-key certificate payload contained in the Intune t
 > Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.509 or PEM** certificate format.
 
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that is used.
-For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
+For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../../device-configuration/certificates/trusted-root-profiles.md).
 
 ## Configure Line of Business apps in the Microsoft Entra admin center
 

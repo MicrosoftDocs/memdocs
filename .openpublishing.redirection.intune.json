@@ -3267,67 +3267,67 @@
     },
     {
       "source_path": "intune/intune/protect/certificate-authority-add-scep-overview.md",
-      "redirect_url": "/intune/intune-service/protect/certificate-authority-add-scep-overview",
+      "redirect_url": "/intune/fundamentals/certificates/third-party-ca-scep",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificate-connector-install.md",
-      "redirect_url": "/intune/intune-service/protect/certificate-connector-install",
+      "redirect_url": "/intune/fundamentals/certificates/connector/setup-connector",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificate-connector-overview.md",
-      "redirect_url": "/intune/intune-service/protect/certificate-connector-overview",
+      "redirect_url": "/intune/fundamentals/certificates/connector/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificate-connector-prerequisites.md",
-      "redirect_url": "/intune/intune-service/protect/certificate-connector-prerequisites",
+      "redirect_url": "/intune/fundamentals/certificates/connector/prerequisites",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificate-connectors.md",
-      "redirect_url": "/intune/intune-service/protect/certificate-connectors",
+      "redirect_url": "/intune/fundamentals/certificates/connector/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-configure.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-configure",
+      "redirect_url": "/intune/fundamentals/certificates/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-digicert-configure.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-digicert-configure",
+      "redirect_url": "/intune/fundamentals/certificates/digicert-pkcs",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-imported-pfx-configure.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-imported-pfx-configure",
+      "redirect_url": "/intune/device-configuration/certificates/imported-pfx-profiles",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-pfx-configure.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-pfx-configure",
+      "redirect_url": "/intune/device-configuration/certificates/pkcs-profiles",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-profile-scep.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-profile-scep",
+      "redirect_url": "/intune/device-configuration/certificates/scep-profiles",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-s-mime-encryption-sign.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-s-mime-encryption-sign",
+      "redirect_url": "/intune/device-security/certificates/s-mime",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-scep-configure.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-scep-configure",
+      "redirect_url": "/intune/fundamentals/certificates/scep-infrastructure",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/certificates-trusted-root.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-trusted-root",
+      "redirect_url": "/intune/device-configuration/certificates/trusted-root-profiles",
       "redirect_document_id": false
     },
     {
@@ -3502,7 +3502,7 @@
     },
     {
       "source_path": "intune/intune/protect/derived-credentials.md",
-      "redirect_url": "/intune/intune-service/protect/derived-credentials",
+      "redirect_url": "/intune/device-security/certificates/derived-credentials",
       "redirect_document_id": false
     },
     {
@@ -3907,7 +3907,7 @@
     },
     {
       "source_path": "intune/intune/protect/remove-certificates.md",
-      "redirect_url": "/intune/intune-service/protect/remove-certificates",
+      "redirect_url": "/intune/device-configuration/certificates/remove-profiles",
       "redirect_document_id": false
     },
     {
@@ -3917,7 +3917,7 @@
     },
     {
       "source_path": "intune/intune/protect/scep-libraries-apis.md",
-      "redirect_url": "/intune/intune-service/protect/scep-libraries-apis",
+      "redirect_url": "/intune/fundamentals/certificates/ref-scep-api",
       "redirect_document_id": false
     },
     {
@@ -4768,6 +4768,86 @@
     {
       "source_path": "intune/use-docs.md",
       "redirect_url": "/intune/fundamentals/use-docs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-configure.md",
+      "redirect_url": "/intune/fundamentals/certificates/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificate-connector-prerequisites.md",
+      "redirect_url": "/intune/fundamentals/certificates/connector/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-scep-configure.md",
+      "redirect_url": "/intune/fundamentals/certificates/scep-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificate-authority-add-scep-overview.md",
+      "redirect_url": "/intune/fundamentals/certificates/third-party-ca-scep",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-digicert-configure.md",
+      "redirect_url": "/intune/fundamentals/certificates/digicert-pkcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/scep-libraries-apis.md",
+      "redirect_url": "/intune/fundamentals/certificates/ref-scep-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificate-connector-overview.md",
+      "redirect_url": "/intune/fundamentals/certificates/connector/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificate-connector-install.md",
+      "redirect_url": "/intune/fundamentals/certificates/connector/setup-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-trusted-root.md",
+      "redirect_url": "/intune/device-configuration/certificates/trusted-root-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-profile-scep.md",
+      "redirect_url": "/intune/device-configuration/certificates/scep-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-pfx-configure.md",
+      "redirect_url": "/intune/device-configuration/certificates/pkcs-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-imported-pfx-configure.md",
+      "redirect_url": "/intune/device-configuration/certificates/imported-pfx-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/remove-certificates.md",
+      "redirect_url": "/intune/device-configuration/certificates/remove-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificates-s-mime-encryption-sign.md",
+      "redirect_url": "/intune/device-security/certificates/s-mime",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/derived-credentials.md",
+      "redirect_url": "/intune/device-security/certificates/derived-credentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/certificate-connectors.md",
+      "redirect_url": "/intune/fundamentals/certificates/connector/certificate-connectors",
       "redirect_document_id": false
     }
   ]

@@ -617,7 +617,7 @@ For more information, go to [GitHub - Microsoft Shell scripts to rename Mac devi
 
 If you use certificate based authentication for a password-less experience, then you can use Intune to add and deploy certificates.
 
-For more information, go to [Types of certificate available in Microsoft Intune](../../intune-service/protect/certificates-configure.md).
+For more information, go to [Types of certificate available in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 ### Wi-Fi
 
@@ -707,7 +707,7 @@ Remote Help is a cloud-based solution for secure help desk connections that use 
 
 For more information, go to:
 
-- [Use Remote Help on macOS to assist authenticated users](../../intune-service/fundamentals/remote-help-macos.md)
+- [Use Remote Help on macOS to assist authenticated users](../../intune-service/fundamentals/remote-help.md)
 - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
 
 ### Custom attributes

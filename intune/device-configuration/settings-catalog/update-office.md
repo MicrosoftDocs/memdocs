@@ -1,8 +1,6 @@
 ---
 title: Update Microsoft 365 apps with the settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 08/28/2025
 ms.topic: how-to
 ms.reviewer: mayurjadhav

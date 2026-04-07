@@ -1,8 +1,6 @@
 ---
 title: Common tasks and features in the settings catalog
 description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/24/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav, beflamm

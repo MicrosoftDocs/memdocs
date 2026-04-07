@@ -129,7 +129,7 @@ Your user and group accounts access organization resources. You need to keep the
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and certificates can make access to these resources easier.
 
-  For more information, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+  For more information, go to [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 - **Multifactor authentication (MFA)** is a feature available with Microsoft Entra ID. For users to successfully authenticate, at least two different verification methods are required. When MFA is deployed to your environment, you can also require MFA when devices are enrolling into Intune.
 

@@ -114,7 +114,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
   For more information, go to:
 
   - [Windows app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
-  - [Introduction to app management in Configuration Manager](../../configmgr/apps/understand/introduction-to-application-management.md)
+  - [Introduction to app management in Configuration Manager](/previous-versions/troubleshoot/configmgr/introduction-to-application-management)
   - [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11)
 
 - **Configure device settings using policies**
@@ -129,7 +129,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+    - [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
     - [Disk encryption policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-disk-encryption-policy.md)
     - [Add Endpoint protection settings in Intune](../../intune-service/protect/endpoint-protection-configure.md)
     - [Certificates in Configuration Manager](../../configmgr/core/plan-design/security/certificates-overview.md)

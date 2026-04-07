@@ -1,8 +1,6 @@
 ---
 title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 11/11/2025
 ms.topic: reference
 params:
