@@ -4,6 +4,7 @@ description: Learn how to deploy and configure Microsoft Defender for Endpoint o
 ms.date: 04/06/2026
 ms.topic: how-to
 ms.author: brenduns
+author: brenduns
 ms.reviewer: aanavath
 ai-usage: ai-assisted
 ms.collection:
@@ -49,7 +50,7 @@ To add the Defender for Endpoint app to your Managed Google Play store and make 
 
     2. On the apps page, review the app details and then select **Select** (1), followed by selecting **Sync** (2) to sync the app with Intune.
 
-       :::image type="content" source="./media/microsoft-defender-deploy-android/select-and-sync.png" alt-text="Screenshot showing the locations of the Select and Sync buttons." lightbox="./media/microsoft-defender-deploy-android/select-and-sync.png" width="250":::
+       :::image type="content" source="./media/microsoft-defender-deploy-android/select-and-sync.png" alt-text="Screenshot showing the locations of the Select and Sync buttons." lightbox="./media/microsoft-defender-deploy-android/select-and-sync.png":::
 
        The sync completes in a few minutes.
 
@@ -158,11 +159,11 @@ Use a device configuration profile to deliver Defender's web protection tunnel t
 
    Then, select **Create** to open the Device restrictions policy configuration workflow.
 
-   :::image type="content" source="./media/microsoft-defender-deploy-android/1autosetupofvpn.png" alt-text="The Configuration profiles menu item in the Policy pane" lightbox="./media/microsoft-defender-deploy-android/1autosetupofvpn.png":::
+   :::image type="content" source="./media/microsoft-defender-deploy-android/configuration-profile-policy.png" alt-text="The Configuration profiles menu item in the Policy pane" lightbox="./media/microsoft-defender-deploy-android/configuration-profile-policy.png":::
 
 2. On the **Basics** page, provide a **Name** and a **Description** to uniquely identify the configuration profile.
 
-   :::image type="content" source="./media/microsoft-defender-deploy-android/2autosetupofvpn.png" alt-text="The devices configuration profile Name and Description fields in the Basics pane" lightbox="./media/microsoft-defender-deploy-android/2autosetupofvpn.png":::
+   :::image type="content" source="./media/microsoft-defender-deploy-android/configuration-profile-basics.png" alt-text="The devices configuration profile Name and Description fields in the Basics pane" lightbox="./media/microsoft-defender-deploy-android/configuration-profile-basics.png":::
 
 3. For **Configuration settings**, expand **Connectivity**, and then configure your VPN:
 
@@ -177,7 +178,7 @@ Use a device configuration profile to deliver Defender's web protection tunnel t
 
    4. Set **Lockdown mode** to **Not configured**, which is the default.
 
-      :::image type="content" source="./media/microsoft-defender-deploy-android/3autosetupofvpn.png" alt-text="The Connectivity pane under the Configuration settings tab" lightbox="./media/microsoft-defender-deploy-android/3autosetupofvpn.png":::
+      :::image type="content" source="./media/microsoft-defender-deploy-android/configuration-profile-connectivity.png" alt-text="The Connectivity pane under the Configuration settings tab" lightbox="./media/microsoft-defender-deploy-android/configuration-profile-connectivity.png":::
 
 4. On the **Assignments** page, select the user group to which you want to assign this device configuration profile. Choose **Select groups** to include, select the applicable group, and then select **Next**.
 
@@ -194,7 +195,7 @@ After you push policies to devices, users complete onboarding from the device. O
    > [!TIP]
    > Instruct users to select **Allow all the time** when prompted for location access during app setup. This choice enables full Wi-Fi threat detection through [Network Protection](/defender-endpoint/android-configure#network-protection). If users select *While using the app* or deny the permission, Defender can still protect against rogue certificates but can't detect threats on open or suspicious Wi-Fi networks. There's no admin configuration that enforces this choice; it requires user consent at the OS level.
 
-   :::image type="content" source="./media/microsoft-defender-deploy-android/MDE-new.png" alt-text="The display of a Microsoft Defender for Endpoint application on a mobile device" lightbox="./media/microsoft-defender-deploy-android/MDE-new.png":::
+   :::image type="content" source="./media/microsoft-defender-deploy-android/defender-app-mobile.png" alt-text="The display of a Microsoft Defender for Endpoint application on a mobile device" lightbox="./media/microsoft-defender-deploy-android/defender-app-mobile.png":::
 
 ## Verify onboarding status
 
