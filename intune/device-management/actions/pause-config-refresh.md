@@ -77,7 +77,7 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-pauseconfigurationrefresh
 
 [CSP-1]: /windows/client-management/mdm/dmclient-csp#deviceproviderprovideridconfigrefresh

@@ -71,10 +71,10 @@ For more information about devices that support eSIM, see the Apple support arti
 
 <!-- role links -->
 
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
+[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
 
 <!-- API links -->
 

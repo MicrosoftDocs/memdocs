@@ -65,7 +65,7 @@ Depending on the platform, Intune can also report the last known location if the
 > [!NOTE]
 > When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
-For more information about device restrictions, see [Android template device settings list to restrict features using Intune](/intune/intune-service/configuration/device-restrictions-android-for-work).
+For more information about device restrictions, see [Android template device settings list to restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
 
 ::: zone-end
 
@@ -173,9 +173,9 @@ Intune is designed to respect user privacy while providing powerful device manag
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
 
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-locatedevice
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound

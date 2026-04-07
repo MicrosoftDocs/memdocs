@@ -81,9 +81,9 @@ To view the new passcode, select **Passwords and keys** > **View Recovery Lock P
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
 
 [GRAPH-1]: /graph/api/resources/intune-devices-manageddevice
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-RestoreManagedHomeScreen

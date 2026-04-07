@@ -961,7 +961,7 @@ For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
 
 #### Scope tag enforcement for Endpoint Privilege Management elevation requests<!-- 33479826  -->
 
-When viewing Endpoint Privilege Management [elevation requests](/intune/intune-service/protect/epm-support-approved#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
+When viewing Endpoint Privilege Management [elevation requests](../protect/epm-support-approved.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
 
@@ -1061,7 +1061,7 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
 
 - **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
 
-For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](/intune/solutions/ai/manage-ai-android).
+For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](../../solutions/ai/manage-ai-android.md).
 
 Applies to:
 
@@ -1156,7 +1156,7 @@ Microsoft Tunnel uses the Microsoft Defender client app to provide Android devic
 
 This capability is a feature of the Defender client on Android and doesn't replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
 
-For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](/intune/intune-service/protect/microsoft-tunnel-overview#capabiltities).
+For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#capabiltities).
 
 ### Tenant administration
 
@@ -1573,7 +1573,7 @@ References in Intune documentation and the Intune admin center are updated to re
 > - Windows
 
 > [!NOTE]
-> The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](/intune/configmgr/tenant-attach/resource-explorer) still retains its original name.
+> The **Resource explorer** pane that displays Configuration Manager data via [tenant attach](../../configmgr/tenant-attach/resource-explorer.md) still retains its original name.
 
 #### New features in Copilot for Microsoft Intune <!-- 32549162 -->
 
@@ -1677,7 +1677,7 @@ The new setting is **Install Windows quality updates**. These security updates, 
 
 By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles, this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates, which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
 
-For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status). For information about Windows quality updates, see [Windows quality update policy](/intune/intune-service/protect/windows-quality-update-policy).
+For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](../enrollment/windows-enrollment-status.md). For information about Windows quality updates, see [Windows quality update policy](/intune/intune-service/protect/windows-quality-update-policy).
 
 > [!div class="checklist"]
 > Applies to:
