@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/02/2026
+ms.date: 04/07/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of April 6, 2026 
+
+### Device management  
+
+#### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
+
+There is a new TeamViewer integration in Microsoft Intune that simplifies onboarding and improves reliability for remote assistance workflows. The new connector replaces the existing TeamViewer connector experience and provides a more streamlined experience in the Intune admin center. If you're using the previous TeamViewer connector, you must migrate to the new connector within 12 months to maintain functionality. For more information about the new connector, see [Use the TeamViewer integration in Microsoft Intune](team-viewer-integration.md).  
 
 ## Week of March 30, 2026 (Service release 2603)
 
@@ -230,7 +237,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 > - iOS/iPadOS
 > - macOS
 
-### Device management
+### Device management  
 
 #### Remote Help connectivity update for Windows devices<!-- 29252975 -->
 
@@ -708,7 +715,7 @@ For Android, the **Device Management Type** property for managed apps is:
   - Corporate-owned fully managed
   - Corporate-owned dedicated devices with Entra ID Shared mode
   - Corporate-owned dedicated devices without Entra ID Shared mode
-  - Personally-owned work profile
+  - Personally owned work profile
 
 - To replace the following option:
 
@@ -749,7 +756,7 @@ To learn more about filters, see:
 You can now configure the Zimperium Mobile Threat Defense (MTD) connector to synchronize certificate inventory from your managed iOS devices. This enhancement helps you identify when a device threat level is elevated due to approved but potentially malicious certificates on the device. The following settings are now available when configuring the connector:
 
 - **Enable Certificate Sync for iOS/iPadOS devices** - Allows this Mobile Threat Defense partner to request a list of installed certificates on iOS/iPadOS devices from Intune to use for threat analysis purposes.
-- **Send full certificate inventory data on personally-owned iOS/iPadOS devices** - This setting controls the certificate inventory data that Intune shares with this Mobile Threat Defense partner for personally-owned devices. Data is shared when the partner syncs certificate data and requests the certificate inventory list.
+- **Send full certificate inventory data on personally owned iOS/iPadOS devices** - This setting controls the certificate inventory data that Intune shares with this Mobile Threat Defense partner for personally owned devices. Data is shared when the partner syncs certificate data and requests the certificate inventory list.
 
 When certificate sync is enabled, the following data is shared:
 
@@ -1113,7 +1120,7 @@ For managed devices, the Device Management Type property supports the following 
 - Corporate-owned dedicated devices without Entra ID Shared mode
 - Corporate-owned with work profile
 - Corporate-owned fully managed
-- Personally-owned device with a work profile
+- Personally owned device with a work profile
 - AOSP user-associated devices
 - AOSP userless devices
 
@@ -1504,7 +1511,7 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
-For more information on multiple administrative approval, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
+For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
 #### New Private Space and USB access settings in the Android Enterprise settings catalog <!-- 30802944 24213820 -->
 

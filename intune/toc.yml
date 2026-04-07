@@ -1832,7 +1832,9 @@ items:
       href: ./intune-service/fundamentals/service-now-integration.md
     - name: Remote Help with the Intune Suite
       href: ./intune-service/fundamentals/remote-help.md
-    - name: Use TeamViewer for remote administration
+    - name: Use the TeamViewer integration 
+      href: ./intune-service/fundamentals/team-viewer-integration.md    
+    - name: TeamViewer for remote administration (old)
       href: ./intune-service/fundamentals/teamviewer-support.md
     - name: Remediations that fix common support issues
       items:
