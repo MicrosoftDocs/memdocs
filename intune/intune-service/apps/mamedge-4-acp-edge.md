@@ -497,7 +497,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 | Name | Value | Documentation |
 |------|-------|---------------|
 | com.microsoft.intune.mam<br>.managedbrowser.PasswordSSO | false | [Microsoft Entra password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
-| com.microsoft.intune.mam<br>.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/intune/intune-service/apps/manage-microsoft-edge#microsoft-defender-smartscreen) |
+| com.microsoft.intune.mam<br>.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](manage-microsoft-edge.md#microsoft-defender-smartscreen) |
 | EdgeMyApps | false | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |

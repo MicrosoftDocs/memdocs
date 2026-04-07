@@ -151,14 +151,14 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 <!-- role links -->
 
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
+[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
 
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
-[MAC-ADE]: /intune/intune-service/enrollment/device-enrollment-program-enroll-macos
+[MAC-ADE]: ../../intune-service/enrollment/device-enrollment-program-enroll-macos.md
 [APL-1]: https://support.apple.com/guide/apple-business-manager/axm812df1dd8
 [APL-2]: https://support.apple.com/HT201365
 
