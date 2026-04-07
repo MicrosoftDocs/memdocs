@@ -133,8 +133,8 @@ To learn how to change the Device name shown in the Company Portal, see [Rename 
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
 
 [CSP-1]: /windows/client-management/mdm/accounts-csp

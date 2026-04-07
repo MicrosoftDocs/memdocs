@@ -13,7 +13,7 @@ ms.collection:
 
 # Use Microsoft Intune security tasks to remediate device vulnerabilities identified by Microsoft Defender for Endpoint
 
-When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-integrate#connect-microsoft-defender-for-endpoint-to-intune), you can leverage Microsoft Defender Vulnerability Management through Intune security tasks. These tasks help Intune admins understand and address current vulnerabilities based on guidance from Defender for Endpoint. This integration enhances the discovery and prioritization of vulnerabilities, improving remediation response times across your environment.
+When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune), you can leverage Microsoft Defender Vulnerability Management through Intune security tasks. These tasks help Intune admins understand and address current vulnerabilities based on guidance from Defender for Endpoint. This integration enhances the discovery and prioritization of vulnerabilities, improving remediation response times across your environment.
 
 [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) is part of [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
 
@@ -26,8 +26,8 @@ When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](/intu
 
 Intune configurations for Defender for Endpoint:
 
-- Configure a service-to-service connection with Microsoft Defender for Endpoint, and enable the **Microsoft Intune connection** in the Microsoft Defender portal. This connection allows security admins to create Intune security tasks when submitting remediation requests. For setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](/intune/intune-service/protect/microsoft-defender-integrate#connect-microsoft-defender-for-endpoint-to-intune).
-- Deploy policies to onboard devices to Microsoft Defender for Endpoint and enable risk assessment. See [Configure Microsoft Defender for Endpoint with Intune](/intune/intune-service/protect/microsoft-defender-integrate).
+- Configure a service-to-service connection with Microsoft Defender for Endpoint, and enable the **Microsoft Intune connection** in the Microsoft Defender portal. This connection allows security admins to create Intune security tasks when submitting remediation requests. For setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune).
+- Deploy policies to onboard devices to Microsoft Defender for Endpoint and enable risk assessment. See [Configure Microsoft Defender for Endpoint with Intune](microsoft-defender-integrate.md).
 
 ## How integration works
 

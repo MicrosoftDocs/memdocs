@@ -89,8 +89,8 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 > To **enable**, **configure**, and **delete** the Device Offboarding Agent, use an account with the following roles:
 >
 > :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles, either:
-> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
-> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
+> - [Read Only Operator](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) 
+> - [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
 > :::image type="icon" source="../../media/icons/16/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
@@ -104,8 +104,8 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 > To **use** the agent and perform offboarding actions, use an account with at least the following roles:
 >
 > :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles, either:
-> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
-> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
+> - [Read Only Operator](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) 
+> - [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
 > :::image type="icon" source="../../media/icons/16/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)

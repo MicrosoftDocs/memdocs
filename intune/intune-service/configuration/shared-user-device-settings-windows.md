@@ -84,7 +84,7 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
 
   - [Shared PC technical reference - SetEDUPolicy](/windows/configuration/shared-pc/shared-pc-technical#setedupolicy)
   - [SetEduPolicies CSP](/windows/client-management/mdm/sharedpc-csp#setedupolicies)
-  - [Common Education device restrictions](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
+  - [Common Education device restrictions](../industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md)
 
 > [!TIP]
 > [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows client feature, including concepts and group policies that can be set in shared mode.

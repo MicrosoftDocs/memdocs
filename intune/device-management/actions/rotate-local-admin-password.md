@@ -91,7 +91,7 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 <!-- role links -->
 
 
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
 
 <!-- API links -->
 
@@ -99,5 +99,5 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 [CSP-1]: /windows/client-management/mdm/laps-csp
 
 [LEARN-1]: /windows-server/identity/laps/laps-overview
-[LEARN-2]: /intune/intune-service/enrollment/macos-laps
-[MAC-ADE]: /intune/intune-service/enrollment/device-enrollment-program-enroll-macos
+[LEARN-2]: ../../intune-service/enrollment/macos-laps.md
+[MAC-ADE]: ../../intune-service/enrollment/device-enrollment-program-enroll-macos.md

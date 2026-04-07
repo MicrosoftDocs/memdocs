@@ -75,12 +75,12 @@ This action is useful when the current key is lost, potentially exposed, or need
 
 <!-- role links -->
 
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
 
 <!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-rotateFileVaultKey
 
-[LEARN-1]: /intune/intune-service/protect/encrypt-devices-filevault
+[LEARN-1]: ../../intune-service/protect/encrypt-devices-filevault.md
