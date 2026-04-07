@@ -169,7 +169,7 @@ When you create the policy, the following **required** properties are automatica
 
   For Intune collected data, you see a **Device Inventory** tab. For Configuration Manager collected data, you see a **Resource Explorer** tab. Use the source that best fits your use case. In the future, we recommend using the Intune-based **Device Inventory**.
 
-- The client logs are available at `C:\Program Files\Microsoft Device Inventory Agent\Logs`. The logs can also be collected using the [Remote device action: collect diagnostics](../remote-actions/collect-diagnostics.md). You can use these logs to help troubleshoot.
+- The client logs are available at `C:\Program Files\Microsoft Device Inventory Agent\Logs`. The logs can also be collected using the [Remote device action: collect diagnostics](../../device-management/actions/collect-diagnostics.md). You can use these logs to help troubleshoot.
 
 ## Related content
 

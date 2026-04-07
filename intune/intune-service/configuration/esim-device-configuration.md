@@ -182,9 +182,9 @@ When you remove the device from the Microsoft Entra group, the eSIM profile is a
 
 The eSIM profile is also removed when:
 
-- The device is [retired](../remote-actions/device-retire.md).
+- The device is [retired](../../device-management/actions/retire.md).
 - The user unenrolls the device from Intune.
-- The [reset device remote action](../remote-actions/device-wipe.md) runs on the device.
+- The [reset device remote action](../../device-management/actions/wipe.md) runs on the device.
 
 > [!NOTE]
 > Removing the profile might not stop billing. Contact your mobile operator to check the billing status for your device.

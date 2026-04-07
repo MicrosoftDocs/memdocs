@@ -98,8 +98,8 @@ For more information, see the following articles:
 When creating a cloud distribution point, the wizard now provides the option to create an **Azure Resource Manager deployment**. Azure Resource Manager is a modern platform for managing all solution resources as a single entity, called a resource group. When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.
 
 The feature documentation for the cloud distribution point is also revised and enhanced. For more information, see the following articles:
-- [Use a cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md)
-- [Install a cloud distribution point](../../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)
+- [Use a cloud distribution point](/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point)
+- [Install a cloud distribution point](/previous-versions/troubleshoot/configmgr/install-cloud-based-distribution-points-in-microsoft-azure)
 
 
 ### Pull-distribution points support cloud distribution points as source

@@ -114,7 +114,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
   For more information, go to:
 
   - [Windows app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
-  - [Introduction to app management in Configuration Manager](../../configmgr/apps/understand/introduction-to-application-management.md)
+  - [Introduction to app management in Configuration Manager](/previous-versions/troubleshoot/configmgr/introduction-to-application-management)
   - [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11)
 
 - **Configure device settings using policies**
@@ -396,7 +396,7 @@ This phase transitions new Windows endpoint provisioning to Microsoft Entra join
 
   Before resetting an existing Windows endpoint, be sure to:
 
-  1. [Delete the device in Intune](../../intune-service/remote-actions/device-delete.md).
+  1. [Delete the device in Intune](../../device-management/actions/delete.md).
   2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
   3. [Delete the existing Microsoft Entra device object](/entra/identity/devices/manage-stale-devices).
 

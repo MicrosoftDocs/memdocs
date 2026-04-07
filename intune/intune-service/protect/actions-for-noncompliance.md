@@ -57,7 +57,7 @@ Following are the available actions for noncompliance:
   >
   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification. Compliance notification emails are expected to be sent within 6 hours after a device is marked as non-compliant.
 
-- **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
+- **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../../device-management/actions/remote-lock.md) feature.
 
   The following platforms support this action:
   - Android device administrator
@@ -92,7 +92,7 @@ Following are the available actions for noncompliance:
 
   Other options include *Retire all devices*, *Clear all devices retire state*, and *Clear selected devices retire state*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Add device to retire list* is applied to that device again.
 
-  Learn more about [retiring devices](../remote-actions/device-retire.md).
+  Learn more about [retiring devices](../../device-management/actions/retire.md).
 
 - **Send push notification to end user**: Configure this action to send a push notification about noncompliance to a device through the Company Portal app or Intune App on the device.
 

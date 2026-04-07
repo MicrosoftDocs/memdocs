@@ -91,7 +91,7 @@ If you onboarded to Microsoft Intune with a Gmail account, you can optionally up
 You can disconnect the link between Microsoft Intune and Google in the admin center. Disconnecting the account disables Android Enterprise device management for your tenant.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune Administrator account.
-1. [Retire](../remote-actions/device-retire.md) all of the following devices:
+1. [Retire](../../device-management/actions/retire.md) all of the following devices:
     - Android Enterprise personally owned work profile devices
     - Android Enterprise corporate-owned work profile devices
     - Android Enterprise fully managed

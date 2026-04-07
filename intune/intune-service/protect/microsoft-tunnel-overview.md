@@ -50,7 +50,7 @@ Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. 
 
   When a device is identified as rooted, the client immediately marks the device's risk category as *High*, drops active Tunnel connections, and continues to block access until the device is determined to be compliant. The device user receives a notification about this status from the Defender client.
 
-  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](/intune/intune-service/protect/android-personally-owned-security-configurations#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](/intune/intune-service/protect/android-fully-managed-security-configurations#fully-managed-basic-security-level-1) devices.
+  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](android-personally-owned-security-configurations.md#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](android-fully-managed-security-configurations.md#fully-managed-basic-security-level-1) devices.
 
 ### Setup Overview
 

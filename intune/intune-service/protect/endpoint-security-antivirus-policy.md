@@ -112,7 +112,7 @@ Prerequisites to support managing tamper protection with these profiles:
 
 ## Antivirus profiles
 
-Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](endpoint-security-policy.md).
 
 ### Devices managed by Microsoft Intune
 
