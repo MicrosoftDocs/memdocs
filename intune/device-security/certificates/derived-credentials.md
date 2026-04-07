@@ -1,11 +1,8 @@
 ---
 title: Use derived credentials for mobile devices with Microsoft Intune
 description: Use a third-party partners derived credential as an authentication method for Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 07/19/2024
 ms.topic: how-to
-ms.reviewer: lacranda
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -83,8 +80,8 @@ For important details about using the different issuers, review guidance for tha
 > [!div class="checklist"]
 > Plan to deploy the relevant user-facing app to devices that enroll for a derived credential. Device users use the app to start the credential enrollment process.
 >
-> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
-> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../../intune-service/apps/store-apps-ios.md).
+> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../../intune-service/apps/store-apps-android.md).
 
 ## Plan for derived credentials
 
@@ -122,7 +119,7 @@ The following are key considerations for each supported partner. Become familiar
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-disa-purebred)
-- [Android Enterprise](../user-help/enroll-android-device-disa-purebred.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+- [Android Enterprise](../../intune-service/user-help/enroll-android-device-disa-purebred.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -148,7 +145,7 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-entrust-datacard)
-- [Android Enterprise](../user-help/enroll-android-device-entrust-datacard.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
+- [Android Enterprise](../../intune-service/user-help/enroll-android-device-entrust-datacard.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -172,7 +169,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
 - [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-intercede)
-- [Android Enterprise](../user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+- [Android Enterprise](../../intune-service/user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -193,7 +190,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 ### 3 - Deploy a trusted root certificate to devices
 
-A trusted root certificate is used with derived credentials to verify that the derived credential certificate chain is valid and trusted. Even when not directly referenced by policy, a trusted root certificate is required. See [Configure a certificate profile for your devices in Microsoft Intune](certificates-configure.md).
+A trusted root certificate is used with derived credentials to verify that the derived credential certificate chain is valid and trusted. Even when not directly referenced by policy, a trusted root certificate is required. See [Configure a certificate profile for your devices in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 ### 4 - Provide end-user instructions for how to get the derived credential
 
@@ -257,12 +254,12 @@ In addition to deploying the DISA Purebred app with Intune, the device must have
 
 2. Deploy the DISA Purebred application in Intune.
 
-   - See [Add an iOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
-   - See [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md)
+   - See [Add an iOS line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-ios.md).
+   - See [Add an Android line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-android.md)
 
    Extra settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
-3. If you choose to use a per-app VPN for the DISA Purebred application, see [Create a per-app VPN](../configuration/vpn-settings-configure.md).
+3. If you choose to use a per-app VPN for the DISA Purebred application, see [Create a per-app VPN](../../intune-service/configuration/vpn-settings-configure.md).
 
 ## Use derived credentials for authentication and S/MIME signing and encryption
 
@@ -270,14 +267,14 @@ You can specify **Derived credential** for the following profile types and purpo
 
 - [Applications](#use-derived-credentials-for-app-authentication)
 - Email:
-  - [iOS and iPadOS](../configuration/email-settings-ios.md)
-  - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
+  - [iOS and iPadOS](../../intune-service/configuration/email-settings-ios.md)
+  - [Android Enterprise](../../intune-service/configuration/email-settings-android-enterprise.md)
 - VPN:
-  - [iOS and iPadOS](../configuration/vpn-settings-apple.md)
-- [S/MIME signing and encryption](certificates-s-mime-encryption-sign.md)
+  - [iOS and iPadOS](../../intune-service/configuration/vpn-settings-apple.md)
+- [S/MIME signing and encryption](./s-mime.md)
 - Wi-Fi:
-  - [iOS and iPadOS](../configuration/wi-fi-settings-apple.md)
-  - [Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md)
+  - [iOS and iPadOS](../../intune-service/configuration/wi-fi-settings-apple.md)
+  - [Android Enterprise](../../intune-service/configuration/wi-fi-settings-android-enterprise.md)
 
   For Wi-Fi profiles, *Authentication method* is available only when the **EAP type** is set to one of the following values:
   - EAP – TLS
@@ -370,4 +367,4 @@ After you delete an issuer and then add a new one, device users must request a n
 
 ## Next steps
 
-[Create device configuration profiles](../configuration/device-profile-create.md)
+[Create device configuration profiles](../../intune-service/configuration/device-profile-create.md)

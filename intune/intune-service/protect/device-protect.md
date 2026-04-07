@@ -54,7 +54,7 @@ Deploy policies to configure and enforce security on enrolled devices. The follo
 The following security areas can be managed through these policies:
 
 - **Authentication and identity**
-  - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../protect/certificates-configure.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../protect/derived-credentials.md) for smartcard scenarios.
+  - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../../fundamentals/certificates/overview.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../../device-security/certificates/derived-credentials.md) for smartcard scenarios.
   - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure [Platform SSO for macOS](../configuration/platform-sso-macos.md) to strengthen authentication across apps and services.
   - **Multi-factor authentication** - Use Microsoft Entra Conditional Access to require MFA, and use Intune to configure device PIN/password and other sign-in related settings as needed.
 

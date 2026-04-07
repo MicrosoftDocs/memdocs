@@ -20,7 +20,7 @@ ms.collection:
 > [!IMPORTANT]
 > Beginning on July 29, 2021, the **Certificate Connector for Microsoft Intune** replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Support for the previous connectors that are described in this article, ended on 9/22/2021 with the release of version 6.2109.51.0 of the Certificate Connector for Microsoft.
 >
-> If you need to install a new certificate connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune. For more information, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
+> If you need to install a new certificate connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune. For more information, see [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/overview.md).
 
 To support the use of certificates for authentication and the signing and encryption of email using S/MIME, Intune requires the use of a certificate connector. A certificate connector is software you install on an on-premises server. The connector enables cloud-managed devices to provision certificates from on-premises infrastructure, like an issuing Certificate Authority.
 
@@ -128,7 +128,7 @@ For guidance on installation of this connector, see [Configure infrastructure to
 ## Connector Lifecycle
 
 > [!IMPORTANT]
-> Beginning on July 29, 2021, the [**Certificate Connector for Microsoft Intune**](../protect/certificate-connector-overview.md) replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors.
+> Beginning on July 29, 2021, the [**Certificate Connector for Microsoft Intune**](../../fundamentals/certificates/connector/overview.md) replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors.
 
 Periodically, updated versions of certificate connectors are released. Announcements for new connector releases appear in the [What's New](../fundamentals/whats-new.md) article for Intune and in the [What's new for Connectors](#whats-new-for-connectors) section near the end of this article.
 

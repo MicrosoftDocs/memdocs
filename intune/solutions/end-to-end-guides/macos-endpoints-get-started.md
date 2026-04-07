@@ -617,7 +617,7 @@ For more information, go to [GitHub - Microsoft Shell scripts to rename Mac devi
 
 If you use certificate based authentication for a password-less experience, then you can use Intune to add and deploy certificates.
 
-For more information, go to [Types of certificate available in Microsoft Intune](../../intune-service/protect/certificates-configure.md).
+For more information, go to [Types of certificate available in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 ### Wi-Fi
 

@@ -109,13 +109,13 @@ Select the VPN connection type from the following list of vendors:
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.
 - **Authentication method**: Choose how devices authenticate to the VPN server.
-  - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) provides some guidance about certificate profiles.
+  - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../../fundamentals/certificates/overview.md) provides some guidance about certificate profiles.
   - **Username and password**: End users must enter a username and password to sign in to the VPN server.
 
     > [!NOTE]
     > If username and password are used as the authentication method for Cisco IPsec VPN, they must deliver the SharedSecret through a custom Apple Configurator profile.
 
-  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
 - **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. You can add up to 50 URLs.
 
@@ -176,7 +176,7 @@ Select the VPN connection type from the following list of vendors:
 
 - **VPN server address**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
-  - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../protect/certificates-configure.md). Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
+  - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../../fundamentals/certificates/overview.md). Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
   - **Username and password**: End users must enter a username and password to sign into the VPN server.
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:

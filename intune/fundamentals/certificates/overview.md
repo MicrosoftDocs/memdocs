@@ -1,14 +1,10 @@
 ---
 title: Types of certificate that are supported by Microsoft Intune
 description: Learn about Microsoft Intune's support for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS) certificates.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 10/04/2024
 ms.topic: article
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
-- highpri
 - certificates
 - sub-certificates
 ---
@@ -38,19 +34,19 @@ Intune supports Simple Certificate Enrollment Protocol (SCEP), Public Key Crypto
 
 To provision a user or device with a specific type of certificate, Intune uses a certificate profile.
 
-In addition to the three certificate types and provisioning methods, you need a trusted root certificate from a trusted Certification Authority (CA). The CA can be an on-premises Microsoft Certification Authority, or a [third-party Certification Authority](certificate-authority-add-scep-overview.md). The trusted root certificate establishes a trust from the device to your root or intermediate (issuing) CA from which the other certificates are issued. To deploy this certificate, you use the *trusted certificate* profile, and deploy it to the same devices and users that receive the certificate profiles for SCEP, PKCS, and imported PKCS.
+In addition to the three certificate types and provisioning methods, you need a trusted root certificate from a trusted Certification Authority (CA). The CA can be an on-premises Microsoft Certification Authority, or a [third-party Certification Authority](./third-party-ca-scep.md). The trusted root certificate establishes a trust from the device to your root or intermediate (issuing) CA from which the other certificates are issued. To deploy this certificate, you use the *trusted certificate* profile, and deploy it to the same devices and users that receive the certificate profiles for SCEP, PKCS, and imported PKCS.
 
 > [!TIP]
 >
-> Intune also supports use of [Derived credentials](derived-credentials.md) for environments that require use of smartcards.
+> Intune also supports use of [Derived credentials](../../device-security/certificates/derived-credentials.md) for environments that require use of smartcards.
 
 ### What's required to use certificates
 
 - **A Certification Authority**. Your CA is the source of trust that the certificates reference for authentication. You can use a Microsoft CA or a third-party CA.
 - **On-premises infrastructure**. The infrastructure you require depends on the certificate types you use:
-  - [SCEP](certificates-scep-configure.md)
-  - [PKCS](certificates-pfx-configure.md)
-  - [Imported PKCS](certificates-imported-pfx-configure.md)
+  - [SCEP](./scep-infrastructure.md)
+  - [PKCS](../../device-configuration/certificates/pkcs-profiles.md)
+  - [Imported PKCS](../../device-configuration/certificates/imported-pfx-profiles.md)
 - **A trusted root certificate**. Before you deploy SCEP or PKCS certificate profiles, deploy the trusted root certificate from your CA using a *trusted certificate* profile. This profile helps establish the trust from the device back to the CA and is required by the other certificate profiles.
 
 With a trusted root certificate deployed, you're ready to deploy certificate profiles to provision users and devices with certificates for authentication.
@@ -70,9 +66,9 @@ The following comparisons aren't comprehensive but intended to help distinguish 
 
 | Type              | Authentication | S/MIME Signing | S/MIME encryption  |
 |--|--|--|--|
-| Public Key Cryptography Standards (PKCS) imported certificate |  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|
-| PKCS#12 (or PFX)    | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |  |
-| Simple Certificate Enrollment Protocol (SCEP)  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | |
+| Public Key Cryptography Standards (PKCS) imported certificate |  | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png)|
+| PKCS#12 (or PFX)    | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) |  |
+| Simple Certificate Enrollment Protocol (SCEP)  | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) | |
 
 To deploy these certificates, create and assign certificate profiles to devices.
 
@@ -83,18 +79,18 @@ Each individual certificate profile you create supports a single platform. For e
 When you use a Microsoft Certification Authority (CA):
 
 - To use SCEP certificate profiles:
-  - [setup a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-  - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+  - [setup a Network Device Enrollment Service (NDES) server](./scep-infrastructure.md#set-up-ndes) for use with Intune.
+  - [Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md).
 
 - To use PKCS certificate profiles:
-  - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+  - [Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md).
 
 - To use PKCS imported certificates:
-  - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+  - [Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md).
   - Export certificates from the certification authority and then import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 - Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-trusted-root.md) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+  - [Trusted certificate profiles](../../device-configuration/certificates/trusted-root-profiles.md) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
   - SCEP certificate profiles
   - PKCS certificate profiles
   - PKCS imported certificate profiles
@@ -104,53 +100,53 @@ When you use a Microsoft Certification Authority (CA):
 When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 - SCEP certificate profiles don't require use of the Microsoft Intune Certificate Connector. Instead, the third-party CA handles the certificate issuance and management directly. To use SCEP certificate profiles without the Intune Certificate Connector:
-  - Configure integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
-  - [Create an application in Microsoft Entra ID](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
+  - Configure integration with a third-party CA from [one of our supported partners](./third-party-ca-scep.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
+  - [Create an application in Microsoft Entra ID](./third-party-ca-scep.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
 
-  For more information, see [Set up third-party CA integration](../protect/certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)
+  For more information, see [Set up third-party CA integration](./third-party-ca-scep.md#set-up-third-party-ca-integration)
 
-- PKCS imported certificates require use of the Microsoft Intune Certificate Connector. See [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
+- PKCS imported certificates require use of the Microsoft Intune Certificate Connector. See [Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md).
 
 - Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+  - [Trusted certificate profiles](../../device-configuration/certificates/trusted-root-profiles.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
   - SCEP certificate profiles
-  - PKCS certificate profiles *(only supported with the [Digicert PKI Platform](certificates-digicert-configure.md))*
+  - PKCS certificate profiles *(only supported with the [Digicert PKI Platform](./digicert-pkcs.md))*
   - PKCS imported certificate profiles
 
 ## Supported platforms and certificate profiles
 
 | Platform              | Trusted certificate profile | PKCS certificate profile | SCEP certificate profile | PKCS imported certificate profile  |
 |--|--|--|--|---|
-| Android device administrator | ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 1**)*| ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)|  ![Supported](./media/certificates-configure/green-check.png) |
-| Android Enterprise </br> - Fully Managed (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png)  |
-| Android Enterprise </br> - Dedicated (Device Owner)   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)|
-| Android Enterprise </br> - Corporate-Owned Work Profile   | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  | ![Supported](./media/certificates-configure/green-check.png)  |
-| Android Enterprise </br> - Personally-Owned Work Profile    | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
-| Android (AOSP)   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |  |
-| iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
-| macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
-| Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
-| Windows  | ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
+| Android device administrator | ![Supported](./media/overview/green-check.png) </br>*(see **Note 1**)*| ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png)|  ![Supported](./media/overview/green-check.png) |
+| Android Enterprise </br> - Fully Managed (Device Owner)   | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png)  | ![Supported](./media/overview/green-check.png) |  ![Supported](./media/overview/green-check.png)  |
+| Android Enterprise </br> - Dedicated (Device Owner)   | ![Supported](./media/overview/green-check.png)  | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png)  | ![Supported](./media/overview/green-check.png)|
+| Android Enterprise </br> - Corporate-Owned Work Profile   | ![Supported](./media/overview/green-check.png)  | ![Supported](./media/overview/green-check.png)  | ![Supported](./media/overview/green-check.png)  | ![Supported](./media/overview/green-check.png)  |
+| Android Enterprise </br> - Personally-Owned Work Profile    | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) |
+| Android (AOSP)   | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) |  |
+| iOS/iPadOS                   | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) | ![Supported](./media/overview/green-check.png) |
+| macOS                 | ![Supported](./media/overview/green-check.png) |  ![Supported](./media/overview/green-check.png) |![Supported](./media/overview/green-check.png)|![Supported](./media/overview/green-check.png)|
+| Windows 8.1 and later |![Supported](./media/overview/green-check.png)  |  |![Supported](./media/overview/green-check.png) |   |
+| Windows  | ![Supported](./media/overview/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/overview/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/overview/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/overview/green-check.png) |
 
-- ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
-- ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+- ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](../../device-configuration/certificates/trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator).
+- ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
 
-[!INCLUDE [android-device-administrator-support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android-device-administrator-support](../../intune-service/includes/android-device-administrator-support.md)]
 
 ## Related content
 
 More resources:
 
-- [Use S/MIME to sign and encrypt emails](certificates-s-mime-encryption-sign.md)
-- [Use third-party certification authority](certificate-authority-add-scep-overview.md)
+- [Use S/MIME to sign and encrypt emails](../../device-security/certificates/s-mime.md)
+- [Use third-party certification authority](./third-party-ca-scep.md)
 
 Create certificate profiles:
 
-- [Configure a trusted certificate profile](certificates-trusted-root.md)
-- [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](certificates-pfx-configure.md)
-- [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [Configure a trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md)
+- [Configure infrastructure to support SCEP certificates with Intune](./scep-infrastructure.md)
+- [Configure and manage PKCS certificates with Intune](../../device-configuration/certificates/pkcs-profiles.md)
+- [Create a PKCS imported certificate profile](../../device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile)
 
-Learn about the [Certificate Connector for Microsoft Intune](certificate-connector-install.md)
+Learn about the [Certificate Connector for Microsoft Intune](./connector/setup-connector.md)

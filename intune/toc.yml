@@ -970,29 +970,29 @@ items:
         - name: Certificates
           items:
           - name: Use certificates for authentication
-            href: ./intune-service/protect/certificates-configure.md
+            href: ./fundamentals/certificates/overview.md
           - name: Trusted certificate profiles
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: Certificate Connector
             items:
             - name: Certificate Connector
-              href: ./intune-service/protect/certificate-connector-overview.md
+              href: ./fundamentals/certificates/connector/overview.md
             - name: Connector prerequisites
-              href: ./intune-service/protect/certificate-connector-prerequisites.md
+              href: ./fundamentals/certificates/prerequisites.md
             - name: Install the connector
-              href: ./intune-service/protect/certificate-connector-install.md
+              href: ./fundamentals/certificates/connector/setup-connector.md
             - name: Troubleshoot certificate connector
               href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
 
           - name: SCEP
             items:
             - name: SCEP infrastructure
-              href: ./intune-service/protect/certificates-scep-configure.md
+              href: ./fundamentals/certificates/scep-infrastructure.md
               displayName: ksp
             - name: SCEP certificate profiles
-              href: ./intune-service/protect/certificates-profile-scep.md
+              href: ./device-configuration/certificates/scep-profiles.md
             - name: Use third-party certificate authority with SCEP
-              href: ./intune-service/protect/certificate-authority-add-scep-overview.md
+              href: ./fundamentals/certificates/third-party-ca-scep.md
             - name: Troubleshoot SCEP certificate profiles
               items:
               - name: Troubleshoot SCEP certificate profiles
@@ -1011,22 +1011,22 @@ items:
           - name: PKCS
             items:
             - name: PKCS
-              href: ./intune-service/protect/certificates-pfx-configure.md
+              href: ./device-configuration/certificates/pkcs-profiles.md
               displayName: ksp
             - name: Imported PKCS
-              href: ./intune-service/protect/certificates-imported-pfx-configure.md
+              href: ./device-configuration/certificates/imported-pfx-profiles.md
             - name: Use S/MIME to encrypt email
-              href: ./intune-service/protect/certificates-s-mime-encryption-sign.md
+              href: ./device-security/certificates/s-mime.md
               displayName: csr
             - name: Troubleshoot PKCS certificate profiles
               href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles?context=/intune/context
           - name: Use DigiCert PKI
-            href: ./intune-service/protect/certificates-digicert-configure.md
+            href: ./fundamentals/certificates/digicert-pkcs.md
             displayName: ca; pkcs; pki; ra; registration authority
           - name: Remove SCEP or PKCS certificates
-            href: ./intune-service/protect/remove-certificates.md
+            href: ./device-configuration/certificates/remove-profiles.md
         - name: Derived credentials
-          href: ./intune-service/protect/derived-credentials.md
+          href: ./device-security/certificates/derived-credentials.md
         - name: Microsoft Tunnel VPN gateway
           items:
           - name: Microsoft Tunnel overview
@@ -1075,7 +1075,7 @@ items:
       - name: Settings lists reference
         items:
         - name: API to add third-party certificate authority
-          href: ./intune-service/protect/scep-libraries-apis.md
+          href: ./fundamentals/certificates/ref-scep-api.md
         - name: Compliance policy settings
           items:
           - name: Compliance settings - Android device administrator
@@ -1158,7 +1158,7 @@ items:
           - name: Software update errors
             href: ./device-updates/windows/software-update-agent-error-codes.md
         - name: Deprecated certificate connectors
-          href: ./intune-service/protect/certificate-connectors.md
+          href: ./fundamentals/certificates/connector/overview.md
 
     - name: Configure devices
       items:
@@ -1360,15 +1360,15 @@ items:
             displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./intune-service/configuration/wi-fi-settings-android-enterprise.md
           - name: Trusted certificate
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: PKCS certificate
-            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
-            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Derived credential
-            href: ./intune-service/protect/derived-credentials.md
+            href: ./device-security/certificates/derived-credentials.md
           - name: SCEP certificate
-            href: ./intune-service/protect/certificates-profile-scep.md
+            href: ./device-configuration/certificates/scep-profiles.md
 
           - name: Android device administrator
             items:
@@ -1400,7 +1400,7 @@ items:
             href: ./intune-service/configuration/custom-settings-apple.md
           - name: Derived credentials
             displayName: apple, ios, ipados
-            href: ./intune-service/protect/derived-credentials.md
+            href: ./device-security/certificates/derived-credentials.md
           - name: Device features
             displayName: apple, ios, ipados, macos
             href: ./intune-service/configuration/device-features-apple.md
@@ -1418,19 +1418,19 @@ items:
             href: ./intune-service/configuration/kernel-extensions-settings-macos.md
           - name: PKCS certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Preference file
             displayName: apple, macos
             href: ./intune-service/configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-profile-scep.md
+            href: ./device-configuration/certificates/scep-profiles.md
           - name: Trusted certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: VPN
             displayName: apple, ios, ipados, macos
             href: ./intune-service/configuration/vpn-settings-apple.md

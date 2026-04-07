@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 10/09/2024
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -15,7 +14,7 @@ ms.collection:
 
 # Install the Certificate Connector for Microsoft Intune
 
-To support your use of certificates with Intune, you can install the Certificate Connector for Microsoft Intune on any Windows Server that meets the [connector prerequisites](../protect/certificate-connector-prerequisites.md). The following sections help you install and then configure the connector. This article also explains how to modify a previously installed connector, and how to remove the connector from a server.
+To support your use of certificates with Intune, you can install the Certificate Connector for Microsoft Intune on any Windows Server that meets the [connector prerequisites](../prerequisites.md). The following sections help you install and then configure the connector. This article also explains how to modify a previously installed connector, and how to remove the connector from a server.
 
 ## Download and install the connector software
 
@@ -25,9 +24,9 @@ To support your use of certificates with Intune, you can install the Certificate
 
 3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that's accessible from the server where you're going to install the connector.
 
-   :::image type="content" source="./media/certificate-connector-install/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
+   :::image type="content" source="./media/setup-connector/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 
-4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](../protect/certificate-connector-prerequisites.md) are installed.
+4. Sign in to the Windows Server that will host the certificate connector and confirm that the [prerequisites for the certificate connector](../prerequisites.md) are installed.
 
    To use the Simple Certificate Enrollment Protocol (SCEP) with a Microsoft Certification Authority (CA), confirm that the Network Device Enrollment Service (NDES) role is installed.
 
@@ -65,7 +64,7 @@ To configure the certificate connector, you use the **Certificate Connector for 
 
 Each time **Certificate Connector for Microsoft Intune** starts on a server you should see the following *Welcome* page:
 
-:::image type="content" source="./media/certificate-connector-install/begin-connector-configuration.png" alt-text="Welcome page of the Certificate Connector for Microsoft Intune wizard.":::
+:::image type="content" source="./media/setup-connector/begin-connector-configuration.png" alt-text="Welcome page of the Certificate Connector for Microsoft Intune wizard.":::
 
 > [!TIP]
 > When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won't see the *Microsoft Entra sign-in* page. This is because the connector has already been authenticated to your Microsoft Entra ID.
@@ -84,7 +83,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
    - **Certificate revocation**: Select this option to enable automatic certificate revocation for certificates issued from a Microsoft Active Directory Certification Authority.
 
-3. On *Service Account*, select the type of account to use for the service account of this connector. The account you select must have the permissions described in prerequisites for the [certificate connector service account](../protect/certificate-connector-prerequisites.md#certificate-connector-service-account).
+3. On *Service Account*, select the type of account to use for the service account of this connector. The account you select must have the permissions described in prerequisites for the [certificate connector service account](../prerequisites.md#certificate-connector-service-account).
 
    Options include:
 
@@ -102,15 +101,15 @@ Use the following procedure to both configure a new connector and modify a previ
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
-   :::image type="content" source="./media/certificate-connector-install/authenticate-to-azure-ad.png" alt-text="Authenticate to your Microsoft Entra ID.":::
+   :::image type="content" source="./media/setup-connector/authenticate-to-azure-ad.png" alt-text="Authenticate to your Microsoft Entra ID.":::
 
    After you successfully authenticate to your Microsoft Entra ID, select **Next** to continue:
 
-   :::image type="content" source="./media/certificate-connector-install/azure-ad-sign-in-success.png" alt-text="Successful sign in to Microsoft Entra ID.":::
+   :::image type="content" source="./media/setup-connector/azure-ad-sign-in-success.png" alt-text="Successful sign in to Microsoft Entra ID.":::
 
 7. On the *Configure* page, Intune applies your selections to the connector. If successful, the utility continues to the *Finish* page where you select **Exit** to complete configuration of the connector.
 
-   :::image type="content" source="./media/certificate-connector-install/connector-configuration-complete.png" alt-text="Successful configuration of the certificate connector.":::
+   :::image type="content" source="./media/setup-connector/connector-configuration-complete.png" alt-text="Successful configuration of the certificate connector.":::
 
    If configuration isn't successful, the wizard displays details about the errors to help you resolve the problem.
 
@@ -131,6 +130,6 @@ To uninstall the Certificate Connector for Microsoft Intune from a Windows Serve
 
 ## Related content
 
-- [SCEP certificate profiles](../protect/certificates-profile-scep.md)
-- [PKCS certificates](../protect/certificates-pfx-configure.md)
-- [Imported PKCS certificates](../protect/certificates-imported-pfx-configure.md)
+- [SCEP certificate profiles](../../../device-configuration/certificates/scep-profiles.md)
+- [PKCS certificates](../../../device-configuration/certificates/pkcs-profiles.md)
+- [Imported PKCS certificates](../../../device-configuration/certificates/imported-pfx-profiles.md)
