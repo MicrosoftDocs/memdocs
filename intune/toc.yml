@@ -621,6 +621,8 @@ items:
               href: ./intune-service/apps/apps-monitor.md
             - name: Discovered apps
               href: ./intune-service/apps/app-discovered-apps.md
+            - name: Enhanced app inventory
+              href: ./intune-service/apps/enhanced-app-inventory.md
             - name: Configure apps
               items:
               - name: App configuration policies
