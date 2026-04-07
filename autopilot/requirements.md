@@ -129,7 +129,7 @@ Once authenticated, Microsoft Entra ID triggers enrollment of the device into th
 
 For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/intune/device-management/actions/collect-diagnostics.md).
+For more information, see [Collect diagnostics from a Windows device](/intune/device-management/actions/collect-diagnostics).
 
 ##### Windows Update
 
