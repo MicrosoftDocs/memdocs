@@ -431,7 +431,7 @@ You can use DFCI profiles to manage UEFI (BIOS) settings for NEC devices that ru
 You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
 
 > [!div class="checklist"]
 > Applies to:
@@ -466,7 +466,7 @@ During an unattended Remote Help sessions on Android devices, the screen of the 
 
 This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
+For more information on Remote Help, see [Remote Help](remote-help.md).
 
 ### Device security
 
@@ -826,7 +826,7 @@ As part of the [Settings Catalog](../../device-configuration/settings-catalog/in
 - **Delay In Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
 - **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
-Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
+Learn more about configuring managed updates through DDM at [Managed software updates](/intune/intune-service/protect/updates/apple).
 
 > [!div class="checklist"]
 > Applies to:
@@ -841,7 +841,7 @@ Remote Help now provides support for multi-session AVD with several users on a s
 For more information, see:
 
 - [Remote Help](../fundamentals/remote-help.md)
-- [Remote Help on windows](../fundamentals/remote-help-windows.md)
+- [Remote Help on windows](remote-help.md)
 - [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### Copilot assistant for device query<!-- 26933762 -->
@@ -908,7 +908,7 @@ Applies to:
 
 The Intune Connector for Active Directory now uses a low privileged account, which helps increase the security of your environment. The old connector continues to work until deprecation in late May 2025.
 
-For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
 #### Managed Home Screen QR Code Authentication in public preview<!-- 25348926 -->
 
@@ -1496,7 +1496,7 @@ Some VAIO devices running Windows are enabled for DFCI. Contact your device vend
 For more information about DFCI profiles, see:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
 
 Applies to:
 
@@ -2177,7 +2177,7 @@ Applies to:
 
 For more information, see:
 
-- [Remote Help on macOS](../fundamentals/remote-help-macos.md)
+- [Remote Help on macOS](remote-help.md)
 - [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
 
 ### Device security
@@ -2679,7 +2679,7 @@ For more information, see [Configure the Microsoft Managed Home Screen app for A
 
 #### Device IPv4 and IPv6 details available from Managed Home Screen<!-- 25994445 -->
 
-IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
+IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../../device-management/actions/collect-diagnostics.md).
 
 #### Updates to Managed Home Screen sign-in support<!-- 25597636 -->
 
@@ -2802,8 +2802,8 @@ Remote Help now supports helpdesk connecting to a user's device and requesting f
 
 For more information, see:
 
-- [Remote Help on macOS](../fundamentals/remote-help-macos.md)
-- [Remote Help Web App](../fundamentals/remote-help-webapp.md)
+- [Remote Help on macOS](remote-help.md)
+- [Remote Help Web App](remote-help.md)
 
 Applies to:
 
@@ -4226,7 +4226,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](remote-help-android.md).
+For more information, see [Remote Help on Android](remote-help.md).
 
 ### Device security
 
@@ -4478,7 +4478,7 @@ Applies to:
 - 12 Monterey
 - 13 Ventura
 
-For more information on Remote Help on macOS, see [Remote Help](remote-help-macos.md).
+For more information on Remote Help on macOS, see [Remote Help](remote-help.md).
 
 #### Management certificate expiration date<!-- 17648747  -->
 
@@ -4590,7 +4590,7 @@ Applies to:
 
 - Windows
 
-For more information, see [Remote Help](remote-help-windows.md).
+For more information, see [Remote Help](remote-help.md).
 
 ## Week of September 4, 2023
 
@@ -4681,7 +4681,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](remote-help-android.md).
+For more information, see [Remote Help on Android](remote-help.md).
 
 #### Group Policy analytics is generally available<!-- 24249203  -->
 Group Policy analytics is generally available (GA). Use Group Policy analytics to analyze your on-premises group policy objects (GPOs) for their migration to Intune policy settings.
