@@ -60,7 +60,7 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 ### Direct Android line-of-business app management<!-- 25065436, 29267431 -->
 
-You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned devices.
+You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned fully managed and dedicated devices.
 
 Direct LOB app management enables you to:
 
