@@ -16,10 +16,10 @@ In the Microsoft Intune admin center, the **admin tasks** node provides a centra
 
 Admin tasks supports tasks from the following Intune capabilities:
 
-- [Device Offboarding tasks](/intune/copilot/agents/device-offboarding-agent) - Found in the admin center at *Agents > Device Offboarding Agent*.
-- [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#manage-pending-elevation-requests) – Found in the admin center at *Endpoint security > Endpoint Privilege Management*.
-- [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#work-with-security-tasks) - Found in the admin center at *Endpoint security > Security Tasks*.
-- [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#approve-requests) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
+- [Device Offboarding tasks](../../copilot/agents/device-offboarding-agent.md) - Found in the admin center at *Agents > Device Offboarding Agent*.
+- [Endpoint Privilege Management file elevation requests](../protect/epm-support-approved.md#manage-pending-elevation-requests) – Found in the admin center at *Endpoint security > Endpoint Privilege Management*.
+- [Microsoft Defender security tasks](../protect/atp-manage-vulnerabilities.md#work-with-security-tasks) - Found in the admin center at *Endpoint security > Security Tasks*.
+- [Multi Admin Approval requests](multi-admin-approval.md#approve-requests) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
 
 ## Role-based access control for Admin tasks
 
@@ -30,9 +30,9 @@ Access to tasks in the admin tasks node is based on your Intune role-based acces
 When viewing Admin tasks, you can only see and manage tasks permitted by your assigned roles within the task's original source node. For RBAC requirements and related prerequisites specific to each capability, see:
 
 - [Device Offboarding tasks](../../copilot/agents/device-offboarding-agent.md#prerequisites)
-- [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#rbac-permissions-for-elevation-requests)
-- [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#prerequisites)
-- [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#prerequisites-for-access-policies-and-approvers)
+- [Endpoint Privilege Management file elevation requests](../protect/epm-support-approved.md#rbac-permissions-for-elevation-requests)
+- [Microsoft Defender security tasks](../protect/atp-manage-vulnerabilities.md#prerequisites)
+- [Multi Admin Approval requests](multi-admin-approval.md#prerequisites-for-access-policies-and-approvers)
 
 ## Manage admin tasks in the centralized view
 
@@ -67,7 +67,7 @@ Tasks are removed from this view when they are removed from their source node.
 
 ## Related content
 
-- [Use Endpoint Privilege Management with Microsoft Intune](/intune/intune-service/protect/epm-overview)
-- [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities)
-- [Use Multi Admin Approval in Intune](/intune/intune-service/fundamentals/multi-admin-approval)
+- [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md)
+- [Microsoft Defender security tasks](../protect/atp-manage-vulnerabilities.md)
+- [Use Multi Admin Approval in Intune](multi-admin-approval.md)
 - [Device Offboarding Agent](../../copilot/agents/device-offboarding-agent.md)
