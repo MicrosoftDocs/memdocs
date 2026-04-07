@@ -29,7 +29,7 @@ Requirements for the computer where you install the connector software:
 
 - Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Microsoft Entra documentation.
 
-- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../../intune-service/fundamentals/intune-endpoints.md).
+- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md).
 
 - To support automatic updates of the connector software, the server must have access to the **Azure update service**:
   - Port: **443**
@@ -52,7 +52,7 @@ Requirements for private and public key pair (PKCS) certificate templates:
 
 To support PKCS imported certificates, the server that hosts the connector requires additional configurations, such as configuring a Key storage provider access to allow the Connector Service User to retrieve keys.
 
-For information about support for PKCS imported certificates, see [Configure and use imported PKCS certificates with Intune](../../device-configuration/certificates/imported-pfx-profiles.md).
+For information about support for PKCS imported certificates, see [Configure and use imported PKCS certificates with Intune](../../../device-configuration/certificates/imported-pfx-profiles.md).
 
 ## Revocation Prerequisites
 
@@ -63,7 +63,7 @@ For information about support for PKCS imported certificates, see [Configure and
 To support Simple Certificate Enrollment Protocol (SCEP) certificates, the Windows Server that hosts the connector must meet the following prerequisites in addition to the [general prerequisites](#general-prerequisites):
 
 - IIS 7 or higher
-- Network Device Enrollment Service (NDES) service, which is part of the Active Directory Certification Services role. The connector isn't supported on the same server as your issuing Certification Authority (CA). For more information, see [Configure infrastructure to support SCEP with Intune](./scep-infrastructure.md).
+- Network Device Enrollment Service (NDES) service, which is part of the Active Directory Certification Services role. The connector isn't supported on the same server as your issuing Certification Authority (CA). For more information, see [Configure infrastructure to support SCEP with Intune](../scep-infrastructure.md).
 
 On the Windows Server, select to add the following Server Roles and Features:
 
@@ -79,7 +79,7 @@ On the Windows Server, select to add the following Server Roles and Features:
       - HTTP Activation
 
 - **AD CS > Role Services**:
-  - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install, and configure](./scep-infrastructure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has its own requirements.
+  - Network Device Enrollment Service - For the connector SCEP when you use a Microsoft CA, [install, and configure](../scep-infrastructure.md#set-up-ndes) the **Network Device Enrollment Service** (NDES) server role. When you configure NDES, you need to assign a user account for use by the [NDES application pool](#ndes-application-pool-user). NDES also has its own requirements.
 
 - **Web Server Role (IIS) > Role Services**:
   - Security
@@ -119,14 +119,14 @@ The connector service account must have the following permissions:
 - [**Logon as Service**](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019&preserve-view=true)
 - **Issue and Manage Certificates** permissions on the Certification Authority (required only for revocation scenarios).
 - **Read** and **Enroll** permissions on any certificate template that you use to issue certificates.
-- Permissions to the **Key Storage Provider** (KSP) that's used by PFX Import. See [Import PFX Certificates to Intune](../../device-configuration/certificates/imported-pfx-profiles.md#import-pfx-certificates).
+- Permissions to the **Key Storage Provider** (KSP) that's used by PFX Import. See [Import PFX Certificates to Intune](../../../device-configuration/certificates/imported-pfx-profiles.md#import-pfx-certificates).
 
 The following options are supported for use as the certificate connector service account:
 
 - **SYSTEM**
 - **Domain user** - Use any domain user account that is an administrator on the Windows Server.
 
-For more information, see [Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md).
+For more information, see [Install the Certificate Connector for Microsoft Intune](../connector/setup-connector.md).
 
 ### NDES application pool user
 
@@ -135,7 +135,7 @@ To use SCEP with a Microsoft CA, you need to add NDES to the server that hosts t
 - **Read** and **Enroll** permissions on each SCEP certificate template you use to issue certificates.
 - Member of the **IIS_IUSRS** group.
 
-For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](./scep-infrastructure.md#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
+For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../scep-infrastructure.md#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
 
 ### Microsoft Entra user
 
@@ -143,4 +143,4 @@ When configuring the connector, use a user account that is the built-in **[Intun
 
 ## Next steps
 
-[Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md)
+[Install the Certificate Connector for Microsoft Intune](../connector/setup-connector.md)
