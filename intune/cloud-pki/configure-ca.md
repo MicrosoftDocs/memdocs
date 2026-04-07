@@ -174,7 +174,7 @@ This step requires you to:
 
 ### Create trusted certificate profile
 
- In the admin center, [create a trusted certificate profile](../intune-service/protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. Create one trusted certificate profile for the root CA certificate and one for the issuing CA.
+ In the admin center, [create a trusted certificate profile](../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. Create one trusted certificate profile for the root CA certificate and one for the issuing CA.
 
 When prompted to, enter the public keys for the root CA and issuing CA. Complete the following steps to download the public keys for your CAs.
 
@@ -211,7 +211,7 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 1. Select a CA that has an **Issuing** type.
 1. Go to **Properties**.
 1. Next to the SCEP URI property, select **Copy to clipboard**.
-1. In the admin center, [create a SCEP certificate profile](../intune-service/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
+1. In the admin center, [create a SCEP certificate profile](../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
 1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the root CA certificate that the issuing CA is anchored to in the CA hierarchy.
 
       > [!div class="mx-imgBorder"]

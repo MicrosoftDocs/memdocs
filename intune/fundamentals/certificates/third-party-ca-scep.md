@@ -1,11 +1,8 @@
 ---
 title: Use third-party certification authorities (CA) with SCEP in Microsoft Intune
 description: In Microsoft Intune, you can add a vendor or third-party certificate authority (CA) to issue certificates to mobile devices using the SCEP protocol. In this overview, a Microsoft Entra application gives Microsoft Intune permissions to validate certificates. Then, use the application ID, authentication key, and tenant ID of the Microsoft Entra application in the setup of your SCEP server to issue certificates.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 10/15/2024
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - certificates
@@ -23,7 +20,7 @@ Microsoft created an API to integrate with Intune. Through the API you can valid
 
 The API is available on the [Intune SCEP API public GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) for you to download, and use in your solutions. Use this API with third-party SCEP servers to run custom challenge validation against Intune before SCEP provisions a certificate to a device.
 
-[Integrate with Intune SCEP management solution](scep-libraries-apis.md) provides more details on using the API, its methods, and testing the solution you build.
+[Integrate with Intune SCEP management solution](./ref-scep-api.md) provides more details on using the API, its methods, and testing the solution you build.
 
 **Part 2 - Create the application and profile**
 Using a Microsoft Entra application, you can delegate rights to Intune to handle SCEP requests coming from devices. The Microsoft Entra application includes application ID and authentication key values that are used within the API solution the developer creates. Administrators then create and deploy SCEP certificates profiles using Intune and can view reports on the deployment status on the devices.
@@ -47,7 +44,7 @@ The following steps provide an overview of using SCEP for certificates in Intune
 The following diagram shows a detailed flow of third-party SCEP integration with Intune:
 
 > [!div class="mx-imgBorder"]
-> ![How third-party certification authority SCEP integrates with Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
+> ![How third-party certification authority SCEP integrates with Microsoft Intune](./media/third-party-ca-scep/scep-certificate-vendor-integration.png)
 
 ## Set up third-party CA integration
 
@@ -56,7 +53,7 @@ The following diagram shows a detailed flow of third-party SCEP integration with
 Before integrating third-party certification authorities with Intune, confirm that the CA you're using supports Intune. [Third-party CA partners](#third-party-certification-authority-partners) (in this article) includes a list. You can also check your certification authority's guidance for more information. The CA may include setup instructions specific to their implementation.
 
 > [!NOTE]
-> To support the following devices, the CA must support the use of an HTTPS URL when you configure  you must configure an HTTPS URL when you configure *SCEP Server URLs* for the [SCEP certificate profile](certificates-profile-scep.md):
+> To support the following devices, the CA must support the use of an HTTPS URL when you configure  you must configure an HTTPS URL when you configure *SCEP Server URLs* for the [SCEP certificate profile](../../device-configuration/certificates/scep-profiles.md):
 > - Android device administrator
 > - Android Enterprise device owner
 > - Android Enterprise corporate-owned work profile
@@ -110,9 +107,9 @@ Be sure you have the required permissions to register a Microsoft Entra app. See
 
 As the administrator, create a SCEP certificate profile to target to users or devices. Then, assign the profile.
 
-- [Create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile)
+- [Create a SCEP certificate profile](../../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile)
 
-- [Assign the certificate profile](certificates-profile-scep.md#assign-the-certificate-profile)
+- [Assign the certificate profile](../../device-configuration/certificates/scep-profiles.md#assign-the-certificate-profile)
 
 ## Removing certificates
 
@@ -145,15 +142,15 @@ The following third-party certification authorities support Intune:
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 
 - [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
-- [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)
+- [Intune SCEP API guidance for third party CAs](./ref-scep-api.md)
 
 ## Security and privacy information
 Some user information in the SCEP profile becomes visible to the third-party certificate authority (CA) receiving the certificate signing request. This happens when you deploy a new or updated SCEP profile that contains the `Common name (CN)` user attribute, and variables such as `UserName`, `OnPrem_Distinguished_Name`, and `OnPremisesSamAccountName`. During profile deployment, Microsoft Intune replaces these variables with actual values. The targeted devices in turn must reach out to the third-party CA to request a certificate with the actual values.
 
-For a list of supported user variables, see **Step 7** under [Create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile).
+For a list of supported user variables, see **Step 7** under [Create a SCEP certificate profile](../../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile).
 
 ## See also
 
-- [Configure certificate profiles](certificates-scep-configure.md)
+- [Configure certificate profiles](./scep-infrastructure.md)
 - [Intune SCEP API GitHub repository](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
-- [Intune SCEP API guidance for third party CAs](scep-libraries-apis.md)
+- [Intune SCEP API guidance for third party CAs](./ref-scep-api.md)

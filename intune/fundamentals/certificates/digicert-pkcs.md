@@ -1,11 +1,8 @@
 ---
 title: Issue DigiCert PKCS certificates with Microsoft Intune
 description: Install and configure the Certificate Connector for Microsoft Intune to issue PKCS certificates from DigiCert PKI Platform to Intune-managed devices.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 10/09/2024
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - certificates
@@ -25,7 +22,7 @@ If you already use the Certificate Connector for Microsoft Intune to issue certi
 - PKCS certificates from a DigiCert CA
 - Endpoint Protection certificates from a Microsoft CA
 
-If you don't have the connector installed but plan to use it for both a Microsoft CA and a DigiCert CA, complete the connector configuration for the Microsoft CA first. Then, return to this article to configure it to also support DigiCert. For more information about certificate profiles and the connector, see [Configure a certificate profile for your devices in Microsoft Intune](certificates-configure.md).
+If you don't have the connector installed but plan to use it for both a Microsoft CA and a DigiCert CA, complete the connector configuration for the Microsoft CA first. Then, return to this article to configure it to also support DigiCert. For more information about certificate profiles and the connector, see [Configure a certificate profile for your devices in Microsoft Intune](./overview.md).
 
 To use the connector with only the DigiCert CA, use the instructions in this article to install and then configure the connector.
 
@@ -36,9 +33,9 @@ The following are requirements to support use of a DigiCert CA:
 - **An active subscription at the DigiCert CA** - The subscription is required to get a registration authority (RA) certificate from the DigiCert CA.
 - **Certificate Connector for Microsoft Intune** - Later in this article there are instructions for installing and configuring the certificate connector. To help you plan for the connectors prerequisites in advance, see the following articles:
 
-  - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md)
-  - [Prerequisites](certificate-connector-prerequisites.md)
-  - [Installation and configuration](certificate-connector-install.md)
+  - Overview of the [Certificate Connector for Microsoft Intune](./connector/overview.md)
+  - [Prerequisites](./connector/prerequisites.md)
+  - [Installation and configuration](./connector/setup-connector.md)
 
 ## Install the DigiCert RA certificate
 
@@ -142,7 +139,7 @@ The following are requirements to support use of a DigiCert CA:
 
 ## Configure the certificate connector to support DigiCert
 
-1. Use the information at [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md) to first download and then install and configure the Certificate Connector for Microsoft Intune:
+1. Use the information at [Install the Certificate Connector for Microsoft Intune](./connector/setup-connector.md) to first download and then install and configure the Certificate Connector for Microsoft Intune:
 
    - During installation step **2** of the connector install procedure, select the options for **PKCS** and optionally for **Certificate revocation**.
    - After you complete the connector installation and configuration procedure, return to this procedure to continue.
@@ -179,7 +176,7 @@ The PKCS certificates you deploy for Intune managed devices must be chained with
 
    d. Select **Download root certificate** to download the trusted root certificate.
 
-2. Create a trusted certificate profile in the Microsoft Intune admin center. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
+2. Create a trusted certificate profile in the Microsoft Intune admin center. For detailed guidance, see [To create a trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../../intune-service/configuration/device-profile-assign.md).
 
    After you create the profile, it appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.
 
@@ -223,7 +220,7 @@ The certificate profile OID is associated with a certificate profile template in
    | Certificate authority name | Symantec | This value must be the string **Symantec**. <br><br> If there's any change to this value, the certificate connector doesn't issue PKCS certificates from the DigiCert CA.|
    | Certificate template name | Certificate profile OID from the DigiCert CA. For example: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| This value must be a certificate profile OID [obtained in the previous section](#get-the-certificate-profile-oid) from the DigiCert CA certificate profile template. <br><br> If the certificate connector can't find a certificate template associated with this certificate profile OID in the DigiCert CA, it doesn't issue PKCS certificates from the DigiCert CA.|
 
-   ![Selections for CA and certificate template](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)
+   ![Selections for CA and certificate template](./media/digicert-pkcs/certificates-digicert-pkcs-example.png)
 
    > [!NOTE]
    > The PKCS certificate profile for Windows platforms doesn't need to associate with a trusted certificate profile. But it is required for non-Windows platform profiles such as Android.
@@ -243,8 +240,8 @@ After you complete the previous steps, Certificate Connector for Microsoft Intun
 
 ## Troubleshooting
 
-Logs for the Certificate Connector for Microsoft Intune are available as Event logs on the server where the connector is installed. These logs provide details about the connectors operation, and can be used to identify problems with the certificate connector and operations. For more information, see [Logging](../protect/certificate-connector-overview.md#logging).
+Logs for the Certificate Connector for Microsoft Intune are available as Event logs on the server where the connector is installed. These logs provide details about the connectors operation, and can be used to identify problems with the certificate connector and operations. For more information, see [Logging](./connector/overview.md#logging).
 
 ## Related content
 
-Use the information in this article with the information in [What are Microsoft Intune device profiles?](../configuration/device-profiles.md) to manage your organization's devices and the certificates on them.
+Use the information in this article with the information in [What are Microsoft Intune device profiles?](../../intune-service/configuration/device-profiles.md) to manage your organization's devices and the certificates on them.

@@ -1,8 +1,6 @@
 ---
 title: Sign and encrypt email using S/MIME - Microsoft Intune
 description: Learn how to use email digital certificates in Microsoft Intune to sign and encrypt emails on devices. These certificates are called S/MIME and are configured using device configuration profiles. Signing and encryption certificates use PKCS, or private certificates, and use a connector to import certificates.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 07/29/2021
 ms.topic: how-to
 ms.collection:
@@ -32,15 +30,15 @@ Certificates used for signing allow the client email app to communicate securely
 
 To use signing certificates, create a template on your certificate authority (CA) that focuses on signing. On Microsoft Active Directory Certification Authority, [Configure the server certificate template](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) lists the steps to create certificate templates.
 
-Signing certificates in Intune use PKCS certificates. [Configure and use PKCS certificates](certificates-pfx-configure.md) describes how to deploy and use PKCS certificate in your Intune environment. These steps include:
+Signing certificates in Intune use PKCS certificates. [Configure and use PKCS certificates](../../device-configuration/certificates/pkcs-profiles.md) describes how to deploy and use PKCS certificate in your Intune environment. These steps include:
 
-- Install and configure the [Certificate Connector for Microsoft Intune](certificate-connector-install.md) to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Install and configure the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/setup-connector.md) to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 - Create a trusted root certificate profile for your devices. This step includes using trusted root and intermediate certificates for your certification authority, and then deploying the profile to devices.
 - Create a PKCS certificate profile using the certificate template you created. This profile issues signing certificates to devices, and deploys the PKCS certificate profile to devices.
 
-You can also import a signing certificate for a specific user. The signing certificate is deployed across any device that a user enrolls. To import certificates into Intune, use the [PowerShell cmdlets in GitHub](https://github.com/Microsoft/Intune-Resource-Access). To deploy a PKCS certificate imported in  Intune to be used for email signing, follow the steps in [Configure and use PKCS certificates with Intune](certificates-pfx-configure.md). These steps include:
+You can also import a signing certificate for a specific user. The signing certificate is deployed across any device that a user enrolls. To import certificates into Intune, use the [PowerShell cmdlets in GitHub](https://github.com/Microsoft/Intune-Resource-Access). To deploy a PKCS certificate imported in  Intune to be used for email signing, follow the steps in [Configure and use PKCS certificates with Intune](../../device-configuration/certificates/pkcs-profiles.md). These steps include:
 
-- Download, install, and configure the [Certificate Connector for Microsoft Intune](certificate-connector-install.md). This connector delivers imported PKCS certificates to devices.
+- Download, install, and configure the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/setup-connector.md). This connector delivers imported PKCS certificates to devices.
 - Import S/MIME email signing certificates to Intune.
 - Create a PKCS imported certificate profile. This profile delivers imported PKCS certificates to the appropriate user's devices.
 
@@ -54,9 +52,9 @@ It's recommended that email encryption certificates aren't created in Intune. Wh
 
 To deploy S/MIME certificates using Intune, you must import all of a user's encryption certificates to Intune. Intune then deploys all of those certificates to each device that a user enrolls. To import certificates into Intune, use the [PowerShell cmdlets in GitHub](https://github.com/Microsoft/Intune-Resource-Access).
 
-To deploy a PKCS certificate imported in Intune used for email encryption, follow the steps in [Configure and use PKCS certificates with Intune](certificates-pfx-configure.md). These steps include:
+To deploy a PKCS certificate imported in Intune used for email encryption, follow the steps in [Configure and use PKCS certificates with Intune](../../device-configuration/certificates/pkcs-profiles.md). These steps include:
 
-- Install and configure the [Certificate Connector for Microsoft Intune](certificate-connector-install.md). This connector delivers imported PKCS certificates to devices.
+- Install and configure the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/setup-connector.md). This connector delivers imported PKCS certificates to devices.
 - Import S/MIME email encryption certificates to Intune.
 - Create a PKCS imported certificate profile. This profile delivers imported PKCS certificates to the appropriate user's devices.
 
@@ -65,11 +63,11 @@ To deploy a PKCS certificate imported in Intune used for email encryption, follo
 
 ## S/MIME email profiles
 
-Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../configuration/email-settings-ios.md).
+Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../../intune-service/configuration/email-settings-ios.md).
 
 ## Next steps
 
-- [Use SCEP for certificates](certificates-scep-configure.md)
-- [Use PKCS certificates](certificates-pfx-configure.md)
-- [Use a partner CA](certificate-authority-add-scep-overview.md)
-- [Issue PKCS certificates from a Symantec PKI manager web service](certificates-digicert-configure.md)
+- [Use SCEP for certificates](../../fundamentals/certificates/scep-infrastructure.md)
+- [Use PKCS certificates](../../device-configuration/certificates/pkcs-profiles.md)
+- [Use a partner CA](../../fundamentals/certificates/third-party-ca-scep.md)
+- [Issue PKCS certificates from a Symantec PKI manager web service](../../fundamentals/certificates/digicert-pkcs.md)

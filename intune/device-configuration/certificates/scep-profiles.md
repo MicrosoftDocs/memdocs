@@ -1,11 +1,8 @@
 ---
 title: Use SCEP certificate profiles with Microsoft Intune
 description: Create and assign Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 06/26/2025
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -16,24 +13,24 @@ ms.collection:
 
 # Create and assign SCEP certificate profiles in Intune
 
-After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
+After you [configure your infrastructure](../../fundamentals/certificates/scep-infrastructure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
 
-For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
+For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](./trusted-root-profiles.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
 
-Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../protect/certificates-scep-configure.md#pin-requirement-for-android-enterprise).
+Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../../fundamentals/certificates/scep-infrastructure.md#pin-requirement-for-android-enterprise).
 
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
 >
-> For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
+> For more information about this limitation, see [Trusted certificate profiles for Android device administrator](./trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator).
 
- [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+ [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Update certificate connector: Strong mapping requirements for KB5014754
 
@@ -51,12 +48,12 @@ Strong mapping is required for all certificates deployed by Microsoft Intune and
 To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP profile.
 
   > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/certificates-profile-scep/scep-configuration-settings.png)
+   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/scep-profiles/scep-configuration-settings.png)
 
 This variable must be part of the URI attribute. You can create a new SCEP profile or edit an existing one to add the URI attribute.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/certificates-profile-scep/scep-san-add.png)
+   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/scep-profiles/scep-san-add.png)
 
 After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and the resolved SID. Example formatting: `tag:microsoft.com,2022-09-14:sid:<value>` At this point, the certificate profile meets the strong mapping requirements.
 
@@ -73,7 +70,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 - Given name attribute
 - Surname attribute
 
- In terms of Microsoft Intune, these attributes are required for you when using Intune SCEP certificate profiles with third party public CA partners to issue S/MIME certificates for secure email. For a list of those CA partners, see [Third party certification authority partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners).
+ In terms of Microsoft Intune, these attributes are required for you when using Intune SCEP certificate profiles with third party public CA partners to issue S/MIME certificates for secure email. For a list of those CA partners, see [Third party certification authority partners](../../fundamentals/certificates/third-party-ca-scep.md#third-party-certification-authority-partners).
 
  Public CAs will reject certificate requests from Intune-enrolled devices that omit the given name and surname attributes from the subject name. This requirement applies to new certificates and renewals.
 
@@ -89,7 +86,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
      You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.
 
       > [!div class="mx-imgBorder"]
-        > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/certificates-profile-scep/subject-name-2506.png)
+        > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/scep-profiles/subject-name-2506.png)
 
 
   3. Test changes. Before broad deployment, create a new profile and assign a small user group.
@@ -312,7 +309,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
    - **Certificate validity period**:
 
-     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune admin center](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
+     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune admin center](../../fundamentals/certificates/scep-infrastructure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
 
      Intune supports a validity period of up to 24 months.
 
@@ -368,7 +365,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
    - **Root Certificate**:
 
-     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*.
+     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](./trusted-root-profiles.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](./trusted-root-profiles.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*.
      > [!NOTE]
      > If you have a multiple level PKI Infastructure, such as a Root Certification Authority and an Issuing Certification Authority, select the top level Trusted Root certificate profile that validates the Issuing Certification Authority.
 
@@ -413,13 +410,13 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
 9. Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
 
     Select **Next**.
 
 11. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
-    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+    For more information, see [Applicability rules](../../intune-service/configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
 12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -463,7 +460,7 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## Assign the certificate profile
 
-Assign SCEP certificate profiles the same way you [deploy device profiles](../configuration/device-profile-assign.md) for other purposes.
+Assign SCEP certificate profiles the same way you [deploy device profiles](../../intune-service/configuration/device-profile-assign.md) for other purposes.
 
 > [!IMPORTANT]
 > To use a SCEP certificate profile, a device must have also received the trusted certificate profile that provisions it with your Trusted Root CA certificate. We recommend you deploy both the trusted root certificate profile and SCEP certificate profile to the same groups.
@@ -487,6 +484,6 @@ Consider the following before you continue:
 
 ## Next steps
 
-[Assign profiles](../configuration/device-profile-assign.md)
+[Assign profiles](../../intune-service/configuration/device-profile-assign.md)
 
 [Troubleshoot deployment of SCEP certificate profiles](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)

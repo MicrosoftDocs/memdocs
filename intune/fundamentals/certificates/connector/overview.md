@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 02/23/2026
 ms.topic: how-to
-ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 - certificates
@@ -38,7 +37,7 @@ After the connector installs, you can run configuration of the connector again a
 
 Intune supports installing of multiple instances of the connector in a tenant, and each instance can support different features. If you use multiple connectors that support different features, certificate requests are always routed to a relevant connector. For example, if you install two connectors that support PKCS, and install two more that support both PKCS and SCEP, certificate tasks for PKCS can be managed by any of the four connectors, but tasks for SCEP are only directed to the two connectors that support SCEP.
 
-Each instance of the certificate connector has the same network requirements as devices that are managed by Intune. For more information, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+Each instance of the certificate connector has the same network requirements as devices that are managed by Intune. For more information, see [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md).
 
 ## Capabilities of the certificate connector
 
@@ -119,7 +118,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 1. On the Windows Server that hosts the connector, run the connector installation program to uninstall the connector.
 
-2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisites](../protect/certificate-connector-prerequisites.md) when installing a newer version of a connector.
+2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisites](prerequisites.md) when installing a newer version of a connector.
 
 ## Connector status
 
@@ -381,7 +380,7 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 New updates for the connector can take a week or more to become available for each tenant.
 
 > [!IMPORTANT]
-> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the *PFX Certificate Connector for Microsoft Intune* and  *Microsoft Intune Connector*, which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
 
 ### February 18, 2026
 
@@ -495,4 +494,4 @@ This connector is a unified connector in that it includes the capabilities of bo
 
 ## Next steps
 
-[Review prerequisites for the Certificate Connector for Microsoft Intune](../protect/certificate-connector-prerequisites.md)
+[Review prerequisites for the Certificate Connector for Microsoft Intune](prerequisites.md)

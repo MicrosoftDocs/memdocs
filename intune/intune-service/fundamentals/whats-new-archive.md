@@ -341,7 +341,7 @@ Intune supports two new attributes for subject name settings in SCEP and PKCS de
 
 Beginning July 16, if you're using a third party public certificate authority (CA) integrated with the Intune SCEP API for issuing S\MIME (encryption or signing) certificates anchored up to a public root CA, then you must use these attributes in the subject name format. After that date, a public CA won't issue or sign S\MIME certificates that omit these attributes.
 
-For more information, see [S/MIME certificate requirements for third party public CA](../protect/certificates-profile-scep.md#smime-certificate-requirements-for-third-party-public-ca).
+For more information, see [S/MIME certificate requirements for third party public CA](../../device-configuration/certificates/scep-profiles.md#smime-certificate-requirements-for-third-party-public-ca).
 
 ### Intune apps
 
@@ -1399,7 +1399,7 @@ The Key Distribution Center (KDC) requires user or device objects to be strongly
 
 To meet requirements, modify or create a SCEP certificate profile in Microsoft Intune. Then add a `URI` attribute and the `OnPremisesSecurityIdentifier` variable to the SAN. After you do that, Microsoft Intune appends a tag with the SID extension to the SAN and issues new certificates to targeted users and devices. If the user or device has a SID on premises that's synced to Microsoft Entra ID, the certificate shows the SID. If they don't have a SID, a new certificate is issued without the SID.
 
-For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](../protect/certificates-profile-scep.md).
+For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](../../device-configuration/certificates/scep-profiles.md).
 
 Applies to:
 
@@ -1426,9 +1426,9 @@ The SID update is available for user certificates across all platforms, and for 
 
 For more information, see:
 
-- [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
+- [What's new for the certificate connector](../../fundamentals/certificates/connector/overview.md#september-19-2024)
 
-- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md)
+- [Apply PFX changes to certificate](../../device-configuration/certificates/pkcs-profiles.md)
 
 ## Week of September 23, 2024 (Service release 2409)
 
@@ -1469,7 +1469,7 @@ In Intune, this deprecation impacts the following device restrictions settings, 
 
 - [Device restriction settings for Android in Microsoft Intune](../configuration/device-restrictions-android.md)
 - [View the Android device administrator compliance settings for Microsoft Intune compliance policies](../protect/compliance-policy-create-android.md)
-- [Create trusted certificate profiles in Microsoft Intune](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator)
+- [Create trusted certificate profiles in Microsoft Intune](../../device-configuration/certificates/trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator)
 
 In the Intune admin center, when you create or update a profile with these settings, the impacted settings are noted.
 
@@ -4618,10 +4618,10 @@ For more information, see [Ending support for Android device administrator on GM
 
 #### Windows and Android support for 4096-bit key size for SCEP and PFX certificate profiles<!--16314561  -->
 
-Intune [SCEP certificate profiles](../protect/certificates-profile-scep.md) and [PKCS certificate profiles](../protect/certificates-pfx-configure.md) for Windows and Android devices now support a **Key size (bits)** of **4096**. This key size is available for new profiles and existing profiles you choose to edit.
+Intune [SCEP certificate profiles](../../device-configuration/certificates/scep-profiles.md) and [PKCS certificate profiles](../../device-configuration/certificates/pkcs-profiles.md) for Windows and Android devices now support a **Key size (bits)** of **4096**. This key size is available for new profiles and existing profiles you choose to edit.
 
 - SCEP profiles have always included the *Key size (bits)* setting and now support 4096 as an available configuration option.
-- PKCS profiles don't include the *Key size (bits)* setting directly. Instead, an admin must [modify the certificate template on the Certification Authority](../protect/certificates-pfx-configure.md#configure-certificate-templates-on-the-ca) to set the *Minimum key size* to 4096.
+- PKCS profiles don't include the *Key size (bits)* setting directly. Instead, an admin must [modify the certificate template on the Certification Authority](../../device-configuration/certificates/pkcs-profiles.md#configure-certificate-templates-on-the-ca) to set the *Minimum key size* to 4096.
 
 If you use a third-party Certificate Authority (CA), you might need to contact your vendor for assistance with implementing the 4096-bit key size.
 

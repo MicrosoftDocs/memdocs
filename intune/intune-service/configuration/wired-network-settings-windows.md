@@ -76,9 +76,9 @@ This feature applies to:
       - **PKCS certificate**: Select an existing Public Key Cryptography Standards (PKCS) **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
       - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the connection.
 
-        For more information on imported PFX certificates, go to [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
+        For more information on imported PFX certificates, go to [Configure and use imported PKCS certificates with Intune](../../device-configuration/certificates/imported-pfx-profiles.md).
 
-      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
   - **EAP-TTLS**: Also enter:
 
@@ -103,11 +103,11 @@ This feature applies to:
 
       - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection.
 
-        For more information on imported PFX certificates, go to [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
+        For more information on imported PFX certificates, go to [Configure and use imported PKCS certificates with Intune](../../device-configuration/certificates/imported-pfx-profiles.md).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
-      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
   - **Protected EAP (PEAP)**: Also enter:
 
@@ -139,11 +139,11 @@ This feature applies to:
 
       - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection.
 
-        For more information on imported PFX certificates, go to [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
+        For more information on imported PFX certificates, go to [Configure and use imported PKCS certificates with Intune](../../device-configuration/certificates/imported-pfx-profiles.md).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
-      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
   - **Tunnel EAP (TEAP)**: Also enter:
 
@@ -159,7 +159,7 @@ This feature applies to:
 
       - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
 
-      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
     - **Client Authentication** - **Secondary authentication method**: Select the secondary authentication method used by your device clients for machine authentication. This authentication method is the identity certificate that the device presents to the server.
 
@@ -175,7 +175,7 @@ This feature applies to:
 
       - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
 
-      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Select an existing certificate profile that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
 ## Related articles
 

@@ -1,8 +1,6 @@
 ---
 title: Walkthrough-Create a settings catalog policy
 description: This tutorial or walkthrough steps through creating and comparing an on-premises Administrative Templates (ADMX) Group Policy and Microsoft Intune cloud-based settings catalog policy. It shows similar settings in on-premises and the Intune settings catalog to create and manage policies for Office, Windows, and Microsoft Edge on Windows 10/11 client devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 08/21/2025
 ms.topic: tutorial
 ms.reviewer: mayurjadhav

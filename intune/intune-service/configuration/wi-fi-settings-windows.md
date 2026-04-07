@@ -135,7 +135,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       - **SCEP certificate**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
       - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
-      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
   - **EAP-TTLS**: Also enter:
 
@@ -158,7 +158,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
-      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
   - **Protected EAP (PEAP)**: Also enter:
 
@@ -188,7 +188,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
-      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Use a certificate that is derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
 - **Company Proxy settings**: Select to use the proxy settings within your organization. Your options:
   - **None**: No proxy settings are configured.
