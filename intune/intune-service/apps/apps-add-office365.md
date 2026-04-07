@@ -85,13 +85,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
    - **Select other Office apps (license required)**: Select additional Microsoft 365 apps that you want to assign to devices and that you have licenses for by choosing the apps in the dropdown list. These apps include licensed apps, such as Microsoft Project Online desktop client and Microsoft Visio Online Plan 2.
    - **Architecture**: Choose whether you want to assign the **32-bit** or **64-bit** version of Microsoft 365 Apps. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
    - **Default file format**: Choose whether you want to use **Office Open Document Format** or **Office Open XML Format**.
-   - **Update Channel**: Choose how Office is updated on devices. For information about the various update channels, see [Overview of update channels for Microsoft 365 Apps for enterprise](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Choose from:
-        - **Monthly**
-        - **Monthly (Targeted)**
-        - **Semi-Annual**
-        - **Semi-Annual (Targeted)**
-
-        After you choose a channel, you can choose the following:
+   - **Update Channel**: Choose how Office is updated on devices. For information about the various update channels, see [Overview of update channels for Microsoft 365 Apps for enterprise](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
         - **Remove other versions**: Choose **Yes** to remove other versions of Office (MSI) from user devices. Choose this option when you want to remove pre-existing Office .MSI apps from end-user devices. The installation won't succeed if there are pre-existing .MSI apps on end-user devices. The apps to be uninstalled aren't limited to the apps selected for installation in **Configure App Suite**, as it will remove all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading to Microsoft 365 Apps](/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users will automatically get the same language packs that they had with previous .MSI Office installations.
         - **Version to install**: Choose the version of Office that should be installed.
         - **Specific version**: If you have chosen **Specific** as the **Version to install** in the above setting, you can select to install a specific version of Office for the selected channel on end user devices.
