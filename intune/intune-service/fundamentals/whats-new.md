@@ -64,7 +64,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 Microsoft Intune now supports management of Android XR devices using Android Enterprise dedicated and fully managed enrollment modes. You can enroll Android XR devices, deploy apps through managed Google Play, and apply core security and compliance policies. Android XR devices appear and are managed alongside other Android devices in the Intune admin center. For more information about supported scenarios and current limitations, see [Microsoft Intune announces Android Enterprise management support for Android XR](https://techcommunity.microsoft.com/blog/microsoftintuneblog/microsoft-intune-announces-android-enterprise-management-support-for-android-xr/4508499).  
 
-### Device management  
+### Tenant administration    
 
 #### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
 
