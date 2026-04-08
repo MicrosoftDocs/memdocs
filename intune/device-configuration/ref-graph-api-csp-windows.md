@@ -2991,5 +2991,5 @@ To see the Windows 10 versions the following APIs apply, use the Windows 10 [con
 
 ## Next steps
 
-- [Device configuration overview](../configuration/device-profiles.md)
+- [Device configuration overview](../intune-service/configuration/device-profiles.md)
 - [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site)
