@@ -1,6 +1,231 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/developer/apps-lob-app-versioning.md",
+      "redirect_url": "/intune/app-management/deployment/lob-app-versioning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/graph-apis-used-by-intune-device-configuration-windows.md",
+      "redirect_url": "/intune/device-configuration/ref-graph-api-csp-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk.md",
+      "redirect_url": "/intune/developer/app-sdk/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-get-started.md",
+      "redirect_url": "/intune/developer/app-sdk/quickstart-integration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase1.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase2.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase3.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase4.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase5.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase6.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-6",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-phase7.md",
+      "redirect_url": "/intune/developer/app-sdk/android-phase-7",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-android-appendix.md",
+      "redirect_url": "/intune/developer/app-sdk/android-appendix",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase1.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase2.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase3.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase4.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase5.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase6.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-6",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-phase7.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-phase-7",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-sdk-ios-appendix.md",
+      "redirect_url": "/intune/developer/app-sdk/ios-appendix",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/apps-prepare-mobile-application-management.md",
+      "redirect_url": "/intune/developer/app-sdk/integration-methods",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-wrapper-prepare-android.md",
+      "redirect_url": "/intune/developer/app-sdk/configure-wrapping-android",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/app-wrapper-prepare-ios.md",
+      "redirect_url": "/intune/developer/app-sdk/configure-wrapping-ios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/tunnel-mam-ios-sdk.md",
+      "redirect_url": "/intune/developer/app-sdk/tunnel-mam-ios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-nav-intune-data-warehouse.md",
+      "redirect_url": "/intune/developer/data-warehouse/index",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-nav-create-intune-reports.md",
+      "redirect_url": "/intune/developer/data-warehouse/create-reports",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-api-url.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-api-endpoints",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-changelog.md",
+      "redirect_url": "/intune/developer/data-warehouse/changelog",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-proc-data-rest.md",
+      "redirect_url": "/intune/developer/data-warehouse/setup-rest-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-proc-create-with-odata.md",
+      "redirect_url": "/intune/developer/data-warehouse/create-report-odata",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-proc-get-a-link-powerbi.md",
+      "redirect_url": "/intune/developer/data-warehouse/connect-power-bi",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/data-warehouse-account-move.md",
+      "redirect_url": "/intune/developer/data-warehouse/move-account-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/data-warehouse-app-only-auth.md",
+      "redirect_url": "/intune/developer/data-warehouse/configure-app-only-auth",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/intune-data-warehouse-collections.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-collections",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-data-model.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-data-model",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-application.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-date.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-date",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-devices.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-intunemanagementextension.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-intune-management-extension",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-mobile-app-management.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-mobile-app-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-policy.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-user.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-user",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-user-device.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-user-device",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/reports-ref-user-timeline.md",
+      "redirect_url": "/intune/developer/data-warehouse/ref-user-timeline",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/developer/intune-graph-apis.md",
+      "redirect_url": "/intune/developer/configure-graph-api-access",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "intune/intune-service/enrollment/enrollment-report-company-portal-abandon.md",
       "redirect_url": "/intune/intune-service/enrollment/view-enrollment-reports",
       "redirect_document_id": false

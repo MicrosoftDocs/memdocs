@@ -385,7 +385,7 @@ This list provides an overview of the tasks required of administrators.
 
     - Account driven user enrollment creates a work partition on the devices. The features and security you configure in the user enrollment profile only exist in the work partition. They don't exist in the user partition. Users can't factory reset the work partition; administrators can. Users can factory reset the personal partition; administrators can't.
 
-    - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../developer/app-sdk.md), then users should download these apps from the Apple App Store. Then, use app protection policies to protect these apps. In this scenario, you don't need account driven user enrollment.
+    - If users primarily use Microsoft apps, or use apps created with the [Intune App SDK](../../developer/app-sdk/index.md), then users should download these apps from the Apple App Store. Then, use app protection policies to protect these apps. In this scenario, you don't need account driven user enrollment.
 
     - For line of business (LOB) apps, account driven user enrollment might be an option, as it deploys these apps to the work partition. Application management (MAM) doesn't support LOB apps. So if you need LOB apps, then use account driven user enrollment.
 
