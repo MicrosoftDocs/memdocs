@@ -827,6 +827,8 @@ items:
             href: ./intune-service/protect/microsoft-defender-with-intune.md
           - name: Configure Defender for Endpoint
             href: ./intune-service/protect/microsoft-defender-integrate.md
+          - name: Deploy Defender for Endpoint on Android
+            href: ./intune-service/protect/microsoft-defender-deploy-android.md
           - name: Android web protection
             href: ./intune-service/protect/microsoft-defender-configure-android.md
           - name: Monitor Defender for Endpoint
@@ -970,65 +972,7 @@ items:
         - name: Microsoft Cloud PKI
           href: ./cloud-pki/toc.yml
         - name: Certificates
-          items:
-          - name: Use certificates for authentication
-            href: ./intune-service/protect/certificates-configure.md
-          - name: Trusted certificate profiles
-            href: ./intune-service/protect/certificates-trusted-root.md
-          - name: Certificate Connector
-            items:
-            - name: Certificate Connector
-              href: ./intune-service/protect/certificate-connector-overview.md
-            - name: Connector prerequisites
-              href: ./intune-service/protect/certificate-connector-prerequisites.md
-            - name: Install the connector
-              href: ./intune-service/protect/certificate-connector-install.md
-            - name: Troubleshoot certificate connector
-              href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
-
-          - name: SCEP
-            items:
-            - name: SCEP infrastructure
-              href: ./intune-service/protect/certificates-scep-configure.md
-              displayName: ksp
-            - name: SCEP certificate profiles
-              href: ./intune-service/protect/certificates-profile-scep.md
-            - name: Use third-party certificate authority with SCEP
-              href: ./intune-service/protect/certificate-authority-add-scep-overview.md
-            - name: Troubleshoot SCEP certificate profiles
-              items:
-              - name: Troubleshoot SCEP certificate profiles
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles?context=/intune/context
-              - name: Profile deployment to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment?context=/intune/context
-              - name: Device to NDES communication
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes?context=/intune/context
-              - name: NDES operations
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module?context=/intune/context
-              - name: Certificate delivery to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery?context=/intune/context
-              - name: Reporting for certificate deployment
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting?context=/intune/context
-
-          - name: PKCS
-            items:
-            - name: PKCS
-              href: ./intune-service/protect/certificates-pfx-configure.md
-              displayName: ksp
-            - name: Imported PKCS
-              href: ./intune-service/protect/certificates-imported-pfx-configure.md
-            - name: Use S/MIME to encrypt email
-              href: ./intune-service/protect/certificates-s-mime-encryption-sign.md
-              displayName: csr
-            - name: Troubleshoot PKCS certificate profiles
-              href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles?context=/intune/context
-          - name: Use DigiCert PKI
-            href: ./intune-service/protect/certificates-digicert-configure.md
-            displayName: ca; pkcs; pki; ra; registration authority
-          - name: Remove SCEP or PKCS certificates
-            href: ./intune-service/protect/remove-certificates.md
-        - name: Derived credentials
-          href: ./intune-service/protect/derived-credentials.md
+          href: ./fundamentals/certificates/toc.yml
         - name: Microsoft Tunnel VPN gateway
           items:
           - name: Microsoft Tunnel overview
@@ -1077,7 +1021,7 @@ items:
       - name: Settings lists reference
         items:
         - name: API to add third-party certificate authority
-          href: ./intune-service/protect/scep-libraries-apis.md
+          href: ./fundamentals/certificates/ref-scep-api.md
         - name: Compliance policy settings
           items:
           - name: Compliance settings - Android device administrator
@@ -1159,8 +1103,6 @@ items:
           items:
           - name: Software update errors
             href: ./device-updates/windows/software-update-agent-error-codes.md
-        - name: Deprecated certificate connectors
-          href: ./intune-service/protect/certificate-connectors.md
 
     - name: Configure devices
       items:
@@ -1362,15 +1304,15 @@ items:
             displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./intune-service/configuration/wi-fi-settings-android-enterprise.md
           - name: Trusted certificate
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: PKCS certificate
-            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
-            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Derived credential
-            href: ./intune-service/protect/derived-credentials.md
+            href: ./device-security/certificates/derived-credentials.md
           - name: SCEP certificate
-            href: ./intune-service/protect/certificates-profile-scep.md
+            href: ./device-configuration/certificates/scep-profiles.md
 
           - name: Android device administrator
             items:
@@ -1402,7 +1344,7 @@ items:
             href: ./intune-service/configuration/custom-settings-apple.md
           - name: Derived credentials
             displayName: apple, ios, ipados
-            href: ./intune-service/protect/derived-credentials.md
+            href: ./device-security/certificates/derived-credentials.md
           - name: Device features
             displayName: apple, ios, ipados, macos
             href: ./intune-service/configuration/device-features-apple.md
@@ -1420,19 +1362,19 @@ items:
             href: ./intune-service/configuration/kernel-extensions-settings-macos.md
           - name: PKCS certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Preference file
             displayName: apple, macos
             href: ./intune-service/configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-profile-scep.md
+            href: ./device-configuration/certificates/scep-profiles.md
           - name: Trusted certificate
             displayName: apple, ios, ipados, macos
-            href: ./intune-service/protect/certificates-trusted-root.md
+            href: ./device-configuration/certificates/trusted-root-profiles.md
           - name: VPN
             displayName: apple, ios, ipados, macos
             href: ./intune-service/configuration/vpn-settings-apple.md
@@ -1804,7 +1746,7 @@ items:
         - name: Intune reports and properties using Graph
           href: ./intune-service/fundamentals/reports-export-graph-available-reports.md
         - name: Use the Intune Data Warehouse
-          href: ./intune-service/developer/reports-nav-create-intune-reports.md
+          href: ./developer/data-warehouse/create-reports.md
       - name: Monitor
         items:
         - name: Audit logs for Intune activities
@@ -2171,116 +2113,116 @@ items:
     - name: Access Intune APIs in Microsoft Graph
       items:
       - name: Use Microsoft Entra ID to access Intune APIs in Microsoft Graph
-        href: ./intune-service/developer/intune-graph-apis.md
+        href: ./developer/configure-graph-api-access.md
       - name: Intune API reference
         href: /graph/api/resources/intune-graph-overview
       - name: Graph APIs used to configure devices
-        href: ./intune-service/developer/graph-apis-used-by-intune-device-configuration-windows.md
+        href: ./device-configuration/ref-graph-api-csp-windows.md
     - name: Use PowerShell cmdlets to automate actions
       href: https://github.com/Microsoft/Intune-PowerShell-SDK/
     - name: Protect apps with Intune App SDK
-      href: ./intune-service/developer/app-sdk.md
+      href: ./developer/app-sdk/index.md
       items:
       - name: Get started with Intune App SDK
-        href: ./intune-service/developer/app-sdk-get-started.md
+        href: ./developer/app-sdk/quickstart-integration.md
       - name: Prepare LOB apps for app protection
-        href: ./intune-service/developer/apps-prepare-mobile-application-management.md
+        href: ./developer/app-sdk/integration-methods.md
       - name: LOB app versioning
-        href: ./intune-service/developer/apps-lob-app-versioning.md
+        href: ./app-management/deployment/lob-app-versioning.md
       - name: App Wrapping Tool for iOS
-        href: ./intune-service/developer/app-wrapper-prepare-ios.md
+        href: ./developer/app-sdk/configure-wrapping-ios.md
       - name: Intune App SDK for iOS
         items:
         - name: Plan the integration
-          href: ./intune-service/developer/app-sdk-ios-phase1.md
+          href: ./developer/app-sdk/ios-phase-1.md
         - name: MSAL prerequisite and setup
-          href: ./intune-service/developer/app-sdk-ios-phase2.md
+          href: ./developer/app-sdk/ios-phase-2.md
         - name: Intune SDK integration into your iOS app
-          href: ./intune-service/developer/app-sdk-ios-phase3.md
+          href: ./developer/app-sdk/ios-phase-3.md
         - name: App participation features
-          href: ./intune-service/developer/app-sdk-ios-phase4.md
+          href: ./developer/app-sdk/ios-phase-4.md
         - name: Multi-Identity
-          href: ./intune-service/developer/app-sdk-ios-phase5.md
+          href: ./developer/app-sdk/ios-phase-5.md
         - name: App Protection Conditional Access support
-          href: ./intune-service/developer/app-sdk-ios-phase6.md
+          href: ./developer/app-sdk/ios-phase-6.md
         - name: Web-view features
-          href: ./intune-service/developer/app-sdk-ios-phase7.md
+          href: ./developer/app-sdk/ios-phase-7.md
         - name: Appendix
-          href: ./intune-service/developer/app-sdk-ios-appendix.md
+          href: ./developer/app-sdk/ios-appendix.md
       - name: App Wrapping Tool for Android
-        href: ./intune-service/developer/app-wrapper-prepare-android.md
+        href: ./developer/app-sdk/configure-wrapping-android.md
         displayName: dex
       - name: Intune App SDK for Android
         items:
         - name: Plan the Integration
-          href: ./intune-service/developer/app-sdk-android-phase1.md
+          href: ./developer/app-sdk/android-phase-1.md
         - name: Understand the MSAL Prerequisite
-          href: ./intune-service/developer/app-sdk-android-phase2.md
+          href: ./developer/app-sdk/android-phase-2.md
         - name: Get Started with MAM
-          href: ./intune-service/developer/app-sdk-android-phase3.md
+          href: ./developer/app-sdk/android-phase-3.md
         - name: MAM Integration Essentials
-          href: ./intune-service/developer/app-sdk-android-phase4.md
+          href: ./developer/app-sdk/android-phase-4.md
         - name: Multi-Identity
-          href: ./intune-service/developer/app-sdk-android-phase5.md
+          href: ./developer/app-sdk/android-phase-5.md
         - name: App Configuration
-          href: ./intune-service/developer/app-sdk-android-phase6.md
+          href: ./developer/app-sdk/android-phase-6.md
         - name: App Participation Features
-          href: ./intune-service/developer/app-sdk-android-phase7.md
+          href: ./developer/app-sdk/android-phase-7.md
         - name: Appendix
-          href: ./intune-service/developer/app-sdk-android-appendix.md
+          href: ./developer/app-sdk/android-appendix.md
       - name: Intune App SDK Xamarin Bindings
-        href: ./intune-service/developer/app-sdk-get-started.md
+        href: ./developer/app-sdk/quickstart-integration.md
       - name: Microsoft Tunnel for MAM SDK
         items:
         - name: Microsoft Tunnel for MAM iOS SDK
-          href: ./intune-service/developer/tunnel-mam-ios-sdk.md
+          href: ./developer/app-sdk/tunnel-mam-ios.md
         - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
-          href: ./intune-service/developer/app-sdk-get-started.md
+          href: ./developer/app-sdk/quickstart-integration.md
     - name: Use the Intune Data Warehouse
-      href: ./intune-service/developer/reports-nav-create-intune-reports.md
+      href: ./developer/data-warehouse/create-reports.md
       items:
       - name: Change log for the Data Warehouse
-        href: ./intune-service/developer/reports-changelog.md
+        href: ./developer/data-warehouse/changelog.md
       - name: Connect to the Data Warehouse with Power BI
-        href: ./intune-service/developer/reports-proc-get-a-link-powerbi.md
+        href: ./developer/data-warehouse/connect-power-bi.md
       - name: Create a report from the OData feed with Power BI
-        href: ./intune-service/developer/reports-proc-create-with-odata.md
+        href: ./developer/data-warehouse/create-report-odata.md
     - name: Report using Intune Data Warehouse API
-      href: ./intune-service/developer/reports-nav-intune-data-warehouse.md
+      href: ./developer/data-warehouse/index.md
       items:
       - name: Get data from the Data Warehouse API with a REST client
-        href: ./intune-service/developer/reports-proc-data-rest.md
+        href: ./developer/data-warehouse/setup-rest-client.md
       - name: Data Warehouse API endpoint
-        href: ./intune-service/developer/reports-api-url.md
+        href: ./developer/data-warehouse/ref-api-endpoints.md
       - name: Data Warehouse application-only authentication
-        href: ./intune-service/developer/data-warehouse-app-only-auth.md
+        href: ./developer/data-warehouse/configure-app-only-auth.md
       - name: Data Warehouse data model
-        href: ./intune-service/developer/reports-ref-data-model.md
+        href: ./developer/data-warehouse/ref-data-model.md
         items:
         - name: Data Warehouse collections
-          href: ./intune-service/developer/intune-data-warehouse-collections.md
+          href: ./developer/data-warehouse/ref-collections.md
         - name: Data Warehouse collections (beta)
           items:
           - name: User lifetime representation in the Intune Data Warehouse
-            href: ./intune-service/developer/reports-ref-user-timeline.md
+            href: ./developer/data-warehouse/ref-user-timeline.md
           - name: Reference for application entities
-            href: ./intune-service/developer/reports-ref-application.md
+            href: ./developer/data-warehouse/ref-application.md
           - name: Reference for date entity
-            href: ./intune-service/developer/reports-ref-date.md
+            href: ./developer/data-warehouse/ref-date.md
           - name: Reference for devices entities
-            href: ./intune-service/developer/reports-ref-devices.md
+            href: ./developer/data-warehouse/ref-devices.md
           - name: Reference for Intune management extension entity
-            href: ./intune-service/developer/reports-ref-intunemanagementextension.md
+            href: ./developer/data-warehouse/ref-intune-management-extension.md
           - name: Reference for mobile app management (MAM) entities
-            href: ./intune-service/developer/reports-ref-mobile-app-management.md
+            href: ./developer/data-warehouse/ref-mobile-app-management.md
           - name: Reference for policy entities
-            href: ./intune-service/developer/reports-ref-policy.md
+            href: ./developer/data-warehouse/ref-policy.md
           - name: Reference for user device association entity
-            href: ./intune-service/developer/reports-ref-user-device.md
+            href: ./developer/data-warehouse/ref-user-device.md
           - name: Reference for user entity
-            href: ./intune-service/developer/reports-ref-user.md
+            href: ./developer/data-warehouse/ref-user.md
       - name: Move your Intune Data Warehouse account data
-        href: ./intune-service/developer/data-warehouse-account-move.md
+        href: ./developer/data-warehouse/move-account-data.md
 
   - name: Privacy and compliance
     href: /intune/privacy-compliance

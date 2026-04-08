@@ -83,11 +83,11 @@ The following settings are shown depending on the connection type you select. No
 
   - **Certificates**: Select an existing user client certificate profile to authenticate the user. This option provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
 
-    To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
+    To create certificate profiles in Intune, see [Use certificates for authentication](../../fundamentals/certificates/overview.md).
 
   - **Username and password**: Require users to enter their domain username and password to authenticate, such as `user@contoso.com`, or `contoso\user`.
 
-  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../../device-security/certificates/derived-credentials.md).
 
     > [!NOTE]
     > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
@@ -100,7 +100,7 @@ The following settings are shown depending on the connection type you select. No
 
     If you use [device tunnel connections](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), you must select **Machine certificates**.
 
-    To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
+    To create certificate profiles in Intune, see [Use certificates for authentication](../../fundamentals/certificates/overview.md).
 
 - **Remember credentials at each logon**: **Enable** caches the authentication credentials. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not cache the authentication credentials.
 - **Custom XML**: Enter any custom XML commands that configure the VPN connection.

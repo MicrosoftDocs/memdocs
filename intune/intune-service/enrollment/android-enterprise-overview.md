@@ -115,7 +115,7 @@ Enhanced certificate management:
 
 - Informs device users that the certificate was deployed and configured by their IT support person via Microsoft Intune.
 
-For more information, see [Configure a certificate profile for your devices in Microsoft Intune](../protect/certificates-configure.md).
+For more information, see [Configure a certificate profile for your devices in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 ## Wi-Fi profiles
 

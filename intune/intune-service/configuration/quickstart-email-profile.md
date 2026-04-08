@@ -71,7 +71,7 @@ The profile includes the required settings that allow a device to connect to you
    - **Account name**: Enter **Company Email**.
    - **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username for this profile using this name. For this evaluation step, use the **User Principal Name** as the username for the profile, like `user1@contoso.com`.
    - **Email address attribute from Microsoft Entra ID**: This setting is the email address from Microsoft Entra ID that signs in to Exchange. For this evaluation step, select **User Principal Name**.
-   - **Authentication method**: For this evaluation step, select **Username and password**. If you set up [authentication certificates in Intune](../protect/certificates-configure.md), then you can choose **Certificate**.
+   - **Authentication method**: For this evaluation step, select **Username and password**. If you set up [authentication certificates in Intune](../../fundamentals/certificates/overview.md), then you can choose **Certificate**.
 
 8. Select **Next**.
 

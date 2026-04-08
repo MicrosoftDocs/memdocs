@@ -101,9 +101,9 @@ Some considerations:
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 
-  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, like connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
+  - Use [certificates](../../fundamentals/certificates/overview.md) on devices to authenticate features and apps, like connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
 
-    If you're planning to use certificates, use a supported [public key infrastructure (PKI) infrastructure](../protect/certificates-configure.md) to create and deploy certificate profiles.
+    If you're planning to use certificates, use a supported [public key infrastructure (PKI) infrastructure](../../fundamentals/certificates/overview.md) to create and deploy certificate profiles.
 
   - Use [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) for an extra layer of authentication on organization-owned devices. Or, use MFA to authenticate apps on personal devices. Biometrics, like face recognition and fingerprints, can also be used.
 

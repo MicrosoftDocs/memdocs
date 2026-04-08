@@ -239,7 +239,7 @@ For information about how to complete these tasks, which are required to proceed
 
 An Intune trusted certificate profile must be created for each CA certificate in the private CA hierarchy if you use a Cloud PKI BYOCA issuing CA that's anchored to a private CA. This step is a requirement for every platform (Windows, Android, iOS/iPad, macOS) that's issuing Cloud PKI SCEP certificates. It's necessary to establish trust with the Cloud PKI certificate registration authority supporting the SCEP protocol.
 
-For more information about how to create the profile, see [Trusted certificate profiles](../intune-service/protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile).
+For more information about how to create the profile, see [Trusted certificate profiles](../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile).
 
 ### Export certificates
 
@@ -284,7 +284,7 @@ Create a trusted certificate profile with the exported intermediate or issuing C
 
 1. Select **Download**. Wait while the public key for the issuing CA downloads.
 
-1. In the admin center, [create a trusted certificate profile](../intune-service/protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. When prompted to, enter the public key you downloaded.
+1. In the admin center, [create a trusted certificate profile](../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. When prompted to, enter the public key you downloaded.
 
 The issuing CA certificate you downloaded for Cloud PKI BYOCA must be installed on all relying parties.
 
@@ -308,7 +308,7 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
 
 1. Copy the **SCEP URI** to your clipboard.
 
-1. In the admin center, [create a SCEP certificate profile](../intune-service/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
+1. In the admin center, [create a SCEP certificate profile](../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
 
 1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the root CA certificate that the issuing CA is anchored to in the CA hierarchy.
 

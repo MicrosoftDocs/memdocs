@@ -157,4 +157,4 @@ The following table describes how noncompliant settings are managed when a compl
 - [Create and deploy policy](../protect/create-compliance-policy.md) and review prerequisites
 - [Monitor device compliance](../protect/compliance-policy-monitor.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
-- [Reference for policy entities](../developer/reports-ref-policy.md) has information about the Intune Data Warehouse policy entities
+- [Reference for policy entities](../../developer/data-warehouse/ref-policy.md) has information about the Intune Data Warehouse policy entities

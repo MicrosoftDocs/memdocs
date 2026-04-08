@@ -77,7 +77,7 @@ For each app protection policy, the Core Microsoft Apps group is targeted, which
 - To Do
 - Word
 
-The policies should include other Microsoft apps based on business need, additional third-party public apps that have integrated the Intune SDK used within the organization, as well as line-of-business apps that have integrated the [Intune SDK](../developer/app-sdk.md) (or have been wrapped).
+The policies should include other Microsoft apps based on business need, additional third-party public apps that have integrated the Intune SDK used within the organization, as well as line-of-business apps that have integrated the [Intune SDK](../../developer/app-sdk/index.md) (or have been wrapped).
 
 [!INCLUDE [app-protection-framework-level1](../includes/app-protection-framework-level1.md)]
 
