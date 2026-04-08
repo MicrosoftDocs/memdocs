@@ -83,7 +83,7 @@ Other details to consider when migrating a device without wiping it:
 > After a device completes the Setup Assistant phase of the automated device enrollment process, we don't recommend restoring a backup on the device if the backup is from a time when the device was unmanaged. Doing so could affect the current management state of the device.
 
 ### Corporate identifiers
-Devices enroll into Intune as personal devices, rather than corporate-owned devices. This condition has an impact on the device details, such as app inventory and phone number, gathered from the device. For more information that you can share with end users about what's visible on enrolled devices, see [What can my organization see on my enrolled device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+Devices enroll into Intune as personal devices, rather than corporate-owned devices. This condition has an impact on the device details, such as app inventory and phone number, gathered from the device. For more information that you can share with end users about what's visible on enrolled devices, see [What can my organization see on my enrolled device?](../../user-help/enrollment/enrollment-data-visibility.md)
 
 If you want to designate devices as corporate-owned devices, you have two options:
 * [Add corporate device identifiers](corporate-identifiers-add.md). This option is the easier of the two and avoids scripting, provided you can obtain a list of serial numbers from your current EMM vendor. The list must be imported prior to enrolling the devices in Intune.

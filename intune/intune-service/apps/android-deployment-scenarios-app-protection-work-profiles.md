@@ -39,7 +39,7 @@ Individual Android apps are enabled for APP in a few ways:
 
     For more information on this tool, see [prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md).
 
-To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](/mem/intune-service/apps/apps-supported-intune-apps).
+To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](/intune/intune-service/apps/apps-supported-intune-apps).
 
 ## Deployment scenarios
 

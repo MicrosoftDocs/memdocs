@@ -117,13 +117,13 @@ Why choose Microsoft Edge for Business?
 
 ### Is this a new browser?
 
-No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience.
+No, this isn't a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience.
 
 ### Benefits
 
 Microsoft Edge for Business offers a multitude of advantages:
 
-**Streamlined IT operations:** Microsoft Edge for Business can significantly reduce the cyber-attack surface area and enhance your organization’s security posture. It achieves this by streamlining down operations to a single browser for all use cases, simplifying IT management.
+**Streamlined IT operations:** Microsoft Edge for Business can significantly reduce the cyber-attack surface area and enhance your organization's security posture. It achieves this by streamlining down operations to a single browser for all use cases, simplifying IT management.
 
 **Improved user experience:** For end users signed in with both work and personal profiles, Microsoft Edge for Business offers a superior browsing experience. The automatic switching feature not only enhances usability but also bolsters security and privacy.
 
@@ -142,7 +142,7 @@ In addition to the above benefits, you can enable protected Mobile Application M
 
 ## Zero Trust Methodology
 
-The [Zero Trust security strategy](/security/zero-trust/zero-trust-overview) is transforming the way organizations approach security. It’s becoming the new standard for security strategy in response to the evolving threat landscape. Traditional best practices revolved around the model of "trust but verify," however this approach is exploitable through modern attacks. This is driving the need for a shift in security strategy. The Zero Trust methodology is based on the concept of "never trust, always verify" and aligns with three key principles:
+The [Zero Trust security strategy](/security/zero-trust/zero-trust-overview) is transforming the way organizations approach security. It's becoming the new standard for security strategy in response to the evolving threat landscape. Traditional best practices revolved around the model of "trust but verify," however this approach is exploitable through modern attacks. This is driving the need for a shift in security strategy. The Zero Trust methodology is based on the concept of "never trust, always verify" and aligns with three key principles:
 
 - **Verify Explicitly:** Always authenticate and authorize based on all available data points. These data points include user identity, location, device health, service/workload, data classification, and anomalies.
 - **Use Least-Privilege Access:** Limit user access with just-in-time and just-enough-access (JIT/JEA) policies. Implement risk-based adaptive policies and data protection to secure both data and productivity.
@@ -156,7 +156,7 @@ In addition to the inherent security features of Chromium, Microsoft Edge for Bu
 
 - **[Microsoft Defender](/defender/):** Provides comprehensive security solutions.
 - **[Microsoft Entra](/entra/):** Offers identity and access management services.
-- **[Microsoft Intune](/mem/):** Offers mobile device and application management.
+- **[Microsoft Intune](/intune/):** Offers mobile device and application management.
 - **[Microsoft Purview](/purview/):** Supports data governance across your hybrid data estate.
 
 Furthermore, Microsoft Edge for Business aligns with the Zero Trust methodology by offering the following features:
