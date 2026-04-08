@@ -3242,7 +3242,7 @@
     },
     {
       "source_path": "intune/intune/protect/atp-manage-vulnerabilities.md",
-      "redirect_url": "/intune/intune-service/protect/atp-manage-vulnerabilities",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-manage-vulnerabilities",
       "redirect_document_id": false
     },
     {
@@ -4848,6 +4848,11 @@
     {
       "source_path": "intune/intune-service/protect/certificate-connectors.md",
       "redirect_url": "/intune/fundamentals/certificates/connector/certificate-connectors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/atp-manage-vulnerabilities.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-manage-vulnerabilities",
       "redirect_document_id": false
     }
   ]
