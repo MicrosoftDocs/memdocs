@@ -146,7 +146,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 - **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
 - **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../protect/endpoint-security-antivirus-policy.md) settings, [EDR onboarding](../protect/endpoint-security-edr-policy.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
-- **Vulnerability management** - [Security tasks](../protect/atp-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
+- **Vulnerability management** - [Security tasks](../protect/microsoft-defender-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
 - **[Microsoft Tunnel](../protect/microsoft-tunnel-overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 
 ### Conditional Access

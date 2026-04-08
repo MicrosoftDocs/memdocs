@@ -67,10 +67,10 @@ Employees and students can access management options for their personal devices 
 
 For more information about how employees and students can access these actions, see:
 
-* [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md)
-* [Check status, or sync device, in Company Portal app](../user-help/sync-your-device-manually-ios.md)
-* [Reset device in Company Portal app](../user-help/effects-of-device-reset-company-portal-ios.md)
-* [Remove or unenroll device in Company Portal app](../user-help/unenroll-your-device-from-intune-ios.md)
+* [Using the Intune Company Portal website](../../user-help/company-portal/company-portal-website.md)
+* [Check status, or sync device, in Company Portal app](../../user-help/device-actions/sync-device-ios.md)
+* [Reset device in Company Portal app](../../user-help/unenrollment/device-reset-effects-ios.md)
+* [Remove or unenroll device in Company Portal app](../../user-help/unenrollment/remove-enrollment-ios.md)
 
 ### Limitations and capabilities not supported
 

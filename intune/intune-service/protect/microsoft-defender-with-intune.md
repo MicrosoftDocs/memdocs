@@ -31,7 +31,7 @@ At a high level, the integration for devices enrolled with Intune works as follo
 3. [Create a device compliance policy](../protect/microsoft-defender-integrate.md#create-and-assign-compliance-policy-to-set-device-risk-level) to set acceptable risk levels.
 4. [Configure Conditional Access policy](../protect/microsoft-defender-integrate.md#create-a-conditional-access-policy) to block noncompliant devices.
 
-**Extend the integration:** Once configured, you can [use Microsoft Defender Vulnerability Management](atp-manage-vulnerabilities.md) to remediate endpoint weaknesses identified by Defender.
+**Extend the integration:** Once configured, you can [use Microsoft Defender Vulnerability Management](microsoft-defender-manage-vulnerabilities.md) to remediate endpoint weaknesses identified by Defender.
 
 ## Additional integration options
 

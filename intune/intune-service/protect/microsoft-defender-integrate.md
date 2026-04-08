@@ -459,7 +459,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 1. **Monitor deployment**: Check [device onboarding status](#monitor-device-onboarding-status) and compliance reports
 2. **Validate protection**: Test with controlled scenarios to ensure policies work as expected
-3. **Expand protection**: Consider [vulnerability management](atp-manage-vulnerabilities.md) for proactive threat remediation
+3. **Expand protection**: Consider [vulnerability management](microsoft-defender-manage-vulnerabilities.md) for proactive threat remediation
 
 ### Platform-specific enhancements
 
@@ -469,7 +469,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 ### Advanced features
 
 **Intune integration:**
-- [Security tasks with Vulnerability Management](atp-manage-vulnerabilities.md) - Remediate device vulnerabilities
+- [Security tasks with Vulnerability Management](microsoft-defender-manage-vulnerabilities.md) - Remediate device vulnerabilities
 - [Device compliance policies](device-compliance-get-started.md) - Comprehensive compliance management
 - [App protection policies](../apps/app-protection-policy.md) - Mobile app data protection
 - [Mobile app protection policies](../protect/mtd-app-protection-policy.md) - For Android and iOS/iPadOS devices, these policies set device risk levels, and work with both enrolled and unenrolled devices

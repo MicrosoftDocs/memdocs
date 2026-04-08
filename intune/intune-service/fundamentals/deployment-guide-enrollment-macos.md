@@ -74,7 +74,7 @@ This task list provides an overview.
 
 ### Device enrollment end user tasks
 
-Your users must do the following steps. For more specific information on the end user steps, go to [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
+Your users must do the following steps. For more specific information on the end user steps, go to [Enroll your macOS device using the Company Portal app](../../user-help/enrollment/enroll-company-portal-macos.md).
 
 1. Download and run [the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 2. Open the Company Portal app, and sign in with their organization account (`user@contoso.com`). Once they sign in, they must approve the enrollment policy (System preferences). When users approve, the device is enrolled, and considered managed. If they don't approve, then they're not enrolled, and won't receive your policies.
@@ -153,7 +153,7 @@ This task list provides an overview. For more specific information, go to [Autom
 
 These tasks depend on how administrators tell users to install the Company Portal app. Typically, the fewer steps end users must do to enroll, the higher chance they'll want to enroll.
 
-For more specific information on the end user steps, go to [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
+For more specific information on the end user steps, go to [Enroll your macOS device using the Company Portal app](../../user-help/enrollment/enroll-company-portal-macos.md).
 
 - **Enroll with user affinity + Setup Assistant (legacy)**:
 

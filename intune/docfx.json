@@ -103,7 +103,7 @@
         "configmgr/core/**/*": ["ConfigMgr"],
         "endpoint-analytics/**/*": ["Intune","advanced-analytics","endpoint-analytics"],
         "device-updates/**/*": ["Intune","device-updates"],
-        "intune-service/user-help/**/*": ["User help"]
+        "user-help/**/*": ["User help"]
       },
       "featureFlags": {
         "*.md" : [
@@ -130,7 +130,7 @@
         "intune-service/apps/**/*": "nicholasswhite",
         "intune-service/configuration/**/*": "mandiohlinger",
         "intune-service/enrollment/**/*": "lenewsad",
-        "intune-service/user-help/**/*": "lenewsad",
+        "user-help/**/*": "lenewsad",
         "privacy/**/*": "paolomatarazzo",
         "solutions/**/*": "mandiohlinger"
       },
@@ -151,7 +151,7 @@
         "intune-service/apps/**/*": "nwhite",
         "intune-service/configuration/**/*": "mandia",
         "intune-service/enrollment/**/*": "lanewsad",
-        "intune-service/user-help/**/*": "lanewsad",
+        "user-help/**/*": "lanewsad",
         "privacy/**/*": "paoloma",
         "solutions/**/*": "mandia"
       },
@@ -184,10 +184,10 @@
         "intune-service/fundamentals/**/*": "fundamentals",
         "intune-service/industry/education/**/*": "education",
         "intune-service/protect/**/*": "protect",
-        "intune-service/user-help/**/*": "end-user"
+        "user-help/**/*": "end-user"
       },
       "ms.topic": {
-        "intune-service/user-help/**/*": "end-user-help"
+        "user-help/**/*": "end-user-help"
       },
       "titleSuffix": {
         "configmgr/**/*": "Configuration Manager"

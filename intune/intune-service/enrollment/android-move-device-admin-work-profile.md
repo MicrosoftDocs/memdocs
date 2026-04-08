@@ -70,7 +70,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Troubleshooting
 
-The [end user flow to move to new device management setup](../user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management. It also helps users set up work profile management on their personal devices. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
+The [end user flow to move to new device management setup](../../user-help/enrollment/migrate-device-management-android.md) guides users through unenrolling from device administrator management. It also helps users set up work profile management on their personal devices. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
 
 ### User sees an error after tapping Resolve
 
@@ -95,6 +95,6 @@ Users might see an error page in the browser when they tap the URL to the **Upda
 - The Android device uses Android 6 or earlier.
 
 ## Next steps
-[See the end user flow](../user-help/move-to-new-device-management-setup.md)
+[See the end user flow](../../user-help/enrollment/migrate-device-management-android.md)
 
 [Manage Android work profile devices with Intune](android-enterprise-overview.md)
