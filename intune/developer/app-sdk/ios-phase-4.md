@@ -467,4 +467,4 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [application configuration policies for managed iOS Enterprise devices]:../../intune-service/apps/app-configuration-policies-use-ios.md
 [application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
 [App configuration policies for Microsoft Intune]:../../intune-service/apps/app-configuration-policies-overview.md
-[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy.md
+[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md#validate-the-applied-app-configuration-policy

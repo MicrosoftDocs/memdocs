@@ -1744,7 +1744,7 @@ items:
         - name: Intune reports and properties using Graph
           href: ./intune-service/fundamentals/reports-export-graph-available-reports.md
         - name: Use the Intune Data Warehouse
-          href: data-warehouse/create-reports.md
+          href: ./developer/data-warehouse/create-reports.md
       - name: Monitor
         items:
         - name: Audit logs for Intune activities

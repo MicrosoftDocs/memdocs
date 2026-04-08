@@ -159,7 +159,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Stage 2: MSAL prerequisite and setup]:ios-phase-2.md
 [Stage 5: Enable multi-identity]:ios-phase-5.md
 [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications]:ios-phase-4.md
-[Manage data transfer between iOS apps in Microsoft Intune]:../../intune-service/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm.md
+[Manage data transfer between iOS apps in Microsoft Intune]:../../intune-service/apps/data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
 [Stage 6: App Protection CA support]:ios-phase-6.md#app-protection-ca-support-optional
 
 <!-- Microsoft Learn documentation: Intune overview -->

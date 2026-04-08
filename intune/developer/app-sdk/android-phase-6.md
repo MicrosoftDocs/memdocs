@@ -222,8 +222,8 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [application configuration policies for managed Android Enterprise devices]:../../intune-service/apps/app-configuration-policies-use-android.md
 [application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
 [Graph API documentation for MAM Targeted Config]:/graph/api/resources/intune-mam-targetedmanagedappconfiguration
-[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy.md
-[Android enterprise app configuration policies]:../../intune-service/apps/app-configuration-policies-overview#android-enterprise-app-configuration-policies.md
+[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md#validate-the-applied-app-configuration-policy
+[Android enterprise app configuration policies]:../../intune-service/apps/app-configuration-policies-overview.md#android-enterprise-app-configuration-policies
 
 <!-- 3rd party links -->
 [managed configurations]:https://developer.android.com/work/managed-configurations

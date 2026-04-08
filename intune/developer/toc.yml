@@ -6,7 +6,7 @@ items:
       - name: Intune API reference
         href: /graph/api/resources/intune-graph-overview
       - name: Graph APIs used to configure devices
-        href: ./device-configuration/ref-graph-api-csp-windows.md
+        href: ../device-configuration/ref-graph-api-csp-windows.md
     - name: Use PowerShell cmdlets to automate actions
       href: https://github.com/Microsoft/Intune-PowerShell-SDK/
     - name: Protect apps with Intune App SDK
