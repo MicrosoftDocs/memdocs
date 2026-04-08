@@ -165,7 +165,7 @@ Enroll new or wiped devices purchased from Apple Business Manager or Apple Schoo
 
 ---
 ## Enrollment for Linux
-Employees and students in BYOD scenarios can [enroll personal Linux devices](../user-help/enroll-device-linux.md) in Microsoft Intune. Enrollment enables them to access work resources in Microsoft Edge.
+Employees and students in BYOD scenarios can [enroll personal Linux devices](../../user-help/enrollment/enroll-linux.md) in Microsoft Intune. Enrollment enables them to access work resources in Microsoft Edge.
 
 As an Intune admin, you don't need to do anything to enable Linux enrollment in the admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the admin center. For more information, see [Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).
 
@@ -192,7 +192,7 @@ Make enrollment in Intune easier for employees and students by enabling automati
 # [BYOD enrollment](#tab/byod-enrollment)
 These options can be used by users in BYOD scenarios who want to enroll their personal devices without joining them to a domain.
 * [Connect a work or school account](./deployment-guide-enrollment-windows.md#automatic-enrollment-end-user-tasks): Users go to the Settings app on their device and add their work or school account. They add their work email address without selecting a domain joining option.
-* [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md): Users sign in to the Intune Company Portal app with their work account to enroll their devices. They can install Company Portal from Microsoft Store.
+* [Enrollment using the Intune Company Portal app](../../user-help/enrollment/enroll-windows.md): Users sign in to the Intune Company Portal app with their work account to enroll their devices. They can install Company Portal from Microsoft Store.
 * Enrollment via a Microsoft 365 app sign-in: Users sign into a Microsoft 365 app or service, such as Exchange Online, from an unmanaged and unregistered device with their work account. On the sign-in prompt, they select **Allow my organization to manage my device**.
 
 In all of these BYOD scenarios, the devices are Microsoft Entra registered and managed by Intune. If both the MDM and MAM user scopes are enabled for a user in the [Intune automatic enrollment configuration](../enrollment/windows-enroll.md), then the MAM user scope will take precedence and the device will not be enrolled and managed by Intune.

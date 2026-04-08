@@ -152,7 +152,7 @@ When users turn on the device, the next steps determine how they're enrolled. Cl
 
         If you want to manage BYOD or personal devices, users must select **Join this device to Azure Active Directory**. Users should also know that their personal devices will be managed by their IT.
 
-  For more information on the end user experience, go to [enroll Windows client devices](../user-help/enroll-windows-10-device.md).
+  For more information on the end user experience, go to [enroll Windows client devices](../../user-help/enrollment/enroll-windows.md).
 
 - If using bulk enrollment, and your end users are familiar with running files from a network share or USB drive, they can complete the enrollment. If they're not comfortable with this step, then it's recommended that the admin enrolls.
 
@@ -288,7 +288,7 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 ### User enrollment end user tasks
 
-Clearly communicate the options users should choose on personal and organization-owned devices. For more information on the end user experience, go to [enroll Windows client devices](../user-help/enroll-windows-10-device.md).
+Clearly communicate the options users should choose on personal and organization-owned devices. For more information on the end user experience, go to [enroll Windows client devices](../../user-help/enrollment/enroll-windows.md).
 
 - **BYOD or personal devices**: These devices are probably existing devices that are already configured with a personal email account (`user@outlook.com`). Users must register the device using the Settings app:
 

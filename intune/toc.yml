@@ -798,7 +798,7 @@ items:
           - name: Monitor your baselines
             href: ./intune-service/protect/security-baselines-monitor.md
         - name: Security tasks
-          href: ./intune-service/protect/atp-manage-vulnerabilities.md
+          href: ./intune-service/protect/microsoft-defender-manage-vulnerabilities.md
         - name: Security policy
           items:
           - name: Manage security policies
@@ -1641,7 +1641,7 @@ items:
         - name: Get started with Linux enrollment
           href: ./intune-service/fundamentals/deployment-guide-enrollment-linux.md
         - name: Intune user help documentation
-          href: ./intune-service/user-help/enroll-device-linux.md
+          href: ./user-help/enrollment/enroll-linux.md
       - name: Set up macOS enrollment
         items:
         - name: Get started with Mac enrollment
@@ -2108,6 +2108,10 @@ items:
 
   - name: Developer guidance
     href: ./developer/toc.yml
+
+  - name: User help documentation
+    href: /intune/user-help
+    displayName: end user
 
   - name: Privacy and compliance
     href: /intune/privacy-compliance

@@ -618,7 +618,7 @@ For more information, go to [Use the Microsoft Enterprise SSO plug-in on macOSOS
 > [!IMPORTANT]
 > To achieve SSO with the Microsoft Entra SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
 >
-> For more information about the Company Portal app, go to [What happens if you install the Company Portal app and enroll your macOS device in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).
+> For more information about the Company Portal app, go to [What happens if you install the Company Portal app and enroll your macOS device in Intune](../../user-help/enrollment/enrollment-effects-macos.md).
 >
 > You can also [download the Company Portal app](https://go.microsoft.com/fwlink/?linkid=853070).
 

@@ -399,7 +399,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
 
 **Self-service access options**:
 
-- **Company Portal app**: Users can access BitLocker recovery keys through the [Company Portal app](../user-help/get-recovery-key-windows.md)
+- **Company Portal app**: Users can access BitLocker recovery keys through the [Company Portal app](../../user-help/security/collect-recovery-key-windows.md)
 - **My Account portal**: Available at account.microsoft.com for Microsoft Entra joined devices
 - **Microsoft Entra ID**: Direct access for Microsoft Entra joined devices
 
@@ -458,4 +458,4 @@ For silent BitLocker enablement, recovery keys are automatically backed up to Mi
 - [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
 - [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises) in the Windows security documentation
 - [Personal Data Encryption overview](/windows/security/operating-system-security/data-protection/personal-data-encryption/)
-- [Self-service scenarios for end users through Company Portal app](../user-help/get-recovery-key-windows.md)
+- [Self-service scenarios for end users through Company Portal app](../../user-help/security/collect-recovery-key-windows.md)

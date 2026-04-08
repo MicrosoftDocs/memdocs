@@ -224,7 +224,7 @@ In Intune, the default compliance policy is evaluated when a calculation is trig
 - It happens periodically to enforce device contact requirements, like the initial user log-on after following the device being offline for a few days.
 - It happens when new compliance information, such as a change in device properties, is found during a device sync.    
 - It happens when a compliance policy assignment is added, after the next device sync. If a compliance policy assignment is removed, such as with exclusion targeting, the compliance calculation will be triggered with the existing service data. 
-- It happens when a user [checks compliance status](../user-help/check-status-company-portal-website.md) on the Company Portal website or app.
+- It happens when a user [checks compliance status](../../user-help/compliance/validate-status-company-portal-website.md) on the Company Portal website or app.
 
 The evaluation process identifies the device as noncompliant if any of the following statements are false.  
 - The device has a compliance policy assigned: At least one applicable compliance policy must be assigned to the device with an applicable setting.

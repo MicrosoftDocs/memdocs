@@ -54,13 +54,13 @@ Other than having Intune setup, there are minimal administrator tasks with Linux
 
 ## End user tasks
 
-The following steps provide an overview. For the specific steps, go to [Enroll a Linux device in Intune](../user-help/enroll-device-linux.md).
+The following steps provide an overview. For the specific steps, go to [Enroll a Linux device in Intune](../../user-help/enrollment/enroll-linux.md).
 
 > [!TIP]
 > When end users install the OS, it's recommended to enable encryption on the hard disk. After the OS is installed, it can be difficult to enable encryption.
 
 1. [Download and install Microsoft Edge browser](https://www.microsoft.com/edge) version 102.x and newer.
-2. [Download and install the Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md). The install can take several minutes and requires a reboot. This app registers the device with Intune.
+2. [Download and install the Microsoft Intune app for Linux](../../user-help/company-portal/intune-app-linux.md). The install can take several minutes and requires a reboot. This app registers the device with Intune.
 3. Users open the Intune app, and sign in with their organization account (`user@contoso.com`). After they sign in, the enrollment process starts. It's possible users might be prompted to configure other settings based on your compliance policies.
 4. Users open Microsoft Edge and sign in with their organization account (`user@contoso.com`). After they sign in, they can access your organization's resources, like internal websites and Microsoft 365 apps.
 

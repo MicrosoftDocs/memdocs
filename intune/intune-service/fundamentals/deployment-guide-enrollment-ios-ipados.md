@@ -166,7 +166,7 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from your enrollment profile. It can take some time for the Company Portal app to auto-install.
   2. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When they sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
-  Users might have to enter more information. For more specific end user steps, go to [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
+  Users might have to enter more information. For more specific end user steps, go to [Enroll your organization-provided iOS device](../../user-help/enrollment/enroll-automated-ios.md).
 
 - **Enroll with user affinity + Setup Assistant (legacy) + Company Portal app**:
 
@@ -309,7 +309,7 @@ The tasks depend on the option you configured in the enrollment profile.
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`). Once entered, the Company Portal app is automatically installed from the app store. It can take some time for the Company Portal app to auto-install.
   2. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). When users sign-in, the enrollment starts. When enrollment completes, users can install and use apps used by your organization, including LOB apps.
 
-  Users might have to enter more information. For more specific steps, go to [Enroll your organization-provided iOS device](../user-help/enroll-your-device-dep-ios.md).
+  Users might have to enter more information. For more specific steps, go to [Enroll your organization-provided iOS device](../../user-help/enrollment/enroll-automated-ios.md).
 
 - **Enroll with user affinity + Setup Assistant + Company Portal app**:
 
@@ -405,10 +405,10 @@ This list provides an overview of the tasks required of administrators.
 
 Your users must do the following steps.
 
-1. Go to the Apple App Store, and [install the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md).
+1. Go to the Apple App Store, and [install the Intune Company Portal app](../../user-help/company-portal/company-portal.md).
 2. Open the Company Portal app, and sign in with their work or school account (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
-    Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-your-device-in-intune-ios.md).
+    Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-ios.md).
 
 Users with enabled app notifications receive a prompt to return to the Company Portal app to complete the required device registration. Users with disabled app notifications aren't alerted to this requirement. If you're utilizing dynamic groups, which rely on device registration to work, it's important that users complete device registration. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration.
 
