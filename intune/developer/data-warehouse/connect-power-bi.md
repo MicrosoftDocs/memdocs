@@ -1,9 +1,10 @@
 ---
 title: Connect to the Data Warehouse With Power BI
 description: You can download a file for use with Microsoft Power BI that allows you to load interactive, dynamically generated reports for your Microsoft Intune tenant.
-ms.date: 10/30/2024
+ms.date: 03/31/2026
 ms.topic: reference
 ms.reviewer: jamiesil
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 ---
@@ -11,6 +12,9 @@ ms.collection:
 # Connect to the Data Warehouse With Power BI
 
 [!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+
+> [!IMPORTANT]
+> The Intune Data Warehouse (beta) connector in Power BI (connector v1) is being retired. Power BI reports that use connector v1 need to be migrated to the Intune connector v2 or the OData Feed connector. Power BI reports created after November 2025 already use connector v2 and aren't affected. For migration steps, see [Migrate from connector v1](#migrate-from-connector-v1).
 
 You can use the Power BI Compliance app to load interactive, dynamically generated reports for your Intune tenant. Additionally, you can load your tenant data in Power BI using the OData link. Intune provides connection settings to your tenant so that you can view the following sample reports and charts related to:
 
@@ -79,6 +83,28 @@ With a client authenticated to Microsoft Entra ID, the OData URL connects to the
     3. Select **Sign In.**
     4. Select **Connect**.
 10. Select **Load**.
+
+## Migrate from connector v1
+
+If your Power BI reports use the Intune connector v1, follow these steps to migrate to the OData Feed connector:
+
+1. Open the report in **Power BI Desktop**.
+2. Select **Transform data** in the toolbar.
+3. For each query that uses an Intune data source, select **Advanced Editor**.
+4. If the data source shows `Intune.Contents(x)`, the report uses connector v1 and needs to be updated.
+5. Replace the data source with the following OData Feed connection:
+
+   ```
+   Source = OData.Feed("<reporting_service_endpoint>", null, [Implementation="2.0", Query=[#"api-version"="v1.0"]])
+   ```
+
+   To find your reporting service endpoint, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Reports** > **Intune Data warehouse** > **Data warehouse**. When you copy the endpoint, don't include the `api-version` segment.
+
+6. Optionally, append the `maxHistoryDays` parameter to the endpoint to limit historical data:
+
+   ```
+   Source = OData.Feed("<reporting_service_endpoint>?maxHistoryDays=7", null, [Implementation="2.0", Query=[#"api-version"="v1.0"]])
+   ```
 
 ## Next steps
 
