@@ -92,12 +92,12 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 The following articles describe the enrollment instructions for smart card-enabled devices. These articles include the sign-in-from-another-device method.
 
-  * [Enroll with Entrust for iOS](../../intune-service/enrollment/enroll-entrust-datacard-ios.md)
-  * [Enroll with Entrust for Android](../../intune-service/enrollment/enroll-entrust-datacard-android.md)
-  * [Enroll with Intercede for iOS](../../intune-service/enrollment/enroll-intercede-ios.md)
-  * [Enroll with Intercede for Android](../../intune-service/enrollment/enroll-intercede-android.md)
-  * [Enroll with DISA Purebred for iOS](../../intune-service/enrollment/enroll-disa-purebred-ios.md)
-  * [Enroll with DISA Purebred for Android](../../intune-service/enrollment/enroll-disa-purebred-android.md)
+  * [Enroll with Entrust for iOS](../enrollment/enroll-entrust-datacard-ios.md)
+  * [Enroll with Entrust for Android](../enrollment/enroll-entrust-datacard-android.md)
+  * [Enroll with Intercede for iOS](../enrollment/enroll-intercede-ios.md)
+  * [Enroll with Intercede for Android](../enrollment/enroll-intercede-android.md)
+  * [Enroll with DISA Purebred for iOS](../enrollment/enroll-disa-purebred-ios.md)
+  * [Enroll with DISA Purebred for Android](../enrollment/enroll-disa-purebred-android.md)
 
 ## App permissions for Android
 The permissions described in this section apply to the Company Portal app for Android and devices running Android, versions 8.0 and later.

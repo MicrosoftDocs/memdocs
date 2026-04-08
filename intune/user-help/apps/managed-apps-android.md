@@ -16,7 +16,7 @@ Intune-managed apps (*managed* apps for short) are work-approved apps managed by
 
 When you sign in or try to access work data in a managed app, you receive a message that the app is protected by your organization.
 
-On a device with a work profile, a work app is marked with a briefcase badge. For more information about Android work profiles, see [Introduction to Android work profile](../../intune-service/enrollment/work-profile-android.md).
+On a device with a work profile, a work app is marked with a briefcase badge. For more information about Android work profiles, see [Introduction to Android work profile](../enrollment/work-profile-android.md).
 
 ## App and data protection policies
 

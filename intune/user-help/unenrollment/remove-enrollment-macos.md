@@ -44,6 +44,6 @@ To uninstall the Company Portal app from a macOS device, select and drag the Com
 
 ## Next steps
 
-If you change your mind and want your access back later, install the Company Portal app and go through device setup again. For detailed instructions, see [Enroll your Mac with Intune Company Portal](../../intune-service/enrollment/enroll-company-portal-macos.md).
+If you change your mind and want your access back later, install the Company Portal app and go through device setup again. For detailed instructions, see [Enroll your Mac with Intune Company Portal](../enrollment/enroll-company-portal-macos.md).
 
 Still need help? Contact your support person. For your organization's helpdesk information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

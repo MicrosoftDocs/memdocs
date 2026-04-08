@@ -149,6 +149,6 @@ Initiate enrollment on the Intune Company Portal website. For this process, you 
 If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors). This article lists common errors, their causes, and steps to resolve them.
 
 ## Next steps
-Find apps that help you at work or school. Learn [how apps are made available](../../intune-service/apps/managed-apps-ios.md) to you through Company Portal.
+Find apps that help you at work or school. Learn [how apps are made available](../apps/managed-apps-ios.md) to you through Company Portal.
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

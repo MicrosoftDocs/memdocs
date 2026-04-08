@@ -132,5 +132,5 @@ Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2
 
 Next, get apps for work or school. For more information, see:
 
-* [Use managed apps on your Android device](../../intune-service/apps/managed-apps-android.md)
-* [Use managed apps on your iOS device](../../intune-service/apps/managed-apps-ios.md)
+* [Use managed apps on your Android device](../apps/managed-apps-android.md)
+* [Use managed apps on your iOS device](../apps/managed-apps-ios.md)

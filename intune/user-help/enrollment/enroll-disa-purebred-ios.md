@@ -142,8 +142,8 @@ Use these instructions to set up Purebred, version 2 on your work device.
 ## Next steps
 After enrollment is complete, you have access to work resources, such as email, Wi-Fi, and any apps that your organization makes available. For more information about how to get, search for, install, and uninstall apps in Company Portal, see:
 
-* [Manage apps from the Company Portal website](../../intune-service/apps/manage-apps-company-portal-website.md)
-* [Use managed apps on your device](../../intune-service/apps/managed-apps-ios.md)
+* [Manage apps from the Company Portal website](../apps/manage-apps-company-portal-website.md)
+* [Use managed apps on your device](../apps/managed-apps-ios.md)
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
 

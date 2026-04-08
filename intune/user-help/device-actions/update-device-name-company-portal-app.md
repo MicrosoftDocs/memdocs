@@ -22,7 +22,7 @@ After you rename a device, its name immediately changes in the app.
 1. Select the **Edit** pencil icon that's next to the current device name. Enter the new name, and then select **Rename**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal app for Windows highlighting the edit pencil icon and rename settings.](./media/validate-device-access-windows/company-portal-windows-rename.png)
+   > ![Example screenshot of the Company Portal app for Windows highlighting the edit pencil icon and rename settings.](../compliance/media/validate-device-access-windows/company-portal-windows-rename.png)
 
 Still need help? Contact your IT support person. For contact information, sign into the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account.
 

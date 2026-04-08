@@ -15,7 +15,7 @@ This article describes how to prevent Microsoft from collecting data about your 
 1. Open the Company Portal app and go to **Settings**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal app homepage, highlighting the Settings option.](./media/sync-device-windows/company-portal-windows-settings.png)
+   > ![Example screenshot of the Company Portal app homepage, highlighting the Settings option.](../device-actions/media/sync-device-windows/company-portal-windows-settings.png)
 
 1. Under **Usage data**, switch the toggle to **No**.
 

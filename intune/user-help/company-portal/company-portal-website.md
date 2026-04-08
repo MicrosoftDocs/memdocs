@@ -12,7 +12,7 @@ Once you're signed in, you can see your enrolled devices and:
 
 * [Check status](../compliance/validate-status-company-portal-website.md): Initiate a status check to verify or regain access to your organization's resources.
 
-* [View and manage work apps](../../intune-service/apps/manage-apps-company-portal-website.md): Search and filter through available work apps, including required and already-installed apps.
+* [View and manage work apps](../apps/manage-apps-company-portal-website.md): Search and filter through available work apps, including required and already-installed apps.
 
 * [Store recovery key for macOS](../security/import-recovery-key-macos.md): Store and rotate the FileVault key for an encrypted Mac.
 
