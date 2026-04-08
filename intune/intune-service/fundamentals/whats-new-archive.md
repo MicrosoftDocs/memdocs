@@ -749,7 +749,7 @@ For more information on *auditd* and how to install it on your Microsoft Tunnel 
 
 #### Endpoint Privilege Management supports ARM 64-bit devices<!-- 28313554 -->
 
-[Endpoint Protection Manager](/mem/intune/protect/epm-overview) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
+[Endpoint Protection Manager](../protect/epm-overview.md) (EPM) now supports managing file elevations on devices that run on ARM 64-bit architecture.
 
 > [!div class="checklist"]
 > Applies to:
@@ -1162,7 +1162,7 @@ Applies to:
 
 #### Use Support Assistant to resolve issues<!-- 29084113 -->
 
-Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](/mem/get-support).
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 ## Week of December 30, 2024
 

@@ -51,7 +51,7 @@ Microsoft Intune helps enforce compliance policies and protect organizational da
 - **Conditional Access**: Ensures only compliant devices and apps managed by Intune can access sensitive data. See [Conditional Access](/intune/intune-service/protect/conditional-access).
 - **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](/intune/intune-service/protect/device-compliance-get-started).
 
-For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/mem/intune).
+For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/intune).
 
 ## Data residency and protection
 

@@ -602,7 +602,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
   - Tools and resources
   - Q & A
 
-The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](/mem/user-help/enrollment/overview) are also great resources.
+The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](../../user-help/index.yml) are also great resources.
 
 ## Related articles
 
