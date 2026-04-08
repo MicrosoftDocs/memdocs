@@ -1,0 +1,114 @@
+items:
+    - name: Access Intune APIs in Microsoft Graph
+      items:
+      - name: Use Microsoft Entra ID to access Intune APIs in Microsoft Graph
+        href: ./configure-graph-api-access.md
+      - name: Intune API reference
+        href: /graph/api/resources/intune-graph-overview
+      - name: Graph APIs used to configure devices
+        href: ./device-configuration/ref-graph-api-csp-windows.md
+    - name: Use PowerShell cmdlets to automate actions
+      href: https://github.com/Microsoft/Intune-PowerShell-SDK/
+    - name: Protect apps with Intune App SDK
+      href: ./app-sdk/index.md
+      items:
+      - name: Get started with Intune App SDK
+        href: ./app-sdk/quickstart-integration.md
+      - name: Prepare LOB apps for app protection
+        href: ./app-sdk/integration-methods.md
+      - name: LOB app versioning
+        href: ./app-management/deployment/lob-app-versioning.md
+      - name: App Wrapping Tool for iOS
+        href: ./app-sdk/configure-wrapping-ios.md
+      - name: Intune App SDK for iOS
+        items:
+        - name: Plan the integration
+          href: ./app-sdk/ios-phase-1.md
+        - name: MSAL prerequisite and setup
+          href: ./app-sdk/ios-phase-2.md
+        - name: Intune SDK integration into your iOS app
+          href: ./app-sdk/ios-phase-3.md
+        - name: App participation features
+          href: ./app-sdk/ios-phase-4.md
+        - name: Multi-Identity
+          href: ./app-sdk/ios-phase-5.md
+        - name: App Protection Conditional Access support
+          href: ./app-sdk/ios-phase-6.md
+        - name: Web-view features
+          href: ./app-sdk/ios-phase-7.md
+        - name: Appendix
+          href: ./app-sdk/ios-appendix.md
+      - name: App Wrapping Tool for Android
+        href: ./app-sdk/configure-wrapping-android.md
+        displayName: dex
+      - name: Intune App SDK for Android
+        items:
+        - name: Plan the Integration
+          href: ./app-sdk/android-phase-1.md
+        - name: Understand the MSAL Prerequisite
+          href: ./app-sdk/android-phase-2.md
+        - name: Get Started with MAM
+          href: ./app-sdk/android-phase-3.md
+        - name: MAM Integration Essentials
+          href: ./app-sdk/android-phase-4.md
+        - name: Multi-Identity
+          href: ./app-sdk/android-phase-5.md
+        - name: App Configuration
+          href: ./app-sdk/android-phase-6.md
+        - name: App Participation Features
+          href: ./app-sdk/android-phase-7.md
+        - name: Appendix
+          href: ./app-sdk/android-appendix.md
+      - name: Intune App SDK Xamarin Bindings
+        href: ./app-sdk/quickstart-integration.md
+      - name: Microsoft Tunnel for MAM SDK
+        items:
+        - name: Microsoft Tunnel for MAM iOS SDK
+          href: ./app-sdk/tunnel-mam-ios.md
+        - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
+          href: ./app-sdk/quickstart-integration.md
+    - name: Use the Intune Data Warehouse
+      href: ./data-warehouse/create-reports.md
+      items:
+      - name: Change log for the Data Warehouse
+        href: ./data-warehouse/changelog.md
+      - name: Connect to the Data Warehouse with Power BI
+        href: ./data-warehouse/connect-power-bi.md
+      - name: Create a report from the OData feed with Power BI
+        href: ./data-warehouse/create-report-odata.md
+    - name: Report using Intune Data Warehouse API
+      href: ./data-warehouse/index.md
+      items:
+      - name: Get data from the Data Warehouse API with a REST client
+        href: ./data-warehouse/setup-rest-client.md
+      - name: Data Warehouse API endpoint
+        href: ./data-warehouse/ref-api-endpoints.md
+      - name: Data Warehouse application-only authentication
+        href: ./data-warehouse/configure-app-only-auth.md
+      - name: Data Warehouse data model
+        href: ./data-warehouse/ref-data-model.md
+        items:
+        - name: Data Warehouse collections
+          href: ./data-warehouse/ref-collections.md
+        - name: Data Warehouse collections (beta)
+          items:
+          - name: User lifetime representation in the Intune Data Warehouse
+            href: ./data-warehouse/ref-user-timeline.md
+          - name: Reference for application entities
+            href: ./data-warehouse/ref-application.md
+          - name: Reference for date entity
+            href: ./data-warehouse/ref-date.md
+          - name: Reference for devices entities
+            href: ./data-warehouse/ref-devices.md
+          - name: Reference for Intune management extension entity
+            href: ./data-warehouse/ref-intune-management-extension.md
+          - name: Reference for mobile app management (MAM) entities
+            href: ./data-warehouse/ref-mobile-app-management.md
+          - name: Reference for policy entities
+            href: ./data-warehouse/ref-policy.md
+          - name: Reference for user device association entity
+            href: ./data-warehouse/ref-user-device.md
+          - name: Reference for user entity
+            href: ./data-warehouse/ref-user.md
+      - name: Move your Intune Data Warehouse account data
+        href: ./data-warehouse/move-account-data.md
