@@ -57,7 +57,7 @@ Resetting to factory settings restores all company and personal data and setting
 
 ### User self-removal from Intune management
 
-Users can remove their [Android](../../intune-service/user-help/unenroll-your-device-from-intune-android.md), [Apple](../../intune-service/user-help/unenroll-your-device-from-intune-ios.md), or [Windows](../../intune-service/user-help/unenroll-your-device-from-intune-windows.md) personal device from Intune management without admin assistance.
+Users can remove their [Android](../../user-help/unenrollment/remove-enrollment-android.md), [Apple](../../user-help/unenrollment/remove-enrollment-ios.md), or [Windows](../../user-help/unenrollment/remove-enrollment-windows.md) personal device from Intune management without admin assistance.
 
 ### Retire
 

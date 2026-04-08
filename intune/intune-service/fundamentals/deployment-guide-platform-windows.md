@@ -165,10 +165,10 @@ The resources in this section are in the Microsoft Intune User Help documentatio
 
 | Task | Detail |
 | ---- | ------ |
-|[Install Intune Company Portal app for Windows](../user-help/sign-in-to-the-company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
-|[Update Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
-|[Enroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to enroll personal devices running Windows. |
-|[Unenroll a device](../user-help/unenroll-your-device-from-intune-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
+|[Install Intune Company Portal app for Windows](../../user-help/company-portal/company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
+|[Update Company Portal app](../../user-help/company-portal/install-company-portal-update.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
+|[Enroll a device](../../user-help/enrollment/enroll-windows.md)| This article describes how to enroll personal devices running Windows. |
+|[Unenroll a device](../../user-help/unenrollment/remove-enrollment-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
 
 ## Next steps
 
