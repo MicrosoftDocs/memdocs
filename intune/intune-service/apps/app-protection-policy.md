@@ -144,7 +144,7 @@ However, there are some limitations to be aware of, such as:
 
 ## Apps you can manage with app protection policies
 
-Any app that integrates with the [Intune SDK](../developer/app-sdk.md) or wraps by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) can be managed using Intune app protection policies. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) that use these tools and are available for public use.
+Any app that integrates with the [Intune SDK](../../developer/app-sdk/index.md) or wraps by the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md) can be managed using Intune app protection policies. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) that use these tools and are available for public use.
 
 The Intune SDK development team actively tests and maintains support for apps built with the native Android and iOS/iPadOS (Obj-C, Swift) platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, explicit guidance or plugins aren't provided for app developers using anything other than the supported platforms.
 
@@ -214,7 +214,7 @@ The settings made available to the OneDrive Admin console, configure a special I
 
 Once enabled, the OneDrive and SharePoint apps for iOS/iPadOS and Android are protected with the selected settings by default. An IT Pro can edit this policy in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to add more targeted apps and to modify any policy setting.
 
-By default, there can only be one **Global** policy per tenant. However, you can use [Intune Graph APIs](../developer/intune-graph-apis.md) to create extra global policies per tenant, but doing so isn't recommended. Creating extra global policies isn't recommended because troubleshooting the implementation of such a policy can become complicated.
+By default, there can only be one **Global** policy per tenant. However, you can use [Intune Graph APIs](../../developer/configure-graph-api-access.md) to create extra global policies per tenant, but doing so isn't recommended. Creating extra global policies isn't recommended because troubleshooting the implementation of such a policy can become complicated.
 
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy overrides these settings.
 
@@ -225,7 +225,7 @@ While the **Global** policy applies to all users in your tenant, any standard In
 
 ### Multi-identity
 
-Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. "Corporate" audiences use work and school accounts, whereas consumer audiences, such as Microsoft 365 (Office) users, would use personal accounts. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../developer/app-sdk.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
+Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. "Corporate" audiences use work and school accounts, whereas consumer audiences, such as Microsoft 365 (Office) users, would use personal accounts. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../../developer/app-sdk/index.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
 
 > [!IMPORTANT]
 > Regardless of whether an app supports multi-identity, only a single "corporate" identity can have an Intune App Protection Policy applied.
@@ -248,7 +248,7 @@ Consider the following examples for the work or "corporate" context:
 The Personal Identification Number (PIN) is a passcode used to verify that the correct user is accessing the organization's data in an application.
 
 **PIN prompt**<br>
-Intune prompts for the user's app PIN when the user is about to access "corporate" data. In multi-identity apps such as Word, Excel, or PowerPoint, the user is prompted for their PIN when they try to open a "corporate" document or file. In single-identity apps, such as line-of-business apps managed using the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md), the PIN is prompted at launch, because the [Intune SDK](../developer/app-sdk.md) knows the user's experience in the app is always "corporate."
+Intune prompts for the user's app PIN when the user is about to access "corporate" data. In multi-identity apps such as Word, Excel, or PowerPoint, the user is prompted for their PIN when they try to open a "corporate" document or file. In single-identity apps, such as line-of-business apps managed using the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md), the PIN is prompted at launch, because the [Intune SDK](../../developer/app-sdk/index.md) knows the user's experience in the app is always "corporate."
 
 **PIN prompt, or corporate credential prompt, frequency**<br>
 The IT admin can define the Intune app protection policy setting **Recheck the access requirements after (minutes)** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen, or corporate credential prompt, is shown again. However, important details about PIN that affect how often the user is prompted are:
@@ -266,10 +266,10 @@ For iOS/iPadOS devices, even if the PIN is shared between apps from different pu
 The Intune PIN works based on an inactivity based timer (the value of **Recheck the access requirements after (minutes)**). As such, Intune PIN prompts show up independently from the built-in app PIN prompts for Outlook and OneDrive, which often are tied to app launch by default. If the user receives both PIN prompts at the same time, the expected behavior is that the Intune PIN takes precedence.
 
 **Intune PIN security**<br>
-The PIN serves to allow only the correct user to access their organization's data in the app. Therefore, a user must sign in with their work or school account before they can set or reset their Intune app PIN. Microsoft Entra ID handles this authentication via secure token exchange and the [Intune SDK](../developer/app-sdk.md) doesn't see it. From a security perspective, the best way to protect work or school data is to encrypt it. Encryption isn't related to the app PIN but is its own app protection policy.
+The PIN serves to allow only the correct user to access their organization's data in the app. Therefore, a user must sign in with their work or school account before they can set or reset their Intune app PIN. Microsoft Entra ID handles this authentication via secure token exchange and the [Intune SDK](../../developer/app-sdk/index.md) doesn't see it. From a security perspective, the best way to protect work or school data is to encrypt it. Encryption isn't related to the app PIN but is its own app protection policy.
 
 **Protecting against brute force attacks and the Intune PIN**<br>
-As part of the app PIN policy, the IT administrator can set the maximum number of times a user can try to authenticate their PIN before locking the app. After the number of attempts is met, the [Intune SDK](../developer/app-sdk.md) can wipe the "corporate" data in the app.
+As part of the app PIN policy, the IT administrator can set the maximum number of times a user can try to authenticate their PIN before locking the app. After the number of attempts is met, the [Intune SDK](../../developer/app-sdk/index.md) can wipe the "corporate" data in the app.
 
 **Intune PIN and a selective wipe**<br>
 On iOS/iPadOS, the app level PIN information is stored in the keychain that is shared between apps with the same publisher, such as all first party Microsoft apps. This PIN information is also tied to a user account. A selective wipe of one app doesn't affect a different app.
@@ -281,7 +281,7 @@ Since the PIN is shared among apps with the same publisher, if the wipe goes to 
 If you observe the PIN being wiped on some devices, the following behavior is likely happening: Since the PIN is tied to an identity, if the user signs in with a different account after a wipe, they're prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain can be used to sign in.
 
 **Setting a PIN twice on apps from the same publisher?**<br>
-MAM (on iOS/iPadOS) currently allows application level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (that is, WXP, Outlook, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios-phase1.md). Without this, the passcode settings aren't properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
+MAM (on iOS/iPadOS) currently allows application level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (that is, WXP, Outlook, Viva Engage) to integrate the [Intune SDK for iOS](../../developer/app-sdk/ios-phase-1.md). Without this, the passcode settings aren't properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
 To support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
 
@@ -311,7 +311,7 @@ Only data marked as "corporate" is encrypted according to the IT administrator's
 - Email (Exchange)
 - Cloud storage (OneDrive app with a OneDrive for work or school account)
 
-For line-of-business apps managed by the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md), all app data is considered "corporate."
+For line-of-business apps managed by the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md), all app data is considered "corporate."
 
 ### Selective wipe
 
@@ -335,10 +335,10 @@ See [Remove devices - retire](../../device-management/actions/retire.md) to read
 **Selective wipe for MAM**<br>
 Selective wipe for MAM removes company app data from an app. The request is initiated using Intune. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
 
-If the user is using the app when selective wipe is initiated, the [Intune SDK](../developer/app-sdk.md) checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
+If the user is using the app when selective wipe is initiated, the [Intune SDK](../../developer/app-sdk/index.md) checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
 
 **When On-Premises (on-prem) services don't work with Intune protected apps**<br>
-Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../developer/app-sdk.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps might work with an on-premises configuration, but they're not consistent or guaranteed.
+Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../../developer/app-sdk/index.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps might work with an on-premises configuration, but they're not consistent or guaranteed.
 
 **Secure way to open web links from managed apps**<br>
 The IT administrator can deploy and set app protection policy for [Microsoft Edge](manage-microsoft-edge.md), a web browser that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using Microsoft Edge.

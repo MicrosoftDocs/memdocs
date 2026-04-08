@@ -85,7 +85,7 @@ The following security areas can be managed through these policies:
 
 Protect organizational data at the application layer using [app protection policies](../apps/app-protection-policy.md) with Intune-managed apps. These protections work on both enrolled and unenrolled devices, supporting Bring Your Own Device (BYOD) scenarios.
 
-**Intune-managed apps** integrate the [Intune App SDK](../developer/app-sdk.md) or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
+**Intune-managed apps** integrate the [Intune App SDK](../../developer/app-sdk/index.md) or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
 
 When you require managed apps (for example, by using app-based Conditional Access policies), users can only access organizational data through those managed apps, while personal data remains unaffected.
 
