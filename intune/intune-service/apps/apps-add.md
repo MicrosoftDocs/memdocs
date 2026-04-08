@@ -112,7 +112,7 @@ As you're determining which apps your workforce needs, consider the various grou
 
 First, you must determine which group should have access to the app, based on the sensitivity of the data the app contains. You might need to include or exclude certain types of roles within your organization. For example, only certain LOB apps might be required for your sales group, whereas people focused on engineering, finance, HR, or legal might not need to use the LOB apps. In addition, your sales group might need additional data protection and access to internal corporate services on their mobile devices. You must determine how this group will connect to resources using the app. Will the data that the app accesses live in the cloud or on-premises? Also, how will the users connect to resources by using the app?
 
-Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../../fundamentals/certificates/overview.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Microsoft Entra application proxy. The Intune [App Wrapping Tool and App SDK](../developer/apps-prepare-mobile-application-management.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
+Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../../fundamentals/certificates/overview.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Microsoft Entra application proxy. The Intune [App Wrapping Tool and App SDK](../../developer/app-sdk/integration-methods.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
 Use the [Intune deployment planning, design and implementation guide](../fundamentals/intune-planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
@@ -137,7 +137,7 @@ Intune lets you modify the functionality of apps that you deploy to help align t
 - Configuring web links to open inside the Microsoft Edge app.
 - Enabling multi-identity use and app-level Conditional Access.
 
-Intune-managed apps can also enable app protection without requiring enrollment, which gives you the choice of applying data loss-prevention policies without managing the user's device. Additionally, you can incorporate mobile-app management in your mobile and line-of-business apps by using the Intune App SDK and App Wrapping Tool. For more information about these tools, see [Intune App SDK overview](../developer/app-sdk.md).
+Intune-managed apps can also enable app protection without requiring enrollment, which gives you the choice of applying data loss-prevention policies without managing the user's device. Additionally, you can incorporate mobile-app management in your mobile and line-of-business apps by using the Intune App SDK and App Wrapping Tool. For more information about these tools, see [Intune App SDK overview](../../developer/app-sdk/index.md).
 
 ### Understanding licensed apps
 
