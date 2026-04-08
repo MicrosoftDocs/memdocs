@@ -136,6 +136,7 @@ To determine whether the app should implement the `getIsOpenFromLocationAllowedF
 | `SHAREPOINT` | The app is opening data from SharePoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
 | `CAMERA` | The app is opening data from the device camera. | A `null` value, because the device camera isn't a cloud service. |
 | `LOCAL` | The app is opening data from an external storage location on the device that **isn't** the app's private storage. | Although external storage isn't a cloud service, an `oid` parameter is expected because it indicates ownership.<br><br>* **For identity-tagged files:** `oid` should be the file owner's identity.<br>* **For files without an identity tag:** `oid` should be `null`. |
+| `LOCAL` | The app is opening data from an external storage location on the device that **isn't** the app's private storage. | Although external storage isn't a cloud service, an `oid` parameter is expected because it indicates ownership.<br><br>* **For identity-tagged files:** `oid` should be the file owner's identity.<br>* **For files without an identity tag:** `oid` should be `null`. |
 | `PHOTO_LIBRARY` | The app is opening data from Android local photo storage. | Local photo storage isn't considered a cloud service and should always be used with a `null` OID parameter. |
 | `ACCOUNT_DOCUMENT` | The app is opening data from a location associated with an account within the app and isn't one of the specific cloud locations in this table.<br><br>*Use this location to determine whether data can be passed between accounts within a multi-identity app.* | An OID for an account used for Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
 | `OTHER` | The app is opening data from a location not specified in this table and that doesn't meet the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and should be `null`. |
@@ -468,7 +469,7 @@ If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re
 If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods return localized strings that the app can display to the end user if it chooses.
 The app can't resolve most error cases. In general, fail account creation or sign-in and allow the user to try again later.
 
-If a failure is persistent, the Company Portal logs might help determine the cause. The end user can submit the logs. For more information, see [Upload and email logs](../../intune-service/user-help/send-logs-to-your-it-admin-by-email-android.md).
+If a failure is persistent, the Company Portal logs might help determine the cause. The end user can submit the logs. For more information, see [Upload and email logs](../../user-help/diagnostics/collect-logs-android.md).
 
 Here's an example of registering a receiver using an anonymous class to implement the MAMNotificationReceiver interface:
 

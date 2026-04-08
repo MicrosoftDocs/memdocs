@@ -165,7 +165,7 @@ These actions are available:
 > Also, these customizations are only available in the default Customization policy, not in the group targeted Customization policies.
 
 ### Device compliance status in Company Portal website
-End users see the compliance status of their devices from the Company Portal website. End users navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices show a status of **Access to company resources**, **Checking access**, or **No access to company resources**. For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md).
+End users see the compliance status of their devices from the Company Portal website. End users navigate to the [Company Portal](https://portal.manage.microsoft.com/devices) website and select the **Devices** page to see device status. Devices show a status of **Access to company resources**, **Checking access**, or **No access to company resources**. For related information, see [Manage apps from the Company Portal website](../../user-help/apps/manage-apps-company-portal-website.md).
 
 ## Opening Web Company Portal applications
 For Web Company Portal applications, if the end user has the Company Portal application installed, the end users see a dialog box asking how they want to open the application when opening outside of the browser. If the app isn't in the path of the Company Portal, then the Company Portal opens the homepage. If the app is in the path, then the Company Portal opens the specific app.

@@ -69,7 +69,7 @@ You need licenses for Microsoft Defender:
 - Microsoft Defender XDR (standalone)
 
 For detailed licensing information, see:
-- [Microsoft Intune licensing](/mem/intune/fundamentals/licenses)
+- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
 - [Microsoft Defender for Endpoint licensing](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
 
 ### Role-based access control

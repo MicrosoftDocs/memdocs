@@ -76,7 +76,7 @@ The following client syncs happen in response to a device event or state change,
 
 Admins or end users initiate these check-ins when they run certain actions on a single device:
 
-- **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/check-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/manage-apps-cpweb.md#available-and-required-apps).
+- **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../../user-help/compliance/validate-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../../user-help/apps/manage-apps-company-portal-website.md#available-and-required-apps).
 
 - **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../../device-management/actions/sync.md), [remote lock](../../device-management/actions/remote-lock.md), or [reset passcode](../../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) don't cause a device check-in.
 
@@ -86,7 +86,7 @@ At any time, users can open the Company Portal app and navigate to **Devices** >
 
 For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
-For related information, see  [Sync enrolled device for Windows](../user-help/sync-your-device-manually-windows.md) and [Check device access in Company Portal for Windows](../user-help/check-device-access-windows-cpapp.md).
+For related information, see  [Sync enrolled device for Windows](../../user-help/device-actions/sync-device-windows.md) and [Check device access in Company Portal for Windows](../../user-help/compliance/validate-device-access-windows.md).
 
 ## Conflicts
 
@@ -138,7 +138,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
     - Allow data roaming
     - Allow automatic synchronization while roaming
 
-  - **Windows devices**: After you remove or unassign the profile, have the Microsoft Entra user sign in to the device, and [sync with the Intune service](../user-help/sync-your-device-manually-windows.md).
+  - **Windows devices**: After you remove or unassign the profile, have the Microsoft Entra user sign in to the device, and [sync with the Intune service](../../user-help/device-actions/sync-device-windows.md).
 
     Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
 

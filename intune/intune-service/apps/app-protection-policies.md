@@ -105,8 +105,8 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying conditional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
-* [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md)
-* [Where to find work or school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
+* [Where to find work or school apps for iOS/iPadOS](../../user-help/apps/managed-apps-ios.md)
+* [Where to find work or school apps for Android](../../user-help/apps/managed-apps-android.md)
 
 
 ## Change existing policies
@@ -205,5 +205,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-- [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
-- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md)
+- [Where to find work or school apps for Android (user help)](../../user-help/apps/managed-apps-android.md)
+- [Where to find work or school apps for iOS/iPadOS (user help)](../../user-help/apps/managed-apps-ios.md)

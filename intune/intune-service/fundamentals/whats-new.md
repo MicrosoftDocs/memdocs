@@ -1929,7 +1929,7 @@ Even if you aren't using Microsoft Defender, if you have Conditional Access turn
 As an admin, if you have JIT registration and compliance remediation set up already, you have no action items. If you don't, set it up today to support this new functionality. For more information, see:
 
 - [Set up just-in-time registration](../enrollment/set-up-just-in-time-registration.md).
-- [Update iOS device settings](../user-help/how-do-i-find-the-serial-number-on-my-device-ios.md).
+- [Update iOS device settings](../../user-help/company-portal/serial-number-ios.md).
 
 ### Intune apps
 

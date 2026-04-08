@@ -140,7 +140,7 @@ The following table lists the type of ownership given to devices when they enrol
 | [Windows Autopilot device preparation profile](/autopilot/device-preparation/tutorial/user-driven/entra-join-workflow#windows-autopilot-device-preparation-user-driven-microsoft-entra-join-process) | Corporate, but will be blocked by personal enrollment restriction | Personal, unless defined by corporate identifiers |
 | [Automatic MDM enrollment](windows-enroll.md) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network) | Personal | Personal, unless defined by corporate identifiers |
 | [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices) option from Windows Settings | Personal | Personal, unless defined by corporate identifiers |
-| [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md) | Personal | Personal, unless defined by corporate identifiers |
+| [Enrollment using the Intune Company Portal app](../../user-help/enrollment/enroll-windows.md) | Personal | Personal, unless defined by corporate identifiers |
 | Enrollment via a Microsoft 365 app, which occurs when users select the **Allow my organization to manage my device** option during app sign-in | Personal | Personal, unless defined by corporate identifiers |
 
 Windows corporate identifiers can only change ownership type if someone adds them to Microsoft Intune. If you don't have corporate identifiers for Windows in Intune, or if you remove them, devices that are Microsoft Entra domain joined are marked as corporate-owned at enrollment time. This includes devices enrolled via [automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with:
