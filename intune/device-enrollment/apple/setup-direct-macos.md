@@ -22,11 +22,11 @@ We recommend direct enrollment if you:
 
 You can use this method to enroll one or more Macs. If you have many devices, it will take some time to enroll them because you must transfer and open the enrollment profile on each Mac you're enrolling.
 
-Devices are deployed without user affinity. If you need devices to have user affinity, enroll Macs in Intune via [Apple automated device enrollment](device-enrollment-program-enroll-macos.md).
+Devices are deployed without user affinity. If you need devices to have user affinity, enroll Macs in Intune via [Apple automated device enrollment](setup-automated-macos.md).
 
 See the following visual guide for a summary of all enrollment options and features available for macOS:
 
-[![A visual representation of Intune enrollment options by platform](../fundamentals/media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
+[![A visual representation of Intune enrollment options by platform](../../intune-service/fundamentals/media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 ## Apps
 Apps requiring user affinity, such as the Intune Company Portal app, aren't supported on Macs enrolled via direct enrollment. The Company Portal app isn't used, needed, or supported for enrollments without user affinity. Be sure device users don't install the Company Portal app from the Apple App Store on enrolled devices.
@@ -41,10 +41,10 @@ Devices that are already enrolled in Intune do not get an ACME certificate unles
 
 ## Prerequisites
 
-- Physical access to [supported devices](../fundamentals/supported-devices-browsers.md#apple).
+- Physical access to [supported devices](../../intune-service/fundamentals/supported-devices-browsers.md#apple).
 - Access to Microsoft Intune admin center and Apple Configurator.
-- Set [MDM authority](../fundamentals/mdm-authority-set.md).
-- [An Apple MDM push certificate](apple-mdm-push-certificate-get.md).
+- Set [MDM authority](../../intune-service/fundamentals/mdm-authority-set.md).
+- [An Apple MDM push certificate](create-mdm-push-certificate.md).
 - Administrator rights on the Macs you're enrolling.
 
 If the Mac you're setting up is enrolled in another MDM provider, you must unenroll it before you can enroll it in Intune. 
@@ -100,7 +100,7 @@ The Mac is now enrolled in Microsoft Intune and ready-to-manage. Other profiles 
 
 Start managing enrolled devices in the Microsoft Intune admin center.
 
-- [Tutorial - Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Tutorial - Walkthrough the Microsoft Intune admin center](../../intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
 - [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md)
-- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md)
 

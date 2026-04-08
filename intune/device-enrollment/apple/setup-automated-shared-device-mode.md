@@ -13,7 +13,7 @@ ms.collection:
 
 *Applies to iOS/iPadOS*
 
-Set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra ID that enables frontline workers to securely share a single device throughout the day, signing in and out as needed. This experience utilizes the [Microsoft Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md) to limit the number of times employees have to sign in during a session.
+Set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra ID that enables frontline workers to securely share a single device throughout the day, signing in and out as needed. This experience utilizes the [Microsoft Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md) to limit the number of times employees have to sign in during a session.
 
 Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment.  Microsoft Intune supports zero-touch provisioning for devices in shared device mode, which means that the device can be set up and enrolled in Intune with minimal interaction from the frontline worker.
 
@@ -30,8 +30,8 @@ In this article, you will:
 
 
 
-* Complete all [prerequisites for Apple Automated Device Enrollment](device-enrollment-program-enroll-ios.md#prerequisites).
-* Read [Before you begin](device-enrollment-program-enroll-ios.md#before-you-begin) for best practices and recommendations for automated device enrollment.
+* Complete all [prerequisites for Apple Automated Device Enrollment](setup-automated-ios.md#prerequisites).
+* Read [Before you begin](setup-automated-ios.md#before-you-begin) for best practices and recommendations for automated device enrollment.
 
 
 ## Step 1: Create an Apple enrollment policy
@@ -48,7 +48,7 @@ Create an Apple automated device enrollment policy in Microsoft Intune for devic
   > [!NOTE]
   > You cannot change the user affinity setting in an existing enrollment profile. If you need to modify this setting, you must create a new Apple enrollment profile.
 
- For more information about how-to create an enrollment profile, see [Create an Apple enrollment profile](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+ For more information about how-to create an enrollment profile, see [Create an Apple enrollment profile](setup-automated-ios.md#create-an-apple-enrollment-profile).
 
 
 <a name='step-2-create-a-dynamic-azure-ad-group'></a>
@@ -77,7 +77,7 @@ Create an assignment filter to quickly target devices assigned to your enrollmen
 * **Operator**: Equals
 * **Value**: Enter the name of the enrollment profile you created for devices in shared device mode.
 
-For more information about how to create an assignment filter rule, see [Create a filter](../fundamentals/filters.md#prerequisites).
+For more information about how to create an assignment filter rule, see [Create a filter](../../intune-service/fundamentals/filters.md#prerequisites).
 
 ## Step 4: Create a device configuration policy
 Configure a single-sign on (SSO) app extension policy for shared device mode. Create a device configuration policy and include these configurations:
@@ -93,16 +93,16 @@ Configure a single-sign on (SSO) app extension policy for shared device mode. Cr
 You can configure the rest of the policy to meet your organization's needs. When you're done configuring the policy, assign it to **All devices** and then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter).
 
 For more information about creating an SSO app extension policy, see:
-* [Create a device configuration profile](../configuration/device-features-configure.md#create-the-profile)
-* [Single-sign on (SSO) app extension settings](../configuration/device-features-configure.md#single-sign-on-sso)
+* [Create a device configuration profile](../../intune-service/configuration/device-features-configure.md#create-the-profile)
+* [Single-sign on (SSO) app extension settings](../../intune-service/configuration/device-features-configure.md#single-sign-on-sso)
 
 ## Step 5: Assign the Microsoft Authenticator app
 Assign the Microsoft Authenticator app to targeted devices. Assign the app as *required* to **All devices**. Then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter). You must have purchased the Microsoft Authenticator app through an Apple volume-purchase program.
 
-For more information about assigning a volume-purchased app, see [Assign a volume purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app).
+For more information about assigning a volume-purchased app, see [Assign a volume purchased app](../../intune-service/apps/vpp-apps-ios.md#assign-a-volume-purchased-app).
 
 ## Step 6: Distribute devices
 
 Shared devices, which are enrolled without user affinity, require minimal user interaction from the frontline worker. Upon receiving the device, the frontline worker will need to open the Microsoft Authenticator app to make sure the device is in shared device mode.
 
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]

@@ -17,7 +17,7 @@ ms.collection:
 
 This article describes how to move from Android device administrator management to mobile application management in Microsoft Intune, and contains recommendations and best practices for a successful transition as [Microsoft Intune ends support for Android device administrator](https://techcommunity.microsoft.com/t5/intune-customer-success/microsoft-intune-ending-support-for-android-device-administrator/ba-p/3915443).
 
-There are two ways to utilize mobile application management in Intune: with device enrollment or without device enrollment. In this article, you'll learn how to set up *mobile application management without device enrollment* to manage apps and data on personal devices. We recommend this option for organizations that don't need mobile device management (MDM) capabilities like Wi-Fi deployment or email configuration profiles. If your organization has dependencies that require device management on personal devices, we recommend moving to [Android Enterprise personally owned work profile management](../enrollment/android-move-device-admin-work-profile.md) instead.
+There are two ways to utilize mobile application management in Intune: with device enrollment or without device enrollment. In this article, you'll learn how to set up *mobile application management without device enrollment* to manage apps and data on personal devices. We recommend this option for organizations that don't need mobile device management (MDM) capabilities like Wi-Fi deployment or email configuration profiles. If your organization has dependencies that require device management on personal devices, we recommend moving to [Android Enterprise personally owned work profile management](migrate-device-admin-to-work-profile.md) instead.
 
 ## Prerequisites
 
@@ -32,13 +32,13 @@ You need the following Intune permissions to set up and enforce mobile applicati
 Additionally, the Intune Company Portal app is required on devices, because it enables device users to receive app protection policies.
 
 >[!TIP]
-> * The built-in [Application Manager](../fundamentals/role-based-access-control-reference.md#application-manager) role has sufficient permissions for mobile application management.
-> * You can add [scope tags](../fundamentals/scope-tags.md) to policies to control object visibility among Intune admin users.
+> * The built-in [Application Manager](../../intune-service/fundamentals/role-based-access-control-reference.md#application-manager) role has sufficient permissions for mobile application management.
+> * You can add [scope tags](../../intune-service/fundamentals/scope-tags.md) to policies to control object visibility among Intune admin users.
 
 ## Step 1: Configure policies for mobile application management
 Create mobile application management policies in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Within these policies you can, for example, allow or block app features such as *copy and paste*. For more app protection settings and capabilities in Intune, see:
-* [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md): Describes the settings you can configure in an app protection policy.
-* [Intune protected apps](../apps/apps-supported-intune-apps.md#microsoft-apps): Lists apps that support app protection policies.
+* [Android app protection policy settings in Microsoft Intune](../../intune-service/apps/app-protection-policy-settings-android.md): Describes the settings you can configure in an app protection policy.
+* [Intune protected apps](../../intune-service/apps/apps-supported-intune-apps.md#microsoft-apps): Lists apps that support app protection policies.
 
 The following table lists configurations commonly used with Android device administrator management and similar mobile application management settings to consider using going forward.
 
@@ -47,21 +47,21 @@ The following table lists configurations commonly used with Android device admin
 
 | Configuration | Android device administrator policy setting |Mobile application management policy setting | More information |
 | --- | --- | --- | --- |
-|Conditional Access | Use [device-based Conditional Access policies](../protect/app-based-conditional-access-intune-create.md).  | Use [app-based Conditional Access policies](../protect/app-based-conditional-access-intune-create.md). | Before you unenroll devices, consider updating your device-based Conditional Access policies to include an `or` condition for app-based Conditional Access policies.  Otherwise, device users could be in an interim state without MDM or mobile application management enforced. |
-| Prevent copy and paste |  **Restrict copy and paste (Knox only)**  <br> <br> Setting available in [Configuration policy > General](../configuration/device-restrictions-android.md#general).   | **Restrict cut, copy, and paste between other apps** <br> <br>  Setting available in [App protection policy > Data protection](../apps/app-protection-policy-settings-android.md#data-protection). | |
-| Enforce password | Password settings vary depending on policy type used.  <br> <br> Settings available in [Configuration policy > Password](../configuration/device-restrictions-android.md#password) and [Compliance policy > Device security](../protect/compliance-policy-create-android.md#device-security).  | **PIN for app access** <br> <br>  Setting available in [App protection policy > Access requirements](../apps/app-protection-policy-settings-android.md#access-requirements). |  |
-| Enforce minimum and maximum OS version | OS version settings vary depending on policy type used.  <br> <br> Settings available in [Compliance policy > Operating system version](../protect/compliance-policy-create-android.md#operating-system-version) and [Enrollment > Device platform restriction](../enrollment/create-device-platform-restrictions.md#create-a-device-platform-restriction). | **Min OS version** and **Max OS version** <br> <br> Settings available in [App protection policy > Conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch). |
-| Block rooted devices| **Rooted devices** <br> <br> Setting available in [Compliance policy > Device health](../protect/compliance-policy-create-android.md#device-health).| **Jailbroken/rooted devices** <br> <br> Setting available in [App protection policy > Conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch). |
-| Allow specific manufacturers | **Device manufacturers** <br> <br> Setting available in [Enrollment > Device platform restriction](../enrollment/create-device-platform-restrictions.md#create-a-device-platform-restriction). | **Device manufacturers** <br> <br> Setting available in [App protection policy > Conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch). | |
-| VPN |Create a [VPN profile](../configuration/vpn-settings-configure.md) in a configuration policy.  |Set up [Microsoft Tunnel for Mobile App Management](../protect/microsoft-tunnel-mam-android.md). |  |
-| Assign and deploy apps |  Make apps required for automatic installation or make them available in the Company Portal app. <br> <br> Settings available in [Apps > Android store app](../apps/store-apps-android.md#add-an-app). | Apps you make available to employees and students automatically appear in the Company Portal for Android app or Managed Google Play app.  |  Protect line-of-business (LOB) apps with app protection policies by using the Intune app wrapping tool. If you develop LOB apps in-house, your developers can [leverage the Intune App SDK](../../developer/app-sdk/index.md).  |
-| Wipe corporate data | **Retire** devices to wipe corporate data only, or **Wipe** devices to restore them to factory settings. <br> <br> Settings available in [remote actions](../../device-management/actions/wipe.md).| **Wipe corporate data from apps** <br> <br> Setting available in [App selective wipe](../apps/apps-selective-wipe.md). |  |
+|Conditional Access | Use [device-based Conditional Access policies](../../intune-service/protect/app-based-conditional-access-intune-create.md).  | Use [app-based Conditional Access policies](../../intune-service/protect/app-based-conditional-access-intune-create.md). | Before you unenroll devices, consider updating your device-based Conditional Access policies to include an `or` condition for app-based Conditional Access policies.  Otherwise, device users could be in an interim state without MDM or mobile application management enforced. |
+| Prevent copy and paste |  **Restrict copy and paste (Knox only)**  <br> <br> Setting available in [Configuration policy > General](../../intune-service/configuration/device-restrictions-android.md#general).   | **Restrict cut, copy, and paste between other apps** <br> <br>  Setting available in [App protection policy > Data protection](../../intune-service/apps/app-protection-policy-settings-android.md#data-protection). | |
+| Enforce password | Password settings vary depending on policy type used.  <br> <br> Settings available in [Configuration policy > Password](../../intune-service/configuration/device-restrictions-android.md#password) and [Compliance policy > Device security](../../intune-service/protect/compliance-policy-create-android.md#device-security).  | **PIN for app access** <br> <br>  Setting available in [App protection policy > Access requirements](../../intune-service/apps/app-protection-policy-settings-android.md#access-requirements). |  |
+| Enforce minimum and maximum OS version | OS version settings vary depending on policy type used.  <br> <br> Settings available in [Compliance policy > Operating system version](../../intune-service/protect/compliance-policy-create-android.md#operating-system-version) and [Enrollment > Device platform restriction](../create-platform-restrictions.md#create-a-device-platform-restriction). | **Min OS version** and **Max OS version** <br> <br> Settings available in [App protection policy > Conditional launch](../../intune-service/apps/app-protection-policy-settings-android.md#conditional-launch). |
+| Block rooted devices| **Rooted devices** <br> <br> Setting available in [Compliance policy > Device health](../../intune-service/protect/compliance-policy-create-android.md#device-health).| **Jailbroken/rooted devices** <br> <br> Setting available in [App protection policy > Conditional launch](../../intune-service/apps/app-protection-policy-settings-android.md#conditional-launch). |
+| Allow specific manufacturers | **Device manufacturers** <br> <br> Setting available in [Enrollment > Device platform restriction](../create-platform-restrictions.md#create-a-device-platform-restriction). | **Device manufacturers** <br> <br> Setting available in [App protection policy > Conditional launch](../../intune-service/apps/app-protection-policy-settings-android.md#conditional-launch). | |
+| VPN |Create a [VPN profile](../../intune-service/configuration/vpn-settings-configure.md) in a configuration policy.  |Set up [Microsoft Tunnel for Mobile App Management](../../intune-service/protect/microsoft-tunnel-mam-android.md). |  |
+| Assign and deploy apps |  Make apps required for automatic installation or make them available in the Company Portal app. <br> <br> Settings available in [Apps > Android store app](../../intune-service/apps/store-apps-android.md#add-an-app). | Apps you make available to employees and students automatically appear in the Company Portal for Android app or Managed Google Play app.  |  Protect line-of-business (LOB) apps with app protection policies by using the Intune app wrapping tool. If you develop LOB apps in-house, your developers can [leverage the Intune App SDK](../../developer/app-sdk/index.md).  |
+| Wipe corporate data | **Retire** devices to wipe corporate data only, or **Wipe** devices to restore them to factory settings. <br> <br> Settings available in [remote actions](../../device-management/actions/wipe.md).| **Wipe corporate data from apps** <br> <br> Setting available in [App selective wipe](../../intune-service/apps/apps-selective-wipe.md). |  |
 
 ## Step 2: Restrict Android device administrator
 
 Create a platform enrollment restriction for Android device administrator to prevent further device administrator enrollments from happening. Devices already enrolled as device administrator remain enrolled and unaffected.
 
-For more information about how to create a platform enrollment restriction, see [Create device platform restrictions](../enrollment/create-device-platform-restrictions.md).
+For more information about how to create a platform enrollment restriction, see [Create device platform restrictions](../create-platform-restrictions.md).
 
 ## Step 3: Remove devices from device administrator management
 Retire enrolled devices in the Microsoft Intune admin center or instruct device users to unenroll them in the Intune Company Portal app.
@@ -94,9 +94,9 @@ For removal steps that Android device users can do themselves, see [Unenroll And
 This section contains best practices for setting up mobile application management.
 
 ### Prevent Company Portal enrollment prompts
-When Microsoft Intune detects that the user's device is set up for app protection policies without enrollment, it doesn't prompt the user to enroll via Intune Company Portal. To ensure that other users don't enroll their devices, we recommend configuring the Company Portal app so that there's no enrollment prompt. For more information, see [Device enrollment setting options](../apps/company-portal-app.md#device-enrollment-setting-options).
+When Microsoft Intune detects that the user's device is set up for app protection policies without enrollment, it doesn't prompt the user to enroll via Intune Company Portal. To ensure that other users don't enroll their devices, we recommend configuring the Company Portal app so that there's no enrollment prompt. For more information, see [Device enrollment setting options](../../intune-service/apps/company-portal-app.md#device-enrollment-setting-options).
 
-To block enrollment of personal devices, create a device enrollment restriction. For more information, see [Best practices for Android platform restrictions](../enrollment/create-device-platform-restrictions.md#best-practice---android-platform-restrictions).
+To block enrollment of personal devices, create a device enrollment restriction. For more information, see [Best practices for Android platform restrictions](../create-platform-restrictions.md#best-practice---android-platform-restrictions).
 
 ### Unenrolling devices with Microsoft Entra Conditional Access policies
 If you have Microsoft Entra Conditional Access policies that require devices to be compliant for corporate access, the devices you remove from Android device administrator management will lose their access. To ensure continued access, review your existing Conditional Access policies. For more information, see [Require device to be marked as compliant](/entra/identity/conditional-access/concept-conditional-access-grant#require-device-to-be-marked-as-compliant).
@@ -128,7 +128,7 @@ This section describes how to fix issues encountered when switching from Android
 
 ## More resources
 
-* [Intune app protection policies overview](../apps/app-protection-policy.md)
-* [App management capabilities by platform](../apps/app-management.md#app-management-capabilities-by-platform)
+* [Intune app protection policies overview](../../intune-service/apps/app-protection-policy.md)
+* [App management capabilities by platform](../../intune-service/apps/app-management.md#app-management-capabilities-by-platform)
 * [Troubleshooting app protection policy user issues](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam)
-* [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-mamwe.md#mam)
+* [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md#mam)

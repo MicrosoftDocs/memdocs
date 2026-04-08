@@ -44,9 +44,9 @@ Microsoft Intune supports a specific subset of device management options for dev
 ### Device configuration and management
 Supported device configuration policies and management capabilities include:
 
-- VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../configuration/vpn-setting-configure-per-app.md). Safari domains are not supported.
-- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../configuration/wi-fi-settings-apple.md).
-- Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-apple.md).
+- VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../../intune-service/configuration/vpn-setting-configure-per-app.md). Safari domains are not supported.
+- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-apple.md).
+- Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-apple.md).
 - Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information, see [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md).
 
 ### App deployment and management
@@ -98,7 +98,7 @@ If these capabilities are important to you, we recommend using Apple Device Enro
 
 After considering supported settings and enrollment features, choose the user enrollment method you want to use to enroll devices. The following articles describe how to set up these enrollment methods in the Microsoft Intune admin center:
 
-* [Set up user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md)
-* [Set up account driven user enrollment](apple-account-driven-user-enrollment.md)
+* [Set up user enrollment with Company Portal](setup-user-company-portal.md)
+* [Set up account driven user enrollment](setup-account-driven-user.md)
 
 For more information about Apple User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) on the Apple support website.

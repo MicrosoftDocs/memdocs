@@ -14,10 +14,10 @@ ms.collection:
 
 To manage Intune-enrolled devices with any of the supported Android Enterprise management options, you must connect your Microsoft Intune tenant to your managed Google Play account. Available management options include:
 
-- [Android Enterprise personally owned work profile](android-work-profile-enroll.md)
-- [Android Enterprise corporate-owned work profile](android-corporate-owned-work-profile-enroll.md)
-- [Android Enterprise fully managed](android-fully-managed-enroll.md)
-- [Android Enterprise dedicated devices](android-kiosk-enroll.md)
+- [Android Enterprise personally owned work profile](setup-personal-work-profile.md)
+- [Android Enterprise corporate-owned work profile](setup-corporate-work-profile.md)
+- [Android Enterprise fully managed](setup-fully-managed.md)
+- [Android Enterprise dedicated devices](setup-dedicated.md)
 
 This article describes how to link your accounts in the Microsoft Intune admin center. After you connect to Google Play, these common apps for Android Enterprise are added to the admin center:
 
@@ -61,7 +61,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 9. When prompted, select **Allow and create account** to allow Microsoft Intune to manage your Android Enterprise devices.
 
 > [!TIP]
-> After you connect to Managed Google Play and start using Collections, Google changes the Play Store mode to Custom. If you prefer all approved apps to be automatically visible, use **Reset to Basic** in the Intune admin center. For more information, see [Play Store modes and layout reset](../apps/apps-add-android-for-work.md#play-store-modes-and-layout-reset).
+> After you connect to Managed Google Play and start using Collections, Google changes the Play Store mode to Custom. If you prefer all approved apps to be automatically visible, use **Reset to Basic** in the Intune admin center. For more information, see [Play Store modes and layout reset](../../intune-service/apps/apps-add-android-for-work.md#play-store-modes-and-layout-reset).
 
 > [!TIP]
 > To choose a scope tag for your managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center. Then select a scope tag to apply to all newly-approved managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.
@@ -131,7 +131,7 @@ Complete the steps in this section to edit the name of your organization.
 ## Next steps  
 
 After you connect to a managed Google Play account, you can set up Microsoft Intune for these Android Enterprise scenarios:
-- [Personally owned work profile devices](android-work-profile-enroll.md).
-- [Corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md).
-- [Dedicated devices](android-kiosk-enroll.md).
-- [Fully managed devices](android-fully-managed-enroll.md).
+- [Personally owned work profile devices](setup-personal-work-profile.md).
+- [Corporate-owned work profile devices](setup-corporate-work-profile.md).
+- [Dedicated devices](setup-dedicated.md).
+- [Fully managed devices](setup-fully-managed.md).

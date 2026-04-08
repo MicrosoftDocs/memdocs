@@ -22,7 +22,7 @@ You and your device users can initiate enrollment by entering or scanning an enr
 ## Step 1: Prerequisites
 Complete these prerequisites to ensure a successful enrollment.
 
-* You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../fundamentals/mdm-authority-set.md).
+* You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../../intune-service/fundamentals/mdm-authority-set.md).
 
 * Devices must:
   - Run Android OS version 10.0 and later.
@@ -37,7 +37,7 @@ Complete these prerequisites to ensure a successful enrollment.
     * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)
     * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)
 
- * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
+ * [Connect your Intune tenant account to your Android Enterprise account](connect-managed-google-play.md).
 
  * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have a Microsoft Entra Conditional Access policy with the following configurations, you must exclude the Microsoft Intune cloud app from the policy:
 
@@ -98,13 +98,13 @@ To create a new enrollment profile:
          Edits you make to the naming template only apply to new enrollments.
 
 1. Select **Next** to continue to **Device group**.
-1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).
+1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](../setup-time-grouping.md).
 
    > [!TIP]
    > Be sure to select a device group, not a user group.
 
 1. Select **Next** to continue to **Scope tags**.
-1. Apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Scope tags are optional. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+1. Apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Scope tags are optional. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 1. Select **Next** to continue to **Review + create**.
 1. Review the summary of your profile, and then select **Create** to finalize it.
 
@@ -146,7 +146,7 @@ After you set up the enrollment profile, token, and dynamic group, you can use a
 * Zero-touch enrollment
 * Samsung Knox Mobile Enrollment
 
-For the next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](android-dedicated-devices-fully-managed-enroll.md).
+For the next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](ref-corporate-methods.md).
 
 ## Token types
 When you create the enrollment profile in the admin center, you have to select a token type. There are two types of tokens. Each type enables a different enrollment flow.
@@ -155,7 +155,7 @@ The default token, *corporate-owned, fully managed*, enrolls devices into Micros
 
 The device staging token, *Corporate-owned, fully managed, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a third party vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 10 or later.
 
-For more information, see [Device staging overview](device-staging-overview.md).
+For more information, see [Device staging overview](device-staging.md).
 
 ## Replace, remove, or export token
 Select a token in the admin center to access these management options:

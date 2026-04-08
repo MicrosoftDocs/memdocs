@@ -48,7 +48,7 @@ To establish a connection, you must have:
    5. Select **Authorize** to save all changes.
 5. Return to the Microsoft Intune admin center and select **Launch Google to connect now.**
 6. When prompted to authenticate with your organization's Google Enterprise domain, use your Google Admin account. The Google Admin account appears in Google Workspace audit logs for all actions applied to ChromeOS devices in the Intune admin center. Your account must have:
-   * Permission to manage ChromeOS devices, as described in [Prerequisites](chrome-enterprise-connector-configure.md#prerequisites).
+   * Permission to manage ChromeOS devices, as described in [Prerequisites](configure-chrome-enterprise-connector.md#prerequisites).
    * Access to Google Workspace Admin SDK Directory API.
 
 After you authenticate, the connection is established and your organization's enrolled ChromeOS devices begin syncing from the Google Admin console. The status changes to **Active** when syncing is complete.
@@ -79,5 +79,5 @@ To delete the connection in the Microsoft Intune admin center:
 3. Select **Delete**.
 
 ## Next steps
-* View ChromeOS devices and details synced between Google Admin console and the Microsoft Intune admin center. The information can be used to monitor connections or build reports. For more information, see [View ChromeOS device information in Intune](../fundamentals/chrome-enterprise-device-details.md).
-*  Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote device actions for ChromeOS](../fundamentals/chrome-enterprise-device-details.md).
+* View ChromeOS devices and details synced between Google Admin console and the Microsoft Intune admin center. The information can be used to monitor connections or build reports. For more information, see [View ChromeOS device information in Intune](../intune-service/fundamentals/chrome-enterprise-device-details.md).
+*  Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote device actions for ChromeOS](../intune-service/fundamentals/chrome-enterprise-device-details.md).

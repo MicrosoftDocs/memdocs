@@ -45,7 +45,7 @@ In the first set of steps, you download the Intune public key certificate requir
 ## Next steps
 This series of articles describes how to set up Microsoft Intune for devices purchased through Apple School Manager.
 
-1. [Prerequisites](apple-school-manager-set-up-ios.md)
+1. [Prerequisites](school-manager.md)
 1. 🡺 Get an Apple token for school devices (*You are here*)
-1. [Create an Apple enrollment profile](apple-school-manager-step-2.md)
-1. [Sync and distribute devices](apple-school-manager-step-3.md)
+1. [Create an Apple enrollment profile](school-manager-step-2.md)
+1. [Sync and distribute devices](school-manager-step-3.md)

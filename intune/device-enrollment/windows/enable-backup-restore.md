@@ -41,7 +41,7 @@ To use the backup functionality, devices must be:
   * Windows 11, version 24H2, build 26100.4946 or later   
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 The restore feature is available on devices that meet the following requirements:
 
@@ -55,7 +55,7 @@ The restore feature is available on devices that meet the following requirements
 - If Autopilot is used, the Autopilot profile must be configured to use [user-driven mode](/autopilot/user-driven), not self-deploying mode.
 
 Additionally, you're required to configure these settings:
-- Configure the Windows quality updates setting, an [enrollment status page feature](windows-enrollment-status.md).
+- Configure the Windows quality updates setting, an [enrollment status page feature](setup-status-page.md).
 
 ## RBAC and tenant wide targeting
 The restore setting for Windows Backup for Organizations is a tenant-wide setting. This means the restore setting is either turned on or off for all Windows devices in a tenant. The default configuration is **Not configured**, which turns off the restore setting for all devices.
@@ -110,7 +110,7 @@ Per device reporting is available in the Microsoft Intune admin center.
    - No Backup Profiles  
    - Setup as New PC Selected   
 
-For more information about the reporting available on the enrollment page, see [View enrollment reports](view-enrollment-reports.md).  
+For more information about the reporting available on the enrollment page, see [View enrollment reports](../monitor-reports.md).  
 
 ## Known issues
 Known issues with Windows Backup for Organizations include:

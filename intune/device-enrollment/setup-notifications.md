@@ -24,7 +24,7 @@ Enrollment notifications are supported on these devices:
 * Windows Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]
 
 ## Example
 The following example image shows what an enrollment notification looks like to a device user.
@@ -33,7 +33,7 @@ The following example image shows what an enrollment notification looks like to 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/setup-notifications/enrollment-notification-message.png)
 
 ## Requirements  
-Prior to creating enrollment notifications, you must [configure Microsoft Intune branding and customization settings](../apps/company-portal-app.md) under **Tenant administration** > **Customization**.
+Prior to creating enrollment notifications, you must [configure Microsoft Intune branding and customization settings](../intune-service/apps/company-portal-app.md) under **Tenant administration** > **Customization**.
 
 Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios, or when provisioning Windows 365 Cloud PCs.
 

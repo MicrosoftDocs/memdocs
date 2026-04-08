@@ -28,7 +28,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 ## Requirements  
 
 - Devices must be running a supported version of Windows.
-- Enable [Windows automatic enrollment](windows-enroll.md#enable-windows-automatic-enrollment).
+- Enable [Windows automatic enrollment](enable-automatic-mdm.md#enable-windows-automatic-enrollment).
 - Make sure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-MgServicePrincipal -Filter "AppId eq '00000014-0000-0000-c000-000000000000'"` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error.
 
   To register the service principal, use the `New-MgServicePrincipal -AppId "00000014-0000-0000-c000-000000000000"` command. To learn more about this command, see [New-MgServicePrincipal](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal).
@@ -63,7 +63,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 ![Screenshot of signing in to the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-cred.png)
 
    > [!NOTE]
-   > - The account used to request the bulk enrollment token in the Windows Configuration Designer app must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) in Microsoft Entra ID. If you remove this account from a group that's tied to the MDM user scope, bulk enrollment will stop working.
+   > - The account used to request the bulk enrollment token in the Windows Configuration Designer app must be included in the [MDM user scope](enable-automatic-mdm.md#enable-windows-automatic-enrollment) in Microsoft Entra ID. If you remove this account from a group that's tied to the MDM user scope, bulk enrollment will stop working.
    > - Bulk token retrieval does not work for federated user accounts enabled for staged rollouts.
 
 1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**.
@@ -102,7 +102,7 @@ You can check for success/failure of the settings in your package in the **Provi
 
 > [!NOTE]
 > Bulk enrollment is considered a userless enrollment method, and because of it, only the "Default" enrollment restriction in Intune would apply during enrollment. Make sure Windows platform is allowed in the default restriction, otherwise, the enrollment will fail.
-> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../fundamentals/deployment-guide-enrollment-windows.md).
+> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../../intune-service/fundamentals/deployment-guide-enrollment-windows.md).
 
 ### Bulk enrollment with Wi-Fi
 
@@ -113,4 +113,4 @@ When not using an open network, you must use [device-level certificates](../../f
 Conditional Access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]  

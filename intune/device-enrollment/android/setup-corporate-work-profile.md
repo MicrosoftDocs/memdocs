@@ -36,8 +36,8 @@ Devices must meet these requirements to be managed as Android Enterprise corpora
 
 To set up Android Enterprise corporate-owned work profile device management, follow these steps:
 
-1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you're first setting up Intune for mobile device management.
-2. [Connect your Intune tenant account to your Managed Google Play account](connect-intune-android-enterprise.md).
+1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../../intune-service/fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you're first setting up Intune for mobile device management.
+2. [Connect your Intune tenant account to your Managed Google Play account](connect-managed-google-play.md).
 3. [Create an enrollment profile.](#create-an-enrollment-profile)
 4. [Create a device group](#create-a-device-group).
 5. [Enroll the corporate-owned work profile devices](#enroll-the-corporate-owned-work-profile-devices).
@@ -76,11 +76,11 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 
     - **Token expiration date**: Only available with the staging token. Enter the date you want the token to expire, up to 65 years in the future. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD` The token expires on the selected date at 12:59:59 PM in the time zone it was created.
 1. Select **Next** to continue to **Device group**.
-1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](enrollment-time-grouping.md).
+1. Optionally, select where to group devices at enrollment time. Select **Search by group name**. Then find and select a static Microsoft Entra device group. For information about how to create a device group to use for grouping, see [Set up enrollment time grouping](../setup-time-grouping.md).
    >[!TIP]
    > Be sure to select a device group, not a user group.
 1. Select **Next** to continue to **Scope tags**.
-1. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+1. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     - **Naming Template**: The default behavior names devices using properties of the device, such as enrollment type, device ID, and time of enrollment. Example: *AndroidForWork_01/01/2025_12:00 PM*
 
@@ -129,7 +129,7 @@ Another way to find the token is:
 
 2. Select **View enrollment token**.
 
-The token appears as an eight-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](android-dedicated-devices-fully-managed-enroll.md).
+The token appears as an eight-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](ref-corporate-methods.md).
 
 ### Revoke or Export tokens
 
@@ -138,7 +138,7 @@ The token appears as an eight-digit string and a QR code. Use this token to enro
   - Accidentally share the token/QR code with an unauthorized party.
   - Complete all enrollments and no longer need the token/QR code.
 
-- **Export token**: You can export the JSON content of the token/QR code. You can use this option to copy/paste JSON content for [Zero Touch Enrollment (ZTE)](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment (KME)](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-knox-mobile-enrollment).
+- **Export token**: You can export the JSON content of the token/QR code. You can use this option to copy/paste JSON content for [Zero Touch Enrollment (ZTE)](ref-corporate-methods.md#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment (KME)](ref-corporate-methods.md#enroll-by-using-knox-mobile-enrollment).
 
 Revoking or exporting a token/QR code doesn't have any effect on devices that are already enrolled.
 
@@ -171,7 +171,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
 
 ## Enroll the corporate-owned work profile devices
 
-Users can now [enroll their corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md).
+Users can now [enroll their corporate-owned work profile devices](ref-corporate-methods.md).
 
 > [!NOTE]
 > The Microsoft Intune app automatically installs on corporate-owned work profile devices during enrollment. This app is required for enrollment and can't be uninstalled. If you deploy the Intune Company Portal app to a device and the user attempts to launch the app, they will be redirected to the Microsoft Intune app, and the Company Portal app icon will be hidden.
@@ -184,7 +184,7 @@ The default token, *corporate-owned work profile*, enrolls devices into Microsof
 
 The device staging token, *Corporate-owned work profile, via staging*, enrolls devices into Microsoft Intune in a staging mode so that you or a partner vendor can complete all pre-provisioning steps. End users complete the last step of provisioning by signing into the Microsoft Intune app with their work or school account. Devices are ready to use upon sign-in. Intune supports device staging for Android Enterprise devices running Android 8 or later.
 
-For more information, see [Device staging overview](device-staging-overview.md).
+For more information, see [Device staging overview](device-staging.md).
 
 ## Managing apps on Android Enterprise corporate-owned work profile devices
 
@@ -203,5 +203,5 @@ The limitations in this section apply to corporate-owned devices with a work pro
 Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden. The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.
 
 ## Next steps
-- [Deploy Android apps](../apps/apps-deploy.md)
-- [Add Android configuration policies](../configuration/device-profiles.md)
+- [Deploy Android apps](../../intune-service/apps/apps-deploy.md)
+- [Add Android configuration policies](../../intune-service/configuration/device-profiles.md)

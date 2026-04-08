@@ -33,7 +33,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 ## Limitations
 
-Automated device enrollment via Apple Business Manager and Apple School Manager isn't supported with [device enrollment manager accounts](device-enrollment-manager-enroll.md).
+Automated device enrollment via Apple Business Manager and Apple School Manager isn't supported with [device enrollment manager accounts](../setup-enrollment-manager.md).
 
 ## Prerequisites
 
@@ -41,8 +41,8 @@ Access to [Apple School Manager](https://school.apple.com/) or [Apple Business M
 
 Before you begin, ensure the following tasks are complete:
 
-- Set the [mobile device management authority](../fundamentals/mdm-authority-set.md) in your tenant.
-- Get an [Apple MDM Push certificate](../enrollment/apple-mdm-push-certificate-get.md).
+- Set the [mobile device management authority](../../intune-service/fundamentals/mdm-authority-set.md) in your tenant.
+- Get an [Apple MDM Push certificate](create-mdm-push-certificate.md).
 
 ## Create enrollment program token
 
@@ -137,7 +137,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
         If the user doesn't sign in to the Company Portal to complete registration, they'll be redirected to the Company Portal app each time they try to open a managed app with Conditional Access protection.
 
-        Devices running macOS 10.15 and later can use this method. Older macOS devices fall back to using the legacy Setup Assistant method. For more information about how to get the Company Portal app to Mac users, see [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
+        Devices running macOS 10.15 and later can use this method. Older macOS devices fall back to using the legacy Setup Assistant method. For more information about how to get the Company Portal app to Mac users, see [Add the Company Portal for macOS app](../../intune-service/apps/apps-company-portal-macos.md).
 
       > [!IMPORTANT]
       > We recommend using **Setup Assistant with modern authentication** for your Apple devices for ADE (automated device enrollment) scenarios with user device affinity. While use of the legacy authentication remains available, we do not recommend its use.
@@ -166,12 +166,12 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
    When a supported macOS device enrolls with Intune through an automated device enrollment (ADE) profile that configures the local administrator, the device is enabled for macOS local account configuration with the Microsoft local admin password solution (LAPS). With this capability, newly enrolled devices receive a unique local administrator account that has a strong, encrypted, and randomized admin password (15 alphanumeric characters), which is also stored and encrypted by Intune. After enrollment, Intune automatically rotates a LAPS-managed administrator password every six months by default and supports look up and manual rotation of the admin password by Intune administrators with sufficient permissions.
 
-   For information about configuring and then managing this capability, [Setup macOS account configuration with LAPS](../enrollment/macos-laps.md).
+   For information about configuring and then managing this capability, [Setup macOS account configuration with LAPS](setup-laps-macos.md).
 
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/setup-automated-macos/macos-account-settings-intune.png)
 
-   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
+   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this profile, see [local administrator account](setup-laps-macos.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
    Your options:
 

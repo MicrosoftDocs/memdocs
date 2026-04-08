@@ -32,7 +32,7 @@ After you get your Apple token, you can create an enrollment profile for school 
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-1. If you chose **Enroll with User Affinity**, select how users must authenticate: Company Portal, Setup Assistant (legacy), or Setup Assistant with modern authentication. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).
+1. If you chose **Enroll with User Affinity**, select how users must authenticate: Company Portal, Setup Assistant (legacy), or Setup Assistant with modern authentication. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](ref-automated-authentication-methods.md).
 
     > [!NOTE]
     > If you want any of the following features, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
@@ -54,7 +54,7 @@ After you get your Apple token, you can create an enrollment profile for school 
 
 1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the supervised management mode set to *yes*.
 
-1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../fundamentals/education-settings-configure-ios-shared.md) and [shared iPad requirements for Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
+1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../../intune-service/fundamentals/education-settings-configure-ios-shared.md) and [shared iPad requirements for Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
 1. Choose if you want the devices using this profile to be able to **Sync with computers**. **Deny All** means that devices using this profile can't sync with any data on any computer.
 
@@ -90,8 +90,8 @@ After you get your Apple token, you can create an enrollment profile for school 
 ## Next steps
 This series of articles describes how to set up Microsoft Intune for devices purchased through Apple School Manager.
 
-1. [Prerequisites](apple-school-manager-set-up-ios.md)
-1. [Get an Apple token for school devices](apple-school-manager-step-1.md).
+1. [Prerequisites](school-manager.md)
+1. [Get an Apple token for school devices](school-manager-step-1.md).
 1. 🡺 Create an Apple enrollment profile (*You are here*).
-1. [Sync and distribute devices](apple-school-manager-step-3.md).
+1. [Sync and distribute devices](school-manager-step-3.md).
 

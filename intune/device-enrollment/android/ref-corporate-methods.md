@@ -14,7 +14,7 @@ ms.collection:
 > [!IMPORTANT]
 >  Device users shouldn't restart devices until enrollment is complete. If device users setting up fully managed devices or corporate-owned devices with a work profile restart their devices in the middle of enrollment, their devices may not be able to register with Microsoft Intune. Devices that restarted may appear to be enrolled but they won't be protected by your Intune policies.
 
-After you've set up your Android Enterprise [dedicated devices](android-kiosk-enroll.md), [fully managed devices](android-fully-managed-enroll.md), or [corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md) in Intune, you can enroll the devices. You have several options for how to enroll these devices: QR code, Google Zero Touch, Knox Mobile Enrollment, Near Field Communication (NFC), or token entry.
+After you've set up your Android Enterprise [dedicated devices](setup-dedicated.md), [fully managed devices](setup-fully-managed.md), or [corporate-owned work profile devices](setup-corporate-work-profile.md) in Intune, you can enroll the devices. You have several options for how to enroll these devices: QR code, Google Zero Touch, Knox Mobile Enrollment, Near Field Communication (NFC), or token entry.
 
 > [!NOTE]
 > If you have a Microsoft Entra Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Microsoft Entra Conditional Access documentation](/azure/active-directory/conditional-access/).
@@ -37,7 +37,7 @@ For corporate owned devices with a work profile running Android 15, you will nee
 
 :::column-end:::
 :::column span="3":::
-> This feature supports the following platforms on [supported Android OS versions](../fundamentals/supported-devices-browsers.md#android):
+> This feature supports the following platforms on [supported Android OS versions](../../intune-service/fundamentals/supported-devices-browsers.md#android):
 >
 > - Android Enterprise corporate owned fully managed devices (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
@@ -75,7 +75,7 @@ To enable the iframe, you must first add the *update app sync* permission and en
   * Configure zero-touch enabled devices
   * Customize provisioning extras
 
-Complete the steps in this section to enable the iframe. To create configurations in the zero-touch enrollment portal instead, skip to [Create configuration in zero-touch enrollment portal](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch-enrollment-portal).
+Complete the steps in this section to enable the iframe. To create configurations in the zero-touch enrollment portal instead, skip to [Create configuration in zero-touch enrollment portal](ref-corporate-methods.md#create-configuration-in-zero-touch-enrollment-portal).
 
 #### Step 1: Add required permission
 Add the *update app sync* permission.
@@ -103,7 +103,7 @@ Link a zero-touch account with your Microsoft Intune account.
 7. A default configuration is created. A screen appears with basic information about the configuration. Intune will automatically apply the default configuration to any zero-touch enabled device that's without an existing configuration.
 
    > [!CAUTION]
-   > The token used for the default configuration is meant for a fully managed device. Once you link your account, the default zero-touch configuration created in Intune overrules the default configuration profile set in the zero-touch enrollment portal. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, don't link your account to Intune. Instead, select **View devices in the zero-touch portal**. Then continue to [Create configuration in zero-touch enrollment portal](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch-enrollment-portal) in this article for next steps.
+   > The token used for the default configuration is meant for a fully managed device. Once you link your account, the default zero-touch configuration created in Intune overrules the default configuration profile set in the zero-touch enrollment portal. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, don't link your account to Intune. Instead, select **View devices in the zero-touch portal**. Then continue to [Create configuration in zero-touch enrollment portal](ref-corporate-methods.md#create-configuration-in-zero-touch-enrollment-portal) in this article for next steps.
 
 8. Select **Next** to continue.
 9. Add support information to assist device users during setup.
@@ -137,7 +137,7 @@ For more information about how to assign a default configuration or apply a conf
 
 ## Enroll by using Knox Mobile Enrollment
 
-To use Samsung Knox Mobile Enrollment, the device must be running [supported Samsung Knox versions](../fundamentals/supported-devices-browsers.md#android). For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./setup-samsung-knox-mobile.md).
+To use Samsung Knox Mobile Enrollment, the device must be running [supported Samsung Knox versions](../../intune-service/fundamentals/supported-devices-browsers.md#android). For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./setup-samsung-knox-mobile.md).
 
 ## Enroll by using Near Field Communication (NFC)
 
@@ -169,5 +169,5 @@ For more information about provisioning devices with the DPC identifier method, 
 
 ## Next steps
 
-- [Deploy Android apps](../apps/apps-deploy.md)
-- [Add Android configuration policies](../configuration/device-profiles.md)
+- [Deploy Android apps](../../intune-service/apps/apps-deploy.md)
+- [Add Android configuration policies](../../intune-service/configuration/device-profiles.md)

@@ -14,7 +14,7 @@ ms.collection:
 
 Enrollment ensures that all devices trying to access data within your organization are secure and compliant with your policies and requirements. Upon enrollment, the device gets access to resources like work email, files, VPN, and Wi-Fi. Employees and students who want remote access to work or school resources can also enroll their devices into Microsoft Intune.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../intune-service/includes/intune-evaluate.md)]
 
 In this article, you:
 
@@ -28,7 +28,7 @@ In this article, you:
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -48,8 +48,8 @@ In this article, you:
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).
-> - Be using a [supported Windows version](../fundamentals/supported-devices-browsers.md).
+> - Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-automatic-mdm.md).
+> - Be using a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md).
 :::column-end:::
 :::row-end:::
 
@@ -65,7 +65,7 @@ These steps guide you through using the Settings app on a Windows device to enro
 
     :::image type="content" source="./media/quickstart-first-device/quickstart-enroll-windows-device-04.png" alt-text="Screenshot of Windows Settings, Accounts section, showing Access work or school with Connect button highlighted." lightbox="./media/quickstart-first-device/quickstart-enroll-windows-device-04.png":::
 
-4. Enter the username and password for your work account. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) evaluation step, you can use the user account that you created.
+4. Enter the username and password for your work account. If you followed the [create a user and assign a license](../../intune-service/fundamentals/quickstart-create-user.md) evaluation step, you can use the user account that you created.
 
 5. Wait for your device to finish registering. When you see the **You're all set!** screen, select **Done**. Your work account should now be visible under **Accounts**.
 
@@ -73,7 +73,7 @@ These steps guide you through using the Settings app on a Windows device to enro
 
     If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows device access](../../user-help/troubleshooting/troubleshoot-device-access-windows.md).
 
-When the device is enrolled in Intune, it starts to receive the Intune policies you create. [Common questions, answers, and scenarios with policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md) provides more information about how policies and profiles work in Intune.
+When the device is enrolled in Intune, it starts to receive the Intune policies you create. [Common questions, answers, and scenarios with policies and profiles in Microsoft Intune](../../intune-service/configuration/device-profile-troubleshoot.md) provides more information about how policies and profiles work in Intune.
 
 ## Confirm device enrollment
 
@@ -92,9 +92,9 @@ In this task, you learned how to enroll a Windows device into Intune. For more i
 - [Windows device enrollment with Intune Company Portal](../../user-help/enrollment/enrollment-overview-windows.md)
 - [What info can your company see when you enroll your device?](../../user-help/enrollment/enrollment-data-visibility.md)
 
-You can also automate Windows device enrollment. To learn more, see [Windows enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
+You can also automate Windows device enrollment. To learn more, see [Windows enrollment guide for Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-windows.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 6 - Set a required password length for Android devices](../protect/quickstart-set-password-length-android.md)
+> [Step 6 - Set a required password length for Android devices](../../intune-service/protect/quickstart-set-password-length-android.md)

@@ -18,12 +18,12 @@ ms.collection:
 Complete these steps first to enable enrollment in your Microsoft Intune tenant.
 
 1. [Verify that devices are eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility)
-2. [Configure domains](../fundamentals/custom-domain-name-configure.md)
-3. [Set the MDM Authority](../fundamentals/mdm-authority-set.md)
-4. [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)
+2. [Configure domains](../../intune-service/fundamentals/custom-domain-name-configure.md)
+3. [Set the MDM Authority](../../intune-service/fundamentals/mdm-authority-set.md)
+4. [Get an Apple MDM push certificate](create-mdm-push-certificate.md)
 5. Assign user licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-6. [Create groups](../fundamentals/groups-add.md)
-7. [Configure the Company Portal app](../apps/company-portal-app.md)
+6. [Create groups](../../intune-service/fundamentals/groups-add.md)
+7. [Configure the Company Portal app](../../intune-service/apps/company-portal-app.md)
 
 ## Enroll devices
 After you enable enrollment, use one of the supported methods described in this section to enroll user-owned and company-owned devices.
@@ -38,9 +38,9 @@ Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll the
 ### Company-owned macOS devices
 Intune supports the following enrollment methods for company-owned macOS devices. Select a hyperlinked method to open its setup steps.
 
-- [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.
-- [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.
-- [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.
+- [Apple Automated Device Enrollment](setup-automated-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.
+- [Device enrollment manager (DEM)](../setup-enrollment-manager.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.
+- [Direct enrollment](setup-direct-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.
 
 ## Bootstrap tokens
 
@@ -82,7 +82,7 @@ User-initiated software updates can be carried out with a bootstrap token on Mac
 Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.
 
 ## Block macOS enrollment
-By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set a device platform restriction](create-device-platform-restrictions.md).
+By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set a device platform restriction](../create-platform-restrictions.md).
 
 ## Enroll virtual macOS machines for testing
 

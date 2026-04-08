@@ -11,7 +11,7 @@ ms.collection:
 # Set up web based device enrollment for iOS
 **Applies to iOS/iPadOS**
 
-Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices. This is one of two *Apple device enrollment* methods supported in Microsoft Intune, with the other being [device enrollment with the Company Portal app](ios-device-enrollment.md#app-or-web-based-enrollment). Both methods give you access to a limited but appropriate set of device management settings and actions for bring-your-own-device (BYOD) scenarios, so you can protect work data without affecting the device user's personal data or apps.
+Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices. This is one of two *Apple device enrollment* methods supported in Microsoft Intune, with the other being [device enrollment with the Company Portal app](personal-device-options-ios.md#app-or-web-based-enrollment). Both methods give you access to a limited but appropriate set of device management settings and actions for bring-your-own-device (BYOD) scenarios, so you can protect work data without affecting the device user's personal data or apps.
 
 Web-based device enrollment provides a faster and more user-friendly enrollment experience. The Company Portal app isn't required because employees and students do everything in Safari and in their device settings. Additionally, web-based device enrollment works with JIT registration. When it's enabled, Intune uses JIT registration with the Microsoft Authenticator app for registration of the device and single sign-on (SSO) to reduce the number of times users have to sign in during enrollment and when accessing work apps.
 
@@ -26,16 +26,16 @@ Microsoft Intune supports web-based device enrollment on devices running iOS/iPa
 
 Before you begin, complete the following tasks:
 
-- [Set mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
-- [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
+- [Set mobile device management (MDM) authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
 
 ## Best practices
-Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md). Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.
+Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../intune-service/apps/web-app.md). Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.
 
 The Microsoft Authenticator app is required for work or school access. We recommend telling employees and students to install Microsoft Authenticator before they begin device enrollment.
 
 ## Step 1: Set up just in time registration
-Create a device configuration, single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.
+Create a device configuration, single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](setup-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.
 
 ## Step 2: Create enrollment profile
 Create an enrollment profile for devices enrolling via web-based device enrollment. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment in Safari.

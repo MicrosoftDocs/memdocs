@@ -19,7 +19,7 @@ Upload and renew your Apple MDM push certificates in Microsoft Intune. An Apple 
 Certificates must be renewed annually. This article describes how to use Intune to create and renew an Apple MDM push certificate.
 
 ## Requirements
-Use an [Intune-supported web browser](../fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate.
+Use an [Intune-supported web browser](../../intune-service/fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate.
 
 ## Steps to get your certificate
 Access your Apple MDM push certificate settings in Microsoft Intune.
@@ -49,7 +49,7 @@ Select **Download your CSR** to download and save the request file locally. The 
 
 > [!NOTE]
 > * The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.
-> * If you later change the Apple ID associated with your certificate, sign in to the Apple Push Certificates Portal with your new Apple ID, redownload the certificate file, and upload it to Intune with your new Apple ID as described in [Step 4](apple-mdm-push-certificate-get.md#step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate) and [Step 5](apple-mdm-push-certificate-get.md#step-5-browse-to-your-apple-mdm-push-certificate-to-upload) in this article.
+> * If you later change the Apple ID associated with your certificate, sign in to the Apple Push Certificates Portal with your new Apple ID, redownload the certificate file, and upload it to Intune with your new Apple ID as described in [Step 4](create-mdm-push-certificate.md#step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate) and [Step 5](create-mdm-push-certificate.md#step-5-browse-to-your-apple-mdm-push-certificate-to-upload) in this article.
 #### Managed Apple ID
 If you plan to federate your existing Microsoft Entra accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).
 
@@ -88,4 +88,4 @@ Renewal is complete when your Apple MDM push certificate status appears active i
 
 ## Next steps
 
-For more information about enrollment options, see [Choose how to enroll iOS/iPadOS devices](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
+For more information about enrollment options, see [Choose how to enroll iOS/iPadOS devices](../../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md).

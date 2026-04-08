@@ -12,7 +12,7 @@ ms.collection:
 # Set up user enrollment with Company Portal
 
 >[!NOTE]
-> Microsoft Intune doesn't support this enrollment profile type for newly enrolled devices. This article is only applicable to existing devices with this profile type. We recommend [account-driven user enrollment](apple-account-driven-user-enrollment.md) for new enrollments.
+> Microsoft Intune doesn't support this enrollment profile type for newly enrolled devices. This article is only applicable to existing devices with this profile type. We recommend [account-driven user enrollment](setup-account-driven-user.md) for new enrollments.
 
 Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple User Enrollment method gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps.
 
@@ -23,8 +23,8 @@ This article describes how to set up an enrollment profile in the Microsoft Intu
 ## Prerequisites
 User enrollment with Company Portal is supported on devices running iOS version 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:
 
-- [Set mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
-- [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
+- [Set mobile device management (MDM) authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
 - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
 
 Additionally, review the following information:
@@ -73,7 +73,7 @@ If a conflict occurs because a user is assigned more than one profile, Intune ap
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune.
 
 ## Next steps
-* For an overview of supported user enrollment methods and management actions, see [Overview of Apple User Enrollment in Microsoft Intune ](ios-user-enrollment-supported-actions.md).
+* For an overview of supported user enrollment methods and management actions, see [Overview of Apple User Enrollment in Microsoft Intune ](user-enrollment-methods-ios.md).
 
 * For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.
 
@@ -81,6 +81,6 @@ The volume and cryptographic keys created to manage the work data on the device 
 
 * For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
-   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
-   * [Set up per-app Virtual Private Network (VPN)](../configuration/vpn-setting-configure-per-app.md)
+   * [iOS and iPadOS device restrictions](../../intune-service/configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../../intune-service/configuration/device-features-apple.md)
+   * [Set up per-app Virtual Private Network (VPN)](../../intune-service/configuration/vpn-setting-configure-per-app.md)

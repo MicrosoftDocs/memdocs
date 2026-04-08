@@ -14,7 +14,7 @@ ms.collection:
 
 In this article, you set up Microsoft Intune to automatically enroll Windows corporate-owned devices, and user-owned devices for bring-your-own-device (BYOD) deployments. You can scope automatic enrollment to some Microsoft Entra users, all users, or no users.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../intune-service/includes/intune-evaluate.md)]
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
 > - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.
 :::column-end:::
 :::row-end:::
@@ -44,8 +44,8 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - [Create a user](../fundamentals/quickstart-create-user.md).
-> - [Create a group](../fundamentals/quickstart-create-group.md).
+> - [Create a user](../../intune-service/fundamentals/quickstart-create-user.md).
+> - [Create a group](../../intune-service/fundamentals/quickstart-create-group.md).
 :::column-end:::
 :::row-end:::
 
@@ -74,13 +74,13 @@ In this example, you configure Microsoft Intune mobile device management (MDM) e
 
 ## Clean up resources
 
-To reconfigure Intune automatic enrollment, see [Set up enrollment for Windows devices](windows-enroll.md).
+To reconfigure Intune automatic enrollment, see [Set up enrollment for Windows devices](enable-automatic-mdm.md).
 
 ## Next steps
 
-In this task, you learned how to set up automatic enrollment for devices running Windows. For more information about device enrollment, see [Device enrollment overview](../fundamentals/deployment-guide-enrollment.md).
+In this task, you learned how to set up automatic enrollment for devices running Windows. For more information about device enrollment, see [Device enrollment overview](../../intune-service/fundamentals/deployment-guide-enrollment.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 5 - Enroll your Windows device](quickstart-enroll-windows-device.md)
+> [Step 5 - Enroll your Windows device](quickstart-first-device.md)

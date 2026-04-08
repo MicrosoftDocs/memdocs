@@ -10,7 +10,7 @@ ms.collection:
 
 # Set up Intune enrollment for Apple corporate-owned userless devices
 
-Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. This procedure differs from what's shown in [the Apple Configurator enrollment process](apple-configurator-enroll-ios.md) because it only enrolls devices without user affinity. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment.
+Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. This procedure differs from what's shown in [the Apple Configurator enrollment process](setup-configurator-ios.md) because it only enrolls devices without user affinity. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment.
 
 You can enroll devices into Intune as a userless device with Apple Configurator by *direct enrollment*. This method doesn't wipe the device, and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
@@ -32,8 +32,8 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 ## Prerequisites
 
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../fundamentals/mdm-authority-set.md)
-- [An Apple MDM push certificate](apple-mdm-push-certificate-get.md)
+- [Set MDM authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [An Apple MDM push certificate](create-mdm-push-certificate.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
 - macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
@@ -62,7 +62,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. Choose **Create** to save the profile.
 
 ## Create a device group
-You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name.
 
@@ -149,5 +149,5 @@ Follow steps from [Export the profile as .mobileconfig to iOS/iPadOS devices](#e
 
 ## Next steps
 
-* [Create an iOS/iPadOS MDM app configuration policy](../apps/app-configuration-policies-use-ios.md) to restrict settings on devices with specific users.
-* For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).
+* [Create an iOS/iPadOS MDM app configuration policy](../../intune-service/apps/app-configuration-policies-use-ios.md) to restrict settings on devices with specific users.
+* For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](setup-direct-macos.md).

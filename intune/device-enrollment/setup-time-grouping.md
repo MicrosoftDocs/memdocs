@@ -28,7 +28,7 @@ Enrollment time grouping is supported on devices provisioned via:
 
 * [Windows Autopilot device preparation](/autopilot/device-preparation/overview)
 
-* [Android Enterprise](../fundamentals/deployment-guide-enrollment-android.md)
+* [Android Enterprise](../intune-service/fundamentals/deployment-guide-enrollment-android.md)
 
 For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.
 
@@ -41,7 +41,7 @@ For Android Enterprise, you must have permissions to create and modify Android E
 * Android Enterprise dedicated
 
 >[!TIP]
-> For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control.md#custom-roles).
+> For more information about creating custom roles, see [Role based access control](../intune-service/fundamentals/role-based-access-control.md#custom-roles).
 
 To add Intune first party app as a security group owner, which is a required step for enrollment time grouping, you must meet one of the following prerequisites:
   * Must be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.
@@ -95,7 +95,7 @@ After you configure enrollment time grouping in the enrollment profile, you can 
 
 The enrollment time grouping feature only applies to new device enrollments. It doesn't affect or apply to devices that are already enrolled.
 
-You can add one static Microsoft Entra security group per enrollment profile. As an Intune admin, you can only add Microsoft Entra groups that are authorized in the scope group for your Intune role. Make sure [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments) and group tags are assigned to the appropriate roles so that admins can see the security group during profile creation.
+You can add one static Microsoft Entra security group per enrollment profile. As an Intune admin, you can only add Microsoft Entra groups that are authorized in the scope group for your Intune role. Make sure [scope groups](../intune-service/fundamentals/role-based-access-control.md#about-intune-role-assignments) and group tags are assigned to the appropriate roles so that admins can see the security group during profile creation.
 
 1. In the Microsoft Intune admin center, go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
@@ -103,11 +103,11 @@ You can add one static Microsoft Entra security group per enrollment profile. As
 
    - Windows: [Create Windows Autopilot device preparation policy](/autopilot/device-preparation/tutorial/user-driven/entra-join-autopilot-policy)
 
-   - Android Enterprise with work profile: [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](android-corporate-owned-work-profile-enroll.md)
+   - Android Enterprise with work profile: [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](android/setup-corporate-work-profile.md)
 
-   - Android Enterprise dedicated: [Set up Intune enrollment of Android Enterprise dedicated devices](android-kiosk-enroll.md)
+   - Android Enterprise dedicated: [Set up Intune enrollment of Android Enterprise dedicated devices](android/setup-dedicated.md)
 
-   - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](android-fully-managed-enroll.md)
+   - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](android/setup-fully-managed.md)
 
     >[!TIP]
     > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token or the corporate owned work profile (default) token.

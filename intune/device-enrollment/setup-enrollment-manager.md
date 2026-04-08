@@ -27,12 +27,12 @@ A DEM account requires an Intune user or device license, and an associated Micro
 
 A device enrollment manager can use the following methods to enroll devices in Intune:
 
-- [Bulk enrollment using a provisioning package](windows-bulk-enroll.md)
+- [Bulk enrollment using a provisioning package](windows/create-bulk-package.md)
 - DEM-initiated via Company Portal enrollment
 - DEM-initiated via Microsoft Entra join
 
 > [!TIP]
-> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../fundamentals/deployment-guide-enrollment-windows.md).
+> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../intune-service/fundamentals/deployment-guide-enrollment-windows.md).
 
 
 ## Requirements  
@@ -45,7 +45,7 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 |Read | View the list of device enrollment manager accounts. |  
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]   
+> [!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]   
 
 ## Add a device enrollment manager
 

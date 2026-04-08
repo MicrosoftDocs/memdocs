@@ -40,7 +40,7 @@ To create device platform restrictions in Microsoft Intune, you must be signed i
 
 - Reprioritize device platform restrictions
 
-All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
 
 ## Default policy
 
@@ -53,7 +53,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 - If you allow both platforms for the same group, and then refine it for specific and nonoverlapping versions, Intune looks at the version to determine the Android enrollment flow devices go through.
 - If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out.
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
 
 ## Create a device platform restriction
 
@@ -86,14 +86,14 @@ Since Intune supports two Android platforms, it's important to understand how OS
         > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Microsoft Entra device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.
 
 1. Select **Next**.
-1. Optionally, add scope tags to the restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+1. Optionally, add scope tags to the restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
 
       > [!NOTE]
       > If you apply scope tags to a restriction, only Intune users within scope can view and manage the policy. Only people in scope can view and reorder a restriction, or change its priority level. They can also see the relative priority of the restriction, even if they can't see all restrictions.
 
 1. Select **Next**.
 1. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.
-1. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Apply assignment filters](create-device-platform-restrictions.md#apply-assignment-filters) in this article.
+1. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Apply assignment filters](create-platform-restrictions.md#apply-assignment-filters) in this article.
 1. Select **Next**.
 1. Review your policy, and then select **Create** to create it.
 
@@ -110,7 +110,7 @@ For example, you can use a filter to allow personal Windows devices to enroll wh
   3. In the assignments settings, select the groups you want to assign.
   4. Select **Edit filter** and then apply your preconfigured filter that contains the `operatingSystemSKU` property. The applied property blocks devices running Windows 10 Home edition.
 
-For more information about creating filters, see [Create a filter](../fundamentals/filters.md).
+For more information about creating filters, see [Create a filter](../intune-service/fundamentals/filters.md).
 
 > [!NOTE]
 > It takes extra time to process assignment filters during enrollment. The update between Microsoft Entra and Intune that processes user, group, and filter assignments typically happens within 15 minutes.  It's not instant. This amount of time can affect enrollment assignments. You should wait and enroll devices several minutes after adding the enrolling users to a group, not immediately after.
@@ -142,7 +142,7 @@ The following filter properties are always available to use with enrollment poli
 * Ownership
 * Enrollment profile name
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#available-properties). Filters can't be used with Android enrollment restrictions.
+For more information about these properties, see [device properties](../intune-service/fundamentals/filters-device-properties.md#available-properties). Filters can't be used with Android enrollment restrictions.
 
 ## Edit enrollment restrictions
 

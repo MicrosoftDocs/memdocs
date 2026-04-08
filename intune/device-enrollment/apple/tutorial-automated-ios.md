@@ -23,12 +23,12 @@ In this tutorial, you'll learn how to:
 At the end of this tutorial, devices will be ready to distribute for enrollment.
 
 ## Prerequisites
-- Set [mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md).
-- Get [Apple MDM Push certificate](apple-mdm-push-certificate-get.md).
+- Set [mobile device management (MDM) authority](../../intune-service/fundamentals/mdm-authority-set.md).
+- Get [Apple MDM Push certificate](create-mdm-push-certificate.md).
 - Have new or wiped devices purchased from Apple Business Manager.
 - Add purchase information under device management settings in [Apple Business Manager](https://business.apple.com).
 
-If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
 
 ## Step 1: Add MDM server
 Create an MDM server profile for Microsoft Intune in Apple Business Manager. The token you download in this step will enable the connection between Microsoft Intune and Apple Business Manager in a later step.
@@ -45,11 +45,11 @@ Create an MDM server profile for Microsoft Intune in Apple Business Manager. The
     >[!IMPORTANT]
     > While you're in Apple Business Manager, don't close the browser tab with Microsoft Intune. You'll return to it later.
 
-6. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-use-device-enrollment-program-enroll-ios.md#step-2-assign-devices).
+6. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-automated-ios.md#step-2-assign-devices).
 
 ## Step 2: Assign devices
 
-While you're in Apple Business Manager, assign devices to your new MDM server (*TestMDMServer* or whatever you named it). For details and instructions, see [Assign, reassign, or unassign devices in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business Manager User Guide). When you're done assigning devices, continue to [Step 3: Upload MDM server token](tutorial-use-device-enrollment-program-enroll-ios.md#step-3-upload-mdm-server-token).
+While you're in Apple Business Manager, assign devices to your new MDM server (*TestMDMServer* or whatever you named it). For details and instructions, see [Assign, reassign, or unassign devices in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business Manager User Guide). When you're done assigning devices, continue to [Step 3: Upload MDM server token](tutorial-automated-ios.md#step-3-upload-mdm-server-token).
 
 ## Step 3: Upload MDM server token
 Return to the Microsoft Intune admin center to upload the MDM server token to Intune. After you upload the token, Microsoft Intune can sync and enroll iOS/iPadOS devices assigned to *TestMDMServer*.
@@ -57,7 +57,7 @@ Return to the Microsoft Intune admin center to upload the MDM server token to In
 1. For **Apple ID**, enter the Apple ID you used to create the token.
 2. For **Apple token**, upload the server token you saved earlier. The file must be in P7M format.
 3. Select **Next**.
-4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 5. Select **Next**.
 6. On **Review + create**, select **Create** to finish linking Microsoft Intune and Apple Business Manager.
 
@@ -76,7 +76,7 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 1. Decide if you want your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users don't need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
 
-   * If you chose to enroll with User Affinity, the **Select where users must authenticate** option appears. Decide if you want to Authenticate with Company Portal or Apple Setup Assistant (legacy), or Setup Assistant with modern authentication. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](../enrollment/automated-device-enrollment-authentication.md).
+   * If you chose to enroll with User Affinity, the **Select where users must authenticate** option appears. Decide if you want to Authenticate with Company Portal or Apple Setup Assistant (legacy), or Setup Assistant with modern authentication. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](ref-automated-authentication-methods.md).
 
 1. If you chose to enroll with User Affinity and Authenticate with Company Portal, the **Install Company Portal with VPP** option appears. If you install the Company Portal with a VPP token, your user won't have to enter an Apple ID and Password to download the Company Portal from the app store during enrollment. Choose **Use Token:** under **Install Company Portal with VPP** to select a VPP token that has free licenses of the Company Portal available. If you don't want to use VPP to deploy the Company Portal, choose **Don't use VPP**.
 
@@ -123,4 +123,4 @@ You've set up management and syncing between Apple and Intune, and assigned a pr
 You can find more information about other options available for enrolling iOS/iPadOS devices.
 
 > [!div class="nextstepaction"]
-> [Technical docs for iOS/iPadOS automated device enrollment](device-enrollment-program-enroll-ios.md)
+> [Technical docs for iOS/iPadOS automated device enrollment](setup-automated-ios.md)

@@ -33,7 +33,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
 > - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.
 :::column-end:::
 :::row-end:::
@@ -60,7 +60,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 1. Configure the **MDM user scope** for Microsoft Intune. This setting enables automatic MDM enrollment for Microsoft Entra users so that you can manage their devices in Intune.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot shows the Microsoft Entra MDM user scope.](../enrollment/media/enable-automatic-mdm/auto-enroll-scope.png)
+   > ![Screenshot shows the Microsoft Entra MDM user scope.](media/enable-automatic-mdm/auto-enroll-scope.png)
 
     Your options are:
 
@@ -130,4 +130,4 @@ For information about how to integrate and use automatic enrollment when provisi
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)
 
-If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable automatic discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable automatic discovery of Intune enrollment server](create-cname-autodiscovery.md).

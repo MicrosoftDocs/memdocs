@@ -16,7 +16,7 @@ Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](
 - **Setup Assistant enrollment** - Wipes the device and prepares it to enroll during Setup Assistant.
 - **Direct enrollment** - Doesn't wipe the device, and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
-Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).
+Apple Configurator enrollment methods can't be used with the [device enrollment manager](../setup-enrollment-manager.md).
 
 ## Certificates
 
@@ -33,8 +33,8 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 ## Prerequisites
 
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../fundamentals/mdm-authority-set.md)
-- [An Apple MDM push certificate](apple-mdm-push-certificate-get.md)
+- [Set MDM authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [An Apple MDM push certificate](create-mdm-push-certificate.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
 - macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
@@ -198,4 +198,4 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 * Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md)
 
-* For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).
+* For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](setup-direct-macos.md).

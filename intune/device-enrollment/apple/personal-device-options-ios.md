@@ -19,7 +19,7 @@ Device enrollment supports an app based enrollment experience and web based enro
 
 Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** and select **Enrollment types**.  
 
-Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. We recommend web enrollment using JIT registration with SSO as the most secure enrollment method for device attestation. We also recommend enabling web-based enrollment for devices because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration).   
+Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. We recommend web enrollment using JIT registration with SSO as the most secure enrollment method for device attestation. We also recommend enabling web-based enrollment for devices because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](setup-web-based-ios.md#step-1-set-up-just-in-time-registration).   
 
 The following table provides details about app and web-based enrollment.
 
@@ -40,8 +40,8 @@ Microsoft Intune supports a subset of device management options for devices enro
 
 <!-- P2 For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
-   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
+   * [iOS and iPadOS device restrictions](../../intune-service/configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../../intune-service/configuration/device-features-apple.md)
    * List others.... -->
 
 ## User experience
@@ -67,7 +67,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 - iPadOS 16.1 or later
 
-This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md).
+This capability is also supported in [GCC High tenants](../../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Known issues and limitations
 
@@ -81,11 +81,11 @@ Intune enrollment with Apple device enrollment has the following known issues an
 
 * Web-based device enrollment can be used without JIT registration. We recommend using the web version of Company Portal instead of Company Portal for iOS to deploy apps to the device. If you are planning to use the Company Portal app for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment.
 
-* There is a known issue with web-based enrollment and JIT registration that prevents the Company Portal app from recognizing enrolled devices. When a user tries to sign in to Company Portal for iOS on a device that doesn't have the SSO extension policy, Company Portal is unable to determine that the device has been enrolled. We are actively working to resolve this issue. To avoid this issue, we recommend deploying the SSO extension policy to enrolling devices. Or, as a temporary workaround, you can deploy a web clip for the web version of Company Portal, as described under [Best practices for web enrollment](web-based-device-enrollment-ios.md#best-practices).
+* There is a known issue with web-based enrollment and JIT registration that prevents the Company Portal app from recognizing enrolled devices. When a user tries to sign in to Company Portal for iOS on a device that doesn't have the SSO extension policy, Company Portal is unable to determine that the device has been enrolled. We are actively working to resolve this issue. To avoid this issue, we recommend deploying the SSO extension policy to enrolling devices. Or, as a temporary workaround, you can deploy a web clip for the web version of Company Portal, as described under [Best practices for web enrollment](setup-web-based-ios.md#best-practices).
 
 ## Next steps
 
-Choose the user enrollment method you want to use to enroll devices, and then create an enrollment profile. For more information about how to enable web-based enrollment in the Microsoft Intune admin center, see [Set up web based enrollment](web-based-device-enrollment-ios.md).
+Choose the user enrollment method you want to use to enroll devices, and then create an enrollment profile. For more information about how to enable web-based enrollment in the Microsoft Intune admin center, see [Set up web based enrollment](setup-web-based-ios.md).
 
 For more details about Apple device enrollment features and functionality, see [Device Enrollment and MDM]( https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple support website.
 
