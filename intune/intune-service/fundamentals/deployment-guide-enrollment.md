@@ -148,7 +148,7 @@ The MDM certificate renews automatically as long as enrolled devices are communi
 
 ## Reporting and troubleshooting
 
-- [Incomplete user enrollments](../enrollment/enrollment-report-company-portal-abandon.md)
+- [Incomplete user enrollments](../enrollment/view-enrollment-reports.md)
 - [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)
 
 ## Next steps

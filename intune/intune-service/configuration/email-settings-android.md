@@ -47,13 +47,13 @@ As an Intune administrator, you can create and assign email settings to Android 
   - **Primary SMTP address**: Uses the primary Simple Mail Transfer Protocol (SMTP) address, like `user1@contoso.com`, to sign in to Exchange.
 
 - **Authentication method**: Select **Username and Password** or **Certificate** as the authentication method used by the email profile.
-  - If you select **Certificate**, select a client [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that you previously created to authenticate the Exchange connection.
+  - If you select **Certificate**, select a client [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PKCS](../../device-configuration/certificates/pkcs-profiles.md) certificate profile that you previously created to authenticate the Exchange connection.
 
 ### Security settings
 
 - **SSL**: **Enable** uses Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server. **Disable** does use SSL.
 - **S/MIME**: **Disable S/MIME** (default): Doesn't use an S/MIME email certificate to sign, encrypt, or decrypt emails. **Enable S/MIME** sends outgoing email using S/MIME encryption. Also enter:
-  - Select a client [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that you previously created to authenticate the Exchange connection.
+  - Select a client [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PKCS](../../device-configuration/certificates/pkcs-profiles.md) certificate profile that you previously created to authenticate the Exchange connection.
 
 ### Synchronization settings
 

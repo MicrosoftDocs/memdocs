@@ -22,7 +22,7 @@ appliesto:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
 
 ## Enrollment Status Page support for installing Windows security updates during Windows OOBE
 
@@ -59,8 +59,8 @@ We've updated the low-privileged Intune Connector for Active Directory build. Ne
 
 - Updated the sign in page to use WebView2, built on Microsoft Edge, instead of WebBrowser.
 - **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
-- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
-- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--the-msa-account-couldn-t-be-granted-permission-to-create-computer-objects-in-the-following-ous--occurring-when-installing-the-intune-connector-for-active-directory-).
+- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](troubleshooting-faq.yml#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](troubleshooting-faq.yml#why-is-the-error--the-msa-account-couldn-t-be-granted-permission-to-create-computer-objects-in-the-following-ous--occurring-when-installing-the-intune-connector-for-active-directory-).
 
 Download and install the latest version to get these changes.
 
@@ -154,7 +154,7 @@ This change affects new primary users of the Windows Autopilot device who are al
 Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
 - A remote Windows Autopilot Reset. For more information, see [Step by step tutorial for Windows Autopilot Reset in Intune](tutorial/reset/autopilot-reset-overview.md), [Reset devices with remote Windows Autopilot Reset](tutorial/reset/remote-autopilot-reset.md), and [Windows Autopilot Reset](windows-autopilot-reset.md).
-- Remove the current primary user or reassign to the new intended primary user before the device is reset or reimaged. For more information, see [Change a device's primary user](/mem/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
+- Remove the current primary user or reassign to the new intended primary user before the device is reset or reimaged. For more information, see [Change a device's primary user](/intune/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
 
 If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties. The primary user on the device then updates to the new user upon the next check-in.
 
@@ -220,13 +220,13 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 Date added: *March 17, 2023*
 
-The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
 
 ## Win32 App Supersedence ESP improvements
 
 Date added: *February 10, 2023*
 
-Starting in January 2023, we're currently in the process of rolling out Win32 app supersedence GA, which introduces enhancements to ESP behavior around app tracking and app processing. Specifically, admins might notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune-service/apps/apps-win32-supersedence).
+Starting in January 2023, we're currently in the process of rolling out Win32 app supersedence GA, which introduces enhancements to ESP behavior around app tracking and app processing. Specifically, admins might notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/intune/intune-service/apps/apps-win32-supersedence).
 
 ## Support for Temporary Access Pass
 
@@ -261,11 +261,11 @@ Starting in September 2022, the Intune Connector for Active Directory (ODJ conne
 
 Date added: *May 20, 2022*
 
-With the Intune 2205 release, device enrollment in Intune can be configured to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Windows Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+With the Intune 2205 release, device enrollment in Intune can be configured to enable [co-management](/intune/configmgr/comanage/overview), which happens during the Windows Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-If the device is targeted with an [Windows Autopilot enrollment status page (ESP) policy](/mem/intune-service/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Windows Autopilot ESP then continues.
+If the device is targeted with an [Windows Autopilot enrollment status page (ESP) policy](/intune/intune-service/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Windows Autopilot ESP then continues.
 
-For more information, see [How to enroll to co-management with Windows Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
+For more information, see [How to enroll to co-management with Windows Autopilot](/intune/configmgr/comanage/autopilot-enrollment).
 
 ## Improvements to the enrollment status page <!-- 2202 -->
 
@@ -315,12 +315,12 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](/mem/intune-service/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](/intune/intune-service/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported when signing in with a Work or School account during a Windows Autopilot user-driven deployment. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Related content
 
 - [What's new in Windows Autopilot device preparation](device-preparation/whats-new.md).
-- [What's new in Microsoft Intune](/mem/intune-service/fundamentals/whats-new).
+- [What's new in Microsoft Intune](/intune/intune-service/fundamentals/whats-new).
 - [What's new in Windows client](/windows/whats-new/).

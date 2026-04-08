@@ -70,9 +70,9 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
   This feature is cloud-based solution that secures help desk connections. With these connections, your support staff can remote connect to FLW devices on:
 
-  - [Android](../../intune-service/fundamentals/remote-help-android.md)
-  - [macOS](../../intune-service/fundamentals/remote-help-macos.md)
-  - [Windows](../../intune-service/fundamentals/remote-help-windows.md)
+  - [Android](../../intune-service/fundamentals/remote-help.md)
+  - [macOS](../../intune-service/fundamentals/remote-help.md)
+  - [Windows](../../intune-service/fundamentals/remote-help.md)
 
 - **[Specialty devices](../../intune-service/fundamentals/specialty-devices-with-intune.md)**
 

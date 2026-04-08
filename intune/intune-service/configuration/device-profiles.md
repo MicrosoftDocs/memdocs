@@ -49,7 +49,7 @@ This article gives an overview of the different types of profiles you can create
 
 ## Certificates
 
-You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
+You use [certificates in Intune](../../fundamentals/certificates/overview.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
 
 Certificates are also used for signing and encrypting email using S/MIME. Common types of certificates used in Intune include trusted root certificates, Simple Certificate Enrollment Protocol (SCEP) certificates, and Public Key Cryptography Standards (PKCS) certificates.
 
@@ -85,9 +85,9 @@ This feature supports:
 
 ## Derived credential
 
-If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../protect/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
+If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../../device-security/certificates/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
 
-Intune [supports several derived credential issuers](../protect/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
+Intune [supports several derived credential issuers](../../device-security/certificates/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
 
 This feature supports:
 

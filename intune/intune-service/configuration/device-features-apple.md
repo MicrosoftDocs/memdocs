@@ -532,7 +532,7 @@ This feature applies to:
 
   Use **App Name** to enter a user-friendly name to help you identify the bundle ID.
 
-- **Credential renewal certificate**: If using certificates for authentication (not passwords), select the existing [SCEP](../protect/certificates-profile-scep.md) or [PFX](../protect/certificates-pfx-configure.md) certificate as the authentication certificate. Typically, this certificate is the same certificate that's deployed to users for other profiles, like VPN, Wi-Fi, or email.
+- **Credential renewal certificate**: If using certificates for authentication (not passwords), select the existing [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PFX](../../device-configuration/certificates/pkcs-profiles.md) certificate as the authentication certificate. Typically, this certificate is the same certificate that's deployed to users for other profiles, like VPN, Wi-Fi, or email.
 
 ::: zone-end
 
@@ -870,9 +870,9 @@ After users successfully sign in to the Authenticator app, they aren't prompted 
 
 - **Domain realm mapping**: Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 
-- **PKINIT certificate**: **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you added in Intune.
+- **PKINIT certificate**: **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../../device-configuration/certificates/pkcs-profiles.md) or [SCEP](../../fundamentals/certificates/scep-infrastructure.md) certificates that you added in Intune.
 
-  For more information about certificates, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+  For more information about certificates, go to [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 ::: zone pivot="macos"
 

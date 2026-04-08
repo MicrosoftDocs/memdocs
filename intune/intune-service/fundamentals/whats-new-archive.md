@@ -341,7 +341,7 @@ Intune supports two new attributes for subject name settings in SCEP and PKCS de
 
 Beginning July 16, if you're using a third party public certificate authority (CA) integrated with the Intune SCEP API for issuing S\MIME (encryption or signing) certificates anchored up to a public root CA, then you must use these attributes in the subject name format. After that date, a public CA won't issue or sign S\MIME certificates that omit these attributes.
 
-For more information, see [S/MIME certificate requirements for third party public CA](../protect/certificates-profile-scep.md#smime-certificate-requirements-for-third-party-public-ca).
+For more information, see [S/MIME certificate requirements for third party public CA](../../device-configuration/certificates/scep-profiles.md#smime-certificate-requirements-for-third-party-public-ca).
 
 ### Intune apps
 
@@ -431,7 +431,7 @@ You can use DFCI profiles to manage UEFI (BIOS) settings for NEC devices that ru
 You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
 
 > [!div class="checklist"]
 > Applies to:
@@ -466,7 +466,7 @@ During an unattended Remote Help sessions on Android devices, the screen of the 
 
 This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices.
 
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
+For more information on Remote Help, see [Remote Help](remote-help.md).
 
 ### Device security
 
@@ -826,7 +826,7 @@ As part of the [Settings Catalog](../../device-configuration/settings-catalog/in
 - **Delay In Days**: Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.
 - **Install Time**: Specify the local device time for when updates are enforced. This setting uses the 24-hour clock format where midnight is 00:00 and 11:59pm is 23:59. Ensure that you include the leading 0 on single digit hours. For example, 01:00, 02:00, 03:00.
 
-Learn more about configuring managed updates through DDM at [Managed software updates](../protect/managed-software-updates-ios-macos.md).
+Learn more about configuring managed updates through DDM at [Managed software updates](/intune/intune-service/protect/updates/apple).
 
 > [!div class="checklist"]
 > Applies to:
@@ -841,7 +841,7 @@ Remote Help now provides support for multi-session AVD with several users on a s
 For more information, see:
 
 - [Remote Help](../fundamentals/remote-help.md)
-- [Remote Help on windows](../fundamentals/remote-help-windows.md)
+- [Remote Help on windows](remote-help.md)
 - [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### Copilot assistant for device query<!-- 26933762 -->
@@ -908,7 +908,7 @@ Applies to:
 
 The Intune Connector for Active Directory now uses a low privileged account, which helps increase the security of your environment. The old connector continues to work until deprecation in late May 2025.
 
-For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
 #### Managed Home Screen QR Code Authentication in public preview<!-- 25348926 -->
 
@@ -1399,7 +1399,7 @@ The Key Distribution Center (KDC) requires user or device objects to be strongly
 
 To meet requirements, modify or create a SCEP certificate profile in Microsoft Intune. Then add a `URI` attribute and the `OnPremisesSecurityIdentifier` variable to the SAN. After you do that, Microsoft Intune appends a tag with the SID extension to the SAN and issues new certificates to targeted users and devices. If the user or device has a SID on premises that's synced to Microsoft Entra ID, the certificate shows the SID. If they don't have a SID, a new certificate is issued without the SID.
 
-For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](../protect/certificates-profile-scep.md).
+For more information and steps, see [Update certificate connector: Strong mapping requirements for KB5014754](../../device-configuration/certificates/scep-profiles.md).
 
 Applies to:
 
@@ -1426,9 +1426,9 @@ The SID update is available for user certificates across all platforms, and for 
 
 For more information, see:
 
-- [What's new for the certificate connector](../protect/certificate-connector-overview.md#september-19-2024)
+- [What's new for the certificate connector](../../fundamentals/certificates/connector/overview.md#september-19-2024)
 
-- [Apply PFX changes to certificate](../protect/certificates-pfx-configure.md)
+- [Apply PFX changes to certificate](../../device-configuration/certificates/pkcs-profiles.md)
 
 ## Week of September 23, 2024 (Service release 2409)
 
@@ -1469,7 +1469,7 @@ In Intune, this deprecation impacts the following device restrictions settings, 
 
 - [Device restriction settings for Android in Microsoft Intune](../configuration/device-restrictions-android.md)
 - [View the Android device administrator compliance settings for Microsoft Intune compliance policies](../protect/compliance-policy-create-android.md)
-- [Create trusted certificate profiles in Microsoft Intune](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator)
+- [Create trusted certificate profiles in Microsoft Intune](../../device-configuration/certificates/trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator)
 
 In the Intune admin center, when you create or update a profile with these settings, the impacted settings are noted.
 
@@ -1496,7 +1496,7 @@ Some VAIO devices running Windows are enabled for DFCI. Contact your device vend
 For more information about DFCI profiles, see:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
 
 Applies to:
 
@@ -2177,7 +2177,7 @@ Applies to:
 
 For more information, see:
 
-- [Remote Help on macOS](../fundamentals/remote-help-macos.md)
+- [Remote Help on macOS](remote-help.md)
 - [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
 
 ### Device security
@@ -2679,7 +2679,7 @@ For more information, see [Configure the Microsoft Managed Home Screen app for A
 
 #### Device IPv4 and IPv6 details available from Managed Home Screen<!-- 25994445 -->
 
-IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](..\remote-actions\collect-diagnostics.md).
+IPv4 and IPv6 connectivity details are now both available from the **Device Information** page of the Managed Home Screen app. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../../device-management/actions/collect-diagnostics.md).
 
 #### Updates to Managed Home Screen sign-in support<!-- 25597636 -->
 
@@ -2802,8 +2802,8 @@ Remote Help now supports helpdesk connecting to a user's device and requesting f
 
 For more information, see:
 
-- [Remote Help on macOS](../fundamentals/remote-help-macos.md)
-- [Remote Help Web App](../fundamentals/remote-help-webapp.md)
+- [Remote Help on macOS](remote-help.md)
+- [Remote Help Web App](remote-help.md)
 
 Applies to:
 
@@ -4226,7 +4226,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](remote-help-android.md).
+For more information, see [Remote Help on Android](remote-help.md).
 
 ### Device security
 
@@ -4478,7 +4478,7 @@ Applies to:
 - 12 Monterey
 - 13 Ventura
 
-For more information on Remote Help on macOS, see [Remote Help](remote-help-macos.md).
+For more information on Remote Help on macOS, see [Remote Help](remote-help.md).
 
 #### Management certificate expiration date<!-- 17648747  -->
 
@@ -4590,7 +4590,7 @@ Applies to:
 
 - Windows
 
-For more information, see [Remote Help](remote-help-windows.md).
+For more information, see [Remote Help](remote-help.md).
 
 ## Week of September 4, 2023
 
@@ -4618,10 +4618,10 @@ For more information, see [Ending support for Android device administrator on GM
 
 #### Windows and Android support for 4096-bit key size for SCEP and PFX certificate profiles<!--16314561  -->
 
-Intune [SCEP certificate profiles](../protect/certificates-profile-scep.md) and [PKCS certificate profiles](../protect/certificates-pfx-configure.md) for Windows and Android devices now support a **Key size (bits)** of **4096**. This key size is available for new profiles and existing profiles you choose to edit.
+Intune [SCEP certificate profiles](../../device-configuration/certificates/scep-profiles.md) and [PKCS certificate profiles](../../device-configuration/certificates/pkcs-profiles.md) for Windows and Android devices now support a **Key size (bits)** of **4096**. This key size is available for new profiles and existing profiles you choose to edit.
 
 - SCEP profiles have always included the *Key size (bits)* setting and now support 4096 as an available configuration option.
-- PKCS profiles don't include the *Key size (bits)* setting directly. Instead, an admin must [modify the certificate template on the Certification Authority](../protect/certificates-pfx-configure.md#configure-certificate-templates-on-the-ca) to set the *Minimum key size* to 4096.
+- PKCS profiles don't include the *Key size (bits)* setting directly. Instead, an admin must [modify the certificate template on the Certification Authority](../../device-configuration/certificates/pkcs-profiles.md#configure-certificate-templates-on-the-ca) to set the *Minimum key size* to 4096.
 
 If you use a third-party Certificate Authority (CA), you might need to contact your vendor for assistance with implementing the 4096-bit key size.
 
@@ -4681,7 +4681,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](remote-help-android.md).
+For more information, see [Remote Help on Android](remote-help.md).
 
 #### Group Policy analytics is generally available<!-- 24249203  -->
 Group Policy analytics is generally available (GA). Use Group Policy analytics to analyze your on-premises group policy objects (GPOs) for their migration to Intune policy settings.

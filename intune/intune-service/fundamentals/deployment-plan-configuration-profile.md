@@ -398,8 +398,8 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
     To learn more about using certificates in Intune, see:
 
-    - [Use PKCS or SCEP certificates for authentication](../protect/certificates-configure.md)
-    - [Use derived credentials](../protect/derived-credentials.md)
+    - [Use PKCS or SCEP certificates for authentication](../../fundamentals/certificates/overview.md)
+    - [Use derived credentials](../../device-security/certificates/derived-credentials.md)
 
   - **Configure single sign-on** (SSO) for a more seamless experience when users open business apps, like Microsoft 365 apps. Users sign in once and then are automatically signed in to all the apps that support your SSO configuration.
 

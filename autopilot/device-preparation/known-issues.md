@@ -27,7 +27,7 @@ This article describes known issues that can often be resolved with:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
 
 ## Known issues
 
@@ -59,7 +59,7 @@ As a workaround, select the table header **Allowed Applications** or **Allowed S
 Date added: *October 10, 2024*<br>
 Date updated: *June 20, 2025*
 
-When the [Managed installer policy](/mem/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+When the [Managed installer policy](/intune/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
 
 > [!NOTE]
 >

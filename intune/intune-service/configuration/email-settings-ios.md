@@ -47,9 +47,9 @@ This article describes all the email settings available for devices running iOS/
   - **Primary SMTP address**: Use the primary SMTP address that signs in to Exchange, like `user1@contoso.com`.
 
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:
-  - **Certificate**: Select a client [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile you previously created to authenticate the Exchange connection. This option provides the most secure and better experience for your users.
+  - **Certificate**: Select a client [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PKCS](../../device-configuration/certificates/pkcs-profiles.md) certificate profile you previously created to authenticate the Exchange connection. This option provides the most secure and better experience for your users.
   - **Username and password**: Users are prompted to enter their user name and password.
-  - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+  - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
   > [!NOTE]
   > Azure multifactor authentication isn't supported.
@@ -114,8 +114,8 @@ Configuring these settings deploys a new profile to the device, even when an exi
       - **Signing certificate type**: Your options:
         - **Not configured**: Intune doesn't update or change this setting.
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
-        - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
-        - **Certificates**: Select an existing [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that signs email messages.
+        - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
+        - **Certificates**: Select an existing [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PKCS](../../device-configuration/certificates/pkcs-profiles.md) certificate profile that signs email messages.
       - **Allow user to change setting**: **Enable** allows users to change the signing certificate. **Disable** (default) prevents users from changing the signing certificate, and forces users to use the certificate you configured.
 
         This feature applies to:
@@ -138,8 +138,8 @@ Configuring these settings deploys a new profile to the device, even when an exi
       - **Encryption certificate type**: Your options:
         - **Not configured**: Intune doesn't update or change this setting.
         - **None**: As an administrator, you don't force a specific certificate. Select this option so users can choose their own certificate.
-        - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
-        - **Certificates**: Select an existing [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that signs email messages.
+        - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, go to [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
+        - **Certificates**: Select an existing [SCEP](../../device-configuration/certificates/scep-profiles.md) or [PKCS](../../device-configuration/certificates/pkcs-profiles.md) certificate profile that signs email messages.
       - **Allow user to change setting**: **Enable** allow users to change the encryption certificate. **Disable** (default) prevents users from changing the encryption certificate, and forces users to use the certificate you configured.
 
         This feature applies to:

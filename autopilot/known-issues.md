@@ -24,11 +24,11 @@ This article describes known issues that can often be resolved with configuratio
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
 
 > [!NOTE]
 >
-> For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
+> For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/intune/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
 
@@ -99,11 +99,11 @@ The following issues are under active investigation:
 
 - **Error `Cannot start service ODJConnectorSvc on computer '.'. ---> System.ComponentModel.Win32Exception: The service did not start due to a logon failure` after the MSA is created.**
 
-  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. For more information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
+  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. For more information on how to mitigate this error, see [Troubleshooting FAQ](troubleshooting-faq.yml#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
 
 - **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`**
 
-  For information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#troubleshooting-the-intune-connector-for-active-directory).
+  For information on how to mitigate this error, see [Troubleshooting FAQ](troubleshooting-faq.yml#troubleshooting-the-intune-connector-for-active-directory).
 
 ### Setting up keyboard automatically doesn't accurately update keyboard language
 
@@ -134,7 +134,7 @@ Date added: *December 4, 2024*
 In Intune's 2411 release, we've updated the backend infrastructure of the Windows Autopilot deployment report for consistency with other Intune reports. With this change, the Windows Autopilot deployment report and the [AutopilotEvents Microsoft Graph API](/graph/api/resources/intune-troubleshooting-devicemanagementautopilotevent) now return 50 records at a time. To show more than 50 records at a time:
 
 - Use the `skipToken` parameter to get additional pages of data with the Windows AutopilotEvents Graph API.
-- Use the [export API](/mem/intune-service/fundamentals/reports-export-graph-apis) with `reportName` **AutopilotV1DeploymentStatus** to get all records.
+- Use the [export API](/intune/intune-service/fundamentals/reports-export-graph-apis) with `reportName` **AutopilotV1DeploymentStatus** to get all records.
 
 ### DFCI enrollment fails for Professional editions of Windows 11, version 24H2
 
@@ -373,7 +373,7 @@ Devices are enrolled using Windows Autopilot self-deployment mode or pre-provisi
 To resolve this error, use one of the following work around methods:
 
 - Delete the device record in Intune, and then redeploy the device so that it reruns the Windows Autopilot deployment. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
-- Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](/mem/intune-service/enrollment/enrollment-restrictions-set).<!-- MEMDocs #2748 -->
+- Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](/intune/intune-service/enrollment/enrollment-restrictions-set).<!-- MEMDocs #2748 -->
 
 For more information on this issue, see [Troubleshooting Windows Autopilot device import and enrollment](troubleshooting-faq.yml#troubleshooting-windows-autopilot-device-import-and-enrollment).
 
@@ -434,7 +434,7 @@ To fix this issue:
   C:\Windows\System32\sysprep\sysprep.exe /oobe /reboot
   ```
 
-For more information, see [Modify the task sequence to account for Sysprep command line configuration](tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
+For more information, see [Modify the task sequence to account for Sysprep command line configuration](tutorial/existing-devices/create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) and [Prepare Windows for Capture](/intune/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
 ### Windows Autopilot self-deploying mode fails with an error code
 
