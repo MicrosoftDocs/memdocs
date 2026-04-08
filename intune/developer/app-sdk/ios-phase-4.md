@@ -263,7 +263,7 @@ MAM targeted configuration (also know as MAM app config) allows an app to receiv
 
 Intune administrators can target and deploy configuration data via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and Intune Graph API. As of version 7.0.1 of the Intune App SDK for iOS, apps that are participating in MAM targeted configuration can be provided MAM targeted configuration data via the MAM Service. The application configuration data is pushed through our MAM Service directly to the app instead of through the MDM channel. The Intune App SDK provides a class to access the data retrieved from these consoles. The following items are prerequisites:
 
-* The app needs to be enrolled with the Intune MAM service before you access the MAM targeted config UI. For more information, see [Receive app protection policy](../developer/ios-phase-3.md#receive-app-protection-policy).
+* The app needs to be enrolled with the Intune MAM service before you access the MAM targeted config UI. For more information, see [Receive app protection policy](ios-phase-3.md#receive-app-protection-policy).
 
 * Include `IntuneMAMAppConfigManager.h` in your app's source file.
 
@@ -351,7 +351,7 @@ IntuneMAMFrameworkPatcher -i /path/to/directory_or_binary [-resign] [-verbose]
 IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign -verbose
 ```
 
-For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/quickstart-integration.md).
+For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](quickstart-integration.md).
 
 ## Exit Criteria
 

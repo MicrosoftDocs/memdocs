@@ -26,7 +26,7 @@ Before running the tool, review [Security considerations for running the App Wra
 
 - Your app must be compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk)
 
-- If your app is complex, it must integrate with the [Intune App SDK for Android](../developer/android-phase-1.md)
+- If your app is complex, it must integrate with the [Intune App SDK for Android](android-phase-1.md)
 
 - You must run the App Wrapping Tool on a Windows computer running Windows 10 or later.
 
@@ -165,6 +165,6 @@ The `.apks` output file is a ZIP archive containing a single universal APK file.
 
 ## See also
 
-- [Decide how to prepare apps for mobile application management with Microsoft Intune](../developer/integration-methods.md)
+- [Decide how to prepare apps for mobile application management with Microsoft Intune](integration-methods.md)
 
-- [Microsoft Intune App SDK for Android developer guide](../developer/android-phase-1.md)
+- [Microsoft Intune App SDK for Android developer guide](android-phase-1.md)

@@ -468,7 +468,7 @@ If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re
 If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods return localized strings that the app can display to the end user if it chooses.
 The app can't resolve most error cases. In general, fail account creation or sign-in and allow the user to try again later.
 
-If a failure is persistent, the Company Portal logs might help determine the cause. The end user can submit the logs. For more information, see [Upload and email logs](../user-help/send-logs-to-your-it-admin-by-email-android.md).
+If a failure is persistent, the Company Portal logs might help determine the cause. The end user can submit the logs. For more information, see [Upload and email logs](../../intune-service/user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 Here's an example of registering a receiver using an anonymous class to implement the MAMNotificationReceiver interface:
 

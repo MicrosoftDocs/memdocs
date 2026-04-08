@@ -78,7 +78,7 @@ You'll need one of the following developer guides to help you integrate the Intu
 
 * **[Intune App SDK for iOS Developer Guide](ios-phase-1.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
 
-* **[Intune App SDK for Android Developer Guide](../developer/android-phase-1.md)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
+* **[Intune App SDK for Android Developer Guide](android-phase-1.md)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
@@ -104,7 +104,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 * **Intune App SDK for Android**: The Intune App SDK for Android doesn't control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we don't collect any personally identifiable information (PII).
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md).
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../../intune-service/user-help/turn-off-microsoft-usage-data-collection-android.md).
 
 ## Line-of-business app version numbers
 

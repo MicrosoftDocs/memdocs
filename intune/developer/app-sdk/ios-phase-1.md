@@ -140,7 +140,7 @@ Before you test app protection policy settings within your own application, it's
 
 ### Where do I download the SDK?
 
-To download the SDK, see [Download the SDK files](../developer/quickstart-integration.md#download-the-sdk-files).
+To download the SDK, see [Download the SDK files](quickstart-integration.md#download-the-sdk-files).
 
 ### Where do I report issues with integrating the Intune App SDK into my apps?
 

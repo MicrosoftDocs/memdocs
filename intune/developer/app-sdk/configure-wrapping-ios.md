@@ -51,8 +51,8 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 2.	Add the custom redirect URL to your app settings. For more information, see [Configuring MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal).
-3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](../developer/quickstart-integration.md#give-your-app-access-to-the-intune-mobile-app-management-service).
-4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Microsoft Entra application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/configure-wrapping-ios.md#command-line-parameters).
+3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](quickstart-integration.md#give-your-app-access-to-the-intune-mobile-app-management-service).
+4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Microsoft Entra application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](configure-wrapping-ios.md#command-line-parameters).
 
    > [!NOTE]
    > The parameters `-ac` and `-ar` are required parameters. Each app needs a unique set of these parameters. `-aa` is only required for single tenant applications.
