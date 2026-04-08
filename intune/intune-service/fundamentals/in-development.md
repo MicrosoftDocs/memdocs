@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/03/2026
+ms.date: 04/08/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -46,7 +46,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Scope tags support for Endpoint Privilege Management reports<!-- 34630681 -->
+### Scope tags support for Endpoint Privilege Management reports<!-- 34639681 -->
 
 We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
@@ -60,7 +60,7 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 ### Direct Android line-of-business app management<!-- 25065436, 29267431 -->
 
-You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned fully managed and dedicated devices.
+You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned devices.
 
 Direct LOB app management enables you to:
 
@@ -175,6 +175,12 @@ Microsoft Intune will be adding support for userless automated device enrollment
 
 ## Device management
 
+### Agentic identity for the Policy Configuration Agent (public preview)<!-- 37369520 -->
+
+The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
+
+For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
+ 
 ### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
 
 Windows devices managed by Intune will need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions will no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
@@ -219,7 +225,7 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
-### Device page in the Intune admin center is updated (public preview) <!-- 3646300 16532161 -->
+### Device page in the Intune admin center is updated (public preview) <!-- 36646300 16532161 -->
 
 In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
 
@@ -346,7 +352,11 @@ Intune will add new guidance to the compliance policy reporting documentation to
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
+
+We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
 
 <!-- *********************************************** -->
 
