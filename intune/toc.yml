@@ -798,7 +798,7 @@ items:
           - name: Monitor your baselines
             href: ./intune-service/protect/security-baselines-monitor.md
         - name: Security tasks
-          href: ./intune-service/protect/atp-manage-vulnerabilities.md
+          href: ./intune-service/protect/microsoft-defender-manage-vulnerabilities.md
         - name: Security policy
           items:
           - name: Manage security policies
