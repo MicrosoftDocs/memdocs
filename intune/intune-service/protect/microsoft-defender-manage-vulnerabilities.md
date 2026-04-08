@@ -21,22 +21,22 @@ When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](micro
 
 **Subscriptions**:
 
-- Microsoft Intune Plan 1
-- Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint).)
+- Intune Plan 1
+- Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint).)
 
 Intune configurations for Defender for Endpoint:
 
 - Configure a service-to-service connection with Microsoft Defender for Endpoint, and enable the **Microsoft Intune connection** in the Microsoft Defender portal. This connection allows security admins to create Intune security tasks when submitting remediation requests. For setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune).
-- Deploy policies to onboard devices to Microsoft Defender for Endpoint and enable risk assessment. See [Configure Microsoft Defender for Endpoint with Intune](microsoft-defender-integrate.md).
+- Deploy policies to onboard devices to Defender for Endpoint and enable risk assessment. See [Configure Microsoft Defender for Endpoint with Intune](microsoft-defender-integrate.md).
 
 ## How integration works
 
-After you integrate Intune with Microsoft Defender for Endpoint, Microsoft Defender Vulnerability Management identifies vulnerabilities on your managed devices.
+After you integrate Intune with Defender for Endpoint, Defender Vulnerability Management identifies vulnerabilities on your managed devices.
 
-In the Microsoft Defender portal, [security admins can review endpoint vulnerabilities](/defender-vulnerability-management/defender-vulnerability-management#remediation-and-tracking) and create Intune security tasks for remediation. These tasks appear in the Microsoft Intune admin center, where Intune admins can act and remediate issues based on Defender's guidance:
+In the Defender portal, [security admins can review endpoint vulnerabilities](/defender-vulnerability-management/defender-vulnerability-management#remediation-and-tracking) and create Intune security tasks for remediation. These tasks appear in the Intune admin center, where Intune admins can act and remediate issues based on Defender's guidance:
 
-- Vulnerabilities are identified through scans and assessments by Microsoft Defender for Endpoint.
-- Not all identified vulnerabilities support remediation through Intune; only those vulnerabilities that are compatible result in security tasks.
+- Defender for Endpoint identifies vulnerabilities through scans and assessments.
+- Not all identified vulnerabilities support remediation through Intune; only compatible vulnerabilities result in security tasks.
 
 Security tasks identify:
 
@@ -49,11 +49,11 @@ Intune admins can view a security task and then choose to accept or reject it. F
 
 ### Workflow example
 
-Following is an example of the workflow for discovering and remediating an application vulnerability:
+The following example shows the workflow for discovering and remediating an application vulnerability:
 
-- A Microsoft Defender for Endpoint scan identifies a vulnerability in the app Contoso Media Player v4, which is an unmanaged app that isn't deployed by Intune. A security admin in the Microsoft Defender portal creates an Intune security task to update the app.
-- The security task appears in the Microsoft Intune admin center with a status of **Pending**.
-- The Intune admin views the task details and selects **Accept**, which changes the status of the task to Accepted in both Intune and Defender for Endpoint.
+- A Defender for Endpoint scan identifies a vulnerability in the app Contoso Media Player v4, which is an unmanaged app that isn't deployed by Intune. A security admin in the Defender portal creates an Intune security task to update the app.
+- The security task appears in the Intune admin center with a status of **Pending**.
+- The Intune admin views the task details and selects **Accept**, which changes the status of the task to **Accepted** in both Intune and Defender for Endpoint.
 - The admin follows the remediation guidance provided. For managed apps, Intune might include instructions or links to update the app. For unmanaged apps, Intune can only provide text instructions.
 - After addressing the vulnerability, the Intune admin marks the task as **Complete Task**. This action updates the status in both Intune and Defender for Endpoint, where security admins confirm the remediation is successful and complete.
 
@@ -61,10 +61,10 @@ Following is an example of the workflow for discovering and remediating an appli
 
 Each security task has a *Remediation Type*:
 
-- **Application**: For example, Microsoft Defender for Endpoint finds a vulnerability in an app like *Contoso Media Player v4*. An admin creates a task to update the app, which might involve applying a security update or installing a new version.
+- **Application**: For example, Defender for Endpoint finds a vulnerability in an app like *Contoso Media Player v4*. An admin creates a task to update the app, which might involve applying a security update or installing a new version.
 - **Configuration**: For instance, if devices lack protection from *Potentially Unwanted Applications* (PUA), an admin creates a task to configure the setting in the Microsoft Defender Antivirus profile.
 
-When Intune doesn’t support implementation of a suitable remediation, Microsoft Defender for Endpoint doesn't create a security task.
+When Intune doesn't support implementation of a suitable remediation, Defender for Endpoint doesn't create a security task.
 
 ### Remediation actions
 
@@ -79,7 +79,7 @@ Common security task remediations include:
 
 ## Work with security tasks
 
-Before you can manage security tasks in the Intune admin center, a security admin must first create them in the Microsoft Defender portal. Security admins create tasks by submitting remediation requests through Microsoft Defender Vulnerability Management. For instructions, see [Remediate vulnerabilities with Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-remediation#request-remediation) in the Defender documentation.
+Before you can manage security tasks in the Intune admin center, a security admin must first create them in the Defender portal. Security admins create tasks by submitting remediation requests through Defender Vulnerability Management. For instructions, see [Remediate vulnerabilities with Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-remediation#request-remediation) in the Defender documentation.
 
 [!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
@@ -107,16 +107,16 @@ Successful remediation can reduce the risk exposure score in Defender for Endpoi
 
 ## Troubleshooting
 
-If security tasks aren't appearing in Intune:
+If security tasks don't appear in Intune:
 
-- Verify the Microsoft Intune connection is enabled in the Microsoft Defender portal.
-- Confirm devices are onboarded to Microsoft Defender for Endpoint.
-- Check that security admins are creating tasks for vulnerabilities Intune can remediate.
+- Verify the Intune connection is enabled in the Defender portal.
+- Confirm devices are onboarded to Defender for Endpoint.
+- Check that security admins create tasks for vulnerabilities that Intune can remediate.
 - Allow time for task synchronization between portals.
 
 ## Next steps
 
-- [Set up the integration](microsoft-defender-with-intune.md) - Complete prerequisites and connect services
-- [Monitor compliance for risk levels](microsoft-defender-monitor.md) - Track device risk scores
-- [Review Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) - Understand security recommendations
-- [Learn about Mobile Threat Defense](mobile-threat-defense.md) - Explore other threat protection options for Intune
+- [Set up the integration](microsoft-defender-with-intune.md) - Complete prerequisites and connect services.
+- [Monitor compliance for risk levels](microsoft-defender-monitor.md) - Track device risk scores.
+- [Review Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) - Understand security recommendations.
+- [Learn about Mobile Threat Defense](mobile-threat-defense.md) - Explore other threat protection options for Intune.
