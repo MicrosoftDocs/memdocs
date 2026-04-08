@@ -2109,6 +2109,10 @@ items:
   - name: Developer guidance
     href: ./developer/toc.yml
 
+  - name: User help documentation
+    href: /intune/user-help
+    displayName: end user
+
   - name: Privacy and compliance
     href: /intune/privacy-compliance
     displayName: GDPR, HIPAA, SOC, ISO
