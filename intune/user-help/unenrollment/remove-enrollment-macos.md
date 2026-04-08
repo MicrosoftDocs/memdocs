@@ -23,7 +23,7 @@ This article describes how to remove a device from within the Company Portal app
 
 ## Remove a device
 
-Follow these steps to remove a device from Company Portal that you no longer need for work or school. For these steps to work, you must still have access to your work or school account.  If you no longer have access to your account, see [Remove management profile](unenroll-your-device-from-intune-macos.md#remove-management-profile) (in this article) to unenroll your device.
+Follow these steps to remove a device from Company Portal that you no longer need for work or school. For these steps to work, you must still have access to your work or school account.  If you no longer have access to your account, see [Remove management profile](remove-enrollment-macos.md#remove-management-profile) (in this article) to unenroll your device.
 
 1. Sign in to Company Portal for macOS.
 
@@ -44,6 +44,6 @@ To uninstall the Company Portal app from a macOS device, select and drag the Com
 
 ## Next steps
 
-If you change your mind and want your access back later, install the Company Portal app and go through device setup again. For detailed instructions, see [Enroll your Mac with Intune Company Portal](enroll-your-device-in-intune-macos-cp.md).
+If you change your mind and want your access back later, install the Company Portal app and go through device setup again. For detailed instructions, see [Enroll your Mac with Intune Company Portal](../../intune-service/enrollment/enroll-company-portal-macos.md).
 
 Still need help? Contact your support person. For your organization's helpdesk information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

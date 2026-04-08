@@ -11,7 +11,7 @@ Enroll your personal or corporate-owned Android device with Intune Company Porta
 ## Prerequisites
 The Intune Company Portal app supports devices running Android 8.0 and later, including devices secured by Samsung Knox Standard 2.4 and later. To learn how to update your Android device to meet requirements, see [Check & update your Android version](https://support.google.com/android/answer/7680439).
 
-[!INCLUDE [android-company-portal-version-support](../includes/android-company-portal-version-support.md)]
+[!INCLUDE [android-company-portal-version-support](../../intune-service/includes/android-company-portal-version-support.md)]
 
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 
@@ -19,7 +19,7 @@ The Intune Company Portal app supports devices running Android 8.0 and later, in
 > Samsung Knox is a type of security that certain Samsung devices use for extra protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see the **Knox version** listed there, you have a native Android device.
 
 ## Install Company Portal app
-Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
+Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](../company-portal/install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
 
 1. On your device, open the **Play Store** app.
 
@@ -34,17 +34,17 @@ During enrollment, you might be asked to choose a category that best describes h
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.
 
-   ![Screenshot of the Company Portal, Terms screen, highlighting "Accept all" button.](./media/enroll-device-android-company-portal/accept-terms-1911.png)
+   ![Screenshot of the Company Portal, Terms screen, highlighting "Accept all" button.](./media/enroll-company-portal-android/accept-terms-1911.png)
 
 
 3. Review what your organization can and can't see. Then tap **CONTINUE**.
 
 
-    ![Screenshot of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/enroll-device-android-company-portal/android-privacy-screen-1911.png)
+    ![Screenshot of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/enroll-company-portal-android/android-privacy-screen-1911.png)
 
 4. Review what to expect in the upcoming steps. Then tap **NEXT**.
 
-    ![Screenshot of Company Portal, What's next screen, highlighting the Next button.](./media/enroll-device-android-company-portal/android-whats-next-1911.png)
+    ![Screenshot of Company Portal, What's next screen, highlighting the Next button.](./media/enroll-company-portal-android/android-whats-next-1911.png)
 
 
 5. Depending on your version of Android, you might be prompted to allow access to certain parts of your device. These prompts are a Google requirement and not controlled by Microsoft.
@@ -59,7 +59,7 @@ During enrollment, you might be asked to choose a category that best describes h
 
     Company Portal needs device administrator permissions to securely manage your device. Activating the app lets your organization identify possible security issues, such as repeated failed attempts to unlock your device, and respond appropriately.
 
-    ![Screenshot of the Activate device administrator screen, highlighting the activate button.](./media/enroll-device-android-company-portal/activate-device-administrator-1911.png)
+    ![Screenshot of the Activate device administrator screen, highlighting the activate button.](./media/enroll-company-portal-android/activate-device-administrator-1911.png)
 
 > [!NOTE]
 > Microsoft doesn't control the messaging on this screen. We understand that its phrasing can seem drastic. Company Portal can't specify which restrictions and access are relevant to your organization. If you have questions about how your organization uses the app, contact your IT support person. Go to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's contact information.
@@ -69,20 +69,20 @@ During enrollment, you might be asked to choose a category that best describes h
 
 8. On the **Company Access Setup** screen, check that your device is enrolled. Then tap **CONTINUE**.
 
-    ![Screenshot of Company Portal, Company Access Setup screen, showing Get your device managed is complete.](./media/enroll-device-android-company-portal/update-settings-1911.png)
+    ![Screenshot of Company Portal, Company Access Setup screen, showing Get your device managed is complete.](./media/enroll-company-portal-android/update-settings-1911.png)
 
 9. Your organization might require you to update your device settings. Tap **RESOLVE** to adjust a setting. When you're done updating settings, tap **CONTINUE**.
 
-   ![Screenshot of Company Portal, Update device settings, highlighting Resolve and Continue buttons.](./media/enroll-device-android-company-portal/resolve-settings-1911.png)
+   ![Screenshot of Company Portal, Update device settings, highlighting Resolve and Continue buttons.](./media/enroll-company-portal-android/resolve-settings-1911.png)
 
 10. When setup is complete, tap **DONE**.
 
-    ![Screenshot of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/enroll-device-android-company-portal/android-enrollment-done-1911.png)
+    ![Screenshot of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/enroll-company-portal-android/android-enrollment-done-1911.png)
 
 ## Next steps
 
 Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, Company Portal blocks app installations. Open the **Settings** app on your device. Then go to **Security and privacy** > **Install unknown apps**.
 
-If you get an error while you try to enroll your device in Intune, you can [email your company support](send-logs-to-your-it-admin-by-email-android.md).
+If you get an error while you try to enroll your device in Intune, you can [email your company support](../diagnostics/collect-logs-android.md).
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

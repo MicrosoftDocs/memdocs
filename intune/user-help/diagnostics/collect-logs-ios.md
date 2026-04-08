@@ -12,7 +12,7 @@ ms.reviewer: annovich
 Report a problem or error that occurs in the Intune Company Portal app for iOS/iPadOS. This article describes how to share app diagnostic logs with your support person.
 
 > [!Tip]
-> To make it easier for your support person and app developers to figure out a problem, turn on _verbose logging_. Verbose logging records all details about an error and includes these details in the report. For more information, see [Configure logging settings](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+> To make it easier for your support person and app developers to figure out a problem, turn on _verbose logging_. Verbose logging records all details about an error and includes these details in the report. For more information, see [Configure logging settings](enable-verbose-logging-android.md).
 
 ## Access help and support in app
 You can access the reporting feature in Company Portal using any of these methods:

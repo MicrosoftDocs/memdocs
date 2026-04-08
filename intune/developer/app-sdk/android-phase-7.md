@@ -135,7 +135,7 @@ To determine whether the app should implement the `getIsOpenFromLocationAllowedF
 | `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
 | `SHAREPOINT` | The app is opening data from SharePoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
 | `CAMERA` | The app is opening data from the device camera. | A `null` value, because the device camera isn't a cloud service. |
-| `LOCAL` | The app is opening data from an external storage location on the device that **isn't** the app's private storage. | Although external storage isn't a cloud service, an `oid` parameter is expected because it indicates ownership.<br><br>• **For identity-tagged files:** `oid` should be the file owner's identity.<br>• **For files without an identity tag:** `oid` should be `null`. |
+| `LOCAL` | The app is opening data from an external storage location on the device that **isn't** the app's private storage. | Although external storage isn't a cloud service, an `oid` parameter is expected because it indicates ownership.<br><br>* **For identity-tagged files:** `oid` should be the file owner's identity.<br>* **For files without an identity tag:** `oid` should be `null`. |
 | `PHOTO_LIBRARY` | The app is opening data from Android local photo storage. | Local photo storage isn't considered a cloud service and should always be used with a `null` OID parameter. |
 | `ACCOUNT_DOCUMENT` | The app is opening data from a location associated with an account within the app and isn't one of the specific cloud locations in this table.<br><br>*Use this location to determine whether data can be passed between accounts within a multi-identity app.* | An OID for an account used for Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
 | `OTHER` | The app is opening data from a location not specified in this table and that doesn't meet the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and should be `null`. |
@@ -334,7 +334,7 @@ This method automatically creates new backup entities and writes them to the `Ba
 These entities are automatically consumed upon restore.
 
 **Multi-identity Restore:**
-The Data Backup guide specifies a general algorithm for restoring your application’s data and provides a code sample in the [Extending BackupAgent] section.
+The Data Backup guide specifies a general algorithm for restoring your application's data and provides a code sample in the [Extending BackupAgent] section.
 To perform a successful multi-identity restore, you must follow the general structure provided in this code sample with special attention to the following points:
 
 1. You must use a `while(data.readNextHeader())`* loop to go through the backup entities.
@@ -468,7 +468,7 @@ If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re
 If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods return localized strings that the app can display to the end user if it chooses.
 The app can't resolve most error cases. In general, fail account creation or sign-in and allow the user to try again later.
 
-If a failure is persistent, the Company Portal logs might help determine the cause. The end user can submit the logs. For more information, see [Upload and email logs](../../intune-service/user-help/send-logs-to-your-it-admin-by-email-android.md).
+If a failure is persistent, the Company Portal logs might help determine the cause. The end user can submit the logs. For more information, see [Upload and email logs](../../user-help/diagnostics/collect-logs-android.md).
 
 Here's an example of registering a receiver using an anonymous class to implement the MAMNotificationReceiver interface:
 
@@ -679,9 +679,9 @@ Trusted Root Certificates Management provides support for:
 
 Trusted Root Certificates Management lets your app use trusted root certificates from Intune in combination with certificates from the device.
 
-The API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient] use the Intune trusted root certificates delivered via App Configuration Policy as a fallback option if the device’s trusted root certificate stores don't contain the required trusted root certificates to establish a secure connection to on-premises resources. This way, the app can use both device and Intune certificates to verify secure connections and communication with trusted sources.
+The API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient] use the Intune trusted root certificates delivered via App Configuration Policy as a fallback option if the device's trusted root certificate stores don't contain the required trusted root certificates to establish a secure connection to on-premises resources. This way, the app can use both device and Intune certificates to verify secure connections and communication with trusted sources.
 
-To enhance its network security settings, an app can use the Network Security Configuration XML file. Trusted Root Certificates Management respects this extra security by verifying whether the app’s Network Security Configuration XML has any of these features:
+To enhance its network security settings, an app can use the Network Security Configuration XML file. Trusted Root Certificates Management respects this extra security by verifying whether the app's Network Security Configuration XML has any of these features:
 
 - Custom trust anchors with extra CAs such as self-signed certificates.
 - Domain-specific rules for limiting trusted CAs.
@@ -690,7 +690,7 @@ To enhance its network security settings, an app can use the Network Security Co
 > [!NOTE]
 > For more information about Android Network Security Configuration, see [Network security configuration].
 
-If any of these applies to a domain that is being checked for trust, then Trusted Root Certificates Management skips the custom trust checks for this domain and let only the platform’s default trust managers do the checks.
+If any of these applies to a domain that is being checked for trust, then Trusted Root Certificates Management skips the custom trust checks for this domain and let only the platform's default trust managers do the checks.
 
 #### Class MAMTrustedRootCertsManager
 
@@ -802,12 +802,12 @@ Also:
 
 | Scenario | Preconditions | Steps |
 |----------|---------------|--------|
-| Save to, fully allowed | “Save copies of org data” policy set to **Allow** | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is allowed. |
-| Save to, exempted | - “Save copies of org data” policy set to **Block**<br>- “Allow user to save copies to selected services” policy set to **OneDrive** only | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is allowed.<br>- If your app allows it, attempt to save the file to a different cloud storage location and confirm it is blocked. |
-| Save to, blocked | “Save copies of org data” policy set to **Block** | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is blocked.<br>- If your app allows it, attempt to save the file to a different cloud storage location and confirm it is blocked. |
-| Open from, fully allowed | “Open data into Org documents” policy set to **Allow** | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app’s storage.<br>- Confirm the open is allowed. |
-| Open from, exempted | - “Open data into Org documents” policy set to **Block**<br>- “Allow users to open data from selected services” policy set to **OneDrive** only | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app’s storage.<br>- Confirm the open is allowed.<br>- If your app allows it, attempt to open another file from a different cloud storage location and confirm it is blocked. |
-| Open from, blocked | “Open data into Org documents” policy set to **Block** | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app’s storage.<br>- Confirm the open is blocked.<br>- If your app allows it, attempt to open another file from a different cloud storage location and confirm it is blocked. |
+| Save to, fully allowed | "Save copies of org data" policy set to **Allow** | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is allowed. |
+| Save to, exempted | - "Save copies of org data" policy set to **Block**<br>- "Allow user to save copies to selected services" policy set to **OneDrive** only | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is allowed.<br>- If your app allows it, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Save to, blocked | "Save copies of org data" policy set to **Block** | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is blocked.<br>- If your app allows it, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Open from, fully allowed | "Open data into Org documents" policy set to **Allow** | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app's storage.<br>- Confirm the open is allowed. |
+| Open from, exempted | - "Open data into Org documents" policy set to **Block**<br>- "Allow users to open data from selected services" policy set to **OneDrive** only | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app's storage.<br>- Confirm the open is allowed.<br>- If your app allows it, attempt to open another file from a different cloud storage location and confirm it is blocked. |
+| Open from, blocked | "Open data into Org documents" policy set to **Block** | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app's storage.<br>- Confirm the open is blocked.<br>- If your app allows it, attempt to open another file from a different cloud storage location and confirm it is blocked. |
 
 ### Validating notification restrictions
 
@@ -828,9 +828,9 @@ If your app is multi-identity, also sign-in to your app with an unmanaged accoun
 
 | Scenario | Preconditions | Steps |
 |----------|---------------|--------|
-| Full content blocked | “Org data notifications” policy set to **Block** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification doesn't display any content.<br>- Trigger your app to fire a notification with the managed account’s data.<br>- Confirm the notification doesn't display any content.<br>- Trigger your app to fire a notification with the unmanaged account’s data.<br>- Confirm the notification doesn't display any content. |
-| Partial content blocked | “Org data notifications” policy set to **Block org data** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the managed account’s data.<br>- Confirm the notification redacts the managed account’s content.<br>- Trigger your app to fire a notification with the unmanaged account’s data.<br>- Confirm the notification displays its full content. |
-| No content blocked | “Org data notifications” policy set to **Allow** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the managed account’s data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the unmanaged account’s data.<br>- Confirm the notification displays its full content. |
+| Full content blocked | "Org data notifications" policy set to **Block** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification doesn't display any content.<br>- Trigger your app to fire a notification with the managed account's data.<br>- Confirm the notification doesn't display any content.<br>- Trigger your app to fire a notification with the unmanaged account's data.<br>- Confirm the notification doesn't display any content. |
+| Partial content blocked | "Org data notifications" policy set to **Block org data** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the managed account's data.<br>- Confirm the notification redacts the managed account's content.<br>- Trigger your app to fire a notification with the unmanaged account's data.<br>- Confirm the notification displays its full content. |
+| No content blocked | "Org data notifications" policy set to **Allow** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the managed account's data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the unmanaged account's data.<br>- Confirm the notification displays its full content. |
 
 ### Validating data backup and restore
 
@@ -856,8 +856,8 @@ For these tests, install your app and the Intune Company Portal; sign-in with a 
 
 | Scenario | Preconditions | Steps |
 |----------|---------------|--------|
-| Screen capture blocked | “Screen capture and Google Assistant” policy set to **Block** | - Navigate to the part of your app that uses the custom `FLAG_SECURE` code.<br>- Attempt to use that feature.<br>- Confirm the feature is blocked. |
-| Screen capture allowed | “Screen capture and Google Assistant” policy set to **Allow** | - Navigate to the part of your app that uses the custom `FLAG_SECURE` code.<br>- Attempt to use that feature.<br>- Confirm the feature is allowed. |
+| Screen capture blocked | "Screen capture and Google Assistant" policy set to **Block** | - Navigate to the part of your app that uses the custom `FLAG_SECURE` code.<br>- Attempt to use that feature.<br>- Confirm the feature is blocked. |
+| Screen capture allowed | "Screen capture and Google Assistant" policy set to **Allow** | - Navigate to the part of your app that uses the custom `FLAG_SECURE` code.<br>- Attempt to use that feature.<br>- Confirm the feature is allowed. |
 
 ### Validating App Protection CA
 
@@ -948,8 +948,8 @@ Continue to refer to this guide and the [Appendix] as you continue to develop yo
 [App Protection CA]:/mem/intune-service/protect/app-based-conditional-access-intune
 [issuing a selective wipe]:/mem/intune-service/apps/apps-selective-wipe
 [Set up app-based Conditional Access policies with Intune]:/mem/intune-service/protect/app-based-conditional-access-intune-create
-[Microsoft Tunnel with Mobile Application Management]: /mem/intune-service/protect/microsoft-tunnel-mam
-[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]: /mem/intune-service/protect/microsoft-tunnel-mam-android
+[Microsoft Tunnel with Mobile Application Management]:/mem/intune-service/protect/microsoft-tunnel-mam
+[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]:/mem/intune-service/protect/microsoft-tunnel-mam-android
 
 <!-- 3rd party links -->
 [app private storage]:https://developer.android.com/training/data-storage

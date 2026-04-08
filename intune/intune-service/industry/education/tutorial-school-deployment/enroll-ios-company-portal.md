@@ -11,7 +11,7 @@ ms.author: scbree
 
 If you're setting up an iOS device individually, you can use the Company Portal app to enroll it in Intune.
 
-With this process, no advance preparation is needed. For more information, see [Set up personal iOS device for work or school](/mem/intune-service/user-help/enroll-your-device-in-intune-ios).
+With this process, no advance preparation is needed. For more information, see [Set up personal iOS device for work or school](/mem/user-help/enrollment/enroll-ios).
 
 > [!IMPORTANT]
 > If you configured enrollment restrictions in Intune blocking personal iOS devices, this process will not complete. You will need to use a different enrollment method.

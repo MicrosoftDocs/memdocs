@@ -60,4 +60,4 @@ Events and errors that occur in the Company Portal app are saved on your device 
 
 ## Next steps
 
-If your workplace or school needs additional information about app or device activity, you might need to resend [logs from the Settings app](send-logs-to-your-it-admin-settings-windows.md).
+If your workplace or school needs additional information about app or device activity, you might need to resend [logs from the Settings app](collect-logs-settings-windows.md).

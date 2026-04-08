@@ -249,7 +249,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
 [App Wrapping Tool for Android]:/mem/intune-service/developer/app-wrapper-prepare-android
 [Prepare line-of-business apps for app protection policies]:/mem/intune-service/developer/apps-prepare-mobile-application-management
-[Turn off Microsoft usage data collection]:/mem/intune-service/user-help/turn-off-microsoft-usage-data-collection-android
+[Turn off Microsoft usage data collection]:/mem/user-help/privacy/disable-usage-data-collection-android
 
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft

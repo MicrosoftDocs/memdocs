@@ -10,20 +10,20 @@ ms.reviewer: esmich
 By enrolling your device in Intune, you get secure access to work or school apps on your Android device, and access to apps in Intune Company Portal and the Microsoft Intune app. The Company Portal app and Intune app also monitor your device settings to make sure they meet your organization's requirements and syncs things (like apps, policies, and updates) from your organization to your device.
 
 >[!IMPORTANT]
-> Before setting up Microsoft Intune for an Android Open Source Project (AOSP) device, ensure your device is supported. For a list of supported devices, see to [Android Open Source Project Supported Devices](../fundamentals/android-os-project-supported-devices.md).
+> Before setting up Microsoft Intune for an Android Open Source Project (AOSP) device, ensure your device is supported. For a list of supported devices, see to [Android Open Source Project Supported Devices](../../intune-service/fundamentals/android-os-project-supported-devices.md).
 
 This article provides an overview of device enrollment, its purpose, and its benefits. To skip this overview and go straight to the enrollment steps, select from one of the following articles (ask your IT support person if you're not sure which set of instructions you're supposed to follow):
 
 * Enrollment with Intune Company Portal app
-    * [Android work profile for personal devices](enroll-device-android-work-profile.md)
-    * [Android device administrator for personal and corporate-owned devices](enroll-device-android-company-portal.md)
+    * [Android work profile for personal devices](enroll-work-profile-android.md)
+    * [Android device administrator for personal and corporate-owned devices](enroll-company-portal-android.md)
 * Enrollment with Microsoft Intune app
-    * [Enroll corporate-owned Android device](enroll-device-android-microsoft-intune-app.md)
-    * [Enroll corporate-owned AOSP device](enroll-device-aosp.md)
+    * [Enroll corporate-owned Android device](enroll-intune-app-android.md)
+    * [Enroll corporate-owned AOSP device](enroll-aosp.md)
 * Derived credentials enrollment (smart card users):
-    * [Entrust](enroll-android-device-entrust-datacard.md)
-    * [Intercede](enroll-android-device-intercede.md)
-    * [DISA Purebred](enroll-android-device-disa-purebred.md)
+    * [Entrust](enroll-entrust-datacard-android.md)
+    * [Intercede](enroll-intercede-android.md)
+    * [DISA Purebred](enroll-disa-purebred-android.md)
 
 ## Secure your device
 Use the Company Portal or Microsoft Intune app to enroll and register your personal or work-provided device with your organization. The apps walk you through each step of enrollment, and configure your device settings to match your organization's policies. They also alert you to problems or settings that need to be resolved before you can get corporate access.
@@ -68,6 +68,6 @@ When you enroll your device, your company support or IT admin is given access to
 
 ## Next steps
 
-When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the articles listed [at the beginning of this article](why-enroll-android-device.md#android-device-enrollment-overview) for links to general setup instructions.
+When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the articles listed [at the beginning of this article](enrollment-benefits-android.md#android-device-enrollment-overview) for links to general setup instructions.
 
 Contact your support person to find out which setup instructions you should use.  Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.

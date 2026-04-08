@@ -25,7 +25,7 @@ If you can’t find the app in the Play store, contact your IT support person fo
 
 Your organization might require you to stay connected to Microsoft Tunnel. This is known as an *always-on* connection. If this is the case, the Status toggle will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet.
 
-If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-android.md#send-logs) section in this article.
+If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](microsoft-tunnel-android.md#send-logs) section in this article.
 
 ## Connection details
 

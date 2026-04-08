@@ -16,7 +16,7 @@ Report a problem or error that occurs in the Microsoft Intune and Intune Company
 > App logs are also shared with Microsoft Support in case the problem requires additional help. Your support person will reach out to Microsoft Support with your incident ID to work with them.
 
 ## What you need to know
-Turn on _verbose logging_ in Company Portal to make it easier for your support person to investigate errors. For more information, see [Configure logging settings](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).
+Turn on _verbose logging_ in Company Portal to make it easier for your support person to investigate errors. For more information, see [Configure logging settings](enable-verbose-logging-android.md).
 
 The send logs option in the Company Portal is unavailable for sovereign cloud environments. Instead, you must send logs via email.
 

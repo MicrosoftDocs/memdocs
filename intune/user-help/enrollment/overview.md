@@ -38,7 +38,7 @@ In some cases, your organization installs the Company Portal app on your device 
 
 If you're required to use the Microsoft Intune app with your Android device, your organization installs it on your device for you.
 
-For information about how to install the Intune app on a work or school-provided Linux device, see [Get the Microsoft Intune app for Linux](microsoft-intune-app-linux.md).
+For information about how to install the Intune app on a work or school-provided Linux device, see [Get the Microsoft Intune app for Linux](../company-portal/intune-app-linux.md).
 
 ## What's the difference between the apps and the website?
 
@@ -87,12 +87,12 @@ You can also contact your IT support person. The Company Portal and Microsoft In
 
 If you're ready to access your work or school account, follow your organization's instructions to enroll your device. You can also find step-by-step enrollment guidance in the following articles.
 
-- [Enroll your Windows device](enroll-windows-10-device.md)
-- [Enroll your Android device](enroll-device-android-company-portal.md)
-- [Enroll with Android work profile](enroll-device-android-work-profile.md)
-- [Enroll Android or AOSP device with Microsoft Intune app](enroll-device-android-microsoft-intune-app.md)
-- [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
-- [Enroll your organization-provided iOS device](enroll-your-device-dep-ios.md)
-- [Enroll Linux device with Microsoft Intune app](enroll-device-linux.md)
-- [Enroll your macOS device](enroll-your-device-in-intune-macos-cp.md)
-- [Enroll your organization-provided macOS device](enroll-company-device-macos.md)
+- [Enroll your Windows device](enroll-windows.md)
+- [Enroll your Android device](enroll-company-portal-android.md)
+- [Enroll with Android work profile](enroll-work-profile-android.md)
+- [Enroll Android or AOSP device with Microsoft Intune app](enroll-intune-app-android.md)
+- [Enroll your iOS device](enroll-ios.md)
+- [Enroll your organization-provided iOS device](enroll-automated-ios.md)
+- [Enroll Linux device with Microsoft Intune app](enroll-linux.md)
+- [Enroll your macOS device](enroll-company-portal-macos.md)
+- [Enroll your organization-provided macOS device](enroll-corporate-macos.md)

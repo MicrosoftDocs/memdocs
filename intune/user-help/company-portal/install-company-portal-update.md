@@ -23,7 +23,7 @@ You might be required to update the app on your work or school device when:
 
 Company Portal sends notifications to your device when an update is required.
 
-[!INCLUDE [android-company-portal-version-support](../includes/android-company-portal-version-support.md)]
+[!INCLUDE [android-company-portal-version-support](../../intune-service/includes/android-company-portal-version-support.md)]
 
 ## Update on Android device
 

@@ -10,24 +10,24 @@ Use the Intune Company Portal website to remotely manage your work apps and enro
 
 Once you're signed in, you can see your enrolled devices and:
 
-* [Check status](check-status-company-portal-website.md): Initiate a status check to verify or regain access to your organization's resources.
+* [Check status](../compliance/validate-status-company-portal-website.md): Initiate a status check to verify or regain access to your organization's resources.
 
-* [View and manage work apps](manage-apps-cpweb.md): Search and filter through available work apps, including required and already-installed apps.
+* [View and manage work apps](../../intune-service/apps/manage-apps-company-portal-website.md): Search and filter through available work apps, including required and already-installed apps.
 
-* [Store recovery key for macOS](store-recovery-key.md): Store and rotate the FileVault key for an encrypted Mac.
+* [Store recovery key for macOS](../security/import-recovery-key-macos.md): Store and rotate the FileVault key for an encrypted Mac.
 
-* [Get recovery key for macOS](get-recovery-key-cpweb.md): Retrieve the stored FileVault key so that you can get back into a locked Mac.
+* [Get recovery key for macOS](../security/collect-recovery-key-company-portal-website.md): Retrieve the stored FileVault key so that you can get back into a locked Mac.
 
-* [Get recovery key for Windows](get-recovery-key-windows.md): Retrieve the stored BitLocker key so that you can get back into a locked PC.
+* [Get recovery key for Windows](../security/collect-recovery-key-windows.md): Retrieve the stored BitLocker key so that you can get back into a locked PC.
 
-* [Remotely lock a device](remote-lock-your-device-cpwebsite.md): Lock a lost or stolen device so no one else can access it.
+* [Remotely lock a device](../device-actions/restrict-device-company-portal-website.md): Lock a lost or stolen device so no one else can access it.
 
-* [Rename a device](rename-your-device-cpwebsite.md): Change the generic or default model name that's shown in Company Portal to something you can quickly identify.
+* [Rename a device](../device-actions/update-device-name-company-portal-website.md): Change the generic or default model name that's shown in Company Portal to something you can quickly identify.
 
-* [Remove a device](remove-your-device-cpwebsite.md): Remove and unenroll a personal device that's no longer needed for work.
+* [Remove a device](../device-actions/remove-device-company-portal-website.md): Remove and unenroll a personal device that's no longer needed for work.
 
-* [Reset a device password](reset-your-passcode-cpwebsite.md): Reset a forgotten password.
+* [Reset a device password](../device-actions/reset-passcode-company-portal-website.md): Reset a forgotten password.
 
-* [Reset device to factory settings](reset-device-company-portal-website.md): Restore a used, lost, or stolen personal device to its out-of-box state.
+* [Reset device to factory settings](../device-actions/reset-device-company-portal-website.md): Restore a used, lost, or stolen personal device to its out-of-box state.
 
 Some actions aren't available on all operating systems and device types. The reset device password action, for example, won't work on an Android device that has a work profile.

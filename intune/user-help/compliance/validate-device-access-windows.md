@@ -12,21 +12,21 @@ Verify that your device has access to work or school resources. The *check acces
 Organizations enforce requirements, such as encryption and password limits, to make sure only secure, trusted devices access their internal resources. Your device must meet and maintain these requirements to gain access. Complete the steps in this article to check access from the Company Portal app for Windows.
 
 > [!NOTE]
-> If you don't have the Company Portal app installed, you can still [use the Company Portal website to check access](check-status-company-portal-website.md).
+> If you don't have the Company Portal app installed, you can still [use the Company Portal website to check access](validate-status-company-portal-website.md).
 
 ## Check access
 
 1. Open the Company Portal app for Windows and go to **Devices**.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Company Portal app for Windows highlighting the "Devices" option.](./media/check-device-access-windows-cpapp/company-portal-windows-devices.png)
+   > ![Screenshot of the Company Portal app for Windows highlighting the "Devices" option.](./media/validate-device-access-windows/company-portal-windows-devices.png)
 
 2. Select a device.
 
 3. Under **Device status**, select **Check access**.
 
    > [!div class="mx-imgBorder"]
-   > ![Image of the Company Portal app Devices page highlighting the "Check access" button ](./media/check-device-access-windows-cpapp/company-portal-windows-check-access.png)
+   > ![Image of the Company Portal app Devices page highlighting the "Check access" button ](./media/validate-device-access-windows/company-portal-windows-check-access.png)
 
 
     The app syncs your device with your organization's current requirements and checks to make sure your device matches them. This check can take a few minutes.

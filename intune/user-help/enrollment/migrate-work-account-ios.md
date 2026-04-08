@@ -29,7 +29,7 @@ We recommend turning on *phone sign-in* for the easiest way to authenticate. To 
 
 ## Step 1: Before you begin
 
-If you're migrating from an old iPhone you used for work to a new iPhone, first complete these steps on your old iPhone. If you don't want to restore work account credentials, apps, and settings from a previous iPhone, continue to [Step 2: Power on the new device](set-up-migrate-iphone-for-work.md#step-2-power-on-the-new-device).
+If you're migrating from an old iPhone you used for work to a new iPhone, first complete these steps on your old iPhone. If you don't want to restore work account credentials, apps, and settings from a previous iPhone, continue to [Step 2: Power on the new device](migrate-work-account-ios.md#step-2-power-on-the-new-device).
 
 1. Set up Microsoft Authenticator recovery settings. On your old device, set up a recovery account for your work account credentials:
     1. Open Microsoft Authenticator.

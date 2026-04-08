@@ -1389,7 +1389,7 @@ Applies to:
 
 The UI for the Intune Company Portal app for Windows is updated. Users now see an improved experience for their desktop app without changing the functionality they've used in the past. Specific UI improvements are focused on the **Home**, **Devices**, and **Downloads & updates** pages. The new design is more intuitive and highlights areas where users need to take action.
 
-For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755). For end user details, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md).
+For more information, see [New look for Intune Company Portal app for Windows](https://techcommunity.microsoft.com/t5/intune-customer-success/new-look-for-intune-company-portal-app-for-windows/ba-p/4158755). For end user details, see [Install and share apps on your device](../../user-help/apps/install-apps-windows.md).
 
 ### Device security
 
@@ -2437,9 +2437,9 @@ Applies to:
 For more information, see:
 
 - [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
-- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)
+- [Get recovery key for Windows](../../user-help/security/collect-recovery-key-windows.md)
 - [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md)
-- [Get recovery key for Mac](../user-help/get-recovery-key-cpweb.md)
+- [Get recovery key for Mac](../../user-help/security/collect-recovery-key-company-portal-website.md)
 - [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
 
 ### Role-based access control
@@ -2573,7 +2573,7 @@ You can prevent end users within your organization from accessing BitLocker reco
 For more information, see:
 
 - [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities#configure-device-settings)
-- [Get recovery key for Windows](../user-help/get-recovery-key-windows.md)
+- [Get recovery key for Windows](../../user-help/security/collect-recovery-key-windows.md)
 - [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
 
 #### New version of Windows hardware attestation report<!-- 15425680 -->
@@ -3792,8 +3792,8 @@ The Intune Company Portal app for Android and Microsoft Intune app for Android A
 For more information, see the following articles:
 
 - [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
-- [Check compliance in Intune app for AOSP](../user-help/check-compliance-aosp.md)
-- [Check compliance in Company Portal for Android](../user-help/check-compliance-on-your-device-android.md)
+- [Check compliance in Intune app for AOSP](../../user-help/compliance/validate-compliance-aosp.md)
+- [Check compliance in Company Portal for Android](../../user-help/compliance/validate-compliance-android.md)
 
 ### Device configuration
 

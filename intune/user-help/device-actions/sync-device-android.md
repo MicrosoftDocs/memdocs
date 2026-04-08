@@ -22,7 +22,7 @@ To force a sync:
 ## Next steps
 After you sync a device, you may receive notifications from Company Portal about updating its settings. Microsoft Learn offers how-to articles to help guide you through these updates. To find these articles, go to the table of contents and choose **Android device management** > **Update Android device settings**.
 
-The Company Portal **Sync** feature is different from the **Check device settings** feature. The latter feature forces Company Portal to verify that your settings meet your organization's requirements. Whenever Company Portal prompts you to make changes to your settings, make the change and then select **Check device settings** to regain access to work or school apps. For more information about this feature, see [Check device compliance](check-compliance-on-your-device-android.md).
+The Company Portal **Sync** feature is different from the **Check device settings** feature. The latter feature forces Company Portal to verify that your settings meet your organization's requirements. Whenever Company Portal prompts you to make changes to your settings, make the change and then select **Check device settings** to regain access to work or school apps. For more information about this feature, see [Check device compliance](../compliance/validate-compliance-android.md).
 
 Still need help? Contact your IT support person with specific questions or concerns about Intune, Company Portal, or device management. For contact information, check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
 

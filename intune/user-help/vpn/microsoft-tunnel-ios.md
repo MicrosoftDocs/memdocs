@@ -19,7 +19,7 @@ The Microsoft Tunnel client app helps you securely and privately connect to your
 
 An absent **Status** toggle means that Tunnel is configured to connect automatically when certain apps are in use. To turn this functionality off, go to **Details** and turn off **Connect on demand**.
 
-If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](use-microsoft-tunnel-ios.md#send-logs) section in this article.
+If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](microsoft-tunnel-ios.md#send-logs) section in this article.
 
 ## Connection details
 

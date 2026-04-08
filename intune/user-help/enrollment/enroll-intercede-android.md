@@ -73,7 +73,7 @@ Derived credentials are an implementation of the National Institute of Standards
 9. Enter the code you previously wrote down.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Company Portal website "Enter code" prompt.](./media/enroll-android-device-disa-purebred/enter-code-intercede.png)
+   > ![Screenshot of the Company Portal website "Enter code" prompt.](./media/enroll-disa-purebred-android/enter-code-intercede.png)
 
 10. Insert your smart card to sign in.
 
@@ -81,7 +81,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 12. Depending on your organization's requirements, you might be prompted to update settings, such as screen lock or encryption. If you see these prompts, tap **SET** and follow the onscreen instructions.
 
-       ![Example image of Set up your work phone screen, highlighting Set button.](./media/enroll-android-device-disa-purebred/fully-managed-intune-app-10.png)
+       ![Example image of Set up your work phone screen, highlighting Set button.](./media/enroll-disa-purebred-android/fully-managed-intune-app-10.png)
 
 13. To install work apps on your device, tap **INSTALL**. After installation is complete, tap **NEXT**.
 
@@ -90,9 +90,9 @@ Derived credentials are an implementation of the National Institute of Standards
 
 15. Return to the Intune app on your mobile device and follow the onscreen instructions until enrollment is done.
 
-    ![Example image of Set up access, register your device screen, highlighting Done button.](./media/enroll-android-device-disa-purebred/fully-managed-intune-app-19.png)
+    ![Example image of Set up access, register your device screen, highlighting Done button.](./media/enroll-disa-purebred-android/fully-managed-intune-app-19.png)
 
-16. Continue to the [set up your smart card](enroll-android-device-intercede.md#set-up-smart-card) section in this article to finish setting up your device.
+16. Continue to the [set up your smart card](enroll-intercede-android.md#set-up-smart-card) section in this article to finish setting up your device.
 
 ### QR code enrollment
 In this section, you'll scan your company-provided QR code.  When you're done, we'll redirect you back to the device enrollment steps.
@@ -124,7 +124,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
 1. After enrollment is complete, the Intune app will notify you to set up your smart card. Tap the notification. If you don't get a notification, check your email.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-android-device-disa-purebred/action-required-in-app-android.png)
+   > ![Example screenshot of the Company Portal push notification on device home screen.](./media/enroll-disa-purebred-android/action-required-in-app-android.png)
 
 2. On the **Set up smart card** screen:
 
@@ -133,7 +133,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
    2. Tap **BEGIN**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-android-device-entrust-datacard/smart-card-open-entrust-android.png)
+   > ![Example screenshot of the Company Portal Set up mobile smart card access screen.](./media/enroll-entrust-datacard-android/smart-card-open-entrust-android.png)
 
 3. Switch to your smart card-enabled device or self-service kiosk and open the MyID app. Sign in with your work credentials.
 
@@ -144,7 +144,7 @@ In this section, you'll enter your company-provided token. When you're done, we'
 6. Return to your Android device. On the Company Portal > **Get QR code** screen, tap **NEXT**.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal Get QR code screen.](./media/enroll-android-device-entrust-datacard/get-qr-code-entrust-android.png)
+    > ![Example screenshot of the Company Portal Get QR code screen.](./media/enroll-entrust-datacard-android/get-qr-code-entrust-android.png)
 
 7. If you're prompted to allow the Intune app to use your camera, tap **Allow**.
 
@@ -153,18 +153,18 @@ In this section, you'll enter your company-provided token. When you're done, we'
 9. The Intune app will start downloading and installing the certificates needed to access work or school resources. Depending on your internet connection, this process might take some time. Don't close the app during this time.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the Company Portal "Downloading and installing certificates" screen](./media/enroll-android-device-entrust-datacard/install-certificates-entrust-android.png)
+    > ![Example screenshot of the Company Portal "Downloading and installing certificates" screen](./media/enroll-entrust-datacard-android/install-certificates-entrust-android.png)
 
 10. Once all of the certificates are processed, wait for the Intune app to finish setting up your device. You'll know setup is complete when you see the **You're all set!** screen.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot of the "You're all set" screen](./media/enroll-android-device-disa-purebred/all-set-android.png)
+    > ![Example screenshot of the "You're all set" screen](./media/enroll-disa-purebred-android/all-set-android.png)
 
 ## Next steps
 
 After enrollment is complete, you'll have access to work resources, such as email, Wi-Fi, and any apps that your organization makes available. For more information about how to get, search for, install, and uninstall apps in the Intune app see:
 
-* [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
-* [Manage apps from the Company Portal website](manage-apps-cpweb.md)
+* [Use managed apps on your device](../../intune-service/apps/managed-apps-android.md)
+* [Manage apps from the Company Portal website](../../intune-service/apps/manage-apps-company-portal-website.md)
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

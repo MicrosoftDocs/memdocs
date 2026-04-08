@@ -27,9 +27,9 @@ Follow these steps to remove a device you no longer need for work or school from
 
 3. Next to **Rename**, select the ellipses menu. Then tap **Remove device** > **Remove**.
 
-    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/unenroll-your-device-from-intune-ios/cp_ios_unenroll_after_1804_001.png)
+    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove. Shows "Remove Device" button, "Factory Reset" button, and "Cancel" button.](./media/remove-enrollment-ios/cp_ios_unenroll_after_1804_001.png)
 
-    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/unenroll-your-device-from-intune-ios/cp_ios_unenroll_after_1804_002.png)
+    ![Screenshot of the Company Portal app Devices screen, showing options after user has clicked Remove Device button. Shows red highlighted "Remove" button, and blue highlighted "Learn More" button and "Cancel" button.](./media/remove-enrollment-ios/cp_ios_unenroll_after_1804_002.png)
 
 
 ## Remove data collected by the Company Portal app

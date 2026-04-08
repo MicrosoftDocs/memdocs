@@ -71,12 +71,12 @@ This task list provides an overview. For more specific information, go to [Set u
 
 ### End user tasks (personally owned devices with a work profile)
 
-Your users must do the following steps. For the specific user experience, go to [enroll the device](../user-help/enroll-device-android-work-profile.md).
+Your users must do the following steps. For the specific user experience, go to [enroll the device](../../user-help/enrollment/enroll-work-profile-android.md).
 
 1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 2. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
-    Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-device-android-work-profile.md).
+    Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-work-profile-android.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
@@ -162,12 +162,12 @@ This task list provides an overview. For more specific information, go to [Set u
 
 ### End user tasks (Fully managed)
 
-The specific steps depend on how you configured the enrollment profile. For the specific user experience, go to [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+The specific steps depend on how you configured the enrollment profile. For the specific user experience, go to [enroll the device](../../user-help/enrollment/enroll-intune-app-android.md).
 
 1. Users turn on the device, and are prompted for information, including the enrollment method: NFC, Token, QR Code, or Google Zero Touch. They can be asked to sign in with their organization credentials (`user@contoso.com`).
 2. After they enter the required information, your enrollment profile applies to the device.
 
-    Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+    Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-intune-app-android.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
@@ -205,12 +205,12 @@ This task list provides an overview. For more specific information, go to [Set u
 
 ### End user tasks (Corporate owned with a work profile)
 
-The specific steps depend on how you configured the enrollment profile. For the specific user experience, go to [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+The specific steps depend on how you configured the enrollment profile. For the specific user experience, go to [enroll the device](../../user-help/enrollment/enroll-intune-app-android.md).
 
 1. Users turn on the device, and are prompted for information, including the enrollment method: NFC, Token, QR Code, or Google Zero Touch. They can be asked to sign in with their organization credentials (`user@contoso.com`).
 2. After they enter the required information, your enrollment profile applies to the device.
 
-    Users might have to enter more information. For more specific steps, go to [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+    Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-intune-app-android.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
@@ -265,7 +265,7 @@ Admins can complete the enrollment themselves, and then give the devices to the 
 1. Users turn on the device, and are prompted for information, including the enrollment method: QR Code. If you created a user-associated devices enrollment profile, then they might be asked to sign in with their organization credentials (`user@contoso.com`).
 2. If you created a userless devices enrollment profile, then wait for the enrollment wizard to complete. When it does, the device is ready to use.
 
-    If you created a user-associated devices enrollment profile, then users enter the required information. Then, wait for the enrollment wizard to complete. For more specific steps, go to [enroll the device](../user-help/enroll-device-android-microsoft-intune-app.md).
+    If you created a user-associated devices enrollment profile, then users enter the required information. Then, wait for the enrollment wizard to complete. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-intune-app-android.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 

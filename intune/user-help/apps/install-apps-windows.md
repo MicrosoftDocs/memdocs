@@ -13,7 +13,7 @@ ms.reviewer:
 Browse and install work apps in the Intune Company Portal app for Windows. This article describes how to install, view, and share work apps from Company Portal.
 
 > [!TIP]
-> As a companion to this article, see our [Intune app protection for Windows setup guide](../apps/protect-mam-windows.md) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the [Intune app protection for Windows guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.
+> As a companion to this article, see our [Intune app protection for Windows setup guide](../../intune-service/apps/protect-mam-windows.md) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the [Intune app protection for Windows guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.
 
 ## Types of apps
 
@@ -28,7 +28,7 @@ To find out which installed apps are required:
 1. Sign into the Company Portal app with your work or school account.
 1. Go to **Downloads & updates**.
 
-    ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/install-apps-cpapp-windows/windows-companyportal-02.png)
+    ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/install-apps-windows/windows-companyportal-02.png)
 3. In the table, look under the column **Required by your organization**. A *yes* means that the app is required on your enrolled device.
 
 ## Install apps
@@ -36,7 +36,7 @@ Before you begin, install [Intune Company Portal for Windows from the Microsoft 
 
 1. Sign in to the Company Portal app on your work or school device. You'll see the latest notifications on the Home page.
 
-    ![Screenshot of the Home page with notifications in the Company Portal app for Windows.](./media/install-apps-cpapp-windows/windows-companyportal-03.png)
+    ![Screenshot of the Home page with notifications in the Company Portal app for Windows.](./media/install-apps-windows/windows-companyportal-03.png)
 
 2. You can access available apps from the following places in Company Portal:
 
@@ -67,7 +67,7 @@ Select **Sort by** to rearrange the apps alphabetically by app or publisher name
 ## View installed apps
 Go to **Downloads & updates** to see a list of installed apps on your device. If no apps are available to view, you'll see a message that no company apps were installed.
 
-![Screenshot of the Downloads & updates page for the Company Portal app for Windows.](./media/install-apps-cpapp-windows/windows-companyportal-02.png)
+![Screenshot of the Downloads & updates page for the Company Portal app for Windows.](./media/install-apps-windows/windows-companyportal-02.png)
 
 The following information is available for each app:
 
@@ -91,7 +91,7 @@ Share and recommend apps to your work or school contacts. The following steps de
 ## Request an app for work or school
 Request an app that's unavailable in the Company Portal app. Go to **Help & support** for your organization's helpdesk details. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
 
-  ![Screenshot of the Company Portal app for Windows, Help & Support page, highlighting the Helpdesk section.](./media/install-apps-cpapp-windows/1812_UCP_Help_Support_helpdesk.png)
+  ![Screenshot of the Company Portal app for Windows, Help & Support page, highlighting the Helpdesk section.](./media/install-apps-windows/1812_UCP_Help_Support_helpdesk.png)
 
 ## Uninstall apps
 

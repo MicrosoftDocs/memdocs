@@ -71,7 +71,7 @@ These steps guide you through using the Settings app on a Windows device to enro
 
    :::image type="content" source="./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png" alt-text="Screenshot of Windows Settings showing a connected work or school account under Access work or school." lightbox="./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png":::
 
-    If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows device access](../user-help/troubleshoot-your-windows-10-device-windows.md).
+    If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows device access](../../user-help/troubleshooting/troubleshoot-device-access-windows.md).
 
 When the device is enrolled in Intune, it starts to receive the Intune policies you create. [Common questions, answers, and scenarios with policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md) provides more information about how policies and profiles work in Intune.
 
@@ -83,14 +83,14 @@ When the device is enrolled in Intune, it starts to receive the Intune policies 
 
 ## Clean up resources
 
-To unenroll the device, see [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md).
+To unenroll the device, see [Remove your Windows device from management](../../user-help/unenrollment/remove-enrollment-windows.md).
 
 ## Next steps
 
 In this task, you learned how to enroll a Windows device into Intune. For more information about the user experience on the device, see the following resources:
 
-- [Windows device enrollment with Intune Company Portal](../user-help/device-enrollment-overview-windows.md)
-- [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+- [Windows device enrollment with Intune Company Portal](../../user-help/enrollment/enrollment-overview-windows.md)
+- [What info can your company see when you enroll your device?](../../user-help/enrollment/enrollment-data-visibility.md)
 
 You can also automate Windows device enrollment. To learn more, see [Windows enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
 

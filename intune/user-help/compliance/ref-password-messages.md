@@ -96,5 +96,5 @@ These password-related messages are sent to Android devices.
 | Your password was used too recently. | Create a brand new password. Your organization requires a certain amount of time to pass before you can reuse a password. |
 
 ## Next steps
-For more information about password requirements, including how to change the password or screen lock on your device, see [Secure device with lock screen or password](password-does-not-meet-it-administrator-requirements.md).
+For more information about password requirements, including how to change the password or screen lock on your device, see [Secure device with lock screen or password](password-requirements.md).
 

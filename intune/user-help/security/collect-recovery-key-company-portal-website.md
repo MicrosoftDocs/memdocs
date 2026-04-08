@@ -18,11 +18,11 @@ This option is available for Macs that were encrypted by your organization using
 1. Select the Mac you're locked out of.
 1. Select **Get recovery key**.
 
-    ![Screenshot of Company Portal website, highlighting Get recovery key section.](./media/get-recovery-key-cpweb/1907-recovery2-cpweb-intune.PNG)
+    ![Screenshot of Company Portal website, highlighting Get recovery key section.](./media/collect-recovery-key-company-portal-website/1907-recovery2-cpweb-intune.PNG)
 
 1. Your recovery key appears. For security reasons, the key disappears after five minutes. To see the key again, select **Get recovery key**.
 
-    ![Screenshot of Company Portal website, showing recovery key.](./media/get-recovery-key-cpweb/1907-recovery-cpweb-intune.PNG)
+    ![Screenshot of Company Portal website, showing recovery key.](./media/collect-recovery-key-company-portal-website/1907-recovery-cpweb-intune.PNG)
 
 ## Get recovery key from Company Portal app
 
@@ -41,4 +41,4 @@ This option isn't available for Macs that you have personally encrypted. The per
 
 If a key isn't found but your device is properly encrypted, contact your organization's support person. For contact information, check for helpdesk details on the Company Portal website.
 
-If you're an IT support person and want to configure and manage FileVault encryption, see [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md#monitor-and-manage-filevault).
+If you're an IT support person and want to configure and manage FileVault encryption, see [Use FileVault disk encryption for macOS with Intune](../../intune-service/protect/encrypt-devices-filevault.md#monitor-and-manage-filevault).

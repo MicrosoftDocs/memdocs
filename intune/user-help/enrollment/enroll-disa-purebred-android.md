@@ -85,7 +85,7 @@ You must also contact a Purebred agent or representative during setup.
 
 15. Return to the Intune app on your mobile device and follow the onscreen instructions until enrollment is done.
 
-16. Continue to the [set up your smart card](enroll-android-device-disa-purebred.md#set-up-smart-card) section in this article to finish setting up your device.
+16. Continue to the [set up your smart card](enroll-disa-purebred-android.md#set-up-smart-card) section in this article to finish setting up your device.
 
 ### QR code enrollment
 In this section, you scan your company-provided QR code. When you're done, we'll redirect you back to the device enrollment steps.
@@ -120,7 +120,7 @@ In this section, you enter your company-provided token. When you're done, we'll 
 1. After enrollment is complete, the Intune app prompts you to set up your smart card via a notification. Tap the notification. If you don't get a notification, check your email.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Intune app push notification on device home screen.](./media/enroll-android-device-disa-purebred/action-required-in-app-android.png)
+   > ![Screenshot of the Intune app push notification on device home screen.](./media/enroll-disa-purebred-android/action-required-in-app-android.png)
 
 2. On the **Set up smart card** screen:
 
@@ -129,12 +129,12 @@ In this section, you enter your company-provided token. When you're done, we'll 
    2. Tap **BEGIN**.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Intune app, Set up smart card screen.](./media/enroll-android-device-disa-purebred/smart-card-open-disa-purebred-android.png)
+   > ![Screenshot of the Intune app, Set up smart card screen.](./media/enroll-disa-purebred-android/smart-card-open-disa-purebred-android.png)
 
 3. On the **Get certificates** screen, tap **LAUNCH PUREBRED** to open the Purebred app. (The app should be on your device already, because it installs automatically. If you don't have it, contact your support person.)
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Intune app prompt to open DISA Purebred app.](./media/enroll-android-device-disa-purebred/open-app-prompt-disa-purbred-android.png)
+   > ![Screenshot of the Intune app prompt to open DISA Purebred app.](./media/enroll-disa-purebred-android/open-app-prompt-disa-purbred-android.png)
 
 4. The Purebred app might need other permissions from you in order to run properly. Tap **Allow** or **Allow all the time** when prompted. For more information about why these permissions are required, speak with your support person or Purebred agent.
 
@@ -146,33 +146,33 @@ In this section, you enter your company-provided token. When you're done, we'll 
 6. After installation is complete, you receive a notification that your certificates are ready. Tap the notification to return to the Intune app.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot of the Allow access to certificates screen](./media/enroll-android-device-disa-purebred/certificates-ready-prompt-disa-purbred-android.png)
+    > ![Screenshot of the Allow access to certificates screen](./media/enroll-disa-purebred-android/certificates-ready-prompt-disa-purbred-android.png)
 
 7. From the **Allow access to certificates** screen, give the Intune app permission to access the derived credential you got from DISA Purebred. This step ensures that your organization can verify your identity whenever you access protected work or school resources.
 
     1. Tap **NEXT**.
 
        > [!div class="mx-imgBorder"]
-       > ![Screenshot of the Certificates are ready prompt](./media/enroll-android-device-disa-purebred/certificates-access-disa-purbred-android.png)
+       > ![Screenshot of the Certificates are ready prompt](./media/enroll-disa-purebred-android/certificates-access-disa-purbred-android.png)
 
     2. When you're prompted to **Choose certificate**, don't change the selection. The correct certificate is already selected, so just tap **Select** or **OK**.
 
        > [!div class="mx-imgBorder"]
-       > ![Screenshot of the Choose certificate prompt](./media/enroll-android-device-disa-purebred/choose-certificates-prompt-disa-purbred-android.png)
+       > ![Screenshot of the Choose certificate prompt](./media/enroll-disa-purebred-android/choose-certificates-prompt-disa-purbred-android.png)
 
     3. Your derived credential is made up of multiple certificates, so you might see the **Choose certificate** prompt multiple times. Repeat the previous step until no more prompts appear.
 
 8. Once all of the certificates are processed, wait for the Intune app to finish setting up your device. You know setup is complete when you see the **You're all set!** screen.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot of the You're all set screen](./media/enroll-android-device-disa-purebred/all-set-android.png)
+    > ![Screenshot of the You're all set screen](./media/enroll-disa-purebred-android/all-set-android.png)
 
 ## Next steps
 
 After enrollment is complete, you have access to work resources, such as email, Wi-Fi, and any apps that your organization makes available. For more information about how to get, search for, install, and uninstall apps in the Intune app see:
 
-* [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
-* [Manage apps from the Company Portal website](manage-apps-cpweb.md)
+* [Use managed apps on your device](../../intune-service/apps/managed-apps-android.md)
+* [Manage apps from the Company Portal website](../../intune-service/apps/manage-apps-company-portal-website.md)
 
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

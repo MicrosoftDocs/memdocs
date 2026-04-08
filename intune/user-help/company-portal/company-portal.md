@@ -78,13 +78,13 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 3. Write down the one-time, sign-in code that appears on screen (or just keep this screen handy for the next couple steps).
 
-   ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/sign-in-to-the-company-portal/cp_ios_aad_signin_after_1804_006.png)
+   ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/company-portal/cp_ios_aad_signin_after_1804_006.png)
 
 3. Switch to your other device (the one you're using to authenticate) and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
 
 4. When prompted to, enter the code.
 
-   ![An image of the user's browser on their work computer rather than their Company Portal app. The "Device login" page displayed prompts the user for the code they received in the Company Portal app.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
+   ![An image of the user's browser on their work computer rather than their Company Portal app. The "Device login" page displayed prompts the user for the code they received in the Company Portal app.](../../intune-service/fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
 4. Select  __Continue__ to allow the Company Portal to sign in on your work device.
 
@@ -92,12 +92,12 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 The following articles describe the enrollment instructions for smart card-enabled devices. These articles include the sign-in-from-another-device method.
 
-  * [Enroll with Entrust for iOS](enroll-ios-device-entrust-datacard.md)
-  * [Enroll with Entrust for Android](enroll-android-device-entrust-datacard.md)
-  * [Enroll with Intercede for iOS](enroll-ios-device-intercede.md)
-  * [Enroll with Intercede for Android](enroll-android-device-intercede.md)
-  * [Enroll with DISA Purebred for iOS](enroll-ios-device-disa-purebred.md)
-  * [Enroll with DISA Purebred for Android](enroll-android-device-disa-purebred.md)
+  * [Enroll with Entrust for iOS](../../intune-service/enrollment/enroll-entrust-datacard-ios.md)
+  * [Enroll with Entrust for Android](../../intune-service/enrollment/enroll-entrust-datacard-android.md)
+  * [Enroll with Intercede for iOS](../../intune-service/enrollment/enroll-intercede-ios.md)
+  * [Enroll with Intercede for Android](../../intune-service/enrollment/enroll-intercede-android.md)
+  * [Enroll with DISA Purebred for iOS](../../intune-service/enrollment/enroll-disa-purebred-ios.md)
+  * [Enroll with DISA Purebred for Android](../../intune-service/enrollment/enroll-disa-purebred-android.md)
 
 ## App permissions for Android
 The permissions described in this section apply to the Company Portal app for Android and devices running Android, versions 8.0 and later.

@@ -11,7 +11,7 @@ ms.reviewer:
 
 Set up and register a work or school-provided device so that you can access Wi-Fi, files, and apps for work. This article describes the steps and screens you'll see as you walk through Setup Assistant.
 
-To set up a personal device for work, see [set up personal and bring-your-own devices](enroll-your-device-in-intune-ios.md).
+To set up a personal device for work, see [set up personal and bring-your-own devices](enroll-ios.md).
 
 ## Set up your iOS/iPadOS device
 1. Turn on your device.

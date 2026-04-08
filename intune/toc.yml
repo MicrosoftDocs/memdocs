@@ -1641,7 +1641,7 @@ items:
         - name: Get started with Linux enrollment
           href: ./intune-service/fundamentals/deployment-guide-enrollment-linux.md
         - name: Intune user help documentation
-          href: ./intune-service/user-help/enroll-device-linux.md
+          href: ./user-help/enrollment/enroll-linux.md
       - name: Set up macOS enrollment
         items:
         - name: Get started with Mac enrollment

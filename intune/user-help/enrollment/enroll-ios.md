@@ -15,7 +15,7 @@ Enroll and register your iPhone or iPad for work or school to access apps, Wi-Fi
 - Web enrollment
 - Determine based on your choice
 
-Typically, your organization decides which method to use. Refer to your organization's onboarding documentation to find out which method to use. To enroll a brand new corporate-owned device, see [Set up access on new work or school device](enroll-your-device-dep-ios.md).
+Typically, your organization decides which method to use. Refer to your organization's onboarding documentation to find out which method to use. To enroll a brand new corporate-owned device, see [Set up access on new work or school device](enroll-automated-ios.md).
 
 > [!IMPORTANT]
 > We don't sell any data collected by our service to any third parties for any reason.
@@ -130,25 +130,25 @@ Initiate enrollment on the Intune Company Portal website. For this process, you 
 
 1. On the **Set up access** screen, select **Begin.**
 
-    ![Example screenshot of Company Portal, "Set up access" screen.](./media/enroll-your-device-in-intune-ios/ios-enrollment-checklist-1909.PNG)
+    ![Example screenshot of Company Portal, "Set up access" screen.](./media/enroll-ios/ios-enrollment-checklist-1909.PNG)
 
-1. Select your device and enrollment type. Tap **I own this device** since you're using a personal device that you brought from home. Then continue to the next step. If you're enrolling a company-provided device, tap **My company owns this device**, and then go to [Device enrollment with Company Portal](enroll-your-device-in-intune-ios.md#device-enrollment-with-company-portal-app) to finish setup.
+1. Select your device and enrollment type. Tap **I own this device** since you're using a personal device that you brought from home. Then continue to the next step. If you're enrolling a company-provided device, tap **My company owns this device**, and then go to [Device enrollment with Company Portal](enroll-ios.md#device-enrollment-with-company-portal-app) to finish setup.
 
-    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/enroll-your-device-in-intune-ios/ios-device-type-1909.PNG)
+    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/enroll-ios/ios-device-type-1909.PNG)
 
 1. Choose how to protect the data on your device once it's enrolled.
 
-    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, enrollment type options.](./media/enroll-your-device-in-intune-ios/ios-enrollment-type-1909.PNG)
+    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, enrollment type options.](./media/enroll-ios/ios-enrollment-type-1909.PNG)
 
     Your options:
 
-    * Tap **Secure entire device** to secure all apps and data on the device. Then go to [Device enrollment with Company Portal](enroll-your-device-in-intune-ios.md#device-enrollment-with-company-portal-app).
-    * Tap **Secure work-related apps and data only** to secure only the apps and data you access with your work account. Then go to [Account driven user enrollment](enroll-your-device-in-intune-ios.md#account-driven-user-enrollment).
+    * Tap **Secure entire device** to secure all apps and data on the device. Then go to [Device enrollment with Company Portal](enroll-ios.md#device-enrollment-with-company-portal-app).
+    * Tap **Secure work-related apps and data only** to secure only the apps and data you access with your work account. Then go to [Account driven user enrollment](enroll-ios.md#account-driven-user-enrollment).
 
 ## IT administrator support
 If you're an IT administrator and run in to problems while enrolling devices, see [Troubleshooting iOS device enrollment problems in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors). This article lists common errors, their causes, and steps to resolve them.
 
 ## Next steps
-Find apps that help you at work or school. Learn [how apps are made available](use-managed-apps-on-your-device-ios.md) to you through Company Portal.
+Find apps that help you at work or school. Learn [how apps are made available](../../intune-service/apps/managed-apps-ios.md) to you through Company Portal.
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

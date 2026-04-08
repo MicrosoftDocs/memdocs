@@ -16,7 +16,7 @@ AOSP devices must meet the following requirements to enroll:
 * New or factory-reset
 * Running Android 10.0 or later
 * Corporate-owned (not a personal device)
-* [A supported device](../fundamentals/supported-devices-browsers.md#android)
+* [A supported device](../../intune-service/fundamentals/supported-devices-browsers.md#android)
 
 Additionally, you need the enrollment QR code that's provided by your organization.
 
@@ -41,4 +41,4 @@ Complete these steps to set up and enroll your device.
       2. Enter your password, and then tap **SIGN IN** to begin enrollment.
 1. When you see the message that your device is ready, tap **DONE**.
 
-If after enrolling you have trouble accessing your organization's resources, go to the Microsoft Intune app to verify that all of your device settings meet your organization's requirements. For more information about checking compliance, see [Check compliance on your AOSP device](check-compliance-aosp.md).
+If after enrolling you have trouble accessing your organization's resources, go to the Microsoft Intune app to verify that all of your device settings meet your organization's requirements. For more information about checking compliance, see [Check compliance on your AOSP device](../compliance/validate-compliance-aosp.md).

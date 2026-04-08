@@ -82,7 +82,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 15. Return to the Intune app on your mobile device and follow the onscreen instructions until enrollment is done.
 
-16. Continue to the [set up your smart card](enroll-android-device-entrust-datacard.md#set-up-smart-card) section in this article to finish setting up your device.
+16. Continue to the [set up your smart card](enroll-entrust-datacard-android.md#set-up-smart-card) section in this article to finish setting up your device.
 
 ### QR code enrollment
 In this section, you scan your company-provided QR code. When you're done, we'll redirect you back to the device enrollment steps.
@@ -113,7 +113,7 @@ In this section, you enter your company-provided token. When you're done, we'll 
 1. After enrollment is complete, the Intune app prompts you to set up your smart card via notification. Tap the notification. If you don't get a notification, check your email.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Intune app push notification on device home screen.](./media/enroll-android-device-disa-purebred/action-required-in-app-android.png)
+   > ![Screenshot of the Intune app push notification on device home screen.](./media/enroll-disa-purebred-android/action-required-in-app-android.png)
 
 2. On the **Set up smart card** screen:
 
@@ -122,7 +122,7 @@ In this section, you enter your company-provided token. When you're done, we'll 
    2. Tap **BEGIN**.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of the Intune app Set up mobile smart card access screen.](./media/enroll-android-device-entrust-datacard/smart-card-open-entrust-android.png)
+   > ![Screenshot of the Intune app Set up mobile smart card access screen.](./media/enroll-entrust-datacard-android/smart-card-open-entrust-android.png)
 
 3. Switch to your smart card-enabled device and open IdentityGuard.
 
@@ -146,7 +146,7 @@ In this section, you enter your company-provided token. When you're done, we'll 
 10. Return to your Android device. On the Intune app > **Get QR code** screen, tap **NEXT**.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot of the Intune app Get QR code screen.](./media/enroll-android-device-entrust-datacard/get-qr-code-entrust-android.png)
+    > ![Screenshot of the Intune app Get QR code screen.](./media/enroll-entrust-datacard-android/get-qr-code-entrust-android.png)
 
 11. If you're prompted to allow the Intune app to use your camera, tap **Allow**.
 
@@ -155,23 +155,23 @@ In this section, you enter your company-provided token. When you're done, we'll 
 13. On the **Password required** screen, enter the password that appears under the QR code.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot of the Intune app Password required screen.](./media/enroll-android-device-entrust-datacard/password-required-entrust-android.png)
+    > ![Screenshot of the Intune app Password required screen.](./media/enroll-entrust-datacard-android/password-required-entrust-android.png)
 
 14. The Intune app starts downloading and installing the certificates needed to access work or school resources. Depending on your internet connection, this process could take some time. Don't close the app during this time.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot of the Intune app Downloading and installing certificates screen.](./media/enroll-android-device-entrust-datacard/install-certificates-entrust-android.png)
+    > ![Screenshot of the Intune app Downloading and installing certificates screen.](./media/enroll-entrust-datacard-android/install-certificates-entrust-android.png)
 
 15. Once all of the certificates are processed, wait for the Intune app to finish setting up your device. Setup is complete when you see the **You're all set!** screen.
 
     > [!div class="mx-imgBorder"]
-    > ![Screenshot of the Intune app You're all set screen.](./media/enroll-android-device-disa-purebred/all-set-android.png)
+    > ![Screenshot of the Intune app You're all set screen.](./media/enroll-disa-purebred-android/all-set-android.png)
 
 ## Next steps
 
 After enrollment is complete, you have access to work resources, such as email, Wi-Fi, and any apps that your organization makes available. For more information about how to get, search for, install, and uninstall apps in the Intune app see:
 
-* [Use managed apps on your device](use-managed-apps-on-your-device-android.md)
-* [Manage apps from the Company Portal website](manage-apps-cpweb.md)
+* [Use managed apps on your device](../../intune-service/apps/managed-apps-android.md)
+* [Manage apps from the Company Portal website](../../intune-service/apps/manage-apps-company-portal-website.md)
 
 Still need help? Contact your company support. For contact information, check the [ website](https://go.microsoft.com/fwlink/?linkid=2010980).

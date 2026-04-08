@@ -65,7 +65,7 @@ After you install the MTD app, activate the MTD app on your iOS or Android devic
 
 * Check the MTD app for threats and [resolve them](#resolving-a-threat).
 
- * Return to the Company Portal app or website and check for other flagged device settings. Your workplace might have other requirements that require your attention. For more information, see [Check device compliance in Company Portal app for iOS](sync-your-device-manually-ios.md).
+ * Return to the Company Portal app or website and check for other flagged device settings. Your workplace might have other requirements that require your attention. For more information, see [Check device compliance in Company Portal app for iOS](../device-actions/sync-device-ios.md).
 
 ### Activation for Android app
 
@@ -85,7 +85,7 @@ After you install the MTD app, activate the MTD app on your iOS or Android devic
 
     * Check the MTD app for threats and [resolve them](#resolving-a-threat).
 
-    * Return to the Company Portal app and check for other compliance issues that need your attention. For more information, see [Check compliance in Company Portal app for Android](check-compliance-on-your-device-android.md).
+    * Return to the Company Portal app and check for other compliance issues that need your attention. For more information, see [Check compliance in Company Portal app for Android](../compliance/validate-compliance-android.md).
 
 ## Resolving a threat
 If a threat is detected and exceeds an acceptable threat level, your workplace could:
@@ -132,5 +132,5 @@ Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2
 
 Next, get apps for work or school. For more information, see:
 
-* [Use managed apps on your Android device](use-managed-apps-on-your-device-android.md)
-* [Use managed apps on your iOS device](use-managed-apps-on-your-device-ios.md)
+* [Use managed apps on your Android device](../../intune-service/apps/managed-apps-android.md)
+* [Use managed apps on your iOS device](../../intune-service/apps/managed-apps-ios.md)

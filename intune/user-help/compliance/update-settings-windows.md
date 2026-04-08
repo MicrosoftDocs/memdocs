@@ -35,7 +35,7 @@ Remember to only download apps from verified sources, such as the Company Portal
 Contact your IT support person to enable code integrity on your work or school device. Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For it to work on your device, another security feature called *Secure Boot* must be enabled. Your IT support person can also help you enable Secure Boot, which will in turn trigger code integrity the next time you start up your device.
 
 <!-- Admin info commented out
-If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results). -->
+If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results). -->
 
 ## Turn on Windows Defender Firewall
 

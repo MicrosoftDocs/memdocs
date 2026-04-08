@@ -19,7 +19,7 @@ To force a sync:
 
 ## Sync versus Refresh
 
-The Company Portal **Sync** feature is different from the **Refresh** feature. *Refresh* your device to check device compliance and verify that your settings meet your organization's requirements. For more information, see [Check device compliance for AOSP](check-compliance-aosp.md).
+The Company Portal **Sync** feature is different from the **Refresh** feature. *Refresh* your device to check device compliance and verify that your settings meet your organization's requirements. For more information, see [Check device compliance for AOSP](../compliance/validate-compliance-aosp.md).
 
 
 

@@ -16,7 +16,7 @@ Before you can access school or work resources, your organization might require 
 * Set a lock screen and startup PIN
 
 > [!Note]
->  Certain Android devices from Huawei, Vivo, and OPPO can't be encrypted. For more information, see [Device encrypted but app says otherwise](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
+>  Certain Android devices from Huawei, Vivo, and OPPO can't be encrypted. For more information, see [Device encrypted but app says otherwise](troubleshoot-encryption-status-android.md).
 
 ## Encrypt device
 

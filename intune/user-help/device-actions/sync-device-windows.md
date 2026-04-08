@@ -24,12 +24,12 @@ Complete these steps to sync a device in the Company Portal app. <!-- checking w
 1. Open the Company Portal app on your device and go to **Settings**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal app homepage, highlighting the Settings option.](./media/sync-your-device-manually-windows/company-portal-windows-settings.png)
+   > ![Example screenshot of the Company Portal app homepage, highlighting the Settings option.](./media/sync-device-windows/company-portal-windows-settings.png)
 
 1. Select **Sync**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal app, highlighting Sync button.](./media/sync-your-device-manually-windows/company-portal-windows-sync.png)
+   > ![Example screenshot of the Company Portal app, highlighting Sync button.](./media/sync-device-windows/company-portal-windows-sync.png)
 
 ## Sync from device taskbar or Start menu
 
@@ -38,7 +38,7 @@ You can access Company Portal syncing action from the desktop. This way is usefu
 1. Find the Company Portal app icon in your taskbar or Start menu.
 2. Right-click the app's icon so its menu (also referred to as a jump list) appears.
 
-    ![Screenshot of the Windows taskbar on a device's desktop. Company Portal app icon was selected and shows a menu with options "Pin to taskbar," "Close window," and "Sync this device" action.](./media/sync-your-device-manually-windows/sync-device-from-start-menu-1807.png)
+    ![Screenshot of the Windows taskbar on a device's desktop. Company Portal app icon was selected and shows a menu with options "Pin to taskbar," "Close window," and "Sync this device" action.](./media/sync-device-windows/sync-device-from-start-menu-1807.png)
 
 3. Select **Sync this device**. The Company Portal app opens and the sync begins.
 
@@ -53,7 +53,7 @@ You can sync devices running a supported version of Windows from the system Sett
 
     * If your screen shows the **Access work or school** option, jump to [Access work or school steps](#access-work-or-school-steps) in this article.
 
-      ![Screenshot of the Settings app's account settings section highlighting the Access work or school option with a red rectangle.](./media/sync-your-device-manually-windows/w10-enroll-rs1-connect-to-work-or-school.png)
+      ![Screenshot of the Settings app's account settings section highlighting the Access work or school option with a red rectangle.](./media/sync-device-windows/w10-enroll-rs1-connect-to-work-or-school.png)
 
     * If your screen shows the **Work access** option, jump to [Work access steps](#work-access-steps) in this article.
 
@@ -61,11 +61,11 @@ You can sync devices running a supported version of Windows from the system Sett
 
 1. Select **Access work or school**.
 
-    ![Screenshot showing Access work or school option.](./media/sync-your-device-manually-windows/w10-enroll-rs1-connect-to-work-or-school.png)
+    ![Screenshot showing Access work or school option.](./media/sync-device-windows/w10-enroll-rs1-connect-to-work-or-school.png)
 
 2. Select your work account, which is marked with a briefcase icon or Microsoft logo.
 
-     ![Choose your account name next to the briefcase or Microsoft logo.](./media/sync-your-device-manually-windows/win10pc-rs1-sync-info-button.png)
+     ![Choose your account name next to the briefcase or Microsoft logo.](./media/sync-device-windows/win10pc-rs1-sync-info-button.png)
 
 3. Select **Info**.
 

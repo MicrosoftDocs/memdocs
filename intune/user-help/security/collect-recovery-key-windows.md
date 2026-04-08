@@ -26,7 +26,7 @@ You can obtain the recovery key for a work or school device that's encrypted by 
 Retrieve a personal BitLocker recovery key on the Company Portal website.
 
 > [!div class="mx-imgBorder"]
-> ![Example screenshot of the BitLocker Recovery Key page on the Intune Company Portal website. ](./media/get-recovery-key-windows/get-recovery-key-company-portal-website.png)
+> ![Example screenshot of the BitLocker Recovery Key page on the Intune Company Portal website. ](./media/collect-recovery-key-windows/get-recovery-key-company-portal-website.png)
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com).
 1. Go to **Devices**.
@@ -53,4 +53,4 @@ Retrieve a personal BitLocker recovery key in the Company Portal app. The recove
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage encryption, see [Manage policy for Windows devices with Microsoft Intune](../protect/encrypt-devices.md).
+If you're an IT support person and want to configure and manage encryption, see [Manage policy for Windows devices with Microsoft Intune](../../intune-service/protect/encrypt-devices.md).

@@ -11,7 +11,7 @@ ms.reviewer: madekeva
 - Windows 
 
  > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+ > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 Enroll your Windows device in Intune to get mobile access to work or school apps, email, and Wi-Fi.
 
@@ -32,29 +32,29 @@ Use Intune Company Portal to enroll devices running on Windows 10, version 1607 
 
 2. On the **Home** screen, select **Next** to set up your device.
 
-    ![Example image of Company Portal > Set up your device screen, showing that the device needs to be set up to connect to work and highlighting the Next button.](./media/enroll-windows-10-device/set-up-your-device-company-portal-2107.png)
+    ![Example image of Company Portal > Set up your device screen, showing that the device needs to be set up to connect to work and highlighting the Next button.](./media/enroll-windows/set-up-your-device-company-portal-2107.png)
 
 3. Select **Connect**.
 
-    ![Example image of Company Portal > Connect to work screen highlighting the Connect button.](./media/enroll-windows-10-device/connect-to-work-company-portal-2107.png)
+    ![Example image of Company Portal > Connect to work screen highlighting the Connect button.](./media/enroll-windows/connect-to-work-company-portal-2107.png)
 
 4. Sign in with your work or school account again. If you're using the Company Portal website, the sign-in prompt may open in a new window.
 
-    ![Example image of Microsoft authentication screen that prompts user to "Enter password."](./media/enroll-windows-10-device/enter-password-prompt-company-portal-2107.png)
+    ![Example image of Microsoft authentication screen that prompts user to "Enter password."](./media/enroll-windows/enter-password-prompt-company-portal-2107.png)
 
 5. On the **Setting up your device** screen, select **Go**.
 6. After setup is complete, return to the Company Portal app. Select **Next**.
 7. Select **Done** to exit setup.
 
-    ![Example image of Company Portal > You're all set screen, highlighting the Done button.](./media/enroll-windows-10-device/youre-all-set-company-portal-2107.png)
+    ![Example image of Company Portal > You're all set screen, highlighting the Done button.](./media/enroll-windows/youre-all-set-company-portal-2107.png)
 
 ## Sync device to fix connection problems
 
-After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync device](sync-your-device-manually-windows.md).  
+After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync device](../device-actions/sync-device-windows.md).  
 
 
 ## Troubleshooting
-For a non-exhaustive list of error messages and resolutions, see [Troubleshoot Windows device access](troubleshoot-your-windows-10-device-windows.md).
+For a non-exhaustive list of error messages and resolutions, see [Troubleshoot Windows device access](../troubleshooting/troubleshoot-device-access-windows.md).
 
 ## Support for IT administrators
 

@@ -5,145 +5,145 @@ items:
   expanded: true
   items:
   - name: Device enrollment overview 
-    href: use-managed-devices-to-get-work-done.md
+    href: enrollment/overview.md
   - name: What information can my organization see? 
-    href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
+    href: enrollment/enrollment-data-visibility.md
   - name: Get Intune Company Portal  
-    href: sign-in-to-the-company-portal.md
+    href: company-portal/company-portal.md
   - name: Update Intune Company Portal 
-    href: install-a-new-version-of-the-company-portal-app.md
+    href: company-portal/install-company-portal-update.md
   - name: Add device password, PIN, or passcode    
-    href: password-does-not-meet-it-administrator-requirements.md
+    href: compliance/password-requirements.md
   - name: Install mobile threat defense app
-    href: set-up-mobile-threat-defense.md
+    href: security/setup-mobile-threat-defense.md
 - name: Android device management
   items:
   - name: Enrollment
     items:
     - name: About Android device enrollment
-      href: why-enroll-android-device.md
+      href: enrollment/enrollment-benefits-android.md
     - name: Enroll with Android device administrator
-      href: enroll-device-android-company-portal.md
+      href: enrollment/enroll-company-portal-android.md
     - name: Enroll with Android work profile
-      href: enroll-device-android-work-profile.md
+      href: enrollment/enroll-work-profile-android.md
     - name: Enroll Android with Microsoft Intune app 
-      href: enroll-device-android-microsoft-intune-app.md 
+      href: enrollment/enroll-intune-app-android.md 
     - name: Enroll AOSP with Microsoft Intune app 
-      href: enroll-device-aosp.md
+      href: enrollment/enroll-aosp.md
     - name: Enroll with derived credentials
       items:
       - name: Enroll with Entrust
-        href: enroll-android-device-entrust-datacard.md
+        href: enrollment/enroll-entrust-datacard-android.md
       - name: Enroll with Intercede
-        href: enroll-android-device-intercede.md
+        href: enrollment/enroll-intercede-android.md
       - name: Enroll with DISA Purebred
-        href: enroll-android-device-disa-purebred.md
+        href: enrollment/enroll-disa-purebred-android.md
     - name: Unenroll Android device
-      href: unenroll-your-device-from-intune-android.md
+      href: unenrollment/remove-enrollment-android.md
   - name: Company Portal app for Android
     items:
     - name: Check device compliance
-      href: check-compliance-on-your-device-android.md
+      href: compliance/validate-compliance-android.md
     - name: Encrypt your device
-      href: encrypt-your-device-android.md
+      href: security/enable-encryption-android.md
     - name: Move to new device management setup
-      href: move-to-new-device-management-setup.md
+      href: enrollment/migrate-device-management-android.md
     - name: Reset used, lost, stolen device
-      href: reset-device-company-portal-android.md
+      href: device-actions/reset-device-android.md
     - name: Sync device 
-      href: sync-device-android.md  
+      href: device-actions/sync-device-android.md  
     - name: Turn off battery optimization   
-      href: turn-off-battery-optimization-android.md      
+      href: diagnostics/disable-battery-optimization-android.md      
     - name: Turn on verbose logging
-      href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
+      href: diagnostics/enable-verbose-logging-android.md
     - name: Turn off Microsoft data collection 
-      href: turn-off-microsoft-usage-data-collection-android.md 
+      href: privacy/disable-usage-data-collection-android.md 
     - name: Update Android device settings         
-      href: update-device-settings-android.md   
+      href: compliance/update-settings-android.md   
   - name: Microsoft Intune app for Android  
     items: 
     - name: Check compliance status      
-      href: check-compliance-microsoft-intune-app-android.md  
+      href: compliance/validate-compliance-intune-app-android.md  
     - name: Configure logging settings   
-      href: microsoft-intune-app-verbose-logging.md  
+      href: diagnostics/enable-verbose-logging-intune-app.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 
-      href: check-compliance-aosp.md 
+      href: compliance/validate-compliance-aosp.md 
     - name: Sync device 
-      href: sync-device-aosp.md 
+      href: device-actions/sync-device-aosp.md 
     - name: Configure logging settings 
-      href: intune-app-logs-aosp.md 
+      href: diagnostics/collect-logs-aosp.md 
     - name: Turn off Microsoft data collection 
-      href: turn-off-microsoft-usage-data-collection-aosp.md 
+      href: privacy/disable-usage-data-collection-aosp.md 
   - name: Get Android apps
     items:
     - name: Where to find work or school apps for Android
-      href: use-managed-apps-on-your-device-android.md
+      href: apps/managed-apps-android.md
     - name: Introduction to Android work profile
-      href: what-happens-when-you-create-a-work-profile-android.md
+      href: enrollment/work-profile-android.md
     - name: Get Microsoft Tunnel for Android
-      href: use-microsoft-tunnel-android.md
+      href: vpn/microsoft-tunnel-android.md
     - name: Installing Company Portal app in China 
-      href: install-company-portal-android-china.md
+      href: company-portal/install-company-portal-android-china.md
   - name: Get help
     items:
     - name: Report a problem 
-      href: send-logs-to-your-it-admin-by-email-android.md  
+      href: diagnostics/collect-logs-android.md  
     - name: Troubleshoot enrollment for Samsung Knox 
-      href: samsung-knox-errors-android.md  
+      href: troubleshooting/troubleshoot-samsung-knox-android.md  
     - name: Troubleshoot encryption problems  
-      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md  
+      href: security/troubleshoot-encryption-status-android.md  
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
     items:
     - name: Enroll iOS/iPadOS device
-      href: enroll-your-device-in-intune-ios.md
+      href: enrollment/enroll-ios.md
     - name: Enroll company-provided iOS device
-      href: enroll-your-device-dep-ios.md
+      href: enrollment/enroll-automated-ios.md
     - name: Enroll with derived credentials
       items:
       - name: Enroll with Entrust
-        href: enroll-ios-device-entrust-datacard.md
+        href: enrollment/enroll-entrust-datacard-ios.md
       - name: Enroll with Intercede
-        href: enroll-ios-device-intercede.md
+        href: enrollment/enroll-intercede-ios.md
       - name: Enroll with DISA Purebred
-        href: enroll-ios-device-disa-purebred.md
+        href: enrollment/enroll-disa-purebred-ios.md
   - name: Company Portal app for iOS/iPadOS
     items:
     - name: Migrate account to new iPhone
-      href: set-up-migrate-iphone-for-work.md
+      href: enrollment/migrate-work-account-ios.md
     - name: Check device status  
-      href: sync-your-device-manually-ios.md
+      href: device-actions/sync-device-ios.md
     - name: Reset iOS/iPadOS device
-      href: effects-of-device-reset-company-portal-ios.md
+      href: unenrollment/device-reset-effects-ios.md
     - name: Turn off Microsoft usage data collection
-      href: turn-off-microsoft-usage-data-collection-ios.md
+      href: privacy/disable-usage-data-collection-ios.md
     - name: Remove a device  
-      href: unenroll-your-device-from-intune-ios.md
+      href: unenrollment/remove-enrollment-ios.md
     - name: Update iOS device settings         
-      href: how-do-i-find-the-serial-number-on-my-device-ios.md  
+      href: company-portal/serial-number-ios.md  
   - name: Get iOS/iPadOS apps
     items:
     - name: Where to find work or school apps for iOS/iPadOS
-      href: use-managed-apps-on-your-device-ios.md
+      href: apps/managed-apps-ios.md
     - name: Use Microsoft Tunnel for iOS
-      href: use-microsoft-tunnel-iOS.md 
+      href: vpn/microsoft-tunnel-ios.md 
   - name: Get help
     items:
     - name: Retrieve app logs
-      href: retrieve-ios-app-logs.md  
+      href: diagnostics/collect-app-logs-ios.md  
     - name: Share app logs 
-      href: send-logs-to-microsoft-ios.md
+      href: diagnostics/collect-logs-ios.md
 - name: Linux device management
   items: 
   - name: Enroll your Linux device 
-    href: enroll-device-linux.md
+    href: enrollment/enroll-linux.md
   - name: Get Microsoft Intune app for Linux 
-    href: microsoft-intune-app-linux.md
+    href: company-portal/intune-app-linux.md
   - name: Check device status  
-    href: check-status-linux.md   
+    href: compliance/validate-status-linux.md   
 - name: macOS device management
   items:
   - name: Enrollment
@@ -151,88 +151,88 @@ items:
     - name: What happens when you enroll a macOS device?
       href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md
     - name: Enroll your macOS device 
-      href: enroll-your-device-in-intune-macos-cp.md
+      href: enrollment/enroll-company-portal-macos.md
     - name: Enroll your organization-provided macOS device
-      href: enroll-company-device-macos.md
+      href: enrollment/enroll-corporate-macos.md
     - name: Unenroll Mac 
-      href: unenroll-your-device-from-intune-macos.md 
+      href: unenrollment/remove-enrollment-macos.md 
   - name: Company Portal for macOS
     items:
     - name: Sync macOS device
-      href: sync-your-device-manually-macos.md
+      href: device-actions/sync-device-macos.md
     - name: Manage Company Portal preferences
-      href: intune-company-portal-preferences-macos.md  
+      href: company-portal/company-portal-preferences-macos.md  
     - name: Update macOS device settings         
-      href: update-device-settings-mac.md  
+      href: compliance/update-settings-macos.md  
   - name: Get help
     items:
     - name: Report a problem  
-      href: send-errors-macos.md  
+      href: diagnostics/collect-errors-macos.md  
     - name: Help for JAMF-managed devices in Intune
-      href: device-little-different-jamf.md  
+      href: troubleshooting/troubleshoot-jamf-registration-macos.md  
 - name: Windows device management
   items:
   - name: Enrollment
     items:
     - name: Device enrollment overview  
-      href: device-enrollment-overview-windows.md  
+      href: enrollment/enrollment-overview-windows.md  
     - name: Enroll Windows device  
-      href: enroll-windows-10-device.md
+      href: enrollment/enroll-windows.md
     - name: Unenroll device
-      href: unenroll-your-device-from-intune-windows.md
+      href: unenrollment/remove-enrollment-windows.md
 
   - name: Company Portal app for Windows
     items:
     - name: Install apps from Company Portal
-      href: install-apps-cpapp-windows.md
+      href: apps/install-apps-windows.md
     - name: Sync device 
-      href: sync-your-device-manually-windows.md
+      href: device-actions/sync-device-windows.md
     - name: Check device access
-      href: check-device-access-windows-cpapp.md
+      href: compliance/validate-device-access-windows.md
     - name: Remote lock device
-      href: remote-lock-your-device-cp-app.md
+      href: device-actions/restrict-device-company-portal-app.md
     - name: Rename device
-      href: rename-your-device-cpapp.md
+      href: device-actions/update-device-name-company-portal-app.md
     - name: Reset used, lost, stolen device
-      href: reset-device-company-portal-windows.md
+      href: device-actions/reset-device-windows.md
     - name: Turn off Microsoft usage data collection
-      href: turn-off-microsoft-usage-data-collection-windows.md
+      href: privacy/disable-usage-data-collection-windows.md
     - name: Update device settings
-      href: update-device-settings-windows.md
+      href: compliance/update-settings-windows.md
     - name: Help and support page
-      href: help-support-windows-cpapp.md
+      href: company-portal/company-portal-support-windows.md
   - name: Get help
     items:
     - name: Report problems in Company Portal
-      href: send-logs-to-your-it-admin-cp-windows.md
+      href: diagnostics/collect-logs-company-portal-windows.md
     - name: Export management logs for device troubleshooting  
-      href: send-logs-to-your-it-admin-settings-windows.md
+      href: diagnostics/collect-logs-settings-windows.md
     - name: Troubleshoot enrollment problems
-      href: troubleshoot-your-windows-10-device-windows.md
+      href: troubleshooting/troubleshoot-device-access-windows.md
 - name: Using the Intune Company Portal website
-  href: using-the-intune-company-portal-website.md
+  href: company-portal/company-portal-website.md
   items:
   - name: Check status 
-    href: check-status-company-portal-website.md 
+    href: compliance/validate-status-company-portal-website.md 
   - name: Manage apps
-    href: manage-apps-cpweb.md
+    href: apps/manage-apps-company-portal-website.md
   - name: Store recovery key for Mac
-    href: store-recovery-key.md
+    href: security/import-recovery-key-macos.md
   - name: Get recovery key for Mac
-    href: get-recovery-key-cpweb.md
+    href: security/collect-recovery-key-company-portal-website.md
   - name: Get recovery key for Windows 
-    href: get-recovery-key-windows.md  
+    href: security/collect-recovery-key-windows.md  
   - name: Remote lock device
-    href: remote-lock-your-device-cpwebsite.md
+    href: device-actions/restrict-device-company-portal-website.md
   - name: Rename device
-    href: rename-your-device-cpwebsite.md
+    href: device-actions/update-device-name-company-portal-website.md
   - name: Remove device
-    href: remove-your-device-cpwebsite.md
+    href: device-actions/remove-device-company-portal-website.md
   - name: Reset device passcode
-    href: reset-your-passcode-cpwebsite.md
+    href: device-actions/reset-passcode-company-portal-website.md
   - name: Reset used, lost, stolen device
-    href: reset-device-company-portal-website.md
+    href: device-actions/reset-device-company-portal-website.md
 - name: Reference   
   items:
   - name: Company Portal device password messages  
-    href: intune-company-portal-password-message-reference.md 
+    href: compliance/ref-password-messages.md 
