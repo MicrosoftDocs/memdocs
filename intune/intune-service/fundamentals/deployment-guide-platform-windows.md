@@ -145,7 +145,7 @@ After devices are set up, you can use supported remote actions to manage and tro
 | ---- | ------ |
 |[Take remote action on devices](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |
+|[Use security tasks to view threats and vulnerabilities](../protect/microsoft-defender-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |
 
 <!-- org msg moved to m365 admin center
 |[Use organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365)|Set up organizational messages in the Microsoft 365 admin center to send important messages to employees on Intune-managed devices running Windows 11. You can use organizational messages to communicate in remote and hybrid work scenarios.| -->
@@ -165,10 +165,10 @@ The resources in this section are in the Microsoft Intune User Help documentatio
 
 | Task | Detail |
 | ---- | ------ |
-|[Install Intune Company Portal app for Windows](../user-help/sign-in-to-the-company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
-|[Update Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
-|[Enroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to enroll personal devices running Windows. |
-|[Unenroll a device](../user-help/unenroll-your-device-from-intune-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
+|[Install Intune Company Portal app for Windows](../../user-help/company-portal/company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
+|[Update Company Portal app](../../user-help/company-portal/install-company-portal-update.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
+|[Enroll a device](../../user-help/enrollment/enroll-windows.md)| This article describes how to enroll personal devices running Windows. |
+|[Unenroll a device](../../user-help/unenrollment/remove-enrollment-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
 
 ## Next steps
 

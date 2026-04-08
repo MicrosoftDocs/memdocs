@@ -169,7 +169,7 @@ When you can't install the Microsoft 365 apps to a device, you must identify whe
 - There's an active network connection on the device. If the device is in airplane mode, is turned off, or is in a location with no service, the policy won't apply until network connectivity is established.
 - Both Intune and Microsoft 365 network requirements are met and the related IP ranges are accessible based on the following articles:
 
-  - [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints)
+  - [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)
   - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges)
 
 - The correct groups are assigned the Microsoft 365 app suite.

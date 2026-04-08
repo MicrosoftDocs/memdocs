@@ -140,7 +140,7 @@ Intune marks devices going through the following types of enrollments as corpora
 Intune also blocks personal devices using these enrollment methods:
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
 - [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
-- [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md).
+- [Enrollment using the Intune Company Portal app](../../user-help/enrollment/enroll-windows.md).
 - Enrollment via a Microsoft 365 app, which occurs when users select the **Allow my organization to manage my device** option during app sign-in.
 
 > [!IMPORTANT]

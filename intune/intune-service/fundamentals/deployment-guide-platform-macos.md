@@ -128,7 +128,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | ---- | ------ |
 |[Take remote action on devices](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
+|[Use security tasks to view threats and vulnerabilities](../protect/microsoft-defender-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 
 ## Next steps
 

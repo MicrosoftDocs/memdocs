@@ -28,7 +28,7 @@ If you still decide to have users enroll their Android devices with device admin
 4. Select the **Android** tab.
 5. Under **Android device administrator**, choose **Personal and corporate-owned devices with device administration privileges**.
 6. Select the checkmark next to **Use device administrator to manage devices**.
-7. [Tell your users how to enroll their devices](../user-help/enroll-device-android-company-portal.md).
+7. [Tell your users how to enroll their devices](../../user-help/enrollment/enroll-company-portal-android.md).
 
 After a user enrolls, you can begin managing their devices in Intune, including [assigning compliance policies](../protect/compliance-policy-create-android.md), [managing apps](../apps/app-management.md), and more.
 
@@ -36,7 +36,7 @@ For information about other user tasks, see these articles:
 
 - [Microsoft Intune planning guide](../fundamentals/intune-planning-guide.md)
 
-- [Android device enrollment overview ](../user-help/why-enroll-android-device.md)
+- [Android device enrollment overview ](../../user-help/enrollment/enrollment-benefits-android.md)
 
 ## Block device administrator enrollment
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).

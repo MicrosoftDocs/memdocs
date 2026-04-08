@@ -63,7 +63,7 @@ Users must be signed in to the primary user account on their device when enrolli
 > [!TIP]
 > You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. For more information, see [Remote device action: retire](../../device-management/actions/retire.md?pivots=android).
 
-For more information and screenshots of the end user experience, see [Enroll device with Android work profile](../user-help/enroll-device-android-work-profile.md) in the Intune user help docs.
+For more information and screenshots of the end user experience, see [Enroll device with Android work profile](../../user-help/enrollment/enroll-work-profile-android.md) in the Intune user help docs.
 
 ## Data shared with Google
 

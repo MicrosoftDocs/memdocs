@@ -36,7 +36,7 @@ Before deployment, devices must be registered in the Windows Autopilot service. 
 - **Cloud Solution Provider (CSP) registration process.** As with OEMs, CSP partners must be granted permission to register devices for a school. For more information, see [Partner registration][MEM-5].
     > [!TIP]
     > Try the [Microsoft Partner Center clickable demo](https://cloudpartners.transform.microsoft.com/resources/autopilot-in-edu-setup-english), which provides detailed steps to establish a partner relationship and register devices.
-- **Manual registration.** To manually register a device, you must first capture its hardware hash. Then upload the hardware hash to the Windows Autopilot service using Microsoft Intune. For steps, see [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices).
+- **Manual registration.** To manually register a device, you must first capture its hardware hash. Then upload the hardware hash to the Windows Autopilot service using Microsoft Intune. For steps, see [Manually register devices with Windows Autopilot](/autopilot/add-devices).
     > [!IMPORTANT]
     > **Windows 11 SE** devices do not support the use of Windows PowerShell or Microsoft Configuration Manager to capture hardware hashes. We recommend working with an OEM, partner, or device reseller to register devices.
 
@@ -150,17 +150,17 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 
 <!-- Reference links in article -->
 
-[MEM-1]: /mem/intune-service/fundamentals/intune-endpoints
-[MEM-2]: /mem/autopilot/oem-registration
-[MEM-3]: /mem/autopilot/enrollment-autopilot#create-an-autopilot-device-group-using-intune
-[MEM-4]: /mem/autopilot/profiles
-[MEM-5]: /mem/autopilot/partner-registration
+[MEM-1]: /intune/intune-service/fundamentals/intune-endpoints
+[MEM-2]: /autopilot/oem-registration
+[MEM-3]: /autopilot/enrollment-autopilot#create-an-autopilot-device-group-using-intune
+[MEM-4]: /autopilot/profiles
+[MEM-5]: /autopilot/partner-registration
 
 [WIN-1]: /autopilot/requirements
 
 [MSFT-1]: https://partner.microsoft.com/
 
-[INT-1]: /mem/intune-service/fundamentals/intune-endpoints
+[INT-1]: /intune/intune-service/fundamentals/intune-endpoints
 
 [M365-1]: https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2
 

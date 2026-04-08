@@ -478,7 +478,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 ## End user experience
 For information on the end-user experience, see:
 - [ADE end user tasks](../fundamentals/deployment-guide-enrollment-ios-ipados.md#ade-end-user-tasks)
-- [Enroll your iOS/iPadOS device](../user-help/enroll-your-device-dep-ios.md)
+- [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)
 
 ## Re-enroll a device
 Complete these steps to re-enroll a device that already went through automated device enrollment.

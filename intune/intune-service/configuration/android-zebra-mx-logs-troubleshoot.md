@@ -47,7 +47,7 @@ On the device, logs are saved in `/sdcard/Android/data/com.microsoft.windowsintu
 
 ### Get logs from email
 
-To get logs after the profile is deployed with Intune, end users can email you the logs using an email app on the device. On the Zebra device, open the Company Portal app, and [send the logs](../user-help/send-logs-to-your-it-admin-by-email-android.md). Using the send logs feature also creates a PowerLift incident ID, which you can reference if contacting Microsoft support.
+To get logs after the profile is deployed with Intune, end users can email you the logs using an email app on the device. On the Zebra device, open the Company Portal app, and [send the logs](../../user-help/diagnostics/collect-logs-android.md). Using the send logs feature also creates a PowerLift incident ID, which you can reference if contacting Microsoft support.
 
 ## Read the logs
 

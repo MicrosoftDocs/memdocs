@@ -157,6 +157,10 @@ conceptualContent:
           - text: Feedback for Intune
             itemType: whats-new
             url: https://aka.ms/IntuneFeedback
+          - url: ./user-help/index.yml
+            itemType: overview
+            text: User help documentation
+
 
 
       - title: Related services
