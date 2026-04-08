@@ -319,7 +319,7 @@ You can help secure email profiles using the following options:
 
   If you use certificate-based authentication for your email profile, then deploy the email profile, certificate profile, and trusted root profile to the same groups. This deployment makes sure each device can recognize the legitimacy of your certificate authority.
 
-  For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../protect/certificates-configure.md).
+  For more information about how to create and use certificate profiles in Intune, see [How to configure certificates with Intune](../../fundamentals/certificates/overview.md).
 
 - **User name and password**: The end user authenticates to the native mail server by entering a user name and password. The password doesn't exist in the email profile. So, the end user enters the password when connecting to email.
 

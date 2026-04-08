@@ -59,11 +59,11 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **VPN server address or FQDN**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
 
-  - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
+  - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../../fundamentals/certificates/overview.md) lists the steps to create a certificate profile.
   - **Username and password**: When end users sign into the VPN server, users are prompted to enter their user name and password.
   - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
-    For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+    For more information, see [Use derived credentials in Intune](../../device-security/certificates/derived-credentials.md).
 
 - **Enter key and value pairs for the NetMotion Mobility VPN attributes**: Add or import **Keys** and **Values** that customize your VPN connection. These values are typically supplied by your VPN provider.
 
@@ -113,11 +113,11 @@ The available settings depend on the VPN client you choose. Some settings are on
 - **VPN server address**: Enter the IP address or fully qualified domain name (FQDN) of the VPN server that devices connect. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
 
-  - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../protect/certificates-configure.md) lists the steps to create a certificate profile.
+  - **Certificates**: Select an existing SCEP or PKCS certificate profile that authenticates the connection. [Configure certificates](../../fundamentals/certificates/overview.md) lists the steps to create a certificate profile.
   - **Username and password**: When end users sign into the VPN server, users are prompted to enter their user name and password.
   - **Derived credential**: Use a certificate that is derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one.
 
-    For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+    For more information, see [Use derived credentials in Intune](../../device-security/certificates/derived-credentials.md).
 
 - **Fingerprint** (Check Point Capsule VPN only): Enter the fingerprint string given to you by the VPN vendor, such as `Contoso Fingerprint Code`. This fingerprint verifies that the VPN server can be trusted.
 

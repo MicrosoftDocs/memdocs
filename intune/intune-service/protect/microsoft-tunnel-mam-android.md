@@ -53,7 +53,7 @@ Users of devices that aren't enrolled with Intune must install the following app
 
 **Line of Business apps**:
 
-For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, you can [add your LOB apps](#configure-line-of-business-applications) to your app protection policy and app configuration policies for MAM Tunnel. See [Getting started with MAM for Android](../developer/app-sdk-android-phase3.md).
+For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, you can [add your LOB apps](#configure-line-of-business-applications) to your app protection policy and app configuration policies for MAM Tunnel. See [Getting started with MAM for Android](../../developer/app-sdk/android-phase-3.md).
 
 > [!NOTE]
 > Make sure your Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
@@ -85,7 +85,7 @@ To support using Tunnel for MAM, create and deploy the three profiles detailed i
 
 When all three are configured and deployed to the same groups, the app protection policy automatically triggers Tunnel to connect to the VPN whenever Microsoft Edge is launched.
 
-You can also configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with Microsoft Edge and with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). By default, Microsoft Edge supports trusted root certificates. For LOB apps, you [use the MAM SDK](#configure-line-of-business-applications) to add support for trusted root certificates.
+You can also configure a [Trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md) for use with Microsoft Edge and with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). By default, Microsoft Edge supports trusted root certificates. For LOB apps, you [use the MAM SDK](#configure-line-of-business-applications) to add support for trusted root certificates.
 
 ### App configuration policy for Microsoft Defender
 
@@ -253,7 +253,7 @@ During configuration of the app configuration profile for an app that will use T
 
    :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the root certificate selection pane." lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
 
-   For information about configuring root certificate profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
+   For information about configuring root certificate profiles, see [Trusted root certificate profiles for Microsoft Intune](../../device-configuration/certificates/trusted-root-profiles.md).
 
 1. After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 

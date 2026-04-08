@@ -82,7 +82,7 @@ Import the VPN server's root certificate issued by the CA into an Intune profile
 
 6. Select **Next**.
 7. In **Configuration settings**, select the folder icon, and browse to your VPN certificate (`.cer` file) that you exported from your VPN administration console.
-8. Select **Next**, and continue [creating the trusted certificate profile](../protect/certificates-trusted-root.md). You can save the profile and assign it later.
+8. Select **Next**, and continue [creating the trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md). You can save the profile and assign it later.
 
     :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png" alt-text="Create a trusted certificate profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
@@ -96,8 +96,8 @@ In this next step, create the SCEP or PKCS certificate profile in Intune. The SC
 
 To configure and assign the client authentication certificate in Intune, go to one of the following articles:
 
-- [Configure infrastructure to support SCEP with Intune](../protect/certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](../protect/certificates-pfx-configure.md)
+- [Configure infrastructure to support SCEP with Intune](../../fundamentals/certificates/scep-infrastructure.md)
+- [Configure and manage PKCS certificates with Intune](../../device-configuration/certificates/pkcs-profiles.md)
 
 Be sure to configure the certificate for client authentication. You can set client authentication directly in SCEP certificate profiles (**Extended key usage** list > **Client authentication**). For PKCS, set client authentication in the certificate template in the certificate authority (CA).
 

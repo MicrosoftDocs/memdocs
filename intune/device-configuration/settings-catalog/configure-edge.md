@@ -1,11 +1,8 @@
 ---
 title: Deploy Microsoft Edge policy using settings catalog in Microsoft Intune
 description: Add or create settings using the settings catalog to configure Microsoft Edge on Windows and macOS devices. Using Microsoft Intune, you can configure group policy settings, and deploy these settings to Microsoft Edge users.
-ms.author: mandia
-author: MandiOhlinger
 ms.date: 08/25/2025
 ms.topic: how-to
-
 ms.reviewer: mayurjadhav
 ms.collection:
 - M365-identity-device-management
