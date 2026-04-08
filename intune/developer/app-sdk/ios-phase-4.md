@@ -113,7 +113,7 @@ The Intune MAM SDK provides support for the following save locations defined in 
 * `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.
 * `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used.
-* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, uploading a photo to an organization’s LOB cloud service that is tied to the organization account.
+* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, uploading a photo to an organization's LOB cloud service that is tied to the organization account.
 * `IntuneMAMSaveLocationOther` - This location represents any nonorganizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for save locations
@@ -140,7 +140,7 @@ The Intune MAM SDK provides support for the following open locations defined in 
 * `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there's no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
 * `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
 * `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.
-* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, downloading a photo from an organization’s LOB cloud service that is tied to the organization account.
+* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. For example, downloading a photo from an organization's LOB cloud service that is tied to the organization account.
 * `IntuneMAMOpenLocationOther` - This location represents any nonorganizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for open locations
@@ -170,10 +170,10 @@ When sharing documents via the `UIActivityViewController` and `UIDocumentInterac
 1. Your application must have at least one schemeURL defined under its Info.plist `CFBundleURLTypes` along with its `-intunemam` counterpart. For example:
     ```xml
     <key>CFBundleURLSchemes</key>
-	<array>
-		<string>launch-com.contoso.myapp</string>
-  		<string>launch-com.contoso.myapp-intunemam</string>
-	</array>
+    <array>
+        <string>launch-com.contoso.myapp</string>
+          <string>launch-com.contoso.myapp-intunemam</string>
+    </array>
     ```
 
 2. Both your application and action extension must share at least one App Group, and the App Group must be listed under the `AppGroupIdentifiers` array under the app's and the extension's IntuneMAMSettings dictionaries.
@@ -305,7 +305,7 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 
  ## Screen capture blocking
 
-For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, screen capture block will be applied if you have configured `Send Org data to other apps` to a value other than “All apps”. You can configure app configuration policy setting “com.microsoft.intune.mam.screencapturecontrol = Disabled” if you wish to allow screen capture for your iOS devices.
+For apps that have updated to v19.7.6 or later for Xcode 15 and v20.2.1 or later for Xcode 16 of the SDK, screen capture block will be applied if you have configured `Send Org data to other apps` to a value other than "All apps". You can configure app configuration policy setting "com.microsoft.intune.mam.screencapturecontrol = Disabled" if you wish to allow screen capture for your iOS devices.
 
 ## Notifications
 
@@ -464,7 +464,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Appendix]:ios-appendix.md
 
 <!-- external links -->
-[application configuration policies for managed iOS Enterprise devices]:/mem/intune-service/apps/app-configuration-policies-use-ios
-[application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
-[App configuration policies for Microsoft Intune]:/mem/intune-service/apps/app-configuration-policies-overview
-[Validate the applied app configuration policy]:/mem/intune-service/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy
+[application configuration policies for managed iOS Enterprise devices]:../../intune-service/apps/app-configuration-policies-use-ios.md
+[application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
+[App configuration policies for Microsoft Intune]:../../intune-service/apps/app-configuration-policies-overview.md
+[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md#validate-the-applied-app-configuration-policy

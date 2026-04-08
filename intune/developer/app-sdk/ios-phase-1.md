@@ -159,28 +159,28 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Stage 2: MSAL prerequisite and setup]:ios-phase-2.md
 [Stage 5: Enable multi-identity]:ios-phase-5.md
 [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications]:ios-phase-4.md
-[Manage data transfer between iOS apps in Microsoft Intune]:/mem/intune-service/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
+[Manage data transfer between iOS apps in Microsoft Intune]:../../intune-service/apps/data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
 [Stage 6: App Protection CA support]:ios-phase-6.md#app-protection-ca-support-optional
 
 <!-- Microsoft Learn documentation: Intune overview -->
-[Intune App SDK overview]:/mem/intune-service/developer/app-sdk
-[What is Microsoft Intune app management]:/mem/intune-service/apps/app-management
-[iOS app protection policy settings]:/mem/intune-service/apps/app-protection-policy-settings-ios
+[Intune App SDK overview]:../../intune-service/developer/app-sdk.md
+[What is Microsoft Intune app management]:../../intune-service/apps/app-management.md
+[iOS app protection policy settings]:../../intune-service/apps/app-protection-policy-settings-ios.md
 [Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn]:/training/modules/plan-for-mobile-application-management
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
-[application configuration policies for managed apps]:/mem/intune-service/apps/app-configuration-policies-managed-app
-[App Wrapping Tool for iOS]:/mem/intune-service/developer/app-wrapper-prepare-ios
+[application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
+[App Wrapping Tool for iOS]:../../intune-service/developer/app-wrapper-prepare-ios.md
 
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
-[Set up Intune]:/mem/intune-service/fundamentals/deployment-plan-setup
-[Create users]:/mem/intune-service/fundamentals/users-add
-[Create groups]:/mem/intune-service/fundamentals/groups-add
-[Assign licenses]:/mem/intune-service/fundamentals/licenses-assign
-[Create and assign app protection policies]:/mem/intune-service/apps/app-protection-policies
-[app configuration policy]:/mem/intune-service/apps/app-configuration-policies-overview
+[Set up Intune]:../../intune-service/fundamentals/deployment-plan-setup.md
+[Create users]:../../intune-service/fundamentals/users-add.md
+[Create groups]:../../intune-service/fundamentals/groups-add.md
+[Assign licenses]:../../intune-service/fundamentals/licenses-assign.md
+[Create and assign app protection policies]:../../intune-service/apps/app-protection-policies.md
+[app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app
