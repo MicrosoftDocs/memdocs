@@ -4132,7 +4132,7 @@ Applies to:
 
 For more information on this feature, see:
 
-- [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations)
+- [Android's built-in app configurations](../../developer/app-sdk/android-phase-6.md#androids-built-in-app-configurations)
 - [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune > Applications](../configuration/device-restrictions-android-for-work.md)
 
 #### Samsung ended support for kiosk mode on Android device administrator (DA) devices<!-- 24810356  -->
