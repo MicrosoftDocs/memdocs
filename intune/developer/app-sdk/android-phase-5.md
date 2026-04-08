@@ -476,7 +476,7 @@ ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(origin
 As mentioned in [Organizing App Data by Identity] above, the Intune App SDK associates the active identity (from the thread/process level) with files as they're written.
 It is critical to have the correct identity set at file creation time to ensure proper encryption and selective wipe functionality.
 
-Your app may query or change a file’s identity using the [MAMFileProtectionManager] class, specifically `MAMFileProtectionManager.getProtectionInfo` for querying and `MAMFileProtectionManager.protectForOID` for changing.
+Your app may query or change a file's identity using the [MAMFileProtectionManager] class, specifically `MAMFileProtectionManager.getProtectionInfo` for querying and `MAMFileProtectionManager.protectForOID` for changing.
 
 The `protectForOID` method can also be used to protect directories.
 Directory protection applies recursively to all files and subdirectories contained in the directory.
@@ -788,7 +788,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Register for notifications from the SDK]:android-phase-7.md#register-for-notifications-from-the-sdk
 
 <!-- Links to other Intune docs -->
-[Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune-service/apps/apps-selective-wipe
+[Issue a selective wipe from the Microsoft Intune admin center]:../../intune-service/apps/apps-selective-wipe.md
 
 <!-- Class links -->
 [AppIdentitySwitchResultCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchResultCallback.html
