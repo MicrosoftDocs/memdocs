@@ -149,7 +149,7 @@ items:
   - name: Enrollment
     items:
     - name: What happens when you enroll a macOS device?
-      href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md
+      href: enrollment/enrollment-effects-macos.md
     - name: Enroll your macOS device 
       href: enrollment/enroll-company-portal-macos.md
     - name: Enroll your organization-provided macOS device

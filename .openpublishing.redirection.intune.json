@@ -4849,6 +4849,11 @@
       "source_path": "intune/intune-service/protect/certificate-connectors.md",
       "redirect_url": "/intune/fundamentals/certificates/connector/certificate-connectors",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/user-help/index.yml",
+      "redirect_url": "/intune/user-help",
+      "redirect_document_id": false
     }
   ]
 }
