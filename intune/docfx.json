@@ -129,7 +129,7 @@
         "fundamentals/licensing/**/*": "paolomatarazzo",
         "intune-service/apps/**/*": "nicholasswhite",
         "intune-service/configuration/**/*": "mandiohlinger",
-        "intune-service/enrollment/**/*": "lenewsad",
+        "device-enrollment/**/*": "lenewsad",
         "user-help/**/*": "lenewsad",
         "privacy/**/*": "paolomatarazzo",
         "solutions/**/*": "mandiohlinger"
@@ -150,7 +150,7 @@
         "fundamentals/licensing/**/*": "paoloma",
         "intune-service/apps/**/*": "nwhite",
         "intune-service/configuration/**/*": "mandia",
-        "intune-service/enrollment/**/*": "lanewsad",
+        "device-enrollment/**/*": "lanewsad",
         "user-help/**/*": "lanewsad",
         "privacy/**/*": "paoloma",
         "solutions/**/*": "mandia"
@@ -180,7 +180,7 @@
         "endpoint-analytics/**/*": "endpoint-analytics",
         "intune-service/apps/**/*": "apps",
         "intune-service/configuration/**/*": "configuration",
-        "intune-service/enrollment/**/*": "enrollment",
+        "device-enrollment/**/*": "enrollment",
         "intune-service/fundamentals/**/*": "fundamentals",
         "intune-service/industry/education/**/*": "education",
         "intune-service/protect/**/*": "protect",

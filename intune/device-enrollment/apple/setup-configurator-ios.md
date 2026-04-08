@@ -49,7 +49,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Go to **Profiles** > **Create**.
 1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).
-    :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
+    :::image type="content" source="./media/setup-configurator-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
 1. Select **Next** to go to the **Settings** page.
 
@@ -179,7 +179,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
     2. Connect the iOS/iPadOS device to the Mac computer with a USB cord. Close Photos, iTunes, and other apps that open for the device when the device is detected.
     3. In Apple Configurator, choose the connected iOS/iPadOS device, and then choose the **Add** button. Options that can be added to the device appear in the drop-down list. Choose **Profiles**.
 
-        ![Screenshot Export Profile for Setup Assistant Enrollment with Profile URL highlighted](./media/apple-configurator-enroll-ios/ios-apple-configurator-add-profile.png)
+        ![Screenshot Export Profile for Setup Assistant Enrollment with Profile URL highlighted](./media/setup-configurator-ios/ios-apple-configurator-add-profile.png)
 
     4. Use the file picker to select the .mobileconfig file that you exported from Intune, and then choose **Add**. The profile is added to the device. If the device is Unsupervised, the installation requires acceptance on the device.
 1. Use the following steps to install the profile on the iOS/iPadOS device. The device must have already completed the Setup Assistant and be ready to use. If enrollment entails app deployments, the device should have an Apple ID set up because the app deployment requires that you have an Apple ID signed in for the App Store.

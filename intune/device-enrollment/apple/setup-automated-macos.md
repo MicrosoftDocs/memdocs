@@ -84,7 +84,7 @@ Optionally, after you create the MDM server in Apple Business Manager, you can s
 
 Return to the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and enter the Apple ID used to download the server token. This ID is the Apple ID you need to use to renew the token every year. Make sure future Intune admins are aware of the Apple ID used, in case you leave your organization and need to transition token management to them.
 
-![Screenshot highlighting the Apple ID field in the "Add enrollment program token" pane. ](./media/device-enrollment-program-enroll-ios/image03.png)
+![Screenshot highlighting the Apple ID field in the "Add enrollment program token" pane. ](./media/setup-automated-ios/image03.png)
 
 ### Step 5: Upload server token and finish
 Upload the server token file to Intune to finish creating the enrollment program token.
@@ -109,7 +109,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 1. Select an enrollment program token.
 1. Select **Profiles** > **Create profile** > **macOS**.
 
-    ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)
+    ![Create a profile screenshot.](./media/setup-automated-macos/image04.png)
 
    > [!IMPORTANT]
    > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business Manager or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple is not assigned an enrollment policy and someone turns it on to set it up, enrollment will fail.
@@ -169,7 +169,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    For information about configuring and then managing this capability, [Setup macOS account configuration with LAPS](../enrollment/macos-laps.md).
 
    > [!div class="mx-imgBorder"]
-   > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)
+   > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/setup-automated-macos/macos-account-settings-intune.png)
 
    The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
@@ -256,7 +256,7 @@ Syncing refreshes existing device status and imports new devices assigned to the
 
 2. Select **Devices** > **Sync**.
 
-   ![Screenshot of Enrollment program token area in the admin center, highlighting the example token, "Devices" link, and "Sync" button.](./media/device-enrollment-program-enroll-macos/image06.png)
+   ![Screenshot of Enrollment program token area in the admin center, highlighting the example token, "Devices" link, and "Sync" button.](./media/setup-automated-macos/image06.png)
 
 ### Sync restrictions
 To comply with Apple's terms for acceptable enrollment program traffic, Microsoft Intune imposes the following restrictions:

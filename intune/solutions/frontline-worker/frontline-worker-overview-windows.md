@@ -60,7 +60,7 @@ This option uses the Windows Configuration Designer (WCD) app to create a provis
 
 ❌ If you have Microsoft Entra Premium, then use Windows Autopilot. Windows Autopilot requires Entra Premium.
 
-For information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../intune-service/enrollment/windows-bulk-enroll.md).
+For information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../device-enrollment/windows/create-bulk-package.md).
 
 ---
 

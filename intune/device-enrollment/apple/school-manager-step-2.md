@@ -22,7 +22,7 @@ After you get your Apple token, you can create an enrollment profile for school 
 
 1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
 
-   ![Example screenshot of the profile name and description fields in the admin center.](./media/apple-school-manager-set-up-ios/image05.png)
+   ![Example screenshot of the profile name and description fields in the admin center.](./media/school-manager/image05.png)
 
    You can use the name you enter here to create a dynamic group in Microsoft Entra ID. To assign devices with this enrollment profile to a group, for example, enter the name in the *enrollmentProfileName* parameter in your dynamic group rules. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 

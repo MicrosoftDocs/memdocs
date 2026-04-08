@@ -23,12 +23,12 @@ It isn't necessary to add corporate identifiers for all deployments. During enro
 - Automatic mobile device management (MDM) enrollment via provisioning package
 - [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md)
 - Android Enterprise management:
-  - [Coporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
-  - [Fully managed devices](./android-fully-managed-enroll.md)
-  - [Dedicated devices](./android-kiosk-enroll.md).
+  - [Coporate-owned devices with work profile](./android/setup-corporate-work-profile.md)
+  - [Fully managed devices](./android/setup-fully-managed.md)
+  - [Dedicated devices](./android/setup-dedicated.md).
 - Android Open Source Project (AOSP) management:
-  - [Corporate-owned user-associated devices](./android-aosp-corporate-owned-user-associated-enroll.md)
-  - [Corporate-owned userless devices](./android-aosp-corporate-owned-userless-enroll.md)
+  - [Corporate-owned user-associated devices](./android/setup-aosp-corporate-user-associated.md)
+  - [Corporate-owned userless devices](./android/setup-aosp-corporate-userless.md)
   - [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch)
 
 Microsoft Intune marks devices that register with Microsoft Entra as personal.
@@ -120,7 +120,7 @@ Remove all periods, if applicable, from the serial number before you add it to t
 
 After you add Windows corporate identifiers, Intune marks devices that match all three identifiers as corporate-owned, and marks all other enrolling devices in your tenant as personal. This means that anything you exclude from the Windows corporate identifiers is marked personal, but only at enrollment time. Existing Windows logic determines the final state in Intune. For more information, see the table in this section. To change the ownership type in Intune, you have to manually adjust it in the admin center.
 
-:::image type="content" source="./media/corporate-identifiers-add/device-enrollment-add-identifiers.png" alt-text="Screenshot of selecting and adding corporate identifiers.":::
+:::image type="content" source="./media/add-corporate-identifiers/device-enrollment-add-identifiers.png" alt-text="Screenshot of selecting and adding corporate identifiers.":::
 
 The following table lists the type of ownership given to devices when they enroll without corporate identifiers and when they enroll with corporate identifiers.
 
@@ -223,7 +223,7 @@ To edit a device's identification after enrollment, change its ownership setting
 1. Choose **Properties**.
 1. For **Device ownership**,  select **Personal** or **Corporate**.
 
-   :::image type="content" source="./media/corporate-identifiers-add/device-properties.png" alt-text="Screenshot of the Managed device properties showing Device category and Device ownership options.":::
+   :::image type="content" source="./media/add-corporate-identifiers/device-properties.png" alt-text="Screenshot of the Managed device properties showing Device category and Device ownership options.":::
 
 When you change a device's ownership type from *corporate* to *personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune also deletes the phone number on record. Intune still collects the inventory of apps installed by the IT admin on the device, and a partial phone number.
 

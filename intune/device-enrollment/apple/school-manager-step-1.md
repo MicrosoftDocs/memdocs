@@ -38,7 +38,7 @@ In the first set of steps, you download the Intune public key certificate requir
 1. Select **Edit MDM Server**. Select the MDM server you just added, and then save your changes. This step assigns devices to the token.
 1. Return to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and enter the Apple ID you used to create the token.
 
-   ![Example screenshot showing the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/apple-school-manager-set-up-ios/image03.png)
+   ![Example screenshot showing the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/school-manager/image03.png)
 
 1. For **Apple token**, browse to the certificate (.pem) file. Select **Open**, and then choose **Create**. With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policies to enrolled mobile devices. Intune automatically syncs your Apple School Manager devices from Apple.
 

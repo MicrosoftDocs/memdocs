@@ -38,20 +38,20 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 1. Install [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
 
 1. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
-![Screenshot of selecting Provision desktop devices in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-select.png)
+![Screenshot of selecting Provision desktop devices in the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-select.png)
 
 1. A **New project** window opens where you specify the following information:
    - **Name** - A name for your project
    - **Project folder** - Save location for the project
    - **Description** - An optional description of the project
-   ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-name.png)
+   ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-name.png)
 
 1. Enter a unique name for your devices. Names can include a serial number (%SERIAL%) or a random set of characters. Optionally, you can also enter a product key if you are upgrading the edition of Windows, configure the device for shared use, and remove pre-installed software.
 
-   ![Screenshot of specifying name and product key in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-device.png)
+   ![Screenshot of specifying name and product key in the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-device.png)
 
 1. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
-![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
+![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-network.png)
 
 1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
 
@@ -60,7 +60,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
    > 
    > Due to the use of the package_{GUID} user account in the bulk enrollment process, tenants that use Conditional Access policies with MFA must set an exclusion or disable MFA for this process, because MFA is not supported for this scenario.
 1. Provide your Microsoft Entra credentials to get a bulk token. Make sure you authenticate by way of password or CBA authentication, since other methods of authentication aren't supported by the app for this operation.  
-![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
+![Screenshot of signing in to the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-cred.png)
 
    > [!NOTE]
    > - The account used to request the bulk enrollment token in the Windows Configuration Designer app must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) in Microsoft Entra ID. If you remove this account from a group that's tied to the MDM user scope, bulk enrollment will stop working.
@@ -73,7 +73,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
 1. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
 
 1. Optionally, you can password protect your provisioning package.  Click **Create**.
-![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
+![Screenshot of package protection in the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-create.png)
 
 ## Provision devices
 
@@ -86,7 +86,7 @@ For more information about these roles, see [Microsoft Entra built-in roles](/en
    For step-by-step instruction on applying a provisioning package, see [Apply a provisioning package](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 1. After you apply the package, the device will automatically restart in one minute.
-![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
+![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/create-bulk-package/bulk-enroll-add.png)
 
 4. When the device restarts, it connects to the Microsoft Entra ID and enrolls in Microsoft Intune.
 

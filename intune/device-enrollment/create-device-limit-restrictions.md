@@ -57,12 +57,12 @@ Other built-in Intune roles have read-only access to device limit restrictions. 
 3. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 4. Choose **Next** to go to the **Device limit** page.
 5. For **Device limit**, select the maximum number of devices that a user can enroll.
-    ![Screenshot that shows how to choose a device limit.](./media/enrollment-restrictions-set/choose-device-limit.png)
+    ![Screenshot that shows how to choose a device limit.](./media/restrictions/choose-device-limit.png)
 6. Choose **Next** to go to the **Scope tags** page.
 7. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 8. Choose **Next** to go to the **Assignments** page.
 9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**.
-    ![Screenshot that shows selecting groups.](./media/enrollment-restrictions-set/select-groups-device-limit.png)
+    ![Screenshot that shows selecting groups.](./media/restrictions/select-groups-device-limit.png)
 10. Select **Next** to go to the **Review + create** page.
 11. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](create-device-limit-restrictions.md#change-restriction-priority) (in this article).
 
@@ -95,7 +95,7 @@ When you create a restriction, it's added to the list just above the default. Yo
 ## Device user experience
 BYOD users who reach their device limit receive a message during enrollment explaining the restriction. To continue enrolling, the device user must unenroll an existing device. Alternatively, as the admin you can increase the device limit in the admin center. For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).
 
-![Example image of device limit notification which reads, "Couldn't add your device. You have added the maximum number of devices allowed by your IT support. You must remove a device before you can add a new one.](./media/enrollment-restrictions-set/enrollment-restrictions-ios-set-limit-notification.png)
+![Example image of device limit notification which reads, "Couldn't add your device. You have added the maximum number of devices allowed by your IT support. You must remove a device before you can add a new one.](./media/restrictions/enrollment-restrictions-ios-set-limit-notification.png)
 
 
 

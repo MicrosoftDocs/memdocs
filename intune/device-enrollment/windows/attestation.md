@@ -59,7 +59,7 @@ We recommend using the latest updates for a more successful attestation rate.
 
 ## How Windows enrollment attestation works
 
-:::image type="content" alt-text="High-level architecture diagram on how we harden the Windows device using TPM at enrollment" source="./media/windows-enroll-attestation/windows-enroll-attest.png":::
+:::image type="content" alt-text="High-level architecture diagram on how we harden the Windows device using TPM at enrollment" source="./media/attestation/windows-enroll-attest.png":::
 
 ## Device attestation status report
 
@@ -71,7 +71,7 @@ To access this report:
 2. Select **Reports** > **Device attestation status (preview)** under the **Device Management** section.
 3. Filter by **Attestation status** or **Ownership type** and select **Generate report**.
 
-    :::image type="content" alt-text="Screenshot of Device attestation report" source="./media/windows-enroll-attestation/device-attest-report.png":::
+    :::image type="content" alt-text="Screenshot of Device attestation report" source="./media/attestation/device-attest-report.png":::
 
 After the report is generated, The top-level details that you see include:
 

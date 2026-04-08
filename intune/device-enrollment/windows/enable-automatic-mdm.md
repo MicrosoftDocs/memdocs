@@ -60,7 +60,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 1. Configure the **MDM user scope** for Microsoft Intune. This setting enables automatic MDM enrollment for Microsoft Entra users so that you can manage their devices in Intune.
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot shows the Microsoft Entra MDM user scope.](../enrollment/media/windows-enroll/auto-enroll-scope.png)
+   > ![Screenshot shows the Microsoft Entra MDM user scope.](../enrollment/media/enable-automatic-mdm/auto-enroll-scope.png)
 
     Your options are:
 

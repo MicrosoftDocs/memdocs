@@ -137,7 +137,7 @@ For more information about how to assign a default configuration or apply a conf
 
 ## Enroll by using Knox Mobile Enrollment
 
-To use Samsung Knox Mobile Enrollment, the device must be running [supported Samsung Knox versions](../fundamentals/supported-devices-browsers.md#android). For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).
+To use Samsung Knox Mobile Enrollment, the device must be running [supported Samsung Knox versions](../fundamentals/supported-devices-browsers.md#android). For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./setup-samsung-knox-mobile.md).
 
 ## Enroll by using Near Field Communication (NFC)
 

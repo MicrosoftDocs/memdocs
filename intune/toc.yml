@@ -59,9 +59,9 @@ items:
         - name: Step 3 - Create a group
           href: ./intune-service/fundamentals/quickstart-create-group.md
         - name: Step 4 - Set up automatic enrollment
-          href: ./intune-service/enrollment/quickstart-setup-auto-enrollment.md
+          href: ./device-enrollment/windows/quickstart-automatic-mdm.md
         - name: Step 5 - Enroll your Windows device
-          href: ./intune-service/enrollment/quickstart-enroll-windows-device.md
+          href: ./device-enrollment/windows/quickstart-first-device.md
         - name: Step 6 - Create a device compliance policy
           href: ./intune-service/protect/quickstart-set-password-length-android.md
         - name: Step 7 - Send notifications to noncompliant devices
@@ -83,9 +83,9 @@ items:
         - name: Configure Slack to use Intune
           href: ./intune-service/apps/tutorial-configure-slack-enterprise-grid.md
         - name: Set up just in time (JIT) registration
-          href: ./intune-service/enrollment/set-up-just-in-time-registration.md
+          href: ./device-enrollment/apple/setup-just-in-time-registration.md
         - name: Use automated device enrollment to enroll iOS/iPadOS devices
-          href: ./intune-service/enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
+          href: ./device-enrollment/apple/tutorial-automated-ios.md
         - name: Create settings catalog policy and compare with on-premises ADMX
           href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
           displayName: admx, administrative template, gpo, windows
@@ -1471,45 +1471,45 @@ items:
       - name: Configure enrollment features
         items:
         - name: Add corporate identifiers
-          href: ./intune-service/enrollment/corporate-identifiers-add.md
+          href: ./device-enrollment/add-corporate-identifiers.md
           displayName: COD; corporate owned; IMEI; device ownership; serial
         - name: Add device categories
-          href: ./intune-service/enrollment/device-group-mapping.md
+          href: ./device-management/create-device-categories.md
           displayName: group; category; categorize; security group
         - name: Add device enrollment manager
-          href: ./intune-service/enrollment/device-enrollment-manager-enroll.md
+          href: ./device-enrollment/setup-enrollment-manager.md
           displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
         - name: Configure Chrome Enterprise connector
-          href: ./intune-service/enrollment/chrome-enterprise-connector-configure.md
+          href: ./device-enrollment/configure-chrome-enterprise-connector.md
           displayName: chrome os; connector; device management; google admin
         - name: Configure device enrollment restrictions
           items:
           - name: Overview
-            href: ./intune-service/enrollment/enrollment-restrictions-set.md
+            href: ./device-enrollment/restrictions.md
           - name: Intune device limits vs. Microsoft Entra device limits
-            href: ./intune-service/enrollment/device-limit-intune-azure.md
+            href: ./device-enrollment/limits-intune-entra.md
           - name: Create device platform restrictions
-            href: ./intune-service/enrollment/create-device-platform-restrictions.md
+            href: ./device-enrollment/create-platform-restrictions.md
           - name: Create device limit restrictions
-            href: ./intune-service/enrollment/create-device-limit-restrictions.md
+            href: ./device-enrollment/create-device-limit-restrictions.md
         - name: Create terms and conditions policy
-          href: ./intune-service/enrollment/terms-and-conditions-create.md
+          href: ./device-enrollment/create-terms-and-conditions.md
           displayName: intune; enrollment; terms and conditions; policy
         - name: Enable Windows backup and restore
-          href: ./intune-service/enrollment/windows-backup-restore.md
+          href: ./device-enrollment/windows/enable-backup-restore.md
         - name: Get Apple MDM push certificate
-          href: ./intune-service/enrollment/apple-mdm-push-certificate-get.md
+          href: ./device-enrollment/apple/create-mdm-push-certificate.md
           displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
         - name: Require multifactor authentication
-          href: ./intune-service/enrollment/multi-factor-authentication.md
+          href: ./device-enrollment/configure-multifactor-authentication.md
           displayName: multi-factor; enrollment; MFA; verification; Conditional Access
         - name: Set up enrollment notifications
-          href: ./intune-service/enrollment/enrollment-notifications.md
+          href: ./device-enrollment/setup-notifications.md
         - name: Set up enrollment time grouping
-          href: ./intune-service/enrollment/enrollment-time-grouping.md
+          href: ./device-enrollment/setup-time-grouping.md
           displayName: enrollment time grouping; security groups; Entra
         - name: Turn on iOS/iPadOS supervised mode
-          href: ./intune-service/enrollment/device-supervised-mode.md
+          href: ./device-enrollment/apple/enable-supervised-mode.md
 
       - name: Set up Windows enrollment
         items:
@@ -1518,19 +1518,19 @@ items:
         - name: Enrollment solutions
           items:
           - name: Set up automatic enrollment
-            href: ./intune-service/enrollment/windows-enroll.md
+            href: ./device-enrollment/windows/enable-automatic-mdm.md
           - name: Set up bulk enrollment and workplace join
-            href: ./intune-service/enrollment/windows-bulk-enroll.md
+            href: ./device-enrollment/windows/create-bulk-package.md
         - name: Enrollment configurations
           items:
           - name: Create and validate CNAME records
-            href: ./intune-service/enrollment/windows-enrollment-create-cname.md
+            href: ./device-enrollment/windows/create-cname-autodiscovery.md
           - name: Set up Enrollment Status Page
-            href: ./intune-service/enrollment/windows-enrollment-status.md
+            href: ./device-enrollment/windows/setup-status-page.md
           - name: Set up Intune Connector for Active Directory
             href: /autopilot/windows-autopilot-hybrid
           - name: Set up Windows Enrollment Attestation
-            href: ./intune-service/enrollment/windows-enrollment-attestation.md
+            href: ./device-enrollment/windows/attestation.md
 
 
       - name: Set up Android enrollment
@@ -1541,42 +1541,42 @@ items:
         - name: Android Enterprise enrollment solutions
           items:
           - name: Prerequisite - Connect Intune to Android Enterprise
-            href: ./intune-service/enrollment/connect-intune-android-enterprise.md
+            href: ./device-enrollment/android/connect-managed-google-play.md
           - name: Device staging overview
-            href: ./intune-service/enrollment/device-staging-overview.md
+            href: ./device-enrollment/android/device-staging.md
             displayName: COBO; staged enrollment
           - name: Set up work profile management
             items:
             - name: Overview
-              href: ./intune-service/enrollment/android-enterprise-overview.md
+              href: ./device-enrollment/android/enterprise-work-profile.md
             - name: Work profile for personal devices
-              href: ./intune-service/enrollment/android-work-profile-enroll.md
+              href: ./device-enrollment/android/setup-personal-work-profile.md
             - name: Work profile for corporate-owned devices
-              href: ./intune-service/enrollment/android-corporate-owned-work-profile-enroll.md
+              href: ./device-enrollment/android/setup-corporate-work-profile.md
           - name: Set up enrollment for dedicated devices
-            href: ./intune-service/enrollment/android-kiosk-enroll.md
+            href: ./device-enrollment/android/setup-dedicated.md
           - name: Set up enrollment for fully managed devices
-            href: ./intune-service/enrollment/android-fully-managed-enroll.md
+            href: ./device-enrollment/android/setup-fully-managed.md
           - name: Enroll corporate-owned devices
-            href: ./intune-service/enrollment/android-dedicated-devices-fully-managed-enroll.md
+            href: ./device-enrollment/android/ref-corporate-methods.md
         - name: AOSP enrollment solutions
           items:
           - name: Enroll corporate-owned, userless devices
-            href: ./intune-service/enrollment/android-aosp-corporate-owned-userless-enroll.md
+            href: ./device-enrollment/android/setup-aosp-corporate-userless.md
           - name: Enroll corporate-owned, user-associated devices
-            href: ./intune-service/enrollment/android-aosp-corporate-owned-user-associated-enroll.md
+            href: ./device-enrollment/android/setup-aosp-corporate-user-associated.md
         - name: Android device administrator solutions
           items:
           - name: Set up enrollment for Android device administrator
-            href: ./intune-service/enrollment/android-enroll-device-administrator.md
+            href: ./device-enrollment/android/manage-device-administrator.md
           - name: Move to Android Enterprise work profile management
-            href: ./intune-service/enrollment/android-move-device-admin-work-profile.md
+            href: ./device-enrollment/android/migrate-device-admin-to-work-profile.md
           - name: Move to mobile application management without enrollment
-            href: ./intune-service/enrollment/move-to-android-mobile-application-management.md
+            href: ./device-enrollment/android/migrate-to-application-management.md
         - name: Samsung Knox enrollment solutions
           items:
           - name: Use Samsung Knox Mobile Enrollment
-            href: ./intune-service/enrollment/android-samsung-knox-mobile-enroll.md
+            href: ./device-enrollment/android/setup-samsung-knox-mobile.md
 
       - name: Set up iOS/iPadOS enrollment
         items:
@@ -1587,53 +1587,53 @@ items:
           - name: Set up enrollment with Apple Configurator
             items:
             - name: Enroll corporate-owned devices
-              href: ./intune-service/enrollment/apple-configurator-enroll-ios.md
+              href: ./device-enrollment/apple/setup-configurator-ios.md
             - name: Enroll corporate-owned, userless devices
-              href: ./intune-service/enrollment/apple-corporate-owned-userless-enroll.md
+              href: ./device-enrollment/apple/setup-corporate-userless.md
           - name: Set up Apple Automated Device Enrollment
             items:
             - name: Set up Automated Device Enrollment
-              href: ./intune-service/enrollment/device-enrollment-program-enroll-ios.md
+              href: ./device-enrollment/apple/setup-automated-ios.md
             - name: Choose enrollment authentication method
-              href: ./intune-service/enrollment/automated-device-enrollment-authentication.md
+              href: ./device-enrollment/apple/ref-automated-authentication-methods.md
             - name: Set up enrollment for shared device mode
-              href: ./intune-service/enrollment/automated-device-enrollment-shared-device-mode.md
+              href: ./device-enrollment/apple/setup-automated-shared-device-mode.md
               displayName: devices, frontline worker, automated device enrollment
             - name: Walkthrough - Set up enrollment with Apple School Manager
               items:
               - name: Prerequisites
-                href: ./intune-service/enrollment/apple-school-manager-set-up-ios.md
+                href: ./device-enrollment/apple/school-manager.md
               - name: Step 1 - Get an Apple token and assign devices
-                href: ./intune-service/enrollment/apple-school-manager-step-1.md
+                href: ./device-enrollment/apple/school-manager-step-1.md
               - name: Step 2 - Create an Apple enrollment profile
-                href: ./intune-service/enrollment/apple-school-manager-step-2.md
+                href: ./device-enrollment/apple/school-manager-step-2.md
               - name: Step 3 - Sync managed devices
-                href: ./intune-service/enrollment/apple-school-manager-step-3.md
+                href: ./device-enrollment/apple/school-manager-step-3.md
 
           - name: Set up Apple device enrollment
             items:
             - name: Overview
-              href: ./intune-service/enrollment/ios-device-enrollment.md
+              href: ./device-enrollment/apple/personal-device-options-ios.md
             - name: Set up web based device enrollment
-              href: ./intune-service/enrollment/web-based-device-enrollment-ios.md
+              href: ./device-enrollment/apple/setup-web-based-ios.md
           - name: Set up Apple user enrollment
             items:
             - name: Overview
-              href: ./intune-service/enrollment/ios-user-enrollment-supported-actions.md
+              href: ./device-enrollment/apple/user-enrollment-methods-ios.md
             - name: Set up account driven user enrollment
-              href: ./intune-service/enrollment/apple-account-driven-user-enrollment.md
+              href: ./device-enrollment/apple/setup-account-driven-user.md
             - name: Set up user enrollment with Company Portal
-              href: ./intune-service/enrollment/apple-user-enrollment-with-company-portal.md
+              href: ./device-enrollment/apple/setup-user-company-portal.md
           - name: Set up Shared iPad
             items:
             - name: Overview of shared device solutions
-              href: ./intune-service/enrollment/device-enrollment-shared-ios.md
+              href: ./device-enrollment/apple/shared-device-solutions-ios.md
             - name: Set up Shared iPad
-              href: ./intune-service/enrollment/device-enrollment-shared-ipad.md
+              href: ./device-enrollment/apple/shared-ipad.md
         - name: Enrollment configurations
           items:
           - name: Back up and restore for Automated Device Enrollment
-            href: ./intune-service/enrollment/backup-restore-ios.md
+            href: ./device-enrollment/apple/backup-restore-ios.md
 
 
       - name: Set up Linux enrollment
@@ -1649,19 +1649,19 @@ items:
         - name: Enrollment solutions
           items:
           - name: Set up automated device enrollment for macOS
-            href: ./intune-service/enrollment/device-enrollment-program-enroll-macos.md
+            href: ./device-enrollment/apple/setup-automated-macos.md
           - name: Set up macOS account configuration with LAPS
-            href: ./intune-service/enrollment/macos-laps.md
+            href: ./device-enrollment/apple/setup-laps-macos.md
           - name: Set up Direct Enrollment for macOS
-            href: ./intune-service/enrollment/device-enrollment-direct-enroll-macos.md
+            href: ./device-enrollment/apple/setup-direct-macos.md
         - name: Enrollment configurations
           items:
           - name: Configure enrollment settings
-            href: ./intune-service/enrollment/macos-enroll.md
+            href: ./device-enrollment/apple/methods-macos.md
       - name: Troubleshoot enrollment
         items:
         - name: View enrollment reports
-          href: ./intune-service/enrollment/view-enrollment-reports.md
+          href: ./device-enrollment/monitor-reports.md
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune?context=/intune/context
         - name: Troubleshoot iOS/iPadOS device enrollment

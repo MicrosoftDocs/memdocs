@@ -19,7 +19,7 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 ## Prerequisites
 
-- [Set up Managed Google Play for your tenant](../../intune-service/enrollment/connect-intune-android-enterprise.md)
+- [Set up Managed Google Play for your tenant](../../device-enrollment/android/connect-managed-google-play.md)
 
 - Administrators must have all the required RBAC (role-based access control) permissions:
 

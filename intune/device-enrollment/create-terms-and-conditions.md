@@ -49,12 +49,12 @@ Complete these steps to create an Intune terms and conditions policy.
 Targeted users can see the terms and conditions in the Intune Company Portal app. The following image shows what the title and summary of terms look like in the app. Intune formats the title with bold font to make it stand out, with the summary of terms positioned directly under it.
 
 > [!div class="mx-imgBorder"]
-> ![Example image of the drafted terms in the Intune and then what it looks like in Company Portal.](./media/terms-and-conditions-create/terms-summary-terms.png)
+> ![Example image of the drafted terms in the Intune and then what it looks like in Company Portal.](./media/create-terms-and-conditions/terms-summary-terms.png)
 
 Device users tap **Read terms** to expand the terms and conditions to full-view. The following image shows what the terms and conditions look like when expanded.
 
 > [!div class="mx-imgBorder"]
-> ![Example image of the drafted terms and conditions message in Intune and then what it looks like in Company Portal.](./media/terms-and-conditions-create/terms-properties-terms.png)
+> ![Example image of the drafted terms and conditions message in Intune and then what it looks like in Company Portal.](./media/create-terms-and-conditions/terms-properties-terms.png)
 
 ## Monitor acceptance of terms
 An acceptance report provides the details of an individual's agreement to your terms and conditions. Intune reports the following details:

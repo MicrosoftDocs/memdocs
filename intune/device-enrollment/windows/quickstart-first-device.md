@@ -63,13 +63,13 @@ These steps guide you through using the Settings app on a Windows device to enro
 
 3. Select **Connect** to add a work or school account.
 
-    :::image type="content" source="./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png" alt-text="Screenshot of Windows Settings, Accounts section, showing Access work or school with Connect button highlighted." lightbox="./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png":::
+    :::image type="content" source="./media/quickstart-first-device/quickstart-enroll-windows-device-04.png" alt-text="Screenshot of Windows Settings, Accounts section, showing Access work or school with Connect button highlighted." lightbox="./media/quickstart-first-device/quickstart-enroll-windows-device-04.png":::
 
 4. Enter the username and password for your work account. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) evaluation step, you can use the user account that you created.
 
 5. Wait for your device to finish registering. When you see the **You're all set!** screen, select **Done**. Your work account should now be visible under **Accounts**.
 
-   :::image type="content" source="./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png" alt-text="Screenshot of Windows Settings showing a connected work or school account under Access work or school." lightbox="./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png":::
+   :::image type="content" source="./media/quickstart-first-device/quickstart-enroll-windows-device-06.png" alt-text="Screenshot of Windows Settings showing a connected work or school account under Access work or school." lightbox="./media/quickstart-first-device/quickstart-enroll-windows-device-06.png":::
 
     If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows device access](../../user-help/troubleshooting/troubleshoot-device-access-windows.md).
 

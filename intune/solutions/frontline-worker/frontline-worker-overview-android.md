@@ -91,11 +91,11 @@ The next decision is to decide if the devices are shared with many users or assi
 
   - If you're using Android shared devices and the devices support Android Enterprise enrollment, then enroll your devices as **dedicated devices**. These devices support Google Mobile Services (GMS) and aren't associated with a single or specific user.
 
-    For more information on dedicated device enrollment, go to [Intune enrollment of Android Enterprise dedicated devices](../../intune-service/enrollment/android-kiosk-enroll.md).
+    For more information on dedicated device enrollment, go to [Intune enrollment of Android Enterprise dedicated devices](../../device-enrollment/android/setup-dedicated.md).
 
   - If you're using Android (AOSP) shared devices, then you can enroll your devices as **userless devices**. These devices typically don't support GMS and aren't associated with a single or specific user.
 
-    For more information on Android (AOSP) userless enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned userless devices](../../intune-service/enrollment/android-aosp-corporate-owned-userless-enroll.md).
+    For more information on Android (AOSP) userless enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned userless devices](../../device-enrollment/android/setup-aosp-corporate-userless.md).
 
 - **User associated device**
 
@@ -109,8 +109,8 @@ The next decision is to decide if the devices are shared with many users or assi
 
     For more information on these enrollment methods, go to:
 
-    - [Intune enrollment for Android Enterprise fully managed devices](../../intune-service/enrollment/android-fully-managed-enroll.md)
-    - [Intune enrollment for corporate-owned devices with a work profile](../../intune-service/enrollment/android-corporate-owned-work-profile-enroll.md)
+    - [Intune enrollment for Android Enterprise fully managed devices](../../device-enrollment/android/setup-fully-managed.md)
+    - [Intune enrollment for corporate-owned devices with a work profile](../../device-enrollment/android/setup-corporate-work-profile.md)
 
     For a list of some of the settings can you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
 
@@ -118,7 +118,7 @@ The next decision is to decide if the devices are shared with many users or assi
 
     Remember, Android (AOSP) devices don't support Google Mobile Services (GMS).
 
-    - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../intune-service/enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
+    - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../device-enrollment/android/setup-aosp-corporate-user-associated.md).
     - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
 
 ## Step 3 - Home screen and device experience

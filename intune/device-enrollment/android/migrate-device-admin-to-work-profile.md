@@ -34,20 +34,20 @@ When users see that they're out of compliance for this reason, they can tap **Re
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Select **Compliance** > **Create Policy**.
 
-    ![Create policy](./media/android-move-device-admin-work-profile/create-policy.png)
+    ![Create policy](./media/migrate-device-admin-to-work-profile/create-policy.png)
 
 1. On the **Create a policy** page, set **Platform** to **Android device administrator** > **Create**.
 1. On the **Basics** page, type in the **Name** and **Description** > **Next**.
 
-    ![Basics page](./media/android-move-device-admin-work-profile/basics.png)
+    ![Basics page](./media/migrate-device-admin-to-work-profile/basics.png)
 
 1. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
 
-    ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
+    ![Block devices](./media/migrate-device-admin-to-work-profile/block-devices.png)
 
 1. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
-    ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
+    ![Noncompliance actions](media/migrate-device-admin-to-work-profile/noncompliance-actions.png)
 
     Some actions to consider include:
 

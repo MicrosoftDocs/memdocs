@@ -63,7 +63,7 @@ This section provides details for configuring *macOS local account configuration
 
 When you [configure a macOS automated device enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md), the **Account Settings** tab presents options to configure both the Local administrator account and the Local user account. By default, these options are both set to *No*.
 
-:::image type="content" source="./media/macos-laps/account-settings-initial-configuration.png" alt-text="Screen shot of the default appearance of the automated device enrollment profiles Account Setting pane.":::
+:::image type="content" source="./media/setup-laps-macos/account-settings-initial-configuration.png" alt-text="Screen shot of the default appearance of the automated device enrollment profiles Account Setting pane.":::
 
 When you select **Yes** for either the local or admin or user account options, you're configuring both the macOS local admin account with LAPS configuration as well as a standard user account for devices that enroll using this enrollment profile.
 
@@ -73,7 +73,7 @@ Whenever any part of the local account configuration, the **Await final configur
 
 ### Local administrator account
 
-:::image type="content" source="./media/macos-laps/configure-local-admin-account-options.png" alt-text="Screen capture that shows the options available for an admin account.":::
+:::image type="content" source="./media/setup-laps-macos/configure-local-admin-account-options.png" alt-text="Screen capture that shows the options available for an admin account.":::
 
 The following are examples of the available configuration options. Additional details are accessible through the *Information* icons that follow the name of some settings.
 
@@ -92,7 +92,7 @@ The following are examples of the available configuration options. Additional de
 
 ### Local user account
 
-:::image type="content" source="./media/macos-laps/configure-local-user-account-options.png" alt-text="Screen capture that shows the options available for a non-admin user account.":::
+:::image type="content" source="./media/setup-laps-macos/configure-local-user-account-options.png" alt-text="Screen capture that shows the options available for a non-admin user account.":::
 
 The following is some guidance for the available options. Additional details are accessible through the Information icons that follow the name of some settings.
 
@@ -127,7 +127,7 @@ On the **Passwords and keys** pane, you can retrieve the admin password for the 
 
 To see whether an enrolled macOS device has an Intune managed admin password, if the password can be successfully retrieved in the console, that means the password for the local administrator account is managed by Intune.
 
-:::image type="content" source="./media/macos-laps/passwords-and-keys-pane.png" alt-text="Screen capture that shows the Passwords and keys pane, and the Rotate local admin password options.":::
+:::image type="content" source="./media/setup-laps-macos/passwords-and-keys-pane.png" alt-text="Screen capture that shows the Passwords and keys pane, and the Rotate local admin password options.":::
 
 ## Manually rotate admin account password
 
@@ -143,7 +143,7 @@ To use this device action, your account must be assigned the [Intune RBAC permis
 
 2. On the devices *Overview* pane, from the list of options at the top of the pane select **Rotate local admin password**.
 
-   :::image type="content" source="./media/macos-laps/macos-device-overview.png" alt-text="Screen capture of a devices overview pane.":::
+   :::image type="content" source="./media/setup-laps-macos/macos-device-overview.png" alt-text="Screen capture of a devices overview pane.":::
 
 
 3. To confirm when the password was last rotated for the device, from the device's *Overview* pane:

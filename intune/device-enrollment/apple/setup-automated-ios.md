@@ -140,7 +140,7 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
 
     1. Select **I agree** to give permission to Microsoft to send user and device information to Apple.
 
-        :::image type="content" source="./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png" alt-text="Screenshot that shows the Add enrollment program token screen.":::
+        :::image type="content" source="./media/setup-automated-ios/add-enrollment-program-token-pane.png" alt-text="Screenshot that shows the Add enrollment program token screen.":::
 
     2. Select **Download the Intune public key certificate required to create the token**. This step downloads and saves the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple Business Manager portal.
 
@@ -180,7 +180,7 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 1. In your web browser, go back to the tab that has the Microsoft Intune **Add enrollment program token** page, where you started in [Step 1: Download the Intune public key certificate](#step-1-download-the-intune-public-key-certificate).
 2. In **Apple ID**, enter your ID. This step saves the ID. The ID can be used in the future.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image03.png" alt-text="Sreenshot that shows the Apple ID box on the Basics tab.":::
+    :::image type="content" source="./media/setup-automated-ios/image03.png" alt-text="Sreenshot that shows the Apple ID box on the Basics tab.":::
 
 ### Step 4: Upload your token and finish
 
@@ -227,7 +227,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 
 1. If you selected **Enroll with User Affinity** for the **User Affinity** field, you have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).
 
-   ![Screenshot of authentication method options.](./media/device-enrollment-program-enroll-ios/authentication-method.png)
+   ![Screenshot of authentication method options.](./media/setup-automated-ios/authentication-method.png)
 
     Your options:
 
@@ -247,11 +247,11 @@ Now that you've installed your token, you can create an enrollment profile for a
 
     This feature is supported only for iOS/iPadOS 11.3.1 and later.
 
-   :::image type="content" source="./media/device-enrollment-program-enroll-ios/single-app-mode.png" alt-text="Screenshot that shows the Run Company Portal in Single App Mode option.":::
+   :::image type="content" source="./media/setup-automated-ios/single-app-mode.png" alt-text="Screenshot that shows the Run Company Portal in Single App Mode option.":::
 
 1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
+    :::image type="content" source="./media/setup-automated-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
 
     Supervised devices give you more management options and disabled Activation Lock by default. Microsoft recommends that you use ADE as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices. Apple Shared iPad for Business devices must be supervised.
 
@@ -419,7 +419,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 1. Choose **Enrollment Program Tokens**.
 1. Select a token in the list, and then select **Devices** > **Sync**.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token." lightbox="./media/device-enrollment-program-enroll-ios/image06.png":::
+    :::image type="content" source="./media/setup-automated-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token." lightbox="./media/setup-automated-ios/image06.png":::
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
 
@@ -501,7 +501,7 @@ It's important to renew your enrollment program token yearly. The Intune admin c
 1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has an Administrator or Device Enrollment Manager role.
 2. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file that you want to renew. Select **Download Token**.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-macos/download-token.png" alt-text="Screenshot that shows how to renew and download an Apple token in Apple Business Manager.":::
+    :::image type="content" source="./media/setup-automated-macos/download-token.png" alt-text="Screenshot that shows how to renew and download an Apple token in Apple Business Manager.":::
 
 3. Select **Download Server Token**.
 
@@ -514,7 +514,7 @@ It's important to renew your enrollment program token yearly. The Intune admin c
 7. Select the token.
 8. Select **Renew token**. Enter the **Apple ID** used to create the original token (if it's not already filled-in):
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page." lightbox="./media/device-enrollment-program-enroll-ios/renewtoken.png":::
+    :::image type="content" source="./media/setup-automated-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page." lightbox="./media/setup-automated-ios/renewtoken.png":::
 
 9. Upload the newly downloaded token.
 
@@ -522,7 +522,7 @@ It's important to renew your enrollment program token yearly. The Intune admin c
 
 11. Select **Renew token**. Wait for confirmation that the token renewal is done.
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/confirmation.png" alt-text="Screenshot that shows the confirmation message.":::
+    :::image type="content" source="./media/setup-automated-ios/confirmation.png" alt-text="Screenshot that shows the confirmation message.":::
 
 ## Delete an Automated Device Enrollment token from Intune
 

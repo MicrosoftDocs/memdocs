@@ -42,7 +42,7 @@ The following example shows an enrollment device platform restrictions policy fo
 
 When users enroll their personal devices, this policy checks the version info. If the devices are outside the versions you enter, then they're prevented from enrolling.
 
-For more information on this feature, go to [Device platform restrictions in Intune](../intune-service/enrollment/create-device-platform-restrictions.md).
+For more information on this feature, go to [Device platform restrictions in Intune](../device-enrollment/create-platform-restrictions.md).
 
 ## Create compliance policies
 
