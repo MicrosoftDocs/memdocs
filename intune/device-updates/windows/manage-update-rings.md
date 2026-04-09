@@ -76,7 +76,7 @@ In Microsoft Intune, update rings are configured through **update ring policies*
 1. Select the **Update rings** tab > **Create profile**.
 1. Under *Basics*, specify a name, a description (optional), and then select **Next**.
 1. Under **Update ring settings**, configure settings aligned with your organization's update deployment strategy
-   - For information about the available settings, see [Windows update settings](update-ring-policy-settings.md).
+   - For information about the available settings, see [Windows update settings](ref-update-ring-settings.md).
    - After configuring *Update and User experience* settings, select **Next**.
 1. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 1. Select **Next** to continue to *Assignments*.
@@ -104,7 +104,7 @@ This view includes:
     - **Device assignment status**: This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
     - **Per setting status**: View the configuration status of each setting for this policy across all devices and users.
 
-  For details about this report view, see [Reports for update ring policies](update-rings-reports.md).
+  For details about this report view, see [Reports for update ring policies](monitor-update-rings.md).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
 
@@ -193,9 +193,9 @@ To uninstall the latest Windows update:
 
 ## Next steps
 
-- [Windows feature update policies](feature-update-policy.md)
-- [Windows feature updates reports](feature-updates-reports.md)
-- [Windows update compatibility reports](compatibility-reports.md)
+- [Windows feature update policies](configure-feature-update-policy.md)
+- [Windows feature updates reports](monitor-feature-updates.md)
+- [Windows update compatibility reports](monitor-compatibility.md)
 
 <!-- admin center links -->
 

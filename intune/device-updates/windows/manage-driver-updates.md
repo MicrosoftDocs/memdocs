@@ -28,7 +28,7 @@ Driver update policies support **automatic or manual approval workflows**, allow
 
 The following diagram illustrates the high‑level architecture for managing Windows driver updates by using Microsoft Intune and Windows Autopatch.
 
-:::image type="content" source="./media/driver-updates/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./media/driver-updates/autopatch-ds.png" border="false":::
+:::image type="content" source="./media/manage-driver-updates/update-management-architecture.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./media/manage-driver-updates/update-management-architecture.png" border="false":::
 
 1. **Microsoft Intune** provides device identity, assignment, and driver update approval information. Intune sends policy settings, approved drivers, and pause commands to Windows Autopatch.
 1. **Windows Autopatch** uses this information to configure Windows Update behavior for managed devices and to coordinate driver update deployment.
@@ -40,4 +40,4 @@ This architecture allows administrators to approve and control driver updates ce
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn how to configure driver update policies](driver-update-policy.md)
+> [Learn how to configure driver update policies](configure-driver-update-policy.md)

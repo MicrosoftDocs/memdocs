@@ -41,7 +41,7 @@ This feature applies to:
 
 4. On the **Update policy settings** tab, configure the following options:
 
-   :::image type="content" source="images/macos-update-policy-settings.png" alt-text="Screen capture of the Update policy settings page.":::
+   :::image type="content" source="media/deprecated-mdm-policies-macos/macos-update-policy-settings.png" alt-text="Screen capture of the Update policy settings page.":::
 
    1. For *Critical*, *Firmware*, *Configuration file*, and *All other updates (OS, built-in apps)*, the following installation actions can be configured:
 
@@ -77,7 +77,7 @@ This feature applies to:
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-        :::image type="content" source="images/update-policy-schedule-settings.png" alt-text="Screen capture of the Update policy schedule settings.":::
+        :::image type="content" source="media/deprecated-mdm-policies-macos/update-policy-schedule-settings.png" alt-text="Screen capture of the Update policy schedule settings.":::
 
       - **Time zone**: Choose a time zone.
 
@@ -97,7 +97,7 @@ This feature applies to:
    > You can deploy a settings catalog policy to hide an update from device users for a specified period of time on your supervised macOS devices. For more information, see the following section [Delay visibility of updates](#delay-visibility-of-updates).
 
    <!--
-   > You can configure settings in a [Settings Catalog](../../intune-service/intune-service/protect/updates/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+   > You can configure settings in a [Settings Catalog](../intune-service/intune-service/protect/updates/deprecated-mdm-policies-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
    >
    > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
    -->
@@ -141,7 +141,7 @@ You can edit an existing policy, including changing the restricted times:
 1. Select **Devices** > **Update policies for macOS**. Select the policy you want to edit.
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   :::image type="content" source="images/edit-a-macos-update-policy.png" alt-text="Screen capture of the policy edit page.":::
+   :::image type="content" source="media/deprecated-mdm-policies-macos/edit-a-macos-update-policy.png" alt-text="Screen capture of the policy edit page.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits.
 

@@ -52,5 +52,5 @@ In most environments, you create a Windows quality update policy only when you n
 
 ## Next steps
 
-- [Learn how hotpatch works with quality update policies](hotpatch.md)
-- [Learn how expedite policies work with quality update policies](quality-updates.md)
+- [Learn how hotpatch works with quality update policies](configure-hotpatch.md)
+- [Learn how expedite policies work with quality update policies](manage-quality-updates.md)

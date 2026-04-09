@@ -35,7 +35,7 @@ On the policy page view:
   - Check-in status
   - Last report modification time
 
-  :::image type="content" source="./media/update-rings-reports/report-view-details.png" alt-text="Screen capture that shows details available from the View report action.":::
+  :::image type="content" source="./media/monitor-update-rings/report-view-details.png" alt-text="Screen capture that shows details available from the View report action.":::
 
   From this report view, you can select a device to drill in to view the list of the settings in the policy, and the status of the selected device for each of those settings. Additional drill-in is available by selecting a setting to open the *Setting details*. The *Setting details* display the name of the setting, the devices status (State) for that setting, and a list of profiles that manage the setting and that are assigned to the device. This is useful to help identify the source of a settings conflict.
 
@@ -45,7 +45,7 @@ On the policy page view:
 
     For this report, you can select one or more status details you are interested in, and then select *Generate report* to update the view with only that information. In this following image, we have generated a report that displays only the devices that were successfully assigned this policy:
 
-    :::image type="content" source="./media/update-rings-reports/successful-assignment-view.png" alt-text="Image of the results of the Assignment status report.":::
+    :::image type="content" source="./media/monitor-update-rings/successful-assignment-view.png" alt-text="Image of the results of the Assignment status report.":::
 
     This report supports drilling in to view the list of settings, with subsequent drill-in as seen in for the full report view available from the *View report* button.
 

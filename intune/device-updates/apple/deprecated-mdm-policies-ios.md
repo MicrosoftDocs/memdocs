@@ -38,8 +38,8 @@ With these MDM-based policies, you can:
 
 - If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 
-  - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-  - [Software updates planning guide for BYOD and personal devices](../byod-software-updates-guide.md)
+  - [Software updates planning guide for supervised iOS/iPadOS devices](planning-guide-ios-ipados.md)
+  - [Software updates planning guide for BYOD and personal devices](../byod-planning-guide.md)
 
 ## Configure the update policy
 
@@ -48,7 +48,7 @@ With these MDM-based policies, you can:
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 4. On the **Update policy settings** tab, configure the following options:
 
-   :::image type="content" source="images/basics-tab.png" alt-text="Screenshot that shows sample software update policy settings in Microsoft Intune.":::
+   :::image type="content" source="media/deprecated-mdm-policies-ios/policy-basics-settings.png" alt-text="Screenshot that shows sample software update policy settings in Microsoft Intune.":::
 
    1. **Select version to install**. You can choose from:
 
@@ -63,7 +63,7 @@ With these MDM-based policies, you can:
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-      :::image type="content" source="images/scheduled-time.png" alt-text="Screenshot that shows selecting to install an update during scheduled time in an update policy in Microsoft Intune.":::
+      :::image type="content" source="media/deprecated-mdm-policies-ios/update-schedule-time-setting.png" alt-text="Screenshot that shows selecting to install an update during scheduled time in an update policy in Microsoft Intune.":::
 
       - **Time zone**: Choose a time zone.
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. With a start day and end day, overnight blocks are supported. Options include:
@@ -106,7 +106,7 @@ You can edit an existing policy, including changing the restricted times:
 
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   :::image type="content" source="images/edit-policy.png" alt-text="Screenshot that shows how to edit an existing iOS/iPadOS software update policy in Microsoft Intune.":::
+   :::image type="content" source="media/deprecated-mdm-policies-ios/edit-update-policy.png" alt-text="Screenshot that shows how to edit an existing iOS/iPadOS software update policy in Microsoft Intune.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits, and return to the policies *Properties*.
 
@@ -143,4 +143,4 @@ For each device on the list, the *Installation Status* displays the error that t
 ## Next steps
 
 - [Monitor device profiles](../../intune-service/configuration/device-profile-monitor.md)
-- [Software updates admin guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
+- [Software updates admin guide for supervised iOS/iPadOS devices in Intune](planning-guide-ios-ipados.md)

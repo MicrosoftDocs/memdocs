@@ -17,7 +17,7 @@ Feature update policies remain in effect until you modify or remove them. This b
 ## Before you begin
 
 > [!div class="checklist"]
-> - Ensure your environment meets the requirements in [Windows feature updates overview](feature-updates.md#prerequisites).
+> - Ensure your environment meets the requirements in [Windows feature updates overview](manage-feature-updates.md#prerequisites).
 > - Devices won't install a feature update if the targeted Windows version is blocked by a [*safeguard hold*](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds).
 >   - Safeguard holds are applied when known issues exist. Once the issue is resolved, the hold is removed and the device can update.
 >   - For details about known issues that can result in safeguard holds, see [Windows 11 release information](/windows/release-health/windows11-release-information).
@@ -33,7 +33,7 @@ Feature update policies remain in effect until you modify or remove them. This b
    - Select either:
        - **Make available to users as a required update**: the device will automatically install the update based on device settings.
        - **Make available to users as an optional update**: selected updates are made available to users as an optional update. The rollout settings still control when the update is available to the device but then the user must choose to install the update before it is installed on the device. This option requires a license for Windows Autopatch.
-1. Under **Rollout options**, configure how and when the update is made available to devices that receive this policy. For more information, see [Rollout options for Windows Updates](rollout-options.md).
+1. Under **Rollout options**, configure how and when the update is made available to devices that receive this policy. For more information, see [Rollout options for Windows Updates](configure-rollout-options.md).
 1. Select **Next**
 1. Under **Assignments**, assign the policy to one or more device groups. Select **Next** to continue.
 1. Under **Review + create**, review the settings. When ready to save the policy, select **Create**.
@@ -115,7 +115,7 @@ To prevent this initial delay from impacting your co-managed devices:
 1. For **Deployment settings**, enter a name and a description for the policy. Then, specify the feature update you want devices to be running.
 1. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you've selected, or a newer version, won't be offered the update.\
    Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** tab > **Feature Updates report**. Select the policy you created and then generate the report.
-1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](feature-updates-reports.md#accessing-feature-updates-reports).
+1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](monitor-feature-updates.md#accessing-feature-updates-reports).
 1. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 ## Move from update ring deferrals to feature update policies
@@ -139,13 +139,13 @@ If a device scans for updates after a deferral is removed but before Windows Upd
 Use the following process to ensure Windows Update processes the feature update policy before feature update deferrals are removed:
 
 1. In the Microsoft Intune admin center, create a feature update policy that targets the desired Windows version and assign it to the appropriate devices. After the policy is assigned, allow several minutes for Windows Update to process the policy.
-1. Review the [Windows feature updates (Organizational)](feature-updates-reports.md#accessing-feature-updates-reports) report and verify that targeted devices show a state of **OfferReady**. This state indicates that Windows Update has completed policy processing.
-1. After all targeted devices report **OfferReady**, update the applicable [update ring policy](update-rings.md) and set **Feature update deferral period (days)** to **0**.
+1. Review the [Windows feature updates (Organizational)](monitor-feature-updates.md#accessing-feature-updates-reports) report and verify that targeted devices show a state of **OfferReady**. This state indicates that Windows Update has completed policy processing.
+1. After all targeted devices report **OfferReady**, update the applicable [update ring policy](manage-update-rings.md) and set **Feature update deferral period (days)** to **0**.
 
 ## Next steps
 
-- [Rollout options for Windows Updates](rollout-options.md)
-- [Reports for Windows Feature Update Policies](feature-updates-reports.md)
+- [Rollout options for Windows Updates](configure-rollout-options.md)
+- [Reports for Windows Feature Update Policies](monitor-feature-updates.md)
 
 <!-- admin center links -->
 

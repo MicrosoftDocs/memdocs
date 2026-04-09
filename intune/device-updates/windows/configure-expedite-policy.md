@@ -17,7 +17,7 @@ Not all updates are eligible for expediting. Only supported Windows security upd
 ## Before you begin
 
 > [!div class="checklist"]
-> - Ensure your environment meets the requirements in [Windows quality updates overview](quality-updates.md#prerequisites).
+> - Ensure your environment meets the requirements in [Windows quality updates overview](manage-quality-updates.md#prerequisites).
 > - Although you're not required to modify existing settings, we recommend configuring various settings to support a smoother update process. To help avoid conflicts or configurations that can block the installation of expedited updates, configure devices as follows. You can use the *update ring policies* to manage these settings.
 >
 >    | Update ring setting       | Recommended value        |
@@ -213,8 +213,8 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [update ring policies](update-rings.md)
-- Configure [feature update policies](feature-update-policy.md)
+- Configure [update ring policies](manage-update-rings.md)
+- Configure [feature update policies](configure-feature-update-policy.md)
 - View [Windows release information](/windows/release-information/)
 
 <!-- admin center links -->

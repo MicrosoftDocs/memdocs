@@ -24,7 +24,7 @@ You can configure if hotpatch is enabled for you devices using either a tenant l
 
 ## Prerequisites
 
-Hotpatch has the same [prerequisites](quality-updates.md#prerequisites) as Windows quality update policies. This section highlights additional prerequisites specific to hotpatch.
+Hotpatch has the same [prerequisites](manage-quality-updates.md#prerequisites) as Windows quality update policies. This section highlights additional prerequisites specific to hotpatch.
 
 :::row:::
 :::column span="1":::

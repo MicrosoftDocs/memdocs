@@ -5,57 +5,57 @@ items:
 - name: Update ring policies
   items:
   - name: Get started
-    href: update-rings.md
+    href: manage-update-rings.md
     displayName: windows updates, rings
   - name: Policy settings
-    href: update-ring-policy-settings.md
+    href: ref-update-ring-settings.md
     displayName: windows updates, rings
   - name: Reports
-    href: update-rings-reports.md
+    href: monitor-update-rings.md
     displayName: windows updates, rings
 - name: Manage Windows feature updates
   items:
   - name: Get started
-    href: feature-updates.md
+    href: manage-feature-updates.md
     displayName: windows feature updates
   - name: Configure feature update policies
-    href: feature-update-policy.md
+    href: configure-feature-update-policy.md
     displayName: windows quality updates
   - name: Rollout options
-    href: rollout-options.md
+    href: configure-rollout-options.md
     displayName: windows updates
   - name: Upgrade Windows 10 devices
-    href: feature-updates-windows-10.md
+    href: upgrade-to-windows-11.md
   - name: Feature update policies reports
-    href: feature-updates-reports.md
+    href: monitor-feature-updates.md
     displayName: windows feature updates
   - name: Feature updates compatibility reports
-    href: compatibility-reports.md
+    href: monitor-compatibility.md
     displayName: windows updates, reports
 - name: Manage Windows quality updates
   items:
   - name: Get started
-    href: quality-updates.md
+    href: manage-quality-updates.md
     displayName: windows quality updates
   - name: Use hotpatch with quality updates
-    href: hotpatch.md
+    href: configure-hotpatch.md
     displayName: windows quality updates
   - name: Expedite Windows quality updates
-    href: expedite-policy.md
+    href: configure-expedite-policy.md
     displayName: windows quality updates
   - name: Monitor and report on Windows quality updates
-    href: quality-updates-reports.md
+    href: monitor-quality-updates.md
     displayName: windows quality updates
 - name: Manage Windows driver updates
   items:
   - name: Get started
-    href: driver-updates.md
+    href: manage-driver-updates.md
     displayName: windows driver updates
   - name: Configure driver update policies
-    href: driver-update-policy.md
+    href: configure-driver-update-policy.md
     displayName: windows driver updates
   - name: Driver update policies reports
-    href: driver-updates-reports.md
+    href: monitor-driver-updates.md
     displayName: windows updates
   - name: Driver updates FAQs
     href: driver-updates-faq.yml

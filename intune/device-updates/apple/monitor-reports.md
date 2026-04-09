@@ -51,7 +51,7 @@ In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Device ma
 
 The following image shows a blank summary report with no device details available, captured from a newly provisioned Intune tenant:
 
-:::image type="content" source="images/apple-update-summary-report.png " alt-text="Screen capture that shows the Apple software update Summary view.":::
+:::image type="content" source="media/monitor-reports/update-summary-report.png " alt-text="Screen capture that shows the Apple software update Summary view.":::
 
 # [**Organizational report**](#tab/organizational)
 
@@ -71,7 +71,7 @@ This report supports filters to focus results by platforms and update installati
 
 The following image shows a blank report with no device details available, captured from a newly provisioned Intune tenant.
 
-:::image type="content" source="images/apple-software-update-report.png" alt-text="Screen capture that shows the Apple software update report.":::
+:::image type="content" source="media/monitor-reports/software-update-report.png" alt-text="Screen capture that shows the Apple software update report.":::
 
 # [**Failures report**](#tab/failures)
 
@@ -108,7 +108,7 @@ In the per-device view, Intune displays the following information about the devi
 
 The following example is taken from the *macOS software updates* report:
 
-:::image type="content" source="images/per-device-macos-software-updates.png" alt-text="Screen capture that shows the per-device report for a macOS device":::
+:::image type="content" source="media/monitor-reports/per-device-macos-software-updates.png" alt-text="Screen capture that shows the per-device report for a macOS device":::
 
 ---
 

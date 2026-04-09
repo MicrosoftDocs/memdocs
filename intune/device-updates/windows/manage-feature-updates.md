@@ -10,7 +10,7 @@ ms.reviewer: davidmeb; bryanke; davguy
 
 Windows feature updates are periodic releases that introduce new Windows capabilities, improvements, and changes to existing functionality. These updates typically ship once per year and represent a full operating system upgrade, such as moving a device from one Windows version to a newer release. Because feature updates can affect user experience, application compatibility, and device readiness, organizations often deploy them using controlled and phased rollouts.
 
-In Microsoft Intune, Windows feature updates are managed through **feature update policies**, which provide a dedicated policy surface for controlling which Windows version devices are offered and when that version can install. This policy uses cloud‑based update orchestration and can be used alongside other Windows update policies, such as quality updates and driver updates. Depending on your deployment model, feature updates may be managed manually through Intune or automatically through Windows Autopatch. Client‑side update behavior—such as restart experience and installation timing—continues to be influenced by standard Windows Update policy settings, including [update rings](update-rings.md) and [Windows Update client policies](/windows/deployment/update/waas-configure-wufb).
+In Microsoft Intune, Windows feature updates are managed through **feature update policies**, which provide a dedicated policy surface for controlling which Windows version devices are offered and when that version can install. This policy uses cloud‑based update orchestration and can be used alongside other Windows update policies, such as quality updates and driver updates. Depending on your deployment model, feature updates may be managed manually through Intune or automatically through Windows Autopatch. Client‑side update behavior—such as restart experience and installation timing—continues to be influenced by standard Windows Update policy settings, including [update rings](manage-update-rings.md) and [Windows Update client policies](/windows/deployment/update/waas-configure-wufb).
 
 Feature update policies allow you to **lock devices to a specific Windows release** or **target an upgrade to a newer version** while preventing devices from moving beyond that version. This approach helps ensure version compliance, reduce unexpected upgrades, and coordinate OS updates with application readiness and organizational rollout plans.
 
@@ -32,7 +32,7 @@ When planning feature update deployments, consider how feature update policies i
 
 If a device is targeted by both a feature update policy and an update ring policy, review the update ring configuration to avoid unintended delays:
 
-- Set **Feature update deferral period (days)** to **0** so deferrals in update rings don't delay feature updates controlled by the feature update policy. For more information, see [Move from update ring deferrals to feature update policies](feature-update-policy.md#move-from-update-ring-deferrals-to-feature-update-policies).
+- Set **Feature update deferral period (days)** to **0** so deferrals in update rings don't delay feature updates controlled by the feature update policy. For more information, see [Move from update ring deferrals to feature update policies](configure-feature-update-policy.md#move-from-update-ring-deferrals-to-feature-update-policies).
 - Ensure feature updates in the update ring aren't paused.
 - Client‑side behaviors such as restart experience, deadlines, and active hours continue to be governed by update rings and Windows Update client settings.
 
@@ -42,7 +42,7 @@ Feature update policies don't apply during Windows Autopilot out‑of‑box expe
 
 When devices check in with the Windows Update service, group membership is evaluated against the security groups assigned to feature update policies. Any configured holds are enforced during this evaluation.
 
-Feature update policies also support scheduled and gradual deployments using rollout options. For details on configuring rollout timing, see [Rollout options for Windows Updates](rollout-options.md).
+Feature update policies also support scheduled and gradual deployments using rollout options. For details on configuring rollout timing, see [Rollout options for Windows Updates](configure-rollout-options.md).
 
 ### Working with Windows Autopatch
 
@@ -58,4 +58,4 @@ As a result, when a feature update policy no longer applies to a device, that de
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn how to manage Windows feature update policies](feature-update-policy.md)
+> [Learn how to manage Windows feature update policies](configure-feature-update-policy.md)

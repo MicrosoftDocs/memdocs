@@ -20,7 +20,7 @@ To request help for endpoint analytics, use the **Help and Support** option in t
 
 If the issue is more broadly for Intune than just endpoint analytics, follow the instructions in the [How to get support in Microsoft Intune](../fundamentals/it-pro-support/get-support-admin-center.md) article to open a new support request. For an issue that is more broadly for Configuration Manager than just endpoint analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request.
 
-[![Help and support in Microsoft Endpoint Manager](images/help.png)](images/help.png#lightbox)
+[![Help and support in Microsoft Endpoint Manager](media/support/support-options.png)](media/support/support-options.png#lightbox)
 
 ## Share product feedback
 
