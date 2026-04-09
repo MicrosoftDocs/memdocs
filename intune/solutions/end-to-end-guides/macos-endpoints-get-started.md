@@ -447,7 +447,7 @@ When you configure these settings, you enforce and restrict the behavior in the 
 
 - **Option 3 (not recommended)** - End users manually install the updates. This approach relies on end users to decide when to install the updates. And, they can install an update that your organization doesn't approve.
 
-For more information on planning your macOS update strategy, go to [Software updates planning guide for managed macOS devices in Microsoft Intune](../../device-updates/apple/software-updates-guide-macos.md).
+For more information on planning your macOS update strategy, go to [Software updates planning guide for managed macOS devices in Microsoft Intune](../../device-updates/apple/planning-guide-macos.md).
 
 ### Guest account
 

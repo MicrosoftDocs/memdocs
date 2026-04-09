@@ -869,7 +869,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 We're introducing a new **Update Substate** in service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
 
-For more information, see [Use Windows Update for Business reports](../../device-updates/windows/feature-updates-reports.md)
+For more information, see [Use Windows Update for Business reports](../../device-updates/windows/monitor-feature-updates.md)
 
 ## Week of February 24, 2025 (Service release 2502)
 
@@ -1969,7 +1969,7 @@ Add-on capabilities:
 Plan 2 capabilities:
 
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+- [Firmware-over-the-air update](../../device-updates/android/setup-zebra-lifeguard.md)
 - [Specialty devices management](../fundamentals/specialty-devices-with-intune.md)
 
 For more information, see:
@@ -2595,7 +2595,7 @@ Feature updates can now be made available to end users as **Optional** updates, 
 
 End users can easily opt in to try out the next Feature update and provide feedback. When it's time to roll out the feature as a **Required** update, admins can change the setting on the policy and update the rollout settings so that the update is deployed as a **Required** update to devices that don't yet have it installed.
 
-For more information about optional feature updates, see [Feature updates policy in Intune](../../device-updates/windows/feature-updates.md).
+For more information about optional feature updates, see [Feature updates policy in Intune](../../device-updates/windows/manage-feature-updates.md).
 
 Applies to:
 
@@ -2783,7 +2783,7 @@ You can drill down further in the report for each quality update that aggregates
 
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
-For more information see [Windows update distribution report](../../device-updates/windows/quality-updates-reports.md#windows-update-distribution-report).
+For more information see [Windows update distribution report](../../device-updates/windows/monitor-quality-updates.md#windows-update-distribution-report).
 
 Applies to:
 
@@ -3093,7 +3093,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/quality-updates.md).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/manage-quality-updates.md).
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
@@ -3156,7 +3156,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/quality-updates.md).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/manage-quality-updates.md).
 
 ### Intune apps
 
@@ -3450,7 +3450,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For more information, see [Bulk driver updates](../../device-updates/windows/driver-update-policy.md#bulk-driver-updates).
+For more information, see [Bulk driver updates](../../device-updates/windows/configure-driver-update-policy.md#bulk-driver-updates).
 
 #### App Control for Business policy limitation is resolved<!-- 19548950 -->
 
@@ -4022,7 +4022,7 @@ For more information, see [Microsoft Defender for Endpoint Security settings man
 
 The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins don't need to create or manage groups of eligible and non-eligible devices.
 
-For more information on feature updates, see [Feature updates for Windows 10 and later](../../device-updates/windows/feature-updates.md).
+For more information on feature updates, see [Feature updates for Windows 10 and later](../../device-updates/windows/manage-feature-updates.md).
 
 ## Week of October 30, 2023
 
@@ -4564,7 +4564,7 @@ With this change for reports for Windows update rings, when you select an update
   - **Per setting status**: This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings might not be successfully deploying to your organization.
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
 
-For more information, see [Reports for update rings policies](../../device-updates/windows/update-rings-reports.md).
+For more information, see [Reports for update rings policies](../../device-updates/windows/monitor-update-rings.md).
 
 ### Role-based access
 
