@@ -13,7 +13,7 @@ Set up secure, remote access to work emails, files, and apps on your personal Ma
 
 During initial setup, the Company Portal app requires you to sign in and authenticate with your work account. Company Portal then informs you of any device settings you need to change to meet your organization's requirements. For example, your organization could require you to make your device PIN longer or require you to update your operating system. After you enroll your device, Company Portal helps you maintain the secure work access. The app notifies you of new policies and requirements and gives you the chance to adjust your settings so that you can continue to work uninterrupted.
 
-For more information about the Company Portal app for macOS, see [What happens when I install the Company Portal app and enroll my device?](enrollment-effects-macos.md)
+For more information about the Company Portal app for macOS, see [What happens when I install the Company Portal app and enroll my device?](effects-macos.md)
 
 ## Before you begin
 Your device must be running macOS 11 or later.

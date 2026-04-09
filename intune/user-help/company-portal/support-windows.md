@@ -10,7 +10,7 @@ ms.reviewer:
 Go to  **Help & support** in the Intune Company Portal app for Windows to troubleshoot app and access problems.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the Company Portal app highlighting the "Help & support" option and "Help & support" page.](./media/company-portal-support-windows/company-portal-windows-support.png)
+   > ![Example screenshot of the Company Portal app highlighting the "Help & support" option and "Help & support" page.](./media/support-windows/company-portal-windows-support.png)
 
 From Help & support, you can:
 

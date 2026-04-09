@@ -67,6 +67,6 @@ If you're an IT support person and want to configure and manage FileVault encryp
 
 You can always retrieve your key from the Company Portal website, the Intune app, and the Company Portal apps for iOS and Android, and use it to access your Mac device. To learn how to retrieve your recovery key, see [Get recovery key](collect-recovery-key-company-portal-website.md).
 
-Find out what else you can do in the Company Portal website. See [Using the Intune Company Portal website](../company-portal/company-portal-website.md) for a list of actions.
+Find out what else you can do in the Company Portal website. See [Using the Intune Company Portal website](../company-portal/website.md) for a list of actions.
 
 Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

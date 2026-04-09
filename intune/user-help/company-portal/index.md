@@ -23,7 +23,7 @@ Install Company Portal for Android from these stores:
 
 If the app stores listed above are unavailable, or you're using a device that doesn't support Google Mobile Services, you can [download Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or software fixes automatically. Be sure to regularly update and patch the app yourself.
 
-Google Play Store is not available in People's Republic of China. You can install the Company Portal app from select Chinese app marketplaces instead. For more information, see [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md).
+Google Play Store is not available in People's Republic of China. You can install the Company Portal app from select Chinese app marketplaces instead. For more information, see [Install Company Portal app in People's Republic of China](install-android-china.md).
 
 ### iOS
 Install Company Portal for iOS from the [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358).
@@ -78,7 +78,7 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 3. Write down the one-time, sign-in code that appears on screen (or just keep this screen handy for the next couple steps).
 
-   ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/company-portal/cp_ios_aad_signin_after_1804_006.png)
+   ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/index/cp_ios_aad_signin_after_1804_006.png)
 
 3. Switch to your other device (the one you're using to authenticate) and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
 
