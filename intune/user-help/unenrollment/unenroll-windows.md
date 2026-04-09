@@ -16,7 +16,7 @@ Remove a registered, Windows device from management when you no longer want or n
 
 After you unregister the device, you lose device access to school or work resources.
 
-Make sure to read [What happens if you remove device from Intune](remove-enrollment-windows.md#what-happens-if-you-remove-device-from-intune) before unenrolling your device.
+Make sure to read [What happens if you remove device from Intune](unenroll-windows.md#what-happens-if-you-remove-device-from-intune) before unenrolling your device.
 
 ## What happens if you remove device from Intune
 This section describes how your device and access to work or school will change after you remove your device from Intune.
