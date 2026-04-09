@@ -63,7 +63,7 @@ The following security areas can be managed through these policies:
   - **macOS** - Manage [FileVault](../protect/encrypt-devices-filevault.md) for full disk encryption.
 
 - **Software updates** - Control when and how devices receive updates:
-  - **Android** - [FOTA updates](../../device-updates/android/fota-updates.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/zebra-lifeguard-ota-integration.md) for Zebra devices.
+  - **Android** - [FOTA updates](../../device-updates/android/manage-fota.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/setup-zebra-lifeguard.md) for Zebra devices.
   - **iOS/iPadOS and macOS** - [Configure update policies](../../device-updates/apple/index.md) to manage OS versions and update schedules.
   - **Windows** - Configure [Windows Update behaviors](../../device-updates/windows/index.md), schedule updates, and maintain feature update compliance.
 

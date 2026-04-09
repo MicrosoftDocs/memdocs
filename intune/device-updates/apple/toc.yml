@@ -3,11 +3,11 @@ items:
   href: index.md
   displayName: apple updates ios macos
 - name: Software update reports
-  href: reports.md
+  href: monitor-reports.md
   displayName: apple updates ios macos
 - name: Update policies (deprecated)
   items:
   - name: iOS/iPadOS update policies (deprecated)
-    href: software-updates-ios.md
+    href: deprecated-mdm-policies-ios.md
   - name: macOS update policies (deprecated)
-    href: software-updates-macos.md
+    href: deprecated-mdm-policies-macos.md

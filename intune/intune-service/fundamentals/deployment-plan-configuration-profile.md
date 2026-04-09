@@ -144,7 +144,7 @@ Your policy options:
 | Android Enterprise personally owned devices | Not available <br/><br/>Can use [compliance policies](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) to set a minimum patch level, min/max OS version, and more. |
 | iOS/iPadOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
 | macOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
-| Windows client | - [Intune feature updates policy](../../device-updates/windows/feature-updates.md) </br>- [Intune quality updates policy](../../device-updates/windows/quality-updates.md) |
+| Windows client | - [Intune feature updates policy](../../device-updates/windows/manage-feature-updates.md) </br>- [Intune quality updates policy](../../device-updates/windows/manage-quality-updates.md) |
 
 ## Level 1 - Access organization email, connect to VPN or Wi-Fi
 
@@ -486,8 +486,8 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   These policies help you manage firmware updates, which can include software and security patches, feature updates, and other changes to the device's firmware.
 
-  - [Firmware Over-the-Air (FOTA) updates](../../device-updates/android/fota-updates.md)
-  - [Zebra LifeGuard Over-the-Air updates](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+  - [Firmware Over-the-Air (FOTA) updates](../../device-updates/android/manage-fota.md)
+  - [Zebra LifeGuard Over-the-Air updates](../../device-updates/android/setup-zebra-lifeguard.md)
 
   # [Windows](#tab/windows-firmware)
 
