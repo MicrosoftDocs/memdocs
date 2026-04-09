@@ -4337,7 +4337,7 @@
     },
     {
       "source_path": "intune/intune/user-help/device-enrollment-overview-windows.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-overview-windows",
+      "redirect_url": "/intune/user-help/enrollment/overview-windows",
       "redirect_document_id": false
     },
     {
@@ -4347,7 +4347,7 @@
     },
     {
       "source_path": "intune/intune/user-help/effects-of-device-reset-company-portal-ios.md",
-      "redirect_url": "/intune/user-help/unenrollment/device-reset-effects-ios",
+      "redirect_url": "/intune/user-help/device-actions/reset-device-ios",
       "redirect_document_id": false
     },
     {
@@ -4447,22 +4447,22 @@
     },
     {
       "source_path": "intune/intune/user-help/help-support-windows-cpapp.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal-support-windows",
+      "redirect_url": "/intune/user-help/company-portal/support-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios.md",
-      "redirect_url": "/intune/user-help/company-portal/serial-number-ios",
+      "redirect_url": "/intune/user-help/compliance/device-settings-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/index.yml",
-      "redirect_url": "/intune/user-help/enrollment/overview",
+      "redirect_url": "/intune/user-help/enrollment/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/install-a-new-version-of-the-company-portal-app.md",
-      "redirect_url": "/intune/user-help/company-portal/install-company-portal-update",
+      "redirect_url": "/intune/user-help/company-portal/update-app",
       "redirect_document_id": false
     },
     {
@@ -4472,7 +4472,7 @@
     },
     {
       "source_path": "intune/intune/user-help/install-company-portal-android-china.md",
-      "redirect_url": "/intune/user-help/company-portal/install-company-portal-android-china",
+      "redirect_url": "/intune/user-help/company-portal/install-android-china",
       "redirect_document_id": false
     },
     {
@@ -4487,7 +4487,7 @@
     },
     {
       "source_path": "intune/intune/user-help/intune-company-portal-preferences-macos.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal-preferences-macos",
+      "redirect_url": "/intune/user-help/company-portal/manage-preferences-macos",
       "redirect_document_id": false
     },
     {
@@ -4607,7 +4607,7 @@
     },
     {
       "source_path": "intune/intune/user-help/sign-in-to-the-company-portal.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal",
+      "redirect_url": "/intune/user-help/company-portal/index",
       "redirect_document_id": false
     },
     {
@@ -4672,22 +4672,22 @@
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-android.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-android",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-android",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-ios.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-ios",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-macos.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-macos",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-windows.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-windows",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "redirect_document_id": false
     },
     {
@@ -4717,7 +4717,7 @@
     },
     {
       "source_path": "intune/intune/user-help/use-managed-devices-to-get-work-done.md",
-      "redirect_url": "/intune/user-help/enrollment/overview",
+      "redirect_url": "/intune/user-help/enrollment/index",
       "redirect_document_id": false
     },
     {
@@ -4737,12 +4737,12 @@
     },
     {
       "source_path": "intune/intune/user-help/using-the-intune-company-portal-website.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal-website",
+      "redirect_url": "/intune/user-help/company-portal/website",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-effects-macos",
+      "redirect_url": "/intune/user-help/enrollment/effects-macos",
       "redirect_document_id": false
     },
     {
@@ -4752,12 +4752,12 @@
     },
     {
       "source_path": "intune/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-data-visibility",
+      "redirect_url": "/intune/user-help/enrollment/data-visibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/why-enroll-android-device.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-benefits-android",
+      "redirect_url": "/intune/user-help/enrollment/benefits-android",
       "redirect_document_id": false
     },
     {
@@ -5261,88 +5261,88 @@
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/compliance/device-settings-ios",
       "source_path": "intune/user-help/company-portal/serial-number-ios.md",
+      "redirect_url": "/intune/user-help/compliance/device-settings-ios",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/device-actions/reset-device-ios",
       "source_path": "intune/user-help/unenrollment/device-reset-effects-ios.md",
+      "redirect_url": "/intune/user-help/device-actions/reset-device-ios",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/company-portal/index",
       "source_path": "intune/user-help/company-portal/company-portal.md",
+      "redirect_url": "/intune/user-help/company-portal/index",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/company-portal/website",
       "source_path": "intune/user-help/company-portal/company-portal-website.md",
+      "redirect_url": "/intune/user-help/company-portal/website",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/company-portal/manage-preferences-macos",
       "source_path": "intune/user-help/company-portal/company-portal-preferences-macos.md",
+      "redirect_url": "/intune/user-help/company-portal/manage-preferences-macos",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/company-portal/support-windows",
       "source_path": "intune/user-help/company-portal/company-portal-support-windows.md",
+      "redirect_url": "/intune/user-help/company-portal/support-windows",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/company-portal/install-android-china",
       "source_path": "intune/user-help/company-portal/install-company-portal-android-china.md",
+      "redirect_url": "/intune/user-help/company-portal/install-android-china",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/company-portal/update-app",
       "source_path": "intune/user-help/company-portal/install-company-portal-update.md",
+      "redirect_url": "/intune/user-help/company-portal/update-app",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/enrollment/index",
       "source_path": "intune/user-help/enrollment/overview.md",
+      "redirect_url": "/intune/user-help/enrollment/index",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/enrollment/benefits-android",
       "source_path": "intune/user-help/enrollment/enrollment-benefits-android.md",
+      "redirect_url": "/intune/user-help/enrollment/benefits-android",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/enrollment/data-visibility",
       "source_path": "intune/user-help/enrollment/enrollment-data-visibility.md",
+      "redirect_url": "/intune/user-help/enrollment/data-visibility",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/enrollment/effects-macos",
       "source_path": "intune/user-help/enrollment/enrollment-effects-macos.md",
+      "redirect_url": "/intune/user-help/enrollment/effects-macos",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/enrollment/overview-windows",
       "source_path": "intune/user-help/enrollment/enrollment-overview-windows.md",
+      "redirect_url": "/intune/user-help/enrollment/overview-windows",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/unenrollment/unenroll-android",
       "source_path": "intune/user-help/unenrollment/remove-enrollment-android.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-android",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/unenrollment/unenroll-ios",
       "source_path": "intune/user-help/unenrollment/remove-enrollment-ios.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-ios",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/unenrollment/unenroll-macos",
       "source_path": "intune/user-help/unenrollment/remove-enrollment-macos.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-macos",
       "redirect_document_id": false
     },
     {
-      "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "source_path": "intune/user-help/unenrollment/remove-enrollment-windows.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "redirect_document_id": false
     }
   ]
