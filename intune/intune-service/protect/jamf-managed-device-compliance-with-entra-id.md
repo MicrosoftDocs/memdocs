@@ -242,4 +242,4 @@ Second, On the affected device:
 ## Next steps
 
 - [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
-- [Data Jamf sends to Intune](../../privacy/data-sharing/jamf-to-intune.md)
+- [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)

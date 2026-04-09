@@ -42,7 +42,7 @@ You can use *Windows Configuration Designer* or the *Set up School PCs app* to c
 
 - [What is Set up School PCs?](/education/windows/use-set-up-school-pcs-app)
 - [Windows Configuration Designer](/windows/configuration/provisioning-packages/provisioning-install-icd)
-- [Bulk enrollment for Windows devices](/intune/intune-service/enrollment/windows-bulk-enroll)
+- [Bulk enrollment for Windows devices](/intune/device-enrollment/windows/create-bulk-package)
 
 After you create the provisioning package (PPKG) you can copy it to one or more USB drives, insert them into devices and power them on to start the provisioning process.
 

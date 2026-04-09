@@ -95,7 +95,7 @@ Microsoft Entra ID, previously known as Azure Active Directory (Azure AD), is a 
 For more information, go to:
 
 - [Add users](../intune-service/fundamentals/users-add.md)
-- [Set up auto enrollment](../intune-service/enrollment/windows-enroll.md)
+- [Set up auto enrollment](../device-enrollment/windows/enable-automatic-mdm.md)
 - [Learn about Conditional Access and Intune](../intune-service/protect/conditional-access.md)
 
 ## Windows Autopilot

@@ -145,7 +145,7 @@ As you set up apps and app policies, think about your organization's requirement
 
 Enrolling devices allows them to receive the policies you create, so have your Microsoft Entra user groups and device groups ready.
 
-For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-ios-ipados.md).
+For information about each enrollment method and how to choose one that's right for your organization, see the [iOS/iPadOS device enrollment guide for Microsoft Intune](../../device-enrollment/apple/guide-ios-ipados.md).
 
 | Task | Detail |
 | ---- | ------ |

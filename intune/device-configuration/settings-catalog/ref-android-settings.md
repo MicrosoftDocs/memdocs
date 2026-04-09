@@ -74,7 +74,7 @@ These settings apply to the Android Enterprise enrollment types where Intune con
 - Dedicated devices
 - Corporate-owned devices with a work profile
 
-To learn more about the different Android enrollment types, see [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+To learn more about the different Android enrollment types, see [Android Enrollment guide](../../device-enrollment/android/guide.md).
 
 ### Device restriction
 

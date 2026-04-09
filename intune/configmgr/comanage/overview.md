@@ -110,7 +110,7 @@ Enabling co-management itself doesn't require that you onboard your site with Mi
 
 - [Set up Intune](../../intune-service/fundamentals/deployment-plan-setup.md)
 
-- [Enable Windows automatic enrollment](../../intune-service/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
+- [Enable Windows automatic enrollment](../../device-enrollment/windows/enable-automatic-mdm.md#enable-windows-automatic-enrollment)
 
 ### Windows
 

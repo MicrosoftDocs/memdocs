@@ -17,7 +17,7 @@ Certain Android devices require you to create a startup PIN for security purpose
 
 This section only applies to the Company Portal app. Some devices will give you a choice between encrypting the entire device or just the used space. Choose the option to encrypt the entire device. If you selected to encrypt only the used space:
 
-1. [Remove this device from the Company Portal](../unenrollment/remove-enrollment-android.md).
+1. [Remove this device from the Company Portal](../unenrollment/unenroll-android.md).
 2. Decrypt the used space.
 3. Encrypt the entire device.
 4. Re-enroll the device.
