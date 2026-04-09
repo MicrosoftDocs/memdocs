@@ -232,7 +232,7 @@
     },
     {
       "source_path": "intune/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "redirect_url": "/intune/governance/configure-cleanup-rules",
       "redirect_document_id": false
     },
     {
@@ -422,7 +422,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "redirect_url": "/intune/governance/configure-cleanup-rules",
       "redirect_document_id": false
     },
     {
@@ -482,37 +482,37 @@
     },
     {
       "source_path": "intune/intune-service/protect/data-apple-sends-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/apple-to-intune",
+      "redirect_url": "/intune/privacy/data-sharing/ref-apple-to-intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/data-enable-windows-data.md",
-      "redirect_url": "/intune/privacy/windows-diagnostic-data",
+      "redirect_url": "/intune/privacy/enable-windows-diagnostic-data",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/data-google-sends-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/google-to-intune",
+      "redirect_url": "/intune/privacy/data-sharing/ref-google-to-intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/data-intune-sends-to-apple.md",
-      "redirect_url": "/intune/privacy/data-sharing/intune-to-apple",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/data-intune-sends-to-google.md",
-      "redirect_url": "/intune/privacy/data-sharing/intune-to-google",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-google",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/data-intune-sends-to-zebra.md",
-      "redirect_url": "/intune/privacy/data-sharing/intune-to-zebra",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-zebra",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/data-jamf-sends-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/jamf-to-intune",
+      "redirect_url": "/intune/privacy/data-sharing/ref-jamf-to-intune",
       "redirect_document_id": false
     },
     {
@@ -542,12 +542,12 @@
     },
     {
       "source_path": "intune/intune-service/protect/microsoft-cloud-pki-delete.md",
-      "redirect_url": "/intune/cloud-pki/delete",
+      "redirect_url": "/intune/cloud-pki/delete-ca",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/microsoft-cloud-pki-deployment.md",
-      "redirect_url": "/intune/cloud-pki/deploy",
+      "redirect_url": "/intune/cloud-pki/deployment-models",
       "redirect_document_id": false
     },
     {
@@ -557,7 +557,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/microsoft-cloud-pki-monitor.md",
-      "redirect_url": "/intune/cloud-pki/monitor",
+      "redirect_url": "/intune/cloud-pki/monitor-certificates",
       "redirect_document_id": false
     },
     {
@@ -567,7 +567,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/privacy-data-audit-export-delete.md",
-      "redirect_url": "/intune/privacy/personal-data/audit-export-delete",
+      "redirect_url": "/intune/privacy/personal-data/manage-data-requests",
       "redirect_document_id": false
     },
     {
@@ -587,7 +587,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/privacy-data-view-correct.md",
-      "redirect_url": "/intune/privacy/personal-data/view-correct",
+      "redirect_url": "/intune/privacy/personal-data/data-visibility",
       "redirect_document_id": false
     },
     {
@@ -3867,7 +3867,7 @@
     },
     {
       "source_path": "intune/intune/protect/privacy-data-audit-export-delete.md",
-      "redirect_url": "/intune/intune-service/protect/privacy-data-audit-export-delete",
+      "redirect_url": "/intune/privacy/personal-data/manage-data-requests",
       "redirect_document_id": false
     },
     {
@@ -3887,7 +3887,7 @@
     },
     {
       "source_path": "intune/intune/protect/privacy-data-view-correct.md",
-      "redirect_url": "/intune/intune-service/protect/privacy-data-view-correct",
+      "redirect_url": "/intune/privacy/personal-data/data-visibility",
       "redirect_document_id": false
     },
     {
@@ -4337,7 +4337,7 @@
     },
     {
       "source_path": "intune/intune/user-help/device-enrollment-overview-windows.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-overview-windows",
+      "redirect_url": "/intune/user-help/enrollment/overview-windows",
       "redirect_document_id": false
     },
     {
@@ -4347,7 +4347,7 @@
     },
     {
       "source_path": "intune/intune/user-help/effects-of-device-reset-company-portal-ios.md",
-      "redirect_url": "/intune/user-help/unenrollment/device-reset-effects-ios",
+      "redirect_url": "/intune/user-help/device-actions/reset-device-ios",
       "redirect_document_id": false
     },
     {
@@ -4447,22 +4447,22 @@
     },
     {
       "source_path": "intune/intune/user-help/help-support-windows-cpapp.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal-support-windows",
+      "redirect_url": "/intune/user-help/company-portal/support-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios.md",
-      "redirect_url": "/intune/user-help/company-portal/serial-number-ios",
+      "redirect_url": "/intune/user-help/compliance/device-settings-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/index.yml",
-      "redirect_url": "/intune/user-help/enrollment/overview",
+      "redirect_url": "/intune/user-help/enrollment/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/install-a-new-version-of-the-company-portal-app.md",
-      "redirect_url": "/intune/user-help/company-portal/install-company-portal-update",
+      "redirect_url": "/intune/user-help/company-portal/update-app",
       "redirect_document_id": false
     },
     {
@@ -4472,7 +4472,7 @@
     },
     {
       "source_path": "intune/intune/user-help/install-company-portal-android-china.md",
-      "redirect_url": "/intune/user-help/company-portal/install-company-portal-android-china",
+      "redirect_url": "/intune/user-help/company-portal/install-android-china",
       "redirect_document_id": false
     },
     {
@@ -4487,7 +4487,7 @@
     },
     {
       "source_path": "intune/intune/user-help/intune-company-portal-preferences-macos.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal-preferences-macos",
+      "redirect_url": "/intune/user-help/company-portal/manage-preferences-macos",
       "redirect_document_id": false
     },
     {
@@ -4607,7 +4607,7 @@
     },
     {
       "source_path": "intune/intune/user-help/sign-in-to-the-company-portal.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal",
+      "redirect_url": "/intune/user-help/company-portal/index",
       "redirect_document_id": false
     },
     {
@@ -4672,22 +4672,22 @@
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-android.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-android",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-android",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-ios.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-ios",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-macos.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-macos",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/unenroll-your-device-from-intune-windows.md",
-      "redirect_url": "/intune/user-help/unenrollment/remove-enrollment-windows",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "redirect_document_id": false
     },
     {
@@ -4717,7 +4717,7 @@
     },
     {
       "source_path": "intune/intune/user-help/use-managed-devices-to-get-work-done.md",
-      "redirect_url": "/intune/user-help/enrollment/overview",
+      "redirect_url": "/intune/user-help/enrollment/index",
       "redirect_document_id": false
     },
     {
@@ -4737,12 +4737,12 @@
     },
     {
       "source_path": "intune/intune/user-help/using-the-intune-company-portal-website.md",
-      "redirect_url": "/intune/user-help/company-portal/company-portal-website",
+      "redirect_url": "/intune/user-help/company-portal/website",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-effects-macos",
+      "redirect_url": "/intune/user-help/enrollment/effects-macos",
       "redirect_document_id": false
     },
     {
@@ -4752,12 +4752,12 @@
     },
     {
       "source_path": "intune/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-data-visibility",
+      "redirect_url": "/intune/user-help/enrollment/data-visibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/user-help/why-enroll-android-device.md",
-      "redirect_url": "/intune/user-help/enrollment/enrollment-benefits-android",
+      "redirect_url": "/intune/user-help/enrollment/benefits-android",
       "redirect_document_id": false
     },
     {
@@ -4858,6 +4858,491 @@
     {
       "source_path": "intune/intune-service/user-help/index.yml",
       "redirect_url": "/intune/user-help",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-aosp-corporate-owned-user-associated-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-aosp-corporate-user-associated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-aosp-corporate-owned-userless-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-aosp-corporate-userless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-corporate-owned-work-profile-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-corporate-work-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-dedicated-devices-fully-managed-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/ref-corporate-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-enroll-device-administrator.md",
+      "redirect_url": "/intune/device-enrollment/android/manage-device-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-enterprise-overview.md",
+      "redirect_url": "/intune/device-enrollment/android/enterprise-work-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-fully-managed-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-fully-managed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-kiosk-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-dedicated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-move-device-admin-work-profile.md",
+      "redirect_url": "/intune/device-enrollment/android/migrate-device-admin-to-work-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-samsung-knox-mobile-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-samsung-knox-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/android-work-profile-enroll.md",
+      "redirect_url": "/intune/device-enrollment/android/setup-personal-work-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/connect-intune-android-enterprise.md",
+      "redirect_url": "/intune/device-enrollment/android/connect-managed-google-play",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-staging-overview.md",
+      "redirect_url": "/intune/device-enrollment/android/device-staging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/move-to-android-mobile-application-management.md",
+      "redirect_url": "/intune/device-enrollment/android/migrate-to-application-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-account-driven-user-enrollment.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-account-driven-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-configurator-enroll-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-configurator-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-corporate-owned-userless-enroll.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-corporate-userless",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-mdm-push-certificate-get.md",
+      "redirect_url": "/intune/device-enrollment/apple/create-mdm-push-certificate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-school-manager-set-up-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/school-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-school-manager-step-1.md",
+      "redirect_url": "/intune/device-enrollment/apple/school-manager-step-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-school-manager-step-2.md",
+      "redirect_url": "/intune/device-enrollment/apple/school-manager-step-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-school-manager-step-3.md",
+      "redirect_url": "/intune/device-enrollment/apple/school-manager-step-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/apple-user-enrollment-with-company-portal.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-user-company-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/automated-device-enrollment-authentication.md",
+      "redirect_url": "/intune/device-enrollment/apple/ref-automated-authentication-methods",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/automated-device-enrollment-shared-device-mode.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-automated-shared-device-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/backup-restore-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/backup-restore-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-enrollment-direct-enroll-macos.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-direct-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-enrollment-program-enroll-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-automated-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-enrollment-program-enroll-macos.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-automated-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-enrollment-shared-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/shared-device-solutions-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-enrollment-shared-ipad.md",
+      "redirect_url": "/intune/device-enrollment/apple/shared-ipad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-supervised-mode.md",
+      "redirect_url": "/intune/device-enrollment/apple/enable-supervised-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/ios-device-enrollment.md",
+      "redirect_url": "/intune/device-enrollment/apple/personal-device-options-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/ios-user-enrollment-supported-actions.md",
+      "redirect_url": "/intune/device-enrollment/apple/user-enrollment-methods-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/macos-enroll.md",
+      "redirect_url": "/intune/device-enrollment/apple/methods-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/macos-laps.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-laps-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/set-up-just-in-time-registration.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-just-in-time-registration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/tutorial-use-device-enrollment-program-enroll-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/tutorial-automated-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/web-based-device-enrollment-ios.md",
+      "redirect_url": "/intune/device-enrollment/apple/setup-web-based-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/quickstart-enroll-windows-device.md",
+      "redirect_url": "/intune/device-enrollment/windows/quickstart-first-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/quickstart-setup-auto-enrollment.md",
+      "redirect_url": "/intune/device-enrollment/windows/quickstart-automatic-mdm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/windows-backup-restore.md",
+      "redirect_url": "/intune/device-enrollment/windows/enable-backup-restore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/windows-bulk-enroll.md",
+      "redirect_url": "/intune/device-enrollment/windows/create-bulk-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/windows-enroll.md",
+      "redirect_url": "/intune/device-enrollment/windows/enable-automatic-mdm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/windows-enrollment-attestation.md",
+      "redirect_url": "/intune/device-enrollment/windows/attestation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/windows-enrollment-create-cname.md",
+      "redirect_url": "/intune/device-enrollment/windows/create-cname-autodiscovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/windows-enrollment-status.md",
+      "redirect_url": "/intune/device-enrollment/windows/setup-status-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/chrome-enterprise-connector-configure.md",
+      "redirect_url": "/intune/device-enrollment/configure-chrome-enterprise-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/corporate-identifiers-add.md",
+      "redirect_url": "/intune/device-enrollment/add-corporate-identifiers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/create-device-limit-restrictions.md",
+      "redirect_url": "/intune/device-enrollment/create-device-limit-restrictions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/create-device-platform-restrictions.md",
+      "redirect_url": "/intune/device-enrollment/create-platform-restrictions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-enrollment-manager-enroll.md",
+      "redirect_url": "/intune/device-enrollment/setup-enrollment-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-limit-intune-azure.md",
+      "redirect_url": "/intune/device-enrollment/limits-intune-entra",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/enrollment-notifications.md",
+      "redirect_url": "/intune/device-enrollment/setup-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/enrollment-restrictions-set.md",
+      "redirect_url": "/intune/device-enrollment/restrictions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/enrollment-time-grouping.md",
+      "redirect_url": "/intune/device-enrollment/setup-time-grouping",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/multi-factor-authentication.md",
+      "redirect_url": "/intune/device-enrollment/configure-multifactor-authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/terms-and-conditions-create.md",
+      "redirect_url": "/intune/device-enrollment/create-terms-and-conditions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/view-enrollment-reports.md",
+      "redirect_url": "/intune/device-enrollment/monitor-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/enrollment/device-group-mapping.md",
+      "redirect_url": "/intune/device-management/create-device-categories",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/guide"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-android.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/android/guide"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/apple/guide-ios-ipados"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-macos.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/apple/guide-macos"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-windows.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/windows/guide"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-linux.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/guide-linux"
+    },
+    {
+      "source_path": "intune/governance/device-cleanup-rules.md",
+      "redirect_url": "/intune/governance/configure-cleanup-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/windows-diagnostic-data.md",
+      "redirect_url": "/intune/privacy/enable-windows-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/data-sharing/apple-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/ref-apple-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/data-sharing/google-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/ref-google-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/data-sharing/jamf-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/ref-jamf-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/data-sharing/intune-to-apple.md",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/data-sharing/intune-to-google.md",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-google",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/data-sharing/intune-to-zebra.md",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-zebra",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/personal-data/view-correct.md",
+      "redirect_url": "/intune/privacy/personal-data/data-visibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/privacy/personal-data/audit-export-delete.md",
+      "redirect_url": "/intune/privacy/personal-data/manage-data-requests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/cloud-pki/deploy.md",
+      "redirect_url": "/intune/cloud-pki/deployment-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/cloud-pki/delete.md",
+      "redirect_url": "/intune/cloud-pki/delete-ca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/cloud-pki/monitor.md",
+      "redirect_url": "/intune/cloud-pki/monitor-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/cloud-pki/renew-ca.md",
+      "redirect_url": "/intune/cloud-pki/manage-ca-expiration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/serial-number-ios.md",
+      "redirect_url": "/intune/user-help/compliance/device-settings-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/unenrollment/device-reset-effects-ios.md",
+      "redirect_url": "/intune/user-help/device-actions/reset-device-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/company-portal.md",
+      "redirect_url": "/intune/user-help/company-portal/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/company-portal-website.md",
+      "redirect_url": "/intune/user-help/company-portal/website",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/company-portal-preferences-macos.md",
+      "redirect_url": "/intune/user-help/company-portal/manage-preferences-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/company-portal-support-windows.md",
+      "redirect_url": "/intune/user-help/company-portal/support-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/install-company-portal-android-china.md",
+      "redirect_url": "/intune/user-help/company-portal/install-android-china",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/company-portal/install-company-portal-update.md",
+      "redirect_url": "/intune/user-help/company-portal/update-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/enrollment/overview.md",
+      "redirect_url": "/intune/user-help/enrollment/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/enrollment/enrollment-benefits-android.md",
+      "redirect_url": "/intune/user-help/enrollment/benefits-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/enrollment/enrollment-data-visibility.md",
+      "redirect_url": "/intune/user-help/enrollment/data-visibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/enrollment/enrollment-effects-macos.md",
+      "redirect_url": "/intune/user-help/enrollment/effects-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/enrollment/enrollment-overview-windows.md",
+      "redirect_url": "/intune/user-help/enrollment/overview-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/unenrollment/remove-enrollment-android.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/unenrollment/remove-enrollment-ios.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/unenrollment/remove-enrollment-macos.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/user-help/unenrollment/remove-enrollment-windows.md",
+      "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "redirect_document_id": false
     }
   ]

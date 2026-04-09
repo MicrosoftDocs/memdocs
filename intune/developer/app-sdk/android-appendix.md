@@ -321,7 +321,7 @@ If you need to test your application under Robolectric, the recommended workarou
 <!-- Other Intune docs -->
 [Review client app protection logs]:../../intune-service/apps/app-protection-policy-settings-log.md#android-app-protection-policy-settings
 [Android app protection policy settings in Microsoft Intune]:../../intune-service/apps/app-protection-policy-settings-android.md
-[Enroll Android devices]:../../intune-service/fundamentals/deployment-guide-enrollment-android.md
+[Enroll Android devices]:../../device-enrollment/android/guide.md
 
 <!-- Class links -->
 [MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html

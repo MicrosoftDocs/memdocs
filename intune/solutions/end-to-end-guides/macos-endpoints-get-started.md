@@ -87,7 +87,7 @@ Specifically:
 
   If needed/wanted, you can also prevent specific devices from enrolling.
 
-  For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune-service/enrollment/enrollment-restrictions-set.md).
+  For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../device-enrollment/restrictions.md).
 
 - **Licensing**
 
@@ -106,7 +106,7 @@ Specifically:
 
   **Don't use a personal Apple ID**. Management of the Apple Push Notification Service certificate is critical over the life of your device management solution. Access with a personal Apple ID can become unavailable, as staff does change over time.
 
-For information on configurating an Apple MDM push certificate, go to [Get an Apple MDM Push certificate for Intune](../../intune-service/enrollment/apple-mdm-push-certificate-get.md).
+For information on configurating an Apple MDM push certificate, go to [Get an Apple MDM Push certificate for Intune](../../device-enrollment/apple/create-mdm-push-certificate.md).
 
 ### Step 4 - Add the Apple automated device enrollment token
 
@@ -122,7 +122,7 @@ This token is required for Automated Device Enrollment (ADE) in Intune. The toke
 
 If you currently manage iOS/iPadOS devices in this same tenant using ADE, then some of these steps might be done.
 
-For information on configuring Apple Business Manager with Intune, go to [Enroll macOS devices - Apple Business Manager or Apple School Manager](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md).
+For information on configuring Apple Business Manager with Intune, go to [Enroll macOS devices - Apple Business Manager or Apple School Manager](../../device-enrollment/apple/setup-automated-macos.md).
 
 The high-level steps to configure Apple Business Manager (or Apple School Manager) with Intune are:
 
@@ -131,7 +131,7 @@ The high-level steps to configure Apple Business Manager (or Apple School Manage
 3. In Apple Business Manager, assign devices to your Intune MDM.
 4. In Intune, assign the ADE profiles to your macOS devices.
 
-When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../../intune-service/enrollment/macos-laps.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
+When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
 
 ### Step 5 - Target devices
 
@@ -182,7 +182,7 @@ Using Intune, you can optimize the first run experience using built-in settings 
 - Preconfigure end user information in Setup Assistant.
 - Use the **Await final configuration** feature. This feature prevents end users from accessing restricted content or changing settings until the Intune device configuration policies apply.
 
-For more information on this feature and ADE enrollment, go to [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md).
+For more information on this feature and ADE enrollment, go to [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../device-enrollment/apple/setup-automated-macos.md).
 
 ✅ **Reduce app sign-in prompts with SSO**
 
@@ -290,7 +290,7 @@ To enroll your first organization macOS endpoint, make sure the macOS device is:
 > [!div class="checklist"]
 >
 > - [Registered in Apple Business Manager (or Apple School Manager) and assigned to your Intune MDM](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web) (opens Apple's website)
-> - [Assigned an enrollment profile in Intune](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md#assign-an-enrollment-profile-to-devices)
+> - [Assigned an enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#assign-an-enrollment-profile-to-devices)
 
 The high-level steps to enroll your first macOS endpoint with Intune are:
 
@@ -657,7 +657,7 @@ So far, you created your configuration and added apps. Now you're ready to enrol
 
 The enrollment policy is assigned to your new group. When the devices receive the enrollment policy, the enrollment process starts, and the app & configuration policies you created are applied.
 
-For more information on Automated Device Enrollment, and to get started, go to [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md).
+For more information on Automated Device Enrollment, and to get started, go to [Automatically enroll Macs with Apple Business Manager or Apple School Manager](../../device-enrollment/apple/setup-automated-macos.md).
 
 ## Phase 7 - Support, maintenance, and next steps
 
@@ -683,13 +683,13 @@ For your Mac devices to maintain their connection to Intune and continue enrolli
 
   Apple's Push Notification Service certificate must be renewed yearly. When this certificate expires, Intune can't manage devices that enrolled using that certificate. Make sure you renew this certificate every year.
 
-  For more information, go to [Get an Apple MDM Push certificate for Intune](../../intune-service/enrollment/apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+  For more information, go to [Get an Apple MDM Push certificate for Intune](../../device-enrollment/apple/create-mdm-push-certificate.md#renew-apple-mdm-push-certificate).
 
 - **Apple Automated Device Enrollment certificate expiry**
 
   When you set up a connection between Apple Business Manager (or Apple School Manager) and Intune, a certificate is used. This certificate must be renewed yearly. If this certificate isn't renewed, changes from Apple Business Manager (or Apple School Manager) can't sync to Intune.
 
-  For more information, go to [Enroll macOS devices - Apple Business Manager or Apple School Manager](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md#renew-enrollment-program-token).
+  For more information, go to [Enroll macOS devices - Apple Business Manager or Apple School Manager](../../device-enrollment/apple/setup-automated-macos.md#renew-enrollment-program-token).
 
 - **Apple Automated Device Enrollment sync status**
 
@@ -697,7 +697,7 @@ For your Mac devices to maintain their connection to Intune and continue enrolli
 
   You should monitor the sync status for any problems that require attention.
 
-  For more information, go to [sync managed devices](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md#sync-managed-devices).
+  For more information, go to [sync managed devices](../../device-enrollment/apple/setup-automated-macos.md#sync-managed-devices).
 
 ### Remote Help
 
@@ -730,4 +730,4 @@ For more information, go to [Tutorial: Configure Apple Business Manager for auto
 
 - [macOS platform guide](../../intune-service/fundamentals/deployment-guide-platform-macos.md)
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../intune-service/fundamentals/what-is-intune.md)
-- [macOS account configuration with LAPS](../../intune-service/enrollment/macos-laps.md)
+- [macOS account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md)

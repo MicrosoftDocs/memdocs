@@ -20,13 +20,13 @@ landingContent:
     - linkListType: overview
       links:
       - text: What is device enrollment?
-        url: enrollment/overview.md
+        url: enrollment/index.md
       - text: What can my organization see?
-        url: enrollment/enrollment-data-visibility.md
+        url: enrollment/data-visibility.md
     - linkListType: how-to-guide
       links:
       - text: Sign in to Intune Company Portal
-        url: company-portal/company-portal.md
+        url: company-portal/index.md
 
     # Card (optional)
   - title: Set up Windows device
@@ -34,7 +34,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: About Windows device enrollment
-        url: enrollment/enrollment-overview-windows.md
+        url: enrollment/overview-windows.md
     - linkListType: how-to-guide
       links:
       - text: Enroll Windows device
@@ -42,7 +42,7 @@ landingContent:
       - text: Install apps for work or school
         url: apps/install-apps-windows.md
       - text: Remove device from Company Portal App for Windows
-        url: unenrollment/remove-enrollment-windows.md
+        url: unenrollment/unenroll-windows.md
 
   # Card (optional)
   - title: Set up iOS/iPadOS device
@@ -58,7 +58,7 @@ landingContent:
       - text: Set device passcode
         url: compliance/password-requirements.md
       - text: Remove Company Portal from iOS/iPadOS device
-        url: unenrollment/remove-enrollment-ios.md
+        url: unenrollment/unenroll-ios.md
     - linkListType: concept
       links:
       - text: Where to find work and school apps for iOS/iPadOS
@@ -70,7 +70,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: About Android device enrollment
-        url: enrollment/enrollment-benefits-android.md
+        url: enrollment/benefits-android.md
       - text: About Android work profile
         url: enrollment/work-profile-android.md
     - linkListType: how-to-guide
@@ -82,7 +82,7 @@ landingContent:
       - text: Encrypt device
         url: security/enable-encryption-android.md
       - text: Remove Android device from Intune
-        url: unenrollment/remove-enrollment-android.md
+        url: unenrollment/unenroll-android.md
     - linkListType: concept
       links:
       - text: Where to find work and school apps for Android
@@ -95,7 +95,7 @@ landingContent:
     - linkListType: overview
       links:
       - text: About macOS device enrollment
-        url: enrollment/enrollment-effects-macos.md
+        url: enrollment/effects-macos.md
     - linkListType: how-to-guide
       links:
       - text: Enroll Mac device
@@ -105,7 +105,7 @@ landingContent:
       - text: Store personal recovery key
         url: security/import-recovery-key-macos.md
       - text: Remove device from Company Portal for macOS
-        url: unenrollment/remove-enrollment-macos.md
+        url: unenrollment/unenroll-macos.md
 
     # Card (optional)
   - title: Get apps for work or school

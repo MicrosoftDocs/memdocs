@@ -55,7 +55,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 - If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), which supports split tunneling.
 
-- These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
+- These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
 
 - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 

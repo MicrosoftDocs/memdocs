@@ -61,7 +61,7 @@ Automatic updates work together with other update policies, which can provide a 
 
 Using Intune policies, you can also force users to update their devices:
 
-- Use [Enrollment Restrictions](../../intune-service/enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
+- Use [Enrollment Restrictions](../../device-enrollment/create-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
 - Create [compliance policies](../../intune-service/protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
 - Create [Conditional Access (CA) policies](../../intune-service/protect/conditional-access.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
 
@@ -229,7 +229,7 @@ To accomplish this task, create a policy with the following settings:
 
 Shared devices are used by many users who typically sign in and out of the device, including education environments. These devices can be terminal/desktop computers, tablets, laptops, and smartphones. They're often used in offices, classrooms, and retail stores.
 
-For more information on managing shared iOS/iPadOS devices, go to [Shared device solutions for iOS/iPadOS](../../intune-service/enrollment/device-enrollment-shared-ios.md).
+For more information on managing shared iOS/iPadOS devices, go to [Shared device solutions for iOS/iPadOS](../../device-enrollment/apple/shared-device-solutions-ios.md).
 
 For iOS/iPadOS shared devices, to apply updates, all users must be signed out. The users can be signed out or the device can be rebooted, which automatically signs out users.
 

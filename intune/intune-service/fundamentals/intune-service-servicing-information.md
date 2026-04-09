@@ -72,7 +72,7 @@ The following resources can help you understand privacy and personal data in Int
 - [Optional diagnostic data from Intune Client apps](../../privacy/data-handling/optional-diagnostic-data.md)
 - [Data collection in Intune](../../privacy/data-handling/data-collection.md)
 - [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
-- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/audit-export-delete.md)
+- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/manage-data-requests.md)
 
 ## Related content
 
