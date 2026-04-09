@@ -193,7 +193,7 @@ Implementing Zero Trust device security requires coordination across multiple te
 **Related guidance:**
 
 - [Microsoft Defender for Endpoint integration](../protect/microsoft-defender-integrate.md)
-- [Remediate vulnerabilities with security tasks](../protect/atp-manage-vulnerabilities.md)
+- [Remediate vulnerabilities with security tasks](../protect/microsoft-defender-manage-vulnerabilities.md)
 
 ### Data security and privacy team (Microsoft Purview)
 
