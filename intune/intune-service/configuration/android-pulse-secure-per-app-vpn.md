@@ -31,7 +31,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 ## Prerequisites
 
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
-- The device must be enrolled and MDM managed by Intune. For information on the enrollment options for Android devices, go to [Android enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
+- The device must be enrolled and MDM managed by Intune. For information on the enrollment options for Android devices, go to [Android enrollment guide for Microsoft Intune](../../device-enrollment/android/guide.md).
 
 ## Step 1 - Create a VPN profile
 

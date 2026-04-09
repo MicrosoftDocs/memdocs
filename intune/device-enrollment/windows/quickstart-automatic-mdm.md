@@ -78,7 +78,7 @@ To reconfigure Intune automatic enrollment, see [Set up enrollment for Windows d
 
 ## Next steps
 
-In this task, you learned how to set up automatic enrollment for devices running Windows. For more information about device enrollment, see [Device enrollment overview](../../intune-service/fundamentals/deployment-guide-enrollment.md).
+In this task, you learned how to set up automatic enrollment for devices running Windows. For more information about device enrollment, see [Device enrollment overview](../guide.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 

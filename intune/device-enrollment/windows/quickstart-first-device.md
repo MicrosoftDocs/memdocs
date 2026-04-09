@@ -92,7 +92,7 @@ In this task, you learned how to enroll a Windows device into Intune. For more i
 - [Windows device enrollment with Intune Company Portal](../../user-help/enrollment/enrollment-overview-windows.md)
 - [What info can your company see when you enroll your device?](../../user-help/enrollment/enrollment-data-visibility.md)
 
-You can also automate Windows device enrollment. To learn more, see [Windows enrollment guide for Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-windows.md).
+You can also automate Windows device enrollment. To learn more, see [Windows enrollment guide for Microsoft Intune](guide.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 

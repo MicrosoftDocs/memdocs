@@ -122,7 +122,7 @@ As you set up apps and app policies, think about your organization's requirement
 
 ## Step 8: Enroll devices
 
-During enrollment, the device is registered with Microsoft Entra ID and evaluated for compliance. For information about each enrollment method and how to choose one that's right for your organization, see [Windows device enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
+During enrollment, the device is registered with Microsoft Entra ID and evaluated for compliance. For information about each enrollment method and how to choose one that's right for your organization, see [Windows device enrollment guide for Microsoft Intune](../../device-enrollment/windows/guide.md).
 
 | Task | Detail |
 | ---- | ------ |

@@ -27,16 +27,16 @@ This article provides enrollment recommendations and includes an overview of the
 
 There's also a visual guide of the different enrollment options for each platform:
 
-[![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
+[![A visual representation of Intune enrollment options by platform](../media/guide/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../../intune-service/includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 
-- For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
+- For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](../guide.md).
 
-- [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+- [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 ## Windows automatic enrollment
 
@@ -50,7 +50,7 @@ Automatic enrollment:
 You can use this enrollment option to:
 
 - Enable automatic enrollment for personal devices that register and join in Microsoft Entra ID.
-- Automatically [bulk enroll devices with the Windows Configuration Designer app](../enrollment/windows-bulk-enroll.md).
+- Automatically [bulk enroll devices with the Windows Configuration Designer app](create-bulk-package.md).
 - Automatically [enroll Microsoft Entra hybrid joined devices using group policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy).
 
 ---
@@ -58,14 +58,14 @@ You can use this enrollment option to:
 | --- | --- |
 | You use Windows client. | ✅ <br/><br/> Configuration Manager supports Windows Server. |
 | You have Microsoft Entra ID P1 or P2 | ✅ |
-| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✅ On Windows, CA is available for Windows devices enrolled using bulk enrollment. |
+| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](create-bulk-package.md) with a provisioning package. | ✅ On Windows, CA is available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✅ |
 | Devices are personal or BYOD. | ✅ <br/><br/> ❌ If you use Group Policy, then bulk enrollment and automatic enrollment are for corporate-owned devices, not personal or BYOD. |
 | Devices are owned by the organization or school. | ✅  |
 | You have new or existing devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ <br/><br/> Bulk enrollment is for organization-owned devices, not personal or BYOD.|
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, like kiosk, dedicated, or shared device. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| Devices are user-less, like kiosk, dedicated, or shared device. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../intune-service/configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../intune-service/configuration/shared-user-device-settings.md). |
 | You use the optional device enrollment manager (DEM) account. | ✅ <br/><br/> ❌ DEM accounts don't work with Group Policy. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 
@@ -73,7 +73,7 @@ You can use this enrollment option to:
 
 ### Automatic enrollment administrator tasks
 
-- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../intune-service/fundamentals/supported-devices-browsers.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
@@ -106,7 +106,7 @@ You can use this enrollment option to:
 
   In the account settings on the device, users sign in with their organization account, and select this package file. Then, users are automatically enrolled.
 
-  If your end users are familiar with running a file from these locations, they can complete the enrollment. For more information, go to [automatic bulk enrollment](../enrollment/windows-bulk-enroll.md).
+  If your end users are familiar with running a file from these locations, they can complete the enrollment. For more information, go to [automatic bulk enrollment](create-bulk-package.md).
 
 - For automatic enrollments using group policy:
 
@@ -115,7 +115,7 @@ You can use this enrollment option to:
   - Be sure your devices are Microsoft Entra hybrid joined devices. The devices must be registered in local AD and in Microsoft Entra ID.
   - In local on-premises AD, create an **Enable automatic MDM enrollment using default Microsoft Entra credentials** group policy. When group policy is refreshed, this policy is pushed to the devices, and users complete the configuration using their domain account (example: `user@contoso.com`).
 
-  In the Intune admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune.
+  In the Intune admin center, you can use [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune.
 
   > [!TIP]
   > If you want a cloud native solution to manage devices, then Windows Autopilot (in this article) might be the best enrollment option for your organization.
@@ -158,7 +158,7 @@ When users turn on the device, the next steps determine how they're enrolled. Cl
 
 - On personal or BYOD non-Windows client devices, users must install the Company Portal app from the Microsoft Store. Once installed, they open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). They're asked for more information, including the Intune server name. Be sure to give them all the information they need to enter.
 
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
 
 ## Windows Autopilot
 
@@ -180,7 +180,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | You have Microsoft Entra ID P1 or P2. | ✅ <br/><br/> Windows Autopilot uses Automatic enrollment. Automatic enrollment requires Microsoft Entra ID P1 or P2. |
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../intune-service/configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../intune-service/configuration/shared-user-device-settings.md). |
 | Devices are personal or BYOD. | ❌ <br/><br/> Windows Autopilot is only for organization-owned devices. For BYOD or personal devices, use [Windows automatic enrollment](#windows-automatic-enrollment) (in this article) or a [User enrollment option](#byod-user-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Windows Autopilot. |
@@ -232,7 +232,7 @@ The end user experience depends on the Windows Autopilot deployment option you c
 
 - **User driven**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. For more specific information, go to [user-driven deployment](/autopilot/user-driven).
 
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
 
 ## BYOD: User enrollment
 
@@ -270,7 +270,7 @@ With User enrollment, you can "register" the devices with Microsoft Entra ID or 
 
 Other than having Intune setup, there are minimal administrator tasks with this enrollment method.
 
-- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../intune-service/fundamentals/supported-devices-browsers.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 
@@ -344,7 +344,7 @@ For more specific information on co-management, go to [What is co-management?](.
 | You have new or existing devices. | ✅ <br/><br/> For devices that aren't running supported versions of Windows, like Windows 7, you'll need to upgrade. For more specific information, go to [Upgrade Windows for co-management](../../configmgr/comanage/quickstart-upgrade-win10.md). |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
+| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../intune-service/configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../intune-service/configuration/shared-user-device-settings.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be co-managed, users need to unenroll from the current MDM provider. They shouldn't be enrolled using the Intune classic agents. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to co-management. |
 
@@ -370,8 +370,8 @@ Configuration Manager can randomize the enrollment, so enrollment might not occu
 
 ## Related articles
 
-- [MAM without enrollment](deployment-guide-enrollment-mamwe.md)
-- [Android enrollment guide](deployment-guide-enrollment-android.md)
-- [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
-- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
-- [macOS enrollment guide](deployment-guide-enrollment-macos.md)
+- [MAM without enrollment](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md)
+- [Android enrollment guide](../android/guide.md)
+- [iOS/iPadOS enrollment guide](../apple/guide-ios-ipados.md)
+- [Linux enrollment guide](../guide-linux.md)
+- [macOS enrollment guide](../apple/guide-macos.md)

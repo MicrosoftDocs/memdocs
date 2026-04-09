@@ -1,6 +1,6 @@
 items:
 - name: Device enrollment overview
-  href: ../intune-service/fundamentals/deployment-guide-enrollment.md
+  href: guide.md
   displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
 - name: Configure enrollment features
   items:
@@ -47,7 +47,7 @@ items:
 - name: Set up Windows enrollment
   items:
   - name: Get started with Windows enrollment
-    href: ../intune-service/fundamentals/deployment-guide-enrollment-windows.md
+    href: windows/guide.md
   - name: Enrollment solutions
     items:
     - name: Set up automatic enrollment
@@ -67,7 +67,7 @@ items:
 - name: Set up Android enrollment
   items:
   - name: Get started with Android enrollment
-    href: ../intune-service/fundamentals/deployment-guide-enrollment-android.md
+    href: android/guide.md
     displayName: COBO
   - name: Android Enterprise enrollment solutions
     items:
@@ -111,7 +111,7 @@ items:
 - name: Set up iOS/iPadOS enrollment
   items:
   - name: Get started with iOS/iPadOS enrollment
-    href: ../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md
+    href: apple/guide-ios-ipados.md
   - name: Enrollment solutions
     items:
     - name: Set up enrollment with Apple Configurator
@@ -166,13 +166,13 @@ items:
 - name: Set up Linux enrollment
   items:
   - name: Get started with Linux enrollment
-    href: ../intune-service/fundamentals/deployment-guide-enrollment-linux.md
+    href: guide-linux.md
   - name: Intune user help documentation
     href: ../user-help/enrollment/enroll-linux.md
 - name: Set up macOS enrollment
   items:
   - name: Get started with Mac enrollment
-    href: ../intune-service/fundamentals/deployment-guide-enrollment-macos.md
+    href: apple/guide-macos.md
   - name: Enrollment solutions
     items:
     - name: Set up automated device enrollment for macOS

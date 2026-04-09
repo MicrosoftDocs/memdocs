@@ -477,7 +477,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
 ## End user experience
 For information on the end-user experience, see:
-- [ADE end user tasks](../../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md#ade-end-user-tasks)
+- [ADE end user tasks](guide-ios-ipados.md#ade-end-user-tasks)
 - [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)
 
 ## Re-enroll a device
@@ -553,4 +553,4 @@ These Setup Assistant screens don't work correctly on devices running iOS/iPadOS
 Hide both screens on devices running iOS/iPadOS 14.5 and later. If you want to require passcodes on those devices, create a device configuration policy or a compliance policy with passcode requirements. After the user enrolls and receives the policy, the passcode requirement will kick in.
 
 ## Next steps
-For an overview of requirements for device users, see [ADE end user tasks](../../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md#ade-end-user-tasks).
+For an overview of requirements for device users, see [ADE end user tasks](guide-ios-ipados.md#ade-end-user-tasks).

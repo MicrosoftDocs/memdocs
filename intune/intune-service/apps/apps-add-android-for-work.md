@@ -293,7 +293,7 @@ You can enable an Android Enterprise system app for [Android Enterprise dedicate
 
 ## MAM policies with AE dedicated devices enrolled with Microsoft Entra shared mode
 
-Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode can receive MAM policies and can be targeted separately from other Android enterprise devices. Intune-managed Android Enterprise dedicated devices that aren't in Shared Device Mode continue to be blocked from getting MAM. For more information about Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
+Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode can receive MAM policies and can be targeted separately from other Android enterprise devices. Intune-managed Android Enterprise dedicated devices that aren't in Shared Device Mode continue to be blocked from getting MAM. For more information about Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode, see [Android Enterprise dedicated devices](../../device-enrollment/android/guide.md#android-enterprise-dedicated-devices).
 
 ## Next steps
 

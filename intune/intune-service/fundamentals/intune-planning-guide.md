@@ -506,7 +506,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
   | Self-service |  |  |  | HR, Finance |
   | Pre-provisioned |  |  |  | Executives |
 
-  For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+  For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md).
 
 ## Step 6 - Communicate changes
 

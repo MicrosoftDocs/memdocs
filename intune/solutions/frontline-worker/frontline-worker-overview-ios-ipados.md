@@ -35,7 +35,7 @@ This article applies to:
 For an overview on FLW devices in Intune, go to [FLW device management in Intune](frontline-worker-overview.md).
 
 > [!NOTE]
-> There are other iOS/iPadOS enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the iOS/iPadOS enrollment options, go to [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md).
+> There are other iOS/iPadOS enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the iOS/iPadOS enrollment options, go to [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../device-enrollment/apple/guide-ios-ipados.md).
 
 ## Shared iPad vs Microsoft Entra shared device mode
 

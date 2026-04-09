@@ -162,4 +162,4 @@ Look for the following entries:
 
 ## Related content
 
-- Get started with the [macOS enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-macos.md).
+- Get started with the [macOS enrollment guide](guide-macos.md).

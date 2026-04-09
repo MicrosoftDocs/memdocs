@@ -160,7 +160,7 @@ Intune supports the following enrollment methods for Android devices:
 * Android Enterprise corporate owned work profile
 * Android device administrator
 
-For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](deployment-guide-enrollment-android.md).
+For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](../../device-enrollment/android/guide.md).
 
 | Task | Detail | Platform |
 | ---- | ------ | ------ |

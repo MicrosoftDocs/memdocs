@@ -30,9 +30,9 @@ This article applies to:
 
 Users can enroll their personal devices in Microsoft Intune.
 
-- When users enroll their personal Android devices, these devices automatically get a work profile. Any policies you create apply to the work profile, not the personal profile. For information on the Android enrollment option for personal devices, go to [Android enrollment guide](../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+- When users enroll their personal Android devices, these devices automatically get a work profile. Any policies you create apply to the work profile, not the personal profile. For information on the Android enrollment option for personal devices, go to [Android enrollment guide](../device-enrollment/android/guide.md).
 
-- When they enroll iOS/iPadOS devices, the behavior depends on the enrollment option you use. For information on the different iOS/iPadOS enrollment options for personal devices, go to [iOS/iPadOS enrollment guide](../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md).
+- When they enroll iOS/iPadOS devices, the behavior depends on the enrollment option you use. For information on the different iOS/iPadOS enrollment options for personal devices, go to [iOS/iPadOS enrollment guide](../device-enrollment/apple/guide-ios-ipados.md).
 
 ✅ Create an enrollment restrictions policy that requires a minimum and maximum operating system version. This policy helps create a good baseline for new enrollments.
 

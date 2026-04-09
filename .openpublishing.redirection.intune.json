@@ -5154,6 +5154,36 @@
       "source_path": "intune/intune-service/enrollment/device-group-mapping.md",
       "redirect_url": "/intune/device-management/create-device-categories",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/guide"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-android.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/android/guide"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/apple/guide-ios-ipados"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-macos.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/apple/guide-macos"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-windows.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/windows/guide"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-linux.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/guide-linux"
     }
   ]
 }
