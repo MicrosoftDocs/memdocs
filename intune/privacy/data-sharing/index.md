@@ -39,11 +39,11 @@ Sharing data with such entities is done to aid customer and technical support, s
 A tenant's contract with the third party governs the Intune personal data held in the third party's service. It also grants Intune the permission to transmit data to the third party service.
 
 For information about data shared with certain third parties, see the following articles:
-- [Data Intune sends to Apple](intune-to-apple.md)
-- [Data Intune sends to Google](intune-to-google.md)
-- [Data Apple sends to Intune](apple-to-intune.md)
-- [Data Google sends to Intune](google-to-intune.md)
-- [Data Jamf Pro sends to Intune](jamf-to-intune.md)
+- [Data Intune sends to Apple](ref-intune-to-apple.md)
+- [Data Intune sends to Google](ref-intune-to-google.md)
+- [Data Apple sends to Intune](ref-apple-to-intune.md)
+- [Data Google sends to Intune](ref-google-to-intune.md)
+- [Data Jamf Pro sends to Intune](ref-jamf-to-intune.md)
 
 ### Microsoft Configuration Manager data sharing
 
@@ -54,4 +54,4 @@ To learn more, see [Diagnostics and usage data for Configuration Manager](/confi
 
 ## Next steps
 
-Find out how to [view and correct](../personal-data/view-correct.md) personal data in Intune.
+Find out how to [view and correct](../personal-data/data-visibility.md) personal data in Intune.

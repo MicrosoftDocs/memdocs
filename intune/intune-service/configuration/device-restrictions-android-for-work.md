@@ -47,7 +47,7 @@ This article applies to:
   >- If you can't find a setting in **templates**, select **settings catalog**. The settings catalog is a list of the settings you can configure for corporate-owned Android Enterprise devices. It can include other settings that aren't available in **templates**.
   >- If you can't find a setting in **settings catalog**, check **templates**.
 
-- To learn more about the Android enrollment options, see [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
+- To learn more about the Android enrollment options, see [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
 
 ## Android settings
 

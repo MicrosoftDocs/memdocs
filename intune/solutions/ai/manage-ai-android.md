@@ -36,7 +36,7 @@ Applies to:
 > - Android Enterprise corporate owned devices with a work profile (COPE)
 > - Android Enterprise personally owned devices with a work profile (BYOD)
 >
-> To learn more about the different Android enrollment options, see the [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+> To learn more about the different Android enrollment options, see the [Android Enrollment guide](../../device-enrollment/android/guide.md).
 :::column-end:::
 :::row-end:::
 
@@ -444,7 +444,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 
 ## Related content
 
-- [Android enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md)
+- [Android enrollment guide](../../device-enrollment/android/guide.md)
 - [Include and exclude app assignments in Microsoft Intune](../../intune-service/apps/apps-inc-exl-assignments.md)
 - [Assign apps to groups in Microsoft Intune](../../intune-service/apps/apps-deploy.md)
 - [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../intune-service/configuration/android-oem-configuration-overview.md)

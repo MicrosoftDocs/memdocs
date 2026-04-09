@@ -61,12 +61,12 @@ Before you can join Microsoft Entra and enroll in Intune, there are a few things
 - **Enrollment restrictions**
 Enrollment restrictions allow you to control what types of devices can enroll into management with Intune. For this guide to be successful, make sure *Windows (MDM)* enrollment is allowed, which is the default configuration.
 
-  For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune-service/enrollment/enrollment-restrictions-set.md).
+  For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../device-enrollment/restrictions.md).
 
 - **Microsoft Entra Device MDM settings**
   When you join a Windows device to Microsoft Entra, Microsoft Entra can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
 
-  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md).
+  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../device-enrollment/windows/quickstart-automatic-mdm.md).
 
 - **Microsoft Entra company branding**
   Adding your corporate logo and images to Microsoft Entra ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
@@ -151,7 +151,7 @@ To limit the configurations from this guide to the test devices that you import 
 
 ### Step 5 - Configure the Enrollment Status Page
 
-The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../intune-service/enrollment/windows-enrollment-status.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Microsoft Entra dynamic group for the device*.
+The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Microsoft Entra dynamic group for the device*.
 
 - For the purposes of testing, we recommend the following settings, but feel free to adjust them as required:
   - **Show app and profile configuration progress** - Yes

@@ -147,7 +147,7 @@ Intune doesn't collect nor allow an Admin to see the following data:
 - Calendar events
 - Photos, including those pictures in a photo app or camera
 
-For more information, see [Getting started enrolling devices](../../intune-service/fundamentals/deployment-guide-enrollment.md).
+For more information, see [Getting started enrolling devices](../../device-enrollment/guide.md).
 
 For more information on the data types and definition, see [How Microsoft categorizes data for online services](https://www.microsoft.com/trust-center/privacy/customer-data-definitions).
 

@@ -59,7 +59,7 @@ For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for
 ## Before you begin
 
 - This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
-- Devices must be MDM enrolled in Intune as dedicated devices or fully managed devices. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
+- Devices must be MDM enrolled in Intune as dedicated devices or fully managed devices. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
 - To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Step 1 - Get the app from the Managed Google Play Store

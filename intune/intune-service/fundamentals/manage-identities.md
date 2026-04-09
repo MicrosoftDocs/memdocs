@@ -85,11 +85,11 @@ In Intune, you can create policies for both scenarios on Android, iOS/iPadOS, ma
 
 For more specific information, go to the enrollment guides for your platforms:
 
-- [Enrollment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
-- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
-- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
-- [Enrollment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
-- [Enrollment guide: Enroll Windows devices in Microsoft Intune](deployment-guide-enrollment-windows.md)
+- [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md)
+- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../device-enrollment/apple/guide-ios-ipados.md)
+- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../../device-enrollment/guide-linux.md)
+- [Enrollment guide: Enroll macOS devices in Microsoft Intune](../../device-enrollment/apple/guide-macos.md)
+- [Enrollment guide: Enroll Windows devices in Microsoft Intune](../../device-enrollment/windows/guide.md)
 
 ## Assign policies to users and groups
 
