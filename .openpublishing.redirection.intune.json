@@ -232,7 +232,7 @@
     },
     {
       "source_path": "intune/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "redirect_url": "/intune/governance/configure-cleanup-rules",
       "redirect_document_id": false
     },
     {
@@ -422,7 +422,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "redirect_url": "/intune/governance/configure-cleanup-rules",
       "redirect_document_id": false
     },
     {
@@ -5184,6 +5184,11 @@
       "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-linux.md",
       "redirect_document_id": true,
       "redirect_url": "/intune/device-enrollment/guide-linux"
+    },
+    {
+      "source_path": "intune/governance/device-cleanup-rules.md",
+      "redirect_url": "/intune/governance/configure-cleanup-rules",
+      "redirect_document_id": false
     }
   ]
 }
