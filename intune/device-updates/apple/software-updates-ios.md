@@ -13,7 +13,7 @@ ms.reviewer: annovich, beflamm
 
 You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPadOS devices that are enrolled as *supervised devices*.
 
-A [supervised device](../../intune-service/enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
+A [supervised device](../../device-enrollment/apple/setup-automated-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
 This feature applies to:
 
@@ -32,7 +32,7 @@ With these MDM-based policies, you can:
 
 ## Before you begin
 
-- iOS/iPadOS software updates that you send to a [Shared iPad](../../intune-service/enrollment/device-enrollment-shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
+- iOS/iPadOS software updates that you send to a [Shared iPad](../../device-enrollment/apple/shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 
 - If using [Autonomous Single App Mode (ASAM)](../../intune-service/configuration/device-restrictions-apple.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../../intune-service/configuration/device-restrictions-apple.md#general) to configure ASAM.
 

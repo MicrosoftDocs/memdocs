@@ -302,5 +302,5 @@ Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Ch
 ## Next steps
 
 - [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
-- [Data Jamf sends to Intune](../../privacy/data-sharing/jamf-to-intune.md)
+- [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)
 - [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).

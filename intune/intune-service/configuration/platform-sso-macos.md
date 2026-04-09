@@ -277,7 +277,7 @@ To use Platform SSO, the devices must be MDM enrolled in Intune using one of the
   - Create an [Automated device enrollment](../enrollment/device-enrollment-program-enroll-macos.md) policy using Apple Business Manager or Apple School Manager.
   - Create a [Direct enrollment](../enrollment/device-enrollment-direct-enroll-macos.md) policy using Apple Configurator.
 
-- For **personally-owned devices**, create a [Device enrollment](../fundamentals/deployment-guide-enrollment-macos.md#byod-device-enrollment) policy. With this enrollment method, end users open the Company Portal app and sign in with their Microsoft Entra ID. When they successfully sign in, the enrollment policy applies.
+- For **personally-owned devices**, create a [Device enrollment](../../device-enrollment/apple/guide-macos.md#byod-device-enrollment) policy. With this enrollment method, end users open the Company Portal app and sign in with their Microsoft Entra ID. When they successfully sign in, the enrollment policy applies.
 
 For **new devices**, we recommend you precreate and configure all the necessary policies, including the enrollment policy. Then, when the devices enroll in Intune, the policies automatically apply.
 

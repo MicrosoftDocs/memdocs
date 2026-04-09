@@ -61,9 +61,9 @@ For more specific information by platform, go to:
 
 - [Android platform deployment guide](deployment-guide-platform-android.md)
 - [iOS/iPadOS platform deployment guide](deployment-guide-platform-ios-ipados.md)
-- [Linux enrollment deployment guide](deployment-guide-enrollment-linux.md)
+- [Linux enrollment deployment guide](../../device-enrollment/guide-linux.md)
 - [macOS platform deployment guide](deployment-guide-platform-macos.md)
-- [Windows enrollment deployment guide](deployment-guide-enrollment-windows.md)
+- [Windows enrollment deployment guide](../../device-enrollment/windows/guide.md)
 
 ## Check the compliance health of your devices
 
