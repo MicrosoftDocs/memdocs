@@ -158,7 +158,7 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
-[MAC-ADE]: ../../intune-service/enrollment/device-enrollment-program-enroll-macos.md
+[MAC-ADE]: ../../device-enrollment/apple/setup-automated-macos.md
 [APL-1]: https://support.apple.com/guide/apple-business-manager/axm812df1dd8
 [APL-2]: https://support.apple.com/HT201365
 

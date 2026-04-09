@@ -68,17 +68,17 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 
   - Enrolled in Intune using **Automated Device Enrollment** (ADE), previously called Device Enrollment Program (DEP). For more information on this enrollment option, go to:
 
-    - [Automated Device Enrollment (ADE) for macOS devices](../fundamentals/deployment-guide-enrollment-macos.md#automated-device-enrollment-ade-supervised)
+    - [Automated Device Enrollment (ADE) for macOS devices](../../device-enrollment/apple/guide-macos.md#automated-device-enrollment-ade-supervised)
     - [Automatically enroll macOS devices](../enrollment/device-enrollment-program-enroll-macos.md)
 
     **OR**
 
   - Enrolled in Intune using **Device enrollment**, also known as **user approved enrollment**. This enrollment method is common on personally owned devices. For more information on this enrollment option, go to:
 
-    - [BYOD: Device enrollment for macOS devices](../fundamentals/deployment-guide-enrollment-macos.md#byod-device-enrollment)
+    - [BYOD: Device enrollment for macOS devices](../../device-enrollment/apple/guide-macos.md#byod-device-enrollment)
     - [Prepare for changes to kernel extensions in macOS High Sierra](https://support.apple.com/en-us/HT208019) (opens Apple's web site)
 
-  For more information on the enrollment options for macOS devices, go to [Enrollment guide: Enroll macOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-macos.md).
+  For more information on the enrollment options for macOS devices, go to [Enrollment guide: Enroll macOS devices in Microsoft Intune](../../device-enrollment/apple/guide-macos.md).
 
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 

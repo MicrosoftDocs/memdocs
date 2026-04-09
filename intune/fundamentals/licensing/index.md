@@ -80,11 +80,11 @@ Microsoft Intune offers a device-only subscription service that helps organizati
 You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a device is enrolled through any of the following methods:
 
 - [Windows Autopilot Self-Deploying mode](/autopilot/self-deploying)
-- [Apple Device Enrollment Program without user affinity](../../intune-service/enrollment/device-enrollment-program-enroll-ios.md)
-- [Apple School Manager without user affinity](../../intune-service/enrollment/apple-school-manager-set-up-ios.md)
-- [Apple Configurator without user affinity](../../intune-service/enrollment/apple-configurator-enroll-ios.md)
-- [Android Enterprise dedicated](../../intune-service/enrollment/android-kiosk-enroll.md)
-- [Using a device enrollment manager account](../../intune-service/enrollment/device-enrollment-manager-enroll.md)
+- [Apple Device Enrollment Program without user affinity](../../device-enrollment/apple/setup-automated-ios.md)
+- [Apple School Manager without user affinity](../../device-enrollment/apple/school-manager.md)
+- [Apple Configurator without user affinity](../../device-enrollment/apple/setup-configurator-ios.md)
+- [Android Enterprise dedicated](../../device-enrollment/android/setup-dedicated.md)
+- [Using a device enrollment manager account](../../device-enrollment/setup-enrollment-manager.md)
 
 > [!NOTE]
 > Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page, or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.

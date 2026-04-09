@@ -19,7 +19,7 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 ## Prerequisites
 
-- [Set up Managed Google Play for your tenant](../../intune-service/enrollment/connect-intune-android-enterprise.md)
+- [Set up Managed Google Play for your tenant](../../device-enrollment/android/connect-managed-google-play.md)
 
 - Administrators must have all the required RBAC (role-based access control) permissions:
 
@@ -45,8 +45,8 @@ For more information, see [Microsoft Intune for US Government GCC service descri
 
 LG OTA is supported on the following devices:
 
-- [Android Enterprise dedicated devices](../../intune-service/fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
-- [Android Enterprise fully managed devices](../../intune-service/fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
+- [Android Enterprise dedicated devices](../../device-enrollment/android/guide.md#android-enterprise-dedicated-devices)
+- [Android Enterprise fully managed devices](../../device-enrollment/android/guide.md#android-enterprise-fully-managed)
 
 For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 

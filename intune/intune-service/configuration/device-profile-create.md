@@ -47,7 +47,7 @@ This feature applies to:
 
 - At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-- Enroll your devices in Intune. To learn more about your enrollment options, see [Microsoft Intune enrollment guide](../fundamentals/deployment-guide-enrollment.md).
+- Enroll your devices in Intune. To learn more about your enrollment options, see [Microsoft Intune enrollment guide](../../device-enrollment/guide.md).
 
 ## Create the profile
 

@@ -41,4 +41,4 @@ For more information, see [Microsoft Intune for US Government GCC service descri
 
 Learn about enrolling devices into Microsoft Intune here:
 
-- [Enroll devices into Microsoft Intune](deployment-guide-enrollment.md)
+- [Enroll devices into Microsoft Intune](../../device-enrollment/guide.md)

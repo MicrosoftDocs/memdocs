@@ -78,7 +78,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 - **Android Enterprise personally owned devices with a work profile**: End users own these devices. Users enroll their devices and a work profile is automatically created. You manage the work profile, including apps and data in the work profile.
 
-  For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll Android devices - BYOD: Android Enterprise personally owned devices with a work profile](../fundamentals/deployment-guide-enrollment-android.md#byod-android-enterprise-personally-owned-devices-with-a-work-profile).
+  For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll Android devices - BYOD: Android Enterprise personally owned devices with a work profile](../../device-enrollment/android/guide.md#byod-android-enterprise-personally-owned-devices-with-a-work-profile).
 
   These personal devices have a built-in email app that isn't typically used for organization email. Organizations that use Conditional Access (CA) can create CA policies to block native mail apps, or only allow specific apps.
 
@@ -167,7 +167,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 - **Personally owned devices**: End users own these devices. Users can enroll their entire devices in Intune to be fully managed by you. Or, they can enroll only the apps that access organization data.
 
-  For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll iOS and iPadOS devices - BYOD User and Device enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md#byod-user-and-device-enrollment).
+  For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll iOS and iPadOS devices - BYOD User and Device enrollment](../../device-enrollment/apple/guide-ios-ipados.md#byod-user-and-device-enrollment).
 
   Depending on the enrollment method for personal devices, it's also recommended to use [app protection policies](../apps/app-protection-policy-settings-ios.md) on the email app.
 
@@ -224,7 +224,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 - **Personally owned devices**: End users own these devices. Users can enroll their entire devices in Intune to be fully managed by you.
 
-  For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll Windows devices - BYOD: User enrollment](../fundamentals/deployment-guide-enrollment-windows.md#byod-user-enrollment).
+  For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll Windows devices - BYOD: User enrollment](../../device-enrollment/windows/guide.md#byod-user-enrollment).
 
 #### Email app options for Windows client
 

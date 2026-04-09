@@ -178,12 +178,12 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 #### New Windows 10 devices
 For new Windows 10 devices, you can use the Windows Autopilot service to configure the out of box experience, which includes joining the device to AD and Microsoft Entra ID, as well as enrolling the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
 1. Enable Windows Autopilot for the new Windows 10 devices. For details, see [Overview of Windows Autopilot](/windows/deployment/windows-10-auto-pilot).
-2. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/mem/intune-service/enrollment/windows-enroll).
+2. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/device-enrollment/windows/enable-automatic-mdm).
 3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### Windows 10 devices not enrolled in Intune or a Configuration Manager client
 For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
-1. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/mem/intune-service/enrollment/windows-enroll).
+1. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/device-enrollment/windows/enable-automatic-mdm).
 2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### Windows 10 devices enrolled in Intune

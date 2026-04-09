@@ -52,10 +52,10 @@ This article provides an overview of the steps to start your Intune deployment.
 
     For more information, go to:
 
-    - [**Android** enrollment guide](deployment-guide-enrollment-android.md)
-    - [**iOS/iPadOS** enrollment guide](deployment-guide-enrollment-ios-ipados.md)
-    - [**macOS** enrollment guide](deployment-guide-enrollment-macos.md)
-    - [**Windows** enrollment guide](deployment-guide-enrollment-windows.md)
+    - [**Android** enrollment guide](../../device-enrollment/android/guide.md)
+    - [**iOS/iPadOS** enrollment guide](../../device-enrollment/apple/guide-ios-ipados.md)
+    - [**macOS** enrollment guide](../../device-enrollment/apple/guide-macos.md)
+    - [**Windows** enrollment guide](../../device-enrollment/windows/guide.md)
 
 - Review and determine [Network endpoints](intune-endpoints.md) necessary for the successful deployment and management of Microsoft Intune. Review the IP addresses, port settings, and domain names that need to be configured to allow communication between managed devices and Intune services.
 
@@ -144,7 +144,7 @@ In this step:
 
 :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Enroll your devices** in Intune.
 
-For more specific information, go to [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For more specific information, go to [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md).
 
 To fully manage devices, the devices must be enrolled in Intune to receive the compliance & Conditional Access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, Linux, macOS, and Windows) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
 
@@ -154,12 +154,12 @@ When a device enrolls, the device is issued a secure MDM certificate. This certi
 
 Different platforms have different enrollment requirements. The following articles can help you learn more about device enrollment, including platform-specific guidance:
 
-- [Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
-  - [Enrollment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
-  - [Enrollment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
-  - [Enrollment guide: Enroll Linux desktop devices](deployment-guide-enrollment-linux.md)
-  - [Enrollment guide: Enroll macOS devices](deployment-guide-enrollment-macos.md)
-  - [Enrollment guide: Enroll Windows devices](deployment-guide-enrollment-windows.md)
+- [Enrollment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md)
+  - [Enrollment guide: Enroll Android devices](../../device-enrollment/android/guide.md)
+  - [Enrollment guide: Enroll iOS/iPadOS devices](../../device-enrollment/apple/guide-ios-ipados.md)
+  - [Enrollment guide: Enroll Linux desktop devices](../../device-enrollment/guide-linux.md)
+  - [Enrollment guide: Enroll macOS devices](../../device-enrollment/apple/guide-macos.md)
+  - [Enrollment guide: Enroll Windows devices](../../device-enrollment/windows/guide.md)
 
 ## Cloud attach with Configuration Manager
 
@@ -183,4 +183,4 @@ For guidance on the Microsoft Intune setup that's right for your organization, g
 - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
 - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
 - [Step 4 - Configure device features and settings to secure devices and access organization resources](deployment-plan-configuration-profile.md)
-- [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
+- [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md)

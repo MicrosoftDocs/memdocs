@@ -60,12 +60,12 @@ This option uses the Windows Configuration Designer (WCD) app to create a provis
 
 ❌ If you have Microsoft Entra Premium, then use Windows Autopilot. Windows Autopilot requires Entra Premium.
 
-For information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../intune-service/enrollment/windows-bulk-enroll.md).
+For information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../device-enrollment/windows/create-bulk-package.md).
 
 ---
 
 > [!NOTE]
-> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-windows.md).
+> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../../device-enrollment/windows/guide.md).
 
 ## Step 2 - Shared device or user associated device
 
