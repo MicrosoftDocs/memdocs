@@ -188,7 +188,7 @@ Use on devices owned by your organization that don't need user device affinity.
 
 These devices are organization-owned, and use Apple Configurator. The only purpose is to be a kiosk-style device. They aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
 
-For more specific information on this enrollment type, go to [Use Direct Enrollment for macOS devices](../enrollment/device-enrollment-direct-enroll-macos.md).
+For more specific information on this enrollment type, go to [Use Direct Enrollment for macOS devices](setup-direct-macos.md).
 
 ---
 | Feature | Use this enrollment option when |
@@ -209,7 +209,7 @@ For more specific information on this enrollment type, go to [Use Direct Enrollm
 
 ### Direct enrollment admin tasks
 
-This task list provides an overview. For more specific information, go to [macOS Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md).
+This task list provides an overview. For more specific information, go to [macOS Direct Enrollment](setup-direct-macos.md).
 
 - Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
@@ -220,7 +220,7 @@ This task list provides an overview. For more specific information, go to [macOS
 
 - When the enrollment profile is ready, export the policy, and copy the file to the macOS device. Double-click the file to install the enrollment policy.
 
-For more information on this enrollment option, and its prerequisites, go to [macOS Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md).
+For more information on this enrollment option, and its prerequisites, go to [macOS Direct Enrollment](setup-direct-macos.md).
 
 ### Direct enrollment end user tasks
 

@@ -223,8 +223,8 @@ Also referred to as AOSP. These devices are organization-owned, and don't use Go
 
 When you create the Intune enrollment profile, you decide if the devices are userless, or are associated with a single user. For more information on these options, including supported OEMs, go to:
 
-- [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
-- [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+- [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](setup-aosp-corporate-userless.md)
+- [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](setup-aosp-corporate-user-associated.md)
 
 ---
 | Feature | Use this enrollment option when |
@@ -243,16 +243,16 @@ When you create the Intune enrollment profile, you decide if the devices are use
 
 ### Admin tasks (AOSP)
 
-This task list provides an overview. For more specific information, go to enrollment for [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) and [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
+This task list provides an overview. For more specific information, go to enrollment for [AOSP corporate-owned userless devices](setup-aosp-corporate-userless.md) and [AOSP corporate-owned user-associated devices](setup-aosp-corporate-user-associated.md).
 
 - Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
 - Factory reset the devices. This step is required. New devices might not require a factory reset.
 - Create an enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and have your device groups ready. For the specific steps, go to:
-  - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
-  - [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+  - [AOSP corporate-owned userless devices](setup-aosp-corporate-userless.md)
+  - [AOSP corporate-owned user-associated devices](setup-aosp-corporate-user-associated.md)
 - Enroll the devices in Intune. For the specific steps, go to:
-  - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
-  - [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+  - [AOSP corporate-owned userless devices](setup-aosp-corporate-userless.md)
+  - [AOSP corporate-owned user-associated devices](setup-aosp-corporate-user-associated.md)
 
   During enrollment, the Microsoft Intune app and Microsoft Authenticator app automatically install and open on the device, which allows the device to enroll. The device is locked in the enrollment process until enrollment completes.
 

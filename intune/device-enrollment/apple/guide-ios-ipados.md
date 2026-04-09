@@ -45,7 +45,7 @@ Previously called Apple Device Enrollment Program (DEP). Use on devices owned by
 For more specific information on this enrollment type, go to:
 
 - [Apple Business Manager enrollment](setup-automated-ios.md)
-- [Apple School Manager enrollment](../enrollment/apple-school-manager-set-up-ios.md): For more information on Apple School Manager, go to [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
+- [Apple School Manager enrollment](school-manager.md): For more information on Apple School Manager, go to [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
 
 ---
 | Feature | Use this enrollment option when |
@@ -65,7 +65,7 @@ For more specific information on this enrollment type, go to:
 
 ### ADE administrator tasks
 
-This task list provides an overview. For more specific information, go to [Apple Business Manager enrollment](setup-automated-ios.md) or [Apple School Manager enrollment](../enrollment/apple-school-manager-set-up-ios.md).
+This task list provides an overview. For more specific information, go to [Apple Business Manager enrollment](setup-automated-ios.md) or [Apple School Manager enrollment](school-manager.md).
 
 - Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
@@ -217,9 +217,9 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
 
 ## Apple Configurator enrollment
 
-Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/apple-configurator-enroll-ios.md#direct-enrollment). This option requires you to physically connect iOS/iPadOS devices to a Mac computer using the USB port.
+Use on devices owned by your organization, and includes [Direct Enrollment](setup-configurator-ios.md#direct-enrollment). This option requires you to physically connect iOS/iPadOS devices to a Mac computer using the USB port.
 
-For more specific information on this enrollment type, go to [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
+For more specific information on this enrollment type, go to [Apple Configurator enrollment](setup-configurator-ios.md).
 
 ---
 | Feature | Use this enrollment option when |
@@ -240,7 +240,7 @@ For more specific information on this enrollment type, go to [Apple Configurator
 
 ### Apple Configurator administrator tasks
 
-This task list provides an overview. For more specific information, go to [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
+This task list provides an overview. For more specific information, go to [Apple Configurator enrollment](setup-configurator-ios.md).
 
 - Requires access to a Mac computer with a USB port.
 - Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
@@ -296,7 +296,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
 - When the enrollment profile is ready, USB connect the devices to the Mac, and open the **Apple Configurator** app. When the app opens, it detects the USB connected device, and deploys the Intune enrollment profile you created.
 
-For more information on this enrollment option, and its prerequisites, go to [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
+For more information on this enrollment option, and its prerequisites, go to [Apple Configurator enrollment](setup-configurator-ios.md).
 
 ### Apple Configurator end user tasks
 
@@ -339,7 +339,7 @@ These iOS/iPadOS devices are personal or BYOD (bring your own device) devices th
 
 When you create the enrollment profile, you're asked to choose **Device enrollment with Company Portal**, **Account driven user enrollment**, or **Determine based on user choice**.
 
-For the specific enrollment steps, and its prerequisites, go to [Set up account driven user enrollment](../enrollment/apple-account-driven-user-enrollment.md) and [Set up iOS/iPadOS device enrollment](personal-device-options-ios.md).
+For the specific enrollment steps, and its prerequisites, go to [Set up account driven user enrollment](setup-account-driven-user.md) and [Set up iOS/iPadOS device enrollment](personal-device-options-ios.md).
 
 ---
 | Feature | Use this enrollment option when |
@@ -376,7 +376,7 @@ This list provides an overview of the tasks required of administrators.
 
   - **Account driven user enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, like password, per-app VPN, Wi-Fi, and Siri. If you use this method, and to help secure apps and their data, then we recommend also using app protection policies.
 
-    For the complete list of what you can and can't do, go to [Overview of Apple User Enrollment in Microsoft Intune](../enrollment/ios-user-enrollment-supported-actions.md).
+    For the complete list of what you can and can't do, go to [Overview of Apple User Enrollment in Microsoft Intune](user-enrollment-methods-ios.md).
 
     > [!NOTE]
     > BYOD can become organization-owned devices. To make these devices corporate, go to [Identify devices as corporate-owned](../add-corporate-identifiers.md).
@@ -432,7 +432,7 @@ Your users must complete the following steps during account driven user enrollme
 
 When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check in with Intune and receive policy updates.
 
-For more information about the user experience, go to [Prepare employees for enrollment](../enrollment/apple-account-driven-user-enrollment.md#step-3-prepare-employees-for-enrollment).
+For more information about the user experience, go to [Prepare employees for enrollment](setup-account-driven-user.md#step-3-prepare-employees-for-enrollment).
 
 ## Related articles
 
