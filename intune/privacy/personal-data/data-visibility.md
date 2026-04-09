@@ -39,4 +39,4 @@ Admins can't update device or app specific information. If an end user wants to 
 
 ## Next steps
 
-Find out how to [audit, export, or delete](audit-export-delete.md) personal data in Intune.
+Find out how to [audit, export, or delete](manage-data-requests.md) personal data in Intune.

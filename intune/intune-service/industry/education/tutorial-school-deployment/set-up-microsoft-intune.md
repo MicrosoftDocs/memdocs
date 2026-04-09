@@ -157,7 +157,7 @@ Intune needs permission to collect certain data for Windows update reports on Wi
     :::image type="content" source="./images/intune-windows-data.png" alt-text="A screenshot showing the configuration of the Intune Windows data settings." lightbox="./images/intune-windows-data.png":::
 1. Select **Save**.
 
-For more information, see [Enable use of Windows diagnostic data by Intune](../../../../privacy/windows-diagnostic-data.md).
+For more information, see [Enable use of Windows diagnostic data by Intune](../../../../privacy/enable-windows-diagnostic-data.md).
 
 ### Configure Windows device diagnostics
 
