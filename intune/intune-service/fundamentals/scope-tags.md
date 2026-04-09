@@ -129,7 +129,21 @@ To enable Scoped permissions, go to **Tenant administration** > **Roles** > **Se
 
 Before enabling Scoped permissions, use the **Permissions Assessment Report** to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings**, and can be run as often as needed, before or after enabling the setting.
 
-The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled. Security groups with no members are not listed, and security groups not affected by permission merging are not listed.
+<!-- In progress edits to replace second published paragraph with more details. THe following were bullet point options. However, we are in discussion to break out more detail than we have today:
+
+OPTIONS
+A:
+- The report shows each affected security group, including the roles and scope tags involved, and compares current (merged) permissions with the permissions that would apply after Scoped permissions is enabled.
+- To reduce noise, the report excludes security groups that have no members and groups that are not affected by permission merging.
+
+B: 
+- The report shows each affected security group, with the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled.
+- The report excludes security groups with no members, and security groups not affected by permission merging.
+
+C:   This option introduces an edit to the first sentence, which might not be correct.  It also adds clarity to the second bullet point: 
+- The report shows each affected security group, including the roles and scope tags involved, and compares current (merged) permissions with the permissions that would apply after Scoped permissions is enabled.
+- The report excludes security groups that have no members, as well as groups that are not affected by permission merging.
+-->
 
 To review the impact on your tenant and enable Scoped permissions:
 
