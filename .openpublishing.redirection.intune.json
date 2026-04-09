@@ -542,12 +542,12 @@
         },
         {
             "source_path": "intune/intune-service/protect/microsoft-cloud-pki-delete.md",
-            "redirect_url": "/intune/cloud-pki/delete",
+            "redirect_url": "/intune/cloud-pki/delete-ca",
             "redirect_document_id": false
         },
         {
             "source_path": "intune/intune-service/protect/microsoft-cloud-pki-deployment.md",
-            "redirect_url": "/intune/cloud-pki/deploy",
+            "redirect_url": "/intune/cloud-pki/deployment-models",
             "redirect_document_id": false
         },
         {
@@ -557,7 +557,7 @@
         },
         {
             "source_path": "intune/intune-service/protect/microsoft-cloud-pki-monitor.md",
-            "redirect_url": "/intune/cloud-pki/monitor",
+            "redirect_url": "/intune/cloud-pki/monitor-certificates",
             "redirect_document_id": false
         },
         {
@@ -5238,6 +5238,26 @@
         {
             "source_path": "intune/privacy/personal-data/audit-export-delete.md",
             "redirect_url": "/intune/privacy/personal-data/manage-data-requests",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "intune/cloud-pki/deploy.md",
+            "redirect_url": "/intune/cloud-pki/deployment-models",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "intune/cloud-pki/delete.md",
+            "redirect_url": "/intune/cloud-pki/delete-ca",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "intune/cloud-pki/monitor.md",
+            "redirect_url": "/intune/cloud-pki/monitor-certificates",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "intune/cloud-pki/renew-ca.md",
+            "redirect_url": "/intune/cloud-pki/manage-ca-expiration",
             "redirect_document_id": false
         }
     ]

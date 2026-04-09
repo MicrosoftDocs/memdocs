@@ -2005,7 +2005,7 @@ The following actions have been added for Microsoft Cloud PKI issuing and root c
 - Pause: Temporarily suspend use of a CA.
 - Revoke: Revoke a CA certificate.
 
-You can access all new actions in the Microsoft Intune admin center and Graph API. For more information, see [Delete Microsoft Cloud PKI certification authority](../../cloud-pki/delete.md).
+You can access all new actions in the Microsoft Intune admin center and Graph API. For more information, see [Delete Microsoft Cloud PKI certification authority](../../cloud-pki/delete-ca.md).
 
 ### App management
 
