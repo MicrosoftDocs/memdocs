@@ -89,7 +89,7 @@ If a different proxy server needs to be used with the Intune Connector for Activ
 <configuration>
     <system.net>
         <defaultProxy>
-            <proxy proxyaddress="<PROXY ADDRESS HERE>:<PORT HERE>" bypassonlocal="True" usesystemdefault="True"/>
+            <proxy proxyaddress="<https://PROXY ADDRESS HERE>:<PORT HERE>" bypassonlocal="True" usesystemdefault="True"/>
         </defaultProxy>
     </system.net>
     <runtime>
@@ -117,7 +117,7 @@ To ensure that the Connector Updater service also bypasses the proxy, make a sim
 <configuration>
     <system.net>
         <defaultProxy>
-            <proxy proxyaddress="<PROXY ADDRESS HERE>:<PORT HERE>" bypassonlocal="True" usesystemdefault="True"/>
+            <proxy proxyaddress="<https://PROXY ADDRESS HERE>:<PORT HERE>" bypassonlocal="True" usesystemdefault="True"/>
         </defaultProxy>
     </system.net>
     <startup>

@@ -1690,7 +1690,7 @@ The new setting is **Install Windows quality updates**. These security updates, 
 
 By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles, this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates, which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
 
-For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](../enrollment/windows-enrollment-status.md). For information about Windows quality updates, see [Windows quality update policy](../../device-updates/windows/quality-updates.md).
+For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](../enrollment/windows-enrollment-status.md). For information about Windows quality updates, see [Windows quality update policy](../../device-updates/windows/manage-quality-updates.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1951,7 +1951,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Declarative software update reports for Apple devices<!-- 25207078, 31557946 -->
 
-You can now use several new [software update reports for Apple devices](../../device-updates/apple/reports.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
+You can now use several new [software update reports for Apple devices](../../device-updates/apple/monitor-reports.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
 
 - A *per-device software update report* - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. In the Devices Overview pane for that device, below Monitor, you see the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
 

@@ -44,7 +44,7 @@ The following policy types help you manage Windows updates in Intune:
 > Applies Windows Update client policies to groups of devices. Update rings control deferral periods, deadlines, restart behavior, and user experience settings, enabling phased rollout across your environment.
 >
 >> [!div class="nextstepaction"]
->> [Learn more](update-rings.md)
+>> [Learn more](manage-update-rings.md)
 :::column-end:::
 :::row-end:::
 
@@ -57,7 +57,7 @@ The following policy types help you manage Windows updates in Intune:
 > Locks devices to a specific Windows version (for example, Windows 11 24H2). These policies prevent devices from upgrading beyond the targeted release, ensuring consistency and control over major OS upgrades.
 >
 >> [!div class="nextstepaction"]
->> [Learn more](feature-updates.md)
+>> [Learn more](manage-feature-updates.md)
 :::column-end:::
 :::column:::
 #### Quality update policy
@@ -69,7 +69,7 @@ The following policy types help you manage Windows updates in Intune:
 > - **Expedite policies**: Push critical security updates immediately by overriding deferral settings.
 >
 >> [!div class="nextstepaction"]
->> [Learn more](quality-updates.md)
+>> [Learn more](manage-quality-updates.md)
 :::column-end:::
 :::row-end:::
 
@@ -92,7 +92,7 @@ The following policy types help you manage Windows updates in Intune:
 > Manages the delivery of hardware driver updates from Windows Update. Driver update policies help ensure device compatibility and stability by controlling when and how drivers are installed.
 >
 >> [!div class="nextstepaction"]
->> [Learn more](feature-updates.md)
+>> [Learn more](manage-feature-updates.md)
 :::column-end:::
 :::row-end:::
 
