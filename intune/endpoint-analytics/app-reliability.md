@@ -20,7 +20,7 @@ The application reliability report provides insight into potential issues for de
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Application reliability**.
 
-:::image type="content" source="images/app-reliability/score.png" alt-text="Application reliability report in endpoint analytics" lightbox="images/app-reliability/score.png":::
+:::image type="content" source="media/app-reliability/reliability-score.png" alt-text="Application reliability report in endpoint analytics" lightbox="media/app-reliability/reliability-score.png":::
 
 ## App reliability score
 
@@ -42,7 +42,7 @@ The **App performance** tab uses data from the past 14 days to show reliability 
 - Foreground applications with a measurable amount of usage in your organization. Including these applications ensures that the report is focused on end-user impacting issues.
 - Applications with either an active device count that's greater than 5, or a count greater than 2% of the total number of your tenant's enrolled devices, whichever is larger. Including these applications helps to filter out noise and ensures that calculations are made across a sufficient number of devices to be meaningful.
 
-:::image type="content" source="images/app-reliability/app-performance.png" alt-text="Application performance tab in endpoint analytics" lightbox="images/app-reliability/app-performance.png":::
+:::image type="content" source="media/app-reliability/app-performance.png" alt-text="Application performance tab in endpoint analytics" lightbox="media/app-reliability/app-performance.png":::
 
 For each application in the report, the following data is provided:
 
@@ -68,7 +68,7 @@ Selecting an app name in the table from **App performance** opens **App performa
 - **App versions**: This tab allows you to compare the number of **App crashes** and number of unique **Devices with crashes** across different versions of the application over the past 14 days. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You might also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
 - **OS versions**: This tab compares the **Mean time to failure** for the application across different versions of Windows. This information can be helpful for identifying potential correlations between OS version and application issues.
 
-:::image type="content" source="images/app-reliability/app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="images/app-reliability/app-performance-details.png":::
+:::image type="content" source="media/app-reliability/app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="media/app-reliability/app-performance-details.png":::
 
 ### Device performance
 
