@@ -160,7 +160,7 @@ Intune supports the following enrollment methods for Android devices:
 * Android Enterprise corporate owned work profile
 * Android device administrator
 
-For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](deployment-guide-enrollment-android.md).
+For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](../../device-enrollment/android/guide.md).
 
 | Task | Detail | Platform |
 | ---- | ------ | ------ |
@@ -183,7 +183,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | Task | Detail |
 | ---- | ------ |
 |[Run remote actions in Intune](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.|
-|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
+|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/microsoft-defender-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 | [Wipe corporate data from Intune-managed apps](../apps/apps-selective-wipe.md) | Selectively remove work-related data from a device. |
 
 ## Next steps

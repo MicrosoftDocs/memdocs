@@ -63,7 +63,7 @@ The following security areas can be managed through these policies:
   - **macOS** - Manage [FileVault](../protect/encrypt-devices-filevault.md) for full disk encryption.
 
 - **Software updates** - Control when and how devices receive updates:
-  - **Android** - [FOTA updates](../../device-updates/android/fota-updates.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/zebra-lifeguard-ota-integration.md) for Zebra devices.
+  - **Android** - [FOTA updates](../../device-updates/android/manage-fota.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/setup-zebra-lifeguard.md) for Zebra devices.
   - **iOS/iPadOS and macOS** - [Configure update policies](../../device-updates/apple/index.md) to manage OS versions and update schedules.
   - **Windows** - Configure [Windows Update behaviors](../../device-updates/windows/index.md), schedule updates, and maintain feature update compliance.
 
@@ -85,7 +85,7 @@ The following security areas can be managed through these policies:
 
 Protect organizational data at the application layer using [app protection policies](../apps/app-protection-policy.md) with Intune-managed apps. These protections work on both enrolled and unenrolled devices, supporting Bring Your Own Device (BYOD) scenarios.
 
-**Intune-managed apps** integrate the [Intune App SDK](../developer/app-sdk.md) or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
+**Intune-managed apps** integrate the [Intune App SDK](../../developer/app-sdk/index.md) or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
 
 When you require managed apps (for example, by using app-based Conditional Access policies), users can only access organizational data through those managed apps, while personal data remains unaffected.
 
@@ -146,7 +146,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 - **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
 - **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../protect/endpoint-security-antivirus-policy.md) settings, [EDR onboarding](../protect/endpoint-security-edr-policy.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
-- **Vulnerability management** - [Security tasks](../protect/atp-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
+- **Vulnerability management** - [Security tasks](../protect/microsoft-defender-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
 - **[Microsoft Tunnel](../protect/microsoft-tunnel-overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 
 ### Conditional Access

@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 01/30/2026
+ms.date: 04/10/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: whats-new
@@ -22,6 +22,12 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
+
+## Managed installer policy support during Windows Autopilot device preparation<!-- 31776436 -->  
+
+Date added: *April 10, 2026*
+
+Microsoft Intune now supports the managed installer policy for apps during Windows Autopilot device preparation. The policy will be applied during the out-of-box experience (OOBE) before Win32, Microsoft Store, and Enterprise App Catalog apps install. These app types were previously skipped to prevent app installation conflicts and deployment failures. This update helps ensure supported apps install reliably during user-driven and automatic Autopilot scenarios.  
 
 ## Admins can configure up to 25 apps to install during Autopilot device preparation 
 

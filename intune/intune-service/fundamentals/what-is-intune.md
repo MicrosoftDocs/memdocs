@@ -194,10 +194,10 @@ With these services, Intune:
 
 For more platform-specific requirements to enroll third party partner devices in Intune, go to:
 
-- [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
-- [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
-- [Deployment guide: Enroll Linux devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
-- [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
+- [Deployment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md)
+- [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../device-enrollment/apple/guide-ios-ipados.md)
+- [Deployment guide: Enroll Linux devices in Microsoft Intune](../../device-enrollment/guide-linux.md)
+- [Deployment guide: Enroll macOS devices in Microsoft Intune](../../device-enrollment/apple/guide-macos.md)
 
 ## Enroll in device management, application management, or both
 
@@ -219,7 +219,7 @@ With MAM, you can:
 
 For more information, go to:
 
-- [Device enrollment in Intune?](deployment-guide-enrollment.md)
+- [Device enrollment in Intune?](../../device-enrollment/guide.md)
 - [App protection policies overview](../apps/app-protection-policy.md)
 
 ## Protect data on any device

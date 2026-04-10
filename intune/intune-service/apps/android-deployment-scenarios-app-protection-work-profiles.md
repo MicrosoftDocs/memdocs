@@ -37,9 +37,9 @@ Individual Android apps are enabled for APP in a few ways:
 
     To help, Intune includes the **App Wrapping Tool** tool for existing Android apps (APKs), and creates an app that recognizes app protection policies.
 
-    For more information on this tool, see [prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md).
+    For more information on this tool, see [prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md).
 
-To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](/mem/intune-service/apps/apps-supported-intune-apps).
+To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](/intune/intune-service/apps/apps-supported-intune-apps).
 
 ## Deployment scenarios
 
@@ -110,4 +110,4 @@ For example, customers in or have users in China can't use Android device manage
 Using Intune, both MAM and Android Enterprise personally-owned work profiles are available for your Android BYOD program. You can choose to use MAM and/or work profiles depending upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use MAM if you want to protect org data within applications.
 
 ## Next steps
-[Start using app protection policies](app-protection-policy.md), or [enroll your devices](../fundamentals/deployment-guide-enrollment-android.md).
+[Start using app protection policies](app-protection-policy.md), or [enroll your devices](../../device-enrollment/android/guide.md).

@@ -118,8 +118,8 @@ The following are key considerations for each supported partner. Become familiar
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-disa-purebred)
-- [Android Enterprise](../../intune-service/user-help/enroll-android-device-disa-purebred.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+- [iOS and iPadOS](../../user-help/enrollment/enroll-disa-purebred-ios.md)
+- [Android Enterprise](../../user-help/enrollment/enroll-disa-purebred-android.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -144,8 +144,8 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-entrust-datacard)
-- [Android Enterprise](../../intune-service/user-help/enroll-android-device-entrust-datacard.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
+- [iOS and iPadOS](../../user-help/enrollment/enroll-entrust-datacard-ios.md)
+- [Android Enterprise](../../user-help/enrollment/enroll-entrust-datacard-android.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -168,8 +168,8 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-intercede)
-- [Android Enterprise](../../intune-service/user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+- [iOS and iPadOS](../../user-help/enrollment/enroll-intercede-ios.md)
+- [Android Enterprise](../../user-help/enrollment/enroll-intercede-android.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 

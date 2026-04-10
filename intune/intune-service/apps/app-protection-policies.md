@@ -65,7 +65,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     The app(s) you have selected will appear in the public and custom apps list.
 
     > [!NOTE]
-    > **Public apps** are supported are apps from Microsoft and partners that are commonly used with Microsoft Intune. These Intune protected apps are enabled with a rich set of support for mobile application protection policies. For more information, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md). Custom apps are LOB apps that have been integrated with the Intune SDK or wrapped by the Intune App Wrapping Tool. For more information see [Microsoft Intune App SDK Overview](../developer/app-sdk.md) and [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md).
+    > **Public apps** are supported are apps from Microsoft and partners that are commonly used with Microsoft Intune. These Intune protected apps are enabled with a rich set of support for mobile application protection policies. For more information, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md). Custom apps are LOB apps that have been integrated with the Intune SDK or wrapped by the Intune App Wrapping Tool. For more information see [Microsoft Intune App SDK Overview](../../developer/app-sdk/index.md) and [Prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md).
 
 6. Click **Next** to display the **Data protection** page.
 
@@ -105,8 +105,8 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying conditional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
-* [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md)
-* [Where to find work or school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
+* [Where to find work or school apps for iOS/iPadOS](../../user-help/apps/managed-apps-ios.md)
+* [Where to find work or school apps for Android](../../user-help/apps/managed-apps-android.md)
 
 
 ## Change existing policies
@@ -205,5 +205,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-- [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
-- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md)
+- [Where to find work or school apps for Android (user help)](../../user-help/apps/managed-apps-android.md)
+- [Where to find work or school apps for iOS/iPadOS (user help)](../../user-help/apps/managed-apps-ios.md)

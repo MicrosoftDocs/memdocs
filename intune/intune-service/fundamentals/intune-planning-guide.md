@@ -94,10 +94,10 @@ Some considerations:
 
   The following software updates planning guides can help you determine your update strategy:
 
-  - [Personal/BYOD](../../device-updates/byod-software-updates-guide.md)
-  - [Android](../../device-updates/android/software-updates-guide.md)
-  - [iOS/iPadOS](../../device-updates/apple/software-updates-guide-ios-ipados.md)
-  - [macOS](../../device-updates/apple/software-updates-guide-macos.md)
+  - [Personal/BYOD](../../device-updates/byod-planning-guide.md)
+  - [Android](../../device-updates/android/planning-guide.md)
+  - [iOS/iPadOS](../../device-updates/apple/planning-guide-ios-ipados.md)
+  - [macOS](../../device-updates/apple/planning-guide-macos.md)
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 
@@ -506,7 +506,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
   | Self-service |  |  |  | HR, Finance |
   | Pre-provisioned |  |  |  | Executives |
 
-  For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+  For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md).
 
 ## Step 6 - Communicate changes
 
@@ -602,7 +602,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
   - Tools and resources
   - Q & A
 
-The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](/mem/intune-service/user-help/use-managed-devices-to-get-work-done) are also great resources.
+The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](../../user-help/index.yml) are also great resources.
 
 ## Related articles
 

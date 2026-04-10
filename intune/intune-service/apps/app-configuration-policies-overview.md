@@ -70,7 +70,7 @@ To support app configuration for apps deployed through Intune on enrolled device
 
 Selecting **Managed apps** as the **Device Enrollment Type** specifically refers to apps configured with an Intune App Protection Policy on devices regardless of the enrollment state.
 
-To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../developer/app-sdk.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
+To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../../developer/app-sdk/index.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md#feature-comparison).
 
 Delivery of app configuration through the MAM channel does not require the device to be enrolled or for the app to be managed or delivered through the unified endpoint management solution. There are three scenarios for app configuration delivery using the MAM channel:
 

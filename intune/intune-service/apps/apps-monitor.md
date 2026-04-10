@@ -136,5 +136,5 @@ The following table provides addition installation error code details for LOB ap
 
 ## Next steps
 
-- To learn more about working with your Intune data, see [Use the Intune Data Warehouse](../developer/reports-nav-create-intune-reports.md).
+- To learn more about working with your Intune data, see [Use the Intune Data Warehouse](../../developer/data-warehouse/create-reports.md).
 - To learn about app configuration policies, see [App configuration policies for Intune](app-configuration-policies-overview.md).
