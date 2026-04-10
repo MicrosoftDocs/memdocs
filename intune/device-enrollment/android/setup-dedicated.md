@@ -152,7 +152,7 @@ You can now [enroll your dedicated devices](ref-corporate-methods.md).
 
 ## Managing apps on Android Enterprise dedicated devices
 
-Only apps that have assignment type [set to Required](../../intune-service/apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise dedicated devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personal and corporate owned work profile devices.
+Only apps that have assignment type [set to Required](../../app-management/deployment/assign-groups.md#assign-an-app) can be installed on Android Enterprise dedicated devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personal and corporate owned work profile devices.
 
 Apps are automatically updated on managed devices when the app developer publishes an update to Google Play.
 
@@ -163,5 +163,5 @@ To remove an app from Android Enterprise dedicated devices, you can do either of
 
 ## Next steps
 
-- [Deploy Android apps](../../intune-service/apps/apps-deploy.md)
+- [Deploy Android apps](../../app-management/deployment/assign-groups.md)
 - [Add Android configuration policies](../../intune-service/configuration/device-profiles.md)

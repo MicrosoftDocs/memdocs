@@ -99,7 +99,7 @@ For more information about creating an SSO app extension policy, see:
 ## Step 5: Assign the Microsoft Authenticator app
 Assign the Microsoft Authenticator app to targeted devices. Assign the app as *required* to **All devices**. Then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter). You must have purchased the Microsoft Authenticator app through an Apple volume-purchase program.
 
-For more information about assigning a volume-purchased app, see [Assign a volume purchased app](../../intune-service/apps/vpp-apps-ios.md#assign-a-volume-purchased-app).
+For more information about assigning a volume-purchased app, see [Assign a volume purchased app](../../app-management/deployment/manage-vpp-apple.md#assign-a-volume-purchased-app).
 
 ## Step 6: Distribute devices
 

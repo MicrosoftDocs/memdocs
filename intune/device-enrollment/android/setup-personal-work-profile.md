@@ -80,6 +80,6 @@ Private space is a feature introduced with Android 15 that lets people create a 
  * If users attempt to enroll the private space after they enroll the device, Intune will initiate the device administrator enrollment process. The second enrollment causes two enrollment records to appear in the Microsoft Intune admin center: one under work profile management and one under device administrator management.  Microsoft Intune doesn't provide support for this scenario.
 
 ## Next steps
-- [Deploy Android Enterprise apps](../../intune-service/apps/apps-add-android-for-work.md)
+- [Deploy Android Enterprise apps](../../app-management/deployment/add-managed-google-play.md)
 - [Add Android Enterprise configuration policies](../../intune-service/configuration/device-profiles.md)
 - [Configuring and troubleshooting Android Enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974)

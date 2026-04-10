@@ -231,15 +231,15 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
   - Select **configuration designer** for the settings format, as opposed to XML.
   - Select **Current Channel** for the update channel.
 
-  To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
+  To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
 
 - **Company Portal app**
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal app is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the Company Portal app to sync their device with Intune, check compliance status, and so on.
 
-  To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../intune-service/apps/store-apps-company-portal-autopilot.md).
+  To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../app-management/deployment/add-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)
-  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../intune-service/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
+  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md) to install **Microsoft Whiteboard**.
 
 ## Phase 2 - Build a cloud-native Windows endpoint
 
@@ -497,7 +497,7 @@ After users sign in, Microsoft Edge updates automatically. To trigger an update 
 Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"
 ```
 
-To deploy Microsoft Edge to previous versions of Windows, go to [Add Microsoft Edge for Windows to Microsoft Intune](../../intune-service/apps/apps-windows-edge.md).
+To deploy Microsoft Edge to previous versions of Windows, go to [Add Microsoft Edge for Windows to Microsoft Intune](../../app-management/deployment/add-edge-windows.md).
 
 #### Microsoft Edge Configuration
 
@@ -635,7 +635,7 @@ Instead, identify the group policy settings that are mandatory and review those 
 
 ### Scripts
 
-You can use PowerShell scripts for any settings or customizations that you need to configure outside of the in-built configuration profiles. For more information, go to [Add PowerShell scripts to Windows devices in Microsoft Intune](../../intune-service/apps/intune-management-extension.md).
+You can use PowerShell scripts for any settings or customizations that you need to configure outside of the in-built configuration profiles. For more information, go to [Add PowerShell scripts to Windows devices in Microsoft Intune](../../device-management/tools/management-extension-windows.md).
 
 ### Mapping Network Drives and Printers
 
@@ -659,11 +659,11 @@ For printing solutions, consider Universal Print. For more information, go to:
 
 Intune supports the deployment of many different Windows application types.
 
-- Windows Installer (MSI) – [Add a Windows line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-windows.md)
-- MSIX – [Add a Windows line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-windows.md)
-- Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../intune-service/apps/apps-win32-app-management.md)
-- Store apps – [Add Microsoft Store apps to Microsoft Intune](../../intune-service/apps/store-apps-windows.md)
-- Web links – [Add web apps to Microsoft Intune](../../intune-service/apps/web-app.md)
+- Windows Installer (MSI) – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
+- MSIX – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
+- Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../app-management/deployment/win32-overview.md)
+- Store apps – [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store-legacy.md)
+- Web links – [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md)
 
 If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits, including notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Windows Autopilot.
 
@@ -695,8 +695,8 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
 - Configure an Intune [device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
-- Add [Store Apps](../../intune-service/apps/store-apps-microsoft.md)
-- Add [Win32 apps](../../intune-service/apps/apps-win32-app-management.md)
+- Add [Store Apps](../../app-management/deployment/add-microsoft-store.md)
+- Add [Win32 apps](../../app-management/deployment/win32-overview.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)

@@ -517,7 +517,7 @@
     },
     {
       "source_path": "intune/intune/enrollment/android-app-configuration-policies.md",
-      "redirect_url": "/intune/intune-service/apps/app-configuration-policies-use-android",
+      "redirect_url": "/intune/app-management/configuration/configure-managed-android",
       "redirect_document_id": false
     },
     {
@@ -617,17 +617,17 @@
     },
     {
       "source_path": "intune/intune/fundamentals/migration-guide-app-protection-policies.md",
-      "redirect_url": "/intune/intune-service/apps/app-configuration-policies-overview",
+      "redirect_url": "/intune/app-management/configuration/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/windows-store-for-business.md",
-      "redirect_url": "/intune/intune-service/apps/store-apps-microsoft",
+      "redirect_url": "/intune/app-management/deployment/add-microsoft-store",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/app-sideload-windows.md",
-      "redirect_url": "/intune/intune-service/apps/lob-apps-windows",
+      "redirect_url": "/intune/app-management/deployment/add-lob-windows",
       "redirect_document_id": false
     },
     {
@@ -697,7 +697,7 @@
     },
     {
       "source_path": "intune/intune/apps/protect-edge-mam-windows.md",
-      "redirect_url": "/intune/intune-service/apps/apps/protect-mam-windows",
+      "redirect_url": "/intune/app-management/protection/enable-mam-windows",
       "redirect_document_id": false
     },
     {
@@ -952,12 +952,12 @@
     },
     {
       "source_path": "intune/intune/apps/store-apps-windows-phone-8-1.md",
-      "redirect_url": "/intune/intune-service/apps/apps-add",
+      "redirect_url": "/intune/app-management/deployment/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/lob-apps-windows-phone.md",
-      "redirect_url": "/intune/intune-service/apps/apps-add",
+      "redirect_url": "/intune/app-management/deployment/index",
       "redirect_document_id": false
     },
     {
@@ -1257,7 +1257,7 @@
     },
     {
       "source_path": "intune/intune/apps/app-configuration-managed-browser.md",
-      "redirect_url": "/intune/intune-service/apps/manage-microsoft-edge",
+      "redirect_url": "/intune/app-management/configuration/configure-edge-ios-android",
       "redirect_document_id": false
     },
     {
@@ -3392,6 +3392,486 @@
     {
       "source_path": "intune/intune-service/user-help/device-little-different-jamf.md",
       "redirect_url": "/intune/user-help/troubleshooting/troubleshoot-jamf-registration-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-management.md",
+      "redirect_url": "/intune/app-management/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-lifecycle.md",
+      "redirect_url": "/intune/app-management/lifecycle",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-supported-intune-apps.md",
+      "redirect_url": "/intune/app-management/ref-protected-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-discovered-apps.md",
+      "redirect_url": "/intune/app-management/discovered-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-monitor.md",
+      "redirect_url": "/intune/app-management/monitor-assignments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-selective-wipe.md",
+      "redirect_url": "/intune/app-management/wipe-corporate-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/get-app-bundle-id-intune-admin-center.md",
+      "redirect_url": "/intune/app-management/ref-bundle-ids",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/manage-without-gms.md",
+      "redirect_url": "/intune/app-management/manage-without-gms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-add.md",
+      "redirect_url": "/intune/app-management/deployment/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-add-built-in.md",
+      "redirect_url": "/intune/app-management/deployment/add-built-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-add-enterprise-app.md",
+      "redirect_url": "/intune/app-management/deployment/add-enterprise-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-add-android-for-work.md",
+      "redirect_url": "/intune/app-management/deployment/add-managed-google-play",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-add-office365.md",
+      "redirect_url": "/intune/app-management/deployment/add-microsoft-365-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-add-office365-macOS.md",
+      "redirect_url": "/intune/app-management/deployment/add-microsoft-365-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-company-portal-macos.md",
+      "redirect_url": "/intune/app-management/deployment/add-company-portal-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-edge-macos.md",
+      "redirect_url": "/intune/app-management/deployment/add-edge-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-windows-edge.md",
+      "redirect_url": "/intune/app-management/deployment/add-edge-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-advanced-threat-protection-macos.md",
+      "redirect_url": "/intune/app-management/deployment/add-defender-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-deploy.md",
+      "redirect_url": "/intune/app-management/deployment/assign-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-inc-exl-assignments.md",
+      "redirect_url": "/intune/app-management/deployment/configure-assignment-filters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-deploy-gcc-dod.md",
+      "redirect_url": "/intune/app-management/deployment/deploy-gcc-dod",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-windows-10-app-deploy.md",
+      "redirect_url": "/intune/app-management/deployment/deploy-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/web-app.md",
+      "redirect_url": "/intune/app-management/deployment/add-web",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/macos-unmanaged-pkg.md",
+      "redirect_url": "/intune/app-management/deployment/add-unmanaged-pkg-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-provisioning-profile-ios.md",
+      "redirect_url": "/intune/app-management/deployment/manage-provisioning-profiles-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-enterprise-app-management.md",
+      "redirect_url": "/intune/app-management/deployment/enterprise-app-catalog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-eam-supersedence.md",
+      "redirect_url": "/intune/app-management/deployment/update-enterprise-supersedence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/store-apps-android.md",
+      "redirect_url": "/intune/app-management/deployment/add-store-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/store-apps-company-portal-app.md",
+      "redirect_url": "/intune/app-management/deployment/add-company-portal-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/store-apps-company-portal-autopilot.md",
+      "redirect_url": "/intune/app-management/deployment/add-company-portal-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/store-apps-ios.md",
+      "redirect_url": "/intune/app-management/deployment/add-store-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/store-apps-microsoft.md",
+      "redirect_url": "/intune/app-management/deployment/add-microsoft-store",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/store-apps-windows.md",
+      "redirect_url": "/intune/app-management/deployment/add-microsoft-store-legacy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/lob-apps-android.md",
+      "redirect_url": "/intune/app-management/deployment/add-lob-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/lob-apps-ios.md",
+      "redirect_url": "/intune/app-management/deployment/add-lob-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/lob-apps-macos.md",
+      "redirect_url": "/intune/app-management/deployment/add-lob-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/lob-apps-macos-dmg.md",
+      "redirect_url": "/intune/app-management/deployment/add-dmg-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/lob-apps-macos-agent.md",
+      "redirect_url": "/intune/app-management/deployment/management-agent-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/lob-apps-windows.md",
+      "redirect_url": "/intune/app-management/deployment/add-lob-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-app-management.md",
+      "redirect_url": "/intune/app-management/deployment/win32-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-add.md",
+      "redirect_url": "/intune/app-management/deployment/add-win32",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-prepare.md",
+      "redirect_url": "/intune/app-management/deployment/win32-packaging",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-supersedence.md",
+      "redirect_url": "/intune/app-management/deployment/configure-win32-supersedence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-s-mode.md",
+      "redirect_url": "/intune/app-management/deployment/enable-win32-s-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-deploy-update-package.md",
+      "redirect_url": "/intune/app-management/deployment/deploy-win32-update-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-win32-troubleshoot.md",
+      "redirect_url": "/intune/app-management/deployment/troubleshoot-win32",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/vpp-apps.md",
+      "redirect_url": "/intune/app-management/deployment/manage-volume-purchased",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/vpp-apps-ios.md",
+      "redirect_url": "/intune/app-management/deployment/manage-vpp-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/vpp-ebooks-ios.md",
+      "redirect_url": "/intune/app-management/deployment/manage-ebooks-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/quickstart-add-assign-app.md",
+      "redirect_url": "/intune/app-management/deployment/quickstart-add-assign",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-policies-overview.md",
+      "redirect_url": "/intune/app-management/configuration/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-policies-managed-app.md",
+      "redirect_url": "/intune/app-management/configuration/configure-managed-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-policies-outlook.md",
+      "redirect_url": "/intune/app-management/configuration/configure-outlook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-policies-use-android.md",
+      "redirect_url": "/intune/app-management/configuration/configure-managed-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-policies-use-ios.md",
+      "redirect_url": "/intune/app-management/configuration/configure-managed-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-vpn-ae.md",
+      "redirect_url": "/intune/app-management/configuration/configure-vpn-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-configuration-managed-home-screen-app.md",
+      "redirect_url": "/intune/app-management/configuration/configure-managed-home-screen",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/configure-microsoft-launcher.md",
+      "redirect_url": "/intune/app-management/configuration/configure-launcher-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-configure-chrome-android.md",
+      "redirect_url": "/intune/app-management/configuration/configure-chrome-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/manage-microsoft-edge.md",
+      "redirect_url": "/intune/app-management/configuration/configure-edge-ios-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/manage-microsoft-edge-windows.md",
+      "redirect_url": "/intune/app-management/configuration/configure-edge-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/manage-microsoft-office.md",
+      "redirect_url": "/intune/app-management/configuration/configure-microsoft-365-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/manage-microsoft-teams.md",
+      "redirect_url": "/intune/app-management/configuration/configure-teams-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-office-policies.md",
+      "redirect_url": "/intune/app-management/configuration/microsoft-365-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/company-portal-app.md",
+      "redirect_url": "/intune/app-management/configuration/configure-company-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-ae-system.md",
+      "redirect_url": "/intune/app-management/configuration/manage-system-apps-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/tutorial-configure-slack-enterprise-grid.md",
+      "redirect_url": "/intune/app-management/configuration/tutorial-configure-slack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy.md",
+      "redirect_url": "/intune/app-management/protection/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policies.md",
+      "redirect_url": "/intune/app-management/protection/create-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-framework.md",
+      "redirect_url": "/intune/app-management/protection/data-protection-framework",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policies-access-actions.md",
+      "redirect_url": "/intune/app-management/protection/configure-conditional-launch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policies-exception.md",
+      "redirect_url": "/intune/app-management/protection/data-transfer-exceptions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policies-monitor.md",
+      "redirect_url": "/intune/app-management/protection/monitor-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policies-validate.md",
+      "redirect_url": "/intune/app-management/protection/validate-policy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy-delivery.md",
+      "redirect_url": "/intune/app-management/protection/policy-delivery-timing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy-extensions.md",
+      "redirect_url": "/intune/app-management/protection/policy-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy-settings-android.md",
+      "redirect_url": "/intune/app-management/protection/ref-settings-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy-settings-ios.md",
+      "redirect_url": "/intune/app-management/protection/ref-settings-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy-settings-windows.md",
+      "redirect_url": "/intune/app-management/protection/ref-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policy-settings-log.md",
+      "redirect_url": "/intune/app-management/protection/ref-settings-log",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/protect-mam-windows.md",
+      "redirect_url": "/intune/app-management/protection/enable-mam-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/android-deployment-scenarios-app-protection-work-profiles.md",
+      "redirect_url": "/intune/app-management/protection/mam-vs-work-profiles-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/data-transfer-between-apps-manage-ios.md",
+      "redirect_url": "/intune/app-management/protection/manage-data-transfer-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/apps-quiet-time-policies.md",
+      "redirect_url": "/intune/app-management/protection/configure-quiet-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/quickstart-create-assign-app-policy.md",
+      "redirect_url": "/intune/app-management/protection/quickstart-create-assign-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/powershell-scripts.md",
+      "redirect_url": "/intune/device-management/tools/run-powershell-scripts-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/macos-shell-scripts.md",
+      "redirect_url": "/intune/device-management/tools/run-shell-scripts-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/intune-management-extension.md",
+      "redirect_url": "/intune/device-management/tools/management-extension-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-overview.md",
+      "redirect_url": "/intune/solutions/edge-data-security/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-1-mamca.md",
+      "redirect_url": "/intune/solutions/edge-data-security/conditional-access-step-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-2-app.md",
+      "redirect_url": "/intune/solutions/edge-data-security/protection-policies-step-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-3-scc.md",
+      "redirect_url": "/intune/solutions/edge-data-security/threat-defense-step-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-4-acp-edge.md",
+      "redirect_url": "/intune/solutions/edge-data-security/app-configuration-step-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-5-settings-catalog.md",
+      "redirect_url": "/intune/solutions/edge-data-security/settings-catalog-step-5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-6-end-user-experience.md",
+      "redirect_url": "/intune/solutions/edge-data-security/end-user-experience-step-6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-7-troubleshoot.md",
+      "redirect_url": "/intune/solutions/edge-data-security/troubleshoot-step-7",
       "redirect_document_id": false
     }
   ]

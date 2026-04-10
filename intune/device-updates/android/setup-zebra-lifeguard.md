@@ -104,13 +104,13 @@ The apps required are:
 - Zebra Enrollment Manager
 - Zebra Common Transport Layer
 
-Use Managed Google Play to add them to your tenant. For information on how to add them to your tenant, see [Add and assign Managed Google Play apps to Android Enterprise devices](../../intune-service/apps/apps-add-android-for-work.md)
+Use Managed Google Play to add them to your tenant. For information on how to add them to your tenant, see [Add and assign Managed Google Play apps to Android Enterprise devices](../../app-management/deployment/add-managed-google-play.md)
 
 Next, assign **Zebra Enrollment Manager** and **Zebra Common Transport Layer** as Required apps for all the Zebra devices you want to update and use with LG OTA. The apps are deployed automatically to those devices.
 
 #### Enabling a Zebra package as a system app
 
-If you're planning to use LG OTA to update a device running on Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../../intune-service/apps/apps-ae-system.md)
+If you're planning to use LG OTA to update a device running on Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../../app-management/configuration/manage-system-apps-android.md)
 
 |Build|System app to be enabled|
 |--------|------------------------------|
@@ -122,7 +122,7 @@ If you're planning to use LG OTA to update a device running on Android 11, you n
 
 From the context panel in the Set up Zebra connector screen, select the link - **Go to app configuration policies**. You need to create an app configuration policy for managed devices for each of the two required apps.
 
-For more information, see [Add app configuration policies for managed Android Enterprise devices](../../intune-service/apps/app-configuration-policies-use-android.md)
+For more information, see [Add app configuration policies for managed Android Enterprise devices](../../app-management/configuration/configure-managed-android.md)
 
 #### Policy targeting Zebra Enrollment Manager app
 

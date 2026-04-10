@@ -281,7 +281,7 @@ Microsoft recommends:
 
 - Don't enroll new devices using Android device administrator.
 
-- Enroll new devices using one of the other methods described in this article and/or using [App protection policies](../../intune-service/apps/app-protection-policy.md).
+- Enroll new devices using one of the other methods described in this article and/or using [App protection policies](../../app-management/protection/overview.md).
 
 - Move existing Android device administrator devices to one of the other methods described in this article. If you're moving them to [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article), consider using the streamlined flow to move [Android devices from device administrator to personally owned work profile management](migrate-device-admin-to-work-profile.md).
 

@@ -67,7 +67,7 @@ For more information, see [Remove devices by using wipe, retire, or manually une
 
 When you choose an **App selective wipe**, it removes company app data without removing personal data. Use this action when a device is reported as lost or stolen.
 
-For more information, see [How to wipe only corporate data from Intune-managed apps](../../intune-service/apps/apps-selective-wipe.md).
+For more information, see [How to wipe only corporate data from Intune-managed apps](../../app-management/wipe-corporate-data.md).
 
 #### Sync
 

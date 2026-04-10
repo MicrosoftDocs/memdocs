@@ -113,7 +113,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
+  - [Windows app deployment using Microsoft Intune](../../app-management/deployment/deploy-windows.md)
   - [Introduction to app management in Configuration Manager](/previous-versions/troubleshoot/configmgr/introduction-to-application-management)
   - [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11)
 
@@ -155,7 +155,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
+    - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
     - [Management tasks for Configuration Manager apps](../../configmgr/apps/deploy-use/management-tasks-applications.md)
 
 - **Manage user data and settings**

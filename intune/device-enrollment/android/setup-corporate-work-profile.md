@@ -203,5 +203,5 @@ The limitations in this section apply to corporate-owned devices with a work pro
 Private space is a feature introduced with Android 15 that lets people create a space on their device for sensitive apps and data they want to keep hidden. The private space is considered a personal profile. Microsoft Intune doesn't support mobile device management within the private space or provide technical support for devices that attempt to enroll the private space.
 
 ## Next steps
-- [Deploy Android apps](../../intune-service/apps/apps-deploy.md)
+- [Deploy Android apps](../../app-management/deployment/assign-groups.md)
 - [Add Android configuration policies](../../intune-service/configuration/device-profiles.md)
