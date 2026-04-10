@@ -191,7 +191,7 @@ items:
               - name: Windows LOB apps
                 href: ./deployment/add-lob-windows.md
               - name: Intune management extension for Windows
-                href: ./device-management/tools/management-extension-windows.md
+                href: ../device-management/tools/management-extension-windows.md
               - name: Enterprise App Management
                 items:
                   - name: Enterprise App Management overview
