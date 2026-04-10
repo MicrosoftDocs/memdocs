@@ -65,7 +65,7 @@ To create and manage access policies, use an account with one of the following o
 To approve or reject MAA requests submitted by other admins, an account must meet all of the following requirements:
 
 1. **Approver group membership**: The account must be a member of the approver group that's assigned to the access policy for the specific resource type.
-2. **Intune role permission**: The account must have the resource-specific Read permissions for the policy type they are approving. See [Permissions reference](#permissions-reference) for the full list.
+2. **Intune role permission**: The account must have the resource-specific Read permissions for the policy type they are approving. 
 3. **RBAC role assignment for the group**: The approver security group itself must be added as a member group to at least one Intune role assignment. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
    > [!IMPORTANT]
@@ -75,8 +75,7 @@ To approve or reject MAA requests submitted by other admins, an account must mee
 
 ### Role 3: Change requestor
 
-To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. See [Permissions reference](#permissions-reference) for the full list by policy type.
-
+To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. 
 > [!NOTE]
 > - An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
 > - Changes submitted by a Global Administrator or Intune Administrator account must still be approved by a different administrator.
