@@ -38,7 +38,7 @@ To use Multi Admin Approval, your tenant must have at least two administrator ac
 
 ### Administrator licensing
 
-By default, every administrator who participates in the MAA workflow must have an Intune license assigned to their account. If your organization needs administrators to participate without individual Intune licenses, you can enable the **Allow access to unlicensed admins** setting.
+By default, the administrators who participate in the MAA workflow must have an Intune license assigned to their account. To allow unlicensed administrators to participate in the MAA workflow, enable the **Allow access to unlicensed admins** setting.
 
 > [!CAUTION]
 > **This setting is irreversible.** Once enabled, you can't turn it off. Make sure your organization understands this limitation before proceeding.
@@ -65,7 +65,7 @@ To create and manage access policies, use an account with one of the following o
 To approve or reject MAA requests submitted by other admins, an account must meet all of the following requirements:
 
 1. **Approver group membership**: The account must be a member of the approver group that's assigned to the access policy for the specific resource type.
-2. **Intune role permission**: The account must have the *Approval for Multi Admin Approval* permission in their Intune role, plus the resource-specific Read permissions for the policy type they are approving. See [Permissions reference](#permissions-reference) for the full list.
+2. **Intune role permission**: The account must have the resource-specific Read permissions for the policy type they are approving. See [Permissions reference](#permissions-reference) for the full list.
 3. **RBAC role assignment for the group**: The approver security group itself must be added as a member group to at least one Intune role assignment. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
    > [!IMPORTANT]
@@ -78,7 +78,8 @@ To approve or reject MAA requests submitted by other admins, an account must mee
 To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. See [Permissions reference](#permissions-reference) for the full list by policy type.
 
 > [!NOTE]
-> An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
+> - An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
+> - Changes submitted by a Global Administrator or Intune Administrator account must still be approved by a different administrator.
 
 ## How Multi Admin Approval and Access policies work
 
@@ -87,7 +88,7 @@ When an admin edits or creates a new object for an area that's protected by an a
 - The *business justification* becomes part of the approval request for the change.
 - An admin who submitted a change can view the status of their requests in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My request** page.
 
-After a change is submitted, an *approver* navigates to the **Received request** page of the **Multi Admin Approval** node. Here they see a list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
+After a change is submitted, an *approver* can navigate to the **Received request** page of the **Multi Admin Approval** node, or go to **Tenant administration** > **Admin Tasks** to manage the requests. Both locations provide the list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
 
 - The approver selects the *Business justification* link for the request. This action opens the Access policy request pane where you can view more information about the change, including the full details provided in the Business justification field of the request.
 - On the Access policy request pane, the approver can enter notes in the **Approver notes** field, and then select an option to **Approve request** or **Reject request**. These notes are added to the request and are visible to the individual who requested the change when they review their requests on the **My request** page. For example, if the request is rejected, the reason for the rejection can be passed back to the requestor through the Approver notes.
