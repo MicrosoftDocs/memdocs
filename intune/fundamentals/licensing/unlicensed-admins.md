@@ -29,9 +29,8 @@ You can allow administrators to sign in to and manage Microsoft Intune without a
 :::row-end:::
 
 > [!IMPORTANT]
- > Intune supports up to 350 unlicensed admins per security group and
- > only applies to direct members. It can take up to 48 hours for
- > access changes to take effect.
+> - Intune supports up to 350 unlicensed admins per security group and only applies to direct members.
+> - It can take up to 48 hours for access changes to take effect.
 
 ## Enable the setting
 
@@ -55,5 +54,5 @@ After you enable this setting, users who sign in to the Microsoft Intune admin c
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
-[Intune role administrator]: role-based-access-control-reference.md#intune-role-administrator
+[Intune role administrator]: ../../intune-service/fundamentals/role-based-access-control-reference.md
 [Custom role]: ../../intune-service/fundamentals/create-custom-role.md
