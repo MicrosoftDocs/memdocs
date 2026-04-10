@@ -13,7 +13,7 @@ ms.collection:
 
 # Add an Enterprise App Catalog App to Microsoft Intune
 
-The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32-overview.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
 
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md).
@@ -254,7 +254,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Select **Add group** and assign the groups that use this app.
 3. On the **Select groups** pane, select groups to assign based on users or devices.
-4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](./win32-overview.md#set-win32-app-availability-and-notifications).
+4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](./win32.md#set-win32-app-availability-and-notifications).
 5. If you don't want this app assignment to affect groups of users, select **Included** under the **MODE** column. In the **Edit assignment** pane, change the **mode** value from  **Included** to **Excluded**. Select **OK** to close the **Edit assignment** pane.
 6. In the **App settings** section, select the **Delivery optimization priority** value for the app. This setting determines how the app content is downloaded. You can choose to download the app content in background mode or foreground mode based on assignment.
 
@@ -309,6 +309,6 @@ When Multi-Admin Approval (MAA) is enabled for your tenant, there are some limit
 
 ## Next steps
 
-- [App relationship viewer](./win32-overview.md#app-relationship-viewer)
+- [App relationship viewer](./win32.md#app-relationship-viewer)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)

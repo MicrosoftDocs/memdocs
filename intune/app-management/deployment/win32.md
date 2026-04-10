@@ -85,11 +85,11 @@ For more information about adding Win32 apps with script installers, see [Add, a
 
 ## Prepare the Win32 app content for upload
 
-Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the Microsoft Win32 Content Prep Tool. You use the Microsoft Win32 Content Prep Tool to preprocess Windows classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. For more information and steps, see [Prepare Win32 app content for upload](./win32-packaging.md).
+Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the Microsoft Win32 Content Prep Tool. You use the Microsoft Win32 Content Prep Tool to preprocess Windows classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. For more information and steps, see [Prepare Win32 app content for upload](./create-win32-package.md).
 
 ## Add, assign, and monitor a Win32 app
 
-After you have [prepared a Win32 app to be uploaded to Intune](./win32-packaging.md) by using the Microsoft Win32 Content Prep Tool, you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](./add-win32.md).
+After you have [prepared a Win32 app to be uploaded to Intune](./create-win32-package.md) by using the Microsoft Win32 Content Prep Tool, you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](./add-win32.md).
 
 > [!NOTE]
 > Windows application size is limited to 30 GB per app.
@@ -208,7 +208,7 @@ To view an app using the relationship viewer:
 
 For related information, see the following resources:
 - [Add Win32 app supersedence](./configure-win32-supersedence.md)
-- [App relationship viewer](./win32-overview.md#app-relationship-viewer)
+- [App relationship viewer](./win32.md#app-relationship-viewer)
 - [Microsoft Intune Enterprise Application Management](./enterprise-app-catalog.md)
 
 ## Next steps

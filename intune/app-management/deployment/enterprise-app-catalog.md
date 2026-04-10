@@ -13,7 +13,7 @@ ms.collection:
 
 # Microsoft Intune Enterprise Application Management
 
-Microsoft Intune Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](./win32-packaging.md) and hosted by Microsoft.
+Microsoft Intune Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](./create-win32-package.md) and hosted by Microsoft.
 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md).

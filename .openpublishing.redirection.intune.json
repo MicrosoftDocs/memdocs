@@ -957,7 +957,7 @@
     },
     {
       "source_path": "intune/intune/apps/app-protection-policies-exception.md",
-      "redirect_url": "/intune/app-management/protection/data-transfer-exceptions",
+      "redirect_url": "/intune/app-management/protection/create-data-transfer-exceptions",
       "redirect_document_id": false
     },
     {
@@ -997,7 +997,7 @@
     },
     {
       "source_path": "intune/intune/apps/app-protection-policy-settings-log.md",
-      "redirect_url": "/intune/app-management/protection/ref-settings-log",
+      "redirect_url": "/intune/app-management/protection/troubleshoot-protection-logs",
       "redirect_document_id": false
     },
     {
@@ -1092,7 +1092,7 @@
     },
     {
       "source_path": "intune/intune/apps/apps-inc-exl-assignments.md",
-      "redirect_url": "/intune/app-management/deployment/configure-assignment-filters",
+      "redirect_url": "/intune/app-management/deployment/configure-assignment-scope",
       "redirect_document_id": false
     },
     {
@@ -1107,7 +1107,7 @@
     },
     {
       "source_path": "intune/intune/apps/apps-selective-wipe.md",
-      "redirect_url": "/intune/app-management/wipe-corporate-data",
+      "redirect_url": "/intune/app-management/protection/wipe-corporate-data",
       "redirect_document_id": false
     },
     {
@@ -1122,7 +1122,7 @@
     },
     {
       "source_path": "intune/intune/apps/apps-win32-app-management.md",
-      "redirect_url": "/intune/app-management/deployment/win32-overview",
+      "redirect_url": "/intune/app-management/deployment/win32",
       "redirect_document_id": false
     },
     {
@@ -1132,7 +1132,7 @@
     },
     {
       "source_path": "intune/intune/apps/apps-win32-prepare.md",
-      "redirect_url": "/intune/app-management/deployment/win32-packaging",
+      "redirect_url": "/intune/app-management/deployment/create-win32-package",
       "redirect_document_id": false
     },
     {
@@ -1177,7 +1177,7 @@
     },
     {
       "source_path": "intune/intune/apps/get-app-bundle-id-intune-admin-center.md",
-      "redirect_url": "/intune/app-management/ref-bundle-ids",
+      "redirect_url": "/intune/app-management/collect-bundle-ids",
       "redirect_document_id": false
     },
     {
@@ -5483,6 +5483,46 @@
     {
       "source_path": "intune/device-updates/android/fota-updates.md",
       "redirect_url": "/intune/device-updates/android/manage-fota",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/wipe-corporate-data.md",
+      "redirect_url": "/intune/app-management/protection/wipe-corporate-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/ref-bundle-ids.md",
+      "redirect_url": "/intune/app-management/collect-bundle-ids",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/deployment/lob-app-versioning.md",
+      "redirect_url": "/intune/app-management/deployment/ref-lob-app-versioning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/deployment/win32-overview.md",
+      "redirect_url": "/intune/app-management/deployment/win32",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/deployment/win32-packaging.md",
+      "redirect_url": "/intune/app-management/deployment/create-win32-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/deployment/configure-assignment-filters.md",
+      "redirect_url": "/intune/app-management/deployment/configure-assignment-scope",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/protection/data-transfer-exceptions.md",
+      "redirect_url": "/intune/app-management/protection/create-data-transfer-exceptions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/protection/ref-settings-log.md",
+      "redirect_url": "/intune/app-management/protection/troubleshoot-protection-logs",
       "redirect_document_id": false
     }
   ]

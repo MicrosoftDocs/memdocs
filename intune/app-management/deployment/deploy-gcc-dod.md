@@ -14,7 +14,7 @@ Microsoft Intune can be used by tenant administrators to distribute apps to thei
 
 ## Add Windows apps using Intune
 
-To add a Windows line-of-business app or a Win32 app intended for a GCC High or DoD environment using Intune, you can follow the [Windows LOB app](./add-lob-windows.md) or [Win32 app management](./win32-overview.md) instructions. If you choose to use the Company Portal, you can manually install and deploy the Company Portal. For more information, see [How to configure the Microsoft Intune Company Portal app](../configuration/configure-company-portal.md).
+To add a Windows line-of-business app or a Win32 app intended for a GCC High or DoD environment using Intune, you can follow the [Windows LOB app](./add-lob-windows.md) or [Win32 app management](./win32.md) instructions. If you choose to use the Company Portal, you can manually install and deploy the Company Portal. For more information, see [How to configure the Microsoft Intune Company Portal app](../configuration/configure-company-portal.md).
 
 ## Compliance
 

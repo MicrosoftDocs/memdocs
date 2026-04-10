@@ -50,7 +50,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 - **Compliance State**: The app meets compliance if targeted with MAM policy.
 
 >[!NOTE]
-> The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy [exportable .csv report](#export-app-protection-activities). The difference is a small delay in synchronization between the value in the two reports.
+> The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy exportable .csv report. The difference is a small delay in synchronization between the value in the two reports.
 >
 > The time referenced in Last Sync is when Intune last saw the app instance. When a user launches an app, it might notify the Intune App Protection service at that launch time, depending on when it last checked in. For more information, see [the retry interval times for App Protection Policy check-in](./policy-delivery-timing.md). If a user doesn't use that particular app in the last check-in interval (which is usually 30 minutes for active usage), and they launch the app, then:
 >

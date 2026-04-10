@@ -147,7 +147,7 @@ sections:
 
       - question: How does Intune remotely wipe data?
         answer: |
-          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](../wipe-corporate-data.md).
+          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](./wipe-corporate-data.md).
 
       - question: What is wipe?
         answer: |
@@ -161,7 +161,7 @@ sections:
 
       - question: What is selective wipe for MAM?
         answer: |
-           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](../wipe-corporate-data.md).
+           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](./wipe-corporate-data.md).
 
       - question: How quickly does selective wipe for MAM happen?
         answer:  If the user is using the app when selective wipe is initiated, the Intune App SDK checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.

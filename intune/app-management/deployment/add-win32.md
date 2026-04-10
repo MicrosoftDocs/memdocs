@@ -12,7 +12,7 @@ ms.collection:
 
 # Add, Assign, and Monitor a Win32 App in Microsoft Intune
 
-After you've [prepared a Win32 app to be uploaded to Intune](./win32-packaging.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](./win32-packaging.md).
+After you've [prepared a Win32 app to be uploaded to Intune](./create-win32-package.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](./create-win32-package.md).
 
 > [!NOTE]
 > For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog.md).
@@ -352,7 +352,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Select **Add group** and assign the groups that will use this app.
 3. On the **Select groups** pane, select groups to assign based on users or devices.
-4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](./win32-overview.md#set-win32-app-availability-and-notifications).
+4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](./win32.md#set-win32-app-availability-and-notifications).
 5. If you don't want this app assignment to affect groups of users, select **Included** under the **MODE** column. In the **Edit assignment** pane, change the **mode** value from  **Included** to **Excluded**. Select **OK** to close the **Edit assignment** pane.
 6. In the **App settings** section, select the **Delivery optimization priority** value for the app. This setting will determine how the app content will be downloaded. You can choose to download the app content in background mode or foreground mode based on assignment.
 

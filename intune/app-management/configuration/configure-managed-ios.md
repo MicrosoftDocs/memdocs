@@ -23,7 +23,7 @@ Once you add an app configuration policy, you can set the assignments for the ap
 > [!NOTE]
 > Intune provides precreated **All Users** and **All Devices** groups in the console with built-in optimizations for your convenience. It's highly recommended that you use these groups to target all users and all devices instead of any 'All users' or 'All devices' groups you may have created yourself.
 
-Once you have selected the included groups for your application configuration policy, you can also choose the specific groups to exclude. For more information, see [Include and exclude app assignments in Microsoft Intune](../deployment/configure-assignment-filters.md).
+Once you have selected the included groups for your application configuration policy, you can also choose the specific groups to exclude. For more information, see [Include and exclude app assignments in Microsoft Intune](../deployment/configure-assignment-scope.md).
 
 > [!TIP]
 > This policy type is currently available only for devices running iOS/iPadOS 8.0 and later. It supports the following app installation types:

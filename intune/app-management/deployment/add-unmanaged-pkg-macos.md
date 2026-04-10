@@ -110,7 +110,7 @@ You can use detection rules to choose how an app installation is detected on a m
 >
 > Alternatively, Mac Terminal can be used to look up and confirm the included app details of an installed app at a known location.
 >
-> For example, to look up the bundle ID and build number of Company Portal, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`<br>Then, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString` <br/><br/>For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../ref-bundle-ids.md).
+> For example, to look up the bundle ID and build number of Company Portal, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`<br>Then, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString` <br/><br/>For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../collect-bundle-ids.md).
 
 ## Step 5 – Select scope tags (optional)
 

@@ -661,7 +661,7 @@ Intune supports the deployment of many different Windows application types.
 
 - Windows Installer (MSI) – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
 - MSIX – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
-- Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../app-management/deployment/win32-overview.md)
+- Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../app-management/deployment/win32.md)
 - Store apps – [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store-legacy.md)
 - Web links – [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md)
 
@@ -696,7 +696,7 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
 - Configure an Intune [device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
 - Add [Store Apps](../../app-management/deployment/add-microsoft-store.md)
-- Add [Win32 apps](../../app-management/deployment/win32-overview.md)
+- Add [Win32 apps](../../app-management/deployment/win32.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)

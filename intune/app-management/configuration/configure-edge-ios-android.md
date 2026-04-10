@@ -809,7 +809,7 @@ Users with Microsoft Edge for iOS and Android installed on their iOS or Android 
 
 You can retrieve logs from Microsoft Support by giving them the user's incident ID.
 
-For a list of the settings stored in the app logs, see [Review client app protection logs](../protection/ref-settings-log.md).
+For a list of the settings stored in the app logs, see [Review client app protection logs](../protection/troubleshoot-protection-logs.md).
 
 ## Diagnostic logs
 

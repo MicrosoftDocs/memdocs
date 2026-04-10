@@ -322,7 +322,7 @@ Intune can wipe app data in three different ways:
 - Selective wipe for MDM
 - MAM selective wipe
 
-For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](../wipe-corporate-data.md).
+For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](./wipe-corporate-data.md).
 
 [Full device wipe](../../device-management/actions/wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
 
@@ -333,7 +333,7 @@ For more information about remote wipe for MDM, see [Remove devices by using wip
 See [Remove devices - retire](../../device-management/actions/retire.md) to read about removing company data.
 
 **Selective wipe for MAM**<br>
-Selective wipe for MAM removes company app data from an app. The request is initiated using Intune. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](../wipe-corporate-data.md).
+Selective wipe for MAM removes company app data from an app. The request is initiated using Intune. To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](./wipe-corporate-data.md).
 
 If the user is using the app when selective wipe is initiated, the [Intune SDK](../../developer/app-sdk/index.md) checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
 

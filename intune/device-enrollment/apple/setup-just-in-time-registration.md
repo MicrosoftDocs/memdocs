@@ -42,7 +42,7 @@ Create a single sign-on app extension policy that uses the Apple SSO extension t
 
     Don't add the Microsoft Authenticator app to the SSO extension either.  That app is added later in an app policy.
 
-    To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/ref-bundle-ids.md).
+    To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 5. Under **Additional configuration**, add the required key-value pair. Remove trailing spaces before and after the value and key. Otherwise just-in-time registration won't work.
     * **Key**: device_registration

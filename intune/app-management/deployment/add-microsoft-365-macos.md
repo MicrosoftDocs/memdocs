@@ -79,4 +79,4 @@ You can use scope tags to determine who can see client app information in Intune
 ## Next steps
 
 - To learn about adding Microsoft 365 apps to Windows devices, see [Assign Microsoft 365 Apps to Windows devices with Microsoft Intune](./add-microsoft-365-windows.md).
-- To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-filters.md).
+- To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-scope.md).

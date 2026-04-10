@@ -69,7 +69,7 @@ Applies to:
 
   To learn more, see:
 
-  - [Inclusion and exclusion groups](../../app-management/deployment/configure-assignment-filters.md) to assign apps that target specific users and devices.
+  - [Inclusion and exclusion groups](../../app-management/deployment/configure-assignment-scope.md) to assign apps that target specific users and devices.
   - [Assign policies in Intune](../../intune-service/configuration/device-profile-assign.md) that target specific users and devices.
 
 - For corporate owned devices with a work profile (COPE) and personally owned devices with a work profile (BYOD), most controls are available only in the work profile. They're not available in the personal profile.
@@ -445,7 +445,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 ## Related content
 
 - [Android enrollment guide](../../device-enrollment/android/guide.md)
-- [Include and exclude app assignments in Microsoft Intune](../../app-management/deployment/configure-assignment-filters.md)
+- [Include and exclude app assignments in Microsoft Intune](../../app-management/deployment/configure-assignment-scope.md)
 - [Assign apps to groups in Microsoft Intune](../../app-management/deployment/assign-groups.md)
 - [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../intune-service/configuration/android-oem-configuration-overview.md)
 - [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037)

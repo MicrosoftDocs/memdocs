@@ -87,7 +87,7 @@ If there's a conflict in policies on a single user or device, the following prio
 - A device context policy is a higher priority than a user context policy.
 - An install policy is a higher priority than an uninstall policy.
 
-For more information, see [Include and exclude app assignments in Microsoft Intune](./configure-assignment-filters.md). For more information about app types in Intune, see [Add apps to Microsoft Intune](./index.md).
+For more information, see [Include and exclude app assignments in Microsoft Intune](./configure-assignment-scope.md). For more information about app types in Intune, see [Add apps to Microsoft Intune](./index.md).
 
 ## Next steps
 

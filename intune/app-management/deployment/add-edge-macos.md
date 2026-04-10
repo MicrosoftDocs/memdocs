@@ -75,5 +75,5 @@ The app you've created is displayed in the apps list, where you can assign it to
 
 ## Next steps
 - To learn how to configure Microsoft Edge on macOS devices, see [Configure Microsoft Edge on macOS devices](/deployedge/configure-microsoft-edge-on-mac).
-- To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-filters.md).
+- To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-scope.md).
 - [Assign apps to groups](./assign-groups.md)

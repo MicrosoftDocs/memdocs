@@ -100,7 +100,7 @@ You can use detection rules to choose how an app installation is detected on a m
 >   `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString`
 >
 > - Alternatively, the `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
-> - For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../ref-bundle-ids.md).
+> - For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../collect-bundle-ids.md).
 
 ## Step 4 – Select scope tags (optional)
 

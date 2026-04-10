@@ -90,6 +90,6 @@ User wipes will remain in the list until removed by an administrator. To remove 
 
 ## See also
 
-[What's app protection policy](./protection/overview.md)
+[What's app protection policy](./overview.md)
 
-[What's app management](./overview.md)
+[What's app management](../overview.md)

@@ -87,7 +87,7 @@ The app is now assigned to the groups that you selected.
 > [!NOTE]
 > If Microsoft Entra soft-deletes any of these groups, Intune shows them as soft deleted in the console, and their assignments don’t apply until the groups are restored.
 
-For more information about including and excluding app assignments, see [Include and exclude app assignments](./configure-assignment-filters.md).
+For more information about including and excluding app assignments, see [Include and exclude app assignments](./configure-assignment-scope.md).
 
 > [!NOTE]
 > You see the status of the selected group in the assignments. The possible status options are: Active, Deleted, or Soft-Deleted.

@@ -572,9 +572,9 @@ items:
                 - name: Win32 app management
                   items:
                   - name: Win32 app management overview
-                    href: ./app-management/deployment/win32-overview.md
+                    href: ./app-management/deployment/win32.md
                   - name: Prepare a Win32 app
-                    href: ./app-management/deployment/win32-packaging.md
+                    href: ./app-management/deployment/create-win32-package.md
                   - name: Add a Win32 app
                     href: ./app-management/deployment/add-win32.md
                   - name: Win32 app supersedence
@@ -604,14 +604,14 @@ items:
               - name: macOS shell scripts
                 href: ./device-management/tools/run-shell-scripts-macos.md
               - name: Get the app bundle ID
-                href: ./app-management/ref-bundle-ids.md
+                href: ./app-management/collect-bundle-ids.md
             - name: Assign apps
               items:
               - name: Assign apps to groups
                 href: ./app-management/deployment/assign-groups.md
                 displayName: app assignment; assignment
               - name: Include and exclude apps
-                href: ./app-management/deployment/configure-assignment-filters.md
+                href: ./app-management/deployment/configure-assignment-scope.md
                 displayName: app assignment
               - name: Deploy Windows apps
                 href: ./app-management/deployment/deploy-windows.md
@@ -668,7 +668,7 @@ items:
             - name: Protect apps
               items:
               - name: Selectively wipe apps
-                href: ./app-management/wipe-corporate-data.md
+                href: ./app-management/protection/wipe-corporate-data.md
               - name: Use app protection policies
                 items:
                 - name: App protection policies overview
@@ -690,7 +690,7 @@ items:
                   - name: Conditional launch
                     href: ./app-management/protection/configure-conditional-launch.md
                   - name: Data transfer exceptions
-                    href: ./app-management/protection/data-transfer-exceptions.md
+                    href: ./app-management/protection/create-data-transfer-exceptions.md
                 - name: Validate app protection policies
                   href: ./app-management/protection/validate-policy-setup.md
                 - name: App protection policy delivery
@@ -702,7 +702,7 @@ items:
                 - name: Manage data transfer between iOS apps
                   href: ./app-management/protection/manage-data-transfer-ios.md
               - name: Review app protection logs
-                href: ./app-management/protection/ref-settings-log.md
+                href: ./app-management/protection/troubleshoot-protection-logs.md
             - name: Policies for Microsoft 365 apps
               href: ./app-management/configuration/microsoft-365-policies.md
             - name: Quiet time policies
@@ -718,7 +718,7 @@ items:
               - name: Troubleshoot mobile application management
                 href: /troubleshoot/mem/intune/troubleshoot-mam?context=/intune/context
               - name: Review app protection logs
-                href: ./app-management/protection/ref-settings-log.md
+                href: ./app-management/protection/troubleshoot-protection-logs.md
               - name: Troubleshooting app protection policy deployment
                 href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment?context=/intune/context
 
@@ -1476,7 +1476,7 @@ items:
           href: ./app-management/deployment/assign-groups.md
           displayName: app assignment, android, ios, ipados
         - name: Include and exclude apps
-          href: ./app-management/deployment/configure-assignment-filters.md
+          href: ./app-management/deployment/configure-assignment-scope.md
           displayName: assign apps, app assignment, android, ios, ipados
         - name: Deploy Windows apps
           displayName: assign apps, app assignment, windows

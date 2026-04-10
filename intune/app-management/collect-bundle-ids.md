@@ -29,11 +29,11 @@ This article lists the steps to get the app bundle IDs using the Intune admin ce
 1. Select **Apps** > **All Apps**.
 1. Select **Columns**.
 
-    :::image type="content" source="./media/ref-bundle-ids/all-apps-column.png" alt-text="Screenshot that shows how to select the Columns option in All Apps in Microsoft Intune and the Intune admin center.":::
+    :::image type="content" source="./media/collect-bundle-ids/all-apps-column.png" alt-text="Screenshot that shows how to select the Columns option in All Apps in Microsoft Intune and the Intune admin center.":::
 
 1. In the list, select **App identifier** > **Apply**.
 
-    :::image type="content" source="./media/ref-bundle-ids/columns-select-app-identifier.png" alt-text="Screenshot that shows how to select the App Bundle ID column in All Apps in Microsoft Intune and the Intune admin center.":::
+    :::image type="content" source="./media/collect-bundle-ids/columns-select-app-identifier.png" alt-text="Screenshot that shows how to select the App Bundle ID column in All Apps in Microsoft Intune and the Intune admin center.":::
 
 1. The **App identifier** column shows the bundle ID of the app.
 

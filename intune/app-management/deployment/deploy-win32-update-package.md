@@ -14,7 +14,7 @@ ms.collection:
 
 [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
-You can deploy a Windows update package (*.msu* file) to Windows devices managed by Intune by using the [Intune Win32 app management](./win32-overview.md) capabilities.
+You can deploy a Windows update package (*.msu* file) to Windows devices managed by Intune by using the [Intune Win32 app management](./win32.md) capabilities.
 
 > [!NOTE]
 > Deploying updates as Win32 apps isn't the recommended approach as described in this article. Use Windows Update policies instead, including [Update rings](../../device-updates/windows/manage-update-rings.md), [Feature updates](../../device-updates/windows/manage-feature-updates.md), and [Quality updates](../../device-updates/windows/configure-expedite-policy.md). The Win32 app method can provide more granular control when needed but requires more manual effort.
@@ -24,7 +24,7 @@ The following steps help you deploy a Windows update package to Intune.
 ## Step 1: Prepare the update package as Win32 app content
 
 1. Download the  Windows update package by searching on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).
-2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool guides you to input the required parameters in a step-by-step process if you don't specify the parameters in the command-line. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](./win32-packaging.md#convert-the-win32-app-content).
+2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool guides you to input the required parameters in a step-by-step process if you don't specify the parameters in the command-line. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](./create-win32-package.md#convert-the-win32-app-content).
 
 ## Step 2: Create the Win32 app
 
@@ -120,4 +120,4 @@ The following steps help you deploy a Windows update package to Intune.
 ## Next steps
 
 - For more information about adding apps to Intune, see [Add apps to Microsoft Intune](./index.md).
-- For more information about Win32 apps, see [Intune Win32 app management](./win32-overview.md).
+- For more information about Win32 apps, see [Intune Win32 app management](./win32.md).

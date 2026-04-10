@@ -31,7 +31,7 @@ The steps to allow Win32 apps to run on a Windows device in S mode are the follo
    - You upload the signed supplemental policy to Intune by creating a Windows 10 S mode supplemental policy (see below).
 1. You allow Win32 app catalogs through Intune:
    - You create catalog files (one for every app) and signs them using DGSS or other certificate infrastructure.
-   - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). There are no naming restrictions when creating a catalog file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). When generating the *.intunewin* file from the specified source folder and setup file, you can provide a separate folder containing only catalog files by using the -a cmdline option. For more information, see [Win32 app management - Prepare the Win32 app content for upload](./win32-overview.md#prepare-the-win32-app-content-for-upload).
+   - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). There are no naming restrictions when creating a catalog file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). When generating the *.intunewin* file from the specified source folder and setup file, you can provide a separate folder containing only catalog files by using the -a cmdline option. For more information, see [Win32 app management - Prepare the Win32 app content for upload](./win32.md#prepare-the-win32-app-content-for-upload).
    - Intune applies the signed app catalog to install the Win32 app on the S mode device using the [Intune Management Extension](../../device-management/tools/management-extension-windows.md).
 
 > [!NOTE]
@@ -85,4 +85,4 @@ Reporting values that are shown in the Microsoft Intune admin center for S mode 
 
 - For more information, see [Win32 apps on s mode](/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s).
 - For more information about adding apps to Intune, see [Add apps to Microsoft Intune](./index.md).
-- For more information about Win32 apps, see [Intune Win32 app management](./win32-overview.md).
+- For more information about Win32 apps, see [Intune Win32 app management](./win32.md).

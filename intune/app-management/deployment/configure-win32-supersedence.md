@@ -225,4 +225,4 @@ Other limitations:
 
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
-- [Win32 app management in Microsoft Intune](./win32-overview.md)
+- [Win32 app management in Microsoft Intune](./win32.md)

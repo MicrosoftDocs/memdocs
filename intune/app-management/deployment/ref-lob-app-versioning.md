@@ -25,17 +25,17 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 - When you add the app to Intune, the version is displayed in the **App package file** pane. The version value will be used for the **identityVersion** property.
 
-  :::image type="content" source="media/lob-app-versioning/apps-lob-app-versioning-01.png" alt-text="Select app package file":::
+  :::image type="content" source="media/ref-lob-app-versioning/apps-lob-app-versioning-01.png" alt-text="Select app package file":::
 - When you select an existing LOB app, the version is displayed in the details pane. The version value is the value of the **identityVersion** property.
 
-  :::image type="content" source="media/lob-app-versioning/apps-lob-app-versioning-02.png" alt-text="View an existing app":::
+  :::image type="content" source="media/ref-lob-app-versioning/apps-lob-app-versioning-02.png" alt-text="View an existing app":::
 - You can select to view the version in the list of apps. The version value is the value of the **identityVersion** property.
 
-  :::image type="content" source="media/lob-app-versioning/apps-lob-app-versioning-03.png" alt-text="View app versions":::
+  :::image type="content" source="media/ref-lob-app-versioning/apps-lob-app-versioning-03.png" alt-text="View app versions":::
 
 You can see the version when you install the app from the Company Portal app.
 
-:::image type="content" source="media/lob-app-versioning/apps-lob-app-versioning-03.png" alt-text="View app version during installation":::
+:::image type="content" source="media/ref-lob-app-versioning/apps-lob-app-versioning-03.png" alt-text="View app version during installation":::
 
 - For .appx and .apk files, the version value is the value of the **identityVersion** property.
 - For other types of files, the version value is the value of the **InternalVersion** property in the app's metadata.
