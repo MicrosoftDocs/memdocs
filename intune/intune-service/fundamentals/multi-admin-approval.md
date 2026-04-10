@@ -99,7 +99,7 @@ If a request isn't processed further within 3 days, it becomes **Expired**, and 
 
 ## Create an access policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Administration** > **Access policies** > select **Create**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Approval** > **Access policies** > select **Create**.
 
 1. On *Basics*, enter a *Name*, and optional *Description*. For *Profile type*, select from available options. Each policy supports a single profile type.
 
@@ -125,7 +125,7 @@ You can cancel a request before it's approved by selecting it from the **My requ
 
 ## Approve requests
 
-1. To find requests to approve, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Administration** > **Received requests**.
+1. To find requests to approve, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Approval** > **Received requests**.
 
 1. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection.
 
