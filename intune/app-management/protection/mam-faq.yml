@@ -16,7 +16,7 @@ sections:
     questions:
       - question: What is MAM?
         answer: |
-          [MAM Overview](../apps/app-management.md#mobile-application-management-mam-basics)
+          [MAM Overview](../overview.md#mobile-application-management-mam-basics)
 
 
   - name: App protection policies
@@ -26,7 +26,7 @@ sections:
 
       - question: What are examples of app protection policies?
         answer: |
-          For details about each app protection policy setting, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md).
+          For details about each app protection policy setting, see [Android app protection policy settings](ref-settings-android.md) and [iOS/iPadOS app protection policy settings](ref-settings-ios.md).
 
       - question: Is it possible to have both MDM and MAM policies applied to the same user at the same time, for different devices?
         answer: |
@@ -35,7 +35,7 @@ sections:
           -	Apply an equally strict MAM policy to Intune-managed devices and to non-Microsoft managed devices.
           - Apply a MAM policy to unenrolled devices only.
 
-          For more information, see [How to monitor app protection policies](app-protection-policies-monitor.md).
+          For more information, see [How to monitor app protection policies](monitor-policies.md).
 
   - name: Apps you can manage with app protection policies
     questions:
@@ -45,7 +45,7 @@ sections:
 
       - question: What are the baseline requirements to use app protection policies on an Intune-managed app?
         answer: |
-          - The end user must have a Microsoft Entra account. For more information on how to create Intune users in Microsoft Entra ID, see [Add users and give administrative permission to Intune](../fundamentals/users-add.md).
+          - The end user must have a Microsoft Entra account. For more information on how to create Intune users in Microsoft Entra ID, see [Add users and give administrative permission to Intune](../../intune-service/fundamentals/users-add.md).
 
           - The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. For more information on how to assign Intune licenses to end users, see [Manage Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
@@ -139,7 +139,7 @@ sections:
 
       - question: How does Intune encrypt data?
         answer: |
-           Intune encrypts data according to the app protection policy setting for encryption. For details, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md).
+           Intune encrypts data according to the app protection policy setting for encryption. For details, see [Android app protection policy settings](ref-settings-android.md) and [iOS/iPadOS app protection policy settings](ref-settings-ios.md).
 
       - question: What gets encrypted?
         answer: |
@@ -147,7 +147,7 @@ sections:
 
       - question: How does Intune remotely wipe data?
         answer: |
-          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](apps-selective-wipe.md).
+          Intune can wipe app data in three different ways: full device wipe, selective wipe for MDM, and MAM selective wipe. For more information about remote wipe for MDM, see [Remove devices by using wipe or retire](../../device-management/actions/wipe.md). For more information about selective wipe using MAM, see [the Retire action](../../device-management/actions/retire.md) and [How to wipe only corporate data from apps](../wipe-corporate-data.md).
 
       - question: What is wipe?
         answer: |
@@ -161,7 +161,7 @@ sections:
 
       - question: What is selective wipe for MAM?
         answer: |
-           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
+           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](../wipe-corporate-data.md).
 
       - question: How quickly does selective wipe for MAM happen?
         answer:  If the user is using the app when selective wipe is initiated, the Intune App SDK checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
@@ -176,7 +176,7 @@ sections:
     questions:
       - question: Why is the Company Portal app needed for Intune app protection to work on Android devices?
         answer: |
-          [Company Portal app and Intune app protection](../apps/app-protection-policy.md#company-portal-app-and-intune-app-protection)
+          [Company Portal app and Intune app protection](overview.md#company-portal-app-and-intune-app-protection)
 
       - question: How do multiple Intune app protection access settings that are configured to the same set of apps and users work on Android?
         answer: |
@@ -232,11 +232,11 @@ additionalContent: |
 
    ## See also
 
-   - [Deploy Intune](../fundamentals/deployment-guide-intune-setup.md)
-   - [Create a rollout plan](../fundamentals/intune-planning-guide.md)
-   - [Android mobile app management policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md)
-   - [iOS/iPadOS mobile app management policy settings](../apps/app-protection-policy-settings-ios.md)
-   - [App protection policies policy refresh](../apps/app-protection-policy-delivery.md)
-   - [Validate your app protection policies](../apps/app-protection-policy-delivery.md)
-   - [Add app configuration policies for managed apps without device enrollment](../apps/app-configuration-policies-managed-app.md)
+   - [Deploy Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
+   - [Create a rollout plan](../../intune-service/fundamentals/intune-planning-guide.md)
+   - [Android mobile app management policy settings in Microsoft Intune](ref-settings-android.md)
+   - [iOS/iPadOS mobile app management policy settings](ref-settings-ios.md)
+   - [App protection policies policy refresh](policy-delivery-timing.md)
+   - [Validate your app protection policies](policy-delivery-timing.md)
+   - [Add app configuration policies for managed apps without device enrollment](../configuration/configure-managed-apps.md)
    - [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md)

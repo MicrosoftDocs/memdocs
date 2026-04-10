@@ -160,4 +160,4 @@ For more information, go to:
 
 - [Learn about managing identities in Intune](manage-identities.md)
 - [Learn about managing devices in Intune](manage-devices.md)
-- [Frequently asked questions about application management and app protection](../apps/mam-faq.yml)
+- [Frequently asked questions about application management and app protection](../../app-management/protection/mam-faq.yml)

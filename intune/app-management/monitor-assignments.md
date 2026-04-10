@@ -10,7 +10,7 @@ ms.collection:
 
 # Monitor app information and assignments with Microsoft Intune
 
-[!INCLUDE [azure_portal](../intune-service/intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../intune-service/includes/azure_portal.md)]
 
 Intune provides several ways to monitor the properties of apps that you manage and to manage app assignment status.
 

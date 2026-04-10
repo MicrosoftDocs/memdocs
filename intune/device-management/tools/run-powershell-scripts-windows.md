@@ -4,6 +4,8 @@ description: Create and run PowerShell scripts, assign the script policy to Micr
 ms.date: 10/02/2025
 ms.topic: how-to
 ms.reviewer: bryanke
+author: nicholasswhite
+ms.author: nwhite
 ms.collection:
 - M365-identity-device-management
 - Windows

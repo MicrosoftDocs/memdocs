@@ -3,6 +3,8 @@ title: Use Shell Scripts on macOS Devices in Microsoft Intune
 description: Create, assign, monitor, and troubleshoot shell scripts for macOS devices in Microsoft Intune.
 ms.date: 08/08/2024
 ms.topic: how-to
+author: nicholasswhite
+ms.author: nwhite
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
@@ -215,4 +217,4 @@ When you deploy shell scripts or custom attributes for macOS devices from Micros
 
 ## Next steps
 
-- [Create a compliance policy in Microsoft Intune](/..\protect\create-compliance-policy.md)
+- [Create a compliance policy in Microsoft Intune](../../intune-service/protect/create-compliance-policy.md)
