@@ -1,0 +1,17 @@
+items:
+  - name: Overview
+    href: edge-data-security/overview.md
+  - name: Step 1. Create Microsoft Entra Conditional Access
+    href: edge-data-security/conditional-access-step-1.md
+  - name: Step 2. Create an app protection policy
+    href: edge-data-security/protection-policies-step-2.md
+  - name: Step 3. Integrate Mobile Threat Defense
+    href: edge-data-security/threat-defense-step-3.md
+  - name: Step 4. Create app configuration policies
+    href: edge-data-security/app-configuration-step-4.md
+  - name: Step 5. Create Settings Catalog policies
+    href: edge-data-security/settings-catalog-step-5.md
+  - name: Step 6. Understand end user experience
+    href: edge-data-security/end-user-experience-step-6.md
+  - name: Step 7. Troubleshoot
+    href: edge-data-security/troubleshoot-step-7.md

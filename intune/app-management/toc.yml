@@ -1,0 +1,363 @@
+items:
+  - name: App management overview
+    href: ./overview.md
+  - name: MAM for unenrolled devices
+    href: ../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md
+    displayName: mobile application management, mam-we, mamwe
+
+  - name: App solutions
+    items:
+      - name: Purchase and add apps for Microsoft Intune
+        items:
+          - name: Overview
+            href: /microsoft-365/solutions/apps-guide-overview?context=/intune/context
+            displayName: purchase, buy, app, license
+          - name: Understand app types
+            items:
+              - name: App types overview
+                href: /microsoft-365/solutions/apps-type-overview?context=/intune/context
+              - name: Understand store apps
+                href: /microsoft-365/solutions/apps-type-store?context=/intune/context
+              - name: Understand line-of-business apps
+                href: /microsoft-365/solutions/apps-type-lob?context=/intune/context
+              - name: Understand built-in apps
+                href: /microsoft-365/solutions/apps-type-built-in?context=/intune/context
+              - name: Understand web apps
+                href: /microsoft-365/solutions/apps-type-web?context=/intune/context
+              - name: Understand Microsoft apps
+                href: /microsoft-365/solutions/apps-type-microsoft?context=/intune/context
+          - name: Understand app purchases
+            items:
+              - name: Purchase apps overview
+                href: /microsoft-365/solutions/apps-purchase-overview?context=/intune/context
+              - name: Purchase store apps
+                href: /microsoft-365/solutions/apps-purchase-store?context=/intune/context
+              - name: Purchase apps in-volume
+                href: /microsoft-365/solutions/apps-purchase-volume?context=/intune/context
+          - name: Understand app licenses
+            items:
+              - name: App licenses overview
+                href: /microsoft-365/solutions/apps-license-overview?context=/intune/context
+              - name: Manage app licenses
+                href: /microsoft-365/solutions/apps-license-manage?context=/intune/context
+          - name: Add apps to Intune
+            items:
+              - name: Add apps overview
+                href: /microsoft-365/solutions/apps-add-overview?context=/intune/context
+              - name: Step 1. Assess app requirements
+                href: /microsoft-365/solutions/apps-add-step-1?context=/intune/context
+              - name: Step 2. Create categories for apps
+                href: /microsoft-365/solutions/apps-add-step-2?context=/intune/context
+              - name: Step 3. Purchase apps
+                href: /microsoft-365/solutions/apps-add-step-3?context=/intune/context
+              - name: Step 4. Add apps to Intune
+                href: /microsoft-365/solutions/apps-add-step-4?context=/intune/context
+              - name: Step 5. Manage apps and licenses
+                href: /microsoft-365/solutions/apps-add-step-5?context=/intune/context
+
+      - name: Configure apps using Microsoft Intune
+        items:
+          - name: Overview
+            href: /microsoft-365/solutions/apps-config-overview?context=/intune/context
+            displayName: configure, app, apps, channel
+          - name: Step 1. Configure the Company Portal
+            href: /microsoft-365/solutions/apps-config-step-1?context=/intune/context
+          - name: Step 2. Configure Microsoft Outlook
+            href: /microsoft-365/solutions/apps-config-step-2?context=/intune/context
+          - name: Step 3. Configure Microsoft 365 Apps
+            href: /microsoft-365/solutions/apps-config-step-3?context=/intune/context
+          - name: Step 4. Configure Microsoft Edge
+            href: /microsoft-365/solutions/apps-config-step-4?context=/intune/context
+          - name: Step 5. Configure Microsoft Teams
+            href: /microsoft-365/solutions/apps-config-step-5?context=/intune/context
+          - name: Step 6. Configure other apps
+            href: /microsoft-365/solutions/apps-config-step-6?context=/intune/context
+          - name: Step 7. Verify app configuration
+            href: /microsoft-365/solutions/apps-config-step-7?context=/intune/context
+
+      - name: Secure and protect apps using Microsoft Intune
+        items:
+          - name: Overview
+            href: /microsoft-365/solutions/apps-protect-overview?context=/intune/context
+            displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
+          - name: Understand app data protection
+            href: /microsoft-365/solutions/apps-protect-data-protection?context=/intune/context
+          - name: Understand app protection access requirements
+            href: /microsoft-365/solutions/apps-protect-access-requirements?context=/intune/context
+          - name: Understand app protection conditional launch
+            href: /microsoft-365/solutions/apps-protect-conditional-launch?context=/intune/context
+          - name: Understand app protection health checks
+            href: /microsoft-365/solutions/apps-protect-health-checks?context=/intune/context
+          - name: Use the app protection framework
+            items:
+              - name: App protection framework overview
+                href: /microsoft-365/solutions/apps-protect-framework?context=/intune/context
+              - name: Step 1. Apply basic data protection
+                href: /microsoft-365/solutions/apps-protect-step-1?context=/intune/context
+              - name: Step 2. Apply enhanced data protection
+                href: /microsoft-365/solutions/apps-protect-step-2?context=/intune/context
+              - name: Step 3. Apply high data protection
+                href: /microsoft-365/solutions/apps-protect-step-3?context=/intune/context
+              - name: Step 4. Understand app protection delivery
+                href: /microsoft-365/solutions/apps-protect-step-4?context=/intune/context
+              - name: Step 5. Verify and monitor app protection
+                href: /microsoft-365/solutions/apps-protect-step-5?context=/intune/context
+              - name: Step 6. Use app protection actions
+                href: /microsoft-365/solutions/apps-protect-step-6?context=/intune/context
+
+      - name: Assign and deploy apps using Microsoft Intune
+        items:
+          - name: Overview
+            href: /microsoft-365/solutions/apps-assign-overview?context=/intune/context
+            displayName: assign, deploy, app, apps, monitor, troubleshoot
+          - name: Understand app management
+            href: /microsoft-365/solutions/apps-assign-management?context=/intune/context
+          - name: Understand app assignments
+            href: /microsoft-365/solutions/apps-assign-assignments?context=/intune/context
+          - name: Understand app deployment
+            href: /microsoft-365/solutions/apps-assign-deployment?context=/intune/context
+          - name: Assign apps to your organization
+            items:
+              - name: Assign apps overview
+                href: /microsoft-365/solutions/apps-assign-steps-overview?context=/intune/context
+              - name: Step 1. Confirm users, devices, or groups
+                href: /microsoft-365/solutions/apps-assign-step-1?context=/intune/context
+              - name: Step 2. Assign apps to users, devices, or groups
+                href: /microsoft-365/solutions/apps-assign-step-2?context=/intune/context
+              - name: Step 3. Verify and monitor app assignments
+                href: /microsoft-365/solutions/apps-assign-step-3?context=/intune/context
+              - name: Step 4. Troubleshoot app deployment issues
+                href: /microsoft-365/solutions/apps-assign-step-4?context=/intune/context
+
+      - name: Secure your corporate data using Edge for Business
+        href: /intune/solutions/edge-data-security/overview
+
+  - name: Concepts
+    items:
+      - name: App lifecycle
+        href: ./lifecycle.md
+      - name: App protection policies and work profiles (Android)
+        href: ./protection/mam-vs-work-profiles-android.md
+        displayName: app-we; without; without enrollment
+      - name: Use Intune without Google Mobile Services
+        href: ./manage-without-gms.md
+      - name: Data protection for Windows MAM
+        href: ./protection/enable-mam-windows.md
+        displayName: Windows MAM
+      - name: MAM FAQ
+        href: ./protection/mam-faq.yml
+        displayName: MAM
+
+  - name: App policies and their step-by-step guides
+    items:
+      - name: Add apps
+        items:
+          - name: Add apps overview
+            href: ./deployment/index.md
+            displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
+          - name: Intune protected apps
+            href: ./ref-protected-apps.md
+          - name: Store apps
+            items:
+              - name: Android store apps
+                href: ./deployment/add-store-android.md
+              - name: iOS store apps
+                href: ./deployment/add-store-ios.md
+              - name: Microsoft store apps (new)
+                href: ./deployment/add-microsoft-store.md
+              - name: Microsoft store apps (legacy)
+                href: ./deployment/add-microsoft-store-legacy.md
+              - name: Managed Google Play apps
+                href: ./deployment/add-managed-google-play.md
+          - name: Microsoft 365 Suite
+            items:
+              - name: Microsoft 365 apps for Windows
+                href: ./deployment/add-microsoft-365-windows.md
+              - name: Microsoft 365 apps for macOS
+                href: ./deployment/add-microsoft-365-macos.md
+          - name: Android Enterprise system apps
+            href: ./configuration/manage-system-apps-android.md
+          - name: Web apps
+            href: ./deployment/add-web.md
+            displayName: web; web link; weblink; web-link
+          - name: Built-in apps
+            href: ./deployment/add-built-in.md
+          - name: Build your app (LOB)
+            items:
+              - name: Android LOB apps
+                href: ./deployment/add-lob-android.md
+              - name: iOS LOB apps
+                href: ./deployment/add-lob-ios.md
+              - name: Windows LOB apps
+                href: ./deployment/add-lob-windows.md
+              - name: Intune management extension for Windows
+                href: ./device-management/tools/management-extension-windows.md
+              - name: Enterprise App Management
+                items:
+                  - name: Enterprise App Management overview
+                    href: ./deployment/enterprise-app-catalog.md
+                  - name: Add an Enterprise App Catalog app (Win32)
+                    href: ./deployment/add-enterprise-catalog.md
+              - name: macOS LOB apps
+                href: ./deployment/add-lob-macos.md
+              - name: macOS app management
+                items:
+                  - name: Intune management agent for macOS
+                    href: ./deployment/management-agent-macos.md
+                  - name: Add a macOS DMG app
+                    href: ./deployment/add-dmg-macos.md
+                  - name: Add an unmanaged macOS PKG app
+                    href: ./deployment/add-unmanaged-pkg-macos.md
+                    displayName: unmanaged, pkg
+              - name: Win32 app management
+                items:
+                  - name: Win32 app management overview
+                    href: ./deployment/win32.md
+                  - name: Prepare a Win32 app
+                    href: ./deployment/create-win32-package.md
+                  - name: Add a Win32 app
+                    href: ./deployment/add-win32.md
+                  - name: Win32 app supersedence
+                    href: ./deployment/configure-win32-supersedence.md
+                  - name: Troubleshoot a Win32 app
+                    href: ./deployment/troubleshoot-win32.md
+                  - name: Win32 app S mode devices
+                    href: ./deployment/enable-win32-s-mode.md
+                  - name: Deploy Windows update packages
+                    href: ./deployment/deploy-win32-update-package.md
+          - name: Add specific apps
+            items:
+              - name: Company Portal app - Windows Autopilot
+                href: ./deployment/add-company-portal-autopilot.md
+              - name: Company Portal app - Download
+                href: ./deployment/add-company-portal-windows.md
+              - name: Company Portal app - macOS
+                href: ./deployment/add-company-portal-macos.md
+              - name: Microsoft Edge for Windows
+                href: ./deployment/add-edge-windows.md
+              - name: Microsoft Edge for macOS
+                href: ./deployment/add-edge-macos.md
+              - name: Microsoft Defender for Endpoint for macOS
+                href: ./deployment/add-defender-macos.md
+          - name: PowerShell scripts
+            href: ../device-management/tools/run-powershell-scripts-windows.md
+          - name: macOS shell scripts
+            href: ../device-management/tools/run-shell-scripts-macos.md
+          - name: Get the app bundle ID
+            href: ./collect-bundle-ids.md
+      - name: Assign apps
+        items:
+          - name: Assign apps to groups
+            href: ./deployment/assign-groups.md
+            displayName: app assignment; assignment
+          - name: Include and exclude apps
+            href: ./deployment/configure-assignment-scope.md
+            displayName: app assignment
+          - name: Deploy Windows apps
+            href: ./deployment/deploy-windows.md
+          - name: Deploy apps to Government environments
+            href: ./deployment/deploy-gcc-dod.md
+      - name: Monitor apps
+        href: ./monitor-assignments.md
+      - name: Discovered apps
+        href: ./discovered-apps.md
+      - name: Configure apps
+        items:
+          - name: App configuration policies
+            href: ./configuration/overview.md
+            displayName: App configuration policy; configuration policy; AFW
+          - name: iOS managed devices
+            href: ./configuration/configure-managed-ios.md
+          - name: Android managed devices
+            href: ./configuration/configure-managed-android.md
+          - name: Managed apps
+            href: ./configuration/configure-managed-apps.md
+          - name: Use iOS app provisioning profiles
+            href: ./deployment/manage-provisioning-profiles-ios.md
+          - name: Configure specific apps
+            items:
+              - name: Configure the Managed Home Screen
+                href: ./configuration/configure-managed-home-screen.md
+              - name: Configure the Company Portal
+                href: ./configuration/configure-company-portal.md
+              - name: Configure Microsoft Launcher
+                href: ./configuration/configure-launcher-android.md
+              - name: Configure Microsoft Edge for iOS/Android
+                href: ./configuration/configure-edge-ios-android.md
+              - name: Configure Microsoft Edge for Windows
+                href: ./configuration/configure-edge-windows.md
+              - name: Configure Office
+                href: ./configuration/configure-microsoft-365-mobile.md
+              - name: Configure Outlook
+                href: ./configuration/configure-outlook.md
+              - name: Configure Microsoft Teams
+                href: ./configuration/configure-teams-mobile.md
+              - name: Configure Google Chrome for Android
+                href: ./configuration/configure-chrome-android.md
+              - name: VPN and per-app VPN on Android Enterprise
+                href: ./configuration/configure-vpn-android.md
+          - name: Volume-purchased apps and books
+            items:
+              - name: Volume-purchased overview
+                href: ./deployment/manage-volume-purchased.md
+                displayName: vpp; volume purchased
+              - name: Volume-purchased iOS apps
+                href: ./deployment/manage-vpp-apple.md
+              - name: iOS eBooks
+                href: ./deployment/manage-ebooks-ios.md
+      - name: Protect apps
+        items:
+          - name: Selectively wipe apps
+            href: ./protection/wipe-corporate-data.md
+          - name: Use app protection policies
+            items:
+              - name: App protection policies overview
+                href: ./protection/overview.md
+                displayName: app; protection; policy
+              - name: Data protection framework using app protection policies
+                href: ./protection/data-protection-framework.md
+              - name: Create app protection policies
+                items:
+                  - name: General settings
+                    href: ./protection/create-policy.md
+                    displayName: dlp; data loss prevention
+                  - name: Android settings
+                    href: ./protection/ref-settings-android.md
+                  - name: iOS settings
+                    href: ./protection/ref-settings-ios.md
+                  - name: Windows settings
+                    href: ./protection/ref-settings-windows.md
+                  - name: Conditional launch
+                    href: ./protection/configure-conditional-launch.md
+                  - name: Data transfer exceptions
+                    href: ./protection/create-data-transfer-exceptions.md
+              - name: Validate app protection policies
+                href: ./protection/validate-policy-setup.md
+              - name: App protection policy delivery
+                href: ./protection/policy-delivery-timing.md
+              - name: Protecting app extensions
+                href: ./protection/policy-extensions.md
+              - name: Monitor app protection user status
+                href: ./protection/monitor-policies.md
+              - name: Manage data transfer between iOS apps
+                href: ./protection/manage-data-transfer-ios.md
+          - name: Review app protection logs
+            href: ./protection/troubleshoot-protection-logs.md
+      - name: Policies for Microsoft 365 apps
+        href: ./configuration/microsoft-365-policies.md
+      - name: Quiet time policies
+        href: ./protection/configure-quiet-time.md
+      - name: Troubleshoot
+        items:
+          - name: Help users troubleshoot problems
+            href: /intune/intune-service/fundamentals/help-desk-operators
+          - name: Troubleshoot app installation problems
+            href: /troubleshoot/mem/intune/troubleshoot-app-install?context=/intune/context
+          - name: App installation error reference
+            href: /troubleshoot/mem/intune/app-install-error-codes?context=/intune/context
+          - name: Troubleshoot mobile application management
+            href: /troubleshoot/mem/intune/troubleshoot-mam?context=/intune/context
+          - name: Review app protection logs
+            href: ./protection/troubleshoot-protection-logs.md
+          - name: Troubleshooting app protection policy deployment
+            href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment?context=/intune/context
