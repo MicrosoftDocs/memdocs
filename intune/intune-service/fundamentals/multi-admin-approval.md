@@ -5,7 +5,7 @@ author: brenduns
 ms.author: brenduns
 ms.date: 04/10/2026
 ms.topic: how-to
-ai-usage: : true
+ai-usage: ai-assisted
 ms.reviewer: davidra
 ms.collection:
 - M365-identity-device-management
@@ -75,7 +75,7 @@ To approve or reject MAA requests submitted by other admins, an account must mee
 
 ### Role 3: Change requestor
 
-To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps - submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. See [Permissions reference](#permissions-reference) for the full list by policy type.
+To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. See [Permissions reference](#permissions-reference) for the full list by policy type.
 
 > [!NOTE]
 > An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
@@ -131,7 +131,7 @@ You can cancel a request before it's approved by selecting it from the **My requ
 
 1. After reviewing the details, enter relevant details in the **Approver notes** field, and then select **Approve request** or **Reject request**.
 
-1. After you approve a request, the requestor needs select **Complete**. Intune processes the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion.
+1. After you approve a request, the requestor needs to select **Complete**. Intune processes the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion.
 
    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
