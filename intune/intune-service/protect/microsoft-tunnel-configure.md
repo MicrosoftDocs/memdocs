@@ -3,7 +3,7 @@ title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway on a Linux server to support Intune managed cloud-based devices in connecting to your on-premises infrastructure.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/07/2025
+ms.date: 04/10/2026
 ms.topic: how-to
 ms.reviewer: ochukwunyere
 ms.collection:
@@ -131,9 +131,9 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
    To see detailed console output during the tunnel and installation agent enrollment process:
 
-   1. Run `export mst_verbose_log="true"` before you run the *./mstunnel-setup* script. To confirm verbose logging is enabled, run `export`.
+   1. Run `export mst_log_verbose=1` before you run the *./mstunnel-setup* script. To confirm verbose logging is enabled, run `export`.
 
-   2. After setup completes, edit the environment file **/etc/mstunnel/env.sh** to add a new line: `mst_verbose_log="true"`. After adding the line, run `mst-cli server restart` to restart the server.
+   2. After setup completes, edit the environment file **/etc/mstunnel/env.sh** to add a new line: `mst_log_verbose=1`. After adding the line, run `mst-cli server restart` to restart the server.
 
    > [!IMPORTANT]
    > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following commands to add *intune_env=FXP* to the command line:

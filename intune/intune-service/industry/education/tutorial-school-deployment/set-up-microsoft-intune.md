@@ -142,7 +142,7 @@ To enable data collection:
 1. Select **Review + Save**.
 1. Select **Save**.
 
-For more information on data collection, see [Endpoint analytics data collection](../../../../endpoint-analytics/data-collection.md).
+For more information on data collection, see [Endpoint analytics data collection](../../../../endpoint-analytics/ref-data-collection.md).
 
 ### Configure Windows data
 

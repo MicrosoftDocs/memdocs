@@ -110,11 +110,11 @@ items:
   - name: Reference for Endpoint analytics
     items:
     - name: Data collection
-      href: ../../endpoint-analytics/data-collection.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/ref-data-collection.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot
       href: ../../endpoint-analytics/troubleshoot.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Get support
-      href: ../../endpoint-analytics/get-support.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/support.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Co-management
   items:
   - name: Co-management overview

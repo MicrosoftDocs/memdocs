@@ -94,10 +94,10 @@ Some considerations:
 
   The following software updates planning guides can help you determine your update strategy:
 
-  - [Personal/BYOD](../../device-updates/byod-software-updates-guide.md)
-  - [Android](../../device-updates/android/software-updates-guide.md)
-  - [iOS/iPadOS](../../device-updates/apple/software-updates-guide-ios-ipados.md)
-  - [macOS](../../device-updates/apple/software-updates-guide-macos.md)
+  - [Personal/BYOD](../../device-updates/byod-planning-guide.md)
+  - [Android](../../device-updates/android/planning-guide.md)
+  - [iOS/iPadOS](../../device-updates/apple/planning-guide-ios-ipados.md)
+  - [macOS](../../device-updates/apple/planning-guide-macos.md)
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 
