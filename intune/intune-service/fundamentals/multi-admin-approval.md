@@ -13,41 +13,41 @@ ms.collection:
 - setup
 ---
 
-# Use Access policies to require Multi Admin Approval
+# Use access policies to require multi admin approval
 
-To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as Multi Admin Approval.
+To help protect against a compromised administrative account, use Microsoft Intune *access policies* to require that a second administrative account approves a change before the change is applied. This capability is known as Multi Admin Approval.
 
-With Multi Admin Approval, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
+By using Multi Admin Approval, you can configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts can approve changes to those resources.
 
-When any account in the Tenant is used to make a change to a resource that's protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that's assigned a protected resource in an access protection policy can approve changes. Approvers can also reject change requests.
+When you use any account in the tenant to make a change to a resource that's protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that an access protection policy assigns a protected resource to can approve changes. Approvers can also reject change requests.
 
-Access policies are supported for the following resources:
+Intune supports access policies for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.  
 - Compliance policies - Applies to creating and managing [compliance policies](../protect/create-compliance-policy.md).  
 - Configuration policies - Applies to creating and managing policies via the [settings catalog](../../device-configuration/settings-catalog/index.md).  
-- Device actions - Applies to [wipe](../../device-management/actions/wipe.md), [retire](../../device-management/actions/retire.md) and [delete](../../device-management/actions/delete.md) device actions.
+- Device actions - Applies to [wipe](../../device-management/actions/wipe.md), [retire](../../device-management/actions/retire.md), and [delete](../../device-management/actions/delete.md) device actions.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
-- Tenant Configuration - Applies to managing [device categories](../enrollment/device-group-mapping.md), including creating, editing or deleting them.
+- Tenant Configuration - Applies to managing [device categories](../enrollment/device-group-mapping.md), including creating, editing, or deleting them.
 
 ## Prerequisites for access policies and approvers
 
-To use Multi Admin Approval, your tenant must have at least two administrator accounts. There are three distinct roles in the MAA workflow, each with different permission requirements:
+To use Multi Admin Approval, your tenant must have at least two administrator accounts. The MAA workflow has three distinct roles, each with different permission requirements:
 
 ### Administrator licensing
 
 By default, every administrator who participates in the MAA workflow must have an Intune license assigned to their account. If your organization needs administrators to participate without individual Intune licenses, you can enable the **Allow access to unlicensed admins** setting.
 
 > [!CAUTION]
-> **This setting is irreversible.** Once enabled, it cannot be turned off. Make sure your organization understands this before proceeding.
+> **This setting is irreversible.** Once enabled, you can't turn it off. Make sure your organization understands this limitation before proceeding.
 
 Before enabling this setting, review [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md) for important limits and behavior details, including group membership caps and how long access changes take to take effect.
 
 ### Role 1: Access policy manager
 
-To create and manage access policies, use an account with one of the following:
+To create and manage access policies, use an account with one of the following options:
 
 - **Custom Intune role** (recommended): Use a [custom role](create-custom-role.md) that includes the following [Multi Admin Approval permissions](create-custom-role.md#multi-admin-approval):
 
@@ -70,15 +70,15 @@ To approve or reject MAA requests submitted by other admins, an account must mee
 
    > [!IMPORTANT]
    > The approver group has two requirements:
-   > - It must be a **security group**. Distribution lists, Microsoft 365 groups, and mail-enabled security groups are not supported and will silently fail to resolve approver membership.
+   > - It must be a **security group**. Distribution lists, Microsoft 365 groups, and mail-enabled security groups aren't supported and silently fail to resolve approver membership.
    > - It must be directly assigned to an Intune role as a member group. Intune role permissions held by individual members, whether through other groups or direct user assignments, don't satisfy this requirement.
 
 ### Role 3: Change requestor
 
-To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they are performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. See [Permissions reference](#permissions-reference) for the full list by policy type.
+To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps - submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. See [Permissions reference](#permissions-reference) for the full list by policy type.
 
 > [!NOTE]
-> An administrator cannot approve their own requests, even if they are a member of the approver group. A different administrator must approve the request.
+> An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
 
 ## How Multi Admin Approval and Access policies work
 
@@ -101,15 +101,15 @@ Each change of status remains visible for up to 30 days after the status changes
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Administration** > **Access policies** > select **Create**.
 
-2. On the *Basics* page, provide a *Name*, and optional *Description*, and for *Profile type* select from available options. Each policy supports a single profile type.
+1. On *Basics*, enter a *Name*, and optional *Description*. For *Profile type*, select from available options. Each policy supports a single profile type.
 
-3. On the *Approvers page*, select **Add groups** and then select a group as the group of approvers for this policy. More complex configurations that exclude groups aren't supported.
+1. On *Approvers*, select **Add groups** and then select a group as the group of approvers for this policy. More complex configurations that exclude groups aren't supported.
 
-4. On the *Review + Create* page, review, and then save your changes.
+1. On *Review + Create*, review, and then save your changes.
 
-5. Next, use a separate administrative account with Approval for Multi Admin Approval permission to sign-in to the admin center to review and approve the new access policy.
+1. Next, use a separate administrative account with **Approval for Multi Admin Approval** permission to sign in to the admin center to review and approve the new access policy.
 
-6. Sign back in to the admin center with the first admin account that created the access policy, view the policy, and finalize it by selecting **Complete**. After Intune applies this policy, configurations for the protected profile type will require multiple admin approvals.
+1. Sign back in to the admin center with the first admin account that created the access policy, view the policy, and finalize it by selecting **Complete**. After Intune applies this policy, configurations for the protected profile type require multiple admin approvals.
 
 ## Submit a request
 
@@ -117,21 +117,21 @@ To submit a request when Multi Admin Approval is enabled, use your normal proces
 
 On the final page before you can save your changes, add details to the *Business justification* field, and then submit the request. For urgent requests, consider reaching out to a known list of approvers to ensure your request is seen in a timely manner.
 
-When a request for the same object is already pending approval, you aren't able to submit your request. Intune displays a message to alert you to this situation.
+When a request for the same object is already pending approval, you can't submit your request. Intune displays a message to alert you to this situation.
 
 To monitor the status of your requests, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
 
-You can cancel a request before it's approved by selecting it from the My requests page, and then selecting **Cancel request**.
+You can cancel a request before it's approved by selecting it from the **My requests** page, and then selecting **Cancel request**.
 
 ## Approve requests
 
 1. To find requests to approve, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Administration** > **Received requests**.
 
-2. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection.
+1. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection.
 
-3. After reviewing the details, enter relevant details in the Approver notes field, and then select **Approve request** or **Reject request**.
+1. After reviewing the details, enter relevant details in the **Approver notes** field, and then select **Approve request** or **Reject request**.
 
-4. After you approve a request, the requestor needs select **Complete**. Intune processes the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion.
+1. After you approve a request, the requestor needs select **Complete**. Intune processes the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion.
 
    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
@@ -139,11 +139,11 @@ You can cancel a request before it's approved by selecting it from the My reques
 
 ## More considerations
 
-- Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
+- Intune doesn't send notifications when new requests are created, or the status of an existing request changes. When you submit an urgent change request, contact individuals who have permission to approve those requests.
 
-- Plan to monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Microsoft Intune admin center.
+- Monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Intune admin center.
 
-- When an approval is already pending for an object, a new request can't be submitted for it.
+- When an approval is already pending for an object, you can't submit a new request for it.
 
 - All actions for a protected resource are protected, including but not limited to:
   - Edit
@@ -152,7 +152,7 @@ You can cancel a request before it's approved by selecting it from the My reques
   - Delete
   - Assign
 
-- Actions for requests and the approval process are logged in the Intune audit logs. For more information, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md).
+- Intune audit logs record actions for requests and the approval process. For more information, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md).
 
 - The following status conditions are available for a request:
   - Needs approval – This request is pending action by an approver.
@@ -161,14 +161,14 @@ You can cancel a request before it's approved by selecting it from the My reques
   - Rejected – This request was rejected by an approver.
   - Canceled – This request was canceled by the admin who submitted it.
 
-- Be cautious when creating an access policy for the **Role** policy type. This policy type protects all role-related changes, including creating, updating, and deleting RBAC roles and role assignments. Once active, any attempt to modify roles, including the RBAC assignments that MAA itself requires, will need MAA approval first. This can create a deadlock situation where you can't configure the RBAC assignments needed for MAA to function.
+- Be cautious when creating an access policy for the **Role** policy type. This policy type protects all role-related changes, including creating, updating, and deleting RBAC roles and role assignments. Once active, any attempt to modify roles, including the RBAC assignments that MAA itself requires, needs MAA approval first. This requirement can create a deadlock situation where you can't configure the RBAC assignments needed for MAA to function.
 
   If you experience this deadlock:
   1. Go to **Tenant administration** > **Multi Admin Approval** > **Access policies**.
-  2. Find and delete the access policy configured for the **Role** policy type.
-  3. Wait 3–5 minutes for the change to propagate.
-  4. Go to **Tenant administration** > **Roles** and complete the required RBAC role assignments, adding the approver group to a role assignment.
-  5. After RBAC is configured correctly, you can re-create the **Role** access policy if desired.
+  1. Find and delete the access policy configured for the **Role** policy type.
+  1. Wait 3–5 minutes for the change to propagate.
+  1. Go to **Tenant administration** > **Roles** and complete the required RBAC role assignments, adding the approver group to a role assignment.
+  1. After RBAC is configured correctly, you can re-create the **Role** access policy if desired.
 
   To avoid this issue, configure all other MAA access policies and verify RBAC assignments are correct before enabling an access policy for the **Role** policy type.
 
@@ -197,7 +197,7 @@ Approvers need **Read** permissions for the resources they are approving. The fo
 
 ### Change requestor permissions
 
-Change requestors need **Write** or **Execute** permissions for the action they are performing:
+Change requestors need **Write** or **Execute** permissions for the action they're performing:
 
 | Policy type | Required RBAC permission |
 |-------------|--------------------------|
