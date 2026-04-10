@@ -105,7 +105,7 @@ In the **Configuration settings** page:
 
 1. Expand the **Apps** section by selecting it:
 
-   The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device.
+   The **Apps** section allows selection of up to 25 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device.
 
    > [!IMPORTANT]
    >

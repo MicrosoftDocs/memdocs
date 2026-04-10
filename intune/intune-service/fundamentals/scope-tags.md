@@ -5,7 +5,7 @@ author: brenduns
 ms.author: brenduns
 ms.date: 04/09/2026
 ms.topic: how-to
-ai-assisted: true
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 - highpri
