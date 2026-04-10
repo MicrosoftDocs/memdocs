@@ -19,11 +19,7 @@ You can allow administrators to sign in to and manage Microsoft Intune without a
 
 :::column-end:::
 :::column span="3":::
-> To enable this setting, use an account with at least one of the following roles:
->
-> - [Intune role administrator]
-> - [Custom role] that includes the permissions **Roles/\***
-
+> To enable this setting, use an account assigned the [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) :::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false"::: Microsoft Entra role. Because this role is privileged, use it only when necessary.
 :::column-end:::
 :::row-end:::
 
