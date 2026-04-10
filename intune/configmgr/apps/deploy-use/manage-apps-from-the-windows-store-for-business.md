@@ -57,7 +57,7 @@ Before deploying Microsoft Store for Business and Education apps to devices that
 
 - When the local Administrator account signs in on the device, it can't access Microsoft Store for Business and Education apps.
 
-- Devices need a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](/mem/intune/app-management/deployment/add-microsoft-store).
+- Devices need a live internet connection to the Microsoft Store for Business and Education. For more information including proxy configuration, see [Prerequisites](../../../app-management/deployment/add-microsoft-store.md).
 
 ## Set up synchronization
 
@@ -65,7 +65,7 @@ When you synchronize the list of Microsoft Store for Business and Education apps
 
 Connect your Configuration Manager site to Microsoft Entra ID and the Microsoft Store for Business and Education. For more information and details of this process, see [Configure Azure services](../../core/servers/deploy/configure/azure-services-wizard.md). Create a connection to the **Microsoft Store for Business** service.
 
-Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](/mem/intune/app-management/deployment/add-microsoft-store).
+Make sure the service connection point and targeted devices can access the cloud service. For more information, see [Prerequisites for Microsoft Store for Business and Education - Proxy configuration](../../../app-management/deployment/add-microsoft-store.md).
 
 ### Supplemental information and configuration
 

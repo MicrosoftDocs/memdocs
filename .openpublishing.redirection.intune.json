@@ -1231,6 +1231,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/apps/mam-faq.yml",
+      "redirect_url": "/intune/app-management/protection/mam-faq",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune/apps/mamedge-1-mamca.md",
       "redirect_url": "/intune/solutions/edge-data-security/conditional-access-step-1",
       "redirect_document_id": false
