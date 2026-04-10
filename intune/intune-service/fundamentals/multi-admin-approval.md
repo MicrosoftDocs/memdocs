@@ -186,13 +186,13 @@ Approvers need **Read** permissions for the resources they are approving. The fo
 | Device Wipe | `ManagedDevices/Read` |
 | Device Retire | `ManagedDevices/Read` |
 | Device Delete | `ManagedDevices/Read` |
-| Apps | `MobileApps/Read`, `ManagedApps/Wipe`, plus shared configuration permissions* |
+| Apps | `MobileApps/Read`, plus shared configuration permissions* |
 | Configuration Policies | `DeviceConfigurations/Read`, plus shared configuration permissions* |
 | Compliance Policies | `DeviceCompliancePolicies/Read`, `DeviceConfigurations/Read` |
 | Scripts | `DeviceConfigurations/Read`, `SecurityBaselines/Read` |
 | Roles | `Roles/Read` |
 | Access Policies | `MultiAdminApproval/ReadAccessPolicy` and `MultiAdminApproval/ApprovalForMultiAdminApproval` |
-| Tenant Configuration | `Organization/Read`, `DeviceConfigurations/Read`, plus 11 other Read permissions |
+| Tenant Configuration | `Organization/Read`, `DeviceConfigurations/Read`, plus shared configuration permissions |
 
 *Shared configuration permissions (required for Apps and Configuration Policies): `DeviceConfigurations/Read`, `SecurityBaselines/Read`, `QuietTimePolicies/Read`, `EpmPolicy/Read`, `AppleEnrollmentProfiles/Read`, `ASRPolicy/Read`, `EDRPolicy/Read`, `AppControlPolicy/Read`
 
@@ -208,11 +208,11 @@ Change requestors need **Write** or **Execute** permissions for the action they'
 | Apps | `MobileApps/Create` (or `Update` / `Delete` depending on the action) |
 | Configuration Policies | `DeviceConfigurations/Create` (or `Update` / `Delete`) |
 | Compliance Policies | `DeviceCompliancePolicies/Create` (or `Update` / `Delete`) |
-| Scripts | `DeviceConfigurations/Create` (or `Update` / `Delete`) |
+| Scripts | `DeviceConfigurations/Create` (or `Update` / `Delete`); `SecurityBaselines/Create` (or `Update` / `Delete`) |
 | Roles | `Roles/Create` (or `Update` / `Delete`) |
-| Access Policies | `MultiAdminApproval/UpdateAccessPolicy` |
+| Access Policies | `MultiAdminApproval/Create` (or `Update` / `Delete`) |
 | Tenant Configuration | Depends on the specific tenant setting being modified |
-
+ 
 > [!TIP]
 > If an approver or requestor is missing permissions, their action might fail silently or return an error. When troubleshooting, always verify that permissions match the specific policy type, not just the general MAA permissions.
 
