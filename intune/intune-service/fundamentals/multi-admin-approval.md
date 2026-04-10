@@ -96,7 +96,7 @@ After a change is submitted, an *approver* can navigate to the **Received reques
 
 If a change is approved, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. The original requestor needs to view the request, and choose **Complete** to initiate the change. After being successfully processed, the status updates to **Completed**.
 
-Each change of status remains visible for up to 30 days after the status changes. If a request isn't processed further within 3 days, it becomes **Expired**, and must be resubmitted.
+If a request isn't processed further within 3 days, it becomes **Expired**, and must be resubmitted. Each change of status remains visible for up to 30 days after the status changes.
 
 ## Create an access policy
 
@@ -172,49 +172,6 @@ You can cancel a request before it's approved by selecting it from the **My requ
   1. After RBAC is configured correctly, you can re-create the **Role** access policy if desired.
 
   To avoid this issue, configure all other MAA access policies and verify RBAC assignments are correct before enabling an access policy for the **Role** policy type.
-
-## Permissions reference
-
-The following tables list the core RBAC permissions required for each MAA role by policy type. These tables reflect known requirements at time of publication. As MAA support expands, use the full permissions list to verify requirements for any resource types not shown here. For descriptions of all available Intune RBAC permissions, see [Custom role permissions](create-custom-role.md#custom-role-permissions).
-
-### Approver permissions
-
-Approvers need **Read** permissions for the resources they are approving. The following table lists the required RBAC permissions by policy type:
-
-| Policy type | Required RBAC permissions |
-|-------------|---------------------------|
-| Device Wipe | `ManagedDevices/Read` |
-| Device Retire | `ManagedDevices/Read` |
-| Device Delete | `ManagedDevices/Read` |
-| Apps | `MobileApps/Read`, plus shared configuration permissions* |
-| Configuration Policies | `DeviceConfigurations/Read`, plus shared configuration permissions* |
-| Compliance Policies | `DeviceCompliancePolicies/Read`, `DeviceConfigurations/Read` |
-| Scripts | `DeviceConfigurations/Read`, `SecurityBaselines/Read` |
-| Roles | `Roles/Read` |
-| Access Policies | `MultiAdminApproval/ReadAccessPolicy` and `MultiAdminApproval/ApprovalForMultiAdminApproval` |
-| Tenant Configuration | `Organization/Read`, `DeviceConfigurations/Read`, plus shared configuration permissions |
-
-*Shared configuration permissions (required for Apps and Configuration Policies): `DeviceConfigurations/Read`, `SecurityBaselines/Read`, `QuietTimePolicies/Read`, `EpmPolicy/Read`, `AppleEnrollmentProfiles/Read`, `ASRPolicy/Read`, `EDRPolicy/Read`, `AppControlPolicy/Read`
-
-### Change requestor permissions
-
-Change requestors need **Write** or **Execute** permissions for the action they're performing:
-
-| Policy type | Required RBAC permission |
-|-------------|--------------------------|
-| Device Wipe | `RemoteTasks/Wipe` |
-| Device Retire | `RemoteTasks/Retire` |
-| Device Delete | `ManagedDevices/Delete` |
-| Apps | `MobileApps/Create` (or `Update` / `Delete` depending on the action) |
-| Configuration Policies | `DeviceConfigurations/Create` (or `Update` / `Delete`) |
-| Compliance Policies | `DeviceCompliancePolicies/Create` (or `Update` / `Delete`) |
-| Scripts | `DeviceConfigurations/Create` (or `Update` / `Delete`); `SecurityBaselines/Create` (or `Update` / `Delete`) |
-| Roles | `Roles/Create` (or `Update` / `Delete`) |
-| Access Policies | `MultiAdminApproval/Create` (or `Update` / `Delete`) |
-| Tenant Configuration | Depends on the specific tenant setting being modified |
- 
-> [!TIP]
-> If an approver or requestor is missing permissions, their action might fail silently or return an error. When troubleshooting, always verify that permissions match the specific policy type, not just the general MAA permissions.
 
 ## Related content
 
