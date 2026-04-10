@@ -3,9 +3,9 @@ title: Use role-based access control (RBAC) and scope tags for distributed IT
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/02/2026
+ms.date: 04/09/2026
 ms.topic: how-to
-ai-assisted: true
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -129,7 +129,18 @@ To enable Scoped permissions, go to **Tenant administration** > **Roles** > **Se
 
 Before enabling Scoped permissions, use the **Permissions Assessment Report** to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings**, and can be run as often as needed, before or after enabling the setting.
 
-The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled. Security groups with no members are not listed, and security groups not affected by permission merging are not listed.
+The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled. Each row represents a specific resource where a permission reduction would occur, and a group may appear across multiple rows if reductions apply to more than one resource type. Review the results to identify permission reductions and communicate them to affected admins before enabling the setting.
+
+**Report columns:**
+
+- **Group**: The security group whose permissions are affected by merging across role assignments.
+- **Roles**: The roles whose permissions are currently merged together for this group, producing the broader access shown in **Old Permissions**.
+- **Scope Tag**: The scope tag where a permission reduction will occur. Only scope tags with a net reduction are listed.
+- **Resource**: The resource type where the change applies, such as DeviceConfigurations.
+- **Old Permissions**: The group's current permissions for this resource, reflecting the merged result of all role assignments that share this permission category. These merged permissions currently apply across all scope tags in those assignments.
+- **New Permissions**: The permissions that will apply to this specific scope tag after Scoped permissions is enabled, based only on the role assignment associated with this scope tag.
+
+The report excludes security groups with no members, and security groups not affected by permission merging.
 
 To review the impact on your tenant and enable Scoped permissions:
 
@@ -137,9 +148,7 @@ To review the impact on your tenant and enable Scoped permissions:
 
 2. Select **Generate Report** to run the Permissions Assessment Report.
 
-   The report displays the current permissions for each affected security group (as *Old Permissions*) and what those permissions would be after enabling Scoped permissions (as *New Permissions*). Review the results, adjust role assignments as needed, and communicate any permission reductions to affected admins.
-
-   You can also export this report to Excel for later review.
+   Review the results, adjust role assignments as needed, and communicate any permission reductions to affected admins. You can also export the report to Excel for offline review or sharing.
 
 3. When ready, enable the **Scoped permissions** toggle.
 

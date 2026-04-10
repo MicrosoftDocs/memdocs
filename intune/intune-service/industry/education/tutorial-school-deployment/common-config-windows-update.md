@@ -21,7 +21,7 @@ Update ring policies are a collection of settings that configure when devices th
 
 To learn more, see:
 
-- [Update rings for Windows policy in Intune](../../../../device-updates/windows/update-rings.md)
+- [Update rings for Windows policy in Intune](../../../../device-updates/windows/manage-update-rings.md)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
 - [YouTube: Windows Update for Business Fundamentals (Japanese)](https://youtu.be/o6_eGOyv-_g)
@@ -122,7 +122,7 @@ Using the **update ring** you configured earlier, set the **Feature update defer
 
 ### Control feature version
 
-A [Feature update policy](../../../../device-updates/windows/feature-update-policy.md) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
+A [Feature update policy](../../../../device-updates/windows/configure-feature-update-policy.md) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
 
 To set a feature update policy:
 
