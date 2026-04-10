@@ -22,8 +22,7 @@ You can allow administrators to sign in to and manage Microsoft Intune without a
 > To enable this setting, use an account with at least one of the following roles:
 >
 > - [Intune role administrator]
-> - [Custom role] that includes:
->   - The permissions **Roles/\***
+> - [Custom role] that includes the permissions **Roles/\***
 
 :::column-end:::
 :::row-end:::
