@@ -1,7 +1,7 @@
 ---
 title: Passwordless authentication with Microsoft Intune
 description: Learn how Microsoft Intune supports passwordless authentication across devices. Explore key methods and plan your deployment.
-ms.date: 03/24/2026
+ms.date: 04/13/2026
 ms.topic: concept-article
 author: paolomatarazzo
 ms.author: paoloma
@@ -253,7 +253,7 @@ The passwordless methods available to users depend on both the device platform a
 :::row-end:::
 
 :::row:::
-    :::column span="1":::
+:::column span="1":::
 #### **Certificate-Based Authentication (CBA)**
 
 :::image type="icon" source="media/passwordless/certificate.svg" border="false":::
@@ -422,7 +422,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 :::row-end:::
 
 :::row:::
-    :::column span="1":::
+:::column span="1":::
 #### Android
 
 :::image type="icon" source="media/passwordless/android.svg" border="false":::
@@ -435,8 +435,8 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 > :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 > 
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-:::row-end:::
 :::column-end:::
+:::row-end:::
 
 ## Dependencies for passwordless authentication
 
