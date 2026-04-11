@@ -102,7 +102,7 @@
     },
     {
       "source_path": "intune/analytics/data-collection.md",
-      "redirect_url": "/intune/endpoint-analytics/data-collection",
+      "redirect_url": "/intune/endpoint-analytics/ref-data-collection",
       "redirect_document_id": false
     },
     {
@@ -142,7 +142,7 @@
     },
     {
       "source_path": "intune/analytics/get-support.md",
-      "redirect_url": "/intune/endpoint-analytics/get-support",
+      "redirect_url": "/intune/endpoint-analytics/support",
       "redirect_document_id": false
     },
     {
@@ -197,32 +197,32 @@
     },
     {
       "source_path": "intune/device-updates/windows/driver-updates-overview.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-driver-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/device-updates/windows/driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_url": "/intune/device-updates/windows/configure-driver-update-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/device-updates/windows/expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-quality-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/device-updates/windows/quality-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/expedite-policy",
+      "redirect_url": "/intune/device-updates/windows/configure-expedite-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/device-updates/windows/reports.md",
-      "redirect_url": "/intune/device-updates/windows/feature-updates-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-feature-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/device-updates/windows/settings.md",
-      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
+      "redirect_url": "/intune/device-updates/windows/ref-update-ring-settings",
       "redirect_document_id": false
     },
     {
@@ -522,7 +522,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/fota-updates-android.md",
-      "redirect_url": "/intune/device-updates/android/fota-updates",
+      "redirect_url": "/intune/device-updates/android/manage-fota",
       "redirect_document_id": false
     },
     {
@@ -597,22 +597,22 @@
     },
     {
       "source_path": "intune/intune-service/protect/software-update-agent-error-codes.md",
-      "redirect_url": "/intune/device-updates/windows/software-update-agent-error-codes",
+      "redirect_url": "/intune/device-updates/windows/ref-agent-error-codes",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-guide-android.md",
-      "redirect_url": "/intune/device-updates/android/software-updates-guide",
+      "redirect_url": "/intune/device-updates/android/planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-guide-personal-byod.md",
-      "redirect_url": "/intune/device-updates/byod-software-updates-guide",
+      "redirect_url": "/intune/device-updates/byod-planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/updates/apple-reports.md",
-      "redirect_url": "/intune/device-updates/apple/reports",
+      "redirect_url": "/intune/device-updates/apple/monitor-reports",
       "redirect_document_id": false
     },
     {
@@ -622,22 +622,22 @@
     },
     {
       "source_path": "intune/intune-service/protect/updates/software-updates-guide-ios-ipados.md",
-      "redirect_url": "/intune/device-updates/apple/software-updates-guide-ios-ipados",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-ios-ipados",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/updates/software-updates-guide-macos.md",
-      "redirect_url": "/intune/device-updates/apple/software-updates-guide-macos",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/updates/software-updates-ios.md",
-      "redirect_url": "/intune/device-updates/apple/software-updates-ios",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/updates/software-updates-macos.md",
-      "redirect_url": "/intune/device-updates/apple/software-updates-macos",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-macos",
       "redirect_document_id": false
     },
     {
@@ -647,27 +647,27 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-quality-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-10-feature-updates.md",
-      "redirect_url": "/intune/device-updates/windows/feature-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-feature-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-10-update-rings.md",
-      "redirect_url": "/intune/device-updates/windows/update-rings",
+      "redirect_url": "/intune/device-updates/windows/manage-update-rings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-overview.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-driver-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_url": "/intune/device-updates/windows/configure-driver-update-policy",
       "redirect_document_id": false
     },
     {
@@ -677,12 +677,12 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-quality-update-policy.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-quality-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-compatibility-reports.md",
-      "redirect_url": "/intune/device-updates/windows/compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
@@ -697,17 +697,17 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-rollout-options.md",
-      "redirect_url": "/intune/device-updates/windows/rollout-options",
+      "redirect_url": "/intune/device-updates/windows/configure-rollout-options",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-settings.md",
-      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
+      "redirect_url": "/intune/device-updates/windows/ref-update-ring-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/zebra-lifeguard-ota-integration.md",
-      "redirect_url": "/intune/device-updates/android/zebra-lifeguard-ota-integration",
+      "redirect_url": "/intune/device-updates/android/setup-zebra-lifeguard",
       "redirect_document_id": false
     },
     {
@@ -4077,7 +4077,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-quality-updates",
       "redirect_document_id": false
     },
     {
@@ -4087,7 +4087,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-update-rings.md",
-      "redirect_url": "/intune/device-updates/windows/update-rings",
+      "redirect_url": "/intune/device-updates/windows/manage-update-rings",
       "redirect_document_id": false
     },
     {
@@ -4097,7 +4097,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_url": "/intune/device-updates/windows/configure-driver-update-policy",
       "redirect_document_id": false
     },
     {
@@ -5343,6 +5343,146 @@
     {
       "source_path": "intune/user-help/unenrollment/remove-enrollment-windows.md",
       "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/endpoint-analytics/data-collection.md",
+      "redirect_url": "/intune/endpoint-analytics/ref-data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/endpoint-analytics/get-support.md",
+      "redirect_url": "/intune/endpoint-analytics/support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/apple/reports.md",
+      "redirect_url": "/intune/device-updates/apple/monitor-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/update-ring-policy-settings.md",
+      "redirect_url": "/intune/device-updates/windows/ref-update-ring-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/software-update-agent-error-codes.md",
+      "redirect_url": "/intune/device-updates/windows/ref-agent-error-codes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/byod-software-updates-guide.md",
+      "redirect_url": "/intune/device-updates/byod-planning-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/android/software-updates-guide.md",
+      "redirect_url": "/intune/device-updates/android/planning-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/apple/software-updates-guide-ios-ipados.md",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/apple/software-updates-guide-macos.md",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/android/zebra-lifeguard-ota-integration.md",
+      "redirect_url": "/intune/device-updates/android/setup-zebra-lifeguard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/apple/software-updates-ios.md",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/apple/software-updates-macos.md",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/update-rings.md",
+      "redirect_url": "/intune/device-updates/windows/manage-update-rings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/quality-updates.md",
+      "redirect_url": "/intune/device-updates/windows/manage-quality-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/feature-updates.md",
+      "redirect_url": "/intune/device-updates/windows/manage-feature-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates.md",
+      "redirect_url": "/intune/device-updates/windows/manage-driver-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/feature-update-policy.md",
+      "redirect_url": "/intune/device-updates/windows/configure-feature-update-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-update-policy.md",
+      "redirect_url": "/intune/device-updates/windows/configure-driver-update-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/expedite-policy.md",
+      "redirect_url": "/intune/device-updates/windows/configure-expedite-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/hotpatch.md",
+      "redirect_url": "/intune/device-updates/windows/configure-hotpatch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/rollout-options.md",
+      "redirect_url": "/intune/device-updates/windows/configure-rollout-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/update-rings-reports.md",
+      "redirect_url": "/intune/device-updates/windows/monitor-update-rings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/quality-updates-reports.md",
+      "redirect_url": "/intune/device-updates/windows/monitor-quality-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/feature-updates-reports.md",
+      "redirect_url": "/intune/device-updates/windows/monitor-feature-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates-reports.md",
+      "redirect_url": "/intune/device-updates/windows/monitor-driver-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/compatibility-reports.md",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/feature-updates-windows-10.md",
+      "redirect_url": "/intune/device-updates/windows/upgrade-to-windows-11",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/android/fota-updates.md",
+      "redirect_url": "/intune/device-updates/android/manage-fota",
       "redirect_document_id": false
     }
   ]
