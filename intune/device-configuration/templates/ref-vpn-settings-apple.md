@@ -19,7 +19,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -31,16 +31,16 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
 > - Create a [VPN device configuration profile](vpn-settings-configure.md).
@@ -49,7 +49,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 ## Before you begin
 
-- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
+- [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
 
 ::: zone pivot="ios-ipados"
 

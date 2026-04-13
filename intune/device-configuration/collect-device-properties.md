@@ -1,8 +1,6 @@
 ---
 title: Collect device hardware info with the properties catalog
 description: Use the properties catalog in Microsoft Intune view and collect enhanced device hardware info on Windows devices you manage with Intune. You can collect info like BIOS version, TPM status, disk info, memory details, and network adapter configurations. Use this information to get deeper visibility into your device inventory and troubleshoot issues.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/09/2026
 ms.topic: how-to
 ms.collection:
@@ -38,7 +36,7 @@ This feature applies to:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -51,13 +49,13 @@ This feature applies to:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
 > To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 > - A [custom role](custom-settings-configure.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
 > - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md).
 :::column-end:::

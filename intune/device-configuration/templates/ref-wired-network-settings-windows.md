@@ -1,8 +1,6 @@
 ---
 title: Configure wired network settings for Windows devices in Microsoft Intune
 description: Create or add a wired network device configuration profile for Windows 10/11 devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/25/2024
 ms.topic: reference
 ms.reviewer: abalwan

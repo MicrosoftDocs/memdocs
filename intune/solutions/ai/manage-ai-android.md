@@ -70,11 +70,11 @@ Applies to:
   To learn more, see:
 
   - [Inclusion and exclusion groups](../../app-management/deployment/configure-assignment-scope.md) to assign apps that target specific users and devices.
-  - [Assign policies in Intune](../../intune-service/configuration/device-profile-assign.md) that target specific users and devices.
+  - [Assign policies in Intune](../../device-configuration/assign-device-profile.md) that target specific users and devices.
 
 - For corporate owned devices with a work profile (COPE) and personally owned devices with a work profile (BYOD), most controls are available only in the work profile. They're not available in the personal profile.
 - The steps in this guide show you how to block AI experiences. If you want to allow specific AI experiences, you can use the same steps but configure them to allow instead of block.
-- When you create a policy and assign it, the devices receive the policy the next time they check in with Intune. To learn more, see [Intune policy refresh intervals](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+- When you create a policy and assign it, the devices receive the policy the next time they check in with Intune. To learn more, see [Intune policy refresh intervals](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 ## How AI shows up on Android
 
@@ -145,7 +145,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
     3. Expand the **Applications** category and set the **Allow access to all apps in Google Play store** setting to **Allow**.
 
-    4. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
+    4. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../device-configuration/create-device-profile.md).
 
 2. Add the apps you want to block.
 
@@ -323,7 +323,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
         - **Type of restricted apps list**: Set to **Blocked Apps** and add the AI apps you want to block.
 
-    6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
+    6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../device-configuration/create-device-profile.md).
 
 # [Personally owned with work profile](#tab/screen-personal)
 
@@ -346,7 +346,7 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
     - **Copy and paste between work and personal profiles**: Set to **Block** (default).
     - **Data sharing between work and personal profiles**: Set to **Device Default**. Device Default restricts sharing between work and personal profiles.
 
-6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
+6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../device-configuration/create-device-profile.md).
 
 ---
 
@@ -388,7 +388,7 @@ OEMs can include their own AI features and capabilities on the device, like the 
 
 To configure the OEMConfig app, you need to know the AI settings available in the app. Contact your OEMs to get a list of available AI controls in their OEMConfig apps.
 
-For a list of supported OEMConfig apps, see [OEMConfig in Intune - Supported OEMConfig apps](../../intune-service/configuration/android-oem-configuration-overview.md#supported-oemconfig-apps).
+For a list of supported OEMConfig apps, see [OEMConfig in Intune - Supported OEMConfig apps](../../device-configuration/templates/configure-oemconfig-android.md#supported-oemconfig-apps).
 
 **Supported enrollment types**:
 
@@ -438,7 +438,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 
     The available settings depend on the OEMConfig app you select. Contact your OEM to get a list of available AI controls in their OEMConfig apps.
 
-6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use and manage Android Enterprise devices with OEMConfig](../../intune-service/configuration/android-oem-configuration-overview.md).
+6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use and manage Android Enterprise devices with OEMConfig](../../device-configuration/templates/configure-oemconfig-android.md).
 
     Make sure you assign the profile to the same groups and/or users you assigned the OEMConfig app to.
 
@@ -447,5 +447,5 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 - [Android enrollment guide](../../device-enrollment/android/guide.md)
 - [Include and exclude app assignments in Microsoft Intune](../../app-management/deployment/configure-assignment-scope.md)
 - [Assign apps to groups in Microsoft Intune](../../app-management/deployment/assign-groups.md)
-- [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../intune-service/configuration/android-oem-configuration-overview.md)
+- [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md)
 - [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037)

@@ -1,8 +1,6 @@
 ---
 title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/24/2026
 ms.topic: how-to
 ms.reviewer: akritis
@@ -68,11 +66,11 @@ When using OEMConfig, be familiar with the following information:
 
     The following example shows the top parent groups or bundles available in an OEMConfig app that you can configure in an Intune policy:
 
-    :::image type="content" source="./media/android-oem-configuration-overview/knox-top-parent-options.png" alt-text="Screenshot that shows a sample OEMConfig device configuration profile with top parent groups or bundles  that can be configured in Microsoft Intune.":::
+    :::image type="content" source="./media/configure-oemconfig-android/knox-top-parent-options.png" alt-text="Screenshot that shows a sample OEMConfig device configuration profile with top parent groups or bundles  that can be configured in Microsoft Intune.":::
 
     The following example shows the Wi-Fi top parent group or bundle configured in the Intune profile:
 
-    :::image type="content" source="./media/android-oem-configuration-overview/knox-top-parent-wifi-configurations.png" alt-text="Screenshot that shows a sample OEMConfig device configuration profile with the Wi-Fi top parent group or bundle configured in Microsoft Intune." lightbox="./media/android-oem-configuration-overview/knox-top-parent-wifi-configurations.png":::
+    :::image type="content" source="./media/configure-oemconfig-android/knox-top-parent-wifi-configurations.png" alt-text="Screenshot that shows a sample OEMConfig device configuration profile with the Wi-Fi top parent group or bundle configured in Microsoft Intune." lightbox="./media/configure-oemconfig-android/knox-top-parent-wifi-configurations.png":::
 
   - On Zebra devices, you can create multiple profiles using the **Legacy Zebra OEMConfig** app, and assign the profiles to the same device. For more information, go to [OEMConfig on Zebra devices](oemconfig-zebra-android-devices.md).
 
@@ -84,7 +82,7 @@ To use OEMConfig on your devices, you need the following requirements:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -97,7 +95,7 @@ To use OEMConfig on your devices, you need the following requirements:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > To create the Intune profile, the Intune admin needs the following role-based access (RBAC) permissions in Intune:

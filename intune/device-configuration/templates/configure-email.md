@@ -1,8 +1,6 @@
 ---
 title: Configure email settings in Microsoft Intune
 description: Create an email device configuration profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including a Microsoft Exchange email server. Add authentication methods to connect to corporate email on devices you manage.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: sheetg
@@ -35,11 +33,11 @@ You can use email profiles to configure email settings for the following devices
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
 - Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Microsoft Entra properties in the email profile of the user during enrollment. The email app your organization uses must support Microsoft Entra identities.
 

@@ -1,8 +1,6 @@
 ---
 title: Device restriction settings for Android in Microsoft Intune
 description: On Android Enterprise or Android for Work devices owned by your organization, you can restrict settings on the device using Microsoft Intune. Allow copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/17/2025
 ms.topic: reference
 params:
@@ -63,11 +61,11 @@ These settings apply to the following Android Enterprise enrollment types where 
 
 Some settings aren't supported by all enrollment types. The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) shows the enrollment types that the settings apply to.
 
-:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
+:::image type="content" source="./media/ref-device-restrictions-android-enterprise/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
 For corporate-owned devices with a work profile, some settings only apply in the work profile. These settings have **(work profile-level)** in the setting name. For fully managed and dedicated devices, these settings apply device-wide.
 
-:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Screenshot that shows the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune.":::
+:::image type="content" source="./media/ref-device-restrictions-android-enterprise/work-profile-level.png" alt-text="Screenshot that shows the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune.":::
 
 ## General
 
@@ -339,7 +337,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
           When you add items, select the context menu to remove items, or move them to different positions:
 
-          :::image type="content" source="./media/device-restrictions-android-for-work/custom-layout-context-menu.png" alt-text="Screenshot that shows how to move your apps and folders to different locations on Android Enterprise dedicated devices running in multi-app mode in Microsoft Intune.":::
+          :::image type="content" source="./media/ref-device-restrictions-android-enterprise/custom-layout-context-menu.png" alt-text="Screenshot that shows how to move your apps and folders to different locations on Android Enterprise dedicated devices running in multi-app mode in Microsoft Intune.":::
 
       - **Add**: Select your apps from the list.
 

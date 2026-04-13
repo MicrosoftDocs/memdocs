@@ -38,7 +38,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/intune/device-configuration/overview).
 
 > [!TIP]
 > You can find a list of common configurations used in K-12 organizations at [Common Education configuration overview](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-overview).
@@ -69,7 +69,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/intune/device-configuration/overview).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -121,7 +121,7 @@ Settings that are commonly configured for student devices include:
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
 > [!NOTE]
-> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/device-configuration/overview).
 
 ::: zone-end
 
@@ -156,7 +156,7 @@ Settings that are commonly configured for student devices include:
 For more information, see [iOS device settings in Intune for Education](/intune-education/all-edu-settings-ios).
 
 > [!NOTE]
-> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/device-configuration/overview).
 
 ::: zone-end
 
@@ -317,7 +317,7 @@ Common areas for security include:
 - Passcode, Touch ID, and Face ID
 
 > [!NOTE]
-> If you require more sophisticated security settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+> If you require more sophisticated security settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/device-configuration/overview).
 
 ::: zone-end
 

@@ -1,8 +1,6 @@
 ---
 title: Configure Platform SSO for macOS devices
 description: Use Microsoft Intune to configure Platform SSO and deploy the configuration to your macOS devices. Platform SSO enables single sign-on (SSO) using Microsoft Entra ID with the Secure Enclave, smart card, or password authentication methods. You create a settings catalog policy to configure the settings. This article is a step-by-step guide to configure Platform SSO for macOS devices using Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/26/2026
 ms.topic: how-to
 appliesto:
@@ -181,7 +179,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
 6. Select **Next**.
 7. In **Configuration settings**, select **Add settings**. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
-    :::image type="content" source="./media/platform-sso-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune.":::
+    :::image type="content" source="./media/configure-platform-sso-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune.":::
 
     In the list, select the following settings:
 
@@ -227,7 +225,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
 
     When the profile is ready, it looks similar to the following example:
 
-    :::image type="content" source="./media/platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
+    :::image type="content" source="./media/configure-platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
 10. Select **Next**.
 11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -287,7 +285,7 @@ For **existing devices** already enrolled in Intune, assign the Platform SSO pol
 
 When the device receives the policy, there's a **Registration required** notification that shows in the Notification Center.
 
-:::image type="content" border="false" source="./media/platform-sso-macos/platform-sso-macos-registration-required.png" alt-text="Screenshot that shows the registration required prompt on end user devices when you configure Platform SSO in Microsoft Intune.":::
+:::image type="content" border="false" source="./media/configure-platform-sso-macos/platform-sso-macos-registration-required.png" alt-text="Screenshot that shows the registration required prompt on end user devices when you configure Platform SSO in Microsoft Intune.":::
 
 - End users select this notification, sign in to the Microsoft Entra ID plug-in with their organization account, and complete multifactor authentication (MFA), if required.
 

@@ -1,8 +1,6 @@
 ---
 title: Configure device configuration profiles in Microsoft Intune
 description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag. Learn more about applicability rules, and the policy refresh cycle times.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/15/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
@@ -53,7 +51,7 @@ This feature applies to:
 
 In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**. You have the following options:
 
-:::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune." lightbox="./media/device-profile-create/devices-overview.png":::
+:::image type="content" source="./media/create-device-profile/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune." lightbox="./media/create-device-profile/devices-overview.png":::
 
 - **Overview**: Lists the status of some of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Lists all device monitoring reports. Use these reports to check configuration policy assignment failures, incomplete user enrollments, noncompliant devices, update installation failures, and more.
@@ -120,7 +118,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 
 For example, if you select Windows for the platform, your options look similar to the following profile:
 
-:::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
+:::image type="content" source="./media/create-device-profile/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
 
 ## Scope tags
 
@@ -165,7 +163,7 @@ Use the following steps to create an applicability rule.
 
 1. In your policy, select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
-    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows device configuration profile in Microsoft Intune." lightbox="./media/device-profile-create/applicability-rules.png":::
+    :::image type="content" source="./media/create-device-profile/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows device configuration profile in Microsoft Intune." lightbox="./media/create-device-profile/applicability-rules.png":::
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
@@ -217,7 +215,7 @@ When creating profiles, consider the following recommendations:
 
   The following image shows an example of some settings that can apply to users, apply to devices, or apply to both:
 
-  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Screenshot that shows an Intune admin template that applies to user and devices in Microsoft Intune." lightbox="./media/device-profile-create/setting-applies-to-user-and-device.png":::
+  :::image type="content" source="./media/create-device-profile/setting-applies-to-user-and-device.png" alt-text="Screenshot that shows an Intune admin template that applies to user and devices in Microsoft Intune." lightbox="./media/create-device-profile/setting-applies-to-user-and-device.png":::
 
 - Use Microsoft Copilot in Intune to evaluate your policies, learn more about a policy setting & its effect on your users & security, and compare policies between two devices.
 

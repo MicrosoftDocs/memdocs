@@ -1,8 +1,6 @@
 ---
 title: Import custom and third-party partner ADMX templates in Microsoft Intune
 description: You can add, upload, or import custom and third-party partner ADMX and ADML files in Microsoft Intune. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 client devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/04/2025
 ms.topic: how-to
 ms.reviewer: mikedano, kabalu
@@ -28,7 +26,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 ## What you need to know
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
   To modify or update an ADMX policy with the **Not Configured** setting, RBAC administrators need the **Device configurations > Delete** permission. The built-in **Policy and Profile Manager** role has this permission.
 
@@ -93,7 +91,7 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Import ADMX** tab > **Import**:
 
-    :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in the Microsoft Intune admin center.":::
+    :::image type="content" source="./media/import-custom-admx-templates/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in the Microsoft Intune admin center.":::
 
     Or, you can also import from **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Import ADMX** tab.
 
@@ -112,7 +110,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 - See the upload **Status**.
 - **Delete** an imported template.
 
-:::image type="content" source="./media/administrative-templates-import-custom/imported-templates-refresh-delete.png" alt-text="Screenshot that shows how to refresh and delete imported custom ADMX and ADML administrative templates in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/import-custom-admx-templates/imported-templates-refresh-delete.png" alt-text="Screenshot that shows how to refresh and delete imported custom ADMX and ADML administrative templates in Microsoft Intune and Intune admin center.":::
 
 ## Create a profile using your imported files
 
@@ -123,7 +121,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
     - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Imported Administrative templates (Preview)**:
 
-      :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in the Microsoft Intune admin center.":::
+      :::image type="content" source="./media/import-custom-admx-templates/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in the Microsoft Intune admin center.":::
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

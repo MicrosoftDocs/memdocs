@@ -1,8 +1,6 @@
 ---
 title: Use Microsoft Intune to import and analyze group policies
 description: Import and analyze your group policy objects using the Group Policy analytics tool. See the policies that are supported and aren't supported in Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 11/15/2023
 ms.topic: how-to
 ms.reviewer: aanavath
@@ -46,7 +44,7 @@ The following steps can be different on your server, depending on the GPMC versi
 3. Expand **Group Policy Objects** to see all the available GPOs.
 4. Right-click the GPO you want to migrate and choose **Save report**:
 
-    :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Screenshot that shows how to open Group Policy management and save a GPO as an XML file report.":::
+    :::image type="content" source="./media/import-group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Screenshot that shows how to open Group Policy management and save a GPO as an XML file report.":::
 
 5. Select an easily accessible folder for your export. In **Save as type**, select **XML File**. In another step, you add this file to group policy analytics in Intune.
 
@@ -63,7 +61,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 3. In **Scope tags**, select the existing scope tag you want to apply to the imported GPO. If you don't select an existing scope tag, then the **Default** scope tag is automatically used:
 
-    :::image type="content" source="./media/group-policy-analytics/import-gpo-select-scope-tag.png" alt-text="Screenshot that shows how to import a group policy object (GPO) and select a scope tag in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/import-group-policy-analytics/import-gpo-select-scope-tag.png" alt-text="Screenshot that shows how to import a group policy object (GPO) and select a scope tag in Microsoft Intune and Intune admin center.":::
 
     Only admins included in the scope tags you select can see the imported GPO. For more information on scope tags on your imported GPOs, go to [Select a scope tag when you import](#select-a-scope-tag-when-you-import) (in this article).
 
@@ -86,7 +84,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     You can **Import** more GPOs for analysis, **Refresh** the page, and **Filter** the output. You can also **Export** this view to a `.csv` file:
 
-    :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Screenshot that shows how to import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/import-group-policy-analytics/import-refresh-filter-options.png" alt-text="Screenshot that shows how to import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Intune admin center.":::
 
 6. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:
 
@@ -148,7 +146,7 @@ Even though Group Policy analytics can parse the CSPs, there are some things you
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Device management** > **Group policy analytics**:
 
-    :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/import-group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 
 2. In the **Summary** tab, a summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
 
@@ -196,7 +194,7 @@ At any time, you can delete imported GPOs:
 1. Go to **Devices** > **Manage devices** > **Group Policy analytics**.
 2. Select the context menu > **Delete**:
 
-    :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/import-group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Intune admin center.":::
 
 ## Next steps
 

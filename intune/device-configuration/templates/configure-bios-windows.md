@@ -1,8 +1,6 @@
 ---
 title: Update Windows BIOS using configuration MDM policy
 description: Learn more about the BIOS configuration profile that can manage traditional BIOS settings in Microsoft Intune. You use an OEM tool to create a configuration file with the settings. You deploy an OEM Win32 app to the devices to read the configuration file and BIOS passwords. Then, you create a BIOS configuration policy in Intune to add the configuration file and assign the policy to your devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/06/2024
 ms.topic: how-to
 ms.reviewer: madakeva

@@ -1,8 +1,6 @@
 ---
 title: Configure 802.1x wired network settings for macOS and Windows devices in Microsoft Intune
 description: Create or add a wired network device configuration profile or policy using the IEEE 802.1X standard for macOS, Windows 10, and Windows 11 devices and computers. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/18/2025
 ms.topic: how-to
 ms.reviewer: abalwan
@@ -37,7 +35,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 

@@ -1,8 +1,6 @@
 ---
 title: Windows Holographic Business device settings - Microsoft Intune
 description: Read about and configure device restriction settings in Microsoft Intune for Windows Holographic for Business. Control unenrollment, geolocation, passwords, install apps from app store, cookies, and pop ups in Microsoft Edge, Microsoft Defender, search, cloud and storage, bluetooth connectivity, system time, and usage data.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 10/17/2023
 ms.topic: reference
 ms.reviewer: mikedano
@@ -83,7 +81,7 @@ When you create a Windows device restrictions configuration profile, there are m
 
   [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-  [!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
+  [!INCLUDE [cortana-app-deprecation](../../intune-service/includes/cortana-app-deprecation.md)]
 
 ## Microsoft Edge Browser
 

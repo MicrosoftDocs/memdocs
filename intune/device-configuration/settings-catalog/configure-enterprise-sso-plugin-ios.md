@@ -1,8 +1,6 @@
 ---
 title: Configure iOS/iPadOS Enterprise SSO app extension with MDMs
 description: Learn more about the Microsoft Enterprise single sign-on (SSO) plug-in. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 07/14/2025
 ms.topic: how-to
 ms.reviewer: miepping, tbc, alessanc
@@ -12,7 +10,7 @@ ms.collection:
 
 # Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices
 
-[!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
+[!INCLUDE [Apple SSO Boilerplate](../../intune-service/includes/apple-enterprise-sso-intro-boilerplate.md)]
 
 This feature applies to:
 
@@ -24,7 +22,7 @@ This article shows how to create an SSO app extension configuration policy for i
 
 ## App support
 
-[!INCLUDE [Apple SSO app support](../includes/apple-enterpsie-sso-app-support.md)]
+[!INCLUDE [Apple SSO app support](../../intune-service/includes/apple-enterpsie-sso-app-support.md)]
 
 ## Prerequisites
 
@@ -67,7 +65,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 > [!NOTE]
 > On iOS/iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
 
-[!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
+[!INCLUDE [Apple Kerberos Extension Boilerplate](../../intune-service/includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
 ---
 
@@ -88,7 +86,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 4. Select **Create**:
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-create-device-features.png" alt-text="Screenshot that shows how to create a device features configuration profile for iOS/iPadOS in Microsoft Intune." lightbox="./media/apple-enterprise-sso-plug-in/ios-ipados-create-device-features.png":::
+    :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-create-device-features.png" alt-text="Screenshot that shows how to create a device features configuration profile for iOS/iPadOS in Microsoft Intune." lightbox="./media/enterprise-sso-plugin/ios-ipados-create-device-features.png":::
 
 5. In **Basics**, enter the following properties:
 
@@ -100,7 +98,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
     - **SSO app extension type**: Select **Microsoft Entra ID**.
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for iOS/iPadOS in Intune.":::
+      :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for iOS/iPadOS in Intune.":::
 
     - **Enable shared device mode**:
 
@@ -113,11 +111,11 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
     - **Additional configuration**: To customize the end user experience, you can add the following properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../../intune-service/includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
 
       When you're done configuring the settings and are allowing Microsoft & Apple apps, then the settings look similar to the following values in your Intune configuration profile:
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on iOS/iPadOS devices in Intune.":::
+      :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on iOS/iPadOS devices in Intune.":::
 
 8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, go to [Create the profile](device-features-configure.md#create-the-profile).
 
@@ -127,7 +125,7 @@ When the device checks in with the Intune service, it receives this profile. For
 
 To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > select the profile you created and generate a report:
 
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the iOS/iPadOS device configuration profile deployment report in Intune.":::
+:::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the iOS/iPadOS device configuration profile deployment report in Intune.":::
 
 # [Jamf Pro](#tab/create-profile-jamf-pro)
 
@@ -136,13 +134,13 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 1. Sign in to the Jamf Pro portal.
 2. To create an iOS/iPadOS profile, select **Devices** > **Configuration Profiles** > **New**:
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-create-profile-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for iOS/iPadOS devices.":::
+    :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-create-profile-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for iOS/iPadOS devices.":::
 
 3. In **Name**, enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
 
 4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**:
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal. Select the configuration profiles SSO option and select add for iOS/iPadOS devices.":::
+    :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-sso-extensions-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal. Select the configuration profiles SSO option and select add for iOS/iPadOS devices.":::
 
 5. Enter the following properties:
 
@@ -159,9 +157,9 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
       - `https://login.microsoftonline.us`
       - `https://login-us.microsoftonline.com`
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-settings-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for iOS/iPadOS devices.":::
+    :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-sso-extensions-settings-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for iOS/iPadOS devices.":::
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-urls-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for iOS/iPadOS devices.":::
+    :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-sso-extensions-urls-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for iOS/iPadOS devices.":::
 
 6. In **Custom Configuration**, you define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Enterprise SSO plug-in for Apple devices documentation](/entra/identity-platform/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
@@ -181,11 +179,11 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
     </plist>
     ```
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-custom-configuration-plist-jamf.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
+    :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-custom-configuration-plist-jamf.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
 
     These PLIST settings configure the following SSO Extension options. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-jamf-pro-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../../intune-service/includes/apple-enterprise-sso-recommended-settings-ios-jamf-pro-boilerplate.md)]
 
 7. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 8. Select **Save**.
@@ -210,7 +208,7 @@ In the MDM portal, create a device configuration profile. This profile include
 
 5. Optionally, you can configure other properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../../intune-service/includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
 
 6. Assign the new policy to the devices that should be targeted to receive the SSO Extension MDM profile.
 
@@ -218,7 +216,7 @@ When the device checks in with the MDM service, it receives this profile.
 
 ---
 
-[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
+[!INCLUDE [Apple iOS End User Experience Boilerplate](../../intune-service/includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 
 > [!TIP]
 > Learn more about how the SSO plug-in works and how to troubleshoot the Microsoft Enterprise SSO Extension with the [SSO troubleshooting guide for Apple devices](/entra/identity/devices/troubleshoot-mac-sso-extension-plugin).

@@ -1,8 +1,6 @@
 ---
 title: Configure Wi-Fi settings for Android DA devices in Microsoft Intune
 description: Create or add a WiFi device configuration profile for Android device administrator. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: abalwan
@@ -20,7 +18,7 @@ This feature applies to:
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings. This article describes these settings.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 ## Before you begin
 

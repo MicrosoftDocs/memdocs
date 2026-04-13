@@ -1,8 +1,6 @@
 ---
 title: Use StageNow logs on Android Zebra devices in Microsoft Intune
 description: See common issues and resolutions when using StageNow on Android devices with Microsoft Intune. Also learn how to get logs, and see examples of how to read the logs for success or errors.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/27/2024
 ms.topic: troubleshooting
 ms.reviewer: jieyan
@@ -29,7 +27,7 @@ Some issues aren't related to the contents of the StageNow profile, and aren't r
 This article shows you how to read the StageNow logs. It also lists some potential issues with Zebra devices that may not be reflected in the logs.
 
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 [Use and manage Zebra devices with Zebra Mobility Extensions](android-zebra-mx-overview.md) has more information on this feature.
 

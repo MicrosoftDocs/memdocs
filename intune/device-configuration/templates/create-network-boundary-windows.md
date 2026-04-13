@@ -1,8 +1,6 @@
 ---
 title: Create a Windows Network Boundary profile in Microsoft Intune
 description: Add a Windows Network Boundary policy to Windows devices using Microsoft Intune. Add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers to a device configuration policy. Microsoft Defender Application Guard in Microsoft Edge trusts sites in this boundary.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: mikedano
@@ -28,7 +26,7 @@ This article shows you how to create the profile, and add trusted sites.
 
 ## Before you begin
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 - This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/policy-csp-networkisolation).
 
 ## Create the profile

@@ -1,8 +1,6 @@
 ---
 title: Wi-Fi settings for Windows devices in Microsoft Intune
 description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10/11 client devices in Microsoft Intune. You can configure basic settings, or enterprise level settings.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 05/15/2025
 ms.topic: reference
 ms.reviewer: abalwan
@@ -13,7 +11,7 @@ ms.collection:
 # Add Wi-Fi settings for Windows devices in Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 
 You can create a profile with specific WiFi settings. Then, deploy this profile to your Windows client devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 

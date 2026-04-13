@@ -20,7 +20,7 @@ You can create profiles for different devices and different platforms, including
 
 When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 

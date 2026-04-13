@@ -120,7 +120,7 @@ You can create objects in Intune based on the objects that you have in Configura
 
 <!-- - [Device compliance policies](/mem/intune-service/protect/compliance-policy-create-windows)  -->
 - [Windows Update client policies](/mem/intune-service/protect/windows-update-for-business-configure)
-- [Device configuration profiles](/mem/intune-service/configuration/device-profile-create)
+- [Device configuration profiles](/mem/device-configuration/create-device-profile)
 
 ### Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.

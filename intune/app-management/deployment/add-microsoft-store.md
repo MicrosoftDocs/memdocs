@@ -183,7 +183,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; use a [custom configuration profile](../../intune-service/configuration/custom-settings-configure.md). | Administrative Templates > Windows Components > Desktop App Installer |
+  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; use a [custom configuration profile](../../device-configuration/templates/configure-custom-settings.md). | Administrative Templates > Windows Components > Desktop App Installer |
 
 - **Enable App Installer** policy
 
@@ -191,7 +191,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; use a [custom configuration profile](../../intune-service/configuration/custom-settings-configure.md). | Administrative Templates > Windows Components > Desktop App Installer |
+  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; use a [custom configuration profile](../../device-configuration/templates/configure-custom-settings.md). | Administrative Templates > Windows Components > Desktop App Installer |
 
 - **Turn off the Store application** policy: Your options:
 

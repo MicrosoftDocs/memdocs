@@ -1,8 +1,6 @@
 ---
 title: eSIM configuration of a download server
 description: Learn about configuration of an eSIM Download Server from Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.reviewer: hejimenez
@@ -35,7 +33,7 @@ eSIM technology created a worldwide ecosystem of cellular devices and mobile ope
 
 eSIM decouples the secure execution environment of the plastic SIM card from the SIM credentials it contains. The secure container is called an eUICC (embedded Universal Integrated Circuit Card). In the same way that each physical SIM card has a unique identity, each eUICC has a unique identity called eUICC Identifier (EID).
 
-:::image type="content" source="./media/esim-device-configuration/euicc-tech-download-server.png" alt-text="eUICC and eSIM technology image that shows a sample circuit card with multiple eSIM profiles":::
+:::image type="content" source="./media/enable-esim/euicc-tech-download-server.png" alt-text="eUICC and eSIM technology image that shows a sample circuit card with multiple eSIM profiles":::
 
 The credentials and associated other configuration that uniquely identify a cellular subscription are contained in a digital (software) package called an eSIM Profile. Multiple eSIM Profiles can be installed into an eUICC. One of the installed eSIM Profiles is enabled (and the rest are disabled). The combination of the enabled eSIM Profile and its eUICC container behaves exactly like a traditional SIM card.
 
@@ -56,7 +54,7 @@ To deploy eSIM to your devices using Intune, you need the following prerequisite
 - **Windows** devices that are enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../../device-enrollment/windows/guide.md).
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 - **eSIM capable devices**, like the [Surface Pro 9 with 5G](https://www.microsoft.com/surface/business/surface-pro-9)
 
@@ -78,11 +76,11 @@ To deploy eSIM to your devices using Intune, you need the following prerequisite
 
   You don't need the individual activation codes.
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Process flow
 
-:::image type="content" source="./media/esim-device-configuration/esim-download-server-process.png" alt-text="Process flow for eSIM bulk activation via download server.":::
+:::image type="content" source="./media/enable-esim/esim-download-server-process.png" alt-text="Process flow for eSIM bulk activation via download server.":::
 
 The overall process flow is as follows:
 
@@ -136,7 +134,7 @@ This profile uses the FQDN of your mobile operator's download server (SM-DP+), a
 
 7. In the **Configuration Settings** tab, select **+ Add** settings and search for *eSIM* in the Settings Picker. After you select eSIM, you can select the settings that you want to make available on your policy.
 
-    :::image type="content" source="./media/esim-device-configuration/create-profile-configuration-settings.png" alt-text="Screenshot that shows the configuration settings when adding an eSIM download server in Microsoft Intune.":::
+    :::image type="content" source="./media/enable-esim/create-profile-configuration-settings.png" alt-text="Screenshot that shows the configuration settings when adding an eSIM download server in Microsoft Intune.":::
 
     - In the **Download Servers** area:
 

@@ -19,7 +19,7 @@ This feature applies to:
 - macOS
 - Windows
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 Custom settings are configured differently for each platform. For example, to control features on Android and Windows devices, you enter Open Mobile Alliance Uniform Resource Identifier (OMA-URI) values. For Apple devices, you import a file you created with the [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) or [Apple Profile Manager](https://support.apple.com/profile-manager).
 
@@ -72,7 +72,7 @@ This article shows you how to create a custom device configuration profile in In
 
 In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows client device to open a VPN connection when on a cellular network.
 
-:::image type="content" source="./media/custom-settings-configure/custom-policy-example.png" alt-text="Screenshot that shows an example of a custom policy containing VPN settings in Microsoft Intune.":::
+:::image type="content" source="./media/configure-custom-settings/custom-policy-example.png" alt-text="Screenshot that shows an example of a custom policy containing VPN settings in Microsoft Intune.":::
 
 ## Related articles
 

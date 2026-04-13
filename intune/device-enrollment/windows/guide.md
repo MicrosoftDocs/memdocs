@@ -65,7 +65,7 @@ You can use this enrollment option to:
 | You have new or existing devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ <br/><br/> Bulk enrollment is for organization-owned devices, not personal or BYOD.|
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, like kiosk, dedicated, or shared device. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../intune-service/configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../intune-service/configuration/shared-user-device-settings.md). |
+| Devices are user-less, like kiosk, dedicated, or shared device. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../device-configuration/templates/configure-kiosk.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../device-configuration/templates/configure-shared-device.md). |
 | You use the optional device enrollment manager (DEM) account. | ✅ <br/><br/> ❌ DEM accounts don't work with Group Policy. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 
@@ -115,7 +115,7 @@ You can use this enrollment option to:
   - Be sure your devices are Microsoft Entra hybrid joined devices. The devices must be registered in local AD and in Microsoft Entra ID.
   - In local on-premises AD, create an **Enable automatic MDM enrollment using default Microsoft Entra credentials** group policy. When group policy is refreshed, this policy is pushed to the devices, and users complete the configuration using their domain account (example: `user@contoso.com`).
 
-  In the Intune admin center, you can use [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune.
+  In the Intune admin center, you can use [Group Policy analytics](../../device-configuration/import-group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune.
 
   > [!TIP]
   > If you want a cloud native solution to manage devices, then Windows Autopilot (in this article) might be the best enrollment option for your organization.
@@ -180,7 +180,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | You have Microsoft Entra ID P1 or P2. | ✅ <br/><br/> Windows Autopilot uses Automatic enrollment. Automatic enrollment requires Microsoft Entra ID P1 or P2. |
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../intune-service/configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../intune-service/configuration/shared-user-device-settings.md). |
+| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../device-configuration/templates/configure-kiosk.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../device-configuration/templates/configure-shared-device.md). |
 | Devices are personal or BYOD. | ❌ <br/><br/> Windows Autopilot is only for organization-owned devices. For BYOD or personal devices, use [Windows automatic enrollment](#windows-automatic-enrollment) (in this article) or a [User enrollment option](#byod-user-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Windows Autopilot. |
@@ -344,7 +344,7 @@ For more specific information on co-management, go to [What is co-management?](.
 | You have new or existing devices. | ✅ <br/><br/> For devices that aren't running supported versions of Windows, like Windows 7, you'll need to upgrade. For more specific information, go to [Upgrade Windows for co-management](../../configmgr/comanage/quickstart-upgrade-win10.md). |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../intune-service/configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../intune-service/configuration/shared-user-device-settings.md). |
+| Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../../device-configuration/templates/configure-kiosk.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../../device-configuration/templates/configure-shared-device.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be co-managed, users need to unenroll from the current MDM provider. They shouldn't be enrolled using the Intune classic agents. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to co-management. |
 

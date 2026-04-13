@@ -152,6 +152,6 @@ The volume and cryptographic keys created to manage the work data on the device 
 * For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).
 * For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../../intune-service/configuration/device-restrictions-apple.md)
-   * [iOS and iPadOS device features](../../intune-service/configuration/device-features-apple.md)
-   * [Set up per-app Virtual Private Network (VPN)](../../intune-service/configuration/vpn-setting-configure-per-app.md)
+   * [iOS and iPadOS device restrictions](../../device-configuration/templates/ref-device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../../device-configuration/templates/ref-device-features-apple.md)
+   * [Set up per-app Virtual Private Network (VPN)](../../device-configuration/templates/configure-per-app-vpn-ios.md)

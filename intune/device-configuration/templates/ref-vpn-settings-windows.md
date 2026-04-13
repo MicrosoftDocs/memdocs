@@ -11,7 +11,7 @@ ms.collection:
 # Windows and Windows Holographic device settings to add VPN connections using Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 
 You can add and configure VPN connections for devices using Microsoft Intune. This article describes some of the settings and features you can configure when creating virtual private networks (VPNs). These VPN settings are used in device configuration profiles, and then pushed or deployed to devices.
 
@@ -26,7 +26,7 @@ These settings apply to devices running:
 
 - [Deploy your VPN app](../apps/apps-add.md), and create a [Windows client VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client app you choose. Some settings are only available for specific VPN clients.
 
-- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
+- [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
 
 - These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
@@ -298,7 +298,7 @@ Example:
 
   To change the order, select the dots to the left of the DNS suffix, and then drag the suffix to the top:
 
-  ![Select the three dots, and click-and-drag to move the dns suffix](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
+  ![Select the three dots, and click-and-drag to move the dns suffix](./media/ref-vpn-settings-windows/vpn-settings-windows10-move-dns-suffix.png)
 
 - **Name Resolution Policy table (NRPT) rules**: Name Resolution Policy table (NRPT) rules define how DNS resolves names when connected to the VPN. After the VPN connection is established, you choose which DNS servers the VPN connection uses.
 

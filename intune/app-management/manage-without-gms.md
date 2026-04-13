@@ -54,7 +54,7 @@ In conditions where GMS isn't available:
 
 This frequency is also affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal or Intune apps.
 
-For more information on Intune policy refresh intervals, go to [Common questions, answers, and scenarios with Intune policies](../intune-service/configuration/device-profile-troubleshoot.md).
+For more information on Intune policy refresh intervals, go to [Common questions, answers, and scenarios with Intune policies](../device-configuration/troubleshoot-device-profiles.md).
 
 The following tasks can require up to 8 hours to finish:
 
@@ -83,7 +83,7 @@ The following tasks can require up to 8 hours to finish:
 - Device reset
 - Device passcode reset
 
-If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../intune-service/configuration/device-profile-troubleshoot.md).
+If the device recently enrolled, the compliance, non-compliance, and configuration check-in runs more frequently. For more information on device check-ins, see [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../device-configuration/troubleshoot-device-profiles.md).
 
 ## Next steps
 

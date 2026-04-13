@@ -207,4 +207,4 @@ When a Windows device with assigned scripts is no longer managed, the IME isn't 
 
 ## Next steps
 
-[Monitor](../../intune-service/configuration/device-profile-monitor.md) and [troubleshoot](../../intune-service/configuration/device-profile-troubleshoot.md) your profiles.
+[Monitor](../../device-configuration/monitor-device-profile.md) and [troubleshoot](../../device-configuration/troubleshoot-device-profiles.md) your profiles.

@@ -1,8 +1,6 @@
 ---
 title: Add VPN settings to devices in Microsoft Intune
 description: On Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/22/2024
 ms.topic: how-to
 ms.reviewer: abalwan
@@ -13,7 +11,7 @@ ms.collection:
 
 # Create VPN profiles to connect to VPN servers in Intune
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
 
@@ -70,7 +68,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
     If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's a loss of VPN functionality.
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 ## Step 1 - Deploy your VPN app
 

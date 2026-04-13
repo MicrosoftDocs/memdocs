@@ -81,5 +81,5 @@ Private space is a feature introduced with Android 15 that lets people create a 
 
 ## Next steps
 - [Deploy Android Enterprise apps](../../app-management/deployment/add-managed-google-play.md)
-- [Add Android Enterprise configuration policies](../../intune-service/configuration/device-profiles.md)
+- [Add Android Enterprise configuration policies](../../device-configuration/overview.md)
 - [Configuring and troubleshooting Android Enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974)

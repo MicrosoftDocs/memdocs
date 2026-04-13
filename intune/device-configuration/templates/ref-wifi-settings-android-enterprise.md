@@ -1,8 +1,6 @@
 ---
 title: Add Wi-Fi settings for Android devices in Microsoft Intune
 description: Create or add a WiFi device configuration profile for Android Enterprise, Android Kiosk, and AOSP devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune. For kiosk devices, also enter the Pre-shared key of your network.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/17/2025
 ms.topic: reference
 params:

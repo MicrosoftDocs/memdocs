@@ -1,8 +1,6 @@
 ---
 title: Android DA email settings in Microsoft Intune
 description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Microsoft Entra ID. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android device administrator Samsung Knox devices using Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: sheetg
@@ -20,7 +18,7 @@ This feature applies to:
 
 As an Intune administrator, you can create and assign email settings to Android Samsung Knox Standard devices. To learn more about email profiles in Intune, go to [configure email settings](email-settings-configure.md).
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 ## Before you begin
 

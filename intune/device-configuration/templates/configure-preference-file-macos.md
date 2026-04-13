@@ -1,8 +1,6 @@
 ---
 title: Add preference file settings to macOS devices in Microsoft Intune
 description: Add an xml or plist file that includes key information about your app. Use a preference file device configuration profile to change key information in the property list file, and assign it to your macOS devices in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 08/22/2024
 ms.topic: how-to
 ms.reviewer: beflamm
@@ -36,7 +34,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 - The device must be enrolled and MDM managed by Intune. For information on the enrollment options for macOS devices, go to [macOS enrollment guide for Microsoft Intune](../../device-enrollment/apple/guide-macos.md).
 
 ## What you need to know
@@ -55,7 +53,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Create the profile
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 >
 > [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md) is also a good resource.
 

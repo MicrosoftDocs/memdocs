@@ -1,8 +1,6 @@
 ---
 title: Use ADMX templates on Windows devices in Microsoft Intune
 description: Use the settings catalog to configure administrative templates (ADMX) in Microsoft Intune on Windows 10/11 client devices. You can configure some Control Panel features, Start menu and task bar notifications, event log service, prevent IIS installation, and more.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/25/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
@@ -56,17 +54,17 @@ This article describes the steps to use the administrative templates in the sett
 
 7. Select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
 
-    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a settings catalog policy in Microsoft Intune." lightbox="./media/administrative-templates-windows/settings-catalog-administrative-templates.png":::
+    :::image type="content" source="./media/configure-admx-templates-windows/settings-catalog-administrative-templates.png" alt-text="Screenshot that shows how to expand administrative templates in a settings catalog policy in Microsoft Intune." lightbox="./media/configure-admx-templates-windows/settings-catalog-administrative-templates.png":::
 
 8. When you select a setting, you can see `(User)` in the setting name. `(User)` means that the settings apply to users when they sign in. Settings that don't have `(User)` in the setting name apply to devices.
 
-    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates-user.png" alt-text="See the settings that apply to users and that apply to devices in the settings catalog in Microsoft Intune and Intune admin center" lightbox="./media/administrative-templates-windows/settings-catalog-administrative-templates-user.png":::
+    :::image type="content" source="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-user.png" alt-text="See the settings that apply to users and that apply to devices in the settings catalog in Microsoft Intune and Intune admin center" lightbox="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-user.png":::
 
 9. Select a setting you want to configure. For example, expand **Control Panel** > **Personalization** > select **Enable screen saver (User)**. Close the settings picker.
 
     When you select the setting, it's added to the policy, and ready for you to configure:
 
-    :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates-sample-setting.png" alt-text="See a sample setting in the settings catalog in Microsoft Intune and Intune admin center that you can configure" lightbox="./media/administrative-templates-windows/settings-catalog-administrative-templates-sample-setting.png":::
+    :::image type="content" source="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-sample-setting.png" alt-text="See a sample setting in the settings catalog in Microsoft Intune and Intune admin center that you can configure" lightbox="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-sample-setting.png":::
 
 10. Select **Next**.
 11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).

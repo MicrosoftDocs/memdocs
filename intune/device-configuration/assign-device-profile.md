@@ -1,8 +1,6 @@
 ---
 title: Assign device profiles in Microsoft Intune
 description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/10/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
@@ -57,7 +55,7 @@ This feature applies to:
     1. Go to **Devices** > **Manage devices** > **Configuration**. All the profiles are listed.
     2. Select the policy you want to assign > **Properties** > **Assignments** > **Edit**:
 
-       :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
+       :::image type="content" source="./media/assign-device-profile/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
 4. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Microsoft Entra groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
@@ -192,7 +190,7 @@ Use the following matrix to understand support for excluding groups:
 - ❌: Not supported
 - ❕ : Partially supported
 
-:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Screenshot that shows the supported options to include or exclude groups from a policy assignment.":::
+:::image type="content" source="./media/assign-device-profile/include-exclude-user-device-groups-matrix.png" alt-text="Screenshot that shows the supported options to include or exclude groups from a policy assignment.":::
 
 | Scenario | Support|
 | --- | --- |

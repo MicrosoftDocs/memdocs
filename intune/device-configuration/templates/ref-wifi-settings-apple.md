@@ -21,7 +21,7 @@ This article describes the settings you can configure.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -33,16 +33,16 @@ This article describes the settings you can configure.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
 > - Create a [Wi-Fi device configuration profile](wi-fi-settings-configure.md)

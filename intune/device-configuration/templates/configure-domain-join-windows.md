@@ -1,8 +1,6 @@
 ---
 title: Domain join profile settings for Windows devices in Microsoft Intune
 description: Create a domain join device configuration profile for Microsoft Entra hybrid joined devices. Use this profile to deploy on-premises Active Directory domain information to devices provisioned with Windows Autopilot and Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 10/22/2025
 ms.topic: how-to
 ms.reviewer: mikedano
@@ -26,7 +24,7 @@ This article shows you how to create a domain join profile for a hybrid Windows 
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 

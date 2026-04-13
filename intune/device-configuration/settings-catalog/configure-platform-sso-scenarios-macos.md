@@ -1,8 +1,6 @@
 ---
 title: Platform SSO scenarios for macOS devices
 description: Use Microsoft Intune to configure common Platform SSO scenarios for macOS devices. You can enable Kerberos SSO to on-premises Active Directory and cloud-based Microsoft Entra ID, use Touch ID biometric policy with Secure Enclave authentication, and enable SSO on non-Microsoft apps. You can also configure end user experience settings.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 08/26/2025
 ms.topic: how-to
 appliesto:
@@ -52,11 +50,11 @@ In your existing Platform SSO settings catalog policy, add the **Extension Data*
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
-        :::image type="content" source="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png":::
 
     4. In the list, select **Extension Data** and close the settings picker:
 
-        :::image type="content" source="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso-extension-data.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png":::
 
 2. In **Extension Data**, **Add** the following key and your preferred value. Only enter one value for the key.
 
@@ -83,11 +81,11 @@ Add the **Extension Data** setting to your existing Platform SSO settings catalo
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
-        :::image type="content" source="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png":::
 
     4. In the list, select **Extension Data** and close the settings picker:
 
-        :::image type="content" source="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso-extension-data.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png":::
 
 2. In **Extension Data**, **Add** the following key and value:
 
@@ -116,11 +114,11 @@ The following settings are commonly recommended for configuring SSO settings, in
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
-        :::image type="content" source="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png":::
 
     4. In the list, select **Extension Data** and close the settings picker:
 
-        :::image type="content" source="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/platform-sso-scenarios/settings-picker-authentication-extensible-sso-extension-data.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png":::
 
 2. In **Extension Data**, **Add** the following keys and values:
 
@@ -132,7 +130,7 @@ The following settings are commonly recommended for configuring SSO settings, in
 
     The following example shows the recommended configuration:
 
-    :::image type="content" source="./media/platform-sso-scenarios/extension-data-appprefixallowlist.png" alt-text="Screenshot that shows how to configure Extension Data settings, such as AppPrefixAllowList." lightbox="./media/platform-sso-scenarios/extension-data-appprefixallowlist.png":::
+    :::image type="content" source="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png" alt-text="Screenshot that shows how to configure Extension Data settings, such as AppPrefixAllowList." lightbox="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png":::
 
 3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
 

@@ -1,8 +1,6 @@
 ---
 title: See device configuration policies with Microsoft Intune
 description: See and manage the device configuration policy details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a policy, and see which devices have policies assigned or deployed. Can also troubleshoot policies that have conflict settings.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
@@ -41,11 +39,11 @@ For information on the built-in roles in Intune, and what they can do, go to [Ro
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Policies** tab. All of your policies are shown. You also see the platform, the type of policy, and more properties.
 
-    :::image type="content" source="./media/device-profile-monitor/configuration-policy-list.png" alt-text="Screenshot that shows all the device configuration profiles, their profile type, and the last modified date in Microsoft Intune and Intune admin center." lightbox="./media/device-profile-monitor/configuration-policy-list.png":::
+    :::image type="content" source="./media/monitor-device-profile/configuration-policy-list.png" alt-text="Screenshot that shows all the device configuration profiles, their profile type, and the last modified date in Microsoft Intune and Intune admin center." lightbox="./media/monitor-device-profile/configuration-policy-list.png":::
 
 3. If you have many policies, you can filter by the policy type, like the settings catalog or software updates. Select **Add filters** > **Policy type** > **Apply**:
 
-    :::image type="content" source="./media/device-profile-monitor/filter-policies.png" alt-text="Screenshot that shows the Add filter option to filter existing policies in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/filter-policies.png" alt-text="Screenshot that shows the Add filter option to filter existing policies in Microsoft Intune and Intune admin center.":::
 
 > [!NOTE]
 > For more in-depth reporting information about device configuration policies, go to [Intune reports](../fundamentals/reports.md).
@@ -70,7 +68,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 3. Select **Device assignment status**:
 
-    :::image type="content" source="./media/device-profile-monitor/device-assignment-status.png" alt-text="Screenshot that shows the device assignment status report in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/device-assignment-status.png" alt-text="Screenshot that shows the device assignment status report in Microsoft Intune and Intune admin center.":::
 
     This report shows information about the user that last checked-in. Select **Generate report** to see the latest policy assignment states for the devices that received the policy. You can also filter the assignment status to see only errors, conflicts, and more.
 
@@ -78,13 +76,13 @@ After you create your device configuration policy, Intune provides reporting dat
 
 4. Go back to **Device and user check-in status** and select **Per setting status**:
 
-    :::image type="content" source="./media/device-profile-monitor/per-setting-status.png" alt-text="Screenshot that shows the per setting status report in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/per-setting-status.png" alt-text="Screenshot that shows the per setting status report in Microsoft Intune and Intune admin center.":::
 
     This report shows the individual settings in the policy, and their status.
 
 5. Go back to **Device and user check-in status** and select **View report**:
 
-    :::image type="content" source="./media/device-profile-monitor/device-user-check-in-status-view-report.png" alt-text="Screenshot that shows to select view report on a device configuration policy to get the device and user check-in status in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/device-user-check-in-status-view-report.png" alt-text="Screenshot that shows to select view report on a device configuration policy to get the device and user check-in status in Microsoft Intune and Intune admin center.":::
 
     **View report** shows more information on the devices assigned to that specific device configuration policy, including:
 
@@ -108,7 +106,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 2. Select **Summarize with Copilot**:
 
-    :::image type="content" source="./media/device-profile-monitor/copilot-summarize-policy.png" alt-text="Screenshot that shows you can select Summarize with Copilot on a device configuration policy in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/copilot-summarize-policy.png" alt-text="Screenshot that shows you can select Summarize with Copilot on a device configuration policy in Microsoft Intune and Intune admin center.":::
 
     The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
 
@@ -126,7 +124,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 1. Go to **Devices** > **Manage devices** > **Configuration** > **Monitor** tab:
 
-    :::image type="content" source="./media/device-profile-monitor/device-configuration-monitor-tab.png" alt-text="Screenshot that shows to select the monitor tab in device configuration profiles in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/device-configuration-monitor-tab.png" alt-text="Screenshot that shows to select the monitor tab in device configuration profiles in Microsoft Intune and Intune admin center.":::
 
 2. In this area, you have access to the **Configuration policy assignment failures** report. This report helps troubleshoot errors and conflicts for configuration policies that are assigned.
 
@@ -163,11 +161,11 @@ You can use Copilot to help troubleshoot conflicts at the setting level.
 
 2. Scroll to the **Configuration settings** area and expand a setting category:
 
-    :::image type="content" source="./media/device-profile-monitor/copilot-configuration-settings-expand-category.png" alt-text="Screenshot that shows how to expand a category to see the Copilot tooltip in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/copilot-configuration-settings-expand-category.png" alt-text="Screenshot that shows how to expand a category to see the Copilot tooltip in Microsoft Intune and Intune admin center.":::
 
 3. For each setting, there's a Copilot tooltip:
 
-    :::image type="content" source="./media/device-profile-monitor/copilot-tooltip.png" alt-text="Screenshot that shows the Copilot tooltip for a setting in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/monitor-device-profile/copilot-tooltip.png" alt-text="Screenshot that shows the Copilot tooltip for a setting in Microsoft Intune and Intune admin center.":::
 
     Select the tooltip to get more information about setting. In Copilot Chat, enter `conflicts`. In suggestions, there are some sample prompts you can select, like **Show me policies that contain conflicting settings**.
 

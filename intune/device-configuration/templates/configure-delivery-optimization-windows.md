@@ -1,8 +1,6 @@
 ---
 title: Windows Delivery Optimization settings in Microsoft Intune
 description: Configure device configuration policy to manage Delivery Optimization settings on Windows devices you manage with Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 04/23/2025
 ms.topic: how-to
 ms.collection:
@@ -53,7 +51,7 @@ This feature applies to:
 
    Select **Next** to continue.
 
-9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
    Select **Next**.
 
@@ -64,4 +62,4 @@ The next time each device checks in, the policy is applied.
 ## Next steps
 
 - [Monitor the profiles status](device-profile-monitor.md).
-- [Review available settings for the older profile format](../../intune-service/configuration/delivery-optimization-settings.md). *Applies to profiles created before April 24, 2025*
+- [Review available settings for the older profile format](../../device-configuration/templates/ref-delivery-optimization-settings-windows.md). *Applies to profiles created before April 24, 2025*

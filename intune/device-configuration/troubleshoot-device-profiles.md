@@ -1,8 +1,6 @@
 ---
 title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/26/2026
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
@@ -14,7 +12,7 @@ ms.collection:
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Get answers to common questions when working with policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 

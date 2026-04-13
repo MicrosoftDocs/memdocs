@@ -1,8 +1,6 @@
 ---
 title: Add custom settings to Android DA devices in Microsoft Intune
 description: Add or create a custom profile for Android device administrator (DA) devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/18/2025
 ms.topic: how-to
 ms.reviewer: anuragjain
@@ -18,15 +16,15 @@ This feature applies to:
 
 - Android device administrator (DA)
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 Android custom profiles use Open Mobile Alliance Uniform Resource Identifier (OMA-URI) settings to configure different features on Android devices. These settings are typically used by mobile device manufacturers to control these features.
 
 Using a custom profile, you can configure and assign the following Android settings. The following settings aren't built in to Intune:
 
-- [Create a Wi-Fi profile with a pre-shared key](/intune/intune-service/configuration/wi-fi-profile-shared-key)
-- [Create a per-app VPN profile](/intune/intune-service/configuration/android-pulse-secure-per-app-vpn)
-- [Allow and block apps for Samsung Knox Standard devices](/intune/intune-service/configuration/samsung-knox-apps-allow-block)
+- [Create a Wi-Fi profile with a pre-shared key](/intune/device-configuration/templates/create-wifi-preshared-key)
+- [Create a per-app VPN profile](/intune/device-configuration/templates/configure-per-app-vpn-android)
+- [Allow and block apps for Samsung Knox Standard devices](/intune/device-configuration/templates/manage-apps-samsung-knox)
 - [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/microsoft-defender-configure-android.md)
 
 > [!IMPORTANT]
@@ -36,7 +34,7 @@ This article shows you how to create a custom profile for Android DA devices.
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Create the profile
 

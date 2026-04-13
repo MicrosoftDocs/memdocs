@@ -1,8 +1,6 @@
 ---
 title: Windows shared device settings - Microsoft Intune
 description: Add and use Windows 10/11 to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft Surface. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 04/28/2025
 ms.topic: reference
 ms.collection:
@@ -12,7 +10,7 @@ ms.collection:
 # Windows settings to manage shared devices using Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 
 Windows client devices, like the Microsoft Surface, can be used by many users. Devices that have multiple users are called shared devices, and are a part of mobile device management (MDM) solutions.
 

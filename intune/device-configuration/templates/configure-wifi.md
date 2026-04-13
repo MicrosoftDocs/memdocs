@@ -1,8 +1,6 @@
 ---
 title: Create a Wi-Fi profile for devices in Microsoft Intune
 description: See the steps to create a Wi-Fi device configuration profile in Microsoft Intune. Create profiles for Android device administrator, Android Enterprise, Android kiosk, iOS, iPadOS, macOS, Windows 10/11, and Windows Holographic for Business. Use these profiles to create a WiFi connection to use certificates, choose an EAP type, select an authentication method, enable a proxy, and more.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.reviewer: abalwan
@@ -13,10 +11,10 @@ ms.collection:
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
 
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 Wi-Fi is a wireless network that's used by many mobile devices to get network access. Microsoft Intune includes built-in Wi-Fi settings that can be deployed to users and devices in your organization. This group of settings is called a **profile**, and can be assigned to different users and groups. Once assigned, your users get access your organization's Wi-Fi network without configuring it themselves.
 

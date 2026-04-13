@@ -37,7 +37,7 @@ As an Intune administrator, you can create and assign VPN settings to Android En
   - Fully managed, dedicated, and corporate-owned work profile
   - Personally owned work profile
 
-- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
+- [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
 
 - If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), which supports split tunneling.
 

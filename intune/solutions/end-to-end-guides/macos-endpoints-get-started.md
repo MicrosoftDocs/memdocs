@@ -188,9 +188,9 @@ For more information on this feature and ADE enrollment, go to [Automatically en
 
 In Intune, you can configure settings that reduce the number of sign-in prompts end users receive when using apps, including Microsoft 365 apps. There are two parts to this configuration:
 
-- **Part 1** - Use the [Microsoft Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
+- **Part 1** - Use the [Microsoft Enterprise SSO plug-in](../../device-configuration/enterprise-sso-plugin.md) to provide single sign-on (SSO) to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
 
-  There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune-service/configuration/platform-sso-macos.md).
+  There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../device-configuration/templates/configure-enterprise-sso-plugin-macos.md) and [Platform SSO](../../device-configuration/settings-catalog/configure-platform-sso-macos.md).
 
   # [Platform SSO](#tab/psso)
 
@@ -200,7 +200,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   For more information, go to:
 
-  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune-service/configuration/platform-sso-macos.md)
+  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../device-configuration/settings-catalog/configure-platform-sso-macos.md)
 
   - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
 
@@ -227,7 +227,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
     | browser_sso_interaction_enabled | Integer | 1 |
     | disable_explicit_app_prompt | Integer | 1 |
 
-  For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
+  For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../device-configuration/templates/configure-enterprise-sso-plugin-macos.md).
 
   ---
 
@@ -325,7 +325,7 @@ This section focuses on the different endpoint security features in Microsoft In
 
 - **Compliance policies** verify the device settings you configure and can remediate some settings that aren't compliant. For example, you can create compliance policies that check password complexity, jailbroken status, threat levels, enrollment status, and more.
 
-  If there are configuration settings that conflict between compliance policies and other policies, then the compliance policy takes precedence. For more information, go to [Compliance and device configuration policies that conflict](../../intune-service/configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+  If there are configuration settings that conflict between compliance policies and other policies, then the compliance policy takes precedence. For more information, go to [Compliance and device configuration policies that conflict](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 - **Conditional Access** can be used to enforce the compliance policies you create. When combined, end users can be required to enroll their devices and meet a minimum security standard before accessing organization resources. If a device is noncompliant, then you can block access to resources, like email, or require the user to enroll their device and fix the issue.
 
@@ -586,13 +586,13 @@ For more information, go to [Notifications MDM payload settings for Apple device
 
   Microsoft recommends you use the built-in settings in the settings catalog. If the settings catalog doesn't have the settings you need, then add a preference file to Intune.
 
-  For more information, go to [Add a property list file to macOS devices using Microsoft Intune](../../intune-service/configuration/preference-file-settings-macos.md)
+  For more information, go to [Add a property list file to macOS devices using Microsoft Intune](../../device-configuration/templates/configure-preference-file-macos.md)
 
 - **Custom profiles** are designed to add device settings and features that aren't built in to Intune.
 
   Microsoft recommends you use the built-in settings in the settings catalog. If the settings catalog doesn't have the settings you need, then use a custom profile.
 
-  For more information, go to [custom profiles](../../intune-service/configuration/custom-settings-apple.md).
+  For more information, go to [custom profiles](../../device-configuration/templates/configure-custom-settings-apple.md).
 
 ✅ **Wallpaper**
 
@@ -625,7 +625,7 @@ For more information, go to [Types of certificate available in Microsoft Intune]
 
 Using Intune, you can create a Wi-Fi connection that includes your network information, and then deploy the connection to your macOS devices. If your devices connect to the organization using Wi-Fi, then create a Wi-Fi connection policy.
 
-For more information, go to [Configure Wi-Fi settings for macOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-apple.md).
+For more information, go to [Configure Wi-Fi settings for macOS devices in Microsoft Intune](../../device-configuration/templates/ref-wifi-settings-apple.md).
 
 ## Phase 5 - Caching (optional)
 

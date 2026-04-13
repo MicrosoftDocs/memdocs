@@ -2,8 +2,6 @@
 title: Enable eSIM data connections in Microsoft Intune
 description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices.
 keywords:
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.reviewer: nicolezhao, hejimenez
@@ -40,12 +38,12 @@ To deploy eSIM to your devices using Intune, you need the following prerequisite
 - **Windows** devices that are enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../../device-enrollment/windows/guide.md).
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 - **eSIM capable devices**, like the Surface LTE. To determine if your Windows device supports eSIM, go to [Use an eSIM to get a cellular data connection on your Windows PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). If you're unsure if your devices support eSIM, then you can also contact your device manufacturer.
 
 - **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Deploy eSIM to devices - overview
 
@@ -85,11 +83,11 @@ When working with the `csv` file with the activation codes, be sure you or your 
     1. First column is the unique ICCID (the identifier of the SIM chip)
     2. Second column is the Matching ID with only a comma separating them (no comma at the end). See the following example:
 
-        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
+        :::image type="content" source="./media/enable-esim/url-activation-code-examples.png" alt-text="Mobile operator activation code sample csv file.":::
 
 3. The cellular subscription becomes the first part of the SMDP of your mobile operator. For example, in the previous image, the first row includes the `smdp.skynet.mobile` URL of the mobile operator. Intune names the cellular subscription pool name as `smdp`:
 
-    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
+    :::image type="content" source="./media/enable-esim/subscription-pool-name-csv-file.png" alt-text="Cellular subscription pool is named the activation code sample csv file name.":::
 
 > [!IMPORTANT]
 > You can't have two lists with the same provider. If you try to upload two lists with the same provider, you may get a `The request is invalid` error message.
@@ -117,7 +115,7 @@ Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
 
-    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
+    :::image type="content" source="./media/enable-esim/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
 
 5. When you select your groups, you're choosing a Microsoft Entra group. To select multiple groups, use the **Ctrl** key, and select the groups.
 6. When done, **Save** your changes.
@@ -170,7 +168,7 @@ In **Device Status**, you can monitor and view a detailed list of devices you ca
 2. Select **Cellular** > **Manage eSIM profiles**.
 3. The eSIM profiles are listed:
 
-    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="View the eSIM profiles in your device settings.":::
+    :::image type="content" source="./media/enable-esim/device-settings-cellular-profiles.png" alt-text="View the eSIM profiles in your device settings.":::
 
 ## Remove the eSIM profile from device
 

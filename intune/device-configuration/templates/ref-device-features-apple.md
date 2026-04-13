@@ -12,7 +12,7 @@ zone_pivot_groups: platforms-apple
 # Apple device feature settings in Microsoft Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 
 Intune has a built-in **Device Features** template profile for Apple devices. It includes built-in settings that admins can use to customize different Apple features on iOS/iPadOS and macOS devices. For example, you can add AirPrint printers, show notifications, use single sign-on authentication, and more.
 
@@ -26,7 +26,7 @@ These settings apply to different enrollment types, with some settings applying 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -38,16 +38,16 @@ These settings apply to different enrollment types, with some settings applying 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
 > - Create a [device features configuration profile](device-features-configure.md).
@@ -166,11 +166,11 @@ Add up to four (4) items for iPhones, and up to six (6) items for iPads (apps an
 
 In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Stocks app is selected to show its properties:
 
-:::image type="content" source="./media/device-features-apple/dock-screen-stocks-app.png" alt-text="Sample iOS/iPadOS Home screen layout dock settings in Microsoft Intune":::
+:::image type="content" source="./media/ref-device-features-apple/dock-screen-stocks-app.png" alt-text="Sample iOS/iPadOS Home screen layout dock settings in Microsoft Intune":::
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-:::image type="content" source="./media/device-features-apple/safari-mail-stocks-apps-ios-dock.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
+:::image type="content" source="./media/ref-device-features-apple/safari-mail-stocks-apps-ios-dock.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
 
 ::: zone-end
 
@@ -182,7 +182,7 @@ When you assign the policy to an iPhone, the dock looks similar to the following
 
 **Add**: Add notifications for apps:
 
-:::image type="content" source="./media/device-features-apple/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
+:::image type="content" source="./media/ref-device-features-apple/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
 
 - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add.
 
@@ -498,7 +498,7 @@ This feature applies to:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS prompts users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
 
-    :::image type="content" source="./media/device-features-apple/user-name-attribute.png" alt-text="iOS/iPadOS Username SSO attribute in Microsoft Intune":::
+    :::image type="content" source="./media/ref-device-features-apple/user-name-attribute.png" alt-text="iOS/iPadOS Username SSO attribute in Microsoft Intune":::
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 

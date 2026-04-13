@@ -445,5 +445,5 @@ Use the following security and privacy best practices when you use the App Wrapp
 ## Additional resources
 
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](integration-methods.md)
-- [Common questions, issues, and resolutions with device policies and profiles](../../intune-service/configuration/device-profile-troubleshoot.md)
+- [Common questions, issues, and resolutions with device policies and profiles](../../device-configuration/troubleshoot-device-profiles.md)
 - [Use the SDK to enable apps for mobile application management](index.md)

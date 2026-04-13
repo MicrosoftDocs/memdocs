@@ -1,8 +1,6 @@
 ---
 title: Update Windows BIOS features using DFCI MDM policies
 description: Learn more about the Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings in Microsoft Intune. To use DFCI profiles, create Microsoft Entra security groups, the Windows Autopilot deployment profile, and the Enrollment State Page profile.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 04/04/2024
 ms.topic: how-to
 ms.reviewer: madakeva

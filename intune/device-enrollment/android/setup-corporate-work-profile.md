@@ -204,4 +204,4 @@ Private space is a feature introduced with Android 15 that lets people create a 
 
 ## Next steps
 - [Deploy Android apps](../../app-management/deployment/assign-groups.md)
-- [Add Android configuration policies](../../intune-service/configuration/device-profiles.md)
+- [Add Android configuration policies](../../device-configuration/overview.md)

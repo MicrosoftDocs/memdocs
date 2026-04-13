@@ -1,8 +1,6 @@
 ---
 title: Migrate your imported group policy to a policy in Microsoft Intune
 description: After you import your Windows group policy objects in Microsoft Intune, use the migrate feature to transfer your GPOs to a Settings Catalog policy. This policy uses your imported GPOs, and can be assigned to users and devices managed by your organizations.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: aanavath
@@ -48,29 +46,29 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
-    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Screenshot that shows how to select the Migrate checkbox next to your imported GPO in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png":::
+    :::image type="content" source="./media/migrate-group-policy/select-migrate-checkbox-imported-gpo.png" alt-text="Screenshot that shows how to select the Migrate checkbox next to your imported GPO in Microsoft Intune." lightbox="./media/migrate-group-policy/select-migrate-checkbox-imported-gpo.png":::
 
 3. To see all the settings in your imported GPO, select **Migrate**:
 
-    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-see-all-settings.png" alt-text="Screenshot that shows how to select the Migrate button to see all the settings in your imported GPO in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-see-all-settings.png":::
+    :::image type="content" source="./media/migrate-group-policy/select-migrate-see-all-settings.png" alt-text="Screenshot that shows how to select the Migrate button to see all the settings in your imported GPO in Microsoft Intune." lightbox="./media/migrate-group-policy/select-migrate-see-all-settings.png":::
 
 4. In the **Settings to migrate** tab, select the **Migrate** column for the settings you want to include in your Settings Catalog profile:
 
-      :::image type="content" source="./media/group-policy-analytics-migrate/settings-to-migrate-tab.png" alt-text="Screenshot that shows the settings to migrate, and how to select the Migrate checkbox in Microsoft Intune.":::
+      :::image type="content" source="./media/migrate-group-policy/settings-to-migrate-tab.png" alt-text="Screenshot that shows the settings to migrate, and how to select the Migrate checkbox in Microsoft Intune.":::
 
     To help you pick the settings, you can use the built-in features:
 
     - **Select all on this page**: Select this option if you want all settings on the existing page to be included in your Settings Catalog profile.
 
-      :::image type="content" source="./media/group-policy-analytics-migrate/select-all-on-this-page.png" alt-text="Screenshot that shows how to use the select all on this page button to include all page settings in the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-all-on-this-page.png":::
+      :::image type="content" source="./media/migrate-group-policy/select-all-on-this-page.png" alt-text="Screenshot that shows how to use the select all on this page button to include all page settings in the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/migrate-group-policy/select-all-on-this-page.png":::
 
     - **Search by setting name**: Enter the setting name to find the settings you want:
 
-      :::image type="content" source="./media/group-policy-analytics-migrate/search-by-setting-name.png" alt-text="Screenshot that shows how to search for the setting name in the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/search-by-setting-name.png":::
+      :::image type="content" source="./media/migrate-group-policy/search-by-setting-name.png" alt-text="Screenshot that shows how to search for the setting name in the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/migrate-group-policy/search-by-setting-name.png":::
 
     - **Sort**: Sort your settings using the column names:
 
-      :::image type="content" source="./media/group-policy-analytics-migrate/sort-using-column-names.png" alt-text="Screenshot that shows how to sort the settings using the Migrate, Setting name, Group policy setting category, MDM support, value, scope, min OS version, and CSP name Group Policy Analytics migrate features in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/sort-using-column-names.png":::
+      :::image type="content" source="./media/migrate-group-policy/sort-using-column-names.png" alt-text="Screenshot that shows how to sort the settings using the Migrate, Setting name, Group policy setting category, MDM support, value, scope, min OS version, and CSP name Group Policy Analytics migrate features in Microsoft Intune." lightbox="./media/migrate-group-policy/sort-using-column-names.png":::
 
     > [!TIP]
     > If you haven't already, review your Group Policy settings. It's possible some settings don't apply to cloud-based policy management or don't apply to cloud native endpoints, like Windows devices. It's not recommended to include all your Group Policy settings without reviewing them.
@@ -108,7 +106,7 @@ It's possible you have multiple GPOs that include the same setting, and that the
 
 `Conflicts are detected for the following settings: <setting name>. Select only one version with the value you prefer in order to continue.`
 
-:::image type="content" source="./media/group-policy-analytics-migrate/conflicting-settings.png" alt-text="Screenshot that shows conflicts are detected error message with the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/conflicting-settings.png":::
+:::image type="content" source="./media/migrate-group-policy/conflicting-settings.png" alt-text="Screenshot that shows conflicts are detected error message with the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/migrate-group-policy/conflicting-settings.png":::
 
 To resolve the conflict, uncheck a conflicting setting, and continue the migration.
 
@@ -137,13 +135,13 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   You can see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings. In the following image, an older Office setting isn't supported. So, Intune suggests migrating to a supported version:
 
-  :::image type="content" source="./media/group-policy-analytics-migrate/setting-not-supported-migrate.png" alt-text="Screenshot that shows older Office setting that isn't supported and suggests migrating to a supported version in Microsoft Intune.":::
+  :::image type="content" source="./media/migrate-group-policy/setting-not-supported-migrate.png" alt-text="Screenshot that shows older Office setting that isn't supported and suggests migrating to a supported version in Microsoft Intune.":::
 
 - **Some settings fail to migrate**
 
   It's possible some errors can happen when the settings are migrating. When the profile is being created, settings that return an error are shown in **Notifications**:
 
-  :::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Screenshot that shows notifications with additional information when the policy is being created in Microsoft Intune.":::
+  :::image type="content" source="./media/migrate-group-policy/notifications.png" alt-text="Screenshot that shows notifications with additional information when the policy is being created in Microsoft Intune.":::
 
   Some common reasons a setting might show an error include:
 

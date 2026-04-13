@@ -1,8 +1,6 @@
 ---
 title: macOS extension settings in Microsoft Intune
 description: Add, configure, or create settings on macOS devices to use system extensions and kernel extensions. Also, allow users to override approved extensions, allow all extensions from a team identifier, or allow specific extensions or apps in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 09/23/2024
 ms.topic: reference
 ms.reviewer: beflamm
@@ -19,7 +17,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> - [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> - [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 > - macOS kernel extensions are being replaced with system extensions. For more information, go to [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
 This article describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.

@@ -154,7 +154,7 @@ Use the following process to configure the co-management policy in Intune:
 
     :::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
 
-1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../intune-service/configuration/device-profile-assign.md).
+1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../device-configuration/assign-device-profile.md).
 
 1. On the **Review + create** page, review the settings and create the policy.
 

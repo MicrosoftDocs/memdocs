@@ -1,8 +1,6 @@
 ---
 title: Kiosk settings for Windows in Microsoft Intune
 description: Configure your Windows 10/11 client devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/20/2025
 ms.topic: reference
 ms.reviewer: mikedano
@@ -14,7 +12,7 @@ ms.collection:
 # Windows device settings to run as a kiosk in Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 
 On Windows devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
@@ -29,7 +27,7 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 - Create a [Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
@@ -153,7 +151,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
 - **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
 
-  :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-add-applications-browser.png" alt-text="Add browsers or apps to multi-app kiosk profile in Microsoft Intune.":::
+  :::image type="content" source="./media/ref-kiosk-settings-windows/multi-app-kiosk-add-applications-browser.png" alt-text="Add browsers or apps to multi-app kiosk profile in Microsoft Intune.":::
 
   - **Browsers**
 
@@ -209,7 +207,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
     - **AutoLaunch**: Optional. After you add your apps and browser, select one app or browser to automatically open when the user signs in. Only a single app or browser can be autolaunched.
     - **Tile size**: Required. After you add your apps, select a Small, Medium, Wide, or Large app tile size.
 
-      :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-autolaunch-tiles.png" alt-text="Automatically launch the app or browser, and select the tile size in a multi-app kiosk profile in Microsoft Intune.":::
+      :::image type="content" source="./media/ref-kiosk-settings-windows/multi-app-kiosk-autolaunch-tiles.png" alt-text="Automatically launch the app or browser, and select the tile size in a multi-app kiosk profile in Microsoft Intune.":::
 
   > [!TIP]
   > After you add all the apps, you can change the display order by clicking-and-dragging the apps in the list.
