@@ -113,12 +113,12 @@ Software update policy settings use the same reporting as other device configura
 A policy that reports *Success* only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update.\
 After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
-To monitor the update status of your Apple devices, see [View Software Update Reports for Apple Devices](reports.md).
+To monitor the update status of your Apple devices, see [View Software Update Reports for Apple Devices](monitor-reports.md).
 
 ## Related articles
 
-- [View Software Update Reports for Apple Devices](reports.md)
-- [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
-- [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
+- [View Software Update Reports for Apple Devices](monitor-reports.md)
+- [Software updates planning guide for supervised iOS/iPadOS devices in Intune](planning-guide-ios-ipados.md)
+- [Software updates planning guide for managed macOS devices in Intune](planning-guide-macos.md)
 
 To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.

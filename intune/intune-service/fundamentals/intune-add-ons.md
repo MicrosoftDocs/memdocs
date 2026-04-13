@@ -35,7 +35,7 @@ The following table provides a list of add-on capabilities and associated Intune
 | [Remote Help](remote-help.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Cloud PKI](../../cloud-pki/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Firmware-over-the-air update](../../device-updates/android/setup-zebra-lifeguard.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Specialized devices management](specialty-devices-with-intune.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
@@ -77,7 +77,7 @@ For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/inde
 
 Firmware over-the-air (FOTA) update allows you to remotely update the firmware of supported devices wirelessly with more control.
 
-For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/setup-zebra-lifeguard.md)
 
 ### Managing specialty devices with Microsoft Intune
 
@@ -152,7 +152,7 @@ Learn more about:
 
 - [Remote Help](remote-help.md)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../../device-updates/android/setup-zebra-lifeguard.md)
 - [Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
