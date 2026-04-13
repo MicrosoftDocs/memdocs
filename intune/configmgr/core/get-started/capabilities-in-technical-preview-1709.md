@@ -119,8 +119,8 @@ Before you switch workloads from Configuration Manager to Intune, create the pro
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.
 
 <!-- - [Device compliance policies](/mem/intune-service/protect/compliance-policy-create-windows)  -->
-- [Windows Update client policies](/mem/intune-service/protect/windows-update-for-business-configure)
-- [Device configuration profiles](/mem/device-configuration/create-device-profile)
+- [Windows Update client policies](../../../device-updates/windows/ref-update-ring-settings.md)
+- [Device configuration profiles](../../../device-configuration/overview.md)
 
 ### Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.

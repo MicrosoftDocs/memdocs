@@ -102,7 +102,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
 4. Select **Create**:
 
-    :::image type="content" source="./media/enterprise-sso-plugin/macos-create-device-features.png" alt-text="Screenshot that shows how to create a device features configuration profile for macOS in Intune.":::
+    :::image type="content" source="../media/enterprise-sso-plugin/macos-create-device-features.png" alt-text="Screenshot that shows how to create a device features configuration profile for macOS in Intune.":::
 
 5. In **Basics**, enter the following properties:
 
@@ -114,7 +114,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
     - **SSO app extension type**: Select **Microsoft Entra ID**:
 
-      :::image type="content" source="./media/enterprise-sso-plugin/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for macOS in Intune":::
+      :::image type="content" source="../media/enterprise-sso-plugin/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for macOS in Intune":::
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/entra/identity-platform/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
@@ -124,7 +124,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       When you're done configuring the recommended settings, the settings look similar to the following values in your Intune configuration profile:
 
-      :::image type="content" source="./media/enterprise-sso-plugin/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO app extension plug-in on macOS devices in Microsoft Intune.":::
+      :::image type="content" source="../media/enterprise-sso-plugin/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO app extension plug-in on macOS devices in Microsoft Intune.":::
 
 8. Continue creating the profile, and assign the profile to the users or groups that receive these settings. For the specific steps, go to [Create the profile](./configure-device-features-apple.md#create-the-profile).
 
@@ -134,7 +134,7 @@ When the policy is ready, you assign the policy to your users. Microsoft recomme
 
 To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > select the profile you created and generate a report:
 
-:::image type="content" source="./media/enterprise-sso-plugin/macos-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the macOS device configuration profile deployment report in Microsoft Intune.":::
+:::image type="content" source="../media/enterprise-sso-plugin/macos-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the macOS device configuration profile deployment report in Microsoft Intune.":::
 
 # [Jamf Pro](#tab/create-profile-jamf-pro)
 
@@ -143,13 +143,13 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 1. Sign in to the Jamf Pro portal.
 2. To create a macOS profile, select **Computers** > **Configuration profiles** > **New**:
 
-    :::image type="content" source="./media/enterprise-sso-plugin/jamf-pro-configuration-profiles.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for macOS devices.":::
+    :::image type="content" source="../media/enterprise-sso-plugin/jamf-pro-configuration-profiles.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for macOS devices.":::
 
 3. In **Name**, enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **macOS-Microsoft Enterprise SSO plug-in**.
 
 4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**:
 
-    :::image type="content" source="./media/enterprise-sso-plugin/sso-extension-creation.png" alt-text="Screenshot that shows the Jamf Pro portal. Select the configuration profiles SSO option and select add for macOS devices.":::
+    :::image type="content" source="../media/enterprise-sso-plugin/sso-extension-creation.png" alt-text="Screenshot that shows the Jamf Pro portal. Select the configuration profiles SSO option and select add for macOS devices.":::
 
 5. Enter the following properties:
 
@@ -166,9 +166,9 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
       - `https://login.microsoftonline.us`
       - `https://login-us.microsoftonline.com`
 
-    :::image type="content" source="./media/enterprise-sso-plugin/sso-extension-basic-settings-1.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for macOS devices.":::
+    :::image type="content" source="../media/enterprise-sso-plugin/sso-extension-basic-settings-1.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for macOS devices.":::
 
-    :::image type="content" source="./media/enterprise-sso-plugin/sso-extension-basic-settings-2.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for macOS devices.":::
+    :::image type="content" source="../media/enterprise-sso-plugin/sso-extension-basic-settings-2.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for macOS devices.":::
 
 6. In **Custom Configuration**, you define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Enterprise SSO plug-in for Apple devices documentation](/entra/identity-platform/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
@@ -188,7 +188,7 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
     </plist>
     ```
 
-    :::image type="content" source="./media/enterprise-sso-plugin/sso-extension-custom-configuration-plist.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
+    :::image type="content" source="../media/enterprise-sso-plugin/sso-extension-custom-configuration-plist.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
 
     These PLIST settings configure the following SSO Extension options. These properties are the default values used by the SSO app extension, but they can be customized for your organization needs:
 

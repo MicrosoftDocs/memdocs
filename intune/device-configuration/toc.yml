@@ -313,7 +313,7 @@ items:
             href: ../intune-service/protect/endpoint-protection-windows-10.md
           - name: Identity protection (deprecated)
             displayName: hello, windows
-            href: ./intune-service/protect/identity-protection-windows-settings.md
+            href: ../intune-service/protect/identity-protection-windows-settings.md
           - name: Kiosk
             displayName: single app, multi app, dedicated device, windows
             href: ./templates/ref-kiosk-settings-windows.md
