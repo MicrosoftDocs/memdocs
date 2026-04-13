@@ -69,6 +69,9 @@ When you select **Yes** for either the local or admin or user account options, y
 
 Unique account passwords are created using 15 characters with a mixture of lowercase and uppercase letters, numbers, and special symbols.
 
+> [!IMPORTANT]
+> Devices with LAPS accounts configured should only be targeted by password policies using the settings catalog with Change At Next Auth disabled. Using password settings in either compliance policies or Device restrictions templates will enable Change At Next Auth by default and may cause issues when logging in with the newly-created LAPS account. 
+
 Whenever any part of the local account configuration, the **Await final configuration** setting is always set to **Yes** in the backend by default. This setting is set because the account configuration occurs during Setup Assistant.
 
 ### Local administrator account
