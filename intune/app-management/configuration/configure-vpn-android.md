@@ -32,7 +32,7 @@ This article shows you how to create a per-app VPN and VPN app configuration pol
 
 ## Before you begin
 
-- Android doesn't automatically trigger a VPN client connection when an app opens. The VPN connection must be started manually. Or, you can use [always-on VPN](../../intune-service/configuration/vpn-settings-android-enterprise.md) to start the connection.
+- Android doesn't automatically trigger a VPN client connection when an app opens. The VPN connection must be started manually. Or, you can use [always-on VPN](../../device-configuration/templates/ref-vpn-settings-android-enterprise.md) to start the connection.
 
 - The following VPN clients support Intune app configuration policies:
 
@@ -280,8 +280,8 @@ In these steps, create a temporary policy. The policy won't be saved. The intent
 ## Additional information
 
 - [Add app configuration policies for managed Android Enterprise devices](./configure-managed-android.md)
-- [Android Enterprise device settings to configure VPN in Intune](../../intune-service/configuration/vpn-settings-android-enterprise.md)
+- [Android Enterprise device settings to configure VPN in Intune](../../device-configuration/templates/ref-vpn-settings-android-enterprise.md)
 
 ## Next steps
 
-- [Create VPN profiles to connect to VPN servers in Intune](../../intune-service/configuration/vpn-settings-configure.md)
+- [Create VPN profiles to connect to VPN servers in Intune](../../device-configuration/templates/configure-vpn.md)

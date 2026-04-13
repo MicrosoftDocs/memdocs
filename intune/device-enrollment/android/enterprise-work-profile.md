@@ -45,7 +45,7 @@ There are unique app icons in the work profile to help users differentiate betwe
 The settings available in Intune, ranging from enrollment to device configuration to compliance, allow you to tailor the level of protection to your organization's needs. For more information about applicable settings, see:
 
 * [Device compliance settings for Android Enterprise in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md)
-* [Android Enterprise device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md)
+* [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)
 
 <!-- Removing section until linked files are updated.
 When configuring policies for device configuration or compliance, the broad range of settings enables you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies. The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
@@ -53,7 +53,7 @@ When configuring policies for device configuration or compliance, the broad rang
 - For Android Enterprise personally owned work profile devices: [Android personally owned work profile security settings](../../intune-service/enrollment/android-work-profile-security-settings.md)
 - For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../../intune-service/enrollment/android-fully-managed-security-settings.md)
 
-Alternatively, you can review the [Device compliance settings for Android Enterprise in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md) and [Android Enterprise device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md). -->
+Alternatively, you can review the [Device compliance settings for Android Enterprise in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md) and [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md). -->
 
 ## App publishing and distribution
 
@@ -73,7 +73,7 @@ Android Enterprise doesn't provide a default email app or native email profile o
 
 Gmail and Nine Work are two Exchange ActiveSync (EAS) client apps in the Play Store that support Android Enterprise app configuration. Intune provides configuration templates for Gmail and Nine Work apps so you can manage them as work apps. You can configure other email apps that support app configuration profiles in an app configuration policy.
 
-If you're using Exchange ActiveSync Conditional Access for a personal or corporate-owned device, consider using the Gmail or Nine Work email app. The Microsoft Outlook for Android app, and any other email app that uses modern authentication via MSAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../../intune-service/configuration/email-settings-configure.md).
+If you're using Exchange ActiveSync Conditional Access for a personal or corporate-owned device, consider using the Gmail or Nine Work email app. The Microsoft Outlook for Android app, and any other email app that uses modern authentication via MSAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../../device-configuration/templates/configure-email.md).
 
    > [!TIP]
    > Azure AD Authentication Library (ADAL) has been deprecated, so we recommend updating apps that currently use ADAL to MSAL. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -93,7 +93,7 @@ For more information about app protection policies for the work profile, see the
 
 VPN support is similar to Android VPN profiles. The same VPN providers and basic configuration options are available for Android Enterprise management, with two differences:
 
-- **Work profile-scoped VPN** – VPN connections are limited to the apps deployed to the work profile on personal and corporate-owned devices, so only managed apps can use the VPN connection. Personal apps on the device can't use a managed VPN connection. For more information, see [Android Enterprise VPN settings](../../intune-service/configuration/vpn-settings-android-enterprise.md).
+- **Work profile-scoped VPN** – VPN connections are limited to the apps deployed to the work profile on personal and corporate-owned devices, so only managed apps can use the VPN connection. Personal apps on the device can't use a managed VPN connection. For more information, see [Android Enterprise VPN settings](../../device-configuration/templates/ref-vpn-settings-android-enterprise.md).
 
 - **App-specific VPN** – You can configure an app-specific VPN in Intune if the VPN provider supports:
 
@@ -101,7 +101,7 @@ VPN support is similar to Android VPN profiles. The same VPN providers and basic
 
   - The capability to configure per-app VPN via the Android Enterprise app configuration profile.
 
-  For more information, see [Use a Microsoft Intune custom profile to create a per-app VPN profile for Android devices](../../intune-service/configuration/android-pulse-secure-per-app-vpn.md).
+  For more information, see [Use a Microsoft Intune custom profile to create a per-app VPN profile for Android devices](../../device-configuration/templates/configure-per-app-vpn-android.md).
 
 ## Certificate profiles
 
@@ -119,7 +119,7 @@ For more information, see [Configure a certificate profile for your devices in M
 
 ## Wi-Fi profiles
 
-Wi-Fi profiles are removed when the device retires from Intune and the work profile is deleted. For more information, see [How to configure Wi-Fi settings in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-configure.md).
+Wi-Fi profiles are removed when the device retires from Intune and the work profile is deleted. For more information, see [How to configure Wi-Fi settings in Microsoft Intune](../../device-configuration/templates/configure-wifi.md).
 
 ## Next steps
 

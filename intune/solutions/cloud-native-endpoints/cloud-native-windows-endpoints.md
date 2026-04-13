@@ -526,7 +526,7 @@ You can customize and set a standard start and taskbar layout using Intune.
   - For more information about start and taskbar customization, go to [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
   - To create a start and taskbar layout, go to [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
-  After the layout is created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+  After the layout is created, it can be uploaded to Intune by configuring a [Device Restrictions](../../device-configuration/templates/configure-device-restrictions.md) profile. The setting is under the *Start* category.
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
@@ -580,7 +580,7 @@ Following are some settings available in the settings catalog that might be rele
 
 ### Device Restrictions
 
-Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md).
+Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../device-configuration/templates/configure-device-restrictions.md).
 
 To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
@@ -597,7 +597,7 @@ To create a profile that uses the Device restrictions template, in the [Microsof
 
 Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization).
 
-To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](../../intune-service/configuration/delivery-optimization-windows.md) or a settings catalog profile.
+To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](../../device-configuration/templates/configure-delivery-optimization-windows.md) or a settings catalog profile.
 
 Some settings that are commonly used by organizations are:
 
@@ -622,7 +622,7 @@ For more information, go to [How to manage the local administrators group on Mic
 There are several options for creating your device configuration when considering a migration from Group Policy to cloud-native device management:
 
 - Start fresh and apply custom settings as required.
-- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md).
+- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy analytics](../../device-configuration/import-group-policy-analytics.md).
 - Use Group Policy analytics to create Device Configuration profiles directly for supported settings.
 
 The transition to a cloud-native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
@@ -631,7 +631,7 @@ To start fresh, review your current requirements and implement a minimal collect
 
 Migrating settings from existing Group Policies to MDM (Microsoft Intune) isn't the preferred approach. When you transition to cloud-native Windows, the intention shouldn't be to lift and shift existing group policy settings. Instead, consider the target audience and what settings they require. It's time consuming and likely impractical to review each group policy setting in your environment to determine its relevance and compatibility with a modern managed device. Avoid trying to assess every group policy and individual setting. Instead, focus on assessing those common policies that cover most devices and scenarios.
 
-Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud-native device if unresolved. Tools such as [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
+Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud-native device if unresolved. Tools such as [Group Policy analytics](../../device-configuration/import-group-policy-analytics.md) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
 
 ### Scripts
 
@@ -698,6 +698,6 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - Add [Store Apps](../../app-management/deployment/add-microsoft-store.md)
 - Add [Win32 apps](../../app-management/deployment/win32.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
-- Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
+- Deploy network profiles, including [VPN](../../device-configuration/templates/ref-vpn-settings-windows.md) and [Wi-Fi](../../device-configuration/templates/ref-wifi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
 - Security baseline for [Microsoft Edge](../../intune-service/protect/security-baseline-settings-edge.md)

@@ -30,7 +30,7 @@ This article applies to:
 - macOS
 - Microsoft Edge version 77 and newer
 
-  For Microsoft Edge version 45 and earlier, go to [Microsoft Edge Browser device restrictions](../../intune-service/configuration/device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+  For Microsoft Edge version 45 and earlier, go to [Microsoft Edge Browser device restrictions](../../device-configuration/templates/ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older).
 
 > [!TIP]
 >
@@ -86,7 +86,7 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
 11. In **Assignments**, select **Next**.
 
-    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](../../intune-service/configuration/device-profile-assign.md).
+    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](../../device-configuration/assign-device-profile.md).
 
     :::image type="content" source="./media/configure-edge/add-entra-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/add-entra-group-assign-policy.png":::
 

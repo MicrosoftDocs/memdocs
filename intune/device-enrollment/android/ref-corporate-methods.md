@@ -170,4 +170,4 @@ For more information about provisioning devices with the DPC identifier method, 
 ## Next steps
 
 - [Deploy Android apps](../../app-management/deployment/assign-groups.md)
-- [Add Android configuration policies](../../intune-service/configuration/device-profiles.md)
+- [Add Android configuration policies](../../device-configuration/overview.md)

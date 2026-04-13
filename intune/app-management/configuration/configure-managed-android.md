@@ -25,7 +25,7 @@ Not every app supports app configuration. Check with the app developer to see if
 Android Enterprise has several enrollment methods. The enrollment type depends on how email is configured on the device:
 
 - On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use an app configuration policy and the steps in this article. App configuration policies support Gmail and Nine Work email apps.
-- On Android Enterprise personally owned devices with a work profile, create an [Android Enterprise email device configuration profile](../../intune-service/configuration/email-settings-android-enterprise.md). When you create the profile, you can configure settings for email clients that support app configuration policies. When you use the configuration designer, Intune includes email settings specific to Gmail and Nine Work apps.
+- On Android Enterprise personally owned devices with a work profile, create an [Android Enterprise email device configuration profile](../../device-configuration/templates/ref-email-settings-android-enterprise.md). When you create the profile, you can configure settings for email clients that support app configuration policies. When you use the configuration designer, Intune includes email settings specific to Gmail and Nine Work apps.
 
 ## Create an app configuration policy
 
@@ -102,7 +102,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 1. Select **Add**. Choose the list of configuration settings that you want to enter for the app.
 
-    If you're using Gmail or Nine Work email apps, [Android Enterprise device settings to configure email](../../intune-service/configuration/email-settings-android-enterprise.md) has more information on these specific settings.
+    If you're using Gmail or Nine Work email apps, [Android Enterprise device settings to configure email](../../device-configuration/templates/ref-email-settings-android-enterprise.md) has more information on these specific settings.
 
 2. For each key and value in the configuration, set:
 

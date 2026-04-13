@@ -83,8 +83,8 @@ For example, shared Windows devices can be public computers in libraries, comput
 
 For information on this feature, and to get started, go to:
 
-- [Shared PC or multi-user Windows devices in Intune](../../intune-service/configuration/shared-user-device-settings-windows.md)
-- [Shared PC or multi-user Windows devices in Intune - Settings list](../../intune-service/configuration/shared-user-device-settings.md)
+- [Shared PC or multi-user Windows devices in Intune](../../device-configuration/templates/ref-shared-device-settings-windows.md)
+- [Shared PC or multi-user Windows devices in Intune - Settings list](../../device-configuration/templates/configure-shared-device.md)
 
 # [User associated device](#tab/single)
 
@@ -124,7 +124,7 @@ You can pin one app or many apps, select a wallpaper, set icon positions, and mo
 To get started, use the following links:
 
 1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md). When the apps are added, you create app policies that deploy the apps to the devices.
-2. Create a device configuration [kiosk profile](../../intune-service/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../../intune-service/configuration/kiosk-settings.md).
+2. Create a device configuration [kiosk profile](../../device-configuration/templates/configure-kiosk.md) and configure the [Windows kiosk profile - settings list](../../device-configuration/templates/configure-kiosk.md).
 
     The following example shows the kiosk profile settings for a single app. Make sure you add the app to Intune before you configure the kiosk profile.
 
@@ -145,7 +145,7 @@ To configure devices for this scenario, you deploy the apps to the devices. Then
 To get started, use the following links:
 
 1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md). When the apps are added, you create app policies that deploy the apps to the devices.
-2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../device-configuration/settings-catalog/index.md).
+2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../device-configuration/templates/ref-device-restrictions-windows.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../device-configuration/settings-catalog/index.md).
 
     :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
 

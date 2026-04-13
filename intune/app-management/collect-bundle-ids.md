@@ -40,5 +40,5 @@ This article lists the steps to get the app bundle IDs using the Intune admin ce
 ## Related articles
 
 - [Add apps to Microsoft Intune](./deployment/index.md)
-- [Bundle IDs for built-in iOS and iPadOS apps you can use in Intune](../intune-service/configuration/bundle-ids-built-in-ios-apps.md)
+- [Bundle IDs for built-in iOS and iPadOS apps you can use in Intune](../device-configuration/templates/ref-bundle-ids-ios.md)
 - [Add built-in apps to Microsoft Intune](./deployment/add-built-in.md)

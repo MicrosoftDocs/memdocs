@@ -81,7 +81,7 @@ For devices meeting the prerequisites, the Intune management extension installs 
 - [Endpoint analytics](../../endpoint-analytics/index.md)
 - [Remote Help](../../intune-service/fundamentals/remote-help.md)
 - [Managed Installers in Intune](../../intune-service/protect/endpoint-security-app-control-policy.md)
-- [Update Windows BIOS using configuration MDM policy](../../intune-service/configuration/bios-configuration.md)
+- [Update Windows BIOS using configuration MDM policy](../../device-configuration/templates/configure-bios-windows.md)
 
 > [!NOTE]
 > For details about how the IME is rolled out and updated, see [Service information for Microsoft Intune release updates](../../intune-service/fundamentals/intune-service-servicing-information.md).

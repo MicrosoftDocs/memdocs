@@ -44,9 +44,9 @@ Microsoft Intune supports a specific subset of device management options for dev
 ### Device configuration and management
 Supported device configuration policies and management capabilities include:
 
-- VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../../intune-service/configuration/vpn-setting-configure-per-app.md). Safari domains are not supported.
-- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-apple.md).
-- Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-apple.md).
+- VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../../device-configuration/templates/configure-per-app-vpn-ios.md). Safari domains are not supported.
+- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../../device-configuration/templates/ref-wifi-settings-apple.md).
+- Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-apple.md).
 - Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information, see [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md).
 
 ### App deployment and management
