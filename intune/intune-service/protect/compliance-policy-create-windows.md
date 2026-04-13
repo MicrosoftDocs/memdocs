@@ -48,7 +48,7 @@ For more information, see:
   [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
   > [!NOTE]
-  > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even although BitLocker encryption may have completed - a reboot will be required in order for the device detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
+  > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even though BitLocker encryption may have completed – a reboot will be required in order for the device to detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
 
 - **Require Secure Boot to be enabled on the device**:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
