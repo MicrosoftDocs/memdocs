@@ -676,7 +676,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 
 <!-- Microsoft Learn documentation -->
 [Microsoft Privacy Policy]:https://go.microsoft.com/fwlink/?Linkid=857875
-[How to validate your app protection policy setup in Microsoft Intune]:../../intune-service/apps/app-protection-policies-validate.md
+[How to validate your app protection policy setup in Microsoft Intune]:../../app-management/protection/validate-policy-setup.md
 
 <!-- Sovereign Cloud -->
 [sovereign cloud aware]:/azure/active-directory/develop/authentication-national-cloud

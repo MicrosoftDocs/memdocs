@@ -78,10 +78,10 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
       >
       > The following types of applications are supported for use with Windows Autopilot device preparation:
       >
-      > - [Line-of-business (LOB)](/intune/intune-service/apps/lob-apps-windows).
-      > - [Win32](/intune/intune-service/apps/apps-win32-prepare).
-      > - [Microsoft Store](/intune/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-      > - [Microsoft 365](/intune/intune-service/apps/apps-add-office365).
+      > - [Line-of-business (LOB)](/intune/app-management/deployment/add-lob-windows).
+      > - [Win32](/intune/app-management/deployment/win32-packaging).
+      > - [Microsoft Store](/intune/app-management/deployment/add-microsoft-store) - only Microsoft Store apps that support WinGet are supported.
+      > - [Microsoft 365](/intune/app-management/deployment/add-microsoft-365-windows).
       >
       > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 

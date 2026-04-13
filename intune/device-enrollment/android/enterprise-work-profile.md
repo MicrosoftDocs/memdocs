@@ -61,11 +61,11 @@ Managed Google Play is an integral part of Android Enterprise app distribution a
 
 To manage and deploy apps in the Play Store, sign in to the Google Play website with your administrator credentials for Google management. From here, you can approve apps for deployment. Approved apps sync with Microsoft Intune and appear in the admin center where you can deploy and manage them. Line of business (LOB) apps developed by your organization must be published to Managed Google Play using the Google Play managed publishing console.
 
-Apps can be installed without user interaction and without requiring the user to allow app installations from unknown sources. To browse and install optional or available apps, the user can browse the Managed Google Play store on their device. For more information, see [Assign apps to Android Enterprise work profile devices with Intune](../../intune-service/apps/apps-add-android-for-work.md).
+Apps can be installed without user interaction and without requiring the user to allow app installations from unknown sources. To browse and install optional or available apps, the user can browse the Managed Google Play store on their device. For more information, see [Assign apps to Android Enterprise work profile devices with Intune](../../app-management/deployment/add-managed-google-play.md).
 
 ## App configuration
 
-Android Enterprise provides infrastructure for deploying app configuration values to apps that support them. By specifying the values for work apps, you ensure they're properly configured when users launch the app for the first time. Support for app configuration requires that app developers create Android apps specifically to support managed configuration values. If they do, then you can use Intune to specify and apply these configuration settings. For more information, see [Add app configuration policies for managed Android devices](../../intune-service/apps/app-configuration-policies-use-android.md).
+Android Enterprise provides infrastructure for deploying app configuration values to apps that support them. By specifying the values for work apps, you ensure they're properly configured when users launch the app for the first time. Support for app configuration requires that app developers create Android apps specifically to support managed configuration values. If they do, then you can use Intune to specify and apply these configuration settings. For more information, see [Add app configuration policies for managed Android devices](../../app-management/configuration/configure-managed-android.md).
 
 ## Email configuration
 
@@ -85,7 +85,7 @@ Microsoft Intune supports app protection policies applied to apps in the work pr
 
 For more information about app protection policies for the work profile, see the following articles:
 
-* [Overview of app protection policies](../../intune-service/apps/app-protection-policy.md)
+* [Overview of app protection policies](../../app-management/protection/overview.md)
 
 * [Add a device compliance policy for work profile devices in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md)
 
@@ -125,4 +125,4 @@ Wi-Fi profiles are removed when the device retires from Intune and the work prof
 
 - [Enrollment deployment guide for Android](guide.md)
 
-- [Assign apps to Android Enterprise work profile devices with Intune](../../intune-service/apps/apps-add-android-for-work.md)
+- [Assign apps to Android Enterprise work profile devices with Intune](../../app-management/deployment/add-managed-google-play.md)

@@ -80,8 +80,8 @@ For important details about using the different issuers, review guidance for tha
 > [!div class="checklist"]
 > Plan to deploy the relevant user-facing app to devices that enroll for a derived credential. Device users use the app to start the credential enrollment process.
 >
-> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../../intune-service/apps/store-apps-ios.md).
-> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../../intune-service/apps/store-apps-android.md).
+> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md).
+> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../../app-management/deployment/add-store-android.md).
 
 ## Plan for derived credentials
 
@@ -254,8 +254,8 @@ In addition to deploying the DISA Purebred app with Intune, the device must have
 
 2. Deploy the DISA Purebred application in Intune.
 
-   - See [Add an iOS line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-ios.md).
-   - See [Add an Android line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-android.md)
+   - See [Add an iOS line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-ios.md).
+   - See [Add an Android line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-android.md)
 
    Extra settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 

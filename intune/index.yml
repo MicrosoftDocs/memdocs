@@ -44,7 +44,7 @@ productDirectory:
     - title: Application management
       imageSrc: ./media/icons/hub-page/apps.svg
       summary: Deploy and manage apps across platforms.
-      url: ./intune-service/apps/app-management.md
+      url: ./app-management/overview.md
 
     - title: Device updates 
       imageSrc: ./media/icons/hub-page/device-updates.svg
@@ -64,7 +64,7 @@ productDirectory:
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Protect corporate data at the app level without requiring device enrollment.
-      url: ./intune-service/apps/app-protection-policy.md
+      url: ./app-management/protection/overview.md
 
     - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/agent.svg

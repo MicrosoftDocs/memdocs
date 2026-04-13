@@ -149,9 +149,9 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Intune](../../intune-service/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+  1. [Add apps to Intune](../../app-management/deployment/index.md). When the apps are added, you create app policies that deploy the apps to the devices.
 
-  2. [Create app configuration policies](../../intune-service/apps/app-configuration-policies-overview.md) to configure app features. You can also add a JSON file with all the configuration settings you want.
+  2. [Create app configuration policies](../../app-management/configuration/overview.md) to configure app features. You can also add a JSON file with all the configuration settings you want.
 
   3. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
 
@@ -175,7 +175,7 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../../intune-service/apps/apps-add.md), including the MHS app. When the apps are added, you create app policies that deploy the apps to the devices.
+  1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md), including the MHS app. When the apps are added, you create app policies that deploy the apps to the devices.
 
   2. Use a [device restrictions configuration profile](../../intune-service/configuration/device-restrictions-configure.md) to set the kiosk mode to multi-app, and select your apps. This step locks the device to only the apps you select:
 
@@ -191,7 +191,7 @@ The following scenarios are common for FLW:
 
       - **Option 2 - App configuration policy**: The app configuration policy has more configuration settings than the device restrictions configuration profile. You can also add a JSON file with all the configuration settings you want.
 
-        For more information, go to [Configure the Microsoft Managed Home Screen app](../../intune-service/apps/app-configuration-managed-home-screen-app.md).
+        For more information, go to [Configure the Microsoft Managed Home Screen app](../../app-management/configuration/configure-managed-home-screen.md).
 
 - **Scenario 3: Single app kiosk**
 
@@ -209,7 +209,7 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../../intune-service/apps/apps-add.md). When the app is added, you create an app policy that deploys the app to the devices.
+  1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md). When the app is added, you create an app policy that deploys the app to the devices.
   2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md):
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and select **Single app**:

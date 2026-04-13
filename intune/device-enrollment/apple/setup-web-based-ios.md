@@ -30,7 +30,7 @@ Before you begin, complete the following tasks:
 - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
 
 ## Best practices
-Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../intune-service/apps/web-app.md). Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.
+Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md). Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.
 
 The Microsoft Authenticator app is required for work or school access. We recommend telling employees and students to install Microsoft Authenticator before they begin device enrollment.
 

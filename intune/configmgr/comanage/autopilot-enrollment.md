@@ -116,7 +116,7 @@ Use these recommendations for a more successful deployment:
     > [!NOTE]
     > The default timeout for the enrollment status page is 60 minutes. You can adjust this value in that policy, if needed, but a faster process may provide a better user experience.
 
-- Don't use this process with other policy providers like the [Intune management extension](../../intune-service/apps/intune-management-extension.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
+- Don't use this process with other policy providers like the [Intune management extension](../../device-management/tools/management-extension-windows.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
 
   - If you need to install apps in a specific order, use the co-management policy. Run a task sequence to install the apps.
 

@@ -98,9 +98,9 @@ When creating the device configuration profile for Shared iPads, keep in mind th
 
 You can deploy volume-purchased (VPP), apps, custom apps, line-of-business apps, or web apps to a Shared iPad device.
 
-* To add a VPP or custom app in the admin center, add the apps in Apple Business Manager or Apple School Manager and sync the VPP token with Intune. Assign a VPP or custom app as device-licensed to Microsoft Entra device groups in Intune. For more information, see [Sync a VPP token](../../intune-service/apps/vpp-apps-ios.md#synchronize-a-vpp-token).
-* Add a line-of-business app in the admin center and assign it to Microsoft Entra device groups. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-ios.md).
-* Add a web app, also referred to as a *web clip*, in the admin center and assign it to Microsoft Entra user groups. For more information, see [Add a web app to Intune](../../intune-service/apps/web-app.md#add-a-web-app-to-intune).
+* To add a VPP or custom app in the admin center, add the apps in Apple Business Manager or Apple School Manager and sync the VPP token with Intune. Assign a VPP or custom app as device-licensed to Microsoft Entra device groups in Intune. For more information, see [Sync a VPP token](../../app-management/deployment/manage-vpp-apple.md#synchronize-a-vpp-token).
+* Add a line-of-business app in the admin center and assign it to Microsoft Entra device groups. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-ios.md).
+* Add a web app, also referred to as a *web clip*, in the admin center and assign it to Microsoft Entra user groups. For more information, see [Add a web app to Intune](../../app-management/deployment/add-web.md#add-a-web-app-to-intune).
 
 The following table shows each iOS app type and describes the type of assignment supported with shared iPads.
 

@@ -17,7 +17,7 @@ items:
       - name: Prepare LOB apps for app protection
         href: ./app-sdk/integration-methods.md
       - name: LOB app versioning
-        href: ../app-management/deployment/lob-app-versioning.md
+        href: ../app-management/deployment/ref-lob-app-versioning.md
       - name: App Wrapping Tool for iOS
         href: ./app-sdk/configure-wrapping-ios.md
       - name: Intune App SDK for iOS

@@ -130,7 +130,7 @@ Updates can be managed using either of the following features:
 > [!NOTE]
 > To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
-For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md).
+For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md).
 
 ## Client apps
 
@@ -141,7 +141,7 @@ For more information on the Intune feature, see [Add Microsoft 365 apps to Windo
 
 Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 or later devices. After you transition this workload, any available apps deployed from Intune are available in the Company Portal. Apps that you deploy from Configuration Manager are available in Software Center.
 
-For more information on the Intune feature, see [What is Microsoft Intune app management?](../../intune-service/apps/app-management.md)
+For more information on the Intune feature, see [What is Microsoft Intune app management?](../../app-management/overview.md)
 
 > [!NOTE]
 > In Windows 10 version 1903 and later, PowerShell scripts still run on co-managed devices even if you haven't switched the **Client Apps** workload to Intune.

@@ -149,5 +149,5 @@ Follow steps from [Export the profile as .mobileconfig to iOS/iPadOS devices](#e
 
 ## Next steps
 
-* [Create an iOS/iPadOS MDM app configuration policy](../../intune-service/apps/app-configuration-policies-use-ios.md) to restrict settings on devices with specific users.
+* [Create an iOS/iPadOS MDM app configuration policy](../../app-management/configuration/configure-managed-ios.md) to restrict settings on devices with specific users.
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](setup-direct-macos.md).

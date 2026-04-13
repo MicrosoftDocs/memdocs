@@ -42,7 +42,7 @@ Create a single sign-on app extension policy that uses the Apple SSO extension t
 
     Don't add the Microsoft Authenticator app to the SSO extension either.  That app is added later in an app policy.
 
-    To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../intune-service/apps/get-app-bundle-id-intune-admin-center.md).
+    To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 5. Under **Additional configuration**, add the required key-value pair. Remove trailing spaces before and after the value and key. Otherwise just-in-time registration won't work.
     * **Key**: device_registration
@@ -56,7 +56,7 @@ Create a single sign-on app extension policy that uses the Apple SSO extension t
 8. For **Assignments**, assign the profile to all users, or select specific groups.
 9. Select **Next**.
 10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.
-11. Go to **Apps** > **All Apps** and assign Microsoft Authenticator to groups as a required app. For more information, see [Add apps to Microsoft Intune](../../intune-service/apps/apps-add.md) and [Assign apps to groups](../../intune-service/apps/apps-deploy.md).
+11. Go to **Apps** > **All Apps** and assign Microsoft Authenticator to groups as a required app. For more information, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md) and [Assign apps to groups](../../app-management/deployment/assign-groups.md).
 
 ## Next steps
 Create an enrollment profile for enrolling devices. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment. For information about how to create a profile for supported enrollment types, see the following resources:

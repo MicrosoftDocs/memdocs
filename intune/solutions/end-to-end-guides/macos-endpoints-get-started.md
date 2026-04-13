@@ -268,7 +268,7 @@ Some must-have apps include:
 
   The Company Portal app is also required for the SSO extension that you configure in [Step 6 - Configure initial settings and single sign-on (SSO)](#step-6---configure-initial-settings-and-single-sign-on-sso) (in this article).
 
-  To deploy the Company Portal app as a required app, go to [Add the Company Portal for macOS app](../../intune-service/apps/apps-company-portal-macos.md).
+  To deploy the Company Portal app as a required app, go to [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).
 
 - **Microsoft 365 Apps**
 
@@ -276,7 +276,7 @@ Some must-have apps include:
 
   To deploy Microsoft 365 Apps, go to:
 
-  - [Assign Microsoft 365 to macOS devices with Microsoft Intune](../../intune-service/apps/apps-add-office365-macos.md)
+  - [Assign Microsoft 365 to macOS devices with Microsoft Intune](../../app-management/deployment/add-microsoft-365-macos.md)
   - [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
 ## Phase 2 - Enroll a test endpoint
@@ -519,14 +519,14 @@ In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you 
 
   In Intune, you can deploy LOB apps using the following options:
 
-  - [Add the app package (`.pkg`) to Intune, and use a shell script to deploy the app](../../intune-service/apps/macos-unmanaged-pkg.md). This feature uses the Intune Management Extension. It can deploy unsigned packages and packages without a payload and supports pre- and post- scripts.
-  - [Add the app disk image (`.dmg`) to Intune, and use Intune policy to deploy the app](../../intune-service/apps/lob-apps-macos-dmg.md)
-  - [Apps licensed with Apple's Volume Purchase Plan (VPP) and use Intune policy to deploy the app](../../intune-service/apps/vpp-apps-ios.md)
-  - [Add the app package (`.pkg`) to Intune, and use Intune policy to deploy the app](../../intune-service/apps/lob-apps-macos.md)
+  - [Add the app package (`.pkg`) to Intune, and use a shell script to deploy the app](../../app-management/deployment/add-unmanaged-pkg-macos.md). This feature uses the Intune Management Extension. It can deploy unsigned packages and packages without a payload and supports pre- and post- scripts.
+  - [Add the app disk image (`.dmg`) to Intune, and use Intune policy to deploy the app](../../app-management/deployment/add-dmg-macos.md)
+  - [Apps licensed with Apple's Volume Purchase Plan (VPP) and use Intune policy to deploy the app](../../app-management/deployment/manage-vpp-apple.md)
+  - [Add the app package (`.pkg`) to Intune, and use Intune policy to deploy the app](../../app-management/deployment/add-lob-macos.md)
 
 - **Microsoft Edge**
 
-  You can deploy Microsoft Edge to macOS endpoints using the built-in deployment type. For more information, go to [Add Microsoft Edge to macOS devices using Microsoft Intune](../../intune-service/apps/apps-edge-macos.md).
+  You can deploy Microsoft Edge to macOS endpoints using the built-in deployment type. For more information, go to [Add Microsoft Edge to macOS devices using Microsoft Intune](../../app-management/deployment/add-edge-macos.md).
 
   You can also configure Microsoft Edge settings using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md):
 
@@ -601,7 +601,7 @@ You can enforce a wallpaper on macOS using a combination of a sample script and 
 - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > User Experience > Desktop**:
   - **Override Picture Path**: 'Enter the \<path of the image>'.
 
-The image file must exist on the macOS endpoint. To download a picture from a web location, you can use a sample script at [GitHub - Microsoft Intune wallpaper shell sample](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Wallpaper). You can also use an app package tool to copy a file and then deploy it using the [unmanaged PKG](../../intune-service/apps/macos-unmanaged-pkg.md) deployment feature.
+The image file must exist on the macOS endpoint. To download a picture from a web location, you can use a sample script at [GitHub - Microsoft Intune wallpaper shell sample](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Wallpaper). You can also use an app package tool to copy a file and then deploy it using the [unmanaged PKG](../../app-management/deployment/add-unmanaged-pkg-macos.md) deployment feature.
 
 ### Device name
 
@@ -671,7 +671,7 @@ These two components offer separate functionality and communicate with the macOS
 
 :::image type="content" source="./media/macos-endpoints-get-started/macos-endpoint-ime-architecture.png" border="false" alt-text="A diagram that shows how the macOS MDM and the Intune Managemnt Extension work together to support management of macOS devices using Microsoft Intune":::
 
-For more information about the Intune Management Extension, go to [Understanding Microsoft Intune management agent for macOS](../../intune-service/apps/lob-apps-macos-agent.md).
+For more information about the Intune Management Extension, go to [Understanding Microsoft Intune management agent for macOS](../../app-management/deployment/management-agent-macos.md).
 
 ### macOS enrollment maintenance
 
@@ -716,7 +716,7 @@ For more information, go to:
 
 In Intune, you can use shell scripts to collect custom properties from managed macOS devices. This feature is a great way to get custom reporting information.
 
-For more information, go to [Use shell scripts on macOS devices in Microsoft Intune](../../intune-service/apps/macos-shell-scripts.md#custom-attributes-for-macos).
+For more information, go to [Use shell scripts on macOS devices in Microsoft Intune](../../device-management/tools/run-shell-scripts-macos.md#custom-attributes-for-macos).
 
 ### Configure Apple Business Manager for automatic user provisioning
 
