@@ -72,7 +72,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
   These devices have a built-in email app that's typically hidden when the device enrolls in Intune. This behavior also depends on the OEM, so it can be different on your devices.
 
-  The built-in email app is also considered a system app. For more information on system apps and Intune, go to [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md).
+  The built-in email app is also considered a system app. For more information on system apps and Intune, go to [Manage Android Enterprise system apps in Microsoft Intune](../../app-management/configuration/manage-system-apps-android.md).
 
 - **Android Enterprise personally owned devices with a work profile**: End users own these devices. Users enroll their devices and a work profile is automatically created. You manage the work profile, including apps and data in the work profile.
 
@@ -90,7 +90,7 @@ The **Microsoft Outlook** app is available in the managed Play Store. To use Out
 
 After the app is deployed and installed:
 
-- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../../app-management/configuration/configure-managed-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
 - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -105,7 +105,7 @@ After the app is deployed and installed:
 
 - On **Android Enterprise organization-owned devices**:
 
-  - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an app configuration policy](../../app-management/configuration/configure-managed-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
   - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -123,7 +123,7 @@ After the app is deployed and installed:
 
 - On **Android Enterprise organization-owned devices**:
 
-  - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an app configuration policy](../../app-management/configuration/configure-managed-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
   - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -139,7 +139,7 @@ After the app is deployed and installed:
 
 After the app is deployed and installed:
 
-- If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+- If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../../app-management/configuration/configure-managed-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
 - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -147,15 +147,15 @@ After the app is deployed and installed:
 
 For more information on app configuration policies, go to:
 
-- [Learn about app configuration policies in Microsoft Intune](../apps/app-configuration-policies-overview.md)
-- [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md)
-- [Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune](../apps/app-configuration-policies-outlook.md)
+- [Learn about app configuration policies in Microsoft Intune](../../app-management/configuration/overview.md)
+- [Add app configuration policies for managed Android Enterprise devices](../../app-management/configuration/configure-managed-android.md)
+- [Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune](../../app-management/configuration/configure-outlook.md)
 - [Deploy Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 > [!TIP]
 > When you create an app configuration policy, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
 >
-> For more information on these options, go to [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
+> For more information on these options, go to [App configuration policies for Microsoft Intune](../../app-management/configuration/overview.md).
 
 ### iOS/iPadOS
 
@@ -167,7 +167,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
   For more information on the enrollment options for personal devices, go to [Deployment guide: Enroll iOS and iPadOS devices - BYOD User and Device enrollment](../../device-enrollment/apple/guide-ios-ipados.md#byod-user-and-device-enrollment).
 
-  Depending on the enrollment method for personal devices, it's also recommended to use [app protection policies](../apps/app-protection-policy-settings-ios.md) on the email app.
+  Depending on the enrollment method for personal devices, it's also recommended to use [app protection policies](../../app-management/protection/ref-settings-ios.md) on the email app.
 
 #### Email app options for iOS/iPadOS
 
@@ -179,7 +179,7 @@ The **Microsoft Outlook** app is available in the App Store. To use Outlook as t
 
 After the app is deployed and installed:
 
-- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../../app-management/configuration/configure-managed-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
 - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -197,7 +197,7 @@ The **Built-in Mail app** is preinstalled with the OS and can be used to access 
 
 After the app is deployed and installed:
 
-- If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+- If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../../app-management/configuration/configure-managed-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
 - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -205,14 +205,14 @@ After the app is deployed and installed:
 
 For more information on app configuration policies, go to:
 
-- [Learn about app configuration policies in Microsoft Intune](../apps/app-configuration-policies-overview.md)
-- [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md)
+- [Learn about app configuration policies in Microsoft Intune](../../app-management/configuration/overview.md)
+- [Add app configuration policies for managed iOS/iPadOS devices](../../app-management/configuration/configure-managed-ios.md)
 - [Deploy Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 > [!TIP]
 > When you create an app configuration policy, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
 >
-> For more information on these options, go to [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
+> For more information on these options, go to [App configuration policies for Microsoft Intune](../../app-management/configuration/overview.md).
 
 ### Windows client
 
@@ -285,17 +285,17 @@ After the email app is assigned to the device, this next step creates the device
 
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
-    - [Android device administrator (Samsung Knox Standard)](email-settings-android.md)
-    - [Android Enterprise](email-settings-android-enterprise.md)
-    - [iOS/iPadOS](email-settings-ios.md)
-    - [Windows](email-settings-windows-10.md)
+    - [Android device administrator (Samsung Knox Standard)](./ref-email-settings-android.md)
+    - [Android Enterprise](./ref-email-settings-android-enterprise.md)
+    - [iOS/iPadOS](./ref-email-settings-ios.md)
+    - [Windows](./ref-email-settings-windows.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [Before you begin](#before-you-begin) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [Before you begin](#before-you-begin) (in this article). [Assign user and device profiles](../assign-device-profile.md) also some guidance.
 
     Select **Next**.
 
@@ -341,4 +341,4 @@ If you make changes to an email profile you previously assigned, end users might
 
 ## Related articles
 
-Once the profile is created, it might not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Once the profile is created, it might not be doing anything yet. Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

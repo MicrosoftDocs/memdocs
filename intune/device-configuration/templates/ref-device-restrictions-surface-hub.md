@@ -18,7 +18,7 @@ This article describes some of the Microsoft Intune device restrictions settings
 
 ## Before you begin
 
-- Create a [Windows 10 Teams device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
+- Create a [Windows 10 Teams device restrictions configuration profile](./configure-device-restrictions.md#create-the-profile).
 - [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
 
 ## Apps and experience
@@ -69,6 +69,6 @@ These settings use the [SurfaceHub CSP](/windows/client-management/mdm/surfacehu
 
 ## Related articles
 
-- [Create a device restriction configuration profile](device-restrictions-configure.md).
+- [Create a device restriction configuration profile](./configure-device-restrictions.md).
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).

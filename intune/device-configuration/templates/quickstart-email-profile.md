@@ -14,26 +14,26 @@ In this article, you create an email profile for iOS/iPadOS devices. Email devic
 
 [!INCLUDE [intune-evaluate](../../intune-service/includes/intune-evaluate.md)]
 
-To help safeguard your email, you can create a compliance policy that sets rules on devices that connect to email. Then, set up Conditional Access to allow only compliant devices access to your email profiles. To learn more about email profiles, see [configure email settings in Microsoft Intune](email-settings-configure.md).
+To help safeguard your email, you can create a compliance policy that sets rules on devices that connect to email. Then, set up Conditional Access to allow only compliant devices access to your email profiles. To learn more about email profiles, see [configure email settings in Microsoft Intune](./configure-email.md).
 
 ## Prerequisites
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [licensing](../../../includes/requirements/licensing.md)]
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Policy and Profile Manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
+> - Built-in **[Policy and Profile Manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -88,17 +88,17 @@ If you don't use this profile for other tutorials or testing, delete it:
 
 ## Next steps
 
-In this article, you created an email profile for iOS/iPadOS devices. To learn more about all the profiles you can create in Intune, see [Create device profiles in Microsoft Intune](device-profiles.md).
+In this article, you created an email profile for iOS/iPadOS devices. To learn more about all the profiles you can create in Intune, see [Create device profiles in Microsoft Intune](../overview.md).
 
 This article is the last step in the evaluation guide. You set up a test environment and stepped through common tasks that help you better understand and use Intune.
 
 When you're ready to deploy Intune in your organization, the following resources can help.
 
 > [!div class="nextstepaction"]
-> [Microsoft Intune planning guide](../fundamentals/intune-planning-guide.md)
+> [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md)
 
 > [!div class="nextstepaction"]
-> [Deploy or move to Microsoft Intune](../fundamentals/get-started-with-intune.md)
+> [Deploy or move to Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
 
 > [!div class="nextstepaction"]
-> [Migration guide: Set up or move to Microsoft Intune](../fundamentals/deployment-guide-intune-setup.md)
+> [Migration guide: Set up or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)

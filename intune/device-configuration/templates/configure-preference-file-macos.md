@@ -95,11 +95,11 @@ These settings are added to a device configuration profile in Intune, and then a
     To see some property list file examples, go to [Set preferences for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/mac-preferences).
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -107,6 +107,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Resources
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
 For more information on preference files for Microsoft Edge, go to [Configure Microsoft Edge policy settings on macOS](/deployedge/configure-microsoft-edge-on-mac).

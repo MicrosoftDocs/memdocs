@@ -26,14 +26,14 @@ This feature applies to:
 
 - macOS
 
-To learn more about extensions in Intune, and any prerequisites, go to [add macOS extensions](kernel-extensions-overview-macos.md).
+To learn more about extensions in Intune, and any prerequisites, go to [add macOS extensions](./configure-kernel-extensions-macos.md).
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
 ## Before you begin
 
-- Create a [macOS extensions device configuration profile](kernel-extensions-overview-macos.md).
-- These settings apply to different enrollment types. For more information on the different enrollment types, go to [macOS enrollment](../enrollment/macos-enroll.md).
+- Create a [macOS extensions device configuration profile](./configure-kernel-extensions-macos.md).
+- These settings apply to different enrollment types. For more information on the different enrollment types, go to [macOS enrollment](../../device-enrollment/apple/methods-macos.md).
 
 ## Kernel extensions
 
@@ -145,4 +145,4 @@ This feature applies to:
 
 ## Related articles
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

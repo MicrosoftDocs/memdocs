@@ -61,5 +61,5 @@ The next time each device checks in, the policy is applied.
 
 ## Next steps
 
-- [Monitor the profiles status](device-profile-monitor.md).
+- [Monitor the profiles status](../monitor-device-profile.md).
 - [Review available settings for the older profile format](../../device-configuration/templates/ref-delivery-optimization-settings-windows.md). *Applies to profiles created before April 24, 2025*

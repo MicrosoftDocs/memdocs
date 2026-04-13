@@ -22,16 +22,16 @@ This feature applies to:
 - Android Enterprise personally owned devices with a work profile (BYOD)
 - Android (AOSP)
 
-This article describes these settings. [Use Wi-Fi on your devices](wi-fi-settings-configure.md) includes more information about the Wi-Fi feature in Microsoft Intune.
+This article describes these settings. [Use Wi-Fi on your devices](./configure-wifi.md) includes more information about the Wi-Fi feature in Microsoft Intune.
 
 ## Before you begin
 
-- Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings-configure.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
+- Create an [Android Enterprise Wi-Fi device configuration profile](./configure-wifi.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
 
   - **Platform**: Select **Android Enterprise** or **Android (AOSP)**.
   - **Profile type**: Select **Templates**.
 
-  For the steps, go to [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+  For the steps, go to [Android Enterprise Wi-Fi device configuration profile](./configure-wifi.md).
 
 ## Android settings
 
@@ -473,8 +473,8 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 
 ## Related articles
 
-- The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- The profile is created, but might not be doing anything. Be sure to [assign this profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- You can also create Wi-Fi profiles for [iOS/iPadOS and macOS](wi-fi-settings-apple.md), and [Windows](wi-fi-settings-windows.md).
+- You can also create Wi-Fi profiles for [iOS/iPadOS and macOS](./ref-wifi-settings-apple.md), and [Windows](./ref-wifi-settings-windows.md).
 
 - [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

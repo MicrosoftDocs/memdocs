@@ -67,11 +67,11 @@ This article shows you how to create the profile, and enable the monitoring.
 
 8. Select **Next**.
 
-9. In **Assignments**, select the devices or device groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+9. In **Assignments**, select the devices or device groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
-10. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, go to [Applicability rules](device-profile-create.md#applicability-rules).
+10. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, go to [Applicability rules](../create-device-profile.md#applicability-rules).
 
     Select **Next**.
 
@@ -81,5 +81,5 @@ The next time each device checks in, the policy is applied.
 
 ## Related content
 
-- After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
+- After the [profile is assigned](../assign-device-profile.md), be sure to [monitor its status](../monitor-device-profile.md).
 - [Endpoint Analytics Overview](../../endpoint-analytics/index.md)

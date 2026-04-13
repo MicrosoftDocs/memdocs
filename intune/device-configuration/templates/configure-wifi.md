@@ -29,7 +29,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 ## Before you begin
 
 - To create a Wi-Fi profile, you need to know the settings for your Wi-Fi network, including the SSID (service set identifier), security type, and more.
-- To configure the Wi-Fi policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the Wi-Fi policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 - Wi-Fi profiles support the following device platforms:
 
@@ -41,7 +41,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
   - Windows
   - Windows Holographic for Business
 
-  For specific versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+  For specific versions, go to [Supported operating systems and browsers in Intune](../../intune-service/fundamentals/supported-devices-browsers.md).
 
 ## Create the profile
 
@@ -75,19 +75,19 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
-    - [Android](wi-fi-settings-android-enterprise.md), including dedicated devices
-    - [iOS/iPadOS](wi-fi-settings-apple.md)
-    - [macOS](wi-fi-settings-apple.md)
-    - [Windows](wi-fi-settings-windows.md)
-    - [Windows 8.1 and newer](wi-fi-settings-import-windows-8-1.md), including Windows Holographic for Business
-    - [Android device administrator](wi-fi-settings-android.md)
+    - [Android](./ref-wifi-settings-android-enterprise.md), including dedicated devices
+    - [iOS/iPadOS](./ref-wifi-settings-apple.md)
+    - [macOS](./ref-wifi-settings-apple.md)
+    - [Windows](./ref-wifi-settings-windows.md)
+    - [Windows 8.1 and newer](./import-wifi-settings-windows.md), including Windows Holographic for Business
+    - [Android device administrator](./ref-wifi-settings-android.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -98,5 +98,5 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 - [Troubleshoot Wi-Fi profiles in Intune](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles).

@@ -38,11 +38,11 @@ This feature applies to:
 - Windows Holographic for Business, such as the HoloLens
 
 > [!TIP]
-> For iOS/iPadOS shared devices, go to [shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
+> For iOS/iPadOS shared devices, go to [shared device solutions for iOS/iPadOS](../../device-enrollment/apple/shared-device-solutions-ios.md).
 
 ## Prerequisites
 
-- To create the policy, at a minimum, sign in with an account that has the **Policy and Profile Manager** Intune role. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To create the policy, at a minimum, sign in with an account that has the **Policy and Profile Manager** Intune role. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Create the profile
 
@@ -62,16 +62,16 @@ This feature applies to:
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Windows](shared-user-device-settings-windows.md)
-    - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
+    - [Windows](./ref-shared-device-settings-windows.md)
+    - [Windows Holographic for Business](./ref-shared-device-settings-windows-holographic.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the devices group that receives your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the devices group that receives your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -84,5 +84,5 @@ The next time each device checks in, the policy is applied.
 
 ## Related articles
 
-- See all the settings for [Windows](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- See all the settings for [Windows](./ref-shared-device-settings-windows.md) and [Windows Holographic for Business](./ref-shared-device-settings-windows-holographic.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

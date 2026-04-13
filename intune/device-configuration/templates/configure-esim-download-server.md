@@ -22,8 +22,8 @@ In Intune, you can bulk activate eSIM codes using the following options:
 
 | Option | Platform support | Description |
 | --- | --- | --- |
-| **eSIM download server <br/>(this article)** | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Windows 11 (**recommended**) <br/><br/>:::image type="icon" source="../../media/icons/16/error.svg" border="false":::  Windows 10 - Use [import activation codes using a CSV file](esim-device-configuration.md). | In a settings catalog policy, add your mobile operator's download server FQDN. The device contacts the download server, authenticates, and receives eSIM connection info. <br/><br/>No individual activation codes needed. |
-| **[Import activation codes using a CSV file](esim-device-configuration.md)** | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Windows 11 (**supported, but not recommended**) - Use an eSIM download server instead<br/> <br/>:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Windows 10 <br/>| In an eSIM policy, import one-time-use activation codes. The eSIM hardware uses the activation codes to contact the mobile operator, download the eSIM policy, and configure cellular activation. <br/><br/>Requires individual activation codes. |
+| **eSIM download server <br/>(this article)** | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Windows 11 (**recommended**) <br/><br/>:::image type="icon" source="../../media/icons/16/error.svg" border="false":::  Windows 10 - Use [import activation codes using a CSV file](./enable-esim.md). | In a settings catalog policy, add your mobile operator's download server FQDN. The device contacts the download server, authenticates, and receives eSIM connection info. <br/><br/>No individual activation codes needed. |
+| **[Import activation codes using a CSV file](./enable-esim.md)** | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Windows 11 (**supported, but not recommended**) - Use an eSIM download server instead<br/> <br/>:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Windows 10 <br/>| In an eSIM policy, import one-time-use activation codes. The eSIM hardware uses the activation codes to contact the mobile operator, download the eSIM policy, and configure cellular activation. <br/><br/>Requires individual activation codes. |
 
 Using an Intune [settings catalog](../../device-configuration/settings-catalog/index.md) policy, you can add eSIM to your supported devices using an eSIM download server. This article gives more information about eSIM, describes the process, lists the prerequisites, and lists the steps to configure eSIM using the settings catalog.
 
@@ -105,7 +105,7 @@ After the initial configuration is complete, the following process unfolds for e
 
 ## Step 1 - Create a devices group
 
-Create a device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
+Create a device group that includes the eSIM capable devices. [Add groups](../../intune-service/fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
 > We recommend creating a static Microsoft Entra device group that includes your eSIM devices. Using a group confirms that you target only eSIM devices.
@@ -148,7 +148,7 @@ This profile uses the FQDN of your mobile operator's download server (SM-DP+), a
 
 8. In the **Scope tags** tab, add the required tags, and select **Next**.
 
-9. In the **Assignments** tab, select the device group you created in [Step 1 - Create a devices group](#step-1---create-a-devices-group). For more information on assigning the profile, go to [Assign device profiles](device-profile-assign.md) in Microsoft Intune.
+9. In the **Assignments** tab, select the device group you created in [Step 1 - Create a devices group](#step-1---create-a-devices-group). For more information on assigning the profile, go to [Assign device profiles](../assign-device-profile.md) in Microsoft Intune.
 
 10. In the **Review + create** tab, review all the details, and select **Create**.
 
@@ -168,4 +168,4 @@ This profile uses the FQDN of your mobile operator's download server (SM-DP+), a
 
 ## Related articles
 
-[Configure device profiles](device-profiles.md)
+[Configure device profiles](../overview.md)

@@ -17,7 +17,7 @@ As an Intune administrator, you can create and assign these settings to your dev
 
 ## Before you begin
 
-- [Create a Windows device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
+- [Create a Windows device restrictions configuration profile](./configure-device-restrictions.md#create-the-profile).
 
 When you create a Windows device restrictions configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
@@ -144,4 +144,4 @@ When you create a Windows device restrictions configuration profile, there are m
 
 ## Next steps
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).

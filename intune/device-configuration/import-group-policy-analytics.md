@@ -19,7 +19,7 @@ Microsoft Intune has many of the same settings as your on-premises GPOs. **Group
 - Imports and analyzes your on-premises GPOs.
 - Shows the settings that cloud-based MDM providers support, including Microsoft Intune.
 - Shows any deprecated settings, or settings not available.
-- Can [migrate your imported GPOs to a settings catalog policy](group-policy-analytics-migrate.md) that can be deployed to your devices.
+- Can [migrate your imported GPOs to a settings catalog policy](./migrate-group-policy.md) that can be deployed to your devices.
 
 If your organization uses on-premises GPOs to manage Windows devices, then Group Policy analytics can help. With Group Policy analytics, it's possible Intune can replace your on-premises GPOs. Windows devices are inherently cloud native. So depending on your configuration, these devices might not require access to an on-premises Active Directory.
 
@@ -29,11 +29,11 @@ This feature applies to:
 
 - Windows
 
-This article shows you how to export your on-premises GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md).
+This article shows you how to export your on-premises GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](./migrate-group-policy.md).
 
 ## Before you begin
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../intune-service/fundamentals/role-based-access-control.md).
 
 ## Export a GPO as an XML file
 
@@ -94,7 +94,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
       - **Yes** means there's a matching setting available in Intune. You can configure this setting in the Settings Catalog.
       - **No** means there isn't a matching setting available to MDM providers, including Intune.
-      - Other values: If you import older settings that aren't supported anymore, then the tool suggests migrating to a newer supported version. For more information on migrate scenarios, go to [Imported GPOs in Intune - What you need to know](group-policy-analytics-migrate.md#what-you-need-to-know).
+      - Other values: If you import older settings that aren't supported anymore, then the tool suggests migrating to a newer supported version. For more information on migrate scenarios, go to [Imported GPOs in Intune - What you need to know](./migrate-group-policy.md#what-you-need-to-know).
 
     - **Value**: Shows the value imported from the GPO. It shows different values, such `true`, `900`, `Enabled`, `false`, and so on.
     - **Scope**: Shows if the imported GPO targets users or targets devices.
@@ -106,9 +106,9 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
       The [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference) lists the available CSPs, shows the supported OS editions, and more.
 
-    - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you might see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
+    - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](./templates/configure-custom-settings.md). For example, you might see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
-7. For the settings that have MDM support, you can create a Settings Catalog policy with these settings. For the specific steps, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md).
+7. For the settings that have MDM support, you can create a Settings Catalog policy with these settings. For the specific steps, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](./migrate-group-policy.md).
 
 ### Select a scope tag when you import
 
@@ -125,7 +125,7 @@ For example, admins have `Charlotte`, `London`, or `Boston` scope tags assigned 
 
 For admins to see the analytics or migrate the imported GPO to an Intune policy, these admins must have one of the same scope tags selected during the import.
 
-For more information on scope tags, go to [RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+For more information on scope tags, go to [RBAC and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
 
 ## Supported CSPs and group policies
 
@@ -140,7 +140,7 @@ Group Policy analytics can parse the following CSPs for MDM support:
 
 If your imported GPO has settings that aren't in the supported CSPs and Group Policies, then the settings might be listed in the **Unknown Settings** column. This behavior means the settings were identified in your GPO.
 
-Even though Group Policy analytics can parse the CSPs, there are some things you should know when migrating your imported GPOs. For more information, go to [Migrate your imported GPO to a Settings Catalog policy - What you need to know](group-policy-analytics-migrate.md#what-you-need-to-know).
+Even though Group Policy analytics can parse the CSPs, there are some things you should know when migrating your imported GPOs. For more information, go to [Migrate your imported GPO to a Settings Catalog policy - What you need to know](./migrate-group-policy.md#what-you-need-to-know).
 
 ## Group Policy migration readiness report
 
@@ -198,7 +198,7 @@ At any time, you can delete imported GPOs:
 
 ## Next steps
 
-- [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md)
+- [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](./migrate-group-policy.md)
 
 ## See also
 

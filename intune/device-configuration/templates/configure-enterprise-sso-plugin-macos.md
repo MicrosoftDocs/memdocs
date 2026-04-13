@@ -16,7 +16,7 @@ This feature applies to:
 
 - macOS
 
-  For iOS/iPadOS, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
+  For iOS/iPadOS, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../settings-catalog/configure-enterprise-sso-plugin-ios.md).
 
 On macOS devices, you can configure SSO app extension settings in two places in Intune:
 
@@ -24,15 +24,15 @@ On macOS devices, you can configure SSO app extension settings in two places in 
 
   Use this article if you only want to configure the SSO app extension settings and don't want to also configure Platform SSO.
 
-- **[Settings Catalog](platform-sso-macos.md)** - This option configures Platform SSO and the SSO app extension together. You use Intune to deploy the settings to your devices.
+- **[Settings Catalog](../settings-catalog/configure-platform-sso-macos.md)** - This option configures Platform SSO and the SSO app extension together. You use Intune to deploy the settings to your devices.
 
-  Use the settings catalog settings if you want to configure both the Platform SSO and SSO app extension settings. For more information, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+  Use the settings catalog settings if you want to configure both the Platform SSO and SSO app extension settings. For more information, go to [Configure platform SSO for macOS devices in Microsoft Intune](../settings-catalog/configure-platform-sso-macos.md).
 
-For an overview of your SSO options on Apple devices, go to [SSO overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md).
+For an overview of your SSO options on Apple devices, go to [SSO overview and options for Apple devices in Microsoft Intune](../enterprise-sso-plugin.md).
 
 This article shows how to create an SSO app extension configuration policy for macOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
-If you want to configure Platform SSO and SSO app extension settings together, then go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+If you want to configure Platform SSO and SSO app extension settings together, then go to [Configure platform SSO for macOS devices in Microsoft Intune](../settings-catalog/configure-platform-sso-macos.md).
 
 ## App support
 
@@ -83,11 +83,11 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../../intune-service/includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
-For more information on the SSO app extension, go to [SSO overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md).
+For more information on the SSO app extension, go to [SSO overview and options for Apple devices in Microsoft Intune](../enterprise-sso-plugin.md).
 
 ## Create a single sign-on app extension configuration policy
 
-This section shows how to create an SSO app extension policy. For information on platform SSO, go to [Configure platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+This section shows how to create an SSO app extension policy. For information on platform SSO, go to [Configure platform SSO for macOS devices in Microsoft Intune](../settings-catalog/configure-platform-sso-macos.md).
 
 # [Intune](#tab/create-profile-intune)
 
@@ -126,11 +126,11 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       :::image type="content" source="./media/enterprise-sso-plugin/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO app extension plug-in on macOS devices in Microsoft Intune.":::
 
-8. Continue creating the profile, and assign the profile to the users or groups that receive these settings. For the specific steps, go to [Create the profile](device-features-configure.md#create-the-profile).
+8. Continue creating the profile, and assign the profile to the users or groups that receive these settings. For the specific steps, go to [Create the profile](./configure-device-features-apple.md#create-the-profile).
 
-    For guidance on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For guidance on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
-When the policy is ready, you assign the policy to your users. Microsoft recommends you assign the policy when the device enrolls in Intune. But, it can be assigned at any time, including on existing devices. When the device checks in with the Intune service, it receives this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
+When the policy is ready, you assign the policy to your users. Microsoft recommends you assign the policy when the device enrolls in Intune. But, it can be assigned at any time, including on existing devices. When the device checks in with the Intune service, it receives this profile. For more information, go to [Policy refresh intervals](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > select the profile you created and generate a report:
 

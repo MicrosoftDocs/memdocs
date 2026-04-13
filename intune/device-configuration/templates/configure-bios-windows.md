@@ -32,8 +32,8 @@ This article includes more information on the configuration file and Win32 app, 
 
 - To configure the Intune policies, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to:
 
-  - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-  - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+  - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
+  - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
 
 - This feature supports organization-owned devices that are MDM enrolled in Intune. Personal devices and devices not enrolled in Intune aren't supported.
 
@@ -59,7 +59,7 @@ This section focuses on using the OEM tool to create the configuration file, and
     - Add the app to Intune and make it a required app.
     - Assign the app to the group or assignment filter you create in [the next step](#step-2---create-a-group-or-use-an-assignment-filter) (in this article).
 
-    For information on Win32 apps in Intune, go to [Add, assign, and monitor a Win32 app in Microsoft Intune](../apps/apps-win32-add.md).
+    For information on Win32 apps in Intune, go to [Add, assign, and monitor a Win32 app in Microsoft Intune](../../app-management/deployment/add-win32.md).
 
 ## Step 2 - Create a group or use an assignment filter
 
@@ -70,8 +70,8 @@ It's recommended to focus this policy on a specific set of devices. Your options
 
 For information on these features, go to:
 
-- [Add groups to organize users and devices](../fundamentals/groups-add.md)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
+- [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../intune-service/fundamentals/filters.md)
 
 ## Step 3 - Create the BIOS configuration policy in Intune
 
@@ -107,7 +107,7 @@ This policy is where you add the configuration file you created in [Step 1 with 
 
     Select **Next**.
 
-7. In **Assignments**, select the new device group you created. This group receives your profile. For information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+7. In **Assignments**, select the new device group you created. This group receives your profile. For information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -124,8 +124,8 @@ In the Intune admin center, after you create a policy, you can monitor its statu
 
 For more information, go to:
 
-- [Monitor device configuration policies in Microsoft Intune](device-profile-monitor.md)
-- [Intune reports](../fundamentals/reports.md)
+- [Monitor device configuration policies in Microsoft Intune](../monitor-device-profile.md)
+- [Intune reports](../../intune-service/fundamentals/reports.md)
 
 ## Retrieve the BIOS passwords
 
@@ -147,8 +147,8 @@ This option gets the BIOS passwords, one device at a time.
 
         For information on the Intune built-in roles, go to:
 
-        - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-        - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+        - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
+        - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
 
     1. Select **Tenant administration** > **Roles** > **Create a new role**.
     1. **Name** your role and select **Next**.
@@ -175,7 +175,7 @@ For information on the built-in roles, go to [Microsoft Entra built-in roles](/e
 
 If you're planning to stop managing the BIOS of your devices or remove devices permanently from your tenant, then you must remove the BIOS password.
 
-To remove the BIOS password, in your Intune BIOS configuration policy, set the **Disable per-device BIOS password protection** setting to **Yes**. Then, assign the policy. When the device [checks in with Intune](device-profile-troubleshoot.md#policy-refresh-intervals), the policy applies. On the device, you can also manually sync the device with Intune to apply the policy.
+To remove the BIOS password, in your Intune BIOS configuration policy, set the **Disable per-device BIOS password protection** setting to **Yes**. Then, assign the policy. When the device [checks in with Intune](../troubleshoot-device-profiles.md#policy-refresh-intervals), the policy applies. On the device, you can also manually sync the device with Intune to apply the policy.
 
 After the policy applies, reboot the device.
 
@@ -199,11 +199,11 @@ The following table compares these options.
 
 For information on DFCI, go to:
 
-- [Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](./configure-dfci-windows.md)
 - [Microsoft DFCI Scenarios](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/)
 - [DFCI on Surface devices](/surface/surface-manage-dfci-guide)
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md)
-- [Monitor the profile status](device-profile-monitor.md)
+- [Assign the profile](../assign-device-profile.md)
+- [Monitor the profile status](../monitor-device-profile.md)

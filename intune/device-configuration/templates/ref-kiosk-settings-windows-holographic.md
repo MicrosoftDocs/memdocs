@@ -16,23 +16,23 @@ This article describes the different settings you can control on Windows Hologra
 
 As an Intune administrator, you can create and assign these settings to your devices.
 
-To learn more about the Windows kiosk feature in Intune, go to [configure kiosk settings](kiosk-settings.md).
+To learn more about the Windows kiosk feature in Intune, go to [configure kiosk settings](./configure-kiosk.md).
 
 ## Before you begin
 
-- [Create a Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+- [Create a Windows kiosk device configuration profile](./configure-kiosk.md#create-the-profile).
 
   When you create a Windows client kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
-- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-holographic.md#microsoft-edge-browser). To summarize:
+- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](./ref-device-restrictions-windows-holographic.md#microsoft-edge-browser). To summarize:
 
   1. Create this kiosk profile to run the device in kiosk mode.
-  2. Create the [device restrictions profile](device-restrictions-windows-holographic.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
+  2. Create the [device restrictions profile](./ref-device-restrictions-windows-holographic.md#microsoft-edge-browser), and configure specific features and settings allowed in Microsoft Edge.
 
-- Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-holographic.md#microsoft-edge-browser).
+- Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](./ref-device-restrictions-windows-holographic.md#microsoft-edge-browser).
 
 ## Single app, full-screen kiosk
 
@@ -50,7 +50,7 @@ Runs only one app on the device. When the user signs in, a specific app starts. 
 
   - **App to run in kiosk mode**: Select an app from the list.
 
-    Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
+    Don't have any apps listed? Add some using the steps at [Client Apps](../../app-management/deployment/index.md).
 
 ## Multi-app kiosk
 
@@ -77,12 +77,12 @@ Apps in this mode are available on the start menu. These apps are the only apps 
       For more information on these options, go to [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
+      > This setting enables the Microsoft Edge browser on the device. To configure Microsoft Edge-specific settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device restrictions profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Restrictions** > **Microsoft Edge Browser**). [Microsoft Edge browser](./ref-device-restrictions-windows-holographic.md#microsoft-edge-browser) describes the available Holographic for Business settings.
 
     - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
 
   - **Applications**
-    - **Add store app**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-windows.md).
+    - **Add store app**: Select an existing app you added or deployed to Intune as [Client Apps](../../app-management/deployment/index.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../../app-management/deployment/index.md) that you [add to Intune](../../app-management/deployment/add-microsoft-store-legacy.md).
     - **Add Win32 app**: Not supported on Windows Holographic for Business.
     - **Add by AUMID**: Use this option to add inbox Windows apps, like Notepad or Calculator. Enter the following properties:
 
@@ -100,6 +100,6 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [Windows](kiosk-settings-windows.md) devices.
+- Create kiosk profiles for [Android](./ref-device-restrictions-android.md#kiosk), [Android Enterprise](./ref-device-restrictions-android-enterprise.md) (Device experience), and [Windows](./ref-kiosk-settings-windows.md) devices.

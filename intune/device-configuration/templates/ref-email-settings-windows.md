@@ -23,8 +23,8 @@ This article describes some of the settings you can configure. You can create a 
 
 ## Before you begin
 
-- Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
-- Create a [Windows Email device configuration profile](email-settings-configure.md).
+- Deploy your email app. For more information, go to [Configure email apps](./configure-email.md).
+- Create a [Windows Email device configuration profile](./configure-email.md).
 
 ## Email settings
 
@@ -67,8 +67,8 @@ Select the content types that you want to synchronize to devices. Your options:
 
 ## Related articles
 
-- Configure the email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [iOS/iPadOS](email-settings-ios.md).
+- Configure the email settings on [Android](./ref-email-settings-android.md), [Android Enterprise](./ref-email-settings-android-enterprise.md), and [iOS/iPadOS](./ref-email-settings-ios.md).
 
-- [Learn more about the email settings in Intune](email-settings-configure.md).
+- [Learn more about the email settings in Intune](./configure-email.md).
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).

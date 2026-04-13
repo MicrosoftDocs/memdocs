@@ -25,7 +25,7 @@ This article shows you how to:
 
 1. Use Windows PowerShell to create WDAC policies.
 2. Use Windows PowerShell to convert the WDAC policy rules to XML, update the XML, and then convert the XML to a binary file.
-3. In Microsoft Intune, create a [custom device configuration profile](custom-settings-windows-holographic.md), add this WDAC policy binary file, and apply the policy to your HoloLens 2 devices.
+3. In Microsoft Intune, create a [custom device configuration profile](./ref-custom-settings-windows-holographic.md), add this WDAC policy binary file, and apply the policy to your HoloLens 2 devices.
 
 In Intune, you must create a custom configuration profile to use the Windows Defender Application Control (WDAC) CSP.
 
@@ -38,10 +38,10 @@ Use the steps in this article as a template to allow or deny specific apps from 
 
   For information on the Intune built-in roles, and what they can do, go to:
 
-  - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-  - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+  - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
+  - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
 
-- Create a user group or devices group with your HoloLens 2 devices. For information on groups, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
+- Create a user group or devices group with your HoloLens 2 devices. For information on groups, go to [User groups vs. device groups](../assign-device-profile.md#user-groups-vs-device-groups).
 
 ## Step 1 - Create the WDAC policy using Windows PowerShell
 
@@ -170,7 +170,7 @@ In this step, you create a custom device configuration profile in Intune. In the
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows custom device configuration profile.
 
-    For the specific steps, go to [Create a custom profile using OMA-URI in Intune](custom-settings-configure.md).
+    For the specific steps, go to [Create a custom profile using OMA-URI in Intune](./configure-custom-settings.md).
 
 2. When you create the profile, enter the following settings:
 
@@ -189,9 +189,9 @@ In this step, you create a custom device configuration profile in Intune. In the
 
     :::image type="content" source="./media/configure-wdac-hololens/custom-applicationcontrol-omauri.png" alt-text="Add a custom OMA-URI to configure ApplicationControl CSP in Microsoft Intune.":::
 
-3. When the profile is [assigned](device-profile-assign.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices.
+3. When the profile is [assigned](../assign-device-profile.md) to your HoloLens 2 group, check the profile status. After the profile successfully applies, reboot the HoloLens 2 devices.
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-- [Learn more about custom profiles in Intune](custom-settings-configure.md).
+- [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
+- [Learn more about custom profiles in Intune](./configure-custom-settings.md).

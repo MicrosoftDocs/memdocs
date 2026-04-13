@@ -52,17 +52,17 @@ This article shows you how to create a domain join profile for a hybrid Windows 
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the device groups that will receive your profile. For more information about assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the device groups that will receive your profile. For more information about assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     If you need to join devices to different domains or OUs, create different device groups.
 
     Select **Next**.
 
-11. In **Applicability rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. For more information on applicability rules, go to [Applicability rules](device-profile-create.md#applicability-rules).
+11. In **Applicability rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. For more information on applicability rules, go to [Applicability rules](../create-device-profile.md#applicability-rules).
 
     Select **Next**.
 
@@ -72,5 +72,5 @@ It's now ready for you to [deploy Microsoft Entra hybrid joined devices by using
 
 ## Related articles
 
-- After the profile is [assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
+- After the profile is [assigned](../assign-device-profile.md), [monitor its status](../monitor-device-profile.md).
 - [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).

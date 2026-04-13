@@ -20,8 +20,8 @@ This article describes all the email settings available for devices running iOS/
 
 ## Before you begin
 
-- Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
-- Create an [iOS/iPadOS e-mail device configuration profile](email-settings-configure.md).
+- Deploy your email app. For more information, go to [Configure email apps](./configure-email.md).
+- Create an [iOS/iPadOS e-mail device configuration profile](./configure-email.md).
 - These settings:
 
   - Are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
@@ -160,6 +160,6 @@ Configuring these settings deploys a new profile to the device, even when an exi
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows](email-settings-windows-10.md) devices.
+- Configure email settings on [Android](./ref-email-settings-android.md), [Android Enterprise](./ref-email-settings-android-enterprise.md), and [Windows](./ref-email-settings-windows.md) devices.

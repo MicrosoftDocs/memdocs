@@ -30,7 +30,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
   To modify or update an ADMX policy with the **Not Configured** setting, RBAC administrators need the **Device configurations > Delete** permission. The built-in **Policy and Profile Manager** role has this permission.
 
-- This feature is in [public preview](../fundamentals/public-preview.md).
+- This feature is in [public preview](../../intune-service/fundamentals/public-preview.md).
 
 - There are some limits:
 
@@ -73,7 +73,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 - ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs).
 
-  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](../../device-configuration/settings-catalog/index.md) or a [custom profile](custom-settings-configure.md).
+  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](../../device-configuration/settings-catalog/index.md) or a [custom profile](../templates/configure-custom-settings.md).
   - Do import these built-in settings if they're a required parent namespace of another file.
 
   For a list of the ADMX backed CSP settings, go to [ADMX-backed policies in Policy CSP](/windows/client-management/mdm/policies-in-policy-csp-admx-backed).
@@ -132,15 +132,15 @@ When the import completes, your ADMX templates are shown in the list. You can al
 6. Select **Next**.
 
 7. In **Configuration settings**, select and configure the settings you want in your policy. When finished, select **Next**.
-8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles in Intune](device-profile-assign.md).
+9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles in Intune](../assign-device-profile.md).
 
     If the profile is assigned to user groups, then configured ADMX settings apply to any device that the user enrolls, and signs in to. If the profile is assigned to device groups, then configured ADMX settings apply to any user that signs into that device. This assignment happens if the ADMX setting is a computer configuration (`HKEY_LOCAL_MACHINE`), or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user can also affect the experience of other users on that device.
 
-    For more information, see [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
+    For more information, see [User groups vs. device groups when assigning policies](../assign-device-profile.md#user-groups-vs-device-groups).
 
     Select **Next**.
 

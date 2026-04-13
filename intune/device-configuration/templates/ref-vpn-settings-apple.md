@@ -19,7 +19,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -31,7 +31,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
@@ -40,10 +40,10 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> - Create a [VPN device configuration profile](vpn-settings-configure.md).
+> - Create a [VPN device configuration profile](./configure-vpn.md).
 :::column-end:::
 :::row-end:::
 
@@ -53,9 +53,9 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 ::: zone pivot="ios-ipados"
 
-- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), which supports split tunneling.
+- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../../intune-service/protect/microsoft-tunnel-overview.md), which supports split tunneling.
 
-- These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
+- These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./configure-per-app-vpn-ios.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
 
 - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -63,7 +63,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 ::: zone pivot="macos"
 
-- These settings are available for all enrollment types. For more information on the enrollment types, go to [macOS enrollment](../enrollment/macos-enroll.md).
+- These settings are available for all enrollment types. For more information on the enrollment types, go to [macOS enrollment](../../device-enrollment/apple/methods-macos.md).
 
 ::: zone-end
 
@@ -132,7 +132,7 @@ Select the VPN connection type from the following list of vendors:
   - Enable NAC in the VPN profile.
 
   > [!IMPORTANT]
-  > The [network access control (NAC) service is deprecated](../protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
+  > The [network access control (NAC) service is deprecated](../../intune-service/protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
   >
   > To use the CR Service and prevent downtime with your VPN connection, redeploy this same VPN device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service and receives the VPN configuration profile, then the CR Service changes are automatically deployed to the device. And, your VPN connections should continue to work.
 
@@ -157,7 +157,7 @@ Select the VPN connection type from the following list of vendors:
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
 
 ::: zone-end
 
@@ -224,7 +224,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
     - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
 
-      To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+      To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
   - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign-on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
   - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.
@@ -391,9 +391,9 @@ For example, you can create a condition where the VPN connection is only used wh
 
 ### Per-app VPN feature in Automatic VPN
 
-Enables per-app VPN by associating this VPN connection with a specific app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the app software or program. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+Enables per-app VPN by associating this VPN connection with a specific app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the app software or program. For more information, see [How to assign and monitor apps](../../app-management/deployment/assign-groups.md).
 
-Per-app VPN isn't supported on an IKEv2 connection. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
+Per-app VPN isn't supported on an IKEv2 connection. For more information, see [set up per-app VPN for iOS/iPadOS devices](./configure-per-app-vpn-ios.md).
 
 - **Provider Type**: Only available for Pulse Secure and Custom VPN.
 
@@ -408,7 +408,7 @@ Per-app VPN isn't supported on an IKEv2 connection. For more information, see [s
 
 - **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection.
 
-  For more information, see [associated domains](device-features-configure.md#associated-domains).
+  For more information, see [associated domains](./configure-device-features-apple.md#associated-domains).
 
 - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
 
@@ -463,13 +463,13 @@ Select the **type of automatic VPN** you want. Your options:
   This setting applies to:
   - macOS 11 and newer (Big Sur)
 
-- **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a macOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, go to [How to assign and monitor apps](../apps/apps-deploy.md).
+- **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a macOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, go to [How to assign and monitor apps](../../app-management/deployment/assign-groups.md).
 
   - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
 
   - **Associated Domains**: Enter associated domains in the VPN profile that automatically start the VPN connection. For example, enter `contoso.com`. Devices in the `contoso.com` domain automatically start the VPN connection.
 
-    For more information, go to [associated domains](device-features-configure.md#associated-domains).
+    For more information, go to [associated domains](./configure-device-features-apple.md#associated-domains).
 
   - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Devices in the `contoso.com` domain won't start or won't use the per-app VPN connection. Devices in the `contoso.com` domain use the public Internet.
 
@@ -494,15 +494,15 @@ These settings apply to the following VPN connection types:
 
 **Settings**:
 
-- **Per-app VPN**: **Enable** associates a specific app to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+- **Per-app VPN**: **Enable** associates a specific app to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../../app-management/deployment/assign-groups.md).
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
 
 - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
 
 - **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection.
 
-  For more information, see [associated domains](device-features-configure.md#associated-domains).
+  For more information, see [associated domains](./configure-device-features-apple.md#associated-domains).
 
 - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
 
@@ -518,5 +518,5 @@ If you use a proxy, then configure the following settings.
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), and [Windows](vpn-settings-windows-10.md) devices.
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- Configure VPN settings on [Android](./ref-vpn-settings-android.md), [Android Enterprise](./ref-vpn-settings-android-enterprise.md), and [Windows](./ref-vpn-settings-windows.md) devices.

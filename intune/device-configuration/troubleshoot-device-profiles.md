@@ -29,7 +29,7 @@ This article applies to the following policies:
 
 When a device syncs with Intune, it checks for configuration for the current user or device context, and receives any pending actions, policies, and apps assigned to it.
 
-For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
+For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../app-management/protection/policy-delivery-timing.md).
 
 There are three main types of device syncs - change-based, client initiated, and single device.
 
@@ -39,7 +39,7 @@ These syncs happen when different actions trigger a notification for the device 
 
 Intune notifies online devices to sync with the Intune service. The notification times can vary from immediately up to a few hours. They can also vary between platforms. To learn more, see:
 
-- Android - [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed)
+- Android - [Google Mobile Services (GMS) can affect policy refresh intervals](../app-management/manage-without-gms.md#some-tasks-can-be-delayed)
 - iOS/iPadOS  - [Specific conditions can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy)
 
 An offline device, like when it's powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next sync with Intune.
@@ -47,11 +47,11 @@ An offline device, like when it's powered off, or a disconnected device, might n
 > [!NOTE]
 >
 > - It can take more time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
-> - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
+> - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../intune-service/fundamentals/intune-endpoints.md#intune-dependencies).
 >
->   - [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies)
->   - [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies)
->   - [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies)
+>   - [Windows dependencies](../intune-service/fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies)
+>   - [Apple dependencies](../intune-service/fundamentals/intune-endpoints.md#apple-dependencies)
+>   - [Android dependencies](../intune-service/fundamentals/intune-endpoints.md#android-aosp-dependencies)
 
 ### Client initiated
 
@@ -74,23 +74,23 @@ The following client syncs happen in response to a device event or state change,
 
 Admins or end users initiate these check-ins when they run certain actions on a single device:
 
-- **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../../user-help/compliance/validate-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../../user-help/apps/manage-apps-company-portal-website.md#available-and-required-apps).
+- **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/compliance/validate-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/apps/manage-apps-company-portal-website.md#available-and-required-apps).
 
-- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../../device-management/actions/sync.md), [remote lock](../../device-management/actions/remote-lock.md), or [reset passcode](../../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) don't cause a device check-in.
+- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../device-management/actions/sync.md), [remote lock](../device-management/actions/remote-lock.md), or [reset passcode](../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../intune-service/fundamentals/remote-help.md) don't cause a device check-in.
 
 ## Company portal
 
 At any time, users can open the Company Portal app and navigate to **Devices** > **Check Status** to evaluate your device's settings and verify access to work or school resources or navigate to **Settings** > **Sync** to get the latest updates, requirements, and communications from your organization.
 
-For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../app-management/deployment/win32.md).
 
-For related information, see  [Sync enrolled device for Windows](../../user-help/device-actions/sync-device-windows.md) and [Check device access in Company Portal for Windows](../../user-help/compliance/validate-device-access-windows.md).
+For related information, see  [Sync enrolled device for Windows](../user-help/device-actions/sync-device-windows.md) and [Check device access in Company Portal for Windows](../user-help/compliance/validate-device-access-windows.md).
 
 ## Conflicts
 
 Conflicts can happen when different policies update the same setting to different values. For example, you have two policies that update the copy/paste setting to different values. The conflict is handled differently depending on the type of policy.
 
-If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../../copilot/index.md#policy-and-setting-management).
+If you use Microsoft Copilot in Intune, then Copilot can help you resolve conflicts. For more information, go to [Policy and setting management in Copilot in Intune](../copilot/index.md#policy-and-setting-management).
 
 You can also use Microsoft Copilot in Intune to get more information about your policies and the settings configured in your policies.
 
@@ -112,7 +112,7 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
-In the Intune admin center, there are a few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+In the Intune admin center, there are a few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../intune-service/fundamentals/reports.md).
 
 ### Custom iOS/iPadOS or macOS policies that conflict
 
@@ -120,7 +120,7 @@ Intune doesn't evaluate the payload of Apple Configuration files or a custom Ope
 
 When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then Apple randomly applies the settings.
 
-The built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+The built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../intune-service/fundamentals/reports.md).
 
 ## A profile is deleted or no longer applicable
 
@@ -136,7 +136,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
     - Allow data roaming
     - Allow automatic synchronization while roaming
 
-  - **Windows devices**: After you remove or unassign the profile, have the Microsoft Entra user sign in to the device, and [sync with the Intune service](../../user-help/device-actions/sync-device-windows.md).
+  - **Windows devices**: After you remove or unassign the profile, have the Microsoft Entra user sign in to the device, and [sync with the Intune service](../user-help/device-actions/sync-device-windows.md).
 
     Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
 
@@ -170,8 +170,8 @@ If fast delivery of apps and policies is important to your setup/enrollment scen
 
 For more information on dynamic groups, go to:
 
-- [Add groups to organize users and devices in Intune](../fundamentals/groups-add.md)
-- [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
+- [Add groups to organize users and devices in Intune](../intune-service/fundamentals/groups-add.md)
+- [Performance recommendations when using Intune to group, target, and filter](../intune-service/fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
 ## Unassigned device compliance policy still assigned and enforced
@@ -185,7 +185,7 @@ You can also manually sync the device.
 To learn more, see:
 
 - [Policy refresh intervals](#policy-refresh-intervals) (this article)
-- [Remote device action: sync](../../device-management/actions/sync.md)
+- [Remote device action: sync](../device-management/actions/sync.md)
 
 ## "The sync could not be initiated (0x80072f9a)" error
 
@@ -196,4 +196,4 @@ If the Trusted Platform Module (TPM) was reset to factory settings, then the dev
 ## Related articles
 
 - [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
-- Need extra help? See [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md).
+- Need extra help? See [How to get support in Microsoft Intune](../fundamentals/it-pro-support/get-support-admin-center.md).

@@ -20,26 +20,26 @@ This article describes some of the settings you can control on Windows client de
 
 As an Intune administrator, you can create and assign these settings to your devices.
 
-To learn more about the Windows kiosk feature in Intune, see [configure kiosk settings](kiosk-settings.md).
+To learn more about the Windows kiosk feature in Intune, see [configure kiosk settings](./configure-kiosk.md).
 
 ## Before you begin
 
-- Create a [Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+- Create a [Windows kiosk device configuration profile](./configure-kiosk.md#create-the-profile).
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
-- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
+- This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](./ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
   1. Create this kiosk profile to run the device in kiosk mode.
-  2. Create the [device restrictions profile](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older), and configure specific features and settings allowed in Microsoft Edge.
+  2. Create the [device restrictions profile](./ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older), and configure specific features and settings allowed in Microsoft Edge.
 
 - Be sure that any files, scripts, and shortcuts are on the local system. For more information, including other Windows requirements, see [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout).
 
 - The kiosk profile loads for standard user accounts. The kiosk profile doesn't load for members in the local admin group.
 
 > [!IMPORTANT]
-> Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+> Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](./ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older).
 
 ## Single app, full-screen kiosk
 
@@ -75,7 +75,7 @@ Runs only one app on the device, such as a web browser or Store app.
     > This setting enables the Microsoft Edge browser on the device.
     >
     > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](../../device-configuration/settings-catalog/configure-edge.md).
-    > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+    > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](./configure-device-restrictions.md), and [configure the settings](./ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
 
@@ -84,7 +84,7 @@ Runs only one app on the device, such as a web browser or Store app.
 
     For more information on these options, see [Deploy Microsoft Edge kiosk mode](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://apps.microsoft.com/detail/9ngb5s5xg2kp?) from the Store, add it to Intune as a [Client App](../apps/apps-add.md). Then, assign the app to the kiosk devices.
+  - **Add Kiosk browser**: Select **Kiosk browser settings**. These settings control a web browser app on the kiosk. Be sure you get the [Kiosk browser app](https://apps.microsoft.com/detail/9ngb5s5xg2kp?) from the Store, add it to Intune as a [Client App](../../app-management/deployment/index.md). Then, assign the app to the kiosk devices.
 
     Enter the following settings:
 
@@ -115,7 +115,7 @@ Runs only one app on the device, such as a web browser or Store app.
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 
-    Don't have any apps listed? Add some using the steps at [Client Apps](../apps/apps-add.md).
+    Don't have any apps listed? Add some using the steps at [Client Apps](../../app-management/deployment/index.md).
 
 - **Specify Maintenance Window for App Restarts**: Some apps require a restart to complete the app installation, or complete the installation of updates. **Require** creates a maintenance window. If the app requires a restart, then it's restarted during this window.
 
@@ -166,9 +166,9 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
       > This setting enables the Microsoft Edge browser on the device.
       >
       > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](../../device-configuration/settings-catalog/configure-edge.md)
-      > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+      > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](./configure-device-restrictions.md), and [configure the settings](./ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older).
 
-    - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../apps/apps-add.md).
+    - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../../app-management/deployment/index.md).
 
       Enter the following settings:
 
@@ -191,7 +191,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
   - **Applications**
 
-    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../apps/store-apps-windows.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
+    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../../app-management/deployment/add-microsoft-store-legacy.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
 
     - **Add Win32 App**: A Win32 app is a traditional desktop app, such as Visual Studio Code or Google Chrome. Enter the following properties:
 
@@ -232,8 +232,8 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
 ## Next steps
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 
-You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
+You can also create kiosk profiles for [Android](./ref-device-restrictions-android.md#kiosk), [Android Enterprise](./ref-device-restrictions-android-enterprise.md) (Device experience), and [Windows Holographic for Business](./ref-kiosk-settings-windows-holographic.md) devices.
 
 Also see [set up a single-app kiosk](/windows/configuration/kiosk-single-app) or [set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps) in the Windows guidance.

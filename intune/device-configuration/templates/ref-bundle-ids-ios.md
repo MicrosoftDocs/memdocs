@@ -13,7 +13,7 @@ When you configure features on iOS/iPadOS devices, you can also add the built-in
 
 To get the bundle ID of other apps, you can:
 
-- [Get the app bundle ID using the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+- [Get the app bundle ID using the Intune admin center](../../app-management/collect-bundle-ids.md).
 - Go to Apple's list of [iOS/iPadOS bundle IDs](https://support.apple.com/guide/deployment/bundle-ids-for-native-ios-and-ipados-apps-depece748c41/1/web/1.0) (opens Apple's web site).
 
 > [!TIP]
@@ -84,4 +84,4 @@ This feature applies to:
 
 ## Next steps
 
-Use these bundle IDs to configure [device features](device-features-apple.md) and to [allow or restrict some settings](device-restrictions-apple.md) on iOS/iPadOS devices.
+Use these bundle IDs to configure [device features](./ref-device-features-apple.md) and to [allow or restrict some settings](./ref-device-restrictions-apple.md) on iOS/iPadOS devices.

@@ -18,7 +18,7 @@ Depending on the settings you choose, not all values in the following list are c
 
 ## Before you begin
 
-- [Create a Windows 8.1 VPN device configuration profile](vpn-settings-configure.md).
+- [Create a Windows 8.1 VPN device configuration profile](./configure-vpn.md).
 
 - [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
 
@@ -88,6 +88,6 @@ Depending on the settings you choose, not all values in the following list are c
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 
-- Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-apple.md), and [Windows](vpn-settings-windows-10.md) devices.
+- Configure VPN settings on [Android](./ref-vpn-settings-android.md), [Android Enterprise](./ref-vpn-settings-android-enterprise.md), [macOS](./ref-vpn-settings-apple.md), and [Windows](./ref-vpn-settings-windows.md) devices.

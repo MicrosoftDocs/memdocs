@@ -12,7 +12,7 @@ ms.collection:
 
 # Platform SSO configuration guide for macOS devices using Microsoft Intune
 
-You can configure Platform SSO to enable single sign-on (SSO) for your macOS devices using passwordless authentication, Microsoft Entra ID user accounts, or smart cards. Platform SSO is a Microsoft Entra feature that enhances the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) and the [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md).
+You can configure Platform SSO to enable single sign-on (SSO) for your macOS devices using passwordless authentication, Microsoft Entra ID user accounts, or smart cards. Platform SSO is a Microsoft Entra feature that enhances the [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) and the [SSO app extension](../templates/configure-enterprise-sso-plugin-macos.md).
 
 This feature applies to:
 
@@ -22,7 +22,7 @@ Platform SSO can sign users into their managed Mac devices using their Microsoft
 
 The [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin) in Microsoft Entra ID includes two SSO features - **Platform SSO** and the **SSO app extension**. This article focuses on configuring [Platform SSO with Microsoft Entra ID](/entra/identity/devices/macos-psso).
 
-This article shows you how to configure Platform SSO for macOS devices in Intune. For some common Platform SSO scenarios you can also configure, go to [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md).
+This article shows you how to configure Platform SSO for macOS devices in Intune. For some common Platform SSO scenarios you can also configure, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).
 
 ## Benefits
 
@@ -48,14 +48,14 @@ You configure Platform SSO using the Intune [settings catalog](../../device-conf
 
 - Devices must be running macOS 13.0 and newer.
 
-- Microsoft Intune [Company Portal app](../apps/apps-company-portal-macos.md) version **5.2404.0** and newer is required on the devices. This version includes Platform SSO.
+- Microsoft Intune [Company Portal app](../../app-management/deployment/add-company-portal-macos.md) version **5.2404.0** and newer is required on the devices. This version includes Platform SSO.
 
 - The following web browsers support Platform SSO:
 
   - Microsoft Edge
   - Google Chrome with the [Microsoft Single Sign On extension](https://chromewebstore.google.com/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji)
 
-    Using an [Intune preference file (.plist) policy](preference-file-settings-macos.md), you can force this extension to install. In your `.plist` file, you need some of the information at [Chrome Enterprise policy - ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist) (opens Google's web site).
+    Using an [Intune preference file (.plist) policy](../templates/configure-preference-file-macos.md), you can force this extension to install. In your `.plist` file, you need some of the information at [Chrome Enterprise policy - ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist) (opens Google's web site).
 
     > [!WARNING]
     > There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
@@ -63,17 +63,17 @@ You configure Platform SSO using the Intune [settings catalog](../../device-conf
   - Safari
   - Firefox - Configure the [MicrosoftEntraSSO policy](https://mozilla.github.io/policy-templates/#microsoftentrasso) (opens Mozilla's web site).
 
-  You can use Intune to add web browser apps, including [package (`.pkg`)](../apps/lob-apps-macos.md) and [disk image (`.dmg`)](../apps/lob-apps-macos-dmg.md) files, and deploy the app to your macOS devices. To get started, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
+  You can use Intune to add web browser apps, including [package (`.pkg`)](../../app-management/deployment/add-lob-macos.md) and [disk image (`.dmg`)](../../app-management/deployment/add-dmg-macos.md) files, and deploy the app to your macOS devices. To get started, go to [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
 - Platform SSO uses the Intune settings catalog to configure the required settings. To create the settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
-  There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+  There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
-- In [Step 2 - Create the Platform SSO policy](#step-2---create-the-platform-sso-policy-in-intune) (this article), you create a settings catalog policy that configures the required settings for Platform SSO. There are other common scenarios and settings you can configure in this policy. For more information, go to [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md).
+- In [Step 2 - Create the Platform SSO policy](#step-2---create-the-platform-sso-policy-in-intune) (this article), you create a settings catalog policy that configures the required settings for Platform SSO. There are other common scenarios and settings you can configure in this policy. For more information, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).
 
-  We recommend you review the [scenarios](platform-sso-scenarios.md) **before** you create the settings catalog policy. This way, you can configure the settings you need/want when you initially create the policy. If you don't configure the optional scenario settings initially, you can always edit the policy later. Only one SSO policy can be assigned to your groups. So, add these scenario settings to your existing Platform SSO settings catalog policy.
+  We recommend you review the [scenarios](./configure-platform-sso-scenarios-macos.md) **before** you create the settings catalog policy. This way, you can configure the settings you need/want when you initially create the policy. If you don't configure the optional scenario settings initially, you can always edit the policy later. Only one SSO policy can be assigned to your groups. So, add these scenario settings to your existing Platform SSO settings catalog policy.
 
 - In [Step 5 - Register the device](#step-5---register-the-device) (this article), users register their devices. These users must be allowed to join devices to Microsoft Entra ID. For more information, go to [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
@@ -199,7 +199,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     Close the settings picker.
 
     > [!TIP]
-    > There are more Platform SSO settings you can add to the policy that configure different scenarios, like enabling Kerberos SSO, using Touch ID biometric authentication, and enabling SSO on non-Microsoft apps. To learn more about these scenarios and their required settings, go to [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md).
+    > There are more Platform SSO settings you can add to the policy that configure different scenarios, like enabling Kerberos SSO, using Touch ID biometric authentication, and enabling SSO on non-Microsoft apps. To learn more about these scenarios and their required settings, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).
     >
     > If you don't configure the optional scenario settings initially, you can always edit the policy later.
 
@@ -228,7 +228,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     :::image type="content" source="./media/configure-platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
 10. Select **Next**.
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -240,7 +240,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     > - If the Platform SSO settings are applied incorrectly, or,
     > - If the Company Portal app bypasses Microsoft Entra device registration when Platform SSO isn't enabled
 
-    For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -259,8 +259,8 @@ The Company Portal app for macOS deploys and installs the Microsoft Enterprise S
 
 Using Intune, you can add the Company Portal app and deploy it as a required app to your macOS devices:
 
-- [Add the Company Portal app for macOS](../apps/apps-company-portal-macos.md) lists the steps.
-- Configure the Company Portal app to include your organization information (optional). For the steps, go to [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+- [Add the Company Portal app for macOS](../../app-management/deployment/add-company-portal-macos.md) lists the steps.
+- Configure the Company Portal app to include your organization information (optional). For the steps, go to [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../../app-management/configuration/configure-company-portal.md).
 
 There aren't any specific steps to configure the app for Platform SSO. Just make sure the latest Company Portal app is added to Intune and deployed to your macOS devices.
 
@@ -272,8 +272,8 @@ To use Platform SSO, the devices must be MDM enrolled in Intune using one of the
 
 - For **organization-owned devices**, you can:
 
-  - Create an [Automated device enrollment](../enrollment/device-enrollment-program-enroll-macos.md) policy using Apple Business Manager or Apple School Manager.
-  - Create a [Direct enrollment](../enrollment/device-enrollment-direct-enroll-macos.md) policy using Apple Configurator.
+  - Create an [Automated device enrollment](../../device-enrollment/apple/setup-automated-macos.md) policy using Apple Business Manager or Apple School Manager.
+  - Create a [Direct enrollment](../../device-enrollment/apple/setup-direct-macos.md) policy using Apple Configurator.
 
 - For **personally-owned devices**, create a [Device enrollment](../../device-enrollment/apple/guide-macos.md#byod-device-enrollment) policy. With this enrollment method, end users open the Company Portal app and sign in with their Microsoft Entra ID. When they successfully sign in, the enrollment policy applies.
 
@@ -309,7 +309,7 @@ To troubleshoot Platform SSO, go to [macOS Platform single sign-on known issues 
 
 ## Step 7 - Unassign any existing SSO app extension profiles
 
-After you confirm that your settings catalog policy is working, unassign any existing [SSO app extension](use-enterprise-sso-plug-in-macos-with-intune.md) profiles created using the Intune Device Features template.
+After you confirm that your settings catalog policy is working, unassign any existing [SSO app extension](../templates/configure-enterprise-sso-plugin-macos.md) profiles created using the Intune Device Features template.
 
 If you keep both policies, conflicts can occur.
 
@@ -321,7 +321,7 @@ You can configure Platform SSO with other mobile device management services (MDM
 
   The configuration steps in your MDM service can be different. We recommend you work with your MDM service vendor to correctly configure and deploy these Platform SSO settings.
 
-- Device registration with Platform SSO is more secure and uses hardware-bound device certificates. These changes can affect some MDM flows, like integration with [device compliance partners](../protect/device-compliance-partners.md).
+- Device registration with Platform SSO is more secure and uses hardware-bound device certificates. These changes can affect some MDM flows, like integration with [device compliance partners](../../intune-service/protect/device-compliance-partners.md).
 
   You should talk to your MDM service vendor to understand if the MDM tested Platform SSO, certified that their software works properly with Platform SSO, and is ready to support customers using Platform SSO.
 
@@ -334,7 +334,7 @@ When you configure Platform SSO, you might see the following errors:
   This error can occur if:
 
   - There's a required setting that isn't configured in the settings catalog profile.
-  - There's a setting in the settings catalog profile that you configured that's not applicable for the [redirect type payload](use-enterprise-sso-plug-in-ios-ipados-macos.md#sso-app-extension).
+  - There's a setting in the settings catalog profile that you configured that's not applicable for the [redirect type payload](../enterprise-sso-plugin.md#sso-app-extension).
 
   The authentication settings you configure in the settings catalog profile are different for macOS 13.x and 14.x devices.
 
@@ -348,9 +348,9 @@ When you configure Platform SSO, you might see the following errors:
 
 ## Related articles
 
-- [Common Platform SSO scenarios for macOS devices](platform-sso-scenarios.md)
+- [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md)
 - [macOS Platform Single Sign-on overview](/entra/identity/devices/macos-psso)
 - [Microsoft Enterprise SSO plug-in](/entra/identity-platform/apple-sso-plugin)
-- [Use the Microsoft Enterprise SSO app extension on macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
+- [Use the Microsoft Enterprise SSO app extension on macOS devices](../templates/configure-enterprise-sso-plugin-macos.md)
 - [What is a Primary Refresh Token (PRT)?](/entra/identity/devices/concept-primary-refresh-token)
 - [macOS Platform single sign-on known issues and troubleshooting](/entra/identity/devices/troubleshoot-macos-platform-single-sign-on-extension)

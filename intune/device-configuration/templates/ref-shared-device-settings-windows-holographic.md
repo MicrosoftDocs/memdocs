@@ -15,11 +15,11 @@ Users can sign in to these shared devices with a guest account. As they use the 
 
 This article describes the settings you use in a Windows Holographic for Business device configuration profile in Microsoft Intune. When the profile is created in Intune, you then deploy or assign the profile to device groups in your organization. You can also assign this profile to a device group with mixed device types and OS versions.
 
-For more information on this feature in Intune, see [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md). For more information on the Windows CSP, see [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp).
+For more information on this feature in Intune, see [Control access, accounts, and power features on shared PC or multi-user devices](./configure-shared-device.md). For more information on the Windows CSP, see [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp).
 
 ## Before your begin
 
-- [Create a Windows shared multi-user device configuration profile](shared-user-device-settings.md).
+- [Create a Windows shared multi-user device configuration profile](./configure-shared-device.md).
 
 - When you create a Windows shared user device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
@@ -48,5 +48,5 @@ For more information on this feature in Intune, see [Control access, accounts, a
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- See the shared user device settings for [Windows](shared-user-device-settings-windows.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- See the shared user device settings for [Windows](./ref-shared-device-settings-windows.md).

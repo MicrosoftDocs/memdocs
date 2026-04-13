@@ -12,9 +12,9 @@ ms.collection:
 
 # View and monitor device configuration policies in Microsoft Intune
 
-Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy. These capabilities extend to the profiles for your [endpoint security policies](../protect/endpoint-security-manage-devices.md#review-your-profiles-for-endpoint-security-policies) for macOS and Windows devices.
+Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, view the devices assigned to the policy, and update the properties of an existing policy. These capabilities extend to the profiles for your [endpoint security policies](../intune-service/protect/endpoint-security-manage-devices.md#review-your-profiles-for-endpoint-security-policies) for macOS and Windows devices.
 
-You can also use [Microsoft Copilot in Intune](../../copilot/index.md) to get more information about your policies and the settings configured in your policies.
+You can also use [Microsoft Copilot in Intune](../copilot/index.md) to get more information about your policies and the settings configured in your policies.
 
 This article shows you how to check the assignment status of existing device configuration policies, make changes, troubleshoot conflicts, and how to use Copilot for some of these features.
 
@@ -32,7 +32,7 @@ At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft
 - **Read Only Operator**: This role can view existing policies and view reports. It can't make any changes.
 - **Policy and Profile manager**: This role can view existing policies and reports, and can make any changes.
 
-For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
 
 ## View and filter existing policies
 
@@ -46,7 +46,7 @@ For information on the built-in roles in Intune, and what they can do, go to [Ro
     :::image type="content" source="./media/monitor-device-profile/filter-policies.png" alt-text="Screenshot that shows the Add filter option to filter existing policies in Microsoft Intune and Intune admin center.":::
 
 > [!NOTE]
-> For more in-depth reporting information about device configuration policies, go to [Intune reports](../fundamentals/reports.md).
+> For more in-depth reporting information about device configuration policies, go to [Intune reports](../intune-service/fundamentals/reports.md).
 
 ## View details on a policy
 
@@ -95,10 +95,10 @@ After you create your device configuration policy, Intune provides reporting dat
 6. Back in **Device and user check-in status**, the following property information for the specific policy is available for you to view and edit:
 
     - **Basics**: See the policy name and description.
-    - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy.
-    - **Scope tags**: See any existing [scope tags](../fundamentals/scope-tags.md) used in the policy.
+    - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../intune-service/fundamentals/filters.md) in the policy.
+    - **Scope tags**: See any existing [scope tags](../intune-service/fundamentals/scope-tags.md) used in the policy.
     - **Configuration settings**: See the settings you configured in the policy.
-    - **Applicability Rules**: On your Windows devices, go to the [applicability rules](device-profile-create.md#applicability-rules) used in the policy.
+    - **Applicability Rules**: On your Windows devices, go to the [applicability rules](./create-device-profile.md#applicability-rules) used in the policy.
 
 # [Copilot](#tab/copilot-devices)
 
@@ -110,13 +110,13 @@ After you create your device configuration policy, Intune provides reporting dat
 
     The summary describes what the policy does, the users and groups assigned to the policy, and the settings in the policy. This feature can help you understand the effect of a policy and its settings on your users and devices.
 
-    For more information on the different ways you can use Copilot in Intune, go to [Copilot in Intune overview](../../copilot/index.md).
+    For more information on the different ways you can use Copilot in Intune, go to [Copilot in Intune overview](../copilot/index.md).
 
 3. Go to **Devices** > **All devices** > select an existing device.
 
 4. Select **Summarize with Copilot**. Copilot shows device-specific information, like the device properties, group membership, and more.
 
-    For information on using Copilot to troubleshoot devices, go to [Use Copilot in Intune to troubleshoot devices](../../copilot/troubleshoot-devices.md).
+    For information on using Copilot to troubleshoot devices, go to [Use Copilot in Intune to troubleshoot devices](../copilot/troubleshoot-devices.md).
 
 ---
 
@@ -135,7 +135,7 @@ After you create your device configuration policy, Intune provides reporting dat
     - Certificates
 
 > [!TIP]
-> In **Devices**, select **Monitor**. This area lists all reports you can use, including reports for device configuration, compliance, enrollment, and software updates. For more information on all the Intune reports, go to [Intune reports](../fundamentals/reports.md).
+> In **Devices**, select **Monitor**. This area lists all reports you can use, including reports for device configuration, compliance, enrollment, and software updates. For more information on all the Intune reports, go to [Intune reports](../intune-service/fundamentals/reports.md).
 
 ## View conflicts
 
@@ -197,5 +197,5 @@ With your DFCI profile settings, you might see the following states:
 
 ## Related content
 
-- [Common questions, issues, and resolutions with device configuration policies](device-profile-troubleshoot.md)
+- [Common questions, issues, and resolutions with device configuration policies](./troubleshoot-device-profiles.md)
 - [Troubleshoot device configuration policies in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

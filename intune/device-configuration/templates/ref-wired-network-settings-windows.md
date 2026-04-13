@@ -20,9 +20,9 @@ This feature applies to:
 
 ## Before you begin
 
-- Create a [wired network device configuration profile](wired-networks-configure.md).
+- Create a [wired network device configuration profile](./configure-wired-networks.md).
 
-- These settings are available for all enrollment types. For more information on the enrollment types, go to [Set up enrollment for Windows devices](../enrollment/windows-enroll.md).
+- These settings are available for all enrollment types. For more information on the enrollment types, go to [Set up enrollment for Windows devices](../../device-enrollment/windows/enable-automatic-mdm.md).
 
 - These settings use the [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp).
 
@@ -177,6 +177,6 @@ This feature applies to:
 
 ## Related articles
 
-- Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Learn more about the [wired network settings for macOS devices](wired-network-settings-macos.md).
+- Be sure to [assign this profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- Learn more about the [wired network settings for macOS devices](./ref-wired-network-settings-macos.md).
 - Get information on the [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).

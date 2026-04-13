@@ -28,7 +28,7 @@ This feature applies to:
 You have a wired network named **Contoso wired network**. You want to set up all macOS desktops to connect to this network. Here's the process:
 
 1. In Intune, create a wired network profile that includes the settings that connect to the **Contoso wired network**.
-2. Assign the profile to a group that includes all users macOS desktop computers. For recommendations on using group types, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
+2. Assign the profile to a group that includes all users macOS desktop computers. For recommendations on using group types, go to [User groups vs. device groups](../assign-device-profile.md#user-groups-vs-device-groups).
 3. On their desktops, users find the **Contoso wired network** in the list of networks. They can then connect to the network, using the authentication method of your choosing.
 
 This article lists the steps to create a wired network profile in Intune. It also includes links that describe the different settings.
@@ -55,11 +55,11 @@ This article lists the steps to create a wired network profile in Intune. It als
 6. Select **Next**.
 7. In **Configuration settings**, configure the settings, including the Extensible Authentication Protocol (EAP) type. For a list of all settings, and what they do, go to:
 
-    - [macOS](wired-network-settings-macos.md)
-    - [Windows](wired-network-settings-windows.md)
+    - [macOS](./ref-wired-network-settings-macos.md)
+    - [Windows](./ref-wired-network-settings-windows.md)
 
 8. Select **Next**.
-9. In **Assignments**, select the user groups or device groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+9. In **Assignments**, select the user groups or device groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -70,4 +70,4 @@ This article lists the steps to create a wired network profile in Intune. It als
 
 ## Related articles
 
-The profile is created, but might not be doing anything. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but might not be doing anything. Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

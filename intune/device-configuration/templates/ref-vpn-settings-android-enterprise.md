@@ -21,25 +21,25 @@ This feature applies to:
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 
-As an Intune administrator, you can create and assign VPN settings to Android Enterprise devices. To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-configure.md).
+As an Intune administrator, you can create and assign VPN settings to Android Enterprise devices. To learn more about VPN profiles in Intune, see [VPN profiles](./configure-vpn.md).
 
 > [!NOTE]
 > To configure always-on VPN, you need to:
 >
 > 1. Create a VPN profile with your connection info, as described in this article.
-> 2. Create an [Android Enterprise device restrictions](device-restrictions-android-for-work.md) > **Corporate-owned** > **Connectivity** profile with the Always-on VPN setting configured.
+> 2. Create an [Android Enterprise device restrictions](./ref-device-restrictions-android-enterprise.md) > **Corporate-owned** > **Connectivity** profile with the Always-on VPN setting configured.
 > 3. Assign both profiles to your groups.
 
 ## Before you begin
 
-- Create an [Android Enterprise VPN device configuration profile](vpn-settings-configure.md):
+- Create an [Android Enterprise VPN device configuration profile](./configure-vpn.md):
 
   - Fully managed, dedicated, and corporate-owned work profile
   - Personally owned work profile
 
 - [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
 
-- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), which supports split tunneling.
+- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../../intune-service/protect/microsoft-tunnel-overview.md), which supports split tunneling.
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -69,13 +69,13 @@ The available settings depend on the VPN client you choose. Some settings are on
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
 
 ### Per-app VPN (fully managed, dedicated, and corporate-owned work profile)
 
 - **Add**: Select managed apps from the list. When users start the apps you add, traffic automatically routes through the VPN connection.
 
-For more information, see [Use a VPN and per-app VPN policy on Android Enterprise devices](../apps/app-configuration-vpn-ae.md).
+For more information, see [Use a VPN and per-app VPN policy on Android Enterprise devices](../../app-management/configuration/configure-vpn-android.md).
 
 ### Always-on VPN (fully managed, dedicated, and corporate-owned work profile)
 
@@ -127,13 +127,13 @@ The available settings depend on the VPN client you choose. Some settings are on
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
-  For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
 
 ### Per-app VPN (personally owned work profile)
 
 - **Add**: Select managed apps from the list. When users start the apps you add, traffic automatically routes through the VPN connection.
 
-For more information, see [Use a VPN and per-app VPN policy on Android Enterprise devices](../apps/app-configuration-vpn-ae.md).
+For more information, see [Use a VPN and per-app VPN policy on Android Enterprise devices](../../app-management/configuration/configure-vpn-android.md).
 
 ### Always-on VPN (personally owned work profile)
 
@@ -149,8 +149,8 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS and macOS](vpn-settings-apple.md), and [Windows](vpn-settings-windows-10.md).
+- Create VPN profiles for [Android device administrator](./ref-vpn-settings-android.md), [iOS/iPadOS and macOS](./ref-vpn-settings-apple.md), and [Windows](./ref-vpn-settings-windows.md).
 
 - Learn how to [Troubleshoot VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles).

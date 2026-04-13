@@ -61,17 +61,17 @@ This article shows you how to create a device restrictions profile. You can also
 
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
-    - [Android](device-restrictions-android-for-work.md)
-    - [iOS/iPadOS](device-restrictions-apple.md)
-    - [macOS](device-restrictions-apple.md)
-    - [Windows](device-restrictions-windows-10.md)
+    - [Android](./ref-device-restrictions-android-enterprise.md)
+    - [iOS/iPadOS](./ref-device-restrictions-apple.md)
+    - [macOS](./ref-device-restrictions-apple.md)
+    - [Windows](./ref-device-restrictions-windows.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, like `US-NC IT Team` or `JohnGlenn_ITDepartment`. For information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, like `US-NC IT Team` or `JohnGlenn_ITDepartment`. For information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -79,5 +79,5 @@ This article shows you how to create a device restrictions profile. You can also
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md).
-- [Monitor the profile status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md).
+- [Monitor the profile status](../monitor-device-profile.md).

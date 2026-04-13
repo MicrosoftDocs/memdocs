@@ -19,7 +19,7 @@ This feature applies to:
 
 - Windows
 
-You can import custom and non-Microsoft ADMX and ADML files. For more information, see [Import custom or partner ADMX files](administrative-templates-import-custom.md).
+You can import custom and non-Microsoft ADMX and ADML files. For more information, see [Import custom or partner ADMX files](./import-custom-admx-templates.md).
 
 This article describes the steps to use the administrative templates in the settings catalog. When the settings catalog policy is created, you can assign or deploy this profile to Windows client devices in your organization.
 
@@ -33,7 +33,7 @@ This article describes the steps to use the administrative templates in the sett
 
 - Starting with the December 2412 release, the **Templates** > **Administrative Templates** profile type in the Intune admin center is deprecated and read-only. For more information on this change, see [Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-device-configuration-policies-migrating-to/ba-p/4189665).
 
-  If you use custom ADMX templates, you can still [import administrative templates](administrative-templates-import-custom.md).
+  If you use custom ADMX templates, you can still [import administrative templates](./import-custom-admx-templates.md).
 
 ## Create the policy
 
@@ -67,15 +67,15 @@ This article describes the steps to use the administrative templates in the sett
     :::image type="content" source="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-sample-setting.png" alt-text="See a sample setting in the settings catalog in Microsoft Intune and Intune admin center that you can configure" lightbox="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-sample-setting.png":::
 
 10. Select **Next**.
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-12. In **Assignments**, select the user or groups that receive your profile. For more information, see [Assign user and device profiles in Intune](device-profile-assign.md).
+12. In **Assignments**, select the user or groups that receive your profile. For more information, see [Assign user and device profiles in Intune](../assign-device-profile.md).
 
     If the profile is assigned to user groups, the configured settings apply to any device that the user enrolls and signs in to. If the profile is assigned to device groups, the configured settings apply to any user that signs in to that device. This assignment happens if the setting is a computer configuration (`HKEY_LOCAL_MACHINE`) or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user can also affect the experience of other users on that device.
 
-    For more information, see [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
+    For more information, see [User groups vs. device groups when assigning policies](../assign-device-profile.md#user-groups-vs-device-groups).
 
     Select **Next**.
 
@@ -94,8 +94,8 @@ For more information about KIR, see:
 
 ## Related content
 
-- [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
+- [assign the template (also called a profile)](../assign-device-profile.md) and [monitor the policy status](../monitor-device-profile.md).
 - [Update Office using the settings catalog](../../device-configuration/settings-catalog/update-office.md).
 - [Restrict USB devices using the settings catalog](../../device-configuration/settings-catalog/restrict-usb.md).
 - [Create Microsoft Edge policy using the settings catalog](../../device-configuration/settings-catalog/configure-edge.md).
-- [Import custom or partner ADMX files](administrative-templates-import-custom.md).
+- [Import custom or partner ADMX files](./import-custom-admx-templates.md).

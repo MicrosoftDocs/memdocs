@@ -18,13 +18,13 @@ This feature applies to:
 
 - Android device administrator (DA) enrolled in Intune
 
-To use per-app VPN on Android Enterprise devices, use an [app configuration policy](../apps/app-configuration-vpn-ae.md). App configuration policies support more VPN client apps. On Android Enterprise devices, you can use the steps in this article. But, it's not recommended, and you're limited to only Pulse Secure and Citrix VPN connections.
+To use per-app VPN on Android Enterprise devices, use an [app configuration policy](../../app-management/configuration/configure-vpn-android.md). App configuration policies support more VPN client apps. On Android Enterprise devices, you can use the steps in this article. But, it's not recommended, and you're limited to only Pulse Secure and Citrix VPN connections.
 
 After you assign the policy to your Android DA device or user groups, users should start the Pulse Secure or Citrix VPN client. Then, the VPN client allows only traffic from the specified apps to use the open VPN connection.
 
 > [!NOTE]
 >
-> Only the Pulse Secure and Citrix connection types are supported for Android device administrator. On Android Enterprise devices, use an [app configuration policy](../apps/app-configuration-vpn-ae.md).
+> Only the Pulse Secure and Citrix connection types are supported for Android device administrator. On Android Enterprise devices, use an [app configuration policy](../../app-management/configuration/configure-vpn-android.md).
 
 ## Prerequisites
 
@@ -49,11 +49,11 @@ After you assign the policy to your Android DA device or user groups, users shou
 6. Select **Next**.
 7. In **Configuration settings**, configure the settings you want in the profile:
 
-    - [VPN settings for Android device administrator devices](vpn-settings-android.md).
+    - [VPN settings for Android device administrator devices](./ref-vpn-settings-android.md).
 
     Take note of the **Connection Name** value you enter when creating the VPN profile. This name is needed in the next step. In this example, the connection name is **MyAppVpnProfile**.
 
-8. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
+8. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](./configure-vpn.md#step-2---create-the-profile).
 
 ## Step 2 - Create a custom configuration policy
 
@@ -84,7 +84,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 
     :::image type="content" source="./media/configure-per-app-vpn-android/android_per_app_vpn_oma_uri.png" alt-text="Screenshot that shows Android device administrator per-app VPN custom policy in Microsoft Intune.":::
 
-8. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
+8. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](./configure-vpn.md#step-2---create-the-profile).
 
 ### Set your blocked and allowed app list (optional)
 
@@ -98,9 +98,9 @@ Use the **BLACKLIST** value to enter a list of apps that can't use the VPN conne
 
 ## Step 3 - Assign both policies
 
-[Assign both device profiles](device-profile-assign.md) to the required users or devices.
+[Assign both device profiles](../assign-device-profile.md) to the required users or devices.
 
 ## Resources
 
-- For a list of all the Android device administrator VPN settings, go to [Android device settings to configure VPN](vpn-settings-android.md).
-- To learn more about VPN settings and Intune, go to [configure VPN settings in Microsoft Intune](vpn-settings-configure.md).
+- For a list of all the Android device administrator VPN settings, go to [Android device settings to configure VPN](./ref-vpn-settings-android.md).
+- To learn more about VPN settings and Intune, go to [configure VPN settings in Microsoft Intune](./configure-vpn.md).

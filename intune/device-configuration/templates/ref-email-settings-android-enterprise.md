@@ -16,17 +16,17 @@ This feature applies to:
 
 - Android Enterprise personally owned devices with a work profile (BYOD)
 
-On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../apps/app-configuration-policies-use-android.md). For Android device administrator, go to [Android device settings to configure email](email-settings-android.md).
+On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../../app-management/configuration/configure-managed-android.md). For Android device administrator, go to [Android device settings to configure email](./ref-email-settings-android.md).
 
-As an Intune administrator, you can create and assign email settings to Android Enterprise personally owned devices with a work profile. To learn more about email profiles in Intune, go to [configure email settings](email-settings-configure.md).
+As an Intune administrator, you can create and assign email settings to Android Enterprise personally owned devices with a work profile. To learn more about email profiles in Intune, go to [configure email settings](./configure-email.md).
 
 ## Before you begin
 
-- Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
+- Deploy your email app. For more information, go to [Configure email apps](./configure-email.md).
 
   - If your profile uses Gmail and you want to use modern authentication, then you might have to deploy the Google Chrome app to the work profile.
 
-- Create an [Android Enterprise email device configuration profile](email-settings-configure.md) > **Personally-owned work profile**.
+- Create an [Android Enterprise email device configuration profile](./configure-email.md) > **Personally-owned work profile**.
 
 ## Android Enterprise
 
@@ -52,6 +52,6 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Create email profiles for [Android Samsung Knox](email-settings-android.md), [iOS/iPadOS](email-settings-ios.md), and [Windows](email-settings-windows-10.md) devices.
+- Create email profiles for [Android Samsung Knox](./ref-email-settings-android.md), [iOS/iPadOS](./ref-email-settings-ios.md), and [Windows](./ref-email-settings-windows.md) devices.

@@ -33,7 +33,7 @@ System extensions run in the user space, and don't access the kernel. Their goal
 
 System extensions are included in an app's bundle, and installed from the app. Specifically, you write your system extension, and then package the extension in your app bundle. For more information, go to [system extensions](https://developer.apple.com/documentation/systemextensions) (opens Apple's web site).
 
-When the app with the system extension is ready, you can deploy the app using Microsoft Intune. For more information, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
+When the app with the system extension is ready, you can deploy the app using Microsoft Intune. For more information, go to [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
 ## Kernel extensions
 
@@ -67,7 +67,7 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
   - Enrolled in Intune using **Automated Device Enrollment** (ADE), previously called Device Enrollment Program (DEP). For more information on this enrollment option, go to:
 
     - [Automated Device Enrollment (ADE) for macOS devices](../../device-enrollment/apple/guide-macos.md#automated-device-enrollment-ade-supervised)
-    - [Automatically enroll macOS devices](../enrollment/device-enrollment-program-enroll-macos.md)
+    - [Automatically enroll macOS devices](../../device-enrollment/apple/setup-automated-macos.md)
 
     **OR**
 
@@ -117,14 +117,14 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 
 7. In **Configuration settings**, configure your settings:
 
-    - [macOS](kernel-extensions-settings-macos.md)
+    - [macOS](./ref-kernel-extensions-settings-macos.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -132,4 +132,4 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 
 ## Resources
 
-Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

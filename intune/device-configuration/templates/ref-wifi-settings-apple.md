@@ -21,7 +21,7 @@ This article describes the settings you can configure.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -33,7 +33,7 @@ This article describes the settings you can configure.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
@@ -42,10 +42,10 @@ This article describes the settings you can configure.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> - Create a [Wi-Fi device configuration profile](wi-fi-settings-configure.md)
+> - Create a [Wi-Fi device configuration profile](./configure-wifi.md)
 > - These settings are available for all enrollment types.
 :::column-end:::
 :::row-end:::
@@ -236,6 +236,6 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
 ## Related articles
 
-- [Assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign this profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), and [Windows](wi-fi-settings-windows.md) devices.
+- Configure Wi-Fi settings on [Android](./ref-wifi-settings-android.md), [Android Enterprise](./ref-wifi-settings-android-enterprise.md), and [Windows](./ref-wifi-settings-windows.md) devices.

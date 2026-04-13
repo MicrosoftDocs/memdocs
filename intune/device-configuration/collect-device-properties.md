@@ -56,8 +56,8 @@ This feature applies to:
 > To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
-> - A [custom role](custom-settings-configure.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
-> - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md).
+> - A [custom role](./templates/configure-custom-settings.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
+> - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../intune-service/fundamentals/role-based-access-control-reference.md).
 :::column-end:::
 :::row-end:::
 
@@ -85,11 +85,11 @@ Use the following steps to create a properties catalog profile and assign it to 
 
     Select **Next**.
 
-6. Optional. In **Scope (Tags)**, select any scope tags you want to assign to the profile. To learn more about scope tags, see [Use scope tags for distributed IT](../fundamentals/scope-tags.md).
+6. Optional. In **Scope (Tags)**, select any scope tags you want to assign to the profile. To learn more about scope tags, see [Use scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-7. In **Assignments**, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+7. In **Assignments**, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](./assign-device-profile.md).
 
    Select **Next**.
 
@@ -109,7 +109,7 @@ Use the following steps to view the collected device inventory information:
 
 ## Available and required properties
 
-The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../../advanced-analytics/ref-data-platform-schema.md).
+The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../advanced-analytics/ref-data-platform-schema.md).
 
 # [Available property categories](#tab/available)
 
@@ -167,8 +167,8 @@ When you create the policy, the following **required** properties are automatica
 
   For Intune collected data, you see a **Device Inventory** tab. For Configuration Manager collected data, you see a **Resource Explorer** tab. Use the source that best fits your use case. In the future, we recommend using the Intune-based **Device Inventory**.
 
-- The client logs are available at `C:\Program Files\Microsoft Device Inventory Agent\Logs`. The logs can also be collected using the [Remote device action: collect diagnostics](../../device-management/actions/collect-diagnostics.md). You can use these logs to help troubleshoot.
+- The client logs are available at `C:\Program Files\Microsoft Device Inventory Agent\Logs`. The logs can also be collected using the [Remote device action: collect diagnostics](../device-management/actions/collect-diagnostics.md). You can use these logs to help troubleshoot.
 
 ## Related content
 
-- [Intune Data Platform Schema and property info](../../advanced-analytics/ref-data-platform-schema.md)
+- [Intune Data Platform Schema and property info](../advanced-analytics/ref-data-platform-schema.md)

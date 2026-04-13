@@ -16,13 +16,13 @@ This feature applies to:
 
 - Android device administrator (DA)
 
-As an Intune administrator, you can create and assign email settings to Android Samsung Knox Standard devices. To learn more about email profiles in Intune, go to [configure email settings](email-settings-configure.md).
+As an Intune administrator, you can create and assign email settings to Android Samsung Knox Standard devices. To learn more about email profiles in Intune, go to [configure email settings](./configure-email.md).
 
 [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
-- Create an [Android device administrator Email device configuration profile](email-settings-configure.md).
+- Create an [Android device administrator Email device configuration profile](./configure-email.md).
 
 ## Android (Samsung Knox)
 
@@ -70,6 +70,6 @@ Select the content types that you want to synchronize on the devices.
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Create email profiles for [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), and [Windows](email-settings-windows-10.md).
+- Create email profiles for [Android Enterprise](./ref-email-settings-android-enterprise.md), [iOS/iPadOS](./ref-email-settings-ios.md), and [Windows](./ref-email-settings-windows.md).

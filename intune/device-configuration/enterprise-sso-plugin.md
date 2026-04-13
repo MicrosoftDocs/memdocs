@@ -59,7 +59,7 @@ With Platform SSO:
   - Get a single sign-on experience when combined with the SSO app extension. The SSO app extension allows using Touch ID and passkeys with Microsoft Entra ID.
   - Can sign in with their Microsoft Entra user account and minimize the number of times they need to enter their Microsoft Entra credentials on their macOS devices.
 
-For more information on Platform SSO and to get started, go to [Configure Platform SSO for macOS devices in Intune](platform-sso-macos.md).
+For more information on Platform SSO and to get started, go to [Configure Platform SSO for macOS devices in Intune](./settings-catalog/configure-platform-sso-macos.md).
 
 ### Platform SSO feature summary
 
@@ -110,13 +110,13 @@ For more information on the SSO app extension, go to:
 
 - iOS/iPadOS:
 
-  - [Use the SSO app extension on iOS/iPadOS devices in Intune](use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-  - [SSO app extension settings list - iOS/iPadOS in Intune](device-features-apple.md)
+  - [Use the SSO app extension on iOS/iPadOS devices in Intune](./settings-catalog/configure-enterprise-sso-plugin-ios.md)
+  - [SSO app extension settings list - iOS/iPadOS in Intune](./templates/ref-device-features-apple.md)
 
 - macOS:
 
-  - [Use the SSO app extension on macOS devices in Intune](use-enterprise-sso-plug-in-macos-with-intune.md)
-  - [SSO app extension settings list - macOS in Intune](device-features-apple.md)
+  - [Use the SSO app extension on macOS devices in Intune](./templates/configure-enterprise-sso-plugin-macos.md)
+  - [SSO app extension settings list - macOS in Intune](./templates/ref-device-features-apple.md)
 
 ### SSO app extension feature summary
 
@@ -146,7 +146,7 @@ Applies to:
 
 This single sign-on policy is based on Kerberos. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune policy settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps.
 
-For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](device-features-apple.md).
+For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](./templates/ref-device-features-apple.md).
 
 To use single sign-on, be sure you have:
 

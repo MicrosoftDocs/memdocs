@@ -25,7 +25,7 @@ For example, you use Windows client devices in a secure environment, and want to
 When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
 
 > [!TIP]
-> For Dell devices, you can create a **BIOS configurations** policy. For more information, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](bios-configuration.md).
+> For Dell devices, you can create a **BIOS configurations** policy. For more information, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](./configure-bios-windows.md).
 
 ## Before you begin
 
@@ -47,7 +47,7 @@ Windows Autopilot deployment profiles are assigned to Microsoft Entra security g
 
 - On the manufacturing floor, you have 10 devices. On all devices, you want to prevent booting the devices from a USB device. In this scenario, you can create a security devices group, and add these 10 devices to the group.
 
-For more information on creating groups in Intune, go to [Add groups to organize users and devices](../fundamentals/groups-add.md).
+For more information on creating groups in Intune, go to [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
 
 ## Create the profiles
 
@@ -65,7 +65,7 @@ This profile makes sure that devices are verified and enabled for DFCI during th
 
 The following article lists the steps to create the profile:
 
-- [Enrollment State Page profile](../enrollment/windows-enrollment-status.md)
+- [Enrollment State Page profile](../../device-enrollment/windows/setup-status-page.md)
 
 ### Step 3 - Create the DFCI profile in Intune
 
@@ -90,13 +90,13 @@ This profile includes the DFCI settings you configure.
    Select **Next**.
 6. In **Configuration settings**, configure the settings you want to control in the UEFI firmware layer. For a list of all the settings, and what they do, go to:
 
-    - [Windows DFCI settings](device-firmware-configuration-interface-windows-settings.md)
+    - [Windows DFCI settings](./ref-dfci-settings-windows.md)
 
     Select **Next**.
 
-7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
    Select **Next**.
-8. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+8. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
    Select **Next**.
 9. In **Review + create**, review your settings and select **Create**. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -104,7 +104,7 @@ The next time each device checks in, the policy is applied.
 
 ## Assign the profiles, and reboot
 
-Be sure to [assign](../configuration/device-profile-assign.md) the profiles to your Microsoft Entra security groups that include your DFCI devices. The profile can be assigned when it's created, or after.
+Be sure to [assign](../assign-device-profile.md) the profiles to your Microsoft Entra security groups that include your DFCI devices. The profile can be assigned when it's created, or after.
 
 When the device runs the Windows Autopilot, during the Enrollment Status page, DFCI may force a reboot. This first reboot enrolls UEFI to Intune.
 
@@ -116,7 +116,7 @@ The next time the device syncs with Intune, Windows receives the DFCI settings. 
 
 If you want to change existing DFCI settings on devices that are in use, you can. In your existing DFCI profile, change the settings, and save your changes. Since the profile is already assigned, the new DFCI settings take effect when:
 
-1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, go to [when devices get a policy, profile, or app updates](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, go to [when devices get a policy, profile, or app updates](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 2. To enforce the new settings, reboot the device [remotely](../../device-management/actions/restart.md) or locally.
 
 You can also [signal devices to check in](../../device-management/actions/sync.md). After a successful sync, [signal to reboot](../../device-management/actions/restart.md).
@@ -126,7 +126,7 @@ You can also [signal devices to check in](../../device-management/actions/sync.m
 
 ## Conflicts
 
-When you create the DFCI policy, you configure the [Windows DFCI settings](device-firmware-configuration-interface-windows-settings.md) you want to manage.
+When you create the DFCI policy, you configure the [Windows DFCI settings](./ref-dfci-settings-windows.md) you want to manage.
 
 Some settings are in a logical category, like **Microphones and Speakers**. There's also granular settings, like **Microphones**. If these settings conflict, then the following happens:
 
@@ -180,5 +180,5 @@ When the DFCI policy is applied, local users can't change settings configured by
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md)
-- [Monitor the profile status](device-profile-monitor.md)
+- [Assign the profile](../assign-device-profile.md)
+- [Monitor the profile status](../monitor-device-profile.md)

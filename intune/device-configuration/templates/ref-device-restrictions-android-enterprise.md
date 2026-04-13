@@ -29,12 +29,12 @@ This article applies to:
 
 ## Before you begin
 
-- Create a [device restrictions profile](device-restrictions-configure.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
+- Create a [device restrictions profile](./configure-device-restrictions.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
 
   - **Platform**: Select **Android Enterprise** or **Android (AOSP)**.
   - **Profile type**: Select **Templates**.
 
-  For the steps, go to [Create a device restriction profile in Microsoft Intune](device-restrictions-configure.md).
+  For the steps, go to [Create a device restriction profile in Microsoft Intune](./configure-device-restrictions.md).
 
 - Settings can be configured using **templates** (this article) or the **[settings catalog](../../device-configuration/settings-catalog/index.md)**. This article focuses on the template. For more information on **settings catalog**, go to:
 
@@ -283,7 +283,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 **Device experience type**: Select a device experience type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 
 - **Not configured**: Intune doesn't change or update this setting. By default, users might see the device's default home screen experience.
-- **Kiosk mode (dedicated and fully managed)**: Configure a kiosk-style experience on your dedicated and fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md), and [assign](../apps/apps-deploy.md) the apps you want on the devices.
+- **Kiosk mode (dedicated and fully managed)**: Configure a kiosk-style experience on your dedicated and fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available. Before you configure these settings, be sure to [add](../../app-management/deployment/add-managed-google-play.md), and [assign](../../app-management/deployment/assign-groups.md) the apps you want on the devices.
 
   When you use kiosk mode (single-app or multi-app), by default, the platform disables familiar user interfaces and workflows. Some of these features can be re-enabled on OS 9 and newer. For example, when a device is operating in a kiosk state, the system changes some behaviors, including:
 
@@ -305,8 +305,8 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
       **Select an app to use for kiosk mode**: Select the Managed Google Play or Android Enterprise system app from the list. For single-app dedicated and fully managed devices, the app you select **must be**:
 
-      - [Added in Intune](../apps/apps-add-android-for-work.md).
-      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated or fully managed devices.
+      - [Added in Intune](../../app-management/deployment/add-managed-google-play.md).
+      - [Assigned to the device group](../../app-management/deployment/assign-groups.md) created for your dedicated or fully managed devices.
 
         > [!NOTE]
         > On fully managed devices, the only selected app that applies is the Managed Home Screen. All other apps are treated as a required app.
@@ -315,20 +315,20 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
       For multi-app dedicated and fully managed devices, the **Managed Home Screen** app isn't required to be in the configuration profile, but the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
 
-      - [Added in Intune](../apps/apps-add-android-for-work.md).
-      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated or fully managed devices.
+      - [Added in Intune](../../app-management/deployment/add-managed-google-play.md).
+      - [Assigned to the device group](../../app-management/deployment/assign-groups.md) created for your dedicated or fully managed devices.
 
       Also, any packages you want launchable from Managed Home Screen **must be**:
 
-      - [Added in Intune](../apps/apps-add-android-for-work.md).
-      - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated or fully managed devices.
+      - [Added in Intune](../../app-management/deployment/add-managed-google-play.md).
+      - [Assigned to the device group](../../app-management/deployment/assign-groups.md) created for your dedicated or fully managed devices.
 
       When the **Managed Home Screen** app is added, any other installed apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
 
       For more information on the Managed Home screen, see [Setup Microsoft Managed Home Screen on dedicated and fully managed devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
       > [!NOTE]
-      > Some of the **Managed Home Screen** settings are available in a device restrictions policy. To view and use all the available settings for the **Managed Home Screen**, [create a Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
+      > Some of the **Managed Home Screen** settings are available in a device restrictions policy. To view and use all the available settings for the **Managed Home Screen**, [create a Managed Home Screen app configuration policy](../../app-management/configuration/configure-managed-home-screen.md).
 
       - **Custom app layout**: **Enable** lets you put apps and folders in different places on the Managed Home Screen. When set to **Not configured**, Intune doesn't change or update this setting. By default, the apps and folders you add are shown on the home screen in alphabetical order.
 
@@ -341,9 +341,9 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
 
       - **Add**: Select your apps from the list.
 
-        If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated or fully managed devices.
+        If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../../app-management/deployment/assign-groups.md) to the device group created for your dedicated or fully managed devices.
 
-        You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated or fully managed devices](../apps/apps-deploy.md).
+        You can also add other [Android apps](../../app-management/deployment/add-managed-google-play.md) and [web apps](../../app-management/deployment/add-web.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated or fully managed devices](../../app-management/deployment/assign-groups.md).
 
         > [!IMPORTANT]
         >
@@ -457,7 +457,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
         - Android System Settings
         - Android System UI
 
-        For more information on how to enable Android system apps, go to: [Manage Android Enterprise system apps](../apps/apps-ae-system.md#enable-a-system-app-in-intune)
+        For more information on how to enable Android system apps, go to: [Manage Android Enterprise system apps](../../app-management/configuration/manage-system-apps-android.md#enable-a-system-app-in-intune)
 
       - **Flashlight access**: **Enable** shows the flashlight control on the Managed Home Screen, and allows users to turn the flashlight on or off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the flashlight control on Managed Home Screen. It prevents users from using the flashlight while using the Managed Home Screen.
 
@@ -501,7 +501,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
             - **Simple**: Requires numbers. There are no restrictions on repeating (444) or ordered (123, 321, 246) sequences.
             - **Complex**: Allows users to create a PIN with alphanumeric characters. Can't use repeating (444) or ordered (123, 321, 246) sequences.
 
-            For more information on this setting, see **Complexity of session PIN** at [create a Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
+            For more information on this setting, see **Complexity of session PIN** at [create a Managed Home Screen app configuration policy](../../app-management/configuration/configure-managed-home-screen.md).
 
           - **Require user to enter session PIN if screensaver has appeared**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver shows.
         - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign out of the Managed Home Screen based on inactivity. This setting must be enabled to show the subsettings.
@@ -509,7 +509,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds.
 
       > [!NOTE]
-      > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../apps/app-configuration-managed-home-screen-app.md).
+      > Some of the Managed Home Screen settings are available in a device restrictions policy. To view and use all the available settings for the Managed Home Screen, create a [Managed Home Screen app configuration policy](../../app-management/configuration/configure-managed-home-screen.md).
 
 - **Microsoft launcher (fully managed only)**: Configures the Microsoft Launcher app on fully managed devices. This option is best suited for devices which should provide the end user access to all applications and settings on the device.
 
@@ -567,7 +567,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
   >
   > - Users on fully managed, and corporate-owned work profile devices aren't prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   >
-  >   To apply the device password settings during device enrollment, assign the device restriction profile to users (no [filters](../fundamentals/filters.md)). Don't assign the profile to devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
+  >   To apply the device password settings during device enrollment, assign the device restriction profile to users (no [filters](../../intune-service/fundamentals/filters.md)). Don't assign the profile to devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
   > - On dedicated devices, if the device is set up with single or multi-app kiosk mode, then users are prompted to set a password. Screens force and guide users to create a compliant password before they can continue using the device.
   > - On dedicated devices that aren't using kiosk mode, users aren't notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
 
@@ -651,7 +651,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
     - Make sure you target any app (private or public) with the uninstall intent that shouldn't be findable or apps installed by users from the Managed Google Play Store.
     - Users can't use apps that are added to a blocklist (assigned with uninstall intent) on the personal profile of corporate-owned devices with a work profile.
 
-    For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+    For more information on excluding users and groups from specific apps, go to [Include and exclude app assignments](../../app-management/deployment/configure-assignment-scope.md).
 
   - When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS:
 
@@ -709,7 +709,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
   The VPN client you choose must be installed on the device, and it must support per-app VPN in corporate-owned work profiles. Otherwise, an error occurs.
 
   - You do need to approve the VPN client app in the **Managed Google Play Store**, sync the app to Intune, and deploy the app to the device. After these steps, the app is installed in the user's corporate-owned work profile.
-  - You still need to configure the VPN client with a [VPN profile](vpn-settings-android-enterprise.md), or through an [app configuration profile](../apps/app-configuration-policies-use-android.md).
+  - You still need to configure the VPN client with a [VPN profile](./ref-vpn-settings-android-enterprise.md), or through an [app configuration profile](../../app-management/configuration/configure-managed-android.md).
   - There might be known issues when using per-app VPN with F5 Access for Android 3.0.4. For more information, see [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Lockdown mode**: **Enable** forces all network traffic to use the VPN tunnel. If a connection to the VPN isn't established, then the device won't have network access. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow traffic to flow through the VPN tunnel or through the mobile network.
@@ -1211,6 +1211,6 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows](kiosk-settings.md) devices.
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- You can also create dedicated device kiosk profiles for [Android](./ref-device-restrictions-android.md#kiosk) and [Windows](./configure-kiosk.md) devices.
 - [Configure and troubleshoot Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974).

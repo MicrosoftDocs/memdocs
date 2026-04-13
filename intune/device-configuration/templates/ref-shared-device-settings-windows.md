@@ -18,11 +18,11 @@ End users can sign in to these shared devices with a guest account. As they use 
 
 This article describes some of the settings you can configure in an Intune device configuration profile. When the profile is created in Intune, you deploy or assign the profile to device groups in your organization. You can also assign this profile to device groups with mixed device types and Windows OS versions.
 
-For more information on this feature in Intune, go to [Control access, accounts, and power features on shared PC or multi-user devices](shared-user-device-settings.md). For more information on the Windows CSP, go to [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp).
+For more information on this feature in Intune, go to [Control access, accounts, and power features on shared PC or multi-user devices](./configure-shared-device.md). For more information on the Windows CSP, go to [SharedPC CSP](/windows/client-management/mdm/sharedpc-csp).
 
 ## Before your begin
 
-- Create a [Windows shared multi-user device configuration profile](shared-user-device-settings.md).
+- Create a [Windows shared multi-user device configuration profile](./configure-shared-device.md).
 
 ## Shared multi-user device settings
 
@@ -82,12 +82,12 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
 
   - [Shared PC technical reference - SetEDUPolicy](/windows/configuration/shared-pc/shared-pc-technical#setedupolicy)
   - [SetEduPolicies CSP](/windows/client-management/mdm/sharedpc-csp#setedupolicies)
-  - [Common Education device restrictions](../industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md)
+  - [Common Education device restrictions](../../intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md)
 
 > [!TIP]
 > [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows client feature, including concepts and group policies that can be set in shared mode.
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- See the settings for [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- See the settings for [Windows Holographic for Business](./ref-shared-device-settings-windows-holographic.md).

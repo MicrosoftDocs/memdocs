@@ -24,7 +24,7 @@ These settings apply to devices running:
 
 ## Before you begin
 
-- [Deploy your VPN app](../apps/apps-add.md), and create a [Windows client VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client app you choose. Some settings are only available for specific VPN clients.
+- [Deploy your VPN app](../../app-management/deployment/index.md), and create a [Windows client VPN device configuration profile](./configure-vpn.md). The available settings depend on the VPN client app you choose. Some settings are only available for specific VPN clients.
 
 - [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
 
@@ -340,6 +340,6 @@ For example, if the user is already connected to a trusted DNS suffix, then the 
 
 ## Related articles
 
-Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+Be sure to [assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 
-Configure VPN settings on [Android](vpn-settings-android.md), and [iOS/iPadOS and macOS](vpn-settings-apple.md) devices.
+Configure VPN settings on [Android](./ref-vpn-settings-android.md), and [iOS/iPadOS and macOS](./ref-vpn-settings-apple.md) devices.

@@ -16,7 +16,7 @@ This article shows you the Microsoft Intune device restrictions settings that yo
 
 ## Before you begin
 
-- [Create a Windows 8.1 device restrictions configuration profile](device-restrictions-configure.md#create-the-profile).
+- [Create a Windows 8.1 device restrictions configuration profile](./configure-device-restrictions.md#create-the-profile).
 
 ## General
 
@@ -110,4 +110,4 @@ This article shows you the Microsoft Intune device restrictions settings that yo
 
 ## Related articles
 
-- Create a device restrictions profile on [Windows devices](device-restrictions-windows-10.md).
+- Create a device restrictions profile on [Windows devices](./ref-device-restrictions-windows.md).

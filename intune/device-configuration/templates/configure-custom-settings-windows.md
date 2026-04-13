@@ -16,7 +16,7 @@ ms.collection:
 
 This article describes some of the different custom settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built in to Intune.
 
-For more information on custom profiles, go to [Create a profile with custom settings](custom-settings-configure.md).
+For more information on custom profiles, go to [Create a profile with custom settings](./configure-custom-settings.md).
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
@@ -28,11 +28,11 @@ Windows client custom profiles use Open Mobile Alliance Uniform Resource Identif
 
 Windows client makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
-If you're looking for a specific setting, the [Windows device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](../../device-configuration/settings-catalog/index.md) include many built-in settings. So, you may not need to enter custom values.
+If you're looking for a specific setting, the [Windows device restriction profile](./ref-device-restrictions-windows.md) and the [Settings catalog](../../device-configuration/settings-catalog/index.md) include many built-in settings. So, you may not need to enter custom values.
 
 ## Before you begin
 
-- [Create a Windows custom profile](custom-settings-configure.md#create-the-profile).
+- [Create a Windows custom profile](./configure-custom-settings.md#create-the-profile).
 
 ## OMA-URI settings
 
@@ -70,11 +70,11 @@ Also, Intune doesn't support all the settings listed in [CSP reference](/windows
 > - Intune Administrator Microsoft Entra role
 >
 > For more information, go to:
-> - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+> - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
 > - [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 
 ## Next steps
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 
-[Learn more about custom profiles in Intune](custom-settings-configure.md).
+[Learn more about custom profiles in Intune](./configure-custom-settings.md).

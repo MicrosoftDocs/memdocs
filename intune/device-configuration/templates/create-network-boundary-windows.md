@@ -16,7 +16,7 @@ In a network boundary, you can add network domains, IPV4 and IPv6 ranges, proxy 
 
 In Intune, you can create a network boundary profile, and deploy this policy to your devices.
 
-For more information on using Microsoft Defender Application Guard in Intune, go to [Windows client settings to protect devices using Intune](../protect/endpoint-protection-windows-10.md#microsoft-defender-application-guard).
+For more information on using Microsoft Defender Application Guard in Intune, go to [Windows client settings to protect devices using Intune](../../intune-service/protect/endpoint-protection-windows-10.md#microsoft-defender-application-guard).
 
 This feature applies to:
 
@@ -63,11 +63,11 @@ This article shows you how to create the profile, and add trusted sites.
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -77,5 +77,5 @@ The next time each device checks in, the policy is applied.
 
 ## Related articles
 
-- After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
+- After the [profile is assigned](../assign-device-profile.md), be sure to [monitor its status](../monitor-device-profile.md).
 - [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)

@@ -33,23 +33,23 @@ As part of your mobile device management (MDM) solution, use these configuration
 > [!TIP]
 > If you manage on-premises devices using Microsoft Configuration Manager, then you can use co-management to cloud attach your on-premises devices. With co-management, you manage Windows client devices with Configuration Manager and Microsoft Intune.
 >
-> You can create the device profiles and policies you need in Intune based on policies you currently have in Configuration Manager. For more information about co-management, go [Understand co-management using Microsoft Configuration Manager](../../configmgr/comanage/overview.md). For related information, see [Prepare Intune for co-management](../../configmgr/core/get-started/capabilities-in-technical-preview-1709.md#prepare-intune-for-co-management).
+> You can create the device profiles and policies you need in Intune based on policies you currently have in Configuration Manager. For more information about co-management, go [Understand co-management using Microsoft Configuration Manager](../configmgr/comanage/overview.md). For related information, see [Prepare Intune for co-management](/configmgr/core/get-started/capabilities-in-technical-preview-1709#prepare-intune-for-co-management).
 
 ## Use templates or the settings catalog
 
-In Intune, for most platforms, when you create a device configuration profile, you have two policy types: **Templates** or the **[Settings Catalog](../../device-configuration/settings-catalog/index.md)**.
+In Intune, for most platforms, when you create a device configuration profile, you have two policy types: **Templates** or the **[Settings Catalog](./settings-catalog/index.md)**.
 
 The settings catalog lists all the settings you can configure, and all in one place. Templates include a logical grouping of settings that configure a feature or concept, like email, kiosk devices, and device firmware.
 
 Intune has many templates that include groups of settings that focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates).
 
-You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../fundamentals/protection-configuration-levels.md).
+You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../intune-service/fundamentals/protection-configuration-levels.md).
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
 ## Certificates
 
-You use [certificates in Intune](../../fundamentals/certificates/overview.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
+You use [certificates in Intune](../fundamentals/certificates/overview.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
 
 Certificates are also used for signing and encrypting email using S/MIME. Common types of certificates used in Intune include trusted root certificates, Simple Certificate Enrollment Protocol (SCEP) certificates, and Public Key Cryptography Standards (PKCS) certificates.
 
@@ -64,7 +64,7 @@ This feature supports:
 
 ## Custom profile
 
-[Custom settings](custom-settings-configure.md) let administrators assign device settings that aren't built in to Intune. On Android devices, you can enter OMA-URI values. For iOS/iPadOS devices, you can import a configuration file you created in the Apple Configurator.
+[Custom settings](./templates/configure-custom-settings.md) let administrators assign device settings that aren't built in to Intune. On Android devices, you can enter OMA-URI values. For iOS/iPadOS devices, you can import a configuration file you created in the Apple Configurator.
 
 This feature supports:
 
@@ -75,7 +75,7 @@ This feature supports:
 
 ## Delivery optimization
 
-[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates.
+[Delivery optimization](./templates/configure-delivery-optimization-windows.md) provides a better experience to delivery software updates.
 
 Use these settings to control how software updates are downloaded to devices in your organization. For example, you can let users get their own updates, or get updates using the delivery optimization cloud services in a device profile.
 
@@ -85,9 +85,9 @@ This feature supports:
 
 ## Derived credential
 
-If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../../device-security/certificates/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
+If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../device-security/certificates/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing & encryption.
 
-Intune [supports several derived credential issuers](../../device-security/certificates/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
+Intune [supports several derived credential issuers](../device-security/certificates/derived-credentials.md#supported-issuers). Each platform also has their own set of settings.
 
 This feature supports:
 
@@ -96,7 +96,7 @@ This feature supports:
 
 ## Device features
 
-[Device features](device-features-configure.md) controls features on iOS/iPadOS and macOS devices, such as AirPrint, notifications, and lock screen messages.
+[Device features](./templates/configure-device-features-apple.md) controls features on iOS/iPadOS and macOS devices, such as AirPrint, notifications, and lock screen messages.
 
 This feature supports:
 
@@ -105,9 +105,9 @@ This feature supports:
 
 ## BIOS configuration and DFCI
 
-With [BIOS configuration](bios-configuration.md), administrators can password-protect access to the BIOS and create a configuration file using an OEM tool with the BIOS settings they want. Then, they add this configuration file to the Intune policy.
+With [BIOS configuration](./templates/configure-bios-windows.md), administrators can password-protect access to the BIOS and create a configuration file using an OEM tool with the BIOS settings they want. Then, they add this configuration file to the Intune policy.
 
-[Device firmware configuration interface](device-firmware-configuration-interface-windows.md) (DFCI) allows administrators to enable or disable UEFI (BIOS) settings using Intune. Use these settings to enhance security at the firmware-level, which is typically more resilient to malicious attacks.
+[Device firmware configuration interface](./templates/configure-dfci-windows.md) (DFCI) allows administrators to enable or disable UEFI (BIOS) settings using Intune. Use these settings to enhance security at the firmware-level, which is typically more resilient to malicious attacks.
 
 This feature supports:
 
@@ -115,7 +115,7 @@ This feature supports:
 
 ## Device restrictions
 
-[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera.
+[Device restrictions](./templates/configure-device-restrictions.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera.
 
 There are also settings that manage access to app stores, restrict users from viewing corporate documents in unmanaged apps, require a password to unlock the device, or require devices to use only specific Wi-Fi networks.
 
@@ -130,7 +130,7 @@ This feature supports:
 
 ## Domain join
 
-[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to Microsoft Entra hybrid joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
+[Domain join](./templates/configure-domain-join-windows.md) configures on-premises Active Directory domain information. This information is deployed to Microsoft Entra hybrid joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
 
 This feature supports:
 
@@ -138,7 +138,7 @@ This feature supports:
 
 ## Edition upgrade and mode switch
 
-[Windows edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
+[Windows edition upgrades](./templates/configure-edition-upgrade-windows.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
 
 This feature supports:
 
@@ -146,13 +146,13 @@ This feature supports:
 
 ## Education
 
-[Education settings - Windows](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows](./templates/configure-education-settings.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
-[Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
+[Education settings - iOS/iPadOS](../intune-service/fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
 ## Email
 
-[Email settings](email-settings-configure.md) creates, assigns, and monitors Exchange ActiveSync email settings on the devices. Email profiles help with consistency, reduce support calls, and let end-users access company email on their personal devices, without any required setup on their part.
+[Email settings](./templates/configure-email.md) creates, assigns, and monitors Exchange ActiveSync email settings on the devices. Email profiles help with consistency, reduce support calls, and let end-users access company email on their personal devices, without any required setup on their part.
 
 This feature supports:
 
@@ -166,9 +166,9 @@ This feature supports:
 > [!IMPORTANT]
 > This template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
 >
-> Instead, use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. To learn more, go to [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
+> Instead, use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. To learn more, go to [macOS settings catalog](./settings-catalog/index.md).
 
-[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
+[Endpoint protection](../intune-service/protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
 To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
@@ -179,7 +179,7 @@ This feature supports:
 
 ## eSIM cellular
 
-[eSIM cellular profiles](esim-device-configuration.md) lets administrators configure cellular data plans on your managed devices for internet and data access. After getting activation codes from your mobile operator, use Intune to import these activation codes, and then assign to your eSIM capable devices.
+[eSIM cellular profiles](./templates/enable-esim.md) lets administrators configure cellular data plans on your managed devices for internet and data access. After getting activation codes from your mobile operator, use Intune to import these activation codes, and then assign to your eSIM capable devices.
 
 This feature supports:
 
@@ -190,9 +190,9 @@ This feature supports:
 > [!IMPORTANT]
 > This template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
 >
-> Instead, use the settings catalog to create new policies that configure the System Extensions payload. To learn more, go to [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
+> Instead, use the settings catalog to create new policies that configure the System Extensions payload. To learn more, go to [macOS settings catalog](./settings-catalog/index.md).
 
-[macOS system extensions and kernel extensions](kernel-extensions-overview-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
+[macOS system extensions and kernel extensions](./templates/configure-kernel-extensions-macos.md) allows administrators to add features or programs that extend the native capabilities of the operating system. Configure these settings to trust all extensions from a specific developer or partner, or allow specific extensions.
 
 This feature supports:
 
@@ -200,7 +200,7 @@ This feature supports:
 
 ## Kiosk
 
-[Kiosk settings](kiosk-settings.md) profile configures a device to run one app, or run many apps. You can also customize other features on your kiosk, including a start menu and a web browser.
+[Kiosk settings](./templates/configure-kiosk.md) profile configures a device to run one app, or run many apps. You can also customize other features on your kiosk, including a start menu and a web browser.
 
 This feature supports:
 
@@ -208,11 +208,11 @@ This feature supports:
 
   Windows 11 supports single app kiosk only.
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-apple.md).
+Kiosk settings also available as device restrictions for [Android](./templates/ref-device-restrictions-android.md#kiosk), [Android Enterprise](./templates/ref-device-restrictions-android-enterprise.md) (Device experience), and [iOS/iPadOS](./templates/ref-device-restrictions-apple.md).
 
 ## MX profile (Zebra)
 
-[Mobility extensions (MX)](android-zebra-mx-overview.md) expand on the built-in Intune settings to customize or add more settings specific to Zebra devices. Zebra devices are commonly used on factory floors, and retail environments. If you have hundreds or thousands of Zebra devices, you can use Intune to configure and manage these devices.
+[Mobility extensions (MX)](./templates/configure-zebra-mx-android.md) expand on the built-in Intune settings to customize or add more settings specific to Zebra devices. Zebra devices are commonly used on factory floors, and retail environments. If you have hundreds or thousands of Zebra devices, you can use Intune to configure and manage these devices.
 
 This feature supports:
 
@@ -220,7 +220,7 @@ This feature supports:
 
 ## Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../intune-service/protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 
@@ -228,7 +228,7 @@ This feature supports:
 
 ## Network boundary
 
-[Network boundary](network-boundary-windows.md) creates a list of sites that your organization trusts. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
+[Network boundary](./templates/create-network-boundary-windows.md) creates a list of sites that your organization trusts. This feature is used with Microsoft Defender Application Guard and Microsoft Edge to help protect your devices.
 
 This feature supports:
 
@@ -236,7 +236,7 @@ This feature supports:
 
 ## OEMConfig
 
-On Android Enterprise devices, [OEMConfig](android-oem-configuration-overview.md) is a standard. It allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way.
+On Android Enterprise devices, [OEMConfig](./templates/configure-oemconfig-android.md) is a standard. It allows OEMs (original equipment manufacturers) and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way.
 
 With OEMConfig, an OEM creates a schema that defines OEM-specific management features, and embeds it in an app uploaded to Google Play. Intune reads the schema from the app, and allows Intune administrators to configure the settings in the schema.
 
@@ -246,22 +246,22 @@ This feature supports:
 
 ## Preference file
 
-[Preference files](preference-file-settings-macos.md) on macOS devices include information about apps. For example, you can use preference files to control web browser settings, customize apps, and more.
+[Preference files](./templates/configure-preference-file-macos.md) on macOS devices include information about apps. For example, you can use preference files to control web browser settings, customize apps, and more.
 
 This feature supports:
 
 - macOS
 
 > [!TIP]
-> macOS settings are continually being added to the [settings catalog](../../device-configuration/settings-catalog/index.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md).
+> macOS settings are continually being added to the [settings catalog](./settings-catalog/index.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](./settings-catalog/common-tasks.md).
 
 ## Settings catalog and Group Policy analytics
 
-The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
+The [settings catalog](./settings-catalog/index.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
 On Windows, there are thousands of settings available, including many settings not found in the templates. When you want a complete list of all the settings, use the settings catalog to create your policy. If you want to use a logical grouping of settings, then continue to use the templates.
 
-[Tasks you can complete using the Intune settings catalog](../../device-configuration/settings-catalog/common-tasks.md) is a good resource.
+[Tasks you can complete using the Intune settings catalog](./settings-catalog/common-tasks.md) is a good resource.
 
 This feature supports:
 
@@ -271,7 +271,7 @@ This feature supports:
 - Android (AOSP)
 - Windows
 
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
+[Group Policy analytics](./import-group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
 
 This feature supports:
 
@@ -279,7 +279,7 @@ This feature supports:
 
 ## Shared multi-user device
 
-[Windows](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
+[Windows](./templates/ref-shared-device-settings-windows.md) and [Windows Holographic for Business](./templates/ref-shared-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
 
 These shared multi-user device settings allow administrators to control some of the device features, and manage these shared devices using Intune.
 
@@ -290,11 +290,11 @@ This feature supports:
 
 ## Shell scripts
 
-On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. With Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
+On Linux devices, you can [add existing Bash scripts](./overview.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. With Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
 
-On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
+On macOS devices, you can [add existing shell scripts](../device-management/tools/run-shell-scripts-macos.md), and then deploy these scripts to your macOS devices.
 
-On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/powershell-scripts.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../device-management/tools/run-powershell-scripts-windows.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 
@@ -304,9 +304,9 @@ This feature supports:
 
 ## Update policies
 
-[iOS/iPadOS and macOS managed software updates](../../device-updates/apple/index.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
+[iOS/iPadOS and macOS managed software updates](../device-updates/apple/index.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
 
-For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md).
+For update policies on Windows devices, see [Delivery optimization](./templates/configure-delivery-optimization-windows.md).
 
 This feature supports:
 
@@ -315,7 +315,7 @@ This feature supports:
 
 ## VPN
 
-[VPN settings](vpn-settings-configure.md) assigns VPN profiles to users and devices in your organization, so they can easily and securely connect to the network.
+[VPN settings](./templates/configure-vpn.md) assigns VPN profiles to users and devices in your organization, so they can easily and securely connect to the network.
 
 Virtual private networks (VPNs) give users secure remote access to your company network. Devices use a VPN connection profile to start a connection with your VPN server.
 
@@ -329,7 +329,7 @@ This feature supports:
 
 ## Wi-Fi
 
-[Wi-Fi settings](wi-fi-settings-configure.md) assigns wireless network settings to users and devices. When you assign a WiFi profile, users get access to your corporate WiFi without having to configure it themselves.
+[Wi-Fi settings](./templates/configure-wifi.md) assigns wireless network settings to users and devices. When you assign a WiFi profile, users get access to your corporate WiFi without having to configure it themselves.
 
 This feature supports:
 
@@ -342,7 +342,7 @@ This feature supports:
 
 ## Windows health monitoring
 
-[Windows health monitoring](windows-health-monitoring.md) lets Endpoint Analytics collect and analyze your event data. You can use this data to get insights on your Windows devices, including software updates and startup performance.
+[Windows health monitoring](./templates/configure-health-monitoring-windows.md) lets Endpoint Analytics collect and analyze your event data. You can use this data to get insights on your Windows devices, including software updates and startup performance.
 
 This feature supports:
 
@@ -350,7 +350,7 @@ This feature supports:
 
 ## Wired networks
 
-[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS and Windows desktop computers and devices. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+[Wired networks](./templates/configure-wired-networks.md) let you create and manage 802.1x wired connections for macOS and Windows desktop computers and devices. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
 
 When you assign the profile, users get access to your corporate wired network without having to configure it themselves.
 
@@ -361,7 +361,7 @@ This feature supports:
 
 ## Zebra Mobility Extensions (MX)
 
-[Zebra Mobility Extensions (MX)](android-zebra-mx-overview.md) allows administrators to use and manage Zebra devices in Intune. You create StageNow profiles with your settings, and then use Intune to assign and deploy these profiles to your Zebra devices. The [StageNow logs and common issues](android-zebra-mx-logs-troubleshoot.md) is a great resource to troubleshoot profiles, and see some potential issues when using StageNow.
+[Zebra Mobility Extensions (MX)](./templates/configure-zebra-mx-android.md) allows administrators to use and manage Zebra devices in Intune. You create StageNow profiles with your settings, and then use Intune to assign and deploy these profiles to your Zebra devices. The [StageNow logs and common issues](./templates/troubleshoot-zebra-mx-android.md) is a great resource to troubleshoot profiles, and see some potential issues when using StageNow.
 
 This feature supports:
 
@@ -369,9 +369,9 @@ This feature supports:
 
 ## Manage and troubleshoot
 
-[Manage your profiles](device-profile-monitor.md) to check the status of devices, and the profiles assigned. Also help resolve conflicts by seeing the settings that cause a conflict, and the profiles that include these settings.
+[Manage your profiles](./monitor-device-profile.md) to check the status of devices, and the profiles assigned. Also help resolve conflicts by seeing the settings that cause a conflict, and the profiles that include these settings.
 
-[Common questions and behaviors with policies and profiles](device-profile-troubleshoot.md) helps administrators work with profiles. It describes what happens when deleting a profile, what causes notifications to be sent to devices, and more.
+[Common questions and behaviors with policies and profiles](./troubleshoot-device-profiles.md) helps administrators work with profiles. It describes what happens when deleting a profile, what causes notifications to be sent to devices, and more.
 
 ## Next steps
 

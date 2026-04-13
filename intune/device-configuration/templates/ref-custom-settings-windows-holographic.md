@@ -21,13 +21,13 @@ Windows Holographic for Business custom profiles use Open Mobile Alliance Unifor
 
 Windows Holographic for Business makes many configuration service providers (CSPs) settings available. For a CSP overview, go to [Introduction to configuration service providers (CSPs) for IT pros](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). For specific CSPs supported by Windows Holographic, go to [CSPs supported in Windows Holographic](/windows/client-management/mdm/configuration-service-provider-reference#hololens).
 
-If you're looking for a specific setting, remember that the [Windows Holographic for Business device restriction profile](device-restrictions-windows-holographic.md) includes many built-in settings. So, you might not need to enter custom values.
+If you're looking for a specific setting, remember that the [Windows Holographic for Business device restriction profile](./ref-device-restrictions-windows-holographic.md) includes many built-in settings. So, you might not need to enter custom values.
 
 This article shows you how to create a custom profile for Windows Holographic for Business devices. It also includes a list of the recommended OMA-URI settings.
 
 ## Before you begin
 
-- [Create a Windows custom profile](custom-settings-configure.md#create-the-profile).
+- [Create a Windows custom profile](./configure-custom-settings.md#create-the-profile).
 
 ## Custom OMA-URI Settings
 
@@ -153,8 +153,8 @@ Also, Intune doesn't support all of the settings listed in [CSPs supported in Wi
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- Create a [custom profile on Windows devices](custom-settings-windows-10.md).
+- Create a [custom profile on Windows devices](./configure-custom-settings-windows.md).
 
-- Learn more about [custom profiles](custom-settings-configure.md) in Intune.
+- Learn more about [custom profiles](./configure-custom-settings.md) in Intune.

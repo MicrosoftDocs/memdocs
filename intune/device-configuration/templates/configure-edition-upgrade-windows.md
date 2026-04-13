@@ -25,7 +25,7 @@ This feature applies to:
 
 Intune uses **configuration profiles** to create and customize these settings for your organization's needs. After you add these features in a profile, you can then push or deploy the profile to Windows client devices in your organization. When you deploy the profile, Intune automatically upgrades the devices or switches out of S mode. When the device checks-in with the Intune service, the policy applies and Intune upgrades the device or switches out of S mode.
 
-This article lists the supported upgrade paths, and shows you how to create the device configuration profile. For a list of all the available upgrade and S mode settings you can configure, go to [Windows client device settings to upgrade editions or enable S mode in Intune](edition-upgrade-windows-settings.md).
+This article lists the supported upgrade paths, and shows you how to create the device configuration profile. For a list of all the available upgrade and S mode settings you can configure, go to [Windows client device settings to upgrade editions or enable S mode in Intune](./ref-edition-upgrade-settings-windows.md).
 
 > [!NOTE]
 > If you remove the policy assignment later, the version of Windows on the device isn't reverted. The device continues to run normally.
@@ -35,7 +35,7 @@ This article lists the supported upgrade paths, and shows you how to create the 
 - To install the updated Windows version on the devices that you target with the policy (for Windows client Desktop editions), you need a valid product key. You can use either Multiple Activation Keys (MAK) or Key Management Server (KMS) keys.
 - For Windows Holographic editions, you can use a Microsoft license file. The license file includes the licensing information to install the updated edition on all devices that you target with the policy.
 - The Windows client devices you assign the policy are enrolled in Microsoft Intune.
-- To create the policy, at a minimum, sign in with an account that has the **Policy and Profile Manager** Intune role. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To create the policy, at a minimum, sign in with an account that has the **Policy and Profile Manager** Intune role. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Supported upgrade paths
 
@@ -72,16 +72,16 @@ The following table lists the supported upgrade paths for the Windows edition up
 6. Select **Next**.
 7. In **Configuration settings**, enter the settings you want to configure. For a list of all settings, and what they do, go to:
 
-    - [Windows upgrade and S mode](edition-upgrade-windows-settings.md)
-    - [Windows Holographic for Business](holographic-upgrade.md)
+    - [Windows upgrade and S mode](./ref-edition-upgrade-settings-windows.md)
+    - [Windows Holographic for Business](./ref-holographic-upgrade-settings.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -91,6 +91,6 @@ The next time each device checks in with Intune, the policy applies.
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- See the upgrade and S mode settings for [Windows](edition-upgrade-windows-settings.md) and [Windows Holographic for Business](holographic-upgrade.md) devices.
+- See the upgrade and S mode settings for [Windows](./ref-edition-upgrade-settings-windows.md) and [Windows Holographic for Business](./ref-holographic-upgrade-settings.md) devices.

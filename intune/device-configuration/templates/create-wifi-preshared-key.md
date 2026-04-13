@@ -83,11 +83,11 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     > [!NOTE]
     > This policy can only be assigned to user groups.
@@ -275,5 +275,5 @@ After you have the XML file, copy and paste the XML syntax into OMA-URI settings
 
 ## Resources
 
-- Be sure to [assign the profile](device-profile-assign.md), and [monitor](device-profile-monitor.md) its status.
+- Be sure to [assign the profile](../assign-device-profile.md), and [monitor](../monitor-device-profile.md) its status.
 - For more information on EAP in general, see [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)

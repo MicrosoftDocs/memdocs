@@ -26,7 +26,7 @@ These settings use Apple's restriction settings. For more information, see [Appl
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -38,7 +38,7 @@ These settings use Apple's restriction settings. For more information, see [Appl
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
@@ -47,10 +47,10 @@ These settings use Apple's restriction settings. For more information, see [Appl
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> - Create a [device restrictions configuration profile](device-restrictions-configure.md).
+> - Create a [device restrictions configuration profile](./configure-device-restrictions.md).
 :::column-end:::
 :::row-end:::
 
@@ -167,7 +167,7 @@ For the ASAM configuration to apply, users must manually open the specific app. 
 ### Settings apply to: Automated device enrollment (supervised)
 
 - **App name**: Enter the name of the app you want.
-- **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+- **App Bundle ID**: Enter the [bundle ID](./ref-bundle-ids-ios.md) of the app you want. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 You can also **Import** a CSV file with the list of app names and their bundle IDs. Or, **Export** an existing list that includes the apps.
 
@@ -677,7 +677,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might not apply kiosk settings. The device doesn't run in kiosk mode.
   - **Store App**: Enter the URL to an app in the iTunes App Store.
   - **Managed App**: Select an app you previously added to Intune.
-  - **Built-In App**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the built-in app. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - **Built-In App**: Enter the [bundle ID](./ref-bundle-ids-ios.md) of the built-in app. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 - **Require Assistive touch**: **Yes** requires the Assistive Touch accessibility setting on devices. This feature helps users with on-screen gestures that might be difficult for them. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not run or enable this feature in kiosk mode.
 - **Require invert colors**: **Yes** requires the Invert Colors accessibility setting so users with visual impairments can change the display screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not run or enable this feature in kiosk mode.
@@ -945,7 +945,7 @@ This feature applies to:
     To get the app bundle ID:
 
     - Open the Terminal app, and run the `codesign` command. This command identifies the code signature. You can get the bundle ID and the code signature simultaneously.
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+    - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
   - **Code requirement**: Enter the code signature for the application or process.
 
@@ -1129,13 +1129,13 @@ To add apps to these lists, you can:
 
 ::: zone-end
 
-- **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps.
+- **App Bundle ID**: Enter the [bundle ID](./ref-bundle-ids-ios.md) of the app. You can add built-in apps and line-of-business apps.
 
   To get the bundle ID:
 
   - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
   - Open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
-  - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 - **App name**: Enter a user-friendly name to help you identify the bundle ID.
 - **Publisher**: Enter the publisher of the app.
@@ -1201,12 +1201,12 @@ This feature applies to:
 
   You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 
-- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps.
+- **App Bundle ID**: Enter the app [bundle ID](./ref-bundle-ids-ios.md) of the app you want. You can show or hide built-in apps and line-of-business apps.
 
   To get the app bundle ID:
 
   - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
-  - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 - **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/en-us/HT211833).
 - **Publisher**: Enter the publisher of the app you want.
@@ -1284,7 +1284,7 @@ You can also:
 
   - When set to **Yes**:
 
-    - Make sure you configure a Wi-Fi device configuration profile using the [built-in Wi-Fi template](wi-fi-settings-configure.md) (not the settings catalog). Don't assign Wi-Fi profiles created using [custom profiles](custom-settings-configure.md), as this setting doesn't support custom Wi-Fi profiles.
+    - Make sure you configure a Wi-Fi device configuration profile using the [built-in Wi-Fi template](./configure-wifi.md) (not the settings catalog). Don't assign Wi-Fi profiles created using [custom profiles](./configure-custom-settings.md), as this setting doesn't support custom Wi-Fi profiles.
 
       If you don't use the built-in Wi-Fi device configuration template, the policy shows an error state for this setting (**Require devices to use Wi-Fi networks set up via configuration profiles**).
 
@@ -1302,5 +1302,5 @@ You can also:
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Learn more about the [device restrictions profile](device-restrictions-configure.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- Learn more about the [device restrictions profile](./configure-device-restrictions.md).

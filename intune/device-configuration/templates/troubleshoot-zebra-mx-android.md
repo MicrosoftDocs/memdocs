@@ -10,7 +10,7 @@ ms.collection:
 
 # Troubleshoot and see potential issues on Android Zebra devices in Microsoft Intune
 
-In Microsoft Intune, you can use [Zebra Mobility Extensions (MX) to manage Android Zebra devices](android-zebra-mx-overview.md). When using Zebra devices, you create profiles in StageNow to manage settings, and upload them to Intune. Intune uses the StageNow app to apply the settings on the devices. The StageNow app also creates a detailed log file on the device that's used to troubleshoot.
+In Microsoft Intune, you can use [Zebra Mobility Extensions (MX) to manage Android Zebra devices](./configure-zebra-mx-android.md). When using Zebra devices, you create profiles in StageNow to manage settings, and upload them to Intune. Intune uses the StageNow app to apply the settings on the devices. The StageNow app also creates a detailed log file on the device that's used to troubleshoot.
 
 This feature applies to:
 
@@ -29,13 +29,13 @@ This article shows you how to read the StageNow logs. It also lists some potenti
 
  [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
-[Use and manage Zebra devices with Zebra Mobility Extensions](android-zebra-mx-overview.md) has more information on this feature.
+[Use and manage Zebra devices with Zebra Mobility Extensions](./configure-zebra-mx-android.md) has more information on this feature.
 
 ## Get the logs
 
 ### Use the StageNow app on the device
 
-You don't have to use [Intune to deploy the profile](android-zebra-mx-overview.md#step-4---create-a-device-management-profile-in-stagenow). Instead, you can test a profile directly using StageNow on your computer. The StageNow app on the device saves the logs from the test. To get the log file, use the **More (...)** option in the StageNow app on the device.
+You don't have to use [Intune to deploy the profile](./configure-zebra-mx-android.md#step-4---create-a-device-management-profile-in-stagenow). Instead, you can test a profile directly using StageNow on your computer. The StageNow app on the device saves the logs from the test. To get the log file, use the **More (...)** option in the StageNow app on the device.
 
 ### Get logs using Android Debug Bridge
 
@@ -136,10 +136,10 @@ This error means that Intune suspects a non-Zebra Android device is reporting it
 
 ### Company Portal app is older than minimum required version
 
-Intune may update the minimum required version of the Company Portal app. If Google Play isn't installed on the device, then the Company Portal app doesn't get automatically updated. If the minimum required version is newer than the installed version, then the Company Portal app stops working. Update to the latest Company Portal app using [sideloading on Zebra devices](android-zebra-mx-overview.md#sideload-the-company-portal-app).
+Intune may update the minimum required version of the Company Portal app. If Google Play isn't installed on the device, then the Company Portal app doesn't get automatically updated. If the minimum required version is newer than the installed version, then the Company Portal app stops working. Update to the latest Company Portal app using [sideloading on Zebra devices](./configure-zebra-mx-android.md#sideload-the-company-portal-app).
 
 ## Next steps
 
 [Zebra discussion boards](https://developer.zebra.com/community/home/discussions) (opens Zebra's web site)
 
-[Use and manage Zebra devices with Zebra Mobility Extensions in Intune](android-zebra-mx-overview.md)
+[Use and manage Zebra devices with Zebra Mobility Extensions in Intune](./configure-zebra-mx-android.md)

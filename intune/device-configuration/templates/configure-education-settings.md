@@ -38,15 +38,15 @@ This article lists the steps to create a device configuration profile  in Micros
 6. Select **Next**.
 7. In **Configuration settings**, enter the settings you want to configure:
 
-    - [Windows](education-settings-windows.md)
+    - [Windows](./ref-education-settings-windows.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -56,6 +56,6 @@ The next time each device checks in, the policy is applied.
 
 ## Next steps
 
-See a list of the [Windows education settings](education-settings-windows.md) and their descriptions.
+See a list of the [Windows education settings](./ref-education-settings-windows.md) and their descriptions.
 
-After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
+After the [profile is assigned](../assign-device-profile.md), [monitor its status](../monitor-device-profile.md).

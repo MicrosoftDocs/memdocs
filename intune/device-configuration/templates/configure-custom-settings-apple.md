@@ -21,7 +21,7 @@ The Intune settings catalog has many settings, and more are continually added. B
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -33,7 +33,7 @@ The Intune settings catalog has many settings, and more are continually added. B
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
@@ -42,10 +42,10 @@ The Intune settings catalog has many settings, and more are continually added. B
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> - Create a [custom device configuration profile](custom-settings-configure.md).
+> - Create a [custom device configuration profile](./configure-custom-settings.md).
 :::column-end:::
 :::row-end:::
 
@@ -53,7 +53,7 @@ The Intune settings catalog has many settings, and more are continually added. B
 
 - Don't use custom configuration profiles for sensitive information, such as Wi-Fi connections or authenticating apps, sites, and more. Instead, use the built-in profiles for sensitive information, as they're designed and configured to handle sensitive information.
 
-  For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../../fundamentals/certificates/overview.md) for authentication.
+  For example, use the built-in [Wi-Fi profile](./configure-wifi.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../../fundamentals/certificates/overview.md) for authentication.
 
 ::: zone pivot="ios-ipados"
 
@@ -104,7 +104,7 @@ When you configure the profile, enter the following settings:
 
   You can also add device tokens to your custom configuration files. Use device tokens to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device.
 
-  When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that you can use. You can also use `deviceid` or any other device-specific value.
+  When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../../app-management/configuration/configure-managed-ios.md#tokens-used-in-the-property-list) includes a list of variables that you can use. You can also use `deviceid` or any other device-specific value.
 
 ::: zone-end
 
@@ -119,7 +119,7 @@ When you configure the profile, enter the following settings:
 
   You can also add device tokens to your `.mobileconfig` files. Use device tokens to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device. When entering variables, be sure to use curly brackets `{{ }}`.
 
-  [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
+  [App configuration tokens](../../app-management/configuration/configure-managed-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
 
 ::: zone-end
 
@@ -128,5 +128,5 @@ When you configure the profile, enter the following settings:
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Learn about [custom profiles](custom-settings-configure.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- Learn about [custom profiles](./configure-custom-settings.md).

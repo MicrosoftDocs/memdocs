@@ -30,7 +30,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-[Create a Windows device restrictions profile](device-restrictions-configure.md#create-the-profile).
+[Create a Windows device restrictions profile](./configure-device-restrictions.md#create-the-profile).
 
 ## App Store
 
@@ -354,15 +354,15 @@ For more information on what these options do, see [Microsoft Edge kiosk mode co
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
-This device restrictions profile is directly related to the kiosk profile you create using the [Windows kiosk settings](kiosk-settings-windows.md). To summarize:
+This device restrictions profile is directly related to the kiosk profile you create using the [Windows kiosk settings](./ref-kiosk-settings-windows.md). To summarize:
 
-1. Create the [Windows kiosk settings](kiosk-settings-windows.md) profile to run the device in kiosk mode. Select Microsoft Edge as the application and set the Microsoft Edge Kiosk Mode in the Kiosk profile.
-2. Create the device restrictions profile described in this article, and configure specific features and settings allowed in Microsoft Edge. Be sure to choose the same Microsoft Edge kiosk mode type as selected in your kiosk profile ([Windows kiosk settings](kiosk-settings-windows.md)).
+1. Create the [Windows kiosk settings](./ref-kiosk-settings-windows.md) profile to run the device in kiosk mode. Select Microsoft Edge as the application and set the Microsoft Edge Kiosk Mode in the Kiosk profile.
+2. Create the device restrictions profile described in this article, and configure specific features and settings allowed in Microsoft Edge. Be sure to choose the same Microsoft Edge kiosk mode type as selected in your kiosk profile ([Windows kiosk settings](./ref-kiosk-settings-windows.md)).
 
     [Supported kiosk mode settings](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) is a great resource.
 
 > [!IMPORTANT]
-> Be sure to assign this Microsoft Edge profile to the same devices as your kiosk profile ([Windows kiosk settings](kiosk-settings-windows.md)).
+> Be sure to assign this Microsoft Edge profile to the same devices as your kiosk profile ([Windows kiosk settings](./ref-kiosk-settings-windows.md)).
 
 [ConfigureKioskMode CSP](/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
@@ -1269,4 +1269,4 @@ These settings use the [power policy CSP](/windows/client-management/mdm/policy-
 
 For additional technical details on each setting and what editions of Windows are supported, see [Windows Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider)
 
-[Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).

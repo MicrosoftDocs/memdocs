@@ -25,7 +25,7 @@ Using a custom profile, you can configure and assign the following Android setti
 - [Create a Wi-Fi profile with a pre-shared key](/intune/device-configuration/templates/create-wifi-preshared-key)
 - [Create a per-app VPN profile](/intune/device-configuration/templates/configure-per-app-vpn-android)
 - [Allow and block apps for Samsung Knox Standard devices](/intune/device-configuration/templates/manage-apps-samsung-knox)
-- [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/microsoft-defender-configure-android.md)
+- [Configure web protection in Microsoft Defender for Endpoint for Android](../../intune-service/protect/microsoft-defender-configure-android.md)
 
 > [!IMPORTANT]
 > Only the settings listed can be configured in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->
@@ -73,18 +73,18 @@ This article shows you how to create a custom profile for Android DA devices.
 
     Select **Next**.
 
-9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
 11. In **Review + create**, when you're done, choose **Create**. The profile is created, and shown in the list.
 
-    You can also [monitor its status](device-profile-monitor.md).
+    You can also [monitor its status](../monitor-device-profile.md).
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

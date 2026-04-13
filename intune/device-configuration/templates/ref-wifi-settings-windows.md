@@ -19,7 +19,7 @@ This article describes some of these settings.
 
 ## Before you begin
 
-- Create a [Windows Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+- Create a [Windows Wi-Fi device configuration profile](./configure-wifi.md).
 - These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
 
 ## Basic profile
@@ -199,10 +199,10 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
 ## Use an imported settings file
 
-For any settings not available in Intune, you can export Wi-Fi settings from another Windows device. This export creates an XML file with all the settings. Then, import this file in to Intune, and use it as the Wi-Fi profile. For information on importing the XML file, go to [Export and import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
+For any settings not available in Intune, you can export Wi-Fi settings from another Windows device. This export creates an XML file with all the settings. Then, import this file in to Intune, and use it as the Wi-Fi profile. For information on importing the XML file, go to [Export and import Wi-Fi settings for Windows devices](./import-wifi-settings-windows.md).
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Learn more about Wi-Fi profiles in Intune at [Wi-Fi settings overview](wi-fi-settings-configure.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- Learn more about Wi-Fi profiles in Intune at [Wi-Fi settings overview](./configure-wifi.md).
 - Get information on the [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).

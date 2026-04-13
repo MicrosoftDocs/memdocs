@@ -21,13 +21,13 @@ This feature applies to:
 
 - Windows
 
-For more information on this feature, see [Upgrade Windows editions or enable S mode](edition-upgrade-configure-windows-10.md).
+For more information on this feature, see [Upgrade Windows editions or enable S mode](./configure-edition-upgrade-windows.md).
 
 For information on other options to upgrade Windows editions, see [Windows edition upgrade](/windows/deployment/upgrade/windows-10-edition-upgrades).
 
 ## Before you begin
 
-- Create a [Windows edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
+- Create a [Windows edition upgrade and mode switch device configuration profile](./configure-edition-upgrade-windows.md#create-the-profile).
 
 ## Edition upgrade
 
@@ -45,6 +45,6 @@ For information on other options to upgrade Windows editions, see [Windows editi
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 
-- Create edition upgrade profiles for [Windows Holographic for Business](holographic-upgrade.md) devices.
+- Create edition upgrade profiles for [Windows Holographic for Business](./ref-holographic-upgrade-settings.md) devices.

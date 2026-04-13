@@ -12,16 +12,16 @@ ms.collection:
 
 The Managed Home Screen (MHS) is an Intune app that allows you to configure the home screen on the device. It only shows the apps that your users access and the device settings that admins need to manage.
 
-The MHS is used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android Enterprise dedicated and fully managed devices. To learn more about the MHS app, go to [Configure the Microsoft MHS app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+The MHS is used for kiosk devices, including frontline worker (FLW) devices. It replaces the default launcher on your Android Enterprise dedicated and fully managed devices. To learn more about the MHS app, go to [Configure the Microsoft MHS app for Android Enterprise](../../app-management/configuration/configure-managed-home-screen.md).
 
 Typically, when you configure the MHS on a device, end users need to manually accept certain permissions that MHS needs. These permissions allow the MHS to access device features and settings.
 
-Instead of relying on end users to accept the permissions, you can use an [OEMConfig device configuration policy](android-oem-configuration-overview.md) to automatically grant permissions to the MHS app.
+Instead of relying on end users to accept the permissions, you can use an [OEMConfig device configuration policy](./configure-oemconfig-android.md) to automatically grant permissions to the MHS app.
 
 This feature applies to:
 
-- Android Enterprise devices enrolled as [dedicated devices](../enrollment/android-kiosk-enroll.md)
-- Android Enterprise devices enrolled as [fully managed devices](../enrollment/android-fully-managed-enroll.md)
+- Android Enterprise devices enrolled as [dedicated devices](../../device-enrollment/android/setup-dedicated.md)
+- Android Enterprise devices enrolled as [fully managed devices](../../device-enrollment/android/setup-fully-managed.md)
 
 Supported OEMs include:
 
@@ -52,13 +52,13 @@ The following table lists the permissions that you can configure for the MHS app
 | **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ✅ | ✅ | n/a | ✅ |
 | **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a | ✅ |
 
-For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
+For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](./deploy-oemconfig-zebra-android.md#oemconfig-apps-for-zebra-devices).
 
 ## Before you begin
 
-- This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](android-oem-configuration-overview.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
+- This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](./configure-oemconfig-android.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
 - Devices must be MDM enrolled in Intune as dedicated devices or fully managed devices. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
-- To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Step 1 - Get the app from the Managed Google Play Store
 
@@ -84,44 +84,44 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Knox Service Plugin** app, select the app, and then select **Sync**.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
 
 3. In the **Knox Service Plugin** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/assign-groups.md#assign-an-app).
 
 # [Zebra](#tab/zebra-mx-app)
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Zebra OEMConfig Powered by MX** app, select the app, and then select **Sync**.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
 
 3. In the **Zebra OEMConfig Powered by MX** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/assign-groups.md#assign-an-app).
 
 # [Zebra Legacy](#tab/zebra-legacy-app)
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Legacy Zebra OEMConfig** app, select the app, and then select **Sync**.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
 
 3. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/assign-groups.md#assign-an-app).
 
 # [Honeywell](#tab/honeywell)
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
 2. Search for the **Honeywell UEMConnect** app, select the app, and then select **Sync**.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
 
 3. In the **Honeywell UEMConnect** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
-    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/assign-groups.md#assign-an-app).
 
 ---
 
@@ -169,11 +169,11 @@ When you use the schema settings in the **Knox Service Plugin** app, the Intune 
     - **MHS Package Name**: `com.microsoft.launcher.enterprise`
     - **MHS notification service package name**: `com.microsoft.launcher.enterprise/com.microsoft.launcher.homescreen.next.model.notification.AppNotificationService`
 
-8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
+8. Select **Next**, add any [optional scope tags](../../intune-service/fundamentals/scope-tags.md) > **Next**.
 
 9. In **Assignments**, select the devices or device groups that should receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
 
-    For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
 10. Select **Next**, and review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -225,11 +225,11 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
     - **MHS Package name**: `com.microsoft.launcher.enterprise`
     - **MHS Package Signing Certificate**: `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`
 
-8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
+8. Select **Next**, add any [optional scope tags](../../intune-service/fundamentals/scope-tags.md) > **Next**.
 
 9. In **Assignments**, select the devices or device groups that should receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
 
-    For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
 10. Select **Next**, and review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -273,11 +273,11 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
     - **MHS Application Package**: `com.microsoft.launcher.enterprise`
     - **MHS Application Signature**: `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`
 
-8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
+8. Select **Next**, add any [optional scope tags](../../intune-service/fundamentals/scope-tags.md) > **Next**.
 
 9. In **Assignments**, select the devices or device groups that should receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
 
-    For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
 10. Select **Next**, and review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -320,11 +320,11 @@ When you use the schema settings in the **Honeywell UEMConnect** app, the Intune
 
     - **MHS Package Name**: `com.microsoft.launcher.enterprise`
 
-8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
+8. Select **Next**, add any [optional scope tags](../../intune-service/fundamentals/scope-tags.md) > **Next**.
 
 9. In **Assignments**, select the devices or device groups that should receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
 
-    For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
 10. Select **Next**, and review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -334,4 +334,4 @@ The next time the device checks for configuration updates, the settings you conf
 
 ## Related articles
 
-- [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](android-oem-configuration-overview.md)
+- [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](./configure-oemconfig-android.md)

@@ -13,13 +13,13 @@ ms.collection:
 
 You can import your on-premises Group Policy Objects (GPOs), and create an Intune policy using these imported settings. This policy can be deployed to users and devices managed by your organization.
 
-With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a [Settings Catalog policy](../../device-configuration/settings-catalog/index.md), and then deploy the policy to your managed devices.
+With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a [Settings Catalog policy](./settings-catalog/index.md), and then deploy the policy to your managed devices.
 
 This feature applies to:
 
 - Windows
 
-This article shows you how to create the policy from your imported GPOs. For more information and an overview on Group Policy Analytics, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md).
+This article shows you how to create the policy from your imported GPOs. For more information and an overview on Group Policy Analytics, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](./import-group-policy-analytics.md).
 
 ## Before you begin
 
@@ -31,17 +31,17 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   - A role that has the **Security baselines** permission and the **Device configurations/Create** permission
 
-  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../fundamentals/role-based-access-control.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../fundamentals/create-custom-role.md#custom-role-permissions).
+  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../intune-service/fundamentals/role-based-access-control.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions).
 
 - Import your on-premises GPOs, and review the results.
 
-  For the specific steps, go to [Import and analyze your on-premises GPOs using Group Policy analytics in Intune](group-policy-analytics.md#import-gpos-and-run-analytics).
+  For the specific steps, go to [Import and analyze your on-premises GPOs using Group Policy analytics in Intune](./import-group-policy-analytics.md#import-gpos-and-run-analytics).
 
 - Only admins scoped to the GPO can create a settings catalog policy from that imported GPO. Scope tags are first applied during import of the GPO and can be edited. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used.
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
-After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows devices. After you review them, you can migrate the settings to a Settings Catalog policy.
+After you [import your GPOs](./import-group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows devices. After you review them, you can migrate the settings to a Settings Catalog policy.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
@@ -88,9 +88,9 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 
     Select **Next**.
 
-7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
 
-8. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
+8. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](./assign-device-profile.md).
 
     Select **Next**.
 
@@ -124,10 +124,10 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   For more information, go to:
 
-  - [Firewall policy in Endpoint Security](../protect/endpoint-security-firewall-policy.md)
-  - [Application control policy in Endpoint Security](../protect/endpoint-security-asr-policy.md).
+  - [Firewall policy in Endpoint Security](../intune-service/protect/endpoint-security-firewall-policy.md)
+  - [Application control policy in Endpoint Security](../intune-service/protect/endpoint-security-asr-policy.md).
 
-  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including security baselines and mobile threat defense.
+  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../intune-service/protect/endpoint-security.md), including security baselines and mobile threat defense.
 
 - **Some settings don't migrate exactly, and may use a different setting**
 
@@ -150,5 +150,5 @@ When you create the Settings Catalog profile, any settings that can be included 
 
 ## Related articles
 
-- [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md)
-- [Use the settings catalog to configure settings on Windows and macOS devices](../../device-configuration/settings-catalog/index.md)
+- [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](./import-group-policy-analytics.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](./settings-catalog/index.md)

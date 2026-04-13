@@ -21,15 +21,15 @@ This feature applies to:
 
 To create kiosk profiles for other platforms, go to:
 
-- [Android device administrator](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md) (Device experience)
-- [iOS/iPadOS](device-restrictions-apple.md)
+- [Android device administrator](./ref-device-restrictions-android.md#kiosk)
+- [Android Enterprise](./ref-device-restrictions-android-enterprise.md) (Device experience)
+- [iOS/iPadOS](./ref-device-restrictions-apple.md)
 
-Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
+Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](./configure-custom-settings-windows.md).
 
 Intune uses configuration profiles to create and customize these settings for your organization's needs. After you add these features in a profile, assign or deploy these settings to groups in your organization.
 
-This article shows you how to run one app or many apps as a Windows kiosk device using a device configuration profile. For a list of all the settings, and what they do, go to [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
+This article shows you how to run one app or many apps as a Windows kiosk device using a device configuration profile. For a list of all the settings, and what they do, go to [Windows client kiosk settings](./ref-kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](./ref-kiosk-settings-windows-holographic.md).
 
 ## Create the profile
 
@@ -65,16 +65,16 @@ This article shows you how to run one app or many apps as a Windows kiosk device
 
     For a list of all settings, and what they do, go to:
 
-      - [Windows client kiosk settings](kiosk-settings-windows.md)
-      - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md)
+      - [Windows client kiosk settings](./ref-kiosk-settings-windows.md)
+      - [Windows Holographic for Business kiosk settings](./ref-kiosk-settings-windows-holographic.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -84,10 +84,10 @@ The next time each device checks in, the policy is applied.
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 - You can create kiosk profiles for devices that run the following platforms:
 
-  - [Android device administrator](device-restrictions-android.md#kiosk)
-  - [Android Enterprise](device-restrictions-android-for-work.md) (Device experience)
-  - [Windows](kiosk-settings-windows.md)
-  - [Windows Holographic for Business](kiosk-settings-holographic.md)
+  - [Android device administrator](./ref-device-restrictions-android.md#kiosk)
+  - [Android Enterprise](./ref-device-restrictions-android-enterprise.md) (Device experience)
+  - [Windows](./ref-kiosk-settings-windows.md)
+  - [Windows Holographic for Business](./ref-kiosk-settings-windows-holographic.md)

@@ -23,12 +23,12 @@ This article shows you how to export Wi-Fi settings from a Windows device, and t
 
 > [!NOTE]
 >
-> - On Windows, you can [create a Wi-Fi profile](wi-fi-settings-windows.md) directly in Intune. You don't have to import a file.
+> - On Windows, you can [create a Wi-Fi profile](./ref-wifi-settings-windows.md) directly in Intune. You don't have to import a file.
 > - For Windows 8.1 devices, you must export and import Wi-Fi settings to create and deploy Wi-Fi profiles.
 
 ## Before you begin
 
-- To configure the Intune policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the Intune policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Export Wi-Fi settings from a Windows device
 
@@ -81,11 +81,11 @@ When the XML file is ready, you can import it into Intune to create a Wi-Fi prof
     - **File contents**: Shows the XML code for the XML file you selected.
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -93,6 +93,6 @@ When the XML file is ready, you can import it into Intune to create a Wi-Fi prof
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-- See the [Wi-Fi settings overview](wi-fi-settings-configure.md), including other available platforms.
+- See the [Wi-Fi settings overview](./configure-wifi.md), including other available platforms.

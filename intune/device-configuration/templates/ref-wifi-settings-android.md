@@ -22,7 +22,7 @@ These Wi-Fi settings are separated in to two categories: Basic settings and Ente
 
 ## Before you begin
 
-- Create an [Android device administrator Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+- Create an [Android device administrator Wi-Fi device configuration profile](./configure-wifi.md).
 
 ## Basic
 
@@ -90,10 +90,10 @@ These Wi-Fi settings are separated in to two categories: Basic settings and Ente
 
 ## Next steps
 
-The profile is created, but it's not doing anything. Next, [assign this profile](device-profile-assign.md).
+The profile is created, but it's not doing anything. Next, [assign this profile](../assign-device-profile.md).
 
 ## More resources
 
-- [Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms.
+- [Wi-Fi settings overview](./configure-wifi.md), including other platforms.
 
-- Using Android Enterprise or Android Kiosk devices? If yes, then look at [Wi-Fi settings for devices running Android Enterprise and dedicated devices](wi-fi-settings-android-enterprise.md).
+- Using Android Enterprise or Android Kiosk devices? If yes, then look at [Wi-Fi settings for devices running Android Enterprise and dedicated devices](./ref-wifi-settings-android-enterprise.md).

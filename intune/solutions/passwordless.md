@@ -399,7 +399,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 > :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 > 
 > - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
-> - [Platform SSO configuration guide for macOS devices](../intune-service/configuration/platform-sso-macos.md)
+> - [Platform SSO configuration guide for macOS devices](../device-configuration/settings-catalog/configure-platform-sso-macos.md)
 :::column-end:::
 :::row-end:::
 
@@ -418,7 +418,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 > 
 > - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-> - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+> - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../device-configuration/settings-catalog/configure-enterprise-sso-plugin-ios.md)
 :::row-end:::
 
 :::row:::
@@ -492,7 +492,7 @@ Passwordless often depends on the device being in the right state before users c
 - [Supported device platforms and versions](../intune-service/fundamentals/supported-devices-browsers.md)
 - [Device enrollment or registration](../intune-service/fundamentals/deployment-guide-enrollment.md)
 - [Required apps and brokers](../intune-service/apps/apps-add.md)
-- [Method-specific configuration profiles and identity prerequisites](../intune-service/configuration/device-profiles.md)
+- [Method-specific configuration profiles and identity prerequisites](../device-configuration/overview.md)
 
 ### Verification and ongoing operations
 

@@ -16,7 +16,7 @@ This feature applies to:
 
 - iOS/iPadOS
 
-  For macOS, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+  For macOS, go to [Configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md).
 
 This article shows how to create an SSO app extension configuration policy for iOS/iPadOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
@@ -35,7 +35,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device.
 
-  Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Intune. For information on how to install the Microsoft Authenticator app, go to [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
+  Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Intune. For information on how to install the Microsoft Authenticator app, go to [Manage Apple volume-purchased apps](../../app-management/deployment/manage-vpp-apple.md).
 
 - The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
 
@@ -49,7 +49,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Jamf Pro. For instructions, see [Deploying the Microsoft Authenticator App to End Users](https://learn.jamf.com/bundle/technical-paper-microsoft-intune-current/page/Deploying_the_Microsoft_Authenticator_App.html) on the Jamf Learning Hub.
 
 - The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
-- **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
+- **[Jamf Pro and Intune integration for device compliance](../../intune-service/protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
 # [Other MDMs](#tab/prereq-other-mdm)
 
@@ -69,7 +69,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 
 ---
 
-For more information on the single sign-on app extension, go to [SSO overview and options for Apple devices in Microsoft Intune](use-enterprise-sso-plug-in-ios-ipados-macos.md).
+For more information on the single sign-on app extension, go to [SSO overview and options for Apple devices in Microsoft Intune](../enterprise-sso-plugin.md).
 
 ## Create a single sign-on app extension configuration policy
 
@@ -117,11 +117,11 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       :::image type="content" source="./media/enterprise-sso-plugin/ios-ipados-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on iOS/iPadOS devices in Intune.":::
 
-8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, go to [Create the profile](device-features-configure.md#create-the-profile).
+8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, go to [Create the profile](../templates/configure-device-features-apple.md#create-the-profile).
 
-    For guidance on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+    For guidance on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
-When the device checks in with the Intune service, it receives this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
+When the device checks in with the Intune service, it receives this profile. For more information, go to [Policy refresh intervals](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > select the profile you created and generate a report:
 

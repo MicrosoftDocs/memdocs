@@ -23,7 +23,7 @@ This feature applies to:
 
 Custom settings are configured differently for each platform. For example, to control features on Android and Windows devices, you enter Open Mobile Alliance Uniform Resource Identifier (OMA-URI) values. For Apple devices, you import a file you created with the [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) or [Apple Profile Manager](https://support.apple.com/profile-manager).
 
-For an overview of device configuration profiles, go to [What are Microsoft Intune device profiles?](device-profiles.md).
+For an overview of device configuration profiles, go to [What are Microsoft Intune device profiles?](../overview.md).
 
 This article shows you how to create a custom device configuration profile in Intune. You can also see all the available settings for the different platforms.
 
@@ -52,17 +52,17 @@ This article shows you how to create a custom device configuration profile in In
 
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Android device administrator](custom-settings-android.md)
-    - [iOS/iPadOS or macOS](custom-settings-apple.md)
-    - [Windows](custom-settings-windows-10.md)
-    - [Windows Holographic for Business](custom-settings-windows-holographic.md)
+    - [Android device administrator](./configure-custom-settings-android.md)
+    - [iOS/iPadOS or macOS](./configure-custom-settings-apple.md)
+    - [Windows](./configure-custom-settings-windows.md)
+    - [Windows Holographic for Business](./ref-custom-settings-windows-holographic.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
 
     Select **Next**.
 
@@ -76,4 +76,4 @@ In the following example, the **Connectivity/AllowVPNOverCellular** setting is e
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).

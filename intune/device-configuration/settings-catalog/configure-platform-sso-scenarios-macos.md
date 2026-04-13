@@ -12,7 +12,7 @@ ms.collection:
 
 # Common Platform SSO scenarios for macOS devices
 
-On macOS devices, you can configure [Platform SSO](platform-sso-macos.md) to enable single sign-on (SSO) with your Microsoft Entra accounts. Platform SSO allows users to access resources on their macOS devices without needing to enter their credentials repeatedly.
+On macOS devices, you can configure [Platform SSO](./configure-platform-sso-macos.md) to enable single sign-on (SSO) with your Microsoft Entra accounts. Platform SSO allows users to access resources on their macOS devices without needing to enter their credentials repeatedly.
 
 When Platform SSO is configured, you can use the scenarios described in this article to use Kerberos SSO authentication to on-premises resources, enhance security with biometrics, enable SSO on non-Microsoft apps, and improve the user experience.
 
@@ -22,7 +22,7 @@ This feature applies to:
 
 ## Before you begin
 
-- You must [configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md) before you configure the scenarios in this article. When it's configured, you have an existing Platform SSO settings catalog policy that you use to add the scenarios described in this article.
+- You must [configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md) before you configure the scenarios in this article. When it's configured, you have an existing Platform SSO settings catalog policy that you use to add the scenarios described in this article.
 
 - Only one SSO policy can be assigned to your groups. So if you already configured Platform SSO, then add these scenario settings to your existing Platform SSO settings catalog policy.
 
@@ -30,7 +30,7 @@ This feature applies to:
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
-  There are some built-in roles that have these permissions, including the built-in **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+  There are some built-in roles that have these permissions, including the built-in **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Enable Kerberos SSO to on-premises Active Directory and Microsoft Entra ID
 
@@ -65,11 +65,11 @@ In your existing Platform SSO settings catalog policy, add the **Extension Data*
     | &nbsp; | &nbsp; | `2` | **Cloud TGT Only** – Maps only the cloud-based TGT. |
     | &nbsp; | &nbsp; | `3` | **No TGTs** – Disables TGT mapping entirely. |
 
-3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
+3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 ## Touch ID biometric policy with Secure Enclave authentication
 
-On devices that support Touch ID biometric authentication, you can use the Secure Enclave authentication option, as described in [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+On devices that support Touch ID biometric authentication, you can use the Secure Enclave authentication option, as described in [Configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md).
 
 This policy requires users to authenticate with Touch ID whenever the User Secure Enclave Key needs to be accessed. To learn more about `UserSecureEnclaveKeyBiometricPolicy`, see [UserSecureEnclaveKeyBiometricPolicy](/entra/identity/devices/macos-psso#microsoft-platform-sso-usersecureenclavekeybiometricpolicy).
 
@@ -93,7 +93,7 @@ Add the **Extension Data** setting to your existing Platform SSO settings catalo
     | --- | --- | --- | --- |
     | **enable_se_key_biometric_policy**  | Boolean | True | Copy and paste this value. |
 
-3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
+3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 ## Non-Microsoft apps and Microsoft Enterprise SSO Extension settings
 
@@ -132,7 +132,7 @@ The following settings are commonly recommended for configuring SSO settings, in
 
     :::image type="content" source="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png" alt-text="Screenshot that shows how to configure Extension Data settings, such as AppPrefixAllowList." lightbox="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png":::
 
-3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](device-profile-troubleshoot.md#policy-refresh-intervals).
+3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 ## End user experience settings
 
@@ -151,4 +151,4 @@ In your existing Platform SSO settings catalog policy, use the following optiona
 
 ## Related articles
 
-- [Platform SSO for macOS devices](platform-sso-macos.md)
+- [Platform SSO for macOS devices](./configure-platform-sso-macos.md)

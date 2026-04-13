@@ -18,15 +18,15 @@ Intune has a built-in **Device Features** template profile for Apple devices. It
 
 As part of your mobile device management (MDM) solution, use these features to control and manage Apple features on your devices.
 
-This article lists these settings and describes what each setting does. It also lists the steps to get the IP address, path, and port of AirPrint printers by using the Terminal app (emulator). For more information on the device features template, see [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
+This article lists these settings and describes what each setting does. It also lists the steps to get the IP address, path, and port of AirPrint printers by using the Terminal app (emulator). For more information on the device features template, see [Add iOS/iPadOS or macOS device feature settings](./configure-device-features-apple.md).
 
-These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [macOS enrollment](../enrollment/macos-enroll.md).
+These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [macOS enrollment](../../device-enrollment/apple/methods-macos.md).
 
 ## Prerequisites
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -38,7 +38,7 @@ These settings apply to different enrollment types, with some settings applying 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
@@ -47,10 +47,10 @@ These settings apply to different enrollment types, with some settings applying 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> - Create a [device features configuration profile](device-features-configure.md).
+> - Create a [device features configuration profile](./configure-device-features-apple.md).
 :::column-end:::
 :::row-end:::
 
@@ -123,7 +123,7 @@ This feature applies to:
 
 ### Home screen
 
-Use this feature to add apps. You can see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of-business apps, and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md).
+Use this feature to add apps. You can see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of-business apps, and web link apps (web app URLs) are populated from the [client apps you add](../../app-management/deployment/index.md).
 
 - **Grid size**: Choose an appropriate grid size for the device's home screen. An app or folder takes up one place in the grid. If the target device doesn't support the selected size, some apps might not fit and are pushed to the next available position on a new page. For reference:
 
@@ -135,7 +135,7 @@ Use this feature to add apps. You can see how these apps look on pages, the dock
 
 - **Create folder or add apps**: Add an **App** or a **Folder**:
 
-  - **App**: Select existing apps from the list. This option adds apps to the home screen on devices. If you don't have any apps, then [Add apps to Intune](../apps/apps-add.md).
+  - **App**: Select existing apps from the list. This option adds apps to the home screen on devices. If you don't have any apps, then [Add apps to Intune](../../app-management/deployment/index.md).
 
     You can also search for apps by the app name, like `authenticator` or `drive`. Or, search by the app publisher, like `Microsoft` or `Apple`.
 
@@ -152,7 +152,7 @@ Add up to four (4) items for iPhones, and up to six (6) items for iPads (apps an
 - **+**: Select the add button to add apps or folders to the dock.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
 
-  - **App**: Select existing apps from the list. This option adds apps to the dock on the screen. If you don't have any apps, then [Add apps to Intune](../apps/apps-add.md).
+  - **App**: Select existing apps from the list. This option adds apps to the dock on the screen. If you don't have any apps, then [Add apps to Intune](../../app-management/deployment/index.md).
 
     You can also search for apps by the app name, like `authenticator` or `drive`. Or, search by the app publisher, like `Microsoft` or `Apple`.
 
@@ -188,8 +188,8 @@ When you assign the policy to an iPhone, the dock looks similar to the following
 
   To get the app bundle ID:
 
-  - For some examples, see [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md).
-  - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - For some examples, see [Bundle IDs for built-in iOS/iPadOS apps](./ref-bundle-ids-ios.md).
+  - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
   When set to **Not configured** or left blank, Intune doesn't change or update this setting.
 - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
@@ -246,7 +246,7 @@ These settings use the [AssociatedDomains.ConfigurationItem payload](https://dev
     To get the bundle ID:
 
     - Open the Terminal app and use AppleScript: `osascript -e 'id of app "ExampleApp"'`
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+    - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
   - **Domains**: Enter the website domain to associate with an app. The domain includes a service type and fully qualified hostname, like `webcredentials:www.contoso.com`.
 
@@ -586,7 +586,7 @@ This feature applies to:
 - macOS 10.15 and newer
 
 > [!NOTE]
-> On macOS devices, Microsoft recommends you use Platform SSO to enable single sign-on (SSO). For more information, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
+> On macOS devices, Microsoft recommends you use Platform SSO to enable single sign-on (SSO). For more information, go to [Configure Platform SSO for macOS devices in Microsoft Intune](../settings-catalog/configure-platform-sso-macos.md).
 
 ### Settings apply to: User approved device enrollment, and Automated device enrollment
 
@@ -604,7 +604,7 @@ Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO
 
 ::: zone pivot="ios-ipados"
 
-All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). For more information, see [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
+All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). For more information, see [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../settings-catalog/configure-enterprise-sso-plugin-ios.md).
 
 > [!IMPORTANT]
 > To achieve SSO with the Microsoft Entra SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, go to [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -613,12 +613,12 @@ All apps that use the Microsoft Authenticator app for authentication continue to
 
 ::: zone pivot="macos"
 
-For more information, go to [Use the Microsoft Enterprise SSO plug-in on macOSOS devices](use-enterprise-sso-plug-in-macos-with-intune.md).
+For more information, go to [Use the Microsoft Enterprise SSO plug-in on macOSOS devices](./configure-enterprise-sso-plugin-macos.md).
 
 > [!IMPORTANT]
 > To achieve SSO with the Microsoft Entra SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
 >
-> For more information about the Company Portal app, go to [What happens if you install the Company Portal app and enroll your macOS device in Intune](../../user-help/enrollment/enrollment-effects-macos.md).
+> For more information about the Company Portal app, go to [What happens if you install the Company Portal app and enroll your macOS device in Intune](../../user-help/enrollment/effects-macos.md).
 >
 > You can also [download the Company Portal app](https://go.microsoft.com/fwlink/?linkid=853070).
 
@@ -636,7 +636,7 @@ For more information, go to [Use the Microsoft Enterprise SSO plug-in on macOSOS
 
 ::: zone-end
 
-- **App bundle IDs**: Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+- **App bundle IDs**: Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
   - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
   - The app bundle IDs you enter have permission to use the Microsoft Entra SSO app extension if they don't use any Microsoft libraries, like Microsoft Authentication Library (MSAL).
@@ -860,7 +860,7 @@ After users successfully sign in to the Authenticator app, they aren't prompted 
 
 ::: zone-end
 
-- **App bundle IDs**: Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+- **App bundle IDs**: Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
   If you use the **Kerberos SSO app extension** type, then these apps:
 
@@ -901,12 +901,12 @@ You might see unexpected behavior when you assign a profile with no image to dev
 
 > [!TIP]
 >
-> - When you configure a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-apple.md) setting. This setting prevents users from changing the wallpaper.
+> - When you configure a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](./ref-device-restrictions-apple.md) setting. This setting prevents users from changing the wallpaper.
 > - To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
 
 ::: zone-end
 
 ## Related articles
 
-- [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Learn more about the [device feature configuration profile template](device-features-configure.md).
+- [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+- Learn more about the [device feature configuration profile template](./configure-device-features-apple.md).

@@ -21,7 +21,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-- [Create the Windows DFCI profile](device-firmware-configuration-interface-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
+- [Create the Windows DFCI profile](./configure-dfci-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](./configure-dfci-windows.md).
 - Some settings aren't available for all devices. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
 - These settings use the [UEFI CSP](/windows/client-management/mdm/uefi-csp).
 
@@ -88,7 +88,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Microphones and speakers
 
-We recommend you configure the **Microphones and speakers** category settings **or** the **Microphones** granular settings. If you configure all the settings, then these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+We recommend you configure the **Microphones and speakers** category settings **or** the **Microphones** granular settings. If you configure all the settings, then these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](./configure-dfci-windows.md#conflicts).
 
 - **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. It doesn't manage attached peripherals, such as USB devices.
 
@@ -108,7 +108,7 @@ We recommend you configure the **Microphones and speakers** category settings **
 
 ## Radios
 
-We recommend you configure the **Radios (Bluetooth, Wi-Fi, NFC, etc.)** category settings **or** the **Bluetooth**, **Wi-Fi**, etc. granular settings. If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+We recommend you configure the **Radios (Bluetooth, Wi-Fi, NFC, etc.)** category settings **or** the **Bluetooth**, **Wi-Fi**, etc. granular settings. If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](./configure-dfci-windows.md#conflicts).
 
 - **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
@@ -210,6 +210,6 @@ We recommend you configure the **Radios (Bluetooth, Wi-Fi, NFC, etc.)** category
 
 - For other technical details on each setting and what editions of Windows are supported, go to [Windows Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider).
 
-- [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
+- [Use DFCI profiles on Windows devices in Microsoft Intune](./configure-dfci-windows.md).
 
-- [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+- [Assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).

@@ -19,11 +19,11 @@ This feature applies to:
   [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
 
 >[!TIP]
->If the settings you want aren't available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
+>If the settings you want aren't available, you might be able to configure your devices using a [custom profile](./configure-custom-settings-android.md).
 
 ## Before you begin
 
-Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+Create an [Android device administrator device restrictions configuration profile](./configure-device-restrictions.md).
 
 ## General
 
@@ -150,7 +150,7 @@ This feature is supported on Android and Samsung Knox Standard devices.
   - **App store URL**: Enter the Google Play Store URL of the app you want. For example, to add the Microsoft Remote Desktop app for Android, enter `https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`.
 
     To find the URL of an app, open the [Google Play store](https://play.google.com/store/apps), and search for the app. For example, search for `Microsoft Remote Desktop Play Store` or `Microsoft Planner`. Select the app, and copy the URL.
-  - **App bundle ID**: Enter the app bundle ID. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - **App bundle ID**: Enter the app bundle ID. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
   - **App name**: Enter the name you want. This name is shown to users.
   - **Publisher** (optional): Enter the publisher of the app, like `Microsoft`.
 
@@ -209,7 +209,7 @@ For each setting, add your apps:
 
 Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to Intune-managed apps.
 
-- Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Preinstalled browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../apps/manage-microsoft-edge.md).
+- Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Preinstalled browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../../app-management/configuration/configure-edge-ios-android.md).
 
   Your app options:
 
@@ -222,6 +222,6 @@ Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or
 
 ## Next steps
 
-[Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+[Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md) (Device experience) and [Windows](kiosk-settings.md) devices.
+You can also create kiosk profiles for [Android Enterprise](./ref-device-restrictions-android-enterprise.md) (Device experience) and [Windows](./configure-kiosk.md) devices.
