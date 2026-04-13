@@ -29,7 +29,7 @@ You have two ways to manage software updates on android:
     2. Navigate to **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device restrictions**.
     3. Device restrictions profiles offer control over how the device handles over-the-air updates and allow you to set a freeze period for these updates.
     > [!NOTE]
-    > Not all device manufacturers support over-the-air updates. For more information, see [Corporate-owned Android Enterprise device restriction settings in Microsoft Intune](../../intune-service/configuration/device-restrictions-android-for-work.md)
+    > Not all device manufacturers support over-the-air updates. For more information, see [Corporate-owned Android Enterprise device restriction settings in Microsoft Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)
 
 Firmware Over-the-Air (FOTA) updates allow remotely updating the firmware of devices using a wireless connection, rather than requiring the devices to be physically connected to a computer or network.
 

@@ -44,7 +44,7 @@ Additional prerequisites for device query for multiple devices:
 > Device query for multiple devices supports devices that are:
 >
 > - Managed by Intune and marked as corporate owned.
-> - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
+> - Windows devices must have a [properties catalog policy](../device-configuration/collect-device-properties.md) deployed to them to collect inventory data.\
 >   For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 :::column-end:::
 :::row-end:::

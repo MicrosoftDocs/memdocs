@@ -30,7 +30,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Baselines**: Baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
-  For more information, see [Security baselines](/intune/intune-service/protect/security-baselines).
+  For more information, see [Security baselines](../../../protect/security-baselines.md).
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker.
 
@@ -38,10 +38,10 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](../../../../device-configuration/overview.md).
 
 > [!TIP]
-> You can find a list of common configurations used in K-12 organizations at [Common Education configuration overview](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-overview).
+> You can find a list of common configurations used in K-12 organizations at [Common Education configuration overview](common-config-overview.md).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -69,7 +69,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Templates**: Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. If you're familiar with creating device configuration policies in Microsoft Intune, then you're already using these templates.
 
-  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+  For more information, including the available templates, see [Apply features and settings on your devices using device profiles](../../../../device-configuration/overview.md).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -121,7 +121,7 @@ Settings that are commonly configured for student devices include:
 For more information, see [Windows device settings in Intune for Education][INT-3].
 
 > [!NOTE]
-> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](../../../../device-configuration/overview.md).
 
 ::: zone-end
 
@@ -156,7 +156,7 @@ Settings that are commonly configured for student devices include:
 For more information, see [iOS device settings in Intune for Education](/intune-education/all-edu-settings-ios).
 
 > [!NOTE]
-> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+> If you require more sophisticated device settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](../../../../device-configuration/overview.md).
 
 ::: zone-end
 
@@ -245,7 +245,7 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Endpoint detection and response][MEM-5]
 - [Attack surface reduction][MEM-6]
 - [Account protection][MEM-7]
-- [Security Baselines](/intune/intune-service/protect/security-baselines)
+- [Security Baselines](../../../protect/security-baselines.md)
 - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
@@ -277,7 +277,7 @@ For more information, see [Security][INT-4].
 > - [Endpoint detection and response][MEM-5]
 > - [Attack surface reduction][MEM-6]
 > - [Account protection][MEM-7]
-> - [Security Baselines](/intune/intune-service/protect/security-baselines)
+> - [Security Baselines](../../../protect/security-baselines.md)
 > - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 > - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
@@ -317,7 +317,7 @@ Common areas for security include:
 - Passcode, Touch ID, and Face ID
 
 > [!NOTE]
-> If you require more sophisticated security settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](/intune/intune-service/configuration/device-profiles).
+> If you require more sophisticated security settings, you can create them in Microsoft Intune. For more information, see [Apply features and settings on your devices using device profiles](../../../../device-configuration/overview.md).
 
 ::: zone-end
 
