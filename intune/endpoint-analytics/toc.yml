@@ -23,11 +23,11 @@ items:
   href: adoption-score.md
   displayName: endpoint analytics
 - name: Data collection
-  href: data-collection.md
+  href: ref-data-collection.md
   displayName: endpoint analytics
 - name: Troubleshooting
   href: troubleshoot.md
   displayName: endpoint analytics
 - name: Support options
-  href: get-support.md
+  href: support.md
   displayName: endpoint analytics

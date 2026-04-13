@@ -20,7 +20,7 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 - View analytics in the Intune admin center.
 - Apply remediations or adjust policies based on insights.
 
-:::image type="content" source="images/ea-overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="images/ea-overview.png" border="false":::
+:::image type="content" source="media/shared/overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="media/shared/overview.png" border="false":::
 
 ## Available reports
 
@@ -111,7 +111,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
-> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
+> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](ref-data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
 > For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
@@ -129,7 +129,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
-> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
+> | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](ref-data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
 > For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
@@ -211,7 +211,7 @@ Learn more about endpoint analytics:
 
 - [Configure endpoint analytics](configure.md)
 - [Scores, baselines, and insights](scores.md)
-- [Understand data collection](data-collection.md)
+- [Understand data collection](ref-data-collection.md)
 - [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)
 
 <!-- admin center -->

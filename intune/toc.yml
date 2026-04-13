@@ -271,16 +271,16 @@ items:
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
-        href: ./device-updates/byod-software-updates-guide.md
+        href: ./device-updates/byod-planning-guide.md
       - name: Android
         displayName: software updates
-        href: ./device-updates/android/software-updates-guide.md
+        href: ./device-updates/android/planning-guide.md
       - name: iOS/iPadOS
         displayName: software updates
-        href: ./device-updates/apple/software-updates-guide-ios-ipados.md
+        href: ./device-updates/apple/planning-guide-ios-ipados.md
       - name: macOS
         displayName: software updates
-        href: ./device-updates/apple/software-updates-guide-macos.md
+        href: ./device-updates/apple/planning-guide-macos.md
 
   - name: Set up Microsoft Intune
     items:
@@ -1100,7 +1100,7 @@ items:
         - name: Error codes and descriptions
           items:
           - name: Software update errors
-            href: ./device-updates/windows/software-update-agent-error-codes.md
+            href: ./device-updates/windows/ref-agent-error-codes.md
 
     - name: Configure devices
       items:
@@ -1699,6 +1699,8 @@ items:
 
   - name: Scenario-based guidance
     items:
+    - name: Passwordless authentication
+      href: ./solutions/passwordless.md
     - name: Manage AI on Android
       href: ./solutions/ai/manage-ai-android.md
     - name: Manage operating system versions
