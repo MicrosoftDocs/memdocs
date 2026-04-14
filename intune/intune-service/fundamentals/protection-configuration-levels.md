@@ -48,7 +48,7 @@ In this level, Microsoft recommends you configure the following protection and a
   - Block app access based on jailbroken or rooted devices
   - Restrict app access based on basic integrity of devices
 
-For more information, see [Level 1 basic app protection](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
+For more information, see [Level 1 basic app protection](../../app-management/protection/data-protection-framework.md#level-1-enterprise-basic-data-protection).
 
 ### Compliance (level 1)
 
@@ -123,7 +123,7 @@ In addition to Level 1 settings, configure the following protection and access f
   - Require device lock (Android)
   - Allow app access based on increased integrity of device
 
-For more information, see [Level 2 enhanced app protection](../apps/app-protection-framework.md#level-2-enterprise-enhanced-data-protection).
+For more information, see [Level 2 enhanced app protection](../../app-management/protection/data-protection-framework.md#level-2-enterprise-enhanced-data-protection).
 
 ### Compliance (level 2)
 
@@ -198,7 +198,7 @@ In addition to level 1 and 2 settings, configure the following protection and ac
   - Require max allowed threat level
   - Require Max OS version
 
-For more information, see [Level 3 high app protection](../apps/app-protection-framework.md#level-3-enterprise-high-data-protection).
+For more information, see [Level 3 high app protection](../../app-management/protection/data-protection-framework.md#level-3-enterprise-high-data-protection).
 
 ### Compliance (level 3)
 
@@ -227,7 +227,7 @@ This level focuses on enterprise-level services and features, and it can require
 
   For information, see:
 
-  - [macOS LAPS in Intune](../enrollment/macos-laps.md)
+  - [macOS LAPS in Intune](../../device-enrollment/apple/setup-laps-macos.md)
   - [Windows LAPS in Intune](../protect/windows-laps-overview.md)
 
 - Protect Windows devices using Endpoint Privilege Management (EPM). EPM helps you run your organization's users as standard users (without administrator rights) and enables those same users to complete tasks that require elevated privileges.
@@ -242,6 +242,6 @@ For more specific information on device configuration policies at this level, se
 
 ## Related articles
 
-For a complete list of all the device configuration profiles you can create, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
+For a complete list of all the device configuration profiles you can create, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../../device-configuration/overview.md).
 
 For a Zero Trust-focused deployment approach, see [Zero Trust deployment approach with Microsoft Intune](deployment-plan-zero-trust.md). This framework provides a seven-layer progressive deployment strategy aligned with Zero Trust security principles.

@@ -111,9 +111,9 @@ Use the firewall to control connections per-application, rather than per-port. U
 
     - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
     - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+    - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
-  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
   **Apps blocked**: Configure a list of apps that have incoming connections blocked.
 
@@ -123,9 +123,9 @@ Use the firewall to control connections per-application, rather than per-port. U
 
     - Use the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`.
     - Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+    - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
-  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+  - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
 - **Enable stealth mode**
 
@@ -154,6 +154,6 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 ## Next steps
 
-[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md).
+[Assign the profile](../../device-configuration/assign-device-profile.md) and [monitor its status](../../device-configuration/monitor-device-profile.md).
 
 You can also [configure endpoint protection for Windows](endpoint-protection-windows-10.md).

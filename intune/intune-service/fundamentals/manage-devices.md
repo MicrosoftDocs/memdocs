@@ -97,8 +97,8 @@ For more information, go to:
 
 - [FLW device management in Intune](../../solutions/frontline-worker/frontline-worker-overview.md)
 - [Get started with Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-overview)
-- [Windows device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md)
-- [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../configuration/shared-user-device-settings.md)
+- [Windows device settings to run as a dedicated kiosk using Intune](../../device-configuration/templates/configure-kiosk.md)
+- [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../../device-configuration/templates/configure-shared-device.md)
 
 ## Secure your devices
 

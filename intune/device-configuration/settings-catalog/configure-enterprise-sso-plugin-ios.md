@@ -10,7 +10,7 @@ ms.collection:
 
 # Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices
 
-[!INCLUDE [Apple SSO Boilerplate](../../intune-service/includes/apple-enterprise-sso-intro-boilerplate.md)]
+[!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
 This feature applies to:
 
@@ -22,7 +22,7 @@ This article shows how to create an SSO app extension configuration policy for i
 
 ## App support
 
-[!INCLUDE [Apple SSO app support](../../intune-service/includes/apple-enterpsie-sso-app-support.md)]
+[!INCLUDE [Apple SSO app support](../includes/apple-enterpsie-sso-app-support.md)]
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 > [!NOTE]
 > On iOS/iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
 
-[!INCLUDE [Apple Kerberos Extension Boilerplate](../../intune-service/includes/apple-enterprise-sso-kerberos-boilerplate.md)]
+[!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
 ---
 
@@ -111,7 +111,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
     - **Additional configuration**: To customize the end user experience, you can add the following properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../../intune-service/includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
 
       When you're done configuring the settings and are allowing Microsoft & Apple apps, then the settings look similar to the following values in your Intune configuration profile:
 
@@ -183,7 +183,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     These PLIST settings configure the following SSO Extension options. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../../intune-service/includes/apple-enterprise-sso-recommended-settings-ios-jamf-pro-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-jamf-pro-boilerplate.md)]
 
 7. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 8. Select **Save**.
@@ -208,7 +208,7 @@ In the MDM portal, create a device configuration profile. This profile include
 
 5. Optionally, you can configure other properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../../intune-service/includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
 
 6. Assign the new policy to the devices that should be targeted to receive the SSO Extension MDM profile.
 
@@ -216,7 +216,7 @@ When the device checks in with the MDM service, it receives this profile.
 
 ---
 
-[!INCLUDE [Apple iOS End User Experience Boilerplate](../../intune-service/includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
+[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 
 > [!TIP]
 > Learn more about how the SSO plug-in works and how to troubleshoot the Microsoft Enterprise SSO Extension with the [SSO troubleshooting guide for Apple devices](/entra/identity/devices/troubleshoot-mac-sso-extension-plugin).

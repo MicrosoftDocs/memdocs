@@ -75,4 +75,4 @@ You can also use Graph API to get two years of audit events. For more informatio
 ## Related articles
 
 - [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md)
-- [Review client app protection logs](../apps/app-protection-policy-settings-log.md)
+- [Review client app protection logs](../../app-management/protection/troubleshoot-protection-logs.md)

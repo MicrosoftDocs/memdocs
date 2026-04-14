@@ -30,13 +30,13 @@ There's also a visual guide of the different enrollment options for each platfor
 [![A visual representation of Intune enrollment options by platform](../media/guide/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../../intune-service/includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 
 - For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](../guide.md).
 
-- [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+- [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Windows automatic enrollment
 
@@ -158,7 +158,7 @@ When users turn on the device, the next steps determine how they're enrolled. Cl
 
 - On personal or BYOD non-Windows client devices, users must install the Company Portal app from the Microsoft Store. Once installed, they open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). They're asked for more information, including the Intune server name. Be sure to give them all the information they need to enter.
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Windows Autopilot
 
@@ -232,7 +232,7 @@ The end user experience depends on the Windows Autopilot deployment option you c
 
 - **User driven**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. For more specific information, go to [user-driven deployment](/autopilot/user-driven).
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## BYOD: User enrollment
 

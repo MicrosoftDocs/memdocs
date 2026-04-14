@@ -99,7 +99,7 @@ Removing company data from an Android personally owned work profile device remov
 
 ### Android device administrator
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 The following table shows what data is removed and what remains on the device after the action is applied.
 

@@ -125,8 +125,6 @@ At this point, you may also:
 
   1. Choose **Manifest** from the application pane.
 
-     <img src="../intune-service/media/azure-ad-edit-mft.png" width="295" height="114" alt="The Edit manifest blade" />
-
   2. Change the value of the `availableToOtherTenants` setting to `true`.
 
   3. Save your changes.
@@ -391,7 +389,7 @@ This example shows how to use C# to retrieve a list of devices associated with y
 
 2. Enter a name for your project and provide other details as desired.
 
-    <img src="../intune-service/media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
+    <img src="./media/configure-graph-api-access/entra-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
 3. Use the Solution Explorer to add the Microsoft MSAL NuGet package to the project:
 
@@ -515,17 +513,11 @@ To invite the user to be a guest of your tenant:
 
 1. Choose **Add a guest user** from the **Quick tasks** panel.
 
-    <img src="../intune-service/media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
-
 2. Enter the client's email address and (optionally) add a personalized message for the invite.
-
-    <img src="../intune-service/media/azure-ad-guest-invite.png" width="203" height="106" alt="Inviting an external user as a guest" />
 
 3. Choose **Invite**.
 
 This sends an invite to the user.
-
-   <img src="../intune-service/media/aad-multiple-tenant-invitation.png" width="624" height="523" alt="A sample guest invitation">
 
    The user needs to choose the **Get Started** link to accept your invitation.
 

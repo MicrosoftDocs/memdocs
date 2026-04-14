@@ -40,7 +40,7 @@ For this tutorial, when you sign in to the [Microsoft Intune admin center](https
 
 ## Create the app protection policy
 
-In this tutorial, we set up an Intune [app protection policy](../apps/app-protection-policy.md) for iOS for the Outlook app to put protections in place at the app level. We'll require a PIN to open the app in a work context. We'll also limit data sharing between apps and prevent company data from being saved to a personal location.
+In this tutorial, we set up an Intune [app protection policy](../../app-management/protection/overview.md) for iOS for the Outlook app to put protections in place at the app level. We'll require a PIN to open the app in a work context. We'll also limit data sharing between apps and prevent company data from being saved to a personal location.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

@@ -91,15 +91,15 @@ After you prepare your licenses and review the information in [Step 1 - Prepare]
     | Basic Mobility and Security policy | Intune policy type | Intune location |
     | --- | --- | --- |
     | [Access requirements policy mapping](policy-map-access-requirements.md) | [Compliance policies](../protect/device-compliance-get-started.md) |  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
-    | [Configurations policy mapping](policy-map-configurations.md) | [Device configuration profiles](../configuration/device-profiles.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-    | [Miscellaneous policy mapping](policy-map-miscellaneous.md) | [Device configuration profiles](../configuration/device-profiles.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
+    | [Configurations policy mapping](policy-map-configurations.md) | [Device configuration profiles](../../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
+    | [Miscellaneous policy mapping](policy-map-miscellaneous.md) | [Device configuration profiles](../../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
     | Basic Conditional Access policies described in: <br/><br/>-[Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up)<br/>- [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure) | [Conditional Access policies]( ../protect/conditional-access.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** |
 
 ## Step 3 - Assign the policies in stages
 
 Next, assign the Intune policies to the groups you choose. Keep the following points in mind:
 
-- If you already assigned Intune policies to your groups, these policies can conflict with your new Intune policies. To learn how Intune handles conflicts, see [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+- If you already assigned Intune policies to your groups, these policies can conflict with your new Intune policies. To learn how Intune handles conflicts, see [Common questions and answers with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 - When the Intune policies are created, you can assign them to groups at any time. We recommend assigning the policies in stages. This staged approach helps you manage the migration process.
 
@@ -109,7 +109,7 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select your policy > **Assignments** > **Edit**. Add your groups and **Save**. When you save, the policies are assigned.
 
-    For the steps and guidance, see [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md).
+    For the steps and guidance, see [Assign policies in Microsoft Intune](../../device-configuration/assign-device-profile.md).
 
     It's important to understand how policy assignment works. When you assign Intune licenses, the Intune policies replace any existing Basic Mobility and Security policies. Users can lose settings and email configuration if they're licensed for Intune but not assigned to any Intune policies.
 
@@ -122,7 +122,7 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
 
     For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign-licenses.md).
 
-At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
+At the next [Intune device refresh cycle](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
 
 After you move to Intune, Microsoft recommends that you remove the Basic Mobility and Security policies. You don't want these old policies to accidentally get assigned to users later. To learn more, see [Turn off Basic Mobility and Security enforcement](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-turn-off).
 

@@ -13,7 +13,7 @@ ms.collection:
 
 # Add apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 

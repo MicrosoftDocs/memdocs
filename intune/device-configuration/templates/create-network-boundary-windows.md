@@ -26,7 +26,7 @@ This article shows you how to create the profile, and add trusted sites.
 
 ## Before you begin
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 - This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/policy-csp-networkisolation).
 
 ## Create the profile

@@ -31,4 +31,4 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 - Windows (x86, x64, ARM64)
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]

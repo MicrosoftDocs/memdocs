@@ -12,7 +12,7 @@ ms.collection:
 # How to Manage iOS/iPadOS eBooks You Purchased Through a Volume-Purchase Program with Microsoft Intune
 
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 The Apple Volume Purchase Program (VPP) lets you purchase multiple licenses for a book that you want to distribute to users in your company. You can distribute books from the Business, or Education stores.
 

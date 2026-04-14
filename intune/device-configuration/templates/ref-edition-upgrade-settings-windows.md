@@ -11,7 +11,7 @@ ms.collection:
 # Windows device settings to upgrade editions or enable S mode in Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 Microsoft Intune includes many settings to help manage and protect your devices. This article describes some of the settings to upgrade Windows client editions, or switch out of S mode on Windows devices. These settings are created in an upgrade configuration profile in Intune that are assigned or deployed to devices.
 

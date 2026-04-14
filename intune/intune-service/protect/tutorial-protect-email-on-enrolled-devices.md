@@ -39,7 +39,7 @@ For this tutorial, when you sign in to the [Microsoft Intune admin center](https
 
 ## Create an email device profile
 
-This tutorial requires you to create an iOS/iPadOS device Email profile. To do so, follow the guidance in [Step 11 – Create a device profile](../configuration/quickstart-email-profile.md) from the *Try Intune tasks* area of the Intune documentation. The email profile is used to require iOS/iPad devices to use work email.
+This tutorial requires you to create an iOS/iPadOS device Email profile. To do so, follow the guidance in [Step 11 – Create a device profile](../../device-configuration/templates/quickstart-email-profile.md) from the *Try Intune tasks* area of the Intune documentation. The email profile is used to require iOS/iPad devices to use work email.
 
 When you create the email profile, assign the profile to the same group of devices that you use later for the *device compliance* policy and *Conditional Access* policies that you create in subsequent steps of this tutorial.
 
