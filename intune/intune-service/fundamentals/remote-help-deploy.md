@@ -107,7 +107,7 @@ When a new version of Remote Help is required, the app prompts users to update. 
 
 #### Deploy Remote Help as an Enterprise App Catalog app
 
-The Enterprise App Catalog is a collection of prepackaged Win32 apps that are prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](/mem/intune-service/apps/apps-add-enterprise-app#add-a-windows-catalog-app-win32-to-intune).
+The Enterprise App Catalog is a collection of prepackaged Win32 apps that are prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog.md#add-a-windows-catalog-app-win32-to-intune).
 
 #### Deploy Remote Help as a Win32 app
 
@@ -163,7 +163,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 The macOS Remote Help native app is available to download from Microsoft and must be installed on the device to use full control.
 
 > [!TIP]
-> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help-webapp.md).
+> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help.md).
 
 #### Deploy macOS Remote Help
 
@@ -319,7 +319,7 @@ If you're planning to use Remote Help on a device running on Android 11, you nee
 *Zebra OEMConfig Powered by MX* is a new version of the OEMConfig app released in May 2023.
 
 > [!NOTE]
-> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions about updating supported Zebra devices with Intune, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md).  
+> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions about updating supported Zebra devices with Intune, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/setup-zebra-lifeguard.md).  
 
 Use OEMConfig to deploy the following settings on devices that you want to use Remote Help with:
 

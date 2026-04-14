@@ -59,8 +59,8 @@ For example, you might deploy an Intune compliance policy to the *all devices* g
 
 > [!TIP]
 > Consider the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:
-> - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/intune/intune-service/fundamentals/filters)
-> - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations)
+> - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+> - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
 
 ## Add groups to Intune
 
@@ -98,7 +98,7 @@ To create groups in the Microsoft Intune admin center:
         > Avoid creating groups that include both users and devices, as this can lead to policy conflicts and unpredictable behavior during Intune deployments.
 
         > [!TIP]
-        > To create groups of devices, you can use [device categories](/intune/intune-service/enrollment/device-group-mapping) to automatically join devices to a group at the time they enroll with Intune.
+        > To create groups of devices, you can use [device categories](../enrollment/device-group-mapping.md) to automatically join devices to a group at the time they enroll with Intune.
 
       - **Dynamic User** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, see [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
 
@@ -140,5 +140,5 @@ Use the following steps to delete an existing group:
 
 ## Related content
 
-- [Assign users licenses to Intune](../fundamentals/licenses-assign.md)
+- [Assign users licenses to Intune](../../fundamentals/licensing/assign-licenses.md)
 - [Assign Microsoft Intune roles to groups of users for role-based access control](../fundamentals/assign-role.md)

@@ -277,6 +277,9 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 > [!NOTE]
 > On Android 13 devices, the device unlock UI (the PIN entry pad, or the pattern dot grid) can't be shown remotely. To unlock the device, you can still use keyboard input to enter a passcode. Android added this feature as a security measure to protect the end user from a passcode or unlock pattern being captured if the device is unlocked while screen sharing.  
 
+> [!NOTE]
+> On Samsung devices running Android 15, you might notice minor visual latency during a Remote Help session. In some scenarios, portions of the screen may appear to refresh with a slight delay. This behavior doesn’t affect session connectivity.
+
 ### [:::image type="icon" source="../media/icons/webapp.svg"::: **Windows or macOS from the web app**](#tab/helperwebapp)
 
 1. Sign in to <a href="https://aka.ms/rhh" target="_blank"><u>https://aka.ms/rhh</u></a>.
@@ -294,4 +297,4 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 ## Next steps
 
-[Get support in the Microsoft Intune admin center.](../../get-support.md)
+[Get support in the Microsoft Intune admin center.](../../fundamentals/it-pro-support/get-support-admin-center.md)

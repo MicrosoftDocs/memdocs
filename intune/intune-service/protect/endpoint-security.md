@@ -32,7 +32,7 @@ Use the Endpoint security node to address common security challenges:
 
 - **Meet compliance requirements** - Deploy standardized security configurations using baselines aligned to industry frameworks, monitor compliance status through reporting, and configure automated actions for noncompliant devices. For more information, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
-- **Respond to security threats** - Review security tasks from your Defender for Endpoint team, use remote actions to remediate at-risk devices, rotate encryption keys, and monitor threat detection through dashboards. For more information, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md).
+- **Respond to security threats** - Review security tasks from your Defender for Endpoint team, use remote actions to remediate at-risk devices, rotate encryption keys, and monitor threat detection through dashboards. For more information, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/microsoft-defender-manage-vulnerabilities.md).
 
 ## Endpoint security dashboard
 
@@ -70,7 +70,7 @@ Each baseline contains Microsoft-recommended settings organized by functional ar
 
 Security tasks enable collaboration between Defender for Endpoint and Intune teams. When Defender for Endpoint identifies vulnerabilities, Defender for Endpoint security admins create tasks in the Defender for Endpoint portal specifying affected devices, the vulnerability, and remediation guidance. These tasks appear in Intune, where Intune administrators accept them, deploy appropriate policies or configurations, then mark complete after remediation is verified. Completion status synchronizes to the Defender for Endpoint portal for validation.
 
-This workflow ensures both teams stay aligned on which devices are at risk and provides clear accountability for remediation. Security tasks require integration with Defender for Endpoint. See [Set up integration with Microsoft Defender for Endpoint](#set-up-integration-with-microsoft-defender-for-endpoint). For more information on the workflow, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md).
+This workflow ensures both teams stay aligned on which devices are at risk and provides clear accountability for remediation. Security tasks require integration with Defender for Endpoint. See [Set up integration with Microsoft Defender for Endpoint](#set-up-integration-with-microsoft-defender-for-endpoint). For more information on the workflow, see [Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/microsoft-defender-manage-vulnerabilities.md).
 
 ### Endpoint security policies
 

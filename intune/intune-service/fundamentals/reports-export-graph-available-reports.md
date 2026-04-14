@@ -1,5 +1,5 @@
 ---
-title: Intune Graph API - Reports and Properties | Microsoft Docs
+title: Intune Graph API - Reports and Properties
 description: Learn about Intune reports and properties provided via Graph API.
 author: nicholasswhite
 ms.author: nwhite
@@ -205,7 +205,6 @@ The following table contains the possible values for the `reportName` parameter 
 | Users | Under **Users** |
 | UserScaleTest | Under **Reports** > **Endpoint analytics** |
 | WindowsDeviceHealthAttestationReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
-| WindowsUpdatePerPolicyPerDeviceStatus | Under **Devices** > **Manage updates** > **Windows updates** |
 | WorkFromAnywhereDeviceList | Under **Reports** > **Endpoint analytics** > **Work from anywhere** |
 
 The following sections describe each listed report.
@@ -4880,22 +4879,6 @@ The following table contains the possible output when calling the `WindowsDevice
 | UPN |
 | VSMStatus |
 | WinPEStatus |
-
-There are no filters for this report.
-
-## WindowsUpdatePerPolicyPerDeviceStatus
-
-The following table contains the possible output when calling the `WindowsUpdatePerPolicyPerDeviceStatus` report:
-
-| Available properties |
-|-|
-| AggregateState |
-| CurrentDeviceUpdateStatus |
-| DeviceId |
-| DeviceName |
-| LatestAlertMessage |
-| PolicyId |
-| UPN |
 
 There are no filters for this report.
 

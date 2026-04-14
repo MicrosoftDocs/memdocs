@@ -33,7 +33,7 @@ This article provides recommendations on when to use MAM. It also includes an ov
 
 ## Before you begin
 
-For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md).
 
 ## MAM
 
@@ -80,8 +80,8 @@ The specific tasks depend on how you tell users to install the apps.
 
 ## Related articles
 
-- [Android enrollment guide](deployment-guide-enrollment-android.md)
-- [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
-- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
-- [macOS enrollment guide](deployment-guide-enrollment-macos.md)
-- [Windows enrollment guide](deployment-guide-enrollment-windows.md)
+- [Android enrollment guide](../../device-enrollment/android/guide.md)
+- [iOS/iPadOS enrollment guide](../../device-enrollment/apple/guide-ios-ipados.md)
+- [Linux enrollment guide](../../device-enrollment/guide-linux.md)
+- [macOS enrollment guide](../../device-enrollment/apple/guide-macos.md)
+- [Windows enrollment guide](../../device-enrollment/windows/guide.md)

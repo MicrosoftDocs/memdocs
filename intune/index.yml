@@ -34,17 +34,17 @@ productDirectory:
     - title: Device enrollment
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
       summary: Enroll and prepare devices for management, including Windows Autopilot scenarios.
-      url: ./intune-service/fundamentals/deployment-guide-enrollment.md
+      url: ./device-enrollment/guide.md
 
     - title: Device configuration
       imageSrc: ./media/icons/hub-page/devices.svg
       summary: Configure settings and features across managed devices.
-      url: ./intune-service/configuration/device-profiles.md
+      url: ./device-configuration/overview.md
 
     - title: Application management
       imageSrc: ./media/icons/hub-page/apps.svg
       summary: Deploy and manage apps across platforms.
-      url: ./intune-service/apps/app-management.md
+      url: ./app-management/overview.md
 
     - title: Device updates 
       imageSrc: ./media/icons/hub-page/device-updates.svg
@@ -64,7 +64,7 @@ productDirectory:
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Protect corporate data at the app level without requiring device enrollment.
-      url: ./intune-service/apps/app-protection-policy.md
+      url: ./app-management/protection/overview.md
 
     - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/agent.svg
@@ -79,7 +79,7 @@ productDirectory:
     - title: Remote actions and support
       imageSrc: ./media/icons/hub-page/remote-actions.svg
       summary: Take actions on devices and help users remotely.
-      url: ./intune-service/remote-actions/index.md
+      url: device-management/actions/index.md
 
     - title: Administration and governance
       imageSrc: ./media/icons/hub-page/administration.svg
@@ -107,7 +107,7 @@ conceptualContent:
         - url: https://aka.ms/Intune_GuidedDemo
           itemType: get-started
           text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/licenses.md
+        - url: ./fundamentals/licensing/index.md
           itemType: get-started
           text: Microsoft Intune licensing
         - url: ./intune-service/fundamentals/intune-planning-guide.md
@@ -116,6 +116,9 @@ conceptualContent:
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
+        - url: ./privacy-compliance.yml
+          itemType: overview
+          text: Privacy and compliance
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
@@ -154,6 +157,10 @@ conceptualContent:
           - text: Feedback for Intune
             itemType: whats-new
             url: https://aka.ms/IntuneFeedback
+          - url: ./user-help/index.yml
+            itemType: overview
+            text: User help documentation
+
 
 
       - title: Related services

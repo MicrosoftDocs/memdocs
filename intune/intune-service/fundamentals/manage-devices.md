@@ -61,9 +61,9 @@ For more specific information by platform, go to:
 
 - [Android platform deployment guide](deployment-guide-platform-android.md)
 - [iOS/iPadOS platform deployment guide](deployment-guide-platform-ios-ipados.md)
-- [Linux enrollment deployment guide](deployment-guide-enrollment-linux.md)
+- [Linux enrollment deployment guide](../../device-enrollment/guide-linux.md)
 - [macOS platform deployment guide](deployment-guide-platform-macos.md)
-- [Windows enrollment deployment guide](deployment-guide-enrollment-windows.md)
+- [Windows enrollment deployment guide](../../device-enrollment/windows/guide.md)
 
 ## Check the compliance health of your devices
 
@@ -114,12 +114,11 @@ In Intune, some common security tasks include:
 
 - **Use security baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
-  If you're not sure where to start, then look at security baseline and the built-in guided scenarios.
+  If you're not sure where to start, then look at security baselines.
 
   For more specific information, go to:
 
   - [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md)
-  - [Guided scenarios overview](guided-scenarios-overview.md)
 
 - **Manage software updates, encrypt hard disks, configure built-in firewalls**, and more using built-in policy settings. You can also use Windows Autopatch for automatic patching of Windows, including Windows quality updates and Windows feature updates.
 
@@ -131,7 +130,7 @@ In Intune, some common security tasks include:
 
 - **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, and restore a device to its factory settings. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
-  For more information, go to [Remote actions in Intune](../remote-actions/index.md).
+  For more information, go to [Remote actions in Intune](../../device-management/actions/index.md).
 
 ## Related articles
 

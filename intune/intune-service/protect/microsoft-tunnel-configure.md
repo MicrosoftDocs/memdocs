@@ -3,7 +3,7 @@ title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway on a Linux server to support Intune managed cloud-based devices in connecting to your on-premises infrastructure.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/07/2025
+ms.date: 04/10/2026
 ms.topic: how-to
 ms.reviewer: ochukwunyere
 ms.collection:
@@ -131,9 +131,9 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
    To see detailed console output during the tunnel and installation agent enrollment process:
 
-   1. Run `export mst_verbose_log="true"` before you run the *./mstunnel-setup* script. To confirm verbose logging is enabled, run `export`.
+   1. Run `export mst_log_verbose=1` before you run the *./mstunnel-setup* script. To confirm verbose logging is enabled, run `export`.
 
-   2. After setup completes, edit the environment file **/etc/mstunnel/env.sh** to add a new line: `mst_verbose_log="true"`. After adding the line, run `mst-cli server restart` to restart the server.
+   2. After setup completes, edit the environment file **/etc/mstunnel/env.sh** to add a new line: `mst_log_verbose=1`. After adding the line, run `mst-cli server restart` to restart the server.
 
    > [!IMPORTANT]
    > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following commands to add *intune_env=FXP* to the command line:
@@ -448,7 +448,7 @@ While on the Configuration settings page after you set the Connection type to Mi
 
 Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Microsoft Tunnel client application on Android Enterprise devices. If you use Defender for Endpoint for both the Microsoft Tunnel client application and as an MTD app, you can use *custom settings* in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.
 
-For devices [enrolled](../fundamentals/deployment-guide-enrollment-android.md) as *Android Enterprise personally owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
+For devices [enrolled](../../device-enrollment/android/guide.md) as *Android Enterprise personally owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
 
 If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD, then you continue to use the app tunnel configuration profile to configure Microsoft Defender for Endpoint as a Tunnel Client.
 

@@ -1,16 +1,20 @@
 ---
 title: Remotely administer devices in Microsoft Intune
-description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
-author: paolomatarazzo
-ms.author: paoloma
-ms.date: 03/04/2025
+description: Install the previous TeamViewer connector to remotely administer devices using Microsoft Intune.    
+author: lenewsad
+ms.author: lanewsad
+ms.date: 04/07/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
-# Use TeamViewer to remotely administer Intune devices
+# Use TeamViewer to remotely administer Intune devices 
+
+> [!IMPORTANT]
+> A new TeamViewer remote assistance experience is available in Intune and replaces the connector described in this article.  
+>
+> This article describes the previous TeamViewer connector, which is being deprecated. We recommend using the new TeamViewer integration for the latest experience and ongoing support. For more information and setup guidance, see [Use the TeamViewer integration in Microsoft Intune](team-viewer-integration.md).  
 
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This article shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
 
@@ -27,7 +31,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](unlicensed-admins.md).
+- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
 
 - Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 

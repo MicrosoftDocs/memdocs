@@ -59,28 +59,27 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
 - **[Windows cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)**
 
-  This feature is a guided scenario and can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
+  This feature can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
 
-  For more information on this guided scenario and the other guided scenarios available, go to:
+  For more information, go to:
 
-  - [Guided scenario - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)
-  - [Step-by-step guide - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
-  - [Intune guided scenarios overview](../../intune-service/fundamentals/guided-scenarios-overview.md)
+  - [Windows in cloud configuration overview](../../intune-service/fundamentals/cloud-configuration.md)
+  - [Step-by-step setup guide](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
 
 - **[Remote Help](../../intune-service/fundamentals/remote-help.md)**
 
   This feature is cloud-based solution that secures help desk connections. With these connections, your support staff can remote connect to FLW devices on:
 
-  - [Android](../../intune-service/fundamentals/remote-help-android.md)
-  - [macOS](../../intune-service/fundamentals/remote-help-macos.md)
-  - [Windows](../../intune-service/fundamentals/remote-help-windows.md)
+  - [Android](../../intune-service/fundamentals/remote-help.md)
+  - [macOS](../../intune-service/fundamentals/remote-help.md)
+  - [Windows](../../intune-service/fundamentals/remote-help.md)
 
 - **[Specialty devices](../../intune-service/fundamentals/specialty-devices-with-intune.md)**
 
   These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, like Microsoft Teams Rooms devices. They can be managed using Intune policies.
 
 > [!NOTE]
-> Some features may require additional licenses. For more information, go to [Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md) or [Microsoft Intune licensing](../../intune-service/fundamentals/licenses.md).
+> Some features may require additional licenses. For more information, go to [Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md) or [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
 ## Microsoft Entra shared device mode for FLW
 

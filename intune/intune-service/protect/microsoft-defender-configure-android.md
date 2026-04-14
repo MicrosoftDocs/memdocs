@@ -159,7 +159,7 @@ To configure web protection on devices, use the following procedures to create a
 ## Next steps
 
 - [Monitor device compliance status for risk levels](../protect/microsoft-defender-monitor.md)
-- [Use security tasks with Defender for Endpoints Vulnerability Management to remediate problems on devices](../protect/atp-manage-vulnerabilities.md)
+- [Use security tasks with Defender for Endpoints Vulnerability Management to remediate problems on devices](../protect/microsoft-defender-manage-vulnerabilities.md)
 
 - Learn more from the Microsoft Defender for Endpoint documentation:
 

@@ -72,12 +72,12 @@ sections:
           > The following procedure is supported for Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
 
             1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
-            2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](driver-update-policy.md).
+            2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](configure-driver-update-policy.md).
             3. Configure a domain-based group policy to configure **Windows Update** as the source for **Driver Updates** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus).
                 > [!NOTE]
                 > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
-            4. Enable [data collection](driver-updates.md#prerequisites) in Intune for devices that you wish to deploy drivers and firmware to.
-            5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](driver-updates-reports.md).
+            4. Enable [data collection](manage-driver-updates.md#prerequisites) in Intune for devices that you wish to deploy drivers and firmware to.
+            5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](monitor-driver-updates.md).
                 > [!NOTE]
                 > By default, diagnostic data submission to Microsoft is allowed on Windows devices. Disabling diagnostic data collection prevents the use of Windows Update reports for Microsoft Intune from reporting any update information for your managed devices.
 
@@ -92,7 +92,7 @@ sections:
                 > [!NOTE]
                 > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
-            You can move Feature update management to the cloud in Intune by configuring a [Feature update](feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
+            You can move Feature update management to the cloud in Intune by configuring a [Feature update](manage-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
 
             Using Update Ring policies in Intune for Quality or Feature Updates requires you to move the **Windows Update** workload to Intune.
 

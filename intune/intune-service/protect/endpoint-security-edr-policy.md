@@ -69,7 +69,7 @@ You need licenses for Microsoft Defender:
 - Microsoft Defender XDR (standalone)
 
 For detailed licensing information, see:
-- [Microsoft Intune licensing](/mem/intune/fundamentals/licenses)
+- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
 - [Microsoft Defender for Endpoint licensing](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
 
 ### Role-based access control
@@ -464,7 +464,7 @@ For more information, see the following subjects in the Microsoft Defender for E
 
 After onboarding devices with EDR policies, consider deploying additional endpoint security controls:
 
-- [Attack surface reduction rules](/intune/intune-service/protect/endpoint-security-asr-policy)
-- [Anti-malware policies](/intune/intune-service/protect/endpoint-security-antivirus-policy)
-- [Firewall policies](/intune/intune-service/protect/endpoint-security-firewall-policy)
-- [Device compliance policies](/intune/intune-service/protect/device-compliance-get-started)
+- [Attack surface reduction rules](endpoint-security-asr-policy.md)
+- [Anti-malware policies](endpoint-security-antivirus-policy.md)
+- [Firewall policies](endpoint-security-firewall-policy.md)
+- [Device compliance policies](device-compliance-get-started.md)

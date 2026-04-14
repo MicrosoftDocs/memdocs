@@ -197,7 +197,7 @@ When you run **Update Distribution Points** on a selected boot image, you can no
 ## Software updates
 
 ### Improvements to Express Update download time
-In this release, we have improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+In this release, we have improved the download time for Express Updates. For more information, see [Manage Express installation files for Windows 10 updates](/previous-versions/troubleshoot/configmgr/manage-express-installation-files-for-windows-10-updates).
 
 ### Manage Microsoft Surface driver updates
 <!-- 1098490 -->

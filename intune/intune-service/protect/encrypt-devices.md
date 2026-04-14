@@ -107,7 +107,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 ### Create device configuration policy
 
 > [!TIP]
-> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../configuration/settings-catalog.md) and the *PDE* category.
+> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../../device-configuration/settings-catalog/index.md) and the *PDE* category.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -187,7 +187,7 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 > - **System instability** and boot failures
 > - **Complex recovery scenarios** with multiple encryption layers
 >
-> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../remote-actions/device-inventory.md) to identify devices with existing encryption software.
+> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../fundamentals/device-inventory.md) to identify devices with existing encryption software.
 
 > [!IMPORTANT]
 > After setting **Allow Warning For Other Disk Encryption** to *Disabled*, another setting becomes available:
@@ -399,7 +399,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
 
 **Self-service access options**:
 
-- **Company Portal app**: Users can access BitLocker recovery keys through the [Company Portal app](../user-help/get-recovery-key-windows.md)
+- **Company Portal app**: Users can access BitLocker recovery keys through the [Company Portal app](../../user-help/security/collect-recovery-key-windows.md)
 - **My Account portal**: Available at account.microsoft.com for Microsoft Entra joined devices
 - **Microsoft Entra ID**: Direct access for Microsoft Entra joined devices
 
@@ -458,4 +458,4 @@ For silent BitLocker enablement, recovery keys are automatically backed up to Mi
 - [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
 - [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises) in the Windows security documentation
 - [Personal Data Encryption overview](/windows/security/operating-system-security/data-protection/personal-data-encryption/)
-- [Self-service scenarios for end users through Company Portal app](../user-help/get-recovery-key-windows.md)
+- [Self-service scenarios for end users through Company Portal app](../../user-help/security/collect-recovery-key-windows.md)

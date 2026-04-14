@@ -21,7 +21,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
  Complete the following prerequisites to enable your tenant's endpoint management capabilities:
 
 * [Add users](users-add.md) and [groups](groups-add.md)
-* [Assign licenses to users](licenses-assign.md)
+* [Assign licenses to users](../../fundamentals/licensing/assign-licenses.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
@@ -48,7 +48,7 @@ You can use Microsoft Entra Conditional Access policies in conjunction with devi
 | ---- | ------ |
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. Examples of actions include sending alerts, remotely locking devices, or retiring devices. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |
-| Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Select the apps or services you want to protect and define the conditions for access. |
+| Create [a device-based](/entra/identity/conditional-access/policy-all-users-device-compliance) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Select the apps or services you want to protect and define the conditions for access. |
 |[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of. For example, things like meeting room calendar kiosks use basic authentication.  |
 | [Add custom compliance settings](../protect/compliance-use-custom-settings.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Windows devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-json.md) that identifies the settings and value pairs.|
 
@@ -74,7 +74,7 @@ Use Microsoft Intune to enable or disable Windows settings and features on devic
 | Task | Detail |
 | ---- | ------ |
 |[Create a device profile](../configuration/device-profile-create.md) |Create a device profile in Microsoft Intune and find resources about all device profile types.|
-|[Configure device settings](../configuration/settings-catalog.md) | Use the settings catalog to configure settings in Microsoft Intune. The settings catalog includes hundreds of settings that you can configure for Microsoft Edge, OneDrive, remote desktop, Office apps, and more. These settings have a similar feel to Group Policy Objects (GPO), and they're 100% cloud-based.|
+|[Configure device settings](../../device-configuration/settings-catalog/index.md) | Use the settings catalog to configure settings in Microsoft Intune. The settings catalog includes hundreds of settings that you can configure for Microsoft Edge, OneDrive, remote desktop, Office apps, and more. These settings have a similar feel to Group Policy Objects (GPO), and they're 100% cloud-based.|
 |[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference for Windows](../configuration/wi-fi-settings-windows.md).|
 |[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-windows-10.md). |
 |[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see the [email settings reference](../configuration/email-settings-windows-10.md).|
@@ -98,11 +98,11 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 | Task | Detail |
 | ---- | ------ |
 |[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of device enrollment. This policy works in conjunction with Microsoft Entra Conditional Access policies.|
-|[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
-|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|
-|[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. |
-|[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md).
-|[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Windows devices with certificates that are derived from user smart cards.
+|[Create a trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
+|[Use SCEP certificates with Intune ](../../fundamentals/certificates/scep-infrastructure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../../device-configuration/certificates/scep-profiles.md) or [set up a third-party certification authority with SCEP](../../fundamentals/certificates/third-party-ca-scep.md).|
+|[Use PKCS certificates with Intune](../../device-configuration/certificates/pkcs-profiles.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. |
+|[Use imported PKCS certificates with Intune](../../device-configuration/certificates/imported-pfx-profiles.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../../device-security/certificates/s-mime.md).
+|[Set up a derived credentials issuer](../../device-security/certificates/derived-credentials.md)| Provision Windows devices with certificates that are derived from user smart cards.
 |[Integrate Windows Hello for Business with Microsoft Intune](../protect/windows-hello.md)| Create a Windows Hello for Business policy to enable or disable Windows Hello for Business during device enrollment. Hello for Business is an alternative sign-in method that uses Active Directory or a Microsoft Entra account to replace a password, smart card, or a virtual smart card. |
 
 ## Step 7: Deploy apps
@@ -122,7 +122,7 @@ As you set up apps and app policies, think about your organization's requirement
 
 ## Step 8: Enroll devices
 
-During enrollment, the device is registered with Microsoft Entra ID and evaluated for compliance. For information about each enrollment method and how to choose one that's right for your organization, see [Windows device enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
+During enrollment, the device is registered with Microsoft Entra ID and evaluated for compliance. For information about each enrollment method and how to choose one that's right for your organization, see [Windows device enrollment guide for Microsoft Intune](../../device-enrollment/windows/guide.md).
 
 | Task | Detail |
 | ---- | ------ |
@@ -143,9 +143,9 @@ After devices are set up, you can use supported remote actions to manage and tro
 
 | Task | Detail |
 | ---- | ------ |
-|[Take remote action on devices](../remote-actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
+|[Take remote action on devices](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |
+|[Use security tasks to view threats and vulnerabilities](../protect/microsoft-defender-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |
 
 <!-- org msg moved to m365 admin center
 |[Use organizational messages](/microsoft-365/admin/misc/organizational-messages-microsoft-365)|Set up organizational messages in the Microsoft 365 admin center to send important messages to employees on Intune-managed devices running Windows 11. You can use organizational messages to communicate in remote and hybrid work scenarios.| -->
@@ -165,10 +165,10 @@ The resources in this section are in the Microsoft Intune User Help documentatio
 
 | Task | Detail |
 | ---- | ------ |
-|[Install Intune Company Portal app for Windows](../user-help/sign-in-to-the-company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
-|[Update Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
-|[Enroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to enroll personal devices running Windows. |
-|[Unenroll a device](../user-help/unenroll-your-device-from-intune-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
+|[Install Intune Company Portal app for Windows](../../user-help/company-portal/company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
+|[Update Company Portal app](../../user-help/company-portal/install-company-portal-update.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
+|[Enroll a device](../../user-help/enrollment/enroll-windows.md)| This article describes how to enroll personal devices running Windows. |
+|[Unenroll a device](../../user-help/unenrollment/remove-enrollment-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
 
 ## Next steps
 

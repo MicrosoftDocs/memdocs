@@ -54,7 +54,7 @@ Deploy policies to configure and enforce security on enrolled devices. The follo
 The following security areas can be managed through these policies:
 
 - **Authentication and identity**
-  - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../protect/certificates-configure.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../protect/derived-credentials.md) for smartcard scenarios.
+  - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../../fundamentals/certificates/overview.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../../device-security/certificates/derived-credentials.md) for smartcard scenarios.
   - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure [Platform SSO for macOS](../configuration/platform-sso-macos.md) to strengthen authentication across apps and services.
   - **Multi-factor authentication** - Use Microsoft Entra Conditional Access to require MFA, and use Intune to configure device PIN/password and other sign-in related settings as needed.
 
@@ -63,7 +63,7 @@ The following security areas can be managed through these policies:
   - **macOS** - Manage [FileVault](../protect/encrypt-devices-filevault.md) for full disk encryption.
 
 - **Software updates** - Control when and how devices receive updates:
-  - **Android** - [FOTA updates](../../device-updates/android/fota-updates.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/zebra-lifeguard-ota-integration.md) for Zebra devices.
+  - **Android** - [FOTA updates](../../device-updates/android/manage-fota.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/setup-zebra-lifeguard.md) for Zebra devices.
   - **iOS/iPadOS and macOS** - [Configure update policies](../../device-updates/apple/index.md) to manage OS versions and update schedules.
   - **Windows** - Configure [Windows Update behaviors](../../device-updates/windows/index.md), schedule updates, and maintain feature update compliance.
 
@@ -85,7 +85,7 @@ The following security areas can be managed through these policies:
 
 Protect organizational data at the application layer using [app protection policies](../apps/app-protection-policy.md) with Intune-managed apps. These protections work on both enrolled and unenrolled devices, supporting Bring Your Own Device (BYOD) scenarios.
 
-**Intune-managed apps** integrate the [Intune App SDK](../developer/app-sdk.md) or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
+**Intune-managed apps** integrate the [Intune App SDK](../../developer/app-sdk/index.md) or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
 
 When you require managed apps (for example, by using app-based Conditional Access policies), users can only access organizational data through those managed apps, while personal data remains unaffected.
 
@@ -99,7 +99,7 @@ When you require managed apps (for example, by using app-based Conditional Acces
 
 ## Use device actions to protect devices and data
 
-Run immediate [device actions](../remote-actions/index.md) to respond to security incidents or maintain device security. Unlike policies that maintain ongoing configurations, device actions execute once when invoked. Actions take effect immediately for online devices, or at next check-in for offline devices. [Bulk device actions](../remote-actions/index.md#bulk-device-actions) can target multiple devices simultaneously.
+Run immediate [device actions](../../device-management/actions/index.md) to respond to security incidents or maintain device security. Unlike policies that maintain ongoing configurations, device actions execute once when invoked. Actions take effect immediately for online devices, or at next check-in for offline devices. [Bulk device actions](../../device-management/actions/index.md#bulk-device-actions) can target multiple devices simultaneously.
 
 **Common security actions:**
 
@@ -146,7 +146,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 - **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
 - **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../protect/endpoint-security-antivirus-policy.md) settings, [EDR onboarding](../protect/endpoint-security-edr-policy.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
-- **Vulnerability management** - [Security tasks](../protect/atp-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
+- **Vulnerability management** - [Security tasks](../protect/microsoft-defender-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
 - **[Microsoft Tunnel](../protect/microsoft-tunnel-overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 
 ### Conditional Access
@@ -162,7 +162,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 **Conditional Access with Intune enables:**
 
-- [Device-based policies](../protect/create-conditional-access-intune.md) - Require devices to meet compliance requirements before accessing organizational resources.
+- [Device-based policies](/entra/identity/conditional-access/policy-all-users-device-compliance) - Require devices to meet compliance requirements before accessing organizational resources.
 - [App-based policies](../protect/app-based-conditional-access-intune.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services.
 - Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners.
 
@@ -190,4 +190,4 @@ Build your security posture with Intune:
 - **Configure endpoint security** - Start with [endpoint security policies](../protect/endpoint-security.md) for focused security configurations.
 - **Implement compliance** - Deploy [device compliance policies](../protect/device-compliance-get-started.md) and [Conditional Access](../protect/conditional-access.md).
 - **Protect data** - Configure [app protection policies](../apps/app-protection-policy.md) for organizational data.
-- **Monitor and maintain** - Learn about [data security and sharing in Intune](../protect/privacy-data-secure-share.md).
+- **Monitor and maintain** - Learn about [data security and sharing in Intune](../../privacy/data-sharing/index.md).

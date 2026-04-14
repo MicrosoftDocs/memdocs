@@ -75,7 +75,7 @@ sections:
 
           For group policies, don't try to translate all of your existing group policy objects (GPOs) to Intune policies. For a cloud-managed device, there are some group policies that don't apply to the scenario. If you don't know why a group policy setting is configured, now is an opportunity to determine if it's still needed. Also make sure that you're not still using settings for an app that you no longer use. This process is an opportunity to optimize the performance and configuration requirements of your cloud-managed devices.
 
-          Use Microsoft policy analytics to help you understand if there are critical settings in your GPOs that you need to migrate to Intune. For more information, see [Use group policy analytics](../../intune-service/configuration/group-policy-analytics.md).
+          Use Microsoft policy analytics to help you understand if there are critical settings in your GPOs that you need to migrate to Intune. For more information, see [Use group policy analytics](../../device-configuration/import-group-policy-analytics.md).
 
           Don't decide to invest in hybrid authentication only to avoid reviewing the settings that you need for your Windows 10 or later devices. Use this opportunity to invest the time now to be in a better position for the future. Also, a healthy and clean device configuration helps with performance and user experience. Don't buy new hardware, install the latest Windows version, and then apply an old configuration.
 
@@ -127,8 +127,8 @@ sections:
 
           If you switch the **Office Click-to-Run apps** workload to Intune, then it becomes the management authority for Microsoft 365 apps and updates. When you create a new Microsoft 365 suite deployment, choose the update channel for your clients will be at. For more information, see the following articles:
 
-          - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
-          - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune settings catalog](../../intune-service/configuration/settings-catalog-update-office.md)
+          - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
+          - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune settings catalog](../../device-configuration/settings-catalog/update-office.md)
           - [Overview of update channels for Microsoft 365 Apps](/deployoffice/overview-update-channels)
 
       - question: |

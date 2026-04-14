@@ -1,7 +1,7 @@
 ---
-title: Device Query in Advanced Analytics
+title: Device Query
 description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
-ms.date: 12/01/2025
+ms.date: 03/24/2026
 ms.topic: how-to
 ---
 
@@ -32,7 +32,7 @@ Additional prerequisites for device query:
 >
 > Device query runs in real time: when you query a device, Intune sends a request to the device and expects an immediate response.
 > WNS is the transport mechanism: Windows Push Notification Services is used to notify the device and return the query results.
->Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
+> Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
 
 :::column-end:::
 :::row-end:::
@@ -61,7 +61,7 @@ The supported properties you can query are listed in the [Supported properties](
 For more information on Kusto Query Language, see [Kusto Query Language Overview](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../copilot/index.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 Best practices:
 
@@ -74,9 +74,9 @@ Best practices:
 
 Use the Intune remote device actions in Single device query to help you manage your devices remotely. From the device query interface, you can now run device actions based on query results for faster and more efficient troubleshooting.
 
-The available device actions depend on the device platform and configuration. Not all actions are available for all devices. For a complete list of what can be done on your devices, see [Remote device actions in Microsoft Intune ](../intune-service/remote-actions/index.md).
+The available device actions depend on the device platform and configuration. Not all actions are available for all devices. For a complete list of what can be done on your devices, see [Remote device actions in Microsoft Intune ](../device-management/actions/index.md).
 
-## Supported Operators 
+## Supported operators 
 
 Device query supports only a subset of the operators supported in the Kusto Query Language (KQL). The following operators are currently supported:
 
@@ -166,9 +166,9 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |`substring()`|Extracts a substring from a source string starting from some index to the end of the string|
 |`tostring()`|Converts input to a string representation|
 
-## Supported Properties
+## Supported properties
 
-Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
+Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](ref-data-platform-schema.md).
 
 - `BiosInfo`
 - `Certificate`
@@ -216,5 +216,5 @@ Device query supports the following entities. To learn more about what propertie
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-RC]: ../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator

@@ -66,7 +66,7 @@ To see a generated report of device state, you can use the following steps:
 3. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
 4. Select **Generate report** (or **Generate again**) to retrieve current data.
 
-    ![Device compliance report](./media/intune-reports/intune-reports-02a.png)
+    :::image type="content" source="./media/intune-reports/intune-reports-02a.png" alt-text="Screenshot of the Device compliance report in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-02a.png":::
 
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated.
@@ -84,7 +84,7 @@ You can view the **Device compliance trends** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 30 day trend.
 
-    ![Intune trend report](./media/intune-reports/intune-reports-03.png)
+    :::image type="content" source="./media/intune-reports/intune-reports-03.png" alt-text="Screenshot of the Device compliance trends report in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-03.png":::
 
 ### Noncompliant devices report (Organizational)
 
@@ -364,7 +364,7 @@ You can view the **Windows Expedited update failures** report using the followin
 
 A Windows update report, the **Feature update failures** operational report provides failure details for devices that are targeted with a **Feature updates for Windows 10 and later** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting.
 
-Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/feature-updates.md).
+Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/manage-feature-updates.md).
 
 To view the **Feature update failures** report, use the following steps:
 
@@ -407,7 +407,7 @@ You can view the **Installation status for macOS devices** report using the foll
 
 A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
-For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/feature-updates.md).
+For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/manage-feature-updates.md).
 
 You can view the **Windows 10 and later feature updates** report using the following steps:
 
@@ -547,8 +547,7 @@ Other reports for Microsoft Defender Antivirus include:
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
-> [!div class="mx-imgBorder"]
-> ![Select firewall reports](media/intune-reports/select-firewall-reports.png)
+:::image type="content" source="./media/intune-reports/select-firewall-reports.png" alt-text="Screenshot showing how to select firewall reports in the Microsoft Intune admin center." lightbox="./media/intune-reports/select-firewall-reports.png":::
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
 
@@ -560,8 +559,7 @@ Status details include:
 - **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
 - **Not applicable** – The device doesn't support firewall reporting.
 
-> [!div class="mx-imgBorder"]
-> ![View the Firewall Status report](media/intune-reports/firewall-status.png)
+:::image type="content" source="./media/intune-reports/firewall-status.png" alt-text="Screenshot of the Firewall Status report in the Microsoft Intune admin center." lightbox="./media/intune-reports/firewall-status.png":::
 
 ## Application reports
 
@@ -740,7 +738,7 @@ You can create and view custom reports using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](reports.md#diagnostic-settings).
 
-    ![Intune Reports - Add diagnostic setting](./media/intune-reports/intune-reports-04.png)
+    :::image type="content" source="./media/intune-reports/intune-reports-04.png" alt-text="Screenshot showing how to add a diagnostic setting in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-04.png":::
 
 3. Select **Add diagnostic setting** to display the **Diagnostic settings** pane.
 
@@ -750,16 +748,16 @@ You can create and view custom reports using the following steps:
 4. Add a **Name** for the diagnostic settings.
 5. Select the **Send to Log Analytics** and **DeviceComplianceOrg** settings.
 
-    ![Intune Reports - Diagnostic settings](./media/intune-reports/intune-reports-04a.png)
+    :::image type="content" source="./media/intune-reports/intune-reports-04a.png" alt-text="Screenshot of the Diagnostic settings pane in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-04a.png":::
 
 6. Select **Save**.
 7. Next, select **Log analytics** to create and run a new log query using [Log Analytics](reports.md#log-analytics).
 
-   ![Log Analytics - Log query](./media/intune-reports/intune-reports-05.png)
+   :::image type="content" source="./media/intune-reports/intune-reports-05.png" alt-text="Screenshot of a Log Analytics log query in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-05.png":::
 
 8. Select **Workbooks** to create or open an interactive report using [Azure Monitor workbooks](reports.md#workbooks).
 
-   ![Workbooks - Interactive reports](./media/intune-reports/intune-reports-07.png)
+   :::image type="content" source="./media/intune-reports/intune-reports-07.png" alt-text="Screenshot of Azure Monitor workbooks for interactive reports in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-07.png":::
 
 ### Diagnostic settings
 Each Azure resource requires its own diagnostic setting. The diagnostic setting defines the following for a resource:

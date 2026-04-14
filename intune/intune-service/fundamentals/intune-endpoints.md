@@ -3,7 +3,7 @@ title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/21/2025
+ms.date: 03/24/2026
 ms.topic: reference
 ms.reviewer: angrobe
 ms.collection:
@@ -27,7 +27,7 @@ As a cloud-only service, Intune doesn't require an on-premises infrastructure su
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
 > [!NOTE]
-> The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
+> The information in this section also applies to the [Microsoft Intune Certificate Connector](../../fundamentals/certificates/connector/prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The endpoints in this article allow access to the ports identified in the following tables.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
@@ -109,7 +109,7 @@ In this section, the following tables list the Intune dependencies and the ports
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
-**Android port information** - Depending on how you choose to manage Android devices, you might need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](deployment-guide-enrollment-android.md).
+**Android port information** - Depending on how you choose to manage Android devices, you might need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](../../device-enrollment/android/guide.md).
 
 #### Apple dependencies
 
@@ -156,7 +156,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 | ID |Desc |Category |ER |Addresses |Ports|Notes|
 |----|-----|---------|---|----------|-----|-----|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
 
@@ -439,16 +439,6 @@ euprodimedatasec.azureedge.net
 naprodimedatahotfix.azureedge.net
 naprodimedatapri.azureedge.net
 naprodimedatasec.azureedge.net
-swda01-mscdn.azureedge.net
-swda02-mscdn.azureedge.net
-swdb01-mscdn.azureedge.net
-swdb02-mscdn.azureedge.net
-swdc01-mscdn.azureedge.net
-swdc02-mscdn.azureedge.net
-swdd01-mscdn.azureedge.net
-swdd02-mscdn.azureedge.net
-swdin01-mscdn.azureedge.net
-swdin02-mscdn.azureedge.net
 *.notify.windows.com
 *.wns.windows.com
 ekcert.spserv.microsoft.com
@@ -459,6 +449,9 @@ intunecdnpeasd.azureedge.net
 *.support.services.microsoft.com
 *.trouter.communication.microsoft.com
 *.trouter.communications.svc.cloud.microsoft
+go-amer.trouter.communications.svc.cloud.microsoft
+go-apac.trouter.communications.svc.cloud.microsoft
+go-eu.trouter.communications.svc.cloud.microsoft
 *.trouter.teams.microsoft.com
 api.flightproxy.skype.com
 ecs.communication.microsoft.com
@@ -488,12 +481,34 @@ intunemaape9.neu.attest.azure.net
 *.gov.teams.microsoft.us
 remoteassistanceweb.usgov.communication.azure.us
 config.edge.skype.com
-contentauthassetscdn-prod.azureedge.net
-contentauthassetscdn-prodeur.azureedge.net
-contentauthrafcontentcdn-prod.azureedge.net
-contentauthrafcontentcdn-prodeur.azureedge.net
 fd.api.orgmsg.microsoft.com
 ris.prod.api.personalization.ideas.microsoft.com
+*.powershellgallery.com
+cdn.oneget.org
+go.microsoft.com
+aka.ms
+displaycatalog.mp.microsoft.com
+purchase.md.mp.microsoft.com
+licensing.mp.microsoft.com
+storeedgefd.dsx.mp.microsoft.com
+*.events.data.microsoft.com
+*.delivery.mp.microsoft.com
+enterpriseregistration.windows.net
+certauth.enterpriseregistration.windows.net
+login.microsoftonline.com
+graph.windows.net
+config.office.com
+ecs.office.com
+aadcdn.msauth.net
+aadcdn.msftauth.net
+browser.pipe.aria.microsoft.com
+teams.microsoft.com
+login.live.com
+lgmsapeweu.blob.core.windows.net
+lgmsapewus2.blob.core.windows.net
+lgmsapesea.blob.core.windows.net
+lgmsapeaus.blob.core.windows.net
+lgmsapeind.blob.core.windows.net
 
 ```
 

@@ -1417,7 +1417,7 @@ This task sequence variable specifies the password for the domain-based account 
 
 |**Example**|
 |-|
-|`OSDJoinPassword=P@ssw0rd10`|
+|`OSDJoinPassword=<complex_password>`|
 
 ### OSDLocalAdminPassword
 
@@ -1429,7 +1429,7 @@ This task sequence variable specifies the password for the Administrator local b
 
 |**Example**|
 |-|
-|`OSDLocalAdminPassword=P@ssw0rd10`|
+|`OSDLocalAdminPassword=<complex_password>`|
 
 ### OSDNetworkJoinType
 

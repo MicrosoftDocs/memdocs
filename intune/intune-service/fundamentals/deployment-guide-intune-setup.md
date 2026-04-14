@@ -52,7 +52,7 @@ If you currently don't use any MDM or mobile application management (MAM) provid
   - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
   - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
   - [Step 4 - Create device configuration profiles to secure devices](deployment-plan-configuration-profile.md)
-  - [Step 5 - Enroll devices](deployment-guide-enrollment.md)
+  - [Step 5 - Enroll devices](../../device-enrollment/guide.md)
 
 - **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with Intune (cloud), then consider [tenant attach](#option-1---add-tenant-attach) (in this article) or [co-management](#option-2---set-up-co-management) (in this article).
 
@@ -61,7 +61,7 @@ If you currently don't use any MDM or mobile application management (MAM) provid
   - Manage [on-premises Windows Server and some client devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
   - Manage [partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
   - Create [custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
-  - [Deploy and manage many app types](../../configmgr/apps/understand/introduction-to-application-management.md).
+  - [Deploy and manage many app types](/previous-versions/troubleshoot/configmgr/introduction-to-application-management).
 
 ## Currently use a third party MDM provider
 
@@ -103,7 +103,7 @@ Users must unenroll their devices from the current MDM provider before they enro
     For more information, go to:
 
     - [Step 5 – Enroll devices in Microsoft Intune](deployment-guide-enroll.md)
-    - [Intune enrollment deployment guide](deployment-guide-enrollment.md)
+    - [Intune enrollment deployment guide](../../device-enrollment/guide.md)
 
 > [!IMPORTANT]
 > Don't configure Intune and any existing third party MDM solution simultaneously to apply access controls to resources, including Exchange or SharePoint.
@@ -136,12 +136,12 @@ Recommendations:
 Helpful information:
 
 - [Get started with Intune](get-started-with-intune.md)
-- [Intune enrollment deployment guide](deployment-guide-enrollment.md)
+- [Intune enrollment deployment guide](../../device-enrollment/guide.md)
 - [Step 1 - Set up Intune and your tenant](deployment-plan-setup.md)
 
 ## Currently use Configuration Manager
 
-Configuration Manager supports Windows Servers, and Windows & macOS client devices. If your organization uses other platforms, you might need to reset the devices, and then enroll them in Intune. Once enrolled, they receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+Configuration Manager supports Windows Servers, and Windows & macOS client devices. If your organization uses other platforms, you might need to reset the devices, and then enroll them in Intune. Once enrolled, they receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](../../device-enrollment/guide.md).
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
@@ -331,4 +331,4 @@ There are some policy types that can't be exported. There are some policy types 
 ## Related articles
 
 - [Get started with Intune](get-started-with-intune.md)
-- [Enrollment deployment guides](deployment-guide-enrollment.md)
+- [Enrollment deployment guides](../../device-enrollment/guide.md)

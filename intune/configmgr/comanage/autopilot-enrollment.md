@@ -20,7 +20,7 @@ Now you can configure co-management settings in Intune, which happens during the
 
 You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune co-management settings policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This parameter can optionally include the [PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts) property to specify a task sequence.
 
-If the device is targeted with an [Windows Autopilot enrollment status page (ESP) policy](../../intune-service/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Windows Autopilot ESP continues.
+If the device is targeted with an [Windows Autopilot enrollment status page (ESP) policy](../../device-enrollment/windows/setup-status-page.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Windows Autopilot ESP continues.
 
 ## Scenarios
 
@@ -97,7 +97,7 @@ The following components are required to support Windows Autopilot into co-manag
 
   You also need to assign the following profiles to the same device group:
 
-  - [Enrollment status page profile](../../intune-service/enrollment/windows-enrollment-status.md), with the option to **Show app and profile configuration progress**
+  - [Enrollment status page profile](../../device-enrollment/windows/setup-status-page.md), with the option to **Show app and profile configuration progress**
 
   - [Windows Autopilot deployment profile](/autopilot/profiles)
 
@@ -116,7 +116,7 @@ Use these recommendations for a more successful deployment:
     > [!NOTE]
     > The default timeout for the enrollment status page is 60 minutes. You can adjust this value in that policy, if needed, but a faster process may provide a better user experience.
 
-- Don't use this process with other policy providers like the [Intune management extension](../../intune-service/apps/intune-management-extension.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
+- Don't use this process with other policy providers like the [Intune management extension](../../device-management/tools/management-extension-windows.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
 
   - If you need to install apps in a specific order, use the co-management policy. Run a task sequence to install the apps.
 
@@ -154,7 +154,7 @@ Use the following process to configure the co-management policy in Intune:
 
     :::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
 
-1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../intune-service/configuration/device-profile-assign.md).
+1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../device-configuration/assign-device-profile.md).
 
 1. On the **Review + create** page, review the settings and create the policy.
 

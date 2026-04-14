@@ -99,7 +99,7 @@ Before adding apps to Intune, consider reviewing the support app types and asses
 
 ### Add Microsoft apps
 
-Intune includes a number of Microsoft apps based on the Microsoft license that you use for Intune. To learn more about the different Microsoft enterprise licenses available that include Intune, see [Microsoft Intune licensing](licenses.md). To compare the different Microsoft apps that are available with Microsoft 365, see the [licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans). To see all the options for each plan (including the available Microsoft apps), download the full [Microsoft subscription comparison table](https://go.microsoft.com/fwlink/?linkid=2139145) and locate the plans that include Microsoft Intune.
+Intune includes a number of Microsoft apps based on the Microsoft license that you use for Intune. To learn more about the different Microsoft enterprise licenses available that include Intune, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md). To compare the different Microsoft apps that are available with Microsoft 365, see the [licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans). To see all the options for each plan (including the available Microsoft apps), download the full [Microsoft subscription comparison table](https://go.microsoft.com/fwlink/?linkid=2139145) and locate the plans that include Microsoft Intune.
 
 One of the available app types is Microsoft 365 apps for Windows devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
@@ -274,14 +274,16 @@ For more information about protecting Exchange Online, go to the following topic
 The following list provides the end-user requirements to use app protection policies on apps managed by Intune include the following:
 
 - The end user must have a Microsoft Entra account. See [Add users and give administrative permission to Intune](users-add.md) to learn how to create Intune users in Microsoft Entra ID.
-- The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](licenses-assign.md) to learn how to assign Intune licenses to end users.
+- The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../../fundamentals/licensing/assign-licenses.md) to learn how to assign Intune licenses to end users.
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 - The end user must sign into the app using their Microsoft Entra account.
 
 ## Follow the minimum recommended baseline policies
 
+This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
+
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
-2. 🡺 **Add, configure, and protect apps** (*You are here*)
+2. 🡺 **Add, configure, and protect apps** (this article)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Configure device features](deployment-plan-configuration-profile.md)
 5. [Enroll devices](deployment-guide-enroll.md)

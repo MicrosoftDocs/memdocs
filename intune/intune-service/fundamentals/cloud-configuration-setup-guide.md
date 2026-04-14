@@ -92,7 +92,7 @@ If you already use Windows Autopilot, then skip this step, and go to [Step 3 - D
 
 ### ✅ 1 - Enable automatic enrollment
 
-Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, see [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
+Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, see [Enrollment guide -  Windows automatic enrollment](../../device-enrollment/windows/guide.md#windows-automatic-enrollment).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **Automatic Enrollment**.
@@ -585,7 +585,7 @@ You can monitor the status of the Windows Update ring policy:
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 
-For more information on reporting for Windows Update rings, see [Reports for update rings policies](../../device-updates/windows/update-rings-reports.md).
+For more information on reporting for Windows Update rings, see [Reports for update rings policies](../../device-updates/windows/monitor-update-rings.md).
 
 ### Compliance policy
 

@@ -17,9 +17,8 @@ The troubleshooting pane lets help desk operators and Intune administrators view
 
 The **Troubleshooting + support** pane provides three options:
 
-- [Guided scenarios](guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case. For more information, see [Guided scenarios](guided-scenarios-overview.md).
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
-- [Help and support](../../get-support.md) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune. For more information, see [Help and support](../../get-support.md).
+- [Help and support](../../fundamentals/it-pro-support/get-support-admin-center.md) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune. For more information, see [Help and support](../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 
@@ -55,7 +54,7 @@ In the **Troubleshooting** pane provides specific details for each Intune end-us
 
 You can use the **Troubleshooting + support** pane to review a variety of managed user and device information.
 
-![Intune troubleshooting dashboard](./media/help-desk-operators/help-desk-operators-01.png)
+:::image type="content" source="./media/help-desk-operators/help-desk-operators-01.png" alt-text="Screenshot of the Intune troubleshooting dashboard." lightbox="./media/help-desk-operators/help-desk-operators-01.png":::
 
 ### Summary
 
@@ -174,7 +173,7 @@ The **Diagnostics** tab provides the device name or application, platform, creat
 Use the following resources to help collect device data when troubleshooting user's device issues:
 
 - [Report a problem in Company Portal for iOS](../user-help/send-logs-to-microsoft-ios.md)
-- [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [Report a problem in Company Portal or Intune app for Android](../../user-help/diagnostics/collect-logs-android.md)
 
 You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).
 
@@ -184,4 +183,4 @@ You can learn more about Role-based administration control (RBAC) to define role
 
 Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
-Learn how to create a support ticket a get help when you need it. [Get support](../../get-support.md).
+Learn how to create a support ticket a get help when you need it. [Get support](../../fundamentals/it-pro-support/get-support-admin-center.md).

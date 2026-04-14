@@ -57,7 +57,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
-    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/mem/intune-service/fundamentals/deployment-guide-enrollment)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/intune/intune-service/fundamentals/deployment-guide-enrollment)
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant.
 
@@ -173,7 +173,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Tenant status." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png":::
 
-    For more information, see [Intune Tenant Status](tenant-status.md).
+    For more information, see [Intune Tenant Status](../../governance/tenant-status.md).
 
 13. From the navigation pane, select **Troubleshooting + support** > **Troubleshoot** to check status details on a specific user or devices.
 
@@ -206,17 +206,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     To create a support ticket, your account must be assigned an [administrator role in Microsoft Entra](/entra/identity/role-based-access-control) with sufficient permissions. To adhere to the principles of least privileged access, Microsoft recommends assigning the [**Service support administrator**](/entra/identity/role-based-access-control/delegate-by-task) role to your administrators who create Intune support tickets, which is the least privileged Microsoft Entra role that can create support tickets.
 
-    For more information, see [How to get support in Microsoft Intune](../../get-support.md).
-
-15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
-
-    A guided scenario is a customized series of steps centered around one end-to-end use-case. Common scenarios are based on the role an admin, user, or device plays in your organization. These roles typically require a collection of carefully orchestrated profiles, settings, applications, and security controls to provide the best user experience and security.
-
-    If you are not familiar with all the steps and resources needed to implement a particular Intune scenario, guided scenarios may be used as your starting point.
-
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Guided scenarios." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-15.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-15.png":::
-
-    For more information about guided scenarios, see [Guided scenarios overview](guided-scenarios-overview.md).
+    For more information, see [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 ## Configure the Microsoft Intune admin center
 

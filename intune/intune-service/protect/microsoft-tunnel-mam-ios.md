@@ -26,7 +26,7 @@ Applies to:
 
 - iOS/iPadOS
 
-Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
+Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../../developer/app-sdk/tunnel-mam-ios.md).
 
 In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use either the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
@@ -51,9 +51,9 @@ For more information, see [Microsoft Intune for US Government GCC service descri
 
 To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (LOB) apps to integrate the following three SDKs. Find guidance for integrating each SDK later in this article:
 
-- [Intune App SDK for iOS](../developer/app-sdk-ios-phase1.md)
-- [Microsoft Authentication Library](../developer/app-sdk-ios-phase2.md) (MSAL)
-- [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md)
+- [Intune App SDK for iOS](../../developer/app-sdk/ios-phase-1.md)
+- [Microsoft Authentication Library](../../developer/app-sdk/ios-phase-2.md) (MSAL)
+- [Tunnel for MAM iOS SDK](../../developer/app-sdk/tunnel-mam-ios.md)
 
 ## Tunnel for MAM iOS SDK Architecture
 
@@ -218,7 +218,7 @@ Tunnel for MAM uses the public-key certificate payload contained in the Intune t
 > Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.509 or PEM** certificate format.
 
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that is used.
-For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
+For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../../device-configuration/certificates/trusted-root-profiles.md).
 
 ## Configure Line of Business apps in the Microsoft Entra admin center
 
@@ -394,11 +394,11 @@ The following are requirements for using Xcode to successfully integrate an iOS 
 - MSAL-SDK – min version: 1.2.3
 - Tunnel for MAM iOS SDK, available on GitHub
 
-For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md).
+For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide](../../developer/app-sdk/tunnel-mam-ios.md).
 
 ## Known Issues
 
-The following are known issues or limitations for Tunnel for MAM on iOS. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
+The following are known issues or limitations for Tunnel for MAM on iOS. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../../developer/app-sdk/tunnel-mam-ios.md#known-issues).
 
 ### MAM Tunnel not supported when using the MDM Tunnel
 
