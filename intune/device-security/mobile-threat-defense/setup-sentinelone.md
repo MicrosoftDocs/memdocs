@@ -18,7 +18,7 @@ Complete the following steps to integrate the SentinelOne Mobile Threat Defense 
 
 ## Before you begin
 
-The following steps are done in the [SentinelOne Management Console](https://console.mobile.sentinelone.net) and enable a connection to SentinelOne’s service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the [SentinelOne Management Console](https://console.mobile.sentinelone.net) and enable a connection to SentinelOne's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating SentinelOne with Intune, make sure you have the following subscription and credentials:
 

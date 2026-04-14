@@ -20,7 +20,7 @@ Control mobile device access to corporate resources using Conditional Access bas
 - Operating system vulnerabilities
 - Device misconfiguration
 
-You can configure Conditional Access policies based on Trend Micro Mobile Security as a Service’s risk assessment, enabled through Intune device compliance policies for enrolled devices. You can set up your policies to allow or block noncompliant devices from accessing corporate resources based on detected threats.
+You can configure Conditional Access policies based on Trend Micro Mobile Security as a Service's risk assessment, enabled through Intune device compliance policies for enrolled devices. You can set up your policies to allow or block noncompliant devices from accessing corporate resources based on detected threats.
 
 For more information about how to integrate Trend Micro with Microsoft Intune, see [Setting up Intune integration](https://docs.trendmicro.com/documentation/article/trend-vision-one-setting-up-intune-integration) in the Trend Micro Mobile Security documentation.
 

@@ -96,7 +96,7 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 
       When this option is selected, the Wizard presents extra pages to complete the setup of co-management. For more information, see [Enable co-management](../configmgr/comanage/how-to-enable.md) in the Configuration Manager content.
 
-      :::image type="content" source="./media/tenant-attach-intune/tenant-onboarding.png" alt-text="Configure tenant attach" Lightbox="./media/tenant-attach-intune/tenant-onboarding.png":::
+      :::image type="content" source="./media/tenant-attach/tenant-onboarding.png" alt-text="Configure tenant attach" Lightbox="./media/tenant-attach/tenant-onboarding.png":::
 
 4. Select **Next** and then **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync of collections to the Microsoft Intune admin center.
 
@@ -123,7 +123,7 @@ Tenant attach is now configured, and selected devices sync to Microsoft Intune a
 
    The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 
-   :::image type="content" source="./media/tenant-attach-intune/configure-upload.png" alt-text="View the co-management properties tab" Lightbox="./media/tenant-attach-intune/configure-upload.png":::
+   :::image type="content" source="./media/tenant-attach/configure-upload.png" alt-text="View the co-management properties tab" Lightbox="./media/tenant-attach/configure-upload.png":::
 
 4. Sign in with your *Global Administrator* account when prompted.
 
@@ -164,7 +164,7 @@ To display the Configuration Manager connector status:
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
 
-   :::image type="content" source="./media/tenant-attach-intune/connector-status.png" alt-text="Display the Configuration Manager connector status" Lightbox="./media/tenant-attach-intune/connector-status.png":::
+   :::image type="content" source="./media/tenant-attach/connector-status.png" alt-text="Display the Configuration Manager connector status" Lightbox="./media/tenant-attach/connector-status.png":::
 
    > [!NOTE]
    >
@@ -185,7 +185,7 @@ Use the following steps to view client details for a specific device:
 
    Devices that have been uploaded using tenant attach display **ConfigMgr** in the **Managed by** column.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-02.png" alt-text="Microsoft Intune - All devices" Lightbox="./media/tenant-attach-intune/tenant-attach-02.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-02.png" alt-text="Microsoft Intune - All devices" Lightbox="./media/tenant-attach/tenant-attach-02.png":::
 
 3. Select a device that is synced from Configuration Manager via tenant attach.
 4. Select **Client details** to see more details.
@@ -195,13 +195,13 @@ Use the following steps to view client details for a specific device:
    - Last active time
    - Management point
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-08.png" alt-text="Client details in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-08.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-08.png" alt-text="Client details in Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-08.png":::
 
 5. Select **Collections** to list the client's [collections](../configmgr/core/clients/manage/collections/introduction-to-collections.md).
 
    Collections help you organize resources into manageable units.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-09.png" alt-text="Client collections in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-09.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-09.png" alt-text="Client collections in Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-09.png":::
 
 ### View a list of devices based on user
 
@@ -233,7 +233,7 @@ To view device data from the resource explorer:
 4. Select **Resource explorer** to view hardware inventory.
 5. Search for or select a class (a device value) to retrieve information from the client.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-05.png" alt-text="Resource explorer in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-05.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-05.png" alt-text="Resource explorer in Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-05.png":::
 
 Resource explorer can display a historical view of the device inventory in the Microsoft Intune admin center. When you're troubleshooting, having historical inventory data can provide valuable information about changes to the device.
 
@@ -241,11 +241,11 @@ Resource explorer can display a historical view of the device inventory in the M
 2. Select a class (a device value).
 3. Enter a custom date in the date time picker to get historical inventory data.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-06.png" alt-text="Screenshot of choosing a date from Resource explorer in the Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-06.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-06.png" alt-text="Screenshot of choosing a date from Resource explorer in the Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-06.png":::
 
 4. Close resource explorer and return to the device information by selecting the `X` icon in the top right of resource explorer.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-07.png" alt-text="Close resource explorer with the x icon in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-07.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-07.png" alt-text="Close resource explorer with the x icon in Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-07.png":::
 
 For more information about viewing device data for tenant attach devices, see [Tenant attach: Resource explorer in the admin center](../configmgr/tenant-attach/resource-explorer.md).
 
@@ -264,7 +264,7 @@ Use the following steps to install an application to an on-premises device:
 4. Select **Applications** to view a list of applicable apps.
 5. Select an application that hasn't been installed, and then select **Install**.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-11.png" alt-text="Screenshot of application installation from Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-11.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-11.png" alt-text="Screenshot of application installation from Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-11.png":::
 
 For more information about applications and tenant attach, see [Tenant attach: Install an application from the admin center](../configmgr/tenant-attach/applications.md).
 
@@ -282,7 +282,7 @@ You can run PowerShell scripts from the cloud against an individual Configuratio
 
    Scripts that were recently run that directly targeted the device are listed. The list includes scripts run from the admin center, SDK, or the Configuration Manager console. Scripts initiated from the Configuration Manager console against collections containing the device aren't shown, unless the scripts were also initiated specifically for the single device.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-12.png" alt-text="Screenshot of the scripts list from Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-12.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-12.png" alt-text="Screenshot of the scripts list from Microsoft Intune admin center" Lightbox="./media/tenant-attach/tenant-attach-12.png":::
 
 For more information about running scripts on tenant attached devices, see [Tenant attach: Run Scripts from the admin center](../configmgr/tenant-attach/scripts.md).
 
@@ -309,7 +309,7 @@ To view the device event timeline:
    - If you select an event, you can view the detailed message for it.
    - Select **Refresh** to reload the page and to see newly collected events.
 
-   :::image type="content" source="./media/tenant-attach-intune/tenant-attach-10.png" alt-text="Timeline of events for a device" Lightbox="./media/tenant-attach-intune/tenant-attach-10.png":::
+   :::image type="content" source="./media/tenant-attach/tenant-attach-10.png" alt-text="Timeline of events for a device" Lightbox="./media/tenant-attach/tenant-attach-10.png":::
 
 For more information about viewing device events for tenant attached devices, see [Tenant attach: Device timeline in the admin center](../configmgr/tenant-attach/timeline.md).
 

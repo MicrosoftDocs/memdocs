@@ -30,9 +30,9 @@ The compliance policy in Intune includes a rule for MTD based on Jamf's risk ass
 
 For devices that are noncompliant, access to resources like Microsoft 365 can be blocked. Users on blocked devices receive guidance from the Jamf app to resolve the issue and regain access.
 
-Jamf updates Intune with each device’s latest threat level (Secure, Low, Medium, or High) whenever it changes. This threat level is continuously recalculated by the Jamf Security Cloud and is based upon device state, network activity, and numerous mobile threat intelligence feeds across various threat categories.
+Jamf updates Intune with each device's latest threat level (Secure, Low, Medium, or High) whenever it changes. This threat level is continuously recalculated by the Jamf Security Cloud and is based upon device state, network activity, and numerous mobile threat intelligence feeds across various threat categories.
 
-These categories and their associated threat levels are configurable in Jamf Security Cloud portal such that the total calculated threat level for each device is customizable per your organization’s security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
+These categories and their associated threat levels are configurable in Jamf Security Cloud portal such that the total calculated threat level for each device is customizable per your organization's security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
 
 - Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Jamf-reported threat level. This compliance flag empowers Conditional Access policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](./create-compliance-policy.md) with Intune for configuration details.
 

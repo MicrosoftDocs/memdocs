@@ -44,7 +44,7 @@ The iVerify Enterprise app authorization process consists of the following steps
 For step-by-step setup guidance, see [Connecting iVerify Enterprise with Microsoft Intune](https://edr.iverify.io/docs/iverify-portal-guide/Integrations/intune-mtd) in the iVerify documentation.
 
 > [!NOTE]
-> You’ll need to sign in with your iVerify Admin Console credentials to view the documentation.
+> You'll need to sign in with your iVerify Admin Console credentials to view the documentation.
 
 
 ## Related content
