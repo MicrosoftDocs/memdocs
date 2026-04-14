@@ -47,8 +47,8 @@ To allow Intune to access Windows diagnostic data collected from enrolled device
 
 Features that require Windows diagnostic data include:
 
-- [Compatibility reports for Windows updates](../device-updates/windows/compatibility-reports.md)
-- [Reports for expedite policies](../device-updates/windows/expedite-policy.md#monitoring-and-reporting)
+- [Compatibility reports for Windows updates](../device-updates/windows/monitor-compatibility.md)
+- [Reports for expedite policies](../device-updates/windows/configure-expedite-policy.md#monitoring-and-reporting)
 - Driver update policies with alerts for Windows driver update failures
 - Expedited quality update policies with alerts for Windows expedited update failures
 - Feature update policies with alerts for feature update failures
@@ -72,7 +72,7 @@ Supported licenses:
 
 Features that require license verification include:
 
-- [Compatibility reports for Windows updates](../device-updates/windows/compatibility-reports.md)
+- [Compatibility reports for Windows updates](../device-updates/windows/monitor-compatibility.md)
 - [Remediations](../intune-service/fundamentals/remediations.md)
 
 ## Next steps
