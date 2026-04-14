@@ -47,7 +47,7 @@ Before you begin setting up Microsoft Intune, you should:
 For guidance and need-to-know information, see [Supported configurations](supported-devices-browsers.md).
 
 > [!TIP]
-> By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, create a restriction. For more information, see [Create a device platform restriction](../enrollment/create-device-platform-restrictions.md).
+> By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, create a restriction. For more information, see [Create a device platform restriction](../../device-enrollment/create-platform-restrictions.md).
 
 ## 2 - Sign up for Microsoft Intune
 
@@ -178,7 +178,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website. You can also customize the Company Portal app so it includes your organization details.
 
-For guidance, see [Configure the company portal](../apps/company-portal-app.md).
+For guidance, see [Configure the company portal](../../app-management/configuration/configure-company-portal.md).
 
 ## Follow the minimum recommended baseline policies
 

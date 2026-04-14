@@ -11,7 +11,7 @@ ms.collection:
 
 # Configure device restriction settings in Microsoft Intune
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Intune includes device restriction policies that help administrators control Android, iOS/iPadOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, admins can:
 

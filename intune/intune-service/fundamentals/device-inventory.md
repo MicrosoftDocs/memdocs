@@ -23,9 +23,9 @@ This article shows you how to view all your devices, and their properties in the
 2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
    - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. Depending on the device platform, you can perform different actions. For more information, see [Use remote actions to manage devices using Intune](../../device-management/actions/index.md).
-   - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
+   - Use **Properties** to assign a [device category you create](../../device-management/create-device-categories.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
-   - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).
+   - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../../app-management/discovered-apps.md).
    - **Device compliance** lists all assigned compliance policies, and if the device is compliant or not compliant.
    - **Device configuration** shows all device configuration policies assigned to the device, and if the policy succeeded or failed.
    - **App configuration**

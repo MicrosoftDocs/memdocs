@@ -17,7 +17,7 @@ ms.reviewer: aanavath
 View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 > [!NOTE]
 > Beginning on June 19, 2023, the BitLocker profile for Windows was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile, but due to the new format, settings names in the Intune admin center have updated. With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use and edit.
@@ -32,7 +32,7 @@ Applies to:
 - Windows
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 

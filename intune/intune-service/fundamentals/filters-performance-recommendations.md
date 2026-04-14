@@ -77,7 +77,7 @@ The update from Microsoft Entra to Intune typically happens within 5 minutes. It
 The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Microsoft Entra ID. There isn't a continuous sync between Microsoft Entra ID and Intune. So, group membership is instant.
 
 > [!NOTE]
-> For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+> For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 You can also apply this optimization to other large and frequently changing groups you might have, like "All windows devices" or "all iOS devices". Instead of creating and targeting these groups, use the existing "All users" or "All devices" virtual groups, since Intune policies and applications are automatically scoped by platform.
 
@@ -125,7 +125,7 @@ This recommendation also applies when groups are "unnested". For more informatio
 
 This recommendation is also a support statement. We don't recommend or support creating assignments to user groups and excluding a device group from that assignment, or vice-versa.
 
-This recommendation exists due to the timing/latency characteristic of dynamic groups. **Excluded groups** membership isn't instant, which can result in cases where devices incorrectly receive app or policy assignments. To understand more, go to [Assign policies and profiles - support matrix](../configuration/device-profile-assign.md#support-matrix).
+This recommendation exists due to the timing/latency characteristic of dynamic groups. **Excluded groups** membership isn't instant, which can result in cases where devices incorrectly receive app or policy assignments. To understand more, go to [Assign policies and profiles - support matrix](../../device-configuration/assign-device-profile.md#support-matrix).
 
 Instead of mixed exclusions, we recommend assigning to a user group. Then, use assignment filters to dynamically include or exclude the appropriate devices.
 

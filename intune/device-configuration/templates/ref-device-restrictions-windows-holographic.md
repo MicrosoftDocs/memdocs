@@ -81,7 +81,7 @@ When you create a Windows device restrictions configuration profile, there are m
 
   [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-  [!INCLUDE [cortana-app-deprecation](../../intune-service/includes/cortana-app-deprecation.md)]
+  [!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
 
 ## Microsoft Edge Browser
 

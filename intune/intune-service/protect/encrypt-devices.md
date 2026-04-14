@@ -18,7 +18,7 @@ ms.collection:
 Use Microsoft Intune to configure BitLocker encryption on devices that run Windows, and Personal Data Encryption (PDE) on devices that run Windows 11 Version 22H2 or later. This article covers both standard BitLocker encryption and silent BitLocker encryption scenarios.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 > [!TIP]
 > Some settings for BitLocker require the device have a supported TPM.
@@ -98,7 +98,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 
    Select **Next** to continue.
 
-6. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+6. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
    Select **Next**.
 
@@ -439,7 +439,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
 
 **Issue**: Policy conflicts prevent silent enablement
 
-- **Solution**: Use [policy conflict detection](../configuration/device-profile-monitor.md#view-conflicts) in Intune to identify conflicting settings between policies.
+- **Solution**: Use [policy conflict detection](../../device-configuration/monitor-device-profile.md#view-conflicts) in Intune to identify conflicting settings between policies.
 
 ### Recovery key troubleshooting
 

@@ -159,7 +159,7 @@ Prerequisites:
 
 - Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
 - The ADE enrollment profile must be configured to use Setup Assistant with modern authentication.
-- Before you enroll, create a [settings catalog policy](../../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting. In the **[Await final configuration](../enrollment/device-enrollment-program-enroll-macos.md)** in Setup Assistant, add the settings catalog policy.
+- Before you enroll, create a [settings catalog policy](../../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting. In the **[Await final configuration](../../device-enrollment/apple/setup-automated-macos.md)** in Setup Assistant, add the settings catalog policy.
 - Before you enroll, deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
 
 > [!div class="checklist"]
@@ -218,7 +218,7 @@ To use these features, you will need to opt-in:
 To learn more, see:
 
 - [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
-- [Android Enterprise work profile management overview](../enrollment/android-enterprise-overview.md)
+- [Android Enterprise work profile management overview](../../device-enrollment/android/enterprise-work-profile.md)
 
 > [!div class="checklist"]
 > Applies to:

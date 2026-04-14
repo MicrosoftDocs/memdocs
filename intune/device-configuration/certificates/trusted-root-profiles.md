@@ -44,7 +44,7 @@ Create a separate trusted certificate profile for each device platform you want 
 
 ### Trusted certificate profiles for Android device administrator
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 This feature applies to:
 
@@ -96,7 +96,7 @@ After you name the certificate, it can be saved.
    - **Platform**: Choose the platform of the devices that should receive this profile.
    - **Profile**: Depending on your chosen platform, select **Trusted certificate** or select **Templates** > **Trusted certificate**.
 
-   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 4. Select **Create**.
 

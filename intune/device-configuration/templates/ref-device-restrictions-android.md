@@ -16,7 +16,7 @@ This feature applies to:
 
 - Android device administrator (DA)
 
-  [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+  [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 >[!TIP]
 >If the settings you want aren't available, you might be able to configure your devices using a [custom profile](./configure-custom-settings-android.md).

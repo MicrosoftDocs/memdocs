@@ -26,7 +26,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 ## What you need to know
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 
   To modify or update an ADMX policy with the **Not Configured** setting, RBAC administrators need the **Device configurations > Delete** permission. The built-in **Policy and Profile Manager** role has this permission.
 

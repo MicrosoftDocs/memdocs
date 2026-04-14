@@ -16,7 +16,7 @@ ms.collection:
 
 # Troubleshoot and Monitor Remote Help
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 

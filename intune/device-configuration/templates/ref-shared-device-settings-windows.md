@@ -10,7 +10,7 @@ ms.collection:
 # Windows settings to manage shared devices using Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 Windows client devices, like the Microsoft Surface, can be used by many users. Devices that have multiple users are called shared devices, and are a part of mobile device management (MDM) solutions.
 
@@ -82,7 +82,7 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
 
   - [Shared PC technical reference - SetEDUPolicy](/windows/configuration/shared-pc/shared-pc-technical#setedupolicy)
   - [SetEduPolicies CSP](/windows/client-management/mdm/sharedpc-csp#setedupolicies)
-  - [Common Education device restrictions](../../intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md)
+  - [Common Education device restrictions](../../solutions/education/tutorial-school-deployment/ref-device-restrictions-settings-windows.md)
 
 > [!TIP]
 > [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows client feature, including concepts and group policies that can be set in shared mode.

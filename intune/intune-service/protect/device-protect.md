@@ -45,7 +45,7 @@ Deploy policies to configure and enforce security on enrolled devices. The follo
 - **Endpoint detection and response** - Microsoft Defender for Endpoint onboarding
 - **Firewall** - Network protection and firewall rules
 
-**[Device configuration policies](../configuration/device-profiles.md)** - Broader device settings including endpoint protection, certificates, software updates, and VPN. Use when you need to combine security settings with device functionality configurations.
+**[Device configuration policies](../../device-configuration/overview.md)** - Broader device settings including endpoint protection, certificates, software updates, and VPN. Use when you need to combine security settings with device functionality configurations.
 
 **[Device compliance policies](../protect/device-compliance-get-started.md)** - Define device requirements like OS versions, encryption status, and threat levels. Noncompliant devices trigger alerts and can be blocked from organizational resources when combined with [Conditional Access](#conditional-access).
 
@@ -55,7 +55,7 @@ The following security areas can be managed through these policies:
 
 - **Authentication and identity**
   - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../../fundamentals/certificates/overview.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../../device-security/certificates/derived-credentials.md) for smartcard scenarios.
-  - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure [Platform SSO for macOS](../configuration/platform-sso-macos.md) to strengthen authentication across apps and services.
+  - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure [Platform SSO for macOS](../../device-configuration/settings-catalog/configure-platform-sso-macos.md) to strengthen authentication across apps and services.
   - **Multi-factor authentication** - Use Microsoft Entra Conditional Access to require MFA, and use Intune to configure device PIN/password and other sign-in related settings as needed.
 
 - **Data encryption**
@@ -74,7 +74,7 @@ The following security areas can be managed through these policies:
 - **Security baselines** - Deploy preconfigured [security baselines](../protect/security-baselines.md) for Windows devices, Microsoft Edge, and Microsoft Defender for Endpoint that reflect Microsoft security team recommendations.
 
 - **Network security**
-  - **VPN profiles** - Configure [VPN connections](../configuration/vpn-settings-configure.md#vpn-connection-types) for secure remote access to organizational resources.
+  - **VPN profiles** - Configure [VPN connections](../../device-configuration/templates/configure-vpn.md#vpn-connection-types) for secure remote access to organizational resources.
   - **Firewall policies** - Manage built-in firewall protection on Windows and macOS devices.
 
 - **Privileged access management**
@@ -83,9 +83,9 @@ The following security areas can be managed through these policies:
 
 ## Protect data with app protection policies
 
-Protect organizational data at the application layer using [app protection policies](../apps/app-protection-policy.md) with Intune-managed apps. These protections work on both enrolled and unenrolled devices, supporting Bring Your Own Device (BYOD) scenarios.
+Protect organizational data at the application layer using [app protection policies](../../app-management/protection/overview.md) with Intune-managed apps. These protections work on both enrolled and unenrolled devices, supporting Bring Your Own Device (BYOD) scenarios.
 
-**Intune-managed apps** integrate the [Intune App SDK](../../developer/app-sdk/index.md) or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
+**Intune-managed apps** integrate the [Intune App SDK](../../developer/app-sdk/index.md) or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). See [Intune protected apps](../../app-management/ref-protected-apps.md) for a list of supported apps.
 
 When you require managed apps (for example, by using app-based Conditional Access policies), users can only access organizational data through those managed apps, while personal data remains unaffected.
 
@@ -189,5 +189,5 @@ Build your security posture with Intune:
 - **Plan your approach** - Review [Zero Trust security guidance](../protect/zero-trust-configure-security.md) for Intune.
 - **Configure endpoint security** - Start with [endpoint security policies](../protect/endpoint-security.md) for focused security configurations.
 - **Implement compliance** - Deploy [device compliance policies](../protect/device-compliance-get-started.md) and [Conditional Access](../protect/conditional-access.md).
-- **Protect data** - Configure [app protection policies](../apps/app-protection-policy.md) for organizational data.
+- **Protect data** - Configure [app protection policies](../../app-management/protection/overview.md) for organizational data.
 - **Monitor and maintain** - Learn about [data security and sharing in Intune](../../privacy/data-sharing/index.md).

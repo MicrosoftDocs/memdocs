@@ -13,7 +13,7 @@ ms.collection:
 
 In this article, you use Intune to add and assign an app to your company's workforce. The goal is to assign apps that users need to do their work. For example, you can assign Microsoft 365 Apps so users can read email, and create and edit documents and spreadsheets.
 
-[!INCLUDE [intune-evaluate](../../intune-service/includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 ## Prerequisites
 

@@ -19,7 +19,7 @@ This feature applies to:
 - macOS
 - Windows
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Custom settings are configured differently for each platform. For example, to control features on Android and Windows devices, you enter Open Mobile Alliance Uniform Resource Identifier (OMA-URI) values. For Apple devices, you import a file you created with the [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) or [Apple Profile Manager](https://support.apple.com/profile-manager).
 

@@ -38,7 +38,7 @@ Enrollment is enabled for all platforms by default, but you can restrict specifi
 This article describes the supported device scenarios and enrollment prerequisites, has information about using other MDM providers, and includes links to platform-specific enrollment guidance.
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../intune-service/includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Supported device scenarios
 
