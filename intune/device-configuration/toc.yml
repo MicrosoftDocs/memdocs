@@ -1,0 +1,359 @@
+items:
+  - name: Device configuration overview
+    displayName: android, ios, ipados, macos, windows
+    href: ./overview.md
+  - name: Create a profile
+    displayName: android, ios, ipados, macos, windows
+    href: ./create-device-profile.md
+  - name: View and monitor profiles
+    displayName: android, ios, ipados, macos, windows
+    href: ./monitor-device-profile.md
+
+  - name: Profiles and their step-by-step guides
+    items:
+      - name: Settings catalog, GPO, and ADMX
+        displayName: gpo, admx, ios, ipados, macos, windows
+        items:
+          - name: Overview and get started
+            displayName: gpo, admx, ios, ipados, macos, windows
+            href: ./settings-catalog/index.md
+          - name: Common tasks for the settings catalog
+            items:
+              - name: Sample tasks
+                displayName: gpo, admx, ios, ipados, macos, windows
+                href: ./settings-catalog/common-tasks.md
+              - name: Create Universal Print policy
+                displayName: printers, gpo, admx, windows
+                href: ./settings-catalog/configure-universal-print.md
+              - name: Configure Microsoft Edge
+                displayName: gpo, windows, macos, admx
+                href: ./settings-catalog/configure-edge.md
+              - name: Update Microsoft 365
+                displayName: gpo, windows, admx, update channel
+                href: ./settings-catalog/update-office.md
+              - name: Restrict USB devices
+                displayName: gpo, windows
+                href: ./settings-catalog/restrict-usb.md
+              - name: Configure ADMX
+                displayName: gpo, admx, windows, settings catalog
+                href: ./settings-catalog/configure-admx-templates-windows.md
+              - name: Configure Recovery Lock on macOS
+                displayName: gpo, admx, macos
+                href: ./settings-catalog/configure-recovery-lock-macos.md
+          - name: Import custom ADMX and ADML
+            displayName: gpo, windows
+            href: ./settings-catalog/import-custom-admx-templates.md
+          - name: Group policy analytics
+            items:
+              - name: Analyze on-premises GPOs
+                displayName: gpo, admx, csp, windows
+                href: ./import-group-policy-analytics.md
+              - name: Import GPOs to create a policy
+                displayName: gpo, admx, settings catalog, windows
+                href: ./migrate-group-policy.md
+
+      - name: Properties catalog (device inventory)
+        displayName: windows, device inventory
+        href: ./collect-device-properties.md
+      - name: Custom settings & scripts
+        items:
+          - name: Create custom profiles
+            displayName: oma-uri, csp, bash, powershell, android, ios, ipados, macos, windows
+            href: ./templates/configure-custom-settings.md
+          - name: HoloLens 2 example
+            displayName: csp, powershell, windows, holographic
+            href: ./templates/configure-wdac-hololens.md
+          - name: Add Linux Bash scripts
+            displayName: linux
+            href: ./templates/configure-custom-settings-linux.md
+      - name: Restrict device settings and features
+        href: ./templates/configure-device-restrictions.md
+        displayName: device restrictions, android, aosp, ios, ipados, macos, windows
+      - name: Email
+        items:
+          - name: Configure email
+            displayName: android, ios, ipados, windows
+            href: ./templates/configure-email.md
+          - name: Issues and resolutions
+            displayName: android, ios, ipados, windows
+            href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune?context=/intune/context
+      - name: VPN
+        items:
+          - name: Configure VPN
+            displayName: android, ios, ipados, macos, windows
+            href: ./templates/configure-vpn.md
+          - name: Per-app VPN for Android
+            href: ./templates/configure-per-app-vpn-android.md
+          - name: Per-App VPN for iOS/iPadOS
+            href: ./templates/configure-per-app-vpn-ios.md
+      - name: Wi-Fi
+        items:
+          - name: Configure Wi-Fi
+            displayName: wifi, wireless, android, aosp, ios, ipados, macos, windows, holographic
+            href: ./templates/configure-wifi.md
+          - name: Import Wi-Fi settings
+            displayName: wifi, wireless, windows, holographic
+            href: ./templates/import-wifi-settings-windows.md
+          - name: Wi-Fi with a pre-shared key
+            href: ./templates/create-wifi-preshared-key.md
+            displayName: wifi, wireless, psk, oma-uri, eap, android, windows
+          - name: Troubleshoot Wi-Fi
+            displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
+            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles?context=/intune/context
+      - name: BIOS & DFCI on Windows
+        items:
+          - name: Configure the BIOS
+            displayName: bios, firmware, windows, dell
+            href: ./templates/configure-bios-windows.md
+          - name: DFCI settings for UEFI
+            href: ./templates/configure-dfci-windows.md
+            displayName: dfci, firmware, uefi, surface
+      - name: Domain Join on Windows
+        href: ./templates/configure-domain-join-windows.md
+        displayName: enrollment, active directory, azure ad joined, join domain
+
+      - name: Upgrade Windows and S mode
+        href: ./templates/configure-edition-upgrade-windows.md
+      - name: Wired networks
+        displayName: 802.1x, macos, windows
+        href: ./templates/configure-wired-networks.md
+      - name: Device features on iOS/iPadOS and macOS
+        href: ./templates/configure-device-features-apple.md
+        displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
+      - name: Extensions on macOS
+        href: ./templates/configure-kernel-extensions-macos.md
+        displayName: kernel extensions, system extensions
+      - name: Preference file on macOS
+        href: ./templates/configure-preference-file-macos.md
+        displayName: property list files, plist
+      - name: Mobility Extensions on Zebra devices
+        items:
+          - name: Configure MX on Android device administrator
+            displayName: mobility extensions, android, stagenow, zebra
+            href: ./templates/configure-zebra-mx-android.md
+          - name: StageNow logs and common issues
+            displayName: mobility extensions, mx, android, zebra
+            href: ./templates/troubleshoot-zebra-mx-android.md
+      - name: OEMConfig on Android Enterprise
+        items:
+          - name: Overview & Get started
+            displayName: original equipment manufacturers, oem, oemconfig, schema, zebra, android
+            href: ./templates/configure-oemconfig-android.md
+          - name: Profiles on Zebra devices
+            displayName: original equipment manufacturers, oem, oemconfig, schema, android
+            href: ./templates/deploy-oemconfig-zebra-android.md
+          - name: Managed Home Screen (MHS) permissions
+            displayName: original equipment manufacturers, oem, oemconfig, schema, android, auto-grant
+            href: ./templates/configure-managed-home-screen-permissions-android.md
+      - name: Kiosks and dedicated devices
+        href: ./templates/configure-kiosk.md
+        displayName: single app, multi app, windows, holographic
+      - name: Shared multi-user devices
+        displayName: shared pc, education, windows, holographic
+        href: ./templates/configure-shared-device.md
+      - name: Network boundary on Windows
+        href: ./templates/create-network-boundary-windows.md
+        displayName: trusted sites, ipv4, ipv6, range
+      - name: Windows health monitoring
+        href: ./templates/configure-health-monitoring-windows.md
+        displayName: endpoint analytics, microsoft productivity score
+      - name: Education Take a Test app
+        displayName: windows
+        href: ./templates/configure-education-settings.md
+      - name: eSIM cellular on Windows
+        displayName: embedded sim, activation code
+        items:
+          - name: eSIM bulk activation with download server (settings catalog)
+            href: ./templates/configure-esim-download-server.md
+          - name: eSIM bulk activation with activation codes (import CSV)
+            href: ./templates/enable-esim.md
+
+  - name: Settings catalog lists
+    items:
+      - name: Apple
+        displayName: ios, ipados, macos
+        href: ./settings-catalog/ref-apple-settings.md
+      - name: Android
+        displayName: Android
+        href: ./settings-catalog/ref-android-settings.md
+
+  - name: Device Configuration template settings lists
+    items:
+      - name: Android
+        items:
+          - name: OEMConfig
+            displayName: original equipment manufacturers, oem, android enterprise, ae
+            href: ./templates/configure-oemconfig-android.md
+          - name: Device restrictions
+            displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
+            href: ./templates/ref-device-restrictions-android-enterprise.md
+          - name: Email
+            displayName: byod, work profile, android, android enterprise, ae
+            href: ./templates/ref-email-settings-android-enterprise.md
+          - name: VPN
+            displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae
+            href: ./templates/ref-vpn-settings-android-enterprise.md
+          - name: Wi-Fi
+            displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
+            href: ./templates/ref-wifi-settings-android-enterprise.md
+          - name: Trusted certificate
+            href: ./certificates/trusted-root-profiles.md
+          - name: PKCS certificate
+            href: ./certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
+          - name: PKCS imported certificate
+            href: ./certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
+          - name: Derived credential
+            href: ../device-security/certificates/derived-credentials.md
+          - name: SCEP certificate
+            href: ./certificates/scep-profiles.md
+
+          - name: Android device administrator
+            items:
+              - name: Custom (OMA-URI)
+                items:
+                  - name: Custom settings
+                    displayName: oma uri, android, device administrator, da
+                    href: ./templates/configure-custom-settings-android.md
+                  - name: Allow/block apps for Samsung Knox Standard
+                    displayName: oma uri, custom, android, device administrator, da
+                    href: ./templates/manage-apps-samsung-knox.md
+              - name: Device restrictions
+                displayName: android, device administrator, da
+                href: ./templates/ref-device-restrictions-android.md
+              - name: Email
+                displayName: android, device administrator, da
+                href: ./templates/ref-email-settings-android.md
+              - name: VPN
+                displayName: android, device administrator, da
+                href: ./templates/ref-vpn-settings-android.md
+              - name: Wi-Fi
+                displayName: wifi, wireless, android, device administrator, da
+                href: ./templates/ref-wifi-settings-android.md
+
+      - name: Apple
+        items:
+          - name: Custom
+            displayName: apple, ios, ipados, macos
+            href: ./templates/configure-custom-settings-apple.md
+          - name: Derived credentials
+            displayName: apple, ios, ipados
+            href: ../device-security/certificates/derived-credentials.md
+          - name: Device features
+            displayName: apple, ios, ipados, macos
+            href: ./templates/ref-device-features-apple.md
+          - name: Device restrictions
+            displayName: apple, ios, ipados, macos
+            href: ./templates/ref-device-restrictions-apple.md
+          - name: Email
+            displayName: apple, ios, ipados
+            href: ./templates/ref-email-settings-ios.md
+          - name: Endpoint protection (deprecated)
+            displayName: apple, macos
+            href: ../intune-service/protect/endpoint-protection-macos.md
+          - name: Extensions (deprecated)
+            displayName: kernel, system, macos
+            href: ./templates/ref-kernel-extensions-settings-macos.md
+          - name: PKCS certificate
+            displayName: apple, ios, ipados, macos
+            href: ./certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
+          - name: PKCS imported certificate
+            displayName: apple, ios, ipados, macos
+            href: ./certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
+          - name: Preference file
+            displayName: apple, macos
+            href: ./templates/configure-preference-file-macos.md
+          - name: SCEP certificate
+            displayName: apple, ios, ipados, macos
+            href: ./certificates/scep-profiles.md
+          - name: Trusted certificate
+            displayName: apple, ios, ipados, macos
+            href: ./certificates/trusted-root-profiles.md
+          - name: VPN
+            displayName: apple, ios, ipados, macos
+            href: ./templates/ref-vpn-settings-apple.md
+          - name: Wi-Fi
+            displayName: wifi, wireless, apple, ios, ipados, macos
+            href: ./templates/ref-wifi-settings-apple.md
+          - name: Wired networks
+            displayName: apple, macos
+            href: ./templates/ref-wired-network-settings-macos.md
+          - name: Bundle IDs for built-in apps
+            displayName: apple, ios, ipados, macos
+            href: ./templates/ref-bundle-ids-ios.md
+
+      - name: Windows
+        items:
+          - name: BIOS configurations and other settings
+            href: ./templates/configure-bios-windows.md
+          - name: Custom (OMA-URI)
+            displayName: oma uri, windows
+            href: ./templates/configure-custom-settings-windows.md
+          - name: Delivery optimization
+            displayName: windows
+            href: ./templates/ref-delivery-optimization-settings-windows.md
+          - name: Device Firmware Configuration Interface (DFCI)
+            displayName: bios, uefi, windows
+            href: ./templates/ref-dfci-settings-windows.md
+          - name: Device restrictions
+            displayName: windows
+            href: ./templates/ref-device-restrictions-windows.md
+          - name: Device restrictions (Windows 10 Teams)
+            displayName: surface
+            href: ./templates/ref-device-restrictions-surface-hub.md
+          - name: Domain join
+            href: ./templates/configure-domain-join-windows.md
+          - name: Edition upgrade and mode switch
+            displayName: windows, s mode
+            href: ./templates/ref-edition-upgrade-settings-windows.md
+          - name: Email
+            displayName: windows
+            href: ./templates/ref-email-settings-windows.md
+          - name: Endpoint protection
+            displayName: windows
+            href: ../intune-service/protect/endpoint-protection-windows-10.md
+          - name: Identity protection (deprecated)
+            displayName: hello, windows
+            href: ../intune-service/protect/identity-protection-windows-settings.md
+          - name: Kiosk
+            displayName: single app, multi app, dedicated device, windows
+            href: ./templates/ref-kiosk-settings-windows.md
+          - name: Secure assessment
+            displayName: take a test, windows
+            href: ./templates/ref-education-settings-windows.md
+          - name: Shared multi-user device
+            displayName: windows
+            href: ./templates/ref-shared-device-settings-windows.md
+          - name: VPN
+            displayName: windows
+            href: ./templates/ref-vpn-settings-windows.md
+          - name: Wi-Fi
+            displayName: wifi, wireless, windows
+            href: ./templates/ref-wifi-settings-windows.md
+          - name: Wired network
+            displayName: windows
+            href: ./templates/ref-wired-network-settings-windows.md
+      - name: Windows Holographic for Business
+        items:
+          - name: Custom (OMA-URI)
+            displayName: oma uri, windows holographic, hololens
+            href: ./templates/ref-custom-settings-windows-holographic.md
+          - name: Device restrictions
+            displayName: windows holographic, hololens
+            href: ./templates/ref-device-restrictions-windows-holographic.md
+          - name: Edition upgrade and mode switch
+            displayName: windows holographic, hololens
+            href: ./templates/ref-holographic-upgrade-settings.md
+          - name: Kiosk
+            displayName: single app, multi app, dedicated device, windows holographic, hololens
+            href: ./templates/ref-kiosk-settings-windows-holographic.md
+          - name: Shared multi-user device
+            displayName: windows holographic, hololens
+            href: ./templates/ref-shared-device-settings-windows-holographic.md
+      - name: Windows 8.1
+        items:
+          - name: Device restrictions
+            displayName: windows
+            href: ./templates/ref-device-restrictions-windows-8-1.md
+          - name: VPN
+            displayName: windows
+            href: ./templates/ref-vpn-settings-windows-8-1.md

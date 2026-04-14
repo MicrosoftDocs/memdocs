@@ -17,7 +17,7 @@ When any of the following Apple services are enabled on a device, Microsoft Intu
 - [Apple Device Enrollment Program (DEP)](../../device-enrollment/apple/setup-automated-ios.md)
 - [Apple MDM Push certificate (APNS)](../../device-enrollment/apple/create-mdm-push-certificate.md)
 - [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
-- [Apple Volume Purchase Program (VPP)](../../intune-service/apps/vpp-apps-ios.md)
+- [Apple Volume Purchase Program (VPP)](../../app-management/deployment/manage-vpp-apple.md)
 
 Before Microsoft Intune can establish a connection, you must create an Apple account for each of the Apple services.
 

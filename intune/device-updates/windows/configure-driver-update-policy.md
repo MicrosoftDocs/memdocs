@@ -84,7 +84,7 @@ Regardless of approval mode, only approved drivers can install, and Windows Upda
    > After a policy is created, you won't be able to edit the policy to change the approval type. If the approval type is automatic, you can edit the value for *Make updates available after (days)*.
 
 1. On **Scope tags**, select any desired scope tags to apply.
-1. On **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
+1. On **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
 
    > [!TIP]
    > We recommend that a device be assigned a single policy for driver update policies. Assignment of a device to only one policy helps to prevent the installation of a driver update that is declined in one policy but approved in a second policy. Keep in mind that policies for Windows driver updates don't support options to remove or roll-back driver updates.

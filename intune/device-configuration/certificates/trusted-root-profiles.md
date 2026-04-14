@@ -5,7 +5,6 @@ ms.date: 09/23/2024
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 - certificates
 - sub-certificates
 ---
@@ -120,13 +119,13 @@ After you name the certificate, it can be saved.
 8. Select **Next**.
 
 
-9. In **Assignments**, select the user or groups that should receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or groups that should receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
    Select **Next**.
 
 10. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
-    For more information, see [Applicability rules](../../intune-service/configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+    For more information, see [Applicability rules](../../device-configuration/create-device-profile.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
 11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 

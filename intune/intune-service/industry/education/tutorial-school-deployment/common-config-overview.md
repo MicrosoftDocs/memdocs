@@ -26,22 +26,22 @@ Key areas of focus include:
 These policies are commonly used but not mandatory. Schools can tailor their configurations based on their specific needs, and optional policies are provided for more situational use cases.
 
 > [!CAUTION]
-> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](/intune/intune-service/configuration/device-profile-troubleshoot#conflicts) and [Avoiding policy conflicts](manage-avoid-policy-conflicts.md).
+> Adding these settings to your existing Intune tenant and assigning them to devices could potentially cause conflicts with your existing Intune policies. For more information, see [Compliance and device configuration policies that conflict](../../../../device-configuration/troubleshoot-device-profiles.md#conflicts) and [Avoiding policy conflicts](manage-avoid-policy-conflicts.md).
 
 ## Intune policies for Windows in Education
 
 ### Configuration sections
 
-- [Device restrictions](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
-- [Windows Update](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-windows-update)
-- [Microsoft Edge](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge)
-- [Delivery Optimization](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization)
+- [Device restrictions](common-config-settings-catalog-device-restrictions.md)
+- [Windows Update](common-config-windows-update.md)
+- [Microsoft Edge](common-config-settings-catalog-edge.md)
+- [Delivery Optimization](common-config-settings-catalog-delivery-optimization.md)
 
 ### Optional
 
-- [Windows privacy](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy)
-- [Start menu customization](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu)
-- [OneDrive Known Folder Move](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove)
+- [Windows privacy](common-config-settings-catalog-windows-privacy.md)
+- [Start menu customization](common-config-settings-catalog-start-menu.md)
+- [OneDrive Known Folder Move](common-config-settings-catalog-onedrive-knownfoldermove.md)
 
 ## Intune policies for iPads in Education
 

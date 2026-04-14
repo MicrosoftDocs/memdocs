@@ -85,22 +85,22 @@ When creating the device configuration profile for Shared iPads, keep in mind th
 - Your Microsoft Entra instance must be federated in Apple Business Manager for a user group policy assignment to succeed.
 - All device configuration profile settings are device applicable for Shared iPad temporary sessions.
 - User-assigned policies apply to a shared iPad when the user signs in using their federated Microsoft Entra credentials. For more information about federating a Microsoft Entra instance with Apple Business Manager, see the [Apple Business Manager guide](https://support.apple.com/guide/apple-business-manager-m/apdb19317543/web) (opens Apple support website).
-- Device-assigned policies apply to a shared iPad when you initiate a device-sync from the admin center, or when Intune notifies the device to check in with the Intune service. For more information about frequency of device check-ins, see [Policy refresh intervals](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+- Device-assigned policies apply to a shared iPad when you initiate a device-sync from the admin center, or when Intune notifies the device to check in with the Intune service. For more information about frequency of device check-ins, see [Policy refresh intervals](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 
 ## Configure temporary sessions
 
   In iPadOS 13.4 or later, users can initiate a temporary session by tapping **Guest** on the device sign-in screen. A *temporary session* allows users to sign in to the device as a guest, and doesn't require them to enter a Managed Apple ID or password. All user data, including browsing history, is deleted when the user signs out of the session. Temporary sessions are allowed by default with Shared iPad. For more information, see [Shared iPad overview](https://support.apple.com/guide/deployment/dep9a34c2ba2/1/web/1.0) (opens Apple documentation).
 
- You can configure temporary sessions in an iOS device restrictions profile in the admin center. For a list of the settings you can configure, see [Shared iPad - Automated device enrollment (supervised)](../../intune-service/configuration/device-restrictions-apple.md).
+ You can configure temporary sessions in an iOS device restrictions profile in the admin center. For a list of the settings you can configure, see [Shared iPad - Automated device enrollment (supervised)](../../device-configuration/templates/ref-device-restrictions-apple.md).
 
 ## Add apps
 
 You can deploy volume-purchased (VPP), apps, custom apps, line-of-business apps, or web apps to a Shared iPad device.
 
-* To add a VPP or custom app in the admin center, add the apps in Apple Business Manager or Apple School Manager and sync the VPP token with Intune. Assign a VPP or custom app as device-licensed to Microsoft Entra device groups in Intune. For more information, see [Sync a VPP token](../../intune-service/apps/vpp-apps-ios.md#synchronize-a-vpp-token).
-* Add a line-of-business app in the admin center and assign it to Microsoft Entra device groups. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-ios.md).
-* Add a web app, also referred to as a *web clip*, in the admin center and assign it to Microsoft Entra user groups. For more information, see [Add a web app to Intune](../../intune-service/apps/web-app.md#add-a-web-app-to-intune).
+* To add a VPP or custom app in the admin center, add the apps in Apple Business Manager or Apple School Manager and sync the VPP token with Intune. Assign a VPP or custom app as device-licensed to Microsoft Entra device groups in Intune. For more information, see [Sync a VPP token](../../app-management/deployment/manage-vpp-apple.md#synchronize-a-vpp-token).
+* Add a line-of-business app in the admin center and assign it to Microsoft Entra device groups. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-ios.md).
+* Add a web app, also referred to as a *web clip*, in the admin center and assign it to Microsoft Entra user groups. For more information, see [Add a web app to Intune](../../app-management/deployment/add-web.md#add-a-web-app-to-intune).
 
 The following table shows each iOS app type and describes the type of assignment supported with shared iPads.
 
@@ -112,7 +112,7 @@ The following table shows each iOS app type and describes the type of assignment
 |     Web app    |     Not supported    |     User    |
 |     App Store app    |     Not applicable    |     Not applicable    |
 
-Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Microsoft Entra user groups. For a list of the settings you can configure, see [Home screen layout](../../intune-service/configuration/device-features-apple.md).
+Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Microsoft Entra user groups. For a list of the settings you can configure, see [Home screen layout](../../device-configuration/templates/ref-device-features-apple.md).
 
 ## Recommended policy and app assignment for Shared iPads
 
