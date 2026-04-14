@@ -1,8 +1,9 @@
 ---
 title: Add an iOS/iPadOS Line-of-Business App to Microsoft Intune
 description: Learn about how to add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune.
-ms.date: 03/10/2026
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
@@ -25,7 +26,7 @@ You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
+3. In the **Select app type** pane, select the **iOS/iPadOS** platform, and then select **Line-of-business app**.
 4. Choose **Select**. The **Add app** steps are displayed.
 
 ## Step 1 - App information
