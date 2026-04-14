@@ -142,7 +142,7 @@ For more information, see [Role based access controls for LAPS](./overview.md#ro
 
 The following are considerations for viewing a devices account and password information:
 
-- Retrieving (viewing) the password for a local admin account triggers an [audit event](./reports.md#events-and-audit-logs).
+- Retrieving (viewing) the password for a local admin account triggers an [audit event](./monitor.md#events-and-audit-logs).
 
 - You can't view password details for the following devices:
 
@@ -179,7 +179,7 @@ The following are considerations for manual password rotation:
 
 - The **Rotate local admin password** device action is available for all Windows devices, but any device that hasn't successfully backed up its account and password data fails to complete a rotate request.
 
-- Each manual rotation attempt results in an [audit event](./reports.md#events-and-audit-logs). Scheduled password rotations also log an audit event.
+- Each manual rotation attempt results in an [audit event](./monitor.md#events-and-audit-logs). Scheduled password rotations also log an audit event.
 
 - When a password is manually rotated, the time to the next scheduled password rotation is reset. The time to the next scheduled rotation is managed through the *PasswordAgeDays* setting in the LAPS policy.
 
@@ -208,5 +208,5 @@ To resolve conflicts, you must either remove policy assignments from the device,
 ## Related content
 
 - [Introduction to Intune policy for LAPS](./overview.md)
-- [View reports for LAPS](./reports.md)
+- [View reports for LAPS](./monitor.md)
 - [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection.md)

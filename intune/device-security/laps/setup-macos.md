@@ -4,6 +4,8 @@ description: Set up macOS account configuration with LAPS through automatic devi
 ms.date: 04/01/2026
 ms.topic: how-to
 ms.reviewer: annovich
+author: lenewsad
+ms.author: lanewsad
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -42,7 +44,7 @@ The following are device requirements for the macOS local account configuration 
 - Devices must enroll with Intune through a macOS ADE enrollment profile after a factory reset.
 
 > [!IMPORTANT]
-> macOS LAPS supports ADE enrollments that occur as part of the initial device setup experience. Enrollment scenarios that re‑initiate ADE from an existing macOS installation (for example, by using the `profiles renew` command) aren’t supported.  
+> macOS LAPS supports ADE enrollments that occur as part of the initial device setup experience. Enrollment scenarios that re‑initiate ADE from an existing macOS installation (for example, by using the `profiles renew` command) aren't supported.  
 
 ## Role-based access controls for macOS LAPS
 

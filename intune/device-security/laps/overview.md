@@ -188,5 +188,5 @@ Because Windows LAPS can only manage one local admin account on a device at a ti
 ## Next steps
 
 - [Create policy for LAPS](./deploy-policy.md)
-- [View reports for LAPS](./reports.md)
+- [View reports for LAPS](./monitor.md)
 - [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection.md)
