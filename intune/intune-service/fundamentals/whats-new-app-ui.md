@@ -16,12 +16,12 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Alert students and employees to app and enrollment changes.
 * Update your organization's documentation or helpdesk procedures.
 
-If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../../user-help/enrollment/overview.md).
+If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../../user-help/enrollment/index.md).
 
 ## Week of August 1, 2022
 
 ### Company Portal for Windows bulk app install<!-- 6401437 -->
-The Company Portal for Windows now allows users to select multiple apps and install in bulk. We recommend that users use the multi-app installation option for better performance when installing more than one app. From the **Apps** tab of the Company Portal for Windows, select the multi-select view button on the top right corner of the page. Then, select the checkbox next to each app that you need to install. Next, select the **Install Selected** button to start installation. All selected apps will install at the same time without requiring users to right-click each app or navigate to each app's page. For related information, see [Install and share apps on your device](../../user-help/apps/install-apps-windows.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+The Company Portal for Windows now allows users to select multiple apps and install in bulk. We recommend that users use the multi-app installation option for better performance when installing more than one app. From the **Apps** tab of the Company Portal for Windows, select the multi-select view button on the top right corner of the page. Then, select the checkbox next to each app that you need to install. Next, select the **Install Selected** button to start installation. All selected apps will install at the same time without requiring users to right-click each app or navigate to each app's page. For related information, see [Install and share apps on your device](../../user-help/apps/install-apps-windows.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../../app-management/configuration/configure-company-portal.md).
 
 ## Week of June 6, 2022
 
@@ -99,7 +99,7 @@ This user experience is improved. The listed settings are expanded by default to
 ## Week of June 8, 2020
 
 ### Updates to informational screen in Company Portal for iOS/iPadOS <!-- 7032452 -->
-We've updated an informational screen in Company Portal for iOS/iPadOS to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To learn more about what's visible to an admin, see [What information can my organization see when I enroll my device?](../../user-help/enrollment/enrollment-data-visibility.md)
+We've updated an informational screen in Company Portal for iOS/iPadOS to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To learn more about what's visible to an admin, see [What information can my organization see when I enroll my device?](../../user-help/enrollment/data-visibility.md)
 
 
 [![Screenshot of Company Portal informational screen showing updated text.](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
@@ -148,7 +148,7 @@ The **What's next?** screen has been removed from the Android work profile enrol
 ## Week of November 11, 2019
 
 ### Web apps launched from the Windows Company Portal app <!-- 5030972 -->
-End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](../apps/web-app.md).
+End-users can now launch web apps directly from the Windows Company Portal app. End-users can select the web app and then choose the option **Open in browser**. The published web URL is opened directly in a web browser. This functionality will be rolled out over the next week. For more information about Web apps, see [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md).
 
 ![Example image of a web app launched from the Windows Company Portal app](./media/whats-new-app-ui/webapp-open-in-browser.png)
 
@@ -258,17 +258,17 @@ A new screen called **App categories** has been added to improve the app browsin
 ## Week of November 12, 2018
 
 ### Windows Company Portal keyboard shortcuts <!-- 2771518 -->
-End users will now be able to trigger app and device actions in the Windows Company Portal [using keyboard shortcuts (accelerators)](../apps/company-portal-app.md#windows-company-portal-keyboard-shortcuts).
+End users will now be able to trigger app and device actions in the Windows Company Portal [using keyboard shortcuts (accelerators)](../../app-management/configuration/configure-company-portal.md#windows-company-portal-keyboard-shortcuts).
 
 ## Week of October 22, 2018
 
 ### Add custom brand image for Company Portal app <!-- 1916266 -->
-As the Microsoft Intune admin, you can upload a custom brand image which will be displayed as a background image on the user's profile page in the iOS Company Portal app. For more information about configuring the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../apps/company-portal-app.md).
+As the Microsoft Intune admin, you can upload a custom brand image which will be displayed as a background image on the user's profile page in the iOS Company Portal app. For more information about configuring the Company Portal app, see [How to configure the Microsoft Intune Company Portal app](../../app-management/configuration/configure-company-portal.md).
 
 ## Week of August 27, 2018
 
 ### New user experience update for the Company Portal website <!--2000968 -->
-We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](../../user-help/company-portal/company-portal-website.md) has been updated to reflect these changes.
+We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Specific areas of the site, such as device details, feedback and support, and device overview, now have a new, modern, responsive design. The [Intune Company Portal website documentation](../../user-help/company-portal/website.md) has been updated to reflect these changes.
 
 Updates you'll see include:
 
@@ -359,7 +359,7 @@ We've updated the Company Portal app for Android to follow Android's [Material D
 
 ### New "Device Categories" step in guided setup for the Company Portal app for Windows <!-- 1335292 -->
 
-If you've enabled [device group mapping](../enrollment/device-group-mapping.md), the Company Portal app for Windows now walks your users through selecting a device category after enrolling their device.
+If you've enabled [device group mapping](../../device-management/create-device-categories.md), the Company Portal app for Windows now walks your users through selecting a device category after enrolling their device.
 
 ![Device group mapping category](./media/whats-new-app-ui/w10_cp_category_device_setup_after_1711.png)
 

@@ -30,7 +30,7 @@ We recommend using the latest updates for a more successful attestation rate.
   - 10.0.19045.3996+
 
     > [!IMPORTANT]
-    > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+    > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 - Windows 11
 

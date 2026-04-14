@@ -29,14 +29,14 @@ This restriction means:
 
 Intune doesn't support any configuration that utilizes a Trusted Platform Module or hardware management, including:
 
-- [BitLocker settings](../configuration/device-profiles.md#endpoint-protection)
-- [Device Firmware Configuration Interface settings](../configuration/device-profiles.md#bios-configuration-and-dfci)
+- [BitLocker settings](../../device-configuration/overview.md#endpoint-protection)
+- [Device Firmware Configuration Interface settings](../../device-configuration/overview.md#bios-configuration-and-dfci)
 
 ## Reporting
 
 Intune automatically detects virtual machines and reports them as "Virtual Machine" in **Devices** > **All devices** > choose a device > **Overview** > **Model** field.
 
-Deallocated virtual machines may contribute to noncompliant device reports because they're unable to [check in with the Intune service](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+Deallocated virtual machines may contribute to noncompliant device reports because they're unable to [check in with the Intune service](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 ## Retirement
 

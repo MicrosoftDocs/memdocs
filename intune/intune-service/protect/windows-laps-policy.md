@@ -32,7 +32,7 @@ Applies to:
 - Windows
 
 > [!TIP]
-> The Intune support for Windows LAPS is similar but distinct from Intune's implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](../enrollment/macos-laps.md).
+> The Intune support for Windows LAPS is similar but distinct from Intune's implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md).
 
 ## About Intune LAPS policy
 
@@ -90,7 +90,7 @@ Before you create a policy, you can review details about the available settings 
    >
    > Until a device successfully checks in with Intune and successfully processes its LAPS policy, data about its managed local admin account won't be available to view or manage from within the admin center.
 
-   For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
 6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 

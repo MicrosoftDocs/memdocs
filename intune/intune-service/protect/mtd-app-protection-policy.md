@@ -27,7 +27,7 @@ Prerequisites for app protection policy with MTD:
 
 ## To create an MTD app protection policy for mobile
 
-Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
+Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../../app-management/protection/create-policy.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
 
 - **Apps**: Select the apps you wish to target with app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Conditional launch**: Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
@@ -48,7 +48,7 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
 
 ## To create an MTD app protection policy for Windows
 
-Use the procedure to [create an Application protection policy for Windows](../apps/app-protection-policy-settings-windows.md), and use the following information on the *Apps*, *Health Checks*, and *Assignments* pages:
+Use the procedure to [create an Application protection policy for Windows](../../app-management/protection/ref-settings-windows.md), and use the following information on the *Apps*, *Health Checks*, and *Assignments* pages:
 
 - **Apps**: Select the apps you want to target app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Health Checks**: Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.

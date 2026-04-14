@@ -10,7 +10,7 @@ ms.collection:
 
 # Manage Volume-Purchased Apps and Books with Microsoft Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 ## Introduction
 

@@ -26,7 +26,7 @@ This feature applies to:
 
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
@@ -98,7 +98,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Check basic integrity & device integrity**
 
 > [!NOTE]
-> To configure Google Play Protect settings using app protection policies, see [Intune app protection policy settings](../apps/app-protection-policy-settings-android.md#conditional-launch) on Android.
+> To configure Google Play Protect settings using app protection policies, see [Intune app protection policy settings](../../app-management/protection/ref-settings-android.md#conditional-launch) on Android.
 
 ## Device Properties
 
@@ -161,7 +161,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 - **Restricted apps**  
   Enter the **App name** and **App bundle ID** for apps that should be restricted, and then select **Add**. A device with at least one restricted app installed is marked as noncompliant.
 
-  To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 - **Maximum minutes of inactivity before password is required (Samsung KNOX Android 12 and earlier)​**  
   This setting specifies the length of time without user input after which the mobile device screen is locked. Options range from *1 Minute* to *8 Hours*. The recommended value is *15 Minutes*.

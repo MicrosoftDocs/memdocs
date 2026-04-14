@@ -15,7 +15,7 @@ The Managed Home Screen app is for corporate-owned Android Enterprise dedicated 
 
 ## When to configure the Microsoft Managed Home Screen app
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 First, ensure that your devices are supported. Intune supports the enrollment of Android Enterprise dedicated devices and fully managed devices running OS version 8.0 and above. Similarly, Managed Home Screen supports Android devices running OS version 8.0 and above.
 

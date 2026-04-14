@@ -11,7 +11,7 @@ ms.collection:
 
 # App Protection Policy Settings for Windows
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 This article describes app protection policy (APP) settings for Windows. The policy settings that are described can be [configured](./create-policy.md) for an app protection policy on the **Settings** pane in the Intune admin center when you create a new policy.
 

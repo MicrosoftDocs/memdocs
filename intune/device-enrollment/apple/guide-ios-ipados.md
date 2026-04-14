@@ -28,7 +28,7 @@ There's also a visual guide of the different enrollment options for each platfor
 
 > [!TIP]
 >
-> - [!INCLUDE [tips-guidance-plan-deploy-guides](../../intune-service/includes/tips-guidance-plan-deploy-guides.md)]
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 > - For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 ## Before you begin
@@ -213,7 +213,7 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
 
   :::image type="content" source="media/guide-ios-ipados/ade-enroll-without-user-affinity.png" alt-text="In the Intune admin center and Microsoft Intune, enroll iOS/iPadOS devices using automated device enrollment (ADE). Select enroll without user affinity.":::
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Apple Configurator enrollment
 
@@ -331,7 +331,7 @@ The tasks depend on the option you configured in the enrollment profile.
 
   :::image type="content" source="media/guide-ios-ipados/configurator-enroll-without-user-affinity.png" alt-text="In the Intune admin center and Microsoft Intune, enroll iOS/iPadOS devices using Apple Configurator. Select enroll without user affinity.":::
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## BYOD: User and Device enrollment
 
@@ -414,7 +414,7 @@ Users with enabled app notifications receive a prompt to return to the Company P
 
 When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check-in with Intune and receive policy updates.
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 > [!TIP]
 > There is a short, step-by-step video to help your users enroll their devices in Intune:

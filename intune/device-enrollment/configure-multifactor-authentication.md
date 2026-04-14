@@ -30,7 +30,7 @@ Multifactor authentication is available for the following platforms:
  * Windows  
  
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 To implement this policy, you must assign Microsoft Entra ID P1 or later to users. 
 

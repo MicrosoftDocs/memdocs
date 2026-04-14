@@ -47,7 +47,7 @@ Intune supports import of PFX certificates for the following platforms:
 - Windows
 
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Requirements
 

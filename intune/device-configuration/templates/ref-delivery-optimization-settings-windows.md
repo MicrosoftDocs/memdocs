@@ -21,7 +21,7 @@ This feature applies to:
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text that is available within in the Microsoft Intune admin center are taken directly from the settings authoritative content. You can access that content by viewing a settings *information text* and then selecting the **Learn more** link.
 
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows.
 

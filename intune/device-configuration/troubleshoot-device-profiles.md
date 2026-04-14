@@ -12,7 +12,7 @@ ms.collection:
 
 # Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Get answers to common questions when working with policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 
