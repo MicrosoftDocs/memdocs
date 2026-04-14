@@ -120,7 +120,7 @@ Requirements to collect diagnostics from an M365 application:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the third setting is enabled.
-3. Create and deploy an Intune App Protection policy to a user, more information [here](../../intune-service/apps/app-protection-policies.md).
+3. Create and deploy an Intune App Protection policy to a user, more information [here](../../app-management/protection/create-policy.md).
 4. Confirm the application has been managed by Intune App Protection policy. You can check locally on the device and/or by loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:

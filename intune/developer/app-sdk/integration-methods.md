@@ -20,7 +20,7 @@ You don't need the source code to use the tool, but you do need valid signing cr
 
 The App Wrapping Tool does **not** support apps in or available in the Apple App Store or Google Play Store. It also doesn't support certain features that require developer integration (see the following feature comparison table).
 
-For more information about the App Wrapping Tool for app protection policies on devices that aren't enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../../intune-service/apps/apps-add.md).
+For more information about the App Wrapping Tool for app protection policies on devices that aren't enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../../app-management/deployment/index.md).
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.

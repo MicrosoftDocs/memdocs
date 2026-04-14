@@ -28,7 +28,7 @@ To configure device categories, you must be an [Intune Administrator](/entra/ide
 
 ## Before you begin
 
-Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../intune-service/apps/company-portal-app.md#device-categories) first, and then create your categories.
+Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../app-management/configuration/configure-company-portal.md#device-categories) first, and then create your categories.
 
 If Multi Admin Approval access policies are enabled for device actions, creating new categories, editing existing ones, and deleting device categories might require approval from a second administrator. To learn more, see [Use Access policies to require Multi Admin Approval](../intune-service/fundamentals/multi-admin-approval.md).
 

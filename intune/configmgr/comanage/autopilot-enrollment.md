@@ -116,7 +116,7 @@ Use these recommendations for a more successful deployment:
     > [!NOTE]
     > The default timeout for the enrollment status page is 60 minutes. You can adjust this value in that policy, if needed, but a faster process may provide a better user experience.
 
-- Don't use this process with other policy providers like the [Intune management extension](../../intune-service/apps/intune-management-extension.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
+- Don't use this process with other policy providers like the [Intune management extension](../../device-management/tools/management-extension-windows.md), which can cause conflicts. Each provider isn't currently aware of others. Either use the co-management policy for the Configuration Manager provider, or use the Intune management extension provider, not both.
 
   - If you need to install apps in a specific order, use the co-management policy. Run a task sequence to install the apps.
 
@@ -154,7 +154,7 @@ Use the following process to configure the co-management policy in Intune:
 
     :::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
 
-1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../intune-service/configuration/device-profile-assign.md).
+1. On the **Assignments** page, select a target _device_ group. For more information, see [Assign user and device profiles in Microsoft Intune](../../device-configuration/assign-device-profile.md).
 
 1. On the **Review + create** page, review the settings and create the policy.
 

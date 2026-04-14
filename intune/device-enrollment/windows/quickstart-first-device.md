@@ -73,7 +73,7 @@ These steps guide you through using the Settings app on a Windows device to enro
 
     If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows device access](../../user-help/troubleshooting/troubleshoot-device-access-windows.md).
 
-When the device is enrolled in Intune, it starts to receive the Intune policies you create. [Common questions, answers, and scenarios with policies and profiles in Microsoft Intune](../../intune-service/configuration/device-profile-troubleshoot.md) provides more information about how policies and profiles work in Intune.
+When the device is enrolled in Intune, it starts to receive the Intune policies you create. [Common questions, answers, and scenarios with policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md) provides more information about how policies and profiles work in Intune.
 
 ## Confirm device enrollment
 

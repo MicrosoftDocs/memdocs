@@ -23,7 +23,7 @@ Complete these steps first to enable enrollment in your Microsoft Intune tenant.
 4. [Get an Apple MDM push certificate](create-mdm-push-certificate.md)
 5. Assign user licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 6. [Create groups](../../intune-service/fundamentals/groups-add.md)
-7. [Configure the Company Portal app](../../intune-service/apps/company-portal-app.md)
+7. [Configure the Company Portal app](../../app-management/configuration/configure-company-portal.md)
 
 ## Enroll devices
 After you enable enrollment, use one of the supported methods described in this section to enroll user-owned and company-owned devices.
