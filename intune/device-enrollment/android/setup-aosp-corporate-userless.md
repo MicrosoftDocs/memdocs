@@ -21,7 +21,7 @@ This article describes how to set up Android (AOSP) device management and enroll
 ## You should know
 Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account and aren't associated with a specific user.
 
-Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-on (SSO) between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also leverage SSO when signing out of [apps that are integrated with the Intune SDK](../../intune-service/apps/apps-supported-intune-apps.md), even apps that don't yet participate with shared device mode.
+Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-on (SSO) between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also leverage SSO when signing out of [apps that are integrated with the Intune SDK](../../app-management/ref-protected-apps.md), even apps that don't yet participate with shared device mode.
 
 
 ## Prerequisites
@@ -236,7 +236,7 @@ The following are known limitations when working with AOSP devices in Intune:
 
 ## Next steps
 
-* [Create an Android (AOSP) device configuration policy](../../intune-service/configuration/device-restrictions-android-for-work.md) to restrict settings on devices.
+* [Create an Android (AOSP) device configuration policy](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) to restrict settings on devices.
 
 * [Create an Android (AOSP) device compliance policy](../../intune-service/protect/compliance-policy-create-android-aosp.md).
 

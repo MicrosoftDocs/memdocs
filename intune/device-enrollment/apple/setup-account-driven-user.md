@@ -83,7 +83,7 @@ Both of these commands should return `Content-Type: application/json`.
 We recommend extra configurations to help improve the enrollment experience for device users. This section provides more information about each recommendation.
 
 ### Deploy Company Portal web app
-Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../intune-service/apps/web-app.md).
+Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md).
 
 ### Enable federated authentication
 Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.
@@ -152,6 +152,6 @@ The volume and cryptographic keys created to manage the work data on the device 
 * For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).
 * For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../../intune-service/configuration/device-restrictions-apple.md)
-   * [iOS and iPadOS device features](../../intune-service/configuration/device-features-apple.md)
-   * [Set up per-app Virtual Private Network (VPN)](../../intune-service/configuration/vpn-setting-configure-per-app.md)
+   * [iOS and iPadOS device restrictions](../../device-configuration/templates/ref-device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../../device-configuration/templates/ref-device-features-apple.md)
+   * [Set up per-app Virtual Private Network (VPN)](../../device-configuration/templates/configure-per-app-vpn-ios.md)

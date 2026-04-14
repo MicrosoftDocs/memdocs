@@ -75,7 +75,7 @@ When users open or resume an app that's managed by you, the app protection polic
 
 :::image type="content" source="android/media/planning-guide/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
 
-For more information on app protection policies, go to [App protection policies overview](../intune-service/apps/app-protection-policy.md).
+For more information on app protection policies, go to [App protection policies overview](../app-management/protection/overview.md).
 
 ## Use custom notifications
 
@@ -87,7 +87,7 @@ Remember, if the OS updates can't be forced or controlled, which is common on pe
 
 For more information on these features, go to:
 
-- [Conditional launch actions with app protection policies in Intune](../intune-service/apps/app-protection-policies-access-actions.md)
+- [Conditional launch actions with app protection policies in Intune](../app-management/protection/configure-conditional-launch.md)
 - [Using custom notifications in Intune](../device-management/actions/send-custom-notification.md)
 
 ## Related articles

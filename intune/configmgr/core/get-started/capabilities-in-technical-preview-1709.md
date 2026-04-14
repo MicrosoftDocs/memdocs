@@ -109,7 +109,7 @@ Windows Update client policies let you configure deferral policies for Windows 1
 ### Remote actions available in Intune on Azure for co-managed devices
 When a Windows 10 device is enabled for co-management, you have the following remote actions available to you from Intune on Azure:
 - [Factory reset](../../../device-management/actions/wipe.md)
-- [Selective wipe](/mem/intune-service/apps/apps-selective-wipe)
+- [Selective wipe](../../../app-management/protection/wipe-corporate-data.md)
 - [Delete devices](../../../device-management/actions/delete.md)
 - [Restart device](../../../device-management/actions/restart.md)
 - [Fresh start](../../../device-management/actions/fresh-start.md)
@@ -119,8 +119,8 @@ Before you switch workloads from Configuration Manager to Intune, create the pro
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.
 
 <!-- - [Device compliance policies](/mem/intune-service/protect/compliance-policy-create-windows)  -->
-- [Windows Update client policies](/mem/intune-service/protect/windows-update-for-business-configure)
-- [Device configuration profiles](/mem/intune-service/configuration/device-profile-create)
+- [Windows Update client policies](../../../device-updates/windows/ref-update-ring-settings.md)
+- [Device configuration profiles](../../../device-configuration/overview.md)
 
 ### Architectural overview for co-management
 The following diagram provides an architectural overview of co-management and how it fits into existing Configuration and Intune infrastructures.

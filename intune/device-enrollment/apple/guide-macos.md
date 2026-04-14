@@ -129,7 +129,7 @@ This task list provides an overview. For more specific information, go to [Autom
     >
     > After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Microsoft Entra ID, and doesn't show in a user's device list in Microsoft Entra ID.
     >
-    > If users need access to resources protected by Conditional Access or should be fully registered with Microsoft Entra ID, then [install the Company Portal app](../../intune-service/apps/apps-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). During this second login, any Conditional Access policies are evaluated, and Microsoft Entra registration is complete. Users can install and use organizational resources, including LOB apps.
+    > If users need access to resources protected by Conditional Access or should be fully registered with Microsoft Entra ID, then [install the Company Portal app](../../app-management/deployment/add-company-portal-macos.md). After it's installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). During this second login, any Conditional Access policies are evaluated, and Microsoft Entra registration is complete. Users can install and use organizational resources, including LOB apps.
 
   - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
 
@@ -139,7 +139,7 @@ This task list provides an overview. For more specific information, go to [Autom
 
       If you want to use the Company Portal app for authentication instead of using Setup Assistant, or want the devices registered in Microsoft Entra ID, then:
 
-      1. To install the Company Portal app on devices, go to [add the Company Portal app](../../intune-service/apps/apps-company-portal-macos.md). Set the Company Portal app as a required app.
+      1. To install the Company Portal app on devices, go to [add the Company Portal app](../../app-management/deployment/add-company-portal-macos.md). Set the Company Portal app as a required app.
       1. **After** the device is enrolled, install the Company Portal app.
       1. Once installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). When they sign in, they're authenticated, and ready to receive your policies.
 
@@ -162,11 +162,11 @@ For more specific information on the end user steps, go to [Enroll your macOS de
 
       If you're using Setup Assistant for authentication, then stop here.
 
-  3. Optional. If you're using the Company Portal app for authentication (instead of Setup Assistant), then the Company Portal app [installs using the option](../../intune-service/apps/apps-company-portal-macos.md) you configured.
+  3. Optional. If you're using the Company Portal app for authentication (instead of Setup Assistant), then the Company Portal app [installs using the option](../../app-management/deployment/add-company-portal-macos.md) you configured.
 
       Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, users are authenticated, and can access organization resources.
 
-      Remember, installing the Company Portal app is optional. If you want your users to authenticate using Company Portal app, instead of using the Setup Assistant, then [add the Company Portal app](../../intune-service/apps/apps-company-portal-macos.md).
+      Remember, installing the Company Portal app is optional. If you want your users to authenticate using Company Portal app, instead of using the Setup Assistant, then [add the Company Portal app](../../app-management/deployment/add-company-portal-macos.md).
 
 - **Enroll with user affinity + Setup Assistant with modern authentication**:
 
@@ -176,7 +176,7 @@ For more specific information on the end user steps, go to [Enroll your macOS de
 
   2. The Setup Assistant can prompt the user for additional information. When it completes, users can use the device. When the home screen shows, the enrollment is complete and user device affinity is established. Users will see your apps and policies on the device.
 
-  3. Users open the Company Portal app [you installed](../../intune-service/apps/apps-company-portal-macos.md), and sign in with their organization credentials (`user@contoso.com`) again.
+  3. Users open the Company Portal app [you installed](../../app-management/deployment/add-company-portal-macos.md), and sign in with their organization credentials (`user@contoso.com`) again.
 
 - **Enroll without user affinity**: No actions. Be sure your users don't install the Company Portal app.
 

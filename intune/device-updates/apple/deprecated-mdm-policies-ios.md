@@ -34,7 +34,7 @@ With these MDM-based policies, you can:
 
 - iOS/iPadOS software updates that you send to a [Shared iPad](../../device-enrollment/apple/shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 
-- If using [Autonomous Single App Mode (ASAM)](../../intune-service/configuration/device-restrictions-apple.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../../intune-service/configuration/device-restrictions-apple.md#general) to configure ASAM.
+- If using [Autonomous Single App Mode (ASAM)](../../device-configuration/templates/ref-device-restrictions-apple.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../../device-configuration/templates/ref-device-restrictions-apple.md#general) to configure ASAM.
 
 - If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 
@@ -128,7 +128,7 @@ To delay visibility, deploy a device restriction template that configures the fo
 - **Delay default visibility of software updates** = **1** to **90**
   90 days is the maximum delay that Apple supports.
 
-[Device restriction](../../intune-service/configuration/device-restrictions-configure.md) templates are part of device configuration policies.
+[Device restriction](../../device-configuration/templates/configure-device-restrictions.md) templates are part of device configuration policies.
 
 For guidance from the Intune support team, see the Intune Customer Success blog [Delaying visibility of software updates in Intune for supervised iOS devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
 
@@ -142,5 +142,5 @@ For each device on the list, the *Installation Status* displays the error that t
 
 ## Next steps
 
-- [Monitor device profiles](../../intune-service/configuration/device-profile-monitor.md)
+- [Monitor device profiles](../../device-configuration/monitor-device-profile.md)
 - [Software updates admin guide for supervised iOS/iPadOS devices in Intune](planning-guide-ios-ipados.md)

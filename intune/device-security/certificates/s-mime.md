@@ -63,7 +63,7 @@ To deploy a PKCS certificate imported in Intune used for email encryption, follo
 
 ## S/MIME email profiles
 
-Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../../intune-service/configuration/email-settings-ios.md).
+Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../../device-configuration/templates/ref-email-settings-ios.md).
 
 ## Next steps
 

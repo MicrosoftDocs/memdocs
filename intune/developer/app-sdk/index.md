@@ -9,7 +9,7 @@ ms.collection:
 ---
 
 # Microsoft Intune App SDK overview
-The Intune App SDK, available for both iOS and Android, enables your app to support Intune [app protection policies](../../intune-service/apps/app-protection-policy.md). When your app has app protection policies applied to it, it can be managed by Intune and is recognized by Intune as a managed app. The SDK strives to minimize the amount of code changes required from the app developer. You'll find that you can enable most of the SDK's features without changing your app's behavior. For enhanced end-user and IT administrator experience, you can utilize the SDK's APIs to customize your app behavior to support features that require your app participation.
+The Intune App SDK, available for both iOS and Android, enables your app to support Intune [app protection policies](../../app-management/protection/overview.md). When your app has app protection policies applied to it, it can be managed by Intune and is recognized by Intune as a managed app. The SDK strives to minimize the amount of code changes required from the app developer. You'll find that you can enable most of the SDK's features without changing your app's behavior. For enhanced end-user and IT administrator experience, you can utilize the SDK's APIs to customize your app behavior to support features that require your app participation.
 
 Once you have enabled your app to support Intune app protection policies, IT administrators can deploy these policies to protect their corporate data within the app.
 
@@ -30,7 +30,7 @@ IT administrators can enforce a policy that ensures that data saved to the devic
 IT administrators can remotely wipe corporate data from an Intune-managed app. This feature is identity-based and will only delete the files associated with the corporate identity of the end user. To do that, the feature requires the app's participation. The app can specify the identity for which the wipe should occur based on user settings. In the absence of these specified user settings from the app, the default behavior is to wipe the application directory and notify the end user that access has been removed.
 
 ### Enforce the use of Microsoft Edge
-IT administrators can force web links in the app to be opened with the [Microsoft Edge app](../../intune-service/apps/manage-microsoft-edge.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
+IT administrators can force web links in the app to be opened with the [Microsoft Edge app](../../app-management/configuration/configure-edge-ios-android.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
 
 ### Enforce a PIN policy
 IT administrators can require the end-user to enter a PIN before accessing corporate data in the app. This ensures that the person using the app is the same person who initially signed in with their work or school account. When end users configure their PIN, the Intune App SDK uses Microsoft Entra ID to verify the credentials of end-users against the enrolled Intune account.

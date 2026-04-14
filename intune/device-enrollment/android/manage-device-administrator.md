@@ -16,7 +16,7 @@ Android device administrator (sometimes referred to *legacy* Android management 
 
 Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
-For information about using device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../../intune-service/apps/manage-without-gms.md).
+For information about using device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../../app-management/manage-without-gms.md).
 
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.
 
@@ -30,7 +30,7 @@ If you still decide to have users enroll their Android devices with device admin
 6. Select the checkmark next to **Use device administrator to manage devices**.
 7. [Tell your users how to enroll their devices](../../user-help/enrollment/enroll-company-portal-android.md).
 
-After a user enrolls, you can begin managing their devices in Intune, including [assigning compliance policies](../../intune-service/protect/compliance-policy-create-android.md), [managing apps](../../intune-service/apps/app-management.md), and more.
+After a user enrolls, you can begin managing their devices in Intune, including [assigning compliance policies](../../intune-service/protect/compliance-policy-create-android.md), [managing apps](../../app-management/overview.md), and more.
 
 For information about other user tasks, see these articles:
 
@@ -66,4 +66,4 @@ Private space is a feature introduced with Android 15 that lets people create a 
 
 ## Next steps
 - [Assign compliance policies](../../intune-service/protect/compliance-policy-create-android.md)
-- [Managing apps](../../intune-service/apps/app-management.md)
+- [Managing apps](../../app-management/overview.md)
