@@ -1,8 +1,9 @@
 ---
 title: Add an Enterprise App Catalog App to Microsoft Intune
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
-ms.date: 01/12/2026
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: dguilory
 ms.subservice: suite
 ms.collection:
@@ -38,7 +39,7 @@ The following steps help you add a Windows App Catalog app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. Select **Enterprise App Catalog app** on the **Select app type** pane under the **Other** app types.
+3. In the **Select app type** pane, select the **Windows** platform, and then select **Enterprise App Catalog app**.
 4. Choose **Select** to add the app type.
    The **Add app** pane appear and shows the steps needed to add the app to Intune.
 
