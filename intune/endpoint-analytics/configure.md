@@ -93,7 +93,7 @@ If you want to change which devices contribute data to endpoint analytics, you c
 
 You can also create a new profile if you want to target a different set of devices:
 
-1. [Create a Windows health monitoring policy](../intune-service/configuration/windows-health-monitoring.md).
+1. [Create a Windows health monitoring policy](../device-configuration/templates/configure-health-monitoring-windows.md).
 1. Assign the policy to a group that contains as members the devices that you want to target.
 
 ::: zone-end

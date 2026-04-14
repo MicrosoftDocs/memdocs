@@ -176,7 +176,7 @@ The PKCS certificates you deploy for Intune managed devices must be chained with
 
    d. Select **Download root certificate** to download the trusted root certificate.
 
-2. Create a trusted certificate profile in the Microsoft Intune admin center. For detailed guidance, see [To create a trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../../intune-service/configuration/device-profile-assign.md).
+2. Create a trusted certificate profile in the Microsoft Intune admin center. For detailed guidance, see [To create a trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../../device-configuration/assign-device-profile.md).
 
    After you create the profile, it appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.
 
@@ -244,4 +244,4 @@ Logs for the Certificate Connector for Microsoft Intune are available as Event l
 
 ## Related content
 
-Use the information in this article with the information in [What are Microsoft Intune device profiles?](../../intune-service/configuration/device-profiles.md) to manage your organization's devices and the certificates on them.
+Use the information in this article with the information in [What are Microsoft Intune device profiles?](../../device-configuration/overview.md) to manage your organization's devices and the certificates on them.

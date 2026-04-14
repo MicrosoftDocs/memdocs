@@ -45,17 +45,17 @@ For applications to install and PowerShell scripts work successfully during a Wi
 
 > [!NOTE]
 >
-> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/intune/intune-service/apps/apps-add) and [Use PowerShell scripts on Windows devices in Intune](/intune/intune-service/apps/intune-management-extension).
+> The below steps assume that the applications or PowerShell scripts that will be deployed during Windows Autopilot device preparation deployment are already added to Intune. For more information on how to add applications and PowerShell scripts to Intune if they aren't already created, see [Add apps to Microsoft Intune](/intune/app-management/deployment/index) and [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
 
 ### Applications
 
 The following types of applications are supported for use with Windows Autopilot device preparation:
 
-- [Line-of-business (LOB)](/intune/intune-service/apps/lob-apps-windows).
-- [Win32](/intune/intune-service/apps/apps-win32-prepare).
-- [Microsoft Store](/intune/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-- [Microsoft 365](/intune/intune-service/apps/apps-add-office365).
-- [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
+- [Line-of-business (LOB)](/intune/app-management/deployment/add-lob-windows).
+- [Win32](/intune/app-management/deployment/win32-packaging).
+- [Microsoft Store](/intune/app-management/deployment/add-microsoft-store) - only Microsoft Store apps that support WinGet are supported.
+- [Microsoft 365](/intune/app-management/deployment/add-microsoft-365-windows).
+- [Enterprise App Catalog](/intune/app-management/deployment/add-enterprise-catalog).
 
 In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
@@ -134,9 +134,9 @@ To assign the desired PowerShell scripts to the device group created for Windows
 
 ## Related content
 
-- [Add apps to Microsoft Intune](/intune/intune-service/apps/apps-add).
-- [Use PowerShell scripts on Windows devices in Intune](/intune/intune-service/apps/intune-management-extension).
-- [Assign apps to groups with Microsoft Intune](/intune/intune-service/apps/apps-deploy).
-- [Win32 app management in Microsoft Intune](/intune/intune-service/apps/apps-win32-app-management).
-- [Add a Windows line-of-business app to Microsoft Intune](/intune/intune-service/apps/lob-apps-windows).
-- [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
+- [Add apps to Microsoft Intune](/intune/app-management/deployment/index).
+- [Use PowerShell scripts on Windows devices in Intune](/intune/device-management/tools/management-extension-windows).
+- [Assign apps to groups with Microsoft Intune](/intune/app-management/deployment/assign-groups).
+- [Win32 app management in Microsoft Intune](/intune/app-management/deployment/win32-overview).
+- [Add a Windows line-of-business app to Microsoft Intune](/intune/app-management/deployment/add-lob-windows).
+- [Add an Enterprise App Catalog app to Microsoft Intune](/intune/app-management/deployment/add-enterprise-catalog).

@@ -107,7 +107,7 @@ This restriction is in the admin center under **Devices** > **Device onboarding*
 #### Blocking personal Android devices
 By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same.
 
-If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally owned work profiles](../intune-service/apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).
+If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally owned work profiles](../app-management/protection/mam-vs-work-profiles-android.md#android-enterprise-personally-owned-work-profiles).
 
 
 #### Blocking personal iOS/iPadOS devices

@@ -183,7 +183,7 @@ Previously referred to as COPE. These devices are organization-owned, and have o
 | You have new or existing devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../../intune-service/configuration/device-restrictions-android-for-work.md) (Device experience) profile, and assign this profile to this device. |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) (Device experience) profile, and assign this profile to this device. |
 | Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article).|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the optional device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
@@ -281,7 +281,7 @@ Microsoft recommends:
 
 - Don't enroll new devices using Android device administrator.
 
-- Enroll new devices using one of the other methods described in this article and/or using [App protection policies](../../intune-service/apps/app-protection-policy.md).
+- Enroll new devices using one of the other methods described in this article and/or using [App protection policies](../../app-management/protection/overview.md).
 
 - Move existing Android device administrator devices to one of the other methods described in this article. If you're moving them to [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article), consider using the streamlined flow to move [Android devices from device administrator to personally owned work profile management](migrate-device-admin-to-work-profile.md).
 

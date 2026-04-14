@@ -65,7 +65,7 @@ Depending on the platform, Intune can also report the last known location if the
 > [!NOTE]
 > When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
-For more information about device restrictions, see [Android template device settings list to restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
+For more information about device restrictions, see [Android template device settings list to restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 ::: zone-end
 
