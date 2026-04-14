@@ -660,6 +660,8 @@ items:
       href: core/clients/sdk/getproperty-method-in-class-ccm_application.md
     - name: Install method
       href: core/clients/sdk/install-method-in-class-ccm_application.md
+    - name: Repair method
+      href: core/clients/sdk/repair-method-in-class-ccm_application.md
     - name: Uninstall method
       href: core/clients/sdk/uninstall-method-in-class-ccm_application.md
   - name: CCM_ApplicationActions client WMI class

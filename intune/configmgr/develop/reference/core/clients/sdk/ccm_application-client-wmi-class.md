@@ -60,17 +60,13 @@ Class CCM_Application : CCM_SoftwareBase
 ## Methods
  The following table lists the methods in the `CCM_Application` class.
 
--   [Cancel Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/cancel-method-in-class-ccm_application.md)
-
--   [DownloadContents Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/downloadcontents-method-in-class-ccm_application.md)
-
--   [GetPendingComponentList Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md)
-
--   [GetProperty Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_application.md)
-
--   [Install Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/install-method-in-class-ccm_application.md)
-
--   [Uninstall Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/uninstall-method-in-class-ccm_application.md)
+- [Cancel Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/cancel-method-in-class-ccm_application.md)
+- [DownloadContents Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/downloadcontents-method-in-class-ccm_application.md)
+- [GetPendingComponentList Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md)
+- [GetProperty Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_application.md)
+- [Install Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/install-method-in-class-ccm_application.md)
+- [Repair Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/repair-method-in-class-ccm_application.md)
+- [Uninstall Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/uninstall-method-in-class-ccm_application.md)
 
 ## Properties
  `AllowedActions`
