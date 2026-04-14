@@ -12,7 +12,7 @@ ms.collection:
 
 # Deploy Windows Update Packages in Intune
 
-[!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 You can deploy a Windows update package (*.msu* file) to Windows devices managed by Intune by using the [Intune Win32 app management](./win32.md) capabilities.
 

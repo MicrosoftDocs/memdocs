@@ -53,7 +53,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 - If you allow both platforms for the same group, and then refine it for specific and nonoverlapping versions, Intune looks at the version to determine the Android enrollment flow devices go through.
 - If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out.
 
- [!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Create a device platform restriction
 

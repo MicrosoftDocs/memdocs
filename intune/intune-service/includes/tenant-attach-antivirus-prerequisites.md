@@ -30,6 +30,6 @@ Manage [Antivirus settings for Configuration Manager devices](../protect/antivir
 - Windows Server 2016 and later (x64)
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]

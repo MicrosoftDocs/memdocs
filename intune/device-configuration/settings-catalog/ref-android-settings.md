@@ -42,7 +42,7 @@ To learn more about the settings catalog, see [Settings catalog overview](index.
 :::column span="3":::
 > To configure the policy, use an account with the following role:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 

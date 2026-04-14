@@ -26,7 +26,7 @@ For more information on this feature, see [Upgrade Windows editions or enable S 
 
 ## Before you begin
 
-- [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+- [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 - [Create a Windows client edition upgrade and mode switch device configuration profile](./configure-edition-upgrade-windows.md#create-the-profile).
 - When you create a Windows client edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 

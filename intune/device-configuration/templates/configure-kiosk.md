@@ -61,7 +61,7 @@ This article shows you how to run one app or many apps as a Windows kiosk device
         > [!NOTE]
         > Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
         >
-        > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+        > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
     For a list of all settings, and what they do, go to:
 

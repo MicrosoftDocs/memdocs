@@ -11,7 +11,7 @@ ms.collection:
 ---
 # Use the Troubleshooting Dashboard to Help Users at Your Company
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 The troubleshooting pane lets help desk operators and Intune administrators view user information to address user help requests. Organizations that include a help desk can assign the [Help desk operator role](role-based-access-control.md#built-in-roles) to a group of Intune users. The help desk operator role can use the **Troubleshooting + support** pane help end users.
 
@@ -172,7 +172,7 @@ The **Diagnostics** tab provides the device name or application, platform, creat
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
 
-- [Report a problem in Company Portal for iOS](../user-help/send-logs-to-microsoft-ios.md)
+- [Report a problem in Company Portal for iOS](../../user-help/diagnostics/collect-logs-ios.md)
 - [Report a problem in Company Portal or Intune app for Android](../../user-help/diagnostics/collect-logs-android.md)
 
 You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).

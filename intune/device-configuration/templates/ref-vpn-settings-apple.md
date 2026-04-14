@@ -34,7 +34,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
@@ -49,7 +49,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 ## Before you begin
 
-- [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 ::: zone pivot="ios-ipados"
 

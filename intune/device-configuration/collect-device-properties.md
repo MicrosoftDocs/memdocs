@@ -55,7 +55,7 @@ This feature applies to:
 :::column span="3":::
 > To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 > - A [custom role](./templates/configure-custom-settings.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
 > - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../intune-service/fundamentals/role-based-access-control-reference.md).
 :::column-end:::

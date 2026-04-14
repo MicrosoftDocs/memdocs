@@ -28,7 +28,7 @@ Use Microsoft Intune to deploy and configure Defender for Endpoint on Android de
   - Corporate-owned devices with a work profile
   - Corporate-owned, fully managed user device enrollment
 
-   [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+   [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 - **Android OS version:** For supported OS versions, see [System requirements](/defender-endpoint/microsoft-defender-endpoint-android#system-requirements) for Defender for Endpoint on Android.
 
@@ -123,7 +123,7 @@ Create an app configuration policy to grant Defender the permissions it needs on
    - **Auto deny**: Automatically denies without notifying the user.
 
    > [!NOTE]
-   > On Android 12 and later, **Auto grant** isn't supported for certain permissions on corporate-owned work profile and dedicated devices. For details, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+   > On Android 12 and later, **Auto grant** isn't supported for certain permissions on corporate-owned work profile and dedicated devices. For details, see [Add app configuration policies for managed Android Enterprise devices](../../app-management/configuration/configure-managed-android.md).
 
 1. **(Optional) Enable low-touch onboarding.**
 

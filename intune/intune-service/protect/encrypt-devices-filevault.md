@@ -422,7 +422,7 @@ After either method, verify successful management assumption:
 
 ### Policy conflict resolution
 
-Use Intune's [policy conflict detection](../configuration/device-profile-monitor.md#view-conflicts) to identify:  
+Use Intune's [policy conflict detection](../../device-configuration/monitor-device-profile.md#view-conflicts) to identify:  
 - Overlapping FileVault policies
 - Conflicting endpoint protection settings
 - Compliance policy interactions

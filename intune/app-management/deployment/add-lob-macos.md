@@ -13,7 +13,7 @@ ms.collection:
 
 # How to Add macOS Line-of-Business (LOB) Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune.
 
@@ -105,7 +105,7 @@ The app you created appears in the apps list where you can assign it to the grou
 
 ## Update a line-of-business app
 
-[!INCLUDE [shared-proc-lob-updateapp](../../intune-service/includes/shared-proc-lob-updateapp.md)]
+[!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
 To update a line-of-business app deployed as a *.pkg* file, you must increment the `CFBundleShortVersionString` of the *.pkg* file.
 

@@ -42,7 +42,7 @@ You can use corporate identifiers with these platforms:
 - Windows 
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]  
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
 
 To add corporate identifiers in Microsoft Intune, you must be assigned one of these roles:
 

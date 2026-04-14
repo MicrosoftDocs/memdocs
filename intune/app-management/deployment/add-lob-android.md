@@ -12,7 +12,7 @@ ms.collection:
 
 # Add an Android Line-of-Business App to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 A line-of-business (LOB) app is an app that you add to Intune from an app installation file. This kind of app is typically written in-house. Intune installs the LOB app on the user's device.
 
@@ -77,7 +77,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 ## Step 5: Update a line-of-business app
 
-[!INCLUDE [shared-proc-lob-updateapp](../../intune-service/includes/shared-proc-lob-updateapp.md)]
+[!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
 If **Check apps from external sources** is enabled on the Android device, the user will be prompted before installing the update. Otherwise the update will be installed automatically.
 

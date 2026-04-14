@@ -24,7 +24,7 @@ Enrollment notifications are supported on these devices:
 * Windows Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Example
 The following example image shows what an enrollment notification looks like to a device user.

@@ -28,7 +28,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 - Any supported version of macOS
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 >
@@ -126,7 +126,7 @@ The reports for Firewall policy display status details about the firewall status
 - Windows
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 ### Summary

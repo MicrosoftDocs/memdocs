@@ -98,7 +98,7 @@ To create groups in the Microsoft Intune admin center:
         > Avoid creating groups that include both users and devices, as this can lead to policy conflicts and unpredictable behavior during Intune deployments.
 
         > [!TIP]
-        > To create groups of devices, you can use [device categories](../enrollment/device-group-mapping.md) to automatically join devices to a group at the time they enroll with Intune.
+        > To create groups of devices, you can use [device categories](../../device-management/create-device-categories.md) to automatically join devices to a group at the time they enroll with Intune.
 
       - **Dynamic User** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, see [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
 

@@ -27,7 +27,7 @@ This article lists the US Government, US Government Community (GCC) High, and De
 
 - The inspection of SSL traffic is not supported on `*.manage.microsoft.us` or `has.spserv.microsoft.com` endpoints.
 
-For more information about Windows auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).
+For more information about Windows auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../../device-enrollment/windows/enable-automatic-mdm.md).
 
 ## Ports and IP addresses list
 
