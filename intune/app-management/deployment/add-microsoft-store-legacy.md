@@ -11,7 +11,7 @@ ms.collection:
 
 # Add Microsoft Store Apps to Intune (Legacy)
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune.
 

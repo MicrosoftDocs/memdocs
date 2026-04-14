@@ -14,7 +14,7 @@ ms.collection:
 
 # Microsoft Tunnel for Mobile Application Management for Android
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled Android devices to support MAM scenarios. With support for MAM, your unenrolled devices can use Tunnel to securely connect to your organization allowing users and apps safe access to your organizational data.
 
@@ -212,8 +212,8 @@ If you've integrated your LOB apps with the MAM SDK, you can use them with Micro
 
 For more information about adding custom apps to policies, see the following articles for the two policy types:
 
-- [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md)
-- [How to create and assign app protection policies](../apps/app-protection-policies.md)
+- [App configuration policies for Intune App SDK managed apps](../../app-management/configuration/configure-managed-apps.md)
+- [How to create and assign app protection policies](../../app-management/protection/create-policy.md)
 
 To support LOB apps on your unenrolled devices, the apps must deploy as *available apps* from within Microsoft Intune admin center. You can't use Intune to deploy apps as required apps to unenrolled devices.
 

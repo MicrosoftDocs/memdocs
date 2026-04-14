@@ -15,7 +15,7 @@ ms.collection:
 
 # Creating elevation rules with Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
@@ -318,7 +318,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Select **Next**.
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md). Select **Next**.
 
 6. In **Review + create**, review your settings, and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 

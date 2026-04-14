@@ -10,7 +10,7 @@ ms.collection:
 
 # Enroll devices in Microsoft Intune with Samsung Knox Mobile Enrollment
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Use Samsung Knox Mobile Enrollment as a tool to bulk enroll enterprise devices in Microsoft Intune. Knox Mobile Enrollment enables device enrollment to happen straight out-of-the-box after you turn on the device. Enrollment is supported for the following Android Enterprise device types:
 

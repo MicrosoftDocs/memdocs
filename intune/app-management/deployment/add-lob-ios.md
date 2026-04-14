@@ -91,7 +91,7 @@ The app that you created now appears in the list of apps. From the list, you can
 
 ## Step 5: Update a line-of-business app
 
-[!INCLUDE [shared-proc-lob-updateapp](../../intune-service/includes/shared-proc-lob-updateapp.md)]
+[!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
 The update to the line-of-business app is installed automatically.
 

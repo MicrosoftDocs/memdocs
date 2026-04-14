@@ -55,7 +55,7 @@ The partial delegation model proposes the following guidelines for policy manage
 ✔️ **Reuse**
 
 - Commonly configured policies, enrollment profiles, and apps should be made available to the local admins to reuse, as much as possible.
-- Microsoft Intune uses many common configurations that fall into a few categories. Review the recommendations listed for [App Protection Policies](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
+- Microsoft Intune uses many common configurations that fall into a few categories. Review the recommendations listed for [App Protection Policies](../../app-management/protection/data-protection-framework.md#level-1-enterprise-basic-data-protection).
 - As local admins onboard, they should review the existing policies and reuse them as needed.
 
 ✔️ **Exceptions**
@@ -113,7 +113,7 @@ Depending on the business requirements for each feature, guidelines provided in 
 
 ### App protection policy
 
-App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. For more information, see [App protection policies](../apps/app-protection-framework.md).
+App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. For more information, see [App protection policies](../../app-management/protection/data-protection-framework.md).
 
 The guidelines for App protection policies are split across the Central team and the local admins as follows:
 
@@ -122,7 +122,7 @@ The guidelines for App protection policies are split across the Central team and
 - Review the security and business needs across the organization and generate a set of common App protection policies for local admins.
 - Review the recommendations listed to identify what security controls are appropriate before creating any App protection policies.
 - Have an established method for local admins to request customized App protection policies, if necessary, for specific business needs where the business requirements can't be achieved with the existing common policies.
-- For specific recommendations about each configuration level and the minimum apps that must be protected, see [Data protection framework using App protection policies](../apps/app-protection-framework.md).
+- For specific recommendations about each configuration level and the minimum apps that must be protected, see [Data protection framework using App protection policies](../../app-management/protection/data-protection-framework.md).
 
 #### Local admins - Permissions and Tasks
 
@@ -131,7 +131,7 @@ The guidelines for App protection policies are split across the Central team and
 - Provide read and assign permissions only when there are different protection policies for managed devices and unmanaged devices. If the Central team chooses to offer only one policy for both, then application configuration policy isn't needed.
 - If application configuration policy is used, we recommend that you assign the application configuration policy to all App instances without exception.
 - Choose from common App protection policies. Local admins can request the Central team to create custom app protection policies as an exception, and only if necessary.
-- For more information, see [App protection policies](../apps/app-protection-framework.md).
+- For more information, see [App protection policies](../../app-management/protection/data-protection-framework.md).
 
 ### Compliance policy
 
@@ -201,16 +201,16 @@ In this section:
 
 - Android
 
-For more information, see [Manage apps](../apps/apps-add.md).
+For more information, see [Manage apps](../../app-management/deployment/index.md).
 
 #### Apple Volume Purchase Program
 
 Currently, there are no scale concerns for the supported number of Volume Purchase Program tokens.
-For more information, see [How many tokens can I upload.](../apps/vpp-apps-ios.md#how-many-tokens-can-i-upload).
+For more information, see [How many tokens can I upload.](../../app-management/deployment/manage-vpp-apple.md#how-many-tokens-can-i-upload).
 
 #### Windows
 
-- Local admins can create Win32 apps as needed within the cross-platform, line-of-business app and web-link limit. For more information, see [Win32 app management](../apps/apps-win32-app-management.md).
+- Local admins can create Win32 apps as needed within the cross-platform, line-of-business app and web-link limit. For more information, see [Win32 app management](../../app-management/deployment/win32.md).
 
   > [!NOTE]
   > Microsoft Store for Business is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, see [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
@@ -224,7 +224,7 @@ For more information, see [How many tokens can I upload.](../apps/vpp-apps-ios.m
 - Central team must add Managed Google Play apps.
   - The central team can only see Managed Google Play apps available in their tenant's country or region. If the central team needs a Managed Google Play app only available in specific countries or regions, they might need to work with the app developer to get it listed correctly.
   - The central team should manage all content related to managed Google Play apps, including private apps, web apps, and collections. For example, if a customer plans on using the [Managed Google Play iframe to publish private apps](https://support.google.com/googleplay/work/answer/9146439?hl=en), they have to do that with a single developer account owned by the central team.
-  - The central team can select a single scope tag as the Managed Google Play scope tag. It has a special dropdown in the Managed Google Play connector page. The scope tag will apply to all Managed Google Play apps after the central team adds them to the console, but won't apply retroactively to apps that have already been added. We highly recommend that the central team [set the scope tag](../enrollment/connect-intune-android-enterprise.md) before they add apps and then assign each regional team that scope tag. Otherwise, regional admins might not be able to see their Managed Google Play apps.
+  - The central team can select a single scope tag as the Managed Google Play scope tag. It has a special dropdown in the Managed Google Play connector page. The scope tag will apply to all Managed Google Play apps after the central team adds them to the console, but won't apply retroactively to apps that have already been added. We highly recommend that the central team [set the scope tag](../../device-enrollment/android/connect-managed-google-play.md) before they add apps and then assign each regional team that scope tag. Otherwise, regional admins might not be able to see their Managed Google Play apps.
 - Only one OEMConfig policy is supported per device, except for Zebra devices. With Zebra devices, we recommended that you have the smallest number of policies possible because the time to enforce the policy is additive. For example, if you assign six policies with the assumption that they'll layer on top of each other, it takes around 6X longer to start working on the device than a single policy.
 
 > [!NOTE]
@@ -255,13 +255,13 @@ For more information on Windows Autopilot, see [Use Windows Autopilot to enroll 
 #### Enrollment status page
 
 - Local admins should select from existing Enrollment status page profiles to assign, or they should request the Central team to create an exception profile, only if necessary.
-- Local admins shouldn't create Enrollment status page profiles. When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. The best practice varies per feature area. For information on Enrollment status page, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+- Local admins shouldn't create Enrollment status page profiles. When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. The best practice varies per feature area. For information on Enrollment status page, see [Set up the Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md).
 
 #### Apple Business Manager
 
 If possible, local admins shouldn't be granted create, update, or delete permissions on enrollment profiles. If local admins are given permissions to create Apple Business Manager profiles it also gives them create, update, and delete permissions in Windows Autopilot. However, local admins shouldn't create Windows Autopilot profiles.
 
-When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. The best practice varies per feature area. For more information, see [Use Apple Business Manager to enroll Apple devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md).
+When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. The best practice varies per feature area. For more information, see [Use Apple Business Manager to enroll Apple devices in Intune](../../device-enrollment/apple/tutorial-automated-ios.md).
 
 #### Android Enterprise profiles
 
@@ -272,7 +272,7 @@ When you delegate to a large number of administrators, the total number of objec
 
 - The same set of permissions govern both device configuration and Enrollment restrictions. When you grant permissions to create for device configuration, then you're also granting permissions to create for enrollment restrictions. However, local admins shouldn't be given permission to create enrollment restriction profiles. Instead instruct them not to create new Enrollment restrictions profiles.
 
-- Enrollment device limit restrictions define how many devices each user can enroll. The enrollment device limit restrictions should cover all possible device limits for local admins to share. For more information, see [What are enrollment restrictions](../enrollment/enrollment-restrictions-set.md#available-restrictions).
+- Enrollment device limit restrictions define how many devices each user can enroll. The enrollment device limit restrictions should cover all possible device limits for local admins to share. For more information, see [What are enrollment restrictions](../../device-enrollment/restrictions.md#available-restrictions).
 
 - The Central team should standardize Device Type restrictions as much as possible and add new restrictions but only as special exceptions after a local admin reviews existing restrictions.
 
@@ -282,7 +282,7 @@ The Device categories (**Devices** > **Device categories**) feature doesn't have
 
 Central teams can create Device Categories. However, local admins shouldn't be allowed to create, update, or delete device categories, as it would require granting them permissions on *Organization* which grants them access to other tenant-level features governed by *Organization* permissions.
 
-For more information, see [Device categories](../enrollment/device-group-mapping.md).
+For more information, see [Device categories](../../device-management/create-device-categories.md).
 
 ### Endpoint analytics
 

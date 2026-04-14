@@ -16,7 +16,7 @@ ms.collection:
 
 Microsoft Intune app protection policies work with Microsoft Entra Conditional Access to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll. Combined, they're referred to app-based Conditional Access.
 
-[App protection policies](../apps/app-protection-policy.md) are rules that ensure an organization's data remains safe or contained in a managed app:
+[App protection policies](../../app-management/protection/overview.md) are rules that ensure an organization's data remains safe or contained in a managed app:
 
 - An app protection policy can be a rule that's enforced when a user attempts to access or move your organizations data, or a set of actions that are prohibited or monitored when a user is working inside a managed app.
 - A managed app is an app that has app protection policies applied to it, and can be managed by Intune.

@@ -15,7 +15,7 @@ ms.collection:
 
  # Use Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 Microsoft Intune Remote Help is a cloud-based remote support solution that allows IT support teams to connect securely to an end-user's device for real-time assistance. It's available as a standalone add-on to Microsoft Intune, or as part of the Intune Suite, enabling organizations to provide remote troubleshooting and guidance with enterprise security controls in place. Remote Help distinguishes between helpers (support personnel) and sharers (end users sharing their screen), both of whom must sign in with corporate Entra ID accounts for each session. This requirement means Remote Help only works within your organization's tenant – helpers can't assist users in another tenant or external organization.
 

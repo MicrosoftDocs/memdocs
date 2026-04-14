@@ -18,7 +18,7 @@ This feature applies to:
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings. This article describes these settings.
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 

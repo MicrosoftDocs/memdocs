@@ -15,7 +15,7 @@ ms.collection:
 
 This article guides you through creating a custom Intune RBAC role with specific permissions for a security operations department and assigning the role to a group of operators. Custom roles help you implement least privilege access, ensuring admins can only manage the users and devices they're empowered to handle.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 Intune includes several built-in RBAC roles that you can use. Microsoft recommends using the least-privileged role that can complete the task an administrator is expected to manage, which might be a custom role. This approach minimizes security risks and operational errors by avoiding over-privileged accounts for routine work.
 
@@ -120,4 +120,4 @@ In this evaluation step, you created a custom security operations role and assig
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 11 - Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md)
+> [Step 11 - Create an email device profile for iOS/iPadOS](../../device-configuration/templates/quickstart-email-profile.md)

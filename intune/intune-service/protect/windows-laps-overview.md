@@ -95,7 +95,7 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 - Windows 10 Enterprise LTSC 2019 and [later LTSC versions](/windows-server/identity/laps/laps-overview#windows-laps-supported-platforms)
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 ### GCC High support

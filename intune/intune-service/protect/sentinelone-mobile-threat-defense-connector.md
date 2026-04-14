@@ -39,7 +39,7 @@ For Android and iOS/iPadOS The SentinelOne app captures file system, network sta
   - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
   - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
 
-- **Support for unenrolled devices** - Intune can use the risk assessment data from the SentinelOne app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using SentinelOne with unenrolled devices:
+- **Support for unenrolled devices** - Intune can use the risk assessment data from the SentinelOne app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../../app-management/ref-protected-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using SentinelOne with unenrolled devices:
 
   - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)

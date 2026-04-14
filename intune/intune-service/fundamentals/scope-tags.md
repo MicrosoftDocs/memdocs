@@ -158,4 +158,4 @@ To review the impact on your tenant and enable Scoped permissions:
 ## Next steps
 
 Learn how scope tags behave when there are [multiple role assignments](role-based-access-control.md#multiple-role-assignments).
-Manage your [roles](role-based-access-control.md) and [profiles](../configuration/device-profile-assign.md).
+Manage your [roles](role-based-access-control.md) and [profiles](../../device-configuration/assign-device-profile.md).

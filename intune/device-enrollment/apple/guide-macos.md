@@ -33,7 +33,7 @@ There's also a visual guide of the different enrollment options for each platfor
 [![A visual representation of Intune enrollment options by platform](../media/guide/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../../intune-service/includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 
@@ -81,7 +81,7 @@ Your users must do the following steps. For more specific information on the end
 
 The Company Portal app detects the installation of the management profile and automatically registers the device, unless it is manually closed by the user. The user must reopen the app to complete device registration. If you're using dynamic groups, which rely on device registration, it's important for users to return to the app and register. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration.
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Automated Device Enrollment (ADE) (supervised)
 
@@ -180,7 +180,7 @@ For more specific information on the end user steps, go to [Enroll your macOS de
 
 - **Enroll without user affinity**: No actions. Be sure your users don't install the Company Portal app.
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Direct enrollment
 

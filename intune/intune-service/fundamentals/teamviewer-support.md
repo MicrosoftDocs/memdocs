@@ -27,7 +27,7 @@ This feature applies to:
 - Windows
 
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Prerequisites
 

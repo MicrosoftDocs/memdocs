@@ -15,7 +15,7 @@ ms.collection:
 
 # Deploy Endpoint Privilege Management with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 

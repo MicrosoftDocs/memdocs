@@ -12,14 +12,14 @@ ms.collection:
 # Windows 10 Team settings to allow or restrict features on Surface Hub devices using Intune
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 This article describes some of the Microsoft Intune device restrictions settings that you can configure for Surface Hub devices running [Windows 10 Team](/surface-hub/differences-between-surface-hub-and-windows-10-enterprise).
 
 ## Before you begin
 
 - Create a [Windows 10 Teams device restrictions configuration profile](./configure-device-restrictions.md#create-the-profile).
-- [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+- [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 ## Apps and experience
 

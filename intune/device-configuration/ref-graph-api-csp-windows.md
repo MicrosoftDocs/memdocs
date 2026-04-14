@@ -19,7 +19,7 @@ This list applies to:
 
 - Windows 10 and later
 
-[!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 This article lists the Graph entities and their matching Windows CSPs and offset URIs.
 

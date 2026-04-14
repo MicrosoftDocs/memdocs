@@ -68,13 +68,13 @@ For more information, go to [Manage apps using Microsoft Intune](manage-apps.md)
 
 You can create policies for apps, security, device configuration, compliance, Conditional Access, and more. When the policies are ready, you can deploy these policies to your user groups and device groups. To receive these policies, the devices only need internet access.
 
-For more information, go to [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md).
+For more information, go to [Assign policies in Microsoft Intune](../../device-configuration/assign-device-profile.md).
 
 ✅ **Use the self-service features**
 
 Employees and students can use the Company Portal app and website to reset a PIN/password, install apps, join groups, and more. You can customize the Company Portal to help reduce support calls.
 
-For more information, go to [Configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+For more information, go to [Configure the Intune Company Portal apps, Company Portal website, and Intune app](../../app-management/configuration/configure-company-portal.md).
 
 ✅ **Integrate with mobile threat defense**
 
@@ -145,7 +145,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Add Microsoft 365 Apps to Windows devices with Microsoft Intune](../apps/apps-add-office365.md)
+  - [Add Microsoft 365 Apps to Windows devices with Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
   - [Microsoft 365 docs: Manage devices with Intune](/microsoft-365/solutions/manage-devices-with-intune-overview)
 
 - **[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)** to help enterprises prevent, detect, investigate, and respond to threats
@@ -172,15 +172,15 @@ The Intune admin center makes it easy to connect to different partner services, 
 
 - **Managed Google Play for Android apps**: When you connect to your Managed Google Play account, admins can access your organization's private store for Android apps, and deploy these apps to your devices.
 
-  For more information, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+  For more information, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
 
 - **Apple tokens and certificates for enrollment and apps**: When they're added, your iOS/iPadOS and macOS devices can enroll in Intune and receive policies from Intune. Admins can access your volume purchased iOS/iPad and macOS app licenses, and deploy these apps to your devices.
 
   For more information, go to:
 
-  - [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)
-  - [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md)
-  - [Manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md)
+  - [Get an Apple MDM push certificate](../../device-enrollment/apple/create-mdm-push-certificate.md)
+  - [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../../device-enrollment/apple/setup-automated-ios.md)
+  - [Manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../app-management/deployment/manage-vpp-apple.md)
 
 - **TeamViewer for remote assist**: When you connect to your TeamViewer account, you can use TeamViewer to remotely assist devices.
 
@@ -220,7 +220,7 @@ With MAM, you can:
 For more information, go to:
 
 - [Device enrollment in Intune?](../../device-enrollment/guide.md)
-- [App protection policies overview](../apps/app-protection-policy.md)
+- [App protection policies overview](../../app-management/protection/overview.md)
 
 ## Protect data on any device
 
@@ -279,7 +279,7 @@ In the VPN policy, you can use certificates to authenticate the VPN connection. 
 
 For more information, go to:
 
-- [Create VPN profiles to connect to VPN servers in Intune](../configuration/vpn-settings-configure.md)
+- [Create VPN profiles to connect to VPN servers in Intune](../../device-configuration/templates/configure-vpn.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - [Learn more about Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md)
 - [Use Microsoft Tunnel for MAM](../protect/microsoft-tunnel-mam.md)
@@ -294,7 +294,7 @@ When the policy is ready, you deploy this policy to your on-premises users and d
 
 For more information, go to:
 
-- [Create Wi-Fi policy to connect to Wi-Fi networks in Intune](../configuration/wi-fi-settings-configure.md)
+- [Create Wi-Fi policy to connect to Wi-Fi networks in Intune](../../device-configuration/templates/configure-wifi.md)
 - [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
 
 ### Enable single sign-on (SSO) to your apps and services
@@ -307,14 +307,14 @@ Specifically:
 
 - On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
 
-  For more information, go to [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md).
+  For more information, go to [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](../../device-configuration/enterprise-sso-plugin.md).
 
 - On Android devices, you can use the Microsoft Authentication Library (MSAL) to enable SSO to Android apps.
 
   For more information, go to:
 
   - [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso)
-  - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
+  - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../../device-configuration/enterprise-sso-plugin.md)
   - [Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on)
 
 ## Related articles

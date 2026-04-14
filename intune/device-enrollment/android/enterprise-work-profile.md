@@ -47,14 +47,6 @@ The settings available in Intune, ranging from enrollment to device configuratio
 * [Device compliance settings for Android Enterprise in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md)
 * [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)
 
-<!-- Removing section until linked files are updated.
-When configuring policies for device configuration or compliance, the broad range of settings enables you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies. The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
-
-- For Android Enterprise personally owned work profile devices: [Android personally owned work profile security settings](../../intune-service/enrollment/android-work-profile-security-settings.md)
-- For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../../intune-service/enrollment/android-fully-managed-security-settings.md)
-
-Alternatively, you can review the [Device compliance settings for Android Enterprise in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md) and [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md). -->
-
 ## App publishing and distribution
 
 Managed Google Play is an integral part of Android Enterprise app distribution and management. All apps deployed to the work profile on personal and corporate-owned devices come from the Managed Google Play service.
