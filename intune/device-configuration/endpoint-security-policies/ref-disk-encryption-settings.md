@@ -1,8 +1,6 @@
 ---
 title: Intune endpoint security disk encryption policy settings
 description: View the list of settings that are available in Microsoft Intune endpoint security disk encryption policy settings for BitLocker and FileVault.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/19/2024
 ms.topic: reference
 ms.collection:
@@ -14,7 +12,7 @@ ms.reviewer: aanavath
 
 # Disk encryption policy settings for endpoint security in Intune
 
-View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune as part of an [Endpoint security policy](./manage-policies.md).
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
@@ -24,7 +22,7 @@ View the settings you can configure in profiles for *Disk Encryption* policy in 
 >
 > The settings details in this article apply only to BitLocker profiles created before June 19, 2023.
 >
-> With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information  for a setting, to open [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
+> With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information  for a setting, to open [BitLocker CSP](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
 
 Applies to:
 
@@ -93,7 +91,7 @@ Supported platforms and profiles:
 ### BitLocker – Base Settings
 
 - **Enable full disk encryption for OS and fixed data drives**
-  CSP: [BitLocker - RequireDeviceEncryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+  CSP: [BitLocker - RequireDeviceEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
   If the drive was encrypted before this policy applied, no extra action is taken. If the encryption method and options match that of this policy, configuration should return success. If an in-place BitLocker configuration option doesn't match this policy, configuration will likely return an error.
 
@@ -103,7 +101,7 @@ Supported platforms and profiles:
   - **Yes** - Enforce use of BitLocker.
 
 - **Require storage cards to be encrypted (mobile only)**
-  CSP: [BitLocker - RequireStorageCardEncryption](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
+  CSP: [BitLocker - RequireStorageCardEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
 
   This setting only applies to Windows Mobile and Mobile Enterprise SKU devices.
   - **Not configured** (*default*) - The setting returns to the OS default, which is to not require storage card encryption.
@@ -113,7 +111,7 @@ Supported platforms and profiles:
   > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
 - **Hide prompt about third-party encryption**
-  CSP: [BitLocker - AllowWarningForOtherDiskEncryption](/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
+  CSP: [BitLocker - AllowWarningForOtherDiskEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
 
   If BitLocker is enabled on a system that's already encrypted by a third-party encryption product, it might render the device unusable. Data loss can occur and you might need to reinstall Windows. It's highly suggested to never enable BitLocker on a device that has third-party encryption installed or enabled.
 
@@ -127,14 +125,14 @@ Supported platforms and profiles:
   When set to *Yes*, you can then configure the following setting:
 
   - **Allow standard users to enable encryption during Autopilot**
-    CSP: [BitLocker - AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp)
+    CSP: [BitLocker - AllowStandardUserEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp)
     - **Not configured** (*default*) – The setting is left as client default, which is to require local admin access to enable BitLocker.
     - **Yes** - During Microsoft Entra join silent enable scenarios, users don't need to be local administrators to enable BitLocker.
 
     For non-silent enablement and Windows Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
 
 - **Configure client-driven recovery password rotation**
-  CSP: [BitLocker - ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)
+  CSP: [BitLocker - ConfigureRecoveryPasswordRotation](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp)
 
   Add Work Account (AWA, formally Workplace Joined) devices aren't supported for key rotation.
   - **Not configured** (*default*) – The client won’t rotate BitLocker recovery keys.
@@ -145,10 +143,10 @@ Supported platforms and profiles:
 ### BitLocker - Fixed Drive Settings
 
 - **BitLocker fixed drive policy**
-  CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+  CSP: [BitLocker - EncryptionMethodByDriveType](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
   - **Fixed drive recovery**
-    CSP: [BitLocker - FixedDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
+    CSP: [BitLocker - FixedDrivesRecoveryOptions](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
 
     Control how BitLocker-protected fixed data-drives are recovered in the absence of the required startup key information.
 
@@ -188,14 +186,14 @@ Supported platforms and profiles:
       - **Yes** - Block the ability to use Data Recovery Agent (DRA) to recover BitLocker enabled drives.
 
   - **Block write access to fixed data-drives not protected by BitLocker**
-    CSP: [BitLocker - FixedDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
+    CSP: [BitLocker - FixedDrivesRequireEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
     This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
 
     - **Not configured** (*default*) - Data can be written to non-encrypted fixed drives.
     - **Yes** - Windows won't allow any data to be written to fixed drives that aren't BitLocker protected. If a fixed drive isn't encrypted, the user will need to complete the BitLocker setup wizard for the drive before write access is granted.
 
   - **Configure encryption method for fixed data-drives**
-    CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+    CSP: [BitLocker - EncryptionMethodByDriveType](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
     Configure the encryption method and cipher strength for fixed data-drives disks. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
@@ -208,7 +206,7 @@ Supported platforms and profiles:
 ### BitLocker - OS Drive Settings
 
 - **BitLocker system drive policy**
-  CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+  CSP: [BitLocker - EncryptionMethodByDriveType](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
   - **Configure** (*default*)
   - **Not configured**
@@ -216,7 +214,7 @@ Supported platforms and profiles:
   When set to *Configure* you can configure the following settings:
 
   - **Startup authentication required**
-    CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+    CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
     - **Not configured** (*default*)
     - **Yes** - Configure the additional authentication requirements at system startup, including the use of Trusted Platform Module (TPM) or startup PIN requirements.
@@ -224,7 +222,7 @@ Supported platforms and profiles:
     When set to *Yes* you can configure the following settings:
 
     - **Compatible TPM startup**
-      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       It's recommended to require a TPM for BitLocker. This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 
@@ -233,7 +231,7 @@ Supported platforms and profiles:
       - **Allowed** - BitLocker uses the TPM if it's present.
 
     - **Compatible TPM startup PIN**
-      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       - **Blocked** (*default*) - Block the use of a PIN.
       - **Required** - Require a PIN and TPM be present to enable BitLocker.
@@ -242,7 +240,7 @@ Supported platforms and profiles:
       For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Windows Autopilot) won't be successful when user interaction is required.
 
     - **Compatible TPM startup key**
-      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       - **Blocked** (*default*) - Block the use of startup keys.
       - **Required** - Require a startup key and TPM be present to enable BitLocker.
@@ -251,7 +249,7 @@ Supported platforms and profiles:
       For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Windows Autopilot) won't be successful when user interaction is required.
 
     - **Compatible TPM startup key and PIN**
-      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+      CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       - **Blocked** (*default*) - Block the use of a startup key and PIN combination.
       - **Required** - Require BitLocker have a startup key and PIN present to become enabled.
@@ -260,7 +258,7 @@ Supported platforms and profiles:
       For silent enable scenarios, you must set this to *Blocked*. Silent enable scenarios (including Windows Autopilot) won't be successful when user interaction is required.
 
     - **Disable BitLocker on devices where TPM is incompatible**
-    CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+    CSP: [BitLocker - SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
       If no TPM is present, BitLocker requires a password or USB drive for startup.
 
@@ -270,7 +268,7 @@ Supported platforms and profiles:
       - **Yes** - Block BitLocker from being configured without a compatible TPM chip.
 
     - **Enable preboot recovery message and url**
-      CSP: [BitLocker - SystemDrivesRecoveryMessage](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)configure
+      CSP: [BitLocker - SystemDrivesRecoveryMessage](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)configure
 
       - **Not configured** (*default*) – Use the default BitLocker pre-boot recovery information.
       - **Yes** – Enable the configuration of a custom pre-boot recovery message and URL to help your users understand how to find their recovery password. The pre-boot message and URL are seen by users when they're locked out of their PC in recovery mode.
@@ -284,7 +282,7 @@ Supported platforms and profiles:
         Specify a custom pre-boot recovery URL.
 
     - **System drive recovery**
-      CSP: [BitLocker - SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
+      CSP: [BitLocker - SystemDrivesRecoveryOptions](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
 
       - **Not configured** (*default*)
       - **Configure** - Enable the configuration of additional settings.
@@ -322,7 +320,7 @@ Supported platforms and profiles:
         - **Yes** - Block the ability to use Data Recovery Agent (DRA) to recover BitLocker enabled drives.
 
     - **Minimum PIN length**
-      CSP: [BitLocker - SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
+      CSP: [BitLocker - SystemDrivesMinimumPINLength](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 
       Specify the minimum startup PIN length when TPM + PIN is required during BitLocker enablement. The PIN length must be between 4 and 20 digits.
 
@@ -331,7 +329,7 @@ Supported platforms and profiles:
       This setting only applies when first enabling BitLocker and has no effect if BitLocker is already enabled.
 
   - **Configure encryption method for Operating System drives**
-   CSP: [BitLocker - EncryptionMethodByDriveType]( https://go.microsoft.com/fwlink/?linkid=872526)
+   CSP: [BitLocker - EncryptionMethodByDriveType](../../intune-service/protect/ https:/go.microsoft.com/fwlink?linkid=872526)
 
     Configure the encryption method and cipher strength for OS drives. *XTS- AES 128-bit* is the Windows default encryption method and the recommended value.
 
@@ -344,7 +342,7 @@ Supported platforms and profiles:
 ### BitLocker - Removable Drive Settings
 
 - **BitLocker removable drive policy**
-  CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+  CSP: [BitLocker - EncryptionMethodByDriveType](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
   - **Not configured** (*default*)
   - **Configure**
@@ -352,7 +350,7 @@ Supported platforms and profiles:
   When set to *Configure* you can configure the following settings.
 
   - **Configure encryption method for removable data-drives**
-    CSP: [BitLocker - EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+    CSP: [BitLocker - EncryptionMethodByDriveType](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
     Select the desired encryption method for removable data-drives disks.
 
@@ -363,17 +361,17 @@ Supported platforms and profiles:
     - **AES 256bit XTS**
 
   - **Block write access to removable data-drives not protected by BitLocker**
-    CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
+    CSP: [BitLocker - RemovableDrivesRequireEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
     - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.
     - **Yes** - Windows doesn’t allow data to be written to removable drives that aren't BitLocker protected. If an inserted removable drive isn't encrypted, the user must complete the BitLocker setup wizard before write access is granted to drive.
 
   - **Block write access to devices configured in another organization**
-    CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
+    CSP: [BitLocker - RemovableDrivesRequireEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
     - **Not configured** (*default*) - Any BitLocker encrypted drive can be used.
     - **Yes** - Block write access to removable drives unless they were encrypted on a computer owned by your organization.
 
 ## Next steps
 
-[Endpoint security policy for disk encryption](../protect/endpoint-security-disk-encryption-policy.md)
+[Endpoint security policy for disk encryption](./disk-encryption-policy.md)

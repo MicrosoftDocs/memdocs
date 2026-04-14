@@ -22,7 +22,7 @@ For Linux, compliance settings are available from the [settings catalog](../../d
 
 In addition to the platform-specific compliance policy, devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
-To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
 
 This feature applies to:
 
@@ -44,7 +44,7 @@ Users of devices that fail to meet the defined criteria need to install a differ
 
 Add the settings in this category when you use custom compliance settings for Linux.
 
-For information about the available settings for custom compliance and how to use them, see [Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune](../protect/compliance-use-custom-settings.md).
+For information about the available settings for custom compliance and how to use them, see [Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune](./custom-settings.md).
 
 ### Device Encryption
 
@@ -89,5 +89,5 @@ If you must modify a device's configuration, use one of the following methods to
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
-- [Monitor your compliance policies](compliance-policy-monitor.md).
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).

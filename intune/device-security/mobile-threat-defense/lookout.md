@@ -27,15 +27,15 @@ Lookout's mobile app, **Lookout for work**, is installed and run on mobile devic
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Lookout for work. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Lookout for work app installed in their devices to resolve the issue and regain access to corporate resources. To support using Lookout for work with enrolled devices:
 
-  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
-  - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
-  - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
+  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
+  - [Enable the MTD connector in Intune](./enable-connector.md)
 
 - **Support for unenrolled devices** - Intune can use the risk assessment data from the Lookout for work app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../../app-management/ref-protected-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using Lookout for work with unenrolled devices:
 
-  - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
-  - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
-  - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
+  - [Add the MTD app to unenrolled devices](./add-apps-unenrolled-devices.md)
+  - [Create a Mobile Threat Defense app protection policy](./create-app-protection-policy.md)
+  - [Enable the MTD connector in Intune for unenrolled devices](./enable-unenrolled-devices.md)
 
 ## Supported platforms
 
@@ -111,8 +111,8 @@ Access is granted on remediation:
 
 Here are the main steps you must do to implement this solution:
 
-- [Set up your Lookout integration](lookout-mtd-connector-integration.md)
-- [Enable Mobile Endpoint Security in Intune](mtd-connector-enable.md)
-- [Add and assign the Lookout for Work app](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Configure Lookout device compliance policy](mtd-device-compliance-policy-create.md)
-- [Create an MTD app protection policy](mtd-app-protection-policy.md)
+- [Set up your Lookout integration](./setup-lookout.md)
+- [Enable Mobile Endpoint Security in Intune](./enable-connector.md)
+- [Add and assign the Lookout for Work app](./add-assign-apps.md)
+- [Configure Lookout device compliance policy](./create-compliance-policy.md)
+- [Create an MTD app protection policy](./create-app-protection-policy.md)

@@ -72,7 +72,7 @@ With Conditional Access, you can also target on-premises sites that you have exp
 For more information, see [Using Microsoft Entra application proxy to publish on-premises apps for remote users](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 > [!NOTE]
-> To use app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../../intune-service/protect/app-based-conditional-access-intune.md).
+> To use app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../../device-security/conditional-access-integration/app-based-policies.md).
 
 ## Single sign-on to Microsoft Entra connected web apps in policy-protected browsers
 
@@ -411,7 +411,7 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 |com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled |**true** (default) Use built-in certificate verifier and Microsoft Root Store to verify certificates <br>**false** Use system certificate verifier and system root certificates as the source of public trust to verify certificates |
 
 > [!NOTE]
-> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Microsoft Edge for Android](../../intune-service/protect/microsoft-tunnel-mam-android.md).
+> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Microsoft Edge for Android](../../device-security/microsoft-tunnel/mam-android.md).
 
 #### SSL warning page control
 By default, users can go through warning pages that show when users navigate to sites that have SSL errors. Organizations can manage the behavior.

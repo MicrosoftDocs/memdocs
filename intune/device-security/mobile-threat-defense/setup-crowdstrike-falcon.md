@@ -53,4 +53,4 @@ CrowdStrike documents the integration steps at [Integrating Falcon for Mobile wi
 
 ## Related content
 
-- [Set up CrowdStrike Falcon apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up CrowdStrike Falcon apps](./add-assign-apps.md)

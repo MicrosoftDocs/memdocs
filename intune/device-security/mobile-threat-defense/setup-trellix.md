@@ -41,7 +41,7 @@ The Trellix Mobile Security app authorization process follows:
 - Allow Trellix Mobile Security admin console to use Microsoft Entra Single Sign On (SSO).
 - Allow the Trellix Mobile Security app to sign in using Microsoft Entra SSO.
 
-For more information about consent and Microsoft Entra applications, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in the Microsoft Entra article *Permissions and consent in the Microsoft Entra v2.0 endpoint*.
+For more information about consent and Microsoft Entra applications, see [Request the permissions from a directory admin](../../intune-service/protect/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in the Microsoft Entra article *Permissions and consent in the Microsoft Entra v2.0 endpoint*.
 
 ## To set up Trellix Mobile Security integration
 
@@ -68,5 +68,5 @@ For more information about consent and Microsoft Entra applications, see [Reques
 
 ## Next steps
 
-- [Set up Trellix Mobile Security apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Trellix Mobile Security apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)
+- [Set up Trellix Mobile Security apps for enrolled devices](./add-assign-apps.md)
+- [Set up Trellix Mobile Security apps for unenrolled devices](./add-apps-unenrolled-devices.md)

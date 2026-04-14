@@ -127,5 +127,5 @@ Model execution and performance are actively monitored to ensure quality and rel
 
 Settings insight provides supplemental peer benchmarking information during baseline configuration. For comprehensive guidance on deploying and managing security baselines, see:
 
-- [Security baselines overview](../protect/security-baselines.md)
-- [Create and manage security baseline profiles in Microsoft Intune](../protect/security-baselines-configure.md)
+- [Security baselines overview](../../device-security/security-baselines/overview.md)
+- [Create and manage security baseline profiles in Microsoft Intune](../../device-security/security-baselines/configure-baselines.md)

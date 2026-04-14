@@ -84,10 +84,10 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 ## Related content
 
-- [Integrate CrowdStrike Falcon for Mobile with Intune](crowdstrike-falcon-mtd-connector-integration.md)
+- [Integrate CrowdStrike Falcon for Mobile with Intune](./setup-crowdstrike-falcon.md)
 
-- [Set up CrowdStrike Falcon app](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up CrowdStrike Falcon app](./add-assign-apps.md)
 
-- [Create CrowdStrike Falcon for Mobile device compliance policy](mtd-device-compliance-policy-create.md)
+- [Create CrowdStrike Falcon for Mobile device compliance policy](./create-compliance-policy.md)
 
-- [Enable CrowdStrike Falcon for the Mobile Threat Defence connector](mtd-connector-enable.md)
+- [Enable CrowdStrike Falcon for the Mobile Threat Defence connector](./enable-connector.md)

@@ -1,8 +1,6 @@
 ---
 title: Encrypt macOS devices with FileVault using Intune
 description: Use Microsoft Intune policy to configure and manage FileVault disk encryption on macOS devices, including Setup Assistant enforcement and comprehensive recovery key management.
-author: brenduns
-ms.author: brenduns
 ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: beflamm 
@@ -23,7 +21,7 @@ FileVault disk encryption is available on devices running **macOS 10.13 or later
 > FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and can't be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
 
 > [!TIP]
-> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
+> Intune provides a built-in [encryption report](./monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
 
 ## FileVault encryption scenarios
 
@@ -58,9 +56,9 @@ FileVault encryption management requires:
 
 ### Role-based access controls
 
-To manage FileVault in Intune, an account must be assigned an Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate FileVault key** right set to **Yes**.
+To manage FileVault in Intune, an account must be assigned an Intune [role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate FileVault key** right set to **Yes**.
 
-You can add this permission to your own [custom RBAC roles](../fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../fundamentals/role-based-access-control-reference.md):
+You can add this permission to your own [custom RBAC roles](../../intune-service/fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../../intune-service/fundamentals/role-based-access-control-reference.md):
 
 - Help Desk Operator
 - Endpoint Security Administrator
@@ -253,7 +251,7 @@ FileVault deployment occurs in two distinct phases:
 
 ### View encryption status
 
-To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
+To view information about devices that receive FileVault policy, see [Monitor disk encryption](./monitor-encryption.md).
 
 Monitor FileVault deployment through multiple Intune interfaces:
 
@@ -422,7 +420,7 @@ After either method, verify successful management assumption:
 
 ### Policy conflict resolution
 
-Use Intune's [policy conflict detection](../../device-configuration/monitor-device-profile.md#view-conflicts) to identify:  
+Use Intune's [policy conflict detection](../monitor-device-profile.md#view-conflicts) to identify:  
 - Overlapping FileVault policies
 - Conflicting endpoint protection settings
 - Compliance policy interactions
@@ -468,8 +466,8 @@ FileVault encryption integrates with Intune compliance policies:
 
 ## Next steps
 
-- [Monitor disk encryption across your environment](../protect/encryption-monitor.md)
-- [Configure BitLocker encryption for Windows devices](../protect/encrypt-devices.md)
-- [FileVault settings reference for endpoint security policies](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault)
+- [Monitor disk encryption across your environment](./monitor-encryption.md)
+- [Configure BitLocker encryption for Windows devices](./encrypt-bitlocker-windows.md)
+- [FileVault settings reference for endpoint security policies](./ref-disk-encryption-settings.md#filevault)
 - [Apple FileVault deployment guide](https://support.apple.com/guide/deployment/dep32bf53500/web) *(opens Apple's website)*
 - [End-user guidance for FileVault recovery keys](../../user-help/security/import-recovery-key-macos.md)

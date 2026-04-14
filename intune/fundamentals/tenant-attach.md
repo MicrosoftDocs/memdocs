@@ -14,7 +14,7 @@ ms.reviewer: mattsha
 
 # Configure tenant attach to support endpoint security policies from Intune
 
-When you use the Configuration Manager [tenant attach scenario](/configmgr/tenant-attach/), you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Intune admin center to create and deploy policies.
+When you use the Configuration Manager [tenant attach scenario](../intune-service/protect/configmgr/tenant-attach), you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Intune admin center to create and deploy policies.
 
 ## Requirements to use Intune policy for tenant attach
 
@@ -35,15 +35,15 @@ To support using Intune endpoint security policies with Configuration Manager de
   > [!IMPORTANT]
   > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](microsoft-defender-with-intune.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](../device-security/microsoft-defender/overview.md) in the Intune documentation.
 
 ### Configuration Manager version requirements for Intune endpoint security policies
 
-[!INCLUDE [Antivirus policy prerequisites](../includes/tenant-attach-antivirus-prerequisites.md)]
+[!INCLUDE [Antivirus policy prerequisites](../intune-service/includes/tenant-attach-antivirus-prerequisites.md)]
 
-[!INCLUDE [endpoint detection and response policy prerequisites](../includes/tenant-attach-edr-prerequisites.md)]
+[!INCLUDE [endpoint detection and response policy prerequisites](../intune-service/includes/tenant-attach-edr-prerequisites.md)]
 
-[!INCLUDE [Firewall policy prerequisites](../includes/tenant-attach-firewall-prerequisites.md)]
+[!INCLUDE [Firewall policy prerequisites](../intune-service/includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Set up Configuration Manager to support Intune policies
 
@@ -59,14 +59,14 @@ The following tasks are completed in the Configuration Manager console. If you'r
 > [!TIP]
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
 >
-> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
-> - [Microsoft Intune tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
+> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Microsoft Intune tenant attach: Device sync and device actions](../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Confirm your Configuration Manager environment
 
 Intune policies for Configuration Manager devices require different minimum versions of Configuration Manager, depending on when the policy was first released. Review the [Configuration Manager version requirements for Intune endpoint security policies](#configuration-manager-version-requirements-for-intune-endpoint-security-policies) found earlier in this article to ensure your environment supports the policies you plan to use. A more recent version of Configuration Manager supports policies that require an earlier version.
 
-When a Configuration Manager hotfix is necessary, you can find the hotfix as an in-console update for Configuration Manager. For more information, see [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
+When a Configuration Manager hotfix is necessary, you can find the hotfix as an in-console update for Configuration Manager. For more information, see [Install in-console updates](../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
 
 After installing necessary updates, return here to continue configuring your environment to support endpoint security policies from the Microsoft Intune admin center.
 
@@ -74,7 +74,7 @@ After installing necessary updates, return here to continue configuring your env
 
 With tenant attach, you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Intune admin center. After collections synchronize, use the admin center to view information about those devices and to deploy endpoint security policy from Intune to them.
 
-For more information about the tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
+For more information about the tenant attach scenario, see [Enable tenant attach](../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
 #### Enable tenant attach when co-management hasn't been enabled
 
@@ -82,7 +82,7 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 >
 > You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don't need to enable co-management.
 >
-> If you plan to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
+> If you plan to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, select **Configure co-management** to open the wizard.
@@ -94,7 +94,7 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 
    3. Remove the check from **Enable automatic client enrollment for co-management**.
 
-      When this option is selected, the Wizard presents extra pages to complete the setup of co-management. For more information, see [Enable co-management](../../configmgr/comanage/how-to-enable.md) in the Configuration Manager content.
+      When this option is selected, the Wizard presents extra pages to complete the setup of co-management. For more information, see [Enable co-management](../configmgr/comanage/how-to-enable.md) in the Configuration Manager content.
 
       :::image type="content" source="./media/tenant-attach-intune/tenant-onboarding.png" alt-text="Configure tenant attach" Lightbox="./media/tenant-attach-intune/tenant-onboarding.png":::
 
@@ -153,7 +153,7 @@ After you configure devices to sync to Microsoft Intune admin center, you must e
 
 #### Enable collections for use with endpoint security policies
 
-[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](includes/make-configmgr-collection-available-edr.md)]
+[!INCLUDE [Enable endpoint security policies for a Configuration Manager collection](../device-configuration/endpoint-security-policies/includes/make-configmgr-collection-available-edr.md)]
 
 ## Display the connector status
 
@@ -197,7 +197,7 @@ Use the following steps to view client details for a specific device:
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-08.png" alt-text="Client details in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-08.png":::
 
-5. Select **Collections** to list the client's [collections](../../configmgr/core/clients/manage/collections/introduction-to-collections.md).
+5. Select **Collections** to list the client's [collections](../configmgr/core/clients/manage/collections/introduction-to-collections.md).
 
    Collections help you organize resources into manageable units.
 
@@ -216,7 +216,7 @@ Use the following steps to view a list of devices that belong to a user:
 
    The **Devices** table lists the Configuration Manager devices associated with the user.
 
-For more information about viewing client details and tenant attach, see [Tenant attach: ConfigMgr client details in the admin center](../../configmgr/tenant-attach/client-details.md).
+For more information about viewing client details and tenant attach, see [Tenant attach: ConfigMgr client details in the admin center](../configmgr/tenant-attach/client-details.md).
 
 ## View on-premises device data
 
@@ -247,7 +247,7 @@ Resource explorer can display a historical view of the device inventory in the M
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-07.png" alt-text="Close resource explorer with the x icon in Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-07.png":::
 
-For more information about viewing device data for tenant attach devices, see [Tenant attach: Resource explorer in the admin center](../../configmgr/tenant-attach/resource-explorer.md).
+For more information about viewing device data for tenant attach devices, see [Tenant attach: Resource explorer in the admin center](../configmgr/tenant-attach/resource-explorer.md).
 
 ## View on-premises app management
 
@@ -266,7 +266,7 @@ Use the following steps to install an application to an on-premises device:
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-11.png" alt-text="Screenshot of application installation from Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-11.png":::
 
-For more information about applications and tenant attach, see [Tenant attach: Install an application from the admin center](../../configmgr/tenant-attach/applications.md).
+For more information about applications and tenant attach, see [Tenant attach: Install an application from the admin center](../configmgr/tenant-attach/applications.md).
 
 ## View on-premises scripts
 
@@ -284,7 +284,7 @@ You can run PowerShell scripts from the cloud against an individual Configuratio
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-12.png" alt-text="Screenshot of the scripts list from Microsoft Intune admin center" Lightbox="./media/tenant-attach-intune/tenant-attach-12.png":::
 
-For more information about running scripts on tenant attached devices, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
+For more information about running scripts on tenant attached devices, see [Tenant attach: Run Scripts from the admin center](../configmgr/tenant-attach/scripts.md).
 
 ## View on-premises device event timeline
 
@@ -293,7 +293,7 @@ When Configuration Manager synchronizes a device to Microsoft Intune through ten
 Once a day Configuration Manager sends the on-premises device events to the Microsoft Intune admin center. Only events collected after the client receives the **Enable Endpoint analytics data collection** policy are visible in the admin center. You can generate test events easily by installing an application or an update from Configuration Manager, or restart the device. Events are kept for 30 days.
 
 > [!NOTE]
-> As a [prerequisite](../../configmgr/tenant-attach/timeline.md#prerequisites) to view the timeline from the Microsoft Intune admin center, you must set **Enable Endpoint analytics data collection** to **Yes** in Configuration Manager. For more information about implementing the device timeline, see [Tenant attach: Device timeline in the admin center](../../configmgr/tenant-attach/timeline.md).
+> As a [prerequisite](../configmgr/tenant-attach/timeline.md#prerequisites) to view the timeline from the Microsoft Intune admin center, you must set **Enable Endpoint analytics data collection** to **Yes** in Configuration Manager. For more information about implementing the device timeline, see [Tenant attach: Device timeline in the admin center](../configmgr/tenant-attach/timeline.md).
 
 To view the device event timeline:
 
@@ -311,9 +311,9 @@ To view the device event timeline:
 
    :::image type="content" source="./media/tenant-attach-intune/tenant-attach-10.png" alt-text="Timeline of events for a device" Lightbox="./media/tenant-attach-intune/tenant-attach-10.png":::
 
-For more information about viewing device events for tenant attached devices, see [Tenant attach: Device timeline in the admin center](../../configmgr/tenant-attach/timeline.md).
+For more information about viewing device events for tenant attached devices, see [Tenant attach: Device timeline in the admin center](../configmgr/tenant-attach/timeline.md).
 
 ## Next steps
 
-- [Configure Endpoint security policies](endpoint-security-policy.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
-- Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).
+- [Configure Endpoint security policies](../device-configuration/endpoint-security-policies/manage-policies.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
+- Learn more about [Microsoft Defender for Endpoint](../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).

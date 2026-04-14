@@ -85,7 +85,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - Devices must be enrolled in Intune
     - Devices that are enrolled to either one user or no primary user.
 
-    For more information, see [Get started with device compliance policies in Intune](../protect/device-compliance-get-started.md).
+    For more information, see [Get started with device compliance policies in Intune](../../device-security/compliance/overview.md).
 
 5. From the **Devices - Overview** pane, select **Conditional Access** to display details about access policies.
 
@@ -94,7 +94,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Conditional Access**.
 
-    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../protect/conditional-access.md)
+    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../../device-security/conditional-access-integration/overview.md)
 
 6. From the navigation pane, select **Devices** > **Manage devices** > **Configuration** to display details about device profiles in Intune.
 

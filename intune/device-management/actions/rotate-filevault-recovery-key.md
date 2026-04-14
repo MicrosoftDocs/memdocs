@@ -83,4 +83,4 @@ This action is useful when the current key is lost, potentially exposed, or need
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-rotateFileVaultKey
 
-[LEARN-1]: ../../intune-service/protect/encrypt-devices-filevault.md
+[LEARN-1]: ../../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md

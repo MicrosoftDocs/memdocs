@@ -24,8 +24,8 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-- To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
-- To create an iOS/iPadOS device compliance policy, see [Create a compliance policy in Microsoft Intune](create-compliance-policy.md). For **Platform**, select **iOS/iPadOS**.
+- To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
+- To create an iOS/iPadOS device compliance policy, see [Create a compliance policy in Microsoft Intune](./create-policy.md). For **Platform**, select **iOS/iPadOS**.
 
 <!-- Removing section, framework pending review and has been removed
 
@@ -35,7 +35,7 @@ The security configuration framework is organized into distinct configuration le
 
 For details about the settings for each level:
 
-- For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](ios-ipados-device-compliance-security-configurations.md)
+- For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](../security-configurations/ios-ipados-compliance.md)
 
 -->
 
@@ -181,6 +181,6 @@ For details about email profiles, see [configure access to organization email us
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md).and [use scope tags to filter policies](../fundamentals/scope-tags.md).
-- [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for macOS](compliance-policy-create-mac-os.md) devices.
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md).and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).
+- See the [compliance policy settings for macOS](./ref-macos-settings.md) devices.

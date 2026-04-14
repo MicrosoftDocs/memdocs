@@ -76,6 +76,6 @@ You can detect threats like Man-in-the-Middle (MiTM) attacks, malicious SSL cert
 
 ## Related content
 
-- [Mobile Threat Defense with Microsoft Intune](mobile-threat-defense.md) 
-- [Create device compliance policy for Mobile Threat Protection](mtd-device-compliance-policy-create.md)
-- [Enable mobile threat connectors in Intune](mtd-connector-enable.md)
+- [Mobile Threat Defense with Microsoft Intune](./overview.md) 
+- [Create device compliance policy for Mobile Threat Protection](./create-compliance-policy.md)
+- [Enable mobile threat connectors in Intune](./enable-connector.md)

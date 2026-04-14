@@ -176,7 +176,7 @@ For more information on the required endpoints for endpoint analytics, see [Netw
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../../device-security/microsoft-defender/security-settings-management.md#connectivity-requirements).
 
 To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
 For communication between clients and the cloud service:
@@ -193,12 +193,12 @@ To support Endpoint Privilege Management, allow the following hostnames on tcp p
 For communication between clients and the cloud service:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
-- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
+- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../../epm/data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
-For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
+For more information, see the [Overview of Endpoint Privilege Management](../../epm/overview.md).
 
 ## Microsoft Security Copilot
 
@@ -312,7 +312,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../../app-management/deployment/win32.md), [PowerShell scripts](../../device-management/tools/run-powershell-scripts-windows.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../endpoint-analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../../app-management/deployment/win32.md), [PowerShell scripts](../../device-management/tools/run-powershell-scripts-windows.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../endpoint-analytics/index.md), [custom compliance policies](../../device-security/compliance/custom-settings.md) or [BIOS configuration profiles](../../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 

@@ -20,26 +20,26 @@ Integrating Microsoft Defender for Endpoint with Microsoft Intune lets you asses
 
 For example, if malware compromises a user's device, Microsoft Defender for Endpoint flags that device as high-risk and Intune can automatically cut off its access to corporate resources.
 
-This article explains how the integration works, what capabilities it enables for device compliance, and when to use each option. For step-by-step configuration, see [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md).
+This article explains how the integration works, what capabilities it enables for device compliance, and when to use each option. For step-by-step configuration, see [Configure Microsoft Defender for Endpoint in Intune](./configure-integration.md).
 
 ## Integration workflow
 
-At a high level, the integration for devices enrolled with Intune works as follows. For detailed instructions, see [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md):
+At a high level, the integration for devices enrolled with Intune works as follows. For detailed instructions, see [Configure Microsoft Defender for Endpoint in Intune](./configure-integration.md):
 
-1. [Establish a service-to-service connection](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint.
-2. [Onboard devices](../protect/microsoft-defender-integrate.md#onboard-devices) with Microsoft Defender for Endpoint using Intune policy.
-3. [Create a device compliance policy](../protect/microsoft-defender-integrate.md#create-and-assign-compliance-policy-to-set-device-risk-level) to set acceptable risk levels.
-4. [Configure Conditional Access policy](../protect/microsoft-defender-integrate.md#create-a-conditional-access-policy) to block noncompliant devices.
+1. [Establish a service-to-service connection](./configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint.
+2. [Onboard devices](./configure-integration.md#onboard-devices) with Microsoft Defender for Endpoint using Intune policy.
+3. [Create a device compliance policy](./configure-integration.md#create-and-assign-compliance-policy-to-set-device-risk-level) to set acceptable risk levels.
+4. [Configure Conditional Access policy](./configure-integration.md#create-a-conditional-access-policy) to block noncompliant devices.
 
-**Extend the integration:** Once configured, you can [use Microsoft Defender Vulnerability Management](microsoft-defender-manage-vulnerabilities.md) to remediate endpoint weaknesses identified by Defender.
+**Extend the integration:** Once configured, you can [use Microsoft Defender Vulnerability Management](./remediate-vulnerabilities.md) to remediate endpoint weaknesses identified by Defender.
 
 ## Additional integration options
 
 The following options extend the integration beyond traditional device compliance and may be useful in mixed enrollment or unenrolled environments.
 
-**App protection policies**: You can use [app protection policies](../protect/microsoft-defender-integrate.md#create-and-assign-app-protection-policy-to-set-device-risk-level) to set device risk levels for both enrolled and unenrolled devices. This provides app-level protection based on Defender threat assessments.
+**App protection policies**: You can use [app protection policies](./configure-integration.md#create-and-assign-app-protection-policy-to-set-device-risk-level) to set device risk levels for both enrolled and unenrolled devices. This provides app-level protection based on Defender threat assessments.
 
-**Unenrolled devices**: For devices that aren't or can't enroll in Intune, use Intune's [security management for Microsoft Defender for Endpoint](mde-security-integration.md) to manage Defender settings via endpoint security policies without requiring full device enrollment.
+**Unenrolled devices**: For devices that aren't or can't enroll in Intune, use Intune's [security management for Microsoft Defender for Endpoint](./security-settings-management.md) to manage Defender settings via endpoint security policies without requiring full device enrollment.
 
 ## Prerequisites
 
@@ -51,10 +51,10 @@ To configure this integration end-to-end, you need permissions to manage the Int
 - **Endpoint Detection and Response**: *Assign*, *Create*, *Read*, and *Update* – Required to onboard devices using Intune EDR policy.
 - **Device compliance policies**: *Assign*, *Create*, *Read*, and *Update* – Required to configure risk-level compliance policies.
 
-You can add these permissions to a [custom Intune role](../fundamentals/create-custom-role.md), or use the built-in **Endpoint Security Manager** role, which is the least-privileged built-in Intune role that includes all required permissions. For details, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+You can add these permissions to a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md), or use the built-in **Endpoint Security Manager** role, which is the least-privileged built-in Intune role that includes all required permissions. For details, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 > [!NOTE]
-> Conditional Access policies are configured in Microsoft Entra ID and require a separate Entra ID role, such as [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
+> Conditional Access policies are configured in Microsoft Entra ID and require a separate Entra ID role, such as [Conditional Access Administrator](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
 
 ### Intune requirements
 
@@ -74,7 +74,7 @@ For licensing options, see [Microsoft Intune licensing](../../fundamentals/licen
 
 **Subscription**: Microsoft Defender for Endpoint subscription provides access to the [Microsoft Defender XDR portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
-For licensing and system requirements, see [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements).
+For licensing and system requirements, see [Minimum requirements for Microsoft Defender for Endpoint](../../intune-service/protect/defender-endpoint/minimum-requirements).
 
 ## Example: Automatic threat containment
 
@@ -89,25 +89,25 @@ The following example shows how the integration automatically contains a threat,
 
 Different platforms offer unique configuration options when integrating with Microsoft Defender for Endpoint:
 
-**Android**: Deploy Defender for Endpoint to Android devices through Managed Google Play using Intune app deployment and app configuration policies. See [Deploy Microsoft Defender for Endpoint on Android](microsoft-defender-deploy-android.md) for the complete deployment guide. After deployment, use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](microsoft-defender-configure-android.md) settings, including the ability to enable or disable VPN-based scanning.
+**Android**: Deploy Defender for Endpoint to Android devices through Managed Google Play using Intune app deployment and app configuration policies. See [Deploy Microsoft Defender for Endpoint on Android](./deploy-android.md) for the complete deployment guide. After deployment, use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](./configure-web-protection-android.md) settings, including the ability to enable or disable VPN-based scanning.
 
-**iOS/iPadOS**: Enable [vulnerability assessment of apps](/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps) to allow Defender to scan installed apps for known vulnerabilities.
+**iOS/iPadOS**: Enable [vulnerability assessment of apps](../../intune-service/protect/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps) to allow Defender to scan installed apps for known vulnerabilities.
 
-**Windows**: Benefit from automatic onboarding capabilities and use [Microsoft Defender for Endpoint security baselines](../protect/security-baselines.md) for comprehensive, prescriptive security configurations.
+**Windows**: Benefit from automatic onboarding capabilities and use [Microsoft Defender for Endpoint security baselines](../security-baselines/overview.md) for comprehensive, prescriptive security configurations.
 
 ## Next steps
 
 ### Configure the integration
 
-[Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md): complete step-by-step instructions for connecting Intune and Defender, onboarding devices, and setting up Conditional Access policies.
+[Configure Microsoft Defender for Endpoint in Intune](./configure-integration.md): complete step-by-step instructions for connecting Intune and Defender, onboarding devices, and setting up Conditional Access policies.
 
 ### Related content
 
 **Intune resources**:
 
-- [Get started with device compliance policies](device-compliance-get-started.md)
+- [Get started with device compliance policies](../compliance/overview.md)
 
 **Microsoft Defender for Endpoint resources**:
 
-- [Microsoft Defender for Endpoint Conditional Access](/defender-endpoint/conditional-access)
-- [Microsoft Defender XDR portal](/defender-xdr/microsoft-365-defender-portal)
+- [Microsoft Defender for Endpoint Conditional Access](../../intune-service/protect/defender-endpoint/conditional-access)
+- [Microsoft Defender XDR portal](../../intune-service/protect/defender-xdr/microsoft-365-defender-portal)

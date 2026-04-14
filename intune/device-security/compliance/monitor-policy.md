@@ -14,7 +14,7 @@ ms.collection:
 ---
 # Monitor results of your Intune Device compliance policies
 
-Compliance reports help you understand when devices fail to meet your [compliance policies](../protect/device-compliance-get-started.md) and can help you identify compliance-related issues in your organization. Using these reports, you can view information on:
+Compliance reports help you understand when devices fail to meet your [compliance policies](./overview.md) and can help you identify compliance-related issues in your organization. Using these reports, you can view information on:
 
 - The overall compliance states of devices
 - The compliance status for an individual setting
@@ -46,7 +46,7 @@ When viewing compliance status details and reports, be aware of the following im
 
 - Devices must be enrolled into Intune to receive device compliance policies.
 
-- The tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can identify the noncompliant devices in the [Devices without compliance policy organization report](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
+- The tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can identify the noncompliant devices in the [Devices without compliance policy organization report](../../intune-service/fundamentals/reports.md#devices-without-compliance-policy-organizational).
 
 - Compliance reports show the compliance status for the last user on the device. For device-targeted policies, *System account* appears as the user principal name in the report if no user is signed in during the device's last compliance check.
 
@@ -58,8 +58,8 @@ You can access the device compliance dashboard in the [Microsoft Intune admin ce
 
 - [Device compliance status](#device-compliance-status)
 - [Devices without compliance](#devices-without-compliance)
-- [Policy compliance](../fundamentals/reports.md#policy-compliance-report-organizational) (Link opens the *Intune reports* article)
-- [Setting compliance](../fundamentals/reports.md#settings-compliance--organizational) (Link opens the *Intune reports* article)
+- [Policy compliance](../../intune-service/fundamentals/reports.md#policy-compliance-report-organizational) (Link opens the *Intune reports* article)
+- [Setting compliance](../../intune-service/fundamentals/reports.md#settings-compliance--organizational) (Link opens the *Intune reports* article)
 
 <!-- outdated image, need to replace. :::image type="content" source="./media/compliance-policy-monitor/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab."::: -->
 
@@ -74,7 +74,7 @@ The tile displays a count of devices for each of the following categories:
 
 - **In-grace period**: The device is targeted with one or more device compliance policy settings but isn't yet compliant to all of them. Often this is due to users not applying compliant configurations, like meeting password complexity requirements. Devices with this status are noncompliant, but in the grace period defined by the admin.
 
- Learn more about [Actions for noncompliant devices](../protect/actions-for-noncompliance.md).
+ Learn more about [Actions for noncompliant devices](./configure-noncompliance-actions.md).
 
 - **Not evaluated**: An initial state for newly enrolled devices. Other possible reasons for this state include:
   - Devices that aren't assigned a compliance policy and don't have a trigger to check for compliance.
@@ -95,7 +95,7 @@ The **Devices without compliance policy** tile displays a count of devices that 
 If you select this tile, Intune displays a *Device status* view that lists each device that doesn’t have a compliance policy. This view includes the *Device* name, the *User Principal Name* associated with the device, the devices compliance *Status*, and the *Device model*.
 
 > [!TIP]
-> Intune includes an organizational report that identifies all devices in your tenant that have not been assigned a compliance policy. See [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
+> Intune includes an organizational report that identifies all devices in your tenant that have not been assigned a compliance policy. See [Devices without compliance policy (Organizational)](../../intune-service/fundamentals/reports.md#devices-without-compliance-policy-organizational).
 
 ## Policy-based device compliance reports
 
@@ -195,7 +195,7 @@ In addition to reports that are available through individual compliance policies
 
 To view these reports, open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Reports** > **Device compliance**, and select the **Reports** tab.
 
-For more information about these reports, see [Device compliance reports](../fundamentals/reports.md#device-compliance-reports) in the **Intune reports** article.
+For more information about these reports, see [Device compliance reports](../../intune-service/fundamentals/reports.md#device-compliance-reports) in the **Intune reports** article.
 
 ## Other compliance reports
 
@@ -233,4 +233,4 @@ The evaluation process identifies the device as noncompliant if any of the follo
 
 ## Next steps
 
-[Compliance policies overview](device-compliance-get-started.md)
+[Compliance policies overview](./overview.md)

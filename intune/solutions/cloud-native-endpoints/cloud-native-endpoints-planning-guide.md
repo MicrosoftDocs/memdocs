@@ -130,8 +130,8 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
     For more information, go to:
 
     - [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
-    - [Disk encryption policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-disk-encryption-policy.md)
-    - [Add Endpoint protection settings in Intune](../../intune-service/protect/endpoint-protection-configure.md)
+    - [Disk encryption policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/disk-encryption-policy.md)
+    - [Add Endpoint protection settings in Intune](../../device-configuration/endpoint-security-policies/configure-endpoint-protection.md)
     - [Certificates in Configuration Manager](../../configmgr/core/plan-design/security/certificates-overview.md)
     - [BitLocker management in Configuration Manager](../../configmgr/protect/plan-design/bitlocker-management.md)
     - [Endpoint Protection in Configuration Manager](../../configmgr/protect/deploy-use/endpoint-protection.md)
@@ -440,11 +440,11 @@ Intune also has built-in features that can help you configure your cloud-native 
 
   For more information, go to [Settings catalog in Intune](../../device-configuration/settings-catalog/index.md).
 
-- **[Security baselines](../../intune-service/protect/security-baselines.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
+- **[Security baselines](../../device-security/security-baselines/overview.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
 
   You can create a security baseline for Windows, Microsoft Edge, and more. If you're not sure where to start, or want the security settings recommended by security experts, then look at security baselines.
 
-  For more information, go to [Security baselines in Intune](../../intune-service/protect/security-baselines.md).
+  For more information, go to [Security baselines in Intune](../../device-security/security-baselines/overview.md).
 
 ## Use Windows Autopilot to provision new or existing Windows endpoints
 

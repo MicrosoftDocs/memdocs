@@ -71,7 +71,7 @@ To see a generated report of device state, you can use the following steps:
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated.
 
-For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).
+For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../../device-security/microsoft-defender/overview.md).
 
 ### Device compliance trends report (Historical)
 
@@ -132,7 +132,7 @@ This report allows admins to:
 
 - View the configuration of the tenant-wide *Compliance policy setting* named **Mark devices with no compliance policy assigned as**. By default, this setting marks a device without an assigned policy as *Compliant*.
 
-  We recommend that this setting be configured to mark devices that aren't targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).
+  We recommend that this setting be configured to mark devices that aren't targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../../device-security/compliance/overview.md#compliance-policy-settings).
 
 To generate the report, use the following steps:
 
@@ -462,7 +462,7 @@ For more information about the difference between a *quick scan* and a *full sca
 > [!NOTE]
 > This report is also known as the **Configuration policy assignment failures** report.
 
-The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report shows a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
+The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report shows a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../../device-security/security-baselines/overview.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
 
 Role-based access control permissions are applied to the report to filter on the set of policies that an admin can see. Those Role-based access control permissions include the Security baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
 
@@ -521,7 +521,7 @@ The information for this report is based on details available from the following
 Other reports for Microsoft Defender Antivirus include:
 
 - [Detected malware report](#detected-malware-report-organizational), an organizational report detailed in this article.
-- [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
+- [Antivirus policy reports](../../device-configuration/endpoint-security-policies/antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
 ### Detected malware report (Organizational)
 
@@ -539,11 +539,11 @@ The information for this report is based on details available from the [Defender
 Other reports for Microsoft Defender Antivirus include:
 
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
-- [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
+- [Antivirus policy reports](../../device-configuration/endpoint-security-policies/antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
 ### MDM Firewall status for Windows (Organizational)
 
-*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
+*This report is also described in [Endpoint security firewall policy](../../device-configuration/endpoint-security-policies/firewall-policy.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 

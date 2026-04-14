@@ -16,11 +16,11 @@ ms.collection:
 
 # Use Endpoint Privilege Management with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
 With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
+Endpoint Privilege Management supports your [Zero Trust](../intune-service/protect/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
 
 This overview provides information about EPM including the benefits, how it works, and how to get started.
 
@@ -88,7 +88,7 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
   >[!TIP]
   > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
 
-- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
+- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](./support-approved.md).
 
   :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
 
@@ -137,13 +137,13 @@ EPM includes reports to help you prepare for, monitor, and use the service. Repo
 Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
 
 - **License EPM and Plan**
-  - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
-  - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](epm-plan.md).
+  - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md).
+  - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](./plan.md).
 
-- **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](epm-deploy.md).
-- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](epm-support-approved.md) and [elevations](epm-reports.md). You can [maintain and update your rules](epm-elevation-rules.md) and [review user privileges](endpoint-security-account-protection-policy.md).
+- **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](./deploy.md).
+- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](./support-approved.md) and [elevations](./reports.md). You can [maintain and update your rules](./elevation-rules.md) and [review user privileges](../device-configuration/endpoint-security-policies/account-protection-policy.md).
 
 ---
 
 > [!div class="nextstepaction"]
-> [Next: Plan for EPM >](epm-plan.md)
+> [Next: Plan for EPM >](./plan.md)

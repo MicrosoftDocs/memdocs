@@ -61,7 +61,7 @@ This section describes the messages you might see as you store a recovery key.
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage FileVault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](../../intune-service/protect/encrypt-devices-filevault.md).
+If you're an IT support person and want to configure and manage FileVault encryption for Mac devices in your organization, see [Use FileVault disk encryption for macOS with Intune](../../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md).
 
 ## Next steps
 

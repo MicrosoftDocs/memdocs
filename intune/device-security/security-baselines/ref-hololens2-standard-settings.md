@@ -28,7 +28,7 @@ zone_pivot_groups: hololens2-Standard-baselines
 This article is a reference for the settings that are available in the Microsoft HoloLens 2 standard security baseline for Microsoft Intune.
 
 > [!TIP]
-> To view settings for the Microsoft HoloLens 2 *advanced* security baseline, see [Settings reference for the Microsoft HoloLens 2 advanced security baseline for Microsoft Intune](../protect/security-baseline-hololens2-advanced.md).
+> To view settings for the Microsoft HoloLens 2 *advanced* security baseline, see [Settings reference for the Microsoft HoloLens 2 advanced security baseline for Microsoft Intune](./ref-hololens2-advanced-settings.md).
 
 ## About this reference article
 
@@ -45,9 +45,9 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
-- [Use security baselines](../protect/security-baselines.md)
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)
-- [Manage security baselines](../protect/security-baselines-configure.md)
+- [Use security baselines](./overview.md)
+- [Change the baseline version for a profile](./configure-baselines.md#update-a-baseline-profile-to-the-latest-version)
+- [Manage security baselines](./configure-baselines.md)
 
 
 ## HoloLens 2 Standard security baseline (version 1) - *January 2025*
@@ -56,7 +56,7 @@ To learn more about using security baselines, see:
 
 - **Allow Microsoft Account Connection**\
    Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Accounts#allowmicrosoftaccountconnection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Accounts#allowmicrosoftaccountconnection)
 
 ### Administrative Templates
 
@@ -64,7 +64,7 @@ To learn more about using security baselines, see:
 
 - **Turn off the display (plugged in)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-power#power-displayofftimeoutpluggedin)
 
   - **When plugged in, turn display off after (seconds)**\
      Baseline default: *30*
@@ -73,81 +73,81 @@ To learn more about using security baselines, see:
 
 - **Allow Cookies**\
   Baseline default: *Block only cookies from third party websites*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowcookies)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Browser#allowcookies)
 
 - **Allow Password Manager**\
   Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowpasswordmanager)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Browser#allowpasswordmanager)
 
 - **Allow Smart Screen**\
   Baseline default: *Allow*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Browser#allowsmartscreen)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Browser#allowsmartscreen)
 
 ### Connectivity
 
 - **Allow USB Connection**\
   Baseline default: *Not allowed.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-connectivity#allowusbconnection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-connectivity#allowusbconnection)
 
 ### Device Lock
 
 - **Device Password Enabled**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicepasswordenabled)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#devicepasswordenabled)
 
   - **Max Device Password Failed Attempts**\
     Baseline default: *Not configured*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#maxdevicepasswordfailedattempts)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#maxdevicepasswordfailedattempts)
 
   - **Allow Idle Return Without Password**\
     Baseline default: *Not allowed.*\
-    [Learn more](/windows/client-management/mdm/policy-csp-deviceLock#allowidlereturnwithoutpassword)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceLock#allowidlereturnwithoutpassword)
 
   - **Alphanumeric Device Password Required**\
     Baseline default: *Password or Numeric PIN required.*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#alphanumericdevicepasswordrequired)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#alphanumericdevicepasswordrequired)
 
   - **Max Inactivity Time Device Lock**\
     Baseline default: *Configured*\
     Value: *3*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#maxinactivitytimedevicelock)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#maxinactivitytimedevicelock)
 
   - **Device Password History**\
     Baseline default: *Not configured*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicepasswordhistory)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#devicepasswordhistory)
 
   - **Allow Simple Device Password**\
     Baseline default: *Not allowed.*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#allowsimpledevicepassword)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#allowsimpledevicepassword)
 
   - **Device Password Expiration**\
     Baseline default: *Not configured*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicepasswordexpiration)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#devicepasswordexpiration)
 
   - **Min Device Password Length**\
     Baseline default: *Configured*\
     Value: *8*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock#mindevicepasswordlength)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#mindevicepasswordlength)
 
 ### Experience
 
 - **Allow Manual MDM Unenrollment**\
   Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Experience#allowmanualmdmunenrollment)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Experience#allowmanualmdmunenrollment)
 
 ### Microsoft App Store
 
 - **Allow All Trusted Apps**\
   Baseline default: *Explicit deny.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement#allowalltrustedapps)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-ApplicationManagement#allowalltrustedapps)
 
 - **Allow apps from the Microsoft app store to auto update**\
   Baseline default: *Allowed.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement#allowappstoreautoupdate)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-ApplicationManagement#allowappstoreautoupdate)
 
 - **Allow Developer Unlock**\
   Baseline default: *Explicit deny.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement#allowdeveloperunlock)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-ApplicationManagement#allowdeveloperunlock)
 
 ### Microsoft Edge
 
@@ -177,24 +177,24 @@ To learn more about using security baselines, see:
 - **AAD Group Membership Cache Validity In Days**\
   Baseline default: *Configured*\
   Value: *7*\
-  [Learn more](/windows/client-management/mdm/policy-csp-MixedReality#aadgroupmembershipcachevalidityindays)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-MixedReality#aadgroupmembershipcachevalidityindays)
 
 ### Settings
 
 - **Allow VPN**\
   Baseline default: *Not allowed.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Settings#allowvpn)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Settings#allowvpn)
 
 - **Page Visibility List**\
   Baseline default: *Configured*\
   Value: *hide:emailandaccounts;workplace;otherusers;bluetooth;usb;network-proxy;network-wifi;network-ethernet;network-airplanemode;powersleep;certificates;developers;windowsinsider;*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Settings#pagevisibilitylist)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Settings#pagevisibilitylist)
 
 ### System
 
 - **Allow Storage Card**\
   Baseline default: *SD card use is not allowed and USB drives are disabled. This setting does not prevent programmatic access to the storage card.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-System#allowstoragecard)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-System#allowstoragecard)
 
 ### Tenant Lockdown
 
@@ -205,76 +205,76 @@ To learn more about using security baselines, see:
 
 - **Enable Pin Recovery**\
   Baseline default: *false*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablepinrecovery)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesenablepinrecovery)
 
 - **Restrict use of TPM 1.2**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesexcludesecuritydevicestpm12)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesexcludesecuritydevicestpm12)
 
 - **Digits**\
   Baseline default: *Requires the use of at least one digits in PIN.*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitydigits)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitydigits)
 
 - **Expiration**\
   Baseline default: *Configured*\
     Value: *90*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexityexpiration)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexityexpiration)
 
 - **PIN History**\
   Baseline default: *Configured*\
   Value: *10*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityhistory)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityhistory)
 
 - **Lowercase Letters**\
   Baseline default: *Allowed*\
-  [Learn more](/windows/client-management/mdm/PassportForWork-csp/#devicetenantidpoliciespincomplexitylowercaseletters)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/PassportForWork-csp#devicetenantidpoliciespincomplexitylowercaseletters)
 
 - **Maximum PIN Length**\
   Baseline default: *Configured*\
   Value: *6*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitymaximumpinlength)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciespincomplexitymaximumpinlength)
 
 - **Minimum PIN Length**\
   Baseline default: *Configured*\
     Value: *6*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityminimumpinlength)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityminimumpinlength)
 
 - **Special Characters**\
   Baseline default: *Allows the use of special characters in PIN.*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityspecialcharacters)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityspecialcharacters)
 
 - **Uppercase Letters**\
   Baseline default: *Allowed*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityuppercaseletters)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#usertenantidpoliciespincomplexityuppercaseletters)
 
 - **Require Security Device**\
   Baseline default: *true*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesrequiresecuritydevice)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesrequiresecuritydevice)
 
 - **Use Certificate For On Prem Auth**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusecertificateforonpremauth)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusecertificateforonpremauth)
 
 - **Use Hello Certificates As Smart Card Certificates**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusehellocertificatesassmartcardcertificates)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusehellocertificatesassmartcardcertificates)
 
 - **Use Windows Hello For Business (Device)**\
   Baseline default: *true*\
-  [Learn more](/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusepassportforwork)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp#devicetenantidpoliciesusepassportforwork)
 
 ### Windows Update For Business
 
 - **Allow Update Service**\
   Baseline default: *Allow*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Update#allowupdateservice)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Update#allowupdateservice)
 
 - **Manage Preview Builds**\
   Baseline default: *Disable Preview builds*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Update#managepreviewbuilds)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Update#managepreviewbuilds)
 
 ## Learn more
 
-- [Learn about security baselines](security-baselines.md)
-- [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Learn about security baselines](./overview.md)
+- [Avoid conflicts](./overview.md#avoid-conflicts)
+- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

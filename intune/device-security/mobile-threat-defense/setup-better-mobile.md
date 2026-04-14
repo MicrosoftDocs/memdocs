@@ -52,7 +52,7 @@ The Better Mobile app authorization process follows:
 1. Go to the Better Mobile admin console and sign in with your credentials.
 2. Choose **Integration** > **EMM/MDM** > **ADD ACCOUNT**.
 
-     ![Image of the Better Mobile admin console](./media/better-mobile-mtd-connector-integration/better_mobile_console.png)
+     ![Image of the Better Mobile admin console](./media/setup-better-mobile/better_mobile_console.png)
 
 3. Choose **Intune**.
 4. Next to **ACCOUNT NAME**, type a descriptor.
@@ -64,5 +64,5 @@ The Better Mobile app authorization process follows:
 
 ## Next steps
 
-- [Set up Better Mobile apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Better Mobile apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)
+- [Set up Better Mobile apps for enrolled devices](./add-assign-apps.md)
+- [Set up Better Mobile apps for unenrolled devices](./add-apps-unenrolled-devices.md)

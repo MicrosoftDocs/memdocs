@@ -19,7 +19,7 @@ In this article, you use Microsoft Intune to send an email notification to the m
 
 [!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
-When Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices using [Microsoft Entra Conditional Access](conditional-access.md).
+When Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices using [Microsoft Entra Conditional Access](../conditional-access-integration/overview.md).
 
 When a device isn't compliant, a common action is to email the device user. You can customize the email notification. Specifically, you can customize the recipients, subject, and message body, including company logo, and contact information. Intune also includes details about the noncompliant device in the email notification.
 
@@ -33,7 +33,7 @@ When a device isn't compliant, a common action is to email the device user. You 
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -43,7 +43,7 @@ When a device isn't compliant, a common action is to email the device user. You 
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Policy and Profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
+> - Built-in **[Policy and Profile manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -131,7 +131,7 @@ When you successfully create and save the policy, it appears in the list of **Co
 
 ## Next steps
 
-In this article, you used Intune to create and assign a compliance policy for your workforce's Windows devices to require a password of at least six characters in length. For more information about creating compliance policies for Windows devices, see [Add a device compliance policy for Windows devices in Intune](compliance-policy-create-windows.md).
+In this article, you used Intune to create and assign a compliance policy for your workforce's Windows devices to require a password of at least six characters in length. For more information about creating compliance policies for Windows devices, see [Add a device compliance policy for Windows devices in Intune](./ref-windows-settings.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 

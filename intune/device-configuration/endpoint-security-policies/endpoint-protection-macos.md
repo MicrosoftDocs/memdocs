@@ -16,14 +16,14 @@ ms.collection:
 
 > [!IMPORTANT]
 > The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. > Instead, use one of the following options:
-> - Use Endpoint security policies like [disk encryption](../protect/endpoint-security-disk-encryption-policy.md) for Filevault, or [Firewall](../protect/endpoint-security-firewall-policy.md) policy.
-> - Use the Settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
+> - Use Endpoint security policies like [disk encryption](./disk-encryption-policy.md) for Filevault, or [Firewall](./firewall-policy.md) policy.
+> - Use the Settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../settings-catalog/index.md).
 
-This article shows you the endpoint protection settings that you can configure for devices that run macOS. You configure these settings by using a macOS device configuration profile for [endpoint protection](endpoint-protection-configure.md) in Intune.
+This article shows you the endpoint protection settings that you can configure for devices that run macOS. You configure these settings by using a macOS device configuration profile for [endpoint protection](./configure-endpoint-protection.md) in Intune.
 
 ## Before you begin
 
-[Create a macOS endpoint protection profile](endpoint-protection-configure.md).
+[Create a macOS endpoint protection profile](./configure-endpoint-protection.md).
 
 ## FileVault
 
@@ -154,6 +154,6 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 ## Next steps
 
-[Assign the profile](../../device-configuration/assign-device-profile.md) and [monitor its status](../../device-configuration/monitor-device-profile.md).
+[Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
-You can also [configure endpoint protection for Windows](endpoint-protection-windows-10.md).
+You can also [configure endpoint protection for Windows](./ref-endpoint-protection-settings-windows.md).

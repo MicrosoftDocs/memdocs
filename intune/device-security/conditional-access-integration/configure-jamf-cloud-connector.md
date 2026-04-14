@@ -1,8 +1,6 @@
 ---
 title: Configure the Jamf Pro Cloud Connector to integrate Jamf Pro with Microsoft Intune
 description: Use the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 08/30/2023
 ms.topic: integration
 ms.reviewer: ilwu
@@ -26,7 +24,7 @@ ms.collection:
 
 This article can help you install the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Microsoft Entra Conditional Access policies in the same way as for devices managed through Intune.
 
-We recommend use of the Jamf Cloud Connector as it automates many of the steps that are required when you manually configure integration as documented in [Integrate Jamf Pro with Intune for compliance](../protect/conditional-access-integrate-jamf.md).
+We recommend use of the Jamf Cloud Connector as it automates many of the steps that are required when you manually configure integration as documented in [Integrate Jamf Pro with Intune for compliance](./setup-jamf-manually.md).
 
 When you set up the Cloud Connector:
 
@@ -37,7 +35,7 @@ Connecting multiple instances of Jamf Pro with a single Azure tenant is supporte
 
 Use of the Cloud Connector is optional:
 
-- For new tenants that don't yet integrate with Jamf, you can choose to configure the Cloud Connector as described in this article. Or you can manually configure integration as described in [Integrate Jamf Pro with Intune for compliance](../protect/conditional-access-integrate-jamf.md)
+- For new tenants that don't yet integrate with Jamf, you can choose to configure the Cloud Connector as described in this article. Or you can manually configure integration as described in [Integrate Jamf Pro with Intune for compliance](./setup-jamf-manually.md)
 - For tenants that already have a manual configuration, you can choose to remove that integration, and then set up the Cloud Connector. Both the removal of an existing integration and setup of the Cloud Connector are described in this article.
 
 If you plan to replace your previous integration with the Jamf Cloud Connector:
@@ -77,7 +75,7 @@ For APNS to function correctly on the network, you must enable outgoing connecti
 
 For more information about these ports, see the following articles:
 
-- [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+- [Network endpoints for Microsoft Intune](../../intune-service/fundamentals/intune-endpoints.md).
 - [Network Ports Used by Jamf Pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro) on jamf.com.
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944) on support.apple.com
 
@@ -100,7 +98,7 @@ If you have not previously set up a connection between Jamf Pro and Intune, or i
 
 2. Select **Settings** (the gear icon in the upper right corner), and then go to **Global Management** > **Conditional Access**.
 
-   ![Navigate to Conditional Access](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
+   ![Navigate to Conditional Access](./media/configure-jamf-cloud-connector/navigate-jamf-console-1.png)
 
 3. Select **Edit**.
 
@@ -118,11 +116,11 @@ If you have not previously set up a connection between Jamf Pro and Intune, or i
 
    Locate the two Jamf apps and delete them. New applications will be automatically created when you configure the Jamf Cloud Connector in the next procedure.
 
-   ![Select the Jamf apps to delete](./media/conditional-access-jamf-cloud-connector/delete-jamf-apps.png)
+   ![Select the Jamf apps to delete](./media/configure-jamf-cloud-connector/delete-jamf-apps.png)
 
    After you've disabled integration in Jamf Pro, and deleted the Enterprise applications, the **Partner device management** node displays the connection status of **Terminated**.
 
-   ![Terminated connection status](./media/conditional-access-jamf-cloud-connector/terminated-connection-status.png)
+   ![Terminated connection status](./media/configure-jamf-cloud-connector/terminated-connection-status.png)
 
 Now that you've successfully removed the manual configuration for Jamf Pro integration, you can set up integration using the Cloud Connector. To do so, see [Configure the Cloud Connector for a new tenant](#configure-the-cloud-connector-for-a-new-tenant) in this article.
 
@@ -141,7 +139,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
 2. Select **Settings** (the gear icon in the upper right corner0, and then go to **Global Management** > **Conditional Access**.
 
-   ![Navigate to Conditional Access](./media/conditional-access-jamf-cloud-connector/navigate-jamf-console-1.png)
+   ![Navigate to Conditional Access](./media/configure-jamf-cloud-connector/navigate-jamf-console-1.png)
 
 3. Select **Edit**.
 
@@ -154,7 +152,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
 5. Under *Connection Type*, select **Cloud Connector**.
 
-   ![Select Cloud Connector in the Jamf Pro console](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
+   ![Select Cloud Connector in the Jamf Pro console](./media/configure-jamf-cloud-connector/select-cloud-connector.png)
 
 6. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft. If you're replacing your previous integration with the Jamf Cloud Connector, you can skip this step if the location has been specified.
 
@@ -173,23 +171,23 @@ If you currently have a manually configured integration between Intune and Jamf 
 
 9. On the **Application ID** page, select **Copy and open Intune**.
 
-   ![Application ID](./media/conditional-access-jamf-cloud-connector/copy-application-id.png)
+   ![Application ID](./media/configure-jamf-cloud-connector/copy-application-id.png)
 
    The *Application ID* is copied to your system clipboard for use in the next step, and the **Partner device management** node in the *Microsoft Intune admin center* opens. (**Tenant administration** > **Partner device management**).
 
 10. On the **Partner device management** node, *Paste* the **Application ID** in to the **Specify the Microsoft Entra App ID for Jamf** field, and then select **Save**.
 
-    ![Configure partner device management](./media/conditional-access-jamf-cloud-connector/partner-device-management.png)
+    ![Configure partner device management](./media/configure-jamf-cloud-connector/partner-device-management.png)
 
 11. Return to the Application ID page in Jamf Pro and select **Confirm**.
 
 12. Jamf Pro completes and tests the configuration and displays the success or failure of the connection on the Conditional Access settings page. The following image is an example of success:
 
-    ![Successful configuration is confirmed in Jamf Pro](./media/conditional-access-jamf-cloud-connector/successful-configuration.png)
+    ![Successful configuration is confirmed in Jamf Pro](./media/configure-jamf-cloud-connector/successful-configuration.png)
 
 13. In the Microsoft Intune admin center, refresh the **Partner device management** node. The connection should now show as **Active**:
 
-    ![Connection status is active](./media/conditional-access-jamf-cloud-connector/active-connection-status.png)
+    ![Connection status is active](./media/configure-jamf-cloud-connector/active-connection-status.png)
 
 When the connection between Jamf Pro and Microsoft Intune is successfully established, Jamf Pro sends inventory information to Microsoft Intune for each computer that is registered with Microsoft Entra ID (registering with Microsoft Entra ID is an end-user workflow). You can view the Conditional Access Inventory State for a user and a computer in the Local User Account category of a computer's inventory information in Jamf Pro.
 
@@ -197,7 +195,7 @@ After you integrate one instance of Jamf Pro by using the Jamf Cloud Connector, 
 
 ## Set up compliance policies and register devices
 
-After you configure integration between Intune and Jamf, you need to [apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md).
+After you configure integration between Intune and Jamf, you need to [apply compliance policies to Jamf-managed devices](./assign-jamf-policies.md).
 
 ## Disconnect Jamf Pro and Intune
 
@@ -301,6 +299,6 @@ Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Ch
 
 ## Next steps
 
-- [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
+- [Apply compliance policies to Jamf-managed devices](./assign-jamf-policies.md)
 - [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)
-- [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+- [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../compliance/jamf-entra-id-compliance.md).

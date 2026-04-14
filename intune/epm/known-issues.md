@@ -15,15 +15,15 @@ ms.collection:
 
 # Known Issues for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
-[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 This article lists known issues with Endpoint Privilege Management.
 
 ## Windows 10 devices might not immediately receive confirmation of support approvals
 
-We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](../protect/epm-support-approved.md#about-support-approved-elevations).
+We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](./support-approved.md#about-support-approved-elevations).
 
 ## Organizations that disable User Account Control (UAC) might experience issues with Endpoint Privilege Management
 
@@ -35,7 +35,7 @@ Administrator Protection doesn't currently support elevations initiated from End
 
 ## Organizations using Application Control for Business might experience issues running Endpoint Privilege Management
 
-Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
+Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](../intune-service/protect/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
 
 > [!Note]
 > EPM is not included in default policies for Application Control and may require creating custom policies.
@@ -83,7 +83,7 @@ Endpoint Privilege Management supports running files that are locally stored on 
 
 ## Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
-Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
+Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ### Certain Windows functions, such as control panel items or configurations in the settings app can't be elevated with EPM
 

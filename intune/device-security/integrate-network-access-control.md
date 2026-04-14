@@ -53,13 +53,13 @@ For devices that are blocked from access to resources, the blocking service shou
 
 ## NAC and Conditional Access
 
-NAC works with Conditional Access to provide access control decisions. For more information, see [Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md).
+NAC works with Conditional Access to provide access control decisions. For more information, see [Common ways to use Conditional Access with Intune](./conditional-access-integration/scenarios.md).
 
 ## How the NAC integration works
 
 The following list is an overview on how NAC integration works when integrated with Intune. The first three steps, 1-3, explain the onboarding process. Once the NAC solution is integrated with Intune, steps 4-9 describe the ongoing operation.
 
-![Conceptual image of how NAC works with Intune](./media/network-access-control-integrate/ca-intune-common-ways-2.png)
+![Conceptual image of how NAC works with Intune](./media/integrate-network-access-control/ca-intune-common-ways-2.png)
 
 1. Register the NAC partner solution with Microsoft Entra ID, and grant delegated permissions to the Intune NAC API.
 2. Configure the NAC partner solution with the appropriate settings including the Intune discovery URL.
@@ -90,7 +90,7 @@ Other NAC products might require you include a device ID when using NAC with iOS
 > [!TIP]
 > We recommend using certificate-based authentication with the Intune device ID wherever possible. If you're unable to use certificate-based authentication, Intune supports querying devices based on MAC addresses.
 
-For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../../device-configuration/certificates/scep-profiles.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../../device-configuration/certificates/pkcs-profiles.md).
+For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../device-configuration/certificates/scep-profiles.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../device-configuration/certificates/pkcs-profiles.md).
 
 ## Data shared with NAC partners
 

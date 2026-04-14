@@ -19,7 +19,7 @@ End users need the Microsoft Authenticator (iOS) to register their device, and t
 
 Optionally, you can use Intune to add and deploy the Microsoft Authenticator, and Mobile Threat Defense (MTD) apps as well.
 
-[!INCLUDE [mtd-mam-note](../../intune-service/protect/includes/mtd-mam-note.md)]
+[!INCLUDE [mtd-mam-note](./includes/mtd-mam-note.md)]
 >
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
 
@@ -30,7 +30,7 @@ When using Intune app protection policies with Mobile Threat Defense, Intune gui
 However, should you wish to make the app available to end users via the Intune Company Portal, see the instructions for [adding iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md). Use this [Microsoft Authenticator - iOS App Store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) when completing the **Configure app information** section. Don't forget to [assigning app to groups with Intune](../../app-management/deployment/assign-groups.md) as the final step.
 
 > [!NOTE]
-> For iOS devices, you need the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Microsoft Entra. The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Microsoft Entra.
+> For iOS devices, you need the [Microsoft Authenticator](../../intune-service/protect/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Microsoft Entra. The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Microsoft Entra.
 
 ## Making Mobile Threat Defense apps available via Intune (optional)
 
@@ -112,4 +112,4 @@ However, should you wish to make the app available to end users via the Intune C
 
 ## Next steps
 
-- [Enable the Mobile Threat Defense connector in Intune for unenrolled devices](mtd-enable-unenrolled-devices.md)
+- [Enable the Mobile Threat Defense connector in Intune for unenrolled devices](./enable-unenrolled-devices.md)

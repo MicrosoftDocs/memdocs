@@ -135,14 +135,14 @@ The guidelines for App protection policies are split across the Central team and
 
 ### Compliance policy
 
-Compliance policies in Intune define the rules and settings that users and devices must meet to be compliant. Compliance can be required before a device can be used to access your organizations resources. For more information on compliance policies, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).
+Compliance policies in Intune define the rules and settings that users and devices must meet to be compliant. Compliance can be required before a device can be used to access your organizations resources. For more information on compliance policies, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md).
 
 #### Central team
 
-The Central team should create common compliance policies for local admins to choose from and only, if necessary, create exception policies. For more information, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).
+The Central team should create common compliance policies for local admins to choose from and only, if necessary, create exception policies. For more information, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md).
 Creating policies includes the creation of custom compliance policy scripts because they're subject to the same scale as normal compliance policy.
 
-For more information on how to create a compliance policy, see [Create a compliance policy in Microsoft Intune](../protect/create-compliance-policy.md#create-the-policy).
+For more information on how to create a compliance policy, see [Create a compliance policy in Microsoft Intune](../../device-security/compliance/create-policy.md#create-the-policy).
 
 #### Local admins
 

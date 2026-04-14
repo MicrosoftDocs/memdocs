@@ -124,10 +124,10 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   For more information, go to:
 
-  - [Firewall policy in Endpoint Security](../intune-service/protect/endpoint-security-firewall-policy.md)
-  - [Application control policy in Endpoint Security](../intune-service/protect/endpoint-security-asr-policy.md).
+  - [Firewall policy in Endpoint Security](./endpoint-security-policies/firewall-policy.md)
+  - [Application control policy in Endpoint Security](./endpoint-security-policies/attack-surface-reduction-policy.md).
 
-  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../intune-service/protect/endpoint-security.md), including security baselines and mobile threat defense.
+  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](./endpoint-security-policies/overview.md), including security baselines and mobile threat defense.
 
 - **Some settings don't migrate exactly, and may use a different setting**
 

@@ -17,7 +17,7 @@ ms.collection:
 
 To help protect your users and Windows devices, you can configure and deploy distinct instances of Microsoft Intune security baseline profiles to different groups of Windows devices and users. There are different baselines for different products, and each is a group of preconfigured settings that represent the recommended security posture from that products security team. You can deploy a default (unmodified) baseline or customize your profiles to configure devices with the settings that your organization requires.
 
-For a list of available security baselines, see [Security baselines overview](../protect/security-baselines.md#available-security-baselines).
+For a list of available security baselines, see [Security baselines overview](./overview.md#available-security-baselines).
 
 This feature applies to:
 
@@ -55,7 +55,7 @@ Find out what you need to manage Intune security baselines.
 
   > [!TIP]
   >
-  > Intune provides an easy-to-use user interface to configure and deploy security baselines but doesn't create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
+  > Intune provides an easy-to-use user interface to configure and deploy security baselines but doesn't create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](../../intune-service/protect/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
 
 - Use of baselines through Intune requires you to have an active subscription for the managed product, when applicable. For example, use of the Microsoft Defender for Endpoint baseline doesn't grant rights to use Microsoft Defender. Instead, the baseline provides a method to configure and manage settings that are present on devices that are licensed for and managed by Microsoft Defender for Endpoint.
 
@@ -73,9 +73,9 @@ To manage security baselines in Intune, your account must be assigned an Intune 
   - Read
   - Update
 
-You can add these permissions to your own [custom RBAC roles](../fundamentals/create-custom-role.md) or use an Intune [built-in RBAC role](../fundamentals/role-based-access-control-reference.md).
+You can add these permissions to your own [custom RBAC roles](../../intune-service/fundamentals/create-custom-role.md) or use an Intune [built-in RBAC role](../../intune-service/fundamentals/role-based-access-control-reference.md).
 
-The least privileged built-in Intune role that supports managing security baselines is the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles).
+The least privileged built-in Intune role that supports managing security baselines is the [Policy and Profile Manager](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles).
 
 ## Create a profile for a security baseline
 
@@ -85,7 +85,7 @@ The following guidance can be used anytime you create a new security baseline pr
 
 2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
-   ![Select a security baseline to configure](./media/security-baselines-configure/available-baselines.png)
+   ![Select a security baseline to configure](./media/configure-baselines/available-baselines.png)
 
 3. Select the baseline you'd like to use, and then select **Create policy**.
 
@@ -100,7 +100,7 @@ The following guidance can be used anytime you create a new security baseline pr
 5. On the **Configuration settings** tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
 
    - Select a group to expand and review the available settings.
-   - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
+   - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../../intune-service/fundamentals/settings-insight.md).
    - Use the *Search* bar and specify keywords that filter the view to view only those groups that contain your search criteria.
 
    Each setting in a baseline has a default configuration preset for that baseline version. Some aren't configured, while others are set to configure specific values or conditions on a device. The default presets found in a baseline represent the recommended security posture from that product's security team. When configuring a baseline:
@@ -108,7 +108,7 @@ The following guidance can be used anytime you create a new security baseline pr
    - Be sure to review each setting and when necessary, reconfigure a default preset when your business needs require a different configuration.
    - Be aware that different baseline types and versions can include settings that are also in other baselines, and each might recommend a different default value for a setting.
 
-   ![Expand a group to view the settings for that group](./media/security-baselines-configure/sample-list-of-settings.png)
+   ![Expand a group to view the settings for that group](./media/configure-baselines/sample-list-of-settings.png)
 
 6. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
 
@@ -117,7 +117,7 @@ The following guidance can be used anytime you create a new security baseline pr
    > [!NOTE]
    > Security baselines are assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines might be needed when assigning both user and device-based settings.
 
-   ![Assign a profile](./media/security-baselines-configure/assignments.png)
+   ![Assign a profile](./media/configure-baselines/assignments.png)
 
 8. When you're ready to deploy the baseline, advance to the **Review + create** tab and review the details for the baseline. Select **Create** to save and deploy the profile.
 
@@ -126,7 +126,7 @@ The following guidance can be used anytime you create a new security baseline pr
    > [!TIP]
    > If you save a profile without first assigning it to groups, you can later edit the profile to do so.
 
-   ![Review the baseline](./media/security-baselines-configure/review.png)
+   ![Review the baseline](./media/configure-baselines/review.png)
 
 9. After you create a profile, edit it by going to **Endpoint security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs and select **Review + save** to commit your changes.
 
@@ -178,7 +178,7 @@ When a new version for a baseline becomes available, plan to update your existin
 
 6. For **Assignments**, plan to assign the new profile to user groups or device groups. The update process doesn't apply the assignments from the older profile to this new profile. You can choose to configure assignments for this profile now and also return to edit the profile and add them later.
 
-   If you do configure assignments at this time, plan to revisit the older profiles assignments to remove or modify them as necessary to avoid creating [conflicts](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines) between the old and new profiles.
+   If you do configure assignments at this time, plan to revisit the older profiles assignments to remove or modify them as necessary to avoid creating [conflicts](./monitor-baselines.md#resolve-conflicts-for-security-baselines) between the old and new profiles.
 
    > [!NOTE]
    > Security baselines are assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines might be needed when assigning both user and device-based settings.
@@ -314,7 +314,7 @@ Before you update the version of a profile that has assigned groups, [test the v
 
 4. On the **Change Version** pane, use the **Select a security baseline to update to** dropdown, and select the version instance you want to use.
 
-   ![select a version](./media/security-baselines-configure/select-instance.png)
+   ![select a version](./media/configure-baselines/select-instance.png)
 
 5. Select **Review update** to download a CSV file that displays the difference between the profile's current version and the new version. Review this file so that you understand which settings are new or removed, and what the default values for these settings are in the updated profile.
 
@@ -376,17 +376,17 @@ If you have a baseline profile associated with an older baseline version in use,
 
 ## Co-managed devices
 
-Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](../../intune-service/protect/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
 
-When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
+When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](../../intune-service/protect/configmgr/comanage/workloads#device-configuration) provides more information.
 
 ## Next steps
 
-- Check the status and monitor the [baseline and profile](security-baselines-monitor.md)
+- Check the status and monitor the [baseline and profile](./monitor-baselines.md)
 
 - View the settings in the latest versions of the available baselines:
-  - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
-  - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender.md)
-  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-v2-office-settings.md)
-  - [Microsoft Edge (Version 112 and later)](security-baseline-v2-edge-settings.md)
-  - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)
+  - [Windows 10 and later - MDM security baseline](./ref-windows-mdm-settings.md)
+  - [Microsoft Defender for Endpoint baseline](./ref-defender-settings.md)
+  - [Microsoft 365 Apps for Enterprise (Office baseline)](./ref-v2-office-settings.md)
+  - [Microsoft Edge (Version 112 and later)](./ref-v2-edge-settings.md)
+  - [Windows 365 Security Baseline](./ref-windows-365-settings.md)

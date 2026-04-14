@@ -45,9 +45,9 @@ The Trend Micro Mobile Security as a Service mobile agent app for Android and iO
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for MTD, which can use risk assessment information from Trend Micro. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources, such as Exchange Online and SharePoint Online. Users also receive guidance from the Trend Micro Mobile Security as a Service mobile agent app installed on their devices to resolve the issue and regain access to corporate resources. To support using Trend Micro with enrolled devices:
 
-  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md) (This is done automatically when setting up Trend Micro Mobile Security as a Service integration)
-  - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
-  - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
+  - [Add MTD apps to devices](./add-assign-apps.md) (This is done automatically when setting up Trend Micro Mobile Security as a Service integration)
+  - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
+  - [Enable the MTD connector in Intune](./enable-connector.md)
 
 ## Sample scenarios
 
@@ -95,7 +95,7 @@ Detect threats like **Man-in-the-middle** in network and prevent synchronization
 
 ## Next steps
 
-- [Integrate Trend Micro Mobile Security as a Service with Intune](../protect/trend-micro-mtd-connector-integration.md)
-- [Set up Trend Micro Mobile Security as a Service mobile agent app](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Create Trend Micro Mobile Security as a Service device compliance policy](../protect/mtd-device-compliance-policy-create.md)
-- [Enable Trend Micro Mobile Security as a Service MTD connector](../protect/mtd-connector-enable.md)
+- [Integrate Trend Micro Mobile Security as a Service with Intune](./setup-trend-micro.md)
+- [Set up Trend Micro Mobile Security as a Service mobile agent app](./add-assign-apps.md)
+- [Create Trend Micro Mobile Security as a Service device compliance policy](./create-compliance-policy.md)
+- [Enable Trend Micro Mobile Security as a Service MTD connector](./enable-connector.md)

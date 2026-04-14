@@ -15,9 +15,9 @@ ms.collection:
 
 # Plan and Prepare for Endpoint Privilege Management Deployment
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
-[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 This article covers the information required to plan for Endpoint Privilege Management (EPM) deployment including requirements, important concepts, security recommendations, and role based access control.
 
@@ -41,16 +41,16 @@ This article covers the information required to plan for Endpoint Privilege Mana
 
 ### Licensing
 
-Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md).
 
 ### Requirements
 
 Endpoint Privilege Management has the following requirements:
 
 - Microsoft Entra joined *or* Microsoft Entra hybrid joined
-- Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../../configmgr/comanage/overview.md) devices (no workload requirements)
+- Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../configmgr/comanage/overview.md) devices (no workload requirements)
 - Supported Operating System
-- Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
+- Clear line of sight (without SSL-Inspection) to the [required endpoints](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
 
 
 Endpoint Privilege Management supports the following operating systems:
@@ -68,7 +68,7 @@ Endpoint Privilege Management supports the following virtual platforms:
 - Windows 365
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 
 > [!IMPORTANT]
@@ -83,7 +83,7 @@ Endpoint Privilege Management is supported with the following sovereign cloud en
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Important concepts for Endpoint Privilege Management
 
@@ -115,7 +115,7 @@ Except for *Elevate as current user*, EPM uses a *virtual account* to elevate pr
 
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
-  - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md)
+  - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](./support-approved.md)
 
   > [!NOTE]
   >
@@ -148,7 +148,7 @@ EPM also supports a reusable settings group to store publisher certificates that
 
 ✅ Learn about policy conflicts
 
-Except for the following situations, conflicting policies for EPM are handled like any other [policy conflict](../../device-configuration/troubleshoot-device-profiles.md#conflicts).
+Except for the following situations, conflicting policies for EPM are handled like any other [policy conflict](../device-configuration/troubleshoot-device-profiles.md#conflicts).
 
 **Windows elevation settings policy**:
 
@@ -177,7 +177,7 @@ If a device receives two rules targeting the same application, both rules are co
 
 Endpoint Privilege Management and Windows built-in user account control (UAC) are separate features with different functionality.
 
-When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
+When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](../intune-service/protect/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
 > [!NOTE]
 > Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that are run by an Administrator on the device.
@@ -190,13 +190,13 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](../protect/epm-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](./elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](../protect/epm-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
+When [configuring an elevation rule](./elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
 
-This recommendation applies to rules created [automatically](../protect/epm-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](../protect/epm-reports.md) or [support approved](../protect/epm-support-approved.md) request, and for elevation rules that you create [manually](../protect/epm-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
+This recommendation applies to rules created [automatically](./elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](./reports.md) or [support approved](./support-approved.md) request, and for elevation rules that you create [manually](./elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
 > [!IMPORTANT]
 > Files located on network shares aren't supported and shouldn't be used in rule definitions.
@@ -249,7 +249,7 @@ In addition to the dedicated roles, the following built-in roles for Intune also
   - Read
   - View elevation requests
 
- For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+ For more information, see [Role-based access control for Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
 
 ## EpmTools PowerShell module
 
@@ -287,4 +287,4 @@ For more information about each cmdlet, review the **readme.md** file from the *
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Review privacy data collection >](epm-data-collection.md)
+> [Next: Review privacy data collection >](./data-collection.md)

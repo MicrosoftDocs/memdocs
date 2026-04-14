@@ -1,0 +1,26 @@
+items:
+  - name: Conditional Access overview
+    href: ./overview.md
+    displayName: ca
+  - name: Common ways to use Conditional Access
+    href: ./scenarios.md
+  - name: App-based Conditional Access
+    href: ./app-based-policies.md
+  - name: Set up app-based Conditional Access
+    href: ./create-app-based-policy.md
+  - name: Block apps that don't use modern authentication (MSAL)
+    href: ./block-no-modern-auth.md
+  - name: Troubleshoot Conditional Access
+    href: /troubleshoot/mem/intune/troubleshoot-conditional-access?context=/intune/context
+  - name: Jamf Cloud connector
+    items:
+      - name: Use the Jamf Cloud connector
+        href: ./configure-jamf-cloud-connector.md
+      - name: Integrate Jamf Pro with Intune for compliance
+        href: ./setup-jamf-manually.md
+      - name: Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID
+        href: ./device-security/compliance/jamf-entra-id-compliance.md
+      - name: Enforce compliance on Macs managed with Jamf Pro
+        href: ./assign-jamf-policies.md
+      - name: Troubleshoot Jamf Pro integration
+        href: /troubleshoot/mem/intune/troubleshoot-jamf?context=/intune/context

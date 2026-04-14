@@ -1,8 +1,6 @@
 ---
 title: Manually configure Jamf Pro integration with Microsoft Intune
 description: Manually configure Jamf Pro integration with Intune when you can't use the Jamf Cloud Connector.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 09/20/2023
 ms.topic: how-to
 ms.reviewer: ilwu
@@ -25,7 +23,7 @@ ms.collection:
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 > [!TIP]
-> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../compliance/jamf-entra-id-compliance.md).
 
 Microsoft Intune supports integrating your Jamf Pro deployment to bring device compliance and Conditional Access policies to your macOS devices. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Microsoft Entra Conditional Access policies in the same way as for devices managed through Intune.
 
@@ -34,9 +32,9 @@ When Jamf Pro integrates with Intune, you can sync the inventory data from macOS
 This article can help you manually integrate Jamf Pro with Intune.
 
 > [!TIP]
-> Instead of manually configuring Jamf Pro integration with Intune, we recommend configuring and using the [Jamf Cloud Connector with Microsoft Intune](../protect/conditional-access-jamf-cloud-connector.md). The Cloud Connector automates many of the steps that are required when you manually configure integration.
+> Instead of manually configuring Jamf Pro integration with Intune, we recommend configuring and using the [Jamf Cloud Connector with Microsoft Intune](./configure-jamf-cloud-connector.md). The Cloud Connector automates many of the steps that are required when you manually configure integration.
 
-After you configure integration, you'll then [configure Jamf and Intune to enforce compliance with Conditional Access](conditional-access-assign-jamf.md) on devices managed by Jamf.
+After you configure integration, you'll then [configure Jamf and Intune to enforce compliance with Conditional Access](./assign-jamf-policies.md) on devices managed by Jamf.
 
 ## Prerequisites
 
@@ -66,7 +64,7 @@ To allow APNS to function correctly on the network, you must also enable outgoin
 
 For more information about these ports, see the following articles:
 
-- [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+- [Network endpoints for Microsoft Intune](../../intune-service/fundamentals/intune-endpoints.md).
 - [Network Ports Used by Jamf Pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro) on jamf.com.
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944) on support.apple.com
 
@@ -120,7 +118,7 @@ To connect Intune with Jamf Pro:
 
 16. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes**, and should appear as follows:
 
-   ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
+   ![Successful permissions](./media/setup-jamf-manually/sucessfull-app-registration.png)
 
 The app registration process in Microsoft Entra ID is complete.
 
@@ -166,11 +164,11 @@ The app registration process in Microsoft Entra ID is complete.
 
 4. Select **Save** when you're ready to apply the configuration.
 
-5. To proceed, you'll next need to use [Jamf to deploy the Company Portal for Mac](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) so that users can register their devices to Intune.
+5. To proceed, you'll next need to use [Jamf to deploy the Company Portal for Mac](./assign-jamf-policies.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) so that users can register their devices to Intune.
 
 ## Set up compliance policies and register devices
 
-After you configure integration between Intune and Jamf, you need to [apply compliance policies to Jamf-managed devices](conditional-access-assign-jamf.md).
+After you configure integration between Intune and Jamf, you need to [apply compliance policies to Jamf-managed devices](./assign-jamf-policies.md).
 
 ## Disconnect Jamf Pro and Intune
 
@@ -202,5 +200,5 @@ After you terminate the integration, your organization's macOS devices will be r
 
 ## Next steps
 
-- [Apply compliance policies to Jamf-managed devices](conditional-access-assign-jamf.md)
+- [Apply compliance policies to Jamf-managed devices](./assign-jamf-policies.md)
 - [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)

@@ -38,16 +38,16 @@ Use the [Microsoft Intune planning guide](intune-planning-guide.md) for help wit
 
 ## Create compliance rules
 
-Use compliance policies to define the rules and conditions that users and devices should meet to access your organization's protected resources. You can also create Conditional Access policies, which work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).
+Use compliance policies to define the rules and conditions that users and devices should meet to access your organization's protected resources. You can also create Conditional Access policies, which work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md).
 
 The following tasks apply to both Android Enterprise and Android device administrator platforms.
 
 | Task | Detail |
 | ---- | ------ |
-| [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |
-| [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |
-| Create [a device-based](/entra/identity/conditional-access/policy-all-users-device-compliance) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy.|Specify the app or services you want to protect and define the conditions for access.
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2.  For example, you can block apps that use basic and form-based authentication. Before you block any access, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |
+| [Create a compliance policy](../../device-security/compliance/create-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |
+| [Add actions for noncompliance](../../device-security/compliance/configure-noncompliance-actions.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |
+| Create [a device-based](/entra/identity/conditional-access/policy-all-users-device-compliance) or [app-based](../../device-security/conditional-access-integration/create-app-based-policy.md) Conditional Access policy.|Specify the app or services you want to protect and define the conditions for access.
+|[Block access to apps that don't use modern authentication](../../device-security/conditional-access-integration/block-no-modern-auth.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2.  For example, you can block apps that use basic and form-based authentication. Before you block any access, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |
 
 ## Configure endpoint security
 
@@ -57,11 +57,11 @@ The following tasks apply to both Android Enterprise and Android device administ
 
 | Task | Detail |
 | ---- | ------ |
-|[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the **Endpoint security** settings in Intune to effectively manage device security and remediate issues for devices.|
-|[Enable the mobile threat defense (MTD) connector for enrolled devices](../protect/mtd-connector-enable.md)|Enable the MTD connection in Intune so that MTD partner apps can work with Intune and your MTD device compliance policies. If you're not using Microsoft Defender for Endpoint, consider enabling the connector so that you can use another mobile threat defense solution. You can also [enable the MTD connector for devices not enrolled in Intune](../protect/mtd-enable-unenrolled-devices.md).|
-|[Create MTD app protection policy](../protect/mtd-app-protection-policy.md)|Create an Intune app protection policy that assesses risks and limits a device's access to work or school apps.|
-|[Create MTD device compliance policy](../protect/mtd-device-compliance-policy-create.md)|Create an Intune app protection policy that assesses risk and limits a device's corporate access based on the threat level.|
-|[Add and assign MTD apps](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)|Add and deploy MTD apps in Intune. These apps work with your device compliance and app protection policies to identify and help remediate device threats. You can also [assign MTD apps to devices not enrolled in Intune](../protect/mtd-add-apps-unenrolled-devices.md). |
+|[Manage devices with endpoint security features](../../device-configuration/endpoint-security-policies/manage-devices.md)|Use the **Endpoint security** settings in Intune to effectively manage device security and remediate issues for devices.|
+|[Enable the mobile threat defense (MTD) connector for enrolled devices](../../device-security/mobile-threat-defense/enable-connector.md)|Enable the MTD connection in Intune so that MTD partner apps can work with Intune and your MTD device compliance policies. If you're not using Microsoft Defender for Endpoint, consider enabling the connector so that you can use another mobile threat defense solution. You can also [enable the MTD connector for devices not enrolled in Intune](../../device-security/mobile-threat-defense/enable-unenrolled-devices.md).|
+|[Create MTD app protection policy](../../device-security/mobile-threat-defense/create-app-protection-policy.md)|Create an Intune app protection policy that assesses risks and limits a device's access to work or school apps.|
+|[Create MTD device compliance policy](../../device-security/mobile-threat-defense/create-compliance-policy.md)|Create an Intune app protection policy that assesses risk and limits a device's corporate access based on the threat level.|
+|[Add and assign MTD apps](../../device-security/mobile-threat-defense/add-assign-apps.md)|Add and deploy MTD apps in Intune. These apps work with your device compliance and app protection policies to identify and help remediate device threats. You can also [assign MTD apps to devices not enrolled in Intune](../../device-security/mobile-threat-defense/add-apps-unenrolled-devices.md). |
 
 ## Configure device settings
 
@@ -153,7 +153,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | Task | Detail |
 | ---- | ------ |
 |[Run remote actions in Intune](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.|
-|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/microsoft-defender-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
+|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../../device-security/microsoft-defender/remediate-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 | [Wipe corporate data from Intune-managed apps](../../app-management/protection/wipe-corporate-data.md) | Selectively remove work-related data from a device. |
 
 ## Next steps

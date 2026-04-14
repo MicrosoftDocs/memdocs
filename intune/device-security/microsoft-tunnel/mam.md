@@ -27,9 +27,9 @@ Applies to:
 
 Before you begin, you must already have deployed the Microsoft Tunnel gateway. To learn more about Microsoft Tunnel gateway and how to install and configure it, see:
 
-- [Learn about the Microsoft Tunnel VPN solution for Microsoft Intune](../protect/microsoft-tunnel-overview.md)
-- [Identify the prerequisites to install and use the Microsoft Tunnel VPN solution for Microsoft Intune](../protect/microsoft-tunnel-prerequisites.md)
-- [Install and configure Microsoft Tunnel VPN solution for Microsoft Intune](../protect/microsoft-tunnel-configure.md)
+- [Learn about the Microsoft Tunnel VPN solution for Microsoft Intune](./overview.md)
+- [Identify the prerequisites to install and use the Microsoft Tunnel VPN solution for Microsoft Intune](./prerequisites.md)
+- [Install and configure Microsoft Tunnel VPN solution for Microsoft Intune](./install.md)
 
 Microsoft Tunnel for MAM supports the following platforms:
 
@@ -50,11 +50,11 @@ The following table identifies key features for the supported platforms:
 
 Try the following interactive demos to discover how Tunnel for MAM extends Microsoft Tunnel VPN Gateway to support Android and iOS devices that aren't enrolled with Intune.
 
-- [Microsoft Tunnel for Mobile Application Management for Android]( https://regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0)
-- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS]( https://regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0)
+- [Microsoft Tunnel for Mobile Application Management for Android](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0)
+- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0)
 
 ## Related content
 
-- [Learn about the Microsoft Tunnel VPN solution for Microsoft Intune](../protect/microsoft-tunnel-overview.md)
-- [Use MAM Tunnel for Android](../protect/microsoft-tunnel-mam-android.md)
-- [MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)
+- [Learn about the Microsoft Tunnel VPN solution for Microsoft Intune](./overview.md)
+- [Use MAM Tunnel for Android](./mam-android.md)
+- [MAM Tunnel for iOS](./mam-ios.md)

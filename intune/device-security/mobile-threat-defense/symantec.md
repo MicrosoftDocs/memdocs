@@ -114,10 +114,10 @@ Access is granted on remediation:
 
 Here are the steps you need to complete to integrate Intune with SEP Mobile:
 
-- [Set up SEP Mobile integration with Intune](skycure-mtd-connector-integration.md)
+- [Set up SEP Mobile integration with Intune](./setup-symantec.md)
 
-- [Add and assign SEP Mobile apps, Microsoft Authenticator and iOS/iPadOS app configuration policy](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Add and assign SEP Mobile apps, Microsoft Authenticator and iOS/iPadOS app configuration policy](./add-assign-apps.md)
 
-- [Create SEP Mobile device compliance policy with Intune](mtd-device-compliance-policy-create.md)
+- [Create SEP Mobile device compliance policy with Intune](./create-compliance-policy.md)
 
-- [Enable SEP Mobile MTD connector in Intune](mtd-connector-enable.md)
+- [Enable SEP Mobile MTD connector in Intune](./enable-connector.md)

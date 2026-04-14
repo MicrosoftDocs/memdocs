@@ -15,7 +15,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md).
+> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../microsoft-defender/overview.md).
 
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
@@ -30,9 +30,9 @@ Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are av
 
 Learn more about Intune and government clouds:
 
-- [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
-- [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/intune-govt-service-description.md)
-- [Microsoft Intune operated by 21Vianet in China](../fundamentals/china.md)
+- [Microsoft Intune for US Government GCC High support](../../intune-service/protect/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
+- [Microsoft Intune for US Government GCC High and DoD service description](../../intune-service/fundamentals/intune-govt-service-description.md)
+- [Microsoft Intune operated by 21Vianet in China](../../intune-service/fundamentals/china.md)
 
 ## Protect corporate resources
 
@@ -101,19 +101,19 @@ Intune can collect and share two types of inventory data with Mobile Threat Defe
 
 When a device is considered infected by the Mobile Threat Defense solution:
 
-![Image showing a Mobile Threat Defense infected device](./media/mobile-threat-defense/MTD-image-1.png)
+![Image showing a Mobile Threat Defense infected device](./media/overview/MTD-image-1.png)
 
 Access is granted when the device is remediated:
 
-![Image showing a Mobile Threat Defense Access granted](./media/mobile-threat-defense/MTD-image-2.png)
+![Image showing a Mobile Threat Defense Access granted](./media/overview/MTD-image-2.png)
 
 ## Sample scenarios for unenrolled devices using Intune app protection policies
 
 When a device is considered infected by the Mobile Threat Defense solution:  
-![Image that shows a Mobile Threat Defense infected device](./media/mobile-threat-defense/MTD-image-3.png)
+![Image that shows a Mobile Threat Defense infected device](./media/overview/MTD-image-3.png)
 
 Access is granted when the device is remediated:  
-![Image showing a Mobile Threat Defense access granted](./media/mobile-threat-defense/MTD-image-4.png)
+![Image showing a Mobile Threat Defense access granted](./media/overview/MTD-image-4.png)
 
 > [!NOTE]
 > We recommend using one Mobile Threat Defense vendor per tenant per platform.
@@ -126,19 +126,19 @@ Access is granted when the device is remediated:
 
 Learn how to protect access to company resource based on device, network, and application risk with:
 
-- [Better Mobile](better-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [iVerify Enterprise](iverify-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
-- [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) - *(Android, iOS/iPadOS, Windows)*
-- [Pradeo](pradeo-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [SentinelOne](Sentinelone-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Sophos Mobile](sophos-mtd-connector.md) - *(Android, iOS/iPadOS)*
-- [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Better Mobile](./better-mobile.md) - *(Android, iOS/iPadOS)*
+- [BlackBerry Protect Mobile](./blackberry.md) - *(Android, iOS/iPadOS)*
+- [Check Point Harmony Mobile](./checkpoint-harmony.md) - *(Android, iOS/iPadOS)*
+- [CrowdStrike Falcon for Mobile](./crowdstrike-falcon.md) - *(Android, iOS/iPadOS)*
+- [iVerify Enterprise](./iverify.md) - *(Android, iOS/iPadOS)*
+- [Jamf Mobile Threat Defense](./jamf.md) - *(Android, iOS/iPadOS)*
+- [Lookout for Work](./lookout.md) - *(Android, iOS/iPadOS)*
+- [Microsoft Defender for Endpoint](../microsoft-defender/overview.md) - *(Android, iOS/iPadOS, Windows)*
+- [Pradeo](./pradeo.md) - *(Android, iOS/iPadOS)*
+- [SentinelOne](./sentinelone.md) - *(Android, iOS/iPadOS)*
+- [Sophos Mobile](./sophos.md) - *(Android, iOS/iPadOS)*
+- [Symantec Endpoint Protection Mobile](./symantec.md) - *(Android, iOS/iPadOS)*
+- [Trellix Mobile Security](./trellix.md) - *(Android, iOS/iPadOS)*
+- [Trend Micro Mobile Security as a Service](./trend-micro.md) - *(Android, iOS/iPadOS)*
 - [Windows Security Center](../../app-management/protection/enable-mam-windows.md) - *(Windows)* - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../../app-management/protection/enable-mam-windows.md).*
-- [Zimperium](zimperium-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [Zimperium](./zimperium.md) - *(Android, iOS/iPadOS)*

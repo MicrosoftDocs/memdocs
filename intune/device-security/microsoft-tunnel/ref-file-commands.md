@@ -188,7 +188,7 @@ Following are environment variables you might want to configure when you install
 The following are common commands for Docker that can be of use if you must investigate problems on a tunnel server.
 
 > [!NOTE]
-> Most Linux distributions use Docker. However, some like *Red Hat Enterprise Linux (RHEL) 8.4* don't support Docker. Instead, these distributions use Podman. For more information about supported distributions and the Docker or Podman requirements of each, see [Linux servers](../protect/microsoft-tunnel-prerequisites.md#linux-server).
+> Most Linux distributions use Docker. However, some like *Red Hat Enterprise Linux (RHEL) 8.4* don't support Docker. Instead, these distributions use Podman. For more information about supported distributions and the Docker or Podman requirements of each, see [Linux servers](./prerequisites.md#linux-server).
 >
 > The references and command lines that are written for Docker can be used with Podman by replacing *docker* with *podman*.
 

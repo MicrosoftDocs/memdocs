@@ -33,7 +33,7 @@ Co-management supports the following workloads:
 
 Compliance policies define the rules and settings that a device must comply with to be considered compliant by Conditional Access policies. Also use compliance policies to monitor and remediate compliance issues with devices independently of Conditional Access. You can add evaluation of custom configuration baselines as a compliance policy assessment rule. For more information, see [Include custom configuration baselines as part of compliance policy assessment](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 
-For more information on the Intune feature, see [Use compliance policies to set rules for devices you manage with Intune](../../intune-service/protect/device-compliance-get-started.md).
+For more information on the Intune feature, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md).
 
 ## Windows Update policies
 
@@ -75,7 +75,7 @@ The Endpoint Protection workload includes the Defender suite of protection featu
 - Windows Defender Application Control
 - Windows Defender Security Center
 
-For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../intune-service/protect/endpoint-protection-windows-10.md).
+For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../device-configuration/endpoint-security-policies/ref-endpoint-protection-settings-windows.md).
 
 > [!NOTE]
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.

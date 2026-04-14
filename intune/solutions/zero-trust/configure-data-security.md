@@ -18,35 +18,35 @@ Protecting sensitive data across mobile apps and networks is a key part of a Zer
 ## Zero Trust security recommendations
 
 ### Data on Android is protected by app protection policies<!-- 24549 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24549](./includes/secure-recommendations/24549.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24549](../../device-security/includes/secure-recommendations/24549.md)]
 
 ### Data on iOS/iPadOS is protected by app protection policies<!-- 24548 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24548](./includes/secure-recommendations/24548.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24548](../../device-security/includes/secure-recommendations/24548.md)]
 
 ### Conditional Access policies block access from unmanaged apps<!-- 24827 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
- [!INCLUDE [24827](./includes/secure-recommendations/24827.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
+ [!INCLUDE [24827](../../device-security/includes/secure-recommendations/24827.md)]
 
 ### Conditional Access policies block access from noncompliant devices<!-- 24824 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24824](./includes/secure-recommendations/24824.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24824](../../device-security/includes/secure-recommendations/24824.md)]
 
 ### Secure Wi-Fi profiles protect iOS devices from unauthorized network access<!-- 24839 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24839](./includes/secure-recommendations/24839.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24839](../../device-security/includes/secure-recommendations/24839.md)]
 
 ### Secure Wi-Fi profiles protect macOS devices from unauthorized network access<!-- 24870 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24870](./includes/secure-recommendations/24870.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24870](../../device-security/includes/secure-recommendations/24870.md)]
 
 ### Secure Wi-Fi profiles protect Android devices from unauthorized network access<!-- 24840 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24840](../../device-security/includes/secure-recommendations/24840.md)]
 
 ## Related content
 
-- [Deployment guide for Microsoft Intune](../fundamentals/get-started-with-intune.md)
-- [Protect data and devices with Microsoft Intune](device-protect.md)
-- [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)
+- [Deployment guide for Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
+- [Protect data and devices with Microsoft Intune](../../device-security/index.md)
+- [Configure Microsoft Entra for increased security (Preview)](../../intune-service/protect/entra/fundamentals/configure-security)

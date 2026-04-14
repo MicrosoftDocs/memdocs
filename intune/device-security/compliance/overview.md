@@ -51,7 +51,7 @@ Compliance policy settings include the following settings:
 
   By default, the period is set to 30 days. You can configure a period from 1 to 120 days.
 
-  You can view details about a devices compliance to the validity period setting. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column. For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
+  You can view details about a devices compliance to the validity period setting. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column. For more information about this and related compliance status views, see [Monitor device compliance](./monitor-policy.md).
 
 ## Device compliance policies
 
@@ -59,7 +59,7 @@ Intune device compliance policies are discrete sets of platform-specific rules a
 
 - Define the rules and settings that users and managed devices must meet to be compliant. Examples of rules include requiring devices run a minimum OS version, not being jail-broken or rooted, and being at or under a *threat level* as specified by threat management software that integrates with Intune.
 
-- Support [actions for noncompliance](../protect/actions-for-noncompliance.md) that apply to devices that don’t meet that policies compliance rules. Examples of actions for noncompliance include marking the device as noncompliant, being remotely locked, and sending a device user email about the device status so they can fix it.
+- Support [actions for noncompliance](./configure-noncompliance-actions.md) that apply to devices that don’t meet that policies compliance rules. Examples of actions for noncompliance include marking the device as noncompliant, being remotely locked, and sending a device user email about the device status so they can fix it.
 
 When using device compliance policies:
 
@@ -76,28 +76,28 @@ The available settings you can specify in a device compliance policy depend on t
 
 The following subjects link to dedicated articles for different aspects of device configuration policy.
 
-- [**Actions for noncompliance**](actions-for-noncompliance.md) - By default, each device compliance policy includes the action to mark a device as noncompliant if it fails to meet a policy rule. Each policy can support more actions based on the device platform. Examples of extra action include:
+- [**Actions for noncompliance**](./configure-noncompliance-actions.md) - By default, each device compliance policy includes the action to mark a device as noncompliant if it fails to meet a policy rule. Each policy can support more actions based on the device platform. Examples of extra action include:
 
   - **Sending email alerts** to users and groups with details about the noncompliant device. You might configure the policy to send an email immediately upon being marked as noncompliant, and then again, periodically, until the device becomes compliant.
   - **Remotely lock devices** that have been noncompliant for some time.
-  - **Retire devices** after they’ve been noncompliant for some time. This action marks a qualifying device as ready to be retired. An admin can then view a list of devices marked for retirement and must take an explicit action to retire one or more devices. Retiring a device removes the device from Intune management and removes all company data from the device. For more information about this action, see [Available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).
+  - **Retire devices** after they’ve been noncompliant for some time. This action marks a qualifying device as ready to be retired. An admin can then view a list of devices marked for retirement and must take an explicit action to retire one or more devices. Retiring a device removes the device from Intune management and removes all company data from the device. For more information about this action, see [Available actions for noncompliance](./configure-noncompliance-actions.md#available-actions-for-noncompliance).
 
-- [**Create a compliance policy**](create-compliance-policy.md) – With the information in the linked article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
+- [**Create a compliance policy**](./create-policy.md) – With the information in the linked article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
 
   View the device compliance settings for the different device platforms:
 
-  - [Android device administrator](compliance-policy-create-android.md)
-  - [Android Enterprise](compliance-policy-create-android-for-work.md)
-  - [Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
-  - [iOS](compliance-policy-create-ios.md)
-  - [Linux](../protect/compliance-policy-create-linux.md)
-  - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows](compliance-policy-create-windows.md)
-  - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
+  - [Android device administrator](./ref-android-administrator-settings.md)
+  - [Android Enterprise](./ref-android-enterprise-settings.md)
+  - [Android Open Source Project (AOSP)](./ref-android-aosp-settings.md)
+  - [iOS](./ref-ios-ipados-settings.md)
+  - [Linux](./ref-linux-settings.md)
+  - [macOS](./ref-macos-settings.md)
+  - [Windows Holographic for Business](./ref-windows-settings.md#windows-holographic-for-business)
+  - [Windows](./ref-windows-settings.md)
+  - [Windows 8.1 and later](./ref-windows-8-1-settings.md)
     [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
-- [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
+- [**Custom compliance settings**](./custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
   - Linux – Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
@@ -105,7 +105,7 @@ The following subjects link to dedicated articles for different aspects of devic
 
 ## Monitor compliance status
 
-Intune includes a device compliance dashboard that you use to monitor the compliance status of devices, and to drill-in to policies and devices for more information. To learn more about this dashboard, see [Monitor device compliance](compliance-policy-monitor.md).
+Intune includes a device compliance dashboard that you use to monitor the compliance status of devices, and to drill-in to policies and devices for more information. To learn more about this dashboard, see [Monitor device compliance](./monitor-policy.md).
 
 ## Integrate with Conditional Access
 
@@ -115,12 +115,12 @@ When a device enrolls in Intune it registers in Microsoft Entra ID. The complian
 
 If you use device compliance status with Conditional Access policies, review how your tenant configures the *Mark devices with no compliance policy assigned as* option, which you manage under [Compliance policy settings](#compliance-policy-settings).
 
-For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](conditional-access-intune-common-ways-use.md#device-based-conditional-access).
+For more information about using Conditional Access with your device compliance policies, see [Device-based Conditional Access](../conditional-access-integration/scenarios.md#device-based-conditional-access).
 
 Learn more about Conditional Access in the Microsoft Entra documentation:
 
-- [What is Conditional Access](/azure/active-directory/conditional-access/overview)
-- [What is a device identity](/azure/active-directory/device-management-introduction)
+- [What is Conditional Access](../../intune-service/protect/azure/active-directory/conditional-access/overview)
+- [What is a device identity](../../intune-service/protect/azure/active-directory/device-management-introduction)
 
 ### Reference for noncompliance and Conditional Access on the different platforms
 
@@ -154,7 +154,7 @@ The following table describes how noncompliant settings are managed when a compl
 
 ## Next steps
 
-- [Create and deploy policy](../protect/create-compliance-policy.md) and review prerequisites
-- [Monitor device compliance](../protect/compliance-policy-monitor.md)
+- [Create and deploy policy](./create-policy.md) and review prerequisites
+- [Monitor device compliance](./monitor-policy.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md)
 - [Reference for policy entities](../../developer/data-warehouse/ref-policy.md) has information about the Intune Data Warehouse policy entities

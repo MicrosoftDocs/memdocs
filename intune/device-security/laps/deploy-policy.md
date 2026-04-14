@@ -13,14 +13,14 @@ ms.collection:
 
 # Deploy Windows LAPS policy with Microsoft Intune
 
-When you're ready to manage the *Windows Local Administrator Password Solution* ([Windows LAPS](/windows-server/identity/laps/laps-overview)) on Windows devices you manage with Microsoft Intune, the information in this article can help you use the Intune admin center to:
+When you're ready to manage the *Windows Local Administrator Password Solution* ([Windows LAPS](../../intune-service/protect/windows-server/identity/laps/laps-overview)) on Windows devices you manage with Microsoft Intune, the information in this article can help you use the Intune admin center to:
 
 - Create and assign Intune LAPS policy to devices.
 - View a device's local admin account details.
 - Manually rotate the password for the managed account.
 - Use reports on LAPS policy.
 
-Before creating policies, be familiar with the information in [Microsoft Intune support for Windows LAPS](../protect/windows-laps-overview.md), which includes:
+Before creating policies, be familiar with the information in [Microsoft Intune support for Windows LAPS](./overview.md), which includes:
 
 - An overview of Intune's Windows LAPS policy and capabilities.
 - The prerequisites for using Intune policies for LAPS.
@@ -36,14 +36,14 @@ Applies to:
 
 ## About Intune LAPS policy
 
-Intune supports configuration of Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile for endpoint security [account protection](../protect/endpoint-security-account-protection-policy.md) policy.
+Intune supports configuration of Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile for endpoint security [account protection](../../device-configuration/endpoint-security-policies/account-protection-policy.md) policy.
 
-Intune policies manage LAPS by using the Windows LAPS configuration service provider (CSP). Windows LAPS CSP configurations [take precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over, and overwrite, any existing configurations from other LAPS sources, like GPOs or the [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) tool.
+Intune policies manage LAPS by using the Windows LAPS configuration service provider (CSP). Windows LAPS CSP configurations [take precedence](../../intune-service/protect/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over, and overwrite, any existing configurations from other LAPS sources, like GPOs or the [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) tool.
 
 Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting **Administrator Account Name**. If the account name specified in the policy isn't present on the device, no account is managed. However, when **Administrator Account Name** is left blank, the policy defaults to the devices built-in local admin account that is identified by its well-known relative identifier (RID).
 
 > [!NOTE]
-> Ensure the [prerequisites](../protect/windows-laps-overview.md#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
+> Ensure the [prerequisites](./overview.md#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
 >
 > Intune's LAPS policies don't create new accounts or passwords. Instead, they manage an account that's already on the device.
 
@@ -54,11 +54,11 @@ To help reduce potential conflicts, we recommend assigning a single LAPS policy 
 ### Create a LAPS policy
 
   > [!IMPORTANT]
-  > Ensure that LAPS is enabled in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
+  > Ensure that LAPS is enabled in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](../../intune-service/protect/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
 
-To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](./overview.md#role-based-access-controls-for-laps).
 
-Before you create a policy, you can review details about the available settings in the [Windows LAPS CSP](/windows-server/identity/laps/laps-management-policy-settings#windows-laps-csp) documentation.
+Before you create a policy, you can review details about the available settings in the [Windows LAPS CSP](../../intune-service/protect/windows-server/identity/laps/laps-management-policy-settings#windows-laps-csp) documentation.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Account protection**, and then select **Create Policy**.
 
@@ -98,7 +98,7 @@ Before you create a policy, you can review details about the available settings 
 
 When your account has permissions equivalent to the *Security baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
 
-For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+For more information, see [Role based access controls for LAPS](./overview.md#role-based-access-controls-for-laps).
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account. Intune displays that devices Overview pane.
 
@@ -117,12 +117,12 @@ To view account and password details, an account must have one of the following 
 
 Use the following methods to grant accounts these permissions:
 
-- Assign the following [built-in Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference):
+- Assign the following [built-in Microsoft Entra role](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference):
   - *Cloud Device Administrator*
 
-Create and assign a custom role in Microsoft Entra ID that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
+Create and assign a custom role in Microsoft Entra ID that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](../../intune-service/protect/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
 
-For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+For more information, see [Role based access controls for LAPS](./overview.md#role-based-access-controls-for-laps).
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** > select a Windows device to open its Overview pane.
 
@@ -142,7 +142,7 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 The following are considerations for viewing a devices account and password information:
 
-- Retrieving (viewing) the password for a local admin account triggers an [audit event](../protect/windows-laps-reports.md#events-and-audit-logs).
+- Retrieving (viewing) the password for a local admin account triggers an [audit event](./reports.md#events-and-audit-logs).
 
 - You can't view password details for the following devices:
 
@@ -159,7 +159,7 @@ To use this device action, your account must have the following three Intune per
 - Organization: **Read**
 - Remote tasks: **Rotate Local Admin Password**
 
-See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+See [Role based access controls for LAPS](./overview.md#role-based-access-controls-for-laps).
 
 ### To rotate a password
 
@@ -179,7 +179,7 @@ The following are considerations for manual password rotation:
 
 - The **Rotate local admin password** device action is available for all Windows devices, but any device that hasn't successfully backed up its account and password data fails to complete a rotate request.
 
-- Each manual rotation attempt results in an [audit event](../protect/windows-laps-reports.md#events-and-audit-logs). Scheduled password rotations also log an audit event.
+- Each manual rotation attempt results in an [audit event](./reports.md#events-and-audit-logs). Scheduled password rotations also log an audit event.
 
 - When a password is manually rotated, the time to the next scheduled password rotation is reset. The time to the next scheduled rotation is managed through the *PasswordAgeDays* setting in the LAPS policy.
 
@@ -207,6 +207,6 @@ To resolve conflicts, you must either remove policy assignments from the device,
 
 ## Related content
 
-- [Introduction to Intune policy for LAPS](../protect/windows-laps-overview.md)
-- [View reports for LAPS](../protect/windows-laps-reports.md)
-- [Account protection policy for endpoint security in Intune](../protect/endpoint-security-account-protection-policy.md)
+- [Introduction to Intune policy for LAPS](./overview.md)
+- [View reports for LAPS](./reports.md)
+- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection-policy.md)

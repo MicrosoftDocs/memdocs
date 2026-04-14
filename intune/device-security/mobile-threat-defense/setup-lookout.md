@@ -13,7 +13,7 @@ ms.collection:
 
 # Set up Lookout Mobile Endpoint Security integration with Intune
 
-With an environment that meets the [prerequisites](lookout-mobile-threat-defense-connector.md#prerequisites), you can integrate Lookout Mobile Endpoint Security with Intune. The information in this article can guide you in setting up integration and configuring important settings in Lookout for use with Intune.
+With an environment that meets the [prerequisites](./lookout.md#prerequisites), you can integrate Lookout Mobile Endpoint Security with Intune. The information in this article can guide you in setting up integration and configuring important settings in Lookout for use with Intune.
 
 > [!IMPORTANT]
 > An existing Lookout Mobile Endpoint Security tenant that is not already associated with your Microsoft Entra tenant cannot be used for the integration with Microsoft Entra ID and Intune. Contact Lookout support to create a new Lookout Mobile Endpoint Security tenant. Use the new tenant to onboard your Microsoft Entra users.
@@ -70,7 +70,7 @@ The first sign-in to the Lookout MES Console displays a consent page ([https://a
 
 A consent page is displayed. Choose **Accept** to complete the registration.
 
-![screenshot of the first-time sign-in page of the Lookout console](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
+![screenshot of the first-time sign-in page of the Lookout console](./media/setup-lookout/lookout_mtp_initial_login.png)
 
 When you accept and consent, you're redirected to the Lookout Console.
 
@@ -82,15 +82,15 @@ The following procedure assumes you've previously created a user group in Micros
 
 1. Sign in to the [Lookout MES Console](https://aad.lookout.com) and go to **System** > **Connectors**, and then select **Add Connector**. Select **Intune**.
 
-   ![Image of the Lookout console with the Intune option on the connectors tab](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
+   ![Image of the Lookout console with the Intune option on the connectors tab](./media/setup-lookout/lookout_mtp_setup-intune-connector.png)
 
 2. On the *Microsoft Intune* pane, select **Connection Settings** and specify the **Heartbeat Frequency** in minutes.
 
-   ![Image of the connection settings tab with heartbeat frequency configured](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
+   ![Image of the connection settings tab with heartbeat frequency configured](./media/setup-lookout/lookout-mtp-connection-settings.png)
 
 3. Select **Enrollment Management**, and for **Use the following Microsoft Entra security groups to identify devices that should be enrolled in Lookout for Work**, specify the *Group name* of a Microsoft Entra group to use with Lookout, and then select **Save changes**.
 
-   ![screenshot of the Intune connector enrollment page](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)
+   ![screenshot of the Intune connector enrollment page](./media/setup-lookout/lookout-mtp-enrollment.png)
 
    **About the groups you use**:
    - As a best practice, start with a Microsoft Entra security group that contains only a few users to test Lookout integration.
@@ -101,13 +101,13 @@ The following procedure assumes you've previously created a user group in Micros
 
 5. Select **Error Management**, specify the email address that should receive the error reports, and then select **Save changes**.
 
-   ![screenshot of the Intune connector error management page](./media/lookout-mtd-connector-integration/lookout-mtp-connector-error-notifications.png)
+   ![screenshot of the Intune connector error management page](./media/setup-lookout/lookout-mtp-connector-error-notifications.png)
 
 6. Select **Create connector** to complete configuration of the connector. Later, when you're satisfied with your results, you can extend enrollment to additional user groups.
 
 ## Configure Intune to use Lookout as a Mobile Threat Defense provider
 
-After you configure Lookout MES, you must set up a connection to [Lookout in Intune](mtd-connector-enable.md).
+After you configure Lookout MES, you must set up a connection to [Lookout in Intune](./enable-connector.md).
 
 ## Additional settings in the Lookout MES Console
 
@@ -121,7 +121,7 @@ In the Lookout MES Console, select **System** > **Manage Enrollment** > **Enroll
 
   Disconnected devices are considered as noncompliant and are blocked from accessing your company applications based on the Intune Conditional Access policies. You can specify values between 1 and 90 days.
 
-  ![Lookout enrollment settings on the System module](./media/lookout-mtd-connector-integration/lookout-console-enrollment-settings.png)
+  ![Lookout enrollment settings on the System module](./media/setup-lookout/lookout-console-enrollment-settings.png)
 
 ### Configure Email Notifications
 
@@ -131,7 +131,7 @@ To receive email alerts for threats, sign in to the [Lookout MES Console](https:
 
 - If you no longer want to receive email notifications, set the notifications to **OFF** and save your changes.
 
-  ![screenshot of the preferences page with the user account displayed](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
+  ![screenshot of the preferences page with the user account displayed](./media/setup-lookout/lookout-mtp-email-notifications.png)
 
 ## Configure threat classifications
 
@@ -152,9 +152,9 @@ After setup is complete, Lookout Mobile Endpoint Security starts to poll Microso
 - Initial status for devices is *pending*.
 - The device status updates after the *Lookout for Work* app is installed, opened, and activated on the device.
 
-For details on how to get the *Lookout for Work* app deployed to a device, see [Add Lookout for work apps with Intune](mtd-apps-ios-app-configuration-policy-add-assign.md).
+For details on how to get the *Lookout for Work* app deployed to a device, see [Add Lookout for work apps with Intune](./add-assign-apps.md).
 
 ## Next steps
 
-- [Set up Lookout apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Lookout apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)
+- [Set up Lookout apps for enrolled devices](./add-assign-apps.md)
+- [Set up Lookout apps for unenrolled devices](./add-apps-unenrolled-devices.md)

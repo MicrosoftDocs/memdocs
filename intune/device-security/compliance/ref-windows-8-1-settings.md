@@ -21,11 +21,11 @@ This feature applies to:
 
 - Windows 8.1 and later
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
 
 ## Before you begin
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Windows 8.1 and later**.
+[Create a compliance policy](./create-policy.md#create-the-policy). For **Platform**, select **Windows 8.1 and later**.
 
 ## Device Properties
 
@@ -94,6 +94,6 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
-- [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Windows](compliance-policy-create-windows.md) devices.
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).
+- See the [compliance policy settings for Windows](./ref-windows-settings.md) devices.

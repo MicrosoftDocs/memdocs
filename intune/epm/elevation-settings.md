@@ -15,7 +15,7 @@ ms.collection:
 
 # Managing elevation settings with Endpoint Privilege Management
 
-[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 To configure Endpoint Privilege Management (EPM) on devices, deploy *Windows elevation settings policy* to users or devices:
 
@@ -36,7 +36,7 @@ Use *Windows elevation settings policy* when you want to:
 - **Set a Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option is set to *Not Configured*. If no setting is configured, the EPM components fall back to their built-in default, which is to **deny all requests**.
 
   > [!TIP]
-  > We [recommend the use of *Require support approval*](../protect/epm-plan.md#security-recommendations) or *Deny all requests* as a default elevation response.
+  > We [recommend the use of *Require support approval*](./plan.md#security-recommendations) or *Deny all requests* as a default elevation response.
 
   Options include:
 
@@ -56,7 +56,7 @@ Use *Windows elevation settings policy* when you want to:
 
 - **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. Use the *Reporting scope* setting to control the data collected.
 
-  Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
+  Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](./data-collection.md).
 
   Options include:
 
@@ -110,7 +110,7 @@ Use *Windows elevation settings policy* when you want to:
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md). Select **Next**.
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../device-configuration/assign-device-profile.md). Select **Next**.
 
 6. For **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
@@ -119,4 +119,4 @@ Use *Windows elevation settings policy* when you want to:
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Create an elevation rules policy >](epm-elevation-rules.md)
+> [Next: Create an elevation rules policy >](./elevation-rules.md)

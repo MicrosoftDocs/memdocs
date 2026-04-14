@@ -14,7 +14,7 @@ ms.collection:
 
 # Custom compliance JSON files for Microsoft Intune
 
-To support [custom settings for compliance](../protect/compliance-use-custom-settings.md) for Microsoft Intune, you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a discovery script evaluates for compliance on the device.
+To support [custom settings for compliance](./custom-settings.md) for Microsoft Intune, you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a discovery script evaluates for compliance on the device.
 
 You include the JSON file in a compliance policy when you configure a policy to assess custom compliance settings.
 
@@ -77,7 +77,7 @@ Your policy can be up to 100 KB and include 100 rules.
 - zh_CN
 - zh_TW
 
-For more information, see [Available languages for Windows](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
+For more information, see [Available languages for Windows](../../intune-service/protect/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
 
 ## Example JSON file
 
@@ -147,6 +147,6 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 
 ## Next steps
 
-- [Use custom compliance settings](../protect/compliance-use-custom-settings.md)
-- [Create a discovery script for custom compliance settings](../protect/compliance-custom-script.md)
-- [Create a compliance policy](../protect/create-compliance-policy.md)
+- [Use custom compliance settings](./custom-settings.md)
+- [Create a discovery script for custom compliance settings](./create-custom-script.md)
+- [Create a compliance policy](./create-policy.md)

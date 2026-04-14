@@ -15,9 +15,9 @@ ms.collection:
 
 # Data collection and privacy for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
-[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 This article provides information about the data that EPM can collect from devices.
 
@@ -28,7 +28,7 @@ Endpoint Privilege Management on devices can be configured to report on the foll
 - Diagnostic data
 - Usage data
 
-When configuring EPM, you configure the *Send elevation data for reporting* and *Reporting scope* settings in an Intune [Windows elevation settings policy](epm-elevation-settings.md) to determine which data Intune reports to Microsoft.
+When configuring EPM, you configure the *Send elevation data for reporting* and *Reporting scope* settings in an Intune [Windows elevation settings policy](./elevation-settings.md) to determine which data Intune reports to Microsoft.
 
 ## Diagnostic Data
 
@@ -36,7 +36,7 @@ Diagnostic data is event data that is used by Microsoft to monitor the health of
 
 ## Usage Data
 
-Usage data is elevation data that is used by customers to determine what elevations occur in their environment. This data is stored with your Intune infrastructure and is used to populate the [elevation reports](../protect/epm-reports.md). When configuring *reporting scope*, you configure what scope of data is collected and can choose between:
+Usage data is elevation data that is used by customers to determine what elevations occur in their environment. This data is stored with your Intune infrastructure and is used to populate the [elevation reports](./reports.md). When configuring *reporting scope*, you configure what scope of data is collected and can choose between:
 
 - *Diagnostic data* only
 - *Diagnostic data and all endpoint elevations* that take place on a device
@@ -85,4 +85,4 @@ Usage data is elevation data that is used by customers to determine what elevati
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Deploy EPM >](epm-deploy.md)
+> [Next: Deploy EPM >](./deploy.md)

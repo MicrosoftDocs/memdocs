@@ -275,7 +275,7 @@ The Windows security baseline for *Windows 11, version 25H2* is now available in
 
 The Windows 11, version 25H2 security baseline includes new settings, updated default values, retired settings, and revised security guidance. Existing security baseline profiles don't automatically update to the new version.
 
-To use the Windows 11, version 25H2 security baseline, Intune admins can [create a new baseline profile](../protect/security-baselines-configure.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
+To use the Windows 11, version 25H2 security baseline, Intune admins can [create a new baseline profile](../../device-security/security-baselines/configure-baselines.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../../device-security/security-baselines/configure-baselines.md#update-a-baseline-profile-to-the-latest-version).
 
 The following two settings aren't included in this baseline release and will be added in a future baseline update. Each change will be communicated to customers when available:
 
@@ -286,7 +286,7 @@ We recommend carefully reviewing the settings in the new baseline before moving 
 
 For a detailed breakdown of setting changes, see the Windows blog post [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231).
 
-To view the default configuration of the Intune baseline for Windows 11, version 25H2, see [Windows MDM baseline settings](../protect/security-baseline-settings-mdm-all.md?pivots=mdm-25h2#security-baseline-for-windows-version-25h2).
+To view the default configuration of the Intune baseline for Windows 11, version 25H2, see [Windows MDM baseline settings](../../device-security/security-baselines/ref-windows-mdm-settings.md?pivots=mdm-25h2#security-baseline-for-windows-version-25h2).
 
 > [!div class="checklist"]
 > Applies to:
@@ -589,7 +589,7 @@ Device query for multiple devices now includes expanded operator support, cleare
 
 Endpoint Privilege Management (EPM) elevation policies now support deployment to users on Azure Virtual Desktop (AVD) single-session virtual machines.
 
-For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../protect/epm-plan.md).
+For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../../epm/plan.md).
 
 ### App management
 
@@ -774,7 +774,7 @@ When certificate sync is enabled, the following data is shared:
   - Data
   - Is Identity
 
-For more information, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
+For more information, see [Mobile Threat Defense toggle options](../../device-security/mobile-threat-defense/enable-connector.md#mobile-threat-defense-toggle-options).
 
 > [!div class="checklist"]
 > Applies to:
@@ -950,7 +950,7 @@ You can now use iVerify Enterprise as a mobile threat defense partner (MTD) for 
 - Android 9.0 and later
 - iOS/iPadOS 15.0 and later
 
-To learn more about this support, see [Set up iVerify Mobile Threat Defense Connector](../protect/iverify-mobile-threat-defense-connector.md).
+To learn more about this support, see [Set up iVerify Mobile Threat Defense Connector](../../device-security/mobile-threat-defense/iverify.md).
 
 ### Tenant administration
 
@@ -974,7 +974,7 @@ For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
 
 #### Scope tag enforcement for Endpoint Privilege Management elevation requests<!-- 33479826  -->
 
-When viewing Endpoint Privilege Management [elevation requests](../protect/epm-support-approved.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
+When viewing Endpoint Privilege Management [elevation requests](../../epm/support-approved.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
 
@@ -1169,7 +1169,7 @@ Microsoft Tunnel uses the Microsoft Defender client app to provide Android devic
 
 This capability is a feature of the Defender client on Android and doesn't replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
 
-For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../protect/microsoft-tunnel-overview.md#capabilities).
+For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../../device-security/microsoft-tunnel/overview.md#capabilities).
 
 ### Tenant administration
 
@@ -1191,7 +1191,7 @@ Endpoint Privilege Management (EPM) has a new option for elevation rules that ru
 
 With the *Elevate as current user* elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to enter their credentials for Windows Authentication. This process supports multifactor authentication (MFA) for enhanced security.
 
-For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-plan.md#important-concepts-for-endpoint-privilege-management).
+For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../../epm/plan.md#important-concepts-for-endpoint-privilege-management).
 
 ####  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
 
@@ -1206,7 +1206,7 @@ Insights provided by the dashboard include:
 - Frequently approved by support
 - Frequently denied elevations
 
-For more information about the dashboard and these new insights, see [Overview dashboard](../protect/epm-reports.md#elevation-report-by-user) in Reports for Endpoint Privilege Management.
+For more information about the dashboard and these new insights, see [Overview dashboard](../../epm/reports.md#elevation-report-by-user) in Reports for Endpoint Privilege Management.
 
 ### Device configuration
 
@@ -1549,7 +1549,7 @@ You can use Microsoft Copilot in Intune to explore new prompts related to your I
 
 - Android and Apple device updates
 - Windows Autopilot
-- [Endpoint Privilege Management](../protect/epm-overview.md)
+- [Endpoint Privilege Management](../../epm/overview.md)
 - [Advanced Analytics](../../advanced-analytics/index.md)
 
 When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
@@ -1640,7 +1640,7 @@ The Intune security baseline update experience is updated for the more recent ve
 
 With both options, your decision is applied to a new profile instance of that baseline, which uses the latest baseline version. This new profile won't have the scope tags or assignments from the original, which you can add later after the new profile has been created. This change gives you time to configure other settings if desired before the updated profile is assigned and begins to deploy the latest baseline version to devices. Meanwhile, your original baseline is left unchanged and remains active. But, its setting configurations become read-only.
 
-For more information, see [Update a baseline profile to the latest version](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)  in Manage security baseline profiles in Microsoft Intune.
+For more information, see [Update a baseline profile to the latest version](../../device-security/security-baselines/configure-baselines.md#update-a-baseline-profile-to-the-latest-version)  in Manage security baseline profiles in Microsoft Intune.
 
 #### Company Portal supports Purebred's new derived credentials experience<!--31973776-->
 
@@ -1670,7 +1670,7 @@ Microsoft Tunnel for Mobile Application Management (MAM) for iOS now supports Ja
 
 While JavaScript WebSockets are now supported, Tunnel for MAM iOS doesn't support native WebSocket APIs or apps that rely on them.
 
-For more information, see [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide](../protect/microsoft-tunnel-mam-ios.md).
+For more information, see [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide](../../device-security/microsoft-tunnel/mam-ios.md).
 
 ## Week of September 1, 2025
 
@@ -1757,7 +1757,7 @@ Our Managed Installer policy is updated to add the capability to target individu
 
 If you previously had a tenant-wide managed installer policy in effect, that policy remains available with a group assignment to all your devices. This reconfiguration is equivalent to the previous tenant-wide configuration it had before. You can choose to use that converted policy or implement new policies with more granular control.
 
-For more information about configuring and using managed installers, see [Get started with managed installers](../protect/endpoint-security-app-control-policy.md#get-started-with-managed-installers).
+For more information about configuring and using managed installers, see [Get started with managed installers](../../device-configuration/endpoint-security-policies/app-control-policy.md#get-started-with-managed-installers).
 
 > [!div class="checklist"]
 > Applies to:

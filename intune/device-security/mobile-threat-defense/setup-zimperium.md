@@ -43,7 +43,7 @@ The Zimperium app authorization process follows:
 - Allow Zimperium admin console to use Microsoft Entra single sign-on (SSO).
 - Allow the Zimperium app to sign in using Microsoft Entra SSO.
 
-For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/permissions-consent-overview) in the Microsoft Entra documentation.
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](../../intune-service/protect/azure/active-directory/develop/permissions-consent-overview) in the Microsoft Entra documentation.
 
 ## To set up Zimperium integration
 
@@ -71,5 +71,5 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 ## Next steps
 
-- [Set up Zimperium apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up Zimperium apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)
+- [Set up Zimperium apps for enrolled devices](./add-assign-apps.md)
+- [Set up Zimperium apps for unenrolled devices](./add-apps-unenrolled-devices.md)

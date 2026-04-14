@@ -29,7 +29,7 @@ Trial subscriptions help you avoid affecting a production environment with wrong
 
 This tutorial requires a test tenant with the following subscriptions:
 
-- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../fundamentals/free-trial-sign-up.md))
+- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md))
 - Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
@@ -83,7 +83,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
    To continue, select **Next**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-system-security.png" alt-text="Configureation of the iOS compliance policy.":::
+   :::image type="content" source="./media/protect-email-enrolled-devices/ios-compliance-policy-system-security.png" alt-text="Configureation of the iOS compliance policy.":::
 
 7. Select **Next** to skip **Actions for noncompliance**.
 
@@ -120,13 +120,13 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
    2. For the **Select** category, select **None** to open the *Select* pane with its applications list.
    3. From the applications list, select the checkbox for **Office 365 Exchange Online**, and then choose **Select**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-apps.png" alt-text="Select Office 365 Exchange Online to add to the policy.":::
+   :::image type="content" source="./media/protect-email-enrolled-devices/ios-ca-policy-cloud-apps.png" alt-text="Select Office 365 Exchange Online to add to the policy.":::
 
 6. Also under **Assignments**, select **Conditions** > **Device platforms** to open the *Device platforms* pane.
    1. Set **Configure** to **Yes**.
    2. On the **Include** tab, select **Any device**, and then select **Done**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png" alt-text="Configure the device platforms":::
+   :::image type="content" source="./media/protect-email-enrolled-devices/ios-ca-policy-cloud-device-platforms.png" alt-text="Configure the device platforms":::
 
 7. Once again, under **Assignments**, select **Conditions** > **Client apps**.
 
@@ -136,7 +136,7 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 
    3. Select **Done**, and then select **Done** again.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png" alt-text="Select apps and clients as conditions for the policy.":::
+   :::image type="content" source="./media/protect-email-enrolled-devices/ios-ca-policy-client-apps.png" alt-text="Select apps and clients as conditions for the policy.":::
 
 8. Under **Access controls**, select **Grant**.
 
@@ -150,11 +150,11 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 
    5. Choose **Select**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png" alt-text="Select controls":::
+   :::image type="content" source="./media/protect-email-enrolled-devices/ios-ca-policy-grant-access.png" alt-text="Select controls":::
 
 9. Under **Enable policy**, select **On**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
+   :::image type="content" source="./media/protect-email-enrolled-devices/ios-ca-policy-enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
 
 10. Select **Create** to save your changes. The profile is assigned.
 
@@ -164,7 +164,7 @@ Conditional Access policies are configurable in either the Microsoft Entra admin
 >
 > If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing into Teams. Failure to comply with these policies affects the ability to sign into Teams.
 >
-> For more information, see [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies#policy-enforcement).
+> For more information, see [Microsoft documentation on service dependencies and policy enforcement](../../intune-service/protect/entra/identity/conditional-access/service-dependencies#policy-enforcement).
 
 ## Try it out
 
@@ -196,4 +196,4 @@ When the test policies are no longer needed, you can remove them.
 
 ## Next steps
 
-In this tutorial, you created policies that require iOS devices to enroll in Intune and use the Outlook app to access Exchange Online email. To learn about using Intune with Conditional Access to protect other apps and services, including Exchange ActiveSync clients for Microsoft 365 Exchange Online, see [Set up Conditional Access](conditional-access.md).
+In this tutorial, you created policies that require iOS devices to enroll in Intune and use the Outlook app to access Exchange Online email. To learn about using Intune with Conditional Access to protect other apps and services, including Exchange ActiveSync clients for Microsoft 365 Exchange Online, see [Set up Conditional Access](../../device-security/conditional-access-integration/overview.md).

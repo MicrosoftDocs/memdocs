@@ -65,7 +65,7 @@ In your baseline, at a minimum, include the following security policies:
 
 This section lists the Intune and Microsoft services you can use to create these security policies.
 
-For a more granular list of Windows settings and their recommended values, see [Windows security baselines](../protect/security-baselines.md).
+For a more granular list of Windows settings and their recommended values, see [Windows security baselines](../../device-security/security-baselines/overview.md).
 
 ### Antivirus and scanning
 
@@ -77,10 +77,10 @@ Your policy options:
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise | - [Mobile threat defense partner](../protect/mobile-threat-defense.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| iOS/iPadOS | - [Mobile threat defense partner](../protect/mobile-threat-defense.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | - [Intune Endpoint Security antivirus profile](../protect/endpoint-security-antivirus-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../protect/endpoint-security-antivirus-policy.md) (Microsoft Defender for Endpoint) |
+| Android Enterprise | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
+| iOS/iPadOS | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
+| macOS | - [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus-policy.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus-policy.md) (Microsoft Defender for Endpoint) |
 
 ### Detection and response
 
@@ -92,10 +92,10 @@ Your policy options:
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise | - [Mobile threat defense partner](../protect/mobile-threat-defense.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| iOS/iPadOS | - [Mobile threat defense partner](../protect/mobile-threat-defense.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) |
+| Android Enterprise | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
+| iOS/iPadOS | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
+| macOS | [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/edr-policy.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/edr-policy.md) (Microsoft Defender for Endpoint) |
 
 ### Firewall
 
@@ -107,10 +107,10 @@ Your policy options:
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise | [Mobile threat defense partner](../protect/mobile-threat-defense.md) |
-| iOS/iPadOS | [Mobile threat defense partner](../protect/mobile-threat-defense.md) |
-| macOS | [Intune Endpoint Security firewall profile](../protect/endpoint-security-firewall-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../protect/endpoint-security-firewall-policy.md) (Microsoft Defender for Endpoint) |
+| Android Enterprise | [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) |
+| iOS/iPadOS | [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) |
+| macOS | [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall-policy.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall-policy.md) (Microsoft Defender for Endpoint) |
 
 ### Password policy
 
@@ -128,7 +128,7 @@ Your policy options:
 | Android Open-Source Project (AOSP) | - [Intune settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md) > **Device password** <br/>- [Intune device restrictions template](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) > **Device password** |
 | iOS/iPadOS | - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../../device-configuration/templates/ref-device-restrictions-apple.md) > **Password** |
 | macOS | - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../../device-configuration/settings-catalog/ref-apple-settings.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../../device-configuration/templates/ref-device-restrictions-apple.md) > **Password** |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended) </br>- [Intune device restrictions template](../../device-configuration/templates/ref-device-restrictions-windows.md) > **Password** </br>- [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md) </br>- [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended) </br>- [Intune device restrictions template](../../device-configuration/templates/ref-device-restrictions-windows.md) > **Password** </br>- [Manage Windows Hello for Business when devices enroll](../../device-security/identity-protection/configure-tenant-wide-policy.md) </br>- [Manage Windows Hello for Business after devices enroll](../../device-security/identity-protection/deploy-group-policy.md) |
 
 ### Software updates
 
@@ -141,7 +141,7 @@ Your policy options:
 | Platform | Policy type |
 | --- | --- |
 | Android Enterprise organization owned devices | [Intune device restrictions template](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) > Corporate owned > General > System update |
-| Android Enterprise personally owned devices | Not available <br/><br/>Can use [compliance policies](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) to set a minimum patch level, min/max OS version, and more. |
+| Android Enterprise personally owned devices | Not available <br/><br/>Can use [compliance policies](../../device-security/compliance/ref-android-enterprise-settings.md#personally-owned-work-profile) to set a minimum patch level, min/max OS version, and more. |
 | iOS/iPadOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
 | macOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
 | Windows client | - [Intune feature updates policy](../../device-updates/windows/manage-feature-updates.md) </br>- [Intune quality updates policy](../../device-updates/windows/manage-quality-updates.md) |
@@ -320,13 +320,13 @@ Microsoft recommends the following level 2 security policies:
 
   # [macOS](#tab/macos-disk)
 
-  On macOS devices, use a settings catalog policy (recommended) or an endpoint security policy (deprecated) to [configure and use FileVault](../protect/encrypt-devices-filevault.md) for disk encryption.
+  On macOS devices, use a settings catalog policy (recommended) or an endpoint security policy (deprecated) to [configure and use FileVault](../../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md) for disk encryption.
 
   Secure Enclave is built into the operating system and automatically enabled. For more specific information, see [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
 
   # [Windows](#tab/windows-disk)
 
-  On Windows devices, use Intune endpoint protection policies that [manage BitLocker, including TPM](../protect/encrypt-devices.md) and [manage Windows settings, including secure boot](../protect/endpoint-protection-windows-10.md#windows-encryption).
+  On Windows devices, use Intune endpoint protection policies that [manage BitLocker, including TPM](../../device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md) and [manage Windows settings, including secure boot](../../device-configuration/endpoint-security-policies/ref-endpoint-protection-settings-windows.md#windows-encryption).
 
 ---
 
@@ -441,9 +441,9 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Set up Microsoft Tunnel** for your enrolled Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources by using modern authentication and Conditional Access.
 
-    Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, see [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
+    Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, see [Microsoft Tunnel for Microsoft Intune](../../device-security/microsoft-tunnel/overview.md).
 
-  - **Use Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an extra license.
+  - **Use Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../../device-security/microsoft-tunnel/mam.md) is available as an Intune add-on that requires an extra license.
 
     For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
@@ -459,7 +459,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   On Windows devices, the built-in local admin account can't be deleted and has full permissions to the device. A LAPS policy helps you manage and secure this account, which is an important step in securing your organization's devices.
 
-  For more information, see [Windows LAPS in Intune](../protect/windows-laps-overview.md).
+  For more information, see [Windows LAPS in Intune](../../device-security/laps/overview.md).
 
   ---
 
@@ -471,7 +471,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
   - Support requests by users to elevate a managed process.
   - Allow for automatic elevations of files that just need to run without any user interruption.
 
-  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+  [Endpoint Privilege Management](../../epm/overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 

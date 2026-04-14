@@ -20,9 +20,9 @@ This article lists the compliance settings you can configure for Android (AOSP) 
 * Device properties
 * System security
 
- Devices are also governed by tenant-wide [compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings). To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
+ Devices are also governed by tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings). To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
-To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
 
 This feature applies to:
 
@@ -30,7 +30,7 @@ This feature applies to:
 
 ## Before you begin
 
-To access these settings, [create an Android (AOSP) compliance policy](create-compliance-policy.md#create-the-policy). When prompted to select a **Platform**, choose **Android (AOSP)**.
+To access these settings, [create an Android (AOSP) compliance policy](./create-policy.md#create-the-policy). When prompted to select a **Platform**, choose **Android (AOSP)**.
 
 ## Device Health
 
@@ -107,5 +107,5 @@ Compliance reports are currently not available for Android (AOSP) devices. This 
 
 ## Next steps
 
-* [Add actions for noncompliant devices](actions-for-noncompliance.md)
+* [Add actions for noncompliant devices](./configure-noncompliance-actions.md)
 * [Set device restrictions for AOSP devices](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)

@@ -15,9 +15,9 @@ ms.collection:
 
 # Use Endpoint Privilege Management to transition users from administrator to standard user
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
-[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 A common scenario for customers who want to use Endpoint Privilege Management is to reduce the number of local administrators in their environment. This scenario adheres to the Zero Trust principle of least privilege. This document steps through the steps a customer could follow to use EPM to move users from administrators to standard users with minimal disruption.
 
@@ -101,7 +101,7 @@ Detections are defined as the set of attributes used to identify an application 
 - Use strong attributes or multiple attributes to increase detection strength.
 - Either a file hash or certificate is mandatory.
 
-For more security recommendations, see [Security Recommendations](epm-plan.md#security-recommendations).
+For more security recommendations, see [Security Recommendations](./plan.md#security-recommendations).
 
 ### Steps to create a rule using elevation report data
 
@@ -123,7 +123,7 @@ For more security recommendations, see [Security Recommendations](epm-plan.md#se
 12. Assign to a group (for example Developers)
 13. **Select**, **Review**, and **Save**
 
-For more details on creating a rule, see [Create elevation rules](epm-elevation-rules.md).
+For more details on creating a rule, see [Create elevation rules](./elevation-rules.md).
 
 ### Confirm the rule is functioning
 
@@ -154,7 +154,7 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
 8. Assign to a group (for example `Developers`)
 9. Select **Save**
 
-For more information on the Local Users and Groups profiles, see [Account protection](endpoint-security-account-protection-policy.md)
+For more information on the Local Users and Groups profiles, see [Account protection](../device-configuration/endpoint-security-policies/account-protection-policy.md)
 
 ## Phase 5: Monitoring
 
@@ -169,4 +169,4 @@ For more information on the Local Users and Groups profiles, see [Account protec
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Support approved requests >](epm-support-approved.md)
+> [Next: Support approved requests >](./support-approved.md)

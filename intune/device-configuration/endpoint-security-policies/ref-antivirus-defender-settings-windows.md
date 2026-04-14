@@ -1,8 +1,6 @@
 ---
 title: Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune
 description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 03/27/2025
 ms.topic: reference
 ms.collection:
@@ -14,7 +12,7 @@ ms.reviewer: laarrizz
 
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
-View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows in Microsoft Intune.
+View details about the [endpoint security](./manage-policies.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows in Microsoft Intune.
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
@@ -29,7 +27,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
 ## Cloud protection
 
 - **Turn on cloud-delivered protection**  
-  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#allowcloudprotection)
+  CSP: [AllowCloudProtection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowcloudprotection)
 
   By default, Defender on Windows desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
@@ -38,7 +36,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
   - **Yes** - Cloud-delivered protection is turned on.  Device users can't change this setting.
 
 - **Cloud-delivered protection level**  
-  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#cloudblocklevel)
+  CSP: [CloudBlockLevel](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#cloudblocklevel)
 
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
   - **Not configured** (*default*) - Default Defender blocking level.
@@ -47,7 +45,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
   - **Zero tolerance** - Block all unknown executable files.
 
 - **Defender cloud extended timeout in seconds**  
-  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#cloudextendedtimeout)
 
   Defender Antivirus automatically blocks suspicious files for 10 seconds while it scans them in the cloud to make sure they're safe. You can add up to 50 additional seconds to this timeout.
 
@@ -56,12 +54,12 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
 > [!WARNING]
 > **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
 >
-> For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
+> For more information, see [Exclusions overview](../../intune-service/protect/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
 
 The following settings are available in the Microsoft Defender Antivirus profile:
 
 - **Defender local admin merge**  
-  CSP: [Configuration/DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)
+  CSP: [Configuration/DisableLocalAdminMerge](../../intune-service/protect/windows/client-management/mdm/defender-csp)
 
   This setting controls if exclusion list settings that are configured by a local administrator merge with managed settings from Intune policy. This setting applies to lists such as threats and exclusions.
 
@@ -77,17 +75,17 @@ The following settings are available in the following profiles:
 For each setting in this group, you can expand the setting, select **Add**, and then specify a value for the exclusion.
 
 - **Defender processes to exclude**  
-  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#excludedprocesses)
+  CSP: [ExcludedProcesses](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#excludedprocesses)
 
   Specify a list of files opened by processes to ignore during a scan. The process itself isn't excluded from the scan.
 
 - **File extensions to exclude from scans and real-time protection**  
-  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#excludedextensions)
+  CSP: [ExcludedExtensions](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#excludedextensions)
 
   Specify a list of file type extensions to ignore during a scan.
 
 - **Defender files and folders to exclude**  
-  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#excludedpaths)
+  CSP: [ExcludedPaths](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#excludedpaths)
 
   Specify a list of files and directory paths to ignore during a scan.
 
@@ -100,7 +98,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Turn on real-time protection**  
-  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowrealtimemonitoring)
 
   Require Defender on Windows desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
@@ -108,7 +106,7 @@ These settings are available in the following profiles:
   - **Yes** - Enforce use of real-time monitoring. Device users can't change this setting.
 
 - **Enable on access protection**  
-  CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#allowonaccessprotection)
+  CSP: [AllowOnAccessProtection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowonaccessprotection)
   Configure virus protection that's continuously active, as opposed to on demand.
 
   - **Not Configured** (*default*) - The setting is restored to the system default.
@@ -116,7 +114,7 @@ These settings are available in the following profiles:
   - **Yes** - On Access Protection is active on devices.
 
 - **Monitoring for incoming and outgoing files**  
-  CSP: [Defender/RealTimeScanDirection](/windows/client-management/mdm/policy-csp-defender)
+  CSP: [Defender/RealTimeScanDirection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
 
   Configure this setting to determine which NTFS file and program activity is monitored.
   - **Monitor all files** (*default*)
@@ -124,7 +122,7 @@ These settings are available in the following profiles:
   - **Only monitor outgoing files**
 
 - **Turn on behavior monitoring**  
-  CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#allowbehaviormonitoring)
+  CSP: [AllowBehaviorMonitoring](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowbehaviormonitoring)
 
   By default, Defender on Windows desktop devices uses the Behavior Monitoring functionality.
 
@@ -133,7 +131,7 @@ These settings are available in the following profiles:
   - **Yes** - Enforce use of real-time behavior monitoring. Device users can't change this setting.
 
 - **Turn on network protection**  
-  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection)
+  CSP: [EnableNetworkProtection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#enablenetworkprotection)
 
   Protect device users using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. Protection includes preventing third-party browsers from connecting to dangerous sites.
 
@@ -142,7 +140,7 @@ These settings are available in the following profiles:
   - **Yes** - Network protection is turned on. Device users can't change this setting.
 
 - **Scan all downloaded files and attachments**  
-  CSP: [AllowIOAVProtection](/windows/client-management/mdm/policy-csp-defender#allowioavprotection)
+  CSP: [AllowIOAVProtection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowioavprotection)
 
   Configure Defender to scan all downloaded files and attachments.
 
@@ -151,7 +149,7 @@ These settings are available in the following profiles:
   - **Yes** - Defender scans all downloaded files and attachments. Device users can't change this setting.
 
 - **Scan scripts that are used in Microsoft browsers**  
-  CSP: [AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender)
+  CSP: [AllowScriptScanning](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
 
   Configure Defender to scan scripts.
 
@@ -160,7 +158,7 @@ These settings are available in the following profiles:
   - **Yes** - Defender scans scripts. Device users can't change this setting.
 
 - **Scan network files**  
-  CSP: [AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#allowscanningnetworkfiles)
+  CSP: [AllowScanningNetworkFiles](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowscanningnetworkfiles)
 
   Configure Defender to scan network files.
 
@@ -169,7 +167,7 @@ These settings are available in the following profiles:
   - **Yes** - Turn on scanning of network files. Device users can't change this setting.
 
 - **Scan emails**  
-  CSP: [AllowEmailScanning](/windows/client-management/mdm/policy-csp-defender#allowemailscanning)
+  CSP: [AllowEmailScanning](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowemailscanning)
 
   Configure Defender to scan incoming email.
 
@@ -186,7 +184,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Number of days (0-90) to keep quarantined malware**  
-  CSP: [DaysToRetainCleanedMalware](/windows/client-management/mdm/policy-csp-defender#daystoretaincleanedmalware)
+  CSP: [DaysToRetainCleanedMalware](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#daystoretaincleanedmalware)
 
   Specify the number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and doesn't automatically remove them.
 
@@ -199,7 +197,7 @@ These settings are available in the following profiles:
   - **Send all samples automatically**
 
 - **Action to take on potentially unwanted apps**  
-  CSP: [PUAProtection](/windows/client-management/mdm/policy-csp-defender#puaprotection)
+  CSP: [PUAProtection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#puaprotection)
 
   Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
 
@@ -209,7 +207,7 @@ These settings are available in the following profiles:
   - **Audit mode** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Actions for detected threats**  
-  CSP: [ThreatSeverityDefaultAction](/windows/client-management/mdm/policy-csp-defender#threatseveritydefaultaction)
+  CSP: [ThreatSeverityDefaultAction](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#threatseveritydefaultaction)
 
   Specify the action that Defender takes for detected malware based on the malware's threat level.
 
@@ -238,7 +236,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Scan archive files**  
-  CSP: [AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#allowarchivescanning)
+  CSP: [AllowArchiveScanning](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowarchivescanning)
 
   Configure Defender to scan archive files, like ZIP or CAB files.
 
@@ -248,7 +246,7 @@ Learn more
   - **Yes** - Enable scans of archive files. Device users can't change this setting.
 
 - **Use low CPU priority for scheduled scans**  
-  CSP: [EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#enablelowcpupriority)
+  CSP: [EnableLowCPUPriority](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#enablelowcpupriority)
 
   Configure CPU priority for scheduled scans.
   - **Not configured** (*default*) - The setting returns to the system default, in which no changes to CPU priority are made.
@@ -256,7 +254,7 @@ Learn more
   - **Yes** - Low CPU priority will be used during scheduled scans. Device users can't change this setting.
 
 - **Disable catch-up full scan**  
-  CSP: [DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#disablecatchupfullscan)
+  CSP: [DisableCatchupFullScan](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#disablecatchupfullscan)
 
   Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
@@ -265,7 +263,7 @@ Learn more
   - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **Disable catchup quick scan**  
-  CSP: [DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#disablecatchupquickscan)
+  CSP: [DisableCatchupQuickScan](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#disablecatchupquickscan)
 
   Configure catch-up scans for scheduled quick scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
@@ -274,12 +272,12 @@ Learn more
   - **Yes** - Catch-up scans for scheduled quick scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
 - **CPU usage limit per scan**  
-  CSP: [AvgCPULoadFactor](/windows/client-management/mdm/policy-csp-defender#avgcpuloadfactor)
+  CSP: [AvgCPULoadFactor](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#avgcpuloadfactor)
 
   Specify as a percent from zero to 100, the average CPU load factor for the Defender scan.
 
 - **Scan mapped network drives during full scan**  
-  CSP: [AllowFullScanOnMappedNetworkDrives](/windows/client-management/mdm/policy-csp-defender#allowfullscanonmappednetworkdrives)
+  CSP: [AllowFullScanOnMappedNetworkDrives](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowfullscanonmappednetworkdrives)
 
   Configure Defender to scan mapped network drives.
 
@@ -288,7 +286,7 @@ Learn more
   - **Yes** - Enable scans of mapped network drives. Device users can't change this setting.
 
 - **Run daily quick scan at**  
-  CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#schedulequickscantime)
+  CSP: [ScheduleQuickScanTime](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#schedulequickscantime)
 
   Select the time of day that Defender quick scans run. This setting applies only when a device runs a quick scan and doesn't interact with the following three settings:
 
@@ -299,7 +297,7 @@ Learn more
   By default, *Run daily quick scan at* is set to **Not configured**.
 
 - **Scan type**  
-  CSP: [ScanParameter](/windows/client-management/mdm/policy-csp-defender#scanparameter)
+  CSP: [ScanParameter](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#scanparameter)
 
   Select the type of scan that Defender runs. This setting interacts with the settings *Day of week to run a scheduled scan* and *Time of day to run a scheduled scan*.
 
@@ -327,19 +325,19 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Enter how often (0-24 hours) to check for security intelligence updates**  
-  CSP: [SignatureUpdateInterval](/windows/client-management/mdm/policy-csp-defender)
+  CSP: [SignatureUpdateInterval](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
 
   Specify the interval from zero to 24 (in hours) that is used to check for signatures. A value of zero results in no check for new signatures. A value of 2 will check every two hours, and so on.
 
 - **Define file shares for downloading definition updates**  
-  CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#signatureupdatefallbackorder)
+  CSP: [SignatureUpdateFallbackOrder](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#signatureupdatefallbackorder)
 
   Manage locations, like a UNC file share, as a download source location to get definition updates. After definition updates successfully download from a specified source, the remaining sources in the list won't be contacted.
 
   You can **Add** individual locations, or **Import** a list of locations as a .csv file.
 
 - **Define the order of sources for downloading definition updates**  
-  CSP: [SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#signatureupdatefilesharessources)
+  CSP: [SignatureUpdateFileSharesSources](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#signatureupdatefilesharessources)
 
   Specify in which order to contact source locations you've specified, to get definition updates. After definition updates have successfully downloaded from one specified source, the remaining sources in the list won't be contacted.
 
@@ -352,7 +350,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Allow user access to Microsoft Defender app**  
-  CSP: [AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#allowuseruiaccess)
+  CSP: [AllowUserUIAccess](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#allowuseruiaccess)
 
 - **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
 

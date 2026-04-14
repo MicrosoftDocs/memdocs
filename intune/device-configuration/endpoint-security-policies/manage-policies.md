@@ -1,8 +1,6 @@
 ---
 title: Manage endpoint security policies in Microsoft Intune
 description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 12/04/2025
 ms.topic: how-to
 ms.collection:
@@ -30,8 +28,8 @@ When implementing endpoint security policies alongside other Intune policy types
 
 **Common conflict scenarios**:
 
-- **Security baselines** can set non-default values for settings to comply with recommended configurations, while endpoint security and device configuration policies typically default to *Not configured* - mixing these approaches can create conflicts ([resolve conflicts](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines)).
-- **Device configuration policies** managing the same settings as endpoint security policies ([resolve conflicts](../../device-configuration/monitor-device-profile.md#view-conflicts)).
+- **Security baselines** can set non-default values for settings to comply with recommended configurations, while endpoint security and device configuration policies typically default to *Not configured* - mixing these approaches can create conflicts ([resolve conflicts](../../device-security/security-baselines/monitor-baselines.md#resolve-conflicts-for-security-baselines)).
+- **Device configuration policies** managing the same settings as endpoint security policies ([resolve conflicts](../monitor-device-profile.md#view-conflicts)).
 - **Multiple endpoint security policies** setting different values for the same setting ([manage conflicts](#manage-policy-conflicts)).
 
 When conflicts occur, affected settings might fail to apply properly. Plan your policy architecture and use the linked guidance to identify and resolve conflicts.
@@ -42,28 +40,28 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 
 :::image type="content" source="./media/endpoint-security-policy/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
 
-**[Account protection](../protect/endpoint-security-account-protection-policy.md)**  
+**[Account protection](./account-protection-policy.md)**  
 
 - **Purpose**: Protect user identities and accounts through modern authentication methods
 - **Platform support**: Windows
 - **Available profiles**: Account protection, Local admin password solution (Windows LAPS), Local user group membership
 - **Use case**: Implement passwordless authentication and credential protection
 
-**[Antivirus](../protect/endpoint-security-antivirus-policy.md)**  
+**[Antivirus](./antivirus-policy.md)**  
 
 - **Purpose**: Configure and manage antivirus protection settings
 - **Platform support**: Windows, macOS, Linux
 - **Available profiles**: Defender Update controls, Microsoft Defender Antivirus, Microsoft Defender Antivirus exclusions, Windows Security experience, macOS Endpoint security antivirus
 - **Use case**: Centrally manage Microsoft Defender Antivirus policies on Windows devices
 
-**[App Control for Business](../protect/endpoint-security-app-control-policy.md)**  
+**[App Control for Business](./app-control-policy.md)**  
 
-- **Purpose**: Control which applications can run on Windows devices using [Windows Defender Application Control (WDAC)](/windows/security/application-security/application-control/windows-defender-application-control/wdac)
+- **Purpose**: Control which applications can run on Windows devices using [Windows Defender Application Control (WDAC)](../../intune-service/protect/windows/security/application-security/application-control/windows-defender-application-control/wdac)
 - **Platform support**: Windows
 - **Available profiles**: Windows Defender Application Control (WDAC)
 - **Use case**: Implement application allowlisting and control software execution
 
-**[Attack surface reduction](../protect/endpoint-security-asr-policy.md)**  
+**[Attack surface reduction](./attack-surface-reduction-policy.md)**  
 
 - **Purpose**: Reduce potential attack vectors and system vulnerabilities
 - **Platform support**: Windows
@@ -71,14 +69,14 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Use case**: Harden devices against common attack methods and techniques
 - **Requirements**: Microsoft Defender Antivirus must be the primary antivirus solution
 
-**[Disk encryption](../protect/endpoint-security-disk-encryption-policy.md)**  
+**[Disk encryption](./disk-encryption-policy.md)**  
 
 - **Purpose**: Manage built-in encryption methods for data protection
 - **Platform support**: Windows, macOS
 - **Available profiles**: BitLocker, Personal Data Encryption (PDE), macOS FileVault
 - **Use case**: Ensure data-at-rest protection with native encryption technologies
 
-**[Endpoint detection and response](../protect/endpoint-security-edr-policy.md)**  
+**[Endpoint detection and response](./edr-policy.md)**  
 
 - **Purpose**: Configure Microsoft Defender for Endpoint integration and onboarding
 - **Platform support**: Windows, macOS, Linux
@@ -86,7 +84,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Use case**: Enable advanced threat detection and response capabilities
 - **Requirements**: Microsoft Defender for Endpoint licensing and tenant connection
 
-**[Firewall](../protect/endpoint-security-firewall-policy.md)**  
+**[Firewall](./firewall-policy.md)**  
 
 - **Purpose**: Configure built-in firewall protection
 - **Platform support**: Windows, macOS
@@ -97,12 +95,12 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 
 Endpoint security policies include the following management capabilities beyond basic policy deployment:
 
-**[Reusable settings groups](../protect/reusable-settings-groups.md)**: Create standardized configurations that can be shared across multiple policies, reducing administrative overhead and ensuring consistency. Supported by:
+**[Reusable settings groups](../../device-security/reusable-settings-groups.md)**: Create standardized configurations that can be shared across multiple policies, reducing administrative overhead and ensuring consistency. Supported by:
 
 - **Firewall** > *Windows Firewall rules* profile (Windows platform)
 - **Attack surface reduction** > *Device control* profile (Windows platform)
 
-**[Security settings management through Microsoft Defender portal](../protect/mde-security-integration.md)**: When devices have Microsoft Defender for Endpoint but aren't enrolled with Intune, you can use select endpoint security policies (Antivirus, Attack Surface Reduction, EDR) directly from the Defender portal. This provides:
+**[Security settings management through Microsoft Defender portal](../../device-security/microsoft-defender/security-settings-management.md)**: When devices have Microsoft Defender for Endpoint but aren't enrolled with Intune, you can use select endpoint security policies (Antivirus, Attack Surface Reduction, EDR) directly from the Defender portal. This provides:
 
 - Extended security management to devices that aren't enrolled with Intune in your environment.
 - Unified policy management experience through the Defender portal.
@@ -138,7 +136,7 @@ For detailed profile-specific requirements, see [Custom role considerations](#cu
 
 > [!IMPORTANT]
 >
-> The granular permission of *Antivirus* for endpoint security policies might be temporarily visible in some Tenants. This permission isn't released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, well announce its availability in the [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
+> The granular permission of *Antivirus* for endpoint security policies might be temporarily visible in some Tenants. This permission isn't released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, well announce its availability in the [What's new in Microsoft Intune](../../intune-service/fundamentals/whats-new.md) article.
 
 ### Built-in RBAC roles
 
@@ -154,7 +152,7 @@ The following Intune built-in roles provide access to endpoint security workload
 
 **Defender portal integration**: Security settings management through the Defender portal uses the same Intune RBAC permissions.
 
-**[Multi Admin Approval](../fundamentals/multi-admin-approval.md)**: Role modifications might require dual administrator approval depending on your organization's governance settings.
+**[Multi Admin Approval](../../intune-service/fundamentals/multi-admin-approval.md)**: Role modifications might require dual administrator approval depending on your organization's governance settings.
 
 ## Create endpoint security policies
 
@@ -173,7 +171,7 @@ Follow this general workflow for creating endpoint security policies:
    - **Basics**: Provide a descriptive name and optional description for the profile.
    - **Configuration settings**: Expand each group of settings and configure the settings you want to manage with this profile. When done configuring settings, select **Next**.
    - **Scope tags**: Choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile (optional).
-   - **Assignments**: Select the groups to receive this profile. See [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
+   - **Assignments**: Select the groups to receive this profile. See [Assign user and device profiles](../assign-device-profile.md).
    - **Review + create**: Review your configuration and select **Create** when ready. The new profile then appears in the policy list.
 
 ## Advanced policy management
@@ -229,7 +227,7 @@ Prevent and resolve policy conflicts through strategic planning and monitoring:
 4. **Check baselines**: Determine if security baselines are setting non-default values that conflict with other policies.
 5. **Apply resolution**: Use policy-specific guidance to resolve conflicts systematically.
 
-**Resolution resources**: [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) and [Monitor security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status).
+**Resolution resources**: [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) and [Monitor security baselines](../../device-security/security-baselines/monitor-baselines.md#troubleshoot-using-per-setting-status).
 
 ## Integration with Microsoft Defender for Endpoint
 
@@ -260,7 +258,7 @@ Many endpoint security policies have deep integration with Microsoft Defender fo
 - **Unified security posture**: Centralized visibility across endpoint security policies and threat detection.
 - **Advanced reporting**: Combined device compliance and threat intelligence data.
 - **Cross-platform management**: Consistent security policy deployment across Windows, macOS, and Linux through Defender agent.
-- **Security settings management**: Manage select endpoint security policies (Antivirus, Attack Surface Reduction, EDR) on non-enrolled devices through the Defender portal. See [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+- **Security settings management**: Manage select endpoint security policies (Antivirus, Attack Surface Reduction, EDR) on non-enrolled devices through the Defender portal. See [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md).
 
 ### Prerequisites for Defender integration
 
@@ -271,8 +269,8 @@ Many endpoint security policies have deep integration with Microsoft Defender fo
 
 ## Next steps
 
-- [Explore the Endpoint security overview](../protect/endpoint-security.md)
-- [Review security baselines for comprehensive security configurations](../protect/security-baselines.md)
-- [Learn about reusable settings groups](../protect/reusable-settings-groups.md)
-- [Configure Microsoft Defender for Endpoint integration](../protect/microsoft-defender-integrate.md)
-- [Understand device protection strategies](../protect/device-protect.md)
+- [Explore the Endpoint security overview](./overview.md)
+- [Review security baselines for comprehensive security configurations](../../device-security/security-baselines/overview.md)
+- [Learn about reusable settings groups](../../device-security/reusable-settings-groups.md)
+- [Configure Microsoft Defender for Endpoint integration](../../device-security/microsoft-defender/configure-integration.md)
+- [Understand device protection strategies](../../device-security/index.md)

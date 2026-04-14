@@ -94,10 +94,10 @@ Access is granted on remediation:
 
 ## Next steps
 
-- [Integrate Check Point Harmony Mobile with Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
+- [Integrate Check Point Harmony Mobile with Intune](./setup-checkpoint-harmony.md)
 
-- [Set up Harmony Mobile Protect app](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Harmony Mobile Protect app](./add-assign-apps.md)
 
-- [Create Check Point Harmony Mobile device compliance policy](mtd-device-compliance-policy-create.md)
+- [Create Check Point Harmony Mobile device compliance policy](./create-compliance-policy.md)
 
-- [Enable Check Point Harmony Mobile MTD connector](mtd-connector-enable.md)
+- [Enable Check Point Harmony Mobile MTD connector](./enable-connector.md)

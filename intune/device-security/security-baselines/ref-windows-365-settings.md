@@ -36,9 +36,9 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
-- [Use security baselines](../protect/security-baselines.md)
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)
-- [Manage security baselines](../protect/security-baselines-configure.md)
+- [Use security baselines](./overview.md)
+- [Change the baseline version for a profile](./configure-baselines.md#update-a-baseline-profile-to-the-latest-version)
+- [Manage security baselines](./configure-baselines.md)
 
 ::: zone pivot="win365-24h1"
 
@@ -52,78 +52,78 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Prevent enabling lock screen camera**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventenablinglockscreencamera)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventenablinglockscreencamera)
 
 - **Prevent enabling lock screen slide show**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventlockscreenslideshow)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#preventlockscreenslideshow)
 
 #### MS Security Guide
 
 - **Apply UAC restrictions to local accounts on network logons**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#applyuacrestrictionstolocalaccountsonnetworklogon)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#applyuacrestrictionstolocalaccountsonnetworklogon)
 
 - **Configure SMB v1 client driver**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1clientdriver)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1clientdriver)
 
   - **Configure MrxSmb10 driver**\
     Baseline default: *Disable driver (recommended)*
 
 - **Configure SMB v1 server**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1server)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#configuresmbv1server)
 
 - **Enable Structured Exception Handling Overwrite Protection (SEHOP)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#enablestructuredexceptionhandlingoverwriteprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#enablestructuredexceptionhandlingoverwriteprotection)
 
 - **WDigest Authentication (disabling may require KB2871997)**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#wdigestauthentication)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-mssecurityguide?WT.mc_id=Portal-fx#wdigestauthentication)
 
 #### MSS (Legacy)
 
 - **MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipv6sourceroutingprotectionlevel)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipv6sourceroutingprotectionlevel)
 
   - **DisableIPSourceRouting IPv6 (Device)**\
     Baseline default: *Highest protection, source routing is completely disabled*
 
 - **MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#ipsourceroutingprotectionlevel)
 
   - **DisableIPSourceRouting (Device)**\
     Baseline default: *Enabled*  *Highest protection, source routing is completely disabled*
 
 - **MSS: (EnableCMPRedirect) Allow ICMP redirects to override OSPF generated routes**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowicmpredirectstooverrideospfgeneratedroutes)
 
 - **MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-msslegacy?WT.mc_id=Portal-fx#allowthecomputertoignorenetbiosnamereleaserequestsexceptfromwinsservers)
 
 #### Network > DNS Client
 
 - **Turn off multicast name resolution**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-dnsclient?WT.mc_id=Portal-fx#turn_off_multicast)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-dnsclient?WT.mc_id=Portal-fx#turn_off_multicast)
 
 #### Network > Network Connections
 
 - **Prohibit use of Internet Connection Sharing on your DNS domain network**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-networkconnections?WT.mc_id=Portal-fx#nc-showsharedaccessui)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-networkconnections?WT.mc_id=Portal-fx#nc-showsharedaccessui)
 
 #### Network > Network Provider
 
 - **Hardened UNC Paths**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#hardeneduncpaths)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#hardeneduncpaths)
   - **Hardened UNC Paths: (Device)**\
     Baseline defaults:
 
@@ -136,31 +136,31 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Prohibit connection to non-domain networks when connected to domain authenticated network**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-windowsconnectionmanager?WT.mc_id=Portal-fx#prohitconnectiontonondomainnetworkswhenconnectedtodomainauthenticatednetwork)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsconnectionmanager?WT.mc_id=Portal-fx#prohitconnectiontonondomainnetworkswhenconnectedtodomainauthenticatednetwork)
 
 #### Start Menu and Taskbar > Notifications
 
 - **Turn off toast notifications on the lock screen (User)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification)
 
 #### System > Credentials Delegation
 
 - **Encryption Oracle Remediation**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-credssp?WT.mc_id=Portal-fx#allowencryptionoracle)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-credssp?WT.mc_id=Portal-fx#allowencryptionoracle)
   - **Protection Level: (Device)**\
     Baseline default: *Force Updated Clients*
 
 - **Remote host allows delegation of non-exportable credentials**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-credentialsdelegation?WT.mc_id=Portal-fx#remotehostallowsdelegationofnonexportablecredentials)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-credentialsdelegation?WT.mc_id=Portal-fx#remotehostallowsdelegationofnonexportablecredentials)
 
 #### System > Device Installation > Device Installation Restrictions
 
 - **Prevent installation of devices using drivers that match these device setup classes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
   - **Prevented Classes**\
     Baseline default: *{d48179be-ec20-11d1-b6b8-00c04fa372a7}*
 
@@ -171,7 +171,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Boot-Start Driver Initialization Policy**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-system?WT.mc_id=Portal-fx#bootstartdriverinitialization)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-system?WT.mc_id=Portal-fx#bootstartdriverinitialization)
   - **Choose the boot-start drivers that can be initialized:**\
     Baseline default: *Good, unknown and bad but critical*
 
@@ -179,7 +179,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Configure registry policy processing**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-grouppolicy?WT.mc_id=Portal-fx#cse-registry)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-grouppolicy?WT.mc_id=Portal-fx#cse-registry)
 
   - **Do not apply during periodic background processing (Device)**\
     Baseline default: *False*
@@ -190,23 +190,23 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Turn off downloading of print drivers over HTTP**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp)
 
 - **Turn off Internet download for Web publishing and online ordering wizards**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disableinternetdownloadforwebpublishingandonlineorderingwizards)
 
 #### System > Remote Assistance
 
 - **Configure Solicited Remote Assistance**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remoteassistance?WT.mc_id=Portal-fx#solicitedremoteassistance)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remoteassistance?WT.mc_id=Portal-fx#solicitedremoteassistance)
 
 #### System > Remote Procedure Call
 
 - **Restrict Unauthenticated RPC clients**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remoteprocedurecall?WT.mc_id=Portal-fx#restrictunauthenticatedrpcclients)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remoteprocedurecall?WT.mc_id=Portal-fx#restrictunauthenticatedrpcclients)
   - **RPC Runtime Unauthenticated Client Restriction to Apply:**\
     Baseline default: *Authenticated*
 
@@ -214,23 +214,23 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Allow Microsoft accounts to be optional**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-appruntime?WT.mc_id=Portal-fx#allowmicrosoftaccountstobeoptional)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-appruntime?WT.mc_id=Portal-fx#allowmicrosoftaccountstobeoptional)
 
 #### Windows Components > AutoPlay Policies
 
 - **Disallow Autoplay for non-volume devices**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#disallowautoplayfornonvolumedevices)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#disallowautoplayfornonvolumedevices)
 
 - **Set the default behavior for AutoRun**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#setdefaultautorunbehavior)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#setdefaultautorunbehavior)
   - **Default AutoRun Behavior**\
     Baseline default: *Do not execute any autorun commands*
 
 - **Turn off Autoplay**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#turnoffautoplay)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-autoplay?WT.mc_id=Portal-fx#turnoffautoplay)
   - **Turn off Autoplay on:**\
     Baseline default: *All drives*
 
@@ -238,13 +238,13 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Enumerate administrator accounts on elevation**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-credentialsui?WT.mc_id=Portal-fx#enumerateadministrators)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-credentialsui?WT.mc_id=Portal-fx#enumerateadministrators)
 
 #### Windows Components > Event Log Service > Application
 
 - **Specify the maximum log file size (KB)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizeapplicationlog)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizeapplicationlog)
   - **Maximum Log Size (KB)**\
     Baseline default: *32768*
 
@@ -252,7 +252,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Specify the maximum log file size (KB)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesecuritylog)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesecuritylog)
   - **Maximum Log Size (KB)**\
     Baseline default: *196608*
 
@@ -260,7 +260,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Specify the maximum log file size (KB)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesystemlog)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-eventlogservice?WT.mc_id=Portal-fx#specifymaximumfilesizesystemlog)
   - **Maximum Log Size (KB)**\
     Baseline default: *32768*
 
@@ -268,247 +268,247 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Configure Windows Defender SmartScreen**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
   - **Pick one of the following settings: (Device)**\
     Baseline default: *Warn and prevent bypass*
 
 - **Turn off Data Execution Prevention for Explorer**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffdataexecutionpreventionforexplorer)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffdataexecutionpreventionforexplorer)
 
 - **Turn off heap termination on corruption**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption)
 
 #### Windows Components > Internet Explorer > Internet Control Panel > Advanced Page
 
 - **Allow software to run or install even if the signature is invalid**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowsoftwarewhensignatureisinvalid)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowsoftwarewhensignatureisinvalid)
 
 - **Check for server certificate revocation**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checkservercertificaterevocation)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checkservercertificaterevocation)
 
 - **Check for signatures on downloaded programs**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checksignaturesondownloadedprograms)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#checksignaturesondownloadedprograms)
 
 - **Do not allow ActiveX controls to run in Protected Mode when Enhanced Protected Mode is enabled**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowactivexcontrolsinprotectedmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowactivexcontrolsinprotectedmode)
 
 - **Turn off encryption support**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableencryptionsupport)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableencryptionsupport)
   - **Secure Protocol combinations**\
     Baseline default: *Use TLS 1.1 and TLS 1.2*
 
 - **Turn on 64-bit tab processes when running in Enhanced Protected Mode on 64-bit versions of Windows**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableprocessesinenhancedprotectedmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableprocessesinenhancedprotectedmode)
 
 - **Turn on Enhanced Protected Mode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowenhancedprotectedmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowenhancedprotectedmode)
 
 #### Windows Components > Internet Explorer > Internet Control Panel
 
 - **Prevent ignoring certificate errors**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableignoringcertificateerrors)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableignoringcertificateerrors)
 
 #### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Internet Zone
 
 - **Access data sources across domains**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowaccesstodatasources)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowaccesstodatasources)
   - **Access data sources across domains**\
     Baseline default: *Disable*
 
 - **Allow cut, copy or paste operations from the clipboard via script**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowcopypasteviascript)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowcopypasteviascript)
   - **Allow paste operations via script**\
     Baseline default: *Disable*
 
 - **Allow drag and drop or copy and paste files**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowdraganddropcopyandpastefiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowdraganddropcopyandpastefiles)
   - **Allow drag and drop or copy and paste files**\
     Baseline default: *Disable*
 
 - **Allow loading of XAML files**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowloadingofxamlfiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowloadingofxamlfiles)
   - **XAML Files**\
     Baseline default: *Disable*
 
 - **Allow only approved domains to use ActiveX controls without prompt**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowonlyapproveddomainstouseactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowonlyapproveddomainstouseactivexcontrols)
   - **Only allow approved domains to use ActiveX controls without prompt**\
     Baseline default: *Enable*
 
 - **Allow only approved domains to use the TDC ActiveX control**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
   - **Only allow approved domains to use the TDC ActiveX control**\
     Baseline default: *Enable*
 
 - **Allow script-initiated windows without size or position constraints**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptinitiatedwindows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptinitiatedwindows)
   - **Allow script-initiated windows without size or position constraints**\
     Baseline default: *Disable*
 
 - **Allow scripting of Internet Explorer WebBrowser controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptingofinternetexplorerwebbrowsercontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptingofinternetexplorerwebbrowsercontrols)
   - **Internet Explorer web browser control**\
     Baseline default: *Disable*
 
 - **Allow scriptlets**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptlets)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowscriptlets)
   - **Scriptlets**\
     Baseline default: *Disable*
 
 - **Allow updates to status bar via script**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowupdatestostatusbarviascript)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowupdatestostatusbarviascript)
   - **Status bar updates via script**\
     Baseline default: *Disable*
 
 - **Allow VBScript to run in Internet Explorer**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowvbscripttorunininternetexplorer)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowvbscripttorunininternetexplorer)
   - **Allow VBScript to run in Internet Explorer**\
     Baseline default: *Disable*
 
 - **Automatic prompting for file downloads**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowautomaticpromptingforfiledownloads)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowautomaticpromptingforfiledownloads)
   - **Automatic prompting for file downloads**\
     Baseline default: *Disable*
 
 - **Don't run antimalware programs against ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedonotrunantimalwareagainstactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedonotrunantimalwareagainstactivexcontrols)
   - **Don't run antimalware programs against ActiveX controls**\
     Baseline default: *Disable*
 
 - **Download signed ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedownloadsignedactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedownloadsignedactivexcontrols)
   - **Download signed ActiveX controls**\
     Baseline default: *Disable*
 
 - **Download unsigned ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedownloadunsignedactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonedownloadunsignedactivexcontrols)
   - **Download unsigned ActiveX controls**\
     Baseline default: *Disable*
 
 - **Enable dragging of content from different domains across windows**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
   - **Enable dragging of content from different domains across windows**\
     Baseline default: *Disable*
 
 - **Enable dragging of content from different domains within a window**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
   - **Enable dragging of content from different domains within a window**\
     Baseline default: *Disable*
 
 - **Include local path when user is uploading files to a server**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneincludelocalpathwhenuploadingfilestoserver)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneincludelocalpathwhenuploadingfilestoserver)
   - **Include local directory path when uploading files to a server**\
     Baseline default: *Disable*
 
 - **Initialize and script ActiveX controls not marked as safe**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneinitializeandscriptactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneinitializeandscriptactivexcontrols)
   - **Initialize and script ActiveX controls not marked as safe**\
     Baseline default: *Disable*
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonejavapermissions)
   - **Java permissions**\
     Baseline default: *Disable Java*
 
 - **Launching applications and files in an IFRAME**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonelaunchingapplicationsandfilesiniframe)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonelaunchingapplicationsandfilesiniframe)
   - **Launching applications and files in an IFRAME**\
     Baseline default: *Disable*
 
 - **Logon options**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonelogonoptions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonelogonoptions)
   - **Logon options**\
     Baseline default: *Prompt for user name and password*
 
 - **Navigate windows and frames across different domains**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonenavigatewindowsandframes)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonenavigatewindowsandframes)
   - **Navigate windows and frames across different domains**\
     Baseline default: *Disable*
 
 - **Run .NET Framework-reliant components not signed with Authenticode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallownetframeworkreliantcomponents)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallownetframeworkreliantcomponents)
   - **Run .NET Framework-reliant components not signed with Authenticode**\
     Baseline default: *Disable*
 
 - **Run .NET Framework-reliant components signed with Authenticode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonerunnetframeworkreliantcomponentssignedwithauthenticode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzonerunnetframeworkreliantcomponentssignedwithauthenticode)
   - **Run .NET Framework-reliant components signed with Authenticode**\
     Baseline default: *Disable*
 
 - **Show security warning for potentially unsafe files**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneshowsecuritywarningforpotentiallyunsafefiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneshowsecuritywarningforpotentiallyunsafefiles)
   - **Launching programs and unsafe files**\
     Baseline default: *Prompt*
 
 - **Turn on Cross-Site Scripting Filter**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenablecrosssitescriptingfilter)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenablecrosssitescriptingfilter)
   - **Turn on Cross-Site Scripting (XSS) Filter**\
     Baseline default: *Enable*
 
 - **Turn on Protected Mode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenableprotectedmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneenableprotectedmode)
   - **Protected Mode**\
     Baseline default: *Enable*
 
 - **Turn on SmartScreen Filter scan**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowsmartscreenie)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowsmartscreenie)
   - **Use SmartScreen Filter**\
     Baseline default: *Enable*
 
 - **Use Pop-up Blocker**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetexplorer-internetzoneusepopupblocker)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetexplorer-internetzoneusepopupblocker)
   - **Use Pop-up Blocker**\
     Baseline default: *Enable*
 
 - **Userdata persistence**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowuserdatapersistence)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowuserdatapersistence)
   - **Userdata persistence**\
     Baseline default: *Disable*
 
 - **Web sites in less privileged Web content zones can navigate into this zone**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowlessprivilegedsites)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneallowlessprivilegedsites)
   - **Web sites in less privileged Web content zones can navigate into this zone**\
     Baseline default: *Disable*
 
@@ -516,29 +516,29 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Intranet Sites: Include all network paths (UNCs)**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#includeallnetworkpaths)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#includeallnetworkpaths)
 
 - **Turn on certificate address mismatch warning**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowcertificateaddressmismatchwarning)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowcertificateaddressmismatchwarning)
 
 #### Windows Components > Internet Explorer > Internet Control Panel > Security Page > Intranet Zone
 
 - **Don't run antimalware programs against ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzonedonotrunantimalwareagainstactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzonedonotrunantimalwareagainstactivexcontrols)
   - **Don't run antimalware programs against ActiveX controls**\
     Baseline default: *Disable*
 
 - **Initialize and script ActiveX controls not marked as safe**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzoneinitializeandscriptactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzoneinitializeandscriptactivexcontrols)
   - **Initialize and script ActiveX controls not marked as safe**\
     Baseline default: *Disable*
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#intranetzonejavapermissions)
   - **Java permissions**\
     Baseline default: *High safety*
 
@@ -546,13 +546,13 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Don't run antimalware programs against ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#localmachinezonedonotrunantimalwareagainstactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#localmachinezonedonotrunantimalwareagainstactivexcontrols)
   - **Don't run antimalware programs against ActiveX controls**\
     Baseline default: *Disable*
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#localmachinezonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#localmachinezonejavapermissions)
   - **Java permissions**\
     Baseline default: *Disable Java*
 
@@ -560,7 +560,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Turn on SmartScreen Filter scan**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddowninternetzoneallowsmartscreenie)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddowninternetzoneallowsmartscreenie)
   - **Use SmartScreen Filter**\
     Baseline default: *Enable*
 
@@ -568,7 +568,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownintranetjavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownintranetjavapermissions)
   - **Java permissions**\
     Baseline default: *Disable Java*
 
@@ -576,7 +576,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownlocalmachinezonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownlocalmachinezonejavapermissions)
   - **Java permissions**\
     Baseline default: *Disable Java*
 
@@ -584,14 +584,14 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-    [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownlocalmachinezonejavapermissions)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownlocalmachinezonejavapermissions)
 
   - **Java permissions**\
     Baseline default: *Disable Java*
 
 - **Turn on SmartScreen Filter scan**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownrestrictedsiteszoneallowsmartscreenie)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddownrestrictedsiteszoneallowsmartscreenie)
   - **Use SmartScreen Filter**\
       Baseline default: *Enable*
 
@@ -599,7 +599,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddowntrustedsiteszonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#lockeddowntrustedsiteszonejavapermissions)
   - **Java permissions**\
     Baseline default: *Disable Java*
 
@@ -607,238 +607,238 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Access data sources across domains**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowaccesstodatasources)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowaccesstodatasources)
   - **Access data sources across domains**\
     Baseline default: *Disable*
 
 - **Allow active scripting**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowactivescripting)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowactivescripting)
   - **Allow active scripting**\
     Baseline default: *Disable*
 
 - **Allow binary and script behaviors**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowbinaryandscriptbehaviors)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowbinaryandscriptbehaviors)
   - **Allow binary and script behaviors**\
     Baseline default: *Disable*
 
 - **Allow cut, copy or paste operations from the clipboard via script**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowcopypasteviascript)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowcopypasteviascript)
   - **Allow paste operations via script**\
     Baseline default: *Disable*
 
 - **Allow drag and drop or copy and paste files**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowdraganddropcopyandpastefiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowdraganddropcopyandpastefiles)
   - **Allow drag and drop or copy and paste files**\
     Baseline default: *Disable*
 
 - **Allow file downloads**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowfiledownloads)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowfiledownloads)
   - **Allow file downloads**\
     Baseline default: *Disable*
 
 - **Allow loading of XAML files**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowloadingofxamlfiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowloadingofxamlfiles)
   - **XAML Files**\
     Baseline default: *Disable*
 
 - **Allow META REFRESH**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowmetarefresh)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowmetarefresh)
   - **Allow META REFRESH**\
     Baseline default: *Disable*
 
 - **Allow only approved domains to use ActiveX controls without prompt**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
   - **Only allow approved domains to use ActiveX controls without prompt**\
     Baseline default: *Enable*
 
 - **Allow only approved domains to use the TDC ActiveX control**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
   - **Only allow approved domains to use the TDC ActiveX control**\
     Baseline default: *Enable*
 
 - **Allow script-initiated windows without size or position constraints**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptinitiatedwindows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptinitiatedwindows)
   - **Allow script-initiated windows without size or position constraints**\
     Baseline default: *Disable*
 
 - **Allow scripting of Internet Explorer WebBrowser controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols)
   - **Internet Explorer web browser control**\
     Baseline default: *Disable*
 
 - **Allow scriptlets**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptlets)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowscriptlets)
   - **Scriptlets**\
     Baseline default: *Disable*
 
 - **Allow updates to status bar via script**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowupdatestostatusbarviascript)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowupdatestostatusbarviascript)
   - **Status bar updates via script**\
     Baseline default: *Disable*
 
 - **Allow VBScript to run in Internet Explorer**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowvbscripttorunininternetexplorer)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowvbscripttorunininternetexplorer)
   - **Allow VBScript to run in Internet Explorer**\
     Baseline default: *Disable*
 
 - **Automatic prompting for file downloads**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowautomaticpromptingforfiledownloads)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowautomaticpromptingforfiledownloads)
   - **Automatic prompting for file downloads**\
     Baseline default: *Disable*
 
 - **Don't run antimalware programs against ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedonotrunantimalwareagainstactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedonotrunantimalwareagainstactivexcontrols)
   - **Don't run antimalware programs against ActiveX controls**\
     Baseline default: *Disable*
 
 - **Download signed ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedownloadsignedactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedownloadsignedactivexcontrols)
   - **Download signed ActiveX controls**\
     Baseline default: *Disable*
 
 - **Download unsigned ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedownloadunsignedactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonedownloadunsignedactivexcontrols)
   - **Download unsigned ActiveX controls**\
     Baseline default: *Disable*
 
 - **Enable dragging of content from different domains across windows**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
   - **Enable dragging of content from different domains across windows**\
     Baseline default: *Disable*
 
 - **Enable dragging of content from different domains within a window**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)
   - **Enable dragging of content from different domains within a window**\
     Baseline default: *Disable*
 
 - **Include local path when user is uploading files to a server**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneincludelocalpathwhenuploadingfilestoserver)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneincludelocalpathwhenuploadingfilestoserver)
   - **Include local directory path when uploading files to a server**\
     Baseline default: *Disable*
 
 - **Initialize and script ActiveX controls not marked as safe**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneinitializeandscriptactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneinitializeandscriptactivexcontrols)
   - **Initialize and script ActiveX controls not marked as safe**\
     Baseline default: *Disable*
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonejavapermissions)
   - **Java permissions**\
     Baseline default: *Disable Java*
 
 - **Launching applications and files in an IFRAME**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonelaunchingapplicationsandfilesiniframe)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonelaunchingapplicationsandfilesiniframe)
   - **Launching applications and files in an IFRAME**\
     Baseline default: *Disable*
 
 - **Logon options**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonelogonoptions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonelogonoptions)
   - **Logon options**\
     Baseline default: *Anonymous logon*
 
 - **Navigate windows and frames across different domains**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonenavigatewindowsandframes)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonenavigatewindowsandframes)
   - **Navigate windows and frames across different domains**\
     Baseline default: *Disable*
 
 - **Run .NET Framework-reliant components not signed with Authenticode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallownetframeworkreliantcomponents)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallownetframeworkreliantcomponents)
   - **Run .NET Framework-reliant components not signed with Authenticode**\
     Baseline default: *Disable*
 
 - **Run .NET Framework-reliant components signed with Authenticode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode)
   - **Run .NET Framework-reliant components signed with Authenticode**\
     Baseline default: *Disable*
 
 - **Run ActiveX controls and plugins**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonerunactivexcontrolsandplugins)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonerunactivexcontrolsandplugins)
   - **Run ActiveX controls and plugins**\
     Baseline default: *Disable*
 
 - **Script ActiveX controls marked safe for scripting**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonescriptactivexcontrolsmarkedsafeforscripting)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonescriptactivexcontrolsmarkedsafeforscripting)
 
   - **Script ActiveX controls marked safe for scripting**\
     Baseline default: *Disable*
 
 - **Scripting of Java applets**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonescriptingofjavaapplets)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszonescriptingofjavaapplets)
   - **Scripting of Java applets**\
     Baseline default: *Disable*
 
 - **Show security warning for potentially unsafe files**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneshowsecuritywarningforpotentiallyunsafefiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneshowsecuritywarningforpotentiallyunsafefiles)
 
   - **Launching programs and unsafe files**\
     Baseline default: *Disable*
 
 - **Turn on Cross-Site Scripting Filter**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenablecrosssitescriptingfilter)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneenablecrosssitescriptingfilter)
   - **Turn on Cross-Site Scripting (XSS) Filter**\
     Baseline default: *Enabled*
 
 - **Turn on Protected Mode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneturnonprotectedmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneturnonprotectedmode)
   - **Protected Mode**\
     Baseline default: *Enabled*
 
 - **Turn on SmartScreen Filter scan**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowsmartscreenie)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowsmartscreenie)
   - **Use SmartScreen Filter**\
     Baseline default: *Enabled*
 
 - **Use Pop-up Blocker**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneusepopupblocker)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneusepopupblocker)
   - **Use Pop-up Blocker**\
     Baseline default: *Enabled*
 
 - **Userdata persistence**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowuserdatapersistence)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowuserdatapersistence)
 
   - **Userdata persistence**\
     Baseline default: *Disable*
 
 - **Web sites in less privileged Web content zones can navigate into this zone**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowlessprivilegedsites)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowlessprivilegedsites)
   - **Web sites in less privileged Web content zones can navigate into this zone**\
     Baseline default: *Disable*
 
@@ -846,19 +846,19 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Don't run antimalware programs against ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszonedonotrunantimalwareagainstactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszonedonotrunantimalwareagainstactivexcontrols)
   - **Don't run antimalware programs against ActiveX controls**\
     Baseline default: *Disable*
 
 - **Initialize and script ActiveX controls not marked as safe**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszoneinitializeandscriptactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszoneinitializeandscriptactivexcontrols)
   - **Initialize and script ActiveX controls not marked as safe**\
     Baseline default: *Disable*
 
 - **Java permissions**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszonejavapermissions)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#trustedsiteszonejavapermissions)
   - **Java permissions**\
     Baseline default: *High safety*
 
@@ -866,65 +866,65 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Prevent bypassing SmartScreen Filter warnings**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarnings)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarnings)
 
 - **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
 
 - **Prevent managing SmartScreen Filter**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
   - **Select SmartScreen Filter mode**\
     Baseline default: *On*
 
 - **Prevent per-user installation of ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventperuserinstallationofactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventperuserinstallationofactivexcontrols)
 
 - **Security Zones: Do not allow users to add/delete sites**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowuserstoaddsites)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowuserstoaddsites)
 
 - **Security Zones: Do not allow users to change policies**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowuserstochangepolicies)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotallowuserstochangepolicies)
 
 - **Security Zones: Use only machine settings**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#securityzonesuseonlymachinesettings)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#securityzonesuseonlymachinesettings)
 
 - **Specify use of ActiveX Installer Service for installation of ActiveX controls**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#specifyuseofactivexinstallerservice)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#specifyuseofactivexinstallerservice)
 
 - **Turn off Crash Detection**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablecrashdetection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablecrashdetection)
 
 - **Turn off the Security Settings Check feature**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablesecuritysettingscheck)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablesecuritysettingscheck)
 
 - **Turn on the auto-complete feature for user names and passwords on forms (User)**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowautocomplete)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowautocomplete)
 
 #### Windows Components > Internet Explorer > Security Features > Add-on Management
 
 - **Remove "Run this time" button for outdated ActiveX controls in Internet Explorer**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#removerunthistimebuttonforoutdatedactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#removerunthistimebuttonforoutdatedactivexcontrols)
 
 - **Turn off blocking of outdated ActiveX controls for Internet Explorer**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotblockoutdatedactivexcontrols)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#donotblockoutdatedactivexcontrols)
 
 #### Windows Components > Internet Explorer > Security Features
 
 - **Allow fallback to SSL 3.0 (Internet Explorer)**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowfallbacktossl3)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#allowfallbacktossl3)
   - **Allow insecure fallback for:**\
     Baseline default: *No Sites*
 
@@ -932,99 +932,99 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#consistentmimehandlinginternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#consistentmimehandlinginternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > Mime Sniffing Safety Feature
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mimesniffingsafetyfeatureinternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mimesniffingsafetyfeatureinternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > MK Protocol Security Restriction
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mkprotocolsecurityrestrictioninternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#mkprotocolsecurityrestrictioninternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > Notification bar
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#notificationbarinternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#notificationbarinternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > Protection From Zone Elevation
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#protectionfromzoneelevationinternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#protectionfromzoneelevationinternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > Restrict ActiveX Install
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictactivexinstallinternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictactivexinstallinternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > Restrict File Download
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictfiledownloadinternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictfiledownloadinternetexplorerprocesses)
 
 #### Windows Components > Internet Explorer > Security Features > Scripted Window Security Restrictions
 
 - **Internet Explorer Processes**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
 
 #### Windows Components > Microsoft Defender Antivirus > MAPS
 
 - **Configure the 'Block at First Sight' feature**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableblockatfirstseen)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableblockatfirstseen)
 
 #### Windows Components > Microsoft Defender Antivirus > Real-time Protection
 
 - **Turn on process scanning whenever real-time protection is enabled**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#realtimeprotection-disablescanonrealtimeenable)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#realtimeprotection-disablescanonrealtimeenable)
 
 #### Windows Components > Microsoft Defender Antivirus > Scan
 
 - **Scan packed executables**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan-disablepackedexescanning)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan-disablepackedexescanning)
 
 #### Windows Components > Microsoft Defender Antivirus
 
 - **Turn off routine remediation**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableroutinelytakingaction)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#disableroutinelytakingaction)
 
 #### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
 
 - **Do not allow passwords to be saved**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowpasswordsaving)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowpasswordsaving)
 
 #### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Device and Resource Redirection
 
 - **Do not allow drive redirection**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowdriveredirection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#donotallowdriveredirection)
 
 #### Windows Components > Remote Desktop Services > Remote Desktop Session Host > Security
 
 - **Always prompt for password upon connection**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#promptforpassworduponconnection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#promptforpassworduponconnection)
 
 - **Require secure RPC communication**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#requiresecurerpccommunication)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#requiresecurerpccommunication)
 
 - **Set client connection encryption level**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#clientconnectionencryptionlevel)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotedesktopservices?WT.mc_id=Portal-fx#clientconnectionencryptionlevel)
   - **Encryption Level**\
     Baseline default: *High Level*
 
@@ -1032,19 +1032,19 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Prevent downloading of enclosures**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableenclosuredownloading)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableenclosuredownloading)
 
 #### Windows Components > Windows Logon Options
 
 - **Sign-in and lock last interactive user automatically after a restart**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-windowslogon?WT.mc_id=Portal-fx#allowautomaticrestartsignon)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowslogon?WT.mc_id=Portal-fx#allowautomaticrestartsignon)
 
 #### Windows Components > Windows PowerShell
 
 - **Turn on PowerShell Script Block Logging**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-windowspowershell?WT.mc_id=Portal-fx#turnonpowershellscriptblocklogging)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowspowershell?WT.mc_id=Portal-fx#turnonpowershellscriptblocklogging)
   - **Log script block invocation start / stop events:**\
     Baseline default: *False*
 
@@ -1052,421 +1052,421 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Allow Basic authentication**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowbasicauthentication-service)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowbasicauthentication-service)
 
 - **Allow unencrypted traffic**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowunencryptedtraffic-client)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowunencryptedtraffic-client)
 
 - **Disallow Digest authentication**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowdigestauthentication)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowdigestauthentication)
 
 #### Windows Components > Windows Remote Management (WinRM) > WinRM Service
 
 - **Allow Basic authentication**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowbasicauthentication-service)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowbasicauthentication-service)
 
 - **Allow unencrypted traffic**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowunencryptedtraffic-service)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#allowunencryptedtraffic-service)
 
 - **Disallow WinRM from storing RunAs credentials**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowstoringofrunascredentials)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-remotemanagement?WT.mc_id=Portal-fx#disallowstoringofrunascredentials)
 
 ### Auditing
 
 - **Account Logon Audit Credential Validation**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogon_auditcredentialvalidation)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogon_auditcredentialvalidation)
 
 - **Account Logon Logoff Audit Account Lockout**\
   Baseline default: *Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditaccountlockout)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditaccountlockout)
 
 - **Account Logon Logoff Audit Group Membership**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditgroupmembership)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditgroupmembership)
 
 - **Account Logon Logoff Audit Logon**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditlogon)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditlogon)
 
 - **Audit Authentication Policy Change**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditauthenticationpolicychange)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditauthenticationpolicychange)
 
 - **Audit Changes to Audit Policy**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditpolicychange)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditpolicychange)
 
 - **Audit File Share Access**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditfileshare)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditfileshare)
 
 - **Audit Other Logon Logoff Events**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditotherlogonlogoffevents)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditotherlogonlogoffevents)
 
 - **Audit Security Group Management**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_auditsecuritygroupmanagement)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_auditsecuritygroupmanagement)
 
 - **Audit Security System Extension**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritysystemextension)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritysystemextension)
 
 - **Audit Special Logon**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditspeciallogon)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountlogonlogoff_auditspeciallogon)
 
 - **Audit User Account Management**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_audituseraccountmanagement)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#accountmanagement_audituseraccountmanagement)
 
 - **Detailed Tracking Audit PNP Activity**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditpnpactivity)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditpnpactivity)
 
 - **Detailed Tracking Audit Process Creation**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditprocesscreation)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#detailedtracking_auditprocesscreation)
 
 - **Object Access Audit Detailed File Share**\
   Baseline default: *Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditdetailedfileshare)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditdetailedfileshare)
 
 - **Object Access Audit Other Object Access Events**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditotherobjectaccessevents)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditotherobjectaccessevents)
 
 - **Object Access Audit Removable Storage**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditremovablestorage)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#objectaccess_auditremovablestorage)
 
 - **Policy Change Audit MPSSVC Rule Level Policy Change**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditmpssvcrulelevelpolicychange)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditmpssvcrulelevelpolicychange)
 
 - **Policy Change Audit Other Policy Change Events**\
   Baseline default: *Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditotherpolicychangeevents)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#policychange_auditotherpolicychangeevents)
 
 - **Privilege Use Audit Sensitive Privilege Use**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#privilegeuse_auditsensitiveprivilegeuse)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#privilegeuse_auditsensitiveprivilegeuse)
 
 - **System Audit Other System Events**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditothersystemevents)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditothersystemevents)
 
 - **System Audit Security State Change**\
   Baseline default: *Success*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritystatechange)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsecuritystatechange)
 
 - **System Audit System Integrity**\
   Baseline default: *Success+ Failure*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsystemintegrity)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Audit?WT.mc_id=Portal-fx#system_auditsystemintegrity)
 
 ### Data Protection
 
 - **Allow Direct Memory Access**\
   Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-dataprotection?WT.mc_id=Portal-fx#allowdirectmemoryaccess)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-dataprotection?WT.mc_id=Portal-fx#allowdirectmemoryaccess)
 
 ### Defender
 
 - **Allow Archive Scanning**\
   Baseline default: *Allowed. Scans the archive files.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowarchivescanning)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowarchivescanning)
 
 - **Allow Behavior Monitoring**\
   Baseline default: *Allowed. Turns on real-time behavior monitoring.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowbehaviormonitoring)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowbehaviormonitoring)
 
 - **Allow Cloud Protection**\
   Baseline default: *Allowed. Turns on Cloud Protection.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowcloudprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowcloudprotection)
 
 - **Allow Full Scan Removable Drive Scanning**\
   Baseline default: *Allowed. Scans removable drives.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowfullscanremovabledrivescanning)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowfullscanremovabledrivescanning)
 
 - **Allow On Access Protection**\
   Baseline default: *Allowed.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowonaccessprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowonaccessprotection)
 
 - **Allow Realtime Monitoring**\
   Baseline default: *Allowed. Turns on and runs the real-time monitoring service.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowrealtimemonitoring)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowrealtimemonitoring)
 
 - **Allow scanning of all downloaded files and attachments**\
   Baseline default: *Allowed.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowioavprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowioavprotection)
 
 - **Allow Script Scanning**\
   Baseline default: *Allowed.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
 
   - **Block execution of potentially obfuscated scripts**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Win32 API calls from Office macros**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office communication application from creating child processes**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block all Office applications from creating child processes**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Adobe Reader from creating child processes**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block credential stealing from the Windows local security authority subsystem**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block JavaScript or VBScript from launching downloaded executable content**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block untrusted and unsigned processes that run from USB**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office applications from creating executable content**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office applications from injecting code into other processes**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block executable content from email client and webmail**\
     Baseline default: *Block*\
-    [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+    [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
 - **Cloud Block Level**\
   Baseline default: *High*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudblocklevel)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudblocklevel)
 
 - **Cloud Extended Timeout**\
   Baseline default: *Configured*\
   Value: *50*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudextendedtimeout)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudextendedtimeout)
 
 - **Disable Local Admin Merge**\
   Baseline default: *Disable Local Admin Merge*\
-  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationdisablelocaladminmerge)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/Defender-csp?WT.mc_id=Portal-fx#configurationdisablelocaladminmerge)
 
 - **Enable File Hash Computation**\
   Baseline default: *Enable*\
-  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationenablefilehashcomputation)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/Defender-csp?WT.mc_id=Portal-fx#configurationenablefilehashcomputation)
 
 - **Enable Network Protection**\
   Baseline default: *Enabled (block mode)*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#enablenetworkprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#enablenetworkprotection)
 
 - **Hide Exclusions From Local Admins**\
   Baseline default: *If you enable this setting, local admins will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*\
-  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/Defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
 
 - **PUA Protection**\
   Baseline default: *PUA Protection on. Detected items are blocked. They will show in history along with other threats.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#puaprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#puaprotection)
 
 - **Real Time Scan Direction**\
   Baseline default: *Monitor all files (bi-directional).*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx##realtimescandirection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx##realtimescandirection)
 
 - **Submit Samples Consent**\
   Baseline default: *Send all samples automatically.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#submitsamplesconsent)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#submitsamplesconsent)
 
 ### Device Guard
 
 - **Configure System Guard Launch**\
   Baseline default: *Unmanaged Enables Secure Launch if supported by hardware*\
-  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#configuresystemguardlaunch)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#configuresystemguardlaunch)
 
 - **Credential Guard**\
   Baseline default: *(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
 
 - **Enable Virtualization Based Security**\
   Baseline default: *Enable virtualization based security.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#enablevirtualizationbasedsecurity)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#enablevirtualizationbasedsecurity)
 
 - **Require Platform Security Features**\
   Baseline default: *Turns on VBS with Secure Boot.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#requireplatformsecurityfeatures)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#requireplatformsecurityfeatures)
 
 ### Device Lock
 
 - **Device Password Enabled**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordenabled)
 
   - **Device Password History**\
     Baseline default: *Configured*\
     Value: *24*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#devicepasswordhistory)
 
   - **Min Device Password Length**\
     Baseline default: *Configured*\
     Value: *14*\
-    [Learn more](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#mindevicepasswordlength)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#mindevicepasswordlength)
 
 ### Dma Guard
 
 - **Device Enumeration Policy**\
   Baseline default: *Block all (Most restrictive)*\
-  [Learn more](/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
 
 ### Experience
 
 - **Allow Windows Spotlight (User)**\
   Baseline default: *Allow*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowwindowsspotlight)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowwindowsspotlight)
 
   - **Allow Windows Consumer Features**\
     Baseline default: *Allow*\
-    [Learn more](/windows/client-management/mdm/policy-csp-experience?WT.mc_id=Portal-fx#allowwindowsconsumerfeatures)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-experience?WT.mc_id=Portal-fx#allowwindowsconsumerfeatures)
 
   - **Allow Third Party Suggestions In Windows Spotlight (User)**\
     Baseline default: *Block*\
-    [Learn more](/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Experience?WT.mc_id=Portal-fx#allowthirdpartysuggestionsinwindowsspotlight)
 
 ### Firewall
 
 - **Enable Domain Network Firewall**\
   Baseline default: *True*\
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
 
   - **Enable Log Dropped Packets**\
     Baseline default: *Enable Logging Of Dropped Packets*\
-    [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogdroppedpackets)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogdroppedpackets)
 
   - **Default Outbound Action**\
     Baseline default: *Allow*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultoutboundaction)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultoutboundaction)
 
   - **Disable Inbound Notifications**\
     Baseline default: *True*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
 
   - **Log Max File Size**\
     Baseline default: *Configured*\
     Value: *16384*\
-    [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofilelogmaxfilesize)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofilelogmaxfilesize)
 
   - **Default Inbound Action for Domain Profile**\
     Baseline default: *Block*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultinboundaction)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledefaultinboundaction)
 
   - **Enable Log Success Connections**\
     Baseline default: *Enable Logging Of Successful Connections*\
-    [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogsuccessconnections)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablelogsuccessconnections)
 
 - **Enable Private Network Firewall**\
   Baseline default: *True*\
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
 
   - **Log Max File Size**\
     Baseline default: *Configured*\
     Value: *16384*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofilelogmaxfilesize)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofilelogmaxfilesize)
 
   - **Default Inbound Action for Private Profile**\
     Baseline default: *Block*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
 
   - **Enable Log Success Connections**\
     Baseline default: *Enable Logging Of Successful Connections*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogsuccessconnections)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogsuccessconnections)
 
   - **Enable Log Dropped Packets**\
     Baseline default: *Enable Logging Of Dropped Packets*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogdroppedpackets)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablelogdroppedpackets)
 
   - **Disable Inbound Notifications**\
     Baseline default: *True*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
 
   - **Default Outbound Action**\
     Baseline default: *Allow*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
 
 - **Enable Public Network Firewall**\
   Baseline default: *True*\
-  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
 
   - **Enable Log Dropped Packets**\
     Baseline default: *Enable Logging Of Dropped Packets*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogdroppedpackets)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogdroppedpackets)
 
   - **Log Max File Size**\
     Baseline default: *Configured*\
     Value: *16384*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofilelogmaxfilesize)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofilelogmaxfilesize)
 
   - **Default Outbound Action**\
     Baseline default: *Allow*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
 
   - **Disable Inbound Notifications**\
     Baseline default: *True*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
 
   - **Allow Local Policy Merge**\
     Baseline default: *False*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
 
   - **Default Inbound Action for Public Profile**\
     Baseline default: *Block*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
 
   - **Enable Log Success Connections**\
     Baseline default: *Enable Logging Of Successful Connections*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogsuccessconnections)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogsuccessconnections)
 
   - **Allow Local Ipsec Policy Merge**\
     Baseline default: *False*\
-    [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
+    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
 ### Lanman Workstation
 
 - **Enable Insecure Guest Logons**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#enableinsecureguestlogons)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LanmanWorkstation?WT.mc_id=Portal-fx#enableinsecureguestlogons)
 
 ### Local Security Authority
 
 - **Configure Lsa Protected Process**\
   Baseline default: *Enabled with UEFI lock. LSA will run as protected process and this configuration is UEFI locked.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-lsa#configurelsaprotectedprocess)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-lsa#configurelsaprotectedprocess)
 
 ### Microsoft App Store
 
 - **Allow Game DVR**\
   Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#allowgamedvr)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#allowgamedvr)
 
 - **MSI Allow User Control Over Install**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#msiallowusercontroloverinstall)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#msiallowusercontroloverinstall)
 
 - **MSI Always Install With Elevated Privileges**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#msialwaysinstallwithelevatedprivileges)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-ApplicationManagement?WT.mc_id=Portal-fx#msialwaysinstallwithelevatedprivileges)
 
 ### Microsoft Edge
 
@@ -1502,23 +1502,23 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Let Apps Activate With Voice Above Lock**\
   Baseline default: *Force deny. Windows apps cannot be activated by voice while the screen is locked, and users cannot change it.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Privacy?WT.mc_id=Portal-fx#letappsactivatewithvoiceabovelock)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Privacy?WT.mc_id=Portal-fx#letappsactivatewithvoiceabovelock)
 
 ### Search
 
 - **Allow Indexing Encrypted Stores Or Items**\
   Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-Search?WT.mc_id=Portal-fx#allowindexingencryptedstoresoritems)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Search?WT.mc_id=Portal-fx#allowindexingencryptedstoresoritems)
 
 ### Smart Screen
 
 - **Enable Smart Screen In Shell**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-smartscreen?WT.mc_id=Portal-fx#enablesmartscreeninshell)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-smartscreen?WT.mc_id=Portal-fx#enablesmartscreeninshell)
 
 - **Prevent Override For Files In Shell**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-smartscreen?WT.mc_id=Portal-fx#preventoverrideforfilesinshell)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-smartscreen?WT.mc_id=Portal-fx#preventoverrideforfilesinshell)
 
 #### Enhanced Phishing Protection
 
@@ -1541,20 +1541,20 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   Values:
   - `*S-1-5-32-544`
   - `*S-1-5-32-555`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#accessfromnetwork)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#accessfromnetwork)
 
 - **Allow Local Log On**\
   Baseline default: *Configured*\
   Values:
   - `*S-1-5-32-544`
   - `*S-1-5-32-545`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#allowlocallogon)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#allowlocallogon)
 
 - **Backup Files And Directories**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#backupfilesanddirectories)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#backupfilesanddirectories)
 
 - **Create Global Objects**\
   Baseline default: *Configured*\
@@ -1563,31 +1563,31 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   - `*S-1-5-19`
   - `*S-1-5-20`
   - `*S-1-5-6`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createglobalobjects)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createglobalobjects)
 
 - **Create Page File**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createpagefile)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createpagefile)
 
 - **Debug Programs**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#debugprograms)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#debugprograms)
 
 - **Deny Access From Network**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-113`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyaccessfromnetwork)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyaccessfromnetwork)
 
 - **Deny Remote Desktop Services Log On**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-113`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyremotedesktopserviceslogon)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyremotedesktopserviceslogon)
 
 - **Impersonate Client**\
   Baseline default: *Configured*\
@@ -1596,155 +1596,155 @@ The settings in this baseline apply to Windows devices managed through Intune. W
   - `*S-1-5-6`
   - `*S-1-5-19`
   - `*S-1-5-20`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#impersonateclient)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#impersonateclient)
 
 - **Load Unload Device Drivers**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#loadunloaddevicedrivers)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#loadunloaddevicedrivers)
 
 - **Manage Auditing And Security Log**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#manageauditingandsecuritylog)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#manageauditingandsecuritylog)
 
 - **Manage Volume**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#managevolume)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#managevolume)
 
 - **Modify Firmware Environment**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#modifyfirmwareenvironment)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#modifyfirmwareenvironment)
 
 - **Profile Single Process**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#profilesingleprocess)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#profilesingleprocess)
 
 - **Remote Shutdown**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#remoteshutdown)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#remoteshutdown)
 
 - **Restore Files And Directories**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#restorefilesanddirectories)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#restorefilesanddirectories)
 
 - **Take Ownership**\
   Baseline default: *Configured*\
   Value:
   - `*S-1-5-32-544`
-  [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#takeownership)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#takeownership)
 
 ### Virtualization Based Technology
 
 - **Hypervisor Enforced Code Integrity**\
   Baseline default: *(Enabled with UEFI lock) Turns on Hypervisor-Protected Code Integrity with UEFI lock.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-VirtualizationBasedTechnology?WT.mc_id=Portal-fx#hypervisorenforcedcodeintegrity)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-VirtualizationBasedTechnology?WT.mc_id=Portal-fx#hypervisorenforcedcodeintegrity)
 
 ### Windows Ink Workspace
 
 - **Allow Windows Ink Workspace**\
   Baseline default: *Ink workspace is enabled (feature is turned on), but the user cannot access it above the lock screen.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-WindowsInkWorkspace?WT.mc_id=Portal-fx#allowwindowsinkworkspace)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-WindowsInkWorkspace?WT.mc_id=Portal-fx#allowwindowsinkworkspace)
 
 ### Local Policies Security Options
 
 - **Accounts Limit Local Account Use Of Blank Passwords To Console Logon Only**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#accounts_limitlocalaccountuseofblankpasswordstoconsolelogononly)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#accounts_limitlocalaccountuseofblankpasswordstoconsolelogononly)
 
 - **Interactive Logon Machine Inactivity Limit**\
   Baseline default: *Configured*\
   Value: *900*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_machineinactivitylimit)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_machineinactivitylimit)
 
 - **Interactive Logon Smart Card Removal Behavior**\
   Baseline default: *Lock Workstation*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_smartcardremovalbehavior)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#interactivelogon_smartcardremovalbehavior)
 
 - **Microsoft Network Client Digitally Sign Communications Always**\
   Baseline default: *Enable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_digitallysigncommunicationsalways)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_digitallysigncommunicationsalways)
 
 - **Microsoft Network Client Send Unencrypted Password To Third Party SMB Servers**\
   Baseline default: *Disable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_sendunencryptedpasswordtothirdpartysmbservers)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkclient_sendunencryptedpasswordtothirdpartysmbservers)
 
 - **Microsoft Network Server Digitally Sign Communications Always**\
   Baseline default: *Enable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkserver_digitallysigncommunicationsalways)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#microsoftnetworkserver_digitallysigncommunicationsalways)
 
 - **Network Access Do Not Allow Anonymous Enumeration Of SAM Accounts**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccounts)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccounts)
 
 - **Network Access Do Not Allow Anonymous Enumeration Of Sam Accounts And Shares**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccountsandshares)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_donotallowanonymousenumerationofsamaccountsandshares)
 
 - **Network Access Restrict Anonymous Access To Named Pipes And Shares**\
   Baseline default *Enable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess-restrictanonymousaccesstonamedpipesandshares)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess-restrictanonymousaccesstonamedpipesandshares)
 
 - **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**\
   Baseline default: *Configured*\
   Value: *O:BAG:BAD:(A;;RC;;;BA)*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_restrictclientsallowedtomakeremotecallstosam)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networkaccess_restrictclientsallowedtomakeremotecallstosam)
 
 - **Network Security Do Not Store LAN Manager Hash Value On Next Password Change**\
   Baseline default: *Enable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange)
 
 - **Network Security LAN Manager Authentication Level**\
   Baseline default: *Send LM and NTLMv2 responses only. Refuse LM and NTLM*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_lanmanagerauthenticationlevel)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_lanmanagerauthenticationlevel)
 
 - **Network Security Minimum Session Security For NTLMSSP Based Clients**\
   Baseline default: *Require NTLM and 128-bit encryption*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedclients)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedclients)
 
 - **Network Security Minimum Session Security For NTLMSSP Based Servers**\
   Baseline default: *Require NTLM and 128-bit encryption*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedservers)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_minimumsessionsecurityforntlmsspbasedservers)
 
 - **User Account Control Behavior Of The Elevation Prompt For Administrators**\
   Baseline default: *Prompt for consent on the secure desktop*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforadministrators)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforadministrators)
 
 - **User Account Control Behavior Of The Elevation Prompt For Standard Users**\
   Baseline default: *Automatically deny elevation requests*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforstandardusers)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_behavioroftheelevationpromptforstandardusers)
 
 - **User Account Control Detect Application Installations And Prompt For Elevation**\
   Baseline default: *Enable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-detectapplicationinstallationsandpromptforelevation)
 
 - **User Account Control Only Elevate UI Access Applications That Are Installed In Secure Locations**\
   Baseline default: *Enabled: Application runs with UIAccess integrity only if it resides in secure location.*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol-onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations)
 
 - **User Account Control Run All Administrators In Admin Approval Mode**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_runalladministratorsinadminapprovalmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_runalladministratorsinadminapprovalmode)
 
 - **User Account Control Use Admin Approval Mode**\
   Baseline default: *Enable*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_useadminapprovalmode)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_useadminapprovalmode)
 
 - **User Account Control Virtualize File And Registry Write Failures To Per User Locations**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations)
 ::: zone-end
 
 ::: zone pivot="win365-nov21"
@@ -1755,7 +1755,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 - **Voice activate apps from locked screen**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-privacy?WT.mc_id=Portal-Microsoft_Intune_Workflows)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-privacy?WT.mc_id=Portal-Microsoft_Intune_Workflows)
 
 - **Block display of toast notifications**\
   Baseline default: *Yes*\
@@ -1783,7 +1783,7 @@ The settings in this baseline apply to Windows devices managed through Intune. W
 
 ### Attack Surface Reduction Rules
 
-For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true).
+For general information, see [Learn about attack surface reduction rules](../../intune-service/protect/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true).
 
 - **Block Office communication apps from creating child processes**\
   Baseline default: *Enable*\
@@ -2109,7 +2109,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ### Internet Explorer
 
-View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/policy-csp-internetexplorer).
+View the full list of [Internet Explorer CSPs](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer).
 
 - **Internet Explorer encryption support**\
   Baseline defaults: Two items: *TLS v1.1* and *TLS v1.2*
@@ -2711,7 +2711,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 
 - **Defender potentially unwanted app action**\
   Baseline default: *Block*\
-  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**\
   Baseline default: *Yes*\
@@ -2722,7 +2722,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 > [!WARNING]
 > **Defining exclusions lowers the protection offered by Microsoft Defender Antivirus**. Always evaluate the risks that are associated with implementing exclusions. Only exclude files you know aren't malicious.
 >
-> For more information, see [Exclusions overview](/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
+> For more information, see [Exclusions overview](../../intune-service/protect/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions) in the Microsoft Defender documentation.
 
 - **Defender Processes to exclude**\
   Baseline defaults:  *Not configured by default. Manually add one or more entries.*

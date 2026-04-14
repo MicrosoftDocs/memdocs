@@ -113,9 +113,9 @@ If you prefer, you can enroll your devices before checking compliance. It's your
 > [!NOTE]
 > Conditional Access is a feature of Microsoft Entra ID that must be enabled in your Microsoft Entra tenant. Then, you can create Conditional Access policies for your user identities, apps, and devices. For more information, go to:
 >
-> - [Learn about Conditional Access and Intune](../protect/conditional-access.md)
-> - [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md)
-> - [Conditional Access scenarios](../protect/conditional-access-intune-common-ways-use.md)
+> - [Learn about Conditional Access and Intune](../../device-security/conditional-access-integration/overview.md)
+> - [App-based Conditional Access with Intune](../../device-security/conditional-access-integration/app-based-policies.md)
+> - [Conditional Access scenarios](../../device-security/conditional-access-integration/scenarios.md)
 
 ## Step 4 - Configure device features
 
@@ -135,7 +135,7 @@ The following articles are good resources:
 
 - [Apply features and settings on your devices using device profiles](../../device-configuration/overview.md)
 - [Use the settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)
-- [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)
+- [Manage endpoint security in Microsoft Intune](../../device-configuration/endpoint-security-policies/overview.md)
 - [Windows security baselines](/windows/security/threat-protection/windows-security-baselines)
 
 ## Step 5 - Enroll your devices

@@ -232,32 +232,32 @@
     },
     {
       "source_path": "intune/intune-service/protect/managed-software-updates-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/apple",
+      "redirect_url": "/intune/device-updates/apple/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-guide-ios-ipados.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-ios-ipados",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-ios-ipados",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-guide-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-macos",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-ios.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-ios",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-macos",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/software-updates-reports-apple-declarative-based.md",
-      "redirect_url": "/intune/intune-service/protect/updates/apple-reports",
+      "redirect_url": "/intune/device-updates/apple/monitor-reports",
       "redirect_document_id": false
     },
     {
@@ -352,7 +352,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/software-update-report-apple-per-device.md",
-      "redirect_url": "/intune/intune-service/protect/updates/apple",
+      "redirect_url": "/intune/device-updates/apple/index",
       "redirect_document_id": false
     },
     {
@@ -512,7 +512,7 @@
     },
     {
       "source_path": "intune/intune/enrollment/android-work-profile-security-settings.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-android-for-work",
+      "redirect_url": "/intune/device-security/compliance/ref-android-enterprise-settings",
       "redirect_document_id": false
     },
     {
@@ -672,12 +672,12 @@
     },
     {
       "source_path": "intune/intune/enrollment/ios-ipados-supervised-device-security-configurations.md",
-      "redirect_url": "/intune/intune-service/protect/ios-ipados-supervised-device-security-configurations",
+      "redirect_url": "/intune/device-security/security-configurations/ios-ipados-supervised",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/enrollment/ios-ipados-personal-device-security-configurations.md",
-      "redirect_url": "/intune/intune-service/protect/ios-ipados-personal-device-security-configurations",
+      "redirect_url": "/intune/device-security/security-configurations/ios-ipados-personal",
       "redirect_document_id": false
     },
     {
@@ -687,7 +687,7 @@
     },
     {
       "source_path": "intune/intune/enrollment/ios-ipados-device-compliance-security-configurations.md",
-      "redirect_url": "/intune/intune-service/protect/ios-ipados-device-compliance-security-configurations",
+      "redirect_url": "/intune/device-security/security-configurations/ios-ipados-compliance",
       "redirect_document_id": false
     },
     {
@@ -767,7 +767,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/migration-guide-drive-adoption.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access",
+      "redirect_url": "/intune/device-security/conditional-access-integration/overview",
       "redirect_document_id": false
     },
     {
@@ -1342,12 +1342,12 @@
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-mdm.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-mdm-all",
+      "redirect_url": "/intune/device-security/security-baselines/ref-windows-mdm-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-mdm-archive.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-mdm-all",
+      "redirect_url": "/intune/device-security/security-baselines/ref-windows-mdm-settings",
       "redirect_document_id": false
     },
     {
@@ -1357,7 +1357,7 @@
     },
     {
       "source_path": "intune/intune/protect/certficates-pfx-configure.md",
-      "redirect_url": "/intune/intune-service/protect/certificates-pfx-configure",
+      "redirect_url": "/intune/device-configuration/certificates/pkcs-profiles",
       "redirect_document_id": false
     },
     {
@@ -1697,7 +1697,7 @@
     },
     {
       "source_path": "intune/intune/protect/conditional-access-intune-reassign.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access",
+      "redirect_url": "/intune/device-security/conditional-access-integration/overview",
       "redirect_document_id": false
     },
     {
@@ -1747,7 +1747,7 @@
     },
     {
       "source_path": "intune/intune/protect/use-network-locations.md",
-      "redirect_url": "/intune/intune-service/protect/create-compliance-policy",
+      "redirect_url": "/intune/device-security/compliance/create-policy",
       "redirect_document_id": false
     },
     {
@@ -2447,22 +2447,22 @@
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-migrate-app.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-configure",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/install",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-declarative-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/apple",
+      "redirect_url": "/intune/device-updates/apple/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/wandera-mtd-connector.md",
-      "redirect_url": "/intune/intune-service/protect/jamf-mtd-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/jamf",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/wandera-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/jamf-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-jamf",
       "redirect_document_id": false
     },
     {
@@ -2472,7 +2472,7 @@
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-defender-atp.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-defender",
+      "redirect_url": "/intune/device-security/security-baselines/ref-defender-settings",
       "redirect_document_id": false
     },
     {
@@ -2517,132 +2517,132 @@
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/monitor-connection-health.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/enroll-devices.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/about-updates.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/tutorial-windows10.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/get-support.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/connect-configmgr.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/ready-for-windows.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/deploy-pilot.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/troubleshooting.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/group-policy-settings.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/deploy-prod.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/compat-assessment.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/account-reset.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/privacy.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/set-up.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/about-deployment-plans.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/faq.yml",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/overview.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/enable-data-sharing.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/whats-new.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/create-deployment-plans.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/index.yml",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/health-status-monitoring.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/account-close.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/log-collector.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/configmgr/desktop-analytics/about-assets.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
@@ -2682,7 +2682,7 @@
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-rule-tool.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-firewall-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security-policies/firewall-policy",
       "redirect_document_id": false
     },
     {
@@ -2741,17 +2741,17 @@
     },
     {
       "source_path": "intune/intune-service/protect/epm-policies.md",
-      "redirect_url": "/intune/intune-service/protect/epm-deploy",
+      "redirect_url": "/intune/epm/deploy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/epm-guidance-for-creating-rules.md",
-      "redirect_url": "/intune/intune-service/protect/epm-elevation-rules",
+      "redirect_url": "/intune/epm/elevation-rules",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/epm-deployment-considerations-ki.md",
-      "redirect_url": "/intune/intune-service/protect/epm-plan",
+      "redirect_url": "/intune/epm/plan",
       "redirect_document_id": false
     },
     {
@@ -2781,22 +2781,22 @@
     },
     {
       "source_path": "intune/intune-service/protect/advanced-threat-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-integrate",
+      "redirect_url": "/intune/device-security/microsoft-defender/configure-integration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/advanced-threat-protection-manage-android.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-configure-android",
+      "redirect_url": "/intune/device-security/microsoft-defender/configure-web-protection-android",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/advanced-threat-protection-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-monitor",
+      "redirect_url": "/intune/device-security/microsoft-defender/monitor",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/advanced-threat-protection.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-with-intune",
+      "redirect_url": "/intune/device-security/microsoft-defender/overview",
       "redirect_document_id": false
     },
     {

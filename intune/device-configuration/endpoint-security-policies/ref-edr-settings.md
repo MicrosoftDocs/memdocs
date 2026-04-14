@@ -1,8 +1,6 @@
 ---
 title: Intune endpoint security Endpoint detection and response settings
 description: Endpoint security Endpoint detection and response policy settings for deprecated profiles in Microsoft Intune
-author: brenduns
-ms.author: brenduns
 ms.date: 03/28/2025
 ms.topic: reference
 ms.collection:
@@ -22,7 +20,7 @@ ms.reviewer: mattcall
 >
 > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Although you can no longer create a new instance of this older profile, you can continue to edit and use an existing instances of this profile. The settings details in this article apply only to the deprecated profiles.
 
-View the settings you can configure in profiles for [Endpoint detection and response policy](../protect/endpoint-security-edr-policy.md) in the endpoint security node of Intune.
+View the settings you can configure in profiles for [Endpoint detection and response policy](./edr-policy.md) in the endpoint security node of Intune.
 
 Applies to:
 
@@ -91,4 +89,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for EDR](../protect/endpoint-security-edr-policy.md)
+[Endpoint security policy for EDR](./edr-policy.md)

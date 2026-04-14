@@ -1,8 +1,6 @@
 ---
 title: View report details for encryption status of devices managed with Microsoft Intune
 description: Use the Microsoft Intune admin center to view reports for device encryption status across macOS FileVault and Windows BitLocker encrypted devices that you manage with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 10/14/2024
 ms.topic: how-to
 ms.reviewer: aanavath
@@ -19,8 +17,8 @@ The Microsoft Intune encryption report is a centralized location to view details
 >
 > To configure Intune policies to manage encryption on devices, see:
 >
-> - [Manage BitLocker policy](../protect/encrypt-devices.md)
-> - [Manage FileVault policy](encrypt-devices-filevault.md)
+> - [Manage BitLocker policy](./encrypt-bitlocker-windows.md)
+> - [Manage FileVault policy](./encrypt-filevault-macos.md)
 
 To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Manage devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
 
@@ -44,7 +42,7 @@ The Encryption report pane displays a list of the devices you manage with high
 - **OS version** – The version of Windows or macOS on the device.
 - **TPM version** *(applies to Windows only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows device.
 
-  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
+  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
 
 - **Encryption readiness** – An evaluation of the devices readiness to support an applicable encryption technology, like BitLocker or FileVault encryption. Devices are identified as:
   - **Ready**: The device can be encrypted by using MDM policy, which requires the device meet the following requirements:
@@ -59,7 +57,7 @@ The Encryption report pane displays a list of the devices you manage with high
     > [!IMPORTANT]
     > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
-    For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
+    For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
   - **Not ready**: The device doesn't have full encryption capabilities, but might still support encryption.
   - **Not applicable**: There isn't enough information to classify this device.
@@ -82,7 +80,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
 
-  For Windows devices, this field doesn't look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).
+  For Windows devices, this field doesn't look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp).
 
 - **Profiles** – A list of the *Device configuration* profiles that apply to this device and are configured with the following values:
 
@@ -117,7 +115,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The device is already encrypted. Device user must decrypt the device to continue.
 
-    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](../protect/encrypt-devices-filevault.md#assume-management-of-existing-filevault-encryption). Alternately, the user can manually decrypt their device so it can then be encrypted by Intune policy at a later time. However, we don't recommend manual decryption as doing so can leave a device unencrypted for a time.*
+    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](./encrypt-filevault-macos.md#assume-management-of-existing-filevault-encryption). Alternately, the user can manually decrypt their device so it can then be encrypted by Intune policy at a later time. However, we don't recommend manual decryption as doing so can leave a device unencrypted for a time.*
 
   - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
@@ -129,7 +127,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   **Windows**:
 
-  For Windows devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later, or Windows 11. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
+  For Windows devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later, or Windows 11. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp).
 
   - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
 
@@ -163,7 +161,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - Windows Recovery Environment (WinRE) isn't configured.
 
-    *Consider: Need to run command line to configure the WinRE on separate partition; as that wasn't detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
+    *Consider: Need to run command line to configure the WinRE on separate partition; as that wasn't detected. For more information, see [REAgentC command-line options](../../intune-service/protect/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
 
   - A TPM isn't available for BitLocker, either because it isn't present, it's been made unavailable in the Registry, or the OS is on a removable drive.
 
@@ -179,7 +177,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 While viewing the Encryption report pane, you can select **Export** to create a *.csv* file download of the report details. This report includes the high-level details from the *Encryption report* pane and *Device encryption status* details for each device you manage.
 
-![Export details](./media/encryption-monitor/export.png)
+![Export details](./media/monitor-encryption/export.png)
 
 This report can be of use in identifying problems for groups of devices. For example, you might use the report to identify a list of macOS devices that all report *FileVault is already enabled by the user*, which indicates devices that must be manually decrypted before Intune can manage their FileVault settings.
 
@@ -189,17 +187,17 @@ For details on managing recovery keys, see the following Intune documentation:
 
 macOS FileVault:
 
-- [Retrieve personal recovery key](../protect/encrypt-devices-filevault.md#recovery-key-access-locations)
-- [Rotate recovery keys](../protect/encrypt-devices-filevault.md#recovery-key-rotation)
-- [Recover recovery keys](../protect/encrypt-devices-filevault.md#recovery-key-access-locations)
+- [Retrieve personal recovery key](./encrypt-filevault-macos.md#recovery-key-access-locations)
+- [Rotate recovery keys](./encrypt-filevault-macos.md#recovery-key-rotation)
+- [Recover recovery keys](./encrypt-filevault-macos.md#recovery-key-access-locations)
 
 Windows BitLocker:
 
-- [Rotate BitLocker recovery keys](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
+- [Rotate BitLocker recovery keys](./encrypt-bitlocker-windows.md#rotate-bitlocker-recovery-keys)
 
 ## Next steps
 
-- [Manage BitLocker policy](../protect/encrypt-devices.md)
-- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
-- [Manage FileVault policy](encrypt-devices-filevault.md)
-- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [Manage BitLocker policy](./encrypt-bitlocker-windows.md)
+- [Troubleshooting BitLocker policy](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Manage FileVault policy](./encrypt-filevault-macos.md)
+- [Known issues for Enforcing BitLocker policies with Intune](../../intune-service/protect/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

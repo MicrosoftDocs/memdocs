@@ -49,20 +49,20 @@ The Sophos Mobile app authorization process follows:
 5. Go to **Mobile** > **Settings** > **Setup** > **Sophos setup**.
 6. On the **Sophos setup** page, select the **Intune MTD** tab.
 
-   ![Sophos setup](./media/sophos-mtd-connector-integration/sophos-setup.png)
+   ![Sophos setup](./media/setup-sophos/sophos-setup.png)
 
 7. Select **Bind**, and then select **Yes**. Sophos connects to Intune and requires you to sign in to your Intune subscription.
 8. In the Microsoft Intune authentication window, enter your Intune credentials and **Accept** the permissions request for *Sophos Mobile Threat Defense*.
 
-   ![Intune authentication](./media/sophos-mtd-connector-integration/intune-authentication.png)
+   ![Intune authentication](./media/setup-sophos/intune-authentication.png)
 
 9. On the **Sophos setup** page, select **Save** to complete the configuration for Intune:
 
-   ![Save Sophos setup](./media/sophos-mtd-connector-integration/save-sophos-configuration.png)
+   ![Save Sophos setup](./media/setup-sophos/save-sophos-configuration.png)
 
 10. When the message **Successful Integration** appears, integration is complete.
 11. In the Intune admin center, Sophos is now available.
 
 ## Next Steps
 
-[Configure Sophos client apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+[Configure Sophos client apps](./add-assign-apps.md)

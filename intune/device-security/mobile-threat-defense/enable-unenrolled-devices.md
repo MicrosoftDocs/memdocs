@@ -15,7 +15,7 @@ ms.collection:
 
 During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the app protection policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
 
-[!INCLUDE [mtd-mam-note](../../intune-service/protect/includes/mtd-mam-note.md)]
+[!INCLUDE [mtd-mam-note](./includes/mtd-mam-note.md)]
 
 ## Classic Conditional Access policies for Mobile Threat Defense (MTD) apps
 
@@ -53,7 +53,7 @@ To view classic Conditional Access policies, in [Azure](https://portal.azure.com
 
 > [!NOTE]
 >
-> Ensure your tenant's MDM Authority is [set to Intune](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
+> Ensure your tenant's MDM Authority is [set to Intune](../../intune-service/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
 
 You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
 
@@ -73,4 +73,4 @@ You can decide which MTD toggle options you need to enable according to your org
 
 ## Next Steps
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](mtd-app-protection-policy.md).
+- [Create Mobile Threat Defense (MTD) app protection policy with Intune](./create-app-protection-policy.md).

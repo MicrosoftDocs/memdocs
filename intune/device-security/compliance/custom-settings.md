@@ -38,19 +38,19 @@ After you deploy custom compliance settings and devices report back, you can vie
 
 - **Microsoft Entra joined** devices, *including* Microsoft Entra hybrid joined devices.
 
-  Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+  Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](../../intune-service/protect/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 - **Microsoft Entra registered/Workplace joined (WPJ)**
 
-  For information about devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
+  For information about devices [registered](../../intune-service/protect/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](../../intune-service/protect/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
 
   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored.
 
 - **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Intune admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
-  To create a custom compliance script, see [Custom compliance discovery scripts for Microsoft Intune](../protect/compliance-custom-script.md).
+  To create a custom compliance script, see [Custom compliance discovery scripts for Microsoft Intune](./create-custom-script.md).
 
-- **JSON file** - The JSON file defines the custom settings and the value that is to be considered as compliant and can contain messages for users on how to restore the device to compliance for the setting. For guidance on creating a JSON for custom compliance, see [Custom compliance JSON files](compliance-custom-json.md).
+- **JSON file** - The JSON file defines the custom settings and the value that is to be considered as compliant and can contain messages for users on how to restore the device to compliance for the setting. For guidance on creating a JSON for custom compliance, see [Custom compliance JSON files](./create-custom-json.md).
 
 ## Create a policy with custom compliance settings
 
@@ -58,7 +58,7 @@ Before you begin to create a policy that includes custom settings, review the [p
 
 You must first upload an applicable discovery script to Intune, and have a ready JSON to add while creating the policy.
 
-When ready, use the normal procedure to [create a compliance policy](create-compliance-policy.md), which includes platform specific instructions for adding custom settings to the policy. Custom settings are added while on the Configuration settings page by configuring the option for *Custom Compliance*.
+When ready, use the normal procedure to [create a compliance policy](./create-policy.md), which includes platform specific instructions for adding custom settings to the policy. Custom settings are added while on the Configuration settings page by configuring the option for *Custom Compliance*.
 
 > [!NOTE]
 >
@@ -78,7 +78,7 @@ Use the following methods to view details about a device’s compliance status.
 
   In the admin center go to **Reports** > **Device compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
 
-  For more information, see [Monitor Intune Device compliance policies](../protect/compliance-policy-monitor.md).
+  For more information, see [Monitor Intune Device compliance policies](./monitor-policy.md).
 
 - On a Linux device, you can open the Intune app to view the device’s status:
 
@@ -176,4 +176,4 @@ After making changes to a device to bring it into compliance, refresh the device
 
 ## Next steps
 
-- [Create a compliance policy](../protect/create-compliance-policy.md)
+- [Create a compliance policy](./create-policy.md)

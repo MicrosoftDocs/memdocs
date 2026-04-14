@@ -14,7 +14,7 @@ ms.collection:
 
 # Reports for LAPS policy in Intune
 
-After devices are assigned Microsoft Intune [policy for Windows LAPS](../protect/windows-laps-policy.md), you can view policy details from within the Microsoft Intune admin center. Reports for LAPS include details about devices and users that are assigned LAPS policies, the status of the policy settings like success, errors, or conflicts, and which devices are pending the submission of device status for assigned policy.
+After devices are assigned Microsoft Intune [policy for Windows LAPS](./deploy-policy.md), you can view policy details from within the Microsoft Intune admin center. Reports for LAPS include details about devices and users that are assigned LAPS policies, the status of the policy settings like success, errors, or conflicts, and which devices are pending the submission of device status for assigned policy.
 
 Reports for Windows LAPS policies are found in the Endpoint security node for Account protection policies. The Reports node of the Intune admin center doesn't have dedicated reports for Windows LAPS.
 
@@ -79,10 +79,10 @@ When you use Intune policies to manage Windows LAPS, the following events are au
 - Manual password rotation through a device action.
 - Requests to view the password for an account.
 
-For information about Microsoft Entra event logs, see [What are Microsoft Entra audit logs](/azure/active-directory/reports-monitoring/concept-audit-logs).
+For information about Microsoft Entra event logs, see [What are Microsoft Entra audit logs](../../intune-service/protect/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 ## Next steps
 
-- [Introduction to Intune policy for LAPS](../protect/windows-laps-overview.md)
-- [Create policy for LAPS](../protect/windows-laps-policy.md)
-- [Account protection policy for endpoint security in Intune](../protect/endpoint-security-account-protection-policy.md)
+- [Introduction to Intune policy for LAPS](./overview.md)
+- [Create policy for LAPS](./deploy-policy.md)
+- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection-policy.md)

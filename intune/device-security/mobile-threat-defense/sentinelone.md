@@ -35,15 +35,15 @@ For Android and iOS/iPadOS The SentinelOne app captures file system, network sta
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from SentinelOne. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the SentinelOne app installed in their devices to resolve the issue and regain access to corporate resources. To support using SentinelOne with enrolled devices:
 
-  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
-  - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
-  - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
+  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
+  - [Enable the MTD connector in Intune](./enable-connector.md)
 
 - **Support for unenrolled devices** - Intune can use the risk assessment data from the SentinelOne app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../../app-management/ref-protected-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using SentinelOne with unenrolled devices:
 
-  - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
-  - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
-  - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
+  - [Add the MTD app to unenrolled devices](./add-apps-unenrolled-devices.md)
+  - [Create a Mobile Threat Defense app protection policy](./create-app-protection-policy.md)
+  - [Enable the MTD connector in Intune for unenrolled devices](./enable-unenrolled-devices.md)
 
 ## Sample scenarios
 
@@ -101,12 +101,12 @@ When the sentinelone Mobile Threat Defense solution considers a device to be inf
 
 ## Next steps
 
-- [Integrate sentinelone with Intune](sentinelone-mtd-connector-integration.md)
+- [Integrate sentinelone with Intune](./setup-sentinelone.md)
 
-- [Set up sentinelone apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up sentinelone apps](./add-assign-apps.md)
 
-- [Create sentinelone device compliance policy](mtd-device-compliance-policy-create.md)
+- [Create sentinelone device compliance policy](./create-compliance-policy.md)
 
-- [Enable sentinelone MTD connector](mtd-connector-enable.md)
+- [Enable sentinelone MTD connector](./enable-connector.md)
 
-- [Create an MTD app protection policy](../protect/mtd-app-protection-policy.md)
+- [Create an MTD app protection policy](./create-app-protection-policy.md)

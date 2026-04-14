@@ -15,15 +15,15 @@ ms.collection:
 
 Microsoft Intune can integrate data from a Mobile Threat Defense (MTD) partner for use by device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
-After you [setup your MTD Partner](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and configure the Intune connector in the MTD partner console, you can then enable the MTD connection for that MTD partner application from within the Intune admin center.
+After you [setup your MTD Partner](./overview.md#mobile-threat-defense-partners) and configure the Intune connector in the MTD partner console, you can then enable the MTD connection for that MTD partner application from within the Intune admin center.
 
 Applies to:
 
-- All [Intune Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
+- All [Intune Mobile Threat Defense partners](./overview.md#mobile-threat-defense-partners).
 
 ## Required role-based access control permissions
 
-To successfully enable the Mobile Threat Defense connector, you must use an account that is assigned [Role-based access control](../fundamentals/role-based-access-control.md) (RBAC) permissions equivalent to the *Endpoint Security Manager* built-in admin role for Intune. If you use a custom role, ensure it includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
+To successfully enable the Mobile Threat Defense connector, you must use an account that is assigned [Role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) permissions equivalent to the *Endpoint Security Manager* built-in admin role for Intune. If you use a custom role, ensure it includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
 
 ## To enable the Mobile Threat Defense connector
 
@@ -47,7 +47,7 @@ To successfully enable the Mobile Threat Defense connector, you must use an acco
 
 > [!NOTE]
 >
-> Ensure your tenant's MDM Authority is [set to Intune](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
+> Ensure your tenant's MDM Authority is [set to Intune](../../intune-service/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
 
 The available options for connectors are divided into three categories. When a partner doesn't support a category, that category isn't available:
 
@@ -101,7 +101,7 @@ Enable the toggles for those options your organization requires.
 
 - **Connect iOS devices version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the "Max allowed threat level" rule evaluate devices including data from this connector.
 
-To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](mtd-enable-unenrolled-devices.md).
+To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](./enable-unenrolled-devices.md).
 
 ### Shared settings
 
@@ -115,4 +115,4 @@ To learn more about using Mobile Threat Defense connectors for Intune App Protec
 
 ## Next steps
 
-- [Create Mobile Threat Defense (MTD) device compliance policy with Intune](mtd-device-compliance-policy-create.md)
+- [Create Mobile Threat Defense (MTD) device compliance policy with Intune](./create-compliance-policy.md)

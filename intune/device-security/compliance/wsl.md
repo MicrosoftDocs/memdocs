@@ -92,7 +92,7 @@ Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microso
 
 This section describes the known limitations with using the Intune WSL plugin for compliance evaluation.
 
-- Compliance evaluation requires the installed Linux distributions in WSL to run at least one time before it works. If you install a Linux distribution with the `--no-launch` [command for WSL](/windows/wsl/basic-commands), the compliance evaluation won't work.
+- Compliance evaluation requires the installed Linux distributions in WSL to run at least one time before it works. If you install a Linux distribution with the `--no-launch` [command for WSL](../../intune-service/protect/windows/wsl/basic-commands), the compliance evaluation won't work.
 
 - Compliance evaluation might not function as expected on custom Linux images or Linux images without the `etc/os-release` directory.
 
@@ -100,10 +100,10 @@ This section describes the known limitations with using the Intune WSL plugin fo
 
 ## Next steps
 
-- [Create a compliance policy](create-compliance-policy.md#create-the-policy), and set the **Platform** to **Windows 10 and later**. For more information about the compliance settings for Windows Subsystem for Linux, see [Windows Subsystem for Linux](compliance-policy-create-windows.md#windows-subsystem-for-linux).
+- [Create a compliance policy](./create-policy.md#create-the-policy), and set the **Platform** to **Windows 10 and later**. For more information about the compliance settings for Windows Subsystem for Linux, see [Windows Subsystem for Linux](./ref-windows-settings.md#windows-subsystem-for-linux).
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
 
-- [Monitor your compliance policies](compliance-policy-monitor.md).
+- [Monitor your compliance policies](./monitor-policy.md).
 
-- For troubleshooting help, see [Troubleshooting Windows Subsystem for Linux](/windows/wsl/troubleshooting).
+- For troubleshooting help, see [Troubleshooting Windows Subsystem for Linux](../../intune-service/protect/windows/wsl/troubleshooting).

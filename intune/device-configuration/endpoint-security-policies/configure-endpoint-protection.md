@@ -25,13 +25,13 @@ For example, you can create an Endpoint protection profile that only allows macO
 
 Before you create a profile, review the following articles that detail the Endpoint protection settings Intune can manage for each supported platform:
 
-- [macOS settings](endpoint-protection-macos.md)
-- [Windows settings](endpoint-protection-windows-10.md)
+- [macOS settings](./endpoint-protection-macos.md)
+- [Windows settings](./ref-endpoint-protection-settings-windows.md)
 
 ## Create a device profile containing Endpoint protection settings
 
 > [!IMPORTANT]
-> The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
+> The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../settings-catalog/index.md).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -57,16 +57,16 @@ Before you create a profile, review the following articles that detail the Endpo
 
 6. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-   - [macOS settings](endpoint-protection-macos.md)
-   - [Windows settings](endpoint-protection-windows-10.md)
+   - [macOS settings](./endpoint-protection-macos.md)
+   - [Windows settings](./ref-endpoint-protection-settings-windows.md)
 
 7. Select **Next**.
 
-8. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
+8. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../assign-device-profile.md).
 
    Select **Next**.
 
-9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../../device-configuration/create-device-profile.md).
+9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../create-device-profile.md).
 
    Select **Next**.
 
@@ -84,7 +84,7 @@ When you plan for profiles with custom Firewall rules, consider the following in
 
 - When a rule fails to apply, all rules in the profile are reported as failed. Intune cannot identify which individual rule failed.
 
-The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows devices that Intune supports, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+The Firewall rules that Intune can manage are detailed in the Windows [Firewall configuration service provider](../../intune-service/protect/windows/client-management/mdm/firewall-csp) (CSP). To review the list of custom firewall settings for Windows devices that Intune supports, see [Custom Firewall rules](./ref-endpoint-protection-settings-windows.md#firewall-rules).
 
 ### To add custom firewall rules to an Endpoint protection profile
 
@@ -109,7 +109,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 6. In **Configuration settings**, expand **Windows Firewall**. Next, for *Firewall rules*, select **Add** to open the **Create Rule** page.
 
-7. Specify settings for the Firewall rule, and then select **Save** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](endpoint-protection-windows-10.md#firewall-rules).
+7. Specify settings for the Firewall rule, and then select **Save** to save it. To review the available custom firewall rule options in documentation, see [Custom Firewall rules](./ref-endpoint-protection-settings-windows.md#firewall-rules).
 
     1. The rule appears on the *Windows Firewall* page in the list of rules.
     2. To modify a rule, select the rule from the list, to open the **Edit Rule** page.
@@ -118,11 +118,11 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
    Select **Next**.
 
-8. In **Assignments**, select the device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
+8. In **Assignments**, select the device groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../assign-device-profile.md).
 
    Select **Next**.
 
-9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../../device-configuration/create-device-profile.md).
+9. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](../create-device-profile.md).
 
    Select **Next**.
 
@@ -130,4 +130,4 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 ## Next steps
 
-[Monitor the profile status](../../device-configuration/monitor-device-profile.md).
+[Monitor the profile status](../monitor-device-profile.md).

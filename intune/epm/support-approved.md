@@ -15,9 +15,9 @@ ms.collection:
 
 # Support approved file elevations for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
-[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
+[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 This article explains how to use the **support approved** workflow with Endpoint Privilege Management.
 
@@ -31,7 +31,7 @@ Use EPM policies with the *support approved* elevation type for files that need 
 
 > [!TIP]
 >
-> To review the four elevation types and other policy options, see [Windows elevation rules policy](epm-elevation-rules.md).
+> To review the four elevation types and other policy options, see [Windows elevation rules policy](./elevation-rules.md).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 
@@ -63,7 +63,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
 - **Auditing for elevation requests**
 
-  An Intune admin who has enough permissions can view information about EPM policy such as creation, editing, and the handling of elevation requests in the [Intune Audit logs](../fundamentals/monitor-audit-logs.md), available at **Tenant administration** > **Audit logs**.
+  An Intune admin who has enough permissions can view information about EPM policy such as creation, editing, and the handling of elevation requests in the [Intune Audit logs](../intune-service/fundamentals/monitor-audit-logs.md), available at **Tenant administration** > **Audit logs**.
 
   The following screen capture shows an example of the audit log for the duplication of a *Support approved* elevation policy, originally named *Test policy - support approved*:
 
@@ -78,17 +78,17 @@ To provide oversight for elevation approvals, only Intune administrators who hav
   - View elevation requests
   - Modify elevation requests
 
-For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](../protect/epm-plan.md#role-based-access-controls-for-endpoint-privilege-management).
+For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](./plan.md#role-based-access-controls-for-endpoint-privilege-management).
 
 ## Create policy for support approved file elevations
 
-To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](../protect/epm-elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](../protect/epm-elevation-rules.md)
+To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](./elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](./elevation-rules.md)
 
 ## Manage pending elevation requests
 
 Use the following procedure as guidance for reviewing and managing elevation requests.
 
-[!INCLUDE [manage--admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
+[!INCLUDE [manage--admin-tasks](../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
 1. The elevation requests tab shows **pending requests** and **requests from the last 30 days**. Selecting a row opens that entries elevation request properties, where you can review the request in detail.
@@ -112,7 +112,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
    :::image type="content" source="./media/epm-support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/epm-support-approved/sample-request-detail.png":::
 
-1. When your Tenant is licensed for [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot), you have access to use the [Analyze with Copilot](#use-microsoft-security-copilot-to-analyze-file-elevation-requests) option, which is at the upper right of the Elevation request properties pane. You can use this option to have Security Copilot work with Microsoft Defender for Endpoint to evaluate the file in the elevation request before you approve or deny it.
+1. When your Tenant is licensed for [Microsoft Security Copilot](../intune-service/protect/copilot/security/microsoft-security-copilot), you have access to use the [Analyze with Copilot](#use-microsoft-security-copilot-to-analyze-file-elevation-requests) option, which is at the upper right of the Elevation request properties pane. You can use this option to have Security Copilot work with Microsoft Defender for Endpoint to evaluate the file in the elevation request before you approve or deny it.
 
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
@@ -134,7 +134,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
 ## Use Microsoft Security Copilot to analyze file elevation requests
 
-With Endpoint Privilege Management (EPM) plus [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot), you can use Security Copilot to reduce the work required to identify and investigate the files in a file elevation request before you choose to approve or deny the request. The information Security Copilot uses to help you evaluate files and establish trust is collected and evaluated through [Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) (Defender TI).
+With Endpoint Privilege Management (EPM) plus [Microsoft Security Copilot](../intune-service/protect/copilot/security/microsoft-security-copilot), you can use Security Copilot to reduce the work required to identify and investigate the files in a file elevation request before you choose to approve or deny the request. The information Security Copilot uses to help you evaluate files and establish trust is collected and evaluated through [Microsoft Defender Threat Intelligence](../intune-service/protect/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) (Defender TI).
 
 For example, when viewing the file properties for an elevation request, you can select the option to **Analyze with Copilot** to have Security Copilot provide details that are often not apparent, including:
 
@@ -145,7 +145,7 @@ For example, when viewing the file properties for an elevation request, you can 
 
 ### Prerequisites for using Security Copilot with EPM
 
-To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-plan.md#prerequisites) for using Endpoint Privilege Management.
+To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](../intune-service/protect/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](./plan.md#prerequisites) for using Endpoint Privilege Management.
 
 If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.
 
@@ -179,4 +179,4 @@ The preceding image shows a screen capture of the Copilot report on the reputati
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Reports >](epm-reports.md)
+> [Next: Reports >](./reports.md)

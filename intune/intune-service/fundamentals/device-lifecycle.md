@@ -34,7 +34,7 @@ Here are the types of configuration options that are available:
 In the modern IT world, protecting devices from unauthorized access is one of the most important tasks that you perform. In addition to the items in the **Configure** step of the device lifecycle, Intune provides these capabilities that help protect devices you manage from unauthorized access or malicious attacks:
 
 - [**Multi-factor authentication**](../../device-enrollment/configure-multifactor-authentication.md). Adding an extra layer of authentication to user sign-ins can help make devices even more secure. Many devices support multi-factor authentication that requires a second level of authentication, such as a phone call or text message, before users can gain access.
-- [**Windows Hello for Business settings**](../protect/windows-hello.md). Windows Hello for Business is an alternative sign-in method that lets users use a *gesture*—such as a fingerprint or Windows Hello—to sign in without needing a password.
+- [**Windows Hello for Business settings**](../../device-security/identity-protection/configure-tenant-wide-policy.md). Windows Hello for Business is an alternative sign-in method that lets users use a *gesture*—such as a fingerprint or Windows Hello—to sign in without needing a password.
 
 ## Retire
 

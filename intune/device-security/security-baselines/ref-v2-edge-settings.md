@@ -32,7 +32,7 @@ zone_pivot_groups: dcv2-edge-baselines
 
 This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
 
-If you use a security baseline for Microsoft Edge version 85 or earlier, see [List of the settings in the Microsoft Edge security baseline in Intune](../protect/security-baseline-settings-edge.md).
+If you use a security baseline for Microsoft Edge version 85 or earlier, see [List of the settings in the Microsoft Edge security baseline in Intune](./ref-edge-settings.md).
 
 > [!NOTE]
 > Beginning in May 2023, all new security baseline versions use a new settings format that replaces previous versions. While the last version instance for a baseline that uses the older setting format remains available to use, the older format will no longer receive updates for new settings, or updated default configurations.
@@ -56,9 +56,9 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
-- [Use security baselines](../protect/security-baselines.md)
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)
-- [Manage security baselines](../protect/security-baselines-configure.md)
+- [Use security baselines](./overview.md)
+- [Change the baseline version for a profile](./configure-baselines.md#update-a-baseline-profile-to-the-latest-version)
+- [Manage security baselines](./configure-baselines.md)
 
 ::: zone pivot="edge-v128"
 ## Microsoft Edge baseline for version 128 (January 2025)
@@ -110,7 +110,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Supported authentication schemes**\
   Baseline default: *Enabled*\
-  [Learn more](/deployedge/microsoft-edge-policies#authschemes)
+  [Learn more](../../intune-service/protect/deployedge/microsoft-edge-policies#authschemes)
 
   - **Supported authentication schemes (Device)**\
     Baseline default: *ntlm,negotiate*
@@ -129,18 +129,18 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Configure Microsoft Defender SmartScreen**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**\
   Baseline default: *Enabled*
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 ### Typosquatting Checker settings
 
@@ -196,7 +196,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Supported authentication schemes**\
   Baseline default: *Enabled*\
-  [Learn more](/deployedge/microsoft-edge-policies#authschemes)
+  [Learn more](../../intune-service/protect/deployedge/microsoft-edge-policies#authschemes)
 
 ### Native Messaging
 
@@ -212,18 +212,18 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Configure Microsoft Defender SmartScreen**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**\
   Baseline default: *Enabled*
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 - **Configure Edge TyposquattingChecker**\
   Baseline default: *Enabled*
@@ -280,7 +280,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Supported authentication schemes**\
   Baseline default: *Enabled*\
-  [Learn more](/deployedge/microsoft-edge-policies#authschemes)
+  [Learn more](../../intune-service/protect/deployedge/microsoft-edge-policies#authschemes)
 
 - **Supported authentication schemes (Device)**\
     Baseline default: *ntlm,negotiate*
@@ -294,7 +294,7 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Enable saving passwords to the password manager**\
   Baseline default: *Disabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
 
 ### Private Network Request Settings
 
@@ -305,21 +305,21 @@ For information about the most recent baseline versions and settings from Micros
 
 - **Configure Microsoft Defender SmartScreen**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**\
   Baseline default: *Enabled*
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**\
   Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 ::: zone-end
 
-- [Learn about security baselines](../protect/security-baselines.md)
-- [Avoid conflicts](../protect/security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Learn about security baselines](./overview.md)
+- [Avoid conflicts](./overview.md#avoid-conflicts)
+- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

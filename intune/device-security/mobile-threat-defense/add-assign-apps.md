@@ -39,7 +39,7 @@ See the instructions for [adding iOS store apps to Microsoft Intune](../../app-m
 
 ## Configure your MTD apps with an app configuration policy
 
-To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration isn't available. See [Add Mobile Threat Defense apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md).
+To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration isn't available. See [Add Mobile Threat Defense apps to unenrolled devices](./add-apps-unenrolled-devices.md).
 
 ### BlackBerry Protect configuration policy
 
@@ -291,7 +291,7 @@ Choose the section that corresponds to your MTD provider:
 
     > [!NOTE]
     >
-    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
+    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](../../intune-service/protect/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
 
   - **Add the Lookout for Work ipa file.**  
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../../app-management/deployment/add-lob-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
@@ -346,4 +346,4 @@ Choose the section that corresponds to your MTD provider:
 
 ## Next steps
 
-- [Configure the device compliance policy for MTD](mtd-device-compliance-policy-create.md)
+- [Configure the device compliance policy for MTD](./create-compliance-policy.md)

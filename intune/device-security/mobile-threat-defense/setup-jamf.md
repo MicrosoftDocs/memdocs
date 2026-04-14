@@ -147,5 +147,5 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 
 ## Next Steps
 
-- With Jamf Activation Profiles loaded in the Jamf Security Cloud portal, create client apps in Intune to deploy the Jamf Trust app to Android and iOS/iPadOS devices. The Jamf app config provides essential functionality to complement device configuration profiles that are pushed to devices, and is recommended for all deployments. See [Add MTD apps](mtd-apps-ios-app-configuration-policy-add-assign.md) for the procedures and custom details specific to the Jamf apps.
+- With Jamf Activation Profiles loaded in the Jamf Security Cloud portal, create client apps in Intune to deploy the Jamf Trust app to Android and iOS/iPadOS devices. The Jamf app config provides essential functionality to complement device configuration profiles that are pushed to devices, and is recommended for all deployments. See [Add MTD apps](./add-assign-apps.md) for the procedures and custom details specific to the Jamf apps.
 - With Jamf integrated with Intune, you can tune your configuration, view reports, and deploy more broadly across your fleet of mobile devices. For detailed configuration guides, see the [Jamf Security Cloud Portal Setup Guide](https://learn.jamf.com/bundle/jamf-security-cloud-setup-guide/page/RADAR_Portal.html) from Jamf.

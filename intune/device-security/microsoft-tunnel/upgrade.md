@@ -31,7 +31,7 @@ During an upgrade cycle:
 
 ## Use upgrade controls
 
-To help control when Intune starts the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](../protect/microsoft-tunnel-configure.md#create-a-site), or by editing the properties of an existing site:
+To help control when Intune starts the upgrade cycle, configure the following settings at each site. You can configure the settings when [creating a new site](./install.md#create-a-site), or by editing the properties of an existing site:
 
 - **Automatically upgrade servers at this site**
 - **Limit server upgrades to maintenance window**
@@ -239,7 +239,7 @@ Changes in this release:
 
 ## Related content
 
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+[Reference for Microsoft Tunnel](./ref-file-commands.md)
 
 <!-- Archive of past releases that are older than 6 months. 
 Update versions were first made available with the Sept 15, 2025 update.
@@ -674,7 +674,7 @@ Changes in this release:
 - Minor bug fixes
 - A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
-  For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).
+  For more information including where to download the tool, see [Run the readiness tool](./prerequisites.md#run-the-readiness-tool).
 
 ### October 25, 2021
 
@@ -688,7 +688,7 @@ Changes in this release:
 
 - Added ability to get a client network trace
 - Added ability to enabled resource access tracking
-- Added support for Podman when using [some versions](../protect/microsoft-tunnel-prerequisites.md#linux-server) of Red Hat Enterprise Linux
+- Added support for Podman when using [some versions](./prerequisites.md#linux-server) of Red Hat Enterprise Linux
 - Minor bug fixes
 
 ### September 7, 2021
@@ -753,7 +753,7 @@ Image hash values:
 
 Changes in this release:
 
-- Fixes for logging. [View the Microsoft Tunnel system logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs).
+- Fixes for logging. [View the Microsoft Tunnel system logs](./monitor.md#view-microsoft-tunnel-logs).
 - Additional bug fixes.
 
 ### October 12, 2020
@@ -766,7 +766,7 @@ Image hash values:
 
 Changes in this release:
 
-- Microsoft Tunnel now [logs](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the *syslog* format.
+- Microsoft Tunnel now [logs](./monitor.md#view-microsoft-tunnel-logs) operational and monitoring details to Linux server logs in the *syslog* format.
 - Various bug fixes.
 
 ### September 23, 2020

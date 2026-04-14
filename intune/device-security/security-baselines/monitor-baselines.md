@@ -19,15 +19,15 @@ Intune provides several options to monitor security baselines. You can:
 - Monitor the security baselines profile that applies to your users and devices.
 - View how the settings from a selected profile are set on a selected device.
 
-You can also view the [Device configuration report](../fundamentals/reports.md#device-configuration-operational) to see which device configuration based policies apply to individual devices, which include security baselines.
+You can also view the [Device configuration report](../../intune-service/fundamentals/reports.md#device-configuration-operational) to see which device configuration based policies apply to individual devices, which include security baselines.
 
-For more information about the feature, see [Security baselines in Intune](security-baselines.md).
+For more information about the feature, see [Security baselines in Intune](./overview.md).
 
 > [!NOTE]
 >
 > In May 2023, Intune began rollout of a new security baseline format that applies to new baseline types, like Microsoft 365 Apps, and to the newer versions of existing baselines, like Microsoft Edge baseline version 112. The new format updates the baseline settings to directly take their name and configuration options from the configuration service provider (CSP) that the baseline setting manages.
 >
-> Intune also introduced a new process to help you [*migrate an older security baseline profile to the newer baseline version*](../protect/security-baselines-configure.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
+> Intune also introduced a new process to help you [*migrate an older security baseline profile to the newer baseline version*](./configure-baselines.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 >
 > Baselines instances that use this new format also have an updated report and monitoring structure that aligns to other report improvements rolled out this year across Intune feature areas. The report view details for the [new format](#monitor-the-baseline-and-your-devices) are presented in this article separately from the [original details provided for the older baselines](#monitor-profiles-for-baseline-versions-released-before-may-2023), many of the concepts discussed for the older views remain relevant.
 
@@ -155,15 +155,15 @@ Monitoring the profile gives insight into the deployment state of your devices, 
 
 2. In the *Properties* of the baseline, expand **Settings** to drill-in and view all the settings categories and individual settings in the baseline, including their configuration for this instance of the baseline.
 
-   ![Screen image showing the settings view](./media/security-baselines-monitor/manage-settings.png)
+   ![Screen image showing the settings view](./media/monitor-baselines/manage-settings.png)
 
 3. Use the options for **Monitor** to view the deployment status of the profile on individual devices, the status for each user, and the status for the settings from the instance of the baseline:
 
-   ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
+   ![See the different monitor options for a security baselines profile](./media/monitor-baselines/monitor-status-options.png)
 
 ### Resolve conflicts for security baselines
 
-To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the [Device configuration report](../fundamentals/reports.md#device-configuration-operational) for a device. This report view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error.
+To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the [Device configuration report](../../intune-service/fundamentals/reports.md#device-configuration-operational) for a device. This report view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error.
 
 You can also reach information about settings in conflict or error through two paths from within Microsoft Intune admin center:
 
@@ -172,7 +172,7 @@ You can also reach information about settings in conflict or error through two p
 
 #### Drill in to identify and resolve conflicts
 
-1. While viewing the [Device configuration report](../fundamentals/reports.md#device-configuration-operational) for a device, select a policy to drill-in to learn more about the issue that results in a conflict or error status.
+1. While viewing the [Device configuration report](../../intune-service/fundamentals/reports.md#device-configuration-operational) for a device, select a policy to drill-in to learn more about the issue that results in a conflict or error status.
 
    When you drill-in, Intune displays a list of settings for that policy that includes each setting that wasn’t set as *Not configured*, and the status of that setting.
 
@@ -222,7 +222,7 @@ On Windows devices, there's a built-in MDM diagnostic information report. This r
 
   For example, look in the **Enrolled configuration sources and target resources** section or the **Unmanaged policies** section. You might get an idea of why it's causing an error or conflict.
 
-For more information about diagnostic information logs, see [Collect MDM logs](/windows/client-management//mdm-collect-logs).
+For more information about diagnostic information logs, see [Collect MDM logs](../../intune-service/protect/windows/client-management/mdm-collect-logs).
 
 > [!TIP]
 >
@@ -231,8 +231,8 @@ For more information about diagnostic information logs, see [Collect MDM logs](/
 
 ## Next steps
 
-- [Learn about security baselines](security-baselines.md)
-- [Avoid conflicts](security-baselines.md#avoid-conflicts)
+- [Learn about security baselines](./overview.md)
+- [Avoid conflicts](./overview.md#avoid-conflicts)
 - [Monitor device profiles](../../device-configuration/monitor-device-profile.md)
 - [Common issues and resolutions](../../device-configuration/troubleshoot-device-profiles.md).
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

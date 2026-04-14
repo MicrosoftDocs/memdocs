@@ -53,7 +53,7 @@ To complete the procedures in this article, you must have:
 
   - Application Administrator - This role can create apps that communicate with JAMF about the device compliance state.
 
-  For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+  For more information about these roles, see [Microsoft Entra built-in roles](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference).
 
 <a name='common-questions-about-jamf-pro-integration-with-entra-id'></a>
 
@@ -241,5 +241,5 @@ Second, On the affected device:
 
 ## Next steps
 
-- [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
+- [Apply compliance policies to Jamf-managed devices](../conditional-access-integration/assign-jamf-policies.md)
 - [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)

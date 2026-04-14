@@ -21,7 +21,7 @@ At a high level, the Microsoft Tunnel requires:
 
 - A *Microsoft Intune Plan 1* subscription.
   > [!NOTE]
-  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md), which is an [Intune add-on](../fundamentals/intune-add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
+  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](./mam.md), which is an [Intune add-on](../../intune-service/fundamentals/intune-add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
 
 - To complete setup of Microsoft Tunnel, the account you'll use to register Tunnel Gateway with Microsoft Intune and your Intune tenant must be assigned the Microsoft Entra ID role of *Intune Administrator* and be assigned an Intune license.
 
@@ -48,7 +48,7 @@ Microsoft Tunnel is supported with the following sovereign cloud environments:
 
 Microsoft Tunnel isn't supported on Microsoft Azure operated by 21Vianet.
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Linux server
 
@@ -113,7 +113,7 @@ Set up a Linux based virtual machine or a physical server on which to install th
     >
     > **Rootless Podman**: Microsoft Tunnel supports use of a rootless Podman container.
     >
-    > Use of rootless Podman requires *additional prerequisites* to those detailed in this article, and the use of a modified command line when you start the Tunnel installation script. For information about the additional prerequisites and installation command line, see [Use a rootless Podman container](../protect/microsoft-tunnel-configure.md#use-a-rootless-podman-container) in the *Configure Microsoft Tunnel for Intune* article.
+    > Use of rootless Podman requires *additional prerequisites* to those detailed in this article, and the use of a modified command line when you start the Tunnel installation script. For information about the additional prerequisites and installation command line, see [Use a rootless Podman container](./install.md#use-a-rootless-podman-container) in the *Configure Microsoft Tunnel for Intune* article.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. During installation of the Tunnel Gateway, you add to the server the TLS certificate and full trusted certificate chain.
 
@@ -254,7 +254,7 @@ Details on how to implement auditing depend on the Linux platform you use:
 
   - **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
 
-- **Ensure cloud-based Linux VMs can access your on-premises network**: If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+- **Ensure cloud-based Linux VMs can access your on-premises network**: If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](../../intune-service/protect/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
 
 - **Load balancers** *(Optional)*: If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
@@ -393,7 +393,7 @@ The following details can help you configure an internal proxy when using Podman
 
 ### Configure Podman to use the proxy to download image updates
 
-You can configure Podman to use the proxy to download (pull) updated images for Podman. This configuration is important for future upgrades. Because it must be configured after the Tunnel Gateway is installed, we mention it here, but have added the configuration guidance to [Configure Podman to use the proxy to download image updates](../protect/microsoft-tunnel-configure.md#configure-podman-to-use-the-proxy-to-download-image-updates) in the *Configure Microsoft Tunnel* article as a task to complete after installing the Tunnel Gateway server.
+You can configure Podman to use the proxy to download (pull) updated images for Podman. This configuration is important for future upgrades. Because it must be configured after the Tunnel Gateway is installed, we mention it here, but have added the configuration guidance to [Configure Podman to use the proxy to download image updates](./install.md#configure-podman-to-use-the-proxy-to-download-image-updates) in the *Configure Microsoft Tunnel* article as a task to complete after installing the Tunnel Gateway server.
 
 ## Platforms
 
@@ -426,7 +426,7 @@ Support for a Proxy is limited to the following platforms:
 
 ## Permissions
 
-To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add them to [custom roles you create](../fundamentals/create-custom-role.md) for your Intune tenant.
+To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add them to [custom roles you create](../../intune-service/fundamentals/create-custom-role.md) for your Intune tenant.
 
 While configuring a role, on the **Permissions** page, expand **Microsoft Tunnel Gateway** and then select the permissions you want to grant.
 
@@ -484,7 +484,7 @@ To use the readiness tool:
 
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra ID and to Intune. The tool reports success or an error.
 
-For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
+For more information about this tool, see [Reference for mst-cli](./ref-file-commands.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 
 ### Manually install auditd for Linux system auditing
 
@@ -494,7 +494,7 @@ The readiness tool checks for the presence of the *auditd* package for Linux sys
 
 For information on how to manually install this before installing Tunnel server, see [Linux system auditing](#linux-system-auditing) earlier in this article.
 
-To install auditd after installing Microsoft Tunnel, see [Install Linux system auditing after installing the Tunnel server](../protect/microsoft-tunnel-configure.md#install-linux-system-auditing-after-installing-the-tunnel-server) in Configure Micrfosoft Tunnel.
+To install auditd after installing Microsoft Tunnel, see [Install Linux system auditing after installing the Tunnel server](./install.md#install-linux-system-auditing-after-installing-the-tunnel-server) in Configure Micrfosoft Tunnel.
 
 ### Manually load ip_tables
 
@@ -544,4 +544,4 @@ In the context of sudo, run the following command on your Linux server to create
 
 ## Next steps
 
-[Configure Microsoft Tunnel](microsoft-tunnel-configure.md)
+[Configure Microsoft Tunnel](./install.md)

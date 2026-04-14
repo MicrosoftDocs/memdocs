@@ -19,9 +19,9 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a c
 
 This article introduces the core Microsoft Tunnel, how it works, and its architecture.
 
-If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then [Configure the Microsoft Tunnel](microsoft-tunnel-configure.md).
+If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](./prerequisites.md), and then [Configure the Microsoft Tunnel](./install.md).
 
-After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) (Tunnel for MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. Tunnel for MAM is available when you add *Microsoft Intune Plan 2* or *Microsoft Intune Suite* as an [add-on license](../fundamentals/intune-add-ons.md) to your Tenant.
+After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for Mobile Application Management](./mam.md) (Tunnel for MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. Tunnel for MAM is available when you add *Microsoft Intune Plan 2* or *Microsoft Intune Suite* as an [add-on license](../../intune-service/fundamentals/intune-add-ons.md) to your Tenant.
 
 > [!NOTE]
 >
@@ -50,7 +50,7 @@ Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. 
 
   When a device is identified as rooted, the client immediately marks the device's risk category as *High*, drops active Tunnel connections, and continues to block access until the device is determined to be compliant. The device user receives a notification about this status from the Defender client.
 
-  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](android-personally-owned-security-configurations.md#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](android-fully-managed-security-configurations.md#fully-managed-basic-security-level-1) devices.
+  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](../security-configurations/android-personally-owned.md#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](../security-configurations/android-fully-managed.md#fully-managed-basic-security-level-1) devices.
 
 ### Setup Overview
 
@@ -92,13 +92,13 @@ To use the Microsoft Tunnel, devices must install the Microsoft Defender app. Yo
 
 The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
-![Drawing of the Microsoft Tunnel Gateway architecture](./media/microsoft-tunnel-overview/tunnel-architecture.png)
+![Drawing of the Microsoft Tunnel Gateway architecture](./media/overview/tunnel-architecture.png)
 
 **Components**:
 
 - **A** – Microsoft Intune.
 - **B**- Microsoft Entra ID.
-- **C** – Linux server with Podman or Docker CE (See the [Linux server](../protect/microsoft-tunnel-prerequisites.md#linux-server) requirements for details about which versions require Podman or Docker)
+- **C** – Linux server with Podman or Docker CE (See the [Linux server](./prerequisites.md#linux-server) requirements for details about which versions require Podman or Docker)
   - **C.1** - Microsoft Tunnel Gateway.
   - **C.2** – Management Agent.
   - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Microsoft Entra.
@@ -118,14 +118,14 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 - **5** - Device authenticates to Microsoft Entra. Conditional Access policies are evaluated.
 - **6** - With split tunnel:
   - **6.a** - Some traffic goes directly to the public internet.
-  - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, and DTLS over port 443. This traffic requires inbound and outbound [Firewall ports](../protect/microsoft-tunnel-prerequisites.md#firewall) to be open.
+  - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, and DTLS over port 443. This traffic requires inbound and outbound [Firewall ports](./prerequisites.md#firewall) to be open.
 - **7** - The Tunnel routes traffic to your internal proxy (optional) and/or your corporate network. IT Admins must ensure that traffic from the Tunnel Gateway server internal interface can successfully route to internal corporate resource (IP address ranges and ports).
 
 > [!NOTE]
 >
-> - Tunnel gateway maintains two channels with the client. A control channel is established over TCP, and TLS. This also serves as a backup data channel. It then looks to establish a UDP channel using DTLS (Datagram TLS, an implementation of TLS over UDP) that serves as the main data channel. If the UDP channel fails to establish or is temporarily unavailable, the backup channel over TCP/TLS is used. By default port 443 is used for both TCP and UDP, but this can be customized via the Intune Server Configuration - [*Server port* setting](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). If changing the default port (443) ensure your inbound firewall rules are adjusted to the custom port.
+> - Tunnel gateway maintains two channels with the client. A control channel is established over TCP, and TLS. This also serves as a backup data channel. It then looks to establish a UDP channel using DTLS (Datagram TLS, an implementation of TLS over UDP) that serves as the main data channel. If the UDP channel fails to establish or is temporarily unavailable, the backup channel over TCP/TLS is used. By default port 443 is used for both TCP and UDP, but this can be customized via the Intune Server Configuration - [*Server port* setting](./install.md#create-a-server-configuration). If changing the default port (443) ensure your inbound firewall rules are adjusted to the custom port.
 >
-> - The assigned client IP addresses (the *IP address range* setting in a [Server configuration](../protect/microsoft-tunnel-configure.md#to-create-a-server-configuration) for Tunnel) are not visible to other devices on the network. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where multiple private IP addresses from the Server configuration are mapped into a single IP (many-to-one) by using ports. Client traffic will have the source IP address of the Linux server host.
+> - The assigned client IP addresses (the *IP address range* setting in a [Server configuration](./install.md#to-create-a-server-configuration) for Tunnel) are not visible to other devices on the network. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where multiple private IP addresses from the Server configuration are mapped into a single IP (many-to-one) by using ports. Client traffic will have the source IP address of the Linux server host.
 
 **Break and inspect**:
 
@@ -137,15 +137,15 @@ The following information outlines where break and inspect isn't supported. Refe
 
   - Tunnel Gateway doesn't support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
   - The use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway isn't supported and causes client connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
-  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 **Additional details**:
 
-- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Noncompliant devices don't receive an access token from Microsoft Entra ID and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
+- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Noncompliant devices don't receive an access token from Microsoft Entra ID and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](./conditional-access.md).
 
 - The Management Agent is authorized against Microsoft Entra ID using Azure app ID/secret keys.
 
 ## Related content
 
-- [Prerequisites for the Microsoft Tunnel in Intune](microsoft-tunnel-prerequisites.md)
-- [Learn about Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Prerequisites for the Microsoft Tunnel in Intune](./prerequisites.md)
+- [Learn about Microsoft Tunnel for Mobile Application Management](./mam.md)

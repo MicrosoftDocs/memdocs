@@ -22,7 +22,7 @@ ms.collection:
 > - *Identity protection* – previously available from  *Devices* > *Configuration* > *Create* >  *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
 > - *Account protection (Preview)* – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
 
-Microsoft Intune supports use of *Account protection* profiles to manage Windows Hello for Business on your managed Windows devices. [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards.
+Microsoft Intune supports use of *Account protection* profiles to manage Windows Hello for Business on your managed Windows devices. [Windows Hello for Business](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards.
 
 Applies to:
 
@@ -36,15 +36,15 @@ When you use Intune Account protection profiles to manage Windows Hello for Busi
 
 In addition to Account protection profiles, Intune supports the following options to manage settings for Windows Hello for Business:
 
-- [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
-- [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
+- [During device enrollment](./configure-tenant-wide-policy.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
+- [Security baselines](../security-baselines/overview.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
 - [Settings catalog](../../device-configuration/settings-catalog/index.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
 
 > [!NOTE]
-> For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](/windows/client-management/mdm/policy-csp-devicelock)
+> For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock)
 
 ## Next steps
 
-- [Configure Account protection profiles to manage Windows Hello for Business settings](../protect/endpoint-security-account-protection-policy.md)
-- [Review settings, and what they do](identity-protection-windows-settings.md)
+- [Configure Account protection profiles to manage Windows Hello for Business settings](../../device-configuration/endpoint-security-policies/account-protection-policy.md)
+- [Review settings, and what they do](./ref-settings.md)
 - [Monitor the profile status](../../device-configuration/monitor-device-profile.md)

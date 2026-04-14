@@ -34,9 +34,9 @@ Jamf updates Intune with each device’s latest threat level (Secure, Low, Mediu
 
 These categories and their associated threat levels are configurable in Jamf Security Cloud portal such that the total calculated threat level for each device is customizable per your organization’s security requirements. With threat level in hand, there are two Intune policy types that make use of this information to manage access to corporate data:
 
-- Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Jamf-reported threat level. This compliance flag empowers Conditional Access policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](../protect/mtd-device-compliance-policy-create.md) with Intune for configuration details.
+- Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Jamf-reported threat level. This compliance flag empowers Conditional Access policies to allow or deny access to applications that utilize modern authentication. See [Create Mobile Threat Defense (MTD) device compliance policy](./create-compliance-policy.md) with Intune for configuration details.
 
-- Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (for example, Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Jamf-reported threat level. These policies can also be used for unenrolled devices with MAM managed applications to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md) with Intune for configuration details.
+- Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (for example, Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Jamf-reported threat level. These policies can also be used for unenrolled devices with MAM managed applications to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](./create-app-protection-policy.md) with Intune for configuration details.
 
 ## Supported platforms
 
@@ -111,7 +111,7 @@ When the Jamf Mobile Threat Defense solution considers a device to be infected:
 
 ## Related content
 
-- [Integrate Jamf with Intune](jamf-mtd-connector-integration.md)
-- [Set up Jamf apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Create Jamf device compliance policy](mtd-device-compliance-policy-create.md)
-- [Enable Jamf MTD connector](mtd-connector-enable.md)
+- [Integrate Jamf with Intune](./setup-jamf.md)
+- [Set up Jamf apps](./add-assign-apps.md)
+- [Create Jamf device compliance policy](./create-compliance-policy.md)
+- [Enable Jamf MTD connector](./enable-connector.md)

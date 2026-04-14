@@ -71,4 +71,4 @@ The Harmony Mobile Protect app authorization process consists of the following s
 
 ## Next steps
 
-- [Set up Harmony Mobile Protect apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up Harmony Mobile Protect apps](./add-assign-apps.md)

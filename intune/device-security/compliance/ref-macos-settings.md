@@ -20,12 +20,12 @@ This feature applies to:
 
 - macOS
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
 
 ## Before you begin
 
-- To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
-- To create a macOS device compliance policy, see [Create a compliance policy in Microsoft Intune](create-compliance-policy.md). For **Platform**, select **macOS**.
+- To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
+- To create a macOS device compliance policy, see [Create a compliance policy in Microsoft Intune](./create-policy.md). For **Platform**, select **macOS**.
 
 > [!NOTE]
 >
@@ -123,6 +123,6 @@ For more information, see [Gatekeeper on macOS](https://support.apple.com/HT2024
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
-- [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for iOS](compliance-policy-create-ios.md) devices.
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).
+- See the [compliance policy settings for iOS](./ref-ios-ipados-settings.md) devices.

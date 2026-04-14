@@ -1,8 +1,6 @@
 ---
 title: macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune
 description: See a list of the settings in the Microsoft Defender Antivirus profile for macOS. This profile is s part of Endpoint security Antivirus policy for macOS in Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/12/2024
 ms.topic: reference
 ms.collection:
@@ -13,13 +11,13 @@ ms.reviewer: laarrizz
 
 # Settings for Microsoft Defender for Endpoint for Mac in Microsoft Intune
 
-View the *Microsoft Defender Antivirus* profile settings you can configure for Microsoft Defender for Endpoint for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
+View the *Microsoft Defender Antivirus* profile settings you can configure for Microsoft Defender for Endpoint for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender for Endpoint for Mac](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
 
-Learn about using [Endpoint security policies](../protect/endpoint-security-policy.md) in Intune.
+Learn about using [Endpoint security policies](./manage-policies.md) in Intune.
 
 ## Cloud delivered protection preferences
 
-For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
+For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](../../intune-service/protect/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
 
 - **Enable / disable cloud delivered protection**
   - *Not configured* (*default*)
@@ -43,7 +41,7 @@ For details about these settings, see the settings entry in [Set preferences for
 
 ## Antivirus engine
 
-For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
+For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](../../intune-service/protect/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
 
 - **Enable real-time protection (deprecated)**  - This setting is replaced by *Enforcement level*.
   - *Not configured* (*default*)
@@ -131,7 +129,7 @@ For details about these settings, see the settings entry in [Set preferences for
 
 ## User interface preferences
 
-For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
+For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](../../intune-service/protect/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
 
 - **Control sign-in to consumer version**
   - *Enabled* (*default*)

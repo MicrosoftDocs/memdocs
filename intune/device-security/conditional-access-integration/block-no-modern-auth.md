@@ -17,15 +17,15 @@ App-based Conditional Access with app protection policies rely on applications u
 
 ## Block access to apps
 
-To block access to apps that don't use modern authentication, use Intune app protection policies to implement Conditional Access. For more information, see [App-based Conditional Access with Intune](app-based-conditional-access-intune.md).
+To block access to apps that don't use modern authentication, use Intune app protection policies to implement Conditional Access. For more information, see [App-based Conditional Access with Intune](./app-based-policies.md).
 
 ## Additional information
 
 For more information about Microsoft Entra Conditional Access, see the following topics:
-- [What is Conditional Access in Microsoft Entra ID?](/azure/active-directory/conditional-access/overview)
-- [How app-based Conditional Access works](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
-- [Set up SharePoint Online and Exchange Online for Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
+- [What is Conditional Access in Microsoft Entra ID?](../../intune-service/protect/azure/active-directory/conditional-access/overview)
+- [How app-based Conditional Access works](./app-based-policies.md#how-app-based-conditional-access-works)
+- [Set up SharePoint Online and Exchange Online for Microsoft Entra Conditional Access](../../intune-service/protect/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
 
 ## Next steps
 
-- [App-based Conditional Access with Intune](app-based-conditional-access-intune.md)
+- [App-based Conditional Access with Intune](./app-based-policies.md)

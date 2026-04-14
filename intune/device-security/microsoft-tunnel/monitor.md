@@ -83,7 +83,7 @@ Default values for server health metrics:
 
   To learn more about Online Certificate Status Protocol (OCSP), see [Online Certificate Status Protocol](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) at wikipedia.org.
 
-- **Internal network accessibility** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](../protect/microsoft-tunnel-configure.md#to-create-a-site-configuration).
+- **Internal network accessibility** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](./install.md#to-create-a-site-configuration).
   - *Healthy* - The server can access the URL specified in the site properties.
   - *Unhealthy* - The server can't access the URL specified in the site properties.
   - *Unknown* - This status appears when you haven't set a URL in the site properties. This status doesn’t affect the overall status of the site.
@@ -97,7 +97,7 @@ Default values for server health metrics:
   - *Warning* - One version behind
   - *Unhealthy* - Two or more versions behind, and out of support
 
-  When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
+  When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](./upgrade.md).
 
 - **Server container** – Determines if the container hosting the Microsoft Tunnel server is running.
   - *Healthy* - Server container status is healthy.
@@ -165,7 +165,7 @@ To view trend charts:
 
 Use the **mst-cli** command-line tool to get information about the Microsoft Tunnel server. This file is added to the Linux server when the Microsoft Tunnel installs. The tool is located at: **/usr/sbin/mst-cli**.
 
-For more information and command-line examples, see [mst-cli command-line tool for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway).
+For more information and command-line examples, see [mst-cli command-line tool for Microsoft Tunnel](./ref-file-commands.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway).
 
 ## View Microsoft Tunnel logs
 
@@ -267,13 +267,13 @@ The following are known issues for Microsoft Tunnel.
 
 #### Clients can successfully use the Tunnel when Server health status shows as offline<!-- 14878305 -->
 
-**Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating that it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.
+**Issue**: On the [Tunnel *Health status* tab](./monitor.md), a server’s health status reports as offline indicating that it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.
 
 **Solution**: To resolve this issue, you must reinstall Microsoft Tunnel, which re-enrolls the Tunnel server agent with Intune. To prevent this issue, install updates for the Tunnel agent and server soon after they're released. Use the Tunnel server health metrics in the Microsoft Intune admin center to monitor server health.
 
 #### With Podman, you see “Error executing checkup” in the mstunnel_monitor log<!-- 14878316 -->
 
-**Issue**: Podman fails to identify or see the active containers are running, and reports “Error executing checkup” in the [mstunnel_monitor log](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) of the Tunnel server. The following are examples of the errors:
+**Issue**: Podman fails to identify or see the active containers are running, and reports “Error executing checkup” in the [mstunnel_monitor log](./monitor.md#view-microsoft-tunnel-logs) of the Tunnel server. The following are examples of the errors:
 
 - Agent:
   ```
@@ -326,4 +326,4 @@ If this issue persists, consider automating the restart command by using the cro
 
 ## Related content
 
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+[Reference for Microsoft Tunnel](./ref-file-commands.md)

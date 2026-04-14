@@ -1,8 +1,6 @@
 ---
 title: Use Intune compliance and Microsoft Entra Conditional Access policies with Jamf Pro
 description: Create Intune compliance policies and Microsoft Entra Conditional Access to help secure Jamf-managed devices.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 08/30/2023
 ms.topic: how-to
 ms.reviewer: ilwu
@@ -25,7 +23,7 @@ ms.collection:
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 > [!TIP]
-> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](jamf-managed-device-compliance-with-entra-id.md).
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../compliance/jamf-entra-id-compliance.md).
 
 After you integrate Jamf Pro with Intune, configure Intune compliance policies and Microsoft Entra Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
 
@@ -37,8 +35,8 @@ This article can help you with the following tasks:
 
 The procedures in this article require access to both the Intune and Jamf Pro consoles. Intune supports two methods to integrate Jamf Pro, which you configure separately from the procedures in this article:
 
-- *Recommended* - [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](conditional-access-jamf-cloud-connector.md)
-- [Manually configure integration of Jamf Pro with Intune](conditional-access-integrate-jamf.md)
+- *Recommended* - [Use the Jamf Cloud Connector to integrate Jamf Pro with Intune](./configure-jamf-cloud-connector.md)
+- [Manually configure integration of Jamf Pro with Intune](./setup-jamf-manually.md)
 
 After integration is configured, device users learn about Jamf Pro and Intune integration through either a communication from your IT department about how to register a device, or by discovering the Intune Company Portal app that you deploy through *Jamf Pro Self Service*. After device registration completes, inventory data collected by Jamf Pro for that device is shared with Intune. Information is shared for only those Mac devices that have completed.
 
@@ -95,9 +93,9 @@ To complete the following procedure, you need access to a macOS device and the J
 
 ## Create a policy in Jamf Pro to have users register their devices with Microsoft Entra ID
 
-After you [deploy the Company Portal](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) for macOS through Jamf Pro Self-Service, you can create the Jamf Pro policy that registers a user's device with Microsoft Entra ID.
+After you [deploy the Company Portal](./assign-jamf-policies.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) for macOS through Jamf Pro Self-Service, you can create the Jamf Pro policy that registers a user's device with Microsoft Entra ID.
 
-Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](../fundamentals/intune-planning-guide.md) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
+Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](../../intune-service/fundamentals/intune-planning-guide.md) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
 
 > [!WARNING]
 > Launching the Company Portal app manually (such as from the Applications or Downloads folders) won't register the device. If device user launches the Company Portal manually, they'll see a warning, **'AccountNotOnboarded'**.
@@ -128,5 +126,5 @@ Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](ht
 
 ## Next steps
 
-- [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Get started with Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Microsoft Entra ID](../../intune-service/protect/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Get started with Conditional Access in Microsoft Entra ID](../../intune-service/protect/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

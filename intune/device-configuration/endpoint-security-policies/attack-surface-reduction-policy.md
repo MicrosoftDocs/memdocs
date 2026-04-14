@@ -1,8 +1,6 @@
 ---
 title: Manage attack surface reduction settings with Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 03/06/2026
 ms.topic: article
 ms.collection:
@@ -23,14 +21,14 @@ You can use attack surface reduction (ASR) policies to reduce the attack surface
 
 - **Device Control**: Use this profile to allow, block, and otherwise secure removable media through controls that can monitor and help prevent threats from unauthorized peripherals from compromising your devices.
 
-For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
+For more information, see [Overview of attack surface reduction](../../intune-service/protect/ /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
  Attack surface reduction policies are found in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 Applies to:
 
 - Windows
-- Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
+- Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../../device-security/microsoft-defender/security-settings-management.md) scenario)*
 
 ## Prerequisites for Attack surface reduction profiles
 
@@ -39,7 +37,7 @@ Applies to:
 
 **Support for Security Management for Microsoft Defender for Endpoint**:
 
-When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support devices you've onboarded to Defender without enrollment with Intune, Attack surface reduction applies to devices that run Windows and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use [Security Management for Microsoft Defender for Endpoint](../../device-security/microsoft-defender/security-settings-management.md) to support devices you've onboarded to Defender without enrollment with Intune, Attack surface reduction applies to devices that run Windows and Windows Server. For more information, see [ASR rules supported operating systems](../../intune-service/protect/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 **Support for Configuration Manager clients**:
 
@@ -47,17 +45,17 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying attack surface reduction policy to devices managed by Configuration Manager, configure tenant attach. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
-  To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+  To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../../fundamentals/tenant-attach.md).
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
+For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Role-based access control for endpoint security](./manage-policies.md#role-based-access-control-for-endpoint-security).
 
 ## Attack surface reduction profiles
 
 The available profiles for attack surface reduction policy depend on the platform you select.
 
-To create an attack surface reduction policy, see [Create an endpoint security policy](endpoint-security-policy.md). When prompted during policy creation, select the **Windows** platform, and then select the profile you want to configure.
+To create an attack surface reduction policy, see [Create an endpoint security policy](./manage-policies.md). When prompted during policy creation, select the **Windows** platform, and then select the profile you want to configure.
 
 > [!NOTE]
 > Most attack surface reduction profiles use the Settings Catalog format. The **Application control** profile is an exception — it remains in the older template-based format. See the **Application control** profile entry in the following profiles list for details.
@@ -100,20 +98,20 @@ Available profiles for this platform include:
   - [Reusable settings](#reusable-settings-groups-for-device-control-profiles)
 
   To learn more about Microsoft Defender for Endpoint  device control, see the following articles in the Defender documentation:
-  - [Overview of device control](/microsoft-365/security/defender-endpoint/device-control-overview)
-  - [Deploy and manage device control with Microsoft Intune](/microsoft-365/security/defender-endpoint/device-control-deploy-manage-intune)
-  - [Device control walkthroughs](/microsoft-365/security/defender-endpoint/device-control-walkthroughs)
+  - [Overview of device control](../../intune-service/protect/microsoft-365/security/defender-endpoint/device-control-overview)
+  - [Deploy and manage device control with Microsoft Intune](../../intune-service/protect/microsoft-365/security/defender-endpoint/device-control-deploy-manage-intune)
+  - [Device control walkthroughs](../../intune-service/protect/microsoft-365/security/defender-endpoint/device-control-walkthroughs)
 
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
-  To learn more, see [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
+  To learn more, see [Application Guard](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
 
 - **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
 
   > [!NOTE]
   > Unlike other ASR profiles, settings in the *Application control* profile haven't been updated to the Settings Catalog format. Existing policies remain fully functional, but the profile uses the older template-based format in the admin center. Also, AppLocker CSP behavior currently prompts the end user to reboot their machine when a policy is deployed.
 
-  To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
+  To learn more, see [Application Control](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit Protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of many mitigations that can apply to either the operating system or individual apps.
 
@@ -124,11 +122,11 @@ Available profiles for this platform include:
   - Untrusted or low-reputation sites
   - Sites that you blocked by using a custom indicator list.
 
-  To learn more, see [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in the Microsoft Defender for Endpoint documentation.
+  To learn more, see [Web protection](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in the Microsoft Defender for Endpoint documentation.
 
 ### Devices managed by Defender for Endpoint security settings management
 
-When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use the [Security Management for Microsoft Defender for Endpoint](../../device-security/microsoft-defender/security-settings-management.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows and Windows Server. For more information, see [ASR rules supported operating systems](../../intune-service/protect/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 Profiles supported for this scenario include:
 
@@ -143,11 +141,11 @@ Profiles supported for this scenario include:
 
 ### Devices managed by Configuration Manager
 
-[!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
+[!INCLUDE [Attack surface reduction prerequisites](../../intune-service/includes/tenant-attach-asr-prerequisites.md)]
 
 ### Reusable settings groups for Device control profiles
 
-In public preview, Device control profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows* platform:
+In public preview, Device control profiles support use of [reusable settings groups](../../device-security/reusable-settings-groups.md) to help manage settings for the following settings groups on devices for the *Windows* platform:
 
 - Printer device:
   The following device control profile settings are available for *printer device*:
@@ -156,7 +154,7 @@ In public preview, Device control profiles support use of [reusable settings gro
   - PrinterConnectionID
   - VID_PID
 
-  For information about printer device options, see [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview) in the Microsoft Defender for Endpoint documentation.
+  For information about printer device options, see [Printer Protection Overview](../../intune-service/protect/microsoft-365/security/defender-endpoint/printer-protection-overview) in the Microsoft Defender for Endpoint documentation.
 
 - Removable storage:
   The following device control profile settings are available in for *removable storage*:
@@ -171,13 +169,13 @@ In public preview, Device control profiles support use of [reusable settings gro
   - Vendor ID
   - Vendor ID and Product ID
 
-  For information about removable storage options, see [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
+  For information about removable storage options, see [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](../../intune-service/protect/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
 
 When you use a reusable settings group with a device control profile, you configure *Actions* to define how the settings in those groups are used.
 
 Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule. However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.
 
-For guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../protect/reusable-settings-groups.md).
+For guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../../device-security/reusable-settings-groups.md).
 
 ### Exclusions for Attack Surface Reduction Rules
 
@@ -189,7 +187,7 @@ Intune supports the following two settings to exclude specific file and folder p
 
   When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This behavior occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions can't be managed for individual settings. To avoid having exclusions applied to all settings on a device, don't use this setting. Instead, configure **ASR Only Per Rule Exclusions** for individual settings.
 
-  For more information, see the documentation for the Defender CSP: [Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-attacksurfacereductiononlyexclusions).
+  For more information, see the documentation for the Defender CSP: [Defender/AttackSurfaceReductionOnlyExclusions](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender#defender-attacksurfacereductiononlyexclusions).
 
 - **Individual settings**: Use **ASR Only Per Rule Exclusions**
 
@@ -235,6 +233,6 @@ Policy merge doesn't compare or merge the configurations from different settings
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies).
+[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies).
 
-View details for the settings in profiles for [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
+View details for the settings in profiles for [Attack surface reduction profiles](./ref-attack-surface-reduction-settings.md).

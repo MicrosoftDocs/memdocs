@@ -18,19 +18,19 @@ ms.collection:
 
 This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
-For assistance in configuring compliance policy, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).
+For assistance in configuring compliance policy, see [Use compliance policies to set rules for devices you manage with Intune](./overview.md).
 
 This feature applies to:
 
 - Android device administrator
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
 
  [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
-[Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **Android device administrator**.
+[Create a compliance policy](./create-policy.md#create-the-policy). For **Platform**, select **Android device administrator**.
 
 ## Microsoft Defender for Endpoint
 
@@ -231,6 +231,6 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
-- [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Android Enterprise](compliance-policy-create-android-for-work.md) devices.
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).
+- See the [compliance policy settings for Android Enterprise](./ref-android-enterprise-settings.md) devices.

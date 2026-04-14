@@ -13,7 +13,7 @@ ms.collection:
 
 # iOS/iPadOS device compliance security configurations examples
 
-In support of the [Microsoft Zero Trust security model](/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations you can use with Microsoft Intune to configure iOS/iPad device compliance settings for mobile users using personal and supervised devices. These examples include levels of device security configuration that align with Zero Trust principles.
+In support of the [Microsoft Zero Trust security model](../../intune-service/protect/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations you can use with Microsoft Intune to configure iOS/iPad device compliance settings for mobile users using personal and supervised devices. These examples include levels of device security configuration that align with Zero Trust principles.
 
 When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, you can incorporate them within a ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
@@ -36,7 +36,7 @@ The following table lists only configured settings. Settings not listed in the t
 | System Security | Required password type | Numeric | Organizations should update this setting to match their password policy. |
 | System Security | Maximum minutes after screen lock before password is required | 5 | Organizations should update this setting to match their password policy. |
 | System Security | Maximum minutes of inactivity until screen locks | 5 | Organizations should update this setting to match their password policy. |
-| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md). |
+| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../compliance/configure-noncompliance-actions.md). |
 
 ## High security (level 3)
 
@@ -57,13 +57,13 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<br>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both.|
+| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../mobile-threat-defense/create-compliance-policy.md).<br>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both.|
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 15.0| Microsoft recommends configuring the minimum iOS major version to match the supported iOS versions for Microsoft apps. Microsoft apps support an N-1 approach where N is the current iOS major release version. For minor and build version values, Microsoft recommends ensuring devices are up to date with the respective security updates. For Apple's latest recommendations, see [Apple security updates](https://support.apple.com/HT201222).|
-| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).<br>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
+| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../microsoft-defender/overview.md).<br>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
 | System Security | Password expiration (days) | 365 |  |
-| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md). |
+| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../compliance/configure-noncompliance-actions.md). |
 
 ## Related articles
 
-- [Configure device security policies for personal devices](../protect/ios-ipados-personal-device-security-configurations.md)
-- [Configure device security policies for supervised devices](../protect/ios-ipados-supervised-device-security-configurations.md)
+- [Configure device security policies for personal devices](./ios-ipados-personal.md)
+- [Configure device security policies for supervised devices](./ios-ipados-supervised.md)

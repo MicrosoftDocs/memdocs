@@ -47,9 +47,9 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
-- [Use security baselines](../protect/security-baselines.md)
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version)
-- [Manage security baselines](../protect/security-baselines-configure.md)
+- [Use security baselines](./overview.md)
+- [Change the baseline version for a profile](./configure-baselines.md#update-a-baseline-profile-to-the-latest-version)
+- [Manage security baselines](./configure-baselines.md)
 
 ::: zone pivot="office-may-2023"
 
@@ -1478,6 +1478,6 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 ## Next steps
 
-- [Learn about security baselines](../protect/security-baselines.md)
-- [Avoid conflicts](../protect/security-baselines.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Learn about security baselines](./overview.md)
+- [Avoid conflicts](./overview.md#avoid-conflicts)
+- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

@@ -40,11 +40,11 @@ The SentinelOne app authorization process follows:
 - Allow SentinelOne Management Console to use Microsoft Entra single sign-on (SSO).
 - Allow the SentinelOne app to sign in using Microsoft Entra SSO.
 
-For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/entra/identity-platform/permissions-consent-overview#request-the-permissions-from-a-directory-admin) in the Microsoft Entra documentation.
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](../../intune-service/protect/entra/identity-platform/permissions-consent-overview#request-the-permissions-from-a-directory-admin) in the Microsoft Entra documentation.
 
 ## To set up SentinelOne integration
 
-1. Go to [SentinelOne Management Console]( https://console.mobile.sentinelone.net) and sign in with your credentials. To perform the SentinelOne integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the SentinelOne apps to communicate with Intune.
+1. Go to [SentinelOne Management Console](../../intune-service/protect/ https:/console.mobile.sentinelone.net) and sign in with your credentials. To perform the SentinelOne integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the SentinelOne apps to communicate with Intune.
 
 2. Choose **Management** from the left menu.
 
@@ -68,5 +68,5 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 ## Next step
 
-- [Set up SentinelOne apps for enrolled devices](mtd-apps-ios-app-configuration-policy-add-assign.md)
-- [Set up SentinelOne apps for unenrolled devices](mtd-add-apps-unenrolled-devices.md)
+- [Set up SentinelOne apps for enrolled devices](./add-assign-apps.md)
+- [Set up SentinelOne apps for unenrolled devices](./add-apps-unenrolled-devices.md)

@@ -336,8 +336,8 @@ You can create compliance and Conditional Access policies in the [Intune admin c
 
 For more information, go to:
 
-- [Use compliance policies to set rules for devices you manage with Intune](../../intune-service/protect/device-compliance-get-started.md)
-- [Conditional Access and Intune](../../intune-service/protect/conditional-access.md)
+- [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md)
+- [Conditional Access and Intune](../../device-security/conditional-access-integration/overview.md)
 - [How to require a compliant device or MFA](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
 - [What is Conditional Access in Microsoft Entra ID?](/entra/identity/conditional-access/overview)
 
@@ -351,7 +351,7 @@ In Intune, you can connect to your Microsoft Defender for Endpoint service, crea
 
 For more information, go to:
 
-- [Configure Microsoft Defender for Endpoint in Intune](../../intune-service/protect/microsoft-defender-integrate.md)
+- [Configure Microsoft Defender for Endpoint in Intune](../../device-security/microsoft-defender/configure-integration.md)
 - [Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune](/microsoft-365/security/defender-endpoint/mac-install-with-intune)
 
 ### Built-in endpoint security
@@ -369,7 +369,7 @@ To create these policies, in the [Intune admin center](https://go.microsoft.com/
 
 For more information about FileVault, go to:
 
-- [Encrypt macOS devices with FileVault disk encryption with Intune](../../intune-service/protect/encrypt-devices-filevault.md)
+- [Encrypt macOS devices with FileVault disk encryption with Intune](../../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md)
 - [Use FileVault to encrypt the startup disk on your Mac](https://support.apple.com/guide/mac-help/mh1710e6fa5b/mac) (opens Apple's website)
 
 ✅ **Configure the firewall**
@@ -388,7 +388,7 @@ To create these policies, in the [Intune admin center](https://go.microsoft.com/
 
 For more information about the macOS firewall, go to:
 
-- [Firewall policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-firewall-policy.md)
+- [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/firewall-policy.md)
 - [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/mh11783/mac) (opens Apple's website)
 
 ✅ **Configure Gatekeeper**

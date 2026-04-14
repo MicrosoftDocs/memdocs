@@ -17,8 +17,8 @@ Microsoft Tunnel Gateway installs to a container on a Linux server that runs eit
 
 Before you start the installation, be sure to complete the following tasks:
 
-- Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
-- Run the Microsoft Tunnel [readiness tool](microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
+- Review and [Configure prerequisites for Microsoft Tunnel](./prerequisites.md).
+- Run the Microsoft Tunnel [readiness tool](./prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
 After your prerequisites are ready, return to this article to begin installation and configuration of the tunnel.
 
@@ -63,7 +63,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
    > [!NOTE]
    > By default, each VPN session stays active for only 3,600 seconds (one hour) before it disconnects (a new session is established immediately in case the client is set to use Always On VPN).
    >
-   > However, you can modify the session timeout value along with other server configuration settings by using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration) For more information, see [Change the Tunnel Servers VPN session timeout](#change-the-tunnel-servers-vpn-session-timeout) later in this article.
+   > However, you can modify the session timeout value along with other server configuration settings by using [graph calls (microsoftTunnelConfiguration)](../../intune-service/protect/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration) For more information, see [Change the Tunnel Servers VPN session timeout](#change-the-tunnel-servers-vpn-session-timeout) later in this article.
 
 ## Create a Site
 
@@ -83,11 +83,11 @@ Sites are logical groups of servers that host Microsoft Tunnel. You assign a Ser
 
    - **Server configuration**: To select a server configuration to associate with this Site, use the drop-down.
 
-   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes, each server that's assigned to this site attempts to access the URL to confirm that it can access your internal network. Servers report the status of this check as *Internal network accessibility* on the servers [*Health check*](microsoft-tunnel-monitor.md#use-the-admin-center-ui) tab.
+   - **URL for internal network access check**: Specify an HTTP or HTTPS URL for a location on your internal network. Every five minutes, each server that's assigned to this site attempts to access the URL to confirm that it can access your internal network. Servers report the status of this check as *Internal network accessibility* on the servers [*Health check*](./monitor.md#use-the-admin-center-ui) tab.
 
    - **Automatically upgrade servers at this site**: If *Yes*, servers upgrade automatically when an upgrade is available. If *No*, upgrade is manual and an administrator must approve an upgrade before it can start.
 
-     For more information, see [Upgrade Microsoft Tunnel](microsoft-tunnel-upgrade.md).
+     For more information, see [Upgrade Microsoft Tunnel](./upgrade.md).
 
    - **Limit server upgrades to maintenance window**: If *Yes*, server upgrades for this site can only start between the start time and end time specified. There must be at least an hour between the start time and end time. When set to *No*, there's no maintenance window and upgrades start as soon as possible depending on how *Automatically upgrade servers at this site* is configured.
 
@@ -97,7 +97,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You assign a Ser
      - **Start time** – Specify the earliest time that the upgrade cycle can start, based on the time zone you selected.
      - **End time** - Specify the latest time that upgrade cycle can start, based on the time zone you selected. Upgrade cycles that start before this time will continue to run and can complete after this time.
 
-     For more information, see [Upgrade Microsoft Tunnel](microsoft-tunnel-upgrade.md).
+     For more information, see [Upgrade Microsoft Tunnel](./upgrade.md).
 
 3. Select **Create** to save the Site.
 
@@ -117,13 +117,13 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
    - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
 
-     ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
+     ![Screen capture for download of installation script](./media/install/download-installation-script.png)
 
    - Use a Linux command to download the tunnel software directly. For example, on the server where you'll install the tunnel, you can use **wget** or **curl** to open the link [https://aka.ms/microsofttunneldownload](https://aka.ms/microsofttunneldownload).
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
-2. To start the server installation, run the script as **root**. For example, you might use the following command line: `sudo ./mstunnel-setup`. The script always installs the [most recent version](microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
+2. To start the server installation, run the script as **root**. For example, you might use the following command line: `sudo ./mstunnel-setup`. The script always installs the [most recent version](./upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
    > [!IMPORTANT]
    >
@@ -153,7 +153,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 4. Review and configure variables in the following files to support your environment.
 
-   - Environment file: **/etc/mstunnel/env.sh**. For more information on these variables, see [Environment variables](microsoft-tunnel-reference.md#environment-variables) in the reference for Microsoft Tunnel article.
+   - Environment file: **/etc/mstunnel/env.sh**. For more information on these variables, see [Environment variables](./ref-file-commands.md#environment-variables) in the reference for Microsoft Tunnel article.
 
 5. When prompted, copy the full chain of your Transport Layer Security (TLS) certificate file to the Linux server. The script displays the correct location to use on the Linux server.
 
@@ -253,7 +253,7 @@ By default, the Tunnel Server VPN session persists for an hour. You can use the 
 
 ### Prerequisites
 
-Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) in the PowerShell documentation.
+Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](../../intune-service/protect/powershell/microsoftgraph/installation) in the PowerShell documentation.
 
 
 ### PowerShell commands to change the VPN session timeout
@@ -358,7 +358,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
    > [!IMPORTANT]
    >
-   > For Android Enterprise devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as an MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender for Endpoint functionality, including web protection, use [custom settings](microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
+   > For Android Enterprise devices that use Microsoft Defender for Endpoint as a Microsoft Tunnel client application and as an MTD app, you must use [**custom settings**](#use-custom-settings-for-microsoft-defender-for-endpoint) to configure Microsoft Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender for Endpoint functionality, including web protection, use [custom settings](./install.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
 
 5. On the **Assignments** tab, configure groups that will receive this profile.
 
@@ -431,7 +431,7 @@ Unsupported formats include:
 
 #### Configure the proxy exclusion list
 
-You can configure the exclusion list when you edit or create a [Microsoft Tunnel VPN Profile](microsoft-tunnel-configure.md#android) for the Android Enterprise platform.
+You can configure the exclusion list when you edit or create a [Microsoft Tunnel VPN Profile](./install.md#android) for the Android Enterprise platform.
 
 While on the Configuration settings page after you set the Connection type to Microsoft Tunnel:
 
@@ -454,7 +454,7 @@ If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD, the
 
 ### Add app configuration support for Microsoft Defender for Endpoint to a VPN profile for Microsoft Tunnel
 
-Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](microsoft-defender-configure-android.md). Available settings vary by platform.
+Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](../microsoft-defender/configure-web-protection-android.md). Available settings vary by platform.
 
 **For Android Enterprise devices**:
 
@@ -496,11 +496,11 @@ For more information about the EU Data Boundary, see [EU Data Boundary for the M
 
 Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the optional package for *auditd* installed to `/etc/audit/auditd.conf`.
 
-If you you've already installed a Tunnel Server on Linux and auditd is missing, use the information in the following procedure to install it. For information about installing auditd on a Linux server *before* you install Microsoft Tunnel, see [Manually install auditd for Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#manually-install-auditd-for-linux-system-auditing) in Microsoft Tunnel prerequisites.
+If you you've already installed a Tunnel Server on Linux and auditd is missing, use the information in the following procedure to install it. For information about installing auditd on a Linux server *before* you install Microsoft Tunnel, see [Manually install auditd for Linux system auditing](./prerequisites.md#manually-install-auditd-for-linux-system-auditing) in Microsoft Tunnel prerequisites.
 
 ### Install auditd on a Tunnel server
 
-When Microsoft Tunnel server is already installed on a Linux server, you can use the [mst-cli command-line tool](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) and the following steps to install *auditd*.
+When Microsoft Tunnel server is already installed on a Linux server, you can use the [mst-cli command-line tool](./ref-file-commands.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) and the following steps to install *auditd*.
 
 Before you start the install procedure, use the following link to download the **mst.rules** file from Microsoft: [https://aka.ms/TunnelAuditdRules](https://aka.ms/TunnelAuditdRules). *(The link downloads a small text file named mst.rules.)*
 
@@ -530,7 +530,7 @@ By default, after a new upgrade is available Intune automatically starts the upg
 
 - You can configure a maintenance window, which limits when upgrades at a site can start.
 
-For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade options, see [Upgrade Microsoft Tunnel](microsoft-tunnel-upgrade.md).
+For more information about upgrades for Microsoft Tunnel, including how to view tunnel status and configure upgrade options, see [Upgrade Microsoft Tunnel](./upgrade.md).
 
 ## Update the TLS certificate on the Linux server
 
@@ -553,7 +553,7 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
  > The "import-cert" command with an additional parameter called "delay." This parameter allows you to specify the delay in minutes before the imported certificate is utilized.
  > Example:  mst-cli import_cert delay 10080
 
-For more information about *mst-cli*, see [Reference for Microsoft Tunnel](microsoft-tunnel-reference.md).
+For more information about *mst-cli*, see [Reference for Microsoft Tunnel](./ref-file-commands.md).
 
 ## Use a rootless Podman container
 
@@ -570,7 +570,7 @@ With prerequisites in place, you can then use the [installation script procedure
 
 ### Additional prerequisites for rootless Podman containers
 
-Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](microsoft-tunnel-prerequisites.md):
+Use of a rootless Podman container requires your environment meet the following prerequisites, which are in *addition* to the default [Microsoft Tunnel prerequisites](./prerequisites.md):
 
 **Supported platform**:
 
@@ -619,5 +619,5 @@ To uninstall the product, run **mst-cli uninstall** from the Linux server as roo
 
 ## Related content
 
-[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)
-[Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)
+[Use Conditional Access with the Microsoft Tunnel](./conditional-access.md)
+[Monitor Microsoft Tunnel](./monitor.md)

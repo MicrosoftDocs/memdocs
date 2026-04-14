@@ -49,5 +49,5 @@ For step-by-step setup guidance, see [Connecting iVerify Enterprise with Microso
 
 ## Related content
 
-- [Mobile Threat Defense with Microsoft Intune](mobile-threat-defense.md)
-- [Enable mobile threat connectors in Intune](mtd-connector-enable.md)
+- [Mobile Threat Defense with Microsoft Intune](./overview.md)
+- [Enable mobile threat connectors in Intune](./enable-connector.md)

@@ -30,7 +30,7 @@ Trial subscriptions help you avoid affecting a production environment with wrong
 
 This tutorial requires a test tenant with the following subscriptions:
 
-- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../fundamentals/free-trial-sign-up.md))
+- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md))
 - Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
@@ -60,11 +60,11 @@ In this tutorial, we set up an Intune [app protection policy](../../app-manageme
    1. Ensure *Target policy to* is set to **Selected apps**.
    1. Choose **+ Select public apps** to open the *Select apps to target* pane. Then, from the list of Apps, select **Microsoft Outlook** to add it to the *Selected Apps* list. You can search for an app by Bundle ID or by name. Choose **Select** to save the app selection.
 
-      :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/create-app-protection-policy.png" alt-text="Locate and add Microsoft Outlook as a public app for this policy.":::
+      :::image type="content" source="./media/protect-email-unmanaged-devices/create-app-protection-policy.png" alt-text="Locate and add Microsoft Outlook as a public app for this policy.":::
 
       The *Select apps to target* pane closes and Microsoft Outlook now appears under *Public apps* on the Apps page.
 
-      :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/add-outlook-to-app-protection-policy.png" alt-text="Select Outlook to add it to the Public apps list for this policy.":::
+      :::image type="content" source="./media/protect-email-unmanaged-devices/add-outlook-to-app-protection-policy.png" alt-text="Select Outlook to add it to the Public apps list for this policy.":::
 
    Select **Next** to continue.
 
@@ -76,7 +76,7 @@ In this tutorial, we set up an Intune [app protection policy](../../app-manageme
    - **Receive data from other apps** - From the drop-down list, select **None**.
    - **Restrict cut, copy and paste between other apps**- From the drop-down list, select **Blocked**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png" alt-text="Select the Outlook app protection policy data relocation settings.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/data-protection-settings.png" alt-text="Select the Outlook app protection policy data relocation settings.":::
 
    Select **Next** to continue.
 
@@ -85,7 +85,7 @@ In this tutorial, we set up an Intune [app protection policy](../../app-manageme
    - For **PIN for access**, select **Require**.
    - For **Work or school account credentials for access**, select **Require**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png" alt-text="Select the Outlook app protection policy access actions.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/access-requirements-settings.png" alt-text="Select the Outlook app protection policy access actions.":::
 
    Select **Next** to continue.
 
@@ -121,7 +121,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
 
 4. Under **Assignments**, for *Users*, select **0 users and groups selected**. On the **Include** tab, select **All users**. The value for *Users* updates to *All users*.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/conditional-access-users.png" alt-text="Begin configuration of the Conditional Access policy.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/conditional-access-users.png" alt-text="Begin configuration of the Conditional Access policy.":::
 
 5. Under **Assignments**, for *Target resources*, select **No target resources selected**. Ensure that *Select what this policy applies to* is set to **Cloud apps**. Because we want to protect Microsoft 365 Exchange Online email, select it by following these steps:
 
@@ -130,7 +130,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
    3. From the list of applications, select the checkbox for **Office 365 Exchange Online**, and then choose **Select**.
    4. Select **Done** to return to the New policy pane.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-cloud-apps.png" alt-text="Select the Office 365 Exchange Online app.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/modern-auth-policy-cloud-apps.png" alt-text="Select the Office 365 Exchange Online app.":::
 
 6. Under **Assignments**, for *Conditions*, select **0 conditions selected**, and then for *Device platforms* select *Not configured* to open the Device platforms pane:
 
@@ -145,7 +145,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
    3. Clear the other check boxes.
    4. Select **Done** to return to the New policy pane.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png" alt-text="Select Mobile apps and clients as conditions.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/modern-auth-policy-client-apps.png" alt-text="Select Mobile apps and clients as conditions.":::
 
 8. Under **Access controls**, for *Grant*, select **0 conditions selected**, and then:
 
@@ -155,11 +155,11 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
    4. Set *For multiple controls* to **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
    5. Choose **Select** to save the Grant configuration.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png" alt-text="To configure Grant, select access controls.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/modern-auth-policy-mfa.png" alt-text="To configure Grant, select access controls.":::
 
 9. Under **Enable policy**, select **On**, and then select **Create**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/enable-policy.png" alt-text="To enable policy, set the Enable policy slider to On.":::
 
 The Conditional Access policy for Modern Authentication clients is created. Now you can create a policy for Exchange Active Sync clients.
 
@@ -194,7 +194,7 @@ The process to configure this policy is similar to the previous Conditional Acce
    4. Clear all other check boxes.
    5. Select **Done**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png" alt-text="Configure client apps for the Conditions category.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/eas-client-apps.png" alt-text="Configure client apps for the Conditions category.":::
 
 8. Under **Access controls**, expand **Grant** and then:
 
@@ -202,7 +202,7 @@ The process to configure this policy is similar to the previous Conditional Acce
    2. Select **Require approved client app**. Clear all other check boxes, but leave the configuration *For multiple controls* set to *Require all the selected controls*.
    3. Choose **Select**.
 
-   :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png" alt-text="configure Require approved client app for the Grant category.":::
+   :::image type="content" source="./media/protect-email-unmanaged-devices/eas-grant-access.png" alt-text="configure Require approved client app for the Grant category.":::
 
 9. Under **Enable policy**, select **On**, and then select **Create**.
 
@@ -245,4 +245,4 @@ When the test policies are no longer needed, you can remove them.
 
 ## Next steps
 
-In this tutorial, you created app protection policies to limit what the user can do with the Outlook app, and you created Conditional Access policies to require the Outlook app and require MFA for Modern Authentication clients. To learn more about using Intune with Conditional Access to protect other apps and services, see [Learn about Conditional Access and Intune](conditional-access.md).
+In this tutorial, you created app protection policies to limit what the user can do with the Outlook app, and you created Conditional Access policies to require the Outlook app and require MFA for Modern Authentication clients. To learn more about using Intune with Conditional Access to protect other apps and services, see [Learn about Conditional Access and Intune](../../device-security/conditional-access-integration/overview.md).

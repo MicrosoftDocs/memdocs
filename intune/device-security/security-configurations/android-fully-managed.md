@@ -13,13 +13,13 @@ ms.collection:
 
 # Android Enterprise fully managed device security configuration examples
 
-In support of the [Microsoft Zero Trust security model](/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations to use with Microsoft Intune to configure both device compliance policy and device restriction policy for Android Enterprise fully managed mobile users. These examples include levels of device security configuration that align with Zero Trust principles.
+In support of the [Microsoft Zero Trust security model](../../intune-service/protect/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations to use with Microsoft Intune to configure both device compliance policy and device restriction policy for Android Enterprise fully managed mobile users. These examples include levels of device security configuration that align with Zero Trust principles.
 
 When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, implement a ring deployment approach for initial testing followed by production use.
 
 For more information on each policy setting, see:
 
-- [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
+- [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../compliance/ref-android-enterprise-settings.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Android Enterprise device settings to allow or restrict features on personally owned devices using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)
 
 ## Fully managed basic security (level 1)
@@ -47,7 +47,7 @@ Tables in the following sections list only the settings that are included in the
 | System Security | Maximum minutes of inactivity before password is required | 5 | Organizations might need to update this setting to match their password policy.|
 | System Security | Require encryption of data storage on device | Require |  |
 | System Security | Intune app runtime integrity | Require |  |
-| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../protect/actions-for-noncompliance.md). |
+| Actions for noncompliance | Mark device noncompliant | Immediately | By default, the policy is configured to mark the device as noncompliant. Additional actions are available. For more information, see [Configure actions for noncompliant devices in Intune](../compliance/configure-noncompliance-actions.md). |
 
 ### Device restrictions (level 1)
 
@@ -124,8 +124,8 @@ The level 3 settings include all the policy settings recommended for level 2. Ho
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).<p> Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
-| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both.|
+| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../microsoft-defender/overview.md).<p> Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
+| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../mobile-threat-defense/create-compliance-policy.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both.|
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 11.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. <br><br> For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
 
 ### Device restrictions (level 3)
@@ -142,4 +142,4 @@ The level 3 settings include all the policy settings recommended for level 2. Ho
 
 ## Related articles
 
-[Configure security settings for personally-owned devices](android-personally-owned-security-configurations.md)
+[Configure security settings for personally-owned devices](./android-personally-owned.md)

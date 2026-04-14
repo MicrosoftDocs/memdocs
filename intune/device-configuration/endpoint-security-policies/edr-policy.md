@@ -1,8 +1,6 @@
 ---
 title: Deploy endpoint detection and response policy with Intune
 description: Use Microsoft Intune endpoint security policies to configure and deploy Microsoft Defender for Endpoint EDR capabilities to Windows, macOS, and Linux devices.
-author: brenduns
-ms.author: brenduns
 ms.date: 12/09/2025
 ms.topic: how-to
 ms.collection:
@@ -22,9 +20,9 @@ Intune policies for EDR include platform-specific profiles that manage the onboa
 This article covers EDR deployment scenarios, from automatic connector-based deployment to manual configuration for specialized environments.
 
 > [!TIP]
-> In addition to EDR policy, you can use [device configuration](../protect/microsoft-defender-integrate.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
+> In addition to EDR policy, you can use [device configuration](../../device-security/microsoft-defender/configure-integration.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
-> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage policy conflicts](../protect/endpoint-security-policy.md#manage-policy-conflicts).
+> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage policy conflicts](./manage-policies.md#manage-policy-conflicts).
 
 ## Understanding EDR onboarding
 
@@ -40,7 +38,7 @@ EDR onboarding configures devices so they can send security telemetry to your De
 - Onboarding enables telemetry flow, but doesn't configure advanced settings such as attack surface reduction, firewall, or antivirus policies.
 - EDR policies don't manage threat hunting rules, custom detection logic, response automation, or investigation workflows.
 
-For technical details, see [Onboard devices to Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboard-configure).
+For technical details, see [Onboard devices to Microsoft Defender for Endpoint](../../intune-service/protect/microsoft-365/security/defender-endpoint/onboard-configure).
 
 Applies to:
 
@@ -70,7 +68,7 @@ You need licenses for Microsoft Defender:
 
 For detailed licensing information, see:
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Microsoft Defender for Endpoint licensing](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
+- [Microsoft Defender for Endpoint licensing](../../intune-service/protect/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
 
 ### Role-based access control
 
@@ -80,10 +78,10 @@ To configure EDR policy, your account must be assigned an Intune role with suffi
 - **Custom role**: At minimum, *Create*/*Read*/*Update*/*Delete* permissions for *Endpoint security*.
 
 You also need permissions in Microsoft Defender for Endpoint to establish the service connection:
-- **[Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)** role in Microsoft Entra ID, or
+- **[Security Administrator](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#security-administrator)** role in Microsoft Entra ID, or
 - **Custom role** with equivalent permissions: *microsoft.directory/applications/create*, *microsoft.directory/applications/delete*, *microsoft.directory/servicePrincipals/create*
 
-For detailed permission guidance, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
+For detailed permission guidance, see [Role-based access control for endpoint security](./manage-policies.md#role-based-access-control-for-endpoint-security).
 
 ## Supported platforms and profiles
 
@@ -94,7 +92,7 @@ For detailed permission guidance, see [Role-based access control for endpoint se
   - **Onboarding options**: *Auto from connector* (available when the service connection is configured) or manually add an *Onboard* or *Offboard* package.
     - Auto from connector (recommended when the service-to-service connection is configured).
     - Manual onboarding using an *Onboard* or *Offboard* package from the Defender portal.
-  - **Management**: Intune-enrolled devices, or unenrolled devices through [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+  - **Management**: Intune-enrolled devices, or unenrolled devices through [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md).
 
 **macOS:**
 
@@ -102,7 +100,7 @@ For detailed permission guidance, see [Role-based access control for endpoint se
   - **Device tags**: Device tags include a *name* and *value* pair used to organize devices in Defender for Endpoint.
   - **Management methods**:
     - Intune-enrolled
-    - [Defender for Endpoint security settings management](../protect/mde-security-integration.md)
+    - [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md)
 
 **Linux:**
 
@@ -111,7 +109,7 @@ For detailed permission guidance, see [Role-based access control for endpoint se
     - **Device tags**: Device tags include a *name* and *value* pair used to organize devices in Defender for Endpoint.
     - **Management methods**:
       - Intune-enrolled
-      - [Defender for Endpoint security settings management](../protect/mde-security-integration.md)
+      - [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md)
   - *Microsoft Defender Global Exclusions (AV+EDR)* - See [Linux global exclusions profile](#create-a-linux-global-exclusions-policy) later in this article.
   
 **Windows Server 2012 R2+:**
@@ -119,7 +117,7 @@ For detailed permission guidance, see [Role-based access control for endpoint se
 - **Profile**: *Endpoint detection and response (ConfigMgr)*
   - **Management**:
     - Configuration Manager tenant attach
-    - [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
+    - [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md).
   - **Collection targeting**: Assign to Configuration Manager collections instead of Entra ID groups.
   - **Requirements**:
     - KB4563473 hotfix
@@ -146,7 +144,7 @@ When the connection is enabled:
 > [!TIP]
 > Connection verification can take up to 15 minutes. If the connection fails, confirm that your account has Security Administrator permissions in both Intune and Defender for Endpoint.
 
-For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune).
+For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](../../device-security/microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune).
 
 ## Deploy EDR policy
 
@@ -168,7 +166,7 @@ Whether you use automatic or manual deployment, Intune applies the same onboardi
 - **Manual** - Use an onboarding package downloaded from the Defender portal when automatic retrieval isn't available.
 
 > [!NOTE]
-> The onboarding package is stable and only requires updating in rare scenarios, like when working with Microsoft to move your tenant to a new [datacenter geography](/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
+> The onboarding package is stable and only requires updating in rare scenarios, like when working with Microsoft to move your tenant to a new [datacenter geography](../../intune-service/protect/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
 
 **Choosing your deployment method:**
 
@@ -229,7 +227,7 @@ After creating your core EDR policies, you can deploy additional specialized pro
 ### Create a Linux Global Exclusions policy
 
 > [!NOTE]
-> **Linux Global Exclusions**: For Linux devices managed through [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can create a separate **Microsoft Defender Global Exclusions (AV+EDR)** profile. This profile supports path and process name exclusions without wildcards.
+> **Linux Global Exclusions**: For Linux devices managed through [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md), you can create a separate **Microsoft Defender Global Exclusions (AV+EDR)** profile. This profile supports path and process name exclusions without wildcards.
 
 1. Go to **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 2. Select **Linux** for platform and **Microsoft Defender Global Exclusions (AV+EDR)** for profile.
@@ -274,7 +272,7 @@ Tenant attach enables Intune to deploy EDR policies to Configuration Manager–m
 
 After you deploy the policy, allow time for **Intune-ConfigMgr synchronization** and **Configuration Manager client policy** evaluation before devices show as onboarded.
 
-For detailed tenant attach configuration, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+For detailed tenant attach configuration, see [Configure tenant attach to support endpoint protection policies](../../fundamentals/tenant-attach.md).
 
 ## EDR Onboarding Status report
 
@@ -375,8 +373,8 @@ When devices fail to onboard:
 
 Beyond the dedicated EDR Onboarding Status report, you can also view device onboarding status through Intune's Microsoft Defender Antivirus reports. These reports include onboarding status information for Windows MDM devices and provide another way to monitor your organization's Defender for Endpoint deployment:
 
-- **[Antivirus agent status report](../fundamentals/reports.md#antivirus-agent-status-report-organizational)**: Shows comprehensive device status including Defender for Endpoint onboarding state
-- **[Unhealthy endpoints report](../protect/endpoint-security-antivirus-policy.md#unhealthy-endpoints)**: Displays devices with detected issues, including onboarding problems
+- **[Antivirus agent status report](../../intune-service/fundamentals/reports.md#antivirus-agent-status-report-organizational)**: Shows comprehensive device status including Defender for Endpoint onboarding state
+- **[Unhealthy endpoints report](./antivirus-policy.md#unhealthy-endpoints)**: Displays devices with detected issues, including onboarding problems
 
 These reports are available at in the admin center at the following lcoations:  
 - Go to **Reports** > **Endpoint security** > **Microsoft Defender Antivirus** > **Reports** > **Antivirus agent status** tile.
@@ -425,7 +423,7 @@ Review the following to ensure continued onboarding success:
 - Allow up to 15 minutes after enabling the connection for the option to appear.
 - Ensure your account has appropriate administrative permissions.
 
-For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
+For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](../../intune-service/protect/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
 
 ## Offboarding devices
 
@@ -457,14 +455,14 @@ When you offboard a device from Defender for Endpoint:
 
 For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
 
-- [Offboard devices using Mobile Device Management tools](/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
-- [Offboard devices](/microsoft-365/security/defender-endpoint/offboard-machines)
+- [Offboard devices using Mobile Device Management tools](../../intune-service/protect/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices](../../intune-service/protect/microsoft-365/security/defender-endpoint/offboard-machines)
 
 ## Related content
 
 After onboarding devices with EDR policies, consider deploying additional endpoint security controls:
 
-- [Attack surface reduction rules](endpoint-security-asr-policy.md)
-- [Anti-malware policies](endpoint-security-antivirus-policy.md)
-- [Firewall policies](endpoint-security-firewall-policy.md)
-- [Device compliance policies](device-compliance-get-started.md)
+- [Attack surface reduction rules](./attack-surface-reduction-policy.md)
+- [Anti-malware policies](./antivirus-policy.md)
+- [Firewall policies](./firewall-policy.md)
+- [Device compliance policies](../../device-security/compliance/overview.md)

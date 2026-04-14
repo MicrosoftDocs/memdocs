@@ -80,7 +80,7 @@ For more information, go to [Configure the Intune Company Portal apps, Company P
 
 Intune integrates with Microsoft Defender for Endpoint and third party partner services. With these services, the focus is on endpoint security. You can create policies that respond to threats, do real-time risk analysis, and automate remediation.
 
-For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
+For more information, go to [Mobile Threat Defense integration with Intune](../../device-security/mobile-threat-defense/overview.md).
 
 ✅ **Use a web-based admin center**
 
@@ -154,8 +154,8 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md)
-  - [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md)
+  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../../device-security/microsoft-defender/overview.md)
+  - [Configure Microsoft Defender for Endpoint in Intune](../../device-security/microsoft-defender/configure-integration.md)
 
 - **[Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)** for automatic patching of Windows, Microsoft 365 apps for enterprise, Microsoft Edge, and Microsoft Teams
 
@@ -248,8 +248,8 @@ On devices using application management, you can:
 
 For more information, go to:
 
-- [Protect data and devices with Microsoft Intune](../protect/device-protect.md)
-- [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
+- [Protect data and devices with Microsoft Intune](../../device-security/index.md)
+- [Mobile Threat Defense integration with Intune](../../device-security/mobile-threat-defense/overview.md)
 
 ## Simplify access
 
@@ -266,7 +266,7 @@ Windows Hello for Business replaces passwords with a PIN or biometric, such as f
 For more information, go to:
 
 - [Get an overview Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview)
-- [Manage Windows Hello for Business on devices when they enroll in Intune](../protect/windows-hello.md)
+- [Manage Windows Hello for Business on devices when they enroll in Intune](../../device-security/identity-protection/configure-tenant-wide-policy.md)
 - [Manage identities using Microsoft Intune](manage-identities.md)
 
 ### Create a VPN connection for remote users
@@ -281,8 +281,8 @@ For more information, go to:
 
 - [Create VPN profiles to connect to VPN servers in Intune](../../device-configuration/templates/configure-vpn.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
-- [Learn more about Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md)
-- [Use Microsoft Tunnel for MAM](../protect/microsoft-tunnel-mam.md)
+- [Learn more about Microsoft Tunnel for Intune](../../device-security/microsoft-tunnel/overview.md)
+- [Use Microsoft Tunnel for MAM](../../device-security/microsoft-tunnel/mam.md)
 
 ### Create a Wi-Fi connection for on-premises users
 

@@ -22,7 +22,7 @@ Applies to:
 
 - Android Enterprise
 
-To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tunnel-configure.md) to support [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), create and deploy three profiles that configure this support on your unenrolled devices:
+To extend your existing [Microsoft Tunnel configuration](./install.md) to support [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md), create and deploy three profiles that configure this support on your unenrolled devices:
 
 - App configuration policy for Microsoft Defender. This policy configures Microsoft Defender for Endpoint on a device as the VPN tunnel client app.
 - App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, which automatically connects and disconnects the VPN tunnel when switching from a Microsoft "Work or school" account to a Microsoft "personal account" in Microsoft Edge.
@@ -31,15 +31,15 @@ To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tu
 With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled in Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 **Try the interactive demo**:
-The [Microsoft Tunnel for Mobile Application Management for Android]( https://regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support Android devices not enrolled with Intune.
+The [Microsoft Tunnel for Mobile Application Management for Android](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support Android devices not enrolled with Intune.
 
 ## Prerequisites
 
 **Infrastructure and tenant**:
 
-Tunnel for MAM requires the same considerations and prerequisites as using Tunnel for enrolled devices. For more information, see [Tunnel prerequisites](../protect/microsoft-tunnel-prerequisites.md).
+Tunnel for MAM requires the same considerations and prerequisites as using Tunnel for enrolled devices. For more information, see [Tunnel prerequisites](./prerequisites.md).
 
-After [configuring Microsoft Tunnel](../protect/microsoft-tunnel-configure.md), you'll be ready to add the two *App configuration policies* and the *App protection policy* that enables unenrolled devices to use Tunnel. Configuration of these policies is detailed in the following sections.
+After [configuring Microsoft Tunnel](./install.md), you'll be ready to add the two *App configuration policies* and the *App protection policy* that enables unenrolled devices to use Tunnel. Configuration of these policies is detailed in the following sections.
 
 **Devices**:
 
@@ -73,7 +73,7 @@ Microsoft Tunnel for MAM on Android isn't supported on Microsoft Azure operated 
 
 Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Configure policies to support Microsoft Tunnel for MAM
 
@@ -248,7 +248,7 @@ During configuration of the app configuration profile for an app that will use T
 1. Configure the following options:
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
    1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
-   1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven't configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
+   1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven't configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](./install.md).
    1. If your app requires a trusted certificate, select **Root Certificate** to open the *Select Root Certificates* pane, and then select a trusted certificate profile to use.
 
    :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the root certificate selection pane." lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
@@ -263,7 +263,7 @@ The following are known issues or limitations for MAM Tunnel for Android.
 
 ### Tunnel for Mobile Application Management does not support Microsoft Defender in Personal Profile mode
 
- For information about Microsoft Defender in Personal Profile Mode, see [Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode](/microsoft-365/security/defender-endpoint/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
+ For information about Microsoft Defender in Personal Profile Mode, see [Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode](../../intune-service/protect/microsoft-365/security/defender-endpoint/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
 
 **Workaround**: None.
 
@@ -329,10 +329,10 @@ If there are other applications included in the per-app VPN configuration, the a
 
 ## Next steps
 
-- [Overview of Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)
+- [Overview of Microsoft Tunnel for Mobile Application Management](./mam.md)
+- [MAM Tunnel for iOS](./mam-ios.md)
 
 Also see:
 
-- [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
-- [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md)
+- [Configure Microsoft Tunnel](./install.md)
+- [Monitor Microsoft Tunnel](./monitor.md)

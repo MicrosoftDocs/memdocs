@@ -1,0 +1,29 @@
+items:
+  - name: EPM Overview
+    href: ./overview.md
+  - name: Planning EPM
+    href: ./plan.md
+  - name: Data and privacy for EPM
+    href: ./data-collection.md
+  - name: Deploying EPM
+    items:
+      - name: Deploying EPM
+        href: ./deploy.md
+      - name: Create elevation settings policy
+        href: ./elevation-settings.md
+      - name: Create elevation rules policy
+        href: ./elevation-rules.md
+      - name: EPM Tutorial - Shift Administrators to Standard User
+        href: ./migrate-administrator-to-standard-user.md
+  - name: Using EPM
+    items:
+      - name: Support approved requests
+        href: ./support-approved.md
+  - name: Troubleshoot and Monitor
+    items:
+      - name: Reports
+        href: ./reports.md
+      - name: FAQs
+        href: ./frequently-asked-questions.md
+      - name: Known Issues
+        href: ./known-issues.md

@@ -38,14 +38,14 @@ For more information about how to integrate BlackBerry UES with Microsoft Intune
 For Android and iOS/iPadOS, the CylancePROTECT app captures file system, network stack, device, and application telemetry where available, then sends the data to the Cylance AI Protection cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for MTD, which can use risk assessment information from CylancePROTECT (BlackBerry). When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources, such as Exchange Online and SharePoint Online. Users also receive guidance from the BlackBerry Protect app installed on their devices to resolve the issue and regain access to corporate resources. To support using BlackBerry Protect with enrolled devices:
-  - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
-  - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
-  - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
+  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
+  - [Enable the MTD connector in Intune](./enable-connector.md)
 
 - **Support for unenrolled devices** - Intune can use the risk assessment data from the CylancePROTECT (BlackBerry) app on unenrolled devices when you use Intune app protection policies. Admins can use this combination to help protect corporate data within a [Microsoft Intune protected app](../../app-management/ref-protected-apps.md), Admins can also issue a block or selective wipe for corporate data on those unenrolled devices. To support using Better Mobile with unenrolled devices:
-  - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
-  - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
-  - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
+  - [Add the MTD app to unenrolled devices](./add-apps-unenrolled-devices.md)
+  - [Create a Mobile Threat Defense app protection policy](./create-app-protection-policy.md)
+  - [Enable the MTD connector in Intune for unenrolled devices](./enable-unenrolled-devices.md)
 
 ## Sample scenarios
 
@@ -105,10 +105,10 @@ Access is granted on remediation:
 
 ## Next steps
 
-- [Integrate CylancePROTECT Mobile with Intune](blackberry-mtd-connector-integration.md)
+- [Integrate CylancePROTECT Mobile with Intune](./setup-blackberry.md)
 
-- [Set up CylancePROTECT app](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Set up CylancePROTECT app](./add-assign-apps.md)
 
-- [Create CylancePROTECT device compliance policy](mtd-device-compliance-policy-create.md)
+- [Create CylancePROTECT device compliance policy](./create-compliance-policy.md)
 
-- [Enable CylancePROTECT Mobile MTD connector](mtd-connector-enable.md)
+- [Enable CylancePROTECT Mobile MTD connector](./enable-connector.md)

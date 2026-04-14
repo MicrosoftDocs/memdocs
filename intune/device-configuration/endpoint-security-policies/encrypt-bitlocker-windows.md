@@ -1,8 +1,6 @@
 ---
 title: Encrypt Windows devices with BitLocker using Intune
 description: Use Microsoft Intune policy to manage BitLocker encryption on Windows devices, including silent encryption and Personal Data Encryption.
-author: brenduns
-ms.author: brenduns
 ms.date: 11/26/2025
 ms.topic: how-to
 ms.reviewer: annovich; aanavath
@@ -32,26 +30,26 @@ Intune supports two primary BitLocker encryption approaches:
 - **Silent BitLocker encryption** - Automatic encryption without user interaction or administrative privileges required on the device. Ideal for organizations that want to ensure all managed devices are encrypted without depending on end-user action.
 
 > [!TIP]
-> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
+> Intune provides a built-in [encryption report](./monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 
 ## Prerequisites
 
 ### Licensing and Windows editions
 
-For Windows editions that support BitLocker management, see [Windows edition and licensing requirements](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common#windows-edition-and-licensing-requirements) in the Windows documentation.
+For Windows editions that support BitLocker management, see [Windows edition and licensing requirements](../../intune-service/protect/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common#windows-edition-and-licensing-requirements) in the Windows documentation.
 
 ### Role-based access controls
 
-To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
+To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
 
-You can add this permission to your own [custom RBAC roles](../fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../fundamentals/role-based-access-control-reference.md):
+You can add this permission to your own [custom RBAC roles](../../intune-service/fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../../intune-service/fundamentals/role-based-access-control-reference.md):
 
 - Help Desk Operator
 - Endpoint Security Administrator
 
 ### Recovery planning
 
-Before enabling BitLocker, understand and plan for recovery options that meet your organization's needs. For more information, see [BitLocker recovery overview](/windows/security/operating-system-security/data-protection/bitlocker/recovery-overview) in the Windows security documentation.
+Before enabling BitLocker, understand and plan for recovery options that meet your organization's needs. For more information, see [BitLocker recovery overview](../../intune-service/protect/windows/security/operating-system-security/data-protection/bitlocker/recovery-overview) in the Windows security documentation.
 
 ## Policy types for BitLocker encryption
 
@@ -61,12 +59,12 @@ Choose from the following Intune policy types to configure BitLocker encryption:
 
 **Endpoint security > Disk encryption policy** provides focused, security-specific BitLocker configuration:
 
-- **BitLocker profile** - Dedicated settings for configuring BitLocker encryption. For more information, see the [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp).
-- **Personal Data Encryption profile** - Configure PDE for file-level encryption that works alongside BitLocker for layered security. For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
+- **BitLocker profile** - Dedicated settings for configuring BitLocker encryption. For more information, see the [BitLocker CSP](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp).
+- **Personal Data Encryption profile** - Configure PDE for file-level encryption that works alongside BitLocker for layered security. For more information, see the [PDE CSP](../../intune-service/protect/windows/client-management/mdm/personaldataencryption-csp).
 
 ### Device configuration policy
 
-**Device configuration > Endpoint protection profile** includes BitLocker settings as part of broader endpoint protection configuration. View available settings at [BitLocker in endpoint protection profiles](../protect/endpoint-protection-windows-10.md#windows-settings).
+**Device configuration > Endpoint protection profile** includes BitLocker settings as part of broader endpoint protection configuration. View available settings at [BitLocker in endpoint protection profiles](./ref-endpoint-protection-settings-windows.md#windows-settings).
 
 > [!NOTE]
 > **Settings Catalog limitations**: Settings Catalog doesn't include the necessary TPM startup authentication controls required for reliable silent BitLocker enablement. Use endpoint security or device configuration policies for BitLocker scenarios.
@@ -98,7 +96,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 
    Select **Next** to continue.
 
-6. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
+6. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../assign-device-profile.md).
 
    Select **Next**.
 
@@ -107,7 +105,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 ### Create device configuration policy
 
 > [!TIP]
-> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../../device-configuration/settings-catalog/index.md) and the *PDE* category.
+> The following procedure configures BitLocker through a device configuration template for Endpoint protection. To configure Personal Data Encryption, use the device configuration [settings catalog](../settings-catalog/index.md) and the *PDE* category.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -149,13 +147,13 @@ A device must meet the following conditions for silent BitLocker enablement:
   - Microsoft Entra joined or Microsoft Entra hybrid joined
   - TPM (Trusted Platform Module) 1.2 or later
   - Native UEFI BIOS mode
-  - [Secure Boot enabled](/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#error-message-the-uefi-variable-secureboot-could-not-be-read)
-  - [Windows Recovery Environment (WinRE) configured and available](/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#event-id-854-winre-is-not-configured)
+  - [Secure Boot enabled](../../intune-service/protect/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#error-message-the-uefi-variable-secureboot-could-not-be-read)
+  - [Windows Recovery Environment (WinRE) configured and available](../../intune-service/protect/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#event-id-854-winre-is-not-configured)
 
 > [!NOTE]
 > When BitLocker is enabled silently, the system automatically uses **full disk encryption** on non-modern standby devices and **used space only encryption** on modern standby devices. The encryption type depends on hardware capabilities and can't be customized for silent encryption scenarios.
 > 
-> To learn more about modern standby, see [What is modern standby](/windows-hardware/design/device-experiences/modern-standby) in the Windows hardware documentation.
+> To learn more about modern standby, see [What is modern standby](../../intune-service/protect/windows-hardware/design/device-experiences/modern-standby) in the Windows hardware documentation.
 
 > [!IMPORTANT]
 > Before deploying silent BitLocker policies, conduct a thorough assessment of your environment:
@@ -173,7 +171,7 @@ Configure the following settings depending on your chosen policy type:
 
 #### Endpoint security policy for silent BitLocker
 
-For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encryption-policy.md) policy**, configure these settings in the BitLocker profile:
+For **Endpoint security [Disk encryption](./disk-encryption-policy.md) policy**, configure these settings in the BitLocker profile:
 
 - **Require Device Encryption** = *Enabled*
 - **Allow Warning For Other Disk Encryption** = *Disabled*
@@ -187,7 +185,7 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 > - **System instability** and boot failures
 > - **Complex recovery scenarios** with multiple encryption layers
 >
-> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../fundamentals/device-inventory.md) to identify devices with existing encryption software.
+> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../../intune-service/fundamentals/device-inventory.md) to identify devices with existing encryption software.
 
 > [!IMPORTANT]
 > After setting **Allow Warning For Other Disk Encryption** to *Disabled*, another setting becomes available:
@@ -196,11 +194,11 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 >
 > This setting is required if devices are used by standard (non-administrator) users. It allows the RequireDeviceEncryption policy to work even when the current logged-on user is a standard user.
 
-In addition to the required settings, consider configuring *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)* to enable automatic rotation of recovery passwords.
+In addition to the required settings, consider configuring *[Configure Recovery Password Rotation](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)* to enable automatic rotation of recovery passwords.
 
 #### Device configuration policy for silent BitLocker
 
-For **Device configuration [Endpoint protection](../protect/endpoint-protection-configure.md) policy**, configure these settings in the *Endpoint protection* template:
+For **Device configuration [Endpoint protection](./configure-endpoint-protection.md) policy**, configure these settings in the *Endpoint protection* template:
 
 - **Warning for other disk encryption** = *Block*
 - **Allow standard users to enable encryption during Microsoft Entra join** = *Allow*
@@ -239,7 +237,7 @@ Configure TPM startup authentication settings to prevent user interaction:
 
 The encryption type (full disk vs. used space only) is determined by the following details:
 
-1. **Hardware capabilities** - Whether the device supports [modern standby](/windows-hardware/design/device-experiences/modern-standby).
+1. **Hardware capabilities** - Whether the device supports [modern standby](../../intune-service/protect/windows-hardware/design/device-experiences/modern-standby).
 2. **Silent encryption configuration** - Whether silent enablement is configured.
 3. **SystemDrivesEncryptionType setting** - If explicitly configured.
 
@@ -279,7 +277,7 @@ The 'Conversion Status' field shows either *Used Space Only Encrypted* or *Fully
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](./monitor-encryption.md).
 
 ### Control encryption type with Settings Catalog
 
@@ -295,14 +293,14 @@ To change the disk encryption type between full disk encryption and used space o
 
 Personal Data Encryption (PDE) provides file-level encryption that complements BitLocker:
 
-[Personal Data Encryption](/windows/security/operating-system-security/data-protection/personal-data-encryption/) differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods like BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business.
+[Personal Data Encryption](../../intune-service/protect/windows/security/operating-system-security/data-protection/personal-data-encryption) differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods like BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business.
 
 - **PDE encrypts files** instead of whole volumes and disks.
 - **Works alongside BitLocker** for layered security - PDE isn't a replacement for BitLocker.
 - **Requires Windows Hello for Business** sign-in to release encryption keys.
 - **Available on Windows 11 22H2 or later**.
 
-For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
+For more information, see the [PDE CSP](../../intune-service/protect/windows/client-management/mdm/personaldataencryption-csp).
 
 To configure PDE, use either:
 
@@ -349,9 +347,9 @@ When keys aren't in Microsoft Entra ID, Intune displays *No BitLocker key found 
 - Helpdesk Administrator
 - Global Administrator
 
-For more information on Microsoft Entra role permissions, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
+For more information on Microsoft Entra role permissions, see [Microsoft Entra built-in roles](../../intune-service/protect/azure/active-directory/roles/permissions-reference).
 
-**Audit logging**: All BitLocker recovery key accesses are audited. For more information, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+**Audit logging**: All BitLocker recovery key accesses are audited. For more information, see [Azure portal audit logs](../../intune-service/protect/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 > [!IMPORTANT]
 > If you delete the Intune object for a Microsoft Entra joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. This leaves BitLocker in a suspended state on that volume.
@@ -367,7 +365,7 @@ When using the tenant attach scenario, Microsoft Intune can display recovery key
 - Your Intune account must have Intune RBAC permissions to view BitLocker keys
 - Must be associated with an on-premises user with Configuration Manager Collection Role and Read BitLocker Recovery Key Permission
 
-For more information, see [Configure role-based administration for Configuration Manager](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
+For more information, see [Configure role-based administration for Configuration Manager](../../intune-service/protect/configmgr/core/servers/deploy/configure/configure-role-based-administration).
 
 #### Rotate BitLocker recovery keys
 
@@ -391,7 +389,7 @@ You can use an Intune device action to remotely rotate the BitLocker recovery ke
 
    :::image type="content" source="./media/encrypt-devices/select-more.png" alt-text="Screenshot of the path to selecting the BiLocker key rotation action":::
 
-For more information about BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
+For more information about BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](../../intune-service/protect/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 #### Self-service recovery
 
@@ -408,7 +406,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
 1. **Tenant-wide toggle**: Determines if non-admin users can use self-service to recover BitLocker keys:
    - Default: **No** (allows all users to recover their keys)
    - **Yes**: Restricts non-admin users from seeing BitLocker keys for their own devices
-   - Configure in [Microsoft Entra device settings](/entra/identity/devices/manage-device-identities#configure-device-settings)
+   - Configure in [Microsoft Entra device settings](../../intune-service/protect/entra/identity/devices/manage-device-identities#configure-device-settings)
 
 2. **Conditional Access integration**: Use Conditional Access policies to require compliant devices for BitLocker recovery key access:
    - Set up **Require compliant device** in Conditional Access policy
@@ -419,7 +417,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
    - Logged in Microsoft Entra audit logs under **Key Management** category
    - Activity type: **Read BitLocker key**
    - Includes User Principal Name and key ID
-   - For more information, see [Microsoft Entra audit logs](/entra/identity/monitoring-health/concept-audit-logs)
+   - For more information, see [Microsoft Entra audit logs](../../intune-service/protect/entra/identity/monitoring-health/concept-audit-logs)
 
 ## Troubleshooting
 
@@ -439,7 +437,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
 
 **Issue**: Policy conflicts prevent silent enablement
 
-- **Solution**: Use [policy conflict detection](../../device-configuration/monitor-device-profile.md#view-conflicts) in Intune to identify conflicting settings between policies.
+- **Solution**: Use [policy conflict detection](../monitor-device-profile.md#view-conflicts) in Intune to identify conflicting settings between policies.
 
 ### Recovery key troubleshooting
 
@@ -451,11 +449,11 @@ For silent BitLocker enablement, recovery keys are automatically backed up to Mi
 
 ## Next steps
 
-- [Manage FileVault policy for macOS devices](../protect/encrypt-devices-filevault.md)
-- [Monitor disk encryption](../protect/encryption-monitor.md)
-- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
-- [Known issues for BitLocker policies](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
-- [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
-- [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises) in the Windows security documentation
-- [Personal Data Encryption overview](/windows/security/operating-system-security/data-protection/personal-data-encryption/)
+- [Manage FileVault policy for macOS devices](./encrypt-filevault-macos.md)
+- [Monitor disk encryption](./monitor-encryption.md)
+- [Troubleshooting BitLocker policy](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Known issues for BitLocker policies](../../intune-service/protect/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [BitLocker deployment comparison chart](../../intune-service/protect/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
+- [BitLocker management for enterprises](../../intune-service/protect/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises) in the Windows security documentation
+- [Personal Data Encryption overview](../../intune-service/protect/windows/security/operating-system-security/data-protection/personal-data-encryption)
 - [Self-service scenarios for end users through Company Portal app](../../user-help/security/collect-recovery-key-windows.md)

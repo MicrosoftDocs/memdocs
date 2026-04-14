@@ -13,7 +13,7 @@ ms.collection:
 
 # iOS/iPadOS supervised device security configurations examples
 
-In support of the [Microsoft Zero Trust security model](/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations you can use with Microsoft Intune to configure iOS/iPad device compliance settings for mobile users using supervised devices. These examples include three levels of device security configuration that align with Zero Trust principles.
+In support of the [Microsoft Zero Trust security model](../../intune-service/protect/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations you can use with Microsoft Intune to configure iOS/iPad device compliance settings for mobile users using supervised devices. These examples include three levels of device security configuration that align with Zero Trust principles.
 
 When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, you can incorporate them within a ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
@@ -144,5 +144,5 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 ## Related articles
 
-- [Configure device compliance security policies](../protect/ios-ipados-device-compliance-security-configurations.md)
-- [Configure device security policies for personal devices](../protect/ios-ipados-personal-device-security-configurations.md)
+- [Configure device compliance security policies](./ios-ipados-compliance.md)
+- [Configure device security policies for personal devices](./ios-ipados-personal.md)

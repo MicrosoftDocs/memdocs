@@ -20,18 +20,18 @@ This feature applies to:
 
 - Android Enterprise
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
+As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
 
 > [!IMPORTANT]
 > It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../../device-enrollment/android/setup-dedicated.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.
 >
-> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
+> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](../../intune-service/protect/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
 
 <!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
 ## Before you begin
 
-[Create a device compliance policy](create-compliance-policy.md#create-the-policy) to access available settings. For **Platform**, select **Android Enterprise**.
+[Create a device compliance policy](./create-policy.md#create-the-policy) to access available settings. For **Platform**, select **Android Enterprise**.
 
 
 ## Fully managed, dedicated, and corporate-owned work profile
@@ -54,7 +54,7 @@ This section describes the compliance profile settings available for fully manag
   - **High**
 
 > [!NOTE]
-> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
+> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
 
 ### Device health
 
@@ -63,7 +63,7 @@ This section describes the compliance profile settings available for fully manag
   - **Block** - Mark rooted devices as noncompliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
+  Select the maximum allowed device threat level evaluated by your [mobile threat defense service](../mobile-threat-defense/overview.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. If the device is detected with any level of threats, it's evaluated as noncompliant.
@@ -208,7 +208,7 @@ This section describes the compliance profile settings available for personal de
   - **Block** - Mark rooted devices as noncompliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  Select the maximum allowed device threat level evaluated by your [mobile threat defense service](mobile-threat-defense.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
+  Select the maximum allowed device threat level evaluated by your [mobile threat defense service](../mobile-threat-defense/overview.md). Devices that exceed this threat level are marked noncompliant. To use this setting, choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. If the device is detected with any level of threats, it's evaluated as noncompliant.
   - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
@@ -459,6 +459,6 @@ These work profile security settings apply to devices running Android 11 and ear
 
 ## Next steps
 
-- [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
-- [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Android](compliance-policy-create-android.md) devices.
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).
+- See the [compliance policy settings for Android](./ref-android-administrator-settings.md) devices.
