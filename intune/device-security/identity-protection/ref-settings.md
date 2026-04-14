@@ -33,7 +33,7 @@ With an Identity protection profile, you can configure settings on discrete grou
 
 This article describes the settings for the enrollment policy.
 
-You can find additional information about these settings in [Configure Windows Hello for Business Policy settings](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), in the Windows Hello documentation.
+You can find additional information about these settings in [Configure Windows Hello for Business Policy settings](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), in the Windows Hello documentation.
 
 ## Windows Hello for Business
 
@@ -108,7 +108,7 @@ You can find additional information about these settings in [Configure Windows H
   - **Certificate for on-premise resources**
 
     - **Enable** - Allows Windows Hello for Business to use certificates to authenticate to resources on-premises.
-    - **Not configured** (*default*) - Prevents Windows Hello for Business from using certificates to authenticate to resources on-premises. Instead, devices use the default behavior of *key-trust on-premises authentication*. For more information, see [User certificate for on-premises authentication](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in the Windows Hello documentation.
+    - **Not configured** (*default*) - Prevents Windows Hello for Business from using certificates to authenticate to resources on-premises. Instead, devices use the default behavior of *key-trust on-premises authentication*. For more information, see [User certificate for on-premises authentication](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in the Windows Hello documentation.
 
 - **Use security keys for sign-in**  
   This setting is available for devices that run Windows 10 version 1903 or later, or Windows 11. Use it to manage support for using Windows Hello security keys for sign-in.

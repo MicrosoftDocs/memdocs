@@ -25,7 +25,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 > [!IMPORTANT]
 > It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../../device-enrollment/android/setup-dedicated.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.
 >
-> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](../../intune-service/protect/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
+> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
 
 <!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
@@ -54,7 +54,7 @@ This section describes the compliance profile settings available for fully manag
   - **High**
 
 > [!NOTE]
-> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
+> Microsoft Defender for Endpoint may not be supported on all Android Enterprise enrollment types. [Learn more about what scenarios are supported](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android#installation-instructions).
 
 ### Device health
 

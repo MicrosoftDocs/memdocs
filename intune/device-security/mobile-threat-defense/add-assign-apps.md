@@ -291,7 +291,7 @@ Choose the section that corresponds to your MTD provider:
 
     > [!NOTE]
     >
-    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](../../intune-service/protect/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
+    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
 
   - **Add the Lookout for Work ipa file.**  
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../../app-management/deployment/add-lob-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.

@@ -35,7 +35,7 @@ To ensure devices boot to a trusted state, Intune utilizes Microsoft device atte
 
 For more information, see:
 
-- [Device Health Attestation](../../intune-service/protect/windows-server/security/device-health-attestation)
+- [Device Health Attestation](/windows-server/security/device-health-attestation)
 
 ### Windows Health Attestation Service evaluation rules
 
@@ -45,7 +45,7 @@ For more information, see:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - The device can protect data that's stored on the drive from unauthorized access when the system is off, or hibernates.
 
-  [Device HealthAttestation CSP - BitLockerStatus](../../intune-service/protect/windows/client-management/mdm/healthattestation-csp)
+  [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
   > [!NOTE]
   > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even though BitLocker encryption may have completed – a reboot will be required in order for the device to detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
@@ -55,7 +55,7 @@ For more information, see:
   - **Require** - The system is forced to boot to a factory trusted state. The core components that are used to boot the machine must have correct cryptographic signatures that are trusted by the organization that manufactured the device. The UEFI firmware verifies the signature before it lets the machine start. If any files are tampered with, which breaks their signature, the system doesn't boot.
 
   > [!NOTE]
-  > The **Require Secure Boot to be enabled on the device** setting is supported on some TPM 1.2 and 2.0 devices. For devices that don't support TPM 2.0 or later, the policy status in Intune shows as **Not Compliant**. For more information on supported versions, see  [Device Health Attestation](../../intune-service/protect/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > The **Require Secure Boot to be enabled on the device** setting is supported on some TPM 1.2 and 2.0 devices. For devices that don't support TPM 2.0 or later, the policy status in Intune shows as **Not Compliant**. For more information on supported versions, see  [Device Health Attestation](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Require code integrity**:  
   Code integrity is a feature that validates the integrity of a driver or system file each time it's loaded into memory.
@@ -64,14 +64,14 @@ For more information, see:
 
 For more information, see:
 
-- For details about how the Health Attestation service works, see [Health Attestation CSP](../../intune-service/protect/windows/client-management/mdm/healthattestation-csp).
+- For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).
 - [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## Device Properties
 
 ### Operating System Version
 
-To discover build versions for all Windows Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](../../intune-service/protect/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 11.0 for Windows 11.
+To discover build versions for all Windows Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 11.0 for Windows 11.
 
 - **Minimum OS version**:  
   Enter the minimum allowed version in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
@@ -150,8 +150,8 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
     > [!TIP]
     > The Alphanumeric password policies can be complex. We encourage administrators to read the CSPs for more information:
     >
-    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Minimum password length**:  
   Enter the minimum number of digits or characters that the password must have.
@@ -179,7 +179,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
 
-   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate BitLocker status at the TPM level. However, when leveraging this setting, be aware that a reboot may be required before the device will reflect as compliant.
@@ -190,32 +190,32 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*) - Intune doesn't control the Windows Firewall, nor change existing settings.
   - **Require** - Turn on the Windows Firewall, and prevent users from turning it off.
 
-  [Firewall CSP](../../intune-service/protect/windows/client-management/mdm/firewall-csp)
+  [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
   > - If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../../user-help/device-actions/sync-device-windows.md).
   >
-  > - If a configuration is applied (for example, via a group policy) to a device that configures Windows Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](../../intune-service/protect/windows/security/threat-protection/windows-firewall/best-practices-configuring#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Firewall](../../intune-service/protect/windows/security/threat-protection/windows-firewall/best-practices-configuring).
+  > - If a configuration is applied (for example, via a group policy) to a device that configures Windows Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](/windows/security/threat-protection/windows-firewall/best-practices-configuring#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
 
 - **Trusted Platform Module (TPM)**:
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.
   - **Require** - Intune checks the TPM chip version for compliance. The device is compliant if the TPM chip version is greater than **0** (zero). The device isn't compliant if there isn't a TPM version on the device.
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antivirus**:
   - **Not configured** (*default*) - Intune doesn't check for any antivirus solutions installed on the device.
   - **Require** - Check compliance using antivirus solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
     When set to Require, a device that has its Antivirus software disabled or out of date is noncompliant.
 
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:
   - **Not configured** (*default*) - Intune doesn't check for any antispyware solutions installed on the device.
   - **Require** - Check compliance using antispyware solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
     When set to Require, a device that has its antimalware software disabled or out of date is noncompliant.
 
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### Defender
 
@@ -235,7 +235,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*) - Intune doesn't enforce any requirements.
   - **Require** - Force the Microsoft Defender security intelligence be up-to-date.
 
-  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](../../intune-service/protect/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](/windows/client-management/mdm/defender-csp)
 
   For more information, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -243,13 +243,13 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*) - Intune doesn't control this feature, nor change existing settings.
   - **Require** - Turn on real-time protection, which scans for malware, spyware, and other unwanted software.
 
-  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## Microsoft Defender for Endpoint
 
 ### Microsoft Defender for Endpoint rules
 
-For additional information on Microsoft Defender for Endpoint integration in Conditional Access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](../../intune-service/protect/microsoft-365/security/defender-endpoint/configure-conditional-access).
+For additional information on Microsoft Defender for Endpoint integration in Conditional Access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-conditional-access).
 
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
@@ -282,7 +282,7 @@ Windows Holographic for Business uses the **Windows 10 and later** platform. Win
 
 - **System Security** > **Encryption** > **Encryption of data storage on device**.
 
-To verify device encryption on the Microsoft HoloLens, see [Verify device encryption](../../intune-service/protect/hololens/security-encryption-data-protection).
+To verify device encryption on the Microsoft HoloLens, see [Verify device encryption](/hololens/security-encryption-data-protection).
 
 ## Surface Hub
 

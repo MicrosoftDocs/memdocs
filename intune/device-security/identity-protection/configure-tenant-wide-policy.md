@@ -17,7 +17,7 @@ ms.reviewer: shpate
 
 With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows Autopilot out-of-box-experience (OOBE).
 
-For Windows devices, use of [Windows Hello for Business](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that’s tied to a device and uses a biometric or PIN.
+For Windows devices, use of [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that’s tied to a device and uses a biometric or PIN.
 
 After device enrollment, or when you choose not to use the tenant-wide enrollment policy, Intune supports the following methods to manage Windows Hello on discrete groups of devices:
 
@@ -110,7 +110,7 @@ You must be an Intune Service Administrator to create or edit a Windows Hello fo
 
    - **Enable enhanced sign in security**:
 
-      Configure [Windows Hello Enhanced Sign-in Security](../../intune-service/protect/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) on devices with capable hardware. Your options:
+      Configure [Windows Hello Enhanced Sign-in Security](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) on devices with capable hardware. Your options:
 
       - **Enhanced sign-in security will be enabled on systems with capable hardware** (default): Device users can't use external peripherals to sign in to their device with Windows Hello.
       - **Enhanced sign-in security will be disabled on all systems**: Device users can use external peripherals that are compatible with Windows Hello to sign in to their device.
@@ -136,5 +136,5 @@ Windows Holographic for Business supports the following settings for Windows Hel
 
 Learn more about Windows Hello from the following subjects in the Windows documentation:
 
-- [Planning a Windows Hello for Business deployment](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-planning-guide)
-- [Windows Hello for Business Deployment Prerequisite Overview](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+- [Planning a Windows Hello for Business deployment](/windows/security/identity-protection/hello-for-business/hello-planning-guide)
+- [Windows Hello for Business Deployment Prerequisite Overview](/windows/security/identity-protection/hello-for-business/hello-identity-verification)

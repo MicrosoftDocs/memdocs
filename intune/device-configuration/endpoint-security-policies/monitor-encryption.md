@@ -42,7 +42,7 @@ The Encryption report pane displays a list of the devices you manage with high
 - **OS version** – The version of Windows or macOS on the device.
 - **TPM version** *(applies to Windows only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows device.
 
-  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
+  For more information on how we query the TPM version, see [DeviceStatus CSP - TPM Specification](/windows/client-management/mdm/devicestatus-csp#devicestatus-tpm-specificationversion).
 
 - **Encryption readiness** – An evaluation of the devices readiness to support an applicable encryption technology, like BitLocker or FileVault encryption. Devices are identified as:
   - **Ready**: The device can be encrypted by using MDM policy, which requires the device meet the following requirements:
@@ -57,7 +57,7 @@ The Encryption report pane displays a list of the devices you manage with high
     > [!IMPORTANT]
     > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
-    For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
+    For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
   - **Not ready**: The device doesn't have full encryption capabilities, but might still support encryption.
   - **Not applicable**: There isn't enough information to classify this device.
@@ -80,7 +80,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
 
-  For Windows devices, this field doesn't look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp).
+  For Windows devices, this field doesn't look at whether other drives, such as fixed drives, are encrypted. *Encryption status* is coming from [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp).
 
 - **Profiles** – A list of the *Device configuration* profiles that apply to this device and are configured with the following values:
 
@@ -127,7 +127,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   **Windows**:
 
-  For Windows devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later, or Windows 11. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp).
+  For Windows devices, Intune only shows *Status details* for devices that run the *Windows 10 April 2019 Update* or later, or Windows 11. *Status details* are coming from [BitLocker CSP - Status/DeviceEncryptionStatus](/windows/client-management/mdm/bitlocker-csp).
 
   - The BitLocker policy requires user consent to launch the BitLocker Drive Encryption Wizard to start encryption of the OS volume but the user didn't consent.
 
@@ -161,7 +161,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - Windows Recovery Environment (WinRE) isn't configured.
 
-    *Consider: Need to run command line to configure the WinRE on separate partition; as that wasn't detected. For more information, see [REAgentC command-line options](../../intune-service/protect/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
+    *Consider: Need to run command line to configure the WinRE on separate partition; as that wasn't detected. For more information, see [REAgentC command-line options](/windows-hardware/manufacture/desktop/reagentc-command-line-options).*
 
   - A TPM isn't available for BitLocker, either because it isn't present, it's been made unavailable in the Registry, or the OS is on a removable drive.
 
@@ -198,6 +198,6 @@ Windows BitLocker:
 ## Next steps
 
 - [Manage BitLocker policy](./encrypt-bitlocker-windows.md)
-- [Troubleshooting BitLocker policy](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
+- [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Manage FileVault policy](./encrypt-filevault-macos.md)
-- [Known issues for Enforcing BitLocker policies with Intune](../../intune-service/protect/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

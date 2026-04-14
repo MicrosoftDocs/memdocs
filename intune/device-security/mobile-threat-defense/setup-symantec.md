@@ -94,7 +94,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 4. Next to the **Tenant ID**, choose the copy icon, and then paste it to a safe location. You need this identifier in a later step.
 
-   :::image type="content" source="./media/skycure-mtd-connector-integration/symantec-azure-portal-directory-ID.png" alt-text="Image showing Tenant ID in the Azure portal":::
+   :::image type="content" source="./media/setup-symantec/symantec-azure-portal-directory-ID.png" alt-text="Image showing Tenant ID in the Azure portal":::
 
 ### (Optional) Create a dedicated Security Group for devices that need to run the SEP Mobile apps
 

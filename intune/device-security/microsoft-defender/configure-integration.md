@@ -50,7 +50,7 @@ This one-time setup per tenant establishes the service-to-service connection tha
 
 **Prerequisites:**  
 - Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings (custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission; see [Create a custom role](../../intune-service/fundamentals/create-custom-role.md)).
-- Admin access to the [Microsoft Defender portal](https://security.microsoft.com) with [Security Administrator](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#security-administrator) role in Microsoft Entra ID, or **"Manage security settings in Security Center"** permission in Microsoft Defender for Endpoint.
+- Admin access to the [Microsoft Defender portal](https://security.microsoft.com) with [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) role in Microsoft Entra ID, or **"Manage security settings in Security Center"** permission in Microsoft Defender for Endpoint.
 
 ### Enable Intune and Microsoft Defender for Endpoint integration
 
@@ -64,17 +64,17 @@ This one-time setup per tenant establishes the service-to-service connection tha
    > [!TIP]
    > If already connected, the link reads: **Open the Microsoft Defender for Endpoint admin console**.
 
-   :::image type="content" source="./media/microsoft-defender-integrate/open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
+   :::image type="content" source="./media/configure-integration/open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
 
 3. **Enable the connection in Microsoft Defender portal:** In the [Microsoft Defender portal](https://security.microsoft.com), go to **System** > **Settings** > **Endpoints** > **General** > **Advanced features**.
 
-   :::image type="content" source="./media/microsoft-defender-integrate/defender-console-settings-endpoints.png" alt-text="Screen shot of the Defender console showing the path to Settings and then Endpoints.":::
+   :::image type="content" source="./media/configure-integration/defender-console-settings-endpoints.png" alt-text="Screen shot of the Defender console showing the path to Settings and then Endpoints.":::
 
    Locate **Microsoft Intune connection**, toggle it to **On**, and then select **Save preferences**.
 
-   :::image type="content" source="./media/microsoft-defender-integrate/intune-connection-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
+   :::image type="content" source="./media/configure-integration/intune-connection-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
 
-   For more information about this setting, see [Microsoft Intune connection](../../intune-service/protect/defender-endpoint/advanced-features#microsoft-intune-connection) in the Defender for Endpoint documentation.
+   For more information about this setting, see [Microsoft Intune connection](/defender-endpoint/advanced-features#microsoft-intune-connection) in the Defender for Endpoint documentation.
 
 4. **Validation:** Return to the Intune admin center. The **Connection status** should now show **Enabled** (it can take up to 15 minutes to update). You can review and adjust monitoring settings under **Endpoint security** > **Microsoft Defender for Endpoint** if needed.
 
@@ -100,7 +100,7 @@ After the service connection is established, configure which platforms connect t
    > When enabled, all applicable devices you currently manage with Intune, plus future enrollments, will be connected to Microsoft Defender for Endpoint for compliance evaluation.
 
    > [!TIP]
-   > **Additional iOS settings:** For iOS devices, Defender for Endpoint also supports settings that help provide Vulnerability Assessment of apps. You can enable **App Sync for iOS Devices** to allow metadata sharing for threat analysis (requires MDM enrollment), and configure **Send full application inventory data on personally owned iOS/iPadOS Devices** to control what app data is shared with Defender for Endpoint. For details, see [Configure vulnerability assessment of apps](../../intune-service/protect/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps).
+   > **Additional iOS settings:** For iOS devices, Defender for Endpoint also supports settings that help provide Vulnerability Assessment of apps. You can enable **App Sync for iOS Devices** to allow metadata sharing for threat analysis (requires MDM enrollment), and configure **Send full application inventory data on personally owned iOS/iPadOS Devices** to control what app data is shared with Defender for Endpoint. For details, see [Configure vulnerability assessment of apps](/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps).
 
    For more information, see [Mobile Threat Defense toggle options](../mobile-threat-defense/enable-connector.md#mobile-threat-defense-toggle-options).
 
@@ -136,7 +136,7 @@ Device onboarding configures your managed devices to communicate with Microsoft 
 
 With the service connection established, Intune automatically receives an onboarding configuration package from Microsoft Defender for Endpoint. This package enables:
 
-- Communication with [Microsoft Defender for Endpoint services](../../intune-service/protect/defender-endpoint/microsoft-defender-endpoint)
+- Communication with [Microsoft Defender for Endpoint services](/defender-endpoint/microsoft-defender-endpoint)
 - File scanning and threat detection
 - Risk level reporting for compliance policies
 
@@ -165,7 +165,7 @@ Use this option for fast, broad deployment to all Windows devices with no additi
 
 2. Select **Deploy preconfigured policy**.
 
-   :::image type="content" source="./media/microsoft-defender-integrate/select-preconfigured-policy.jpg" alt-text="Screen shot that displays the path to the preconfigured policy option.":::
+   :::image type="content" source="./media/configure-integration/select-preconfigured-policy.jpg" alt-text="Screen shot that displays the path to the preconfigured policy option.":::
 
 3. Configure the policy:
    - **Platform**: Select **Windows** (for Intune-managed) or **Windows (ConfigMgr)** (for Tenant Attach)
@@ -205,7 +205,7 @@ Use this option for granular control, specific device groups, or custom scope ta
    > [!NOTE]
    > **Telemetry Reporting Frequency** is deprecated and doesn't affect new devices. The setting remains visible for older policy compatibility.
 
-   :::image type="content" source="./media/microsoft-defender-integrate/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
+   :::image type="content" source="./media/configure-integration/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
 
    > [!NOTE]
    >
@@ -245,7 +245,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 **Additional resources:**
 
-- [Microsoft Defender for Endpoint for Mac](../../intune-service/protect/defender-endpoint/microsoft-defender-endpoint-mac) - Complete feature documentation and release notes.
+- [Microsoft Defender for Endpoint for Mac](/defender-endpoint/microsoft-defender-endpoint-mac) - Complete feature documentation and release notes.
 
 ### Onboard Android devices
 
@@ -266,11 +266,11 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### iOS onboarding quick start
 
-1. **Deploy the app**: Follow [Microsoft Defender for Endpoint for iOS](../../intune-service/protect/defender-endpoint/microsoft-defender-endpoint-ios) prerequisites and onboarding instructions.
+1. **Deploy the app**: Follow [Microsoft Defender for Endpoint for iOS](/defender-endpoint/microsoft-defender-endpoint-ios) prerequisites and onboarding instructions.
 2. **Configure supervision detection**: Set up supervised mode detection for enhanced features
 3. **Verify onboarding**: Check device registration in the Microsoft Defender portal.
 
-**Supervised mode configuration:** For supervised iOS/iPadOS devices, configure supervision detection to enable advanced management features. See [Complete deployment for supervised devices](../../intune-service/protect/defender-endpoint/ios-install#complete-deployment-for-supervised-devices).
+**Supervised mode configuration:** For supervised iOS/iPadOS devices, configure supervision detection to enable advanced management features. See [Complete deployment for supervised devices](/defender-endpoint/ios-install#complete-deployment-for-supervised-devices).
 
 #### Configuration steps for supervised devices
 
@@ -410,10 +410,10 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 **Prerequisites:**
 - Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- Permissions equal to the [Conditional Access Administrator](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) role in Microsoft Entra ID for managing Conditional Access policies.
+- Permissions equal to the [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) role in Microsoft Entra ID for managing Conditional Access policies.
 
 > [!IMPORTANT]
-> A policy that requires device compliance for all cloud apps affects every user in scope immediately when enabled. Before turning the policy on, create it in **Report-only** mode first. Report-only mode logs what the policy *would* have done without blocking anyone, letting you confirm scope and catch misconfigurations before enforcement. See [Report-only mode](../../intune-service/protect/entra/identity/conditional-access/concept-conditional-access-report-only#reviewing-results).
+> A policy that requires device compliance for all cloud apps affects every user in scope immediately when enabled. Before turning the policy on, create it in **Report-only** mode first. Report-only mode logs what the policy *would* have done without blocking anyone, letting you confirm scope and catch misconfigurations before enforcement. See [Report-only mode](/entra/identity/conditional-access/concept-conditional-access-report-only#reviewing-results).
 
 ### Steps to create the policy
 
@@ -424,7 +424,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 3. **User assignment:**
    - **Include**: Select user groups that should be subject to this policy
-   - **Exclude**: We recommend excluding your organization's [emergency break-glass admin accounts](../../intune-service/protect/entra/identity/role-based-access-control/security-emergency-access) to prevent lockout. If you use Microsoft Entra Connect or Microsoft Entra Connect Cloud Sync, also exclude the **Directory Synchronization Accounts** directory role.
+   - **Exclude**: We recommend excluding your organization's [emergency break-glass admin accounts](/entra/identity/role-based-access-control/security-emergency-access) to prevent lockout. If you use Microsoft Entra Connect or Microsoft Entra Connect Cloud Sync, also exclude the **Directory Synchronization Accounts** directory role.
 
 4. **Resource protection:**
    - **Target resources**: Select **Cloud apps**
@@ -476,8 +476,8 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 - [Security Management for unenrolled devices](./security-settings-management.md) - Manage Defender for Endpoint security configurations on devices that aren't enrolled with Intune (including Linux devices)
 
 **Microsoft Defender for Endpoint:**
-- [Conditional Access integration](../../intune-service/protect/defender-endpoint/conditional-access) - Advanced access control scenarios
-- [Microsoft Defender for Endpoint reports](../../intune-service/protect/defender-endpoint/threat-protection-reports) - Threat monitoring and response
+- [Conditional Access integration](/defender-endpoint/conditional-access) - Advanced access control scenarios
+- [Microsoft Defender for Endpoint reports](/defender-endpoint/threat-protection-reports) - Threat monitoring and response
 
 ### Support resources
 

@@ -38,7 +38,7 @@ EDR onboarding configures devices so they can send security telemetry to your De
 - Onboarding enables telemetry flow, but doesn't configure advanced settings such as attack surface reduction, firewall, or antivirus policies.
 - EDR policies don't manage threat hunting rules, custom detection logic, response automation, or investigation workflows.
 
-For technical details, see [Onboard devices to Microsoft Defender for Endpoint](../../intune-service/protect/microsoft-365/security/defender-endpoint/onboard-configure).
+For technical details, see [Onboard devices to Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboard-configure).
 
 Applies to:
 
@@ -68,7 +68,7 @@ You need licenses for Microsoft Defender:
 
 For detailed licensing information, see:
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Microsoft Defender for Endpoint licensing](../../intune-service/protect/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
+- [Microsoft Defender for Endpoint licensing](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
 
 ### Role-based access control
 
@@ -78,7 +78,7 @@ To configure EDR policy, your account must be assigned an Intune role with suffi
 - **Custom role**: At minimum, *Create*/*Read*/*Update*/*Delete* permissions for *Endpoint security*.
 
 You also need permissions in Microsoft Defender for Endpoint to establish the service connection:
-- **[Security Administrator](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#security-administrator)** role in Microsoft Entra ID, or
+- **[Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)** role in Microsoft Entra ID, or
 - **Custom role** with equivalent permissions: *microsoft.directory/applications/create*, *microsoft.directory/applications/delete*, *microsoft.directory/servicePrincipals/create*
 
 For detailed permission guidance, see [Role-based access control for endpoint security](./manage-policies.md#role-based-access-control-for-endpoint-security).
@@ -166,7 +166,7 @@ Whether you use automatic or manual deployment, Intune applies the same onboardi
 - **Manual** - Use an onboarding package downloaded from the Defender portal when automatic retrieval isn't available.
 
 > [!NOTE]
-> The onboarding package is stable and only requires updating in rare scenarios, like when working with Microsoft to move your tenant to a new [datacenter geography](../../intune-service/protect/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
+> The onboarding package is stable and only requires updating in rare scenarios, like when working with Microsoft to move your tenant to a new [datacenter geography](/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
 
 **Choosing your deployment method:**
 
@@ -310,7 +310,7 @@ For rapid deployment to all eligible Windows devices directly from the EDR Onboa
 
 1. From the **EDR Onboarding Status** tab, select **Deploy preconfigured policy**.
 
-   :::image type="content" source="./media/endpoint-security-edr-policy/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
+   :::image type="content" source="./media/edr-policy/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
 
 2. Choose your deployment scope:
    - **Windows + Endpoint detection and response**: For Intune-managed devices
@@ -337,7 +337,7 @@ Use the device list on the **EDR Onboarding Status tab** to identify specific de
 #### Create targeted policies
 Once you've identified problem devices, create specific EDR policies using the **Create Policy** option from the **Summary tab**:
 
-:::image type="content" source="./media/endpoint-security-edr-policy/manually-create-edr-policy.png" alt-text="Screen shot of the admin center that shows where to find the Create Policy option.":::
+:::image type="content" source="./media/edr-policy/manually-create-edr-policy.png" alt-text="Screen shot of the admin center that shows where to find the Create Policy option.":::
 
 ### Monitoring scenarios
 
@@ -423,7 +423,7 @@ Review the following to ensure continued onboarding success:
 - Allow up to 15 minutes after enabling the connection for the option to appear.
 - Ensure your account has appropriate administrative permissions.
 
-For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](../../intune-service/protect/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
+For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
 
 ## Offboarding devices
 
@@ -455,8 +455,8 @@ When you offboard a device from Defender for Endpoint:
 
 For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
 
-- [Offboard devices using Mobile Device Management tools](../../intune-service/protect/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
-- [Offboard devices](../../intune-service/protect/microsoft-365/security/defender-endpoint/offboard-machines)
+- [Offboard devices using Mobile Device Management tools](/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices](/microsoft-365/security/defender-endpoint/offboard-machines)
 
 ## Related content
 

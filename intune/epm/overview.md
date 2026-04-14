@@ -20,7 +20,7 @@ ms.collection:
 
 With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-Endpoint Privilege Management supports your [Zero Trust](../intune-service/protect/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
+Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
 
 This overview provides information about EPM including the benefits, how it works, and how to get started.
 

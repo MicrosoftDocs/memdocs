@@ -15,7 +15,7 @@ ms.collection:
 
 If your Microsoft Intune environment uses Microsoft Entra Conditional Access, you can use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway.
 
-To support integration of Conditional Access and Microsoft Tunnel, use [Microsoft Graph PowerShell](../../intune-service/protect/powershell/microsoftgraph/overview) to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
+To support integration of Conditional Access and Microsoft Tunnel, use [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
 
 ## Provision your tenant
 
@@ -24,11 +24,11 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 > [!IMPORTANT]
 > Support for AzureAD PowerShell ended in March 2025, and is replaced by Microsoft Graph PowerShell. For more information, see [Action required: MSOnline and AzureAD PowerShell retirement - 2025 info and resources](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/action-required-msonline-and-azuread-powershell-retirement---2025-info-and-resou/4364991).
 
-1. [Download and install](../../intune-service/protect/powershell/microsoftgraph/installation) the **Microsoft.Graph module**.
+1. [Download and install](/powershell/microsoftgraph/installation) the **Microsoft.Graph module**.
 
 2. Download the PowerShell script named **mst-ca-provisioning.ps1** from [https://aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
 
-3. Using credentials that have the Microsoft Entra ID Role permissions [equivalent to **Intune Administrator**](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#intune-administrator), run the script from any location in your environment, to provision your tenant.
+3. Using credentials that have the Microsoft Entra ID Role permissions [equivalent to **Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), run the script from any location in your environment, to provision your tenant.
 
    The script modifies your tenant by creating a service principal with the following details:
 
@@ -60,7 +60,7 @@ If you'll use Conditional Access policy to limit user access, we recommend confi
 
 7. Select **Create**.
 
-For more information about creating policies for Conditional Access, see [Create a device-based Conditional Access policy](../../intune-service/protect/entra/identity/conditional-access/policy-all-users-device-compliance).
+For more information about creating policies for Conditional Access, see [Create a device-based Conditional Access policy](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
 ## Related content
 

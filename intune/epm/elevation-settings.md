@@ -83,7 +83,7 @@ Use *Windows elevation settings policy* when you want to:
 
 3. On **Configuration settings**, configure the following to define default behaviors for elevation requests on a device:
 
-   :::image type="content" source="./media/epm-policies/evaluation-settings-policy.png" alt-text="Image of the evaluation settings configuration page." lightbox="./media/epm-policies/evaluation-settings-policy.png":::
+   :::image type="content" source="./media/elevation-settings/evaluation-settings-policy.png" alt-text="Image of the evaluation settings configuration page." lightbox="./media/elevation-settings/evaluation-settings-policy.png":::
 
    - **Endpoint Privilege Management**: Set to **Enabled** (default). When Enabled, a device uses Endpoint Privilege Management. When set to Disabled, the device doesn't use Endpoint Privilege Management, and immediately disables EPM if it was previously enabled. After seven days, the device will deprovision the components for Endpoint Privilege Management.
    - **Default elevation response**: Configure how this device manages elevation requests for files that don't match a rule:

@@ -76,21 +76,21 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 The following settings are configured as [Endpoint Security policy for Windows Firewalls](./firewall-policy.md).
 
 - **Stateful File Transfer Protocol (FTP)**  
-  CSP: [MdmStore/Global/DisableStatefulFtp](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestatefulftp)
+  CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Not configured** (*default*)
   - **Allow** - The firewall performs stateful File Transfer Protocol (FTP) filtering to allow secondary connections.
   - **Disabled** - Stateful FTP is disabled.
 
 - **Number of seconds a security association can be idle before it's deleted**  
-  CSP: [MdmStore/Global/SaIdleTime](../../intune-service/protect/windows/client-management/mdm/firewall-csp#saidletime)
+  CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)
 
   Specify a time in seconds between 300 and 3600, for how long the security associations are kept after network traffic isn't seen.
 
   If you don't specify any value, the system deletes a security association after it's been idle for 300 seconds.
 
 - **Preshared key encoding**  
-  CSP: [MdmStore/Global/PresharedKeyEncoding](../../intune-service/protect/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
+  CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
 
   If you don't require *UTF-8*, preshared keys are initially encoded using UTF-8. After that, device users can choose another encoding method.
 
@@ -103,31 +103,31 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Yes** - Turn off all Firewall IP sec exemptions. The following settings aren't available to configure.
 
   - **Firewall IP sec exemptions allow neighbor discovery**  
-    CSP: [MdmStore/Global/IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#ipsecexempt)
+    CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
     - **Not configured** (*default*)
     - **Yes** - Firewall IPsec exemptions allow neighbor discovery.
 
   - **Firewall IP sec exemptions allow ICMP**  
-    CSP: [MdmStore/Global/IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#ipsecexempt)
+    CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
     - **Not configured** (*default*)
     - **Yes** - Firewall IPsec exemptions allow ICMP.
 
   - **Firewall IP sec exemptions allow router discovery**  
-    CSP: [MdmStore/Global/IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#ipsecexempt)
+    CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
     - **Not configured** (*default*)
     - **Yes** - Firewall IPsec exemptions allow router discovery.
 
   - **Firewall IP sec exemptions allow DHCP**  
-    CSP: [MdmStore/Global/IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#ipsecexempt)
+    CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
     - **Not configured** (*default*)
     - **Yes** - Firewall IP sec exemptions allow DHCP
 
 - **Certificate revocation list (CRL) verification**  
-  CSP: [MdmStore/Global/CRLcheck](../../intune-service/protect/windows/client-management/mdm/firewall-csp#crlcheck)
+  CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)
 
    Specify how certificate revocation list (CRL) verification is enforced.
   - **Not configured** (*default*) - Use the client default, which is to disable CRL verification.
@@ -136,14 +136,14 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Require**
 
 - **Require keying modules to only ignore the authentication suites they don't support**  
-  CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](../../intune-service/protect/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
+  CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
 
   - **Not configured** (*default*)
   - **Disabled**
   - **Enabled** - Keying modules ignore unsupported authentication suites.
 
 - **Packet queuing**  
-  CSP: [MdmStore/Global/EnablePacketQueue](../../intune-service/protect/windows/client-management/mdm/firewall-csp#enablepacketqueue)
+  CSP: [MdmStore/Global/EnablePacketQueue](/windows/client-management/mdm/firewall-csp#enablepacketqueue)
 
   Specify how to enable scaling for the software on the receive side for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This ensures the packet order is preserved.
   - **Not configured** (*default*) - Packet queuing is returned to the client default, which is disabled.
@@ -153,7 +153,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Queue Both**
 
 - **Turn on Windows Firewall for domain networks**  
-  CSP: [EnableFirewall](../../intune-service/protect/windows/client-management/mdm/firewall-csp#enablefirewall)
+  CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
   - **Yes** - The Windows Firewall for the network type of **domain** is turned on and enforced. You also gain access to additional settings for this network.
@@ -162,7 +162,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   Additional settings for this network, when set to *Yes*:
 
   - **Block stealth mode**  
-    CSP: [DisableStealthMode](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+    CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
     By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run. Disabling stealth mode can make devices vulnerable to attack.
     - **Not configured** *(default)*
@@ -170,21 +170,21 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No**
 
   - **Enable shielded mode**  
-    CSP: [Shielded](../../intune-service/protect/windows/client-management/mdm/firewall-csp#shielded)
+    CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
     - **Not configured** *(default)* - Use the client default, which is to disable shielded mode.
     - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
     - **No**
 
   - **Block unicast responses to multicast broadcasts**
-      CSP: [DisableUnicastResponsesToMulticastBroadcast](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
     - **Yes** - Unicast responses to multicast broadcasts are blocked.
     - **No** - Enforce the client default, which is to allow unicast responses.
 
   - **Disable inbound notifications**  
-    CSP [DisableInboundNotifications](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
+    CSP [DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow the user notification.
     - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
     - **No** - User notifications are allowed.
@@ -192,7 +192,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Block outbound connections**
 
     *This setting applies to Windows version 1809 and later*.
-    CSP: [DefaultOutboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
     This rule is evaluated at the very end of the rule list.
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow connections.
@@ -200,7 +200,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No** - All connections that don't match an outbound rule are allowed.
 
   - **Block inbound connections**  
-    CSP: [DefaultInboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultinboundaction)
+    CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
     This rule is evaluated at the very end of the rule list.
     - **Not configured** *(default)* - The setting returns to the client default, which is to block connections.
@@ -208,35 +208,35 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No** - All connections that don't match an inbound rule are allowed.
 
   - **Ignore authorized application firewall rules**  
-    CSP: [AuthAppsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
+    CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - Authorized application firewall rules in the local store are ignored.
     - **No** -  Authorized application firewall rules are honored.
 
   - **Ignore global port firewall rules**  
-    CSP: [GlobalPortsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
+    CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - Global port firewall rules in the local store are ignored.
     - **No** - The global port firewall rules are honored.
 
   - **Ignore all local firewall rules**  
-    CSP: [IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
+    CSP: [IPsecExempt](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - All firewall rules in the local store are ignored.
     - **No** - The firewall rules in the local store are honored.
 
   - **Ignore connection security rules**  
-    CSP: [AllowLocalIpsecPolicyMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
+    CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
 - **Turn on Windows Firewall for private networks**  
-  CSP: [EnableFirewall](../../intune-service/protect/windows/client-management/mdm/firewall-csp#enablefirewall)
+  CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
   - **Yes** - The Windows Firewall for the network type of **private** is turned on and enforced. You also gain access to additional settings for this network.
@@ -245,7 +245,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   Additional settings for this network, when set to *Yes*:
 
   - **Block stealth mode**  
-    CSP: [DisableStealthMode](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+    CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
     By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run. Disabling stealth mode can make devices vulnerable to attack.
     - **Not configured** *(default)*
@@ -253,21 +253,21 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No**
 
   - **Enable shielded mode**  
-    CSP: [Shielded](../../intune-service/protect/windows/client-management/mdm/firewall-csp#shielded)
+    CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
     - **Not configured** *(default)* - Use the client default, which is to disable shielded mode.
     - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
     - **No**
 
   - **Block unicast responses to multicast broadcasts**
-      CSP: [DisableUnicastResponsesToMulticastBroadcast](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
     - **Yes** - Unicast responses to multicast broadcasts are blocked.
     - **No** - Enforce the client default, which is to allow unicast responses.
 
   - **Disable inbound notifications**  
-    CSP [DisableInboundNotifications](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
+    CSP [DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow the user notification.
     - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
     - **No** - User notifications are allowed.
@@ -275,7 +275,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Block outbound connections**
 
     *This setting applies to Windows version 1809 and later*.
-    CSP: [DefaultOutboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
     This rule is evaluated at the very end of the rule list.
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow connections.
@@ -283,7 +283,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No** - All connections that don't match an outbound rule are allowed.
 
   - **Block inbound connections**  
-    CSP: [DefaultInboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultinboundaction)
+    CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
     This rule is evaluated at the very end of the rule list.
     - **Not configured** *(default)* - The setting returns to the client default, which is to block connections.
@@ -291,35 +291,35 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No** - All connections that don't match an inbound rule are allowed.
 
   - **Ignore authorized application firewall rules**  
-    CSP: [AuthAppsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
+    CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - Authorized application firewall rules in the local store are ignored.
     - **No** -  Authorized application firewall rules are honored.
 
   - **Ignore global port firewall rules**  
-    CSP: [GlobalPortsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
+    CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - Global port firewall rules in the local store are ignored.
     - **No** - The global port firewall rules are honored.
 
   - **Ignore all local firewall rules**  
-    CSP: [IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
+    CSP: [IPsecExempt](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - All firewall rules in the local store are ignored.
     - **No** - The firewall rules in the local store are honored.
 
   - **Ignore connection security rules**  
-    CSP: [AllowLocalIpsecPolicyMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
+    CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - IPsec firewall rules in the local store are ignored.
     - **No** - IPsec firewall rules in the local store are honored.
 
 - **Turn on Windows Firewall for public networks**  
-  CSP: [EnableFirewall](../../intune-service/protect/windows/client-management/mdm/firewall-csp#enablefirewall)
+  CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Not configured** (*default*) - The client returns to its default, which is to enable the firewall.
   - **Yes** - The Windows Firewall for the network type of **public** is turned on and enforced. You also gain access to additional settings for this network.
@@ -328,7 +328,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   Additional settings for this network, when set to *Yes*:
 
   - **Block stealth mode**  
-    CSP: [DisableStealthMode](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+    CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
     By default, stealth mode is enabled on devices. It helps prevent malicious users from discovering information about network devices and the services they run. Disabling stealth mode can make devices vulnerable to attack.
     - **Not configured** *(default)*
@@ -336,21 +336,21 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No**
 
   - **Enable shielded mode**  
-    CSP: [Shielded](../../intune-service/protect/windows/client-management/mdm/firewall-csp#shielded)
+    CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
     - **Not configured** *(default)* - Use the client default, which is to disable shielded mode.
     - **Yes** - The machine is put into *shielded mode*, which isolates it from the network. All traffic is blocked.
     - **No**
 
   - **Block unicast responses to multicast broadcasts**
-      CSP: [DisableUnicastResponsesToMulticastBroadcast](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow unicast responses.
     - **Yes** - Unicast responses to multicast broadcasts are blocked.
     - **No** - Enforce the client default, which is to allow unicast responses.
 
   - **Disable inbound notifications**  
-    CSP [DisableInboundNotifications](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
+    CSP [DisableInboundNotifications](/windows/client-management/mdm/firewall-csp#disableinboundnotifications)
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow the user notification.
     - **Yes** - User notification is suppressed when an application is blocked by an inbound rule.
     - **No** - User notifications are allowed.
@@ -358,7 +358,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
   - **Block outbound connections**
 
     *This setting applies to Windows version 1809 and later*.
-    CSP: [DefaultOutboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
     This rule is evaluated at the very end of the rule list.
     - **Not configured** *(default)* - The setting returns to the client default, which is to allow connections.
@@ -366,7 +366,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No** - All connections that don't match an outbound rule are allowed.
 
   - **Block inbound connections**  
-    CSP: [DefaultInboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultinboundaction)
+    CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
     This rule is evaluated at the very end of the rule list.
     - **Not configured** *(default)* - The setting returns to the client default, which is to block connections.
@@ -374,28 +374,28 @@ The following settings are configured as [Endpoint Security policy for Windows F
     - **No** - All connections that don't match an inbound rule are allowed.
 
   - **Ignore authorized application firewall rules**  
-    CSP: [AuthAppsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
+    CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - Authorized application firewall rules in the local store are ignored.
     - **No** -  Authorized application firewall rules are honored.
 
   - **Ignore global port firewall rules**  
-    CSP: [GlobalPortsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
+    CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - Global port firewall rules in the local store are ignored.
     - **No** - The global port firewall rules are honored.
 
   - **Ignore all local firewall rules**  
-    CSP: [IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
+    CSP: [IPsecExempt](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - All firewall rules in the local store are ignored.
     - **No** - The firewall rules in the local store are honored.
 
   - **Ignore connection security rules**  
-    CSP: [AllowLocalIpsecPolicyMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
+    CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
     - **Not configured** *(default)* - The setting returns to the client default, which is to honor the local rules.
     - **Yes** - IPsec firewall rules in the local store are ignored.
@@ -437,17 +437,17 @@ The following settings are configured as [Endpoint Security policy for Windows F
 Applications targeted with this rule:
 
 - **Package family name**  
-  [Get-AppxPackage](../../intune-service/protect/previous-versions/hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions/hh856044(v=technet.10))
 
   Package family names can be retrieved by running the Get-AppxPackage command from PowerShell.
 
 - **File path**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](../../intune-service/protect/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe`
 
 - **Service name**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](../../intune-service/protect/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Use a Windows service short name when a service, not an application, is sending or receiving traffic. Service short names are retrieved by running the `Get-Service` command from PowerShell.
 
@@ -456,7 +456,7 @@ Applications targeted with this rule:
 Specify the local and remote ports to which this rule applies:
 
 - **Protocol**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](../../intune-service/protect/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Specify the protocol for this port rule.
   - Transport layer protocols like *TCP(6)* and *UDP(17)* allow you to specify ports or port ranges.
@@ -473,7 +473,7 @@ Specify the local and remote ports to which this rule applies:
   - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.
 
 - **Authorized users**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](../../intune-service/protect/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if *Service name* in this policy is set as a Windows service. If no authorized user is specified, the default is *all users*.
 
@@ -486,7 +486,7 @@ Specifies the local and remote addresses to which this rule applies:
   - **Yes** - Support any local address and don't configure an address range.
 
 - **Local address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#localaddressranges)
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)
 
   Manage local address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of local addresses that are covered by the rule.
@@ -507,7 +507,7 @@ Specifies the local and remote addresses to which this rule applies:
   - **Yes** - Support any remote address and don't configure an address range.
 
 - **Remote address ranges**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#remoteaddressranges)
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)
 
   Manage remote address ranges for this rule. You can:
   - **Add** one or more addresses as a comma-separated list of remote addresses that are covered by the rule.

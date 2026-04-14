@@ -35,7 +35,7 @@ Administrator Protection doesn't currently support elevations initiated from End
 
 ## Organizations using Application Control for Business might experience issues running Endpoint Privilege Management
 
-Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](../intune-service/protect/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
+Application Control for Business policies that don't account for the EPM client components could prevent the EPM components from functioning. In order to use EPM with AppControl, ensure that your Application Control policy includes rules that allow EPM to function. For more information about troubleshooting application control, see [WDAC debugging and troubleshooting](/windows/security/application-security/application-control/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting).
 
 > [!Note]
 > EPM is not included in default policies for Application Control and may require creating custom policies.

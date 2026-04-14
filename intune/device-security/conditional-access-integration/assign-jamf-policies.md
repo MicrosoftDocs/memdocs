@@ -126,5 +126,5 @@ Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](ht
 
 ## Next steps
 
-- [Conditional Access in Microsoft Entra ID](../../intune-service/protect/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Get started with Conditional Access in Microsoft Entra ID](../../intune-service/protect/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Get started with Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

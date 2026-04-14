@@ -14,7 +14,7 @@ ms.reviewer: mattsha
 
 # Configure tenant attach to support endpoint security policies from Intune
 
-When you use the Configuration Manager [tenant attach scenario](../intune-service/protect/configmgr/tenant-attach), you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Intune admin center to create and deploy policies.
+When you use the Configuration Manager [tenant attach scenario](/configmgr/tenant-attach), you can deploy endpoint security policies from Intune to devices you manage with Configuration Manager. To use this scenario, you must first configure tenant attach for Configuration Manager and enable collections of devices from Configuration Manager for use with Intune. After collections are enabled for use, you use the Microsoft Intune admin center to create and deploy policies.
 
 ## Requirements to use Intune policy for tenant attach
 
@@ -316,4 +316,4 @@ For more information about viewing device events for tenant attached devices, se
 ## Next steps
 
 - [Configure Endpoint security policies](../device-configuration/endpoint-security-policies/manage-policies.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
-- Learn more about [Microsoft Defender for Endpoint](../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).
+- Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).

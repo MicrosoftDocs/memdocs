@@ -210,7 +210,7 @@ To avoid conflicts:
 
 For detailed information on identifying and resolving conflicts, see:
 
-- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](../../device-security/security-baselines/monitor-baselines.md#troubleshoot-using-per-setting-status)
 - [Avoid conflicts](../../device-security/security-baselines/overview.md#avoid-conflicts) in the security baselines documentation.
 

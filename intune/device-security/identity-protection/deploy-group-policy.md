@@ -22,7 +22,7 @@ ms.collection:
 > - *Identity protection* – previously available from  *Devices* > *Configuration* > *Create* >  *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
 > - *Account protection (Preview)* – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
 
-Microsoft Intune supports use of *Account protection* profiles to manage Windows Hello for Business on your managed Windows devices. [Windows Hello for Business](../../intune-service/protect/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards.
+Microsoft Intune supports use of *Account protection* profiles to manage Windows Hello for Business on your managed Windows devices. [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards.
 
 Applies to:
 
@@ -41,7 +41,7 @@ In addition to Account protection profiles, Intune supports the following option
 - [Settings catalog](../../device-configuration/settings-catalog/index.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
 
 > [!NOTE]
-> For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](../../intune-service/protect/windows/client-management/mdm/policy-csp-devicelock)
+> For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](/windows/client-management/mdm/policy-csp-devicelock)
 
 ## Next steps
 

@@ -177,7 +177,7 @@ If a device receives two rules targeting the same application, both rules are co
 
 Endpoint Privilege Management and Windows built-in user account control (UAC) are separate features with different functionality.
 
-When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](../intune-service/protect/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
+When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
 > [!NOTE]
 > Endpoint Privilege Management doesn't interfere with user account control actions (or UAC) that are run by an Administrator on the device.

@@ -30,7 +30,7 @@ Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices are av
 
 Learn more about Intune and government clouds:
 
-- [Microsoft Intune for US Government GCC High support](../../intune-service/protect/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
+- [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
 - [Microsoft Intune for US Government GCC High and DoD service description](../../intune-service/fundamentals/intune-govt-service-description.md)
 - [Microsoft Intune operated by 21Vianet in China](../../intune-service/fundamentals/china.md)
 

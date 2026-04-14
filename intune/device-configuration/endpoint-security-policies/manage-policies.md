@@ -38,7 +38,7 @@ When conflicts occur, affected settings might fail to apply properly. Plan your 
 
 Access endpoint security policies from **Endpoint security** > **Manage** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-:::image type="content" source="./media/endpoint-security-policy/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
+:::image type="content" source="./media/manage-policies/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
 
 **[Account protection](./account-protection-policy.md)**  
 
@@ -56,7 +56,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 
 **[App Control for Business](./app-control-policy.md)**  
 
-- **Purpose**: Control which applications can run on Windows devices using [Windows Defender Application Control (WDAC)](../../intune-service/protect/windows/security/application-security/application-control/windows-defender-application-control/wdac)
+- **Purpose**: Control which applications can run on Windows devices using [Windows Defender Application Control (WDAC)](/windows/security/application-security/application-control/windows-defender-application-control/wdac)
 - **Platform support**: Windows
 - **Available profiles**: Windows Defender Application Control (WDAC)
 - **Use case**: Implement application allowlisting and control software execution
@@ -227,7 +227,7 @@ Prevent and resolve policy conflicts through strategic planning and monitoring:
 4. **Check baselines**: Determine if security baselines are setting non-default values that conflict with other policies.
 5. **Apply resolution**: Use policy-specific guidance to resolve conflicts systematically.
 
-**Resolution resources**: [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) and [Monitor security baselines](../../device-security/security-baselines/monitor-baselines.md#troubleshoot-using-per-setting-status).
+**Resolution resources**: [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) and [Monitor security baselines](../../device-security/security-baselines/monitor-baselines.md#troubleshoot-using-per-setting-status).
 
 ## Integration with Microsoft Defender for Endpoint
 

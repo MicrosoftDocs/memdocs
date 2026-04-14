@@ -67,11 +67,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/lookout/malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/lookout/malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -79,11 +79,11 @@ Detect threats to your network such as man-in-the-middle attacks and protect acc
 
 *Block network access through WiFi:*
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/lookout/network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/lookout/network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -91,21 +91,21 @@ Detect threats to your network such as Man-in-the-middle attacks, and prevent sy
 
 *Block SharePoint Online when network threats are detected:*
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/lookout/network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/lookout/network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Lookout Mobile Threat Defense solution considers a device to be infected:
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/lookout-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
+:::image type="content" source="./media/lookout/lookout-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/lookout-mobile-threat-defense-connector/lookout-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
+:::image type="content" source="./media/lookout/lookout-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

@@ -63,7 +63,7 @@ To learn more about using security baselines, see:
 
 The Microsoft Defender for Endpoint baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](../microsoft-defender/overview.md#prerequisites).
 
-This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can affect remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can affect remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 ::: zone pivot="mde-v24h1"
 
@@ -73,7 +73,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Prevent installation of devices using drivers that match these device setup classes**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation?WT.mc_id=Portal-fx#preventinstallationofmatchingdevicesetupclasses)
 
   - **Prevented Classes**\
     Baseline default: *d48179be-ec20-11d1-b6b8-00c04fa372a7*
@@ -85,7 +85,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later)**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#encryptionmethodbydrivetype)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#encryptionmethodbydrivetype)
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
@@ -103,7 +103,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Choose how BitLocker-protected fixed drives can be recovered**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrecoveryoptions)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrecoveryoptions)
 
   - **Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives**\
     Baseline default: *True*
@@ -127,11 +127,11 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Deny write access to fixed drives not protected by BitLocker**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesrequireencryption)
 
 - **Enforce drive encryption type on fixed data drives**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesencryptiontype)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#fixeddrivesencryptiontype)
 
   - **Select the encryption type: (Device)**\
     Baseline default: *Used Space Only encryption*
@@ -140,15 +140,15 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN.**\
   Baseline default: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootpinexceptionondecapabledevice)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootpinexceptionondecapabledevice)
 
 - **Allow enhanced PINs for startup**\
   Baseline default: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenhancedpin)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenhancedpin)
 
 - **Choose how BitLocker-protected operating system drives can be recovered**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrecoveryoptions)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrecoveryoptions)
 
   - **Omit recovery options from the BitLocker setup wizard**\
     Baseline default: *True*
@@ -172,18 +172,18 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Enable use of BitLocker authentication requiring preboot keyboard input on slates**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootinputprotectorsonslates)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesenableprebootinputprotectorsonslates)
 
 - **Enforce drive encryption type on operating system drive**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesencryptiontype)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesencryptiontype)
 
   - **Select the encryption type: (Device)**\
     Baseline default: *Used Space Only encryption*
 
 - **Require additional authentication at startup**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrequirestartupauthentication)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#systemdrivesrequirestartupauthentication)
 
   - **Configure TPM startup key and PIN:**\
     Baseline default: *Do not allow startup key and PIN with TPM*
@@ -204,14 +204,14 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Control use of BitLocker on removable drives**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesconfigurebde)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesconfigurebde)
 
   - **Allow users to apply BitLocker protection on removable data drives (Device)**\
     Baseline default: *True*
 
     - **Enforce drive encryption type on removable data drives**\
       Baseline default: *Enabled*\
-      [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesencryptiontype)
+      [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesencryptiontype)
 
       - **Select the encryption type: (Device)**\
       Baseline default: *Used Space Only encryption*
@@ -221,7 +221,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Deny write access to removable drives not protected by BitLocker**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#removabledrivesrequireencryption)
 
   - **Do not allow write access to devices configured in another organization**\
     Baseline default: *False*
@@ -230,7 +230,7 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Configure Windows Defender SmartScreen**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
+  [Learn more](/windows/client-management/mdm/policy-csp-admx-windowsexplorer?WT.mc_id=Portal-fx#enablesmartscreen)
 
   - **Pick one of the following settings: (Device)**\
     Baseline default: *Warn and prevent bypass*
@@ -239,15 +239,15 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
 
 - **Prevent bypassing SmartScreen Filter warnings about files that are not commonly downloaded from the Internet (User)**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disablebypassofsmartscreenwarningsaboutuncommonfiles)
 
 - **Prevent managing SmartScreen Filter**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#preventmanagingsmartscreenfilter)
 
   - **Select SmartScreen Filter mode**\
     Baseline default: *On*
@@ -256,361 +256,361 @@ This baseline is optimized for physical devices and isn't recommended for use on
 
 - **Allow Warning For Other Disk Encryption**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#allowwarningforotherdiskencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#allowwarningforotherdiskencryption)
 
 - **Configure Recovery Password Rotation**\
   Baseline default: *Refresh on for both Azure AD-joined and hybrid-joined devices*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)
 
 - **Require Device Encryption**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#requiredeviceencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#requiredeviceencryption)
 
 ### Defender
 
 - **Allow Archive Scanning**\
   Baseline default: *Allowed. Scans the archive files.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowarchivescanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowarchivescanning)
 
 - **Allow Behavior Monitoring**\
   Baseline default: *Allowed. Turns on real-time behavior monitoring.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowbehaviormonitoring)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowbehaviormonitoring)
 
 - **Allow Cloud Protection**\
   Baseline default: *Allowed. Turns on Cloud Protection.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowcloudprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowcloudprotection)
 
 - **Allow Email Scanning**\
   Baseline default: *Allowed. Turns on email scanning.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowemailscanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowemailscanning)
 
 - **Allow Full Scan Removable Drive Scanning**\
   Baseline default: *Allowed. Scans removable drives.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowfullscanremovabledrivescanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowfullscanremovabledrivescanning)
 
 - **Allow On Access Protection**\
   Baseline default: *Allowed.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowonaccessprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowonaccessprotection)
 
 - **Allow Realtime Monitoring**\
   Baseline default: *Allowed. Turns on and runs the real-time monitoring service.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowrealtimemonitoring)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowrealtimemonitoring)
 
 - **Allow Scanning Network Files**\
   Baseline default: *Allowed. Scans network files.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscanningnetworkfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscanningnetworkfiles)
 
 - **Allow scanning of all downloaded files and attachments**\
   Baseline default: *Allowed.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowioavprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowioavprotection)
 
 - **Allow Script Scanning**\
   Baseline default: *Allowed.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowscriptscanning)
 
 - **Allow User UI Access**\
   Baseline default: *Allowed. Lets users access UI.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowuseruiaccess)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#allowuseruiaccess)
 
   - **Block execution of potentially obfuscated scripts**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/defender-endpoint/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Win32 API calls from Office macros**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block executable files from running unless they meet a prevalence, age, or trusted list criterion**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office communication application from creating child processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block all Office applications from creating child processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Adobe Reader from creating child processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block credential stealing from the Windows local security authority subsystem**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block JavaScript or VBScript from launching downloaded executable content**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Webshell creation for Servers**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block untrusted and unsigned processes that run from USB**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block persistence through WMI event subscription**\
   Baseline default: *Audit*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **[PREVIEW] Block use of copied or impersonated system tools**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block abuse of exploited vulnerable signed drivers (Device)**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block process creations originating from PSExec and WMI commands**\
   Baseline default: *Audit*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office applications from creating executable content**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block Office applications from injecting code into other processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **[PREVIEW] Block rebooting machine in Safe Mode**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Use advanced protection against ransomware**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
   - **Block executable content from email client and webmail**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
 
 - **Check For Signatures Before Running Scan**\
   Baseline default: *Enabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#checkforsignaturesbeforerunningscan)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#checkforsignaturesbeforerunningscan)
 
 - **Cloud Block Level**\
   Baseline default: *High*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudblocklevel)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudblocklevel)
 
 - **Cloud Extended Timeout**\
   Baseline default: *Configured*\
   Value: *50*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudextendedtimeout)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#cloudextendedtimeout)
 
 - **Disable Local Admin Merge**\
   Baseline default: *Enable Local Admin Merge*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationdisablelocaladminmerge)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationdisablelocaladminmerge)
 
 - **Enable Network Protection**\
   Baseline default: *Enabled (block mode)*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#enablenetworkprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#enablenetworkprotection)
 
 - **Hide Exclusions From Local Admins**\
   Baseline default: *If you enable this setting, local admins will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
 
 - **Hide Exclusions From Local Users**\
   Baseline default: *If you enable this setting, local users will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
 
 - **Oobe Enable Rtp And Sig Update**\
   Baseline default: *If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationoobeenablertpandsigupdate)
+  [Learn more](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationoobeenablertpandsigupdate)
 
 - **PUA Protection**\
   Baseline default: *PUA Protection on. Detected items are blocked. They will show in history along with other threats.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#puaprotection)
 
 - **Real Time Scan Direction**\
   Baseline default: *Monitor all files (bi-directional).*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#realtimescandirection)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#realtimescandirection)
 
 - **Scan Parameter**\
   Baseline default: *Quick scan*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#scanparameter)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-fx#scanparameter)
 
 - **Schedule Quick Scan Time**\
   Baseline default: *Configured*\
   Value: *120*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulequickscantime)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulequickscantime)
 
 - **Schedule Scan Day**\
   Baseline default: *Every day*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescanday)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescanday)
 
 - **Schedule Scan Time**\
   Baseline default: *Configured*\
   Value: *120*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescantime)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#schedulescantime)
 
 - **Signature Update Interval**\
   Baseline default: *Configured*\
   Value: *4*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#signatureupdateinterval)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#signatureupdateinterval)
 
 - **Submit Samples Consent**\
   Baseline default: *Send all samples automatically.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#submitsamplesconsent)
+  [Learn more](/windows/client-management/mdm/policy-csp-Defender?WT.mc_id=Portal-fx#submitsamplesconsent)
 
 ### Device Guard
 
 - **Credential Guard**\
   Baseline default: *(Enabled with UEFI lock) Turns on Credential Guard with UEFI lock.*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceguard?WT.mc_id=Portal-fx#lsacfgflags)
 
 ### Dma Guard
 
 - **Device Enumeration Policy**\
   Baseline default: *Block all (Most restrictive)*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
+  [Learn more](/windows/client-management/mdm/policy-csp-dmaguard?WT.mc_id=Portal-fx#deviceenumerationpolicy)
 
 ### Firewall
 
 - **Certificate revocation list verification**\
   Baseline default: *None*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalcrlcheck)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalcrlcheck)
 
 - **Disable Stateful Ftp**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobaldisablestatefulftp)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobaldisablestatefulftp)
 
 - **Enable Domain Network Firewall**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileenablefirewall)
 
   - **Allow Local Ipsec Policy Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalipsecpolicymerge)
 
   - **Disable Stealth Mode**\
   Baseline default: *False*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmode)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmode)
 
   - **Disable Inbound Notifications**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
 
   - **Disable Unicast Responses To Multicast Broadcast**\
   Baseline default: *False*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableunicastresponsestomulticastbroadcast)
 
   - **Global Ports Allow User Pref Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileglobalportsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileglobalportsallowuserprefmerge)
 
   - **Disable Stealth Mode Ipsec Secured Packet Exemption**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Allow Local Policy Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofileallowlocalpolicymerge)
 
 - **Enable Packet Queue**\
   Baseline default: *Configured*\
   Value: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalenablepacketqueue)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalenablepacketqueue)
 
 - **Enable Private Network Firewall**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
 
   - **Default Inbound Action for Private Profile**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultinboundaction)
 
   - **Disable Unicast Responses To Multicast Broadcast**\
   Baseline default: *False*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableunicastresponsestomulticastbroadcast)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableunicastresponsestomulticastbroadcast)
 
   - **Disable Stealth Mode**\
   Baseline default: *False*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmode)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmode)
 
   - **Global Ports Allow User Pref Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileglobalportsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileglobalportsallowuserprefmerge)
 
   - **Allow Local Ipsec Policy Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalipsecpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalipsecpolicymerge)
 
   - **Disable Stealth Mode Ipsec Secured Packet Exemption**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Disable Inbound Notifications**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledisableinboundnotifications)
 
   - **Allow Local Policy Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileallowlocalpolicymerge)
 
   - **Default Outbound Action**\
   Baseline default: *Allow*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofiledefaultoutboundaction)
 
   - **Auth Apps Allow User Pref Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileauthappsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileauthappsallowuserprefmerge)
 
 - **Enable Public Network Firewall**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablefirewall)
 
   - **Disable Stealth Mode**\
   Baseline default: *False*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmode)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmode)
 
   - **Default Outbound Action**\
   Baseline default: *Allow*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultoutboundaction)
 
   - **Disable Inbound Notifications**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableinboundnotifications)
 
   - **Disable Stealth Mode Ipsec Secured Packet Exemption**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmodeipsecsecuredpacketexemption)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisablestealthmodeipsecsecuredpacketexemption)
 
   - **Allow Local Policy Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalpolicymerge)
 
   - **Auth Apps Allow User Pref Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileauthappsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileauthappsallowuserprefmerge)
 
   - **Default Inbound Action for Public Profile**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledefaultinboundaction)
 
   - **Disable Unicast Responses To Multicast Broadcast**\
   Baseline default: *False*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableunicastresponsestomulticastbroadcast)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofiledisableunicastresponsestomulticastbroadcast)
 
   - **Global Ports Allow User Pref Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileglobalportsallowuserprefmerge)
 
   - **Allow Local Ipsec Policy Merge**\
   Baseline default: *True*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileallowlocalipsecpolicymerge)
 
 - **Preshared Key Encoding**\
   Baseline default: *UTF8*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalpresharedkeyencoding)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalpresharedkeyencoding)
 
 - **Security association idle time**\
   Baseline default: *Configured*\
   Value: *300*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalsaidletime)
+  [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreglobalsaidletime)
 
 ### Microsoft Edge
 
@@ -652,7 +652,7 @@ Attack surface reduction rule merge behavior is as follows:
 - When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
 
-To learn more, see [Attack surface reduction rules](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
 - **Block Office communication apps from creating child processes**\
   Baseline default: *Enable*\
@@ -710,25 +710,25 @@ To learn more, see [Attack surface reduction rules](../../intune-service/protect
 
 ### Application Guard
 
-For more information, see [WindowsDefenderApplicationGuard CSP](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.
+For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.
 
 When you use Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.
 
 - **Turn on Application Guard for Edge (Options)**\
   Baseline default: *Enabled for Edge*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
+  [Learn more](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
   - **Block external content from non-enterprise approved sites**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#blocknonenterprisecontent)
+  [Learn more](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#blocknonenterprisecontent)
 
   - **Clipboard behavior**\
   Baseline default: *Block copy and paste between PC and browser*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
+  [Learn more](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
 
 - **Windows network isolation policy**\
   Baseline default: *Configure*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-networkisolation)
+  [Learn more](/windows/client-management/mdm/policy-csp-networkisolation)
 
   - **Network domains**\
     Baseline default: *securitycenter.windows.com*
@@ -743,14 +743,14 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Require storage cards to be encrypted (mobile only)**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)
 
   > [!NOTE]
   > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
 - **Enable full disk encryption for OS and fixed data drives**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
 - **BitLocker system drive policy**\
   Baseline default: *Configure*\
@@ -790,15 +790,15 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Standby states when sleeping while on battery**\
   Baseline default: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)
+  [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)
 
 - **Standby states when sleeping while plugged in**\
   Baseline default: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)
+  [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)
 
 - **Enable full disk encryption for OS and fixed data drives**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
 - **BitLocker system drive policy**\
   Baseline default: *Configure*\
@@ -818,7 +818,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
   - **Disable BitLocker on devices where TPM is incompatible**\
     Baseline default: *Yes*\
-    [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+    [Learn more](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
   - **Configure encryption method for Operating System drives**\
     Baseline default: *Not configured*\
@@ -870,7 +870,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
   - **Disable BitLocker on devices where TPM is incompatible**\
     Baseline default: *Yes*\
-    [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+    [Learn more](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
   - **Configure encryption method for Operating System drives**\
     Baseline default: *Not configured*\
@@ -878,15 +878,15 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Standby states when sleeping while on battery**\
   Baseline default: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)
+  [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)
 
 - **Standby states when sleeping while plugged in**\
   Baseline default: *Disabled*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)
+  [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)
 
 - **Enable full disk encryption for OS and fixed data drives**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+  [Learn more](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
 - **BitLocker fixed drive policy**\
   Baseline default: *Configure*\
@@ -923,21 +923,21 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Require SmartScreen for Microsoft Edge**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Block malicious site access**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Block unverified file download**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 ### Data Protection
 
 - **Block direct memory access**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+  [Learn more](/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
@@ -955,7 +955,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Hardware device installation by device identifiers**\
   Baseline default: *Block hardware device installation*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdeviceids)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdeviceids)
 
   - **Remove matching hardware devices**\
     Baseline default: *Yes*
@@ -968,7 +968,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Hardware device installation by setup classes**\
   Baseline default: *Block hardware device installation*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses)
+  [Learn more](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses)
 
   - **Remove matching hardware devices**\
     Baseline default: *Not configured*
@@ -999,14 +999,14 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**\
   Baseline default: *Block all*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [Learn more](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**\
   Baseline default: *Not configured*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [Learn more](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
@@ -1017,11 +1017,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Sample sharing for all files**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  [Learn more](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
 - **Expedite telemetry reporting frequency**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  [Learn more](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
@@ -1095,7 +1095,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone pivot="atp-march-2020,atp-april-2020"
   - **Stealth mode blocked**\
     Baseline default: *Yes*\
-    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+    [Learn more](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
@@ -1147,7 +1147,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone pivot="atp-march-2020,atp-april-2020"
   - **Stealth mode blocked**\
     Baseline default: *Yes*\
-    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+    [Learn more](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
@@ -1178,7 +1178,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
   - **Connection security rules from group policy not merged**\
     Baseline default: *Yes*\
-    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
+    [Learn more](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
   - **Policy rules from group policy not merged**\
     Baseline default: *Yes*\
@@ -1187,7 +1187,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 ::: zone pivot="atp-march-2020,atp-april-2020"
   - **Stealth mode blocked**\
     Baseline default: *Yes*\
-    [Learn more](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+    [Learn more](/windows/client-management/mdm/firewall-csp#disablestealthmode)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
@@ -1233,7 +1233,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Defender potentially unwanted app action**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**\
   Baseline default: *Yes*\
@@ -1272,7 +1272,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Defender potentially unwanted app action**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**\
   Baseline default: *Yes*\
@@ -1283,14 +1283,14 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Run daily quick scan at**\
   Baseline default: *2 AM*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
 - **Scheduled scan start time**\
   Baseline default: *2 AM*
 
 - **Configure low CPU priority for scheduled scans**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)
 
 - **Block Office communication apps from creating child processes**\
   Baseline default: *Enable*\
@@ -1302,7 +1302,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan incoming email messages**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
 - **Turn on real-time protection**\
   Baseline default: *Yes*\
@@ -1310,11 +1310,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Number of days (0-90) to keep quarantined malware**\
   Baseline default: *0*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Defender system scan schedule**\
   Baseline default: *User defined*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**\
   Baseline default: *50*\
@@ -1322,11 +1322,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan mapped network drives during a full scan**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
 - **Turn on network protection**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Scan all downloaded files and attachments**\
   Baseline default: *Yes*\
@@ -1334,19 +1334,19 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Block on access protection**\
   Baseline default: *Not configured*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
 - **Scan browser scripts**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender)
 
 - **Block user access to Microsoft Defender app**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
 - **Maximum allowed CPU usage (0-100 percent) per scan**\
   Baseline default: *50*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)
 
 - **Scan type**\
   Baseline default: *Quick scan*\
@@ -1354,7 +1354,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Enter how often (0-24 hours) to check for security intelligence updates**\
   Baseline default: *8*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender)
 
 - **Defender sample submission consent**\
   Baseline default: *Send safe samples automatically*\
@@ -1366,11 +1366,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan archive files**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
 - **Turn on behavior monitoring**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **Scan removable drives during full scan**\
   Baseline default: *Yes*\
@@ -1378,11 +1378,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan network files**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
 - **Defender potentially unwanted app action**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**\
   Baseline default: *Yes*\
@@ -1390,57 +1390,57 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Block Office applications from injecting code into other processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block Office applications from creating executable content**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block JavaScript or VBScript from launching downloaded executable content**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Enable network protection**\
   Baseline default: *Audit mode*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Block untrusted and unsigned processes that run from USB**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**\
   Baseline default: *Enable*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block executable content download from email and webmail clients**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block all Office applications from creating child processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block Win32 API calls from Office macro**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
 - **Run daily quick scan at**\
   Baseline default: *2 AM*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
 - **Scheduled scan start time**\
   Baseline default: *2 AM*
 
 - **Configure low CPU priority for scheduled scans**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)
 
 - **Block Office communication apps from creating child processes**\
   Baseline default: *Enable*\
@@ -1452,7 +1452,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan incoming email messages**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
 - **Turn on real-time protection**\
   Baseline default: *Yes*\
@@ -1460,11 +1460,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Number of days (0-90) to keep quarantined malware**\
   Baseline default: *0*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Defender system scan schedule**\
   Baseline default: *User defined*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**\
   Baseline default: *50*\
@@ -1472,11 +1472,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan mapped network drives during a full scan**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
 - **Turn on network protection**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Scan all downloaded files and attachments**\
   Baseline default: *Yes*\
@@ -1484,19 +1484,19 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Block on access protection**\
   Baseline default: *Not configured*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
 - **Scan browser scripts**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender)
 
 - **Block user access to Microsoft Defender app**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
 - **Maximum allowed CPU usage (0-100 percent) per scan**\
   Baseline default: *50*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)
 
 - **Scan type**\
   Baseline default: *Quick scan*\
@@ -1504,7 +1504,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Enter how often (0-24 hours) to check for security intelligence updates**\
   Baseline default: *8*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender)
 
 - **Defender sample submission consent**\
   Baseline default: *Send safe samples automatically*\
@@ -1516,11 +1516,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan archive files**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
 - **Turn on behavior monitoring**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **Scan removable drives during full scan**\
   Baseline default: *Yes*\
@@ -1528,11 +1528,11 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Scan network files**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
 - **Defender potentially unwanted app action**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**\
   Baseline default: *Yes*\
@@ -1540,43 +1540,43 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Block Office applications from injecting code into other processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block Office applications from creating executable content**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block JavaScript or VBScript from launching downloaded executable content**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Enable network protection**\
   Baseline default: *Audit mode*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Block untrusted and unsigned processes that run from USB**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**\
   Baseline default: *Enable*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block executable content download from email and webmail clients**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block all Office applications from creating child processes**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 - **Block Win32 API calls from Office macro**\
   Baseline default: *Block*\
-  [Learn more](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
@@ -1587,7 +1587,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Block users from editing the Exploit Guard protection interface**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride)
+  [Learn more](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
@@ -1634,7 +1634,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Turn on Windows SmartScreen**\
   Baseline default: *Yes*\
-  [Learn more](../../intune-service/protect/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
+  [Learn more](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020"
@@ -1643,7 +1643,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 ### Windows Hello for Business
 
-For more information, see [PassportForWork CSP](../../intune-service/protect/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
+For more information, see [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp) in the Windows documentation.
 
 - **Block Windows Hello for Business**\
   Baseline default: *Disabled*
@@ -1663,5 +1663,5 @@ For more information, see [PassportForWork CSP](../../intune-service/protect/win
 
 - [Learn about security baselines](./overview.md)
 - [Avoid conflicts](./overview.md#avoid-conflicts)
-- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 

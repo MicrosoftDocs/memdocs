@@ -16,11 +16,11 @@ Every day new malicious files and apps appear in the wild. When run on devices i
 
 Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl Configuration Service Provider (CSP) to manage allowed apps on Windows devices.
 
-Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../../app-management/deployment/win32.md) to your Tenant as a [managed installer](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps are identified by your App Control for Business policies as safe apps that are allowed to run on your devices.
+Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../../app-management/deployment/win32.md) to your Tenant as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps are identified by your App Control for Business policies as safe apps that are allowed to run on your devices.
 
 - The *Intune management extension* is an Intune service that supplements Windows MDM features for Windows devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../../app-management/deployment/win32.md).
 
-- A *managed installer* uses an AppLocker rule to tag applications you install as trusted by your organization For more information, see [Allow apps installed by a managed installer](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
+- A *managed installer* uses an AppLocker rule to tag applications you install as trusted by your organization For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
   Use of a managed installer isn't required to use App Control for Business policies.
 
@@ -29,11 +29,11 @@ The information in this article can help you:
 - [Configure the Intune Management Extension as a managed installer](#get-started-with-managed-installers).
 - [Configure endpoint security App Control for Business policies](#get-started-with-app-control-for-business-policies).
 
-For related information, see [Windows Defender Application Control](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview#windows-defender-application-control) in the Windows Security documentation.
+For related information, see [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview#windows-defender-application-control) in the Windows Security documentation.
 
 > [!NOTE]
 > **App Control for Business policy vs Application control profiles**:
-> Intune *App Control for Business policies* use the [ApplicationControl CSP](../../intune-service/protect/windows/client-management/mdm/applicationcontrol-csp). Intune's Attack surface reduction policies use the [AppLocker CSP](../../intune-service/protect/windows/client-management/mdm/applocker-csp) for their *Application control profiles*.
+> Intune *App Control for Business policies* use the [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp). Intune's Attack surface reduction policies use the [AppLocker CSP](/windows/client-management/mdm/applocker-csp) for their *Application control profiles*.
 > Windows introduced the **ApplicationControl CSP** to replace the **AppLocker CSP**. Windows continues to support the AppLocker CSP but no longer adds new features to it. Instead, development continues through the ApplicationControl CSP.
 
 Applies to:
@@ -75,7 +75,7 @@ The following devices are supported for App Control for Business policies when t
 
 ### Windows Defender App Control for Business
 
-See [Windows edition and licensing requirements](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control#windows-edition-and-licensing-requirements) in *About application control for Windows* in the Windows Security documentation.
+See [Windows edition and licensing requirements](/windows/security/threat-protection/windows-defender-application-control#windows-edition-and-licensing-requirements) in *About application control for Windows* in the Windows Security documentation.
 
 ### Role based access controls
 
@@ -107,11 +107,11 @@ Intune endpoint security Application control policies and configuring a managed 
 
 ## Get started with managed installers
 
-With Intune's endpoint security App Control for Business, you can use policies to add the [Intune Management Extension](../../app-management/deployment/win32.md) as a [managed installer](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work) on your managed Windows devices.
+With Intune's endpoint security App Control for Business, you can use policies to add the [Intune Management Extension](../../app-management/deployment/win32.md) as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work) on your managed Windows devices.
 
 After you enable a managed installer on a device, all subsequent applications you deploy to Windows devices through Intune are marked with the managed installer tag. The tag identifies that the app was installed by a known source, and can be trusted. The managed installer tagging of apps is then used by App Control for Business policies to automatically identify apps as approved to run on devices in your environment.
 
-App Control for Business policies are an implementation of Windows Defender Application Control (WDAC). To learn more about WDAC and app tagging, see [About application control for Windows](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) and [WDAC Application ID (AppId) Tagging guide](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide) in the Windows Defender Application Control documentation.
+App Control for Business policies are an implementation of Windows Defender Application Control (WDAC). To learn more about WDAC and app tagging, see [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) and [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide) in the Windows Defender Application Control documentation.
 
 **Considerations for using a managed installer**:
 
@@ -130,13 +130,13 @@ App Control for Business policies are an implementation of Windows Defender Appl
 
 - You can [disable a policy](#disable-the-intune-management-extension-policy-required) to prevent subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. For information about manual clean-up of a managed installer after turning off the policy, see [Remove the Intune Management Extension as a managed installer](#remove-the-intune-management-extension-as-a-managed-installer) later in this article.
 
-[Learn more about how Intune set the managed installer](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
+[Learn more about how Intune set the managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
 > [!IMPORTANT]
 >
 > **Potential impact to events collected by any Log Analytics integrations**
 >
-> Log Analytics is a tool in the Azure portal which customers might use to collect data from AppLocker policy events. If you complete the opt-in action, AppLocker policy begins to deploy to applicable devices in your tenant. Depending on your Log Analytics configuration, especially if you're collecting some of the more verbose logs, [*this results in an increase in events generated by AppLocker policy*](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/applocker/using-event-viewer-with-applocker). If your organization uses Log Analytics, our recommendation is to **review your Log Analytics setup so that you**:
+> Log Analytics is a tool in the Azure portal which customers might use to collect data from AppLocker policy events. If you complete the opt-in action, AppLocker policy begins to deploy to applicable devices in your tenant. Depending on your Log Analytics configuration, especially if you're collecting some of the more verbose logs, [*this results in an increase in events generated by AppLocker policy*](/windows/security/threat-protection/windows-defender-application-control/applocker/using-event-viewer-with-applocker). If your organization uses Log Analytics, our recommendation is to **review your Log Analytics setup so that you**:
 >
 > - Understand your Log Analytics setup and ensure there's an appropriate data collection cap in place to avoid unexpected billing costs.
 > - Turn off the collection of AppLocker events altogether in Log Analytics (Error, Warning, Information) except for MSI and Script logs.
@@ -152,7 +152,7 @@ The following procedure guides you through adding the Intune Management Extensio
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **App Control for Business** > select the **Managed installer** tab and then select **Create**. The *Create Managed Installer Policy* workflow opens.
 
-   :::image type="content" source="./media/endpoint-security-app-control-policy/add-managed-installer.png" alt-text="Screen shot of the Managed installer page, with the Add managed installer pane on the right side." lightbox="./media/endpoint-security-app-control-policy/add-managed-installer.png" :::
+   :::image type="content" source="./media/app-control-policy/add-managed-installer.png" alt-text="Screen shot of the Managed installer page, with the Add managed installer pane on the right side." lightbox="./media/app-control-policy/add-managed-installer.png" :::
 
 2. On the **Basics** page, enter the following properties:
 
@@ -177,11 +177,11 @@ After adding the Managed installer, you might need to wait up to 10 minutes befo
 
 When ready, the policy is listed on the Managed installer tab and a status of **Active**. Devices might see a wait of up to 30 minutes before the policy gets delivered.
 
-:::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy.png" alt-text="A screenshot of the Managed Installer pane, with a managed installer policy present, and active." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy.png":::
+:::image type="content" source="./media/app-control-policy/managed-installer-policy.png" alt-text="A screenshot of the Managed Installer pane, with a managed installer policy present, and active." lightbox="./media/app-control-policy/managed-installer-policy.png":::
 
 Before the policy has any effect, you must create and deploy an App Control for Business policy to specify rules for which apps can run on your Windows devices.
 
-For more information, see [Allow apps installed by a managed installer](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
+For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
 > [!IMPORTANT]
 >
@@ -226,7 +226,7 @@ To run this script, you can use Intune to run [PowerShell scripts](../../device-
 
 To remove *all* Windows AppLocker policies from a device, you can use the **CatCleanAll.ps1** PowerShell script. This script removes not only the Intune Management Extension as a managed installer, but *all* policies based on Windows AppLocker from a device. Before using this script, be sure you understand your organizations use of AppLocker policies.
 
-1. Download the **CatCleanAll.ps1** PowerShell script. This script is available at [https://aka.ms/intune_WDAC/CatCleanAll](../../intune-service/protect/ https:/aka.ms/intune_WDAC/CatCleanAll) from *download.microsoft.com*.
+1. Download the **CatCleanAll.ps1** PowerShell script. This script is available at [https://aka.ms/intune_WDAC/CatCleanAll](/ https:/aka.ms/intune_WDAC/CatCleanAll) from *download.microsoft.com*.
 
 2. Run this script on devices that have the Intune Management Extension set as a managed installer. This script removes the Intune Management Extension as a managed installer and AppLocker policies from the device.
 
@@ -260,7 +260,7 @@ Use the following procedure to help you create a successful App Control for Busi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned a platform type.
 
-   :::image type="content" source="./media/endpoint-security-app-control-policy/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/endpoint-security-app-control-policy/create-app-control-policy.png":::
+   :::image type="content" source="./media/app-control-policy/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/app-control-policy/create-app-control-policy.png":::
 
 2. On **Basics**, enter the following properties:
 
@@ -279,7 +279,7 @@ Use the following procedure to help you create a successful App Control for Busi
 
    - **Select additional options for trusting apps** – For this setting you can select one or both of the following options:
 
-     - **Trust apps with a good reputation** – This option allows devices to run reputable apps as defined by the Microsoft Intelligent Security Graph. For information on using the *Intelligent Security Graph* (ISG), see [Allow reputable apps with Intelligent Security Graph (ISG)](../../intune-service/protect/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) in the Windows Security documentation.
+     - **Trust apps with a good reputation** – This option allows devices to run reputable apps as defined by the Microsoft Intelligent Security Graph. For information on using the *Intelligent Security Graph* (ISG), see [Allow reputable apps with Intelligent Security Graph (ISG)](/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) in the Windows Security documentation.
 
      - **Trust apps from managed installers** – This option allows devices to run the apps that were deployed by an authorized source, which is a managed installer. This applies to apps you deploy through Intune after you configure the Intune Management Extension as a managed installer.
 
@@ -288,7 +288,7 @@ Use the following procedure to help you create a successful App Control for Busi
        - If *Enabled*, files and apps are blocked from running on devices.
        - If set to *Audit only*, files and apps are audited only in local client logs.
 
-   :::image type="content" source="./media/endpoint-security-app-control-policy/built-in-controls.png" alt-text="This screen capture shows the default options and settings for App Control for Business policy when you use the built-in-controls." lightbox="./media/endpoint-security-app-control-policy/built-in-controls.png":::
+   :::image type="content" source="./media/app-control-policy/built-in-controls.png" alt-text="This screen capture shows the default options and settings for App Control for Business policy when you use the built-in-controls." lightbox="./media/app-control-policy/built-in-controls.png":::
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
@@ -355,17 +355,17 @@ As a result of these deployments, both supplemental policies could modify both i
 
 App Control for Business policies in tenants for Educational organizations also support **Windows 11 SE** in addition to the supported platforms in the [Prerequisites](#prerequisites).
 
-[Windows 11 SE](../../intune-service/protect/intune-education/windows-11-se-overview) is a cloud-first operating system that's optimized for use in classrooms. Much like Intune for Education, Windows SE 11 prioritizes productivity, student privacy, and learning, and only supports features and apps that are essential for education.
+[Windows 11 SE](/intune-education/windows-11-se-overview) is a cloud-first operating system that's optimized for use in classrooms. Much like Intune for Education, Windows SE 11 prioritizes productivity, student privacy, and learning, and only supports features and apps that are essential for education.
 
 To aid this optimization, WDAC policy and the Intune management Extension are configured automatically for Windows 11 SE devices:
 
-- Intune support for Windows 11 SE devices is scoped to [deploying predefined WDAC policies](../../intune-service/protect/intune-education/windows-11-se-overview) with a set list of apps in EDU tenants. These policies are automatically deployed and can't be changed.
+- Intune support for Windows 11 SE devices is scoped to [deploying predefined WDAC policies](/intune-education/windows-11-se-overview) with a set list of apps in EDU tenants. These policies are automatically deployed and can't be changed.
 
 - For Intune EDU tenants, the Intune Management Extension is automatically set as a managed installer. This configuration is automatic and can't be changed.
 
 ## Delete App Control for Business policy
 
-As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) - Windows security](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
+As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
 
 **To disable or delete WDAC enforcement**:
 
@@ -378,7 +378,7 @@ As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) - Wind
 This sequence prevents anything from being blocked and fully removes the WDAC policy on the next reboot.
 
 > [!WARNING]
-> Before unenrolling a device from Intune that received App Control for Business policies, or removing app control policies from that device, see [Remove App Control policies causing boot stop failures](../../intune-service/protect/windows/security/application-security/application-control/app-control-for-business/deployment/disable-appcontrol-policies#remove-app-control-policies-causing-boot-stop-failures) in the Windows Security article **Remove App Control for Business policies**. This article provides important steps to follow to prevent potential boot stop failures.
+> Before unenrolling a device from Intune that received App Control for Business policies, or removing app control policies from that device, see [Remove App Control policies causing boot stop failures](/windows/security/application-security/application-control/app-control-for-business/deployment/disable-appcontrol-policies#remove-app-control-policies-causing-boot-stop-failures) in the Windows Security article **Remove App Control for Business policies**. This article provides important steps to follow to prevent potential boot stop failures.
 
 ## Monitor App Control for Business policies and the managed installer
 
@@ -420,7 +420,7 @@ Report details include:
 - Error - Devices with errors.
 - New devices – New devices identifies devices that have recently applied the policy.
 
-  :::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png":::
+  :::image type="content" source="./media/app-control-policy/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/app-control-policy/managed-installer-policy-overview.png":::
 
 It can take up to 24 hours for the **Device status** and **Device status trend** sections to update in the Overview.
 
@@ -443,7 +443,7 @@ Once set, subsequent apps you deploy to devices are appropriately tagged to supp
 
 In environments where apps deployed before a managed installer was configured, we recommend you deploy new WDAC policies in *audit-mode* so you can identify the apps were deployed but not tagged as trusted. You can then review the audit results and determine which apps should be trusted. For apps you'll trust and allow to run, you can then create custom WDAC policies to allow those apps.
 
-It can be helpful to explore [Advanced Hunting, which is a feature in Microsoft Defender for Endpoint](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting) that makes it easier to query audit events across the many machines that IT admins manage and help them craft policies.
+It can be helpful to explore [Advanced Hunting, which is a feature in Microsoft Defender for Endpoint](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting) that makes it easier to query audit events across the many machines that IT admins manage and help them craft policies.
 
 ### What do I do with the old Application Control policy from my Attack surface reduction policy
 
@@ -451,7 +451,7 @@ You might notice instances of the Application Control policy in the Intune UI un
 
 ### What if I have multiple base or supplemental policies on the same device?
 
-Prior to Windows 10 1903, App Control for Business only supported a single active policy on a system at any given time. That behavior significantly limits customers in situations where multiple policies with different intents would be useful. Today, multiple base and supplemental policies are supported on the same device. Learn more about [deploying multiple App Control for Business policies](../../intune-service/protect/windows/security/application-security/application-control/windows-defender-application-control/design/deploy-multiple-wdac-policies).
+Prior to Windows 10 1903, App Control for Business only supported a single active policy on a system at any given time. That behavior significantly limits customers in situations where multiple policies with different intents would be useful. Today, multiple base and supplemental policies are supported on the same device. Learn more about [deploying multiple App Control for Business policies](/windows/security/application-security/application-control/windows-defender-application-control/design/deploy-multiple-wdac-policies).
 
 On a related note, there's no longer a limitation of 32 policies active on the same device for App Control for Business. This issue is resolved for devices that run Windows 10 1903 or later with a Windows security update released on or after March 12, 2024. Older versions of Windows are expected to receive this fix in future Windows security updates.
 

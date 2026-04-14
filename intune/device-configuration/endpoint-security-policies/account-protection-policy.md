@@ -50,7 +50,7 @@ Profiles:
   - *Windows Hello for Business* replaces passwords with strong two-factor authentication on PCs and mobile devices.
   - *Credential Guard* helps protect credentials and secrets that you use with your devices.
 
-  To learn more, see [Identity and access management](../../intune-service/protect/windows/security/identity-protection) in the Windows identity and access management documentation.
+  To learn more, see [Identity and access management](/windows/security/identity-protection) in the Windows identity and access management documentation.
 
   The settings in this profile are also available in the [Settings catalog](../settings-catalog/index.md).
 
@@ -67,28 +67,28 @@ Profiles:
 
 ## Manage local groups on Windows devices
 
-Use the *Local user group membership* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](../../intune-service/protect/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
+Use the *Local user group membership* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
 
 > [!TIP]
-> To learn more about support for managing administrator privileges using Microsoft Entra groups, see [Manage administrator privileges using Microsoft Entra groups](../../intune-service/protect/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) in the Microsoft Entra documentation.
+> To learn more about support for managing administrator privileges using Microsoft Entra groups, see [Manage administrator privileges using Microsoft Entra groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) in the Microsoft Entra documentation.
 
 > [!NOTE]
 > Microsoft Entra groups deployed to a device with this policy don't apply to remote desktop connections. To control remote desktop permissions for Microsoft Entra joined devices, you need to add the individual user's SID to the appropriate group.
 
 ### Configure the profile
 
-Use the *Local user group membership* profile to manage the local group membership on devices through the Windows [Policy CSP - LocalUsersAndGroups](../../intune-service/protect/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
+Use the *Local user group membership* profile to manage the local group membership on devices through the Windows [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
 
 When you configure this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
 
-:::image type="content" source="./media/endpoint-security-account-protection-policy/create-profile.png" alt-text="Screen shot of the Configuration settings page for configuring the profile.":::
+:::image type="content" source="./media/account-protection-policy/create-profile.png" alt-text="Screen shot of the Configuration settings page for configuring the profile.":::
 
 The following are the configurations you can make:
 
 - **Local group**: Select one or more groups from the drop-down. These groups all apply the same *Group and user action* to the users you assign. You can create more than one grouping of local groups in a single profile and assign different actions and groups of users to each grouping of local groups.
 
 > [!NOTE]
-> The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [How to manage the local administrators group on Microsoft Entra joined devices](../../intune-service/protect/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) documentation.
+> The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [How to manage the local administrators group on Microsoft Entra joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) documentation.
 
 - **Group and user action**: Configure the action to apply to the selected groups. This action applies to the users you select for this same action and grouping of local accounts. Actions you can select include:
   - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren't specified by the policy aren't changed.
@@ -108,9 +108,9 @@ The following are the configurations you can make:
   - **Select user(s)**: Select the users and user groups from Microsoft Entra.
   - **Add user(s)**: This option opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
 
-    :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page in the Intune admin center.":::
+    :::image type="content" source="./media/account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page in the Intune admin center.":::
 
-Choosing the Manual option can be helpful in scenarios where you want to manage your on-premises Active Directory users from Active Directory to a local group for a Microsoft Entra hybrid joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member's username. Values from Active Directory must be used for hybrid joined devices, while values from Microsoft Entra ID must be used for Microsoft Entra join. Microsoft Entra group SIDs can be obtained using [Graph API for Groups](../../intune-service/protect/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
+Choosing the Manual option can be helpful in scenarios where you want to manage your on-premises Active Directory users from Active Directory to a local group for a Microsoft Entra hybrid joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member's username. Values from Active Directory must be used for hybrid joined devices, while values from Microsoft Entra ID must be used for Microsoft Entra join. Microsoft Entra group SIDs can be obtained using [Graph API for Groups](/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
 
 ### Conflicts
 

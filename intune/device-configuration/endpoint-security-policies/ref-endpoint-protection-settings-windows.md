@@ -24,7 +24,7 @@ To configure Microsoft Defender Antivirus, see [Windows device restrictions](../
 
 [Create an endpoint protection device configuration profile](./configure-endpoint-protection.md).
 
-For more information about configuration service providers (CSPs), see [Configuration service provider reference](../../intune-service/protect/windows/client-management/mdm/configuration-service-provider-reference).
+For more information about configuration service providers (CSPs), see [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## Microsoft Defender Application Guard
 
@@ -34,14 +34,14 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 
 - **Application Guard**  
   **Default**: Not configured  
-   Application Guard CSP: [Settings/AllowWindowsDefenderApplicationGuard](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
+   Application Guard CSP: [Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
   - **Enabled for Edge** - Turns on this feature, which opens untrusted sites in a Hyper-V virtualized browsing container.
   - **Not configured** - Any site (trusted and untrusted) can open on the device.
 
 - **Clipboard behavior**  
   **Default**: Not configured  
-  Application Guard CSP: [Settings/ClipboardSettings](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
+  Application Guard CSP: [Settings/ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
 
   Choose what copy and paste actions are allowed between the local PC and the Application Guard virtual browser.
   - **Not configured**
@@ -53,7 +53,7 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 - **Clipboard content**  
   This setting is available only when *Clipboard behavior* is set to one of the *allow* settings.
   **Default**: Not configured  
-  Application Guard CSP: [Settings/ClipboardFileType](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)
+  Application Guard CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)
 
   Select the allowed clipboard content.
   - **Not configured**
@@ -63,14 +63,14 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 
 - **External content on enterprise sites**  
   **Default**: Not configured  
-  Application Guard CSP: [Settings/BlockNonEnterpriseContent](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#blocknonenterprisecontent)
+  Application Guard CSP: [Settings/BlockNonEnterpriseContent](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#blocknonenterprisecontent)
 
   - **Block** - Block content from unapproved websites from loading.
   - **Not configured** - Non-enterprise sites can open on the device.
 
 - **Print from virtual browser**  
   **Default**: Not configured  
-  Application Guard CSP: [Settings/PrintingSettings](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#printingsettings)
+  Application Guard CSP: [Settings/PrintingSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#printingsettings)
 
   - **Allow** - Allows the printing of selected content from the virtual browser.
   - **Not configured** Disable all print features.
@@ -85,28 +85,28 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 
 - **Collect logs**  
   **Default**: Not configured  
-  Application Guard CSP: [Audit/AuditApplicationGuard](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#auditapplicationguard)
+  Application Guard CSP: [Audit/AuditApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#auditapplicationguard)
 
   - **Allow** - Collect logs for events that occur within an Application Guard browsing session.
   - **Not configured** - Don't collect any logs within the browsing session.
 
 - **Retain user-generated browser data**  
   **Default**: Not configured  
-  Application Guard CSP: [Settings/AllowPersistence](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowpersistence)
+  Application Guard CSP: [Settings/AllowPersistence](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowpersistence)
 
   - **Allow** Save user data (such as passwords, favorites, and cookies) that's created during an Application Guard virtual browsing session.
   - **Not configured** Discard user-downloaded files and data when the device restarts, or when a user signs out.
 
 - **Graphics acceleration**
  **Default**: Not configured  
-  Application Guard CSP: [Settings/AllowVirtualGPU](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowvirtualgpu)
+  Application Guard CSP: [Settings/AllowVirtualGPU](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowvirtualgpu)
 
   - **Enable** - Load graphic-intensive websites and video faster by getting access to a virtual graphics processing unit.
   - **Not configured** Use the device's CPU for graphics; Don't use the virtual graphics processing unit.
 
 - **Download files to host file system**  
   **Default**: Not configured  
-  Application Guard CSP: [Settings/SaveFilesToHost](../../intune-service/protect/windows/client-management/mdm/windowsdefenderapplicationguard-csp#savefilestohost)
+  Application Guard CSP: [Settings/SaveFilesToHost](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#savefilestohost)
 
   - **Enable** - Users can download files from the virtualized browser onto the host operating system.
   - **Not configured** - Keeps the files local on the device, and doesn't download files to the host file system.
@@ -119,27 +119,27 @@ These settings are applicable to all network types.
 
 - **File Transfer Protocol**  
   **Default**: Not configured  
-   Firewall CSP: [MdmStore/Global/DisableStatefulFtp](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestatefulftp)
+   Firewall CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Block** - Disable stateful FTP.
   - **Not configured** - The firewall does stateful FTP filtering to allow secondary connections.
 
 - **Security association idle time before deletion**  
   **Default**: *Not configured*  
-  Firewall CSP: [MdmStore/Global/SaIdleTime](../../intune-service/protect/windows/client-management/mdm/firewall-csp#saidletime)
+  Firewall CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)
 
    Specify an idle time in seconds, after which security associations are deleted.
 
 - **Pre-shared key encoding**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/PresharedKeyEncoding](../../intune-service/protect/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
+  Firewall CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
 
   - **Enable** - Encode presheared keys using UTF-8.
   - **Not configured** - Encode presheared keys using the local store value.
 
 - **IPsec exemptions**  
   **Default**: *0 selected*  
-  Firewall CSP: [MdmStore/Global/IPsecExempt](../../intune-service/protect/windows/client-management/mdm/firewall-csp#ipsecexempt)
+  Firewall CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
   Select one or more of the following types of traffic to be exempt from IPsec:
   - **Neighbor discover IPv6 ICMP type-codes**
@@ -149,7 +149,7 @@ These settings are applicable to all network types.
 
 - **Certificate revocation list verification**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/CRLcheck](../../intune-service/protect/windows/client-management/mdm/firewall-csp#crlcheck)
+  Firewall CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)
 
   Choose how the device verifies the certificate revocation list. Options include:
   - **Disable CRL verification**
@@ -158,14 +158,14 @@ These settings are applicable to all network types.
 
 - **Opportunistically match authentication set per keying module**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](../../intune-service/protect/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
+  Firewall CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
 
   - **Enable** Keying modules must ignore only the authentication suites that they don't support.
   - **Not configured**, Keying modules must ignore the entire authentication set if they don't support all of the authentication suites specified in the set.
 
 - **Packet queuing**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/EnablePacketQueue](../../intune-service/protect/windows/client-management/mdm/firewall-csp#enablepacketqueue)
+  Firewall CSP: [MdmStore/Global/EnablePacketQueue](/windows/client-management/mdm/firewall-csp#enablepacketqueue)
 
   Specify how software scaling on the receive side is enabled for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This setting confirms the packet order is preserved. Options include:
 
@@ -187,21 +187,21 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Windows Firewall**  
   **Default**: Not configured  
-  Firewall CSP: [EnableFirewall](../../intune-service/protect/windows/client-management/mdm/firewall-csp#enablefirewall)
+  Firewall CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
 
   - **Enable** - Turn on the firewall, and advanced security.
   - **Not configured** Allows all network traffic, regardless of any other policy settings.
 
 - **Stealth mode**  
   **Default**: Not configured  
-  Firewall CSP: [DisableStealthMode](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmode)
+  Firewall CSP: [DisableStealthMode](/windows/client-management/mdm/firewall-csp#disablestealthmode)
   - **Not configured**
   - **Block** - Firewall is blocked from operating in stealth mode. Blocking stealth mode allows you to also block **IPsec secured packet exemption**.
   - **Allow** - The firewall operates in stealth mode, which helps prevent responses to probing requests.
 
 - **IPsec secured packet exemption with Stealth Mode**  
   **Default**: Not configured  
-  Firewall CSP: [DisableStealthModeIpsecSecuredPacketExemption](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disablestealthmodeipsecsecuredpacketexemption)
+  Firewall CSP: [DisableStealthModeIpsecSecuredPacketExemption](/windows/client-management/mdm/firewall-csp#disablestealthmodeipsecsecuredpacketexemption)
 
   This option is ignored if *Stealth mode* is set to *Block*.
 
@@ -211,7 +211,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Shielded**  
   **Default**: Not configured  
-  Firewall CSP: [Shielded](../../intune-service/protect/windows/client-management/mdm/firewall-csp#shielded)
+  Firewall CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)
 
   - **Not configured**
   - **Block** - When the Windows Firewall is on and this setting is set to *Block*, all incoming traffic is blocked, regardless of other policy settings.
@@ -219,7 +219,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Unicast responses to multicast broadcasts**  
   **Default**: Not configured  
-  Firewall CSP: [DisableUnicastResponsesToMulticastBroadcast](../../intune-service/protect/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
+  Firewall CSP: [DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
   Typically, you don't want to receive unicast responses to multicast or broadcast messages. These responses can indicate a denial of service (DOS) attack, or an attacker trying to probe a known live computer.
   - **Not configured**
@@ -236,7 +236,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Default action for outbound connections**  
   **Default**: Not configured  
-  Firewall CSP: [DefaultOutboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+  Firewall CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
 
   Configure the default action firewall performs on outbound connections. This setting will get applied to Windows version 1809 and above.
 
@@ -246,7 +246,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Default action for inbound connections**  
   **Default**: Not configured  
-  Firewall CSP: [DefaultInboundAction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#defaultinboundaction)
+  Firewall CSP: [DefaultInboundAction](/windows/client-management/mdm/firewall-csp#defaultinboundaction)
 
   - **Not configured**
   - **Block** - The default firewall action isn't run on inbound connections.
@@ -256,7 +256,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Authorized application Windows Firewall rules from the local store**  
   **Default**: Not configured  
-  Firewall CSP: [AuthAppsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
+  Firewall CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 
   - **Not configured**
   - **Block** - The authorized application firewall rules in the local store are ignored and not enforced.
@@ -265,7 +265,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Global port Windows Firewall rules from the local store**  
   **Default**: Not configured  
-  Firewall CSP: [GlobalPortsAllowUserPrefMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
+  Firewall CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)
 
   - **Not configured**
   - **Block** - The global port firewall rules in the local store are ignored and not enforced.
@@ -273,7 +273,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **Windows Firewall rules from the local store**  
   **Default**: Not configured  
-  Firewall CSP: [AllowLocalPolicyMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
+  Firewall CSP: [AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)
 
   - **Not configured**
   - **Block** - Firewall rules from the local store are ignored and not enforced.
@@ -281,7 +281,7 @@ The following settings are each listed in this article a single time, but all ap
 
 - **IPsec rules from the local store**  
   **Default**: Not configured  
-  Firewall CSP: [AllowLocalIpsecPolicyMerge](../../intune-service/protect/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
+  Firewall CSP: [AllowLocalIpsecPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalipsecpolicymerge)
 
   - **Not configured**
   - **Block** -  The connection security rules from the local store are ignored and not enforced, regardless of the schema version and connection security rule version.
@@ -307,19 +307,19 @@ Custom Firewall rules support the following options:
 
 - **Direction**  
   **Default**: Not configured  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Direction](../../intune-service/protect/windows/client-management/mdm/firewall-csp#direction)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)
 
   Specify if this rule applies to **Inbound**, or **Outbound** traffic. When set as **Not configured**, the rule automatically applies to Outbound traffic.
 
 - **Action**  
   **Default**: Not configured  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Action](../../intune-service/protect/windows/client-management/mdm/firewall-csp#action), and [FirewallRules/*FirewallRuleName*/Action/Type](../../intune-service/protect/windows/client-management/mdm/firewall-csp#type)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Action](/windows/client-management/mdm/firewall-csp#action), and [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)
 
   Select from **Allow** or **Block**. When set as **Not configured**, the rule defaults to allow traffic.
 
 - **Network type**  
   **Default**: 0 selected  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Profiles](../../intune-service/protect/windows/client-management/mdm/firewall-csp#profiles)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)
 
   Select up to three types of network types to which this rule belongs. Options include **Domain**, **Private**, and **Public**.  If no network types are selected, the rule applies to all three network types.
 
@@ -331,13 +331,13 @@ Custom Firewall rules support the following options:
   Control connections for an app or program. Apps and programs can be specified either by *file path*, *package family name*, or *service name*:
 
   - **Package family name** – Specify a package family name. To find the package family name, use the PowerShell command **Get-AppxPackage**.  
-    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](../../intune-service/protect/windows/client-management/mdm/firewall-csp#packagefamilyname)
+    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)
 
   - **File path** – You must specify a file path to an app on the client device, which can be an absolute path, or a relative path. For example:  C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
-    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](../../intune-service/protect/windows/client-management/mdm/firewall-csp#filepath)
+    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   - **Windows service** – Specify the Windows service short name if it's a service and not an application that sends or receives traffic. To find the service short name, use the PowerShell command **Get-Service**.  
-    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](../../intune-service/protect/windows/client-management/mdm/firewall-csp#servicename)
+    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   - **All**– *No configurations is required*
 
@@ -347,7 +347,7 @@ Specify the local and remote addresses to which this rule applies.
 
 - **Local addresses**  
   **Default**: Any address  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#localportranges)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)
 
   Select **Any address** or **Specified address**.
 
@@ -360,7 +360,7 @@ Specify the local and remote addresses to which this rule applies.
 
 - **Remote addresses**  
   **Default**: Any address  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#remoteaddressranges)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)
 
   Select **Any address** or **Specified address**.
 
@@ -387,22 +387,22 @@ Specify the local and remote ports to which this rule applies.
 
 - **Protocol**  
   **Default**: Any  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Protocol](../../intune-service/protect/windows/client-management/mdm/firewall-csp#protocol)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
   Select from the following, and complete any required configurations:
   - **All** – No configuration is available.
   - **TCP** – Configure local and remote ports. Both options support All ports or Specified ports. Enter Specified ports by using a comma-separated list.
-    - **Local ports** -    Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#localportranges)
-    - **Remote ports** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#remoteportranges)
+    - **Local ports** -    Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)
+    - **Remote ports** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)
   - **UDP** – Configure local and remote ports. Both options support All ports or Specified ports. Enter Specified ports by using a comma-separated list.
-    - **Local ports** -    Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#localportranges)
-    - **Remote ports** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](../../intune-service/protect/windows/client-management/mdm/firewall-csp#remoteportranges)
+    - **Local ports** -    Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)
+    - **Remote ports** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)
   - **Custom** – Specify a custom **protocol** number from 0 to 255.
 
 #### Advanced configuration
 
 - **Interface types**  
   **Default**: 0 selected  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](../../intune-service/protect/windows/client-management/mdm/firewall-csp#interfacetypes)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)
 
   Select from the following options:
   - **Remote access**
@@ -411,7 +411,7 @@ Specify the local and remote ports to which this rule applies.
 
 - **Only allow connections from these users**  
   **Default**: All users *(Defaults to all uses when no list is specified)*  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalUserAuthorizationList](../../intune-service/protect/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Specify a list of authorized local users for this rule. A list of authorized users can't be specified if this rule applies to a Windows service.
 
@@ -421,14 +421,14 @@ Microsoft Edge must be installed on the device.
 
 - **SmartScreen for apps and files**  
   **Default**: Not configured  
-   SmartScreen CSP: [SmartScreen/EnableSmartScreenInShell](../../intune-service/protect/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
+   SmartScreen CSP: [SmartScreen/EnableSmartScreenInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
   - **Not configured** - Disables use of SmartScreen.
   - **Enable** - Enable Windows SmartScreen for file execution, and running apps. SmartScreen is a cloud-based anti-phishing and anti-malware component.
 
 - **Unverified files execution**  
   **Default**: Not configured  
-   SmartScreen CSP: [SmartScreen/PreventOverrideForFilesInShell](../../intune-service/protect/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
+   SmartScreen CSP: [SmartScreen/PreventOverrideForFilesInShell](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-preventoverrideforfilesinshell)
 
   - **Not configured** - Disables this feature, and allows end users to run files that haven't been verified.
   - **Block** - Prevent end users from running files that haven't been verified by Windows SmartScreen.
@@ -439,7 +439,7 @@ Microsoft Edge must be installed on the device.
 
 - **Encrypt devices**  
   **Default**: Not configured  
-  BitLocker CSP: [RequireDeviceEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+  BitLocker CSP: [RequireDeviceEncryption](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
   - **Require** - Prompt users to enable device encryption. Depending on the Windows edition and system configuration, users may be asked:
     - To confirm that encryption from another provider isn't enabled.
@@ -454,7 +454,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
 - **Warning for other disk encryption**  
   **Default**: Not configured  
-  BitLocker CSP: [AllowWarningForOtherDiskEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
+  BitLocker CSP: [AllowWarningForOtherDiskEncryption](/windows/client-management/mdm/bitlocker-csp#allowwarningforotherdiskencryption)
 
   - **Block** - Disable the warning prompt if another disk encryption service is on the device.
   - **Not configured** - Allow the warning for other disk encryption to be shown.
@@ -467,7 +467,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Allow standard users to enable encryption during Microsoft Entra join**  
     *This setting only applies to Microsoft Entra joined (Azure ADJ) devices, and depends on the previous setting, `Warning for other disk encryption`.*  
     **Default**: Not configured  
-    BitLocker CSP: [AllowStandardUserEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    BitLocker CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
     - **Allow** - Standard users (non-administrators) can enable BitLocker encryption when signed in.
     - **Not configured** only Administrators can enable BitLocker encryption on the device.
@@ -477,7 +477,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
 - **Configure encryption methods**  
   **Default**: Not configured  
-  BitLocker CSP: [EncryptionMethodByDriveType](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
+  BitLocker CSP: [EncryptionMethodByDriveType](/windows/client-management/mdm/bitlocker-csp#encryptionmethodbydrivetype)
 
   - **Enable** - Configure encryption algorithms for operating system, data, and removable drives.
   - **Not configured** - BitLocker uses XTS-AES 128 bit as the default encryption method, or uses the encryption method specified by any setup script.
@@ -517,7 +517,7 @@ These settings apply specifically to operating system data drives.
 
 - **Additional authentication at startup**  
   **Default**: Not configured  
-  BitLocker CSP: [SystemDrivesRequireStartupAuthentication](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
+  BitLocker CSP: [SystemDrivesRequireStartupAuthentication](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)
 
   - **Require** - Configure the authentication requirements for computer startup, including the use of Trusted Platform Module (TPM).
   - **Not configured** - Configure only basic options on devices with a TPM.
@@ -576,7 +576,7 @@ These settings apply specifically to operating system data drives.
 
 - **Minimum PIN Length**  
   **Default**: Not configured  
-  BitLocker CSP: [SystemDrivesMinimumPINLength](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
+  BitLocker CSP: [SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 
   - **Enable** Configure a minimum length for the TPM startup PIN.
   - **Not configured** - Users can configure a startup PIN of any length between 6 and 20 digits.
@@ -585,13 +585,13 @@ These settings apply specifically to operating system data drives.
 
   - **Minimum characters**  
     **Default**: *Not configured*
-    BitLocker CSP: [SystemDrivesMinimumPINLength](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
+    BitLocker CSP: [SystemDrivesMinimumPINLength](/windows/client-management/mdm/bitlocker-csp#systemdrivesminimumpinlength)
 
     Enter the number of characters required for the startup PIN from **4**-**20**.
 
 - **OS drive recovery**  
   **Default**: Not configured  
-  BitLocker CSP: [SystemDrivesRecoveryOptions](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
+  BitLocker CSP: [SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)
 
   - **Enable** - Control how BitLocker-protected operating system drives recover when the required start-up information isn't available.
   - **Not configured** - Default recovery options are supported including DRA. The end user can specify recovery options. Recovery information isn't backed up to AD DS.
@@ -641,7 +641,7 @@ These settings apply specifically to operating system data drives.
 
   - **Client-driven recovery password rotation**  
     **Default**: Not configured  
-    BitLocker CSP: [ConfigureRecoveryPasswordRotation](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp)
+    BitLocker CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)
 
     This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).
 
@@ -660,7 +660,7 @@ These settings apply specifically to operating system data drives.
 
 - **Pre-boot recovery message and URL**  
   **Default**: Not configured  
-  BitLocker CSP: [SystemDrivesRecoveryMessage](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)
+  BitLocker CSP: [SystemDrivesRecoveryMessage](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoverymessage)
 
   - **Enable** - Configure the message and URL that display on the pre-boot key recovery screen.
   - **Not configured** - Disable this feature.
@@ -681,14 +681,14 @@ These settings apply specifically to fixed data drives.
 
 - **Write access to fixed data-drive not protected by BitLocker**  
   **Default**: Not configured  
-  BitLocker CSP: [FixedDrivesRequireEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
+  BitLocker CSP: [FixedDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrequireencryption)
 
   - **Block** - Give read-only access to data drives that aren't BitLocker-protected.
   - **Not configured** - By default, read and write access to data drives that aren't encrypted.
 
 - **Fixed drive recovery**  
   **Default**: Not configured  
-  BitLocker CSP: [FixedDrivesRecoveryOptions](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
+  BitLocker CSP: [FixedDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#fixeddrivesrecoveryoptions)
 
   - **Enable** - Control how BitLocker-protected fixed drives recover when the required start-up information isn't available.
   - **Not configured** - Disable this feature.
@@ -750,7 +750,7 @@ These settings apply specifically to removable data drives.
 
 - **Write access to removable data-drive not protected by BitLocker**  
   **Default**: Not configured  
-  BitLocker CSP: [RemovableDrivesRequireEncryption](../../intune-service/protect/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
+  BitLocker CSP: [RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
   - **Block** - Give read-only access to data drives that aren't BitLocker-protected.
   - **Not configured** - By default, read and write access to data drives that aren't encrypted.
@@ -765,7 +765,7 @@ These settings apply specifically to removable data drives.
 
 ## Microsoft Defender Exploit Guard
 
-Use [exploit protection](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) to manage and reduce the attack surface of apps used by your employees.
+Use [exploit protection](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) to manage and reduce the attack surface of apps used by your employees.
 
 ### Attack Surface Reduction
 
@@ -773,7 +773,7 @@ Attack surface reduction rules help prevent behaviors malware often uses to infe
 
 #### Attack Surface Reduction rules
 
-To learn more, see [Attack surface reduction rules](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
+To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
 **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -793,7 +793,7 @@ Attack surface reduction rule merge behavior is as follows:
 
 - **Flag credential stealing from the Windows local security authority subsystem**  
   **Default**: Not configured  
-  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Help prevent actions and apps that are typically used by exploit-seeking malware to infect machines.
 
@@ -803,7 +803,7 @@ Attack surface reduction rule merge behavior is as follows:
 
 - **Process creation from Adobe Reader (beta)**  
   **Default**: Not configured  
-  Rule: [Block Adobe Reader from creating child processes](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)
+  Rule: [Block Adobe Reader from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)
 
   - **Not configured**
   - **Enable** - Block child processes that are created from Adobe Reader.
@@ -815,7 +815,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps injecting into other processes (no exceptions)**  
   **Default**: Not configured  
-  Rule: [Block Office applications from injecting code into other processes](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)
+  Rule: [Block Office applications from injecting code into other processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)
 
   - **Not configured**
   - **Block** - Block Office apps from injecting into other processes.
@@ -823,7 +823,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps/macros creating executable content**  
   **Default**: Not configured  
-  Rule: [Block Office applications from creating executable content](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)
+  Rule: [Block Office applications from creating executable content](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)
 
   - **Not configured**
   - **Block** - Block Office apps and macros from creating executable content.
@@ -831,7 +831,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps launching child processes**  
   **Default**: Not configured  
-  Rule: [Block all Office applications from creating child processes](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)
+  Rule: [Block all Office applications from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)
 
   - **Not configured**
   - **Block** - Block Office apps from launching child processes.
@@ -839,7 +839,7 @@ Block Office apps from taking the following actions:
 
 - **Win32 imports from Office macro code**  
   **Default**: Not configured  
-  Rule: [Block Win32 API calls from Office macros](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)
+  Rule: [Block Win32 API calls from Office macros](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)
 
   - **Not configured**
   - **Block** - Block Win32 imports from macro code in Office.
@@ -847,7 +847,7 @@ Block Office apps from taking the following actions:
 
 - **Process creation from Office communication products**  
   **Default**: Not configured  
-  Rule: [Block Office communication application from creating child processes](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)
+  Rule: [Block Office communication application from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)
 
   - **Not configured**
   - **Enable** - Block child process creation from Office communications apps.
@@ -859,7 +859,7 @@ Block the following to help prevent against script threats:
 
 - **Obfuscated js/vbs/ps/macro code**  
   **Default**: Not configured  
-  Rule: [Block execution of potentially obfuscated scripts](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)
+  Rule: [Block execution of potentially obfuscated scripts](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)
 
   - **Not configured**
   - **Block** - Block any obfuscated js/vbs/ps/macro code.
@@ -867,7 +867,7 @@ Block the following to help prevent against script threats:
 
 - **js/vbs executing payload downloaded from Internet (no exceptions)**  
   **Default**: Not configured  
-  Rule: [Block JavaScript or VBScript from launching downloaded executable content](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+  Rule: [Block JavaScript or VBScript from launching downloaded executable content](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
   - **Not configured**
   - **Block** - Block js/vbs from executing payload downloaded from Internet.
@@ -875,7 +875,7 @@ Block the following to help prevent against script threats:
 
 - **Process creation from PSExec and WMI commands**  
   **Default**: Not configured  
-  Rule: [Block process creations originating from PSExec and WMI commands](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)
+  Rule: [Block process creations originating from PSExec and WMI commands](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)
 
   - **Not configured**
   - **Block** - Block process creations originating from PSExec and WMI commands.
@@ -883,7 +883,7 @@ Block the following to help prevent against script threats:
 
 - **Untrusted and unsigned processes that run from USB**  
   **Default**: Not configured  
-  Rule: [Block untrusted and unsigned processes that run from USB](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)
+  Rule: [Block untrusted and unsigned processes that run from USB](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
   - **Not configured**
   - **Block** - Block untrusted and unsigned processes that run from USB.
@@ -891,7 +891,7 @@ Block the following to help prevent against script threats:
 
 - **Executables that don't meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
-  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
+  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   - **Not configured**
   - **Block** - Block executable files from running unless they meet a prevalence, age, or trusted list criteria.
@@ -903,7 +903,7 @@ Block the following to help prevent email threats:
 
 - **Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)**  
   **Default**: Not configured  
-  Rule: [Block executable content from email client and webmail](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)
+  Rule: [Block executable content from email client and webmail](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)
 
   - **Not configured**
   - **Block** - Block execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail-client).
@@ -913,7 +913,7 @@ Block the following to help prevent email threats:
 
 - **Advanced ransomware protection**  
   Default:  Not configured  
-  Rule: [Use advanced protection against ransomware](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)
+  Rule: [Use advanced protection against ransomware](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)
 
   - **Not configured**
   - **Enable** - Use aggressive ransomware protection.
@@ -922,7 +922,7 @@ Block the following to help prevent email threats:
 #### Attack Surface Reduction exceptions
 
 - **Files and folder to exclude from attack surface reduction rules**  
-  Defender CSP: [AttackSurfaceReductionOnlyExclusions](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
+  Defender CSP: [AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions)
 
   - **Import** a .csv file that contains files and folders to exclude from attack surface reduction rules.
   - **Add** local files or folders manually.
@@ -941,11 +941,11 @@ Block the following to help prevent email threats:
 
 ### Controlled folder access
 
-Help [protect valuable data](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) from malicious apps and threats, such as ransomware.
+Help [protect valuable data](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) from malicious apps and threats, such as ransomware.
 
 - **Folder protection**  
   **Default**: Not configured  
-  Defender CSP: [EnableControlledFolderAccess](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablecontrolledfolderaccess)
+  Defender CSP: [EnableControlledFolderAccess](/windows/client-management/mdm/policy-csp-defender#defender-enablecontrolledfolderaccess)
 
   Protect files and folders from unauthorized changes by unfriendly apps.
 
@@ -957,13 +957,13 @@ Help [protect valuable data](../../intune-service/protect/windows/security/threa
 
   When you select a configuration other than *Not configured*, you can then configure:
   - **List of apps that have access to protected folders**  
-    Defender CSP: [ControlledFolderAccessAllowedApplications](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
+    Defender CSP: [ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications)
 
     - **Import** a .csv file that contains an app list.
     - **Add** apps to this list manually.
 
   - **List of additional folders that need to be protected**  
-    Defender CSP: [ControlledFolderAccessProtectedFolders](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
+    Defender CSP: [ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders)
 
     - **Import** a .csv file that contains a folder list.
     - **Add** folders to this list manually.
@@ -974,7 +974,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 
 - **Network protection**  
   **Default**: Not configured  
-  Defender CSP: [EnableNetworkProtection](../../intune-service/protect/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  Defender CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   The intent of this setting is to protect end users from apps with access to phishing scams, exploit-hosting sites, and malicious content on the Internet. It also prevents third-party browsers from connecting to dangerous sites.
 
@@ -987,7 +987,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 - **Upload XML**  
   **Default**: *Not configured*
 
-  To use *Exploit protection* to [protect devices from exploits](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:
+  To use *Exploit protection* to [protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:
 
   - *PowerShell* - Use one or more of the *Get-ProcessMitigation*, *Set-ProcessMitigation*, and *ConvertTo-ProcessMitigationPolicy* PowerShell cmdlets. The cmdlets configure mitigation settings, and export an XML representation of them.
 
@@ -995,7 +995,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 
 - **User editing of the exploit protection interface**  
   **Default**: Not configured  
-  ExploitGuard CSP: [ExploitProtectionSettings](../../intune-service/protect/windows/client-management/mdm/policy-csp-exploitguard)
+  ExploitGuard CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard)
 
   - **Block** -  Upload an XML file that allows you to configure memory, control flow, and policy restrictions. The settings in the XML file can be used to block an application from exploits.
   - **Not configured** - No custom configuration is used.
@@ -1006,7 +1006,7 @@ Choose apps to be audited by or that are trusted to be run by Microsoft Defender
 
 - **Application control code integrity policies**  
   **Default**: Not configured  
-   CSP: [AppLocker CSP](../../intune-service/protect/windows/client-management/mdm/applocker-csp)
+   CSP: [AppLocker CSP](/windows/client-management/mdm/applocker-csp)
 
   - **Enforce** - Choose the application control code integrity policies for your users' devices.
 
@@ -1025,7 +1025,7 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
 
 - **Credential Guard**  
   **Default**: Disable  
-  [DeviceGuard CSP](../../intune-service/protect/windows/client-management/mdm/policy-csp-deviceguard)
+  [DeviceGuard CSP](/windows/client-management/mdm/policy-csp-deviceguard)
 
   - **Disable** - Turn off Credential Guard remotely, if it was previously turned on with the **Enabled without UEFI lock** option.​
 
@@ -1048,7 +1048,7 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
 
 ## Microsoft Defender Security Center
 
-Microsoft Defender Security Center operates as a separate app or process from each of the individual features. It displays notifications through the Action Center. It acts as a collector or single place to see the status and run some configuration for each of the features. Find out more in the [Microsoft Defender](../../intune-service/protect/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) docs.
+Microsoft Defender Security Center operates as a separate app or process from each of the individual features. It displays notifications through the Action Center. It acts as a collector or single place to see the status and run some configuration for each of the features. Find out more in the [Microsoft Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) docs.
 
 ### Microsoft Defender Security Center app and notifications
 
@@ -1056,7 +1056,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Virus and threat protection**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableVirusUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablevirusui)
+  WindowsDefenderSecurityCenter CSP: [DisableVirusUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablevirusui)
 
   Configure if end users can view the Virus and threat protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Virus and threat protection.
 
@@ -1065,7 +1065,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Ransomware protection**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [HideRansomwareDataRecovery](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
+  WindowsDefenderSecurityCenter CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
   Configure if end users can view the Ransomware protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Ransomware protection.
 
@@ -1074,7 +1074,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Account protection**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableAccountProtectionUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableaccountprotectionui)
+  WindowsDefenderSecurityCenter CSP: [DisableAccountProtectionUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableaccountprotectionui)
 
   Configure if end users can view the Account protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Account protection.
 
@@ -1083,7 +1083,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Firewall and network protection**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableNetworkUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenetworkui)
+  WindowsDefenderSecurityCenter CSP: [DisableNetworkUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenetworkui)
 
   Configure if end users can view the Firewall and network protection area in the Microsoft Defender Security center. Hiding this section will also block all notifications related to Firewall and network protection.
 
@@ -1092,7 +1092,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **App and browser Control**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableAppBrowserUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableappbrowserui)
+  WindowsDefenderSecurityCenter CSP: [DisableAppBrowserUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disableappbrowserui)
 
   Configure if end users can view the App and browser control area in the Microsoft Defender Security center. Hiding this section will also block all notifications related to App and browser control.
 
@@ -1101,7 +1101,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Hardware protection**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableDeviceSecurityUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disabledevicesecurityui)
+  WindowsDefenderSecurityCenter CSP: [DisableDeviceSecurityUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disabledevicesecurityui)
 
   Configure if end users can view the Hardware protection area in the Microsoft Defender Security Center. Hiding this section will also block all notifications related to Hardware protection.
 
@@ -1110,7 +1110,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Device performance and health**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableHealthUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablehealthui)
+  WindowsDefenderSecurityCenter CSP: [DisableHealthUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablehealthui)
 
   Configure if end users can view the Device performance and health area in the Microsoft Defender Security center. Hiding this section will also block all notifications related to Device performance and health.
 
@@ -1119,7 +1119,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Family options**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableFamilyUI](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablefamilyui)
+  WindowsDefenderSecurityCenter CSP: [DisableFamilyUI](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablefamilyui)
 
   Configure if end users can view the Family options area in the Microsoft Defender Security center. Hiding this section will also block all notifications-related to Family options.
 
@@ -1128,7 +1128,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Notifications from the displayed areas of app**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableNotifications](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenotifications)
+  WindowsDefenderSecurityCenter CSP: [DisableNotifications](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disablenotifications)
 
   Choose which notifications to display to end users. Non-critical notifications include summaries of Microsoft Defender Antivirus activity, including notifications when scans have completed. All other notifications are considered critical.
 
@@ -1138,7 +1138,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Windows Security Center icon in the system tray**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [HideWindowsSecurityNotificationAreaControl](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#hidewindowssecuritynotificationareacontrol)
+  WindowsDefenderSecurityCenter CSP: [HideWindowsSecurityNotificationAreaControl](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#hidewindowssecuritynotificationareacontrol)
 
   Configure the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.
 
@@ -1147,7 +1147,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **Clear TPM button**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableClearTpmButton](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disablecleartpmbutton)
+  WindowsDefenderSecurityCenter CSP: [DisableClearTpmButton](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disablecleartpmbutton)
 
   Configure the display of the Clear TPM button.
 
@@ -1156,7 +1156,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 
 - **TPM firmware update warning**  
   **Default**: Not configured  
-  WindowsDefenderSecurityCenter CSP: [DisableTpmFirmwareUpdateWarning](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disabletpmfirmwareupdatewarning)
+  WindowsDefenderSecurityCenter CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disabletpmfirmwareupdatewarning)
 
   Configure the display of update TPM Firmware when a vulnerable firmware is detected.
 
@@ -1179,7 +1179,7 @@ You can choose to **Display in app and in notifications**, **Display only in app
 
 - **IT contact information**  
   **Default**: Don't display  
-  WindowsDefenderSecurityCenter CSP: [EnableCustomizedToasts](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-enablecustomizedtoasts)
+  WindowsDefenderSecurityCenter CSP: [EnableCustomizedToasts](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-enablecustomizedtoasts)
 
   Configure where to display IT contact information to end users.
 
@@ -1192,19 +1192,19 @@ You can choose to **Display in app and in notifications**, **Display only in app
 
   - **IT organization name​**  
     **Default**: *Not configured*  
-    WindowsDefenderSecurityCenter CSP: [CompanyName](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-companyname)
+    WindowsDefenderSecurityCenter CSP: [CompanyName](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-companyname)
 
   - **IT department phone number or Skype ID**  
     **Default**: *Not configured*  
-    WindowsDefenderSecurityCenter CSP: [Phone](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-phone)
+    WindowsDefenderSecurityCenter CSP: [Phone](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-phone)
 
   - **IT department email address**  
     **Default**: *Not configured*  
-    WindowsDefenderSecurityCenter CSP: [Email](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-email)
+    WindowsDefenderSecurityCenter CSP: [Email](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-email)
 
   - **IT support website URL**  
     **Default**: *Not configured*  
-    WindowsDefenderSecurityCenter CSP: [URL](../../intune-service/protect/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-url)
+    WindowsDefenderSecurityCenter CSP: [URL](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-url)
 
 ## Local device security options
 
@@ -1214,14 +1214,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Add new Microsoft accounts**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [Accounts_BlockMicrosoftAccounts](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Accounts_BlockMicrosoftAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** Prevent users from adding new Microsoft accounts to the device.
   - **Not configured** - Users can use Microsoft accounts on the device.
 
 - **Remote log on without password**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Allow only local accounts with blank passwords to sign in using the device's keyboard.
   - **Not configured** - Allow local accounts with blank passwords to sign in from locations other than the physical device.
@@ -1230,14 +1230,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Local admin account**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** Prevent use of a local admin account.
   - **Not configured**
 
 - **Rename admin account**  
   **Default**: *Not configured*  
-  LocalPoliciesSecurityOptions CSP: [Accounts_RenameAdministratorAccount](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Accounts_RenameAdministratorAccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define a different account name to be associated with the security identifier (SID) for the account "Administrator".
 
@@ -1245,14 +1245,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Guest account**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [LocalPoliciesSecurityOptions](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Prevent use of a Guest account.
   - **Not configured**
 
 - **Rename guest account**  
   **Default**: *Not configured*  
-  LocalPoliciesSecurityOptions CSP: [Accounts_RenameGuestAccount](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Accounts_RenameGuestAccount](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define a different account name to be associated with the security identifier (SID) for the account "Guest".
 
@@ -1260,28 +1260,28 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Undock device without logon**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)
+  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)
 
   - **Block** - A user must sign in to the device, and receive permission to undock the device.
   - **Not configured** - Users can press a docked portable device's physical eject button to safely undock the device.
 
 - **Install printer drivers for shared printers**  
   **Default**:  Not configured  
-  LocalPoliciesSecurityOptions CSP: [Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Any user can install a printer driver as part of connecting to a shared printer.
   - **Not configured** - Only Administrators can install a printer driver as part of connecting to a shared printer.
 
 - **Restrict CD-ROM access to local active user**  
   **Default**:  Not configured  
-  CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Only the interactively logged-on user can use the CD-ROM media. If this policy is enabled and no one is logged on interactively, then the CD-ROM is accessed over the network.
   - **Not configured** - Anyone has access to the CD-ROM.
 
 - **Format and eject removable media**  
   **Default**: Administrators  
-  CSP: [Devices_AllowedToFormatAndEjectRemovableMedia](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  CSP: [Devices_AllowedToFormatAndEjectRemovableMedia](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define who is allowed to format and eject removable NTFS media:
   - **Not configured**
@@ -1293,24 +1293,24 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Minutes of lock screen inactivity until screen saver activates**  
   **Default**: *Not configured*  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Enter the maximum minutes of inactivity until the screensaver activates. (**0** - **99999**)
 
 - **Require CTRL+ALT+DEL to log on**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** -  Require users to press CTRL+ALT+DEL before logging on to Windows.
   - **Not configured** - Pressing CTRL+ALT+DEL isn't required for users to sign in.
 
 - **Smart card removal behavior**  
   **Default**: No Action  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_SmartCardRemovalBehavior](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_SmartCardRemovalBehavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Determines what happens when the smart card for a logged-on user is removed from the smart card reader. Your options:
 
-  - **Lock Workstation** - The workstation is locked when the smart card is removed. This option allows users to leave the area, take their smart card with them, and still maintain a protected session.​
+  - **Lock Workstation** - The workstation is locked when the smart card is removed. This option allows users to leave the area, take their smart card with them, and still maintain a protected session.
   - **No action**
   - **Force Logoff** - The user is automatically logged off when the smart card is removed.
   - **Disconnect if a Remote Desktop Services session** - Removal of the smart card disconnects the session without logging off the user. This option allows the user to insert the smart card and resume the session later, or at another smart card reader-equipped computer, without having to sign in again. If the session is local, this policy functions identically to Lock Workstation.
@@ -1319,7 +1319,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **User information on lock screen**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)
 
   Configure the user information that is displayed when the session is locked. If not configured, user display name, domain, and username are shown.
 
@@ -1330,27 +1330,27 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Hide last signed-in user**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayLastSignedIn](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayLastSignedIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - Hide the username.
   - **Not configured** - Show the last username.
 
 - **Hide username at sign-in**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - Hide the username.
   - **Not configured** - Show the last username.
 
 - **Logon message title**  
   **Default**: *Not configured*  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTitleForUsersAttemptingToLogOn](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTitleForUsersAttemptingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Set the message title for users signing in.
 
 - **Logon message text**  
   **Default**: *Not configured*  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTextForUsersAttemptingToLogOn](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTextForUsersAttemptingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Set the message text for users signing in.
 
@@ -1358,28 +1358,28 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Anonymous access to Named Pipes and Shares**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Restrict anonymous access to share and Named Pipe settings. Applies to the settings that can be accessed anonymously.
   - **Block** - Disable this policy, making anonymous access available.
 
 - **Anonymous enumeration of SAM accounts**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Anonymous users can enumerate SAM accounts.
   - **Block** - Prevent anonymous enumeration of SAM accounts.
 
 - **Anonymous enumeration of SAM accounts and shares**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Anonymous users can enumerate the names of domain accounts and network shares.
   - **Block** - Prevent anonymous enumeration of SAM accounts and shares.
 
 - **LAN Manager hash value stored on password change**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Determine if the hash value for passwords is stored the next time the password is changed.
   - **Not configured** - The hash value isn't stored
@@ -1387,14 +1387,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **PKU2U authentication requests**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_AllowPKU2UAuthenticationRequests](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_AllowPKU2UAuthenticationRequests](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured**- Allow PU2U requests.
   - **Block** - Block PKU2U authentication requests to the device.
 
 - **Restrict remote RPC connections to SAM**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Not configured** - Use the default security descriptor, which may allow users and groups to make remote RPC calls to the SAM.
   - **Allow** - Deny users and groups from making remote RPC calls to the Security Accounts Manager (SAM), which stores user accounts and passwords. **Allow** also lets you change the default Security Descriptor Definition Language (SDDL) string to explicitly allow or deny users and groups to make these remote calls.
@@ -1404,7 +1404,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Minimum Session Security For NTLM SSP Based Clients**  
   **Default**: None  
-  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedclients)
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedclients)
 
   This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
 
@@ -1415,7 +1415,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Minimum Session Security For NTLM SSP Based Server**  
   **Default**: None  
-  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedservers)
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedservers)
 
   This security setting determines which challenge/response authentication protocol is used for network logons.
 
@@ -1426,7 +1426,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **LAN Manager Authentication Level**  
   **Default**: LM and NTLM  
-  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_LANManagerAuthenticationLevel](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-lanmanagerauthenticationlevel)
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_LANManagerAuthenticationLevel](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-lanmanagerauthenticationlevel)
 
   - **LM and NTLM**
   - **LM, NTLM and NTLMv2**
@@ -1437,7 +1437,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Insecure Guest Logons**  
   **Default**: Not configured  
-  LanmanWorkstation CSP: [LanmanWorkstation](../../intune-service/protect/windows/client-management/mdm/policy-csp-lanmanworkstation#lanmanworkstation-enableinsecureguestlogons)
+  LanmanWorkstation CSP: [LanmanWorkstation](/windows/client-management/mdm/policy-csp-lanmanworkstation#lanmanworkstation-enableinsecureguestlogons)
 
   If you enable this setting, the SMB client will reject insecure guest logons.
 
@@ -1448,14 +1448,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Clear virtual memory pagefile when shutting down**  
   **Default**: Not configured  
-   LocalPoliciesSecurityOptions CSP: [Shutdown_ClearVirtualMemoryPageFile](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+   LocalPoliciesSecurityOptions CSP: [Shutdown_ClearVirtualMemoryPageFile](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - Clear the virtual memory pagefile when the device is powered down.
   - **Not configured** - Doesn't clear the virtual memory.
 
 - **Shut down without log on**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Hide the shutdown option on the Windows sign-in screen. Users must sign in to the device, and then shut down.
   - **Not configured** - Allow users to shut down the device from the Windows sign-in screen.
@@ -1464,21 +1464,21 @@ Use these options to configure the local security settings on Windows devices.
 
 - **UIA integrity without secure location**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Block** - Apps that are in a secure location in the file system will run only with UIAccess integrity.
   - **Not configured** - Enables apps to run with UIAccess integrity, even if the apps aren't in a secure location in the file system.
 
 - **Virtualize file and registry write failures to per-user locations**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Applications that write data to protected locations fail.
   - **Not configured** - Application write failures are redirected at run time to defined user locations for the file system and registry.
 
 - **Only elevate executable files that are signed and validated**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Enforce the PKI certification path validation for an executable file before it can run.
   - **Not configured** - Don't enforce PKI certification path validation before an executable file can run.
@@ -1487,7 +1487,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Elevation prompt for admins**  
   **Default**: Prompt for consent for non-Windows binaries  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForAdministrators](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForAdministrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define the behavior of the elevation prompt for admins in Admin Approval Mode.
 
@@ -1501,7 +1501,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Elevation prompt for standard users**  
   **Default**: Prompt for credentials  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Define the behavior of the elevation prompt for standard users.
 
@@ -1512,21 +1512,21 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Route elevation prompts to user's interactive desktop**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - All elevation requests to go to the interactive user's desktop rather than the secure desktop. Any prompt behavior policy settings for administrators and standard users are used.
   - **Not configured** - Force all elevation requests go to the secure desktop, regardless of any prompt behavior policy settings for administrators and standard users.
 
 - **Elevated prompt for app installations**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Application installation packages aren't detected or prompted for elevation.
   - **Not configured** - Users are prompted for an administrative user name and password when an application installation package requires elevated privileges.
 
 - **UIA elevation prompt without secure desktop**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_AllowUIAccessApplicationsToPromptForElevation](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_AllowUIAccessApplicationsToPromptForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
 - **Enable** - Allow UIAccess apps to prompt for elevation, without using the secure desktop.
 - **Not configured** - Elevation prompts use a secure desktop.
@@ -1535,14 +1535,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Admin Approval Mode For Built-in Administrator**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_UseAdminApprovalMode](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_UseAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled** - Allow the built-in Administrator account to use Admin Approval Mode. Any operation that requires elevation of privilege prompts the user to approve the operation.
   - **Not configured** - runs all apps with full admin privileges.
 
 - **Run all admins in Admin Approval Mode**  
   **Default**: Not Configured  
-  LocalPoliciesSecurityOptions CSP: [UserAccountControl_RunAllAdministratorsInAdminApprovalMode](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_RunAllAdministratorsInAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enabled**- Enable Admin Approval Mode.
   - **Not configured** - Disable Admin Approval Mode and all related UAC policy settings.
@@ -1551,7 +1551,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Digitally sign communications (if server agrees)**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   Determines if the SMB client negotiates SMB packet signing.
   - **Block** - The SMB client never negotiates SMB packet signing.
@@ -1559,7 +1559,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Send unencrypted password to third-party SMB servers**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
 
   - **Block** - The Server Message Block (SMB) redirector can send plaintext passwords to non-Microsoft SMB servers that don't support password encryption during authentication.
@@ -1567,7 +1567,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Digitally sign communications (always)**  
   **Default**: Not configured  
-  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsAlways](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - The Microsoft network client doesn't communicate with a Microsoft network server unless that server agrees to SMB packet signing.
   - **Not configured** - SMB packet signing is negotiated between the client and server.
@@ -1576,14 +1576,14 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Digitally sign communications (if client agrees)**  
   **Default**: Not configured  
-  CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - The Microsoft network server negotiates SMB packet signing as requested by the client. That is, if packet signing is enabled on the client, packet signing is negotiated.
   - **Not configured** - The SMB client never negotiates SMB packet signing.
 
 - **Digitally sign communications (always)**  
   **Default**: Not configured  
-  CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsAlways](../../intune-service/protect/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
+  CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)
 
   - **Enable** - The Microsoft network server doesn't communicate with a Microsoft network client unless that client agrees to SMB packet signing.
   - **Not configured** - SMB packet signing is negotiated between the client and server.
@@ -1592,7 +1592,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Xbox Game Save Task**  
   **Default**: Not configured  
-  CSP: [TaskScheduler/EnableXboxGameSaveTask](../../intune-service/protect/windows/client-management/mdm/policy-csp-taskscheduler#taskscheduler-enablexboxgamesavetask)
+  CSP: [TaskScheduler/EnableXboxGameSaveTask](/windows/client-management/mdm/policy-csp-taskscheduler#taskscheduler-enablexboxgamesavetask)
 
   This setting determines whether the Xbox Game Save Task is Enabled or Disabled.
   - **Enabled**
@@ -1600,7 +1600,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Xbox Accessory Management Service**  
   **Default**: Manual  
-  CSP: [SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode](../../intune-service/protect/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxaccessorymanagementservicestartupmode)
+  CSP: [SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxaccessorymanagementservicestartupmode)
 
   This setting determines the Accessory Management Service's start type.
   - **Manual**
@@ -1609,7 +1609,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Xbox Live Auth Manager Service**  
   **Default**: Manual  
-  CSP: [SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode](../../intune-service/protect/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxliveauthmanagerservicestartupmode)
+  CSP: [SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxliveauthmanagerservicestartupmode)
 
   This setting determines the Live Auth Manager Service's start type.
   - **Manual**
@@ -1618,7 +1618,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Xbox Live Game Save Service**  
   **Default**: Manual  
-  CSP: [SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode](../../intune-service/protect/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivegamesaveservicestartupmode)
+  CSP: [SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivegamesaveservicestartupmode)
 
   This setting determines the Live Game Save Service's start type.
   - **Manual**
@@ -1627,7 +1627,7 @@ Use these options to configure the local security settings on Windows devices.
 
 - **Xbox Live Networking Service**  
   **Default**: Manual  
-  CSP: [SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode](../../intune-service/protect/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivenetworkingservicestartupmode)
+  CSP: [SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivenetworkingservicestartupmode)
 
   This setting determines the Networking Service's start type.
   - **Manual**

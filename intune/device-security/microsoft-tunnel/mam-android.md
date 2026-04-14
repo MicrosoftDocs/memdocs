@@ -31,7 +31,7 @@ To extend your existing [Microsoft Tunnel configuration](./install.md) to suppor
 With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled in Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 **Try the interactive demo**:
-The [Microsoft Tunnel for Mobile Application Management for Android](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support Android devices not enrolled with Intune.
+The [Microsoft Tunnel for Mobile Application Management for Android](/ https:/regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support Android devices not enrolled with Intune.
 
 ## Prerequisites
 
@@ -103,7 +103,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 
    When Microsoft Defender Endpoint is listed for *Public apps*, select **Next**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/public-apps-defender.png" alt-text="Screen shot of configuring an app configuration policy with Microsoft Defender Endpoint as a public app.":::
+   :::image type="content" source="./media/mam-android/public-apps-defender.png" alt-text="Screen shot of configuring an app configuration policy with Microsoft Defender Endpoint as a public app.":::
 
 3. On the *Settings* tab, skip the *General configuration settings* category, which isn't used for this policy. For the *Microsoft Tunnel settings* category, make the following configurations:
 
@@ -119,7 +119,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
      >
      > To ensure seamless identity switching and accurate Tunnel notifications within Microsoft Edge, it's essential to include Edge in your per-app VPN list.
      >
-     > :::image type="content" source="./media/microsoft-tunnel-mam-android/edge_per_app.png" alt-text="Screen shot of the per-app configuration configuration with Microsoft Edge added.":::
+     > :::image type="content" source="./media/mam-android/edge_per_app.png" alt-text="Screen shot of the per-app configuration configuration with Microsoft Edge added.":::
 
      > [!IMPORTANT]
      >
@@ -132,7 +132,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 
    When ready, select **Next** to continue.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-configuration-defender.png" alt-text="Screen shot of the app configuration policies settings configuration.":::
+   :::image type="content" source="./media/mam-android/settings-configuration-defender.png" alt-text="Screen shot of the app configuration policies settings configuration.":::
 
 4. On the *Assignments* tab, select **Add Groups**, and then select the same Microsoft Entra groups that you deployed the Microsoft Edge App configuration profile to, and then select **Next**.
 
@@ -153,7 +153,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
     After Microsoft Edge is listed for *Public apps*, select **Next**.
 
-    :::image type="content" source="./media/microsoft-tunnel-mam-android/public-apps-edge.png" alt-text="Screen shot of configuring an app configuration policy with Microsoft Edge as a public app.":::
+    :::image type="content" source="./media/mam-android/public-apps-edge.png" alt-text="Screen shot of configuring an app configuration policy with Microsoft Edge as a public app.":::
 
 3. On the *Settings* tab, configure the *Name* and *Value* pair in the *General configuration settings* category as follows:
 
@@ -164,7 +164,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
     The following image shows the `Identity switch` setting in an app configuration policy for Microsoft Edge:
 
-    :::image type="content" source="./media/microsoft-tunnel-mam-android/name-value-pair-edge.png" alt-text="Image that shows the Identity switch configuration key and value for MAM Tunnel on unmanaged Android devices in Microsoft Intune.":::
+    :::image type="content" source="./media/mam-android/name-value-pair-edge.png" alt-text="Image that shows the Identity switch configuration key and value for MAM Tunnel on unmanaged Android devices in Microsoft Intune.":::
 
     > [!NOTE]
     > Ensure there are no trailing spaces at the end of the General configuration setting.
@@ -192,11 +192,11 @@ Create an app protection policy to automatically start the Microsoft Tunnel VPN 
 
    When Microsoft Edge is listed for *Public apps*, select **Next**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/app-protection-edge.png" alt-text="Screen shot of configuring an app protection policy with Microsoft Edge as a public app.":::
+   :::image type="content" source="./media/mam-android/app-protection-edge.png" alt-text="Screen shot of configuring an app protection policy with Microsoft Edge as a public app.":::
 
 4. On the *Data protection* tab, scroll to the bottom and set *Start Microsoft Tunnel connection on app-launch* to **Yes**, and then select **Next**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/app-protection-data-protection-tab.png" alt-text="Screen shot of configuring an app protection policy setting for using Tunnel on app-launch.":::
+   :::image type="content" source="./media/mam-android/app-protection-data-protection-tab.png" alt-text="Screen shot of configuring an app protection policy setting for using Tunnel on app-launch.":::
 
 5. Continue past the *Access requirements* and *Conditional launch* tabs.
 
@@ -243,7 +243,7 @@ If your application requires SSL/TLS certificates issued by an on-premises or pr
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, select the certificate profile that will be used:
 
 1. On the *Settings* tab of your app configuration profile, expand *Microsoft Tunnel for Mobile Application Management settings*.
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-certificates.png" alt-text="View of the Tunnel settings in an app configuration policy." lightbox="./media/microsoft-tunnel-mam-android/settings-certificates.png":::
+   :::image type="content" source="./media/mam-android/settings-certificates.png" alt-text="View of the Tunnel settings in an app configuration policy." lightbox="./media/mam-android/settings-certificates.png":::
 
 1. Configure the following options:
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
@@ -251,7 +251,7 @@ During configuration of the app configuration profile for an app that will use T
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven't configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](./install.md).
    1. If your app requires a trusted certificate, select **Root Certificate** to open the *Select Root Certificates* pane, and then select a trusted certificate profile to use.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the root certificate selection pane." lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
+   :::image type="content" source="./media/mam-android/select-root-certificate.png" alt-text="View of the root certificate selection pane." lightbox="./media/mam-android/select-root-certificate.png":::
 
    For information about configuring root certificate profiles, see [Trusted root certificate profiles for Microsoft Intune](../../device-configuration/certificates/trusted-root-profiles.md).
 
@@ -263,7 +263,7 @@ The following are known issues or limitations for MAM Tunnel for Android.
 
 ### Tunnel for Mobile Application Management does not support Microsoft Defender in Personal Profile mode
 
- For information about Microsoft Defender in Personal Profile Mode, see [Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode](../../intune-service/protect/microsoft-365/security/defender-endpoint/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
+ For information about Microsoft Defender in Personal Profile Mode, see [Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode](/microsoft-365/security/defender-endpoint/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
 
 **Workaround**: None.
 

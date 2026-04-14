@@ -15,7 +15,7 @@ ms.collection:
 
 When you integrate [Microsoft Defender for Endpoint](./configure-integration.md) with Microsoft Intune, you can use device configuration profiles to modify some Defender for Endpoint settings on Android devices.
 
-By default, Microsoft Defender for Endpoint for Android includes and enables the Microsoft Defender for Endpoint [Web protection](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) feature that can help to secure devices against web threats and protect users from phishing attacks.
+By default, Microsoft Defender for Endpoint for Android includes and enables the Microsoft Defender for Endpoint [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) feature that can help to secure devices against web threats and protect users from phishing attacks.
 
 While enabled by default, there are valid reasons to disable it on some Android devices. For example, you might decide to use only the Defender for Endpoint app scan feature or to prevent web protection from using your VPN while it scans for harmful URLs.
 
@@ -98,7 +98,7 @@ To configure web protection on devices, use the following procedures to create a
 
 > [!NOTE]
 >
-> You can't disable web protection for the Android Enterprise personally owned work profile if you've configured the [Auto Setup of Always-on VPN device configuration policy](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/android-intune#auto-setup-of-always-on-vpn) on the enrolled devices.
+> You can't disable web protection for the Android Enterprise personally owned work profile if you've configured the [Auto Setup of Always-on VPN device configuration policy](/windows/security/threat-protection/microsoft-defender-atp/android-intune#auto-setup-of-always-on-vpn) on the enrolled devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -163,7 +163,7 @@ To configure web protection on devices, use the following procedures to create a
 
 - Learn more from the Microsoft Defender for Endpoint documentation:
 
-  - [Microsoft Defender for Endpoint Conditional Access](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+  - [Microsoft Defender for Endpoint Conditional Access](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
 
-  - [Microsoft Defender for Endpoint risk dashboard](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+  - [Microsoft Defender for Endpoint risk dashboard](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
 

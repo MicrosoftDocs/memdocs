@@ -50,8 +50,8 @@ The following table identifies key features for the supported platforms:
 
 Try the following interactive demos to discover how Tunnel for MAM extends Microsoft Tunnel VPN Gateway to support Android and iOS devices that aren't enrolled with Intune.
 
-- [Microsoft Tunnel for Mobile Application Management for Android](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0)
-- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0)
+- [Microsoft Tunnel for Mobile Application Management for Android](/ https:/regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0)
+- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS](/ https:/regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0)
 
 ## Related content
 

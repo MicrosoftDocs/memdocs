@@ -100,7 +100,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
 > [!NOTE]
 >
-> Inbound FQDN rules aren't natively supported. However, it's possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](../intune-service/protect/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
+> Inbound FQDN rules aren't natively supported. However, it's possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
 
@@ -146,8 +146,8 @@ On the profiles Configuration settings page, use an option that supports adding 
 
    For more information about these options, see the following articles in the Microsoft Defender for Endpoint documentation:
 
-   - [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](../intune-service/protect/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
-   - [Printer Protection Overview](../intune-service/protect/microsoft-365/security/defender-endpoint/printer-protection-overview)
+   - [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
+   - [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview)
 
 4. For the rule you saved, select **Set reusable settings** for *Included ID* and *Excluded ID* to meet your needs. Both selections open a *Select reusable settings* pane.
 
@@ -160,7 +160,7 @@ The following shows a configuration with only one group selected for Excluded ID
 
 6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile's assignments. A maximum of 100 reusable groups can be added per profile.
 
-If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control](../intune-service/protect/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
+If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
 
 ## Use reusable groups for Endpoint Privilege Management
 
@@ -170,7 +170,7 @@ For information about support for using reusable groups for Endpoint Privilege M
 
 The device settings you can manage through reusable settings groups are applied by Intune the same as settings that are directly configured in a profile. If conflicts or overlaps are introduced by settings from your reusable groups, you can use the same troubleshooting process to identify and resolve those conflicts.
 
-For more information, review guidance that might be specific to the profile types you use. For general guidance, see [Troubleshoot policies and profiles in Microsoft Intune](../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune), and [Common questions and answers with device policies and profiles in Microsoft Intune](../device-configuration/troubleshoot-device-profiles.md).
+For more information, review guidance that might be specific to the profile types you use. For general guidance, see [Troubleshoot policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune), and [Common questions and answers with device policies and profiles in Microsoft Intune](../device-configuration/troubleshoot-device-profiles.md).
 
 ## Next steps
 

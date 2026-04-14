@@ -30,7 +30,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 > [!IMPORTANT]
 >
-> Windows has updated how the Windows Firewall configuration service provider (CSP) enforces rules from Atomic blocks of firewall rules. The [***Windows Firewall CSP***](../../intune-service/protect/windows/client-management/mdm/firewall-csp) on a device implements the firewall rule settings from your Intune endpoint security Firewall policies. Beginning with the following versions of Windows, the updated CSP behavior now enforces an all-or-nothing application of firewall rules from each Atomic block of rules:
+> Windows has updated how the Windows Firewall configuration service provider (CSP) enforces rules from Atomic blocks of firewall rules. The [***Windows Firewall CSP***](/windows/client-management/mdm/firewall-csp) on a device implements the firewall rule settings from your Intune endpoint security Firewall policies. Beginning with the following versions of Windows, the updated CSP behavior now enforces an all-or-nothing application of firewall rules from each Atomic block of rules:
 >
 > - Windows 11 21H2
 > - Windows 11 22H2
@@ -54,7 +54,7 @@ Find guidance for creating endpoint security profiles at [Create an endpoint sec
 
 **Platform: Windows**:
 
- For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](../../intune-service/protect/windows/client-management/mdm/firewall-csp).
+ For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
 > [!NOTE]
 >
@@ -70,9 +70,9 @@ Find guidance for creating endpoint security profiles at [Create an endpoint sec
 
   > [!TIP]
   >
-  > Use of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](../../intune-service/protect/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information, see the following Windows Defender articles:
-  > - [About application control for Windows](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
-  > - [WDAC Application ID (AppId) Tagging guide](../../intune-service/protect/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
+  > Use of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information, see the following Windows Defender articles:
+  > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+  > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
 - **Windows Hyper-V Firewall Rules** The Windows Hyper-V Firewall Rules template allows you to control firewall rules that will apply to specific Hyper-V containers on Windows, including applications like the Windows Subsystem for Linux (WSL) and the Windows Subsystem for Android (WSA)
 
@@ -93,7 +93,7 @@ Each rule you add to the profile can include both reusable settings groups and i
 
 > [!NOTE]
 >
-> Inbound FQDN rules aren't natively supported. However, it's possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](../../intune-service/protect/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
+> Inbound FQDN rules aren't natively supported. However, it's possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
 
 For prerequisites and guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../../device-security/reusable-settings-groups.md).
 
@@ -140,7 +140,7 @@ This view provides:
 
 This report is located in the Endpoint security node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **MDM devices running Windows 10 or later with firewall off**.
 
-Data is reported through the Windows [DeviceStatus CSP](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
+Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
 
 - Device name
 - Firewall status
@@ -160,7 +160,7 @@ As an organizational report, this report is available from the **Reports** node.
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](./media/firewall-policy/select-firewall-reports.png)
 
-Data is reported through the Windows [DeviceStatus CSP](../../intune-service/protect/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
+Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
 
 Status details include:
 

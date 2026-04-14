@@ -173,7 +173,7 @@ Settings Catalog provides the most comprehensive FileVault configuration options
 
 4. On the **Configuration settings** page, select **+ Add settings** and navigate to **Full Disk Encryption**.
 
-   :::image type="content" source="./media/encrypt-devices-filevault/filevault-settings-picker.png" alt-text="Image of the FileVault options in the Full Disk Encryption category of the Settings picker.":::
+   :::image type="content" source="./media/encrypt-filevault-macos/filevault-settings-picker.png" alt-text="Image of the FileVault options in the Full Disk Encryption category of the Settings picker.":::
 
 5. Configure the following core FileVault settings:
 
@@ -215,7 +215,7 @@ For automated FileVault enablement during device setup:
   > [!IMPORTANT]
   > The **Defer** setting must be configured to **Enabled** to successfully enable FileVault in Setup Assistant for devices running macOS 14.4.
 
-  :::image type="content" source="./media/encrypt-devices-filevault/filevault-setup-assistant-configuration.png" alt-text="Screenshot of the settings needed to enable File Vault in Setup Assistant.":::
+  :::image type="content" source="./media/encrypt-filevault-macos/filevault-setup-assistant-configuration.png" alt-text="Screenshot of the settings needed to enable File Vault in Setup Assistant.":::
 
 **Enrollment profile configuration:**  
 1. Configure enrollment profile with **Await final configuration** = *Yes*.

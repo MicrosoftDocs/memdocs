@@ -39,7 +39,7 @@ For more information about the feature, see [Security baselines in Intune](./ove
 
 When you select a security baseline profile that you've deployed, you can gain insights into the security state of devices that received that baseline. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Microsoft 365 Apps for Enterprise Security Baseline*. Then, from the *Profiles* pane, select the profile instance for which you want to view details to open the profiles dashboard view.
 
-:::image type="content" source="./media/security-baselines-monitor/view-baseline-policy-details.png" alt-text="View the dashboard for a security baseline profile.":::
+:::image type="content" source="./media/monitor-baselines/view-baseline-policy-details.png" alt-text="View the dashboard for a security baseline profile.":::
 
 This dashboard view includes:
 
@@ -58,7 +58,7 @@ This summary is a simple chart that presents a count of devices that report a sp
 
 When you select the *View report* button, Intune displays a more detailed view of the *Device and user check-in status* for this baseline instances. When you open the report for the first time, it will be empty until you select **Generate report**, after which it displays information.
 
-:::image type="content" source="./media/security-baselines-monitor/device-assignment-status-report-with-results.png" alt-text="View the report details for Device and user check-in status.":::
+:::image type="content" source="./media/monitor-baselines/device-assignment-status-report-with-results.png" alt-text="View the report details for Device and user check-in status.":::
 
 The preceding image displays the initial *View report* results for the same baseline from the dashboard view. This view shows that there are two other devices that have an *Assignment status* of *Pending*, which means they haven't yet returned status for this baseline.
 
@@ -68,7 +68,7 @@ If you select the name of a device from the *Device name* column, Intune display
 
 In the following image, we drill in on EAGLE003, the only device to show success for the baseline, and then selected the setting *Add-on Management*:
 
-:::image type="content" source="./media/security-baselines-monitor/drill-in-for-setting-details-pane.png" alt-text="View a devices' reported status for each setting in the baseline.":::
+:::image type="content" source="./media/monitor-baselines/drill-in-for-setting-details-pane.png" alt-text="View a devices' reported status for each setting in the baseline.":::
 
 On the settings Setting Details pane, we can see each profile that is assigned to this device that also configures this same setting.
 
@@ -97,7 +97,7 @@ Below the reports section of the dashboard, you can find the profiles *Propertie
 - View the configuration of each page of the profile.
 - **Edit** the profiles configuration, like the friendly name you gave the profile, its *Assignments*, and any of the profile settings.
 
-:::image type="content" source="./media/security-baselines-monitor/view-profile-configurations.png" alt-text="View the baselines configuration, where you can edit to make changes.":::
+:::image type="content" source="./media/monitor-baselines/view-profile-configurations.png" alt-text="View the baselines configuration, where you can edit to make changes.":::
 
 ## Monitor profiles for baseline versions released before May 2023
 
@@ -222,7 +222,7 @@ On Windows devices, there's a built-in MDM diagnostic information report. This r
 
   For example, look in the **Enrolled configuration sources and target resources** section or the **Unmanaged policies** section. You might get an idea of why it's causing an error or conflict.
 
-For more information about diagnostic information logs, see [Collect MDM logs](../../intune-service/protect/windows/client-management/mdm-collect-logs).
+For more information about diagnostic information logs, see [Collect MDM logs](/windows/client-management/mdm-collect-logs).
 
 > [!TIP]
 >
@@ -235,4 +235,4 @@ For more information about diagnostic information logs, see [Collect MDM logs](.
 - [Avoid conflicts](./overview.md#avoid-conflicts)
 - [Monitor device profiles](../../device-configuration/monitor-device-profile.md)
 - [Common issues and resolutions](../../device-configuration/troubleshoot-device-profiles.md).
-- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

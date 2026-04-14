@@ -14,7 +14,7 @@ ms.collection:
 
 # Create Mobile Threat Defense device compliance policy with Intune
 
-Intune supports integrating a Mobile Threat Defense (MTD) partner to help you detect threats and assess risk on mobile devices. With MTD integration, your Intune device compliance policies can use rules to assess a devices risk based on the information from that MTD partner to determine if a device is compliant or not. With compliance policy risk assessed, you can then use [Conditional Access policy](../../intune-service/protect/entra/identity/conditional-access/policy-all-users-device-compliance) to block access to services from devices that fail to meet the requirements of your device compliance policy.
+Intune supports integrating a Mobile Threat Defense (MTD) partner to help you detect threats and assess risk on mobile devices. With MTD integration, your Intune device compliance policies can use rules to assess a devices risk based on the information from that MTD partner to determine if a device is compliant or not. With compliance policy risk assessed, you can then use [Conditional Access policy](/entra/identity/conditional-access/policy-all-users-device-compliance) to block access to services from devices that fail to meet the requirements of your device compliance policy.
 
 ## Before you begin
 

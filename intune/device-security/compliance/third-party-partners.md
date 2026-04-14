@@ -80,7 +80,7 @@ Enable support for a device compliance partner to use compliance state data from
 
 2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** > **Add Compliance Partner**.
 
-   :::image type="content" alt-text="Add a device compliance partner" source="./media/device-compliance-partners/add-compliance-partner.png" lightbox="./media/device-compliance-partners/add-compliance-partner.png":::
+   :::image type="content" alt-text="Add a device compliance partner" source="./media/third-party-partners/add-compliance-partner.png" lightbox="./media/third-party-partners/add-compliance-partner.png":::
 
 3. On the **Basics** page, expand the **Compliance partner** drop-down and select the partner you're adding.
 

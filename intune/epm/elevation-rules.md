@@ -98,7 +98,7 @@ It's important when defining *detections* that they're defined to be as *descrip
 
 File hash rules are the strongest rules that can be created with Endpoint Privilege Management. These rules are *highly recommended* to ensure the file you intend to elevate is the file that's elevated.
 
-File hash can be gathered from the direct binary using the [Get-Filehash PowerShell method](../intune-service/protect/powershell/module/microsoft.powershell.utility/get-filehash) or directly from the [reports for Endpoint Privilege Management](./reports.md).
+File hash can be gathered from the direct binary using the [Get-Filehash PowerShell method](/powershell/module/microsoft.powershell.utility/get-filehash) or directly from the [reports for Endpoint Privilege Management](./reports.md).
 
 ### Certificate rules
 
@@ -213,7 +213,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 2. On the **Elevation detail** pane, review the file details. This information is used by the elevation rule to identify the correct file. When ready, select **Create a rule with these file details**.
 
-   :::image type="content" source="./media/epm-policies/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/epm-policies/elevation-detail-pane.png":::
+   :::image type="content" source="./media/elevation-rules/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/elevation-rules/elevation-detail-pane.png":::
 
 3. Select a policy option for the new elevation rule you're creating:
 
@@ -236,7 +236,7 @@ Use either of the following methods to create new elevation rules, which are add
    > [!TIP]
    > While optional, we [recommend use of a *File path*](./plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
-   :::image type="content" source="./media/epm-policies/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/epm-policies/create-a-rule.png":::
+   :::image type="content" source="./media/elevation-rules/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/elevation-rules/create-a-rule.png":::
 
 ### Manually configure elevation rules for Windows elevation rules policy
 
@@ -250,11 +250,11 @@ Use either of the following methods to create new elevation rules, which are add
 
 3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add more rules to this policy. Each new rule you add has an elevation type of User confirmed, which can be changed when you configure the rule.
 
-   :::image type="content" source="./media/epm-policies/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/epm-policies/new-elevation-rules-policy.png":::
+   :::image type="content" source="./media/elevation-rules/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/elevation-rules/new-elevation-rules-policy.png":::
 
    To configure a rule, select **Edit instance** to open its Rule properties page, and then configure the following:
 
-   :::image type="content" source="./media/epm-policies/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/epm-policies/elevation-rules.png":::
+   :::image type="content" source="./media/elevation-rules/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/elevation-rules/elevation-rules.png":::
 
    - **Rule name**: Specify a descriptive name for the rule. Name your rules so you can easily identify them later.
    - **Description** (Optional): Enter a description for the profile.
@@ -356,7 +356,7 @@ The following are examples of supported wildcard use:
 
 [File elevation rule's](#create-elevation-rules-policy) can also be limited to allow elevation with specific arguments.
 
-For example, [**dsregcmd**](../intune-service/protect/entra/identity/devices/troubleshoot-device-dsregcmd) can be useful for investigating the state of a device in Microsoft Entra ID, but requires elevation. To help support this files use for investigation, you can configure the rule with a list of arguments for *dsregcmd* that includes the switches for **/status**, **/listaccounts**, and more. However, to prevent a destructive action like unregistering a device you exclude arguments like [**/leave**](../intune-service/protect/troubleshoot/entra/entra-id/dir-dmns-obj/pending-devices#the-state-of-a-registered-device-is-changed-to-pending). With this configuration, the rule only allows elevation if the arguments */status*, or */listaccounts* are used. *dsregcmd* with the */leave* switch, which removes the device from Microsoft Entra ID, would be denied.
+For example, [**dsregcmd**](/entra/identity/devices/troubleshoot-device-dsregcmd) can be useful for investigating the state of a device in Microsoft Entra ID, but requires elevation. To help support this files use for investigation, you can configure the rule with a list of arguments for *dsregcmd* that includes the switches for **/status**, **/listaccounts**, and more. However, to prevent a destructive action like unregistering a device you exclude arguments like [**/leave**](/troubleshoot/entra/entra-id/dir-dmns-obj/pending-devices#the-state-of-a-registered-device-is-changed-to-pending). With this configuration, the rule only allows elevation if the arguments */status*, or */listaccounts* are used. *dsregcmd* with the */leave* switch, which removes the device from Microsoft Entra ID, would be denied.
 
 To add one or more arguments to an elevation rule, set **Restrict arguments** to **Allow list**. Select Add and configure the allowed command line options. By adding multiple arguments, you provide multiple command lines that are supported by elevation requests.
 
@@ -367,7 +367,7 @@ To add one or more arguments to an elevation rule, set **Restrict arguments** to
 > - File arguments are case sensitive; users must match the case exactly as defined in the rules.
 > - Don't define secrets as a file argument.
 
-:::image type="content" source="./media/epm-policies/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
+:::image type="content" source="./media/elevation-rules/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
 
 ## Reusable settings groups
 
@@ -377,7 +377,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Reusable settings (preview)** tab > and then select **Add**.
 
-   :::image type="content" source="./media/epm-policies/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/epm-policies/add-reusable-settings.png":::
+   :::image type="content" source="./media/elevation-rules/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/elevation-rules/add-reusable-settings.png":::
 
 2. On **Basics**, enter the following properties:
    - **Name**: Enter a descriptive name for the reusable group. Name groups so you can easily identify each later.
@@ -385,7 +385,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 3. In **Configuration settings**, select the folder icon for *Certificate file*, and browse to a **.CER** file to add it to this reusable group. The *Base 64 value* field fills in based on the certificate selected.
 
-   :::image type="content" source="./media/epm-policies/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/epm-policies/add-a-certificate.png":::
+   :::image type="content" source="./media/elevation-rules/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/elevation-rules/add-a-certificate.png":::
 
 4. In **Review + create**, review your settings, and then select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
 

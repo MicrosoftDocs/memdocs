@@ -122,7 +122,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 **To modify a metrics threshold value**:
 
-:::image type="content" source="./media/microsoft-tunnel-monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status thresholds.":::
+:::image type="content" source="./media/monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status thresholds.":::
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
@@ -138,7 +138,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 After you modify thresholds, the values on a servers *Health check* tab automatically update to reflect its status, based on the current thresholds.
 
-:::image type="content" source="./media/microsoft-tunnel-monitor/server-health-check.png" alt-text="Screen capture of a servers Health check view.":::
+:::image type="content" source="./media/monitor/server-health-check.png" alt-text="Screen capture of a servers Health check view.":::
 
 ## Health status trends for Tunnel servers
 
@@ -242,7 +242,7 @@ Each set of logs that Intune collects and uploads is identified as a separate se
 - The log sets *verbosity level*
 - An *Incident ID* that can be used to identify that specific log set
 
-:::image type="content" source="./media/microsoft-tunnel-monitor/send-server-logs-tab.png" alt-text="Screen capture that shows the Send verbose server logs interface.":::
+:::image type="content" source="./media/monitor/send-server-logs-tab.png" alt-text="Screen capture that shows the Send verbose server logs interface.":::
 
 After capturing an issue while running verbose log collection, you can provide the *Incident id* of that log set to Microsoft to help with investigation.
 

@@ -34,7 +34,7 @@ Each security baseline is a group of preconfigured Windows settings that help yo
 
 The settings in each baseline are device configuration settings like those found in various Intune policies. Each setting in a baseline works with the configuration service provider for the relevant product that is present on a managed windows device.
 
-To learn more about why and when you might want to deploy security baselines, see [Windows security baselines](../../intune-service/protect/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) in the Windows security documentation.
+To learn more about why and when you might want to deploy security baselines, see [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) in the Windows security documentation.
 
 You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows. For example, the default configuration of the *Security Baseline for Windows 10 and later* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
@@ -92,7 +92,7 @@ The following security baseline instances are available for use with Intune. Use
   - [Version 3](./ref-defender-settings.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](../../intune-service/protect/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
+  > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**:
   - [Version 2306 (Office baseline)](./ref-v2-office-settings.md?pivots=v2023) *Released in November 2023*
@@ -145,7 +145,7 @@ In addition, security baselines often manage the same settings you might set wit
 
 For information that can help you identify and resolve conflicts, see:
 
-- [Troubleshoot policies and profiles in Intune](../../intune-service/protect/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
 - [Monitor your security baselines](./monitor-baselines.md#troubleshoot-using-per-setting-status)
 
 ## Q & A
@@ -164,11 +164,11 @@ Strictly speaking, no. The Microsoft security team consults organizations, such 
 
 ### What certifications do Microsoft's security baselines have?
 
-Microsoft continues to publish security baselines for group policies (GPOs) and the [Security Compliance Toolkit](../../intune-service/protect/windows/security/threat-protection/security-compliance-toolkit-10), as it has for many years. These baselines are used by many organizations. The recommendations in these baselines are from the Microsoft security team's engagement with enterprise customers and external agencies, including the Department of Defense (DoD), National Institute of Standards and Technology (NIST), and more. We share our recommendations and baselines with these organizations. These organizations also have their own recommendations that closely mirror Microsoft's recommendations. As mobile device management (MDM) continues to grow into the cloud, Microsoft created equivalent MDM recommendations of these group policy baselines. Many of these baselines are built into Microsoft Intune, and include compliance reports on users, groups, and devices that follow (or don't follow) the baseline.
+Microsoft continues to publish security baselines for group policies (GPOs) and the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10), as it has for many years. These baselines are used by many organizations. The recommendations in these baselines are from the Microsoft security team's engagement with enterprise customers and external agencies, including the Department of Defense (DoD), National Institute of Standards and Technology (NIST), and more. We share our recommendations and baselines with these organizations. These organizations also have their own recommendations that closely mirror Microsoft's recommendations. As mobile device management (MDM) continues to grow into the cloud, Microsoft created equivalent MDM recommendations of these group policy baselines. Many of these baselines are built into Microsoft Intune, and include compliance reports on users, groups, and devices that follow (or don't follow) the baseline.
 
 Many customers use the Intune baseline recommendations as a starting point, and then customize them to meet their IT and security demands. Microsoft's Windows 10 and later baseline template was the first baseline to release. This baseline is built as a generic infrastructure that allows customers to eventually import other security baselines based on CIS, NIST, and other standards.
 
-Migrating from on-premises Active Directory group policies to a pure cloud solution using Microsoft Entra ID with Microsoft Intune is a journey. To help, use the various tools from the [Security Compliance Toolkit](../../intune-service/protect/windows/security/threat-protection/security-compliance-toolkit-10) that can help you identify cloud-based options from security baselines that can replace your on-premises GPO configurations.
+Migrating from on-premises Active Directory group policies to a pure cloud solution using Microsoft Entra ID with Microsoft Intune is a journey. To help, use the various tools from the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) that can help you identify cloud-based options from security baselines that can replace your on-premises GPO configurations.
 
 ### Where can I find details about using or configuring the settings that are available in a security baseline?
 

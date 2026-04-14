@@ -31,7 +31,7 @@ Tunnel for MAM iOS is a powerful tool that allows organizations to securely mana
 In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use either the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 **Try the interactive demo**
-The [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS](../../intune-service/protect/ https:/regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support iOS and iPadOS devices not enrolled with Intune.
+The [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS](/ https:/regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support iOS and iPadOS devices not enrolled with Intune.
 
 ## Government cloud support
 
@@ -59,7 +59,7 @@ To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (
 
 The following diagram describes the flow from a managed app that has successfully been integrated with Tunnel for MAM SDK for iOS.
 
-:::image type="content" source="./media/microsoft-tunnel-mam-ios/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS architecture.":::
+:::image type="content" source="./media/mam-ios/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS architecture.":::
 
 ### Actions
 
@@ -131,7 +131,7 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    > [!NOTE]
    > The bypassedUrl should include the federation STS endpoint.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
+   :::image type="content" source="./media/mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
 
    For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
 
@@ -170,7 +170,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 
     The following image shows the `bypassedUrl` setting in an app configuration policy for Microsoft Edge:
 
-    :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the bypassedUrls configuration key and value for MAM Tunnel on unmanaged iOS devices in Microsoft Intune.":::
+    :::image type="content" source="./media/mam-ios/ios-bypass.png" alt-text="Image that shows the bypassedUrls configuration key and value for MAM Tunnel on unmanaged iOS devices in Microsoft Intune.":::
 
    > [!NOTE]
    > Ensure there are no trailing spaces at the end of the General configuration settings.
@@ -193,7 +193,7 @@ This policy provides the necessary data protection and establishes a means of de
    1. For *Bundle ID*, specify the LOB apps Bundle ID and then select **Add**.
    1. Select the app you just added,  and then **Select**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-protection-custom-lob-app.png" alt-text="Add the custom app to the app protection policy.":::
+   :::image type="content" source="./media/mam-ios/app-protection-custom-lob-app.png" alt-text="Add the custom app to the app protection policy.":::
 
    > [!NOTE]
    > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project.
@@ -254,7 +254,7 @@ Depending on your needs, choose one of the following options:
 
 #### Create a new app registration
 
-The Microsoft Entra online docs provide detailed instruction and guidance on how to [create an app registration](../../intune-service/protect/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals).
+The Microsoft Entra online docs provide detailed instruction and guidance on how to [create an app registration](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals).
 
 The following guidance is specific to requirements for the Tunnel for MAM iOS SDK integration.
 
@@ -270,11 +270,11 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
 4. On the *Authentication* pane for your app registration, select **+ Add a platform**, and then select the tile for **iOS/macOS**. The *Configure your iOS or macOS app* pane opens.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-authentication1.png" alt-text="Configure authentication for the app registration.":::
+   :::image type="content" source="./media/mam-ios/app-registration-authentication1.png" alt-text="Configure authentication for the app registration.":::
 
 5. On the *Configure your iOS or macOS app* pane, Enter the *Bundle ID* for the Xcode app to be integrated with the Tunnel for MAM iOS SDK, and then select **Configure**. The iOS/macOS configuration pane opens.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-configuration-pane.png" alt-text="Review the app registration configuration pane.":::
+   :::image type="content" source="./media/mam-ios/app-registration-configuration-pane.png" alt-text="Review the app registration configuration pane.":::
 
    The *Bundle ID* in this view must exactly match the *Bundle ID* in Xcode. This detail can be found in the following locations in the Xcode project:
 
@@ -288,29 +288,29 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
    - On the *Request API permissions* page, select the tab for **APIs my organization uses**.
    - Search for *Microsoft Mobile Application Management*, select the result, and then select the checkbox.
    - Select **Add permissions**.
-     :::image type="content" source="./media/microsoft-tunnel-mam-ios/request-api-permissions1.png" alt-text="Configure API permissions for Microsoft Mobile Application Management.":::
+     :::image type="content" source="./media/mam-ios/request-api-permissions1.png" alt-text="Configure API permissions for Microsoft Mobile Application Management.":::
 
    Next, repeat the process for the second permission:
    - Select **+ Add a permission** and go to the **APIs my organization uses** tab.
    - Search for *Microsoft Tunnel Gateway*, select the result, and then select the checkbox for *Tunnel Allow*.
    - Select **Add permissions**.
-     :::image type="content" source="./media/microsoft-tunnel-mam-ios/request-api-permissions2.png" alt-text="Configure API permissions for Microsoft Tunnel Gateway.":::
+     :::image type="content" source="./media/mam-ios/request-api-permissions2.png" alt-text="Configure API permissions for Microsoft Tunnel Gateway.":::
 
    To complete the configuration, return to the *API permissions* pane and select **Grant admin consent for YOUR_TENANT**, and then select **Yes**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/grant-api-permissions-consent.png" alt-text="Grand admin consent.":::
+   :::image type="content" source="./media/mam-ios/grant-api-permissions-consent.png" alt-text="Grand admin consent.":::
 
 7. Next, while viewing the app registration, select **Token configuration**, and then **+ Add optional claim**. On the *Add optional claim* page, for *Token type* select **Access**, and then for *Claim*, select the checkbox for **acct**. Tunnel for MAM requires this Auth token to authenticate users to Microsoft Entra ID.
    Select **Add** to complete configuration of the Token.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/configure-token.png" alt-text="Configure the authentication token.":::
+   :::image type="content" source="./media/mam-ios/configure-token.png" alt-text="Configure the authentication token.":::
 
 8. To verify that all settings were applied successfully, select **Integration assistant**:
 
    - For *What application types are you building?* select **Mobile app (Android, iOS, UWP)**.
    - Set *Is this application calling APIs?* to **No**, and then select **Evaluate my app registration**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/integration-assistant.png" alt-text="Use the app registration Integration assistant to verify settings.":::
+   :::image type="content" source="./media/mam-ios/integration-assistant.png" alt-text="Use the app registration Integration assistant to verify settings.":::
 
    The results should show a status of *Complete* for both *Recommended configurations* and *Discouraged configurations*.
 
@@ -333,7 +333,7 @@ When you already have an app registration, you can choose to update it instead o
 
 2. Select **Authentication** and review the app platform type. It must be *iOS/macOS* and have a *Bundle ID* and *Redirect URI*. The Redirect URI must be formed as `msauth.Your_Bundle_ID://auth`.
 
-   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that an *MSAL Configuration* is present. If it isn't, see [Create a Microsoft Entra application and service principal that can access resources](../../intune-service/protect/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
+   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that an *MSAL Configuration* is present. If it isn't, see [Create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
 
    As in the previous step, compare the values *Bundle ID* and *Redirect URI* with these values from your Xcode app project:
    - Project > General > Identity: Bundle ID
@@ -341,11 +341,11 @@ When you already have an app registration, you can choose to update it instead o
 
    Also ensure the Xcode Bundle Identifier in your app project matches the app registration Bundle ID:
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-authentication.png" alt-text="Compare authentication settings to the Bundle ID in your Xcode.":::
+   :::image type="content" source="./media/mam-ios/review-authentication.png" alt-text="Compare authentication settings to the Bundle ID in your Xcode.":::
 
 3. Verify, and update the **API permissions**. Ensure you have *Microsoft Graph*, and *Microsoft Mobile Application Management* permissions already set.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-api-permissions.png" alt-text="Review the APP permissions in the app registration.":::
+   :::image type="content" source="./media/mam-ios/review-api-permissions.png" alt-text="Review the APP permissions in the app registration.":::
 
    Next add permissions for the *Microsoft Tunnel Gateway* service principal:
 

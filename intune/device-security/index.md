@@ -162,7 +162,7 @@ Intune supports [Microsoft Defender for Endpoint](./microsoft-defender/overview.
 
 **Conditional Access with Intune enables:**
 
-- [Device-based policies](../intune-service/protect/entra/identity/conditional-access/policy-all-users-device-compliance) - Require devices to meet compliance requirements before accessing organizational resources.
+- [Device-based policies](/entra/identity/conditional-access/policy-all-users-device-compliance) - Require devices to meet compliance requirements before accessing organizational resources.
 - [App-based policies](./conditional-access-integration/app-based-policies.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services.
 - Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners.
 

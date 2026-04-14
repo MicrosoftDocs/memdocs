@@ -51,8 +51,8 @@ Ensure tenant-level governance, identity, and configuration consistency.
 For license details, see:
 
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Microsoft Entra licensing](../../intune-service/protect/entra/fundamentals/licensing)
-- [Overview of Microsoft Defender for Endpoint Plan 1](../../intune-service/protect/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Entra licensing](/entra/fundamentals/licensing)
+- [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
 
 ## Secure Devices
@@ -80,7 +80,7 @@ Secure endpoints through device configuration and security policies.
 For license details, see:
 
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Overview of Microsoft Defender for Endpoint Plan 1](../../intune-service/protect/defender-endpoint/defender-endpoint-plan-1)
+- [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
 ## Secure Data
 
@@ -99,11 +99,11 @@ Protect data on devices and in transit, and enforce secure access to organizatio
 For license details, see:
 
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Microsoft Entra licensing](../../intune-service/protect/entra/fundamentals/licensing)
+- [Microsoft Entra licensing](/entra/fundamentals/licensing)
 
 ## Related content
 
 - [Zero Trust deployment approach with Microsoft Intune](../../intune-service/fundamentals/deployment-plan-zero-trust.md)
 - [Deployment guide for Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
 - [Protect data and devices with Microsoft Intune](../../device-security/index.md)
-- [Configure Microsoft Entra for increased security (Preview)](../../intune-service/protect/entra/fundamentals/configure-security)
+- [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)

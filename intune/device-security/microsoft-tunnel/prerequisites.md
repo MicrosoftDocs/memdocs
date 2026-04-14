@@ -254,7 +254,7 @@ Details on how to implement auditing depend on the Linux platform you use:
 
   - **NIC 2** - This NIC handles traffic to your on-premises resources and should be on your private internal network without network segmentation.
 
-- **Ensure cloud-based Linux VMs can access your on-premises network**: If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](../../intune-service/protect/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
+- **Ensure cloud-based Linux VMs can access your on-premises network**: If you run Linux as a VM in a cloud, ensure the server can access your on-premises network. For example, for a VM in Azure, you can use [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) or something similar to provide access. Azure ExpressRoute isn't necessary when you run the server in a VM on-premises.
 
 - **Load balancers** *(Optional)*: If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
@@ -366,7 +366,7 @@ The following details can help you configure an internal proxy when using Podman
 
   Example of the results of the port check command. In this example, the proxy uses 3128 and isn't listed:
 
-  :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-selinux-ports.png" alt-text="Screen shot that displays the results of the port check.":::
+  :::image type="content" source="./media/prerequisites/check-selinux-ports.png" alt-text="Screen shot that displays the results of the port check.":::
 
   - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can continue with the Tunnel Gateway install process.
   - If your proxy does't run on a SELinux port for **http_port_t** as in the preceding example, you must make extra configurations.
@@ -375,19 +375,19 @@ The following details can help you configure an internal proxy when using Podman
 
     Example of the results of checking for a service that might use the port:
 
-    :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-service.png" alt-text="Screen shot that displays the results of the service check.":::
+    :::image type="content" source="./media/prerequisites/check-service.png" alt-text="Screen shot that displays the results of the service check.":::
 
     - In the example, the port we expect (3128) is used by *squid*, which happens to be an OSS proxy service. Squid proxy SELinux policies are part of many common distributions. Because *squid* uses port 3128 (our example port), we must modify the **http_port_t** ports and add port 3128 to be allowed via SELinux for the proxy used by Tunnel. To modify the port use, run the following command: `sudo semanage port -m -t http_port_t -p tcp "your proxy port"`
 
       Example of the command to modify the port:
 
-      :::image type="content" source="./media/microsoft-tunnel-prerequisites/modify-port.png" alt-text="Screen shot that shows an example of the port modification command.":::
+      :::image type="content" source="./media/prerequisites/modify-port.png" alt-text="Screen shot that shows an example of the port modification command.":::
 
       After running the command to change the port, run the following command to check if the port is used by another service: `sudo semanage port -l | grep "your proxy port"`
 
       Example of the command to check the port after modifying the port:
 
-      :::image type="content" source="./media/microsoft-tunnel-prerequisites/review-results-for-port.png" alt-text="Screen shot of checking the port after modification.":::
+      :::image type="content" source="./media/prerequisites/review-results-for-port.png" alt-text="Screen shot of checking the port after modification.":::
 
       In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp "your proxy port"`
 
@@ -430,7 +430,7 @@ To manage the Microsoft Tunnel, users must have permissions that are included in
 
 While configuring a role, on the **Permissions** page, expand **Microsoft Tunnel Gateway** and then select the permissions you want to grant.
 
-:::image type="content" source="./media/microsoft-tunnel-prerequisites/microsoft-tunnel-gateway-permissions.png" alt-text="Screen shot of the tunnel gateway permissions in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/prerequisites/microsoft-tunnel-gateway-permissions.png" alt-text="Screen shot of the tunnel gateway permissions in the Microsoft Intune admin center.":::
 
 The Microsoft Tunnel Gateway permissions group grants the following permissions:
 

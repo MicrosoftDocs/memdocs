@@ -63,7 +63,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
    > [!NOTE]
    > By default, each VPN session stays active for only 3,600 seconds (one hour) before it disconnects (a new session is established immediately in case the client is set to use Always On VPN).
    >
-   > However, you can modify the session timeout value along with other server configuration settings by using [graph calls (microsoftTunnelConfiguration)](../../intune-service/protect/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration) For more information, see [Change the Tunnel Servers VPN session timeout](#change-the-tunnel-servers-vpn-session-timeout) later in this article.
+   > However, you can modify the session timeout value along with other server configuration settings by using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration) For more information, see [Change the Tunnel Servers VPN session timeout](#change-the-tunnel-servers-vpn-session-timeout) later in this article.
 
 ## Create a Site
 
@@ -253,7 +253,7 @@ By default, the Tunnel Server VPN session persists for an hour. You can use the 
 
 ### Prerequisites
 
-Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](../../intune-service/protect/powershell/microsoftgraph/installation) in the PowerShell documentation.
+Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* on a Windows machine. For more information on this prerequisite, see [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation) in the PowerShell documentation.
 
 
 ### PowerShell commands to change the VPN session timeout
@@ -407,7 +407,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 > 4. Optionally, you can add a URL to the *But only if this URL probe succeeds* field.
 > 5. Select **Save**.
 >
-> :::image type="content" source="./media/microsoft-tunnel-configure/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
+> :::image type="content" source="./media/install/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
 
 ### Use a proxy exclusion list for Android Enterprise
 
@@ -442,7 +442,7 @@ While on the Configuration settings page after you set the Connection type to Mi
    - Select **Export** to export the current exclusion list from this profile, in CSV file format.
 3. Select **OK** to save your proxy exclusion list configuration, and continue editing the VPN profile.
 
-   :::image type="content" source="./media/microsoft-tunnel-configure/proxy-exclusions.png" alt-text="Screen shot of the proxy exclusion list pane in the Intune admin center.":::
+   :::image type="content" source="./media/install/proxy-exclusions.png" alt-text="Screen shot of the proxy exclusion list pane in the Intune admin center.":::
 
 ## Use custom settings for Microsoft Defender for Endpoint
 
@@ -464,7 +464,7 @@ Use the following information to configure the custom settings in a VPN profile 
 | antiphishing      | Integer | Options: </br> 1 - Enable (default) </br> 0 - Disable | Set to *Enable* to turn on Microsoft Defender for Endpoint anti-phishing. When disabled, the anti-phishing capability is turned off.   |
 | defendertoggle    | Integer | Options: </br> 1 - Enable (default) </br> 0 - Disable | Set to *Enable* to use Microsoft Defender for Endpoint. When disabled, no Microsoft Defender for Endpoint functionality is available.   |
 
-:::image type="content" source="./media/microsoft-tunnel-configure/custom-settings.png" alt-text="Configure custom settings in the VPN profile for Microsoft Defender for Endpoint":::
+:::image type="content" source="./media/install/custom-settings.png" alt-text="Configure custom settings in the VPN profile for Microsoft Defender for Endpoint":::
 
 **For iOS/iPad devices**:
 

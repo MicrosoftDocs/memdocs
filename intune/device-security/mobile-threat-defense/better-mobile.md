@@ -62,11 +62,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 Block when malicious apps are detected:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/better-mobile/better-mobile-maliciousapps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-maliciousapps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/better-mobile/better-mobile-maliciousapps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -74,11 +74,11 @@ Detect threats to your network like **Man-in-the-middle** attacks, and protect a
 
 Block network access through Wi-Fi:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/better-mobile/better-mobile-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/better-mobile/better-mobile-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -86,21 +86,21 @@ Detect threats to your network like **Man-in-the-middle** attacks, and prevent s
 
 Block SharePoint Online when network threats are detected:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/better-mobile/better-mobile-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 Access granted on remediation:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/better-mobile/better-mobile-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control  access on unenrolled devices based on threats from malicious apps
 
 When the BETTER Mobile Threat Defense solution considers a device to be infected:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
+:::image type="content" source="./media/better-mobile/better-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/better-mobile-threat-defense-connector/better-mobile-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
+:::image type="content" source="./media/better-mobile/better-mobile-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

@@ -77,4 +77,4 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 
 - [Deployment guide for Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
 - [Protect data and devices with Microsoft Intune](../../device-security/index.md)
-- [Configure Microsoft Entra for increased security (Preview)](../../intune-service/protect/entra/fundamentals/configure-security)
+- [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)

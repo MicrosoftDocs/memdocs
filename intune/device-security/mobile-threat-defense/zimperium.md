@@ -58,11 +58,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/maliciousapps-blocked-zimperium.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/zimperium/maliciousapps-blocked-zimperium.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/zimperium/maliciousapps-unblocked-zimperium.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -70,11 +70,11 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 *Block network access through Wi-Fi:*
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/zimperium/network-wifi-blocked-zimperium.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/zimperium/network-wifi-unblocked-zimperium.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -82,21 +82,21 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 *Block SharePoint Online when network threats are detected:*
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/zimperium/network-spo-blocked-zimperium.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/zimperium/network-spo-unblocked-zimperium.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Zimperium Mobile Threat Defense solution considers a device to be infected:
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
+:::image type="content" source="./media/zimperium/zimperium-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png" alt-text="Product flow for App protection policies to grant access after malware is remediated.":::
+:::image type="content" source="./media/zimperium/zimperium-mobile-app-policy-remediated.png" alt-text="Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Related content
 

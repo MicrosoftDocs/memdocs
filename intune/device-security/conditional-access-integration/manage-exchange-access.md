@@ -39,4 +39,4 @@ You have used app-based Conditional Access to increase the security of company d
 - Setting up app protection policies to help you protect your company data against intentional or unintentional data leaks.
 - Use of Azure Information Protection to protect company data outside your network.
 
-Want help with enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Microsoft Entra ID P1, use your [FastTrack benefits](../../intune-service/protect/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Want help with enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Microsoft Entra ID P1, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

@@ -38,11 +38,11 @@ After you deploy custom compliance settings and devices report back, you can vie
 
 - **Microsoft Entra joined** devices, *including* Microsoft Entra hybrid joined devices.
 
-  Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](../../intune-service/protect/azure/active-directory/devices/hybrid-azuread-join-plan).
+  Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 - **Microsoft Entra registered/Workplace joined (WPJ)**
 
-  For information about devices [registered](../../intune-service/protect/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](../../intune-service/protect/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
+  For information about devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
 
   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored.
 

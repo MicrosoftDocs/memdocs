@@ -55,7 +55,7 @@ Find out what you need to manage Intune security baselines.
 
   > [!TIP]
   >
-  > Intune provides an easy-to-use user interface to configure and deploy security baselines but doesn't create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](../../intune-service/protect/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
+  > Intune provides an easy-to-use user interface to configure and deploy security baselines but doesn't create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
 
 - Use of baselines through Intune requires you to have an active subscription for the managed product, when applicable. For example, use of the Microsoft Defender for Endpoint baseline doesn't grant rights to use Microsoft Defender. Instead, the baseline provides a method to configure and manage settings that are present on devices that are licensed for and managed by Microsoft Defender for Endpoint.
 
@@ -230,7 +230,7 @@ With the information from an export, you can rapidly reconfigure the new baselin
 
    The following screenshot displays a view of the *Security Baseline for Microsoft Edge*. We have two profiles at this time. One is a new profile for Microsoft Edge v112, and the other is an older profile from September 2020. The older profile also displays an arrow icon to indicate that there's a newer version to replace it.
 
-   :::image type="content" source="./media/security-baselines-configure/select-a-baseline-profile-to-update.png" alt-text="Screen shot that shows the navigation path in the Intune admin center, to open the Change Version pane." lightbox="./media/security-baselines-configure/select-a-baseline-profile-to-update.png":::
+   :::image type="content" source="./media/configure-baselines/select-a-baseline-profile-to-update.png" alt-text="Screen shot that shows the navigation path in the Intune admin center, to open the Change Version pane." lightbox="./media/configure-baselines/select-a-baseline-profile-to-update.png":::
 
 2. On the *Change Version* pane, there are instructions for moving the configuration details from the older baseline to a profile that uses the new format. The pane also identifies the selected baselines name and version, and what the latest baseline version is.
 
@@ -242,7 +242,7 @@ With the information from an export, you can rapidly reconfigure the new baselin
 
    The following screen capture shows an export for the Microsoft Edge profile version 85, as viewed in Microsoft Excel. Of the new Microsoft Edge baselines 17 settings that were found in the older profile, only one setting is changed: **Enable site isolation for every site** was set to **Disabled** in the older baseline. In the newer baseline, the setting now defaults to **Enabled**:
 
-   :::image type="content" source="./media/security-baselines-configure/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/security-baselines-configure/csv-export-of-baseline-configuration.png":::
+   :::image type="content" source="./media/configure-baselines/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/configure-baselines/csv-export-of-baseline-configuration.png":::
 
    In the preceding image, there are three columns of information. The information identifies the settings in the old profile, and the configuration for each of them that you had in the old profile.
 
@@ -310,7 +310,7 @@ Before you update the version of a profile that has assigned groups, [test the v
 
 3. Next, select **Profiles**, and then select the check box for the profile you want to edit, and then select **Change Version**.
 
-   :::image type="content" source="./media/security-baselines-configure/select-baseline.png" alt-text="Screen capture that shows selection of a baseline.":::
+   :::image type="content" source="./media/configure-baselines/select-baseline.png" alt-text="Screen capture that shows selection of a baseline.":::
 
 4. On the **Change Version** pane, use the **Select a security baseline to update to** dropdown, and select the version instance you want to use.
 
@@ -376,9 +376,9 @@ If you have a baseline profile associated with an older baseline version in use,
 
 ## Co-managed devices
 
-Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](../../intune-service/protect/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
 
-When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](../../intune-service/protect/configmgr/comanage/workloads#device-configuration) provides more information.
+When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
 
 ## Next steps
 

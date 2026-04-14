@@ -77,7 +77,7 @@ Your policy can be up to 100 KB and include 100 rules.
 - zh_CN
 - zh_TW
 
-For more information, see [Available languages for Windows](../../intune-service/protect/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
+For more information, see [Available languages for Windows](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
 
 ## Example JSON file
 

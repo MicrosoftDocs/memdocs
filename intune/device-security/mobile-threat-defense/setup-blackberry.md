@@ -50,7 +50,7 @@ The following authorization process happens when you connect the BlackBerry Prot
 
 - Allow BlackBerry Protect app to sign in using Microsoft Entra SSO.
 
-For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](../../intune-service/protect/azure/active-directory/develop/v2-permissions-and-consent).
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/v2-permissions-and-consent).
 
 ## Set up BlackBerry Protect Mobile MTD connector
 

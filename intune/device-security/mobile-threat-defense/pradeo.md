@@ -52,11 +52,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/pradeo/pradeo-maliciousapps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/pradeo/pradeo-maliciousapps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -64,11 +64,11 @@ Detect threats to your network like **Man-in-the-middle** attacks, and protect a
 
 *Block network access through Wi-Fi:*
 
-:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/pradeo/pradeo-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/pradeo/pradeo-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -76,11 +76,11 @@ Detect threats to your network like **Man-in-the-middle** attacks, and prevent s
 
 *Block SharePoint Online when network threats are detected:*
 
-:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/pradeo/pradeo-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/pradeo/pradeo-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ## Next steps
 

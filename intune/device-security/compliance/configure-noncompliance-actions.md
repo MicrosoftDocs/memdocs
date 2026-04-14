@@ -22,7 +22,7 @@ As part of a [compliance policy](./overview.md) that protects your organizations
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliant, Microsoft Entra [Conditional Access](../../intune-service/protect/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliant, Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
@@ -31,7 +31,7 @@ For each action you set, you can configure a schedule that determines when that 
 Not all actions are available for all platforms.
 
    > [!NOTE]
-   > The Microsoft Intune admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](../../intune-service/protect/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
+   > The Microsoft Intune admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
 
 ## Available actions for noncompliance
 
@@ -134,7 +134,7 @@ Following are the available actions for noncompliance:
 
 You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add extra actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
 
-To use device compliance policies to block devices from corporate resources, Microsoft Entra Conditional Access must be set up. See [Conditional Access in Microsoft Entra ID](../../intune-service/protect/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](../conditional-access-integration/scenarios.md) for guidance.
+To use device compliance policies to block devices from corporate resources, Microsoft Entra Conditional Access must be set up. See [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](../conditional-access-integration/scenarios.md) for guidance.
 
 To create a device compliance policy, see the following platform-specific guidance:
 

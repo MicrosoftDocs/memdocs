@@ -119,8 +119,8 @@ For more information about using Conditional Access with your device compliance 
 
 Learn more about Conditional Access in the Microsoft Entra documentation:
 
-- [What is Conditional Access](../../intune-service/protect/azure/active-directory/conditional-access/overview)
-- [What is a device identity](../../intune-service/protect/azure/active-directory/device-management-introduction)
+- [What is Conditional Access](/azure/active-directory/conditional-access/overview)
+- [What is a device identity](/azure/active-directory/device-management-introduction)
 
 ### Reference for noncompliance and Conditional Access on the different platforms
 

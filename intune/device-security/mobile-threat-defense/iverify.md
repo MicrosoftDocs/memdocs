@@ -60,19 +60,19 @@ When iVerify detects a threat to the operating system, such as a zero-click atta
 - Accessing company Line-of-Business (LOB) apps
 - Blocking access to corporate networks
 
-:::image type="content" source="./media/iverify-mobile-threat-defense-connector/iverify-malicious-access-blocked.png" alt-text="Diagram of product flow for blocking threats to the device operating system."::: 
+:::image type="content" source="./media/iverify/iverify-malicious-access-blocked.png" alt-text="Diagram of product flow for blocking threats to the device operating system."::: 
 
  ### Control access based on threats from malicious applications
 
 When an application behaves in a malicious way, such as stealing credentials or accessing sensitive APIs, you can block device access until the threat is resolved.
 
-:::image type="content" source="./media/iverify-mobile-threat-defense-connector/iverify-malicious-apps-blocked.png" alt-text="Diagram of product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/iverify/iverify-malicious-apps-blocked.png" alt-text="Diagram of product flow for blocking access due to malicious apps.":::
 
 ### Control access based on network threats
 
 You can detect threats like Man-in-the-Middle (MiTM) attacks, malicious SSL certificates, or malicious cellular networks and protect access to corporate data based on the device's network security risk.
 
-:::image type="content" source="./media/iverify-mobile-threat-defense-connector/iverify-network-wifi-blocked.png" alt-text="Diagram of product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/iverify/iverify-network-wifi-blocked.png" alt-text="Diagram of product flow for blocking access to the organizations files due to an alert.":::
 
 ## Related content
 

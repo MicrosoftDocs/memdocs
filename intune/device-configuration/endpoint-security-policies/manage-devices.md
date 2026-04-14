@@ -17,7 +17,7 @@ As a security administrator, use the *All devices* view in the Microsoft Intune 
 
 - Intune
 - Configuration Manager
-- [Co-management](../../intune-service/protect/configmgr/comanage/overview) *(by both Intune and Configuration Manager)*
+- [Co-management](/configmgr/comanage/overview) *(by both Intune and Configuration Manager)*
 - [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md) *(for devices that aren't enrolled with Intune)*
 
 Devices can be in the cloud and from your on-premises infrastructure when integrated with your Microsoft Entra ID.
@@ -32,7 +32,7 @@ The initial *All devices* view displays your devices and includes key informatio
 - When the device last checked in
 - And more
 
-:::image type="content" source="./media/endpoint-security-manage-devices/all-device-view.png" alt-text="The all device view in the admin center." lightbox="./media/endpoint-security-manage-devices/all-device-view.png":::
+:::image type="content" source="./media/manage-devices/all-device-view.png" alt-text="The all device view in the admin center." lightbox="./media/manage-devices/all-device-view.png":::
 
 While viewing device details, you can select a device to drill-in for more information.
 
@@ -54,11 +54,11 @@ Consider the following fields:
 
     Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Intune admin center.
 
-    For more information, see [Enable tenant attach](../../intune-service/protect/configmgr/tenant-attach/device-sync-actions) in the Configuration Manager documentation.
+    For more information, see [Enable tenant attach](/configmgr/tenant-attach/device-sync-actions) in the Configuration Manager documentation.
 
   - **MDM/ConfigMgr Agent** – These devices are under co-management between Intune and Configuration Manager.
 
-    With co-management, you [choose different co-management workloads](../../intune-service/protect/configmgr/comanage/how-to-switch-workloads) to determine which aspects are managed by Configuration Manager or by Intune. These choices affect which policies the device applies, and how compliance data is reported to the admin center.
+    With co-management, you [choose different co-management workloads](/configmgr/comanage/how-to-switch-workloads) to determine which aspects are managed by Configuration Manager or by Intune. These choices affect which policies the device applies, and how compliance data is reported to the admin center.
 
     For example, you can use Intune to configure policies for Antivirus, Firewall, and Encryption. These policies are all considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
 

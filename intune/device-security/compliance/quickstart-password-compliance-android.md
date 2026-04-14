@@ -62,7 +62,7 @@ Create a device compliance policy that requires your Android users to enter a pa
    - For **Required password type**, select **At least numeric**.
    - For **Minimum password length**, enter **6**.
 
-    :::image type="content" source="./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png" alt-text="Screenshot of Microsoft Intune admin center showing Compliance settings for Android with password requirements highlighted." lightbox="./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png":::
+    :::image type="content" source="./media/quickstart-password-compliance-android/quickstart-set-password-length-android-01.png" alt-text="Screenshot of Microsoft Intune admin center showing Compliance settings for Android with password requirements highlighted." lightbox="./media/quickstart-password-compliance-android/quickstart-set-password-length-android-01.png":::
 
 1. On the **Assignments**, you can optionally assign the policy to the user or group you created in [Step 2 - Create a user and assign a license](../../intune-service/fundamentals/quickstart-create-user.md) and [Step 3 - Create a group](../../intune-service/fundamentals/quickstart-create-group.md) evaluation steps.
 

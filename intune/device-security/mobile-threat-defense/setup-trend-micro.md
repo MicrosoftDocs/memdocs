@@ -42,7 +42,7 @@ The following authorization process happens when you configure the integration w
 - Allow Trend Micro Mobile Security as a Service to create device configuration profiles.
 - Allow Trend Micro Mobile Security as a Service to perform remote actions when necessary.
 
-For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](../../intune-service/protect/azure/active-directory/develop/v2-permissions-and-consent).
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/v2-permissions-and-consent).
 
 ## Configuration Overview
 

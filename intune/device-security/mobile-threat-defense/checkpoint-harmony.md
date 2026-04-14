@@ -52,11 +52,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/checkpoint-harmony/checkpoint-mtd-2.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/checkpoint-harmony/checkpoint-mtd-3.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -64,11 +64,11 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 *Block network access through Wi-Fi:*
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/checkpoint-harmony/checkpoint-mtd-4.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/checkpoint-harmony/checkpoint-mtd-5.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -76,21 +76,21 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 *Block SharePoint Online when network threats are detected:*
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/checkpoint-harmony/checkpoint-mtd-6.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/checkpoint-harmony/checkpoint-mtd-7.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Check Point Harmony Mobile Threat Defense solution considers a device to be infected:
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/harmony-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
+:::image type="content" source="./media/checkpoint-harmony/harmony-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/harmony-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
+:::image type="content" source="./media/checkpoint-harmony/harmony-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

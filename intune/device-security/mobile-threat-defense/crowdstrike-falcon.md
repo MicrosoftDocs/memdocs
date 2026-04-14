@@ -52,11 +52,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-:::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
+:::image type="content" source="./media/crowdstrike-falcon/crowdstrike-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/crowdstrike-falcon/crowdstrike-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -64,11 +64,11 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 *Block network access through Wi-Fi:*
 
-:::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+:::image type="content" source="./media/crowdstrike-falcon/crowdstrike-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
+:::image type="content" source="./media/crowdstrike-falcon/crowdstrike-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -76,11 +76,11 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 *Block SharePoint Online when network threats are detected:*
 
-:::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
+:::image type="content" source="./media/crowdstrike-falcon/crowdstrike-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/crowdstrike-falcon-defense-connector/crowdstrike-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/crowdstrike-falcon/crowdstrike-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ## Related content
 

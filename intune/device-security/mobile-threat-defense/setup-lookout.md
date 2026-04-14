@@ -42,7 +42,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
 2. Go to **Microsoft Entra ID** > **Properties** and locate your **Tenant ID**. Use the *Copy* button to copy the Directory ID, and then save it in a text file.
 
-   :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-properties.png"alt-text="Microsoft Entra ID":::
+   :::image type="content" source="./media/setup-lookout/azure-ad-properties.png"alt-text="Microsoft Entra ID":::
 
 3. Next, find the Microsoft Entra group ID for the accounts you use to grant Microsoft Entra users access to the Lookout Console. One group is for *full access*, and the second group, for *restricted access* is optional. To get the *Object ID*, for each account:
 
@@ -54,7 +54,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
    4. Repeat the process for the *restricted access* group if you use that group.
 
-      :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-group-id.png" alt-text="Microsoft Entra group Object ID":::
+      :::image type="content" source="./media/setup-lookout/azure-ad-group-id.png" alt-text="Microsoft Entra group Object ID":::
 
    After you gather this information, contact Lookout support. Lookout Support works with your primary contact to onboard your subscription and create your Lookout Enterprise account, using the information that you provide.
 

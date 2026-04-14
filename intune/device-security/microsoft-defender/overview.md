@@ -54,7 +54,7 @@ To configure this integration end-to-end, you need permissions to manage the Int
 You can add these permissions to a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md), or use the built-in **Endpoint Security Manager** role, which is the least-privileged built-in Intune role that includes all required permissions. For details, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 > [!NOTE]
-> Conditional Access policies are configured in Microsoft Entra ID and require a separate Entra ID role, such as [Conditional Access Administrator](../../intune-service/protect/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
+> Conditional Access policies are configured in Microsoft Entra ID and require a separate Entra ID role, such as [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
 
 ### Intune requirements
 
@@ -74,7 +74,7 @@ For licensing options, see [Microsoft Intune licensing](../../fundamentals/licen
 
 **Subscription**: Microsoft Defender for Endpoint subscription provides access to the [Microsoft Defender XDR portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
-For licensing and system requirements, see [Minimum requirements for Microsoft Defender for Endpoint](../../intune-service/protect/defender-endpoint/minimum-requirements).
+For licensing and system requirements, see [Minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements).
 
 ## Example: Automatic threat containment
 
@@ -91,7 +91,7 @@ Different platforms offer unique configuration options when integrating with Mic
 
 **Android**: Deploy Defender for Endpoint to Android devices through Managed Google Play using Intune app deployment and app configuration policies. See [Deploy Microsoft Defender for Endpoint on Android](./deploy-android.md) for the complete deployment guide. After deployment, use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](./configure-web-protection-android.md) settings, including the ability to enable or disable VPN-based scanning.
 
-**iOS/iPadOS**: Enable [vulnerability assessment of apps](../../intune-service/protect/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps) to allow Defender to scan installed apps for known vulnerabilities.
+**iOS/iPadOS**: Enable [vulnerability assessment of apps](/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps) to allow Defender to scan installed apps for known vulnerabilities.
 
 **Windows**: Benefit from automatic onboarding capabilities and use [Microsoft Defender for Endpoint security baselines](../security-baselines/overview.md) for comprehensive, prescriptive security configurations.
 
@@ -109,5 +109,5 @@ Different platforms offer unique configuration options when integrating with Mic
 
 **Microsoft Defender for Endpoint resources**:
 
-- [Microsoft Defender for Endpoint Conditional Access](../../intune-service/protect/defender-endpoint/conditional-access)
-- [Microsoft Defender XDR portal](../../intune-service/protect/defender-xdr/microsoft-365-defender-portal)
+- [Microsoft Defender for Endpoint Conditional Access](/defender-endpoint/conditional-access)
+- [Microsoft Defender XDR portal](/defender-xdr/microsoft-365-defender-portal)

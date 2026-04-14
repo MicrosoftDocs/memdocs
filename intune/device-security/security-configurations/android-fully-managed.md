@@ -13,7 +13,7 @@ ms.collection:
 
 # Android Enterprise fully managed device security configuration examples
 
-In support of the [Microsoft Zero Trust security model](../../intune-service/protect/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations to use with Microsoft Intune to configure both device compliance policy and device restriction policy for Android Enterprise fully managed mobile users. These examples include levels of device security configuration that align with Zero Trust principles.
+In support of the [Microsoft Zero Trust security model](/security/zero-trust/zero-trust-identity-device-access-policies-common), this article provides example configurations to use with Microsoft Intune to configure both device compliance policy and device restriction policy for Android Enterprise fully managed mobile users. These examples include levels of device security configuration that align with Zero Trust principles.
 
 When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, implement a ring deployment approach for initial testing followed by production use.
 

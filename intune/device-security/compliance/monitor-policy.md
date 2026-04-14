@@ -61,7 +61,7 @@ You can access the device compliance dashboard in the [Microsoft Intune admin ce
 - [Policy compliance](../../intune-service/fundamentals/reports.md#policy-compliance-report-organizational) (Link opens the *Intune reports* article)
 - [Setting compliance](../../intune-service/fundamentals/reports.md#settings-compliance--organizational) (Link opens the *Intune reports* article)
 
-<!-- outdated image, need to replace. :::image type="content" source="./media/compliance-policy-monitor/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab."::: -->
+<!-- outdated image, need to replace. :::image type="content" source="./media/monitor-policy/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab."::: -->
 
 ### Device compliance status
 
@@ -90,7 +90,7 @@ The tile displays a count of devices for each of the following categories:
 
 The **Devices without compliance policy** tile displays a count of devices that don't have any compliance policies assigned. The tile name is often truncated in the admin center view as this tile displays only a count of devices:
 
-:::image type="content" source="./media/compliance-policy-monitor/devices-without-compliance-policy-tile.png" alt-text="Image of the Devices without compliance policy tile.":::
+:::image type="content" source="./media/monitor-policy/devices-without-compliance-policy-tile.png" alt-text="Image of the Devices without compliance policy tile.":::
 
 If you select this tile, Intune displays a *Device status* view that lists each device that doesn’t have a compliance policy. This view includes the *Device* name, the *User Principal Name* associated with the device, the devices compliance *Status*, and the *Device model*.
 
@@ -107,7 +107,7 @@ By default, when you select a policy Intune opens the Monitor tab for that polic
 - **View report** - A button you can select that opens the device status report where you can view deeper details about device compliance to this policy.
 - **Per-setting status** - A tile you can select that opens the per-setting status report for this policy.
 
-:::image type="content" source="./media/compliance-policy-monitor/select-compliance-policy.png" alt-text="View of the Intune admin center after selecting a compliance policy. ":::
+:::image type="content" source="./media/monitor-policy/select-compliance-policy.png" alt-text="View of the Intune admin center after selecting a compliance policy. ":::
 
 > [!TIP]
 > The Properties tab shows essential information about the policy such as name and platform type. It also includes information about the configuration of each setting in that policy. From this tab, you can edit policy details such as settings and assignments.
@@ -131,7 +131,7 @@ To view more details, you can select the **View report** button.
 
 When you select the *View report* button on the device status view of a policy, Intune displays a more detailed view of the device status for that policy.
 
-:::image type="content" source="./media/compliance-policy-monitor/view-report-for-compliance-policy.png" alt-text="View of the detailed device status report, after selecting the View report button in the Intune admin center.":::
+:::image type="content" source="./media/monitor-policy/view-report-for-compliance-policy.png" alt-text="View of the detailed device status report, after selecting the View report button in the Intune admin center.":::
 
 By default, the report view displays details for the following, though you can add more columns of detail to the view:
 
@@ -149,7 +149,7 @@ In this report view:
 
  For example, in the previous policy report view, when we enter a search string of **st1** which appears in both the *Device name* and *Logged in user* columns. The resulting view displays both devices that contain *st1* as well as each device associated with the user with *st1* in their user name:
 
- :::image type="content" source="./media/compliance-policy-monitor/filtered-search-results.png" alt-text="A screen capture that shows filtered search results for the device status report view.":::
+ :::image type="content" source="./media/monitor-policy/filtered-search-results.png" alt-text="A screen capture that shows filtered search results for the device status report view.":::
 
 ### Per-setting status
 
@@ -157,11 +157,11 @@ After selecting a compliance policy, you can select the *Per-setting status* til
 
 The following image displays a per-setting view of a policy for Android devices. This policy includes one setting and was deployed to four devices, all of which are compliant to that setting. In this view, you can sort by selecting a column, or using search:
 
-:::image type="content" source="./media/compliance-policy-monitor/view-report-for-per-setting-status.png" alt-text="Screen shot that shows the detailed per-setting status report, after selecting the View report button in the Intune admin center.":::
+:::image type="content" source="./media/monitor-policy/view-report-for-per-setting-status.png" alt-text="Screen shot that shows the detailed per-setting status report, after selecting the View report button in the Intune admin center.":::
 
 From the per-setting view, you can select the device count from any status column to open a view with more details for that specific setting and status. The following image displays the results of having selected the number **4** from the **Compliant devices** column"
 
-:::image type="content" source="./media/compliance-policy-monitor/per-status-drill-in.png" alt-text="Screen shot that displays the results of drilling into a per-setting status result to view details for devices that have reported that status.":::
+:::image type="content" source="./media/monitor-policy/per-status-drill-in.png" alt-text="Screen shot that displays the results of drilling into a per-setting status result to view details for devices that have reported that status.":::
 
 In the screenshot we see there are four entries for the selected setting, with each entry representing a distinct device. This count of devices matches the initial count on the initial per-status view.
 
