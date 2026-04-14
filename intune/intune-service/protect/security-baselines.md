@@ -3,7 +3,7 @@ title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/03/2026
+ms.date: 04/27/2026
 ms.topic: overview
 ms.reviewer: juidaewo
   - intune-azure
@@ -99,6 +99,7 @@ The following security baseline instances are available for use with Intune. Use
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:
+  - [Microsoft Edge version 139](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v139) - April 2026
   - [Microsoft Edge version 128](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v128) - January 2025
   - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
   - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
