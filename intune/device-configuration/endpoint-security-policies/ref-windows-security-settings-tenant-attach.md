@@ -17,7 +17,7 @@ ms.reviewer: mattcall
 
 View the Windows Security experience settings you can manage with the **Windows Security experience (preview)** profile from Intune.
 
-The profile is available when you configure [Intune Endpoint security Antivirus policy](./antivirus-policy.md). This profile supports devices you manage with Configuration Manager after configuring the [tenant attach](../../fundamentals/tenant-attach.md) scenario for Intune.
+The profile is available when you configure [Intune Endpoint security Antivirus policy](./antivirus.md). This profile supports devices you manage with Configuration Manager after configuring the [tenant attach](../../fundamentals/tenant-attach.md) scenario for Intune.
 
 ## Windows Security
 

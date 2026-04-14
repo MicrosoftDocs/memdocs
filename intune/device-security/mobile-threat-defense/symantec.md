@@ -116,7 +116,7 @@ Here are the steps you need to complete to integrate Intune with SEP Mobile:
 
 - [Set up SEP Mobile integration with Intune](./setup-symantec.md)
 
-- [Add and assign SEP Mobile apps, Microsoft Authenticator and iOS/iPadOS app configuration policy](./add-assign-apps.md)
+- [Add and assign SEP Mobile apps, Microsoft Authenticator and iOS/iPadOS app configuration policy](./assign-apps.md)
 
 - [Create SEP Mobile device compliance policy with Intune](./create-compliance-policy.md)
 

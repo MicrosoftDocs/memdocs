@@ -52,7 +52,7 @@ We're fixing how scope tags work with Endpoint Privilege Management (EPM) report
 
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../../epm/support-approved.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../../epm/manage-support-approvals.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
@@ -283,7 +283,7 @@ For information about the currently available Intune security baselines, see [Se
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md) capability.
 
-- **Device control** policies are part of endpoint security [Attack surface reduction policy](../../device-configuration/endpoint-security-policies/attack-surface-reduction-policy.md).
+- **Device control** policies are part of endpoint security [Attack surface reduction policy](../../device-configuration/endpoint-security-policies/attack-surface-reduction.md).
 
 > [!div class="checklist"]
 > Applies to the following when you use the *Windows* platform:

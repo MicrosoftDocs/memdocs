@@ -35,7 +35,7 @@ For Android and iOS/iPadOS The SentinelOne app captures file system, network sta
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from SentinelOne. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the SentinelOne app installed in their devices to resolve the issue and regain access to corporate resources. To support using SentinelOne with enrolled devices:
 
-  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Add MTD apps to devices](./assign-apps.md)
   - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
   - [Enable the MTD connector in Intune](./enable-connector.md)
 
@@ -103,7 +103,7 @@ When the sentinelone Mobile Threat Defense solution considers a device to be inf
 
 - [Integrate sentinelone with Intune](./setup-sentinelone.md)
 
-- [Set up sentinelone apps](./add-assign-apps.md)
+- [Set up sentinelone apps](./assign-apps.md)
 
 - [Create sentinelone device compliance policy](./create-compliance-policy.md)
 

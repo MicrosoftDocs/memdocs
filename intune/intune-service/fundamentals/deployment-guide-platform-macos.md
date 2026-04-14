@@ -89,7 +89,7 @@ Use the Intune endpoint security features to configure device security and to ma
 | ---- | ------ |
 |[Manage devices with endpoint security features](../../device-configuration/endpoint-security-policies/manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
 |[Use Conditional Access to limit access to Microsoft Tunnel](../../device-security/microsoft-tunnel/conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. |
-|[Add endpoint protection settings](../../device-security/microsoft-tunnel/conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../../device-configuration/endpoint-security-policies/endpoint-protection-macos.md).   |
+|[Add endpoint protection settings](../../device-security/microsoft-tunnel/conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../../device-configuration/endpoint-security-policies/ref-endpoint-protection-macos.md).   |
 
 
 ## Set up secure authentication methods

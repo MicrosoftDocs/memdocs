@@ -79,8 +79,8 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | - [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus-policy.md) (Microsoft Defender for Endpoint) |
+| macOS | - [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus.md) (Microsoft Defender for Endpoint) |
 
 ### Detection and response
 
@@ -94,8 +94,8 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/edr-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/edr-policy.md) (Microsoft Defender for Endpoint) |
+| macOS | [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/deploy-edr.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/deploy-edr.md) (Microsoft Defender for Endpoint) |
 
 ### Firewall
 
@@ -109,8 +109,8 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) |
 | iOS/iPadOS | [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) |
-| macOS | [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall-policy.md) (Microsoft Defender for Endpoint) |
+| macOS | [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall.md) (Microsoft Defender for Endpoint) |
 
 ### Password policy
 

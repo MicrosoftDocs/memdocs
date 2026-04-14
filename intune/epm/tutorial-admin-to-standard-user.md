@@ -101,7 +101,7 @@ Detections are defined as the set of attributes used to identify an application 
 - Use strong attributes or multiple attributes to increase detection strength.
 - Either a file hash or certificate is mandatory.
 
-For more security recommendations, see [Security Recommendations](./plan.md#security-recommendations).
+For more security recommendations, see [Security Recommendations](./deployment-planning.md#security-recommendations).
 
 ### Steps to create a rule using elevation report data
 
@@ -123,7 +123,7 @@ For more security recommendations, see [Security Recommendations](./plan.md#secu
 12. Assign to a group (for example Developers)
 13. **Select**, **Review**, and **Save**
 
-For more details on creating a rule, see [Create elevation rules](./elevation-rules.md).
+For more details on creating a rule, see [Create elevation rules](./ref-elevation-rules.md).
 
 ### Confirm the rule is functioning
 
@@ -154,7 +154,7 @@ For more details on creating a rule, see [Create elevation rules](./elevation-ru
 8. Assign to a group (for example `Developers`)
 9. Select **Save**
 
-For more information on the Local Users and Groups profiles, see [Account protection](../device-configuration/endpoint-security-policies/account-protection-policy.md)
+For more information on the Local Users and Groups profiles, see [Account protection](../device-configuration/endpoint-security-policies/account-protection.md)
 
 ## Phase 5: Monitoring
 
@@ -169,4 +169,4 @@ For more information on the Local Users and Groups profiles, see [Account protec
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Support approved requests >](./support-approved.md)
+> [Next: Support approved requests >](./manage-support-approvals.md)

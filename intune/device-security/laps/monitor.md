@@ -24,7 +24,7 @@ You can use the LAPS policy report to view the configuration and assignments for
 
 To use the report, sign into the Intune admin center and navigate to the Account protection policy node. (**Endpoint security** > **Account protection**). Here you can view a list of all Account protection policies, including the policies for LAPS that use the *Local admin password solution (Windows LAPS)* profile. You can identify the profile by the *Policy type* column:
 
-:::image type="content" source="./media/reports/laps-policy-list.png" alt-text="Screen shot of the policy list for Account protection policies." lightbox="./media/reports/laps-policy-list.png":::
+:::image type="content" source="./media/monitor/laps-policy-list.png" alt-text="Screen shot of the policy list for Account protection policies." lightbox="./media/monitor/laps-policy-list.png":::
 
 When you select any row from the list of policies, Intune displays details for that policy that include:
 
@@ -44,7 +44,7 @@ When you select any row from the list of policies, Intune displays details for t
 
 The following image displays a policy instance named *LAPSSHTest*. We use this policy as we examine what you can learn by using the **View report** button to drill in for more information:
 
-:::image type="content" source="./media/reports/check-in-status.png" alt-text="Screen shot of the Device and user check-in status view for a Windows LAPS policy." lightbox="./media/reports/check-in-status.png":::
+:::image type="content" source="./media/monitor/check-in-status.png" alt-text="Screen shot of the Device and user check-in status view for a Windows LAPS policy." lightbox="./media/monitor/check-in-status.png":::
 
 While viewing the details for a policy, select the **View report** button to view a list that identifies each device that is assigned the policy. The device list includes the following information:
 
@@ -59,13 +59,13 @@ While viewing the details for a policy, select the **View report** button to vie
 
 In the following image, we see that our example policy is assigned to a single device. The view also shows that there's a conflict for the devices *Check-in status*:
 
-:::image type="content" source="./media/reports/view-report-details.png" alt-text="Screen shot of the list of devices that are assigned a Windows LAPS policy." lightbox="./media/reports/view-report-details.png":::
+:::image type="content" source="./media/monitor/view-report-details.png" alt-text="Screen shot of the list of devices that are assigned a Windows LAPS policy." lightbox="./media/monitor/view-report-details.png":::
 
 When you select the name of a device from the *Device name* column Intune displays details about the settings assigned to that device. In the following image, we see that the device we selected has two assigned settings. Of the twos settings, *Password Age Days* is identified as being in conflict per the Setting status column. When you select a setting from the setting name column, Intune opens the *Settings Details* pane where you can view details about that setting.
 
 In the following image, *Password Age Days* is selected so we can learn more about its conflict:
 
-:::image type="content" source="./media/reports/profile-settings.png" alt-text="Screen shot of settings from a LAPS policy, with the Settings Details pane." lightbox="./media/reports/profile-settings.png":::
+:::image type="content" source="./media/monitor/profile-settings.png" alt-text="Screen shot of settings from a LAPS policy, with the Settings Details pane." lightbox="./media/monitor/profile-settings.png":::
 
 The Settings Details pane shows us that the selected setting, *Password Age Days*, is configured through two profiles, one named *LAPSSHTest* (the profile we have been viewing), and the other named *Lapsshtestapril*.
 
@@ -85,4 +85,4 @@ For information about Microsoft Entra event logs, see [What are Microsoft Entra 
 
 - [Introduction to Intune policy for LAPS](./overview.md)
 - [Create policy for LAPS](./deploy-policy.md)
-- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection-policy.md)
+- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection.md)

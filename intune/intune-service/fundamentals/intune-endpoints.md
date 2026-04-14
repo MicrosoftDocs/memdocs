@@ -193,7 +193,7 @@ To support Endpoint Privilege Management, allow the following hostnames on tcp p
 For communication between clients and the cloud service:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
-- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../../epm/data-collection.md) to the Intune data collection endpoint.
+- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../../epm/ref-data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.

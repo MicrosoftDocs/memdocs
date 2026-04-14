@@ -11,7 +11,7 @@ ms.reviewer: laarrizz
 ---
 # Firewall policy settings for tenant attached devices in Microsoft Intune
 
-View the Microsoft Windows Firewall settings you can manage with the **Windows Firewall (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Firewall policy](./firewall-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../../fundamentals/tenant-attach.md) scenario.
+View the Microsoft Windows Firewall settings you can manage with the **Windows Firewall (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Firewall policy](./firewall.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../../fundamentals/tenant-attach.md) scenario.
 
 ## Windows Firewall
 
@@ -312,4 +312,4 @@ View the Microsoft Windows Firewall settings you can manage with the **Windows F
 
 ## Next steps
 
-[Endpoint security policy for firewalls](./firewall-policy.md)
+[Endpoint security policy for firewalls](./firewall.md)

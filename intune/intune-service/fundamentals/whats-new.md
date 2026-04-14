@@ -589,7 +589,7 @@ Device query for multiple devices now includes expanded operator support, cleare
 
 Endpoint Privilege Management (EPM) elevation policies now support deployment to users on Azure Virtual Desktop (AVD) single-session virtual machines.
 
-For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../../epm/plan.md).
+For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../../epm/deployment-planning.md).
 
 ### App management
 
@@ -974,7 +974,7 @@ For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
 
 #### Scope tag enforcement for Endpoint Privilege Management elevation requests<!-- 33479826  -->
 
-When viewing Endpoint Privilege Management [elevation requests](../../epm/support-approved.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
+When viewing Endpoint Privilege Management [elevation requests](../../epm/manage-support-approvals.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
 
@@ -1191,7 +1191,7 @@ Endpoint Privilege Management (EPM) has a new option for elevation rules that ru
 
 With the *Elevate as current user* elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to enter their credentials for Windows Authentication. This process supports multifactor authentication (MFA) for enhanced security.
 
-For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../../epm/plan.md#important-concepts-for-endpoint-privilege-management).
+For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../../epm/deployment-planning.md#important-concepts-for-endpoint-privilege-management).
 
 ####  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
 
@@ -1206,7 +1206,7 @@ Insights provided by the dashboard include:
 - Frequently approved by support
 - Frequently denied elevations
 
-For more information about the dashboard and these new insights, see [Overview dashboard](../../epm/reports.md#elevation-report-by-user) in Reports for Endpoint Privilege Management.
+For more information about the dashboard and these new insights, see [Overview dashboard](../../epm/monitor-reports.md#elevation-report-by-user) in Reports for Endpoint Privilege Management.
 
 ### Device configuration
 
@@ -1757,7 +1757,7 @@ Our Managed Installer policy is updated to add the capability to target individu
 
 If you previously had a tenant-wide managed installer policy in effect, that policy remains available with a group assignment to all your devices. This reconfiguration is equivalent to the previous tenant-wide configuration it had before. You can choose to use that converted policy or implement new policies with more granular control.
 
-For more information about configuring and using managed installers, see [Get started with managed installers](../../device-configuration/endpoint-security-policies/app-control-policy.md#get-started-with-managed-installers).
+For more information about configuring and using managed installers, see [Get started with managed installers](../../device-configuration/endpoint-security-policies/manage-app-control.md#get-started-with-managed-installers).
 
 > [!div class="checklist"]
 > Applies to:

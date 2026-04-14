@@ -27,7 +27,7 @@ Lookout's mobile app, **Lookout for work**, is installed and run on mobile devic
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Lookout for work. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Lookout for work app installed in their devices to resolve the issue and regain access to corporate resources. To support using Lookout for work with enrolled devices:
 
-  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Add MTD apps to devices](./assign-apps.md)
   - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
   - [Enable the MTD connector in Intune](./enable-connector.md)
 
@@ -113,6 +113,6 @@ Here are the main steps you must do to implement this solution:
 
 - [Set up your Lookout integration](./setup-lookout.md)
 - [Enable Mobile Endpoint Security in Intune](./enable-connector.md)
-- [Add and assign the Lookout for Work app](./add-assign-apps.md)
+- [Add and assign the Lookout for Work app](./assign-apps.md)
 - [Configure Lookout device compliance policy](./create-compliance-policy.md)
 - [Create an MTD app protection policy](./create-app-protection-policy.md)

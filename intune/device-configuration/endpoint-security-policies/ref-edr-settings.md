@@ -20,7 +20,7 @@ ms.reviewer: mattcall
 >
 > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Although you can no longer create a new instance of this older profile, you can continue to edit and use an existing instances of this profile. The settings details in this article apply only to the deprecated profiles.
 
-View the settings you can configure in profiles for [Endpoint detection and response policy](./edr-policy.md) in the endpoint security node of Intune.
+View the settings you can configure in profiles for [Endpoint detection and response policy](./deploy-edr.md) in the endpoint security node of Intune.
 
 Applies to:
 
@@ -89,4 +89,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for EDR](./edr-policy.md)
+[Endpoint security policy for EDR](./deploy-edr.md)

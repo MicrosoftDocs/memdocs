@@ -58,7 +58,7 @@ The EPM client is installed automatically when an *Elevation settings policy* is
 
 This diagram shows a high level architecture of how the EPM client is triggered, checks for rules and then facilitates elevation:
 
-:::image type="content" source="media/epm-overview/EPM-Elevation-Architecture.png" alt-text="A diagram representing how an EPM elevation starts, is matched against a rule and then elevated.":::
+:::image type="content" source="media/overview/epm-elevation-architecture.png" alt-text="A diagram representing how an EPM elevation starts, is matched against a rule and then elevated.":::
 
 ### Elevation Types
 
@@ -74,7 +74,7 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
 
 - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. Administrators can require the user to perform extra validation using an authentication prompt, business justification, or both.
 
-  :::image type="content" source="media/epm-overview/epm-user-confirmed-inline.png" alt-text="A screenshot showing the prompt a user receives when they use user confirmed elevation." lightbox="media/epm-overview/epm-user-confirmed-expanded.png":::
+  :::image type="content" source="media/overview/epm-user-confirmed-inline.png" alt-text="A screenshot showing the prompt a user receives when they use user confirmed elevation." lightbox="media/overview/epm-user-confirmed-expanded.png":::
 
 - **Elevate as Current User**: Use this elevation type for applications that require access to user-specific resources to function correctly, like profile paths, environment variables, or runtime preferences. Unlike elevations that use a virtual account, this mode runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. By maintaining the same user identity before and after elevation, this approach ensures consistent and accurate audit trails. It also supports Windows Authentication, requiring the user to reauthenticate with valid credentials before elevation occurs.
 
@@ -88,9 +88,9 @@ When you use Endpoint Privilege Management, there are a few options for elevatio
   >[!TIP]
   > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
 
-- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](./support-approved.md).
+- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](./manage-support-approvals.md).
 
-  :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
+  :::image type="content" source="media/overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/overview/epm-support-approval-expanded.png":::
 
 - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. In certain scenarios, deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
@@ -132,18 +132,18 @@ EPM includes reports to help you prepare for, monitor, and use the service. Repo
 
 ✅ Start using EPM
 
-:::image type="content" source="media/epm-overview/epm-lifecycle.png" alt-text="A diagram showing the lifecycle of deploying EPM by licensing and planning, deploying, and managing.":::
+:::image type="content" source="media/overview/epm-lifecycle.png" alt-text="A diagram showing the lifecycle of deploying EPM by licensing and planning, deploying, and managing.":::
 
 Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
 
 - **License EPM and Plan**
   - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md).
-  - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](./plan.md).
+  - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](./deployment-planning.md).
 
 - **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](./deploy.md).
-- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](./support-approved.md) and [elevations](./reports.md). You can [maintain and update your rules](./elevation-rules.md) and [review user privileges](../device-configuration/endpoint-security-policies/account-protection-policy.md).
+- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](./manage-support-approvals.md) and [elevations](./monitor-reports.md). You can [maintain and update your rules](./ref-elevation-rules.md) and [review user privileges](../device-configuration/endpoint-security-policies/account-protection.md).
 
 ---
 
 > [!div class="nextstepaction"]
-> [Next: Plan for EPM >](./plan.md)
+> [Next: Plan for EPM >](./deployment-planning.md)

@@ -112,6 +112,6 @@ When the Jamf Mobile Threat Defense solution considers a device to be infected:
 ## Related content
 
 - [Integrate Jamf with Intune](./setup-jamf.md)
-- [Set up Jamf apps](./add-assign-apps.md)
+- [Set up Jamf apps](./assign-apps.md)
 - [Create Jamf device compliance policy](./create-compliance-policy.md)
 - [Enable Jamf MTD connector](./enable-connector.md)

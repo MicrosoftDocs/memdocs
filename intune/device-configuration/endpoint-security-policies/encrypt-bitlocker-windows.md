@@ -171,7 +171,7 @@ Configure the following settings depending on your chosen policy type:
 
 #### Endpoint security policy for silent BitLocker
 
-For **Endpoint security [Disk encryption](./disk-encryption-policy.md) policy**, configure these settings in the BitLocker profile:
+For **Endpoint security [Disk encryption](./disk-encryption.md) policy**, configure these settings in the BitLocker profile:
 
 - **Require Device Encryption** = *Enabled*
 - **Allow Warning For Other Disk Encryption** = *Disabled*

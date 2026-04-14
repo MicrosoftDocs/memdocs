@@ -70,4 +70,4 @@ The Pradeo app authorization process follows:
 
 ## Next steps
 
-- [Set up Pradeo apps for enrolled devices](./add-assign-apps.md)
+- [Set up Pradeo apps for enrolled devices](./assign-apps.md)

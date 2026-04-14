@@ -36,7 +36,7 @@ Applies to:
 
 ## About Intune LAPS policy
 
-Intune supports configuration of Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile for endpoint security [account protection](../../device-configuration/endpoint-security-policies/account-protection-policy.md) policy.
+Intune supports configuration of Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile for endpoint security [account protection](../../device-configuration/endpoint-security-policies/account-protection.md) policy.
 
 Intune policies manage LAPS by using the Windows LAPS configuration service provider (CSP). Windows LAPS CSP configurations [take precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over, and overwrite, any existing configurations from other LAPS sources, like GPOs or the [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) tool.
 
@@ -209,4 +209,4 @@ To resolve conflicts, you must either remove policy assignments from the device,
 
 - [Introduction to Intune policy for LAPS](./overview.md)
 - [View reports for LAPS](./reports.md)
-- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection-policy.md)
+- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection.md)

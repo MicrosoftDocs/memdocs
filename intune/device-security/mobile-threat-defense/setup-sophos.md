@@ -65,4 +65,4 @@ The Sophos Mobile app authorization process follows:
 
 ## Next Steps
 
-[Configure Sophos client apps](./add-assign-apps.md)
+[Configure Sophos client apps](./assign-apps.md)

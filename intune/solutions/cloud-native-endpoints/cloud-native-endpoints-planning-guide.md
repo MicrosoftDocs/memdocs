@@ -130,7 +130,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
     For more information, go to:
 
     - [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
-    - [Disk encryption policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/disk-encryption-policy.md)
+    - [Disk encryption policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/disk-encryption.md)
     - [Add Endpoint protection settings in Intune](../../device-configuration/endpoint-security-policies/configure-endpoint-protection.md)
     - [Certificates in Configuration Manager](../../configmgr/core/plan-design/security/certificates-overview.md)
     - [BitLocker management in Configuration Manager](../../configmgr/protect/plan-design/bitlocker-management.md)

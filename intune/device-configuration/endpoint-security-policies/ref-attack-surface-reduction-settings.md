@@ -657,4 +657,4 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
 
 ## Next steps
 
-[Endpoint security policy for ASR](./attack-surface-reduction-policy.md)
+[Endpoint security policy for ASR](./attack-surface-reduction.md)

@@ -138,4 +138,4 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 ## Next steps
 
-[Set up SEP Mobile apps](./add-assign-apps.md)
+[Set up SEP Mobile apps](./assign-apps.md)

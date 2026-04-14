@@ -31,7 +31,7 @@ Use EPM policies with the *support approved* elevation type for files that need 
 
 > [!TIP]
 >
-> To review the four elevation types and other policy options, see [Windows elevation rules policy](./elevation-rules.md).
+> To review the four elevation types and other policy options, see [Windows elevation rules policy](./ref-elevation-rules.md).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 
@@ -45,7 +45,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   The following image shows an example of the file elevation prompt that users experience:
 
-  :::image type="content" source="./media/support-approved/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/support-approved/user-prompt.png":::
+  :::image type="content" source="./media/manage-support-approvals/user-prompt.png" alt-text="Screen capture that displays an example of the user elevation request prompt." lightbox="./media/manage-support-approvals/user-prompt.png":::
 
 - **Review of elevation requests**
 
@@ -67,7 +67,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   The following screen capture shows an example of the audit log for the duplication of a *Support approved* elevation policy, originally named *Test policy - support approved*:
 
-  :::image type="content" source="./media/support-approved/sample-audit-log.png" alt-text="Image that displays an audit log entry for a support approved elevation rules policy." lightbox="./media/support-approved/sample-audit-log.png":::
+  :::image type="content" source="./media/manage-support-approvals/sample-audit-log.png" alt-text="Image that displays an audit log entry for a support approved elevation rules policy." lightbox="./media/manage-support-approvals/sample-audit-log.png":::
 
 ## RBAC permissions for elevation requests
 
@@ -78,11 +78,11 @@ To provide oversight for elevation approvals, only Intune administrators who hav
   - View elevation requests
   - Modify elevation requests
 
-For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](./plan.md#role-based-access-controls-for-endpoint-privilege-management).
+For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](./deployment-planning.md#role-based-access-controls-for-endpoint-privilege-management).
 
 ## Create policy for support approved file elevations
 
-To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](./elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](./elevation-rules.md)
+To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](./ref-elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](./ref-elevation-rules.md)
 
 ## Manage pending elevation requests
 
@@ -110,7 +110,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
     1. **File information** - Specifics of the metadata for the file that was requested for approval.
 
-   :::image type="content" source="./media/support-approved/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/support-approved/sample-request-detail.png":::
+   :::image type="content" source="./media/manage-support-approvals/sample-request-detail.png" alt-text="Image that displays the detail of an elevation request." lightbox="./media/manage-support-approvals/sample-request-detail.png":::
 
 1. When your Tenant is licensed for [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot), you have access to use the [Analyze with Copilot](#use-microsoft-security-copilot-to-analyze-file-elevation-requests) option, which is at the upper right of the Elevation request properties pane. You can use this option to have Security Copilot work with Microsoft Defender for Endpoint to evaluate the file in the elevation request before you approve or deny it.
 
@@ -120,13 +120,13 @@ Use the following procedure as guidance for reviewing and managing elevation req
 
       The end user can now complete the elevation activity by using the **Run with elevated access** right-click menu of the file.
 
-      :::image type="content" source="./media/support-approved/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/support-approved/sample-request-approval-dialog.png":::
+      :::image type="content" source="./media/manage-support-approvals/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/manage-support-approvals/sample-request-approval-dialog.png":::
 
     - **For denials** - The admin completes the justification dialog, and then selects **Yes** to deny the request.
 
       When an admin denies a request for approval, the elevation request isn't approved. Intune doesn't send a reply to the device and the user isn't notified.
 
-      :::image type="content" source="./media/support-approved/sample-request-denial-dialog.png" alt-text="Image that displays the elevation denial dialog with no sample approval justification provided" lightbox="./media/support-approved/sample-request-denial-dialog.png":::
+      :::image type="content" source="./media/manage-support-approvals/sample-request-denial-dialog.png" alt-text="Image that displays the elevation denial dialog with no sample approval justification provided" lightbox="./media/manage-support-approvals/sample-request-denial-dialog.png":::
 
 > [!NOTE]
 >
@@ -145,7 +145,7 @@ For example, when viewing the file properties for an elevation request, you can 
 
 ### Prerequisites for using Security Copilot with EPM
 
-To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](./plan.md#prerequisites) for using Endpoint Privilege Management.
+To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](./deployment-planning.md#prerequisites) for using Endpoint Privilege Management.
 
 If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.
 
@@ -164,13 +164,13 @@ You can have Microsoft Security Copilot analyze the properties of a file while y
 **Example**:
 The following images display the path and results of an admin using the Intune the admin center path to locate and select a file elevation request that was submitted by a user. The request is a file named *InstallPrinter.msi*. When the file is selected, its *Elevation request properties* open:
 
-:::image type="content" source="./media/support-approved/analyze-with-copilot.png" alt-text="Screen capture that displays the path and location of the Analyze with Copilot option." lightbox="./media/support-approved/analyze-with-copilot.png":::
+:::image type="content" source="./media/manage-support-approvals/analyze-with-copilot.png" alt-text="Screen capture that displays the path and location of the Analyze with Copilot option." lightbox="./media/manage-support-approvals/analyze-with-copilot.png":::
 
 When the admin reviews the file, they note that the file has an unknown publisher. To verify that this file is legitimate, they use the Analyze with Copilot option from the Elevation request properties to have Copilot take a closer look.
 
 Copilot reviews the file and reports back the following details:
 
-:::image type="content" source="./media/support-approved/malicious-file-results.png" alt-text="Screen capture that displays an example of results from use of the Analyze with Copilot option." lightbox="./media/support-approved/malicious-file-results.png":::
+:::image type="content" source="./media/manage-support-approvals/malicious-file-results.png" alt-text="Screen capture that displays an example of results from use of the Analyze with Copilot option." lightbox="./media/manage-support-approvals/malicious-file-results.png":::
 
 The preceding image shows a screen capture of the Copilot report on the reputation of that *InstallPrinter.msi* file. In this example, the file is identified as malicious and shouldn't be approved to run in an elevated context. The results also include additional information and links to references for the malicious file that was identified.
 
@@ -179,4 +179,4 @@ The preceding image shows a screen capture of the Copilot report on the reputati
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Reports >](./reports.md)
+> [Next: Reports >](./monitor-reports.md)

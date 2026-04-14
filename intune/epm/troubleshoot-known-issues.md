@@ -23,7 +23,7 @@ This article lists known issues with Endpoint Privilege Management.
 
 ## Windows 10 devices might not immediately receive confirmation of support approvals
 
-We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](./support-approved.md#about-support-approved-elevations).
+We're working to resolve a few scenarios that prevent Windows 10 devices from automatically receiving the notification that a new approval is ready for the device when you use [support approved elevations](./manage-support-approvals.md#about-support-approved-elevations).
 
 ## Organizations that disable User Account Control (UAC) might experience issues with Endpoint Privilege Management
 

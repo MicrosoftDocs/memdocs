@@ -12,7 +12,7 @@ ms.reviewer: mattcall
 
 # Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune
 
-View the Microsoft Defender Antivirus settings you can manage with the **Microsoft Defender Antivirus Policy (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Endpoint security Antivirus policy](./antivirus-policy.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../../fundamentals/tenant-attach.md) scenario. (Path in the Microsoft Intune admin center: *Endpoint security* > *Antivirus* > *+ Create Policy* > Platform = *Windows (ConfigMgr)* > Profile = *Microsoft Defender Antivirus*.)
+View the Microsoft Defender Antivirus settings you can manage with the **Microsoft Defender Antivirus Policy (ConfigMgr)** profile from Intune. The profile is available when you configure Intune [Endpoint security Antivirus policy](./antivirus.md), and the policy deploys to devices you manage with Configuration Manager when you've configured the [tenant attach](../../fundamentals/tenant-attach.md) scenario. (Path in the Microsoft Intune admin center: *Endpoint security* > *Antivirus* > *+ Create Policy* > Platform = *Windows (ConfigMgr)* > Profile = *Microsoft Defender Antivirus*.)
 
 ## Cloud protection
 

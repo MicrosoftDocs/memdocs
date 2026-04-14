@@ -68,5 +68,5 @@ For more information about consent and Microsoft Entra applications, see [Reques
 
 ## Next steps
 
-- [Set up Trellix Mobile Security apps for enrolled devices](./add-assign-apps.md)
+- [Set up Trellix Mobile Security apps for enrolled devices](./assign-apps.md)
 - [Set up Trellix Mobile Security apps for unenrolled devices](./add-apps-unenrolled-devices.md)

@@ -374,4 +374,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for disk encryption](./disk-encryption-policy.md)
+[Endpoint security policy for disk encryption](./disk-encryption.md)

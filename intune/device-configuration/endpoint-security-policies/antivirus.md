@@ -80,7 +80,7 @@ Prerequisites to support tamper protection for devices managed by Intune:
 - Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune)
 - Devices are onboarded to Microsoft Defender for Endpoint (P1 or P2)
 
-Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Intune](./edr-policy.md#supported-platforms-and-profiles):
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Intune](./deploy-edr.md#supported-platforms-and-profiles):
 
 - Platform: **Windows**
   - Profile: **Windows Security experience**
@@ -123,7 +123,7 @@ The following profiles are supported for devices you manage with Intune:
   - Profile: **Microsoft Defender Antivirus** - Manage Antivirus settings on Linux devices.
   - Profile: **Microsoft Defender Antivirus Exclusions** - Manage settings for Microsoft Defender Antivirus that define Antivirus exclusions for paths, extensions, and processes.
 
-  Antivirus exclusions are also managed by Microsoft Defender Antivirus policy, which includes identical settings for exclusions, and from other policies like Intune's Endpoint detection and response profile for [Microsoft Defender Global Exclusions (AV+EDR)](./edr-policy.md#create-a-linux-global-exclusions-policy) for Linux, which includes both EDR and Antivirus exclusions. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
+  Antivirus exclusions are also managed by Microsoft Defender Antivirus policy, which includes identical settings for exclusions, and from other policies like Intune's Endpoint detection and response profile for [Microsoft Defender Global Exclusions (AV+EDR)](./deploy-edr.md#create-a-linux-global-exclusions-policy) for Linux, which includes both EDR and Antivirus exclusions. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
 
   > [!IMPORTANT]
   > The *Microsoft Defender Global Exclusions (AV+EDR)* profile is supported only for Linux devices managed by Defender through the [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md) scenario.
@@ -224,11 +224,11 @@ In addition to reports detailed in the following sections, additional reports fo
 
 On the **Summary** page, you can [create new policies](./manage-policies.md#create-endpoint-security-policies) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
 
-![Summary page of antivirus policy](./media/antivirus-policy/antivirus-summary.png)
+![Summary page of antivirus policy](./media/antivirus/antivirus-summary.png)
 
 When you select a policy from the list, the *Overview* page for that policy instance opens and displays more information. After selecting a tile from this view, Intune displays additional details for that profile if they're available.
 
-![Overview page of antivirus policy](./media/antivirus-policy/policy-overview.png)
+![Overview page of antivirus policy](./media/antivirus/policy-overview.png)
 
 ### Unhealthy endpoints
 
@@ -241,7 +241,7 @@ The information for this report is based on details available from the following
 - [Defender CSP](/windows/client-management/mdm/defender-csp)
 - [WindowsAdvancedThreatProtection CSP](/windows/client-management/mdm/windowsadvancedthreatprotection-csp).
 
-:::image type="content" source="./media/antivirus-policy/antivirus-unhealthy-endpoints.png" alt-text="Screenshot of the Unhealthy endpoints report.":::
+:::image type="content" source="./media/antivirus/antivirus-unhealthy-endpoints.png" alt-text="Screenshot of the Unhealthy endpoints report.":::
 
 ## Next steps
 

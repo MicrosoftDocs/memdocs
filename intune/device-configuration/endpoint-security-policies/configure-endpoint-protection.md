@@ -25,7 +25,7 @@ For example, you can create an Endpoint protection profile that only allows macO
 
 Before you create a profile, review the following articles that detail the Endpoint protection settings Intune can manage for each supported platform:
 
-- [macOS settings](./endpoint-protection-macos.md)
+- [macOS settings](./ref-endpoint-protection-macos.md)
 - [Windows settings](./ref-endpoint-protection-settings-windows.md)
 
 ## Create a device profile containing Endpoint protection settings
@@ -57,7 +57,7 @@ Before you create a profile, review the following articles that detail the Endpo
 
 6. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-   - [macOS settings](./endpoint-protection-macos.md)
+   - [macOS settings](./ref-endpoint-protection-macos.md)
    - [Windows settings](./ref-endpoint-protection-settings-windows.md)
 
 7. Select **Next**.

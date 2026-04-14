@@ -19,9 +19,9 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
-Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](./elevation-settings.md).
+Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](./ref-elevation-settings.md).
 
-In addition to the information in this article, remain aware of important [security recommendations](./plan.md#security-recommendations) when managing elevation rules.
+In addition to the information in this article, remain aware of important [security recommendations](./deployment-planning.md#security-recommendations) when managing elevation rules.
 
 ## About elevation rules policy
 
@@ -37,7 +37,7 @@ Each elevation rule instructs EPM on how to:
 - **Identify the file using**:
 
   - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted. The file name (excluding extensions) can include use of [variables](#use-variables-in-elevation-rules) for single characters through use of a question mark `?` or strings through use of an asterisk `*`.
-  - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. Certificates must be trusted and valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see [Reusable settings groups](./elevation-rules.md#reusable-settings-groups).
+  - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. Certificates must be trusted and valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see [Reusable settings groups](./ref-elevation-rules.md#reusable-settings-groups).
 
 - **Validate the file**:
 
@@ -48,7 +48,7 @@ Each elevation rule instructs EPM on how to:
 - **Configure the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*. With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
   - **Deny**: Deny rules prevent the identified file from being run in an elevated context.
-  - **Support approved**: An administrator must approve the [support-required elevation request](./support-approved.md) before the application is allowed to run with elevated privileges.
+  - **Support approved**: An administrator must approve the [support-required elevation request](./manage-support-approvals.md) before the application is allowed to run with elevated privileges.
   - **User confirmed**: A user confirmed elevation always requires the user to select on a confirmation prompt to run the file. The confirmation can only be configured to require a user authentication, a business justification (visible in reporting), or both.
   - **Elevate as current user**: This type of elevation runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. This requires the user to enter their credentials for Windows Authentication. This preserves the user's profile paths, environment variables, and personalized settings. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate.
 
@@ -78,7 +78,7 @@ Each elevation rule instructs EPM on how to:
 > [!NOTE]
 > For more information about creating *strong rules*, see [Defining rules for use with Endpoint Privilege Management](#defining-rules-for-use-with-endpoint-privilege-management).
 >
-> You can also use the `Get-FileAttributes` PowerShell cmdlet from the [EpmTools PowerShell module](./plan.md#epmtools-powershell-module). This cmdlet can retrieve file attributes for an .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
+> You can also use the `Get-FileAttributes` PowerShell cmdlet from the [EpmTools PowerShell module](./deployment-planning.md#epmtools-powershell-module). This cmdlet can retrieve file attributes for an .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
 
 > [!CAUTION]
 >
@@ -98,7 +98,7 @@ It's important when defining *detections* that they're defined to be as *descrip
 
 File hash rules are the strongest rules that can be created with Endpoint Privilege Management. These rules are *highly recommended* to ensure the file you intend to elevate is the file that's elevated.
 
-File hash can be gathered from the direct binary using the [Get-Filehash PowerShell method](/powershell/module/microsoft.powershell.utility/get-filehash) or directly from the [reports for Endpoint Privilege Management](./reports.md).
+File hash can be gathered from the direct binary using the [Get-Filehash PowerShell method](/powershell/module/microsoft.powershell.utility/get-filehash) or directly from the [reports for Endpoint Privilege Management](./monitor-reports.md).
 
 ### Certificate rules
 
@@ -141,7 +141,7 @@ CompanyName   : Microsoft Corporation
 > [!NOTE]
 > The certificate chain for msinfo32.exe is output to the C:\CertsForMsInfo directory listed in the command example.
 
-For more information, see [EpmTools PowerShell module](./plan.md#epmtools-powershell-module).
+For more information, see [EpmTools PowerShell module](./deployment-planning.md#epmtools-powershell-module).
 
 ### Controlling child process behavior
 
@@ -155,7 +155,7 @@ Windows automatically delegates the context of a parent to a child, so take spec
 
 ## Deploying rules created with Endpoint Privilege Management
 
-Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](./plan.md#policy-conflict-handling-for-endpoint-privilege-management).
+Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](./deployment-planning.md#policy-conflict-handling-for-endpoint-privilege-management).
 
 Rules deployed to a device apply to *every user* that uses that device. Rules that are deployed to a *user* apply only to that user on each device that they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to all users of a device, and a more permissive set of rules to a specific user (such as a support admin). This would allow the support administrator to elevate a broader set of applications when they sign-in to the device.
 
@@ -175,7 +175,7 @@ Deploy an *Elevation rules policy* to users or devices to deploy one or more rul
 
 Use either of the following methods to create new elevation rules, which are added to elevation rules policy:
 
-- [**Automatically configure elevation rules**](#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) – Use this method to save time when creating an elevation rule by adding files details from reporting. Rules can be created using the *[Elevation report](./reports.md#elevation-report)* or from a *[support approved](./support-approved.md)* elevation requests record.
+- [**Automatically configure elevation rules**](#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) – Use this method to save time when creating an elevation rule by adding files details from reporting. Rules can be created using the *[Elevation report](./monitor-reports.md#elevation-report)* or from a *[support approved](./manage-support-approvals.md)* elevation requests record.
 
   With this method, you:
 
@@ -193,7 +193,7 @@ Use either of the following methods to create new elevation rules, which are add
   - Can add one or more file arguments that must be part of the elevation request before EPM allows file elevation.
 
 > [!TIP]
-> For both automatically configured and manually configured elevation rules, we [recommend use of a *File path*](./plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+> For both automatically configured and manually configured elevation rules, we [recommend use of a *File path*](./deployment-planning.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
 ### Automatically configure elevation rules for Windows elevation rules policy
 
@@ -213,7 +213,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 2. On the **Elevation detail** pane, review the file details. This information is used by the elevation rule to identify the correct file. When ready, select **Create a rule with these file details**.
 
-   :::image type="content" source="./media/elevation-rules/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/elevation-rules/elevation-detail-pane.png":::
+   :::image type="content" source="./media/ref-elevation-rules/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/ref-elevation-rules/elevation-detail-pane.png":::
 
 3. Select a policy option for the new elevation rule you're creating:
 
@@ -234,9 +234,9 @@ Use either of the following methods to create new elevation rules, which are add
    When you select this checkbox, the File Path field in the rule is set to the file path as seen in the report. If the checkbox isn't selected, the path remains empty.
 
    > [!TIP]
-   > While optional, we [recommend use of a *File path*](./plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+   > While optional, we [recommend use of a *File path*](./deployment-planning.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
-   :::image type="content" source="./media/elevation-rules/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/elevation-rules/create-a-rule.png":::
+   :::image type="content" source="./media/ref-elevation-rules/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/ref-elevation-rules/create-a-rule.png":::
 
 ### Manually configure elevation rules for Windows elevation rules policy
 
@@ -250,11 +250,11 @@ Use either of the following methods to create new elevation rules, which are add
 
 3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add more rules to this policy. Each new rule you add has an elevation type of User confirmed, which can be changed when you configure the rule.
 
-   :::image type="content" source="./media/elevation-rules/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/elevation-rules/new-elevation-rules-policy.png":::
+   :::image type="content" source="./media/ref-elevation-rules/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/ref-elevation-rules/new-elevation-rules-policy.png":::
 
    To configure a rule, select **Edit instance** to open its Rule properties page, and then configure the following:
 
-   :::image type="content" source="./media/elevation-rules/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/elevation-rules/elevation-rules.png":::
+   :::image type="content" source="./media/ref-elevation-rules/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/ref-elevation-rules/elevation-rules.png":::
 
    - **Rule name**: Specify a descriptive name for the rule. Name your rules so you can easily identify them later.
    - **Description** (Optional): Enter a description for the profile.
@@ -265,15 +265,15 @@ Use either of the following methods to create new elevation rules, which are add
 
      - **Deny**: A *deny* rule prevents the identified file from being run in an elevated context. The following behaviors apply:
        - *Deny* rules support the same configuration options as other elevation types except for the child process options. Child process options aren't used from this rule even if configured.
-       - When a user attempts to elevate a file that matches a deny rule, the elevation fails. EPM displays a message that indicates the app can't be run as administrator. Should that user also be assigned a rule that allows elevation of that same file, the [deny rule takes precedence](./plan.md#policy-conflict-handling-for-endpoint-privilege-management).
+       - When a user attempts to elevate a file that matches a deny rule, the elevation fails. EPM displays a message that indicates the app can't be run as administrator. Should that user also be assigned a rule that allows elevation of that same file, the [deny rule takes precedence](./deployment-planning.md#policy-conflict-handling-for-endpoint-privilege-management).
        - Denied elevations appear in the elevation report as denied, similar to a rejected *support approved* request.
        - EPM doesn't currently support automatic configuration of a deny rule from the evaluation report.
 
-     - **Support approved**: This elevation type requires an administrator to approve an elevation request. For more information, see [Support approved elevation requests](./support-approved.md).
+     - **Support approved**: This elevation type requires an administrator to approve an elevation request. For more information, see [Support approved elevation requests](./manage-support-approvals.md).
 
        > [!Important]
        >
-       > Use of support approved elevation for files requires that Admins with additional permissions review and approve each file elevation request before that file on the device with administrator permissions. For information about using the support approved elevation type, see [Support approved file elevations for Endpoint Privilege Management](./support-approved.md).
+       > Use of support approved elevation for files requires that Admins with additional permissions review and approve each file elevation request before that file on the device with administrator permissions. For information about using the support approved elevation type, see [Support approved file elevations for Endpoint Privilege Management](./manage-support-approvals.md).
 
      - **User confirmed**: Most commonly used for files with rules that require elevation because it allows elevation, but requires user acknowledgment. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include other prompts that are available from the *Validation* drop down:
 
@@ -296,7 +296,7 @@ Use either of the following methods to create new elevation rules, which are add
    - **File path** (Optional): Specify the location of the file. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
 
      > [!TIP]
-     > While optional, we [recommend use of a *File path*](./plan.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
+     > While optional, we [recommend use of a *File path*](./deployment-planning.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
    - **Signature source**: Choose one of the following options:
 
@@ -367,7 +367,7 @@ To add one or more arguments to an elevation rule, set **Restrict arguments** to
 > - File arguments are case sensitive; users must match the case exactly as defined in the rules.
 > - Don't define secrets as a file argument.
 
-:::image type="content" source="./media/elevation-rules/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
+:::image type="content" source="./media/ref-elevation-rules/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
 
 ## Reusable settings groups
 
@@ -377,7 +377,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Reusable settings (preview)** tab > and then select **Add**.
 
-   :::image type="content" source="./media/elevation-rules/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/elevation-rules/add-reusable-settings.png":::
+   :::image type="content" source="./media/ref-elevation-rules/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/ref-elevation-rules/add-reusable-settings.png":::
 
 2. On **Basics**, enter the following properties:
    - **Name**: Enter a descriptive name for the reusable group. Name groups so you can easily identify each later.
@@ -385,7 +385,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 3. In **Configuration settings**, select the folder icon for *Certificate file*, and browse to a **.CER** file to add it to this reusable group. The *Base 64 value* field fills in based on the certificate selected.
 
-   :::image type="content" source="./media/elevation-rules/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/elevation-rules/add-a-certificate.png":::
+   :::image type="content" source="./media/ref-elevation-rules/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/ref-elevation-rules/add-a-certificate.png":::
 
 4. In **Review + create**, review your settings, and then select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
 
@@ -394,4 +394,4 @@ To create the reusable settings group for Endpoint Privilege Management:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Use Endpoint Privilege Management to transition users from administrator to standard user >](./migrate-administrator-to-standard-user.md)
+> [Next: Use Endpoint Privilege Management to transition users from administrator to standard user >](./tutorial-admin-to-standard-user.md)

@@ -67,9 +67,9 @@ The following security areas can be managed through these policies:
   - **iOS/iPadOS and macOS** - [Configure update policies](../device-updates/apple/index.md) to manage OS versions and update schedules.
   - **Windows** - Configure [Windows Update behaviors](../device-updates/windows/index.md), schedule updates, and maintain feature update compliance.
 
-- **Application control** - Use [App Control for Business](../device-configuration/endpoint-security-policies/app-control-policy.md) policies to define which applications can run on Windows devices.
+- **Application control** - Use [App Control for Business](../device-configuration/endpoint-security-policies/manage-app-control.md) policies to define which applications can run on Windows devices.
 
-- **Attack surface reduction** - Deploy [ASR policies](../device-configuration/endpoint-security-policies/attack-surface-reduction-policy.md) to reduce vulnerabilities through exploit protection, device control, application isolation, and ASR rules.
+- **Attack surface reduction** - Deploy [ASR policies](../device-configuration/endpoint-security-policies/attack-surface-reduction.md) to reduce vulnerabilities through exploit protection, device control, application isolation, and ASR rules.
 
 - **Security baselines** - Deploy preconfigured [security baselines](./security-baselines/overview.md) for Windows devices, Microsoft Edge, and Microsoft Defender for Endpoint that reflect Microsoft security team recommendations.
 
@@ -145,7 +145,7 @@ Intune supports [Microsoft Defender for Endpoint](./microsoft-defender/overview.
 [Microsoft Defender for Endpoint deeply integrates with Intune](./microsoft-defender/overview.md) across Windows, macOS, Linux, Android, and iOS/iPadOS, creating a unified security platform that combines device management with advanced threat protection. This integration enables:
 
 - **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
-- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../device-configuration/endpoint-security-policies/antivirus-policy.md) settings, [EDR onboarding](../device-configuration/endpoint-security-policies/edr-policy.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
+- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../device-configuration/endpoint-security-policies/antivirus.md) settings, [EDR onboarding](../device-configuration/endpoint-security-policies/deploy-edr.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
 - **Vulnerability management** - [Security tasks](./microsoft-defender/remediate-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
 - **[Microsoft Tunnel](./microsoft-tunnel/overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 

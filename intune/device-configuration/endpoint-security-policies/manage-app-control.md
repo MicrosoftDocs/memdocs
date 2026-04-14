@@ -152,7 +152,7 @@ The following procedure guides you through adding the Intune Management Extensio
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **App Control for Business** > select the **Managed installer** tab and then select **Create**. The *Create Managed Installer Policy* workflow opens.
 
-   :::image type="content" source="./media/app-control-policy/add-managed-installer.png" alt-text="Screen shot of the Managed installer page, with the Add managed installer pane on the right side." lightbox="./media/app-control-policy/add-managed-installer.png" :::
+   :::image type="content" source="./media/manage-app-control/add-managed-installer.png" alt-text="Screen shot of the Managed installer page, with the Add managed installer pane on the right side." lightbox="./media/manage-app-control/add-managed-installer.png" :::
 
 2. On the **Basics** page, enter the following properties:
 
@@ -177,7 +177,7 @@ After adding the Managed installer, you might need to wait up to 10 minutes befo
 
 When ready, the policy is listed on the Managed installer tab and a status of **Active**. Devices might see a wait of up to 30 minutes before the policy gets delivered.
 
-:::image type="content" source="./media/app-control-policy/managed-installer-policy.png" alt-text="A screenshot of the Managed Installer pane, with a managed installer policy present, and active." lightbox="./media/app-control-policy/managed-installer-policy.png":::
+:::image type="content" source="./media/manage-app-control/managed-installer-policy.png" alt-text="A screenshot of the Managed Installer pane, with a managed installer policy present, and active." lightbox="./media/manage-app-control/managed-installer-policy.png":::
 
 Before the policy has any effect, you must create and deploy an App Control for Business policy to specify rules for which apps can run on your Windows devices.
 
@@ -260,7 +260,7 @@ Use the following procedure to help you create a successful App Control for Busi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned a platform type.
 
-   :::image type="content" source="./media/app-control-policy/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/app-control-policy/create-app-control-policy.png":::
+   :::image type="content" source="./media/manage-app-control/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/manage-app-control/create-app-control-policy.png":::
 
 2. On **Basics**, enter the following properties:
 
@@ -288,7 +288,7 @@ Use the following procedure to help you create a successful App Control for Busi
        - If *Enabled*, files and apps are blocked from running on devices.
        - If set to *Audit only*, files and apps are audited only in local client logs.
 
-   :::image type="content" source="./media/app-control-policy/built-in-controls.png" alt-text="This screen capture shows the default options and settings for App Control for Business policy when you use the built-in-controls." lightbox="./media/app-control-policy/built-in-controls.png":::
+   :::image type="content" source="./media/manage-app-control/built-in-controls.png" alt-text="This screen capture shows the default options and settings for App Control for Business policy when you use the built-in-controls." lightbox="./media/manage-app-control/built-in-controls.png":::
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
@@ -420,7 +420,7 @@ Report details include:
 - Error - Devices with errors.
 - New devices – New devices identifies devices that have recently applied the policy.
 
-  :::image type="content" source="./media/app-control-policy/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/app-control-policy/managed-installer-policy-overview.png":::
+  :::image type="content" source="./media/manage-app-control/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/manage-app-control/managed-installer-policy-overview.png":::
 
 It can take up to 24 hours for the **Device status** and **Device status trend** sections to update in the Overview.
 

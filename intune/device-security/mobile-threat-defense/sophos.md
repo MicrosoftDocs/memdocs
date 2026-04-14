@@ -87,6 +87,6 @@ Detect threats to your network like Man-in-the-middle attacks, and prevent synch
 ## Next steps
 
 - [Integrate Sophos with Intune](./setup-sophos.md)
-- [Set up Sophos apps](./add-assign-apps.md)
+- [Set up Sophos apps](./assign-apps.md)
 - [Create Sophos device compliance policy](./create-compliance-policy.md)
 - [Enable Sophos MTD connector](./enable-connector.md)

@@ -183,7 +183,7 @@ Intune supports the following two settings to exclude specific file and folder p
 
 - **Global**: Use **Attack Surface Reduction Only Exclusions**.
 
-  :::image type="content" source="./media/attack-surface-reduction-policy/global-asr-rule-exclusion.png" alt-text="Screen capture of the Attack Surface Reduction Only Exclusions setting.":::
+  :::image type="content" source="./media/attack-surface-reduction/global-asr-rule-exclusion.png" alt-text="Screen capture of the Attack Surface Reduction Only Exclusions setting.":::
 
   When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This behavior occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions can't be managed for individual settings. To avoid having exclusions applied to all settings on a device, don't use this setting. Instead, configure **ASR Only Per Rule Exclusions** for individual settings.
 
@@ -191,7 +191,7 @@ Intune supports the following two settings to exclude specific file and folder p
 
 - **Individual settings**: Use **ASR Only Per Rule Exclusions**
 
-  :::image type="content" source="./media/attack-surface-reduction-policy/individual-rule-exclusion.png" alt-text="Screen capture of the ASR Only \Per Rule Exclusions setting.":::
+  :::image type="content" source="./media/attack-surface-reduction/individual-rule-exclusion.png" alt-text="Screen capture of the ASR Only \Per Rule Exclusions setting.":::
 
   When you set an applicable setting in an attack surface reduction rule profile to anything other than *Not configured*, Intune presents the option to use **ASR Only Per Rule Exclusions** for that individual setting. With this option, you can configure a file and folder exclusion that are isolated to individual settings, which is in contrast to use of the global setting **Attack Surface Reduction Only Exclusions** which applies its exclusions to all settings on the device.
 

@@ -249,7 +249,7 @@ items:
             href: ./templates/ref-email-settings-ios.md
           - name: Endpoint protection (deprecated)
             displayName: apple, macos
-            href: ./endpoint-security-policies/endpoint-protection-macos.md
+            href: ./endpoint-security-policies/ref-endpoint-protection-macos.md
           - name: Extensions (deprecated)
             displayName: kernel, system, macos
             href: ./templates/ref-kernel-extensions-settings-macos.md

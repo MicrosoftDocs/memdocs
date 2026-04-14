@@ -149,7 +149,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 - Last check in time
 
 > [!div class="mx-imgBorder"]
-> ![View the Firewall Off](./media/firewall-policy/firewall-off-report.png)
+> ![View the Firewall Off](./media/firewall/firewall-off-report.png)
 
 ### MDM Firewall status for Windows
 
@@ -158,7 +158,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows**.
 
 > [!div class="mx-imgBorder"]
-> ![Select firewall reports](./media/firewall-policy/select-firewall-reports.png)
+> ![Select firewall reports](./media/firewall/select-firewall-reports.png)
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
 
@@ -173,7 +173,7 @@ Status details include:
 You can filter returns for this report by using one or more of the status detail categories.
 
 > [!div class="mx-imgBorder"]
-> ![View the Firewall Status report](./media/firewall-policy/firewall-status.png)
+> ![View the Firewall Status report](./media/firewall/firewall-status.png)
 
 ## Investigate issues for Firewall rules
 
@@ -185,19 +185,19 @@ Additional common firewall rule issues:
 
 **Event Viewer: RemotePortRanges or LocalPortRanges "The parameter is incorrect"**
 > [!div class="mx-imgBorder"]
-> ![RemotePortRangesFailure](./media/firewall-policy/remoteportrangeparameterincorrect.png)
+> ![RemotePortRangesFailure](./media/firewall/remoteportrangeparameterincorrect.png)
 - Verify configured ranges are ascending (Example: 1-5 is correct, 5-1 will cause this error)
 - Verify configured ranges are within the overall port range of 0-65535
 - If either remote port ranges or local port ranges are configured in a rule, protocol **must** also be configured with 6 (TCP) **or** 17 (UDP)
 
 **Event Viewer: "...Name), Result: (The parameter is incorrect)"**
 > [!div class="mx-imgBorder"]
-> ![Screen capture of the Name Failure](./media/firewall-policy/nameparameterincorrect.png)
+> ![Screen capture of the Name Failure](./media/firewall/nameparameterincorrect.png)
 - If edge traversal is enabled in a rule, the rule direction **must** be set to "This rule applies to inbound traffic".
 
 **Event Viewer: "...InterfaceTypes), Result: (The parameter is incorrect)"**
 > [!div class="mx-imgBorder"]
-> ![Screen capture of the Interface Types Failure](./media/firewall-policy/interfacetypesfailure.png)
+> ![Screen capture of the Interface Types Failure](./media/firewall/interfacetypesfailure.png)
 - If "All" interface type is enabled in a rule, the other interface types **must not** be selected.
 
 ## Next steps

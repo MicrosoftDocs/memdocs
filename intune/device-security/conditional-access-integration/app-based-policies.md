@@ -47,7 +47,7 @@ In this example, the admin has applied app protection policies to the Outlook ap
 > [!NOTE]
 > The following flowchart  can be used for other managed apps.
 
-![App-based Conditional Access process illustrated in a flow-chart](./media/app-based-overview/ca-intune-common-ways-3.png)
+![App-based Conditional Access process illustrated in a flow-chart](./media/app-based-policies/ca-intune-common-ways-3.png)
 
 1. The user tries to authenticate to Microsoft Entra ID from the Outlook app.
 

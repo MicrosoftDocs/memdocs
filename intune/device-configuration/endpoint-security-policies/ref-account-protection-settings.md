@@ -39,7 +39,7 @@ Supported platforms and profiles:
 
 > [!TIP]
 >
-> For *Local user group membership* profiles, see [Manage local groups on Windows devices](./account-protection-policy.md#manage-local-groups-on-windows-devices).
+> For *Local user group membership* profiles, see [Manage local groups on Windows devices](./account-protection.md#manage-local-groups-on-windows-devices).
 >
 > For *Local admin password solution (Windows LAPS)* profiles, see [Manage LAPS policy](../../device-security/laps/deploy-policy.md).
 
@@ -74,4 +74,4 @@ Supported platforms and profiles:
 
 ## Next steps
 
-[Endpoint security policy for Account protection](./account-protection-policy.md)
+[Endpoint security policy for Account protection](./account-protection.md)

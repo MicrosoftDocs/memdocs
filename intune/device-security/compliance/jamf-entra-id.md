@@ -168,11 +168,11 @@ Jamf pro utilizes connectors in the [Microsoft Intune admin center](https://go.m
    - The first authentication prompt creates the *Cloud Connector for Device Compliance* application in Microsoft Entra ID.
    - The second authentication prompt creates the *User registration app for Device Compliance*.
 
-   :::image type="content" source="./media/jamf-entra-id-compliance/appregreqs-all.png" alt-text="Image showing prompts for permissions requested in the Microsoft Entra registered applications." lightbox="./media/jamf-entra-id-compliance/appregreqs-all.png":::
+   :::image type="content" source="./media/jamf-entra-id/appregreqs-all.png" alt-text="Image showing prompts for permissions requested in the Microsoft Entra registered applications." lightbox="./media/jamf-entra-id/appregreqs-all.png":::
 
 1. A new browser tab opens to a Jamf Portal page with a **Configure Compliance Partner** dialog, and then select the button labeled **Open Microsoft Endpoint Manager**.
 
-   :::image type="content" source="./media/jamf-entra-id-compliance/jamf-create-connector-3a.png" alt-text="Image of the Jamf Configure Compliance Partner Open Microsoft Endpoint Manager button." lightbox="./media/jamf-entra-id-compliance/jamf-create-connector-3a.png":::
+   :::image type="content" source="./media/jamf-entra-id/jamf-create-connector-3a.png" alt-text="Image of the Jamf Configure Compliance Partner Open Microsoft Endpoint Manager button." lightbox="./media/jamf-entra-id/jamf-create-connector-3a.png":::
 
 1. A new browser tab opens the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Proceed to *Tenant administration > Connectors and tokens > Partner compliance management*.
@@ -185,12 +185,12 @@ Jamf pro utilizes connectors in the [Microsoft Intune admin center](https://go.m
 1. In your browser, open the tab containing the Jamf Portal with the **Configure Compliance Partner** dialog.
 1. Select the **Confirm** button.
 
-   :::image type="content" source="./media/jamf-entra-id-compliance/jamf-confirm-connector-a.png" alt-text="Image of the Jamf Configure Compliance Partner Confirm button." lightbox="./media/jamf-entra-id-compliance/jamf-confirm-connector-a.png":::
+   :::image type="content" source="./media/jamf-entra-id/jamf-confirm-connector-a.png" alt-text="Image of the Jamf Configure Compliance Partner Confirm button." lightbox="./media/jamf-entra-id/jamf-confirm-connector-a.png":::
 
 1. Switch to the browser tab showing the Intune Partner compliance management dashboard and select the **Refresh** icon at the top next to the *Add compliance Partner* option.
 1. Verify the macOS *Jamf Device Compliance* connector shows a Partner Status of **Active**.
 
-   :::image type="content" source="./media/jamf-entra-id-compliance/intune-confirm-connection-a.png" alt-text="Image of the Intune Connectors for Device Compliance Partner macOS active connection." lightbox="./media/jamf-entra-id-compliance/intune-confirm-connection-a.png":::
+   :::image type="content" source="./media/jamf-entra-id/intune-confirm-connection-a.png" alt-text="Image of the Intune Connectors for Device Compliance Partner macOS active connection." lightbox="./media/jamf-entra-id/intune-confirm-connection-a.png":::
 
 ### Complete the administrative configuration
 
@@ -206,7 +206,7 @@ For example, consider a Microsoft Entra Conditional Access policy that requires 
 >   - Requires compliance
 >   - Requires a registered device
 
-:::image type="content" source="./media/jamf-entra-id-compliance/entra-ca-user-app-exceptions-resize.png" alt-text="Image of the Microsoft Entra Conditional Access Policy exception for user application" lightbox="./media/jamf-entra-id-compliance/entra-ca-user-app-exceptions-resize.png":::
+:::image type="content" source="./media/jamf-entra-id/entra-ca-user-app-exceptions-resize.png" alt-text="Image of the Microsoft Entra Conditional Access Policy exception for user application" lightbox="./media/jamf-entra-id/entra-ca-user-app-exceptions-resize.png":::
 
 ## End user notifications
 

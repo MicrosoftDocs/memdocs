@@ -263,7 +263,7 @@ For additional information on Microsoft Defender for Endpoint integration in Con
 
 ## Windows Subsystem for Linux
 
-The settings in this section require the Windows Subsystem for Linux (WSL) plug-in. For more information, see [Evaluate compliance for Windows Subsystem for Linux](./wsl.md).
+The settings in this section require the Windows Subsystem for Linux (WSL) plug-in. For more information, see [Evaluate compliance for Windows Subsystem for Linux](./configure-wsl.md).
 
 For **Allowed Linux distributions and versions**, enter at least one Linux distribution name. Optionally, enter a minimum or maximum OS version.
 

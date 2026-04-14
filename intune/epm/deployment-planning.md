@@ -115,7 +115,7 @@ Except for *Elevate as current user*, EPM uses a *virtual account* to elevate pr
 
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
-  - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](./support-approved.md)
+  - **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](./manage-support-approvals.md)
 
   > [!NOTE]
   >
@@ -190,13 +190,13 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](./elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](./ref-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](./elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
+When [configuring an elevation rule](./ref-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
 
-This recommendation applies to rules created [automatically](./elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](./reports.md) or [support approved](./support-approved.md) request, and for elevation rules that you create [manually](./elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
+This recommendation applies to rules created [automatically](./ref-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](./monitor-reports.md) or [support approved](./manage-support-approvals.md) request, and for elevation rules that you create [manually](./ref-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
 > [!IMPORTANT]
 > Files located on network shares aren't supported and shouldn't be used in rule definitions.
@@ -287,4 +287,4 @@ For more information about each cmdlet, review the **readme.md** file from the *
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Review privacy data collection >](./data-collection.md)
+> [Next: Review privacy data collection >](./ref-data-collection.md)

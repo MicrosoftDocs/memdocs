@@ -388,7 +388,7 @@ To create these policies, in the [Intune admin center](https://go.microsoft.com/
 
 For more information about the macOS firewall, go to:
 
-- [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/firewall-policy.md)
+- [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/firewall.md)
 - [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/mh11783/mac) (opens Apple's website)
 
 ✅ **Configure Gatekeeper**

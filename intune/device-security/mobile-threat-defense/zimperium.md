@@ -35,7 +35,7 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 The Zimperium app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Zimperium cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Zimperium. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Zimperium app installed in their devices to resolve the issue and regain access to corporate resources. To support using Zimperium with enrolled devices:
-  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Add MTD apps to devices](./assign-apps.md)
   - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
   - [Enable a Mobile Threat Defense connector](./enable-connector.md)
 
@@ -101,6 +101,6 @@ Access is granted on remediation:
 ## Related content
 
 - [Integrate Zimperium with Intune](./setup-zimperium.md)
-- [Set up Zimperium apps](./add-assign-apps.md)
+- [Set up Zimperium apps](./assign-apps.md)
 - [Create Zimperium device compliance policy](./create-compliance-policy.md)
 - [Create an MTD app protection policy](./create-app-protection-policy.md)

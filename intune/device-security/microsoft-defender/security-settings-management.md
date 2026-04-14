@@ -286,12 +286,12 @@ To support use with Microsoft Defender security settings management, your polici
 
 **Each Intune endpoint security profile** is a discrete group of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the profiles that are supported by the security settings management scenario:
 
-- **[Antivirus](../../device-configuration/endpoint-security-policies/antivirus-policy.md)** policies manage the security configurations found in Microsoft Defender for Endpoint.
+- **[Antivirus](../../device-configuration/endpoint-security-policies/antivirus.md)** policies manage the security configurations found in Microsoft Defender for Endpoint.
 
   > [!NOTE]
   > While endpoints don't require a restart in order to apply modified settings or new policies, there's an issue where the *AllowOnAccessProtection* and *DisableLocalAdminMerge* settings might at times require end users to restart their devices for these settings to update. This issue is under investigation in order to provide a resolution.
 
-- **[Attack surface reduction (ASR)](../../device-configuration/endpoint-security-policies/attack-surface-reduction-policy.md)** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*.
+- **[Attack surface reduction (ASR)](../../device-configuration/endpoint-security-policies/attack-surface-reduction.md)** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*.
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
@@ -304,11 +304,11 @@ To support use with Microsoft Defender security settings management, your polici
   Also see:
   - [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
-- **[Endpoint detection and response (EDR)](../../device-configuration/endpoint-security-policies/edr-policy.md)** policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
+- **[Endpoint detection and response (EDR)](../../device-configuration/endpoint-security-policies/deploy-edr.md)** policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
-- **[Firewall](../../device-configuration/endpoint-security-policies/firewall-policy.md)** policies focus on the Defender firewall on your devices.
+- **[Firewall](../../device-configuration/endpoint-security-policies/firewall.md)** policies focus on the Defender firewall on your devices.
 
-- **Firewall Rules** are a type of profile for [Firewall](../../device-configuration/endpoint-security-policies/firewall-policy.md) policy that is comprised of granular rules for Firewalls, including specific ports, protocols, applications, and networks.
+- **Firewall Rules** are a type of profile for [Firewall](../../device-configuration/endpoint-security-policies/firewall.md) policy that is comprised of granular rules for Firewalls, including specific ports, protocols, applications, and networks.
 
 ## Configure your tenant to support Defender for Endpoint security settings management
 

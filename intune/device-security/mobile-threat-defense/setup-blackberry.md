@@ -71,4 +71,4 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 ## Next steps
 
-- [Set up BlackBerry Protect app for enrolled devices](./add-assign-apps.md)
+- [Set up BlackBerry Protect app for enrolled devices](./assign-apps.md)

@@ -21,23 +21,23 @@ ms.collection:
 
 To deploy Endpoint Privilege Management (EPM), start by enabling reporting, then use reports to create rules for elevation. This article describes some common deployment scenarios and outlines the recommended deployment phases for your organization.
 
-- [Windows elevation settings policy](./elevation-settings.md).
-- [Windows elevation rules policy](./elevation-rules.md).
-- [Reusable settings groups](./elevation-rules.md#reusable-settings-groups), which are optional configurations for your elevation rules.
+- [Windows elevation settings policy](./ref-elevation-settings.md).
+- [Windows elevation rules policy](./ref-elevation-rules.md).
+- [Reusable settings groups](./ref-elevation-rules.md#reusable-settings-groups), which are optional configurations for your elevation rules.
 
 ## Deployment overview
 
-EPM can help control the elevation of applications in Intune and [Local Users and Groups](../device-configuration/endpoint-security-policies/account-protection-policy.md) can be used to control the local administrators group and transition users from administrators to standard users.
+EPM can help control the elevation of applications in Intune and [Local Users and Groups](../device-configuration/endpoint-security-policies/account-protection.md) can be used to control the local administrators group and transition users from administrators to standard users.
 
 The common deployment phases are:
 
-:::image type="content" source="media/epm-deploy/epm-deploy-phases.png" alt-text="The five phases to deploy EPM." border="false":::
+:::image type="content" source="media/deploy/epm-deploy-phases.png" alt-text="The five phases to deploy EPM." border="false":::
 
-- **Phase 1: Auditing** - Enable EPM client and enable reporting collection using an [elevation settings policy](./elevation-settings.md).
+- **Phase 1: Auditing** - Enable EPM client and enable reporting collection using an [elevation settings policy](./ref-elevation-settings.md).
 - **Phase 2: Persona identification** - Identity groups of users with common requirements.
-- **Phase 3: Build rules** - Use [EPM reports](./reports.md) to create [elevation rules](./elevation-rules.md) for different personas.
+- **Phase 3: Build rules** - Use [EPM reports](./monitor-reports.md) to create [elevation rules](./ref-elevation-rules.md) for different personas.
 - **Phase 4: Monitoring** - Iterate and refine rules, identify new scenarios.
-- **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](../device-configuration/endpoint-security-policies/account-protection-policy.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](./support-approved.md) so that users can request elevation for apps that aren't covered by rules.
+- **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](../device-configuration/endpoint-security-policies/account-protection.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](./manage-support-approvals.md) so that users can request elevation for apps that aren't covered by rules.
 
 Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with [Zero Trust principles](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
 
@@ -46,7 +46,7 @@ The common deployment scenarios for EPM are:
 | Scenario | Local User (Before) | Local User (After) | Example Role | Use Case |
 |---|---|---|---|---|
 |1|Admin|Admin|IT Support Technicians|A certain subset of users required ongoing local admin – but you want to gain security improvements by using EPM.|
-|2|Admin|Standard User|Information Workers|You want to move users with local admin rights to standard users, with minimal disruption. You want to allow them to request an app to run as admin on occasion.</br></br> For step by step instructions on how to achieve this scenario with EPM, see [Using EPM to transition users from administrator to standard users](./migrate-administrator-to-standard-user.md)|
+|2|Admin|Standard User|Information Workers|You want to move users with local admin rights to standard users, with minimal disruption. You want to allow them to request an app to run as admin on occasion.</br></br> For step by step instructions on how to achieve this scenario with EPM, see [Using EPM to transition users from administrator to standard users](./tutorial-admin-to-standard-user.md)|
 |2|Standard User|Standard User|Developers|You want to allow specific users to 'elevate up' without granting local admin rights or using [LAPS](../device-security/laps/overview.md).|
 
 ---
@@ -54,4 +54,4 @@ The common deployment scenarios for EPM are:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Create an elevation settings policy >](./elevation-settings.md)
+> [Next: Create an elevation settings policy >](./ref-elevation-settings.md)

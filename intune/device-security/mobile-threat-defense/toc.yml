@@ -12,7 +12,7 @@ items:
   - name: MTD on enrolled devices
     items:
       - name: Add MTD apps to enrolled devices
-        href: ./add-assign-apps.md
+        href: ./assign-apps.md
       - name: Create an MTD device compliance policy
         href: ./create-compliance-policy.md
       - name: Enable MTD for enrolled devices

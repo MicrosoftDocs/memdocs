@@ -31,7 +31,7 @@ Because *macOS local account configuration with LAPS* is enabled only during aut
 
 > [!TIP]
 >
-> The Intune implementation of macOS LAPS is similar but distinct from Intune support for Windows LAPS. For information about Windows LAPS in Intune, see [Local administrator account](setup-laps-macos.md#local-administrator-account).
+> The Intune implementation of macOS LAPS is similar but distinct from Intune support for Windows LAPS. For information about Windows LAPS in Intune, see [Local administrator account](setup-macos.md#local-administrator-account).
 
 ## Prerequisites
 
@@ -55,13 +55,13 @@ Category: **Enrollment programs**:
 > [!IMPORTANT]
 > The two permissions for *Enrollment programs* aren't included with any Intune built-in role or with the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md) to assign this permission to users who should have these capabilities.
 
-For permissions and details required to manage macOS policies for automated device enrollment, see [Set up automated device enrollment (ADE) for macOS](setup-automated-macos.md).
+For permissions and details required to manage macOS policies for automated device enrollment, see [Set up automated device enrollment (ADE) for macOS](../../device-enrollment/apple/setup-automated-macos.md).
 
 ## Configuration account and password options
 
-This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an Apple enrollment profile](setup-automated-macos.md#create-an-apple-enrollment-profile) procedure for macOS automatic device enrollment (ADE) profiles.
+This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile) procedure for macOS automatic device enrollment (ADE) profiles.
 
-When you [configure a macOS automated device enrollment profile](setup-automated-macos.md), the **Account Settings** tab presents options to configure both the Local administrator account and the Local user account. By default, these options are both set to *No*.
+When you [configure a macOS automated device enrollment profile](../../device-enrollment/apple/setup-automated-macos.md), the **Account Settings** tab presents options to configure both the Local administrator account and the Local user account. By default, these options are both set to *No*.
 
 :::image type="content" source="./media/setup-macos/account-settings-initial-configuration.png" alt-text="Screen shot of the default appearance of the automated device enrollment profiles Account Setting pane.":::
 
@@ -162,4 +162,4 @@ Look for the following entries:
 
 ## Related content
 
-- Get started with the [macOS enrollment guide](guide-macos.md).
+- Get started with the [macOS enrollment guide](../../device-enrollment/apple/guide-macos.md).

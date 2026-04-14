@@ -40,28 +40,28 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 
 :::image type="content" source="./media/manage-policies/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
 
-**[Account protection](./account-protection-policy.md)**  
+**[Account protection](./account-protection.md)**  
 
 - **Purpose**: Protect user identities and accounts through modern authentication methods
 - **Platform support**: Windows
 - **Available profiles**: Account protection, Local admin password solution (Windows LAPS), Local user group membership
 - **Use case**: Implement passwordless authentication and credential protection
 
-**[Antivirus](./antivirus-policy.md)**  
+**[Antivirus](./antivirus.md)**  
 
 - **Purpose**: Configure and manage antivirus protection settings
 - **Platform support**: Windows, macOS, Linux
 - **Available profiles**: Defender Update controls, Microsoft Defender Antivirus, Microsoft Defender Antivirus exclusions, Windows Security experience, macOS Endpoint security antivirus
 - **Use case**: Centrally manage Microsoft Defender Antivirus policies on Windows devices
 
-**[App Control for Business](./app-control-policy.md)**  
+**[App Control for Business](./manage-app-control.md)**  
 
 - **Purpose**: Control which applications can run on Windows devices using [Windows Defender Application Control (WDAC)](/windows/security/application-security/application-control/windows-defender-application-control/wdac)
 - **Platform support**: Windows
 - **Available profiles**: Windows Defender Application Control (WDAC)
 - **Use case**: Implement application allowlisting and control software execution
 
-**[Attack surface reduction](./attack-surface-reduction-policy.md)**  
+**[Attack surface reduction](./attack-surface-reduction.md)**  
 
 - **Purpose**: Reduce potential attack vectors and system vulnerabilities
 - **Platform support**: Windows
@@ -69,14 +69,14 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Use case**: Harden devices against common attack methods and techniques
 - **Requirements**: Microsoft Defender Antivirus must be the primary antivirus solution
 
-**[Disk encryption](./disk-encryption-policy.md)**  
+**[Disk encryption](./disk-encryption.md)**  
 
 - **Purpose**: Manage built-in encryption methods for data protection
 - **Platform support**: Windows, macOS
 - **Available profiles**: BitLocker, Personal Data Encryption (PDE), macOS FileVault
 - **Use case**: Ensure data-at-rest protection with native encryption technologies
 
-**[Endpoint detection and response](./edr-policy.md)**  
+**[Endpoint detection and response](./deploy-edr.md)**  
 
 - **Purpose**: Configure Microsoft Defender for Endpoint integration and onboarding
 - **Platform support**: Windows, macOS, Linux
@@ -84,7 +84,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Use case**: Enable advanced threat detection and response capabilities
 - **Requirements**: Microsoft Defender for Endpoint licensing and tenant connection
 
-**[Firewall](./firewall-policy.md)**  
+**[Firewall](./firewall.md)**  
 
 - **Purpose**: Configure built-in firewall protection
 - **Platform support**: Windows, macOS

@@ -96,7 +96,7 @@ Access is granted on remediation:
 
 - [Integrate Check Point Harmony Mobile with Intune](./setup-checkpoint-harmony.md)
 
-- [Set up Harmony Mobile Protect app](./add-assign-apps.md)
+- [Set up Harmony Mobile Protect app](./assign-apps.md)
 
 - [Create Check Point Harmony Mobile device compliance policy](./create-compliance-policy.md)
 

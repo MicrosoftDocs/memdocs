@@ -38,7 +38,7 @@ For more information about how to integrate BlackBerry UES with Microsoft Intune
 For Android and iOS/iPadOS, the CylancePROTECT app captures file system, network stack, device, and application telemetry where available, then sends the data to the Cylance AI Protection cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for MTD, which can use risk assessment information from CylancePROTECT (BlackBerry). When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources, such as Exchange Online and SharePoint Online. Users also receive guidance from the BlackBerry Protect app installed on their devices to resolve the issue and regain access to corporate resources. To support using BlackBerry Protect with enrolled devices:
-  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Add MTD apps to devices](./assign-apps.md)
   - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
   - [Enable the MTD connector in Intune](./enable-connector.md)
 
@@ -107,7 +107,7 @@ Access is granted on remediation:
 
 - [Integrate CylancePROTECT Mobile with Intune](./setup-blackberry.md)
 
-- [Set up CylancePROTECT app](./add-assign-apps.md)
+- [Set up CylancePROTECT app](./assign-apps.md)
 
 - [Create CylancePROTECT device compliance policy](./create-compliance-policy.md)
 

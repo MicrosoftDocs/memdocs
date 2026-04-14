@@ -317,7 +317,7 @@ items:
           - name: PowerShell script for custom settings
             href: ./device-security/compliance/create-custom-script.md
           - name: Windows Subsystem for Linux
-            href: ./device-security/compliance/wsl.md
+            href: ./device-security/compliance/configure-wsl.md
         - name: Actions for noncompliance
           href: ./device-security/compliance/configure-noncompliance-actions.md
         - name: Monitor device compliance
@@ -356,19 +356,19 @@ items:
           - name: Use reusable settings groups
             href: ./device-security/reusable-settings-groups.md
           - name: Account protection
-            href: ./device-configuration/endpoint-security-policies/account-protection-policy.md
+            href: ./device-configuration/endpoint-security-policies/account-protection.md
           - name: Antivirus
-            href: ./device-configuration/endpoint-security-policies/antivirus-policy.md
+            href: ./device-configuration/endpoint-security-policies/antivirus.md
           - name: Application Control
-            href: ./device-configuration/endpoint-security-policies/app-control-policy.md
+            href: ./device-configuration/endpoint-security-policies/manage-app-control.md
           - name: Attack surface reduction
-            href: ./device-configuration/endpoint-security-policies/attack-surface-reduction-policy.md
+            href: ./device-configuration/endpoint-security-policies/attack-surface-reduction.md
           - name: Disk encryption
-            href: ./device-configuration/endpoint-security-policies/disk-encryption-policy.md
+            href: ./device-configuration/endpoint-security-policies/disk-encryption.md
           - name: Endpoint detection and response
-            href: ./device-configuration/endpoint-security-policies/edr-policy.md
+            href: ./device-configuration/endpoint-security-policies/deploy-edr.md
           - name: Firewall
-            href: ./device-configuration/endpoint-security-policies/firewall-policy.md
+            href: ./device-configuration/endpoint-security-policies/firewall.md
         - name: Microsoft Defender for Endpoint
           items:
           - name: Microsoft Defender for Endpoint
@@ -419,7 +419,7 @@ items:
           - name: Deploy LAPS policy
             href: ./device-security/laps/deploy-policy.md
           - name: Reports for LAPS policy
-            href: ./device-security/laps/reports.md
+            href: ./device-security/laps/monitor.md
 
       - name: Mobile Threat Defense partners
         href: ./device-security/mobile-threat-defense/toc.yml

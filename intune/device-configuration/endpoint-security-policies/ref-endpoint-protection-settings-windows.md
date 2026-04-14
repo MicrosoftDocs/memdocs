@@ -18,7 +18,7 @@ ms.collection:
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 Microsoft Intune includes many settings to help protect your devices. This article describes the settings in the device configuration *Endpoint protection* template. To manage device security, you can also use [endpoint security policies](./manage-policies.md), which focus directly on subsets of device security.
-To configure Microsoft Defender Antivirus, see [Windows device restrictions](../templates/ref-device-restrictions-windows.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](./antivirus-policy.md).
+To configure Microsoft Defender Antivirus, see [Windows device restrictions](../templates/ref-device-restrictions-windows.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](./antivirus.md).
 
 ## Before you begin
 
@@ -1638,4 +1638,4 @@ Use these options to configure the local security settings on Windows devices.
 
 The profile is created, but it's not doing anything yet. Next, [assign the profile](../assign-device-profile.md), and [monitor its status](../monitor-device-profile.md).
 
-Configure endpoint protections settings on [macOS](./endpoint-protection-macos.md) devices.
+Configure endpoint protections settings on [macOS](./ref-endpoint-protection-macos.md) devices.

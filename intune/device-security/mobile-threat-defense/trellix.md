@@ -37,7 +37,7 @@ The Trellix Mobile Security app for Android and iOS/iPadOS captures file system,
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Trellix Mobile Security. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Trellix Mobile Security app installed in their devices to resolve the issue and regain access to corporate resources. To support using Trellix Mobile Security with enrolled devices:
 
-  - [Add MTD apps to devices](./add-assign-apps.md)
+  - [Add MTD apps to devices](./assign-apps.md)
   - [Create a device compliance policy that supports MTD](./create-compliance-policy.md)
   - [Enable the MTD connector in Intune](./enable-connector.md)
 
@@ -104,7 +104,7 @@ Access is granted on remediation:
 ## Next steps
 
 - [Integrate Trellix Mobile Security with Intune](./setup-trellix.md)
-- [Set up Trellix Mobile Security apps](./add-assign-apps.md)
+- [Set up Trellix Mobile Security apps](./assign-apps.md)
 - [Create Trellix Mobile Security device compliance policy](./create-compliance-policy.md)
 - [Enable Trellix Mobile Security MTD connector](./enable-connector.md)
 - [Create an MTD app protection policy](./create-app-protection-policy.md)

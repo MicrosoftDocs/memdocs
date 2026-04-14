@@ -45,6 +45,6 @@ In addition to Account protection profiles, Intune supports the following option
 
 ## Next steps
 
-- [Configure Account protection profiles to manage Windows Hello for Business settings](../../device-configuration/endpoint-security-policies/account-protection-policy.md)
+- [Configure Account protection profiles to manage Windows Hello for Business settings](../../device-configuration/endpoint-security-policies/account-protection.md)
 - [Review settings, and what they do](./ref-settings.md)
 - [Monitor the profile status](../../device-configuration/monitor-device-profile.md)

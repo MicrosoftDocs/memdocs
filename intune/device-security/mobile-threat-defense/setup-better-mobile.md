@@ -64,5 +64,5 @@ The Better Mobile app authorization process follows:
 
 ## Next steps
 
-- [Set up Better Mobile apps for enrolled devices](./add-assign-apps.md)
+- [Set up Better Mobile apps for enrolled devices](./assign-apps.md)
 - [Set up Better Mobile apps for unenrolled devices](./add-apps-unenrolled-devices.md)

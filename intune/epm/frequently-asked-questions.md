@@ -32,7 +32,7 @@ Endpoint Privilege Management is supported with the following virtual devices:
 
 ### Why is my elevation settings policy showing error/not applicable?
 
-The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](./plan.md#requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](./deployment-planning.md#requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 

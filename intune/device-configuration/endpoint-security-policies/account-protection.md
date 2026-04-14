@@ -81,7 +81,7 @@ Use the *Local user group membership* profile to manage the local group membersh
 
 When you configure this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
 
-:::image type="content" source="./media/account-protection-policy/create-profile.png" alt-text="Screen shot of the Configuration settings page for configuring the profile.":::
+:::image type="content" source="./media/account-protection/create-profile.png" alt-text="Screen shot of the Configuration settings page for configuring the profile.":::
 
 The following are the configurations you can make:
 
@@ -108,7 +108,7 @@ The following are the configurations you can make:
   - **Select user(s)**: Select the users and user groups from Microsoft Entra.
   - **Add user(s)**: This option opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
 
-    :::image type="content" source="./media/account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page in the Intune admin center.":::
+    :::image type="content" source="./media/account-protection/add-user.png" alt-text="Screen shot of the Add users page in the Intune admin center.":::
 
 Choosing the Manual option can be helpful in scenarios where you want to manage your on-premises Active Directory users from Active Directory to a local group for a Microsoft Entra hybrid joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member's username. Values from Active Directory must be used for hybrid joined devices, while values from Microsoft Entra ID must be used for Microsoft Entra join. Microsoft Entra group SIDs can be obtained using [Graph API for Groups](/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
 

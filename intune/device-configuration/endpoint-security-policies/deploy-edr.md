@@ -310,7 +310,7 @@ For rapid deployment to all eligible Windows devices directly from the EDR Onboa
 
 1. From the **EDR Onboarding Status** tab, select **Deploy preconfigured policy**.
 
-   :::image type="content" source="./media/edr-policy/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
+   :::image type="content" source="./media/deploy-edr/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
 
 2. Choose your deployment scope:
    - **Windows + Endpoint detection and response**: For Intune-managed devices
@@ -337,7 +337,7 @@ Use the device list on the **EDR Onboarding Status tab** to identify specific de
 #### Create targeted policies
 Once you've identified problem devices, create specific EDR policies using the **Create Policy** option from the **Summary tab**:
 
-:::image type="content" source="./media/edr-policy/manually-create-edr-policy.png" alt-text="Screen shot of the admin center that shows where to find the Create Policy option.":::
+:::image type="content" source="./media/deploy-edr/manually-create-edr-policy.png" alt-text="Screen shot of the admin center that shows where to find the Create Policy option.":::
 
 ### Monitoring scenarios
 
@@ -374,7 +374,7 @@ When devices fail to onboard:
 Beyond the dedicated EDR Onboarding Status report, you can also view device onboarding status through Intune's Microsoft Defender Antivirus reports. These reports include onboarding status information for Windows MDM devices and provide another way to monitor your organization's Defender for Endpoint deployment:
 
 - **[Antivirus agent status report](../../intune-service/fundamentals/reports.md#antivirus-agent-status-report-organizational)**: Shows comprehensive device status including Defender for Endpoint onboarding state
-- **[Unhealthy endpoints report](./antivirus-policy.md#unhealthy-endpoints)**: Displays devices with detected issues, including onboarding problems
+- **[Unhealthy endpoints report](./antivirus.md#unhealthy-endpoints)**: Displays devices with detected issues, including onboarding problems
 
 These reports are available at in the admin center at the following lcoations:  
 - Go to **Reports** > **Endpoint security** > **Microsoft Defender Antivirus** > **Reports** > **Antivirus agent status** tile.
@@ -462,7 +462,7 @@ For more information, see the following subjects in the Microsoft Defender for E
 
 After onboarding devices with EDR policies, consider deploying additional endpoint security controls:
 
-- [Attack surface reduction rules](./attack-surface-reduction-policy.md)
-- [Anti-malware policies](./antivirus-policy.md)
-- [Firewall policies](./firewall-policy.md)
+- [Attack surface reduction rules](./attack-surface-reduction.md)
+- [Anti-malware policies](./antivirus.md)
+- [Firewall policies](./firewall.md)
 - [Device compliance policies](../../device-security/compliance/overview.md)

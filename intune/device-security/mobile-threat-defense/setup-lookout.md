@@ -152,9 +152,9 @@ After setup is complete, Lookout Mobile Endpoint Security starts to poll Microso
 - Initial status for devices is *pending*.
 - The device status updates after the *Lookout for Work* app is installed, opened, and activated on the device.
 
-For details on how to get the *Lookout for Work* app deployed to a device, see [Add Lookout for work apps with Intune](./add-assign-apps.md).
+For details on how to get the *Lookout for Work* app deployed to a device, see [Add Lookout for work apps with Intune](./assign-apps.md).
 
 ## Next steps
 
-- [Set up Lookout apps for enrolled devices](./add-assign-apps.md)
+- [Set up Lookout apps for enrolled devices](./assign-apps.md)
 - [Set up Lookout apps for unenrolled devices](./add-apps-unenrolled-devices.md)

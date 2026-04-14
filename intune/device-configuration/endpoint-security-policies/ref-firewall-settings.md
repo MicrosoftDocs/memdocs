@@ -41,7 +41,7 @@ Supported platforms and profiles:
 
 ### Firewall
 
-The following settings are configured as [Endpoint Security policy for macOS Firewalls](./firewall-policy.md)
+The following settings are configured as [Endpoint Security policy for macOS Firewalls](./firewall.md)
 
 - **Enable Firewall**
 
@@ -73,7 +73,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
 
 ### Windows Firewall
 
-The following settings are configured as [Endpoint Security policy for Windows Firewalls](./firewall-policy.md).
+The following settings are configured as [Endpoint Security policy for Windows Firewalls](./firewall.md).
 
 - **Stateful File Transfer Protocol (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
@@ -405,7 +405,7 @@ The following settings are configured as [Endpoint Security policy for Windows F
 
 *This profile is in Preview*.
 
-The following settings are configured as [Endpoint Security policy for Windows Firewalls](./firewall-policy.md).
+The following settings are configured as [Endpoint Security policy for Windows Firewalls](./firewall.md).
 
 #### Windows Firewall Rule
 
@@ -535,4 +535,4 @@ Specifies the local and remote addresses to which this rule applies:
 
 ## Next steps
 
-[Endpoint security policy for firewalls](./firewall-policy.md)
+[Endpoint security policy for firewalls](./firewall.md)
