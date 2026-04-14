@@ -282,7 +282,7 @@ This phase is designed to help you build out security settings for your organiza
 
 The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-#### [:::image type="icon" source="../../intune-service/media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+#### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
 
 In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 

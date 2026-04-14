@@ -113,7 +113,7 @@ On your device, you see a prompt showing a request to grant screen share or cont
 - During an attended screen sharing or full control session, the device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from your device.
 - During an unattended control session, the screen of the device is blocked due to security and privacy reasons, and you are notified if you interact with it. If you interact with the blocked screen, you receive a notification that a helper connected. When the notification is shown, you and the helper won't be able to take any action for 30 seconds. You won't be able to end the session from your device until the helper ends the session.
 
-### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 During a session, there are two roles: a helper and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
 
@@ -245,7 +245,7 @@ If the device that you're trying to help isn't enrolled in Microsoft Intune, fol
 
 Remote Help displays a warning if the sharer's device isn't enrolled in Microsoft Intune. This warning doesn't block access but provides transparency about the risk of using sensitive data, like administrative credentials, during the session.
 
-### [:::image type="icon" source="../media/icons/intune.svg"::: **Android from Intune admin center**](#tab/androidadmin)
+### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Android from Intune admin center**](#tab/androidadmin)
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
@@ -280,7 +280,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 > [!NOTE]
 > On Samsung devices running Android 15, you might notice minor visual latency during a Remote Help session. In some scenarios, portions of the screen may appear to refresh with a slight delay. This behavior doesn't affect session connectivity.
 
-### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Windows or macOS from the web app**](#tab/helperwebapp)
+### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Windows or macOS from the web app**](#tab/helperwebapp)
 
 1. Sign in to <a href="https://aka.ms/rhh" target="_blank"><u>https://aka.ms/rhh</u></a>.
 1. Copy and share the eight-digit session code with the sharer that you're trying to help.

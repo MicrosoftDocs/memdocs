@@ -192,7 +192,7 @@ Remote Help is supported on the following Android Enterprise devices enrolled in
 - Install the Intune app on devices with a version later than 5.0.5541.0.  
 - Devices must not have device configuration policy set to block screen capture.  
 
-### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 Device support is dependent on both the users operating system, and their web browser.  
 
@@ -251,7 +251,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 Remote Help doesn't support unenrolled devices on Android.
 
-### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 The web app has the same requirements as the platform of the sharer.
 
@@ -339,7 +339,7 @@ Remote Help with chat *on* is supported in the following languages:
 
 The Remote Help app for Android uses the language set on the device. The Remote Help app for Android supports all languages that are supported by Android.
 
-### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 The Remote Help web app supports all of the languages supported by the browser being used.
 

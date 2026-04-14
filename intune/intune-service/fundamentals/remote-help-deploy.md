@@ -260,7 +260,7 @@ You can configure these settings using either the Microsoft Intune admin center 
     | Static Code | False |
 1. Select **Next**. Configure scope tags as required and assign the profile to groups as required. Review all settings and **Create** the policy.  
 
-#### :::image type="icon" source="../media/icons/graph.svg"::: Microsoft Graph
+#### :::image type="icon" source="../../media/icons/16/graph.svg"::: Microsoft Graph
 
 [!INCLUDE [graph-explorer-introduction](../../solutions/includes/graph-explorer-intro.md)]
 
