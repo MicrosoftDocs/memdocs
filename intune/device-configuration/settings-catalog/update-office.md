@@ -1,8 +1,6 @@
 ---
 title: Update Microsoft 365 apps with the settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 08/28/2025
 ms.topic: how-to
 ms.reviewer: mayurjadhav
@@ -51,10 +49,10 @@ Use an Intune policy to set the update channel for Microsoft 365 apps. The updat
     > - It's recommended to update more frequently. Semi-annually is only used as an example.
     > - For information on the different update channels, go to [Overview of update channels for Microsoft 365 Apps](/microsoft-365-apps/updates/overview-update-channels).
 
-3. When the policy is ready, [assign the policy](../../intune-service/configuration/device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
+3. When the policy is ready, [assign the policy](../../device-configuration/assign-device-profile.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
 
     - [Sync the policy in Intune](../../device-management/actions/sync.md)
-    - [Manually sync the policy on the device](../../intune-service/user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
+    - [Manually sync the policy on the device](../../user-help/device-actions/sync-device-windows.md#sync-from-settings-app)
 
 ## Check the Intune registry keys
 

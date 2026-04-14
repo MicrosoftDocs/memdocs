@@ -1,8 +1,6 @@
 ---
 title: Configure Universal Print policy using settings catalog in Microsoft Intune
 description: Use the settings catalog in Microsoft Intune to create a Universal Print policy for Windows 10/11 client devices. The policy automatically installs printers on your managed devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 05/21/2024
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav
@@ -106,7 +104,7 @@ This policy includes your printer information. When you assign the policy, the p
 
     `The selected groups may not have Universal Print permissions to selected printers. If this is the case, Intune will provide these groups with the correct permissions.`
 
-    For more information on assigning profiles in Intune, go to [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md). For more information on user scope vs. device scope in the settings catalog, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](index.md#device-scope-vs-user-scope-settings).
+    For more information on assigning profiles in Intune, go to [Assign user and device profiles](../../device-configuration/assign-device-profile.md). For more information on user scope vs. device scope in the settings catalog, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](index.md#device-scope-vs-user-scope-settings).
 
     Select **Next**.
 
@@ -114,7 +112,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 ## Failures and reporting
 
-After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](../../intune-service/configuration/device-profile-monitor.md).
+After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](../../device-configuration/monitor-device-profile.md).
 
 For information on the reporting data you can view, go to [Intune reports](../../intune-service/fundamentals/reports.md).
 

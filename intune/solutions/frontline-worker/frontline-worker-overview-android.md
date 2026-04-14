@@ -36,7 +36,7 @@ Intune supports different enrollment options for Android devices, as shown in th
 
 :::image type="content" source="./media/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/android-flw-enrollment-options.png":::
 
-This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
 
 ## Step 1 - Select your Intune enrollment option
 
@@ -91,11 +91,11 @@ The next decision is to decide if the devices are shared with many users or assi
 
   - If you're using Android shared devices and the devices support Android Enterprise enrollment, then enroll your devices as **dedicated devices**. These devices support Google Mobile Services (GMS) and aren't associated with a single or specific user.
 
-    For more information on dedicated device enrollment, go to [Intune enrollment of Android Enterprise dedicated devices](../../intune-service/enrollment/android-kiosk-enroll.md).
+    For more information on dedicated device enrollment, go to [Intune enrollment of Android Enterprise dedicated devices](../../device-enrollment/android/setup-dedicated.md).
 
   - If you're using Android (AOSP) shared devices, then you can enroll your devices as **userless devices**. These devices typically don't support GMS and aren't associated with a single or specific user.
 
-    For more information on Android (AOSP) userless enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned userless devices](../../intune-service/enrollment/android-aosp-corporate-owned-userless-enroll.md).
+    For more information on Android (AOSP) userless enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned userless devices](../../device-enrollment/android/setup-aosp-corporate-userless.md).
 
 - **User associated device**
 
@@ -109,17 +109,17 @@ The next decision is to decide if the devices are shared with many users or assi
 
     For more information on these enrollment methods, go to:
 
-    - [Intune enrollment for Android Enterprise fully managed devices](../../intune-service/enrollment/android-fully-managed-enroll.md)
-    - [Intune enrollment for corporate-owned devices with a work profile](../../intune-service/enrollment/android-corporate-owned-work-profile-enroll.md)
+    - [Intune enrollment for Android Enterprise fully managed devices](../../device-enrollment/android/setup-fully-managed.md)
+    - [Intune enrollment for corporate-owned devices with a work profile](../../device-enrollment/android/setup-corporate-work-profile.md)
 
-    For a list of some of the settings can you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
+    For a list of some of the settings can you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
   - If you're using **Android (AOSP)**, then you can enroll your devices as a **user-associated** device. These devices have one user, and are used exclusively for organization work; not personal use.
 
     Remember, Android (AOSP) devices don't support Google Mobile Services (GMS).
 
-    - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../intune-service/enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
-    - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
+    - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../device-enrollment/android/setup-aosp-corporate-user-associated.md).
+    - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 ## Step 3 - Home screen and device experience
 
@@ -149,11 +149,11 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Intune](../../intune-service/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+  1. [Add apps to Intune](../../app-management/deployment/index.md). When the apps are added, you create app policies that deploy the apps to the devices.
 
-  2. [Create app configuration policies](../../intune-service/apps/app-configuration-policies-overview.md) to configure app features. You can also add a JSON file with all the configuration settings you want.
+  2. [Create app configuration policies](../../app-management/configuration/overview.md) to configure app features. You can also add a JSON file with all the configuration settings you want.
 
-  3. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
+  3. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode**. Set it to **Not configured**:
 
@@ -175,9 +175,9 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../../intune-service/apps/apps-add.md), including the MHS app. When the apps are added, you create app policies that deploy the apps to the devices.
+  1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md), including the MHS app. When the apps are added, you create app policies that deploy the apps to the devices.
 
-  2. Use a [device restrictions configuration profile](../../intune-service/configuration/device-restrictions-configure.md) to set the kiosk mode to multi-app, and select your apps. This step locks the device to only the apps you select:
+  2. Use a [device restrictions configuration profile](../../device-configuration/templates/configure-device-restrictions.md) to set the kiosk mode to multi-app, and select your apps. This step locks the device to only the apps you select:
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** > **Multi-app** > **Add**. Add the apps you want in multi-app kiosk mode:
 
@@ -187,11 +187,11 @@ The following scenarios are common for FLW:
 
       - **Option 1 - Device restrictions configuration profile**: In the same device restrictions configuration profile, configure the device features you want when in multi-app kiosk mode.
 
-        For a list of settings you can configure, go to [Android Enterprise - Device experience settings](../../intune-service/configuration/device-restrictions-android-for-work.md#device-experience).
+        For a list of settings you can configure, go to [Android Enterprise - Device experience settings](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md#device-experience).
 
       - **Option 2 - App configuration policy**: The app configuration policy has more configuration settings than the device restrictions configuration profile. You can also add a JSON file with all the configuration settings you want.
 
-        For more information, go to [Configure the Microsoft Managed Home Screen app](../../intune-service/apps/app-configuration-managed-home-screen-app.md).
+        For more information, go to [Configure the Microsoft Managed Home Screen app](../../app-management/configuration/configure-managed-home-screen.md).
 
 - **Scenario 3: Single app kiosk**
 
@@ -209,8 +209,8 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../../intune-service/apps/apps-add.md). When the app is added, you create an app policy that deploys the app to the devices.
-  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md):
+  1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md). When the app is added, you create an app policy that deploys the app to the devices.
+  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md):
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and select **Single app**:
 

@@ -29,7 +29,7 @@ These remote actions are especially useful in environments where devices are sha
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
-> - iOS/iPadOS in [Supervised Mode](../../intune-service/enrollment/device-supervised-mode.md)
+> - iOS/iPadOS in [Supervised Mode](../../device-enrollment/apple/enable-supervised-mode.md)
 :::column-end:::
 :::row-end:::
 :::row:::
@@ -91,7 +91,7 @@ The sound plays until the user disables the sound or the duration you set expire
 
 If system notifications are enabled, the device displays a notification with a **Stop Sound** button. The alert plays for the configured duration or until a user on the device manually stops it using the notification.
 
-Notification behavior might vary based on system settings. To configure system notifications, see [Android Enterprise device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md).
+Notification behavior might vary based on system settings. To configure system notifications, see [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 ::: zone-end
 

@@ -194,10 +194,10 @@ With these services, Intune:
 
 For more platform-specific requirements to enroll third party partner devices in Intune, go to:
 
-- [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
-- [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
-- [Deployment guide: Enroll Linux devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
-- [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
+- [Deployment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md)
+- [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../device-enrollment/apple/guide-ios-ipados.md)
+- [Deployment guide: Enroll Linux devices in Microsoft Intune](../../device-enrollment/guide-linux.md)
+- [Deployment guide: Enroll macOS devices in Microsoft Intune](../../device-enrollment/apple/guide-macos.md)
 
 ## Enroll in device management, application management, or both
 
@@ -219,7 +219,7 @@ With MAM, you can:
 
 For more information, go to:
 
-- [Device enrollment in Intune?](deployment-guide-enrollment.md)
+- [Device enrollment in Intune?](../../device-enrollment/guide.md)
 - [App protection policies overview](../apps/app-protection-policy.md)
 
 ## Protect data on any device
@@ -280,7 +280,7 @@ In the VPN policy, you can use certificates to authenticate the VPN connection. 
 For more information, go to:
 
 - [Create VPN profiles to connect to VPN servers in Intune](../configuration/vpn-settings-configure.md)
-- [Use certificates for authentication in Intune](../protect/certificates-configure.md)
+- [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - [Learn more about Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md)
 - [Use Microsoft Tunnel for MAM](../protect/microsoft-tunnel-mam.md)
 
@@ -295,7 +295,7 @@ When the policy is ready, you deploy this policy to your on-premises users and d
 For more information, go to:
 
 - [Create Wi-Fi policy to connect to Wi-Fi networks in Intune](../configuration/wi-fi-settings-configure.md)
-- [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md)
+- [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
 
 ### Enable single sign-on (SSO) to your apps and services
 

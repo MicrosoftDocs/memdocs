@@ -472,4 +472,4 @@ FileVault encryption integrates with Intune compliance policies:
 - [Configure BitLocker encryption for Windows devices](../protect/encrypt-devices.md)
 - [FileVault settings reference for endpoint security policies](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault)
 - [Apple FileVault deployment guide](https://support.apple.com/guide/deployment/dep32bf53500/web) *(opens Apple's website)*
-- [End-user guidance for FileVault recovery keys](../user-help/store-recovery-key.md)
+- [End-user guidance for FileVault recovery keys](../../user-help/security/import-recovery-key-macos.md)

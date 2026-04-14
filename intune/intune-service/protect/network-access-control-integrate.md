@@ -90,7 +90,7 @@ Other NAC products might require you include a device ID when using NAC with iOS
 > [!TIP]
 > We recommend using certificate-based authentication with the Intune device ID wherever possible. If you're unable to use certificate-based authentication, Intune supports querying devices based on MAC addresses.
 
-For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md).
+For more information about certificate profiles, see [Use SCEP certificate profiles with Microsoft Intune](../../device-configuration/certificates/scep-profiles.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../../device-configuration/certificates/pkcs-profiles.md).
 
 ## Data shared with NAC partners
 

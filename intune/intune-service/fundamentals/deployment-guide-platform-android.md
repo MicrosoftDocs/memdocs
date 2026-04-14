@@ -117,11 +117,11 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 | Task | Detail | Platform |
 | ---- | ------ | ------ |
 |[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of enrollment.| Android Enterprise |
-|[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices using SCEP, PKCS, and PKCS imported certificates.| Android Enterprise, Android device administrator |
-|[Use SCEP certificates with Intune](../protect/certificates-scep-configure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).| Android Enterprise |
-|[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)| Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | Android Enterprise, Android device administrator |
-|[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). | Android Enterprise, Android device administrator |
-|[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Android devices with certificates that are derived from user smart cards. | Android Enterprise |
+|[Create a trusted certificate profile](../../device-configuration/certificates/trusted-root-profiles.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices using SCEP, PKCS, and PKCS imported certificates.| Android Enterprise, Android device administrator |
+|[Use SCEP certificates with Intune](../../fundamentals/certificates/scep-infrastructure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../../device-configuration/certificates/scep-profiles.md) or [set up a third-party certification authority with SCEP](../../fundamentals/certificates/third-party-ca-scep.md).| Android Enterprise |
+|[Use PKCS certificates with Intune](../../device-configuration/certificates/pkcs-profiles.md)| Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | Android Enterprise, Android device administrator |
+|[Use imported PKCS certificates with Intune](../../device-configuration/certificates/imported-pfx-profiles.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../../device-security/certificates/s-mime.md). | Android Enterprise, Android device administrator |
+|[Set up a derived credentials issuer](../../device-security/certificates/derived-credentials.md)| Provision Android devices with certificates that are derived from user smart cards. | Android Enterprise |
 
 ## Deploy apps
 
@@ -160,7 +160,7 @@ Intune supports the following enrollment methods for Android devices:
 * Android Enterprise corporate owned work profile
 * Android device administrator
 
-For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](deployment-guide-enrollment-android.md).
+For information about each enrollment method and how to choose one that's right for your organization, see the [Android device enrollment guide for Microsoft Intune](../../device-enrollment/android/guide.md).
 
 | Task | Detail | Platform |
 | ---- | ------ | ------ |
@@ -183,7 +183,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | Task | Detail |
 | ---- | ------ |
 |[Run remote actions in Intune](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.|
-|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
+|[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/microsoft-defender-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender's threat and vulnerability management, and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 | [Wipe corporate data from Intune-managed apps](../apps/apps-selective-wipe.md) | Selectively remove work-related data from a device. |
 
 ## Next steps

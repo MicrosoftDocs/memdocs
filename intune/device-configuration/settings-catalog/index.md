@@ -1,8 +1,6 @@
 ---
 title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/24/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
@@ -39,7 +37,7 @@ This feature applies to:
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
 
-  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../intune-service/enrollment/apple-user-enrollment-with-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
+  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../device-enrollment/apple/setup-user-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 
 - **macOS**
 
@@ -55,7 +53,7 @@ This feature applies to:
 
 
   - [Built-in macOS features replacing plist files](common-tasks.md#built-in-macos-features-replacing-plist-files)
-  - [Add a property list file to macOS devices using Microsoft Intune](../../intune-service/configuration/preference-file-settings-macos.md).
+  - [Add a property list file to macOS devices using Microsoft Intune](../../device-configuration/templates/configure-preference-file-macos.md).
 
 
 - **Windows**
@@ -133,7 +131,7 @@ You create the policy by using the settings catalog profile type.
 
     Select **Next**.
 
-11. In **Assignments**, select the users or groups that will receive your profile. For more information, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
+11. In **Assignments**, select the users or groups that will receive your profile. For more information, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
     Select **Next**.
 
@@ -265,8 +263,8 @@ In the Intune admin center, you can use the built-in reporting features to help 
 
 For more information about conflict resolution, see:
 
-- [Monitor device profiles](../../intune-service/configuration/device-profile-monitor.md#view-conflicts)
-- [Common questions and answers with device policies](../../intune-service/configuration/device-profile-troubleshoot.md)
+- [Monitor device profiles](../../device-configuration/monitor-device-profile.md#view-conflicts)
+- [Common questions and answers with device policies](../../device-configuration/troubleshoot-device-profiles.md)
 
 # [Copilot](#tab/copilot-conflicts)
 
@@ -325,5 +323,5 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 
 - [Tasks you can complete using the settings catalog in Intune](common-tasks.md)
 - [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md)
-- [Assign the profile](../../intune-service/configuration/device-profile-assign.md), and [monitor its status](../../intune-service/configuration/device-profile-monitor.md).
+- [Assign the profile](../../device-configuration/assign-device-profile.md), and [monitor its status](../../device-configuration/monitor-device-profile.md).
 - [Overview of Microsoft Copilot for Intune](../../copilot/index.md)

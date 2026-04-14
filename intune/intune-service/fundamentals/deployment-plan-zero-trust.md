@@ -45,7 +45,7 @@ The following table shows recommended deployment progression for Zero Trust devi
 | Layer | Protection capability | What you accomplish | Prerequisites | License requirements |
 |-------|----------------------|---------------------|---------------|---------------------|
 | **1** | [App protection policies](deployment-plan-protect-apps.md) | Protect organizational data in apps without requiring device enrollment. Creates foundation for bring-your-own-device (BYOD) scenarios. | Supported apps (Microsoft 365 apps, policy-enabled apps) | Microsoft 365 E3, E5, F1, F3, F5 |
-| **2** | [Enroll devices](deployment-guide-enrollment.md) | Establish relationship between user, device, and Intune. Enable device management and visibility into endpoints accessing resources. | Platform-specific prerequisites (MDM authority, certificates) | Microsoft 365 E3, E5, F1, F3, F5 |
+| **2** | [Enroll devices](../../device-enrollment/guide.md) | Establish relationship between user, device, and Intune. Enable device management and visibility into endpoints accessing resources. | Platform-specific prerequisites (MDM authority, certificates) | Microsoft 365 E3, E5, F1, F3, F5 |
 | **3** | [Compliance policies](deployment-plan-compliance-policies.md) | Define minimum requirements devices must meet (password protection, OS version, encryption). Mark devices as compliant or noncompliant. | Devices enrolled in layer 2 | Microsoft 365 E3, E5, F3, F5 |
 | **4** | [Require healthy and compliant devices](../protect/device-compliance-get-started.md#integrate-with-conditional-access) | Implement enterprise Zero Trust identity and device access policies. Work with identity team to enforce compliance through Conditional Access, blocking access from devices that don't meet security requirements. | Compliance policies from layer 3, coordination with identity administrators | Microsoft 365 E3, E5, F3, F5 |
 | **5** | [Configuration profiles](deployment-plan-configuration-profile.md) | Configure device settings to harden security. Deploy security baselines. Move security controls from Group Policy to cloud policies. | Enrolled devices from layer 2 | Microsoft 365 E3, E5, F3, F5 |
@@ -75,7 +75,7 @@ Enrollment registers devices with Intune, enabling comprehensive device manageme
 
 **Example:** A corporate laptop enrolls in Intune during Windows Autopilot setup. Intune configures Wi-Fi, deploys certificates, installs security baselines, enforces BitLocker encryption, and monitors compliance with your password policy.
 
-For details, see [Deployment guidance: Enroll devices](deployment-guide-enrollment.md).
+For details, see [Deployment guidance: Enroll devices](../../device-enrollment/guide.md).
 
 ### Compliance policies (Layer 3)
 
@@ -193,7 +193,7 @@ Implementing Zero Trust device security requires coordination across multiple te
 **Related guidance:**
 
 - [Microsoft Defender for Endpoint integration](../protect/microsoft-defender-integrate.md)
-- [Remediate vulnerabilities with security tasks](../protect/atp-manage-vulnerabilities.md)
+- [Remediate vulnerabilities with security tasks](../protect/microsoft-defender-manage-vulnerabilities.md)
 
 ### Data security and privacy team (Microsoft Purview)
 
@@ -228,7 +228,7 @@ Implementing Zero Trust device security requires coordination across multiple te
 **Get started with Zero Trust device security:**
 
 - [Deployment guidance: App protection policies](deployment-plan-protect-apps.md) - Layer 1
-- [Deployment guidance: Enroll devices](deployment-guide-enrollment.md) - Layer 2
+- [Deployment guidance: Enroll devices](../../device-enrollment/guide.md) - Layer 2
 - [Deployment guidance: Compliance policies](deployment-plan-compliance-policies.md) - Layer 3
 - [Require managed devices with Conditional Access](/entra/identity/conditional-access/policy-all-users-device-compliance) - Layer 4
 

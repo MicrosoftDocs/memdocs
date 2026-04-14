@@ -94,16 +94,16 @@ Some considerations:
 
   The following software updates planning guides can help you determine your update strategy:
 
-  - [Personal/BYOD](../../device-updates/byod-software-updates-guide.md)
-  - [Android](../../device-updates/android/software-updates-guide.md)
-  - [iOS/iPadOS](../../device-updates/apple/software-updates-guide-ios-ipados.md)
-  - [macOS](../../device-updates/apple/software-updates-guide-macos.md)
+  - [Personal/BYOD](../../device-updates/byod-planning-guide.md)
+  - [Android](../../device-updates/android/planning-guide.md)
+  - [iOS/iPadOS](../../device-updates/apple/planning-guide-ios-ipados.md)
+  - [macOS](../../device-updates/apple/planning-guide-macos.md)
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 
-  - Use [certificates](../protect/certificates-configure.md) on devices to authenticate features and apps, like connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
+  - Use [certificates](../../fundamentals/certificates/overview.md) on devices to authenticate features and apps, like connecting to a virtual private network (VPN), opening Outlook, and more. These certificates allow for a "password-less" user experience. Password-less is considered more secure than requiring users to enter their organization username and password.
 
-    If you're planning to use certificates, use a supported [public key infrastructure (PKI) infrastructure](../protect/certificates-configure.md) to create and deploy certificate profiles.
+    If you're planning to use certificates, use a supported [public key infrastructure (PKI) infrastructure](../../fundamentals/certificates/overview.md) to create and deploy certificate profiles.
 
   - Use [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) for an extra layer of authentication on organization-owned devices. Or, use MFA to authenticate apps on personal devices. Biometrics, like face recognition and fingerprints, can also be used.
 
@@ -506,7 +506,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
   | Self-service |  |  |  | HR, Finance |
   | Pre-provisioned |  |  |  | Executives |
 
-  For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+  For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md).
 
 ## Step 6 - Communicate changes
 
@@ -602,7 +602,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
   - Tools and resources
   - Q & A
 
-The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](/mem/intune-service/user-help/use-managed-devices-to-get-work-done) are also great resources.
+The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](../../user-help/index.yml) are also great resources.
 
 ## Related articles
 

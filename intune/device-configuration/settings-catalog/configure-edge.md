@@ -1,11 +1,8 @@
 ---
 title: Deploy Microsoft Edge policy using settings catalog in Microsoft Intune
 description: Add or create settings using the settings catalog to configure Microsoft Edge on Windows and macOS devices. Using Microsoft Intune, you can configure group policy settings, and deploy these settings to Microsoft Edge users.
-ms.author: mandia
-author: MandiOhlinger
 ms.date: 08/25/2025
 ms.topic: how-to
-
 ms.reviewer: mayurjadhav
 ms.collection:
 - M365-identity-device-management
@@ -33,12 +30,12 @@ This article applies to:
 - macOS
 - Microsoft Edge version 77 and newer
 
-  For Microsoft Edge version 45 and earlier, go to [Microsoft Edge Browser device restrictions](../../intune-service/configuration/device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+  For Microsoft Edge version 45 and earlier, go to [Microsoft Edge Browser device restrictions](../../device-configuration/templates/ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older).
 
 > [!TIP]
 >
-> - For information on adding the Microsoft Edge version 77+ app on Windows client, go to [Add Microsoft Edge app on Windows client devices](../../intune-service/apps/apps-windows-edge.md).
-> - For information on adding and configuring Microsoft Edge version 77+ app on macOS, go to [Add Microsoft Edge app](../../intune-service/apps/apps-edge-macos.md), and [Configure Microsoft Edge app using plist](/DeployEdge/configure-microsoft-edge-on-mac).
+> - For information on adding the Microsoft Edge version 77+ app on Windows client, go to [Add Microsoft Edge app on Windows client devices](../../app-management/deployment/add-edge-windows.md).
+> - For information on adding and configuring Microsoft Edge version 77+ app on macOS, go to [Add Microsoft Edge app](../../app-management/deployment/add-edge-macos.md), and [Configure Microsoft Edge app using plist](/DeployEdge/configure-microsoft-edge-on-mac).
 > - For a list of the Microsoft Edge updates, including new policies, go to the [Release notes for Microsoft Edge](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
 
 ## Prerequisites
@@ -89,7 +86,7 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
 11. In **Assignments**, select **Next**.
 
-    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](../../intune-service/configuration/device-profile-assign.md).
+    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](../../device-configuration/assign-device-profile.md).
 
     :::image type="content" source="./media/configure-edge/add-entra-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/add-entra-group-assign-policy.png":::
 
@@ -102,5 +99,5 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 ## Related content
 
 - [Download Microsoft Edge for your business](https://aka.ms/EdgeEnterprise)
-- [Manage web access by using Microsoft Edge with Microsoft Intune](../../intune-service/apps/manage-microsoft-edge.md)
-- [Deploy Microsoft Edge app using Microsoft Intune](../../intune-service/apps/apps-windows-edge.md)
+- [Manage web access by using Microsoft Edge with Microsoft Intune](../../app-management/configuration/configure-edge-ios-android.md)
+- [Deploy Microsoft Edge app using Microsoft Intune](../../app-management/deployment/add-edge-windows.md)

@@ -251,7 +251,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### Android onboarding quick start
 
-1. **Deploy the app**: Follow the [Microsoft Defender for Endpoint for Android](/defender-endpoint/android-intune) deployment guide for Intune-managed devices.
+1. **Deploy the app**: Follow the [Deploy and configure Microsoft Defender for Endpoint on Android](microsoft-defender-deploy-android.md) deployment guide.
 2. **Configure web protection**: Use [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md) policies for additional security.
 3. **Verify onboarding**: Confirm device registration in the Microsoft Defender portal.
 
@@ -459,7 +459,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 1. **Monitor deployment**: Check [device onboarding status](#monitor-device-onboarding-status) and compliance reports
 2. **Validate protection**: Test with controlled scenarios to ensure policies work as expected
-3. **Expand protection**: Consider [vulnerability management](atp-manage-vulnerabilities.md) for proactive threat remediation
+3. **Expand protection**: Consider [vulnerability management](microsoft-defender-manage-vulnerabilities.md) for proactive threat remediation
 
 ### Platform-specific enhancements
 
@@ -469,7 +469,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 ### Advanced features
 
 **Intune integration:**
-- [Security tasks with Vulnerability Management](atp-manage-vulnerabilities.md) - Remediate device vulnerabilities
+- [Security tasks with Vulnerability Management](microsoft-defender-manage-vulnerabilities.md) - Remediate device vulnerabilities
 - [Device compliance policies](device-compliance-get-started.md) - Comprehensive compliance management
 - [App protection policies](../apps/app-protection-policy.md) - Mobile app data protection
 - [Mobile app protection policies](../protect/mtd-app-protection-policy.md) - For Android and iOS/iPadOS devices, these policies set device risk levels, and work with both enrolled and unenrolled devices

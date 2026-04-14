@@ -1,8 +1,6 @@
 ---
 title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 11/11/2025
 ms.topic: reference
 params:
@@ -74,7 +72,7 @@ These settings apply to the Android Enterprise enrollment types where Intune con
 - Dedicated devices
 - Corporate-owned devices with a work profile
 
-To learn more about the different Android enrollment types, see [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+To learn more about the different Android enrollment types, see [Android Enrollment guide](../../device-enrollment/android/guide.md).
 
 ### Device restriction
 

@@ -1,0 +1,64 @@
+items:
+- name: Use certificates for authentication
+  href: overview.md
+
+- name: Trusted certificate profiles
+  href: ../../device-configuration/certificates/trusted-root-profiles.md
+
+- name: Certificate Connector
+  items:
+  - name: Overview
+    href: ./connector/overview.md
+  - name: Connector prerequisites
+    href: ./connector/prerequisites.md
+  - name: Install the connector
+    href: ./connector/setup-connector.md
+  - name: Troubleshoot certificate connector
+    href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
+  - name: Deprecated certificate connectors
+    href: connector/certificate-connectors.md
+
+- name: SCEP
+  items:
+  - name: SCEP infrastructure
+    href: scep-infrastructure.md
+  - name: SCEP certificate profiles
+    href: ../../device-configuration/certificates/scep-profiles.md
+  - name: Use third-party certificate authority with SCEP
+    href: third-party-ca-scep.md
+  - name: Troubleshoot SCEP certificate profiles
+    items:
+    - name: Troubleshoot SCEP certificate profiles
+      href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles?context=/intune/context
+    - name: Profile deployment to devices
+      href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment?context=/intune/context
+    - name: Device to NDES communication
+      href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes?context=/intune/context
+    - name: NDES operations
+      href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module?context=/intune/context
+    - name: Certificate delivery to devices
+      href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery?context=/intune/context
+    - name: Reporting for certificate deployment
+      href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting?context=/intune/context
+
+- name: PKCS
+  items:
+  - name: PKCS certificate profiles
+    href: ../../device-configuration/certificates/pkcs-profiles.md
+  - name: Imported PKCS (PFX)
+    href: ../../device-configuration/certificates/imported-pfx-profiles.md
+    displayName: csr
+  - name: Troubleshoot PKCS certificate profiles
+    href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles?context=/intune/context
+
+- name: Use DigiCert PKI
+  href: digicert-pkcs.md
+
+- name: Remove SCEP or PKCS certificates
+  href: ../../device-configuration/certificates/remove-profiles.md
+
+- name: Derived credentials
+  href: ../../device-security/certificates/derived-credentials.md
+
+- name: Use S/MIME to encrypt email
+  href: ../../device-security/certificates/s-mime.md

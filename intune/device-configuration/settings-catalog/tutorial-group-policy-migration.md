@@ -1,8 +1,6 @@
 ---
 title: Walkthrough-Create a settings catalog policy
 description: This tutorial or walkthrough steps through creating and comparing an on-premises Administrative Templates (ADMX) Group Policy and Microsoft Intune cloud-based settings catalog policy. It shows similar settings in on-premises and the Intune settings catalog to create and manage policies for Office, Windows, and Microsoft Edge on Windows 10/11 client devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 08/21/2025
 ms.topic: tutorial
 ms.reviewer: mayurjadhav
@@ -113,7 +111,7 @@ In Intune, policies are applied to users and groups you create. There isn't a hi
 - If two compliance policies are in conflict, then the most restrictive policy applies.
 - If two configuration profiles are in conflict, then the setting isn't applied.
 
-For more information, go to [Common questions, issues, and resolutions with device policies and profiles](../../intune-service/configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+For more information, go to [Common questions, issues, and resolutions with device policies and profiles](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, like a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
@@ -178,7 +176,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
 - Your Microsoft Entra ID license can include other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Conditional Access](/entra/identity/conditional-access/overview).
 
-- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](../../intune-service/configuration/device-profile-assign.md#user-groups-vs-device-groups).
+- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](../../device-configuration/assign-device-profile.md#user-groups-vs-device-groups).
 
 - Remember, a user can belong to multiple groups. Consider some of the other dynamic user and device groups you can create, like:
 
@@ -341,7 +339,7 @@ In this section, you created some settings catalog policies, and assigned them t
 
 ## Policy best practices
 
-When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](../../intune-service/configuration/device-profile-create.md#recommendations).
+When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](../../device-configuration/create-device-profile.md#recommendations).
 
 ## Clean up resources
 

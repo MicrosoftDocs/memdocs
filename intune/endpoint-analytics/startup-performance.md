@@ -20,7 +20,7 @@ The startup performance report in endpoint analytics provides insights into the 
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Startup performance**.
 
-:::image type="content" source="images/startup-performance.png" lightbox="images/startup-performance.png" alt-text="Screenshot of the Startup score tab in endpoint analytics.":::
+:::image type="content" source="media/startup-performance/startup-performance.png" lightbox="media/startup-performance/startup-performance.png" alt-text="Screenshot of the Startup score tab in endpoint analytics.":::
 
 The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it doesn't appear in the startup performance report.
 
@@ -53,7 +53,7 @@ Startup performance provides an insight on the number of devices that have delay
 Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.
 
 > [!TIP]
-> While there are many articles on how to optimize Group Policies performance, you might choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune-service/protect/security-baselines.md) and [Group Policy analytics](../intune-service/configuration/group-policy-analytics.md).
+> While there are many articles on how to optimize Group Policies performance, you might choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune-service/protect/security-baselines.md) and [Group Policy analytics](../device-configuration/import-group-policy-analytics.md).
 
 ### Slow boot and sign-in times
 
@@ -89,7 +89,7 @@ The **OS restart history** table contains the following information:
   - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2) also called the bug check code
   - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 
-:::image type="content" source="images/device-page-os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="images/device-page-os-restart-history.png":::
+:::image type="content" source="media/startup-performance/os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="media/startup-performance/os-restart-history.png":::
 
 The **OS restart history** table shows the 10 most recent restarts that occurred within the last 30 days. Because this table updates with low latency, new restarts typically appear here before they show up in the daily aggregates on the **Device performance** tab.
 
@@ -107,7 +107,7 @@ Startup processes can negatively affect user experience by increasing the length
 
 ### Restart frequency
 
-:::image type="content" source="images/restart-frequency-tab.png" alt-text="Restart frequency tab under Startup Performance" lightbox="images/restart-frequency-tab.png":::
+:::image type="content" source="media/startup-performance/restart-frequency.png" alt-text="Restart frequency tab under Startup Performance" lightbox="media/startup-performance/restart-frequency.png":::
 
 <!--IN6225459-->
 Reboot frequency can affect a user's experience. A device that reboots daily due to Stop errors results in poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.

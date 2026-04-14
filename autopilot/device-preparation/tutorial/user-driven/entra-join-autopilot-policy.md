@@ -105,7 +105,7 @@ In the **Configuration settings** page:
 
 1. Expand the **Apps** section by selecting it:
 
-   The **Apps** section allows selection of up to 10 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device.
+   The **Apps** section allows selection of up to 25 managed applications reference with the deployment. The applications specified here should be the essential applications that should be installed on the device before the end-user can start using the device.
 
    > [!IMPORTANT]
    >
@@ -127,11 +127,11 @@ In the **Configuration settings** page:
     >
     > The following types of applications are supported for use with Windows Autopilot device preparation:
     >
-    > - [Line-of-business (LOB)](/intune/intune-service/apps/lob-apps-windows).
-    > - [Win32](/intune/intune-service/apps/apps-win32-prepare).
-    > - [Microsoft Store](/intune/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-    > - [Microsoft 365](/intune/intune-service/apps/apps-add-office365).
-    > - [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
+    > - [Line-of-business (LOB)](/intune/app-management/deployment/add-lob-windows).
+    > - [Win32](/intune/app-management/deployment/win32-packaging).
+    > - [Microsoft Store](/intune/app-management/deployment/add-microsoft-store) - only Microsoft Store apps that support WinGet are supported.
+    > - [Microsoft 365](/intune/app-management/deployment/add-microsoft-365-windows).
+    > - [Enterprise App Catalog](/intune/app-management/deployment/add-enterprise-catalog).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 

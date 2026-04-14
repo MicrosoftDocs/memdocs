@@ -1,8 +1,6 @@
 ---
 title: Common tasks and features in the settings catalog
 description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/24/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav, beflamm
@@ -120,7 +118,7 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
-Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](../../intune-service/configuration/preference-file-settings-macos.md).
+Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](../../device-configuration/templates/configure-preference-file-macos.md).
 
 ## Related content
 

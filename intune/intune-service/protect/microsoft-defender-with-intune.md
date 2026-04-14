@@ -31,7 +31,7 @@ At a high level, the integration for devices enrolled with Intune works as follo
 3. [Create a device compliance policy](../protect/microsoft-defender-integrate.md#create-and-assign-compliance-policy-to-set-device-risk-level) to set acceptable risk levels.
 4. [Configure Conditional Access policy](../protect/microsoft-defender-integrate.md#create-a-conditional-access-policy) to block noncompliant devices.
 
-**Extend the integration:** Once configured, you can [use Microsoft Defender Vulnerability Management](atp-manage-vulnerabilities.md) to remediate endpoint weaknesses identified by Defender.
+**Extend the integration:** Once configured, you can [use Microsoft Defender Vulnerability Management](microsoft-defender-manage-vulnerabilities.md) to remediate endpoint weaknesses identified by Defender.
 
 ## Additional integration options
 
@@ -89,7 +89,7 @@ The following example shows how the integration automatically contains a threat,
 
 Different platforms offer unique configuration options when integrating with Microsoft Defender for Endpoint:
 
-**Android**: Use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md) settings, including the ability to enable or disable VPN-based scanning.
+**Android**: Deploy Defender for Endpoint to Android devices through Managed Google Play using Intune app deployment and app configuration policies. See [Deploy Microsoft Defender for Endpoint on Android](microsoft-defender-deploy-android.md) for the complete deployment guide. After deployment, use Intune device configuration policies to configure [Microsoft Defender for Endpoint web protection](microsoft-defender-configure-android.md) settings, including the ability to enable or disable VPN-based scanning.
 
 **iOS/iPadOS**: Enable [vulnerability assessment of apps](/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps) to allow Defender to scan installed apps for known vulnerabilities.
 
