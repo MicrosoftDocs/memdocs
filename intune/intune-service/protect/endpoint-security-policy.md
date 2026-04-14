@@ -31,7 +31,7 @@ When implementing endpoint security policies alongside other Intune policy types
 **Common conflict scenarios**:
 
 - **Security baselines** can set non-default values for settings to comply with recommended configurations, while endpoint security and device configuration policies typically default to *Not configured* - mixing these approaches can create conflicts ([resolve conflicts](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines)).
-- **Device configuration policies** managing the same settings as endpoint security policies ([resolve conflicts](../configuration/device-profile-monitor.md#view-conflicts)).
+- **Device configuration policies** managing the same settings as endpoint security policies ([resolve conflicts](../../device-configuration/monitor-device-profile.md#view-conflicts)).
 - **Multiple endpoint security policies** setting different values for the same setting ([manage conflicts](#manage-policy-conflicts)).
 
 When conflicts occur, affected settings might fail to apply properly. Plan your policy architecture and use the linked guidance to identify and resolve conflicts.
@@ -173,7 +173,7 @@ Follow this general workflow for creating endpoint security policies:
    - **Basics**: Provide a descriptive name and optional description for the profile.
    - **Configuration settings**: Expand each group of settings and configure the settings you want to manage with this profile. When done configuring settings, select **Next**.
    - **Scope tags**: Choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile (optional).
-   - **Assignments**: Select the groups to receive this profile. See [Assign user and device profiles](../configuration/device-profile-assign.md).
+   - **Assignments**: Select the groups to receive this profile. See [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
    - **Review + create**: Review your configuration and select **Create** when ready. The new profile then appears in the policy list.
 
 ## Advanced policy management

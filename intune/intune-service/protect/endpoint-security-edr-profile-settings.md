@@ -14,7 +14,7 @@ ms.reviewer: mattcall
 # Endpoint detection and response policy settings for endpoint security in Intune
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 > [!NOTE]
 >
@@ -29,7 +29,7 @@ Applies to:
 - Windows
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 Supported platforms and profiles:

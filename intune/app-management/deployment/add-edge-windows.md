@@ -12,7 +12,7 @@ ms.collection:
 
 # Add Microsoft Edge for Windows to Microsoft Intune
 
-[!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](./index.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows.
 

@@ -304,13 +304,13 @@ All servers should receive the new configuration within five minutes of the chan
 
 To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client app. Microsoft Tunnel uses Microsoft Defender for Endpoint as the Tunnel client app:
 
-- **Android**: Download Microsoft Defender for Endpoint for use as the Microsoft Tunnel client app from the **Google Play** store. See [Add Android store apps to Microsoft Intune](../apps/apps-add.md).
+- **Android**: Download Microsoft Defender for Endpoint for use as the Microsoft Tunnel client app from the **Google Play** store. See [Add Android store apps to Microsoft Intune](../../app-management/deployment/index.md).
 
   When you use Microsoft Defender for Endpoint as your tunnel client application and as a mobile threat defense (MTD) application, see [Use Microsoft Defender for Endpoint for MTD and as the Microsoft Tunnel client app](#use-custom-settings-for-microsoft-defender-for-endpoint) for important configuration guidance.
 
-- **iOS/iPadOS**: Download Microsoft Defender for Endpoint for use as the Microsoft Tunnel client app from the Apple **App store**. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+- **iOS/iPadOS**: Download Microsoft Defender for Endpoint for use as the Microsoft Tunnel client app from the Apple **App store**. See [Add iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md).
 
-For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
 ## Create a VPN profile
 
@@ -354,7 +354,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
        >
        > Proxy server configurations aren't supported with versions of Android prior to version 10. For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
-   For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
+   For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../../device-configuration/templates/ref-vpn-settings-android-enterprise.md)
 
    > [!IMPORTANT]
    >
@@ -388,12 +388,12 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
    - **Per-app VPN**:
      To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, iOS ignores your split tunneling rules.
 
-     For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
+     For more information, see [Per-App VPN for iOS/iPadOS](../../device-configuration/templates/configure-per-app-vpn-ios.md).
 
    - **On-Demand VPN Rules**:
      Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
 
-     For more information, see [Automatic VPN settings](../configuration/vpn-settings-apple.md).
+     For more information, see [Automatic VPN settings](../../device-configuration/templates/ref-vpn-settings-apple.md).
 
    - **Proxy**:
      Configure proxy server details for your environment.

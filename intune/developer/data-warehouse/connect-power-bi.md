@@ -10,7 +10,7 @@ ms.collection:
 
 # Connect to the Data Warehouse With Power BI
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 You can use the Power BI Compliance app to load interactive, dynamically generated reports for your Intune tenant. Additionally, you can load your tenant data in Power BI using the OData link. Intune provides connection settings to your tenant so that you can view the following sample reports and charts related to:
 
@@ -29,7 +29,7 @@ There are also trends highlighted for the enrollment, compliance, device configu
 
 The following steps show you how to download the Power BI file and how to use the OData link with Power BI.
 
-[!INCLUDE [reports-credential-reqs](../../intune-service/includes/reports-credential-reqs.md)]
+[!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
 
 ## Install Power BI
 

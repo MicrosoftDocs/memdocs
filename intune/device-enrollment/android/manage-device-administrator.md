@@ -10,7 +10,7 @@ ms.collection:
 
 # Android device administrator enrollment
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Android device administrator (sometimes referred to *legacy* Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries/regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). Google deprecated Android device administrator management in 2020. Intune is ending support for device administrator devices with access to Google Mobile Services at the end of 2024.
 

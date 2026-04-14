@@ -46,7 +46,7 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
      > [!NOTE]
      > Today, Android Enterprise work profile management for personal devices is allowed by default. In policies configured before July 2019 without any changes, the default setting blocks Android Enterprise work profile management.
 
-     [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+     [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 10. Select **Next** to continue to **Scope tags**.
 11. Optionally, apply one or more scope tags to limit visibility and management of restrictions to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).

@@ -21,11 +21,11 @@ While enabled by default, there are valid reasons to disable it on some Android 
 
 With Intune device configuration policy, you can turn off all or part of the web protection feature. The method you use and the capabilities you can disable depend on how the Android device is enrolled with Intune:
 
-- **Android device administrator**. Use a configuration profile to set custom OMA-URI settings on the device that disable the entire web protection feature or that disable only the use of VPNs. For general information about custom settings for Android devices, see [Use custom settings for Android devices in Microsoft Intune](../configuration/custom-settings-android.md).
+- **Android device administrator**. Use a configuration profile to set custom OMA-URI settings on the device that disable the entire web protection feature or that disable only the use of VPNs. For general information about custom settings for Android devices, see [Use custom settings for Android devices in Microsoft Intune](../../device-configuration/templates/configure-custom-settings-android.md).
 
-- **Android Enterprise personally owned work profile**. Use an app configuration profile and the configuration designer to disable web protection. This method and enrollment type support disabling all web protection capabilities but don't support disabling only the use of VPNs. For general information about app configuration policies, see [Use the configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+- **Android Enterprise personally owned work profile**. Use an app configuration profile and the configuration designer to disable web protection. This method and enrollment type support disabling all web protection capabilities but don't support disabling only the use of VPNs. For general information about app configuration policies, see [Use the configuration designer](../../app-management/configuration/configure-managed-android.md#use-the-configuration-designer).
 
-- **Android Enterprise Fully Managed profile**. Use an app configuration profile and the [configuration designer](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.
+- **Android Enterprise Fully Managed profile**. Use an app configuration profile and the [configuration designer](../../app-management/configuration/configure-managed-android.md#use-the-configuration-designer) to disable the entire web protection feature or to disable only the use of VPNs.
 
 **The following browsers are supported with Defender loopback VPN:**
 - Chrome-
@@ -52,7 +52,7 @@ To configure web protection on devices, use the following procedures to create a
 
 ## Disable web protection for Android device administrator
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -90,7 +90,7 @@ To configure web protection on devices, use the following procedures to create a
 
    Select **Add** to save the OMA-URI settings configuration, and then select **Next** to continue.
 
-6. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+6. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
 7. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
@@ -128,7 +128,7 @@ To configure web protection on devices, use the following procedures to create a
 
    Select **Next** to continue.
 
-8. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+8. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
 9. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
@@ -151,7 +151,7 @@ To configure web protection on devices, use the following procedures to create a
 
    Select **Next** to continue.
 
-2. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+2. In **Assignments**, specify the groups that receive the profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
 3. In **Review + create**, when you're done, select **Create**. The new profile is displayed in the list when you select the policy type for the profile you
    created.

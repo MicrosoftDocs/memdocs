@@ -48,7 +48,7 @@ For more information, see:
   [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
   > [!NOTE]
-  > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even although BitLocker encryption may have completed - a reboot will be required in order for the device detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
+  > If using a device compliance policy in Intune, be aware that the state of this setting is only measured at boot time. Therefore, even though BitLocker encryption may have completed – a reboot will be required in order for the device to detect this and become compliant. For more information, see the following Microsoft support blog on [Device Health Attestation](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-device-health-attestation-settings-as-part-of/ba-p/282643).
 
 - **Require Secure Boot to be enabled on the device**:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -286,9 +286,9 @@ To verify device encryption on the Microsoft HoloLens, see [Verify device encryp
 
 ## Surface Hub
 
-Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows automatic enrollment](../enrollment/windows-enroll.md) in Intune (requires Microsoft Entra ID), and target the Surface Hub devices as device groups. Surface Hubs are required to be Microsoft Entra joined for compliance and Conditional Access to work.
+Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows automatic enrollment](../../device-enrollment/windows/enable-automatic-mdm.md) in Intune (requires Microsoft Entra ID), and target the Surface Hub devices as device groups. Surface Hubs are required to be Microsoft Entra joined for compliance and Conditional Access to work.
 
-For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
+For guidance, see [set up enrollment for Windows devices](../../device-enrollment/windows/enable-automatic-mdm.md).
 
 **Special consideration for Surface Hubs running Windows Team OS**:  
 Surface Hubs that run Windows Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows Team OS set the following two settings to their default of *Not configured*:

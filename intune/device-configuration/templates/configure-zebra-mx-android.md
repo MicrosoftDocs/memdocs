@@ -10,7 +10,7 @@ ms.collection:
 
 # Use and manage Zebra devices with Zebra Mobility Extensions in Microsoft Intune
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Intune includes a rich set of features, including managing apps and configuring device settings. These built-in features and settings manage Android devices manufactured by Zebra Technologies, also known as **Zebra devices**.
 

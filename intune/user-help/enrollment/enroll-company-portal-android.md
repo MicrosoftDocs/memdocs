@@ -11,7 +11,7 @@ Enroll your personal or corporate-owned Android device with Intune Company Porta
 ## Prerequisites
 The Intune Company Portal app supports devices running Android 8.0 and later, including devices secured by Samsung Knox Standard 2.4 and later. To learn how to update your Android device to meet requirements, see [Check & update your Android version](https://support.google.com/android/answer/7680439).
 
-[!INCLUDE [android-company-portal-version-support](../../intune-service/includes/android-company-portal-version-support.md)]
+[!INCLUDE [android-company-portal-version-support](../../includes/android-company-portal-version-support.md)]
 
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 

@@ -106,7 +106,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, macOS, and Windows. Then, you can use Intune to apply the profile to devices in your organization.
 
-    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
+    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../../device-configuration/overview.md).
 
 7. From the navigation pane, select **Devices** > **All devices** to display details about your Intune tenant's enrolled devices. If you are starting with a new Intune enlistment, you will not have any enrolled devices yet.
 
@@ -133,7 +133,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > [!NOTE]
     > The **Apps - Overview** pane also provides tenant status and account details.
 
-    For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+    For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md) and [Assign apps to groups with Microsoft Intune](../../app-management/deployment/assign-groups.md).
 
 9. From the **Apps - Overview** pane, select **All Apps** to see a list of apps that have been added to Intune.
 
@@ -144,7 +144,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - All apps." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-09.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-09.png":::
 
-    For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+    For more information, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
 10. From the navigation pane, select **Users** to display details about the users that you have included in Intune. These users are members of your organization that have devices and apps associated with your Intune tenant.
 
