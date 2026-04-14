@@ -307,7 +307,7 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 - Remediation action for Moderate severity threats: **Quarantine. Moves files to quarantine.**
 - Remediation action for High severity threats: **Quarantine. Moves files to quarantine.**
 
-#### [:::image type="icon" source="../../intune-service/media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+#### [:::image type="icon" source="../../media/icons/16/graph.svg"::: **Microsoft Graph**](#tab/graph)
 
 [!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
 
