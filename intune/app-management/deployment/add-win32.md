@@ -1,8 +1,9 @@
 ---
 title: Add and Assign Win32 Apps to Microsoft Intune
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune.
-ms.date: 02/06/2026
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
@@ -39,7 +40,7 @@ The following steps help you add a Windows app to Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. On the **Select app type** pane, under the **Other** app types, select **Windows app (Win32)**.
+3. In the **Select app type** pane, select the **Windows** platform, and then select **Windows app (Win32)**.
 
     > [!IMPORTANT]
     > Be sure to use the latest version of the Microsoft Win32 Content Prep Tool. If you don't use the latest version, you'll see a warning that says the app was packaged using an older version of the tool.

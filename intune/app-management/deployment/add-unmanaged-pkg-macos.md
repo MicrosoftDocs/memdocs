@@ -1,8 +1,9 @@
 ---
 title: Add an Unmanaged macOS PKG App to Microsoft Intune
 description: Learn about how to add an unmanaged macOS PKG app to Microsoft Intune.
-ms.date: 07/12/2024
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
@@ -44,8 +45,8 @@ The containing app files can be listed under the **Included apps** section in th
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. In the **Select app type** pane, under the **Other** app types, select **macOS app (PKG)**.
-4. Click **Select**. The **Add app** steps are displayed.
+3. In the **Select app type** pane, select the **macOS** platform, and then select **macOS app (PKG)**.
+4. Choose **Select**. The **Add app** steps are displayed.
 
 ## Step 1 – App information
 
