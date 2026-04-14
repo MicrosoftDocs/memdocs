@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 ---
 # Repair Method in Class CCM_Application
+
 The `Repair` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that repairs an application.
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
@@ -27,6 +28,7 @@ uint32 Repair
 ```
 
 ## Parameters
+
  `Id`
  Data type: `String`
 
@@ -94,7 +96,9 @@ uint32 Repair
 ## Requirements
 
 ## Runtime Requirements
+
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
 ## Development Requirements
+
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
