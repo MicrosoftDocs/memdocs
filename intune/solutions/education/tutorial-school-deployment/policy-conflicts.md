@@ -24,10 +24,10 @@ Review the existing Microsoft Entra ID groups and determine if they're applicabl
 
 The key to avoiding policy conflicts is to understand if existing policies targeted at the same set of users or devices contain the same settings. If a new policy has settings that overlap with existing ones for the same users or devices, either exclude those users or devices from the old policies or remove the overlapping settings.
 
-You can exclude groups of devices or users using the "exclude group" option or by excluding devices using [filters](../../../fundamentals/filters.md).
+You can exclude groups of devices or users using the "exclude group" option or by excluding devices using [filters](../../../intune-service/fundamentals/filters.md).
 
 > [!TIP]
-> For more information about grouping and targeting, see [Plan Education device grouping and targeting](plan-grouping.md).
+> For more information about grouping and targeting, see [Plan Education device grouping and targeting](grouping-and-targeting.md).
 
 ### Default policies for Education tenants
 
@@ -76,11 +76,11 @@ Once all the potential sources of conflict are reviewed and any exclusions are c
 
 ## 4. Monitoring for policy conflicts
 
-### [:::image type="icon" source="../../../media/icons/16/16/intune.svg"::: Intune](#tab/intune)
+### [:::image type="icon" source="../../../media/icons/16/intune.svg"::: Intune](#tab/intune)
 
 You can check for potential policy conflicts by going to **Devices** > **Monitor** > **Configuration policy assignment failure**. Find the new policy and review any conflicts in the report. The report can also be exported to CSV.
 
-### [:::image type="icon" source="../../../media/icons/16/16/intune.svg"::: Intune for Education](#tab/intune-for-education)
+### [:::image type="icon" source="../../../media/icons/16/intune.svg"::: Intune for Education](#tab/intune-for-education)
 
 You can check for potential policy conflicts by going to **Reports** > **Settings error**.
 
