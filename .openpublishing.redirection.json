@@ -4333,6 +4333,11 @@
       "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-ipads-optional.md",
       "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-optional-restrictions-settings-ipados",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/configmgr/develop/reference/core/servers/configure/ccm_download_provider-wmi-class.md",
+      "redirect_url": "/intune/configmgr/develop/reference/core/servers/configure/ccm_downloadprovider-wmi-class",
+      "redirect_document_id": false
     }
   ]
 }
