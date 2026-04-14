@@ -35,7 +35,7 @@ The security configuration framework is organized into distinct configuration le
 
 For details about the settings for each level:
 
-- For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](../enrollment/ios-ipados-device-compliance-security-configurations.md)
+- For personally owned and for supervised devices, see [iOS/iPadOS device compliance security configurations](ios-ipados-device-compliance-security-configurations.md)
 
 -->
 
@@ -50,7 +50,7 @@ For details about the settings for each level:
   - The email profile is assigned to a different user group than the user group targeted by the compliance policy.
   - The user already set up an email account on the device that matches the Intune email profile deployed to the device. Intune can't overwrite the user-configured profile, and Intune can't manage it. To be compliant, the end user must remove the existing email settings. Then, Intune can install the managed email profile.
 
-For details about email profiles, see [configure access to organization email using email profiles with Intune](../configuration/email-settings-configure.md).
+For details about email profiles, see [configure access to organization email using email profiles with Intune](../../device-configuration/templates/configure-email.md).
 
 ## Device Health
 
@@ -172,8 +172,8 @@ For details about email profiles, see [configure access to organization email us
     To get the app bundle ID:
 
     - The Apple website has a list of [built-in Apple apps](https://support.apple.com/HT211833).
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
-    - For examples, see [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).
+    - For apps added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
+    - For examples, see [Bundle IDs for built-in iOS/iPadOS apps](../../device-configuration/templates/ref-bundle-ids-ios.md).
 
   > [!NOTE]
   >

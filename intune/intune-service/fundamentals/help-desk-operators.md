@@ -172,7 +172,7 @@ The **Diagnostics** tab provides the device name or application, platform, creat
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
 
-- [Report a problem in Company Portal for iOS](../user-help/send-logs-to-microsoft-ios.md)
+- [Report a problem in Company Portal for iOS](../../user-help/diagnostics/collect-logs-ios.md)
 - [Report a problem in Company Portal or Intune app for Android](../../user-help/diagnostics/collect-logs-android.md)
 
 You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).

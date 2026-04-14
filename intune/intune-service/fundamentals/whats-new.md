@@ -114,7 +114,7 @@ The following OEMConfig app is available in Intune for Android Enterprise:
 
 - Inventus | `com.inventus.oemconfig.gen`
 
-For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md).
 
 #### New settings in the Windows settings catalog <!-- 36922863 -->
 
@@ -253,7 +253,7 @@ We've improved connectivity when using the [Launch Remote Help](../fundamentals/
 
 For the current list of required network endpoints, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md?tabs=north-america#network-requirements-for-powershell-scripts-and-win32-apps) and [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in the Intune endpoints documentation.
 
-With this endpoint addition, we've also added a new [Intune Management Extension log](../apps/intune-management-extension.md#ime-log-files), NotificationInfra.log, which tracks notifications sent through the Microsoft real-time communication channel.
+With this endpoint addition, we've also added a new [Intune Management Extension log](../../device-management/tools/management-extension-windows.md#ime-log-files), NotificationInfra.log, which tracks notifications sent through the Microsoft real-time communication channel.
 
 > [!div class="checklist"]
 > Applies to:
@@ -322,7 +322,7 @@ The following protected apps are now available for Microsoft Intune:
 - Foxit PDF Editor by Foxit Software Inc.
 - EasyPlant QC Inspections by Technip Energies (Android)
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../../app-management/ref-protected-apps.md).
 
 ### Monitor and troubleshooting  
 
@@ -410,7 +410,7 @@ The following protected apps are now available for Microsoft Intune:
 - Jump by Accio Inc.
 - Mijn InPlanning by Intus Workforce Solutions (Android)
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../../app-management/ref-protected-apps.md).
 
 ### Device configuration
 
@@ -514,7 +514,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### New setting controls MDM enrollment during account registration on Windows (public preview)<!-- 14724061 --> 
 
-A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).  
+A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../../device-enrollment/windows/enable-automatic-mdm.md).  
 
 ### Device management
 
@@ -613,7 +613,7 @@ The following protected apps are now available for Microsoft Intune:
 - Qlik Analytics by Qlik
 - Tier1 for Intune by SS&C Technologies, Inc. (iOS)
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../../app-management/ref-protected-apps.md).
 
 ### Device configuration
 
@@ -671,7 +671,7 @@ The following OEMConfig apps are available in Intune for Android Enterprise:
 - FCNT - Schema | `com.fcnt.mobile_phone.schematest`
 - Sonim | `com.sonim.oemappconfig`
 
-For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md).
 
 #### Filter by Android management mode in the settings catalog<!-- 31844205 -->
 
@@ -743,7 +743,7 @@ For iOS/iPadOS, the **Device Management Type** property for managed apps is:
 ##### What you need to know
 
 - If you're using the legacy values in your filters, the values are automatically mapped to the new available values for that platform.
-- For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
+- For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../../app-management/configuration/configure-managed-apps.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
 - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
 To learn more about filters, see:
@@ -849,7 +849,7 @@ To learn more, see:
 
 When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
 
-For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+For more information, see [Win32 app management in Microsoft Intune](../../app-management/deployment/win32.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -909,7 +909,7 @@ For more information about available Setup Assistant skipkeys, see:
 
 Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
 
-For more information, see [Secure Your Corporate Data in Intune with Microsoft Edge for Business](../apps/mamedge-overview.md).
+For more information, see [Secure Your Corporate Data in Intune with Microsoft Edge for Business](../../solutions/edge-data-security/overview.md).
 
 ## Week of November 17, 2025  
 
@@ -917,7 +917,7 @@ For more information, see [Secure Your Corporate Data in Intune with Microsoft E
 
 #### Configure Windows Backup for Organizations <!--29202026 -->  
 
-*Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
+*Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../../device-enrollment/windows/enable-backup-restore.md). 
 
 ### Device management
 
@@ -984,7 +984,7 @@ Admins can now enable more volume controls in the Managed Home Screen (MHS) app 
 
 Each new option can be independently enabled through app configuration policies. When turned on, users can adjust these specific volume levels directly from the Managed Settings page within MHS, without leaving kiosk mode. This enhancement provides task workers greater flexibility to manage sound levels for different environments while keeping the device securely locked down.
 
-For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../../app-management/configuration/configure-managed-home-screen.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -997,7 +997,7 @@ You can now reset the Managed Google Play store layout from **Custom** back to *
 
 In **Basic** mode, all approved apps are automatically visible to users. In **Custom** mode, newly approved apps must be manually added to collections before they appear in the store. The new **Reset to Basic** button lets admins quickly revert to Basic mode without needing to contact support. When selected, Intune deletes all existing collections and immediately displays a success or failure message.
 
-For more information about Managed Google Play store layout options, see [Approve and deploy Android Enterprise apps in Intune](../apps/apps-add-android-for-work.md).
+For more information about Managed Google Play store layout options, see [Approve and deploy Android Enterprise apps in Intune](../../app-management/deployment/add-managed-google-play.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1010,7 +1010,7 @@ For more information about Managed Google Play store layout options, see [Approv
 
 Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
 
-For more information, see [Enterprise App Management overview](../apps/apps-enterprise-app-management.md).
+For more information, see [Enterprise App Management overview](../../app-management/deployment/enterprise-app-catalog.md).
 
 #### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
 
@@ -1019,7 +1019,7 @@ Intune adds two new values to the **Allow cut, copy and paste for** setting in W
 - Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
 - Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
 
-These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../apps/app-protection-policy.md).
+These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../../app-management/protection/overview.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1089,7 +1089,7 @@ Applies to:
 Microsoft Intune offers a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. You are eligible for upgrade if you previously used a consumer Gmail account. This change streamlines the onboarding process by eliminating the need for a separate Gmail account and by leveraging your work account. This change is not required. To learn more about this change, see:
 
 - [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602)
-- [Connect your Intune account to your managed Google Play account](../enrollment/connect-intune-android-enterprise.md#upgrade-to-a-managed-google-domain)
+- [Connect your Intune account to your managed Google Play account](../../device-enrollment/android/connect-managed-google-play.md#upgrade-to-a-managed-google-domain)
 
 #### Incomplete user enrollment report removed <!-- 26395805 -->
 
@@ -1099,7 +1099,7 @@ The incomplete user enrollments report has been removed and is no longer functio
 - getEnrollmentAbandonmentSummaryReport
 - getEnrollmentFailureDetailsReport
 
-Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).  
+Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../../device-enrollment/monitor-reports.md#enrollment-failures-report).  
 
 ### Device management 
 
@@ -1179,7 +1179,7 @@ This feature is in public preview. For more information, see [Public preview in 
 
 Microsoft Intune now displays soft-deleted Microsoft Entra groups in the Intune admin center. When a group is soft-deleted, its assignments no longer apply. However, if the group is restored, its previous assignments are automatically reinstated.
 
-For more information, see [Include and exclude app assignments in Microsoft Intune](../apps/apps-inc-exl-assignments.md).
+For more information, see [Include and exclude app assignments in Microsoft Intune](../../app-management/deployment/configure-assignment-scope.md).
 
 ## Week of October 20, 2025 (Service release 2510)
 
@@ -1212,9 +1212,9 @@ For more information about the dashboard and these new insights, see [Overview d
 
 #### System Info property available in properties catalog for device inventory<!-- 30326613 -->
 
-You can create a [properties catalog](../configuration/properties-catalog.md) policy that lets you collect and view hardware properties from your managed Windows devices. There's a **System Info** category that shows system-level device insights, like OS version, hardware details, and configuration state.
+You can create a [properties catalog](../../device-configuration/collect-device-properties.md) policy that lets you collect and view hardware properties from your managed Windows devices. There's a **System Info** category that shows system-level device insights, like OS version, hardware details, and configuration state.
 
-To learn more and get started, see [properties catalog](../configuration/properties-catalog.md).
+To learn more and get started, see [properties catalog](../../device-configuration/collect-device-properties.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1269,7 +1269,7 @@ The [settings catalog](../../device-configuration/settings-catalog/index.md) lis
 
 #### Edit managed Google Play organization name<!--32268351 -->
 
-Now you can edit the managed Google Play organization name directly in the Microsoft Intune admin center under **Devices** > **Android** > **Enrollment** > **Managed Google Play**. The updated name, which is validated on input, appears in the admin center. It might also appear on Android device lock screens within a message like, *This device is managed by [organization name]*. For more information, see [Connect Intune account to managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
+Now you can edit the managed Google Play organization name directly in the Microsoft Intune admin center under **Devices** > **Android** > **Enrollment** > **Managed Google Play**. The updated name, which is validated on input, appears in the admin center. It might also appear on Android device lock screens within a message like, *This device is managed by [organization name]*. For more information, see [Connect Intune account to managed Google Play account](../../device-enrollment/android/connect-managed-google-play.md).
 
 ### Device management
 
@@ -1333,7 +1333,7 @@ The following protected apps are now available for Microsoft Intune:
 - ANDPAD Inspection by ANDPAD Inc.
 - ANDPAD Blueprint by ANDPAD Inc.
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../../app-management/ref-protected-apps.md).
 
 ### Monitor and troubleshoot
 
@@ -1346,7 +1346,7 @@ Now generally available in the Microsoft Intune admin center, the enrollment tim
 - Enrollment of Android corporate-owned work profile devices 
 - Enrollment of Android Enterprise dedicated devices 
 
-The enrollment time grouping failures report is available in the admin center under **Devices** > **Monitor** > **Enrollment time grouping failures**. Recently updated information could take up to 20 minutes to appear in the report. For more information, see [Enrollment time grouping in Microsoft Intune](../enrollment/enrollment-time-grouping.md#reporting).
+The enrollment time grouping failures report is available in the admin center under **Devices** > **Monitor** > **Enrollment time grouping failures**. Recently updated information could take up to 20 minutes to appear in the report. For more information, see [Enrollment time grouping in Microsoft Intune](../../device-enrollment/setup-time-grouping.md#reporting).
 
 ## Week of October 13, 2025
 
@@ -1373,7 +1373,7 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 
 You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
 
-For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1419,7 +1419,7 @@ In the Intune admin center > **Devices** > **Configuration** > **Policies** tab,
 
 **Policy type** is available in the **Add filters** feature. So, you can filter your list of policies by their type, like the settings catalog, custom, device restrictions, and the other policy types.
 
-To learn more about viewing and monitoring existing profiles, see [View and monitor device configuration policies in Microsoft Intune](../configuration/device-profile-monitor.md).
+To learn more about viewing and monitoring existing profiles, see [View and monitor device configuration policies in Microsoft Intune](../../device-configuration/monitor-device-profile.md).
 
 #### New day zero settings available in the Apple settings catalog <!-- 33806647 -->
 
@@ -1515,7 +1515,7 @@ To learn more about these settings, see [Android Intune settings catalog setting
 
 #### Device category management supports Multi Admin Approval<!-- 26838632 -->
 
-Intune [device categories](../enrollment/device-group-mapping.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
+Intune [device categories](../../device-management/create-device-categories.md) support Multi Admin Approval. When Multi Admin Approval is enabled, changes to device categories, including creating a new one, editing or deleting one, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
 
@@ -1690,7 +1690,7 @@ The new setting is **Install Windows quality updates**. These security updates, 
 
 By default, this setting is set to *Yes* in all new ESP profiles you create, which results in the most recent security updates being installed. In all your previously created ESP profiles, this setting is set to *No* until you choose to edit those profiles to change it. When set to *No*, OOBE doesn't install the updates, which can give your internal teams time to test the updates before allowing them to install on new devices you provision.
 
-For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](../enrollment/windows-enrollment-status.md). For information about Windows quality updates, see [Windows quality update policy](../../device-updates/windows/manage-quality-updates.md).
+For more information about the Intune enrollment status page, see [Set up Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md). For information about Windows quality updates, see [Windows quality update policy](../../device-updates/windows/manage-quality-updates.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1742,7 +1742,7 @@ These features are designed for dedicated devices enrolled in Microsoft Entra sh
 
 Android Enterprise app configuration policies in Intune now support more variable values. The new values include account name, device name, employee ID, MEID, serial number, and the last four digits of the serial number.
 
-For more information, see [Supported variables for configuration values](../apps/app-configuration-policies-use-android.md#supported-variables-for-configuration-values).
+For more information, see [Supported variables for configuration values](../../app-management/configuration/configure-managed-android.md#supported-variables-for-configuration-values).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1913,7 +1913,7 @@ For more information on Multi Admin Approval, see [Use Multi Admin Approval in I
 
 Intune administrators can configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. The backup setting is available now in public preview, while the restore setting will be available for public preview beginning August 26.
 
-For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
+For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../../device-enrollment/windows/enable-backup-restore.md).
 
 #### New resolution button improves compliance remediation experience<!-- 31370959 -->
 
@@ -1928,8 +1928,8 @@ Even if you aren't using Microsoft Defender, if you have Conditional Access turn
 
 As an admin, if you have JIT registration and compliance remediation set up already, you have no action items. If you don't, set it up today to support this new functionality. For more information, see:
 
-- [Set up just-in-time registration](../enrollment/set-up-just-in-time-registration.md).
-- [Update iOS device settings](../../user-help/company-portal/serial-number-ios.md).
+- [Set up just-in-time registration](../../device-enrollment/apple/setup-just-in-time-registration.md).
+- [Update iOS device settings](../../user-help/compliance/device-settings-ios.md).
 
 ### Intune apps
 
@@ -1945,7 +1945,7 @@ The following protected apps are now available for Microsoft Intune:
 - Symphony Messaging Intune by Symphony Communication Services, LLC
 - Zoho Projects - Intune by Zoho Corporation (Android)
 
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+For more information about protected apps, see [Microsoft Intune protected apps](../../app-management/ref-protected-apps.md).
 
 ### Monitor and troubleshoot
 

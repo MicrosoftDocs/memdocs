@@ -96,7 +96,7 @@ Remote Help is available as a download from Microsoft and must be installed on e
 
 When a new version of Remote Help is required, the app prompts users to update. To install an updated version, you can use the same process you used before to download and install Remote Help. There's no need to uninstall the previous version before installing the updated version.
 
-- As an Intune admin, you can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-devices).
+- As an Intune admin, you can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../../app-management/deployment/deploy-windows.md#install-apps-on-windows-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
 
 > [!NOTE]
@@ -111,9 +111,9 @@ The Enterprise App Catalog is a collection of prepackaged Win32 apps that are pr
 
 #### Deploy Remote Help as a Win32 app
 
-To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage `*remotehelpinstaller.exe*` as a `*.intunewin*` file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage `*remotehelpinstaller.exe*` as a `*.intunewin*` file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../../app-management/deployment/create-win32-package.md).
 
-After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
+After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../../app-management/deployment/add-win32.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
    > [!IMPORTANT]
    > To take advantage of the command line example, ensure the downloaded file is renamed to **remotehelpinstaller.exe**.
@@ -169,9 +169,9 @@ The macOS Remote Help native app is available to download from Microsoft and mus
 
 For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
 
-For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
+For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../../app-management/deployment/add-unmanaged-pkg-macos.md).
 
-For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
+For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md).
 
 ### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
@@ -304,9 +304,9 @@ You can autogrant them through app configuration policy:
 
 On Zebra devices, permissions are granted through Zebra OEMConfig profiles.
 
-For instructions on how to set up OEMConfig, see [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+For instructions on how to set up OEMConfig, see [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md).
 
-If you're planning to use Remote Help on a device running on Android 11, you need to enable another Zebra package as a system app. For more information about how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md).  
+If you're planning to use Remote Help on a device running on Android 11, you need to enable another Zebra package as a system app. For more information about how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../../app-management/configuration/manage-system-apps-android.md).  
 
 |Build|System app to be enabled|
 |--------|------------------------------|

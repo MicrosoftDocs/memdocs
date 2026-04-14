@@ -26,7 +26,7 @@ For information about configuring dedicated (1:1) iPad devices to use the Classr
 
 The prerequisites to use the shared iPad capabilities are:
 
-- Setup [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) and [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
+- Setup [Apple School Manager](../../device-enrollment/apple/school-manager.md) and [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
 - As part of Apple School Manager setup, configure [Managed Apple IDs](https://school.apple.com/) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
 - Create an enrollment profile for the device serial numbers synced from Apple School Manager.
 
@@ -131,7 +131,7 @@ The profile is created and appears on the profiles list pane.
 
 ## Step 3 - Create a device category
 
-In the admin center, go to **Devices** > **Manage devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).
+In the admin center, go to **Devices** > **Manage devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../../device-management/create-device-categories.md#step-1-create-device-category-in-intune).
 
 ## Step 4 – Create a dynamic group
 

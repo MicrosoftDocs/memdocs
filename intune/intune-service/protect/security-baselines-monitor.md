@@ -233,6 +233,6 @@ For more information about diagnostic information logs, see [Collect MDM logs](/
 
 - [Learn about security baselines](security-baselines.md)
 - [Avoid conflicts](security-baselines.md#avoid-conflicts)
-- [Monitor device profiles](../configuration/device-profile-monitor.md)
-- [Common issues and resolutions](../configuration/device-profile-troubleshoot.md).
+- [Monitor device profiles](../../device-configuration/monitor-device-profile.md)
+- [Common issues and resolutions](../../device-configuration/troubleshoot-device-profiles.md).
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

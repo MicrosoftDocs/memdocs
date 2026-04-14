@@ -102,7 +102,7 @@ The settings catalog in Intune includes thousands of settings to manage iOS/iPad
 For more information on policies in Intune, go to:
 
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../../device-configuration/settings-catalog/index.md)
-- [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
+- [Common questions and answers with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md)
 
 ## Secure your user identities
 
@@ -136,7 +136,7 @@ Your user and group accounts access organization resources. You need to keep the
   For more information, go to:
 
   - [Plan a Microsoft Entra multifactor authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted)
-  - [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
+  - [Require multifactor authentication for Intune device enrollments](../../device-enrollment/configure-multifactor-authentication.md)
 
 - **Zero Trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 

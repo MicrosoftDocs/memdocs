@@ -23,14 +23,14 @@ When you use any account in the tenant to make a change to a resource that's pro
 
 Intune supports access policies for the following resources:
 
-- Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.  
+- Apps – Applies to [app deployments](../../app-management/deployment/index.md), but doesn't apply to app protection policies.  
 - Compliance policies - Applies to creating and managing [compliance policies](../protect/create-compliance-policy.md).  
 - Configuration policies - Applies to creating and managing policies via the [settings catalog](../../device-configuration/settings-catalog/index.md).  
 - Device actions - Applies to [wipe](../../device-management/actions/wipe.md), [retire](../../device-management/actions/retire.md), and [delete](../../device-management/actions/delete.md) device actions.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
-- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../../device-management/tools/run-powershell-scripts-windows.md).
 - Access Policies - Applies to creating or managing multiple administrative approval policies.
-- Tenant Configuration - Applies to managing [device categories](../enrollment/device-group-mapping.md), including creating, editing, or deleting them.
+- Tenant Configuration - Applies to managing [device categories](../../device-management/create-device-categories.md), including creating, editing, or deleting them.
 
 ## Prerequisites for access policies and approvers
 

@@ -121,4 +121,4 @@ You can find additional information about these settings in [Configure Windows H
 
 ## Next steps
 
-[Assign the profile](../configuration/device-profile-assign.md) and [monitor its status](../configuration/device-profile-monitor.md)
+[Assign the profile](../../device-configuration/assign-device-profile.md) and [monitor its status](../../device-configuration/monitor-device-profile.md)

@@ -47,8 +47,8 @@ All VM limitations listed in [Using Windows virtual machines](windows-10-virtual
 
 Also, the following profiles aren't currently supported:
 
-- [Domain Join](../configuration/device-profiles.md#domain-join)
-- [Wi-Fi](../configuration/device-profiles.md#wi-fi)
+- [Domain Join](../../device-configuration/overview.md#domain-join)
+- [Wi-Fi](../../device-configuration/overview.md#wi-fi)
 
 Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
 

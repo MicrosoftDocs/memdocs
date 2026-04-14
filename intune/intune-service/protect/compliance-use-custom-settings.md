@@ -62,7 +62,7 @@ When ready, use the normal procedure to [create a compliance policy](create-comp
 
 > [!NOTE]
 >
-> When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../apps/intune-management-extension.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
+> When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../../device-management/tools/management-extension-windows.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
 >
 > - Checking for new or updated PowerShell scripts every eight hours.
 > - Running the discovery scripts every eight hours.

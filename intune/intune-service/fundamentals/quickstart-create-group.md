@@ -45,8 +45,8 @@ When you create your policies, assign your policies to these built-in groups or 
 
 For more information about using groups in Intune, like using filters, and assigning to user groups vs. device groups, see:
 
-- [Assign policies in Microsoft Intune](../configuration/device-profile-assign.md)
-- [Assign Apps to Groups With Microsoft Intune](../apps/apps-deploy.md)
+- [Assign policies in Microsoft Intune](../../device-configuration/assign-device-profile.md)
+- [Assign Apps to Groups With Microsoft Intune](../../app-management/deployment/assign-groups.md)
 
 ## Create a group
 
@@ -77,4 +77,4 @@ In this article, you used Intune to create a group based on an existing user. Fo
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 4 - Set up automatic enrollment for Windows devices](../enrollment/quickstart-setup-auto-enrollment.md)
+> [Step 4 - Set up automatic enrollment for Windows devices](../../device-enrollment/windows/quickstart-automatic-mdm.md)

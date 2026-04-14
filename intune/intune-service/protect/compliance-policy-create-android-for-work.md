@@ -23,7 +23,7 @@ This feature applies to:
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 > [!IMPORTANT]
-> It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../enrollment/android-kiosk-enroll.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.
+> It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../../device-enrollment/android/setup-dedicated.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.
 >
 > Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
 
@@ -256,7 +256,7 @@ This section describes the compliance profile settings available for personal de
   - [Integrity verdicts](https://developer.android.com/google/play/integrity/setup#configure-api)
 
 > [!TIP]
-> Intune also has a policy that requires Play Protect to scan installed apps for threats. You can configure this setting in an Android Enterprise device configuration policy under **Device restrictions** > **System security**. For more information, see [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
+> Intune also has a policy that requires Play Protect to scan installed apps for threats. You can configure this setting in an Android Enterprise device configuration policy under **Device restrictions** > **System security**. For more information, see [Android Enterprise device restriction settings](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 
 ### Device properties - *for personally owned work profile*
@@ -321,7 +321,7 @@ Configure device security requirements for the personally owned work profile.
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device.
 
-  This setting applies at the device level. If you only require a password at the work profile level, use a configuration policy. For more information, see [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
+  This setting applies at the device level. If you only require a password at the work profile level, use a configuration policy. For more information, see [Android Enterprise device configuration settings](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 > [!IMPORTANT]
 > When a personally-owned work profile is enabled, the device and work profile passcodes are combined by default so that the same passcode is used in both places. Intune enforces the higher complexity level of the two. The device user can use two separate passcodes if they go to their work profile settings and deselect **Use one lock**. To ensure that device users use two separate passcodes upon enrollment create a device configuration profile that restricts device users from using one lock.

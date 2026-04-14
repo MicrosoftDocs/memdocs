@@ -90,7 +90,7 @@ From the *Endpoint security* node in the admin center, you can select the *Summa
 - *Platform* identifies the device platform.
 
 In addition to the different endpoint security policy views, you can go to **Devices** > *All devices* and below *Manage devices*, select **Configuration** to view and edit your endpoint security profiles for the macOS and Windows platforms along side your Device Configuration profiles. In this view, endpoint security policies are identified by their template type, like *Microsoft Defender Antivirus* in the *Policy type* column. See [Monitor device configuration policies in Microsoft Intune
-](../configuration/device-profile-monitor.md).
+](../../device-configuration/monitor-device-profile.md).
 
 ## Remote actions for devices
 
@@ -127,9 +127,9 @@ The following Intune remote actions are of interest to the security admin, and a
 
 - [Restart](../../device-management/actions/restart.md) – Force a Windows device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
 
-- [Quick Scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
+- [Quick Scan](../../device-configuration/templates/ref-device-restrictions-windows.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
 
-- [Full scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a scan of the device for malware and then submit the results to Intune. A full scan looks at common locations where there could be malware registered, and also scans every file and folder on the device.
+- [Full scan](../../device-configuration/templates/ref-device-restrictions-windows.md) – Have Defender run a scan of the device for malware and then submit the results to Intune. A full scan looks at common locations where there could be malware registered, and also scans every file and folder on the device.
 
 - Update Windows Defender security intelligence – Have the device update its malware definitions for Microsoft Defender Antivirus. This action doesn't start a scan.
 

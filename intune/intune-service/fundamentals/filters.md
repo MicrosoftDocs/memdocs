@@ -19,7 +19,7 @@ Assignment filters are available for:
 - Devices enrolled in Intune, which are **managed devices**.
 - Apps that are managed by Intune, which are **managed apps**.
 
-  Managed apps are used in mobile application management (MAM) scenarios. MAM involves managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more information on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
+  Managed apps are used in mobile application management (MAM) scenarios. MAM involves managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more information on MAM in Intune, go to [What is Microsoft Intune app management?](../../app-management/overview.md).
 
 Use assignment filters in the following scenarios:
 

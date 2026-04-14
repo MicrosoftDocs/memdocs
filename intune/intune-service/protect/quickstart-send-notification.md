@@ -71,9 +71,9 @@ To send email to your users, create a notification message template. When a devi
 
 For details about setting your company name, company contact information, and company logo, see the following articles:
 
-- [Company information and privacy statement](../apps/company-portal-app.md#configuration)
-- [Support information](../apps/company-portal-app.md#support-information)
-- [Customizing the user experience](../apps/company-portal-app.md#customizing-the-user-experience).
+- [Company information and privacy statement](../../app-management/configuration/configure-company-portal.md#configuration)
+- [Support information](../../app-management/configuration/configure-company-portal.md#support-information)
+- [Customizing the user experience](../../app-management/configuration/configure-company-portal.md#customizing-the-user-experience).
 
 ## Add a noncompliance policy
 
@@ -136,4 +136,4 @@ In this article, you used Intune to create and assign a compliance policy for yo
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 8 - Add and assign a client app](../apps/quickstart-add-assign-app.md)
+> [Step 8 - Add and assign a client app](../../app-management/deployment/quickstart-add-assign.md)

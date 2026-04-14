@@ -214,11 +214,11 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 
 - If you have deployed multiple compliance policies, Intune uses the most secure of these policies.
 
-To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 ## How Intune evaluates the default compliance policy
 
-In Intune, the default compliance policy is evaluated when a calculation is triggered. While not every [device sync](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals) results in a compliance calculation, the following cases will:
+In Intune, the default compliance policy is evaluated when a calculation is triggered. While not every [device sync](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals) results in a compliance calculation, the following cases will:
 
 - It happens frequently on new enrollments to ensure users are aware of blocking reasons. The actual frequency depends on the platform and the type of enrollment.
 - It happens periodically to enforce device contact requirements, like the initial user log-on after following the device being offline for a few days.

@@ -133,7 +133,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 The following articles are good resources:
 
-- [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
+- [Apply features and settings on your devices using device profiles](../../device-configuration/overview.md)
 - [Use the settings catalog to configure settings](../../device-configuration/settings-catalog/index.md)
 - [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)
 - [Windows security baselines](/windows/security/threat-protection/windows-security-baselines)

@@ -98,7 +98,7 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 
    Select **Next** to continue.
 
-6. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+6. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
    Select **Next**.
 
@@ -439,7 +439,7 @@ To help end users get their recovery keys without calling the helpdesk, Intune e
 
 **Issue**: Policy conflicts prevent silent enablement
 
-- **Solution**: Use [policy conflict detection](../configuration/device-profile-monitor.md#view-conflicts) in Intune to identify conflicting settings between policies.
+- **Solution**: Use [policy conflict detection](../../device-configuration/monitor-device-profile.md#view-conflicts) in Intune to identify conflicting settings between policies.
 
 ### Recovery key troubleshooting
 

@@ -108,7 +108,7 @@ You can use assignment filters for some common app policies on the following pla
 
 ---
 
-## [App configuration policies](../apps/app-configuration-policies-overview.md)
+## [App configuration policies](../../app-management/configuration/overview.md)
 
 - For **managed apps**, you can use assignment filters for app configuration policies on the following platforms:
 
@@ -121,7 +121,7 @@ You can use assignment filters for some common app policies on the following pla
   - Android Enterprise
   - iOS/iPadOS
 
-## [App protection policies](../apps/app-protection-policy.md)
+## [App protection policies](../../app-management/protection/overview.md)
 
 - For **managed apps**, you can use assignment filters for app protection policies on the following platforms:
 
@@ -152,7 +152,7 @@ You can use assignment filters for some common app policies on the following pla
 > [!NOTE]
 > Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices.
 >
-> For a list of all device configuration profiles, and the platforms they apply to, go to [Apply features and settings on your devices](../configuration/device-profiles.md).
+> For a list of all device configuration profiles, and the platforms they apply to, go to [Apply features and settings on your devices](../../device-configuration/overview.md).
 
 # [Windows](#tab/windows-device-configuration)
 

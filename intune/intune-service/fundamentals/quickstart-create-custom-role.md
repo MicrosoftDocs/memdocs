@@ -120,4 +120,4 @@ In this evaluation step, you created a custom security operations role and assig
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 11 - Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md)
+> [Step 11 - Create an email device profile for iOS/iPadOS](../../device-configuration/templates/quickstart-email-profile.md)

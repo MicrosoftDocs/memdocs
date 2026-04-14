@@ -195,7 +195,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 
 You can bulk enroll devices using a provisioning package created using Windows Configuration Designer or the **[Set up School PCs](/education/windows/use-set-up-school-pcs-app)** app.
 
-For more information on bulk enrollment, see [Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md).
+For more information on bulk enrollment, see [Bulk enrollment for Windows devices](../../device-enrollment/windows/create-bulk-package.md).
 
 With bulk enrollment:
 
@@ -210,7 +210,7 @@ With MDM automatic enrollment enabled in Intune, during the out-of-box experienc
 
 With this enrollment option, you:
 
-1. Configure a Microsoft Intune [custom profile](../configuration/custom-settings-windows-10.md) that restricts local administrators on devices. The [Policy CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) includes a sample policy definition XML that you can use in your custom profile.
+1. Configure a Microsoft Intune [custom profile](../../device-configuration/templates/configure-custom-settings-windows.md) that restricts local administrators on devices. The [Policy CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) includes a sample policy definition XML that you can use in your custom profile.
 
     > [!TIP]
     > In this custom profile, there's another setting that adds a group that can be local admins on the device. This local admin group should only include IT administrators in your environment.
@@ -276,7 +276,7 @@ The script is deployed to devices using in Intune. To add and deploy the script,
 
 If you previously removed the Microsoft Store app, you can redeploy it using Microsoft Intune. To re-add the Microsoft Store app (or any other apps you want to re-add), add the Microsoft Store app to your private organization app repository. Then, deploy the app to devices using Intune. The Microsoft Store app helps keep apps updated.
 
-Your private organization app repository can be the [Intune Company Portal app or website](../apps/company-portal-app.md).
+Your private organization app repository can be the [Intune Company Portal app or website](../../app-management/configuration/configure-company-portal.md).
 
 Using Intune, on Windows Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 
@@ -301,7 +301,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 ### ✅ 1 - Deploy Microsoft Edge
 
-1. [Add Microsoft Edge](../apps/apps-windows-edge.md) to Intune.
+1. [Add Microsoft Edge](../../app-management/deployment/add-edge-windows.md) to Intune.
 2. For **App settings**, select the **Stable Channel**.
 3. Assign the Microsoft Edge app to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 

@@ -17,7 +17,7 @@ In support of the [Microsoft Zero Trust security model](/security/zero-trust/zer
 
 When using these examples, work with your security team to evaluate the threat environment, risk appetite, and the effect the different levels and configurations can have on usability. After reviewing and adjusting the examples to meet the needs of your organization, you can incorporate them within a ring deployment methodology for testing and production use by importing the sample [iOS/iPadOS Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/iOS) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
-For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-apple.md).
+For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../../device-configuration/templates/ref-device-restrictions-apple.md).
 
 ## Supervised basic security (level 1)
 
@@ -99,7 +99,7 @@ This configuration expands upon level 2 by:
 
 - Enacting stronger password policies.
 - Disabling device functionality (like AirPrint).
-- Requiring app installation through Apple’s volume purchase program. For more information, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md).
+- Requiring app installation through Apple’s volume purchase program. For more information, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../app-management/deployment/manage-vpp-apple.md).
 - Enforcing additional data transfer restrictions (like blocking iCloud backup).
 
 The policy settings enforced in level 3 include all the policy settings recommended for level 2. The settings listed in the following table include only those that are added or changed. These settings can have significant impact to users or applications. They enforce a level of security more appropriate for risks facing targeted organizations.

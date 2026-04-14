@@ -286,9 +286,9 @@ To verify device encryption on the Microsoft HoloLens, see [Verify device encryp
 
 ## Surface Hub
 
-Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows automatic enrollment](../enrollment/windows-enroll.md) in Intune (requires Microsoft Entra ID), and target the Surface Hub devices as device groups. Surface Hubs are required to be Microsoft Entra joined for compliance and Conditional Access to work.
+Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are supported for both compliance and Conditional Access. To enable these features on Surface Hubs, we recommend you [enable Windows automatic enrollment](../../device-enrollment/windows/enable-automatic-mdm.md) in Intune (requires Microsoft Entra ID), and target the Surface Hub devices as device groups. Surface Hubs are required to be Microsoft Entra joined for compliance and Conditional Access to work.
 
-For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
+For guidance, see [set up enrollment for Windows devices](../../device-enrollment/windows/enable-automatic-mdm.md).
 
 **Special consideration for Surface Hubs running Windows Team OS**:  
 Surface Hubs that run Windows Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows Team OS set the following two settings to their default of *Not configured*:

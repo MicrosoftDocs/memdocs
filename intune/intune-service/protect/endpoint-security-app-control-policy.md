@@ -18,9 +18,9 @@ Every day new malicious files and apps appear in the wild. When run on devices i
 
 Intune's App Control for Business policies are part of endpoint security and use the Windows ApplicationControl Configuration Service Provider (CSP) to manage allowed apps on Windows devices.
 
-Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../apps/apps-win32-app-management.md) to your Tenant as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps are identified by your App Control for Business policies as safe apps that are allowed to run on your devices.
+Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../../app-management/deployment/win32.md) to your Tenant as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps are identified by your App Control for Business policies as safe apps that are allowed to run on your devices.
 
-- The *Intune management extension* is an Intune service that supplements Windows MDM features for Windows devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
+- The *Intune management extension* is an Intune service that supplements Windows MDM features for Windows devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../../app-management/deployment/win32.md).
 
 - A *managed installer* uses an AppLocker rule to tag applications you install as trusted by your organization For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
@@ -109,7 +109,7 @@ Intune endpoint security Application control policies and configuring a managed 
 
 ## Get started with managed installers
 
-With Intune's endpoint security App Control for Business, you can use policies to add the [Intune Management Extension](../apps/apps-win32-app-management.md) as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work) on your managed Windows devices.
+With Intune's endpoint security App Control for Business, you can use policies to add the [Intune Management Extension](../../app-management/deployment/win32.md) as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work) on your managed Windows devices.
 
 After you enable a managed installer on a device, all subsequent applications you deploy to Windows devices through Intune are marked with the managed installer tag. The tag identifies that the app was installed by a known source, and can be trusted. The managed installer tagging of apps is then used by App Control for Business policies to automatically identify apps as approved to run on devices in your environment.
 
@@ -222,7 +222,7 @@ As an optional clean-up step, you can run a script to remove the Intune Manageme
 
 3. Restart the Intune Management Extension service for the above changes to take effect.
 
-To run this script, you can use Intune to run [PowerShell scripts](../apps/powershell-scripts.md), or other methods of your choice.
+To run this script, you can use Intune to run [PowerShell scripts](../../device-management/tools/run-powershell-scripts-windows.md), or other methods of your choice.
 
 #### Remove all AppLocker policies from a device (optional)
 
@@ -234,7 +234,7 @@ To remove *all* Windows AppLocker policies from a device, you can use the **CatC
 
 3. Restart the Intune Management Extension service for the above changes to take effect.
 
-To run this script, you can use Intune to run [PowerShell scripts](../apps/powershell-scripts.md), or other methods of your choice.
+To run this script, you can use Intune to run [PowerShell scripts](../../device-management/tools/run-powershell-scripts-windows.md), or other methods of your choice.
 
 ## Get started with App Control for Business policies
 
@@ -296,7 +296,7 @@ Use the following procedure to help you create a successful App Control for Busi
 
 5. For **Assignments**, select the groups that receive the policy, but consider that WDAC policies apply to only the device scope. To continue, select **Next**.
 
-   For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
 6. For **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 

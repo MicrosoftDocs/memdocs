@@ -176,7 +176,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
-- The [Intune Management Extension](../apps/intune-management-extension.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
+- The [Intune Management Extension](../../device-management/tools/management-extension-windows.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
 
 ### How to run a Remediation script on-demand
 

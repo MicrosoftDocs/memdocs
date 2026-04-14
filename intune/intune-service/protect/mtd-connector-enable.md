@@ -63,11 +63,11 @@ Enable the toggles for those options your organization requires.
 
 - **Connect iOS/iPadOS devices version _\<supported versions>_ and above to _\<MTD partner name>_**: When you enable this option, compliance policies using the Device Threat Level rule for iOS/iPadOS devices (on supported OS versions) evaluate devices including data from this connector.
 
-- **Enable App Sync for iOS devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and provides updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+- **Enable App Sync for iOS devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and provides updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
   > [!NOTE]
   >
-  > App Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in, and should **not** be confused with the refresh interval for the [Discovered Apps report](../apps/app-discovered-apps.md#details-of-discovered-apps).
+  > App Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in, and should **not** be confused with the refresh interval for the [Discovered Apps report](../../app-management/discovered-apps.md#details-of-discovered-apps).
 
 - **Send full application inventory data on personally-owned iOS/iPadOS devices​**: This setting controls the application inventory data that Intune shares with this Mobile Threat Defense partner. Data is shared when the partner syncs app data and requests the app inventory list.
 
