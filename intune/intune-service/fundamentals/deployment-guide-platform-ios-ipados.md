@@ -33,40 +33,6 @@ For more information on the built-in roles and what they can do, see [Role-based
 
 The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios, and requirements. It also describes how to create plans for rollout, communication, support, testing, and validation.
 
-<!-- Removing section, framework pending review and has been removed
-
-## Leverage the iOS/iPadOS security configuration framework
-
-The iOS/iPadOS security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
-
-Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows. It applies to both personally owned and supervised devices, and includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one and offers more protection than the last.
-
-The security levels for personally owned devices are:
-
-* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for personal devices from which users access work or school data. This configuration enforces password policies, defines device lock characteristics, and disables certain device functions (such as untrusted certificates).
-
-* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. This configuration enacts data sharing controls. It's applicable to most mobile users accessing work or school data on a device.
-
-* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enacts stronger password policies than the previous levels, disables more device functions, and enforces additional data transfer restrictions.
-
-The security levels for supervised devices are:
-
-* Basic security (Level 1) – This configuration is recommended as the minimum security configuration for supervised devices where users access work or school data. This level is achieved by enforcing password policies, defining device lock characteristics, and disabling certain device functions (such as untrusted certificates).
-
-* Enhanced security (Level 2) – This configuration is recommended for devices from which users access sensitive or confidential information. This configuration enacts data sharing controls and blocks access to USB devices. It's applicable to most mobile users accessing work or school data on a device.
-
-* High security (Level 3) – This configuration is recommended for devices used by specific users or groups who are uniquely high risk.  For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss to the organization. This configuration enacts stronger password policies, disables more device functions, enforces additional data transfer restrictions, and requires apps to be installed through the Apple volume purchase program (VPP).
-
-For more information about the security framework, including specific recommendations and the minimum apps that must be protected, see the articles listed in the following table.
-
-| Task | Detail |
-| ---- | ------ |
-| [Disallow personal accounts for Microsoft apps on iOS/iPadOS devices](../enrollment/ios-ipados-app-configuration-policies.md) |Configure an app policy that prevents users from signing into a personal account on a work or school device. |
-| [Configure device compliance security settings](../protect/ios-ipados-device-compliance-security-configurations.md)|Apply these security settings to configure a basic or high security level on personally owned and corporate owned devices. |
-|[Configure device security settings for personal devices ](../protect/ios-ipados-personal-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on personally owned devices. |
-|[Configure device security settings for supervised devices ](../protect/ios-ipados-supervised-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on supervised devices. | -->
-
-
 ## Create compliance rules
 
 Use compliance policies to define the rules and conditions that users and devices should meet to access your protected resources. If you use Conditional Access, your Conditional Access policies can use your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).

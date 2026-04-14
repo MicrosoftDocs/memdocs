@@ -31,13 +31,6 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Before you begin
 
-<!-- Removing section, framework removed for updates. When configuring compliance policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
-
-The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
-
-- For Android Enterprise personally owned work profile devices: [Android personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
-- For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md) -->
-
 [Create a device compliance policy](create-compliance-policy.md#create-the-policy) to access available settings. For **Platform**, select **Android Enterprise**.
 
 
