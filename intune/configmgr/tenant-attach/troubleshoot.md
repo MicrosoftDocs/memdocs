@@ -14,10 +14,10 @@ ms.collection: tier3
 Configuration Manager clients can be synced to Microsoft Intune admin center. Some client actions can be run from the Microsoft Intune admin center on the synchronized clients.
 
 The available actions are:
+
 - Sync Machine Policy
 - Sync User Policy
 - App Evaluation Cycle
-
 
 [![Device overview in Microsoft Intune admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
@@ -44,7 +44,6 @@ Use the following logs located on the client:
 1. The next sync time is noted by log entries similar to `Next run time will be at approximately: 02/28/2020 16:35:31`.
 1. For device uploads, look for log entries similar to `Batching N records`. **N** is the number of changed devices uploaded since the last upload.
 1. The upload occurs every 15 minutes for changes. Once changes are uploaded, it may take an additional 5 to 10 minutes for client changes to appear in **Microsoft Intune admin center**.
-
 
 ## Configuration Manager components and log flow
 
@@ -82,7 +81,6 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
    Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1
     ```
 
-
 ### SMS_NOTIFICATION_SERVER
 
 Once the message is sent to the SMS_NOTIFICATION_SERVER, a task is sent from the management point to the corresponding client. You'll see the below in the **BgbServer.log**, which is on the management point:
@@ -106,7 +104,7 @@ Send Task response message <BgbResponseMessage TimeStamp="2020-01-21T15:43:43Z">
 
 ### <a name="bkmk_noauth"></a> Unauthorized to perform client action
 
-If the admin doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
+If the account that is logged into the Microsoft Intune Admin Center doesn't have the required permissions in Configuration Manager, you'll see an `Unauthorized` response in the **CMGatewayNotificationWorker.log**.
 
 ```text
 Received new notification. Validating basic notification details..
@@ -115,8 +113,6 @@ Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId
 ```
 
 Ensure the user running the action from the Microsoft Intune admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Intune tenant attach prerequisites](prerequisites.md).
-
-
 
 ## Known issues
 
