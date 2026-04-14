@@ -14,7 +14,7 @@ ms.collection:
 
 # Microsoft Tunnel for Mobile Application Management for iOS/iPadOS
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS devices to support MAM the following scenarios:
 
@@ -102,11 +102,11 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    > [!NOTE]
    > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project. Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
    >
-   > To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+   > To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
    After selecting an app, select **Next**.
 
-   For more information about adding custom apps to policies, see [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md).
+   For more information about adding custom apps to policies, see [App configuration policies for Intune App SDK managed apps](../../app-management/configuration/configure-managed-apps.md).
 
 4. On the *Settings* tab, expand *Microsoft Tunnel for Mobile Application Management settings and configure the following options:
 
@@ -198,7 +198,7 @@ This policy provides the necessary data protection and establishes a means of de
    > [!NOTE]
    > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project.
    >
-   > To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+   > To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../../app-management/collect-bundle-ids.md).
 
 5. In the *Data protection*, *Access requirements*, and *Conditional launch* tabs, configure any remaining app protection policy settings based on your deployment and data protection requirements.
 
@@ -460,7 +460,7 @@ Tunnel for MAM doesn't support:
 **Workaround**: None.
 
 > [!TIP]
-> Tunnel for MAM on iOS does support NTLM integrated authentication webserver sign-in with Microsoft Edge, but not for Line of Business (LOB) apps. For more information, see [Manage NTLM single sign-on sites](../apps/manage-microsoft-edge.md#manage-ntlm-single-sign-on-sites) in *Manage Microsoft Edge on iOS and Android with Intune*.
+> Tunnel for MAM on iOS does support NTLM integrated authentication webserver sign-in with Microsoft Edge, but not for Line of Business (LOB) apps. For more information, see [Manage NTLM single sign-on sites](../../app-management/configuration/configure-edge-ios-android.md#manage-ntlm-single-sign-on-sites) in *Manage Microsoft Edge on iOS and Android with Intune*.
 
 ## Next steps
 

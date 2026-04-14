@@ -12,7 +12,7 @@ ms.collection:
 
 # Assign Apps to Groups With Microsoft Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 After you [add an app](./index.md) to Microsoft Intune, you can assign the app to users and devices. You can deploy an app to a device whether or not the device is managed by Intune.
 

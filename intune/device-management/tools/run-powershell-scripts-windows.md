@@ -136,7 +136,7 @@ In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and
 - **Device status**
 - **User status**
 
-[!INCLUDE [platform-scripts-export-api](../../intune-service/includes/platform-scripts-export-api.md)]
+[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
 
 ## Delete a script
 

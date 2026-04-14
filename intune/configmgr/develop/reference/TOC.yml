@@ -54,8 +54,8 @@ items:
     href: core/servers/configure/progress-types.md
   - name: CCM_CTM_JobStateEx4 class
     href: core/servers/configure/ccm_ctm_jobstateex4-class.md
-  - name: CCM_Download_Provider WMI class
-    href: core/servers/configure/ccm_download_provider-wmi-class.md
+  - name: CCM_DownloadProvider WMI class
+    href: core/servers/configure/ccm_downloadprovider-wmi-class.md
   - name: SendNotifyErrorToCTM method
     href: core/servers/configure/sendnotifyerrortoctm-method.md
   - name: SendNotifyProgressToCTM method

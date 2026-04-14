@@ -15,10 +15,10 @@ ms.collection:
 # Windows settings you can manage through an Intune Endpoint Protection profile
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../device-configuration/includes/not-all-settings-are-documented.md)]
 
 Microsoft Intune includes many settings to help protect your devices. This article describes the settings in the device configuration *Endpoint protection* template. To manage device security, you can also use [endpoint security policies](../protect/endpoint-security-policy.md), which focus directly on subsets of device security.
-To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).
+To configure Microsoft Defender Antivirus, see [Windows device restrictions](../../device-configuration/templates/ref-device-restrictions-windows.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).
 
 ## Before you begin
 
@@ -28,7 +28,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 ## Microsoft Defender Application Guard
 
-For Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. With Application Guard, sites that aren't in your isolated network boundary open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
+For Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. With Application Guard, sites that aren't in your isolated network boundary open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../../device-configuration/templates/create-network-boundary-windows.md).
 
 Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.
 
@@ -1037,7 +1037,7 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
   - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and later, or Windows 11.​  
 
      > [!IMPORTANT]
-     > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+     > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
   When you *enable* Credential Guard, the following required features are also enabled:
 
@@ -1636,6 +1636,6 @@ Use these options to configure the local security settings on Windows devices.
 
 ## Next steps
 
-The profile is created, but it's not doing anything yet. Next, [assign the profile](../configuration/device-profile-assign.md), and [monitor its status](../configuration/device-profile-monitor.md).
+The profile is created, but it's not doing anything yet. Next, [assign the profile](../../device-configuration/assign-device-profile.md), and [monitor its status](../../device-configuration/monitor-device-profile.md).
 
 Configure endpoint protections settings on [macOS](endpoint-protection-macos.md) devices.

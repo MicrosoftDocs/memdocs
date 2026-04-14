@@ -35,7 +35,7 @@ Find the endpoint security policies for Account protection under *Manage* in the
 - To support the *Local admin password solution (Windows LAPS), see [Prerequisites](../protect/windows-laps-overview.md#prerequisites) in *Microsoft Intune support for Windows LAPS*.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Role-based access controls (RBAC)
 

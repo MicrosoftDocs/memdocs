@@ -13,7 +13,7 @@ ms.collection:
 
 In this article, you learn how to create and assign an app protection policy in Microsoft Intune to protect apps on user devices. App protection policies help ensure your apps meet your organization's data protection requirements, keeping corporate data secure.
 
-[!INCLUDE [intune-evaluate](../../intune-service/includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 ## Prerequisites
 

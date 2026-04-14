@@ -7,7 +7,7 @@ ms.topic: concept-article
 
 # Battery health report
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience.
 

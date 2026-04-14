@@ -54,7 +54,7 @@ To deploy eSIM to your devices using Intune, you need the following prerequisite
 - **Windows** devices that are enrolled and MDM managed by Intune. For information on the enrollment options for Windows devices, go to [Windows enrollment guide for Microsoft Intune](../../device-enrollment/windows/guide.md).
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 - **eSIM capable devices**, like the [Surface Pro 9 with 5G](https://www.microsoft.com/surface/business/surface-pro-9)
 
@@ -76,7 +76,7 @@ To deploy eSIM to your devices using Intune, you need the following prerequisite
 
   You don't need the individual activation codes.
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Process flow
 

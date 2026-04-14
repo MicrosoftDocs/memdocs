@@ -129,7 +129,7 @@ Before diving into compliance policy recommendations by levels, it's important  
 
 Devices that receive compliance policies are  evaluated against the compliance policy configurations with results returned to Intune for possible actions. Some compliance configurations like password requirements result in enforcement on the device, even when device configurations are more lenient.
 
-When a device receives conflicting configurations for a setting either different or similar policy types, conflicts can occur. To help prepare for this scenario, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict)
+When a device receives conflicting configurations for a setting either different or similar policy types, conflicts can occur. To help prepare for this scenario, see [Compliance and device configuration policies that conflict](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict)
 
 Consider synchronizing any planned configurations between device configuration and device compliance teams to help identify configuration overlaps. Ensure the two policy types agree on the same configuration for targeted devices as this can help avoid policy conflicts or leaving a device without the configuration or resource access you expect.
 
@@ -188,7 +188,7 @@ With robust device compliance policies in place, you can then implement more adv
 
 A Mobile Threat Defense (MTD) solution is software for mobile devices that helps to secure them from various cyber threats. By protecting mobile devices, you help protect your organization and resources. When integrated, MTD solutions provide an additional information source to Intune for your device compliance policies. This information can also be used by Conditional Access rules you can use with Intune.
 
-When integrated, Intune supports use of MTD solutions with enrolled devices, and when supported by the MTD solution, unenrolled devices by using [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) and app protection policies.
+When integrated, Intune supports use of MTD solutions with enrolled devices, and when supported by the MTD solution, unenrolled devices by using [Microsoft Intune protected apps](../../app-management/ref-protected-apps.md) and app protection policies.
 
 Be sure to use an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
 

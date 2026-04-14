@@ -42,7 +42,7 @@ After completing this guide, you'll have completed the following integration wor
 
 **Additional capabilities:** Beyond enrolled devices, you can also manage Defender for Endpoint security configurations on devices that aren't enrolled with Intune (including Linux devices). This scenario is called *Security Management for Microsoft Defender for Endpoint*. To enable this, set the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For details, see [Microsoft Defender for Endpoint Security Configuration Management](../protect/mde-security-integration.md).
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Connect Microsoft Defender for Endpoint to Intune
 
@@ -221,7 +221,7 @@ Use this option for granular control, specific device groups, or custom scope ta
    > - **Device groups**: Recommended for immediate deployment.
    > - **User groups**: Requires user sign-in before policy applies.
 
-   For assignment guidance, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   For assignment guidance, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
 7. **Review + create**: Verify all settings and select **Create**.
 
@@ -239,7 +239,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### macOS onboarding quick start
 
-1. **Deploy the app**: Follow the [Microsoft Defender for Endpoint for macOS](../apps/apps-advanced-threat-protection-macos.md) deployment guide.
+1. **Deploy the app**: Follow the [Microsoft Defender for Endpoint for macOS](../../app-management/deployment/add-defender-macos.md) deployment guide.
 2. **Configure settings**: Use Intune app configuration policies.
 3. **Verify onboarding**: Check device appears in the Microsoft Defender portal.
 
@@ -330,7 +330,7 @@ Devices that exceed the configured risk threshold are automatically marked as no
    - **Windows 10 and later**
 
    > [!IMPORTANT]
-   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+   > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
    If necessary, select a Profile type, like *Windows 10/11 compliance policy* for the Windows platform.
 
@@ -383,7 +383,7 @@ App protection policies work independently of device enrollment, providing an ad
 **Prerequisites:**  
 - Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for security-related *Mobile apps* policies (custom roles require *Assign*, *Create*, *Delete*, *Read*, *Update*, and *Wipe* rights for the *Managed apps* permission).
 
-Follow the [application protection policy creation guide](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps) and configure these Microsoft Defender for Endpoint-specific settings:
+Follow the [application protection policy creation guide](../../app-management/protection/create-policy.md#app-protection-policies-for-iosipados-and-android-apps) and configure these Microsoft Defender for Endpoint-specific settings:
 
 - **Apps**: Select apps to be protected by threat-based policies
 - **Conditional launch**: Configure threat level and response actions:
@@ -471,7 +471,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 **Intune integration:**
 - [Security tasks with Vulnerability Management](microsoft-defender-manage-vulnerabilities.md) - Remediate device vulnerabilities
 - [Device compliance policies](device-compliance-get-started.md) - Comprehensive compliance management
-- [App protection policies](../apps/app-protection-policy.md) - Mobile app data protection
+- [App protection policies](../../app-management/protection/overview.md) - Mobile app data protection
 - [Mobile app protection policies](../protect/mtd-app-protection-policy.md) - For Android and iOS/iPadOS devices, these policies set device risk levels, and work with both enrolled and unenrolled devices
 - [Security Management for unenrolled devices](../protect/mde-security-integration.md) - Manage Defender for Endpoint security configurations on devices that aren't enrolled with Intune (including Linux devices)
 

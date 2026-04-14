@@ -11,7 +11,7 @@ ms.collection:
 
 You can use the Intune Data Warehouse API with an account with specific role-based access controls and Microsoft Entra credentials. You will then authorize your REST client with Microsoft Entra ID using OAuth 2.0. And finally, you will form a meaningful URL to call a data warehouse resource.
 
-[!INCLUDE [reports-credential-reqs](../../intune-service/includes/reports-credential-reqs.md)]
+[!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
 
 ## Authorization
 

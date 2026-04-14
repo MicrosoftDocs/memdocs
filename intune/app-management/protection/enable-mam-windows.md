@@ -13,7 +13,7 @@ ms.collection:
 # Data Protection for Windows MAM
 <!-- Use Mobile Application Management on unmanaged Windows  -->
 
-[!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 You can enable protected Mobile Application Management (MAM) access to org data on personal Windows devices. This capability uses the following functionality:
 - Intune Application Configuration Policies (ACP) to customize the org user experience

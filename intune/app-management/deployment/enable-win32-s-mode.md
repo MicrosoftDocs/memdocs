@@ -11,7 +11,7 @@ ms.collection:
 
 # Enable Win32 Apps on S Mode Devices
 
-[!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 [Windows S mode](/windows/deployment/s-mode) is a locked-down operating system that only runs Store apps. By default, Windows S mode devices don't allow installation and execution of Win32 apps. These devices include a single *Win 10S base policy*, which locks the S mode device from running any Win32 apps on it. However, by creating and using an **S mode supplemental policy** in Intune, you can install and run Win32 apps on Windows S mode managed devices. By using the [Microsoft Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) PowerShell tools, you can create one or more supplemental policies for Windows S mode. You must sign the supplemental policies with the [Device Guard Signing Service (DGSS)](/microsoft-store/device-guard-signing-portal) or with [SignTool.exe](/windows/security/threat-protection/windows-defender-application-control/use-signed-policies-to-protect-windows-defender-application-control-against-tampering) and then upload and distribute the policies via Intune. As an alternative, you can sign the supplemental policies with a codesigning certificate from your organization, however the preferred method is to use DGSS. In the instance that you use the codesigning certificate from your organization, the root certificate that the codesigning certificate chains up to, must be present on the device.
 

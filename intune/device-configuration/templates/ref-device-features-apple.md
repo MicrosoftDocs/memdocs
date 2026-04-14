@@ -12,7 +12,7 @@ zone_pivot_groups: platforms-apple
 # Apple device feature settings in Microsoft Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 Intune has a built-in **Device Features** template profile for Apple devices. It includes built-in settings that admins can use to customize different Apple features on iOS/iPadOS and macOS devices. For example, you can add AirPrint printers, show notifications, use single sign-on authentication, and more.
 
@@ -41,7 +41,7 @@ These settings apply to different enrollment types, with some settings applying 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 

@@ -12,7 +12,7 @@ ms.collection:
 
 # Add iOS Store Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Use the information in this article to help you add iOS store apps to Microsoft Intune. iOS store apps are apps that Intune installs on your users' devices. A user is part of your company's workforce. iOS store apps are automatically updated.
 

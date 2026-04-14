@@ -92,7 +92,7 @@ Support for the device enrollment setting requires end users have these Company 
 - Company Portal on iOS/iPadOS: version 4.4 or later
 - Company Portal on Android: version 5.0.5421.0 or later
 
-[!INCLUDE [android-company-portal-version-support](../../intune-service/includes/android-company-portal-version-support.md)]
+[!INCLUDE [android-company-portal-version-support](../../includes/android-company-portal-version-support.md)]
 
 > [!IMPORTANT]
 > These settings don't apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../../intune-service/enrollment/device-enrollment-program-enroll-ios.md). Regardless of configuration, these devices enroll during the out of box flow. The Company Portal prompts users to sign in when they launch it.

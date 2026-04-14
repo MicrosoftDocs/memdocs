@@ -57,7 +57,7 @@ The Encryption report pane displays a list of the devices you manage with high
     - The device must have a TPM chip
 
     > [!IMPORTANT]
-    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+    > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
     For more information on Windows prerequisites for encryption, see the [BitLocker configuration service provider (CSP)](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation.
 
@@ -121,7 +121,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
-    *Consider: Beginning with macOS version 10.15 (Catalina), user approved enrollment settings can result in the requirement that users manually approve FileVault encryption. For more information, see [User Approved enrollment](../enrollment/macos-enroll.md) in the Intune documentation*.
+    *Consider: Beginning with macOS version 10.15 (Catalina), user approved enrollment settings can result in the requirement that users manually approve FileVault encryption. For more information, see [User Approved enrollment](../../device-enrollment/apple/methods-macos.md) in the Intune documentation*.
 
   - Unknown.
 

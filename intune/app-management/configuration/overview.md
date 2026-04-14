@@ -53,7 +53,7 @@ Intune represents these different app configuration policy channels as:
 
 Apps may handle app configuration policy settings differently with respect to user preference. For example, with Outlook for iOS and Android, the Focused Inbox app configuration setting will respect the user setting, allowing the user to override admin intent. Other settings may let you control whether a user can or cannot change the setting based on the admin intent.
 
-[!INCLUDE [android-supported-os](../../intune-service/includes/android-supported-os.md)]
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
 
 ### Managed devices
 

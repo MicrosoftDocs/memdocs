@@ -43,7 +43,7 @@ Compliance policy settings include the following settings:
 
   If you use Conditional Access with your device compliance policies, change this setting to **Not compliant** to ensure that only devices that are confirmed as compliant can access your resources.
 
-  If an end user isn't compliant because a policy isn't assigned to them, then the [Company Portal app](../apps/company-portal-app.md) shows No compliance policies have been assigned.
+  If an end user isn't compliant because a policy isn't assigned to them, then the [Company Portal app](../../app-management/configuration/configure-company-portal.md) shows No compliance policies have been assigned.
 
 - **Compliance status validity period (days)**
 
@@ -63,13 +63,13 @@ Intune device compliance policies are discrete sets of platform-specific rules a
 
 When using device compliance policies:
 
-- Some compliance policy configurations can override the configuration of settings that you also manage through device configuration policies. To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+- Some compliance policy configurations can override the configuration of settings that you also manage through device configuration policies. To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 - Policies can deploy to users in user groups or devices in device groups. When a compliance policy is deployed to a user, all the user's devices are checked for compliance. Using device groups in this scenario helps with compliance reporting.
 
 - If you use Microsoft Entra Conditional Access, your Conditional Access policies can use the device compliance results to block access to resources from noncompliant devices.
 
-- Like other Intune policies, compliance policy evaluations for a device depend on when the device checks in with Intune, and [policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+- Like other Intune policies, compliance policy evaluations for a device depend on when the device checks in with Intune, and [policy and profile refresh cycles](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 
 The available settings you can specify in a device compliance policy depend on the platform type you select when you create a policy. Different device platforms support different settings, and each platform type requires a separate policy.
@@ -95,7 +95,7 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows](compliance-policy-create-windows.md)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 - [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
@@ -156,5 +156,5 @@ The following table describes how noncompliant settings are managed when a compl
 
 - [Create and deploy policy](../protect/create-compliance-policy.md) and review prerequisites
 - [Monitor device compliance](../protect/compliance-policy-monitor.md)
-- [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
+- [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md)
 - [Reference for policy entities](../../developer/data-warehouse/ref-policy.md) has information about the Intune Data Warehouse policy entities

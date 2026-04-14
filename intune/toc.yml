@@ -91,26 +91,7 @@ items:
           displayName: admx, administrative template, gpo, windows
 
   - name: Microsoft Copilot + Intune
-    items:
-    - name: Copilot in Intune
-      displayName: ai, copilot
-      href: ./copilot/index.md
-    - name: Explore your Intune data
-      displayName: ai, copilot, explore, data, query
-      href: ./copilot/explorer.md
-    - name: Troubleshoot a device using Copilot
-      href: ./copilot/troubleshoot-devices.md
-    - name: Copilot in Intune FAQ
-      href: ./copilot/faq.md
-    - name: Intune plugin in Security Copilot
-      href: ./copilot/security-copilot.md
-    - name: Copilot in Surface Management Portal
-      displayName: ai, copilot, surface, models, fleet, warranty
-      href: /surface/security-copilot-surface-management-portal?context=/intune/context
-    - name: Copilot in Windows 365 Cloud PCs
-      href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
-    - name: Security Copilot agents in Microsoft Intune
-      href: ./copilot/agents/toc.yml
+    href: ./copilot/toc.yml
 
   - name: Intune Suite
     items:
@@ -823,7 +804,7 @@ items:
     - name: Device actions
       href: ./device-management/actions/toc.yml
 
-  - name: Support your end users
+  - name: Support your users
     items:
     - name: Use the Help Desk users operator role
       href: ./intune-service/fundamentals/help-desk-operators.md
@@ -851,99 +832,7 @@ items:
   - name: Industry guides
     items:
     - name: Education
-      items:
-      - name: What is Intune for Education
-        displayName: edu
-        href: ./intune-service/industry/education/introduction-intune-education.md
-      - name: "Tutorial: How to deploy and manage devices in a school"
-        items:
-        - name: Introduction
-          href: ./intune-service/industry/education/tutorial-school-deployment/introduction.md
-        - name: 1. Plan your deployment
-          items:
-          - name: Enrollment methods
-            href: ./intune-service/industry/education/tutorial-school-deployment/plan-enrollment.md
-          - name: Grouping and targeting
-            href: ./intune-service/industry/education/tutorial-school-deployment/plan-grouping.md
-        - name: 2. Prepare your tenant
-          items:
-          - name: Set up Microsoft Entra ID
-            href: ./intune-service/industry/education/tutorial-school-deployment/set-up-microsoft-entra-id.md
-          - name: Set up Microsoft Intune
-            href: ./intune-service/industry/education/tutorial-school-deployment/set-up-microsoft-intune.md
-        - name: 3. Configure settings and applications
-          items:
-          - name: Overview
-            href: ./intune-service/industry/education/tutorial-school-deployment/configure-devices-overview.md
-          - name: Configure policies
-            href: ./intune-service/industry/education/tutorial-school-deployment/configure-device-settings.md
-          - name: Configure applications
-            href: ./intune-service/industry/education/tutorial-school-deployment/configure-device-apps.md
-        - name: 4. Deploy devices
-          items:
-          - name: Overview
-            href: ./intune-service/industry/education/tutorial-school-deployment/enroll-overview.md
-          - name: Windows
-            items:
-            - name: Enroll devices via Microsoft Entra join
-              href: ./intune-service/industry/education/tutorial-school-deployment/enroll-entra-join.md
-            - name: Enroll devices with provisioning packages
-              href: ./intune-service/industry/education/tutorial-school-deployment/enroll-package.md
-            - name: Enroll devices with Windows Autopilot
-              href: ./intune-service/industry/education/tutorial-school-deployment/enroll-autopilot.md
-          - name: iOS
-            items:
-            - name: Enroll with Company Portal
-              href: ./intune-service/industry/education/tutorial-school-deployment/enroll-ios-company-portal.md
-            - name: Enroll devices with Automated Device Enrollment
-              href: ./intune-service/industry/education/tutorial-school-deployment/enroll-ios-ade.md
-            - name: Bulk enrollment with Apple Configurator
-              href: ./intune-service/industry/education/tutorial-school-deployment/enroll-ios-apple-configurator.md
-        - name: 5. Manage devices
-          items:
-          - name: Overview
-            href: ./intune-service/industry/education/tutorial-school-deployment/manage-overview.md
-          - name: Management functionalities for Surface devices
-            href: ./intune-service/industry/education/tutorial-school-deployment/manage-surface-devices.md
-          - name: Reset and wipe devices
-            href: ./intune-service/industry/education/tutorial-school-deployment/reset-wipe.md
-          - name: Avoid policy conflicts
-            href: ./intune-service/industry/education/tutorial-school-deployment/manage-avoid-policy-conflicts.md
-        - name: 6. Troubleshoot and get help
-          href: ./intune-service/industry/education/tutorial-school-deployment/troubleshoot-overview.md
-        - name: 7. Common Education configuration
-          items:
-          - name: Overview
-            href: ./intune-service/industry/education/tutorial-school-deployment/common-config-overview.md
-          - name: Intune policies for Windows in Education
-            items:
-            - name: Device restrictions
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md
-            - name: Windows Update
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-windows-update.md
-            - name: Microsoft Edge
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md
-            - name: Delivery Optimization
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md
-            - name: Windows privacy
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy.md
-            - name: Start menu customization
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md
-            - name: OneDrive Known Folder Move
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md
-          - name: Intune policies for iPads in Education
-            items:
-            - name: Device restrictions
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-ipads-device-restrictions.md
-            - name: Apple Intelligence
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-ipads-ai.md
-            - name: iPads with no user affinity
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-ipads-nouser.md
-            - name: Optional restrictions
-              href: ./intune-service/industry/education/tutorial-school-deployment/common-config-ipads-optional.md
-
-      - name: Intune for Education docs
-        href: /intune-education/
+      href: ./solutions/education/toc.yml
 
     - name: Government
       items:
