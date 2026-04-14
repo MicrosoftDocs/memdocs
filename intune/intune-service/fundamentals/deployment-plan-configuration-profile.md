@@ -509,7 +509,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
     - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
 
-      [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+      [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
   # [iOS/iPadOS](#tab/ios-kiosk)
 

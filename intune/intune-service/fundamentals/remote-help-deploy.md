@@ -17,7 +17,7 @@ ms.collection:
 
 # Deploying Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
@@ -220,7 +220,7 @@ With settings catalog, we can streamline the end users' experience for allowing 
 
 You can configure these settings using either the Microsoft Intune admin center or Microsoft Graph.
 
-#### :::image type="icon" source="../media/icons/intune.svg"::: Intune admin center
+#### :::image type="icon" source="../../media/icons/16/intune.svg"::: Intune admin center
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Manage devices** > **Configuration**.
 1. Select **Create** > **macOS** > **Settings catalog**.  
@@ -262,7 +262,7 @@ You can configure these settings using either the Microsoft Intune admin center 
 
 #### :::image type="icon" source="../media/icons/graph.svg"::: Microsoft Graph
 
-[!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
+[!INCLUDE [graph-explorer-introduction](../../solutions/includes/graph-explorer-intro.md)]
 
 Using Graph Explorer creates a policy in your tenant with the name **_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control**.
 
@@ -272,7 +272,7 @@ Content-Type: application/json
 
 {"name":"_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control","description":"","platforms":"macOS","technologies":"mdm,appleRemoteManagement","roleScopeTagIds":["0"],"settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_authorization","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_authorization_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_coderequirement","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"identifier \"com.microsoft.remotehelp\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifier","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"com.microsoft.remotehelp"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifiertype","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifiertype_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_staticcode","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_staticcode_false","children":[]}}]}]},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_authorization","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_authorization_2","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_coderequirement","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"identifier \"com.microsoft.remotehelp\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifier","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"com.microsoft.remotehelp"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifiertype","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifiertype_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_staticcode","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_staticcode_false","children":[]}}]}]}]}]}]}]}}]}
 ```
-[!INCLUDE [graph-explorer-steps](../includes/graph-explorer-steps.md)]
+[!INCLUDE [graph-explorer-steps](../../solutions/includes/graph-explorer-steps.md)]
 
 ### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 

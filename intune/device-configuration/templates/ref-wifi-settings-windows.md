@@ -11,7 +11,7 @@ ms.collection:
 # Add Wi-Fi settings for Windows devices in Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 You can create a profile with specific WiFi settings. Then, deploy this profile to your Windows client devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 

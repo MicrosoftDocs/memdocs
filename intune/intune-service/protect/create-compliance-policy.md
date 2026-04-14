@@ -45,7 +45,7 @@ To use device compliance policies, be sure you:
   - macOS
   - Windows  
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 - Enroll devices in Intune (required to see the compliance status)
 

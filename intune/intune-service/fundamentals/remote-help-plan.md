@@ -16,7 +16,7 @@ ms.collection:
 
  # Planning for Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
@@ -164,7 +164,7 @@ There are optional Windows updates for higher notification reliability:
 - Windows 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
  > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+ > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md).  
 
@@ -192,7 +192,7 @@ Remote Help is supported on the following Android Enterprise devices enrolled in
 - Install the Intune app on devices with a version later than 5.0.5541.0.  
 - Devices must not have device configuration policy set to block screen capture.  
 
-### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
 
 Device support is dependent on both the users operating system, and their web browser.  
 
@@ -216,7 +216,7 @@ Device support is dependent on both the users operating system, and their web br
 - Windows 11
 
  > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+ > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 #### Linux versions
@@ -251,7 +251,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 
 Remote Help doesn't support unenrolled devices on Android.
 
-### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
 
 The web app has the same requirements as the platform of the sharer.
 
@@ -339,7 +339,7 @@ Remote Help with chat *on* is supported in the following languages:
 
 The Remote Help app for Android uses the language set on the device. The Remote Help app for Android supports all languages that are supported by Android.
 
-### [:::image type="icon" source="../media/icons/webapp.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../../media/icons/16/webapp.svg"::: **Web App**](#tab/webapp)
 
 The Remote Help web app supports all of the languages supported by the browser being used.
 

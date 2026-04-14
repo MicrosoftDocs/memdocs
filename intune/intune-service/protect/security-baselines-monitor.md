@@ -108,7 +108,7 @@ Below the reports section of the dashboard, you can find the profiles *Propertie
 When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Security Baseline for Windows 10 and later*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 The *Overview* pane displays two status views for the selected baseline:
 

@@ -16,7 +16,7 @@ ms.collection:
 
 This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support assignment filters. It also lists the workloads that aren't supported.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 
@@ -25,7 +25,7 @@ This article lists the app types, compliance policies, device configuration prof
 - N/A: Doesn't apply to the platform.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Supported app types for managed devices
 
@@ -78,7 +78,7 @@ You can use assignment filters for some common app policies on the following pla
 | Web link | ❌ |
 | Line-of-business apps | ✅ |
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 # [Apple](#tab/apple-apps)
 

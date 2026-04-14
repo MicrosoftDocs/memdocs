@@ -49,7 +49,7 @@ The following profiles support use of reusable settings groups:
   - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11
 
     > [!IMPORTANT]
-    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+    > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 - **Attack surface reduction** > **Device control**:
   - Platforms: Windows

@@ -25,7 +25,7 @@ To learn more about the Windows kiosk feature in Intune, go to [configure kiosk 
   When you create a Windows client kiosk device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](./ref-device-restrictions-windows-holographic.md#microsoft-edge-browser). To summarize:
 

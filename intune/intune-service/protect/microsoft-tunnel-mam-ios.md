@@ -14,7 +14,7 @@ ms.collection:
 
 # Microsoft Tunnel for Mobile Application Management for iOS/iPadOS
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS devices to support MAM the following scenarios:
 

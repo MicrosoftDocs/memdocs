@@ -29,7 +29,7 @@ This article provides recommendations on when to use MAM. It also includes an ov
 - [Data protection for Windows MAM](../apps/protect-mam-windows.md)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 

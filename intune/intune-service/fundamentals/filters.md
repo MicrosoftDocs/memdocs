@@ -55,7 +55,7 @@ This feature applies to:
 
 This article describes the assignment filter architecture, and shows you how to create, update, and delete an assignment filter.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## How assignment filters work
 

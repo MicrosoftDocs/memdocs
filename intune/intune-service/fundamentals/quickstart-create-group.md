@@ -14,7 +14,7 @@ ms.collection:
 
 In this article, you use Intune to create a group based on an existing user. Use groups to manage your users and control your employees' access to your company resources. These resources can be part of your company's intranet or can be external resources, such as SharePoint sites, SaaS apps, or web apps.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 ## Prerequisites
 

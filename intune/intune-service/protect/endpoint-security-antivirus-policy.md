@@ -31,7 +31,7 @@ Applies to:
 - Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 ## Prerequisites for antivirus policy

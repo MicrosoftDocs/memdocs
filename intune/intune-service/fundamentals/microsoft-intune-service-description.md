@@ -31,7 +31,7 @@ You can start to use Intune with a 30-day free trial. To start your free trial, 
 If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, select the **Sign in** option on that page and authenticate by using the Microsoft Entra Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
 
 > [!IMPORTANT]
-> [!INCLUDE [global-admin](../includes/global-admin.md)]
+> [!INCLUDE [global-admin](../../app-management/includes/global-admin.md)]
 
 ## Intune Onboarding benefit
 

@@ -18,7 +18,7 @@ ms.collection:
 Use Microsoft Intune to configure BitLocker encryption on devices that run Windows, and Personal Data Encryption (PDE) on devices that run Windows 11 Version 22H2 or later. This article covers both standard BitLocker encryption and silent BitLocker encryption scenarios.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 > [!TIP]
 > Some settings for BitLocker require the device have a supported TPM.

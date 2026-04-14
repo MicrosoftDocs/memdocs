@@ -1354,7 +1354,7 @@ The enrollment time grouping failures report is available in the admin center un
 
 #### Windows 10 support in Intune <!-- 34754868 -->
 
-[!INCLUDE [Windows 10 support](../includes/windows-10-support.md)]
+[!INCLUDE [Windows 10 support](../../includes/windows-10-support.md)]
 
 For more information, see [Support statement for Windows 10 in Intune](#update-to-support-statement-for-windows-10-in-intune).
 

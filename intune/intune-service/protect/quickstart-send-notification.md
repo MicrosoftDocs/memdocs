@@ -17,7 +17,7 @@ Learn how to send email notifications to noncompliant devices using Microsoft In
 
 In this article, you use Microsoft Intune to send an email notification to the members of your workforce that have noncompliant devices.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 When Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices using [Microsoft Entra Conditional Access](conditional-access.md).
 

@@ -227,7 +227,7 @@ For details, see the following resources:
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
   > [!NOTE]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 **Win32 content download:**
 

@@ -13,7 +13,7 @@ ms.collection:
 # Windows device settings to allow or restrict features using Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, customize the lock screen, use Microsoft Defender, and more.
 
@@ -264,7 +264,7 @@ These settings use the [experience policy CSP](/windows/client-management/mdm/po
 
   [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-  [!INCLUDE [cortana-app-deprecation](../../intune-service/includes/cortana-app-deprecation.md)]
+  [!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
 
 - **Voice recording** (mobile only): **Block** prevents users from using the device voice recorder on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow voice recording for apps.
 - **Device name modification** (mobile only): **Block** prevents users from changing the name of the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -352,7 +352,7 @@ The available settings change depending on what you choose. Your options:
 For more information on what these options do, see [Microsoft Edge kiosk mode configuration types](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 This device restrictions profile is directly related to the kiosk profile you create using the [Windows kiosk settings](./ref-kiosk-settings-windows.md). To summarize:
 

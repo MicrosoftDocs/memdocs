@@ -13,7 +13,7 @@ ms.collection:
 
 # Configure Intune education settings for shared iPad devices
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 > [!NOTE]
 > Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS/iPadOS education profiles in Intune.

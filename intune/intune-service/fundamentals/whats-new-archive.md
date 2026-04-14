@@ -14,7 +14,7 @@ ms.collection:
 
 # What's new in the Microsoft Intune - previous months
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 <!-- Maintenance plan:
 

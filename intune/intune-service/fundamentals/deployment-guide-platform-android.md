@@ -34,7 +34,7 @@ Use the [Microsoft Intune planning guide](intune-planning-guide.md) for help wit
 * Create rollout and communication plans.
 * Create support, testing, and validation plans.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 <!-- Commenting out b/c outated; add back in after updates. ## Leverage the Android Enterprise security configuration framework
 

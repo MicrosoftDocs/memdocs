@@ -15,7 +15,7 @@ ms.collection:
 
 Sign up for a Microsoft Intune free trial to evaluate mobile device management for your organization. In this article, you learn how to sign up for a free trial, create a new tenant, set up Intune, and prepare your environment for testing.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 When you complete the signup process, you automatically create a new tenant. A tenant is a dedicated instance of Microsoft Entra ID that hosts your Intune subscription. After creating the tenant, you can add users and groups, and assign licenses to users.
 

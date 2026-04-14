@@ -95,7 +95,7 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows](compliance-policy-create-windows.md)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
-    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 - [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 

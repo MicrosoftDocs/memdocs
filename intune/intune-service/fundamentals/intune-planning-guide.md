@@ -34,7 +34,7 @@ Use this guide to plan your move or migration to Intune.
 > [!TIP]
 >
 > - Want to print or save this guide as a PDF? In your web browser, use the **Print** option, **Save as PDF**.
-> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Step 1 - Determine your objectives
 

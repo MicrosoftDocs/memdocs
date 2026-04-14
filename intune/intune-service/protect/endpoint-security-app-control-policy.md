@@ -43,7 +43,7 @@ Applies to:
 - Windows
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 ## Prerequisites
@@ -51,7 +51,7 @@ Applies to:
 ### Devices
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 The following devices are supported for App Control for Business policies when they're enrolled with Intune:
 

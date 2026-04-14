@@ -50,7 +50,7 @@ This guide helps you create your own cloud configuration deployment. The followi
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Step 1 - Create a Microsoft Entra group
 

@@ -25,7 +25,7 @@ ms.reviewer: mattcall
 > - **Account protection (Preview)** – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../../device-configuration/includes/not-all-settings-are-documented.md)]
 
 This article describes Windows Hello for Business settings you can manage with an Identity protection profile. Identity protection profiles are part of device configuration policy in Microsoft Intune. However, as of July 2024, device configuration profiles for *Identity protection* are replaced by endpoint security profiles for *Account protection*. While you can continue to use identity protection profiles that you previously created, Intune no longer supports creating new instances. Instead, to manage settings for identity protection, use an endpoint security [account protection policy](../protect/endpoint-security-account-protection-policy.md).
 
@@ -117,7 +117,7 @@ You can find additional information about these settings in [Configure Windows H
   - **Not configured** - Security keys are disabled and users can't use them to sign in to PCs.  
 
    > [!IMPORTANT]
-   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+   > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Next steps
 

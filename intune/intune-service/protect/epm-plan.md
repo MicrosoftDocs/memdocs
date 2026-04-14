@@ -15,7 +15,7 @@ ms.collection:
 
 # Plan and Prepare for Endpoint Privilege Management Deployment
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
@@ -68,7 +68,7 @@ Endpoint Privilege Management supports the following virtual platforms:
 - Windows 365
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 
 > [!IMPORTANT]

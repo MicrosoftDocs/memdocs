@@ -13,7 +13,7 @@ ms.collection:
 # Configure the Take a Test app on Windows devices using Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 The Take a Test app lets you securely administer online tests on your classroom's Windows devices. To set up the Take a Test app, you'll need to create a device configuration profile in Intune and configure the secure assessment settings. This article describes some of the settings you'll find for the Take a Test app.
 

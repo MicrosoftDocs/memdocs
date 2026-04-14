@@ -131,7 +131,7 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 
 ---
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Enrollment for Apple devices
 This section describes the enrollment options available for iOS/iPadOS and Mac devices in Intune.

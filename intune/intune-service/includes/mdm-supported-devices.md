@@ -46,7 +46,7 @@ ms.date: 10/14/2025
 - Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+)
 - Android open source project devices: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 
-[!INCLUDE [android-supported-os](android-supported-os.md)]
+[!INCLUDE [android-supported-os](../../app-management/includes/android-supported-os.md)]
 
 ### Linux
 
@@ -82,7 +82,7 @@ For guidelines on using Windows virtual machines with Intune, see [Using Windows
 
 > [!IMPORTANT]
 >
-> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> - [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 > - Intune doesn't currently support managing UWF enabled devices. For more information, see [Unified Write Filter (UWF) feature](/windows-hardware/customize/enterprise/unified-write-filter).
 
 ### Windows 11 known issues

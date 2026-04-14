@@ -25,7 +25,7 @@ From a service perspective, Intune uses Microsoft Entra ID for identity storage 
 This article discusses concepts and features you should consider when managing your identities.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Use your existing users and groups
 

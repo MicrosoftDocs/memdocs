@@ -26,7 +26,7 @@ This feature applies to:
 
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Before you begin
 

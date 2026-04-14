@@ -14,7 +14,7 @@ ms.collection:
 
 In this article, you set up Microsoft Intune to automatically enroll Windows corporate-owned devices, and user-owned devices for bring-your-own-device (BYOD) deployments. You can scope automatic enrollment to some Microsoft Entra users, all users, or no users.
 
-[!INCLUDE [intune-evaluate](../../intune-service/includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
 
 ## Prerequisites
 

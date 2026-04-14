@@ -32,7 +32,7 @@ This article applies to:
 - Windows 
 
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Intune includes the following options for reviewing device compliance details:
 

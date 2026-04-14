@@ -11,7 +11,7 @@ ms.collection:
 
 # Use iOS App Provisioning Profiles to Prevent Your Apps From Expiring
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 ## Introduction
 

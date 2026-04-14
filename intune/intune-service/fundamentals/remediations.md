@@ -239,7 +239,7 @@ You can view the status of Remediations that are assigned or run on-demand to a 
 
 When you apply filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
 
-[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
+[!INCLUDE [platform-scripts-export-api](../../device-management/includes/platform-scripts-export-api.md)]
 
 ## Next steps
 

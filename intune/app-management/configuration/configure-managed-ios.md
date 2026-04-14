@@ -12,7 +12,7 @@ ms.collection:
 
 # Add App Configuration Policies for Managed iOS/iPadOS Devices
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Use app configuration policies in Microsoft Intune to provide custom configuration settings for an iOS/iPadOS app. These configuration settings allow an app to be customized based on the app suppliers direction. You must get these configuration settings (keys and values) from the supplier of the app. To configure the app, you specify the settings as keys and values, or as XML containing the keys and values.
 

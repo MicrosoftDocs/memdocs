@@ -20,7 +20,7 @@ You can use assignment filters on **managed devices** (devices enrolled in Intun
 
 This article provides a complete reference for managed device properties, managed app properties, and supported operators you can use in your assignment filters, and includes practical examples.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Available properties
 
@@ -309,7 +309,7 @@ You can use the following device properties in your managed device filter rules:
 > [!NOTE]
 >
 > - In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
-> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> - [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 # [Managed app properties](#tab/managed-app)
 

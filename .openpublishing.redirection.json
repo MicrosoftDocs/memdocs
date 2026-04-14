@@ -2096,146 +2096,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/autopilot/tutorial/includes/assign-autopilot-device-to-user.md",
-      "redirect_url": "/autopilot/tutorial/includes/assign-autopilot-device-to-user",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/assign-autopilot-device-to-user-via-csv.md",
-      "redirect_url": "/autopilot/tutorial/includes/assign-autopilot-device-to-user-via-csv",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/automatic-intune-enrollment.md",
-      "redirect_url": "/autopilot/tutorial/includes/automatic-intune-enrollment",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/autopilot-profile-steps-after.md",
-      "redirect_url": "/autopilot/tutorial/includes/autopilot-profile-steps-after",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/autopilot-profile-steps-before.md",
-      "redirect_url": "/autopilot/tutorial/includes/autopilot-profile-steps-before",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/configure-and-assign-esp.md",
-      "redirect_url": "/autopilot/tutorial/includes/configure-and-assign-esp",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/create-device-group.md",
-      "redirect_url": "/autopilot/tutorial/includes/create-device-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/domain-join-profile.md",
-      "redirect_url": "/autopilot/tutorial/includes/domain-join-profile",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/import-hardware-hash.md",
-      "redirect_url": "/autopilot/tutorial/includes/import-hardware-hash",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-automatic-enrollment.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-automatic-enrollment",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-autopilot-profile.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-autopilot-profile",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-device-group.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-device-group",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-esp.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-esp",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-register-device.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-register-device",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-technician-flow.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-technician-flow",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/more-info-user-flow.md",
-      "redirect_url": "/autopilot/tutorial/includes/more-info-user-flow",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/network-connectivity.md",
-      "redirect_url": "/autopilot/tutorial/includes/network-connectivity",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/register-autopilot-device.md",
-      "redirect_url": "/autopilot/tutorial/includes/register-autopilot-device",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/technician-flow.md",
-      "redirect_url": "/autopilot/tutorial/includes/technician-flow",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-aadj-screens.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-aadj-screens",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-assignments.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-assignments",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-esp-progress.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-esp-progress",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-haadj-lock.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-haadj-lock",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-haadj-screens.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-haadj-screens",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-qr-codes.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-qr-codes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-technician-flow-inherit.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-technician-flow-inherit",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/tips-technician-flow-screens.md",
-      "redirect_url": "/autopilot/tutorial/includes/tips-technician-flow-screens",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "intune/autopilot/tutorial/includes/verify-autopilot-profile-assignment.md",
-      "redirect_url": "/autopilot/tutorial/includes/verify-autopilot-profile-assignment",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "intune/autopilot/tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-allow-users-to-join",
       "redirect_document_id": false
@@ -2607,7 +2467,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/introduction-intune-education.md",
-      "redirect_url": "/intune/intune-service/industry/education/introduction-intune-education",
+      "redirect_url": "/intune/solutions/education/overview",
       "redirect_document_id": false
     },
     {
@@ -4307,6 +4167,171 @@
     {
       "source_path": "intune/intune-service/configuration/windows-health-monitoring.md",
       "redirect_url": "/intune/device-configuration/templates/configure-health-monitoring-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/introduction-intune-education.md",
+      "redirect_url": "/intune/solutions/education/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/introduction.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/plan-enrollment.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enrollment-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/plan-grouping.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/grouping-and-targeting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/set-up-microsoft-entra-id.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/setup-entra-id",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/set-up-microsoft-intune.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/setup-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-overview.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-entra-join.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-entra-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-package.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-autopilot.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-ios-ade.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-ios-ade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-ios-apple-configurator.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-ios-apple-configurator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/enroll-ios-company-portal.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/enroll-ios-company-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/configure-devices-overview.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/configure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/configure-device-settings.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/configure-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/configure-device-apps.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/configure-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/manage-overview.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/manage-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/manage-avoid-policy-conflicts.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/policy-conflicts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/manage-surface-devices.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/manage-surface",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/reset-wipe.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/reset-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/troubleshoot-overview.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/troubleshoot-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-overview.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-common-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-device-restrictions-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-edge.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-edge-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-delivery-optimization.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-delivery-optimization-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-onedrive-knownfoldermove.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-onedrive-knownfoldermove-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-start-menu.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-start-menu-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-windows-privacy.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-privacy-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-windows-update.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-update-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-ipads-device-restrictions.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-device-restrictions-settings-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-ipads-ai.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-ai-restrictions-settings-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-ipads-nouser.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-shared-device-settings-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/industry/education/tutorial-school-deployment/common-config-ipads-optional.md",
+      "redirect_url": "/intune/solutions/education/tutorial-school-deployment/ref-optional-restrictions-settings-ipados",
       "redirect_document_id": false
     }
   ]
