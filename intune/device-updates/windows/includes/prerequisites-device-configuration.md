@@ -18,7 +18,7 @@ ms.date: 01/08/2026
 > - Microsoft Entra hybrid joined
 >
 > Devices must also meet the following requirements:
-> - Telemetry must be turned on, with a minimum setting of [**Required**](../../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
+> - Telemetry must be turned on, with a minimum setting of [**Required**](../../../device-configuration/templates/ref-device-restrictions-windows.md#reporting-and-telemetry).
 > - The *Microsoft Account Sign-In Assistant* service (`wlidsvc`) must be enabled and running.
 
 :::column-end:::

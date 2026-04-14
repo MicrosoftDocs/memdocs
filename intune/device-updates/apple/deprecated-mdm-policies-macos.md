@@ -22,7 +22,7 @@ You can use Microsoft Intune to manage software updates for macOS devices that e
 
 - Create a schedule that determines when the update installs. Schedules can be simple, like installing updates the next time that the device checks in. Or, you can create day-time ranges when updates can install or when they're blocked from installing.
 
-By default, devices check in with [Intune about every 8 hours](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals). If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
+By default, devices check in with [Intune about every 8 hours](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals). If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 This feature applies to:
 
@@ -194,4 +194,4 @@ For each device on the list, the Installation Status displays the error that
 
 ## Next steps
 
-[Monitor device profiles](../../intune-service/configuration/device-profile-monitor.md)
+[Monitor device profiles](../../device-configuration/monitor-device-profile.md)

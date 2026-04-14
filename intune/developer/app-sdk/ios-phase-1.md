@@ -87,7 +87,7 @@ Intune supports application configurations that apply to SDK-integrated applicat
 
 The Intune App SDK supports both types of application configuration and provides a single API for accessing configurations from both channels. If your application has or will support either of these types of application configuration, you'll need to follow [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications].
 
-For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../../intune-service/apps/app-configuration-policies-use-ios.md).
+For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../../app-management/configuration/configure-managed-ios.md).
 
 ### Does my application need to define granular protection for data ingress and egress?
 
@@ -159,19 +159,19 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Stage 2: MSAL prerequisite and setup]:ios-phase-2.md
 [Stage 5: Enable multi-identity]:ios-phase-5.md
 [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications]:ios-phase-4.md
-[Manage data transfer between iOS apps in Microsoft Intune]:../../intune-service/apps/data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
+[Manage data transfer between iOS apps in Microsoft Intune]:../../app-management/protection/manage-data-transfer-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
 [Stage 6: App Protection CA support]:ios-phase-6.md#app-protection-ca-support-optional
 
 <!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:../../intune-service/developer/app-sdk.md
-[What is Microsoft Intune app management]:../../intune-service/apps/app-management.md
-[iOS app protection policy settings]:../../intune-service/apps/app-protection-policy-settings-ios.md
+[What is Microsoft Intune app management]:../../app-management/overview.md
+[iOS app protection policy settings]:../../app-management/protection/ref-settings-ios.md
 [Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn]:/training/modules/plan-for-mobile-application-management
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
-[application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
+[application configuration policies for managed apps]:../../app-management/configuration/configure-managed-apps.md
 [App Wrapping Tool for iOS]:../../intune-service/developer/app-wrapper-prepare-ios.md
 
 <!-- Microsoft Learn documentation: Intune testing -->
@@ -181,6 +181,6 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Create users]:../../intune-service/fundamentals/users-add.md
 [Create groups]:../../intune-service/fundamentals/groups-add.md
 [Assign licenses]:../../intune-service/fundamentals/licenses-assign.md
-[Create and assign app protection policies]:../../intune-service/apps/app-protection-policies.md
-[app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md
+[Create and assign app protection policies]:../../app-management/protection/create-policy.md
+[app configuration policy]:../../app-management/configuration/overview.md
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/develop/quickstart-register-app

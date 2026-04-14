@@ -137,7 +137,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
         If the user doesn't sign in to the Company Portal to complete registration, they'll be redirected to the Company Portal app each time they try to open a managed app with Conditional Access protection.
 
-        Devices running macOS 10.15 and later can use this method. Older macOS devices fall back to using the legacy Setup Assistant method. For more information about how to get the Company Portal app to Mac users, see [Add the Company Portal for macOS app](../../intune-service/apps/apps-company-portal-macos.md).
+        Devices running macOS 10.15 and later can use this method. Older macOS devices fall back to using the legacy Setup Assistant method. For more information about how to get the Company Portal app to Mac users, see [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).
 
       > [!IMPORTANT]
       > We recommend using **Setup Assistant with modern authentication** for your Apple devices for ADE (automated device enrollment) scenarios with user device affinity. While use of the legacy authentication remains available, we do not recommend its use.

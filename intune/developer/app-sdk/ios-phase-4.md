@@ -273,7 +273,7 @@ Intune administrators can target and deploy configuration data via the [Microsof
 
 For more information about the capabilities of the Graph API, see [Graph API Reference](/graph/overview).
 
-For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../../intune-service/apps/app-configuration-policies-use-ios.md).
+For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../../app-management/configuration/configure-managed-ios.md).
 
 ## Telemetry
 
@@ -464,7 +464,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Appendix]:ios-appendix.md
 
 <!-- external links -->
-[application configuration policies for managed iOS Enterprise devices]:../../intune-service/apps/app-configuration-policies-use-ios.md
-[application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
-[App configuration policies for Microsoft Intune]:../../intune-service/apps/app-configuration-policies-overview.md
-[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md#validate-the-applied-app-configuration-policy
+[application configuration policies for managed iOS Enterprise devices]:../../app-management/configuration/configure-managed-ios.md
+[application configuration policies for managed apps]:../../app-management/configuration/configure-managed-apps.md
+[App configuration policies for Microsoft Intune]:../../app-management/configuration/overview.md
+[Validate the applied app configuration policy]:../../app-management/configuration/overview.md#validate-the-applied-app-configuration-policy
