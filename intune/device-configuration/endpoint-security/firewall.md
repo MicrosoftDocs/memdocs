@@ -99,7 +99,7 @@ For prerequisites and guidance on configuring reusable groups, and then adding t
 
 ### Devices managed by Configuration Manager
 
-[!INCLUDE [Firewall policy prerequisites](../../intune-service/includes/tenant-attach-firewall-prerequisites.md)]
+[!INCLUDE [Firewall policy prerequisites](../../includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Firewall rule mergers and policy conflicts
 

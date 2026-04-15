@@ -33,8 +33,6 @@ items:
       items:
       - name: What's new
         href: ./whats-new/index.md
-      - name: What's new in the app UI
-        href: ./whats-new/app-ui-updates.md
       - name: Features in development
         href: ./whats-new/in-development.md
       - name: Important notices

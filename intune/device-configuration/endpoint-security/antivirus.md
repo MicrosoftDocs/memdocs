@@ -185,7 +185,7 @@ The following profiles are supported for devices you manage with Intune:
 
 ### Devices managed by Configuration Manager
 
-[!INCLUDE [antivirus policy prerequisites](../../intune-service/includes/tenant-attach-antivirus-prerequisites.md)]
+[!INCLUDE [antivirus policy prerequisites](../../includes/tenant-attach-antivirus-prerequisites.md)]
 
 ## Policy merge for settings
 

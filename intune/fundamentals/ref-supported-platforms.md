@@ -32,7 +32,7 @@ For more information on configuration service provider support, visit the [Confi
 > [!NOTE]
 > App protection policies are not supported on Chrome OS
 
-[!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
+[!INCLUDE [mdm-supported-devices](./includes/mdm-supported-devices.md)]
 
 ### Cloning physical and virtual devices
 

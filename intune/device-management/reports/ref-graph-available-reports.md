@@ -13,7 +13,7 @@ ms.collection:
 
 # Intune Reports and Properties Available Using Graph API
 
-Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](../../intune-service/fundamentals/export-graph-apis.md).
+Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](./export-graph-apis.md).
 
 > [!NOTE]
 > Intune reports that are migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/1009553#:~:text=New%20Reporting%20Framework%20Coming%20to%20Intune%20%20,Device%20compliance%20logging%20%203%20more%20rows), are available for export from a single top-level export Graph API.
@@ -759,7 +759,7 @@ Repeat the call until the response includes a status of `complete`. When the rep
 
 You can download the completed ChromeOSDevices report by retrieving the `url` provided based on the same call you used to check the ChromeOSDevices report status. The download contains a zip file with the requested data that is formatted as CSV or JSON based on your selected format.
 
-For more information about generating Intune reports, see [Export Intune reports using Graph APIs](../../intune-service/fundamentals/export-graph-apis.md).
+For more information about generating Intune reports, see [Export Intune reports using Graph APIs](./export-graph-apis.md).
 
 ## ComanagedDeviceWorkloads
 
@@ -4935,4 +4935,4 @@ You can choose to filter the `WorkFromAnywhereDeviceList` report's output based 
 ## Next steps
 
 - [Microsoft Graph documentation](/graph/)
-- [Intune reports](./reports.md)
+- [Intune reports](./overview.md)

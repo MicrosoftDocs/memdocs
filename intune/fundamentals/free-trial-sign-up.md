@@ -49,7 +49,7 @@ Before you set up Microsoft Intune, review the following requirements:
 :::column-end:::
 :::row-end:::
 
-[!INCLUDE [MFA requirement for admin center](../includes/mfa-console.md)]
+[!INCLUDE [MFA requirement for admin center](./includes/mfa-console.md)]
 
 ## Sign up for a free trial
 
@@ -128,12 +128,12 @@ There are built-in roles specifically created and used to manage Intune. Your go
 
 If many admins are testing Intune, then assign their accounts to only the roles they need. For example, if an admin is only responsible for adding and managing apps, assign that admin only to the **Application Manager** role.
 
-- To assign built-in roles to your admin team, see [Assign Microsoft Intune roles for role-based access control](assign-role.md).
+- To assign built-in roles to your admin team, see [Assign Microsoft Intune roles for role-based access control](role-based-access-control/assign-role.md).
 
 For more information about Intune built-in roles, see:
 
-- [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
-- [Built-in role permissions for Microsoft Intune](role-based-access-control-reference.md)
+- [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control/overview.md)
+- [Built-in role permissions for Microsoft Intune](role-based-access-control/ref-built-in-roles.md)
 
 ## Confirm the MDM authority
 
@@ -186,9 +186,9 @@ If your organization has its own custom domain that you want to use without **.o
 
 ## Next steps
 
-In this article, you created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](deployment-plan-setup.md).
+In this article, you created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](deploy-setup-step-1.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 2 - Create a user and assign a license](quickstart-create-user.md)
+> [Step 2 - Create a user and assign a license](tenant-administration/quickstart-create-user.md)

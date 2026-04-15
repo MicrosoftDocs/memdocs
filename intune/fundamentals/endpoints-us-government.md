@@ -94,9 +94,9 @@ For more information, see the [Overview of Endpoint Privilege Management](../epm
 - MS Graph: `https://graph.microsoft.us`
 - ADRS: `https://enterpriseregistration.microsoftonline.us`
 
-[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
+[!INCLUDE [Intune notices](./includes/windows-push-notification-services.md)]
 
-[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
+[!INCLUDE [Intune notices](./includes/apple-device-network-information.md)]
 
 ## Next steps
 

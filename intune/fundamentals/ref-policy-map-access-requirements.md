@@ -46,7 +46,7 @@ All Access Requirements are deployed in an Intune compliance policy. The groups 
 > [!NOTE]
 > All password-related settings impact only local accounts on Windows. User accounts sourced from Microsoft Entra ID are not managed by these policies.
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three compliance policies:
 
@@ -58,7 +58,7 @@ Three compliance policies:
 
 For Android devices, this setting and multiple other Office settings are covered by one Android compliance setting. So this setting alone doesn't determine a specific Android compliance value.
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three compliance policies:
 
@@ -73,7 +73,7 @@ Three compliance policies:
 
 For Android devices, this setting and multiple other Office settings are covered by one Android compliance setting. So this setting alone doesn't determine a specific Android compliance value.
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three compliance policies:
 
@@ -86,7 +86,7 @@ Three compliance policies:
 
 ## Password must include at least [1-4] character sets
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Four compliance policies:
 
@@ -126,7 +126,7 @@ Four compliance policies:
 
 ## Minimum password length
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three compliance policies:
 
@@ -143,7 +143,7 @@ Three compliance policies:
 
 Although this setting is listed under **Access requirements** in Basic Mobility and Security, access is still allowed. It's allowed even if this setting isn't enabled on the device yet, and this setting isn't a device compliance criterion.
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three configuration profiles:
 
@@ -189,7 +189,7 @@ Three compliance policies:
 
 ## Password expiration
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three compliance policies:
 
@@ -199,7 +199,7 @@ Three compliance policies:
 
 ## Remember password history and prevent reuse
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three compliance policies:
 
@@ -216,7 +216,7 @@ Three compliance policies:
 
 This setting was never configurable for Windows or iOS/iPadOS in Basic Mobility and Security.
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 One compliance policy:
 
@@ -230,7 +230,7 @@ For Android devices, Intune only supports this setting for Android device admini
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Two compliance policies:
 
@@ -245,7 +245,7 @@ For Android, this setting was only supported on Samsung Knox devices in Basic Mo
 
 Intune requires more settings be configured when deploying email that weren't available in device security policies. For more information, see [More settings required by Intune for email profiles](#more-settings-required-by-intune-for-email-profiles).
 
-[!INCLUDE [blockorallow](../includes/block-or-allow.md)]
+[!INCLUDE [blockorallow](./includes/block-or-allow.md)]
 
 Three configuration profiles and one compliance policy:
 

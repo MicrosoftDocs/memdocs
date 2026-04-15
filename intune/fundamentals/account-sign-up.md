@@ -27,7 +27,7 @@ This article can help system administrators sign up for an Intune account. Befor
 > [!WARNING]
 > You can't combine an existing work or school account after you sign up for a new account.
 
-[!INCLUDE [MFA requirement for admin center](../includes/mfa-console.md)]
+[!INCLUDE [MFA requirement for admin center](./includes/mfa-console.md)]
 
 ## Role-based access controls
 
@@ -37,7 +37,7 @@ The Intune Administrator is a privileged account. The permissions this role incl
 
 In addition to configuring Intune, an Intune Administrator can use the Intune admin center to assign other user accounts to the specific Intune built-in roles that they require to complete their regular day-to-day administrative tasks. Use of lesser-privileged roles to manage daily tasks follows the principle of *least privileged* access and reduces risk.
 
-For enhanced security, consider enabling [Multi Admin Approval](./role-based-access-control/multi-admin-approval.md) for role-based access control changes. [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+For enhanced security, consider enabling [Multi Admin Approval](./role-based-access-control/multi-admin-approval.md) for role-based access control changes. [!INCLUDE [multi-admin-approval-rbac](./includes/multi-admin-approval-rbac.md)]
 
 For more information, see [Best practices](/entra/identity/role-based-access-control/best-practices) for Microsoft Entra roles, and [Role-based access control](./role-based-access-control/overview.md) (RBAC) with Microsoft Intune.
 
