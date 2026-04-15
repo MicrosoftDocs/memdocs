@@ -3,6 +3,8 @@ title: View report details for encryption status of devices managed with Microso
 description: Use the Microsoft Intune admin center to view reports for device encryption status across macOS FileVault and Windows BitLocker encrypted devices that you manage with Microsoft Intune.
 ms.date: 10/14/2024
 ms.topic: how-to
+author: brenduns
+ms.author: brenduns
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management

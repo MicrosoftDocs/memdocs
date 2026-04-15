@@ -324,68 +324,27 @@ items:
 
         - name: Security baselines
           href: ./device-security/security-baselines/toc.yml
-        
+
+        - name: Microsoft Defender for Endpoint
+          href: ./device-security/microsoft-defender.yml
+
         - name: Security tasks
           href: ./device-security/microsoft-defender/remediate-vulnerabilities.md
 
-        - name: Microsoft Defender for Endpoint
-          items:
-          - name: Microsoft Defender for Endpoint
-            href: ./device-security/microsoft-defender/overview.md
-          - name: Configure Defender for Endpoint
-            href: ./device-security/microsoft-defender/configure-integration.md
-          - name: Deploy Defender for Endpoint on Android
-            href: ./device-security/microsoft-defender/deploy-android.md
-          - name: Android web protection
-            href: ./device-security/microsoft-defender/configure-web-protection-android.md
-          - name: Monitor Defender for Endpoint
-            href: ./device-security/microsoft-defender/monitor.md
-          - name: Microsoft Defender for Endpoint Security settings management
-            items:
-            - name: Microsoft Defender for Endpoint Security settings management
-              href: ./device-security/microsoft-defender/security-settings-management.md
-            - name: Manage endpoint security policies in Microsoft Defender
-              href: /defender-endpoint/manage-security-policies?context=/intune/context
-
-          - name: Endpoint Privilege Management (EPM)
-            href: ./epm/toc.yml
+        - name: Endpoint Privilege Management (EPM)
+          href: ./epm/toc.yml
 
         - name: Tenant attach
           href: ./fundamentals/tenant-attach.md
 
-      - name: Identity security
+      - name: Identity and access
         items:
-        - name: Windows Hello identity protection
+        - name: Windows Hello for Business
           items:
           - name: Windows Hello at device enrollment
             href: ./device-security/identity-protection/configure-tenant-wide-policy.md
           - name: Windows Hello after device enrollment
             href: ./device-security/identity-protection/deploy-group-policy.md
-        - name: Windows LAPS
-          items:
-          - name: Intune support for Windows LAPS
-            href: ./device-security/laps/overview.md
-          - name: Deploy LAPS policy
-            href: ./device-security/laps/deploy-policy.md
-          - name: Reports for LAPS policy
-            href: ./device-security/laps/monitor.md
-
-      - name: Mobile Threat Defense partners
-        href: ./device-security/mobile-threat-defense/toc.yml
-        displayName: MTD
-
-      - name: Passwordless, certificates, and single sign-on
-        items:
-
-        - name: Microsoft Cloud PKI
-          href: ./cloud-pki/toc.yml
-
-        - name: Certificates
-          href: ./fundamentals/certificates/toc.yml
-
-        - name: Microsoft Tunnel VPN gateway
-          href: ./device-security/microsoft-tunnel/toc.yml
-
         - name: Single sign-on (SSO) for Apple devices
           items:
           - name: SSO overview & options
@@ -407,10 +366,33 @@ items:
             - name: Enterprise SSO app extension plug-in
               displayName: single sign-on, macos
               href: ./device-configuration/templates/configure-enterprise-sso-plugin-macos.md
+        - name: LAPS
+          items:
+          - name: Windows LAPS overview
+            href: ./device-security/laps/overview.md
+          - name: Deploy Windows LAPS policy
+            href: ./device-security/laps/deploy-policy.md
+          - name: Windows LAPS reports
+            href: ./device-security/laps/monitor.md
+          - name: macOS LAPS
+            href: ./device-security/laps/setup-macos.md
+
+      - name: Certificates and PKI
+        items:
+        - name: Microsoft Cloud PKI
+          href: ./cloud-pki/toc.yml
+        - name: Certificates
+          href: ./fundamentals/certificates/toc.yml
+
+      - name: Microsoft Tunnel VPN gateway
+        href: ./device-security/microsoft-tunnel/toc.yml
+
+      - name: Mobile Threat Defense partners
+        href: ./device-security/mobile-threat-defense/toc.yml
+        displayName: MTD
 
 
-
-
+# Reference content
 
       - name: Settings lists reference
         items:
