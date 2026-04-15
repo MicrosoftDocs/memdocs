@@ -477,53 +477,16 @@ items:
             href: ./device-security/compliance/ref-windows-settings.md
           - name: Compliance settings - Windows 8.1
             href: ./device-security/compliance/ref-windows-8-1-settings.md
+
         - name: Endpoint security policy settings
-          items:
-          - name: Antivirus policy settings
-            items:
-            - name: macOS Defender Antivirus settings
-              href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-macos.md
-            - name: Windows Defender Antivirus settings
-              href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows.md
-            - name: Tenant attach Defender Antivirus settings
-              href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach.md
-            - name: Tenant attach Windows Security settings
-              href: ./device-configuration/endpoint-security-policies/ref-windows-security-settings-tenant-attach.md
-            - name: Windows Security experience settings
-              href: ./device-configuration/endpoint-security-policies/ref-security-experience-settings-windows.md
-          - name: Disk encryption profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-disk-encryption-settings.md
-            displayName: AWA; Add Work Account
-          - name: Firewall policy settings
-            href: ./device-configuration/endpoint-security-policies/ref-firewall-settings.md
-          - name: Tenant attach Firewall settings
-            href: ./device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach.md
-          - name: Endpoint detection and response profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-edr-settings.md
-          - name: Attack surface reduction profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-attack-surface-reduction-settings.md
-          - name: Account protection profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-account-protection-settings.md
+          href: ./device-configuration/endpoint-security-policies/toc.yml
+
         - name: Security baseline settings
-          items:
-          - name: Windows MDM baseline settings
-            href: ./device-security/security-baselines/ref-windows-mdm-settings.md
-          - name: Microsoft Defender for Endpoint baseline settings
-            href: ./device-security/security-baselines/ref-defender-settings.md
-          - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
-            href: ./device-security/security-baselines/ref-v2-office-settings.md
-          - name: Microsoft Edge baseline settings (version 112 and higher)
-            href: ./device-security/security-baselines/ref-v2-edge-settings.md
-          - name: Microsoft Edge baseline settings (version 85 and older)
-            href: ./device-security/security-baselines/ref-edge-settings.md
-          - name: HoloLens 2 - Advanced security baseline settings
-            href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
-          - name: HoloLens 2 - Standard security baseline settings
-            href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
-          - name: Windows 365 baseline settings
-            href: ./device-security/security-baselines/ref-windows-365-settings.md
+          href: ./device-security/security-baselines/toc.yml
+
         - name: Microsoft Tunnel command-line tools
           href: ./device-security/microsoft-tunnel/ref-file-commands.md
+
         - name: Zero Trust security configuration examples
           items:
           - name: Android fully managed compliance and security
