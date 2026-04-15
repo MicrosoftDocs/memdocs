@@ -5,7 +5,7 @@ author: brenduns
 ms.author: brenduns
 ms.date: 04/27/2026
 ms.topic: reference
-ms.reviewer: juidaewo
+ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
