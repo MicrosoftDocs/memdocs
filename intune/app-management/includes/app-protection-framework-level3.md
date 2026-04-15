@@ -1,8 +1,6 @@
 ---
-author: nicholasswhite
 ms.topic: include
 ms.date: 07/31/2024
-ms.author: nwhite
 ---
 #### Level 3 enterprise high data protection
 
@@ -44,7 +42,7 @@ Level 3 is the data protection configuration recommended as a standard for organ
 | Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 |       Device   conditions  |          Max   allowed device threat level  |          Secured / Block access  |          Windows        |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
-|       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information, see  [Mobile Threat Defense for unenrolled devices](/intune/intune-service/protect/mtd-enable-unenrolled-devices).</p><p>If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information, see [Mobile Threat Defense for enrolled devices](/intune/intune-service/protect/mtd-device-compliance-policy-create).</p> |
+|       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information, see  [Mobile Threat Defense for unenrolled devices](/intune/device-security/mobile-threat-defense/enable-unenrolled-devices).</p><p>If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information, see [Mobile Threat Defense for enrolled devices](/intune/device-security/mobile-threat-defense/create-compliance-policy).</p> |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 11.0* / Block access   |          Android        | Microsoft recommends configuring   the maximum Android major version to ensure beta or unsupported versions of the operating system aren't used.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system aren't used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 22631.* / Block access   |          Windows        | Microsoft recommends configuring   the maximum Windows major version to ensure beta or unsupported versions of the operating system aren't used. |

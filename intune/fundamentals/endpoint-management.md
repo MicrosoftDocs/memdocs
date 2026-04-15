@@ -79,8 +79,8 @@ The [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is a 
 The admin center also plugs-in other key device management services, including:
 
 - [**Microsoft Entra Privileged Identity Management** to monitor access to important resources](/azure/active-directory/privileged-identity-management/pim-configure)
-- [**Microsoft Tunnel** VPN gateway solution that runs on Linux](../intune-service/protect/microsoft-tunnel-overview.md)
-- [**Mobile threat defense** partners](../intune-service/protect/mobile-threat-defense.md)
+- [**Microsoft Tunnel** VPN gateway solution that runs on Linux](../device-security/microsoft-tunnel/overview.md)
+- [**Mobile threat defense** partners](../device-security/mobile-threat-defense/overview.md)
 - [**Remote Help** for remote assistance](/intune/intune-service/fundamentals/remote-help)
 - [**TeamViewer** for remote administration](../intune-service/fundamentals/teamviewer-support.md)
 - [**Windows 365** for your Windows virtual machines](/windows-365/overview)
@@ -96,7 +96,7 @@ For more information, go to:
 
 - [Add users](../intune-service/fundamentals/users-add.md)
 - [Set up auto enrollment](../device-enrollment/windows/enable-automatic-mdm.md)
-- [Learn about Conditional Access and Intune](../intune-service/protect/conditional-access.md)
+- [Learn about Conditional Access and Intune](../device-security/conditional-access-integration/overview.md)
 
 ## Windows Autopilot
 

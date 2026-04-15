@@ -92,7 +92,7 @@ For more information, see [Co-management](../../../comanage/overview.md), [Tenan
 
 Desktop Analytics now supports the new [Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#new-windows-diagnostic-data-processor-configuration). This configuration provides you greater control of your Windows diagnostic data. Microsoft acts as a data processor, processing Windows diagnostic data for the controller.
 
-For more information, see [What's new in Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports).
+For more information, see [What's new in Desktop Analytics](/intune/device-updates/windows/monitor-compatibility).
 
 ## Site infrastructure
 

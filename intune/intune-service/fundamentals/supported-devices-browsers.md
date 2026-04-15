@@ -44,7 +44,7 @@ Intune does not support using a cloned image of a computer that is already enrol
 
 ### Supported platforms for Microsoft Defender for Endpoint Integration
 
-For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md)
+For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Intune](../../device-security/microsoft-defender/security-settings-management.md)
 
 ### Supported Samsung Knox Standard devices
 

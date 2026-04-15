@@ -43,8 +43,8 @@ For more information about CMPivot from the admin center, see [Tenant attach: La
 You can now create Microsoft Defender antivirus policies in the Microsoft Intune admin center and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
 - [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
-- [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../../../intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
+- [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
+- [Settings for Windows Security experience Antivirus policy for tenant attached devices](../../../../device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->
@@ -128,7 +128,7 @@ For more information, see [Renew secret key](../../servers/deploy/configure/azur
 
 ### Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/device-updates/windows/monitor-compatibility).
 
 #### Change to diagnostic data labels
 
@@ -145,7 +145,7 @@ To better align with the Desktop Analytics requirements for Windows diagnostic d
 
 If you previously configured any devices at the **Enhanced** level, when you upgrade to version 2006, they'll revert to **Optional (limited)**. They will then send less data to Microsoft. This change shouldn't impact what you see in Desktop Analytics.
 
-For more information, see [Enable data sharing for Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports).
+For more information, see [Enable data sharing for Desktop Analytics](/intune/device-updates/windows/monitor-compatibility).
 
 ## <a name="bkmk_real"></a> Real-time management
 

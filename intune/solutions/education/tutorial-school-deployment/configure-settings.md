@@ -30,7 +30,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
 - **Baselines**: Baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
-  For more information, see [Security baselines](../../../intune-service/protect/security-baselines.md).
+  For more information, see [Security baselines](../../../device-security/security-baselines/overview.md).
 
 - **Settings catalog**: Use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker.
 
@@ -200,8 +200,8 @@ For more information, see [Updates and upgrade][INT-6].
 
 It is important to keep iOS devices up to date with the latest security updates. You can create control updates with Intune using three different methods:
 
-- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](/intune/intune-service/protect/managed-software-updates-ios-macos).
-- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](/intune/intune-service/protect/software-updates-ios).
+- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](/intune/device-updates/apple/index).
+- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](/intune/device-updates/apple/deprecated-mdm-policies-ios).
 - **Option 3** (not recommended) - End users manually install the updates.
 
 At **Devices** > **Manage devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
@@ -210,9 +210,9 @@ At **Devices** > **Manage devices** > **Configuration** > **Create** > **Setting
 - **Delay default visibility of software updates**: 0-90
 
 > [!TIP]
-> The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/intune/intune-service/protect/managed-software-updates-ios-macos).
+> The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/intune/device-updates/apple/index).
 
-For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/intune/intune-service/protect/software-updates-guide-ios-ipados).
+For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/intune/device-updates/apple/planning-guide-ios-ipados).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -225,7 +225,7 @@ To create a iOS update restrictions policy:
 1. Expand the category **Update restrictions**.
 1. Configure the required settings as needed.
 
-For more information about the other update options in the Intune console, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/intune/intune-service/protect/software-updates-guide-ios-ipados).
+For more information about the other update options in the Intune console, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/intune/device-updates/apple/planning-guide-ios-ipados).
 
 ::: zone-end
 
@@ -245,7 +245,7 @@ It is critical to ensure that the devices you manage are secured using the diffe
 - [Endpoint detection and response][MEM-5]
 - [Attack surface reduction][MEM-6]
 - [Account protection][MEM-7]
-- [Security Baselines](../../../intune-service/protect/security-baselines.md)
+- [Security Baselines](../../../device-security/security-baselines/overview.md)
 - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
@@ -277,7 +277,7 @@ For more information, see [Security][INT-4].
 > - [Endpoint detection and response][MEM-5]
 > - [Attack surface reduction][MEM-6]
 > - [Account protection][MEM-7]
-> - [Security Baselines](../../../intune-service/protect/security-baselines.md)
+> - [Security Baselines](../../../device-security/security-baselines/overview.md)
 > - [Local Administrator Password Solution](/windows-server/identity/laps/laps-overview)
 > - [Web Content Filtering on Edge](/deployedge/microsoft-edge-web-content-filtering)
 
@@ -348,10 +348,10 @@ Now that you've configured your device settings, you can configure applications 
 
 [WIN-1]: /windows/deployment/update/waas-manage-updates-wufb
 
-[MEM-1]: /intune/intune-service/protect/windows-update-for-business-configure
-[MEM-2]: /intune/intune-service/protect/endpoint-security-antivirus-policy
-[MEM-3]: /intune/intune-service/protect/encrypt-devices
-[MEM-4]: /intune/intune-service/protect/endpoint-security-firewall-policy
-[MEM-5]: /intune/intune-service/protect/endpoint-security-edr-policy
-[MEM-6]: /intune/intune-service/protect/endpoint-security-asr-policy
-[MEM-7]: /intune/intune-service/protect/endpoint-security-account-protection-policy
+[MEM-1]: /intune/device-updates/windows
+[MEM-2]: /intune/device-configuration/endpoint-security/antivirus
+[MEM-3]: /intune/device-configuration/endpoint-security/encrypt-bitlocker-windows
+[MEM-4]: /intune/device-configuration/endpoint-security/firewall
+[MEM-5]: /intune/device-configuration/endpoint-security/deploy-edr
+[MEM-6]: /intune/device-configuration/endpoint-security/attack-surface-reduction
+[MEM-7]: /intune/device-configuration/endpoint-security/account-protection

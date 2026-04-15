@@ -1,0 +1,92 @@
+items:
+  - name: Overview
+    href: ./overview.md
+  - name: MTD on unenrolled devices
+    items:
+      - name: Add MTD apps to unenrolled devices
+        href: ./add-apps-unenrolled-devices.md
+      - name: Create an MTD app protection policy
+        href: ./create-app-protection-policy.md
+      - name: Enable MTD for unenrolled devices
+        href: ./enable-unenrolled-devices.md
+  - name: MTD on enrolled devices
+    items:
+      - name: Add MTD apps to enrolled devices
+        href: ./assign-apps.md
+      - name: Create an MTD device compliance policy
+        href: ./create-compliance-policy.md
+      - name: Enable MTD for enrolled devices
+        href: ./enable-connector.md
+  - name: MTD apps
+    items:
+      - name: Set up Better Mobile
+        href: ./better-mobile.md
+        items:
+          - name: Better Mobile and Intune integration
+            href: ./setup-better-mobile.md
+            displayName: sso
+      - name: Set up BlackBerry Protect Mobile
+        href: ./blackberry.md
+        items:
+          - name: BlackBerry and Intune integration
+            href: ./setup-blackberry.md
+      - name: Set up Check Point Harmony
+        href: ./checkpoint-harmony.md
+        items:
+          - name: Check Point Harmony and Intune integration
+            href: ./setup-checkpoint-harmony.md
+      - name: Set up CrowdStrike
+        href: ./crowdstrike-falcon.md
+        items:
+          - name: CrowdStrike Falcon and Intune integration
+            href: ./setup-crowdstrike-falcon.md
+      - name: Set up iVerify
+        href: ./iverify.md
+        items:
+          - name: iVerify and Intune integration
+            href: ./setup-iverify.md
+      - name: Set up Jamf
+        href: ./jamf.md
+        items:
+          - name: Jamf and Intune integration
+            href: ./setup-jamf.md
+      - name: Set up Lookout
+        href: ./lookout.md
+        items:
+          - name: Lookout and Intune integration
+            href: ./setup-lookout.md
+      - name: Set up Trellix Mobile Security
+        href: ./trellix.md
+        items:
+          - name: Trellix Mobile Security and Intune integration
+            href: ./setup-trellix.md
+      - name: Set up Pradeo
+        href: ./pradeo.md
+        items:
+          - name: Pradeo and Intune integration
+            href: ./setup-pradeo.md
+      - name: Set up SentinelOne Mobile
+        href: ./sentinelone.md
+        items:
+          - name: SentinelOne Mobile and Intune integration
+            href: ./setup-sentinelone.md
+      - name: Set up Sophos Mobile
+        href: ./sophos.md
+        items:
+          - name: Sophos Mobile and Intune integration
+            href: ./setup-sophos.md
+      - name: Set up Symantec
+        href: ./symantec.md
+        items:
+          - name: Symantec and Intune integration
+            href: ./setup-symantec.md
+      - name: Set up Trend Micro Mobile Security as a Service
+        href: ./trend-micro.md
+        items:
+          - name: Trend Micro Mobile Security as a Service and Intune integration
+            href: ./setup-trend-micro.md
+      - name: Set up Zimperium
+        href: ./zimperium.md
+        items:
+          - name: Zimperium and Intune integration
+            href: ./setup-zimperium.md

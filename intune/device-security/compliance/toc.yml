@@ -1,0 +1,20 @@
+items:
+  - name: Compliance overview
+    href: ./overview.md
+  - name: Create a policy
+    href: ./create-policy.md
+  - name: Custom compliance settings
+    href: ./custom-settings.md
+    items:
+      - name: JSON for custom settings
+        href: ./create-custom-json.md
+      - name: PowerShell script for custom settings
+        href: ./create-custom-script.md
+      - name: Windows Subsystem for Linux
+        href: ./configure-wsl.md
+  - name: Actions for noncompliance
+    href: ./configure-noncompliance-actions.md
+  - name: Monitor device compliance
+    href: ./monitor-policy.md
+  - name: Device compliance partners
+    href: ./third-party-partners.md
