@@ -358,7 +358,7 @@ We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the I
 
 ## Notices
 
-[!INCLUDE [Intune notices](../includes/intune-notices.md)]
+[!INCLUDE [Intune notices](./includes/intune-notices.md)]
 
 ## See also
 
