@@ -87,6 +87,9 @@ For entities that include Android data, the following platforms are supported:
 | `Model`| String | Display name of the battery.|Windows|
 | `SerialNumber`| String | The battery serial number that the manufacturer assigned.|Android|
 
+> [!NOTE]
+> On Android, the following Battery properties are available only on Zebra devices: `CycleCount`, `Health`, `InstanceName`, and `SerialNumber`.
+
 ## `BiosInfo`
 
 > **Description**: Provides basic BIOS information.\
