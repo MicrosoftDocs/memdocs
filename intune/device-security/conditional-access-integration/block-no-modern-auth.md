@@ -1,8 +1,6 @@
 ---
 title: Block Apps with No Modern Authentication on Intune
 description: Learn about applications and modern authentication (MSAL) using Microsoft Intune.
-author: nicholasswhite
-ms.author: nwhite
 ms.date: 03/28/2024
 ms.topic: article
 ms.reviewer: beflamm

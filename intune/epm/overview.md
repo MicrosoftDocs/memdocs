@@ -1,8 +1,6 @@
 ---
 title: Learn about using Endpoint Privilege Management with Microsoft Intune
 description: To enhance the security of your organization, set your users to run with standard permissions while Endpoint Privilege Management ensures those users can seamlessly run specified files with elevated rights.
-author: brenduns
-ms.author: brenduns
 manager: laurawi
 ms.date: 10/20/2025
 ms.topic: how-to

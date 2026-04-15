@@ -1,8 +1,6 @@
 ---
 title: Manage access to Exchange without device management
 description: Use Microsoft Intune to give employees access to their Microsoft 365 Exchange Online email without setting up a device management system.
-author: brenduns
-ms.author: brenduns
 ms.date: 11/07/2024
 ms.topic: archived
 ms.reviewer: demerson

@@ -1,8 +1,6 @@
 ---
 title: macOS device compliance settings in Microsoft Intune
 description: View the device compliance settings for macOS devices that you can manage with Microsoft Intune compliance policies.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 09/5/2025
 ms.topic: article
 ms.reviewer: tycast

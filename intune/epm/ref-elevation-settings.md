@@ -1,8 +1,6 @@
 ---
 title: Managing Elevation Settings for Endpoint Privilege Management
 description: View guidance on how to manage the Endpoint Privilege Management client, including reporting level and default elevation response.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: article
 ms.reviewer: mikedano

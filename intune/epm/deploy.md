@@ -1,8 +1,6 @@
 ---
 title: Deploy Endpoint Privilege Management with Microsoft Intune
 description: Understand the steps and phases for deploying Endpoint Privilege Management with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: how-to
 ms.reviewer: mikedano

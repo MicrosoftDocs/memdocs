@@ -10,6 +10,8 @@ items:
     href: ./create-app-based-policy.md
   - name: Block apps that don't use modern authentication (MSAL)
     href: ./block-no-modern-auth.md
+  - name: Manage access to Exchange Online
+    href: ./manage-exchange-access.md
   - name: Troubleshoot Conditional Access
     href: /troubleshoot/mem/intune/troubleshoot-conditional-access?context=/intune/context
   - name: Jamf Cloud connector

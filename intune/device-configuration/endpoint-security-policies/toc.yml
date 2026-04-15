@@ -1,26 +1,37 @@
 items:
-  - name: Antivirus policy settings
+  - name: Endpoint security overview
+    href: ./overview.md
+  - name: Manage devices
+    href: ./manage-devices.md
+  - name: Use reusable settings groups
+    href: ./device-security/reusable-settings-groups.md
+  - name: Security policy
     items:
-      - name: macOS Defender Antivirus settings
-        href: ./ref-antivirus-defender-settings-macos.md
-      - name: Windows Defender Antivirus settings
-        href: ./ref-antivirus-defender-settings-windows.md
-      - name: Tenant attach Defender Antivirus settings
-        href: ./ref-antivirus-defender-settings-windows-tenant-attach.md
-      - name: Tenant attach Windows Security settings
-        href: ./ref-windows-security-settings-tenant-attach.md
-      - name: Windows Security experience settings
-        href: ./ref-security-experience-settings-windows.md
-  - name: Disk encryption profile settings
-    href: ./ref-disk-encryption-settings.md
-    displayName: AWA; Add Work Account
-  - name: Firewall policy settings
-    href: ./ref-firewall-settings.md
-  - name: Tenant attach Firewall settings
-    href: ./ref-firewall-settings-tenant-attach.md
-  - name: Endpoint detection and response profile settings
-    href: ./ref-edr-settings.md
-  - name: Attack surface reduction profile settings
-    href: ./ref-attack-surface-reduction-settings.md
-  - name: Account protection profile settings
-    href: ./ref-account-protection-settings.md
+      - name: Manage security policies
+        href: ./manage-policies.md
+      - name: Account protection
+        href: ./account-protection.md
+      - name: Antivirus
+        href: ./antivirus.md
+      - name: Application Control
+        href: ./manage-app-control.md
+      - name: Attack surface reduction
+        href: ./attack-surface-reduction.md
+      - name: Disk encryption
+        href: ./disk-encryption.md
+      - name: Endpoint detection and response
+        href: ./deploy-edr.md
+      - name: Endpoint protection
+        href: ./configure-endpoint-protection.md
+      - name: Firewall
+        href: ./firewall.md
+  - name: Disk encryption policies
+    items:
+      - name: Manage BitLocker policy
+        href: ./encrypt-bitlocker-windows.md
+      - name: Manage FileVault policy
+        href: ./encrypt-filevault-macos.md
+      - name: Monitor disk encryption
+        href: ./monitor-encryption.md
+      - name: Troubleshoot BitLocker policies
+        href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies?context=/intune/context

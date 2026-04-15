@@ -1,8 +1,6 @@
 ---
 title: Plan and Prepare for Endpoint Privilege Management Deployment
 description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals, and security recommendations.
-author: brenduns
-ms.author: brenduns
 ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: mikedano

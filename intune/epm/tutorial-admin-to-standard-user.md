@@ -1,8 +1,6 @@
 ---
 title: Use Endpoint Privilege Management to transition users from administrator to standard user
 description: Understand the steps and phases for using Endpoint Privilege Management to transition users from administrators to standard users.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: how-to
 ms.reviewer: mikedano

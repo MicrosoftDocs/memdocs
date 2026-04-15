@@ -1,8 +1,6 @@
 ---
 title: Known Issues for Endpoint Privilege Management with Microsoft Intune
 description: Configure policies that define how Endpoint Privilege Management functions in your tenant, and behaviors when elevating files to run in administrative context.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: how-to
 ms.reviewer: mikedano

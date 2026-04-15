@@ -1,8 +1,6 @@
 ---
 title: Monitor your Endpoint Privilege Management policies for Microsoft Intune
 description: View reports for managed and unmanaged file elevations when you use Endpoint Privilege Management for Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: mikedano

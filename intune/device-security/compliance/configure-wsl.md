@@ -1,8 +1,6 @@
 ---
 title: Compliance for Windows Subsystem for Linux
 description: Evaluate WSL attributes on a host device for compliance.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 11/19/2024
 ms.topic: how-to
 ms.reviewer: arnab

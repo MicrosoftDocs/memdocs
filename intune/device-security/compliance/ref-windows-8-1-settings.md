@@ -1,8 +1,6 @@
 ---
 title: Windows 8.1 compliance settings in Microsoft Intune
 description: View the device compliance settings for Windows 8.1 that you can manage with Microsoft Intune compliance policies.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 05/15/2024
 ms.topic: reference
 ms.collection:

@@ -1,8 +1,6 @@
 ---
 title: Create device compliance policies in Microsoft Intune
 description: Create device compliance policies for Microsoft Intune.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 12/13/2024
 ms.topic: how-to
 ms.reviewer: ilwu

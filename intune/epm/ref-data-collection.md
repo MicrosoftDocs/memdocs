@@ -1,8 +1,6 @@
 ---
 title: Review the type of data that Microsoft Intune Endpoint Privilege Management collects
 description: View details about the type of data Endpoint Privilege Management can collect and store when used with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: article
 ms.reviewer: mikedano

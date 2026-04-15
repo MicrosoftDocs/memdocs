@@ -1,8 +1,6 @@
 ---
 title: Settings you can manage with Intune Endpoint Protection profiles for Windows devices
 description: View the available settings in Intune endpoint protection profiles for managed Windows devices.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 11/14/2023
 ms.topic: reference
 ms.reviewer: mattcall

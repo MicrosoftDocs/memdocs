@@ -1,8 +1,6 @@
 ---
 title: View the Android device administrator compliance settings for Microsoft Intune compliance policies
 description: View the device compliance settings that are available for Android device administrator devices in Microsoft Intune.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 09/04/2025
 ms.topic: article
 ms.reviewer: tycast

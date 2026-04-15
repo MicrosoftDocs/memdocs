@@ -1,8 +1,6 @@
 ---
 title: Third-party device compliance partners support in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 02/27/2026
 ms.topic: overview
 ms.reviewer: ilwu-microsoft

@@ -1,8 +1,6 @@
 ---
-author: nicholasswhite
 ms.topic: include
 ms.date: 07/31/2024
-ms.author: nwhite
 ---
 ### Level 1 enterprise basic data protection
 

@@ -1,8 +1,6 @@
 ---
 title: iOS/iPadOS device compliance settings in Microsoft Intune
 description: View the device compliance settings for iOS/iPadOS that you can manage with Microsoft Intune compliance policies.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 09/04/2025
 ms.topic: reference
 ms.reviewer: tycast

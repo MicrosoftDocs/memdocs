@@ -1,17 +1,7 @@
 items:
-  - name: Windows MDM baseline settings
-    href: ./ref-windows-mdm-settings.md
-  - name: Microsoft Defender for Endpoint baseline settings
-    href: ./ref-defender-settings.md
-  - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
-    href: ./ref-v2-office-settings.md
-  - name: Microsoft Edge baseline settings (version 112 and higher)
-    href: ./ref-v2-edge-settings.md
-  - name: Microsoft Edge baseline settings (version 85 and older)
-    href: ./ref-edge-settings.md
-  - name: HoloLens 2 - Advanced security baseline settings
-    href: ./ref-hololens2-advanced-settings.md
-  - name: HoloLens 2 - Standard security baseline settings
-    href: ./ref-hololens2-advanced-settings.md
-  - name: Windows 365 baseline settings
-    href: ./ref-windows-365-settings.md
+  - name: Security baselines overview
+    href: ./overview.md
+  - name: Manage security baselines
+    href: ./configure-baselines.md
+  - name: Monitor your baselines
+    href: ./monitor-baselines.md

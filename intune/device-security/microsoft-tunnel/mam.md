@@ -14,7 +14,7 @@ ms.collection:
 
 # Microsoft Tunnel for Mobile Application Management
 
-[!INCLUDE [intune-add-on-note](../../developer/includes/intune-plan2-suite-note.md)]
+[!INCLUDE [intune-add-on-note](../../includes/intune-plan2-suite-note.md)]
 
 When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. With this solution, your users can use a single device that isn't enrolled with Intune to gain secure access to the organizations on-premises apps and resources using modern authentication, single sign-on, and Conditional Access. With Tunnel for MAM, your users can use their own device (BYOD) for both work and personal use, without having to grant the organization's IT department control over that device.
 

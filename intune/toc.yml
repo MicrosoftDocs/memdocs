@@ -309,6 +309,7 @@ items:
 
       - name: Network access control
         href: ./device-security/integrate-network-access-control.md
+        displayName: NAC
 
       - name: Conditional Access
         href: ./device-security/conditional-access-integration/toc.yml
@@ -318,40 +319,15 @@ items:
 
       - name: Endpoint security
         items:
-        - name: Endpoint security overview
-          href: ./device-configuration/endpoint-security-policies/overview.md
-        - name: Manage devices
-          href: ./device-configuration/endpoint-security-policies/manage-devices.md
+        - name: Endpoint security policies
+          href: ./device-configuration/endpoint-security-policies/toc.yml
+
         - name: Security baselines
-          items:
-          - name: Security baselines overview
-            href: ./device-security/security-baselines/overview.md
-          - name: Manage security baselines
-            href: ./device-security/security-baselines/configure-baselines.md
-          - name: Monitor your baselines
-            href: ./device-security/security-baselines/monitor-baselines.md
+          href: ./device-security/security-baselines/toc.yml
+        
         - name: Security tasks
           href: ./device-security/microsoft-defender/remediate-vulnerabilities.md
-        - name: Security policy
-          items:
-          - name: Manage security policies
-            href: ./device-configuration/endpoint-security-policies/manage-policies.md
-          - name: Use reusable settings groups
-            href: ./device-security/reusable-settings-groups.md
-          - name: Account protection
-            href: ./device-configuration/endpoint-security-policies/account-protection.md
-          - name: Antivirus
-            href: ./device-configuration/endpoint-security-policies/antivirus.md
-          - name: Application Control
-            href: ./device-configuration/endpoint-security-policies/manage-app-control.md
-          - name: Attack surface reduction
-            href: ./device-configuration/endpoint-security-policies/attack-surface-reduction.md
-          - name: Disk encryption
-            href: ./device-configuration/endpoint-security-policies/disk-encryption.md
-          - name: Endpoint detection and response
-            href: ./device-configuration/endpoint-security-policies/deploy-edr.md
-          - name: Firewall
-            href: ./device-configuration/endpoint-security-policies/firewall.md
+
         - name: Microsoft Defender for Endpoint
           items:
           - name: Microsoft Defender for Endpoint
@@ -371,28 +347,11 @@ items:
             - name: Manage endpoint security policies in Microsoft Defender
               href: /defender-endpoint/manage-security-policies?context=/intune/context
 
-
-
           - name: Endpoint Privilege Management (EPM)
             href: ./epm/toc.yml
 
-
-
-
         - name: Tenant attach
           href: ./fundamentals/tenant-attach.md
-        - name: Encrypt disks
-          items:
-          - name: Manage BitLocker policy
-            href: ./device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md
-          - name: Manage FileVault policy
-            href: ./device-configuration/endpoint-security-policies/encrypt-filevault-macos.md
-          - name: Monitor disk encryption
-            href: ./device-configuration/endpoint-security-policies/monitor-encryption.md
-          - name: Troubleshoot BitLocker policies
-            href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies?context=/intune/context
-        - name: Endpoint protection
-          href: ./device-configuration/endpoint-security-policies/configure-endpoint-protection.md
 
       - name: Identity security
         items:
@@ -417,12 +376,16 @@ items:
 
       - name: Passwordless, certificates, and single sign-on
         items:
+
         - name: Microsoft Cloud PKI
           href: ./cloud-pki/toc.yml
+
         - name: Certificates
           href: ./fundamentals/certificates/toc.yml
+
         - name: Microsoft Tunnel VPN gateway
           href: ./device-security/microsoft-tunnel/toc.yml
+
         - name: Single sign-on (SSO) for Apple devices
           items:
           - name: SSO overview & options
@@ -444,6 +407,10 @@ items:
             - name: Enterprise SSO app extension plug-in
               displayName: single sign-on, macos
               href: ./device-configuration/templates/configure-enterprise-sso-plugin-macos.md
+
+
+
+
 
       - name: Settings lists reference
         items:
@@ -469,13 +436,58 @@ items:
             href: ./device-security/compliance/ref-windows-8-1-settings.md
 
         - name: Endpoint security policy settings
-          href: ./device-configuration/endpoint-security-policies/toc.yml
+          items:
+          - name: Antivirus policy settings
+            items:
+              - name: macOS Defender Antivirus settings
+                href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-macos.md
+              - name: Windows Defender Antivirus settings
+                href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows.md
+              - name: Tenant attach Defender Antivirus settings
+                href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach.md
+              - name: Tenant attach Windows Security settings
+                href: ./device-configuration/endpoint-security-policies/ref-windows-security-settings-tenant-attach.md
+              - name: Windows Security experience settings
+                href: ./device-configuration/endpoint-security-policies/ref-security-experience-settings-windows.md
+          - name: Disk encryption profile settings
+            href: ./device-configuration/endpoint-security-policies/ref-disk-encryption-settings.md
+            displayName: AWA; Add Work Account
+          - name: Firewall policy settings
+            href: ./device-configuration/endpoint-security-policies/ref-firewall-settings.md
+          - name: Tenant attach Firewall settings
+            href: ./device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach.md
+          - name: Endpoint detection and response profile settings
+            href: ./device-configuration/endpoint-security-policies/ref-edr-settings.md
+          - name: Attack surface reduction profile settings
+            href: ./device-configuration/endpoint-security-policies/ref-attack-surface-reduction-settings.md
+          - name: Account protection profile settings
+            href: ./device-configuration/endpoint-security-policies/ref-account-protection-settings.md
 
         - name: Security baseline settings
-          href: ./device-security/security-baselines/toc.yml
+          items:
+          - name: Windows MDM baseline settings
+            href: ./device-security/security-baselines/ref-windows-mdm-settings.md
+          - name: Microsoft Defender for Endpoint baseline settings
+            href: ./device-security/security-baselines/ref-defender-settings.md
+          - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
+            href: ./device-security/security-baselines/ref-v2-office-settings.md
+          - name: Microsoft Edge baseline settings (version 112 and higher)
+            href: ./device-security/security-baselines/ref-v2-edge-settings.md
+          - name: Microsoft Edge baseline settings (version 85 and older)
+            href: ./device-security/security-baselines/ref-edge-settings.md
+          - name: HoloLens 2 - Advanced security baseline settings
+            href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
+          - name: HoloLens 2 - Standard security baseline settings
+            href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
+          - name: Windows 365 baseline settings
+            href: ./device-security/security-baselines/ref-windows-365-settings.md
 
         - name: Microsoft Tunnel command-line tools
           href: ./device-security/microsoft-tunnel/ref-file-commands.md
+
+
+
+
 
         - name: Zero Trust security configuration examples
           items:
@@ -698,8 +710,6 @@ items:
       displayName: admx, administrative template, windows, gpo
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
-    - name: Protect Exchange Online
-      href: ./device-security/conditional-access-integration/manage-exchange-access.md
 
     - name: Secure your corporate data using Edge for Business
       href: ./solutions/edge-data-security/toc.yml

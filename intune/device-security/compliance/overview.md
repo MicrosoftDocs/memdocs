@@ -1,8 +1,6 @@
 ---
 title: Device compliance policies in Microsoft Intune
 description: Overview of Microsoft Intune device compliance, including tenant-wide compliance policy settings and device compliance policies.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 05/14/2024
 ms.topic: concept-article
 ms.reviewer: ilwu

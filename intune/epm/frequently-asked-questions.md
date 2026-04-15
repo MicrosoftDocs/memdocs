@@ -1,8 +1,6 @@
 ---
 title: Frequently asked questions for Endpoint Privilege Management
 description: A list of frequently asked questions for customers deploying Microsoft Intune Endpoint Privilege Management
-author: brenduns
-ms.author: brenduns
 ms.date: 1/26/2026
 ms.topic: how-to
 ms.reviewer: mikedano
