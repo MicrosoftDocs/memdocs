@@ -24,7 +24,7 @@ Microsoft Intune supports account driven Apple User Enrollment on devices runnin
 
 Before beginning setup, complete the following tasks:
 
-- [Set mobile device management (MDM) authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
 - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
 - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
 

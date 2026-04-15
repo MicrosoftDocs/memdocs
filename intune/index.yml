@@ -14,16 +14,16 @@ highlightedContent:
   items:
     - title: What is Microsoft Intune?
       itemType: overview
-      url: ./intune-service/fundamentals/what-is-intune.md
+      url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: whats-new
-      url: ./intune-service/fundamentals/whats-new.md
+      url: ./whats-new/index.md
     - title: Features in development
       itemType: whats-new
-      url: ./intune-service/fundamentals/in-development.md
+      url: ./whats-new/in-development.md
     - title: Microsoft Intune Suite add-ons
       itemType: overview
-      url: ./intune-service/fundamentals/intune-add-ons.md
+      url: ./fundamentals/add-ons.md
 
 
 productDirectory:
@@ -84,7 +84,7 @@ productDirectory:
     - title: Administration and governance
       imageSrc: ./media/icons/hub-page/administration.svg
       summary: Manage administrative access, roles, scope, and governance features to operate Intune securely and at scale.
-      url: ./intune-service/fundamentals/role-based-access-control.md
+      url: ./fundamentals/role-based-access-control/overview.md
 
     - title: Configuration Manager and co-management 
       imageSrc: ./media/icons/hub-page/co-management.svg
@@ -110,10 +110,10 @@ conceptualContent:
         - url: ./fundamentals/licensing/index.md
           itemType: get-started
           text: Microsoft Intune licensing
-        - url: ./intune-service/fundamentals/intune-planning-guide.md
+        - url: ./fundamentals/planning-guide.md
           itemType: get-started
           text: Plan your Intune deployment
-        - url: ./intune-service/fundamentals/supported-devices-browsers.md
+        - url: ./fundamentals/ref-supported-platforms.md
           itemType: get-started
           text: Supported platforms and requirements
         - url: ./privacy-compliance.yml

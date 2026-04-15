@@ -27,7 +27,7 @@ As a cloud-only service, Intune doesn't require an on-premises infrastructure su
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
 > [!NOTE]
-> The information in this section also applies to the [Microsoft Intune Certificate Connector](../../fundamentals/certificates/connector/prerequisites.md). The connector has the same network requirements as managed devices.
+> The information in this section also applies to the [Microsoft Intune Certificate Connector](./certificates/connector/prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The endpoints in this article allow access to the ports identified in the following tables.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
@@ -107,9 +107,9 @@ In this section, the following tables list the Intune dependencies and the ports
 | 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>`intunecdnpeasd.manage.microsoft.com`<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
 
 > [!NOTE]
-> Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../../app-management/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+> Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../app-management/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
-**Android port information** - Depending on how you choose to manage Android devices, you might need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](../../device-enrollment/android/guide.md).
+**Android port information** - Depending on how you choose to manage Android devices, you might need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](../device-enrollment/android/guide.md).
 
 #### Apple dependencies
 
@@ -172,11 +172,11 @@ In addition to configuring the network requirements listed in the following tabl
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../endpoint-analytics/index.md#prerequisites).
+For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../endpoint-analytics/index.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../../device-security/microsoft-defender/security-settings-management.md#connectivity-requirements).
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../device-security/microsoft-defender/security-settings-management.md#connectivity-requirements).
 
 To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
 For communication between clients and the cloud service:
@@ -193,12 +193,12 @@ To support Endpoint Privilege Management, allow the following hostnames on tcp p
 For communication between clients and the cloud service:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
-- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../../epm/ref-data-collection.md) to the Intune data collection endpoint.
+- `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../epm/ref-data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
-For more information, see the [Overview of Endpoint Privilege Management](../../epm/overview.md).
+For more information, see the [Overview of Endpoint Privilege Management](../epm/overview.md).
 
 ## Microsoft Security Copilot
 
@@ -227,7 +227,7 @@ For details, see the following resources:
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
   > [!NOTE]
-  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 **Win32 content download:**
 
@@ -312,7 +312,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../../app-management/deployment/win32.md), [PowerShell scripts](../../device-management/tools/run-powershell-scripts-windows.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../endpoint-analytics/index.md), [custom compliance policies](../../device-security/compliance/custom-settings.md) or [BIOS configuration profiles](../../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../app-management/deployment/win32.md), [PowerShell scripts](../device-management/tools/run-powershell-scripts-windows.md), [remediations](../endpoint-analytics/remediations.md), [endpoint analytics](../endpoint-analytics/index.md), [custom compliance policies](../device-security/compliance/custom-settings.md) or [BIOS configuration profiles](../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 

@@ -38,7 +38,7 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 
 ## Role-based access control
 
-You must be an Intune Service Administrator to create or edit a Windows Hello for Business policy in Windows enrollment. All other Intune roles have read-only access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+You must be an Intune Service Administrator to create or edit a Windows Hello for Business policy in Windows enrollment. All other Intune roles have read-only access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Create a Windows Hello for Business policy for device enrollment
 

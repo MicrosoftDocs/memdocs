@@ -20,8 +20,8 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 
 > [!NOTE]
 > All the devices listed here support the management capabilities available for Android AOSP platform. For more information on enrollment of Android devices, see:
-> - [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../../device-enrollment/android/setup-aosp-corporate-userless.md)
-> - [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../device-enrollment/android/setup-aosp-corporate-user-associated.md)
+> - [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../device-enrollment/android/setup-aosp-corporate-userless.md)
+> - [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../device-enrollment/android/setup-aosp-corporate-user-associated.md)
 
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |

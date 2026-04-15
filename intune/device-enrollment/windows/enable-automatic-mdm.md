@@ -33,7 +33,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 > - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.
 :::column-end:::
 :::row-end:::

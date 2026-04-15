@@ -43,7 +43,7 @@ Microsoft Tunnel for MAM on iOS/iPadOS isn't supported on Microsoft Azure operat
 
 Microsoft Tunnel for MAM on iOS/iPadOS doesn't support Federal Information Processing Standard (FIPS).
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md).
 
 ## Required SDKs for iOS
 

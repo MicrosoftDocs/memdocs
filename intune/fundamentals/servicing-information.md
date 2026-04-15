@@ -22,7 +22,7 @@ The monthly release process involves many different environments and is deployed
 
 An internal environment called Self Host is the first environment to receive the release. Self Host is used only by the Intune engineering teams. After Self Host, the service release is deployed to the Microsoft tenant that manages many devices. Once the release is validated that there are no key issues with the service release, the release begins deploying to customer environments in a phased approach. Once all tenants are successfully updated, the Microsoft Intune admin center is updated. This phased approach helps identify issues before they affect the service or our customers.
 
-Updating Intune client applications is a different process. For devices that meet the prerequisites, the Intune management extension (IME) is installed automatically when certain features are assigned to a user or device. See [Intune management agent for macOS](../../app-management/deployment/management-agent-macos.md), [Add, assign, & monitor a Win32 app](../../app-management/deployment/add-win32.md#prerequisites), and [Add PowerShell scripts to Windows devices](../../device-management/tools/run-powershell-scripts-windows.md) for details. The IMEs are frequently updated alongside with our monthly releases. After a tenant is successfully updated, devices with the IME installed download the new version of the IME as they check-in on their regular schedule, resulting in a phased deployment of the updates within a tenant. The IME download sized is around 10Mb.
+Updating Intune client applications is a different process. For devices that meet the prerequisites, the Intune management extension (IME) is installed automatically when certain features are assigned to a user or device. See [Intune management agent for macOS](../app-management/deployment/management-agent-macos.md), [Add, assign, & monitor a Win32 app](../app-management/deployment/add-win32.md#prerequisites), and [Add PowerShell scripts to Windows devices](../device-management/tools/run-powershell-scripts-windows.md) for details. The IMEs are frequently updated alongside with our monthly releases. After a tenant is successfully updated, devices with the IME installed download the new version of the IME as they check-in on their regular schedule, resulting in a phased deployment of the updates within a tenant. The IME download sized is around 10Mb.
 
 For Company Portal app, Microsoft is subject to the release requirements and processes of the Apple App Store, Google Play, and sometimes mobile carriers. It isn't always possible to align the Intune release updates with updates to the Company Portal app. For more information on the Company Portal app updates, go to [UI updates for Intune end-user apps](whats-new-app-ui.md).
 
@@ -35,7 +35,7 @@ To check the release version of your tenant, use the following steps:
 
 In the following example, the tenant has the 2311 (November 2023) service release:
 
-:::image type="content" source="./media/intune-service-servicing-information/intune-admin-center-tenant-status.png" alt-text="In the Intune admin center, select tenant administration and then tenant status to see the service release version." lightbox="./media/intune-service-servicing-information/intune-admin-center-tenant-status.png":::
+:::image type="content" source="./media/servicing-information/intune-admin-center-tenant-status.png" alt-text="In the Intune admin center, select tenant administration and then tenant status to see the service release version." lightbox="./media/servicing-information/intune-admin-center-tenant-status.png":::
 
 ## Keep current with release features
 
@@ -47,7 +47,7 @@ Keeping up to date about releases and changes is an important part of your Intun
 
 - **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
 - **[Microsoft 365 Message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message center at `admin.microsoft.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
-- **[Microsoft Intune tenant status](../../governance/tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
+- **[Microsoft Intune tenant status](../governance/tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
 
   To see the hub, use the following steps:
 
@@ -68,14 +68,14 @@ You should understand how Intune collects, stores, retains, processes, secures, 
 
 The following resources can help you understand privacy and personal data in Intune:
 
-- [Privacy and personal data in Intune](../../privacy/index.md)
-- [Optional diagnostic data from Intune Client apps](../../privacy/data-handling/optional-diagnostic-data.md)
-- [Data collection in Intune](../../privacy/data-handling/data-collection.md)
-- [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
-- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/manage-data-requests.md)
+- [Privacy and personal data in Intune](../privacy/index.md)
+- [Optional diagnostic data from Intune Client apps](../privacy/data-handling/optional-diagnostic-data.md)
+- [Data collection in Intune](../privacy/data-handling/data-collection.md)
+- [Data storage and processing in Intune](../privacy/data-handling/data-storage-processing.md)
+- [Audit, export, or delete personal data in Intune](../privacy/personal-data/manage-data-requests.md)
 
 ## Related content
 
-- [Get started with Microsoft Intune](get-started-with-intune.md)
-- [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
+- [Get started with Microsoft Intune](get-started.md)
+- [Planning guide to move to Microsoft Intune](planning-guide.md)
 - [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/Intune/ServiceChangeBlog) *- Blog*

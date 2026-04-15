@@ -43,7 +43,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+- At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 - Enroll your devices in Intune. To learn more about your enrollment options, see [Microsoft Intune enrollment guide](../device-enrollment/guide.md).
 
@@ -93,7 +93,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Device restrictions](./templates/configure-device-restrictions.md)
 - [Domain join (Windows)](./templates/configure-domain-join-windows.md)
 - [Edition upgrade and mode switch (Windows)](./templates/configure-edition-upgrade-windows.md)
-- [Education (iOS, iPadOS)](../intune-service/fundamentals/education-settings-configure-ios.md)
+- [Education (iOS, iPadOS)](../solutions/education/ref-classroom-settings-ios.md)
 - [Email](./templates/configure-email.md)
 - [Endpoint protection (macOS, Windows)](./endpoint-security/configure-endpoint-protection.md)
 - [Extensions (macOS)](./templates/configure-kernel-extensions-macos.md)
@@ -124,7 +124,7 @@ For example, if you select Windows for the platform, your options look similar t
 
 After you add the settings, you can also add a scope tag to the profile. Scope tags filter profiles to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. And, are used in distributed IT.
 
-For more information about scope tags, and what you can do, go to [Use RBAC and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+For more information about scope tags, and what you can do, go to [Use RBAC and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
 ## Applicability rules
 
@@ -205,9 +205,9 @@ When creating profiles, consider the following recommendations:
 
 - Create profiles that apply to specific groups, such as Marketing, Sales, IT Administrators, or by location or school system. Use the built-in features, including:
 
-  - [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../intune-service/fundamentals/scope-tags.md)
-  - [Distributed IT with many admins in the same Intune tenant](../intune-service/fundamentals/intune-scale-guidelines.md)
-  - [Use filters when assigning your apps, policies, and profiles in Intune](../intune-service/fundamentals/filters.md)
+  - [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../fundamentals/role-based-access-control/scope-tags.md)
+  - [Distributed IT with many admins in the same Intune tenant](../fundamentals/scale-guidelines.md)
+  - [Use filters when assigning your apps, policies, and profiles in Intune](../fundamentals/filters/overview.md)
 
 - Separate user policies from device policies.
 

@@ -199,7 +199,7 @@ Add variables to the message to create a personalized email with dynamic content
 
    Select **Next** to continue.
 
-1. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+1. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
    Select **Next** to continue.
 1. On the **Review + create** page, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.

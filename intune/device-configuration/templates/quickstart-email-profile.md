@@ -23,7 +23,7 @@ To help safeguard your email, you can create a compliance policy that sets rules
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -33,7 +33,7 @@ To help safeguard your email, you can create a compliance policy that sets rules
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Policy and Profile Manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
+> - Built-in **[Policy and Profile Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -95,10 +95,10 @@ This article is the last step in the evaluation guide. You set up a test environ
 When you're ready to deploy Intune in your organization, the following resources can help.
 
 > [!div class="nextstepaction"]
-> [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md)
+> [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
 
 > [!div class="nextstepaction"]
-> [Deploy or move to Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
+> [Deploy or move to Microsoft Intune](../../fundamentals/get-started.md)
 
 > [!div class="nextstepaction"]
 > [Migration guide: Set up or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)

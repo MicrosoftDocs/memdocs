@@ -38,7 +38,7 @@ Although it's possible for cloud-connected customers to use Microsoft Configurat
 
 To use Win32 app management, be sure the following criteria are met:
 
-- Use a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md) (Enterprise, Pro, or Education editions).
+- Use a [supported Windows version](../../fundamentals/ref-supported-platforms.md) (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
   - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)

@@ -47,11 +47,11 @@ An offline device, like when it's powered off, or a disconnected device, might n
 > [!NOTE]
 >
 > - It can take more time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
-> - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../intune-service/fundamentals/intune-endpoints.md#intune-dependencies).
+> - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/endpoints.md#intune-dependencies).
 >
->   - [Windows dependencies](../intune-service/fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies)
->   - [Apple dependencies](../intune-service/fundamentals/intune-endpoints.md#apple-dependencies)
->   - [Android dependencies](../intune-service/fundamentals/intune-endpoints.md#android-aosp-dependencies)
+>   - [Windows dependencies](../fundamentals/endpoints.md#windows-push-notification-services-wns-dependencies)
+>   - [Apple dependencies](../fundamentals/endpoints.md#apple-dependencies)
+>   - [Android dependencies](../fundamentals/endpoints.md#android-aosp-dependencies)
 
 ### Client initiated
 
@@ -76,7 +76,7 @@ Admins or end users initiate these check-ins when they run certain actions on a 
 
 - **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/compliance/validate-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/apps/manage-apps-company-portal-website.md#available-and-required-apps).
 
-- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../device-management/actions/sync.md), [remote lock](../device-management/actions/remote-lock.md), or [reset passcode](../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../intune-service/fundamentals/remote-help.md) don't cause a device check-in.
+- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../device-management/actions/sync.md), [remote lock](../device-management/actions/remote-lock.md), or [reset passcode](../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../remote-help/overview.md) don't cause a device check-in.
 
 ## Company portal
 
@@ -112,7 +112,7 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
-In the Intune admin center, there are a few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../intune-service/fundamentals/reports.md).
+In the Intune admin center, there are a few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../device-management/reports/overview.md).
 
 ### Custom iOS/iPadOS or macOS policies that conflict
 
@@ -120,7 +120,7 @@ Intune doesn't evaluate the payload of Apple Configuration files or a custom Ope
 
 When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then Apple randomly applies the settings.
 
-The built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../intune-service/fundamentals/reports.md).
+The built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../device-management/reports/overview.md).
 
 ## A profile is deleted or no longer applicable
 
@@ -170,8 +170,8 @@ If fast delivery of apps and policies is important to your setup/enrollment scen
 
 For more information on dynamic groups, go to:
 
-- [Add groups to organize users and devices in Intune](../intune-service/fundamentals/groups-add.md)
-- [Performance recommendations when using Intune to group, target, and filter](../intune-service/fundamentals/filters-performance-recommendations.md)
+- [Add groups to organize users and devices in Intune](../fundamentals/tenant-administration/add-groups.md)
+- [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters/performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
 ## Unassigned device compliance policy still assigned and enforced

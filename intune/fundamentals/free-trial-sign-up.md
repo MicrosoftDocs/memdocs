@@ -15,11 +15,11 @@ ms.collection:
 
 Sign up for a Microsoft Intune free trial to evaluate mobile device management for your organization. In this article, you learn how to sign up for a free trial, create a new tenant, set up Intune, and prepare your environment for testing.
 
-[!INCLUDE [intune-evaluate](../../includes/intune-evaluate.md)]
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
 When you complete the signup process, you automatically create a new tenant. A tenant is a dedicated instance of Microsoft Entra ID that hosts your Intune subscription. After creating the tenant, you can add users and groups, and assign licenses to users.
 
-The free trial is an Enterprise Mobility + Security (EMS) subscription, which includes Microsoft Entra ID P1 or P2 and Microsoft Intune. After the free trial is configured, you can [confirm your free trial licenses](../../fundamentals/licensing/index.md#confirm-your-licenses).
+The free trial is an Enterprise Mobility + Security (EMS) subscription, which includes Microsoft Entra ID P1 or P2 and Microsoft Intune. After the free trial is configured, you can [confirm your free trial licenses](./licensing/index.md#confirm-your-licenses).
 
 You also get access to the following admin centers, which are used by Intune admins:
 
@@ -33,19 +33,19 @@ Before you set up Microsoft Intune, review the following requirements:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
-> - [Supported operating systems and browsers](supported-devices-browsers.md)
+> - [Supported operating systems and browsers](ref-supported-platforms.md)
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [network-connectivity](../../includes/requirements/network-connectivity.md)]
+[!INCLUDE [network-connectivity](../includes/requirements/network-connectivity.md)]
 :::column-end:::
 :::column span="3":::
-> - [Network endpoints for Microsoft Intune](intune-endpoints.md)
+> - [Network endpoints for Microsoft Intune](endpoints.md)
 :::column-end:::
 :::row-end:::
 
@@ -122,9 +122,9 @@ There are built-in roles specifically created and used to manage Intune. Your go
 | **[Domain Name Administrator role](/entra/identity/role-based-access-control/permissions-reference#domain-name-administrator)** | A Microsoft Entra role that can add and verify custom domain names in your tenant. This role is only used if you configure a custom domain name in this series, which is optional. |
 | **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** | A Microsoft Entra role that has full access to all features in Microsoft Intune. You can use this account to set up Intune and set up Automatic Enrollment for Windows devices. |
 | **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** | A Microsoft Entra role that can create and manage user accounts and groups in Intune and Microsoft 365. |
-| **[Application Manager](../fundamentals/role-based-access-control-reference.md#application-manager)** | An Intune role that can add and manage apps in Intune. |
-| **[Intune Role Administrator](../fundamentals/role-based-access-control-reference.md#intune-role-administrator)** | An Intune role that can create and manage custom roles and add users to Intune roles. |
-| **[Policy and Profile Manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** | An Intune role that can create and manage Intune policies, including compliance, device configuration, and most enrollment policies. |
+| **[Application Manager](./role-based-access-control/ref-built-in-roles.md#application-manager)** | An Intune role that can add and manage apps in Intune. |
+| **[Intune Role Administrator](./role-based-access-control/ref-built-in-roles.md#intune-role-administrator)** | An Intune role that can create and manage custom roles and add users to Intune roles. |
+| **[Policy and Profile Manager](./role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** | An Intune role that can create and manage Intune policies, including compliance, device configuration, and most enrollment policies. |
 
 If many admins are testing Intune, then assign their accounts to only the roles they need. For example, if an admin is only responsible for adding and managing apps, assign that admin only to the **Application Manager** role.
 
@@ -156,14 +156,14 @@ If you see an orange banner that states you didn't set the MDM authority, you ca
 
    :::image type="content" source="./media/free-trial-sign-up/choose-mdm-authority.png" alt-text="Screenshot of the Microsoft Intune choose MDM Authority page." lightbox="./media/free-trial-sign-up/choose-mdm-authority.png":::
 
-For more information about the MDM authority, see [Set the mobile device management authority](mdm-authority-set.md).
+For more information about the MDM authority, see [Set the mobile device management authority](setup-mdm-authority.md).
 
 ## Configure your custom domain name (optional)
 
 If your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change it in the Microsoft 365 admin center. Use the following steps to add, verify, and configure your custom domain name.
 
 > [!IMPORTANT]
-> You can't rename or remove the initial **onmicrosoft.com** part of the domain name. However, you can add, verify, or remove *custom* domain names used with Intune to keep your business identity clear. For more information, see [Configure a custom domain name](custom-domain-name-configure.md).
+> You can't rename or remove the initial **onmicrosoft.com** part of the domain name. However, you can add, verify, or remove *custom* domain names used with Intune to keep your business identity clear. For more information, see [Configure a custom domain name](configure-custom-domain.md).
 
 1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) as the **Domain Name Administrator** Microsoft Entra role.
 

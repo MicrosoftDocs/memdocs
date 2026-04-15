@@ -70,7 +70,7 @@ Also, Intune doesn't support all the settings listed in [CSP reference](/windows
 > - Intune Administrator Microsoft Entra role
 >
 > For more information, go to:
-> - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
+> - [Built-in role permissions for Microsoft Intune](../../fundamentals/role-based-access-control/ref-built-in-roles.md)
 > - [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 
 ## Next steps

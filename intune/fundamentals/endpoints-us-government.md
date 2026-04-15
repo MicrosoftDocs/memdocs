@@ -27,7 +27,7 @@ This article lists the US Government, US Government Community (GCC) High, and De
 
 - The inspection of SSL traffic is not supported on `*.manage.microsoft.us` or `has.spserv.microsoft.com` endpoints.
 
-For more information about Windows auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../../device-enrollment/windows/enable-automatic-mdm.md).
+For more information about Windows auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../device-enrollment/windows/enable-automatic-mdm.md).
 
 ## Ports and IP addresses list
 
@@ -61,7 +61,7 @@ For diagnostic data used to monitor the health of the client side components:
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../../device-security/microsoft-defender/security-settings-management.md#connectivity-requirements).
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../device-security/microsoft-defender/security-settings-management.md#connectivity-requirements).
 
 To support Defender for Endpoint security settings management, allow the following hostnames through your firewall.
 
@@ -83,7 +83,7 @@ For communication between clients and the cloud service:
   > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
-For more information, see the [Overview of Endpoint Privilege Management](../../epm/overview.md).
+For more information, see the [Overview of Endpoint Privilege Management](../epm/overview.md).
 
 ## Partner service endpoints that Intune depends on
 
@@ -100,4 +100,4 @@ For more information, see the [Overview of Endpoint Privilege Management](../../
 
 ## Next steps
 
-[Network endpoints for Microsoft Intune](intune-endpoints.md)
+[Network endpoints for Microsoft Intune](endpoints.md)

@@ -42,9 +42,9 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
   - **License administrator** - This Microsoft Entra role lets you assign Intune licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854). For more information on this role, see [Microsoft Entra built-in roles - License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator).
 
-  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager).
+  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](./role-based-access-control-reference.md#policy-and-profile-manager).
 
-  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](../fundamentals/role-based-access-control-reference.md#endpoint-security-manager).
+  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](./role-based-access-control-reference.md#endpoint-security-manager).
 
   - **Conditional Access Administrator** - This Microsoft Entra role lets you create and assign device-based Conditional Access policies in the [Microsoft Entra admin center](https://entra.microsoft.com/). For more information on this role, see [Microsoft Entra built-in roles - Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
 
@@ -58,7 +58,7 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
 Before you move from Basic Mobility and Security device management to Intune device management:
 
-1. Make sure you have enough [Intune licenses](../../fundamentals/licensing/index.md) to cover all your users managed by Basic Mobility and Security. If you don't have enough licenses, group your users by priority and assign licenses in stages.
+1. Make sure you have enough [Intune licenses](./licensing/index.md) to cover all your users managed by Basic Mobility and Security. If you don't have enough licenses, group your users by priority and assign licenses in stages.
 1. Review the existing Basic Mobility and Security policies and [remove any policies](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-turn-off) that you no longer need. Deleting unneeded policies reduces the number of new Intune policies you create.
 
     The following articles list and describe the Basic Mobility and Security policies:
@@ -72,7 +72,7 @@ Before you move from Basic Mobility and Security device management to Intune dev
 
     Decide if you plan to use the same groups for your Intune policies or create new groups. If these groups include users that are already licensed for Intune, they can get Intune policies assigned sooner than expected.
 
-1. Review the types of devices currently enrolled in Basic Mobility and Security. Unsupported [OS versions and variants](supported-devices-browsers.md#intune-supported-operating-systems) might continue to work, but they're not supported in Intune.
+1. Review the types of devices currently enrolled in Basic Mobility and Security. Unsupported [OS versions and variants](ref-supported-platforms.md#intune-supported-operating-systems) might continue to work, but they're not supported in Intune.
 
 1. Be ready to create new Intune policies in the Intune admin center. These policies replace the Basic Mobility and Security policies.
 
@@ -82,24 +82,24 @@ After you prepare your licenses and review the information in [Step 1 - Prepare]
 
 1. In [Basic Mobility and Security](https://compliance.microsoft.com/basicmobilityandsecurity), review each Basic Mobility and Security policy. Use the following policy mapping references and compare them with the Intune policies. If you haven't already, decide which policies you want to create in Intune.
 
-    - [Access requirements policy mapping](policy-map-access-requirements.md)
-    - [Configurations policy mapping](policy-map-configurations.md)
-    - [Miscellaneous policy mapping](policy-map-miscellaneous.md)
+    - [Access requirements policy mapping](ref-policy-map-access-requirements.md)
+    - [Configurations policy mapping](ref-policy-map-configurations.md)
+    - [Miscellaneous policy mapping](ref-policy-map-miscellaneous.md)
 
 2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create your Intune policies based on the policy mappings. When you create the policies, you can assign them to your groups now, or assign them later.
 
     | Basic Mobility and Security policy | Intune policy type | Intune location |
     | --- | --- | --- |
-    | [Access requirements policy mapping](policy-map-access-requirements.md) | [Compliance policies](../../device-security/compliance/overview.md) |  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
-    | [Configurations policy mapping](policy-map-configurations.md) | [Device configuration profiles](../../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-    | [Miscellaneous policy mapping](policy-map-miscellaneous.md) | [Device configuration profiles](../../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-    | Basic Conditional Access policies described in: <br/><br/>-[Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up)<br/>- [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure) | [Conditional Access policies]( ../protect/conditional-access.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** |
+    | [Access requirements policy mapping](ref-policy-map-access-requirements.md) | [Compliance policies](../device-security/compliance/overview.md) |  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
+    | [Configurations policy mapping](ref-policy-map-configurations.md) | [Device configuration profiles](../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
+    | [Miscellaneous policy mapping](ref-policy-map-miscellaneous.md) | [Device configuration profiles](../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
+    | Basic Conditional Access policies described in: <br/><br/>-[Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up)<br/>- [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure) | [Conditional Access policies]( ../intune-service/protect/conditional-access.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** |
 
 ## Step 3 - Assign the policies in stages
 
 Next, assign the Intune policies to the groups you choose. Keep the following points in mind:
 
-- If you already assigned Intune policies to your groups, these policies can conflict with your new Intune policies. To learn how Intune handles conflicts, see [Common questions and answers with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
+- If you already assigned Intune policies to your groups, these policies can conflict with your new Intune policies. To learn how Intune handles conflicts, see [Common questions and answers with device policies and profiles in Microsoft Intune](../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 - When the Intune policies are created, you can assign them to groups at any time. We recommend assigning the policies in stages. This staged approach helps you manage the migration process.
 
@@ -109,7 +109,7 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select your policy > **Assignments** > **Edit**. Add your groups and **Save**. When you save, the policies are assigned.
 
-    For the steps and guidance, see [Assign policies in Microsoft Intune](../../device-configuration/assign-device-profile.md).
+    For the steps and guidance, see [Assign policies in Microsoft Intune](../device-configuration/assign-device-profile.md).
 
     It's important to understand how policy assignment works. When you assign Intune licenses, the Intune policies replace any existing Basic Mobility and Security policies. Users can lose settings and email configuration if they're licensed for Intune but not assigned to any Intune policies.
 
@@ -120,9 +120,9 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
     - Assign licenses to **Users**. For more information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
     - Assign licenses to **Groups**. For more information, see [Assign licenses to a group](/microsoft-365/admin/manage/manage-group-licenses).
 
-    For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign-licenses.md).
+    For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](./licensing/assign-licenses.md).
 
-At the next [Intune device refresh cycle](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
+At the next [Intune device refresh cycle](../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
 
 After you move to Intune, Microsoft recommends that you remove the Basic Mobility and Security policies. You don't want these old policies to accidentally get assigned to users later. To learn more, see [Turn off Basic Mobility and Security enforcement](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-turn-off).
 
@@ -130,7 +130,7 @@ After you move to Intune, Microsoft recommends that you remove the Basic Mobilit
 
 The Basic Mobility and Security policies are a basic set of device management settings. After you migrate to Intune, you can create more policies to take advantage of the different Intune features.
 
-For information on a recommended minimum base set of policies, see [Get started with Intune](get-started-with-intune.md).
+For information on a recommended minimum base set of policies, see [Get started with Intune](get-started.md).
 
 To summarize, you can:
 
@@ -140,4 +140,4 @@ To summarize, you can:
 ## Related articles
 
 - [What is Intune?](what-is-intune.md)
-- [Get started with Intune](get-started-with-intune.md)
+- [Get started with Intune](get-started.md)

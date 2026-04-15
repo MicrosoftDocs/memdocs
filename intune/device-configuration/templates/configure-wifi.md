@@ -29,7 +29,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
 ## Before you begin
 
 - To create a Wi-Fi profile, you need to know the settings for your Wi-Fi network, including the SSID (service set identifier), security type, and more.
-- To configure the Wi-Fi policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+- To configure the Wi-Fi policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 - Wi-Fi profiles support the following device platforms:
 
@@ -41,7 +41,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
   - Windows
   - Windows Holographic for Business
 
-  For specific versions, go to [Supported operating systems and browsers in Intune](../../intune-service/fundamentals/supported-devices-browsers.md).
+  For specific versions, go to [Supported operating systems and browsers in Intune](../../fundamentals/ref-supported-platforms.md).
 
 ## Create the profile
 
@@ -83,7 +83,7 @@ This article lists the steps to create a Wi-Fi profile. It also includes links t
     - [Android device administrator](./ref-wifi-settings-android.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

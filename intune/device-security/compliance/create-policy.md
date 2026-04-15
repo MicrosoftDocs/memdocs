@@ -131,7 +131,7 @@ For more information about using custom compliance settings, including supported
 
 9. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies.
 
-   For information on using scope tags, see [Use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+   For information on using scope tags, see [Use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
 
 10. On the **Assignments** tab, assign the policy to your groups.
 

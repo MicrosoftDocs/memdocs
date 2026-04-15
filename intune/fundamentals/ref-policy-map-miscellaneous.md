@@ -112,4 +112,4 @@ Up to three compliance policies and up to six configuration profiles (three for 
 
 ## Related article
 
-- [Move from Basic Mobility and Security to Intune](migrate-to-intune.md)
+- [Move from Basic Mobility and Security to Intune](migrate-from-other-mdm.md)

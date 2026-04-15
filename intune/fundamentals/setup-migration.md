@@ -14,7 +14,7 @@ ms.collection:
 
 # Migration guide: Set up or move to Microsoft Intune
 
-After you [planned for the move to Microsoft Intune](intune-planning-guide.md), the next step it to choose the migration approach that's right for your organization. These decisions depend on your current mobile device management (MDM) environment, business goals, and technical requirements.
+After you [planned for the move to Microsoft Intune](planning-guide.md), the next step it to choose the migration approach that's right for your organization. These decisions depend on your current mobile device management (MDM) environment, business goals, and technical requirements.
 
 This migration guide lists and describes your options to adopt or move to Intune, which include:
 
@@ -28,7 +28,7 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 > [!TIP]
 >
-> - [!INCLUDE [tips-guidance-plan-deploy-guides](../../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 >
 > - As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
 
@@ -36,7 +36,7 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 - Microsoft Intune is a cloud native solution that helps manage identities, devices, and apps. If your goal is to become cloud native, then you can learn more at the following articles:
 
-  - [Learn about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
+  - [Learn about cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [What is Intune?](what-is-intune.md)
 
 - Your Intune deployment might be different from a previous MDM deployment. Intune uses identity-driven access control. It doesn't require a network proxy to access organization data from devices outside your network.
@@ -45,22 +45,22 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
 
-- **Microsoft Intune**: If you want a cloud solution and are ready for full device management, then go straight to Intune. You can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), which is a web-based console.
+- **Microsoft Intune**: If you want a cloud solution and are ready for full device management, then go straight to Intune. You can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Intune admin center](tutorial-admin-center-walkthrough.md), which is a web-based console.
 
-  - [Get started with Intune](get-started-with-intune.md)
-  - [Step 1 - Set up Intune](deployment-plan-setup.md)
-  - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
-  - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
-  - [Step 4 - Create device configuration profiles to secure devices](deployment-plan-configuration-profile.md)
-  - [Step 5 - Enroll devices](../../device-enrollment/guide.md)
+  - [Get started with Intune](get-started.md)
+  - [Step 1 - Set up Intune](deploy-setup-step-1.md)
+  - [Step 2 - Add, configure, and protect apps with Intune](deploy-protect-apps-step-2.md)
+  - [Step 3 – Plan for compliance policies](deploy-compliance-step-3.md)
+  - [Step 4 - Create device configuration profiles to secure devices](deploy-configuration-step-4.md)
+  - [Step 5 - Enroll devices](../device-enrollment/guide.md)
 
 - **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with Intune (cloud), then consider [tenant attach](#option-1---add-tenant-attach) (in this article) or [co-management](#option-2---set-up-co-management) (in this article).
 
   Configuration Manager can:
 
-  - Manage [on-premises Windows Server and some client devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
-  - Manage [partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
-  - Create [custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
+  - Manage [on-premises Windows Server and some client devices](../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+  - Manage [partner or third party software updates](../configmgr/sum/understand/software-updates-introduction.md).
+  - Create [custom task sequences](../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
   - [Deploy and manage many app types](/previous-versions/troubleshoot/configmgr/introduction-to-application-management).
 
 ## Currently use a third party MDM provider
@@ -73,12 +73,12 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     For more information, go to:
 
-    - [Get started with your Microsoft Intune deployment](get-started-with-intune.md)
-    - [Step 1 - Set up Intune](deployment-plan-setup.md).
+    - [Get started with your Microsoft Intune deployment](get-started.md)
+    - [Step 1 - Set up Intune](deploy-setup-step-1.md).
 
 2. **Deploy apps and create app protection policies**. The idea is to help protect organization data in your apps during the migration and until devices are enrolled & managed by Intune.
 
-    For more information, go to [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md).
+    For more information, go to [Step 2 - Add, configure, and protect apps with Intune](deploy-protect-apps-step-2.md).
 
 3. **Unenroll devices** from the current MDM provider.
 
@@ -86,16 +86,16 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     Give users specific unenroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime, dissatisfaction, and helpdesk calls.
 
-4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [Conditional Access](../../device-security/conditional-access-integration/overview.md)** to block devices until they enroll in Intune.
+4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [Conditional Access](../device-security/conditional-access-integration/overview.md)** to block devices until they enroll in Intune.
 
-    For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
+    For more information, go to [Step 3 – Plan for compliance policies](deploy-compliance-step-3.md).
 
 5. Optional, but recommended. Create a baseline of compliance and device settings that all users and devices must have. These policies can be deployed when users enroll in Intune.
 
     For more information, go to:
 
-    - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
-    - [Step 4 - Configure device features and settings to secure devices and access resources](deployment-plan-configuration-profile.md)
+    - [Step 3 – Plan for compliance policies](deploy-compliance-step-3.md)
+    - [Step 4 - Configure device features and settings to secure devices and access resources](deploy-configuration-step-4.md)
     - [Levels of protection and configuration in Microsoft Intune](protection-configuration-levels.md)
 
 6. **Enroll in Intune**. Be sure you give users specific enrollment steps.
@@ -103,7 +103,7 @@ Users must unenroll their devices from the current MDM provider before they enro
     For more information, go to:
 
     - [Step 5 – Enroll devices in Microsoft Intune](deployment-guide-enroll.md)
-    - [Intune enrollment deployment guide](../../device-enrollment/guide.md)
+    - [Intune enrollment deployment guide](../device-enrollment/guide.md)
 
 > [!IMPORTANT]
 > Don't configure Intune and any existing third party MDM solution simultaneously to apply access controls to resources, including Exchange or SharePoint.
@@ -135,13 +135,13 @@ Recommendations:
 
 Helpful information:
 
-- [Get started with Intune](get-started-with-intune.md)
-- [Intune enrollment deployment guide](../../device-enrollment/guide.md)
-- [Step 1 - Set up Intune and your tenant](deployment-plan-setup.md)
+- [Get started with Intune](get-started.md)
+- [Intune enrollment deployment guide](../device-enrollment/guide.md)
+- [Step 1 - Set up Intune and your tenant](deploy-setup-step-1.md)
 
 ## Currently use Configuration Manager
 
-Configuration Manager supports Windows Servers, and Windows & macOS client devices. If your organization uses other platforms, you might need to reset the devices, and then enroll them in Intune. Once enrolled, they receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](../../device-enrollment/guide.md).
+Configuration Manager supports Windows Servers, and Windows & macOS client devices. If your organization uses other platforms, you might need to reset the devices, and then enroll them in Intune. Once enrolled, they receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](../device-enrollment/guide.md).
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
@@ -149,25 +149,25 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a **tenant**. After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
-Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
+Tenant attach is included with your [Configuration Manager co-management license](../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
-For more information, see [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+For more information, see [enable tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
 
 ### Option 2 - Set up co-management
 
 This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
-1. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-2. In Intune, [set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+1. In Configuration Manager, set up [co-management](../configmgr/comanage/how-to-enable.md).
+2. In Intune, [set up Intune](deploy-setup-step-1.md), including setting the MDM Authority to Intune.
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
 Helpful information:
 
-- [What is co-management?](../../configmgr/comanage/overview.md)
-- [Co-management workloads](../../configmgr/comanage/workloads.md)
-- [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md)
-- [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.yml)
+- [What is co-management?](../configmgr/comanage/overview.md)
+- [Co-management workloads](../configmgr/comanage/workloads.md)
+- [Switch Configuration Manager workloads to Intune](../configmgr/comanage/how-to-switch-workloads.md)
+- [Configuration Manager product and licensing FAQ](../configmgr/core/understand/product-and-licensing-faq.yml)
 
 ### Option 3 - Move from Configuration Manager to Intune
 
@@ -184,12 +184,12 @@ This option is more work for administrators, but can create a more seamless expe
 
     Hybrid Microsoft Entra ID supports Windows devices. For other prerequisites, including sign-in requirements, see [Plan your Microsoft Entra hybrid join implementation](/entra/identity/devices/hybrid-join-plan).
 
-2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-3. In Intune, [set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
-4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
-5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
+2. In Configuration Manager, set up [co-management](../configmgr/comanage/how-to-enable.md).
+3. In Intune, [set up Intune](deploy-setup-step-1.md), including setting the MDM Authority to Intune.
+4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../configmgr/comanage/how-to-switch-workloads.md).
+5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
-    Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
+    Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
@@ -214,8 +214,8 @@ To manage your Windows client devices:
     - [Microsoft 365 Enterprise deployment guide](/microsoft-365/enterprise/deploy-foundation-infrastructure)
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
-2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
-3. Uninstall the Configuration Manager client on existing devices. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
+2. [Set up Intune](deploy-setup-step-1.md), including setting the MDM Authority to Intune.
+3. Uninstall the Configuration Manager client on existing devices. For more information, see [uninstall the client](../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
@@ -231,13 +231,13 @@ Specifically:
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
 - On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference).
 
-When moving devices from group policy, use [Group policy analytics](../../device-configuration/import-group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../../device-configuration/migrate-group-policy.md).
+When moving devices from group policy, use [Group policy analytics](../device-configuration/import-group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../device-configuration/migrate-group-policy.md).
 
-Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
+Next, [Step 1: Set up Microsoft Intune](deploy-setup-step-1.md).
 
 ## Currently use Microsoft 365 Basic Mobility and Security
 
-If you created and deployed Microsoft 365 Basic Mobility and Security policies, then see [Move from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
+If you created and deployed Microsoft 365 Basic Mobility and Security policies, then see [Move from Microsoft 365 Basic Mobility and Security to Intune](migrate-from-other-mdm.md).
 
 ## Tenant to tenant migration
 
@@ -330,5 +330,5 @@ There are some policy types that can't be exported. There are some policy types 
 
 ## Related articles
 
-- [Get started with Intune](get-started-with-intune.md)
-- [Enrollment deployment guides](../../device-enrollment/guide.md)
+- [Get started with Intune](get-started.md)
+- [Enrollment deployment guides](../device-enrollment/guide.md)

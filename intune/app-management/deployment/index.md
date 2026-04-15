@@ -104,7 +104,7 @@ Using Intune to manage apps with MAM without managing the device is useful when:
 - You want to provide a one-time pop-up message to let users know that MAM protections are in place, rather than continual device-level notification.
 - You want to comply with policies that require less management capability on personal devices. For instance, you want to manage the corporate data for the apps, rather than manage the corporate data for the entire device.
 
-For more information, go to [Planning guide: Personal devices vs. Organization-owned devices](../../intune-service/fundamentals/intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
+For more information, go to [Planning guide: Personal devices vs. Organization-owned devices](../../fundamentals/planning-guide.md#personal-devices-vs-organization-owned-devices).
 
 ### Determine who will use the app
 
@@ -114,7 +114,7 @@ First, you must determine which group should have access to the app, based on th
 
 Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../../fundamentals/certificates/overview.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Microsoft Entra application proxy. The Intune [App Wrapping Tool and App SDK](../../developer/app-sdk/integration-methods.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
-Use the [Intune deployment planning, design and implementation guide](../../intune-service/fundamentals/intune-planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+Use the [Intune deployment planning, design and implementation guide](../../fundamentals/planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 ### Determine the type of app for your solution
 
@@ -127,7 +127,7 @@ You can choose from the following app types:
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
 
-For more information about the types of apps that your organization needs, [Create a design](../../intune-service/fundamentals/intune-planning-guide.md).
+For more information about the types of apps that your organization needs, [Create a design](../../fundamentals/planning-guide.md).
 
 ### Understanding app management and protection policies
 

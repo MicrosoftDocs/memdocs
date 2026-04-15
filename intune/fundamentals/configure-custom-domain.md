@@ -40,6 +40,6 @@ Learn more [about the initial onmicrosoft.com domain in Microsoft 365](https://s
 
 ## Related content
 
-- [Add users](../fundamentals/users-add.md)
-- [Add groups](../fundamentals/groups-add.md)
+- [Add users](./tenant-administration/add-users.md)
+- [Add groups](./tenant-administration/add-groups.md)
 

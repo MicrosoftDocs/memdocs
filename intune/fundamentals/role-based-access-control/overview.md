@@ -27,11 +27,11 @@ Intune includes both built-in and custom roles. Built-in roles are the same in a
 
 To view a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > and select a role. You can then manage that role through the following pages:
 
-- **Properties**: The name, description, permissions, and scope tags for the role. You can also view the name, description, and permissions of built-in roles in this documentation at [Built-in role permissions](../fundamentals/role-based-access-control-reference.md).
+- **Properties**: The name, description, permissions, and scope tags for the role. You can also view the name, description, and permissions of built-in roles in this documentation at [Built-in role permissions](../role-based-access-control/ref-built-in-roles.md).
 - **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
 
 > [!NOTE]
-> In June 2021, Intune began supporting [unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
+> In June 2021, Intune began supporting [unlicensed admins](../../licensing/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
 
 ### Built-in roles
 
@@ -184,7 +184,7 @@ The **My permissions** node provides a view of the effective permissions for the
 
 ### Roles by permission
 
-The **Roles by permission** node provides a view of the permissions granted by each role assignment. With this view, you can see details about a specific Intune RBAC [permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available.
+The **Roles by permission** node provides a view of the permissions granted by each role assignment. With this view, you can see details about a specific Intune RBAC [permission](../role-based-access-control/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available.
 
 To get started, select an Intune permission and then a specific action from that permission. The admin center then displays a list of instances that lead to that permission being assigned that includes:
 

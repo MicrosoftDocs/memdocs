@@ -38,7 +38,7 @@ Possible configurations are:
     - **Intune MDM Authority**
     - **None**
 
-    :::image type="content" source="./media/mdm-authority-set/set-mdm-auth.png" alt-text="Screenshot of Intune set mobile device management authority screen." lightbox="./media/mdm-authority-set/set-mdm-auth.png":::
+    :::image type="content" source="./media/setup-mdm-authority/set-mdm-auth.png" alt-text="Screenshot of Intune set mobile device management authority screen." lightbox="./media/setup-mdm-authority/set-mdm-auth.png":::
 
   A message indicates that you have successfully set your MDM authority to Intune.
 
@@ -54,8 +54,8 @@ Scenarios that add a consent to share data are included when:
 
 In each case, the consent is strictly related to running a mobile device management service. For example, confirming that an IT Admin has authorized Google or Apple devices to enroll. Documentation to address what information is shared when the new workflows go live is available from the following locations:
 
-- [Data Intune sends to Google](../../privacy/data-sharing/ref-intune-to-google.md)
-- [Data Intune sends to Apple](../../privacy/data-sharing/ref-intune-to-apple.md)
+- [Data Intune sends to Google](../privacy/data-sharing/ref-intune-to-google.md)
+- [Data Intune sends to Apple](../privacy/data-sharing/ref-intune-to-apple.md)
 
 ## Key Considerations
 
@@ -79,7 +79,7 @@ There are three major steps to enable coexistence:
 
 Before enabling coexistence with Basic Mobility and Security, consider the following points:
 
-- Make sure you have sufficient [Intune licenses](../../fundamentals/licensing/index.md) for the users you intend to manage through Intune.
+- Make sure you have sufficient [Intune licenses](./licensing/index.md) for the users you intend to manage through Intune.
 - Review which users are assigned Intune licenses. After you enable coexistence, any user already assigned an Intune license will have their devices switch to Intune. To avoid unexpected device switches, we recommend not assigning any Intune licenses until you've enabled coexistence.
 - Create and deploy Intune policies to replace device security policies that were originally deployed through the Office 365 Security & Compliance portal. This replacement should be done for any users you expect to move from Basic Mobility and Security to Intune. If there are no Intune policies assigned to those users, enabling coexistence may cause them to lose Basic Mobility and Security settings. These settings are lost without replacement, like managed email profiles. Even when replacing device security policies with Intune policies, users may be prompted to re-authenticate their email profiles after the device is moved to Intune management.
 - You can't unprovision Basic Mobility and Security after you've set it up. However, there are steps you can take to turn off the policies. For more information, see [Turn off Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/turn-off).
@@ -93,7 +93,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 3. The **Add MDM Authority blade** banner is displayed.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
 
-   :::image type="content" alt-text="Screenshot of Add MDM Authority screen." source="./media/mdm-authority-set/add-mdm-authority.png" lightbox="./media/mdm-authority-set/add-mdm-authority.png":::
+   :::image type="content" alt-text="Screenshot of Add MDM Authority screen." source="./media/setup-mdm-authority/add-mdm-authority.png" lightbox="./media/setup-mdm-authority/add-mdm-authority.png":::
 
 ### Migrate users and devices (optional)
 
@@ -145,4 +145,4 @@ To confirm that your MDM authority is set to Intune, use the following steps:
 
 ## Next steps
 
-With the MDM authority set, you can start [enrolling devices](../../device-enrollment/guide.md).
+With the MDM authority set, you can start [enrolling devices](../device-enrollment/guide.md).

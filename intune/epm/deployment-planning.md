@@ -39,7 +39,7 @@ This article covers the information required to plan for Endpoint Privilege Mana
 
 ### Licensing
 
-Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md).
+Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
 
 ### Requirements
 
@@ -48,7 +48,7 @@ Endpoint Privilege Management has the following requirements:
 - Microsoft Entra joined *or* Microsoft Entra hybrid joined
 - Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../configmgr/comanage/overview.md) devices (no workload requirements)
 - Supported Operating System
-- Clear line of sight (without SSL-Inspection) to the [required endpoints](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
+- Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management)
 
 
 Endpoint Privilege Management supports the following operating systems:
@@ -81,7 +81,7 @@ Endpoint Privilege Management is supported with the following sovereign cloud en
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service-description.md).
 
 ## Important concepts for Endpoint Privilege Management
 
@@ -247,7 +247,7 @@ In addition to the dedicated roles, the following built-in roles for Intune also
   - Read
   - View elevation requests
 
- For more information, see [Role-based access control for Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+ For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 ## EpmTools PowerShell module
 

@@ -83,7 +83,7 @@ With these MDM-based policies, you can:
 
    After configuring *Update policy settings*, select **Next**.
 
-5. If [available](../../intune-service/fundamentals/scope-tags.md#default-scope-tag), on the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
+5. If [available](../../fundamentals/role-based-access-control/scope-tags.md#default-scope-tag), on the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
 
    - On the **Select tags** pane, choose one or more tags, and then **Select** to add them to the policy and return to the *Scope tags* pane.
 

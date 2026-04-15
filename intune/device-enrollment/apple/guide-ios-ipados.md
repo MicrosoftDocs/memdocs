@@ -67,7 +67,7 @@ For more specific information on this enrollment type, go to:
 
 This task list provides an overview. For more specific information, go to [Apple Business Manager enrollment](setup-automated-ios.md) or [Apple School Manager enrollment](school-manager.md).
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (.p7m) is active. For more specific information, go to [Get an Apple ADE token](setup-automated-ios.md#get-an-apple-automated-device-enrollment-token).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
@@ -243,7 +243,7 @@ For more specific information on this enrollment type, go to [Apple Configurator
 This task list provides an overview. For more specific information, go to [Apple Configurator enrollment](setup-configurator-ios.md).
 
 - Requires access to a Mac computer with a USB port.
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. We recommend using the Company Portal app.
 
@@ -360,7 +360,7 @@ For the specific enrollment steps, and its prerequisites, go to [Set up account 
 
 This list provides an overview of the tasks required of administrators.
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment profile. When you create the enrollment profile, you have the following options:
 

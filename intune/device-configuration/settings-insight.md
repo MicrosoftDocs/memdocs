@@ -4,7 +4,7 @@ description: Settings insight provides peer benchmarking information during secu
 author: BrenDuns
 ms.author: brenduns
 ms.date: 02/10/2026
-ms.topic: article
+ms.topic: overview
 ms.reviewer: Lavanya.lakshman
 ms.collection:
 - M365-identity-device-management
@@ -37,10 +37,10 @@ Settings insight is informational. You remain responsible for evaluating each se
 
 ## Prerequisites
 
-- **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../../fundamentals/licensing/index.md).
+- **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../fundamentals/licensing/index.md).
 - **Permissions**: Endpoint Security Administrators can create a profile using Baselines.
 
-  To learn more about this Intune built-in role, see [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).
+  To learn more about this Intune built-in role, see [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control/overview.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control/ref-built-in-roles.md).
 
 ## View insights during baseline configuration
 
@@ -127,5 +127,5 @@ Model execution and performance are actively monitored to ensure quality and rel
 
 Settings insight provides supplemental peer benchmarking information during baseline configuration. For comprehensive guidance on deploying and managing security baselines, see:
 
-- [Security baselines overview](../../device-security/security-baselines/overview.md)
-- [Create and manage security baseline profiles in Microsoft Intune](../../device-security/security-baselines/configure-baselines.md)
+- [Security baselines overview](../device-security/security-baselines/overview.md)
+- [Create and manage security baseline profiles in Microsoft Intune](../device-security/security-baselines/configure-baselines.md)

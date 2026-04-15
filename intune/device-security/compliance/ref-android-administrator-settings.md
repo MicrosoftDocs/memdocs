@@ -229,6 +229,6 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Next steps
 
-- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
 - [Monitor your compliance policies](./monitor-policy.md).
 - See the [compliance policy settings for Android Enterprise](./ref-android-enterprise-settings.md) devices.

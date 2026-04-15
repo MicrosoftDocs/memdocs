@@ -322,5 +322,5 @@ You can now build reports and data visualizations using the user device associat
 - The entity, [**IntuneManagementExtension**](ref-intune-management-extension.md), added. **IntuneManagementExtension** contains entities for mobile devices that track information such as version and installation status.
 
 ## Next steps
-- Learn [what's new each week in Intune](../../intune-service/fundamentals/whats-new.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
+- Learn [what's new each week in Intune](../../whats-new/index.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
 - Read the [Microsoft Intune Blog](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog).

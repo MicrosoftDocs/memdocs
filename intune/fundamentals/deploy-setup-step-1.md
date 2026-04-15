@@ -15,15 +15,15 @@ ms.collection:
 
 The first step when deploying Microsoft Intune is to set up your Intune environment.
 
-:::image type="content" source="./media/deployment-plan-setup/deployment-plan-setup-intune.png" alt-text="Diagram that shows getting started with Intune with step 1, which is setting up Microsoft Intune.":::
+:::image type="content" source="./media/deploy-setup-step-1/deployment-plan-setup-intune.png" alt-text="Diagram that shows getting started with Intune with step 1, which is setting up Microsoft Intune.":::
 
 This article takes you through each step in the process of setting up Microsoft Intune. It also provides the choices and considerations you need to make when setting up an endpoint-management solution such as Intune.
 
-The purpose of this article is to help you get a better understanding of Intune's supported configurations. After reviewing the article, you should be able to sign up for the [Microsoft Intune free trial](try-intune-overview.md), add end users, define user groups, assign licenses to users, and set up the other needed settings to begin using Microsoft Intune. All the steps provided in the article help you add and manage devices and apps by using Intune.
+The purpose of this article is to help you get a better understanding of Intune's supported configurations. After reviewing the article, you should be able to sign up for the [Microsoft Intune free trial](try-overview.md), add end users, define user groups, assign licenses to users, and set up the other needed settings to begin using Microsoft Intune. All the steps provided in the article help you add and manage devices and apps by using Intune.
 
 ## Prerequisites
 
-Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). The planning guide helps you plan your move or migration to Intune.
+Before you begin setting up Microsoft Intune, review the [Planning guide](planning-guide.md). The planning guide helps you plan your move or migration to Intune.
 
 The planning guide also helps you address these areas:
 
@@ -35,23 +35,23 @@ The planning guide also helps you address these areas:
 
 ## 1 - Review the Supported Configurations
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with supported configurations**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with supported configurations**
 
 Before you begin setting up Microsoft Intune, you should:
 
 - Review the device platforms and operating systems that Intune supports.
 - Review which web browsers are supported when accessing Intune using Microsoft Intune admin center.
 - Get familiar with the network bandwidth requirements to perform installations and updates using Intune.
-- Review [Network endpoints](intune-endpoints.md) for IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
+- Review [Network endpoints](endpoints.md) for IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
 
-For guidance and need-to-know information, see [Supported configurations](supported-devices-browsers.md).
+For guidance and need-to-know information, see [Supported configurations](ref-supported-platforms.md).
 
 > [!TIP]
-> By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, create a restriction. For more information, see [Create a device platform restriction](../../device-enrollment/create-platform-restrictions.md).
+> By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, create a restriction. For more information, see [Create a device platform restriction](../device-enrollment/create-platform-restrictions.md).
 
 ## 2 - Sign up for Microsoft Intune
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with sign up, or sign in to Intune**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with sign up, or sign in to Intune**
 
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -63,7 +63,7 @@ For guidance, see [Sign in to Intune](account-sign-up.md).
 
 ## 3 - Configure a custom domain name for your Intune tenant
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with configuring a custom domain name for your Intune tenant**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with configuring a custom domain name for your Intune tenant**
 
 When your organization signs up for Microsoft Intune, you get an initial domain name hosted in Microsoft Entra ID that looks like *your-domain.onmicrosoft.com*.
 
@@ -77,11 +77,11 @@ You can **optionally** configure your organization's custom domain in Intune, su
 
 - If you're moving to Microsoft 365 from an Office 365 subscription, your domain might already be in Microsoft Entra ID. Intune uses the same Microsoft Entra ID, and can use your existing domain.
 
-For guidance, see [Configure domain name](custom-domain-name-configure.md).
+For guidance, see [Configure domain name](configure-custom-domain.md).
 
 ## 4 - Add users to Intune
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with adding users to Intune**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with adding users to Intune**
 
 Users are stored in Microsoft Entra ID, which is also included with Microsoft 365. Microsoft Entra ID controls access to resources, and authenticates users.
 
@@ -97,7 +97,7 @@ You must be a Microsoft Entra [License Administrator](/entra/identity/role-based
 
 ## 5 - Create groups in Intune
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with adding groups to Intune**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with adding groups to Intune**
 
 Add groups to assign apps, settings, and other resources. For guidance, see [Add groups](groups-add.md).
 
@@ -107,24 +107,24 @@ Intune uses Microsoft Entra groups to organize and manage devices and users. As 
 
 Intune is available with different subscriptions, including as a stand-alone service. Determine the licensed services your organization needs and then continue to assign each user an Intune license before users can enroll their devices in Intune.
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Determine your license needs**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Determine your license needs**
 
 Microsoft Intune is available for different organization sizes and needs. It offers a simple-to-use management experience for schools and small businesses, and more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune (unless you select to allow unlicensed admins).
 
-For guidance, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+For guidance, see [Microsoft Intune licensing](./licensing/index.md).
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with assigning licenses to users**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with assigning licenses to users**
 
-Whether you add users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The [Microsoft Intune's free trial](try-intune-overview.md) provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
+Whether you add users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The [Microsoft Intune's free trial](try-overview.md) provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
 Give users permission to use Intune. Each user or userless device requires an Intune license to access the service.
 
-For guidance, see [Assign licenses](../../fundamentals/licensing/assign-licenses.md).
+For guidance, see [Assign licenses](./licensing/assign-licenses.md).
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Unlicensed admins**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Unlicensed admins**
 
 You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, Microsoft Entra administrators, and so on.
 
-For guidance, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
+For guidance, see [Unlicensed admins](./licensing/unlicensed-admins.md).
 
 ## 7 - Manage roles and grant admin permissions for Intune
 
@@ -134,7 +134,7 @@ Microsoft Intune uses role-based access control (RBAC) to manage administrative 
 
 Scope tags work with roles to limit which Intune objects, like devices, policies, and apps, are visible to an admin. By using roles and scope tags together, you can implement least-privilege access and support distributed IT administration across teams or regions.
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with managing roles**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with managing roles**
 
 1. Assign the built-in roles to the admins based on their responsibilities. For example, assign the **Policy and Profile manager** role to the admins that create and manage enrollment policies. Role assignments determine what admins can see and modify in Intune.
 
@@ -162,30 +162,30 @@ Scope tags work with roles to limit which Intune objects, like devices, policies
 
 ## 8 - Set the mobile device management authority
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with MDM authority**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with MDM authority**
 
 The mobile device management (MDM) authority setting determines how you manage your devices. By default, the Intune free trial sets your MDM authority to Intune. As an IT admin, you must set an MDM authority before users can enroll devices for management. When you set the MDM authority, you can start enrolling devices.
 
 If you're changing your tenant to support Intune, change your MDM authority configuration.
 
-For guidance, see [Set the mobile device management authority](mdm-authority-set.md).
+For guidance, see [Set the mobile device management authority](setup-mdm-authority.md).
 
 ## 9 - Customize the Intune company portal
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common tasks include enrolling devices, installing apps, and locating information (such as for assistance from your IT department).
 
-:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with configuring the company portal**
+:::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with configuring the company portal**
 
 Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website. You can also customize the Company Portal app so it includes your organization details.
 
-For guidance, see [Configure the company portal](../../app-management/configuration/configure-company-portal.md).
+For guidance, see [Configure the company portal](../app-management/configuration/configure-company-portal.md).
 
 ## Follow the minimum recommended baseline policies
 
 This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
 
 1. 🡺 **Set up Microsoft Intune** (this article)
-2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
-3. [Create compliance policies](deployment-plan-compliance-policies.md)
-4. [Configure device features and settings](deployment-plan-configuration-profile.md)
+2. [Add, configure, and protect apps](deploy-protect-apps-step-2.md)
+3. [Create compliance policies](deploy-compliance-step-3.md)
+4. [Configure device features and settings](deploy-configuration-step-4.md)
 5. [Enroll devices](deployment-guide-enroll.md)

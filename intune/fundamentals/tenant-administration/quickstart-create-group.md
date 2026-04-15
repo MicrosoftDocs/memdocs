@@ -23,7 +23,7 @@ In this article, you use Intune to create a group based on an existing user. Use
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 

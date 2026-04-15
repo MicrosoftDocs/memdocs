@@ -26,7 +26,7 @@ Use the Endpoint security node to address common security challenges:
 
 - **Protect against ransomware and malware** - Deploy antivirus policies with real-time protection, configure attack surface reduction rules, enable controlled folder access, and apply security baselines. For more information, see [Manage device security with endpoint security policies](../device-configuration/endpoint-security/manage-policies.md).
 
-- **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, deploy disk encryption, and enforce least privilege access with Endpoint Privilege Management (EPM). For more information, see [Zero Trust with Microsoft Intune](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
+- **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, deploy disk encryption, and enforce least privilege access with Endpoint Privilege Management (EPM). For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust.md).
 
 - **Secure remote and hybrid work** - Monitor compliance for remote devices, onboard devices to Defender for Endpoint through EDR policies, configure firewall policies, and use Conditional Access to block access from noncompliant devices. For more information, see [Protect data and devices with Microsoft Intune](./index.md).
 
@@ -108,7 +108,7 @@ Endpoint Privilege Management enforces least privilege access by allowing users 
 You deploy Endpoint Privilege Management by creating elevation rules that define which applications can run with administrative privileges and under what conditions. Elevation rules support multiple validation methods including file hashes, publisher certificates, and file paths. You can configure automatic elevation for trusted applications, user-confirmed elevation with optional authentication requirements, support-approved elevation where administrators review requests, or deny rules to block specific files. EPM includes detailed reporting for both managed elevations and unmanaged elevations, helping you identify elevation patterns, refine rules, and plan the transition of users from administrator to standard user accounts.
 
 > [!IMPORTANT]
-> Endpoint Privilege Management is available as an [Intune add-on](../intune-service/fundamentals/intune-add-ons.md) that requires an additional license beyond Microsoft Intune. You can license EPM as a standalone add-on or as part of the Microsoft Intune Suite. EPM policies are only available for Windows devices.
+> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/add-ons.md) that requires an additional license beyond Microsoft Intune. You can license EPM as a standalone add-on or as part of the Microsoft Intune Suite. EPM policies are only available for Windows devices.
 
 For more information, see [Endpoint Privilege Management](../epm/overview.md).
 
@@ -132,7 +132,7 @@ To manage tasks in the Endpoint security node of the Intune admin center, an acc
 - Be assigned a license for Intune.
 - Have role-based access control (RBAC) permissions equal to the built-in Intune role of **Endpoint Security Manager**. This role grants access to the Intune admin center to manage security and compliance features, including security baselines, device compliance, Conditional Access, and Defender for Endpoint.
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md) and the [Endpoint Security Manager](../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager) role reference.
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md) and the [Endpoint Security Manager](../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager) role reference.
 
 ## Choose the right policy type
 

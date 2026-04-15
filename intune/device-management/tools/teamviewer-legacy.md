@@ -31,7 +31,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
+- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../../intune-service/fundamentals/licensing/unlicensed-admins.md).
 
 - Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
@@ -83,13 +83,13 @@ When finished, close the TeamViewer window.
 
 When you start a remote session, users see a notification flag on the Company Portal app icon on their device. A notification also appears when the app opens. Users can then accept the remote assistance request.
 
-:::image type="content" source="./media/teamviewer-support/android-teamviewer.png" alt-text="Use TeamViewer connector to remotely administer Android device in Microsoft Intune and Intune admin center":::
+:::image type="content" source="./media/teamviewer-legacy/android-teamviewer.png" alt-text="Use TeamViewer connector to remotely administer Android device in Microsoft Intune and Intune admin center":::
 
 > [!NOTE]
 > Windows devices that are enrolled using "userless" methods, such as Device Enrollment Manager (DEM) and Windows Configuration Designer (WCD), don't show the TeamViewer notification in the Company Portal app. In these scenarios, it's recommended to use the TeamViewer portal to generate the session.
 
 ## Next steps
 
-[Use Remote Help with Intune](../fundamentals/remote-help.md)
+[Use Remote Help with Intune](../../remote-help/overview.md)
 
-[See device details in Intune](../fundamentals/device-inventory.md)
+[See device details in Intune](../../intune-service/fundamentals/device-inventory.md)

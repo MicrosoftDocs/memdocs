@@ -58,7 +58,7 @@ The Defender for Endpoint security settings management scenario is supported in 
 
 For more information, see:
 
-- [Intune US Government service description](../../intune-service/fundamentals/intune-govt-service-description.md)
+- [Intune US Government service description](../../fundamentals/government-service-description.md)
 - [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov)
 - [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
@@ -69,7 +69,7 @@ Devices must have access to the following endpoint:
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 > [!NOTE]
-> Endpoints for government customers are located at [Network endpoints for US government deployments](../../intune-service/fundamentals/intune-us-government-endpoints.md)
+> Endpoints for government customers are located at [Network endpoints for US government deployments](../../fundamentals/endpoints-us-government.md)
 
 ### Supported platforms
 
@@ -214,7 +214,7 @@ On the *All devices* page In the Microsoft Azure portal, you can view device det
 
 :::image type="content" source="./media/security-settings-management/azure-enrollment-validation.png" alt-text="A screenshot of the All device page in the Microsoft Azure portal with an example device highlighted." lightbox="./media/security-settings-management/azure-enrollment-validation.png":::
 
-To ensure that all devices enrolled in Defender for Endpoint security settings management receive policies, we recommend creating a [dynamic Microsoft Entra group](../../intune-service/fundamentals/groups-add.md) based on the devices' OS Type. With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
+To ensure that all devices enrolled in Defender for Endpoint security settings management receive policies, we recommend creating a [dynamic Microsoft Entra group](../../fundamentals/tenant-administration/add-groups.md) based on the devices' OS Type. With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
 
 > [!IMPORTANT]
 >
@@ -342,7 +342,7 @@ In the Microsoft Defender portal, as a security administrator:
    :::image type="content" source="./media/security-settings-management/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft Defender portal." lightbox="./media/security-settings-management/pilot-CMAuthority-mde-settings-management-defender.png":::
 
    > [!TIP]
-   > To ensure your Microsoft Defender portal users have consistent permissions across portals, if not already provided, request that your IT administrator grants them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../../intune-service/fundamentals/role-based-access-control.md).
+   > To ensure your Microsoft Defender portal users have consistent permissions across portals, if not already provided, request that your IT administrator grants them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](../../fundamentals/role-based-access-control/overview.md).
 
 ### Configure Intune
 
@@ -385,7 +385,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
    Instead of using system labels, you can use the management type attribute, and configure it to **MicrosoftSense**.
 
-You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](../../intune-service/fundamentals/groups-add.md). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:
+You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](../../fundamentals/tenant-administration/add-groups.md). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:
 
 - **Windows 10** and **Windows 11** - The deviceOSType or OS displays as *Windows*
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*

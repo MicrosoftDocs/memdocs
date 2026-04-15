@@ -48,18 +48,18 @@ With Intune, you can manage multiple devices per person, and the different platf
 
 For more information about Intune and its benefits, go to:
 
-- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Microsoft Intune planning guide](planning-guide.md)
 - [What is Intune?](what-is-intune.md)
-- [Get started with Microsoft Intune](get-started-with-intune.md)
+- [Get started with Microsoft Intune](get-started.md)
 
 ### Cloud attach your on-premises Configuration Manager
 
-Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [Conditional Access](../../configmgr/comanage/quickstart-conditional-access.md), [running remote actions](../../configmgr/comanage/quickstart-remote-actions.md), [using Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md), and more.
+Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [Conditional Access](../configmgr/comanage/quickstart-conditional-access.md), [running remote actions](../configmgr/comanage/quickstart-remote-actions.md), [using Windows Autopilot](../configmgr/comanage/quickstart-autopilot.md), and more.
 
 For more information, go to:
 
-- [What is co-management](../../configmgr/comanage/overview.md)
-- [Configuration Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
+- [What is co-management](../configmgr/comanage/overview.md)
+- [Configuration Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md)
 
 ## Choose the device management solution that's right for you
 
@@ -82,11 +82,11 @@ You can also use a combination of MDM and MAM together.
 For more information, go to:
 
 - [What is Intune?](what-is-intune.md)
-- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Microsoft Intune planning guide](planning-guide.md)
 
 ## Related articles
 
-- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Microsoft Intune planning guide](planning-guide.md)
 - [Manage user and group identities in Microsoft Intune](manage-identities.md)
 - [Manage your devices and control device features in Microsoft Intune](manage-devices.md)
 - [Manage your apps and app data in Microsoft Intune](manage-apps.md)

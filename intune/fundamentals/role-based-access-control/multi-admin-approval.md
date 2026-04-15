@@ -43,7 +43,7 @@ By default, the administrators who participate in the MAA workflow must have an 
 > [!CAUTION]
 > **This setting is irreversible.** Once enabled, you can't turn it off. Make sure your organization understands this limitation before proceeding.
 
-Before enabling this setting, review [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md) for important limits and behavior details, including group membership caps and how long access changes take to take effect.
+Before enabling this setting, review [Unlicensed admins](../../licensing/unlicensed-admins.md) for important limits and behavior details, including group membership caps and how long access changes take to take effect.
 
 ### Role 1: Access policy manager
 
@@ -135,7 +135,7 @@ You can cancel a request before it's approved by selecting it from the **My requ
 
    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
-[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
+[!INCLUDE [manage-admin-tasks](.././includes/manage-admin-tasks.md)]
 
 ## More considerations
 
@@ -152,7 +152,7 @@ You can cancel a request before it's approved by selecting it from the **My requ
   - Delete
   - Assign
 
-- Intune audit logs record actions for requests and the approval process. For more information, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md).
+- Intune audit logs record actions for requests and the approval process. For more information, see [Audit logs for Intune activities](../../governance/monitor-audit-logs.md).
 
 - The following status conditions are available for a request:
   - Needs approval – This request is pending action by an approver.
@@ -174,4 +174,4 @@ You can cancel a request before it's approved by selecting it from the **My requ
 
 ## Related content
 
-Manage [role-based access control](../fundamentals/role-based-access-control.md)
+Manage [role-based access control](../role-based-access-control/overview.md)

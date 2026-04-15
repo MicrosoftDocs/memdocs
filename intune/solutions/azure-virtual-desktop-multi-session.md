@@ -54,7 +54,7 @@ This feature supports Windows Enterprise multi-session VMs, which are:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Microsoft Entra hybrid joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Microsoft Entra joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
-- Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+- Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](../fundamentals/licensing/index.md).
 - See [Licensing Azure Virtual Desktop](/azure/virtual-desktop/licensing) for more information about Azure Virtual Desktop licensing requirements.
 
 ## Limitations
@@ -74,14 +74,14 @@ Windows Enterprise multi-session VMs are treated as a separate OS edition and so
 
 ## Create the configuration profile
 
-To configure configuration policies for Windows Enterprise multi-session VMs, use the [Settings catalog](../../device-configuration/settings-catalog/index.md) in the Microsoft Intune admin center.
+To configure configuration policies for Windows Enterprise multi-session VMs, use the [Settings catalog](../device-configuration/settings-catalog/index.md) in the Microsoft Intune admin center.
 
 Only the following configuration profile templates are supported for Windows Enterprise multi-session VMs:
 
-- [Trusted certificate](../../device-configuration/certificates/trusted-root-profiles.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
-- [SCEP certificate](../../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
-- [PKCS certificate](../../device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
-- [VPN](../../device-configuration/templates/configure-vpn.md#step-2---create-the-profile) - Device Tunnel only
+- [Trusted certificate](../device-configuration/certificates/trusted-root-profiles.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
+- [SCEP certificate](../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
+- [PKCS certificate](../device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
+- [VPN](../device-configuration/templates/configure-vpn.md#step-2---create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
 
@@ -106,12 +106,12 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
     - For each setting, select the value that you want for this configuration profile.
 9. Select **Next** when you're done adding settings.
 10. On the **Assignments** page, choose the Microsoft Entra groups containing the devices to which you want this profile assigned > **Next**.
-11. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile > **Next**. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+11. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile > **Next**. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 12. On the **Review + create** page, choose **Create** to create the profile.
 
 ### Administrative templates
 
-Administrative Templates in the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) are supported for Windows Enterprise multi-session with some limitations:
+Administrative Templates in the [Intune settings catalog](../device-configuration/settings-catalog/index.md) are supported for Windows Enterprise multi-session with some limitations:
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
 - ADMX-ingested policies are supported. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows Enterprise multi-session.
@@ -143,13 +143,13 @@ All other policies report as **Not applicable**.
 > [!IMPORTANT]
 > You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
-[Conditional Access policies](../../device-security/conditional-access-integration/overview.md) support both user and device based configurations for Windows Enterprise multi-session.
+[Conditional Access policies](../device-security/conditional-access-integration/overview.md) support both user and device based configurations for Windows Enterprise multi-session.
 
 ## Endpoint security
 
 You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows. If that Platform is not available, the profile is not supported on multi-session VMs.
 
-For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
+For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../device-configuration/endpoint-security/manage-policies.md)
 
 ## Application deployment
 
@@ -169,7 +169,7 @@ Scripts configured to run in the user context and assigned to users are supporte
 ## Windows Update client policies
 <a name="windows-update-for-business"></a>
 
-You can use the [settings catalog](../../device-configuration/settings-catalog/index.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
+You can use the [settings catalog](../device-configuration/settings-catalog/index.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise multi-session VMs. To find the supported settings in the catalog, configure a settings filter for *Enterprise multi-session* and then expand the *Windows Update for Business* category.
 
 The following settings are available in the catalog, with the links opening the Windows CSP documentation:
 
@@ -199,11 +199,11 @@ Deleting VMs from Azure will leave orphaned device records in the Microsoft Intu
 For more information, see:
 
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically remove devices with cleanup rules](../../governance/configure-cleanup-rules.md)
+- [Automatically remove devices with cleanup rules](../governance/configure-cleanup-rules.md)
 
 ## Security baselines
 
-Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../../device-security/security-baselines/overview.md) and configure the recommended policies and values in the [Settings catalog](../../device-configuration/settings-catalog/index.md).
+Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../device-security/security-baselines/overview.md) and configure the recommended policies and values in the [Settings catalog](../device-configuration/settings-catalog/index.md).
 
 ## Additional configurations that aren't supported on Windows Enterprise multi-session VMs
 
@@ -234,7 +234,7 @@ The following sections provide troubleshooting guidance for common issues.
 Configuration policy reports as Not applicable|Some policies aren't applicable to Azure Virtual Desktop VMs.|
 |Microsoft Edge/Microsoft Office ADMX policy doesn't show up when I apply the filter for Windows Enterprise multi-session edition|Applicability for these settings isn't based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
 |App configured to install in system context didn't apply|Confirm the app doesn't have a dependency or supersedence relationship on any apps configured to install in user context. User context apps aren't currently supported on Windows Enterprise multi-session.|
-|Update rings for Windows policy didn't apply|Windows update rings policies aren't currently supported. Quality updates can be managed via settings available in the [settings catalog](../../device-configuration/settings-catalog/index.md).|
+|Update rings for Windows policy didn't apply|Windows update rings policies aren't currently supported. Quality updates can be managed via settings available in the [settings catalog](../device-configuration/settings-catalog/index.md).|
 
 ## Next steps
 

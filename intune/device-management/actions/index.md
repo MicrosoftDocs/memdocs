@@ -245,7 +245,7 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: fresh-start.md
 [RA-FV]: rotate-filevault-recovery-key.md
-[RA-HELP]: ../../intune-service/fundamentals/remote-help.md
+[RA-HELP]: ../../remote-help/overview.md
 [RA-LOCATE]: locate.md
 [RA-LOCK]: remote-lock.md
 [RA-LOGOUT]: logout-user.md

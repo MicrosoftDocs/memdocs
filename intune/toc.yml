@@ -6,58 +6,58 @@ items:
     items:
     - name: Microsoft Intune overview
       displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-      href: ./intune-service/fundamentals/what-is-intune.md
+      href: ./fundamentals/what-is-intune.md
       items:
       - name: Overview - Manage and secure identities
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/manage-identities.md
+        href: ./fundamentals/tenant-administration/identities.md
       - name: Overview - Manage and secure devices
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/manage-devices.md
+        href: ./fundamentals/manage-devices.md
       - name: Overview - Manage apps and protect their data
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/manage-apps.md
+        href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
-        href: ./intune-service/fundamentals/zero-trust-with-microsoft-intune.md
+        href: ./fundamentals/zero-trust.md
       - name: Intune architecture diagram
-        href: ./intune-service/fundamentals/high-level-architecture.md
+        href: ./fundamentals/architecture.md
         displayName: architecture, diagram, components, design, svg, family, products, suite, on-premises, tunnel
     - name: Intune service release information
-      href: ./intune-service/fundamentals/intune-service-servicing-information.md
+      href: ./fundamentals/servicing-information.md
     - name: Endpoint management at Microsoft
       href: ./fundamentals/endpoint-management.md
     - name: What is device management?
-      href: ./intune-service/fundamentals/what-is-device-management.md
+      href: ./fundamentals/what-is-device-management.md
 
     - name: What's new
       items:
       - name: What's new
-        href: ./intune-service/fundamentals/whats-new.md
+        href: ./whats-new/index.md
       - name: What's new in the app UI
-        href: ./intune-service/fundamentals/whats-new-app-ui.md
+        href: ./whats-new/app-ui-updates.md
       - name: Features in development
-        href: ./intune-service/fundamentals/in-development.md
+        href: ./whats-new/in-development.md
       - name: Important notices
-        href: ./intune-service/fundamentals/whats-new.md#notices
+        href: ./whats-new/index.md#notices
       - name: Public preview
-        href: ./intune-service/fundamentals/public-preview.md
+        href: ./fundamentals/public-preview.md
 
     - name: Evaluate and try
       items:
       - name: Walkthrough Intune admin center
-        href: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md
+        href: ./fundamentals/tutorial-admin-center-walkthrough.md
         displayName: trial, free
       - name: Try Intune tasks
         items:
         - name: Overview
-          href: ./intune-service/fundamentals/try-intune-overview.md
+          href: ./fundamentals/try-overview.md
         - name: Step 1 - Sign up for a free Intune trial
-          href: ./intune-service/fundamentals/free-trial-sign-up.md
+          href: ./fundamentals/free-trial-sign-up.md
           displayName: tenant; trial; get started, start; help; MDM
         - name: Step 2 - Create a user and assign a license
-          href: ./intune-service/fundamentals/quickstart-create-user.md
+          href: ./fundamentals/tenant-administration/quickstart-create-user.md
         - name: Step 3 - Create a group
-          href: ./intune-service/fundamentals/quickstart-create-group.md
+          href: ./fundamentals/tenant-administration/quickstart-create-group.md
         - name: Step 4 - Set up automatic enrollment
           href: /intune/device-enrollment/windows/quickstart-automatic-mdm
         - name: Step 5 - Enroll your Windows device
@@ -71,7 +71,7 @@ items:
         - name: Step 9 - Create and assign an app protection policy
           href: ./app-management/protection/quickstart-create-assign-policy.md
         - name: Step 10 - Create and assign a custom role
-          href: ./intune-service/fundamentals/quickstart-create-custom-role.md
+          href: ./fundamentals/role-based-access-control/quickstart-custom-role.md
         - name: Step 11 - Create a device profile
           href: ./device-configuration/templates/quickstart-email-profile.md
       - name: Try Intune scenarios
@@ -96,7 +96,7 @@ items:
   - name: Intune Suite
     items:
     - name: Intune Suite overview
-      href: ./intune-service/fundamentals/intune-add-ons.md
+      href: ./fundamentals/add-ons.md
 
     - name: Endpoint Privilege Management (EPM)
       href: ./epm/toc.yml
@@ -114,15 +114,15 @@ items:
     - name: Remote Help
       items:
       - name: Remote Help overview
-        href: ./intune-service/fundamentals/remote-help.md
+        href: ./remote-help/overview.md
       - name: Planning Remote Help
-        href: ./intune-service/fundamentals/remote-help-plan.md
+        href: ./remote-help/plan.md
       - name: Deploying Remote Help
-        href: ./intune-service/fundamentals/remote-help-deploy.md
+        href: ./remote-help/deploy.md
       - name: Using Remote Help
-        href: ./intune-service/fundamentals/remote-help-use.md
+        href: ./remote-help/use-windows.md
       - name: Troubleshooting Remote Help
-        href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
+        href: ./remote-help/troubleshoot.md
 
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
@@ -133,93 +133,93 @@ items:
       items:
       - name: Supported OS versions and browsers
         displayName: software updates, android, ios, ipados
-        href: ./intune-service/fundamentals/supported-devices-browsers.md
+        href: ./fundamentals/ref-supported-platforms.md
       - name: Android Open Source Project Supported Devices
         displayName: software updates, android open source project, supported devices
-        href: ./intune-service/fundamentals/android-os-project-supported-devices.md
+        href: ./fundamentals/aosp-supported-devices.md
 
     - name: Planning guide
       displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
-      href: ./intune-service/fundamentals/intune-planning-guide.md
+      href: ./fundamentals/planning-guide.md
       items:
       - name: Using Windows VMs with Intune
-        href: ./intune-service/fundamentals/windows-10-virtual-machines.md
+        href: ./solutions/windows-virtual-machines.md
       - name: Using Azure Virtual Desktop with Intune
-        href: ./intune-service/fundamentals/azure-virtual-desktop.md
+        href: ./solutions/azure-virtual-desktop.md
       - name: Using Azure Virtual Desktop multi-session
-        href: ./intune-service/fundamentals/azure-virtual-desktop-multi-session.md
+        href: ./solutions/azure-virtual-desktop-multi-session.md
 
     - name: Settings insight
       displayName: configuration, settings, insight, security baselines
-      href: ./intune-service/fundamentals/settings-insight.md
+      href: ./device-configuration/settings-insight.md
 
     - name: Migrate to Intune
       items:
       - name: Move to Intune
         displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/deployment-guide-intune-setup.md
+        href: ./fundamentals/setup-migration.md
       - name: Move from Basic Mobility and Security
         items:
         - name: Move from Microsoft 365 device management
           displayName: migrate, mdm, office, windows
-          href: ./intune-service/fundamentals/migrate-to-intune.md
+          href: ./fundamentals/migrate-from-other-mdm.md
         - name: Policy mapping
           items:
           - name: Access requirements policy mapping
             displayName: migrate, mdm, office, windows
-            href: ./intune-service/fundamentals/policy-map-access-requirements.md
+            href: ./fundamentals/ref-policy-map-access-requirements.md
           - name: Configurations policy mapping
             displayName: migrate, mdm, office, windows
-            href: ./intune-service/fundamentals/policy-map-configurations.md
+            href: ./fundamentals/ref-policy-map-configurations.md
           - name: Miscellaneous policy mapping
             displayName: migrate, mdm, office, windows
-            href: ./intune-service/fundamentals/policy-map-miscellaneous.md
+            href: ./fundamentals/ref-policy-map-miscellaneous.md
 
     - name: Deployment guide for Intune
       items:
       - name: Get started with your deployment
         displayName: mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/get-started-with-intune.md
+        href: ./fundamentals/get-started.md
       - name: Step 1 - Set up Intune subscription
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/deployment-plan-setup.md
+        href: ./fundamentals/deploy-setup-step-1.md
       - name: Step 2 - Add, configure, and protect apps
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/deployment-plan-protect-apps.md
+        href: ./fundamentals/deploy-protect-apps-step-2.md
       - name: Step 3 - Create compliance policies
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/deployment-plan-compliance-policies.md
+        href: ./fundamentals/deploy-compliance-step-3.md
       - name: Step 4 - Configure device features and security settings
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/deployment-plan-configuration-profile.md
+        href: ./fundamentals/deploy-configuration-step-4.md
       - name: Step 5 - Enroll devices
         displayName: deployment, mdm, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/deployment-guide-enroll.md
+        href: ./device-enrollment/enroll-devices.md
       - name: Protection and configuration levels
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/protection-configuration-levels.md
+        href: ./fundamentals/protection-configuration-levels.md
       - name: Zero Trust deployment approach
         displayName: deployment, zero trust, security, compliance, conditional access
-        href: ./intune-service/fundamentals/deployment-plan-zero-trust.md
+        href: ./fundamentals/zero-trust-deployment.md
 
     - name: Platform guides
       items:
       - name: Windows platform guide
-        href: ./intune-service/fundamentals/deployment-guide-platform-windows.md
+        href: ./fundamentals/platform-guide-windows.md
       - name: Android, Android Enterprise platform guide
-        href: ./intune-service/fundamentals/deployment-guide-platform-android.md
+        href: ./fundamentals/platform-guide-android.md
       - name: iOS/iPadOS platform guide
-        href: ./intune-service/fundamentals/deployment-guide-platform-ios-ipados.md
+        href: ./fundamentals/platform-guide-ios-ipados.md
       - name: macOS platform guide
-        href: ./intune-service/fundamentals/deployment-guide-platform-macos.md
+        href: ./fundamentals/platform-guide-macos.md
       - name: Linux platform guide
-        href: ./intune-service/fundamentals/deployment-guide-platform-linux.md
+        href: ./fundamentals/platform-guide-linux.md
       - name: Windows Holographic platform guide
-        href: ./intune-service/fundamentals/windows-holographic-for-business.md
+        href: ./solutions/windows-holographic.md
       - name: Manage specialty devices with Intune
-        href: ./intune-service/fundamentals/specialty-devices-with-intune.md
+        href: ./device-management/specialty-devices.md
       - name: Microsoft Surface Management Portal
-        href: ./intune-service/fundamentals/surface-management-portal.md
+        href: ./device-management/tools/surface-management-portal.md
 
     - name: Software updates planning guides
       items:
@@ -241,44 +241,44 @@ items:
     - name: URLs and IP address endpoints
       items:
       - name: Intune endpoints
-        href: ./intune-service/fundamentals/intune-endpoints.md
+        href: ./fundamentals/endpoints.md
       - name: China endpoints
-        href: ./intune-service/fundamentals/china-endpoints.md
+        href: ./fundamentals/endpoints-china.md
       - name: Intune US government endpoints
-        href: ./intune-service/fundamentals/intune-us-government-endpoints.md
+        href: ./fundamentals/endpoints-us-government.md
 
     - name: Set up Intune subscription
       items:
       - name: Sign in to Intune
-        href: ./intune-service/fundamentals/account-sign-up.md
+        href: ./fundamentals/account-sign-up.md
       - name: Configure domains
-        href: ./intune-service/fundamentals/custom-domain-name-configure.md
+        href: ./fundamentals/configure-custom-domain.md
       - name: Add users
-        href: ./intune-service/fundamentals/users-add.md
+        href: ./fundamentals/tenant-administration/add-users.md
       - name: Add groups
-        href: ./intune-service/fundamentals/groups-add.md
+        href: ./fundamentals/tenant-administration/add-groups.md
       - name: Manage Intune licenses
         href: ./fundamentals/licensing/toc.yml
       - name: Set the MDM authority
-        href: ./intune-service/fundamentals/mdm-authority-set.md
+        href: ./fundamentals/setup-mdm-authority.md
 
     - name: Manage roles and permissions
       items:
       - name: Role-based access control
-        href: ./intune-service/fundamentals/role-based-access-control.md
+        href: ./fundamentals/role-based-access-control/overview.md
       - name: Built-in roles permissions reference
-        href: ./intune-service/fundamentals/role-based-access-control-reference.md
+        href: ./fundamentals/role-based-access-control/ref-built-in-roles.md
       - name: Assign a role to a user
-        href: ./intune-service/fundamentals/assign-role.md
+        href: ./fundamentals/role-based-access-control/assign-role.md
       - name: Create a custom role
-        href: ./intune-service/fundamentals/create-custom-role.md
+        href: ./fundamentals/role-based-access-control/create-custom-role.md
       - name: Use scope tags to determine what admins can see
-        href: ./intune-service/fundamentals/scope-tags.md
+        href: ./fundamentals/role-based-access-control/scope-tags.md
       - name: Determine admin structure
-        href: ./intune-service/fundamentals/intune-scale-guidelines.md
+        href: ./fundamentals/scale-guidelines.md
         displayName: distributed IT, many admins, scale, guidelines
       - name: Configure multiple admin approvals
-        href: ./intune-service/fundamentals/multi-admin-approval.md
+        href: ./fundamentals/role-based-access-control/multi-admin-approval.md
         displayName: multi-admin approval, maa
 
   - name: Create and deploy Intune policies
@@ -506,22 +506,22 @@ items:
         items:
         - name: Create an assignment filter
           displayName: assignment filter, android, ios, ipados, macos, windows
-          href: ./intune-service/fundamentals/filters.md
+          href: ./fundamentals/filters/overview.md
         - name: Assignment filter properties
           displayName: assignment filter, android, ios, ipados, macos, windows
-          href: ./intune-service/fundamentals/filters-device-properties.md
+          href: ./fundamentals/filters/ref-device-properties.md
         - name: Supported workloads
           displayName: assignment filter, android, ios, ipados, macos, windows
-          href: ./intune-service/fundamentals/filters-supported-workloads.md
+          href: ./fundamentals/filters/ref-supported-workloads.md
         - name: Reporting and conflict resolution
           displayName: assignment filter, android, ios, ipados, macos, windows
-          href: ./intune-service/fundamentals/filters-reports-troubleshoot.md
+          href: ./fundamentals/filters/troubleshoot.md
         - name: Performance recommendations
           displayName: assignment filter, android, ios, ipados, macos, windows
-          href: ./intune-service/fundamentals/filters-performance-recommendations.md
+          href: ./fundamentals/filters/performance-recommendations.md
       - name: Use policy sets to group policies together
         displayName: android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/policy-sets.md
+        href: ./fundamentals/policy-sets.md
       - name: Common questions and answers
         displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
         href: ./device-configuration/troubleshoot-device-profiles.md
@@ -534,7 +534,7 @@ items:
     - name: Tenant status and health
       href: ./governance/tenant-status.md
     - name: Manage admin tasks
-      href: ./intune-service/fundamentals/admin-tasks.md
+      href: ./device-management/admin-tasks.md
     - name: Device cleanup rules
       href: ./governance/configure-cleanup-rules.md
 
@@ -549,30 +549,30 @@ items:
       - name: Reports
         items:
         - name: Intune reports
-          href: ./intune-service/fundamentals/reports.md
+          href: ./device-management/reports/overview.md
         - name: Export reports using Graph
-          href: ./intune-service/fundamentals/reports-export-graph-apis.md
+          href: ./device-management/reports/export-graph-apis.md
         - name: Intune reports and properties using Graph
-          href: ./intune-service/fundamentals/reports-export-graph-available-reports.md
+          href: ./device-management/reports/ref-graph-available-reports.md
         - name: Use the Intune Data Warehouse
           href: ./developer/data-warehouse/create-reports.md
       - name: Monitor
         items:
         - name: Audit logs for Intune activities
-          href: ./intune-service/fundamentals/monitor-audit-logs.md
+          href: ./governance/monitor-audit-logs.md
         - name: Review logs with Azure Monitor
-          href: ./intune-service/fundamentals/review-logs-using-azure-monitor.md
+          href: ./governance/integrate-azure-monitor.md
         - name: Device configuration profile status
           href: ./device-configuration/monitor-device-profile.md
 
     - name: Get device details
       items:
       - name: Find the primary user
-        href: ./intune-service/fundamentals/find-primary-user.md
+        href: ./device-management/inventory-and-status/find-primary-user.md
       - name: View device details
-        href: ./intune-service/fundamentals/device-inventory.md
+        href: ./device-management/inventory-and-status/device-details.md
       - name: View ChromeOS device information
-        href: ./intune-service/fundamentals/chrome-enterprise-device-details.md
+        href: ./device-management/inventory-and-status/chrome-enterprise-details.md
 
     - name: Device actions
       href: ./device-management/actions/toc.yml
@@ -580,21 +580,21 @@ items:
   - name: Support your users
     items:
     - name: Use the Help Desk users operator role
-      href: ./intune-service/fundamentals/help-desk-operators.md
+      href: ./fundamentals/it-pro-support/help-desk-operators.md
     - name: Remote Help with ServiceNow integration
-      href: ./intune-service/fundamentals/service-now-integration.md
+      href: ./device-management/tools/setup-servicenow.md
     - name: Remote Help with the Intune Suite
-      href: ./intune-service/fundamentals/remote-help.md
+      href: ./remote-help/overview.md
     - name: Use the TeamViewer integration 
-      href: ./intune-service/fundamentals/team-viewer-integration.md    
+      href: ./device-management/tools/setup-teamviewer.md    
     - name: TeamViewer for remote administration (old)
-      href: ./intune-service/fundamentals/teamviewer-support.md
+      href: ./device-management/tools/teamviewer-legacy.md
     - name: Remediations that fix common support issues
       items:
       - name: Use Remediations
-        href: ./intune-service/fundamentals/remediations.md
+        href: ./endpoint-analytics/remediations.md
       - name: Powershell scripts for Remediations
-        href: ./intune-service/fundamentals/powershell-scripts-remediation.md
+        href: ./endpoint-analytics/ref-remediation-scripts.md
     - name: Using the Intune docs
       href: ./fundamentals/use-docs.md
     - name: Get support in the Intune admin center
@@ -610,18 +610,18 @@ items:
     - name: Government
       items:
       - name: Intune US Government service description
-        href: ./intune-service/fundamentals/intune-govt-service-description.md
+        href: ./fundamentals/government-service-description.md
       - name: Intune US government endpoints
-        href: ./intune-service/fundamentals/intune-us-government-endpoints.md
+        href: ./fundamentals/endpoints-us-government.md
       - name: Deploy apps to Government environments
         href: ./app-management/deployment/deploy-gcc-dod.md
 
     - name: China
       items:
       - name: Intune operated by 21Vianet in China
-        href: ./intune-service/fundamentals/china.md
+        href: ./fundamentals/china.md
       - name: China endpoints
-        href: ./intune-service/fundamentals/china-endpoints.md
+        href: ./fundamentals/endpoints-china.md
 
   - name: Scenario-based guidance
     items:
@@ -630,7 +630,7 @@ items:
     - name: Manage AI on Android
       href: ./solutions/ai/manage-ai-android.md
     - name: Manage operating system versions
-      href: ./intune-service/fundamentals/manage-os-versions.md
+      href: ./device-updates/manage-os-versions.md
     - name: Frontline worker (FLW) device management
       displayName: android, ios, ipados, windows, kiosk
       items:
@@ -649,10 +649,10 @@ items:
       items:
       - name: Overview
         displayName: cloud config, flw, windows
-        href: ./intune-service/fundamentals/cloud-configuration.md
+        href: ./solutions/cloud-native-endpoints/cloud-configuration.md
       - name: Step-by-step guide
         displayName: cloud config, flw, windows
-        href: ./intune-service/fundamentals/cloud-configuration-setup-guide.md
+        href: ./solutions/cloud-native-endpoints/setup-cloud-configuration.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits
@@ -699,4 +699,4 @@ items:
     displayName: GDPR, HIPAA, SOC, ISO
 
   - name: Microsoft Intune service description
-    href: ./intune-service/fundamentals/microsoft-intune-service-description.md
+    href: ./fundamentals/service-description.md

@@ -59,7 +59,7 @@ Intune supports compliance with data residency requirements by supporting Micros
 
 - **Data location**: Data is stored in Microsoft-managed data centers. For more information, see [Data storage and processing in Intune](..//privacy/data-handling/data-storage-processing.md).
 - **EU Data Boundary**: Ensures that data belonging to EU customers is stored and processed within the EU. For more information, see [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn) and [Configure Microsoft Tunnel for Intune](../device-security/microsoft-tunnel/install.md).
-- **Encryption**: Data is encrypted at rest and in transit. For more information, see [Access requirements policy mapping from Basic Mobility and Security to Intune](../intune-service/fundamentals/policy-map-access-requirements.md).
+- **Encryption**: Data is encrypted at rest and in transit. For more information, see [Access requirements policy mapping from Basic Mobility and Security to Intune](../fundamentals/ref-policy-map-access-requirements.md).
 
 ## Compliance features
 
@@ -70,7 +70,7 @@ Intune includes several compliance features that help organizations meet regulat
 > [!IMPORTANT]
 > Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
 
-Intune supports data lifecycle management through retention policies and labels. These features help organizations retain or delete data based on compliance requirements. For more information, see [Privacy and personal data in Intune](../intune-service/fundamentals/intune-service-servicing-information.md#privacy-and-personal-data-in-intune).
+Intune supports data lifecycle management through retention policies and labels. These features help organizations retain or delete data based on compliance requirements. For more information, see [Privacy and personal data in Intune](../fundamentals/servicing-information.md#privacy-and-personal-data-in-intune).
 
 ### Auditing and reporting
 

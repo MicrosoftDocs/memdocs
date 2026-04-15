@@ -40,7 +40,7 @@ MAM allows you to manage and protect your organization's data within an applicat
 Intune MAM supports two configurations:
 
 - **Intune MDM + MAM**: IT administrators can manage apps using MAM on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- **Unenrolled devices with MAM managed applications**: IT administrators can manage org data and accounts in apps using MAM on unenrolled devices or devices enrolled with third-party EMM providers. To manage apps using MAM, customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information about BYOD and Microsoft's EMS, go to the [Planning guide: Personal devices vs. Organization-owned devices](../intune-service/fundamentals/intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
+- **Unenrolled devices with MAM managed applications**: IT administrators can manage org data and accounts in apps using MAM on unenrolled devices or devices enrolled with third-party EMM providers. To manage apps using MAM, customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information about BYOD and Microsoft's EMS, go to the [Planning guide: Personal devices vs. Organization-owned devices](../fundamentals/planning-guide.md#personal-devices-vs-organization-owned-devices).
 
 ## App management capabilities by platform
 
@@ -106,10 +106,10 @@ The top of the Apps workload navigation menu provides commonly used app details:
     - **App selective wipe**: Select this option to remove only corporate data from a selected user's device. For more information, see [App selective wipe](./protection/wipe-corporate-data.md).
     - **Quiet time**: Select this option to set up quiet time for an app. For more information, see [Quiet time](./protection/configure-quiet-time.md).
 - **Organize apps**:
-    - **Assignment filters**: Select this option to create a filter that can be used to filter managed apps or managed devices. For more information, see [Filters](../intune-service/fundamentals/filters.md).
+    - **Assignment filters**: Select this option to create a filter that can be used to filter managed apps or managed devices. For more information, see [Filters](../fundamentals/filters/overview.md).
     - **App categories**: Add, pin, and delete app category names.
     - **E-books**: Some app stores give you the ability to purchase multiple licenses for an app or books that you want to use in your company. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](./deployment/manage-volume-purchased.md).
-- **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../intune-service/fundamentals/help-desk-operators.md).
+- **Help and support**: Troubleshoot, request support, or view Intune status. For more information, see [Troubleshoot problems](../fundamentals/it-pro-support/help-desk-operators.md).
 
 ## Additional information
 

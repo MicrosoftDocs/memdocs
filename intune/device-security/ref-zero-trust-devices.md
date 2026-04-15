@@ -18,68 +18,68 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 ## Zero Trust security recommendations
 
 ### Local administrator credentials on Windows are protected by Windows LAPS<!-- 24560 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24560](../../device-security/includes/secure-recommendations/24560.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24560](./includes/secure-recommendations/24560.md)]
 
 ### Local administrator credentials on macOS are protected during enrollment by macOS LAPS<!--  24561 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24561](../../device-security/includes/secure-recommendations/24561.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24561](./includes/secure-recommendations/24561.md)]
 
 ### Local account usage on Windows is restricted to reduce unauthorized access<!--  24564 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24564](../../device-security/includes/secure-recommendations/24564.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24564](./includes/secure-recommendations/24564.md)]
 
 ### Data on Windows is protected by BitLocker encryption<!-- 24550 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24550](../../device-security/includes/secure-recommendations/24550.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24550](./includes/secure-recommendations/24550.md)]
 
 ### FileVault encryption protects data on macOS devices<!-- 24569 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24569](../../device-security/includes/secure-recommendations/24569.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24569](./includes/secure-recommendations/24569.md)]
 
 ### Authentication on Windows uses Windows Hello for Business<!-- 24551-->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24551](../../device-security/includes/secure-recommendations/24551.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24551](./includes/secure-recommendations/24551.md)]
 
 ### Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components<!-- 24574 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24574](../../device-security/includes/secure-recommendations/24574.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24574](./includes/secure-recommendations/24574.md)]
 
 ### Defender Antivirus policies protect Windows devices from malware<!-- 24575 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24575](../../device-security/includes/secure-recommendations/24575.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
 
 ### Defender Antivirus policies protect macOS devices from malware<!-- 24784 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24784](../../device-security/includes/secure-recommendations/24784.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
 ### Windows Firewall policies protect against unauthorized network access<!-- 24540 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24540](../../device-security/includes/secure-recommendations/24540.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24540](./includes/secure-recommendations/24540.md)]
 
 ### macOS Firewall policies protect against unauthorized network access<!-- 24552 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24552](../../device-security/includes/secure-recommendations/24552.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24552](./includes/secure-recommendations/24552.md)]
 
 ### Windows Update policies are enforced to reduce risk from unpatched vulnerabilities<!-- 24553 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24553](../../device-security/includes/secure-recommendations/24553.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24553](./includes/secure-recommendations/24553.md)]
 
 ### Security baselines are applied to Windows devices to strengthen security posture<!-- 24573 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)] -->
-[!INCLUDE [24573](../../device-security/includes/secure-recommendations/24573.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)] -->
+[!INCLUDE [24573](./includes/secure-recommendations/24573.md)]
 
 ### Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities<!-- 24690 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24690](../../device-security/includes/secure-recommendations/24690.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24690](./includes/secure-recommendations/24690.md)]
 
 ### Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities<!-- 24554 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](../../device-security/includes/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24554](../../device-security/includes/secure-recommendations/24554.md)]
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24554](./includes/secure-recommendations/24554.md)]
 
 ## Related content
 
-- [Deployment guide for Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
-- [Protect data and devices with Microsoft Intune](../../device-security/index.md)
+- [Deployment guide for Microsoft Intune](../fundamentals/get-started.md)
+- [Protect data and devices with Microsoft Intune](./index.md)
 - [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)
-- [Configure Microsoft Intune for increased security (preview)](./configure-security.md)
+- [Configure Microsoft Intune for increased security (preview)](./ref-zero-trust-security.md)

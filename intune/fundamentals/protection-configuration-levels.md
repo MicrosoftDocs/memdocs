@@ -48,7 +48,7 @@ In this level, Microsoft recommends you configure the following protection and a
   - Block app access based on jailbroken or rooted devices
   - Restrict app access based on basic integrity of devices
 
-For more information, see [Level 1 basic app protection](../../app-management/protection/data-protection-framework.md#level-1-enterprise-basic-data-protection).
+For more information, see [Level 1 basic app protection](../app-management/protection/data-protection-framework.md#level-1-enterprise-basic-data-protection).
 
 ### Compliance (level 1)
 
@@ -74,7 +74,7 @@ Microsoft recommends that you put these configurations in place before you allow
 
 - **Actions for noncompliance** are automatically included with each platform specific policy. These actions are one or more time-ordered actions you configure. They apply to the devices that fail to meet the compliance requirements of your policy. By default, marking a device as noncompliant is an immediate action that comes with each policy.
 
-For more information, see [Level 1 - Minimal device compliance](../fundamentals/deployment-plan-compliance-policies.md#level-1---minimal-device-compliance).
+For more information, see [Level 1 - Minimal device compliance](./deployment-plan-compliance-policies.md#level-1---minimal-device-compliance).
 
 ### Device configuration (level 1)
 
@@ -123,7 +123,7 @@ In addition to Level 1 settings, configure the following protection and access f
   - Require device lock (Android)
   - Allow app access based on increased integrity of device
 
-For more information, see [Level 2 enhanced app protection](../../app-management/protection/data-protection-framework.md#level-2-enterprise-enhanced-data-protection).
+For more information, see [Level 2 enhanced app protection](../app-management/protection/data-protection-framework.md#level-2-enterprise-enhanced-data-protection).
 
 ### Compliance (level 2)
 
@@ -153,7 +153,7 @@ At this level, add more granular options to your compliance policies. Many of th
   - Require secure boot to be enabled (Windows)
   - Trusted Platform Module (Windows)
 
-For more information, see [Level 2 - Enhanced device compliance settings](../fundamentals/deployment-plan-compliance-policies.md#level-2---enhanced-device-compliance-settings).
+For more information, see [Level 2 - Enhanced device compliance settings](./deployment-plan-compliance-policies.md#level-2---enhanced-device-compliance-settings).
 
 ### Device configuration (level 2)
 
@@ -198,7 +198,7 @@ In addition to level 1 and 2 settings, configure the following protection and ac
   - Require max allowed threat level
   - Require Max OS version
 
-For more information, see [Level 3 high app protection](../../app-management/protection/data-protection-framework.md#level-3-enterprise-high-data-protection).
+For more information, see [Level 3 high app protection](../app-management/protection/data-protection-framework.md#level-3-enterprise-high-data-protection).
 
 ### Compliance (level 3)
 
@@ -211,7 +211,7 @@ At this level, you can expand on Intune's built-in compliance features through t
 - Use scripts to add custom compliance settings to your policies for settings that aren't available from within the Intune UI. (Windows, Linux)
 - Use compliance policy data with Conditional Access policies to gate access to your organization's resources.
 
-For more information, see [Level 3 - Advanced device compliance configurations](../fundamentals/deployment-plan-compliance-policies.md#level-3---advanced-device-compliance-configurations).
+For more information, see [Level 3 - Advanced device compliance configurations](./deployment-plan-compliance-policies.md#level-3---advanced-device-compliance-configurations).
 
 ### Device configuration (level 3)
 
@@ -221,18 +221,18 @@ This level focuses on enterprise-level services and features, and it can require
 - Use multifactor authentication (MFA) for an extra layer of security. MFA can help protect your organization from phishing attacks.
 - Expand Microsoft Tunnel by deploying Microsoft Tunnel for Mobile Application Management (Tunnel for MAM), which extends Tunnel support to iOS/iPadOS and Android devices that aren't enrolled with Intune. Tunnel for MAM is available as an Intune add-on.
 
-  For information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+  For information, see [Use Intune Suite add-on capabilities](./add-ons.md).
 
 - Use Intune policy for Local Administrator Password Solution (LAPS) on macOS and Windows devices. LAPS policies help secure the local administrator account on your managed devices.
 
   For information, see:
 
-  - [macOS LAPS in Intune](../../device-enrollment/apple/setup-laps-macos.md)
-  - [Windows LAPS in Intune](../../device-security/laps/overview.md)
+  - [macOS LAPS in Intune](../device-enrollment/apple/setup-laps-macos.md)
+  - [Windows LAPS in Intune](../device-security/laps/overview.md)
 
 - Protect Windows devices using Endpoint Privilege Management (EPM). EPM helps you run your organization's users as standard users (without administrator rights) and enables those same users to complete tasks that require elevated privileges.
 
-  EPM is available as an Intune add-on. For information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+  EPM is available as an Intune add-on. For information, see [Use Intune Suite add-on capabilities](./add-ons.md).
 
 - Configure device features that apply to the Windows firmware layer. Use Android common criteria mode.
 - Configure specialized devices like kiosks and shared devices.
@@ -242,6 +242,6 @@ For more specific information on device configuration policies at this level, se
 
 ## Related articles
 
-For a complete list of all the device configuration profiles you can create, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../../device-configuration/overview.md).
+For a complete list of all the device configuration profiles you can create, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../device-configuration/overview.md).
 
 For a Zero Trust-focused deployment approach, see [Zero Trust deployment approach with Microsoft Intune](deployment-plan-zero-trust.md). This framework provides a seven-layer progressive deployment strategy aligned with Zero Trust security principles.

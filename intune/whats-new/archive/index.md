@@ -366,7 +366,7 @@ We added a new column, **Attest Status**, to the Windows hardware attestation re
 - HTTP bad request errors
 - Other attestation-related failures
 
-For more information about the report, see [Windows hardware attestation report](../fundamentals/reports.md#windows-hardware-attestation-report-organizational).
+For more information about the report, see [Windows hardware attestation report](../../intune-service/fundamentals/reports.md#windows-hardware-attestation-report-organizational).
 
 ## Week of June 9, 2025
 
@@ -407,7 +407,7 @@ Endpoint Privilege Management (EPM) elevation rules now include a new file eleva
 
 *Deny* rules support the same configuration options as other [elevation types](../../epm/create-elevation-rules.md#creating-elevation-rules-with-endpoint-privilege-management) except for child processes, which aren't used.
 
-For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../../epm/overview.md).
+For more information about EPM, which is available as an [Intune Suite add-on-capability](../../fundamentals/add-ons.md), see [Endpoint Privilege Management overview](../../epm/overview.md).
 
 ### App management
 
@@ -450,7 +450,7 @@ Use a custom template for naming AOSP user-affiliated and userless devices when 
 
 #### Change to role-based access control for device enrollment limits<!-- 27115176 -->
 
-We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune Administrator.
+We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune Administrator.
 
 ### Device management
 
@@ -458,7 +458,7 @@ We updated role-based access control (RBAC) for device limits. If you're current
 
 Android, iOS, and Mac devices are added to device inventory. Intune now collects a default set of inventory data including 74 Apple properties and 32 Android properties.
 
-For more information, see [View device details with Microsoft Intune](../fundamentals/device-inventory.md).
+For more information, see [View device details with Microsoft Intune](../../intune-service/fundamentals/device-inventory.md).
 
 #### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
 
@@ -534,7 +534,7 @@ Microsoft Intune has a new icon. The Intune icon is being updated across platfor
 
 File elevation rules for Endpoint Privilege Management (EPM) now support [command line file arguments](../../epm/create-elevation-rules.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that isn't defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
 
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
+EPM is available as an [Intune Suite add-on-capability](../../fundamentals/add-ons.md).
 
 ### App management
 
@@ -840,9 +840,9 @@ Remote Help now provides support for multi-session AVD with several users on a s
 
 For more information, see:
 
-- [Remote Help](../fundamentals/remote-help.md)
+- [Remote Help](../../remote-help/overview.md)
 - [Remote Help on windows](remote-help.md)
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### Copilot assistant for device query<!-- 26933762 -->
 
@@ -1083,7 +1083,7 @@ With this capability, while reviewing the properties of a file elevation request
 - The risk score for the user requesting the file elevation
 - The risk score of the device from which the elevation was submitted
 
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../../copilot/index.md).
+EPM is available as an [Intune Suite add-on-capability](../../fundamentals/add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../../copilot/index.md).
 
 To learn more about Microsoft Security Copilot, see, [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot).
 
@@ -1162,7 +1162,7 @@ Applies to:
 
 #### Use Support Assistant to resolve issues<!-- 29084113 -->
 
-Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md).
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](../../../intune-service/fundamentals/it-pro-support/get-support-admin-center.md).
 
 ## Week of December 30, 2024
 
@@ -1243,7 +1243,7 @@ We're now supporting device management for Ubuntu 24.04 LTS. You can enroll and 
 
 For more information, see the following in Intune documentation:
 
-- [Deployment guide: Manage Linux devices in Microsoft Intune](../fundamentals/deployment-guide-platform-linux.md)
+- [Deployment guide: Manage Linux devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-platform-linux.md)
 - [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../../device-enrollment/guide-linux.md). To enroll Linux devices, ensure that they're running Ubuntu 20.04 LTS or higher.
 
 Applies to:
@@ -1256,7 +1256,7 @@ Applies to:
 
 #### Change to enrollment behavior for iOS enrollment profile type<!-- 29068674 -->
 
-At Apple WWDC 2024, Apple ended support for profile-based Apple user enrollment. For more information, see [Support has ended for profile-based user enrollment with Company Portal](../fundamentals/whats-new-archive.md#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal). As a result of this change, we updated the behavior that occurs when you select **Determine based on user choice** as the enrollment profile type for bring-your-own-device (BYOD) enrollments.
+At Apple WWDC 2024, Apple ended support for profile-based Apple user enrollment. For more information, see [Support has ended for profile-based user enrollment with Company Portal](./index.md#support-has-ended-for-apple-profile-based-user-enrollment-with-company-portal). As a result of this change, we updated the behavior that occurs when you select **Determine based on user choice** as the enrollment profile type for bring-your-own-device (BYOD) enrollments.
 
 Now when users select **I own this device** during a BYOD enrollment, Microsoft Intune enrolls them via account-driven user enrollment, rather than profile-based user enrollment, and then secures only work-related apps. Less than one percent of Apple devices across all Intune tenants are currently enrolled this way, so this change doesn't affect most enrolled devices. There is no change for iOS users who select **My company owns this device** during a BYOD enrollment. Intune enrolls them via device enrollment with Intune Company Portal, and then secures their entire device.
 
@@ -1305,7 +1305,7 @@ Applies to:
 
 Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices.
 
-To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#available-properties) for more information about filters for managed app properties.
+To learn more about how to target policies to VisionOS devices, see [Managed app properties](../../fundamentals/filters/ref-device-properties.md#available-properties) for more information about filters for managed app properties.
 
 Applies to:
 
@@ -1342,7 +1342,7 @@ Applies to:
 
 #### Windows Autopilot device preparation support in Intune operated by 21Vianet in China<!-- MAXADO-9313795 / INADO-28687730 -->
 
-Intune now supports *Windows Autopilot device preparation* policy for [Intune operated by 21Vianet in China](../fundamentals/china.md) cloud. Customers with tenants located in China can now use *Windows Autopilot device preparation* with Intune to provision devices.
+Intune now supports *Windows Autopilot device preparation* policy for [Intune operated by 21Vianet in China](../../fundamentals/china.md) cloud. Customers with tenants located in China can now use *Windows Autopilot device preparation* with Intune to provision devices.
 
 For information about this Windows Autopilot device preparation support, see the following in the Windows Autopilot device preparation documentation:
 
@@ -1353,7 +1353,7 @@ For information about this Windows Autopilot device preparation support, see the
 
 #### Minimum OS version for Android devices is Android 10 and later for user-based management methods<!-- 14755802 -->
 
-Beginning in October 2024, Android 10 and later is the [minimum Android OS version that is supported for user-based management methods](../fundamentals/supported-devices-browsers.md#android), which includes:
+Beginning in October 2024, Android 10 and later is the [minimum Android OS version that is supported for user-based management methods](../../fundamentals/ref-supported-platforms.md#android), which includes:
 
 - Android Enterprise personally-owned work profile
 - Android Enterprise corporate owned work profile
@@ -1412,7 +1412,7 @@ This requirement isn't applicable to device certificates used with Microsoft Ent
 
 In public preview, customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments can now use Intune to manage the Defender security settings on the devices that onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md).
 
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../fundamentals/intune-govt-service-description.md).
+For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../../fundamentals/government-service-description.md).
 
 ## Week of September 30, 2024
 
@@ -1426,7 +1426,7 @@ The SID update is available for user certificates across all platforms, and for 
 
 For more information, see:
 
-- [What's new for the certificate connector](../../fundamentals/certificates/connector/overview.md#september-19-2024)
+- [What's new for the certificate connector](../../../intune-service/fundamentals/certificates/connector/overview.md#september-19-2024)
 
 - [Apply PFX changes to certificate](../../device-configuration/certificates/pkcs-profiles.md)
 
@@ -1685,7 +1685,7 @@ The resource performance scores and insights for physical devices are aimed to h
 For more information, see:
 
 - [Resource performance report](../../advanced-analytics/resource-performance.md)
-- [Microsoft Intune Suite](../fundamentals/intune-add-ons.md)
+- [Microsoft Intune Suite](../../fundamentals/add-ons.md)
 
 ### App management
 
@@ -1823,7 +1823,7 @@ There are new settings in the Apple Settings Catalog. To see these settings, in 
 
 Multi administrative approval adds the ability to limit application access policies to Windows applications or all non-Windows applications or both. We're adding a new access policy to the multiple administrative approval feature to allow approvals for changes to multiple administrative approval.
 
-For more information, see [Multi admin approval](../fundamentals/multi-admin-approval.md).
+For more information, see [Multi admin approval](../../fundamentals/role-based-access-control/multi-admin-approval.md).
 
 ### Device enrollment
 
@@ -1854,7 +1854,7 @@ Applies to:
 
 For more information, see:
 
-- [Intune operated by 21Vianet in China](../fundamentals/china.md)
+- [Intune operated by 21Vianet in China](../../fundamentals/china.md)
 - [Mobile Threat Defense integration with Intune](../../device-security/mobile-threat-defense/overview.md)
 
 #### New `cpuArchitecture` filter device property for app and policy assignments<!-- 7423106 -->
@@ -1970,12 +1970,12 @@ Plan 2 capabilities:
 
 - [Microsoft Tunnel for Mobile Application Management](../../device-security/microsoft-tunnel/mam.md)
 - [Firmware-over-the-air update](../../device-updates/android/setup-zebra-lifeguard.md)
-- [Specialty devices management](../fundamentals/specialty-devices-with-intune.md)
+- [Specialty devices management](../../intune-service/fundamentals/specialty-devices-with-intune.md)
 
 For more information, see:
 
-- [Use Microsoft Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
-- [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
+- [Use Microsoft Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
+- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
 
 ### Device enrollment
 
@@ -1991,7 +1991,7 @@ ACME is supported for Apple Device Enrollment, Apple Configurator enrollment, an
 - iPadOS 16.1 or later
 - macOS 13.1 or later
 
-This capability is also supported in [GCC High tenants](../fundamentals/intune-govt-service-description.md).
+This capability is also supported in [GCC High tenants](../../fundamentals/government-service-description.md).
 
 ## Week of July 22, 2024 (Service release 2407)
 
@@ -2093,7 +2093,7 @@ Use the new device attestation status report in Microsoft Intune to find out if 
 For more information, see:
 
 - [Windows enrollment attestation](../../device-enrollment/windows/attestation.md)
-- [Intune Reports](../fundamentals/reports.md#device-attestation-status-report)
+- [Intune Reports](../../intune-service/fundamentals/reports.md#device-attestation-status-report)
 
 #### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->
 
@@ -2178,7 +2178,7 @@ Applies to:
 For more information, see:
 
 - [Remote Help on macOS](remote-help.md)
-- [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md)
+- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
 
 ### Device security
 
@@ -2315,7 +2315,7 @@ Certification authorities created with a licensed Intune Suite or Cloud PKI stan
 
 #### US GCC and GCC High support for Managed Home Screen<!-- 25827679 -->
 
-Managed Home Screen (MHS) now supports sign-in for the US Government Community (GCC), US Government Community (GCC) High, and U.S. Department of Defense (DoD) environments. For more information, see [Configure the Managed Home Screen](../../app-management/configuration/configure-managed-home-screen.md) and [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+Managed Home Screen (MHS) now supports sign-in for the US Government Community (GCC), US Government Community (GCC) High, and U.S. Department of Defense (DoD) environments. For more information, see [Configure the Managed Home Screen](../../app-management/configuration/configure-managed-home-screen.md) and [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md).
 
 Applies to:
 
@@ -2323,7 +2323,7 @@ Applies to:
 
 #### Updates to the Managed Apps report<!-- 26711898 -->
 
-The Managed Apps report now provides details about Enterprise App Catalog apps for a specific device. For more information about this report, see [Managed Apps report](../fundamentals/reports.md#managed-apps-report-operational).
+The Managed Apps report now provides details about Enterprise App Catalog apps for a specific device. For more information about this report, see [Managed Apps report](../../intune-service/fundamentals/reports.md#managed-apps-report-operational).
 
 ### Device configuration
 
@@ -2446,7 +2446,7 @@ For more information, see:
 
 #### New granular RBAC controls for Intune endpoint security<!-- 5475572 -->
 
-We've begun to replace the role-based access control (RBAC) rights to endpoint security policies that are granted by the *Security baselines* permission with a series of more granular permissions for specific endpoint security tasks. This change can help you assign the specific rights your Intune admins require to do specific jobs instead of relying on either the [built-in](../fundamentals/role-based-access-control.md#built-in-roles) *Endpoint Security Manager* role or a [custom role](../fundamentals/create-custom-role.md) that includes the *Security baseline* permission. Prior to this change, the *Security baseline* permission grants rights across all endpoint security policies.
+We've begun to replace the role-based access control (RBAC) rights to endpoint security policies that are granted by the *Security baselines* permission with a series of more granular permissions for specific endpoint security tasks. This change can help you assign the specific rights your Intune admins require to do specific jobs instead of relying on either the [built-in](../../fundamentals/role-based-access-control/overview.md#built-in-roles) *Endpoint Security Manager* role or a [custom role](../../fundamentals/role-based-access-control/create-custom-role.md) that includes the *Security baseline* permission. Prior to this change, the *Security baseline* permission grants rights across all endpoint security policies.
 
 The following new RBAC permissions are available for endpoint security workloads:
 
@@ -2467,13 +2467,13 @@ Each time we add a new granular permission for an endpoint security policy to In
 
 For more information about current RBAC permissions and built-in roles, see:
 
-- [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-- [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
+- [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
+- [Built-in role permissions for Microsoft Intune](../../fundamentals/role-based-access-control/ref-built-in-roles.md)
 - [Role-based access control for endpoint security](../../device-configuration/endpoint-security/manage-policies.md#role-based-access-control-for-endpoint-security) in *Manage device security with endpoint security policies in Microsoft Intune*.
 
 > [!IMPORTANT]
 >
-> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, it's availability will be announced in this [What's new in Microsoft Intune](../fundamentals/whats-new.md) article.
+> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, it's availability will be announced in this [What's new in Microsoft Intune](../index.md) article.
 
 ## Week of June 3, 2024
 
@@ -2491,7 +2491,7 @@ This feature is available for Windows 11 devices enrolling via Windows Autopilot
 
 #### New primary endpoint for Remote Help
 
-To improve the experience for [Remote Help](../fundamentals/remote-help.md) on Windows, Web, and macOS devices, we have updated the primary endpoint for Remote Help:
+To improve the experience for [Remote Help](../../remote-help/overview.md) on Windows, Web, and macOS devices, we have updated the primary endpoint for Remote Help:
 
 - Old primary endpoint: `https://remoteassistance.support.services.microsoft.com`
 - New primary endpoint: `https://remotehelp.microsoft.com`
@@ -2508,7 +2508,7 @@ Applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 
-For information on the newest version of Remote Help, see [Week of March 13, 2024](#week-of-march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
+For information on the newest version of Remote Help, see [Week of March 13, 2024](#week-of-march-13-2024). For information about Intune endpoints for Remote Help, see [Remote Help](../../fundamentals/endpoints.md#remote-help) in *Network endpoints for Microsoft Intune*.
 
 ### Device management
 
@@ -2657,7 +2657,7 @@ You can now customize your Intune admin center experience by using collapsible n
 
 By default, menu sections are expanded. You can choose your portal menu behavior by selecting the **Settings** gear icon at the top right to display the **Portal settings**. Then, select **Appearance + startup views** and set the **Service menu behavior** to **Collapsed** or **Expanded** as the default portal option. Each menu section retains the expanded or collapsed state that you choose. Additionally, selecting the star icon next to a page on the left navigation adds the page to a **Favorites** section near the top of the menu.
 
-For related information, see [Change the Portal settings](../fundamentals/tutorial-walkthrough-endpoint-manager.md#change-the-portal-settings).
+For related information, see [Change the Portal settings](../../fundamentals/tutorial-admin-center-walkthrough.md#change-the-portal-settings).
 
 ## Week of April 29, 2024
 
@@ -2901,7 +2901,7 @@ Applies to
 
 #### New elevation type for Endpoint Privilege Management<!-- 25230692 -->
 
-Endpoint Privilege Management has a new file elevation type, **support approved**. Endpoint Privilege Management is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md).
+Endpoint Privilege Management has a new file elevation type, **support approved**. Endpoint Privilege Management is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../../fundamentals/add-ons.md).
 
 A support-approved elevation gives you a third option for both the default elevation response and the elevation type for each rule. Unlike automatic or user confirmed, a support-approved elevation request requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
 
@@ -3217,7 +3217,7 @@ For more information, see [Create a notification message template](../../device-
 
 #### New Microsoft Cloud PKI service<!-- 17272901 -->
 
-Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../fundamentals/intune-add-ons.md). The cloud-based service provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/index.md).
+Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../../fundamentals/add-ons.md). The cloud-based service provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/index.md).
 
 Applies to:
 
@@ -3482,7 +3482,7 @@ Enterprise Application Management provides an Enterprise App Catalog of Win32 ap
 
 For more information, see:
 
-- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
 - [Microsoft Intune Enterprise Application Management](../../app-management/deployment/enterprise-app-catalog.md)
 - [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog.md)
 
@@ -3513,7 +3513,7 @@ To use Device query and battery health report in your tenant, or any of the exis
 
 For more information, see:
 
-- [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
 - [Microsoft Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Battery health](../../advanced-analytics/battery-health.md)
 - [Device query](../../advanced-analytics/device-query.md)

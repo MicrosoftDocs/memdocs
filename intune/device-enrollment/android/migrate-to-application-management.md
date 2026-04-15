@@ -32,8 +32,8 @@ You need the following Intune permissions to set up and enforce mobile applicati
 Additionally, the Intune Company Portal app is required on devices, because it enables device users to receive app protection policies.
 
 >[!TIP]
-> * The built-in [Application Manager](../../intune-service/fundamentals/role-based-access-control-reference.md#application-manager) role has sufficient permissions for mobile application management.
-> * You can add [scope tags](../../intune-service/fundamentals/scope-tags.md) to policies to control object visibility among Intune admin users.
+> * The built-in [Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager) role has sufficient permissions for mobile application management.
+> * You can add [scope tags](../../fundamentals/role-based-access-control/scope-tags.md) to policies to control object visibility among Intune admin users.
 
 ## Step 1: Configure policies for mobile application management
 Create mobile application management policies in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Within these policies you can, for example, allow or block app features such as *copy and paste*. For more app protection settings and capabilities in Intune, see:

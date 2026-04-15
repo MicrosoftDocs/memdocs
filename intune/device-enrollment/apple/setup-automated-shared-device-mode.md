@@ -77,7 +77,7 @@ Create an assignment filter to quickly target devices assigned to your enrollmen
 * **Operator**: Equals
 * **Value**: Enter the name of the enrollment profile you created for devices in shared device mode.
 
-For more information about how to create an assignment filter rule, see [Create a filter](../../intune-service/fundamentals/filters.md#prerequisites).
+For more information about how to create an assignment filter rule, see [Create a filter](../../fundamentals/filters/overview.md#prerequisites).
 
 ## Step 4: Create a device configuration policy
 Configure a single-sign on (SSO) app extension policy for shared device mode. Create a device configuration policy and include these configurations:

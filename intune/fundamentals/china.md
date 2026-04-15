@@ -17,7 +17,7 @@ Intune operated by 21Vianet is designed to meet the needs for secure, reliable, 
 
 Microsoft doesn't operate the service itself. 21Vianet operates, provides, and manages delivery of the service. 21Vianet is an Internet data center services provider in China. It provides hosting, managed network services, and cloud computing infrastructure services. By licensing Microsoft technologies, 21Vianet operates local datacenters to provide you with the ability to use Intune service while keeping your data within China. 21Vianet also provides your subscription, billing, and support services.
 
-[!INCLUDE [GDPR-related guidance](../../privacy/includes/gdpr-dsr-and-stp-note.md)]
+[!INCLUDE [GDPR-related guidance](../privacy/includes/gdpr-dsr-and-stp-note.md)]
 
 ## Feature differences in Intune operated by 21Vianet
 
@@ -41,7 +41,7 @@ Because the China services are operated by a partner from inside China, there ar
   - Google Play Protect capabilities such as Play integrity verdict.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services (GMS) to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../../app-management/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
+- The Intune Company Portal app for Android uses Google Mobile Services (GMS) to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../app-management/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
@@ -75,4 +75,4 @@ The Tenant Administrator role for Intune operated by 21Vianet can request data f
 
 ## Next steps
 
-[Learn more about Intune supported configurations](supported-devices-browsers.md)
+[Learn more about Intune supported configurations](ref-supported-platforms.md)

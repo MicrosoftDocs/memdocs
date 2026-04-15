@@ -40,9 +40,9 @@ For Windows editions that support BitLocker management, see [Windows edition and
 
 ### Role-based access controls
 
-To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
+To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../../fundamentals/role-based-access-control/overview.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
 
-You can add this permission to your own [custom RBAC roles](../../intune-service/fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../../intune-service/fundamentals/role-based-access-control-reference.md):
+You can add this permission to your own [custom RBAC roles](../../fundamentals/role-based-access-control/create-custom-role.md) or use one of the following [built-in RBAC roles](../../fundamentals/role-based-access-control/ref-built-in-roles.md):
 
 - Help Desk Operator
 - Endpoint Security Administrator

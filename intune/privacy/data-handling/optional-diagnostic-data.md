@@ -2,7 +2,7 @@
 title: Optional diagnostic data that is collected by Intune client apps
 description: Learn about the optional diagnostic data that Intune Client apps collect.
 ms.date: 04/08/2022
-ms.topic: article
+ms.topic: reference
 ms.reviewer: angerobe
 ms.collection:
 - M365-identity-device-management

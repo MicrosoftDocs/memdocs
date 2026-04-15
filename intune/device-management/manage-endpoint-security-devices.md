@@ -73,7 +73,7 @@ Consider the following fields:
 
 ## Review a devices policy
 
-To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, see [**Security reports**](../intune-service/fundamentals/reports.md#security-reports). Both *endpoint security* and *security baseline* policies are device configuration policies.
+To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, see [**Security reports**](./reports/overview.md#security-reports). Both *endpoint security* and *security baseline* policies are device configuration policies.
 
 To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
 
@@ -120,7 +120,7 @@ Some of the Intune remote actions can help secure devices or safeguard data that
 - Scan for malware outside of a scheduled run
 - Rotate BitLocker keys
 
-The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](../intune-service/fundamentals/device-inventory.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
+The following Intune remote actions are of interest to the security admin, and are a subset of the [full list](./inventory-and-status/device-details.md#view-the-device-details). Not all actions are available for all device platforms. The links go to content that provides in-depth details for each action.
 
 - [Synchronize device](./actions/sync.md) – Have the device immediately check-in with Intune. When a device checks in, it receives any pending actions or policies that are assigned to it.
 

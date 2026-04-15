@@ -47,7 +47,7 @@ Windows Autopilot deployment profiles are assigned to Microsoft Entra security g
 
 - On the manufacturing floor, you have 10 devices. On all devices, you want to prevent booting the devices from a USB device. In this scenario, you can create a security devices group, and add these 10 devices to the group.
 
-For more information on creating groups in Intune, go to [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+For more information on creating groups in Intune, go to [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
 ## Create the profiles
 
@@ -94,7 +94,7 @@ This profile includes the DFCI settings you configure.
 
     Select **Next**.
 
-7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
    Select **Next**.
 8. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../assign-device-profile.md).
    Select **Next**.

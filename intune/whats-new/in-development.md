@@ -25,7 +25,7 @@ This article and the [What's new](whats-new.md) article are updated periodically
 > [!NOTE]
 > This article reflects our current expectations about Intune capabilities in an upcoming release. Dates and individual features might change. This article doesn't describe all features in development. It was last updated on the date shown under the title.
 
-You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
+You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
 
 <!-- Common categories: use this order:
@@ -52,7 +52,7 @@ We're fixing how scope tags work with Endpoint Privilege Management (EPM) report
 
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../../epm/manage-support-approvals.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../epm/manage-support-approvals.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
@@ -112,7 +112,7 @@ A known limitation from the Intune side is that Google Password Manager will not
 
 ### Block location setting for Android Enterprise can keep Location services enabled<!-- 36703827 -->
 
-On Android Enterprise devices, you can use the **General > Block location** in the [settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md) to disable the location services on the device and prevent users from turning it on.
+On Android Enterprise devices, you can use the **General > Block location** in the [settings catalog](../device-configuration/settings-catalog/ref-android-settings.md) to disable the location services on the device and prevent users from turning it on.
 
 This setting is changing. It will be called **Location** and will have three options you can configure:
 
@@ -159,7 +159,7 @@ Prerequisites:
 
 - Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
 - The ADE enrollment profile must be configured to use Setup Assistant with modern authentication.
-- Before you enroll, create a [settings catalog policy](../../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting. In the **[Await final configuration](../../device-enrollment/apple/setup-automated-macos.md)** in Setup Assistant, add the settings catalog policy.
+- Before you enroll, create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting. In the **[Await final configuration](../device-enrollment/apple/setup-automated-macos.md)** in Setup Assistant, add the settings catalog policy.
 - Before you enroll, deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
 
 > [!div class="checklist"]
@@ -218,7 +218,7 @@ To use these features, you will need to opt-in:
 To learn more, see:
 
 - [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
-- [Android Enterprise work profile management overview](../../device-enrollment/android/enterprise-work-profile.md)
+- [Android Enterprise work profile management overview](../device-enrollment/android/enterprise-work-profile.md)
 
 > [!div class="checklist"]
 > Applies to:
@@ -277,13 +277,13 @@ The new baseline will be available for [US Government Community Cloud High (GCC 
 >
 > - Windows
 
-For information about the currently available Intune security baselines, see [Security baselines overview](../../device-security/security-baselines/overview.md).
+For information about the currently available Intune security baselines, see [Security baselines overview](../device-security/security-baselines/overview.md).
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
-You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md) capability.
+You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) capability.
 
-- **Device control** policies are part of endpoint security [Attack surface reduction policy](../../device-configuration/endpoint-security/attack-surface-reduction.md).
+- **Device control** policies are part of endpoint security [Attack surface reduction policy](../device-configuration/endpoint-security/attack-surface-reduction.md).
 
 > [!div class="checklist"]
 > Applies to the following when you use the *Windows* platform:
@@ -352,7 +352,7 @@ Intune will add new guidance to the compliance policy reporting documentation to
 
 ### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
 
-We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
+We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
 
 <!-- *********************************************** -->
 

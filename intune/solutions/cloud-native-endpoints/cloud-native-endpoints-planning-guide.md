@@ -32,8 +32,8 @@ Managing your endpoints, including cloud-native endpoints, is an important task 
 
 If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then the following articles are good resources:
 
-- [What is Microsoft Intune?](../../intune-service/fundamentals/what-is-intune.md)
-- [Get started with Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
+- [What is Microsoft Intune?](../../fundamentals/what-is-intune.md)
+- [Get started with Microsoft Intune](../../fundamentals/get-started.md)
 
 With the Microsoft Intune family of products and services, you have the following endpoint management options:
 
@@ -41,9 +41,9 @@ With the Microsoft Intune family of products and services, you have the followin
 
   For more information on using Intune to manage your endpoints, go to:
 
-  - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../intune-service/fundamentals/what-is-intune.md)
+  - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
   - [Deployment guide: Setup or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
-  - [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md)
+  - [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
 
 - **[Microsoft Configuration Manager](../../configmgr/index.yml)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](../../configmgr/comanage/overview.md), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
 
@@ -261,7 +261,7 @@ After you've identified the key workloads and their end-state blockers, then:
 
     For each of the areas in your pilot, the number of items or tasks should be low. This initial pilot helps you create the processes and procedures required for more groups. It also helps create your long term strategy.
 
-    For more guidance and tips, go to the [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md). It applies to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
+    For more guidance and tips, go to the [Microsoft Intune planning guide](../../fundamentals/planning-guide.md). It applies to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
 
 ### ✅ Phase 3: Transition your workloads
 
@@ -347,7 +347,7 @@ If you use Configuration Manager, then cloud attach your environment to Microsof
 
 When you cloud attach, you can remotely manage your client endpoints, co-manage your endpoints with Intune (cloud) and Configuration Manager (on-premises), and access the Intune admin center.
 
-For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md).
+For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../fundamentals/tutorial-admin-center-walkthrough.md).
 
 ### ✅ Phase 4: Create a Microsoft Entra joined proof of concept
 

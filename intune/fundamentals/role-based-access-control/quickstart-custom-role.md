@@ -26,7 +26,7 @@ Intune includes several built-in RBAC roles that you can use. Microsoft recommen
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -36,7 +36,7 @@ Intune includes several built-in RBAC roles that you can use. Microsoft recommen
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Intune Role Administrator](../fundamentals/role-based-access-control-reference.md#intune-role-administrator)** Microsoft Intune role
+> - Built-in **[Intune Role Administrator](../role-based-access-control/ref-built-in-roles.md#intune-role-administrator)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -46,8 +46,8 @@ Intune includes several built-in RBAC roles that you can use. Microsoft recommen
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - [Create a user](../fundamentals/quickstart-create-user.md).
-> - [Create a group](../fundamentals/quickstart-create-group.md).
+> - [Create a user](../quickstart-create-user.md).
+> - [Create a group](../quickstart-create-group.md).
 :::column-end:::
 :::row-end:::
 

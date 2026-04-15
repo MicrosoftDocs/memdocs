@@ -33,7 +33,7 @@ This article shows you how to export your on-premises GPOs, import the GPOs into
 
 ## Before you begin
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../intune-service/fundamentals/role-based-access-control.md).
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control/overview.md).
 
 ## Export a GPO as an XML file
 
@@ -125,7 +125,7 @@ For example, admins have `Charlotte`, `London`, or `Boston` scope tags assigned 
 
 For admins to see the analytics or migrate the imported GPO to an Intune policy, these admins must have one of the same scope tags selected during the import.
 
-For more information on scope tags, go to [RBAC and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+For more information on scope tags, go to [RBAC and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
 ## Supported CSPs and group policies
 

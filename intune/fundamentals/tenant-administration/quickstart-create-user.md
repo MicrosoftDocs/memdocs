@@ -24,7 +24,7 @@ In this article, you create a user and then assign the user an Intune license. W
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 

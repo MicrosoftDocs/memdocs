@@ -73,7 +73,7 @@ Supported licenses:
 Features that require license verification include:
 
 - [Compatibility reports for Windows updates](../device-updates/windows/monitor-compatibility.md)
-- [Remediations](../intune-service/fundamentals/remediations.md)
+- [Remediations](../endpoint-analytics/remediations.md)
 
 ## Next steps
 
@@ -83,5 +83,5 @@ To understand how Windows diagnostic data is collected and managed, see [Configu
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 
-[INT-RC]: ../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator

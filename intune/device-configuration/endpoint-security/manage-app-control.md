@@ -79,7 +79,7 @@ See [Windows edition and licensing requirements](/windows/security/threat-protec
 
 ### Role based access controls
 
-To manage App Control for Business policies, an account must be assigned an Intune [role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) role that includes sufficient permissions and rights to complete a desired task.
+To manage App Control for Business policies, an account must be assigned an Intune [role-based access control](../../fundamentals/role-based-access-control/overview.md) (RBAC) role that includes sufficient permissions and rights to complete a desired task.
 
 The following are the available tasks with their required permissions and rights.
 

@@ -23,7 +23,7 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 
 ## Before you begin
 
-- Intune Mobile Application Management (MAM) for Windows is available for [supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md). This includes the supporting changes for Microsoft Edge (Stable and Extended Stable releases for Windows) and Windows Security app. App Protection Conditional Access is generally available.
+- Intune Mobile Application Management (MAM) for Windows is available for [supported Windows versions](../../fundamentals/ref-supported-platforms.md). This includes the supporting changes for Microsoft Edge (Stable and Extended Stable releases for Windows) and Windows Security app. App Protection Conditional Access is generally available.
 - Windows MAM is supported in government cloud environments. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../deployment/deploy-gcc-dod.md).
 
   For more information about MAM, see [Mobile Application Management (MAM) basics](../overview.md#mobile-application-management-mam-basics).

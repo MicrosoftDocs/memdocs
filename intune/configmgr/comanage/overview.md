@@ -114,7 +114,7 @@ Enabling co-management itself doesn't require that you onboard your site with Mi
 
 ### Windows
 
-Update your devices to an [Intune supported version of Windows](../../intune-service/fundamentals/supported-devices-browsers.md). For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
+Update your devices to an [Intune supported version of Windows](../../fundamentals/ref-supported-platforms.md). For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
 
 ### Permissions and roles
 

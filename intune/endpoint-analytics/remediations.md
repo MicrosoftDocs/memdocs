@@ -47,7 +47,7 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 
     **OR**
 
-  - Device is [co-managed](../../configmgr/comanage/overview.md) running Windows.
+  - Device is [co-managed](../configmgr/comanage/overview.md) running Windows.
 
 ### Licensing
 
@@ -121,11 +121,11 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 ### Copy the provided detection and remediation scripts
 
-1. Copy the scripts from the [PowerShell scripts](powershell-scripts-remediation.md#powershell-scripts-for-remediations) article.
+1. Copy the scripts from the [PowerShell scripts](ref-remediation-scripts.md#powershell-scripts-for-remediations) article.
    - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
-   - For a description of the scripts, see the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
+   - For a description of the scripts, see the [Script descriptions](ref-remediation-scripts.md#script-descriptions).
 1. Save each script using the provided name. The name is also in the comments at the top of each script. Ensure the saved scripts are encoded in UTF-8.
-   - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
+   - You can use a different script name, but it won't match the name listed in the [Script descriptions](ref-remediation-scripts.md#script-descriptions).
 
 ### Deploy the script packages
 
@@ -142,14 +142,14 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
-    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue isn't found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
+    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue isn't found* state. Review the [Sample detection script](ref-remediation-scripts.md#script-descriptions) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
 
     :::image type="content" source="./media/remediations/remediations-script-settings.png" alt-text="Screenshot that shows the custom script settings in the Remediations page in Microsoft Intune." lightbox="./media/remediations/remediations-script-settings.png":::
 
 1. Finish the options on the **Settings** page with the following recommended configurations:
-   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
+   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](ref-remediation-scripts.md#script-descriptions).
    - **Enforce script signature check**: No
    - **Run script in 64-bit PowerShell**: No
 
@@ -176,7 +176,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
-- The [Intune Management Extension](../../device-management/tools/management-extension-windows.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
+- The [Intune Management Extension](../device-management/tools/management-extension-windows.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
 
 ### How to run a Remediation script on-demand
 
@@ -239,10 +239,10 @@ You can view the status of Remediations that are assigned or run on-demand to a 
 
 When you apply filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
 
-[!INCLUDE [platform-scripts-export-api](../../device-management/includes/platform-scripts-export-api.md)]
+[!INCLUDE [platform-scripts-export-api](../device-management/includes/platform-scripts-export-api.md)]
 
 ## Next steps
 
-- Get the [PowerShell scripts](powershell-scripts-remediation.md) for Remediations.
+- Get the [PowerShell scripts](ref-remediation-scripts.md) for Remediations.
 
-- Learn more about [PowerShell script security](../../configmgr/apps/deploy-use/learn-script-security.md).
+- Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).

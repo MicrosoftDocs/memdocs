@@ -16,7 +16,7 @@ ms.collection:
 
  # Planning for Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
@@ -119,18 +119,18 @@ The following Intune built-in roles include Remote Help permissions:
 - School Administrator (View screen, take full control, elevation, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
 
 > [!NOTE]
-> A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission, the *Remote Assistance Connector - read* permission, and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).
+> A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission, the *Remote Assistance Connector - read* permission, and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 > [!IMPORTANT]
 > If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. The *All Devices* scope group doesn't include unenrolled devices. Instead, use a user scope group during the assignment process.
 >
-> If you select a group to exclude from assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
+> If you select a group to exclude from assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](../fundamentals/role-based-access-control/overview.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
 ## Prerequisites
 
 Remote Help has the following requirements: 
 
-- [Intune subscription](../../fundamentals/licensing/index.md).  
+- [Intune subscription](../fundamentals/licensing/index.md).  
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
 - [Supported platforms and devices](#supported-platforms).  
 - Intune-enrolled devices must be registered with Microsoft Entra.  
@@ -152,7 +152,7 @@ Remote Help has the following limitations:
 
 Each platform has specific prerequisites and capabilities.
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 - Windows x86, x64, and ARM64
 - Windows 365
@@ -164,20 +164,20 @@ There are optional Windows updates for higher notification reliability:
 - Windows 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
  > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+ > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../../device-management/tools/management-extension-windows.md).  
+The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../device-management/tools/management-extension-windows.md).  
 
 We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [How to provide help on an AVD](remote-help-use.md#provide-help-on-an-avd). 
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
 - macOS 15 (Sequoia)
 - macOS 26.0 (from version 1.0.2509231 of Remote Help and later)
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 Remote Help is supported on the following Android Enterprise devices enrolled in dedicated mode:
 
@@ -186,13 +186,13 @@ Remote Help is supported on the following Android Enterprise devices enrolled in
 - Zebra devices
   - Running MX version 8.3 or later.    
   - Unattended control is only supported on MX version 9.3 and later.   
-  - Set up Zebra OEMConfig for your tenant. For more information, see [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md).  
+  - Set up Zebra OEMConfig for your tenant. For more information, see [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../device-configuration/templates/configure-oemconfig-android.md).  
 
-- Set up Managed Google Play for your tenant. For more information, see [Connect your Intune account to your Managed Google Play account](../../device-enrollment/android/connect-managed-google-play.md).  
+- Set up Managed Google Play for your tenant. For more information, see [Connect your Intune account to your Managed Google Play account](../device-enrollment/android/connect-managed-google-play.md).  
 - Install the Intune app on devices with a version later than 5.0.5541.0.  
 - Devices must not have device configuration policy set to block screen capture.  
 
-### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 Device support is dependent on both the users operating system, and their web browser.  
 
@@ -216,7 +216,7 @@ Device support is dependent on both the users operating system, and their web br
 - Windows 11
 
  > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+ > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 
 #### Linux versions
@@ -235,23 +235,23 @@ Remote Help communicates over port 443 (https) and connects to the Remote Assist
 
 If your organization restricts Remote Help to enrolled devices only, there are extra requirements.  
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
-1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
+1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. Open and sign in to Company Portal. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
 
 > [!NOTE]
 > Company Portal isn't supported on devices enrolled without user affinity. To use Remote Help on these devices, you need to change your tenant settings to set **Remote Help to unenrolled devices** to **Allowed**.
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 Remote Help doesn't support unenrolled devices on Android.
 
-### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 The web app has the same requirements as the platform of the sharer.
 
@@ -261,7 +261,7 @@ The web app has the same requirements as the platform of the sharer.
 
 Remote Help with chat *on* is supported in the following languages:
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 - Arabic
 - Bulgarian
@@ -298,7 +298,7 @@ Remote Help with chat *on* is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 - Arabic
 - Bulgarian
@@ -335,11 +335,11 @@ Remote Help with chat *on* is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 The Remote Help app for Android uses the language set on the device. The Remote Help app for Android supports all languages that are supported by Android.
 
-### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 The Remote Help web app supports all of the languages supported by the browser being used.
 

@@ -57,4 +57,4 @@ To confirm configuration:
 
 ## Coming soon
 
-Cloud PKI will soon support **renewing an existing CA** directly. For updates, see [What's new in Microsoft Intune](../intune-service/fundamentals/whats-new.md).
+Cloud PKI will soon support **renewing an existing CA** directly. For updates, see [What's new in Microsoft Intune](../whats-new/index.md).

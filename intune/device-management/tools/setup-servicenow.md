@@ -105,13 +105,13 @@ With the ServiceNow connector verified and enabled, you can view a real time lis
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**. The **Troubleshooting** pane provides specific details for each Intune end-user.
 3. Find and select a **User** by entering a display name or email.
-4. In the **Summary** tab, scroll down and select **Authenticate ServiceNow**. Enter the credentials to authenticate you as a help-desk operator with ServiceNow. :::image type="content" source="./media/service-now-integration/troubleshoot-pane.png" alt-text="Screenshot that shows the Intune troubleshooting dashboard with the Summary tab and selected user details":::
+4. In the **Summary** tab, scroll down and select **Authenticate ServiceNow**. Enter the credentials to authenticate you as a help-desk operator with ServiceNow. :::image type="content" source="./media/setup-servicenow/troubleshoot-pane.png" alt-text="Screenshot that shows the Intune troubleshooting dashboard with the Summary tab and selected user details":::
 5. Choose **Allow**. You can now see the number of incidents associated with the user you selected.
 6. Alongside the **Summary** tab, find and select the **ServiceNow Incidents** tab. Selecting the tab brings up a list of associated incidents for the selected user. The incident view helps you understand if there are other issues previously submitted by employees that might be related or have recurred.
      - The columns visible in the list view can be modified by selecting or deselecting the ones to show in the **Column** field.
      - You can also add some filters for the incidents that you need to be displayed. For example, you might only want new incidents to appear in the list. To add a filter, select **Add Filters**, set **Status** to New and select **Apply**.
 7. The **Incident** column list in the **ServiceNow Incidents** tab includes a link to the source incident in ServiceNow.
-:::image type="content" source="./media/service-now-integration/sn_incidents_tab.png" alt-text="Screenshot that shows Service Now incidents view with a list of all incidents for the selected user.":::
+:::image type="content" source="./media/setup-servicenow/sn_incidents_tab.png" alt-text="Screenshot that shows Service Now incidents view with a list of all incidents for the selected user.":::
 8. Select the Incident link to launch the incident view in ServiceNow. Help-desk agents must be given the appropriate permissions in ServiceNow, to launch the incident view in ServiceNow and view the full incident details.
 9. Review the provided information to help troubleshoot end-user issues.
 
@@ -122,6 +122,6 @@ CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASS
 
 ## Next steps
 
-- [Get support in Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md)
+- [Get support in Microsoft Intune admin center](../../../intune-service/fundamentals/it-pro-support/get-support-admin-center.md)
 
 - [Use Remote Help](remote-help.md)

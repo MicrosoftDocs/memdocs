@@ -29,8 +29,8 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 ## Prerequisites
 Before setting up Microsoft Intune, review the following requirements:
 
-- [Supported operating systems and browsers](supported-devices-browsers.md)
-- [Network endpoints for Microsoft Intune](intune-endpoints.md)
+- [Supported operating systems and browsers](ref-supported-platforms.md)
+- [Network endpoints for Microsoft Intune](endpoints.md)
 
 ## Sign up for a Microsoft Intune free trial
 
@@ -45,7 +45,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
 1. Open a browser and sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If you are new to Intune, use your free trial subscription.
 
-    :::image type="content" source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-01.png" alt-text="Screenshot of the Microsoft Intune admin center - Home page." lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-01.png":::
+    :::image type="content" source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-01.png" alt-text="Screenshot of the Microsoft Intune admin center - Home page." lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-01.png":::
 
     When you open the Microsoft Intune admin center, the service is displayed in a pane of your browser. Some of the first workloads you may use in Intune include **Devices**, **Apps**, **Users**, and **Groups**. A workload is simply a sub-area of a service. When you select the workload, it opens that pane as a full page. Other panes slide out from the right side of the pane when they open, and close to reveal the previous pane.
 
@@ -53,11 +53,11 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
 2. From the navigation pane, select **Dashboard** to display overall details about the devices and apps for your Intune tenant. If you are starting with a new Intune tenant, you won't have any enrolled devices or added apps yet.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Dashboard." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-02.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-02.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Dashboard." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-02.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-02.png":::
 
     Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
-    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/intune/intune-service/fundamentals/deployment-guide-enrollment)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](setup-mdm-authority.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/intune/fundamentals/deployment-guide-enrollment)
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant.
 
@@ -70,11 +70,11 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - **Noncompliant devices** - You can see a count of noncompliant devices for your tenant.
     - **Deployment status per Windows update ring** - You can see if there are any Windows device with update errors or conflicts.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Devices." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Devices." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-03.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-03.png":::
 
 4. From the **Devices - Overview** pane, select **Compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Compliance policies." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-04.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-04.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Compliance policies." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-04.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-04.png":::
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device Compliance**.
@@ -85,20 +85,20 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - Devices must be enrolled in Intune
     - Devices that are enrolled to either one user or no primary user.
 
-    For more information, see [Get started with device compliance policies in Intune](../../device-security/compliance/overview.md).
+    For more information, see [Get started with device compliance policies in Intune](../device-security/compliance/overview.md).
 
 5. From the **Devices - Overview** pane, select **Conditional Access** to display details about access policies.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Conditional Access." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-05.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-05.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Conditional Access." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-05.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-05.png":::
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Conditional Access**.
 
-    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../../device-security/conditional-access-integration/overview.md)
+    Conditional Access refers to ways you can control the devices and apps that are allowed to connect to your email and company resources. To learn about device-based and app-based Conditional Access, and find common scenarios for using Conditional Access with Intune, see [What's Conditional Access?](../device-security/conditional-access-integration/overview.md)
 
 6. From the navigation pane, select **Devices** > **Manage devices** > **Configuration** to display details about device profiles in Intune.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Configuration profiles." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Configuration profiles." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-06.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-06.png":::
 
 
     > [!TIP]
@@ -106,11 +106,11 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android, macOS, and Windows. Then, you can use Intune to apply the profile to devices in your organization.
 
-    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../../device-configuration/overview.md).
+    For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../device-configuration/overview.md).
 
 7. From the navigation pane, select **Devices** > **All devices** to display details about your Intune tenant's enrolled devices. If you are starting with a new Intune enlistment, you will not have any enrolled devices yet.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - All devices." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-07.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-07.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - All devices." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-07.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-07.png":::
 
     This list of devices show key details about compliance, OS version, and last check-in date.
 
@@ -126,14 +126,14 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - **Installation status** - View the top installation failures by device, as well as the apps with installation failures.
     - **App protection policy status** - Find details about assigned users to app protection policies, as well as flagged users.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Apps." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-08.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-08.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Apps." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-08.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-08.png":::
 
     As an IT admin, you can use Microsoft Intune to manage the client apps that your company's workforce uses. This functionality is in addition to managing devices and protecting data. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune. Intune offers a range of capabilities to help you get the apps you need on the devices you want.
 
     > [!NOTE]
     > The **Apps - Overview** pane also provides tenant status and account details.
 
-    For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md) and [Assign apps to groups with Microsoft Intune](../../app-management/deployment/assign-groups.md).
+    For more information about adding and assigning apps, see [Add apps to Microsoft Intune](../app-management/deployment/index.md) and [Assign apps to groups with Microsoft Intune](../app-management/deployment/assign-groups.md).
 
 9. From the **Apps - Overview** pane, select **All Apps** to see a list of apps that have been added to Intune.
 
@@ -142,13 +142,13 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     You can add a variety of different app type based on platform to Intune. Once an app has been added, you can assign it to groups of users.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - All apps." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-09.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-09.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - All apps." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-09.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-09.png":::
 
-    For more information, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
+    For more information, see [Add apps to Microsoft Intune](../app-management/deployment/index.md).
 
 10. From the navigation pane, select **Users** to display details about the users that you have included in Intune. These users are members of your organization that have devices and apps associated with your Intune tenant.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Users." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-10.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-10.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Users." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-10.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-10.png":::
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Users**.
@@ -157,7 +157,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
 11. From the navigation pane, select **Groups** to display details about the Microsoft Entra groups included in Intune. As an Intune admin, you use groups to manage devices and users.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Groups." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-11.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-11.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Groups." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-11.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-11.png":::
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Groups**.
@@ -171,16 +171,16 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     The **Tenant admin - Tenant status** pane provides tabs for **Tenant details**, **Connector status**, and **Service health and message center**. If there are any issues with your tenant or Intune itself, you will find details available from this pane.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Tenant status." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Tenant status." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-12.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-12.png":::
 
-    For more information, see [Intune Tenant Status](../../governance/tenant-status.md).
+    For more information, see [Intune Tenant Status](../governance/tenant-status.md).
 
 13. From the navigation pane, select **Troubleshooting + support** > **Troubleshoot** to check status details on a specific user or devices.
 
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Troubleshoot**.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Troubleshoot." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-13.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-13.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Troubleshoot." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-13.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-13.png":::
 
     The Troubleshooting pane provides tabs as well. You can view troubleshooting information by selecting the following tabs:
     - Summary
@@ -202,11 +202,11 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     As an IT admin, you can use the **Help and Support** option to search and view solutions, as well as file an on-line support ticket for Intune.
 
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Help and support." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png":::
+    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Help and support." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-14.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-14.png":::
 
     To create a support ticket, your account must be assigned an [administrator role in Microsoft Entra](/entra/identity/role-based-access-control) with sufficient permissions. To adhere to the principles of least privileged access, Microsoft recommends assigning the [**Service support administrator**](/entra/identity/role-based-access-control/delegate-by-task) role to your administrators who create Intune support tickets, which is the least privileged Microsoft Entra role that can create support tickets.
 
-    For more information, see [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md).
+    For more information, see [How to get support in Microsoft Intune](./it-pro-support/get-support-admin-center.md).
 
 ## Configure the Microsoft Intune admin center
 
@@ -216,7 +216,7 @@ Microsoft Intune admin center allows you to customize and configure the view of 
 
 The **Dashboard** displays overall details about the devices and client apps in your Intune tenant. Dashboards provide a way for you to create a focused and organized view in the Microsoft Intune admin center. Use dashboards as a workspace where you can quickly launch tasks for day-to-day operations and monitor resources. Build custom dashboards based on projects, tasks, or user roles, for example. The Microsoft Intune admin center provides a default dashboard as a starting point. You can edit the default dashboard, create and customize additional dashboards, and publish and share dashboards to make them available to other users.
 
-:::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Update dashboard." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-16.png":::
+:::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Update dashboard." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-16.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-16.png":::
 
 To modify your current dashboard, select **Edit**. If you don't want to change your default dashboard, you can also create a **New dashboard**. Creating a new dashboard gives you an empty, private dashboard with the **Tile Gallery**, which lets you add or rearrange tiles. You can find tiles by category or resource type. You can also search for particular tiles. Select **My Dashboard** to select any of your existing custom dashboards.
 
@@ -229,7 +229,7 @@ The Microsoft Intune portal settings can be modified. On the **Microsoft Intune 
 - **My information**
 - **Signing out + notifications**
 
-:::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Portal settings." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-17.png":::
+:::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Portal settings." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-17.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-17.png":::
 
 ## Next steps
 

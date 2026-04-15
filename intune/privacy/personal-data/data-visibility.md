@@ -2,7 +2,7 @@
 title: View and correct personal data collected by Intune
 description: Learn how to view and correct personal data that's been collected by Intune.
 ms.date: 04/08/2022
-ms.topic: article
+ms.topic: overview
 ms.reviewer: angerobe
 ms.collection:
 - M365-identity-device-management
@@ -28,7 +28,7 @@ Admins can see end user personal information in various Nodes of the Intune UI i
 
 Microsoft uses strict controls to govern access to customer data, granting the lowest level of access required to complete key tasks and revoking access when it's no longer needed.
 
-You can secure and control access to end user personal data by using role-based administration control (RBAC). For more information, see [RBAC with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+You can secure and control access to end user personal data by using role-based administration control (RBAC). For more information, see [RBAC with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 You can learn more about Microsoft data practices by reading the Online Services Terms and [Microsoft Online Services Privacy Statement](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409).
 

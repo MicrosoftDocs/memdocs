@@ -49,7 +49,7 @@ You can also copy an existing role.
 The following permissions are available when creating custom roles.
 
 > [!TIP]
-> For a list of permissions for each Intune built-in role, see [Intune built-in roles and their permissions](../fundamentals/role-based-access-control-reference.md).
+> For a list of permissions for each Intune built-in role, see [Intune built-in roles and their permissions](../role-based-access-control/ref-built-in-roles.md).
 
 ### Admin tasks
 

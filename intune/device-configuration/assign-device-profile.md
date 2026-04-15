@@ -36,7 +36,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Be sure you have the correct role that can assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+- Be sure you have the correct role that can assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 - Consider using [Microsoft Copilot in Intune](../copilot/index.md). Some benefits include:
 
   - When you create a policy and configure settings, Copilot provides more information on each setting and find potential conflicts.
@@ -67,7 +67,7 @@ This feature applies to:
 
 ## Assignment features you should know and use
 
-- Use **[assignment filters](../intune-service/fundamentals/filters.md)** to assign a policy based on rules you create. You can create assignment filters for:
+- Use **[assignment filters](../fundamentals/filters/overview.md)** to assign a policy based on rules you create. You can create assignment filters for:
 
   - App configuration policies
   - App protection policies
@@ -77,14 +77,14 @@ This feature applies to:
 
   For more information, go to:
 
-  - [Use assignment filters when assigning your apps, policies, and profiles in Microsoft Intune](../intune-service/fundamentals/filters.md)
-  - [Platforms, policies, and app types supported by assignment filters in Microsoft Intune](../intune-service/fundamentals/filters-supported-workloads.md)
+  - [Use assignment filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters/overview.md)
+  - [Platforms, policies, and app types supported by assignment filters in Microsoft Intune](../fundamentals/filters/ref-supported-workloads.md)
 
-- **[Policy sets](../intune-service/fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Microsoft Intune admin center.
+- **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Microsoft Intune admin center.
 
-  For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](../intune-service/fundamentals/policy-sets.md).
+  For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](../fundamentals/policy-sets.md).
 
-- **[Scope tags](../intune-service/fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+- **[Scope tags](../fundamentals/role-based-access-control/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
 - On Windows devices, you can add **[applicability rules](./create-device-profile.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](./create-device-profile.md#applicability-rules).
 
@@ -112,7 +112,7 @@ To summarize, use device groups when you don't care who's signed in on the devic
 
 Policy settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It's normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
 
-If a user has multiple devices on the same platform, then you can use [assignment filters](../intune-service/fundamentals/filters.md) on the group assignment. For example, a user has a personal iOS/iPadOS device, and an organization-owned iOS/iPadOS. When you assign a policy for that user, you can use [assignment filters](../intune-service/fundamentals/filters.md) to target only the organization-owned device.
+If a user has multiple devices on the same platform, then you can use [assignment filters](../fundamentals/filters/overview.md) on the group assignment. For example, a user has a personal iOS/iPadOS device, and an organization-owned iOS/iPadOS. When you assign a policy for that user, you can use [assignment filters](../fundamentals/filters/overview.md) to target only the organization-owned device.
 
 Follow this general rule: If a feature belongs to a user, such as email or user certificates, then assign to user groups.
 
@@ -130,7 +130,7 @@ To summarize, use user groups when you want your settings and rules to always go
 
 You can use Intune to manage Windows multi-session remote desktops created with Azure Virtual Desktop, just like you manage any other shared Windows client device. When you assign policies to user groups or devices, Azure Virtual Desktop multi-session is a special scenario. With virtual machines, device CSPs must target device groups. User CSPs must target user groups.
 
-For more information, go to [Use Azure Virtual Desktop multi-session with Microsoft Intune](../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+For more information, go to [Use Azure Virtual Desktop multi-session with Microsoft Intune](../solutions/azure-virtual-desktop-multi-session.md).
 
 ### Windows CSPs and their behavior
 
@@ -148,7 +148,7 @@ Here's what you need to know about Windows CSPs:
 
   To change a setting to a different value, create a new policy, configure the setting to **Not configured**, and assign the policy. When the policy applies to the device, users should have control to change the setting to their preferred value.
 
-- When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../intune-service/fundamentals/intune-planning-guide.md).
+- When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/planning-guide.md).
 
 ## Exclude groups from a policy assignment
 
@@ -156,16 +156,16 @@ Intune device configuration policies let you include and exclude groups from pol
 
 As a best practice:
 
-- Create and assign policies specifically for your user groups. Use [assignment filters](../intune-service/fundamentals/filters.md) to include or exclude devices of those users.
+- Create and assign policies specifically for your user groups. Use [assignment filters](../fundamentals/filters/overview.md) to include or exclude devices of those users.
 - Create and assign different policies specifically for your device groups.
 
-For more information on groups, see [Add groups to organize users and devices](../intune-service/fundamentals/groups-add.md).
+For more information on groups, see [Add groups to organize users and devices](../fundamentals/tenant-administration/add-groups.md).
 
 ### Principles of including and excluding groups
 
 When you assign your policies and policies, apply the following general principles:
 
-- Think of **Included groups** or **Excluded groups** as a starting point for the users and devices that will receive your policies. The Microsoft Entra group is the limiting group, so use the smallest group scope possible. Use [assignment filters](../intune-service/fundamentals/filters.md) to limit or refine your policy assignment.
+- Think of **Included groups** or **Excluded groups** as a starting point for the users and devices that will receive your policies. The Microsoft Entra group is the limiting group, so use the smallest group scope possible. Use [assignment filters](../fundamentals/filters/overview.md) to limit or refine your policy assignment.
 - Assigned Microsoft Entra groups, also known as static groups, can be added to Included groups or Excluded groups.
 
   Typically, you statically assign devices into a Microsoft Entra group if they're pre-registered in Microsoft Entra ID, like with Windows Autopilot. Or, if you want to combine devices for a one-off, ad-hoc deployment. Otherwise, it might not be practical to statically assign devices into a Microsoft Entra group.
@@ -174,11 +174,11 @@ When you assign your policies and policies, apply the following general principl
 
 - Excluded groups can be groups with users or groups with devices.
 
-- Dynamic Microsoft Entra device groups can be added to Included groups. But, there can be latency when populating the dynamic group membership. In latency-sensitive scenarios, use [assignment filters](../intune-service/fundamentals/filters.md) to target specific devices, and assign your policies to user groups.
+- Dynamic Microsoft Entra device groups can be added to Included groups. But, there can be latency when populating the dynamic group membership. In latency-sensitive scenarios, use [assignment filters](../fundamentals/filters/overview.md) to target specific devices, and assign your policies to user groups.
 
-  For example, you want policies assigned to devices as soon as they enroll. In this latency-sensitive situation, create an [assignment filter](../intune-service/fundamentals/filters.md) to target the devices you want, and assign the policy with this assignment filter to user groups. Don't assign to device groups.
+  For example, you want policies assigned to devices as soon as they enroll. In this latency-sensitive situation, create an [assignment filter](../fundamentals/filters/overview.md) to target the devices you want, and assign the policy with this assignment filter to user groups. Don't assign to device groups.
 
-  In a userless scenario, create an [assignment filter](../intune-service/fundamentals/filters.md) to target the devices you want, and assign the policy with the assignment filter to the "All devices" group.
+  In a userless scenario, create an [assignment filter](../fundamentals/filters/overview.md) to target the devices you want, and assign the policy with the assignment filter to the "All devices" group.
 
 - Avoid adding dynamic Microsoft Entra device groups to Excluded groups. Latency in dynamic device group calculation at enrollment can cause undesirable results. For example, unwanted apps and policies might be deployed before the excluded group membership is populated.
 
@@ -194,11 +194,11 @@ Use the following matrix to understand support for excluding groups:
 
 | Scenario | Support|
 | --- | --- |
-| 1 | ❕ Partially supported </br></br> Assigning policies to a dynamic device group while excluding another dynamic device group is supported. But, it's not recommended in scenarios that are sensitive to latency. Any delay in exclude group membership calculation can cause policies to be offered to devices. In this scenario, we recommend using [assignment filters](../intune-service/fundamentals/filters.md) instead of dynamic device groups for excluding devices. </br></br> For example, you have a device policy that's assigned to **All devices**. Later, you have a requirement that new marketing devices don't receive this policy. So, you create a dynamic device group called **Marketing devices** based on the `enrollmentProfilename` property (`device.enrollmentProfileName -eq "Marketing_devices"`). In the policy, you add the **Marketing devices** dynamic group as an excluded group.  </br></br> A new marketing device enrolls in Intune for the first time, and a new Microsoft Entra device object is created. The dynamic grouping process puts the device into the **Marketing devices** group with a possible delayed calculation. At the same time, the device enrolls into Intune, and starts receiving all applicable policies. The Intune policy can be deployed before the device is put in the exclusion group. This behavior results in an unwanted policy (or app) being deployed to the **Marketing devices** group.  </br></br> As a result, it's not recommended to use dynamic device groups for exclusions in latency sensitive scenarios. Instead, use [assignment filters](../intune-service/fundamentals/filters.md). |
+| 1 | ❕ Partially supported </br></br> Assigning policies to a dynamic device group while excluding another dynamic device group is supported. But, it's not recommended in scenarios that are sensitive to latency. Any delay in exclude group membership calculation can cause policies to be offered to devices. In this scenario, we recommend using [assignment filters](../fundamentals/filters/overview.md) instead of dynamic device groups for excluding devices. </br></br> For example, you have a device policy that's assigned to **All devices**. Later, you have a requirement that new marketing devices don't receive this policy. So, you create a dynamic device group called **Marketing devices** based on the `enrollmentProfilename` property (`device.enrollmentProfileName -eq "Marketing_devices"`). In the policy, you add the **Marketing devices** dynamic group as an excluded group.  </br></br> A new marketing device enrolls in Intune for the first time, and a new Microsoft Entra device object is created. The dynamic grouping process puts the device into the **Marketing devices** group with a possible delayed calculation. At the same time, the device enrolls into Intune, and starts receiving all applicable policies. The Intune policy can be deployed before the device is put in the exclusion group. This behavior results in an unwanted policy (or app) being deployed to the **Marketing devices** group.  </br></br> As a result, it's not recommended to use dynamic device groups for exclusions in latency sensitive scenarios. Instead, use [assignment filters](../fundamentals/filters/overview.md). |
 | 2 | ✅ Supported </br></br> Assigning a policy to a dynamic device group while excluding a static device group is supported. |
 | 3 | ❌ Not supported </br></br> Assigning a policy to a dynamic device group while excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
 | 4 | ❌ Not supported </br></br> Assigning a policy to a dynamic device group and excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
-| 5 | ❕ Partially supported </br></br> Assigning a policy to a static device group while excluding a dynamic device group is supported. But, it's not recommended in scenarios that are sensitive to latency. Any delay in exclude group membership calculation can cause policies to be offered to devices. In this scenario, we recommend using [assignment filters](../intune-service/fundamentals/filters.md) instead of dynamic device groups for excluding devices. |
+| 5 | ❕ Partially supported </br></br> Assigning a policy to a static device group while excluding a dynamic device group is supported. But, it's not recommended in scenarios that are sensitive to latency. Any delay in exclude group membership calculation can cause policies to be offered to devices. In this scenario, we recommend using [assignment filters](../fundamentals/filters/overview.md) instead of dynamic device groups for excluding devices. |
 | 6 | ✅ Supported </br></br> Assigning a policy to a static device group and excluding a different static device group is supported. |
 | 7 | ❌ Not supported </br></br> Assigning a policy to a static device group and excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |
 | 8 | ❌ Not supported </br></br> Assigning a policy to a static device group and excluding user groups (both dynamic and static) isn't supported. Intune doesn't evaluate user-to-device group relationships, and devices of the included users aren't excluded. |

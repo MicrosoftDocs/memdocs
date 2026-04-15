@@ -14,7 +14,7 @@ ms.collection:
 
 # Managing specialty devices with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
 Specialty device management with Microsoft Intune provides a range of management, configuration, and protection capabilities for specialized devices, such as AR/VR headsets, large smart-screen devices, and select conference room meeting devices. To use these advanced endpoint management capabilities and remain compliant with the licensing terms of Microsoft agreements, organizations will need a new license or promotional offer in addition to their plan that includes Microsoft Intune, starting from March 1, 2023.
 
@@ -35,10 +35,10 @@ Specialty device management is supported with the following sovereign cloud envi
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service-description.md).
 
 ## Next Steps
 
 Learn about enrolling devices into Microsoft Intune here:
 
-- [Enroll devices into Microsoft Intune](../../device-enrollment/guide.md)
+- [Enroll devices into Microsoft Intune](../device-enrollment/guide.md)

@@ -73,7 +73,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
       | No | 32-bit  | 32-bit PowerShell host supported | Runs only in 32-bit PowerShell host, which works on 32-bit and 64-bit architectures. |
       | Yes | 64-bit | Runs script in 64-bit PowerShell host for 64-bit architectures. When ran on 32-bit, the script runs in a 32-bit PowerShell host. | Runs script in 32-bit PowerShell host. If this setting changes to 64-bit, the script opens (it doesn't run) in a 64-bit PowerShell host, and reports the results. When ran on 32-bit, the script runs in 32-bit PowerShell host. |
 
-5. Select **Scope tags**. Scope tags are optional. [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md) has more information.
+5. Select **Scope tags**. Scope tags are optional. [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md) has more information.
 
     To add a scope tag:
 

@@ -2,7 +2,7 @@
 title: Audit, export or delete personal data collected by Intune
 description: Learn how to audit, export, or delete personal data that is collected by Intune.
 ms.date: 04/10/2025
-ms.topic: article
+ms.topic: how-to
 ms.reviewer: kerimh
 ms.collection:
 - M365-identity-device-management

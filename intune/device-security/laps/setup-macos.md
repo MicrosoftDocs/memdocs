@@ -55,7 +55,7 @@ Category: **Enrollment programs**:
 - Set **View macOS admin password** to **Yes**
 
 > [!IMPORTANT]
-> The two permissions for *Enrollment programs* aren't included with any Intune built-in role or with the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md) to assign this permission to users who should have these capabilities.
+> The two permissions for *Enrollment programs* aren't included with any Intune built-in role or with the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../fundamentals/role-based-access-control/create-custom-role.md) to assign this permission to users who should have these capabilities.
 
 For permissions and details required to manage macOS policies for automated device enrollment, see [Set up automated device enrollment (ADE) for macOS](../../device-enrollment/apple/setup-automated-macos.md).
 

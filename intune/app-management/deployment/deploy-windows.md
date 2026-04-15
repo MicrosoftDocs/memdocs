@@ -18,7 +18,7 @@ Microsoft Intune supports a variety of app types and deployment scenarios on Win
 A Line-of-business (LOB) app is the app type supported on Windows devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.
 
 > [!NOTE]
-> To deploy modern apps, you need to use [supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md).
+> To deploy modern apps, you need to use [supported Windows versions](../../fundamentals/ref-supported-platforms.md).
 >
 > LOB app deployment isn't supported on devices running Windows Home editions.
 

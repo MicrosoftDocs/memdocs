@@ -228,7 +228,7 @@ This setting was never configurable for Windows in Basic Mobility and Security.
 
 For Android devices, Intune only supports this setting for Android device administrator devices.
 
-[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 [!INCLUDE [blockorallow](../includes/block-or-allow.md)]
 
@@ -303,4 +303,4 @@ The following settings aren't deployed by device security policies. But when dep
 
 ## Related article
 
-- [Move from Basic Mobility and Security to Intune](migrate-to-intune.md)
+- [Move from Basic Mobility and Security to Intune](migrate-from-other-mdm.md)

@@ -16,7 +16,7 @@ ms.collection:
 
 # Using Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
@@ -26,7 +26,7 @@ The use of Remote Help depends on whether you're requesting help or providing he
 
 To get help, you must reach out to your support staff to request assistance. You can reach out by way of call, chat, or email, and you're the sharer during the session.  
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 > [!TIP]
 > The Remote Help app needs to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-remote-help-apps) section.  
@@ -52,7 +52,7 @@ To get help, you must reach out to your support staff to request assistance. You
 
 - Both the sharer and helper can end the session. To end the session, select **Leave** in the upper-right corner of the Remote Help app. 
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 This section covers the steps for using the macOS native app to request Remote Help.
 
@@ -75,16 +75,16 @@ To request help, you must reach out to your support staff to request assistance,
 1. When the session connection begins, a trust screen is displayed with the helper's information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with full control of your device or view only-screen sharing. You can either choose to **Allow** or to **Decline** the request.  
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
    
-     :::image type="content" source="media/remote-help/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
+     :::image type="content" source="media/overview/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
    
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 1. macOS shows a menu with one of two options:  
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
 
-     :::image type="content" source="media/remote-help/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
+     :::image type="content" source="media/overview/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
    - **Yellow microphone icon** (if you selected to allow the microphone permission): Select the microphone icon. Select the **grey icon**, and then select **Screen**. Move your cursor to the screen you want to share and select **Share this screen**.  
 
-     :::image type="content" source="media/remote-help/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
+     :::image type="content" source="media/overview/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
 
 1. After the session is established, the helper can help resolve any issues on the device.
 
@@ -99,7 +99,7 @@ To request help, you must reach out to your support staff to request assistance,
 > [!NOTE]
 > If Remote Help wasn't installed by your administrator, you can install Remote Help yourself by following the download instructions in the [Install Remote Help apps](remote-help-deploy.md#install-remote-help-apps) section.
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 **Starting the session:**
 On your device, you see a prompt showing a request to grant screen share or control of the device with the helpers information, including their full name and company.
@@ -113,7 +113,7 @@ On your device, you see a prompt showing a request to grant screen share or cont
 - During an attended screen sharing or full control session, the device displays a floating **End Session** button. This button can be repositioned on the screen. Tap the button to end the session from your device.
 - During an unattended control session, the screen of the device is blocked due to security and privacy reasons, and you are notified if you interact with it. If you interact with the blocked screen, you receive a notification that a helper connected. When the notification is shown, you and the helper won't be able to take any action for 30 seconds. You won't be able to end the session from your device until the helper ends the session.
 
-### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
+### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Web App**](#tab/webapp)
 
 During a session, there are two roles: a helper and a sharer. The helper obtains the security code, and then provides it to the sharer. After the session is established, the helper can view the sharer's screen.
 
@@ -181,7 +181,7 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 >[!NOTE]
 > The restart option isn't available for helpdesk agents remotely helping AVD.
 
-### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **macOS from the Intune admin center**](#tab/macosintune)
+### [:::image type="icon" source="../media/icons/16/intune.svg"::: **macOS from the Intune admin center**](#tab/macosintune)
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
@@ -245,7 +245,7 @@ If the device that you're trying to help isn't enrolled in Microsoft Intune, fol
 
 Remote Help displays a warning if the sharer's device isn't enrolled in Microsoft Intune. This warning doesn't block access but provides transparency about the risk of using sensitive data, like administrative credentials, during the session.
 
-### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Android from Intune admin center**](#tab/androidadmin)
+### [:::image type="icon" source="../media/icons/16/intune.svg"::: **Android from Intune admin center**](#tab/androidadmin)
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
@@ -280,7 +280,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 > [!NOTE]
 > On Samsung devices running Android 15, you might notice minor visual latency during a Remote Help session. In some scenarios, portions of the screen may appear to refresh with a slight delay. This behavior doesn't affect session connectivity.
 
-### [:::image type="icon" source="../../media/icons/16/globe.svg"::: **Windows or macOS from the web app**](#tab/helperwebapp)
+### [:::image type="icon" source="../media/icons/16/globe.svg"::: **Windows or macOS from the web app**](#tab/helperwebapp)
 
 1. Sign in to <a href="https://aka.ms/rhh" target="_blank"><u>https://aka.ms/rhh</u></a>.
 1. Copy and share the eight-digit session code with the sharer that you're trying to help.
@@ -297,4 +297,4 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 ## Next steps
 
-[Get support in the Microsoft Intune admin center.](../../fundamentals/it-pro-support/get-support-admin-center.md)
+[Get support in the Microsoft Intune admin center.](../fundamentals/it-pro-support/get-support-admin-center.md)

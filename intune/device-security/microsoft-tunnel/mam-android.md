@@ -71,7 +71,7 @@ Microsoft Tunnel for MAM on Android isn't supported on Microsoft Azure operated 
 
 Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md).
 
 ## Configure policies to support Microsoft Tunnel for MAM
 

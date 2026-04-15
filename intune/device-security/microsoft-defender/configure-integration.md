@@ -47,7 +47,7 @@ After completing this guide, you'll have completed the following integration wor
 This one-time setup per tenant establishes the service-to-service connection that enables integration features.
 
 **Prerequisites:**  
-- Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings (custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission; see [Create a custom role](../../intune-service/fundamentals/create-custom-role.md)).
+- Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings (custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission; see [Create a custom role](../../fundamentals/role-based-access-control/create-custom-role.md)).
 - Admin access to the [Microsoft Defender portal](https://security.microsoft.com) with [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) role in Microsoft Entra ID, or **"Manage security settings in Security Center"** permission in Microsoft Defender for Endpoint.
 
 ### Enable Intune and Microsoft Defender for Endpoint integration
@@ -82,7 +82,7 @@ The service-to-service connection is now established. Continue to configure whic
 
 After the service connection is established, configure which platforms connect to Microsoft Defender for Endpoint for compliance and app protection policy evaluation.
 
-**Prerequisites:** Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings (custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission; see [Create a custom role](../../intune-service/fundamentals/create-custom-role.md)).
+**Prerequisites:** Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with **Endpoint Security Manager** role or equivalent permissions for *Mobile Threat Defense* settings (custom roles require *Read* and *Modify* rights for the *Mobile Threat Defense* permission; see [Create a custom role](../../fundamentals/role-based-access-control/create-custom-role.md)).
 
 ### Configure compliance and app protection settings
 

@@ -255,8 +255,8 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
 [Set up Intune]:../../intune-service/fundamentals/deployment-plan-setup.md
-[Create users]:../../intune-service/fundamentals/users-add.md
-[Create groups]:../../intune-service/fundamentals/groups-add.md
+[Create users]:../../fundamentals/tenant-administration/add-users.md
+[Create groups]:../../fundamentals/tenant-administration/add-groups.md
 [Assign licenses]:../../intune-service/fundamentals/licenses-assign.md
 [Create and assign app protection policies]:../../app-management/protection/create-policy.md
 [app configuration policy]:../../app-management/configuration/overview.md

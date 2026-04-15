@@ -55,7 +55,7 @@ To enable co-management, follow these instructions:
    - **Automatic enrollment in Intune**: Enables automatic client enrollment in Intune for existing Configuration Manager clients. This option allows you to enable co-management on a subset of clients to initially test co-management and then roll out co-management by using a phased approach. If the user unenrolls a device, the device will be re-enrolled on the next evaluation of the policy. 
    
       - **Pilot**: Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled in Intune.
-      - **All**: Enable automatic enrollment for all clients running [supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md).
+      - **All**: Enable automatic enrollment for all clients running [supported Windows versions](../../fundamentals/ref-supported-platforms.md).
       - **None**: Disable automatic enrollment for all clients.
             
    - **Intune Auto Enrollment**: This collection should contain all of the clients that you want to onboard into co-management. It's essentially a superset of all the other staging collections.

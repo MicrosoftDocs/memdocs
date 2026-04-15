@@ -43,7 +43,7 @@ The settings catalog lists all the settings you can configure, and all in one pl
 
 Intune has many templates that include groups of settings that focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates).
 
-You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../intune-service/fundamentals/protection-configuration-levels.md).
+You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../fundamentals/protection-configuration-levels.md).
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
@@ -148,7 +148,7 @@ This feature supports:
 
 [Education settings - Windows](./templates/configure-education-settings.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
-[Education settings - iOS/iPadOS](../intune-service/fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
+[Education settings - iOS/iPadOS](../solutions/education/ref-classroom-settings-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
 ## Email
 

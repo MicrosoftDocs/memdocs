@@ -49,10 +49,10 @@ If your organization doesn't use [Google Mobile Services (GMS)](https://www.andr
 
 For more specific information, go to:
 
-- [How to use Intune in environments without Google Mobile Services](../../app-management/manage-without-gms.md)
-- [Add Managed Google Play apps to Android Enterprise devices](../../app-management/deployment/add-managed-google-play.md)
+- [How to use Intune in environments without Google Mobile Services](../app-management/manage-without-gms.md)
+- [Add Managed Google Play apps to Android Enterprise devices](../app-management/deployment/add-managed-google-play.md)
 - [Manage private Android apps in Google Play](https://support.google.com/a/answer/2494992) (opens Google's web site)
-- [Add built-in apps](../../app-management/deployment/add-built-in.md)
+- [Add built-in apps](../app-management/deployment/add-built-in.md)
 
 ### ✅ iOS/iPadOS devices
 
@@ -69,10 +69,10 @@ On iOS/iPadOS devices, you can deploy:
 
 For more specific information, go to:
 
-- [Add iOS store apps](../../app-management/deployment/add-store-ios.md)
-- [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../../app-management/deployment/manage-vpp-apple.md)
-- [Add iOS/iPadOS LOB apps](../../app-management/deployment/add-lob-ios.md)
-- [Add built-in apps](../../app-management/deployment/add-built-in.md)
+- [Add iOS store apps](../app-management/deployment/add-store-ios.md)
+- [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../app-management/deployment/manage-vpp-apple.md)
+- [Add iOS/iPadOS LOB apps](../app-management/deployment/add-lob-ios.md)
+- [Add built-in apps](../app-management/deployment/add-built-in.md)
 
 ### ✅ macOS devices
 
@@ -91,11 +91,11 @@ On macOS devices, you can deploy:
 
 For more specific information, go to:
 
-- [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../../app-management/deployment/manage-vpp-apple.md)
-- [Assign Microsoft 365 to macOS devices](../../app-management/deployment/add-microsoft-365-macos.md)
-- [Add macOS LOB apps](../../app-management/deployment/add-lob-macos.md)
-- [Add macOS PKG apps](../../app-management/deployment/add-unmanaged-pkg-macos.md)
-- [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md)
+- [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../app-management/deployment/manage-vpp-apple.md)
+- [Assign Microsoft 365 to macOS devices](../app-management/deployment/add-microsoft-365-macos.md)
+- [Add macOS LOB apps](../app-management/deployment/add-lob-macos.md)
+- [Add macOS PKG apps](../app-management/deployment/add-unmanaged-pkg-macos.md)
+- [Add Microsoft Store apps to Microsoft Intune](../app-management/deployment/add-microsoft-store.md)
 
 ### ✅ Windows devices
 
@@ -112,9 +112,9 @@ On Windows devices, you can deploy:
 
 For more specific information, go to:
 
-- [Add Microsoft 365 apps to Windows client devices](../../app-management/deployment/add-microsoft-365-windows.md)
-- [Win32 app management](../../app-management/deployment/win32.md)
-- [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md)
+- [Add Microsoft 365 apps to Windows client devices](../app-management/deployment/add-microsoft-365-windows.md)
+- [Win32 app management](../app-management/deployment/win32.md)
+- [Add Microsoft Store apps to Microsoft Intune](../app-management/deployment/add-microsoft-store.md)
 
 ## Configure apps before they're installed
 
@@ -126,7 +126,7 @@ For example, in an app configuration policy, you can enter the app language, add
 
 Your app configuration policies can be deployed at any time. If you want to configure apps before users open them the first time, then include the app configuration policy when users enroll their devices. During enrollment, your app configuration policies are automatically deployed and the apps include your configuration settings.
 
-For more specific information, go to [App configuration policies in Intune](../../app-management/configuration/overview.md).
+For more specific information, go to [App configuration policies in Intune](../app-management/configuration/overview.md).
 
 ## Protect apps on organization owned and personal devices
 
@@ -138,8 +138,8 @@ App protection policies also help separate personal data from organization data.
 
 For more specific information, go to:
 
-- [App protection policies overview and benefits](../../app-management/protection/overview.md)
-- [How to create and assign app protection policies](../../app-management/protection/create-policy.md)
+- [App protection policies overview and benefits](../app-management/protection/overview.md)
+- [How to create and assign app protection policies](../app-management/protection/create-policy.md)
 
 ## Update apps to the latest version
 
@@ -151,13 +151,13 @@ If users install apps themselves, including from a public app store, then these 
 
 For more information, go to:
 
-- [Add and update apps](../../app-management/deployment/index.md)
+- [Add and update apps](../app-management/deployment/index.md)
 - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
-- [Wipe corporate data from Intune-managed apps](../../app-management/protection/wipe-corporate-data.md)
-- [Selectively wipe data using app protection policy conditional launch actions](../../app-management/protection/configure-conditional-launch.md)
+- [Wipe corporate data from Intune-managed apps](../app-management/protection/wipe-corporate-data.md)
+- [Selectively wipe data using app protection policy conditional launch actions](../app-management/protection/configure-conditional-launch.md)
 
 ## Related articles
 
 - [Learn about managing identities in Intune](manage-identities.md)
 - [Learn about managing devices in Intune](manage-devices.md)
-- [Frequently asked questions about application management and app protection](../../app-management/protection/mam-faq.yml)
+- [Frequently asked questions about application management and app protection](../app-management/protection/mam-faq.yml)

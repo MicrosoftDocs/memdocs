@@ -32,11 +32,11 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 - Client devices must support at least two core processors to successfully install and run Microsoft Store apps.
 - Client device need to be able to support the [Intune Management Extension (IME)](../../device-management/tools/management-extension-windows.md) to install Microsoft Store apps.
-- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information, see [Microsoft Store proxy configuration](../../intune-service/fundamentals/intune-endpoints.md#microsoft-store).
+- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information, see [Microsoft Store proxy configuration](../../fundamentals/endpoints.md#microsoft-store).
 
 ## Add and deploy a Microsoft Store app
 
-An [Intune administrator](../../intune-service/fundamentals/role-based-access-control-reference.md) with sufficient permissions can use the following steps to add and deploy a Microsoft Store app.
+An [Intune administrator](../../fundamentals/role-based-access-control/ref-built-in-roles.md) with sufficient permissions can use the following steps to add and deploy a Microsoft Store app.
 
 ### Step 1: Add an app from the Microsoft Store
 

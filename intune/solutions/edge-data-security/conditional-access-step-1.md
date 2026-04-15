@@ -45,7 +45,7 @@ This solution uses three Conditional Access policies to secure Microsoft Edge fo
 ## Before you begin
 
 - Confirm that your tenant has the necessary Microsoft Entra ID Premium and Microsoft Intune licenses for Conditional Access and app protection policies.  
-- Ensure the Microsoft Entra security groups `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` exist; these groups are used for assignments throughout the secure enterprise browser deployment. For step-by-step guidance, see [Use groups to organize users and devices for Microsoft Intune](../../intune-service/fundamentals/groups-add.md).  
+- Ensure the Microsoft Entra security groups `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` exist; these groups are used for assignments throughout the secure enterprise browser deployment. For step-by-step guidance, see [Use groups to organize users and devices for Microsoft Intune](../../fundamentals/tenant-administration/add-groups.md).  
 - Define trusted locations, device filters, and risk integrations (for example, Microsoft Defender for Endpoint or another Mobile Threat Defense provider) before assigning the policies.  
 - Plan to run each policy in **Report-only** mode first so you can validate it before enforcing it.
 

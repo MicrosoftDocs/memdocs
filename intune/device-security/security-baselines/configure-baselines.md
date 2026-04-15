@@ -71,9 +71,9 @@ To manage security baselines in Intune, your account must be assigned an Intune 
   - Read
   - Update
 
-You can add these permissions to your own [custom RBAC roles](../../intune-service/fundamentals/create-custom-role.md) or use an Intune [built-in RBAC role](../../intune-service/fundamentals/role-based-access-control-reference.md).
+You can add these permissions to your own [custom RBAC roles](../../fundamentals/role-based-access-control/create-custom-role.md) or use an Intune [built-in RBAC role](../../fundamentals/role-based-access-control/ref-built-in-roles.md).
 
-The least privileged built-in Intune role that supports managing security baselines is the [Policy and Profile Manager](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles).
+The least privileged built-in Intune role that supports managing security baselines is the [Policy and Profile Manager](../../fundamentals/role-based-access-control/overview.md#built-in-roles).
 
 ## Create a profile for a security baseline
 

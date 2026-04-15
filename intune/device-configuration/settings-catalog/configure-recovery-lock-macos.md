@@ -60,7 +60,7 @@ This article applies to:
 > To run the device actions, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account with one of the following roles:
 >
 > - [Intune administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
-> - An Intune [custom role](../../intune-service/fundamentals/create-custom-role.md) with the following permissions:
+> - An Intune [custom role](../../fundamentals/role-based-access-control/create-custom-role.md) with the following permissions:
 >
 >   - Remote tasks/Rotate macOS recovery lock password
 >   - Remote tasks/View macOS recovery lock password
@@ -102,7 +102,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 9. Select **Next**. In **Scope tags**, select **Next**.
 
-    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 10. In **Assignments**, select **Next**.
 

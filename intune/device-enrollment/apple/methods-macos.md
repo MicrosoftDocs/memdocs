@@ -18,11 +18,11 @@ ms.collection:
 Complete these steps first to enable enrollment in your Microsoft Intune tenant.
 
 1. [Verify that devices are eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility)
-2. [Configure domains](../../intune-service/fundamentals/custom-domain-name-configure.md)
-3. [Set the MDM Authority](../../intune-service/fundamentals/mdm-authority-set.md)
+2. [Configure domains](../../fundamentals/configure-custom-domain.md)
+3. [Set the MDM Authority](../../fundamentals/setup-mdm-authority.md)
 4. [Get an Apple MDM push certificate](create-mdm-push-certificate.md)
 5. Assign user licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-6. [Create groups](../../intune-service/fundamentals/groups-add.md)
+6. [Create groups](../../fundamentals/tenant-administration/add-groups.md)
 7. [Configure the Company Portal app](../../app-management/configuration/configure-company-portal.md)
 
 ## Enroll devices

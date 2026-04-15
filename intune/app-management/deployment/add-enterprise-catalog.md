@@ -17,7 +17,7 @@ ms.collection:
 The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
 
 > [!IMPORTANT]
-> The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md).
+> The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md).
 
 When you add an app to Intune, you want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings are configured and confirmed by Microsoft. You must be careful if you modify the application properties as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
 
@@ -238,13 +238,13 @@ When you add the app to Intune, the version of your Windows catalog app (Win32) 
 After you've added your rules, select **Next** to display the **Scope tags** step.
 
 ## Step 5: Select scope tags (optional)
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 Choose **Select scope tags** to optionally add scope tags for the app. Then select **Next** to display the **Review + create** step.
 
 ## Step 6: Assignments
 
-You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 > [!IMPORTANT]
 > For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app fails to install.

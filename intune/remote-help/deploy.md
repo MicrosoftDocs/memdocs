@@ -17,7 +17,7 @@ ms.collection:
 
 # Deploying Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
 [!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
 
@@ -70,19 +70,19 @@ The built-in **Help Desk Operator** role includes all of the required permission
 
 ## Download Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).  
 
 The most recent version of Remote Help is **5.1.1998.0**.    
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelpmacos](https://aka.ms/downloadremotehelpmacos).    
 
 The most recent version of Remote Help is **1.0.2509231**.
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 The Remote Help app for Android is available on the Google Play store. For more information, see [Remote Help - Google Play Apps](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).  
 
@@ -90,13 +90,13 @@ The Remote Help app for Android is available on the Google Play store. For more 
 
 ## Install Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Remote Help is available as a download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. Remote Help's default behavior opts users into automatic updates and updates itself when an update is available.  
 
 When a new version of Remote Help is required, the app prompts users to update. To install an updated version, you can use the same process you used before to download and install Remote Help. There's no need to uninstall the previous version before installing the updated version.
 
-- As an Intune admin, you can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../../app-management/deployment/deploy-windows.md#install-apps-on-windows-devices).
+- As an Intune admin, you can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../app-management/deployment/deploy-windows.md#install-apps-on-windows-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
 
 > [!NOTE]
@@ -107,13 +107,13 @@ When a new version of Remote Help is required, the app prompts users to update. 
 
 #### Deploy Remote Help as an Enterprise App Catalog app
 
-The Enterprise App Catalog is a collection of prepackaged Win32 apps that are prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog.md#add-a-windows-catalog-app-win32-to-intune).
+The Enterprise App Catalog is a collection of prepackaged Win32 apps that are prepared by Microsoft to support Intune. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities. Remote Help is available in the Enterprise App Catalog. To learn more, see [Add an Enterprise App Catalog app to Microsoft Intune](../app-management/deployment/add-enterprise-catalog.md#add-a-windows-catalog-app-win32-to-intune).
 
 #### Deploy Remote Help as a Win32 app
 
-To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage `*remotehelpinstaller.exe*` as a `*.intunewin*` file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../../app-management/deployment/create-win32-package.md).
+To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don't have the most current version of Remote Help installed. Before you can add Remote Help as a Win32 app, you must repackage `*remotehelpinstaller.exe*` as a `*.intunewin*` file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../app-management/deployment/create-win32-package.md).
 
-After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../../app-management/deployment/add-win32.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
+After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../app-management/deployment/add-win32.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
 
    > [!IMPORTANT]
    > To take advantage of the command line example, ensure the downloaded file is renamed to **remotehelpinstaller.exe**.
@@ -156,7 +156,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 1. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 #### Install and update Remote Help native app
 
@@ -169,11 +169,11 @@ The macOS Remote Help native app is available to download from Microsoft and mus
 
 For enrolled devices, you can streamline the user experience by installing Remote Help on behalf of your users.
 
-For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../../app-management/deployment/add-unmanaged-pkg-macos.md).
+For more information on installing Remote Help through Intune as a required install, see [Add an unmanaged macOS PKG app to Microsoft Intune](../app-management/deployment/add-unmanaged-pkg-macos.md).
 
-For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md).
+For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../app-management/deployment/add-lob-macos.md).
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 To set up Remote Help for Android, complete the following steps:
 
@@ -197,7 +197,7 @@ To set up Remote Help for Android, complete the following steps:
 
 ## Configure Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 #### Windows Firewall details
 
@@ -207,7 +207,7 @@ Depending on which environment Remote Help is utilized in, it might be necessary
 - C:\Program Files\Remote help\RHService.exe  
 - C:\Program Files\Remote help\RemoteHelpRDP.exe  
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 On macOS, apps that access and control the screen require permission. The default behavior is to require users to accept these permissions. macOS allows some control capabilities for each type of privacy setting using *Privacy Preferences Policy Control*. 
 
@@ -220,7 +220,7 @@ With settings catalog, we can streamline the end users' experience for allowing 
 
 You can configure these settings using either the Microsoft Intune admin center or Microsoft Graph.
 
-#### :::image type="icon" source="../../media/icons/16/intune.svg"::: Intune admin center
+#### :::image type="icon" source="../media/icons/16/intune.svg"::: Intune admin center
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Manage devices** > **Configuration**.
 1. Select **Create** > **macOS** > **Settings catalog**.  
@@ -260,9 +260,9 @@ You can configure these settings using either the Microsoft Intune admin center 
     | Static Code | False |
 1. Select **Next**. Configure scope tags as required and assign the profile to groups as required. Review all settings and **Create** the policy.  
 
-#### :::image type="icon" source="../../media/icons/16/graph.svg"::: Microsoft Graph
+#### :::image type="icon" source="../media/icons/16/graph.svg"::: Microsoft Graph
 
-[!INCLUDE [graph-explorer-introduction](../../solutions/includes/graph-explorer-intro.md)]
+[!INCLUDE [graph-explorer-introduction](../solutions/includes/graph-explorer-intro.md)]
 
 Using Graph Explorer creates a policy in your tenant with the name **_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control**.
 
@@ -272,9 +272,9 @@ Content-Type: application/json
 
 {"name":"_MSLearn_Example_macOS Remote Help - Privacy Preferences Policy Control","description":"","platforms":"macOS","technologies":"mdm,appleRemoteManagement","roleScopeTagIds":["0"],"settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_com.apple.tcc.configuration-profile-policy","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_authorization","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_authorization_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_coderequirement","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"identifier \"com.microsoft.remotehelp\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifier","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"com.microsoft.remotehelp"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifiertype","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_identifiertype_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_staticcode","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_accessibility_item_staticcode_false","children":[]}}]}]},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_authorization","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_authorization_2","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_coderequirement","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"identifier \"com.microsoft.remotehelp\" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifier","simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationStringSettingValue","value":"com.microsoft.remotehelp"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifiertype","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_identifiertype_0","children":[]}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_staticcode","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","value":"com.apple.tcc.configuration-profile-policy_services_screencapture_item_staticcode_false","children":[]}}]}]}]}]}]}]}}]}
 ```
-[!INCLUDE [graph-explorer-steps](../../solutions/includes/graph-explorer-steps.md)]
+[!INCLUDE [graph-explorer-steps](../solutions/includes/graph-explorer-steps.md)]
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 #### Grant permissions
 
@@ -304,9 +304,9 @@ You can autogrant them through app configuration policy:
 
 On Zebra devices, permissions are granted through Zebra OEMConfig profiles.
 
-For instructions on how to set up OEMConfig, see [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md).
+For instructions on how to set up OEMConfig, see [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../device-configuration/templates/configure-oemconfig-android.md).
 
-If you're planning to use Remote Help on a device running on Android 11, you need to enable another Zebra package as a system app. For more information about how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../../app-management/configuration/manage-system-apps-android.md).  
+If you're planning to use Remote Help on a device running on Android 11, you need to enable another Zebra package as a system app. For more information about how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../app-management/configuration/manage-system-apps-android.md).  
 
 |Build|System app to be enabled|
 |--------|------------------------------|
@@ -319,7 +319,7 @@ If you're planning to use Remote Help on a device running on Android 11, you nee
 *Zebra OEMConfig Powered by MX* is a new version of the OEMConfig app released in May 2023.
 
 > [!NOTE]
-> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions about updating supported Zebra devices with Intune, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/setup-zebra-lifeguard.md).  
+> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions about updating supported Zebra devices with Intune, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../device-updates/android/setup-zebra-lifeguard.md).  
 
 Use OEMConfig to deploy the following settings on devices that you want to use Remote Help with:
 
@@ -417,15 +417,15 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 
 ## Update Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Remote Help receives updates via Microsoft Update if configured. Otherwise, you need to update the application by using the Enterprise App Catalog (available as part of Intune Suite) or by packaging and deploying the update as a Win32 app.
 
-### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
 
-### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 The Google Play store updates the Remote Help app for Android after deployment.
 

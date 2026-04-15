@@ -152,7 +152,7 @@ The Intune SDK development team actively tests and maintains support for apps bu
 
 The following list provides the user requirements to use app protection policies on an Intune-managed app:
 
-- The user must have a Microsoft Entra account. See [Add users and give administrative permission to Intune](../../intune-service/fundamentals/users-add.md) to learn how to create Intune users in Microsoft Entra ID.
+- The user must have a Microsoft Entra account. See [Add users and give administrative permission to Intune](../../fundamentals/tenant-administration/add-users.md) to learn how to create Intune users in Microsoft Entra ID.
 
 - The user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../../fundamentals/licensing/assign-licenses.md) to learn how to assign Intune licenses to users.
 

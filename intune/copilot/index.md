@@ -69,7 +69,7 @@ To use Copilot in Intune, you should know the following information:
 
   To use Copilot in Intune for Windows 365 Cloud PCs, in the [Security Copilot portal](https://securitycopilot.microsoft.com) > **Sources**, enable **Windows 365**.
 
-- **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../intune-service/fundamentals/role-based-access-control.md) and [scope tags](../intune-service/fundamentals/scope-tags.md) assigned to them.
+- **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control/overview.md) and [scope tags](../fundamentals/role-based-access-control/scope-tags.md) assigned to them.
 
 > [!TIP]
 > For some common questions asked about Copilot in Intune, go to [Copilot in Intune FAQ](faq.md).
@@ -218,7 +218,7 @@ For more information about using Copilot with your devices, go to [Use Copilot i
 You can use Copilot to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
 
 > [!NOTE]
-> To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md#microsoft-intune-advanced-analytics).
+> To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. For more information, see [Intune add-ons](../fundamentals/add-ons.md#microsoft-intune-advanced-analytics).
 
 You can use this feature for an individual device or for many devices.
 

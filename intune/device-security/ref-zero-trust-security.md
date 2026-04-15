@@ -33,24 +33,24 @@ Ensure tenant-level governance, identity, and configuration consistency.
 
 | Check | Minimum License Requirements  |
 |-------|-------------------------------|
-| [Scope tag configuration is enforced to support delegated administration and least-privilege access](./configure-tenant-security.md#scope-tag-configuration-is-enforced-to-support-delegated-administration-and-least-privilege-access) | Microsoft Intune Plan 1 |
-| [Device enrollment notifications are enforced to ensure user awareness and secure onboarding](./configure-tenant-security.md#device-enrollment-notifications-are-enforced-to-ensure-user-awareness-and-secure-onboarding) | Microsoft Intune Plan 1 |
-| [Windows automatic device enrollment is enforced to eliminate risks from unmanaged endpoints](./configure-tenant-security.md#windows-automatic-device-enrollment-is-enforced-to-eliminate-risks-from-unmanaged-endpoints) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
-| [Compliance policies protect Windows devices](./configure-tenant-security.md#compliance-policies-protect-windows-devices) | Microsoft Intune Plan 1 |
-| [Compliance policies protect macOS devices](./configure-tenant-security.md#compliance-policies-protect-macos-devices) | Microsoft Intune Plan 1 |
-| [Compliance policies protect fully managed and corporate-owned Android devices](./configure-tenant-security.md#compliance-policies-protect-fully-managed-and-corporate-owned-android-devices) | Microsoft Intune Plan 1 |
-| [Compliance policies protect personally owned Android devices](./configure-tenant-security.md#compliance-policies-protect-personally-owned-android-devices) | Microsoft Intune Plan 1 |
-| [Compliance policies protect iOS/iPadOS devices](./configure-tenant-security.md#compliance-policies-protect-iosipados-devices) | Microsoft Intune Plan 1 |
-| [Platform SSO is configured to strengthen authentication on macOS devices](./configure-tenant-security.md#platform-sso-is-configured-to-strengthen-authentication-on-macos-devices) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
-| [Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats](./configure-tenant-security.md#defender-for-endpoint-automatic-enrollment-is-enforced-to-reduce-risk-from-unmanaged-android-threats) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1 |
-| [Device cleanup rules maintain tenant hygiene by hiding inactive devices](./configure-tenant-security.md#device-cleanup-rules-maintain-tenant-hygiene-by-hiding-inactive-devices) | Microsoft Intune Plan 1 |
-| [Terms and Conditions policies protect access to sensitive data](./configure-tenant-security.md#terms-and-conditions-policies-protect-access-to-sensitive-data) | Microsoft Intune Plan 1 |
-| [Company Portal branding and support settings enhance user experience and trust](./configure-tenant-security.md#company-portal-branding-and-support-settings-enhance-user-experience-and-trust) | Microsoft Intune Plan 1 |
-| [Endpoint Analytics is enabled to help identify risks on Windows devices](./configure-tenant-security.md#endpoint-analytics-is-enabled-to-help-identify-risks-on-windows-devices) | Microsoft Intune Plan 1 |
+| [Scope tag configuration is enforced to support delegated administration and least-privilege access](./ref-zero-trust-tenant.md#scope-tag-configuration-is-enforced-to-support-delegated-administration-and-least-privilege-access) | Microsoft Intune Plan 1 |
+| [Device enrollment notifications are enforced to ensure user awareness and secure onboarding](./ref-zero-trust-tenant.md#device-enrollment-notifications-are-enforced-to-ensure-user-awareness-and-secure-onboarding) | Microsoft Intune Plan 1 |
+| [Windows automatic device enrollment is enforced to eliminate risks from unmanaged endpoints](./ref-zero-trust-tenant.md#windows-automatic-device-enrollment-is-enforced-to-eliminate-risks-from-unmanaged-endpoints) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
+| [Compliance policies protect Windows devices](./ref-zero-trust-tenant.md#compliance-policies-protect-windows-devices) | Microsoft Intune Plan 1 |
+| [Compliance policies protect macOS devices](./ref-zero-trust-tenant.md#compliance-policies-protect-macos-devices) | Microsoft Intune Plan 1 |
+| [Compliance policies protect fully managed and corporate-owned Android devices](./ref-zero-trust-tenant.md#compliance-policies-protect-fully-managed-and-corporate-owned-android-devices) | Microsoft Intune Plan 1 |
+| [Compliance policies protect personally owned Android devices](./ref-zero-trust-tenant.md#compliance-policies-protect-personally-owned-android-devices) | Microsoft Intune Plan 1 |
+| [Compliance policies protect iOS/iPadOS devices](./ref-zero-trust-tenant.md#compliance-policies-protect-iosipados-devices) | Microsoft Intune Plan 1 |
+| [Platform SSO is configured to strengthen authentication on macOS devices](./ref-zero-trust-tenant.md#platform-sso-is-configured-to-strengthen-authentication-on-macos-devices) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
+| [Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats](./ref-zero-trust-tenant.md#defender-for-endpoint-automatic-enrollment-is-enforced-to-reduce-risk-from-unmanaged-android-threats) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1 |
+| [Device cleanup rules maintain tenant hygiene by hiding inactive devices](./ref-zero-trust-tenant.md#device-cleanup-rules-maintain-tenant-hygiene-by-hiding-inactive-devices) | Microsoft Intune Plan 1 |
+| [Terms and Conditions policies protect access to sensitive data](./ref-zero-trust-tenant.md#terms-and-conditions-policies-protect-access-to-sensitive-data) | Microsoft Intune Plan 1 |
+| [Company Portal branding and support settings enhance user experience and trust](./ref-zero-trust-tenant.md#company-portal-branding-and-support-settings-enhance-user-experience-and-trust) | Microsoft Intune Plan 1 |
+| [Endpoint Analytics is enabled to help identify risks on Windows devices](./ref-zero-trust-tenant.md#endpoint-analytics-is-enabled-to-help-identify-risks-on-windows-devices) | Microsoft Intune Plan 1 |
 
 For license details, see:
 
-- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
 - [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
@@ -61,25 +61,25 @@ Secure endpoints through device configuration and security policies.
 
 | Check | Minimum License Requirements  |
 |-------|-------------------------------|
-| [Local administrator credentials on Windows are protected by Windows LAPS](./configure-device-security.md#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | Microsoft Intune Plan |
-| [Local administrator credentials on macOS are protected during enrollment by macOS LAPS](./configure-device-security.md#local-administrator-credentials-on-macos-are-protected-during-enrollment-by-macos-laps) | Microsoft Intune Plan 1  |
-| [Local account usage on Windows is restricted to reduce unauthorized access](./configure-device-security.md#local-account-usage-on-windows-is-restricted-to-reduce-unauthorized-access) | Microsoft Intune Plan 1 |
-| [Data on Windows is protected by BitLocker encryption](./configure-device-security.md#data-on-windows-is-protected-by-bitlocker-encryption) | Microsoft Intune Plan 1  |
-| [FileVault encryption protects data on macOS devices](./configure-device-security.md#filevault-encryption-protects-data-on-macos-devices) | Microsoft Intune Plan 1  |
-| [Authentication on Windows uses Windows Hello for Business](./configure-device-security.md#authentication-on-windows-uses-windows-hello-for-business) | Microsoft Intune Plan 1  |
-| [Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components](./configure-device-security.md#attack-surface-reduction-rules-are-applied-to-windows-devices-to-prevent-exploitation-of-vulnerable-system-components) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1 |
-| [Defender Antivirus policies protect Windows devices from malware](./configure-device-security.md#defender-antivirus-policies-protect-windows-devices-from-malware) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1  |
-| [Defender Antivirus policies protect macOS devices from malware](./configure-device-security.md#defender-antivirus-policies-protect-macos-devices-from-malware) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1  |
-| [Windows Firewall policies protect against unauthorized network access](./configure-device-security.md#windows-firewall-policies-protect-against-unauthorized-network-access) | Microsoft Intune Plan 1  |
-| [macOS Firewall policies protect against unauthorized network access](./configure-device-security.md#macos-firewall-policies-protect-against-unauthorized-network-access) | Microsoft Intune Plan 1  |
-| [Windows Update policies are enforced to reduce risk from unpatched vulnerabilities](./configure-device-security.md#windows-update-policies-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | Microsoft Intune Plan 1  |
-| [Security baselines are applied to Windows devices to strengthen security posture](./configure-device-security.md#security-baselines-are-applied-to-windows-devices-to-strengthen-security-posture) | Microsoft Intune Plan 1  |
-| [Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities](./configure-device-security.md#update-policies-for-macos-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | Microsoft Intune Plan 1  |
-| [Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities](./configure-device-security.md#update-policies-for-iosipados-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | Microsoft Intune Plan 1  |
+| [Local administrator credentials on Windows are protected by Windows LAPS](./ref-zero-trust-devices.md#local-administrator-credentials-on-windows-are-protected-by-windows-laps) | Microsoft Intune Plan |
+| [Local administrator credentials on macOS are protected during enrollment by macOS LAPS](./ref-zero-trust-devices.md#local-administrator-credentials-on-macos-are-protected-during-enrollment-by-macos-laps) | Microsoft Intune Plan 1  |
+| [Local account usage on Windows is restricted to reduce unauthorized access](./ref-zero-trust-devices.md#local-account-usage-on-windows-is-restricted-to-reduce-unauthorized-access) | Microsoft Intune Plan 1 |
+| [Data on Windows is protected by BitLocker encryption](./ref-zero-trust-devices.md#data-on-windows-is-protected-by-bitlocker-encryption) | Microsoft Intune Plan 1  |
+| [FileVault encryption protects data on macOS devices](./ref-zero-trust-devices.md#filevault-encryption-protects-data-on-macos-devices) | Microsoft Intune Plan 1  |
+| [Authentication on Windows uses Windows Hello for Business](./ref-zero-trust-devices.md#authentication-on-windows-uses-windows-hello-for-business) | Microsoft Intune Plan 1  |
+| [Attack Surface Reduction rules are applied to Windows devices to prevent exploitation of vulnerable system components](./ref-zero-trust-devices.md#attack-surface-reduction-rules-are-applied-to-windows-devices-to-prevent-exploitation-of-vulnerable-system-components) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1 |
+| [Defender Antivirus policies protect Windows devices from malware](./ref-zero-trust-devices.md#defender-antivirus-policies-protect-windows-devices-from-malware) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1  |
+| [Defender Antivirus policies protect macOS devices from malware](./ref-zero-trust-devices.md#defender-antivirus-policies-protect-macos-devices-from-malware) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1  |
+| [Windows Firewall policies protect against unauthorized network access](./ref-zero-trust-devices.md#windows-firewall-policies-protect-against-unauthorized-network-access) | Microsoft Intune Plan 1  |
+| [macOS Firewall policies protect against unauthorized network access](./ref-zero-trust-devices.md#macos-firewall-policies-protect-against-unauthorized-network-access) | Microsoft Intune Plan 1  |
+| [Windows Update policies are enforced to reduce risk from unpatched vulnerabilities](./ref-zero-trust-devices.md#windows-update-policies-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | Microsoft Intune Plan 1  |
+| [Security baselines are applied to Windows devices to strengthen security posture](./ref-zero-trust-devices.md#security-baselines-are-applied-to-windows-devices-to-strengthen-security-posture) | Microsoft Intune Plan 1  |
+| [Update policies for macOS are enforced to reduce risk from unpatched vulnerabilities](./ref-zero-trust-devices.md#update-policies-for-macos-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | Microsoft Intune Plan 1  |
+| [Update policies for iOS/iPadOS are enforced to reduce risk from unpatched vulnerabilities](./ref-zero-trust-devices.md#update-policies-for-iosipados-are-enforced-to-reduce-risk-from-unpatched-vulnerabilities) | Microsoft Intune Plan 1  |
 
 For license details, see:
 
-- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
 - [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
 ## Secure Data
@@ -88,22 +88,22 @@ Protect data on devices and in transit, and enforce secure access to organizatio
 
 | Check | Minimum License Requirements |
 |-------|-------------------------------|
-| [Data on Android is protected by app protection policies](./configure-data-security.md#data-on-android-is-protected-by-app-protection-policies) | Microsoft Intune Plan 1 |
-| [Data on iOS/iPadOS is protected by app protection policies](./configure-data-security.md#data-on-iosipados-is-protected-by-app-protection-policies) | Microsoft Intune Plan 1 |
-| [Conditional Access policies block access from unmanaged apps](./configure-data-security.md#conditional-access-policies-block-access-from-unmanaged-apps) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
-| [Conditional Access policies block access from noncompliant devices](./configure-data-security.md#conditional-access-policies-block-access-from-noncompliant-devices) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
-| [Secure Wi-Fi profiles protect iOS devices from unauthorized network access](./configure-data-security.md#secure-wi-fi-profiles-protect-ios-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
-| [Secure Wi-Fi profiles protect macOS devices from unauthorized network access](./configure-data-security.md#secure-wi-fi-profiles-protect-macos-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
-| [Secure Wi-Fi profiles protect Android devices from unauthorized network access](./configure-data-security.md#secure-wi-fi-profiles-protect-android-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
+| [Data on Android is protected by app protection policies](./ref-zero-trust-data.md#data-on-android-is-protected-by-app-protection-policies) | Microsoft Intune Plan 1 |
+| [Data on iOS/iPadOS is protected by app protection policies](./ref-zero-trust-data.md#data-on-iosipados-is-protected-by-app-protection-policies) | Microsoft Intune Plan 1 |
+| [Conditional Access policies block access from unmanaged apps](./ref-zero-trust-data.md#conditional-access-policies-block-access-from-unmanaged-apps) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
+| [Conditional Access policies block access from noncompliant devices](./ref-zero-trust-data.md#conditional-access-policies-block-access-from-noncompliant-devices) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
+| [Secure Wi-Fi profiles protect iOS devices from unauthorized network access](./ref-zero-trust-data.md#secure-wi-fi-profiles-protect-ios-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
+| [Secure Wi-Fi profiles protect macOS devices from unauthorized network access](./ref-zero-trust-data.md#secure-wi-fi-profiles-protect-macos-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
+| [Secure Wi-Fi profiles protect Android devices from unauthorized network access](./ref-zero-trust-data.md#secure-wi-fi-profiles-protect-android-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
 
 For license details, see:
 
-- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
 
 ## Related content
 
-- [Zero Trust deployment approach with Microsoft Intune](../../intune-service/fundamentals/deployment-plan-zero-trust.md)
-- [Deployment guide for Microsoft Intune](../../intune-service/fundamentals/get-started-with-intune.md)
-- [Protect data and devices with Microsoft Intune](../../device-security/index.md)
+- [Zero Trust deployment approach with Microsoft Intune](../fundamentals/zero-trust-deployment.md)
+- [Deployment guide for Microsoft Intune](../fundamentals/get-started.md)
+- [Protect data and devices with Microsoft Intune](./index.md)
 - [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)

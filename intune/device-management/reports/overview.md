@@ -31,13 +31,13 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Export** – You can quickly export reporting data generated from large tenants.
 
 > [!NOTE]
-> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices](../fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows," and search for "PC," the exported data contains Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices](../../intune-service/fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows," and search for "PC," the exported data contains Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 ## Who can access the data?
 
-Users assigned an Intune role-based access control role with sufficient permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
+Users assigned an Intune role-based access control role with sufficient permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator).
 
-For more information, see [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control.md)
+For more information, see [Role-based access control with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
 
 ## Reporting tiles
 
@@ -472,7 +472,7 @@ Role-based access control permissions are applied to the report to filter on the
 | Device   Configuration | Read | **Yes**: Enables the ability to   view device configuration policies in Assignment Failures   report.<br>**No**: Enables  the   ability to view device configuration policies in Assignment Failures report. |
 | Device   Compliance Policies | View Reports | **Yes**: No impact to Assignment   Failures report.<br>**No**: No impact to Assignment Failures report. |
 
-For more information about Role-based access control permissions, see [Role-based access control (Role-based access control) with Microsoft Intune](../fundamentals/role-based-access-control.md) and the [Endpoint Security Manager](../fundamentals/role-based-access-control-reference.md#endpoint-security-manager) role reference.
+For more information about Role-based access control permissions, see [Role-based access control (Role-based access control) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md) and the [Endpoint Security Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager) role reference.
 
 You can view the **Assignment failures** report using the following steps:
 
@@ -484,11 +484,11 @@ You can view the **Assignment failures** report using the following steps:
 
 You can also get to this report in the **Home** page:
 
-:::image type="content" source="./media/reports/configuration-policies-with-error-conflict-home.png" alt-text="In the Home page, select policies with error or conflict to see any errors or conflicts with device configuration profiles in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/overview/configuration-policies-with-error-conflict-home.png" alt-text="In the Home page, select policies with error or conflict to see any errors or conflicts with device configuration profiles in Microsoft Intune and Intune admin center.":::
 
 And the **Dashboard**:
 
-:::image type="content" source="./media/reports/configuration-policies-with-error-conflict-dashboard.png" alt-text="In the Dashboard, select policies with error or conflict to see any errors or conflicts with device configuration profiles in Microsoft Intune and Intune admin center.":::
+:::image type="content" source="./media/overview/configuration-policies-with-error-conflict-dashboard.png" alt-text="In the Dashboard, select policies with error or conflict to see any errors or conflicts with device configuration profiles in Microsoft Intune and Intune admin center.":::
 
 ### Antivirus agent status report (Organizational)
 

@@ -27,7 +27,7 @@ Device management involves:
 - Creating compliance rules that maintain device integrity, like setting a minimum OS version and preventing simple passwords
 - Being responsible for organization owned devices and personally owned devices that access your organization resources
 
-From a service perspective, Intune uses Microsoft Entra ID for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
+From a service perspective, Intune uses Microsoft Entra ID for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-admin-center-walkthrough.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your devices.
 
@@ -41,7 +41,7 @@ Devices owned by your organization should be enrolled in your MDM service, like 
 
 For more information and guidance, go to:
 
-- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Microsoft Intune planning guide](planning-guide.md)
 - [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
 
 ## Use your existing devices and use new devices
@@ -54,16 +54,16 @@ If your organization is investing in new devices, then we recommend you start wi
 
 For more information and guidance, go to:
 
-- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Microsoft Intune planning guide](planning-guide.md)
 - [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
 
 For more specific information by platform, go to:
 
 - [Android platform deployment guide](deployment-guide-platform-android.md)
 - [iOS/iPadOS platform deployment guide](deployment-guide-platform-ios-ipados.md)
-- [Linux enrollment deployment guide](../../device-enrollment/guide-linux.md)
+- [Linux enrollment deployment guide](../device-enrollment/guide-linux.md)
 - [macOS platform deployment guide](deployment-guide-platform-macos.md)
-- [Windows enrollment deployment guide](../../device-enrollment/windows/guide.md)
+- [Windows enrollment deployment guide](../device-enrollment/windows/guide.md)
 
 ## Check the compliance health of your devices
 
@@ -75,9 +75,9 @@ Conditional Access is a feature of Microsoft Entra ID. With Conditional Access, 
 
 For more information, go to:
 
-- [Use compliance policies to set rules for devices you manage](../../device-security/compliance/overview.md)
-- [Monitor results of your device compliance policies](../../device-security/compliance/monitor-policy.md)
-- [Learn about Conditional Access and Intune](../../device-security/conditional-access-integration/overview.md)
+- [Use compliance policies to set rules for devices you manage](../device-security/compliance/overview.md)
+- [Monitor results of your device compliance policies](../device-security/compliance/monitor-policy.md)
+- [Learn about Conditional Access and Intune](../device-security/conditional-access-integration/overview.md)
 
 ## Control device features and assign policies to device groups
 
@@ -95,10 +95,10 @@ When the groups are ready, you can assign your policies to these device groups.
 
 For more information, go to:
 
-- [FLW device management in Intune](../../solutions/frontline-worker/frontline-worker-overview.md)
+- [FLW device management in Intune](../solutions/frontline-worker/frontline-worker-overview.md)
 - [Get started with Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-overview)
-- [Windows device settings to run as a dedicated kiosk using Intune](../../device-configuration/templates/configure-kiosk.md)
-- [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../../device-configuration/templates/configure-shared-device.md)
+- [Windows device settings to run as a dedicated kiosk using Intune](../device-configuration/templates/configure-kiosk.md)
+- [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../device-configuration/templates/configure-shared-device.md)
 
 ## Secure your devices
 
@@ -110,7 +110,7 @@ In Intune, some common security tasks include:
 
   The MTD partners support different platforms, including Android, iOS/iPadOS, macOS, and Windows.
 
-  For more specific information, go to [Mobile Threat Defense integration with Intune](../../device-security/mobile-threat-defense/overview.md)
+  For more specific information, go to [Mobile Threat Defense integration with Intune](../device-security/mobile-threat-defense/overview.md)
 
 - **Use security baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
@@ -118,19 +118,19 @@ In Intune, some common security tasks include:
 
   For more specific information, go to:
 
-  - [Use security baselines to configure Windows devices in Intune](../../device-security/security-baselines/overview.md)
+  - [Use security baselines to configure Windows devices in Intune](../device-security/security-baselines/overview.md)
 
 - **Manage software updates, encrypt hard disks, configure built-in firewalls**, and more using built-in policy settings. You can also use Windows Autopatch for automatic patching of Windows, including Windows quality updates and Windows feature updates.
 
   For more information, go to:
 
-  - [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security-policies.md)
-  - [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
+  - [Manage endpoint security in Microsoft Intune](../device-security/endpoint-security-policies.md)
+  - [Manage device security with endpoint security policies in Microsoft Intune](../device-configuration/endpoint-security/manage-policies.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
 - **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, and restore a device to its factory settings. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
-  For more information, go to [Remote actions in Intune](../../device-management/actions/index.md).
+  For more information, go to [Remote actions in Intune](../device-management/actions/index.md).
 
 ## Related articles
 

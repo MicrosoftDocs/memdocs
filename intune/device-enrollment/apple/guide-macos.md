@@ -64,7 +64,7 @@ Use for personal or bring your own devices (BYOD). This enrollment option is als
 
 This task list provides an overview.
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - There isn't a Company Portal app for macOS devices in the Apple App Store, or through VPP. Users must [manually download and run the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070). They sign in with their organization account (`user@contoso.com`), and then step through the enrollment. Once they enroll, they must approve the enrollment policy.
 
@@ -108,7 +108,7 @@ For more specific information on this enrollment type, go to [Automatically enro
 
 This task list provides an overview. For more specific information, go to [Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager](setup-automated-macos.md).
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - You need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Create enrollment program token](setup-automated-macos.md#create-enrollment-program-token).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
@@ -211,7 +211,7 @@ For more specific information on this enrollment type, go to [Use Direct Enrollm
 
 This task list provides an overview. For more specific information, go to [macOS Direct Enrollment](setup-direct-macos.md).
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Select **Enroll without user affinity** (user-less devices or shared devices). With user-less devices:
 

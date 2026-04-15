@@ -2,7 +2,7 @@ items:
   - name: App management overview
     href: ./overview.md
   - name: MAM for unenrolled devices
-    href: ../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md
+    href: ../device-enrollment/mam-without-enrollment.md
     displayName: mobile application management, mam-we, mamwe
 
   - name: Secure your corporate data using Edge for Business

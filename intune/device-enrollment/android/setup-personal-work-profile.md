@@ -49,14 +49,14 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
      [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 10. Select **Next** to continue to **Scope tags**.
-11. Optionally, apply one or more scope tags to limit visibility and management of restrictions to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+11. Optionally, apply one or more scope tags to limit visibility and management of restrictions to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 12. Select **Next** to continue to **Assignments**.
 13. Assign the restriction to all users, or select specific groups.
 14. Select **Next** to continue to **Review + create**.
 15. Review your choices, and then select **Create** to finish creating the restriction.
 
 ## Enroll devices
-Communicate enrollment steps to device users. Users typically don't like enrolling themselves, and aren't familiar with the Intune Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Step 5 - Create a rollout plan](../../intune-service/fundamentals/intune-planning-guide.md#step-5---create-a-rollout-plan).
+Communicate enrollment steps to device users. Users typically don't like enrolling themselves, and aren't familiar with the Intune Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Step 5 - Create a rollout plan](../../fundamentals/planning-guide.md#step-5---create-a-rollout-plan).
 
 Users must be signed in to the primary user account on their device when enrolling. Enrollment isn't supported on secondary user accounts. Personal devices previously enrolled with Android device administrator can unenroll, and then re-enroll using the work profile solution.
 

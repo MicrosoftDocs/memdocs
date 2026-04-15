@@ -17,7 +17,7 @@ Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microso
 
 Intune also supports use of user accounts that synchronize from Active Directory to any cloud-based service that shares the tenant with Intune and your Entra tenant.
 
-After a user is added or synchronized to Entra and [assigned a license to Intune](../../fundamentals/licensing/assign-licenses.md), that user can enroll devices with Intune and begin to access company resources. Intune administrators can also [assign Intune RBAC roles](../fundamentals/assign-role.md) and permissions to discreet groups of users to enable those users to help administer your Intune subscription.
+After a user is added or synchronized to Entra and [assigned a license to Intune](../../licensing/assign-licenses.md), that user can enroll devices with Intune and begin to access company resources. Intune administrators can also [assign Intune RBAC roles](../role-based-access-control/assign-role.md) and permissions to discreet groups of users to enable those users to help administer your Intune subscription.
 
 The remainder of this article focuses on using the Intune admin center to manage user accounts.
 
@@ -26,7 +26,7 @@ The remainder of this article focuses on using the Intune admin center to manage
 
 ## Role-based access controls for managing user accounts
 
-Before you can use the Intune admin center to manage users, your account must have RBAC permissions within Microsoft Entra to manage user accounts. Microsoft Entra permissions are required as Intune RBAC is a subset of Entra RBAC. As a subset, Intune-only RBAC permissions aren't sufficient to manage accounts in Microsoft Entra. However, there are some [Microsoft Entra roles](../fundamentals/role-based-access-control.md#microsoft-entra-roles-with-intune-access) that include permissions within Intune.
+Before you can use the Intune admin center to manage users, your account must have RBAC permissions within Microsoft Entra to manage user accounts. Microsoft Entra permissions are required as Intune RBAC is a subset of Entra RBAC. As a subset, Intune-only RBAC permissions aren't sufficient to manage accounts in Microsoft Entra. However, there are some [Microsoft Entra roles](../role-based-access-control/overview.md#microsoft-entra-roles-with-intune-access) that include permissions within Intune.
 
 When working with RBAC, Microsoft recommends following the principle of least-permissions by using only accounts that have the minimum required permissions for a task, and **limiting** use and assignment of [privileged](/entra/identity/role-based-access-control/privileged-roles-permissions) administrative roles like the Intune Administrator.
 
@@ -35,7 +35,7 @@ The following Microsoft Entra built-in RBAC role is the least privileged built-i
 - [**User Administrator**](/entra/identity/role-based-access-control/permissions-reference#user-administrator) – This role provides permissions sufficient to add and edit user accounts from within the admin centers for Microsoft Intune, Microsoft Entra, and Microsoft 365.
 
 > [!TIP]
-> The Microsoft Entra *User Administrator* role also provides sufficient permissions to assign licenses to Intune and other products to users. However, license management is a task that can only be managed when using the Microsoft 365 admin center. For more information, see [Assign Intune licenses to users](../../fundamentals/licensing/assign-licenses.md).
+> The Microsoft Entra *User Administrator* role also provides sufficient permissions to assign licenses to Intune and other products to users. However, license management is a task that can only be managed when using the Microsoft 365 admin center. For more information, see [Assign Intune licenses to users](../../licensing/assign-licenses.md).
 
 ## Add users to Intune
 
@@ -83,7 +83,7 @@ The following procedural steps can be used to add individual users to your Intun
    When a user requires permissions within Entra, you can use this option to assign them a suitable role. To assign Entra roles to other accounts, your account must have permissions equal to the Microsoft Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator).
 
    > [!TIP]
-   > Most users you add to Intune won't require a *Microsoft Entra* role assignment. Instead, for the users that manage only Intune, plan to [assign an Intune RBAC role](../fundamentals/assign-role.md) to them after their account is created.
+   > Most users you add to Intune won't require a *Microsoft Entra* role assignment. Instead, for the users that manage only Intune, plan to [assign an Intune RBAC role](../role-based-access-control/assign-role.md) to them after their account is created.
 
    1. Select **+ Add role**.
    2. From the menu that appears, choose up to 20 roles from the list and select the **Select** button.
@@ -92,7 +92,7 @@ The following procedural steps can be used to add individual users to your Intun
    **To add an administrative unit to the new user**:
    Most users you add to Intune will never require an Administrative Units (AUs), which in Microsoft Entra ID is a powerful way to delegate administrative control over subsets of users, groups, or devices within your organization.
 
-   Instead, within Intune you can use [scope tags](../fundamentals/scope-tags.md) and [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments).
+   Instead, within Intune you can use [scope tags](../role-based-access-control/scope-tags.md) and [scope groups](../role-based-access-control/overview.md#about-intune-role-assignments).
 
    To assign an administrative unit to a user, your account must have permissions equal to the Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator).
 
@@ -161,9 +161,9 @@ To delete users from Entra, your administrative account must have permissions eq
 > - Accounts that are synchronized from an on-premises Active Directory.
 > - Accounts that are assigned a higher-privileged Entra role than your account.
 - what resources they can change.
-> - Accounts that fall outside your current Intune [scope group](../fundamentals/role-based-access-control.md#about-intune-role-assignments) when using the Intune admin center.
+> - Accounts that fall outside your current Intune [scope group](../role-based-access-control/overview.md#about-intune-role-assignments) when using the Intune admin center.
 
 ## Related content
 
-- [Add groups to organize users and devices](../fundamentals/groups-add.md)
-- [Assign users licenses to Intune](../../fundamentals/licensing/assign-licenses.md)
+- [Add groups to organize users and devices](../tenant-administration/add-groups.md)
+- [Assign users licenses to Intune](../../licensing/assign-licenses.md)

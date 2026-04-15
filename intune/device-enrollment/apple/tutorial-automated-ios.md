@@ -23,12 +23,12 @@ In this tutorial, you'll learn how to:
 At the end of this tutorial, devices will be ready to distribute for enrollment.
 
 ## Prerequisites
-- Set [mobile device management (MDM) authority](../../intune-service/fundamentals/mdm-authority-set.md).
+- Set [mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md).
 - Get [Apple MDM Push certificate](create-mdm-push-certificate.md).
 - Have new or wiped devices purchased from Apple Business Manager.
 - Add purchase information under device management settings in [Apple Business Manager](https://business.apple.com).
 
-If you don't have an Intune subscription, [sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 
 ## Step 1: Add MDM server
 Create an MDM server profile for Microsoft Intune in Apple Business Manager. The token you download in this step will enable the connection between Microsoft Intune and Apple Business Manager in a later step.
@@ -57,7 +57,7 @@ Return to the Microsoft Intune admin center to upload the MDM server token to In
 1. For **Apple ID**, enter the Apple ID you used to create the token.
 2. For **Apple token**, upload the server token you saved earlier. The file must be in P7M format.
 3. Select **Next**.
-4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 5. Select **Next**.
 6. On **Review + create**, select **Create** to finish linking Microsoft Intune and Apple Business Manager.
 
