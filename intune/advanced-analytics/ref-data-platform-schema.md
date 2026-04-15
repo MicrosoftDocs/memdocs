@@ -88,7 +88,7 @@ For entities that include Android data, the following platforms are supported:
 | `SerialNumber`| String | The battery serial number that the manufacturer assigned.|Android|
 
 > [!NOTE]
-> On Android, the following Battery properties are only available on **Zebra devices**: `CycleCount`, `Health`, `InstanceName`, and `SerialNumber`.
+> On Android, the following Battery properties are available only on Zebra devices: `CycleCount`, `Health`, `InstanceName`, and `SerialNumber`.
 
 ## `BiosInfo`
 
