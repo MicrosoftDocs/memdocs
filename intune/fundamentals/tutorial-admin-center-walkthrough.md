@@ -57,7 +57,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
-    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](setup-mdm-authority.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/intune/fundamentals/deployment-guide-enrollment)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](setup-mdm-authority.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deploy-setup-step-1.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/intune/fundamentals/deployment-guide-enrollment)
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant.
 
@@ -153,7 +153,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Users**.
 
-    You can add users directly to Intune or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users additional permissions to access Intune. For more information, see [Add users and grant administrative permission to Intune](users-add.md).
+    You can add users directly to Intune or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users additional permissions to access Intune. For more information, see [Add users and grant administrative permission to Intune](tenant-administration/add-users.md).
 
 11. From the navigation pane, select **Groups** to display details about the Microsoft Entra groups included in Intune. As an Intune admin, you use groups to manage devices and users.
 
@@ -162,7 +162,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Groups**.
 
-    You can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices. For more information about groups, see [Add groups to organize users and devices](groups-add.md).
+    You can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices. For more information about groups, see [Add groups to organize users and devices](tenant-administration/add-groups.md).
 
 12. From the navigation pane, select **Tenant administration** to display details about your Intune tenant.
 
@@ -193,7 +193,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - Enrollment restrictions
     - Diagnostics
 
-    For more information about troubleshooting within Intune, see [Use the troubleshooting portal to help users at your company](help-desk-operators.md).
+    For more information about troubleshooting within Intune, see [Use the troubleshooting portal to help users at your company](it-pro-support/help-desk-operators.md).
 
 14. From the navigation pane, select **Troubleshooting + support** > **Help and support** to request help.
 

@@ -72,7 +72,7 @@ After you create the group, it appears in the list of **All groups**.
 
 ## Next steps
 
-In this article, you used Intune to create a group based on an existing user. For more information about adding groups to Intune, see [Add groups to organize users and devices](groups-add.md).
+In this article, you used Intune to create a group based on an existing user. For more information about adding groups to Intune, see [Add groups to organize users and devices](add-groups.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 

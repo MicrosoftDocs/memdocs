@@ -55,7 +55,7 @@ To create a new user:
 3. In the **User name** box, enter a user identifier, such as `Dewey@contoso.onmicrosoft.com`.
 
     > [!NOTE]
-    > If you didn't configure your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](free-trial-sign-up.md#sign-up-for-a-free-trial)).
+    > If you didn't configure your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](../free-trial-sign-up.md#sign-up-for-a-free-trial)).
 
 4. Select **Show password** and remember the automatically generated password so that you can sign in to a test device.
 5. Select **Create**.
@@ -110,7 +110,7 @@ To delete the user:
 
 ## Next steps
 
-In this article, you created a user and assigned an Intune license to that user. For more information on adding users to Intune, see [Add users and grant administrative permission to Intune](users-add.md).
+In this article, you created a user and assigned an Intune license to that user. For more information on adding users to Intune, see [Add users and grant administrative permission to Intune](add-users.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 

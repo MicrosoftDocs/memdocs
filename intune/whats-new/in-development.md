@@ -17,10 +17,10 @@ ms.collection:
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
 - If we anticipate that you need to take action before a change, we'll publish a complementary post in the Office message center.
-- When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
+- When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](index.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
-This article and the [What's new](whats-new.md) article are updated periodically. Check back for more updates.
+This article and the [What's new](index.md) article are updated periodically. Check back for more updates.
 
 > [!NOTE]
 > This article reflects our current expectations about Intune capabilities in an upcoming release. Dates and individual features might change. This article doesn't describe all features in development. It was last updated on the date shown under the title.
@@ -270,7 +270,7 @@ After the defined time elapses, or when the *restore managed home screen* action
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
 
-The new baseline will be available for [US Government Community Cloud High (GCC High)](intune-govt-service-description.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+The new baseline will be available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service-description.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:
@@ -352,7 +352,7 @@ Intune will add new guidance to the compliance policy reporting documentation to
 
 ### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
 
-We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
+We're updating the [Multi Admin Approval](../fundamentals/role-based-access-control/multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
 
 <!-- *********************************************** -->
 
@@ -362,4 +362,4 @@ We're updating the [Multi Admin Approval](multi-admin-approval.md) page in the I
 
 ## See also
 
-For details about recent developments, see [What's new in Microsoft Intune](whats-new.md).
+For details about recent developments, see [What's new in Microsoft Intune](index.md).

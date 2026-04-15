@@ -125,7 +125,7 @@ In the Intune admin center, after you create a policy, you can monitor its statu
 For more information, go to:
 
 - [Monitor device configuration policies in Microsoft Intune](../monitor-device-profile.md)
-- [Intune reports](../../intune-service/fundamentals/reports.md)
+- [Intune reports](../../device-management/reports/overview.md)
 
 ## Retrieve the BIOS passwords
 

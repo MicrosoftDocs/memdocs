@@ -31,7 +31,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../../intune-service/fundamentals/licensing/unlicensed-admins.md).
+- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../../fundamentals/licensing/unlicensed-admins.md).
 
 - Users must be assigned the Remote assistance connectors/Read and Remote assistance connectors/Update permissions in the Intune admin center to onboard TeamViewer. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
@@ -92,4 +92,4 @@ When you start a remote session, users see a notification flag on the Company Po
 
 [Use Remote Help with Intune](../../remote-help/overview.md)
 
-[See device details in Intune](../../intune-service/fundamentals/device-inventory.md)
+[See device details in Intune](../../device-management/inventory-and-status/device-details.md)

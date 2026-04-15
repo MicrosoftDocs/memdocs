@@ -47,7 +47,7 @@ Before you configure the TeamViewer connector in Intune, make sure these require
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - The administrator configuring the TeamViewer connector must have a Microsoft Intune license. You can give administrators access to Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../../intune-service/fundamentals/licensing/unlicensed-admins.md).
+> - The administrator configuring the TeamViewer connector must have a Microsoft Intune license. You can give administrators access to Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../../fundamentals/licensing/unlicensed-admins.md).
 > - A TeamViewer account and license is required. Visit the [TeamViewer integration docs](https://www.teamviewer.com/en/integrations/microsoft-intune/) (opens the TeamViewer website) or contact the TeamViewer sales team for more information about account setup and required licenses.  
 :::column-end:::
 :::row-end:::

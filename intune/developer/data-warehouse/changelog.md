@@ -17,7 +17,7 @@ Keep current on updates to the Intune Data Warehouse.
 ## 2202
 _Released February 2022_
 
-The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../../intune-service/fundamentals/reports-export-graph-apis.md).
+The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../../device-management/reports/export-graph-apis.md).
 
 ## 2105
 _Released May 2021_
@@ -27,7 +27,7 @@ The `IntuneAosp` property value is now supported in the `managementAgentType` en
 ## 2103
 _Released March 2021_
 
-The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../../intune-service/fundamentals/reports-export-graph-apis.md).
+The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../../device-management/reports/export-graph-apis.md).
 
 ## 2007
 _Released July 2020_

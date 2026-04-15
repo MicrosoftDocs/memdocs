@@ -26,22 +26,22 @@ The following list includes recommended prerequisites when setting up Microsoft 
 - Use available devices on [supported operating systems](ref-supported-platforms.md)
 - Be familiar with [network endpoints for Microsoft Intune](endpoints.md)
 - Have an [app](../app-management/ref-protected-apps.md) that you can add to Intune, like a Microsoft 365 app
-- Be familiar with [role-based access control (RBAC) in Intune](role-based-access-control.md)
+- Be familiar with [role-based access control (RBAC) in Intune](role-based-access-control/overview.md)
 
 ## Tasks in this series
 
 In these topics, you set up a test environment. Then, you step through common tasks that help you better understand and use Intune.
 
 - [Step 1 - Set up the Microsoft Intune free trial](free-trial-sign-up.md)
-- [Step 2 - Create a user and assign a license](quickstart-create-user.md)
-- [Step 3 - Create a group](quickstart-create-group.md)
+- [Step 2 - Create a user and assign a license](tenant-administration/quickstart-create-user.md)
+- [Step 3 - Create a group](tenant-administration/quickstart-create-group.md)
 - [Step 4 - Set up automatic enrollment](../device-enrollment/windows/quickstart-automatic-mdm.md)
 - [Step 5 - Enroll your Windows device](../device-enrollment/windows/quickstart-first-device.md)
 - [Step 6 - Create a compliance policy](../device-security/compliance/quickstart-password-compliance-android.md)
 - [Step 7 - Send notifications to noncompliant devices](../device-security/compliance/quickstart-noncompliance-notification.md)
 - [Step 8 - Add and assign an app](../app-management/deployment/quickstart-add-assign.md)
 - [Step 9 - Create and assign an app protection policy](../app-management/protection/quickstart-create-assign-policy.md)
-- [Step 10 - Create and assign custom roles](quickstart-create-custom-role.md)
+- [Step 10 - Create and assign custom roles](role-based-access-control/quickstart-custom-role.md)
 - [Step 11 - Create a device configuration profile](../device-configuration/templates/quickstart-email-profile.md)
 
 ## Get started

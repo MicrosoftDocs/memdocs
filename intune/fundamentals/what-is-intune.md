@@ -23,7 +23,7 @@ Microsoft Intune is a **cloud-based endpoint management solution**. It manages u
 
 :::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Diagram that shows features and benefits of Microsoft Intune.":::
 
-You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support the [Zero Trust security model](zero-trust-with-microsoft-intune.md).
+You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support the [Zero Trust security model](zero-trust.md).
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=dbd45acc-fa88-41aa-a9ac-7a751378d603]
 
@@ -45,7 +45,7 @@ With Intune, you can manage devices owned by your organization and devices owned
 
 For more information, go to:
 
-- [Manage identities using Microsoft Intune](manage-identities.md)
+- [Manage identities using Microsoft Intune](tenant-administration/identities.md)
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Supported operating systems in Microsoft Intune](ref-supported-platforms.md)
 
@@ -184,7 +184,7 @@ The Intune admin center makes it easy to connect to different partner services, 
 
 - **TeamViewer for remote assist**: When you connect to your TeamViewer account, you can use TeamViewer to remotely assist devices.
 
-  For more information, go to [Use TeamViewer to remotely administer Intune devices](./teamviewer-support.md).
+  For more information, go to [Use TeamViewer to remotely administer Intune devices](../device-management/tools/teamviewer-legacy.md).
 
 With these services, Intune:
 
@@ -267,7 +267,7 @@ For more information, go to:
 
 - [Get an overview Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview)
 - [Manage Windows Hello for Business on devices when they enroll in Intune](../device-security/identity-protection/configure-tenant-wide-policy.md)
-- [Manage identities using Microsoft Intune](manage-identities.md)
+- [Manage identities using Microsoft Intune](tenant-administration/identities.md)
 
 ### Create a VPN connection for remote users
 
@@ -319,7 +319,7 @@ Specifically:
 
 ## Related articles
 
-- [Manage identities using Microsoft Intune](manage-identities.md)
+- [Manage identities using Microsoft Intune](tenant-administration/identities.md)
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
 - [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)

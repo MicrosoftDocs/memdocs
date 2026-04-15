@@ -68,14 +68,14 @@ The Intune management extension has the following prerequisites. When the prereq
 - For devices behind firewalls and proxy servers, enable communication for Intune. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../fundamentals/endpoints.md).
 
 > [!NOTE]
-> For details about using Windows virtual machines, see [Using Windows virtual machines with Microsoft Intune](../../intune-service/fundamentals/windows-10-virtual-machines.md).
+> For details about using Windows virtual machines, see [Using Windows virtual machines with Microsoft Intune](../../solutions/windows-virtual-machines.md).
 
 ## Understand Intune management extension agent installation
 
 For devices meeting the prerequisites, the Intune management extension installs automatically when certain features are assigned to a user or device. Installation occurs when the following features are assigned:
 
 - [PowerShell scripts](./run-powershell-scripts-windows.md)
-- [Remediations](../../intune-service/fundamentals/remediations.md)
+- [Remediations](../../endpoint-analytics/remediations.md)
 - [Discovery scripts for custom compliance](../../device-security/compliance/create-custom-script.md)
 - [Win32 apps](../../app-management/deployment/add-win32.md)
 - [Endpoint analytics](../../endpoint-analytics/index.md)

@@ -153,7 +153,7 @@ The [High level planning guide to move to cloud-native endpoints: Intune feature
 
 On Hybrid Microsoft Entra Join endpoints, you can use on-premises group policies objects (GPO) or Intune to control policy settings. It's possible to also use a combination of GPO and Intune, but this combination adds administrative overhead and complexity. If you enable [co-management](../../configmgr/comanage/overview.md) (Intune (cloud) + Configuration Manager (on-premises)), then you can use some Microsoft Entra features, such as Conditional Access.
 
-For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md).
+For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../fundamentals/setup-migration.md).
 
 #### What device join states are required for device compliance and/or Conditional Access?
 

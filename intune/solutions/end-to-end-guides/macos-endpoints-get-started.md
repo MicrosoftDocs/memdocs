@@ -728,6 +728,6 @@ For more information, go to [Tutorial: Configure Apple Business Manager for auto
 
 ## Related articles
 
-- [macOS platform guide](../../intune-service/fundamentals/deployment-guide-platform-macos.md)
+- [macOS platform guide](../../fundamentals/platform-guide-macos.md)
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
 - [macOS account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md)

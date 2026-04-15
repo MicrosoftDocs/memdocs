@@ -60,10 +60,10 @@ Use the table in this section to troubleshoot common issues with Remote Help.
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
   | Remote Help is enabled for the tenant | In the Intune admin center, go to **Tenant administration** > **Remote Help** and ensure that Remote Help is enabled. It can take up to 30 minutes (or a few hours in some cases) after assigning licenses for the service to activate. |
-  | The helper and sharer are using supported platforms and versions | See [Plan Remote Help](remote-help-plan.md#supported-platforms) for details. |
-  | The helper has the required permissions | The helper must be assigned to an Intune role with Remote Help permissions and have the "Offer remote assistance" permission. See [Assign Remote Help permissions to helpers](remote-help-plan.md#role-based-access-control-rbac) for details. |
+  | The helper and sharer are using supported platforms and versions | See [Plan Remote Help](plan.md#supported-platforms) for details. |
+  | The helper has the required permissions | The helper must be assigned to an Intune role with Remote Help permissions and have the "Offer remote assistance" permission. See [Assign Remote Help permissions to helpers](plan.md#role-based-access-control-rbac) for details. |
   | The helper and sharer are signing in with organizational accounts from the same tenant | Both the helper and sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization. |
-  | The helper and sharer have network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-considerations) for details. |
+  | The helper and sharer have network access to the required endpoints | See [Network endpoints for Remote Help](plan.md#network-considerations) for details. |
 
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
@@ -71,10 +71,10 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
 
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
-  | The device meets the requirements for Remote Help | See [Plan Remote Help](remote-help-plan.md#supported-platforms) for details. |
-  | The device has network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-considerations) for details. |
+  | The device meets the requirements for Remote Help | See [Plan Remote Help](plan.md#supported-platforms) for details. |
+  | The device has network access to the required endpoints | See [Network endpoints for Remote Help](plan.md#network-considerations) for details. |
   | The device has blocked applications from using notifications | See [Policy CSP - Notifications](/windows/client-management/mdm/policy-csp-notifications#disallowcloudnotification) for details. |
-  | The Intune Win32 app detection rule (if used) is correct | Incorrect version detection can cause Intune to think the app is already installed or never installed. See [Deploy Remote Help](remote-help-deploy.md) for details. |
+  | The Intune Win32 app detection rule (if used) is correct | Incorrect version detection can cause Intune to think the app is already installed or never installed. See [Deploy Remote Help](deploy.md) for details. |
   | The device is in *do not disturb* mode | If the device is in *do not disturb* mode, notifications for Remote Help session requests won't be shown. Disable *don't disturb* mode and try again or ask the sharer to check their notifications pane. |
 
 #### Troubleshooting Remote Help on Windows for Microsoft Edge WebView2
@@ -108,8 +108,8 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
 
   | Check if                      | Solution                                           |
   |-----------------------------------|-----------------------------------------------|
-  | Single sign-on is configured and active | If unenrolled devices support isn't enabled, the Entra Enterprise single sign-on extension must be configured and registered for Intune to be able to confirm the device is enrolled. See [Plan Remote Help](remote-help-plan.md#prerequisites) for details. |
-  | The required operating system permissions for *Accessibility* and *Screen sharing* are allowed | See [Plan Remote Help](remote-help-deploy.md?tabs=macos#configure-remote-help-apps) for details. |
+  | Single sign-on is configured and active | If unenrolled devices support isn't enabled, the Entra Enterprise single sign-on extension must be configured and registered for Intune to be able to confirm the device is enrolled. See [Plan Remote Help](plan.md#prerequisites) for details. |
+  | The required operating system permissions for *Accessibility* and *Screen sharing* are allowed | See [Plan Remote Help](deploy.md?tabs=macos#configure-remote-help-apps) for details. |
   | Whether the sharer is using the native Remote Help app or the web app | The web app only allows view access, which might confuse helpers expecting control. |
 
 ### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
@@ -120,12 +120,12 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
   |-----------------------------------|-----------------------------------------------|
   | The device is enrolled in Dedicated mode. | Remote Help doesn't support other Android enrollment types. |
   | The device has been newly enrolled with Intune. | On newly enrolled devices, push notifications, needed for Remote Help to receive session initiation requests, can take a while to start working. Wait for 15 minutes and try again later.|
-  | The Remote Help app isn't installed. | Install the app, see [Deploy Remote Help](remote-help-deploy.md) for details. |
-  | All the required permissions are configured and granted for the Remote Help app. | Review and ensure that all required permissions are granted. See [Plan Remote Help](remote-help-plan.md#prerequisites) for details. |
+  | The Remote Help app isn't installed. | Install the app, see [Deploy Remote Help](deploy.md) for details. |
+  | All the required permissions are configured and granted for the Remote Help app. | Review and ensure that all required permissions are granted. See [Plan Remote Help](plan.md#prerequisites) for details. |
   | The Intune app version isn't updated. | Update the Intune app to the latest version. |
   | The device doesn't have access to Google services. | Remote Help requires access to Google Mobile Services to function, so make sure the device has Google services. You can do this by verifying that the Play Store is present on the device. See [Android: Google Mobile Services](https://www.android.com/gms/). |
   | There's no response from the end user. | Screen Sharing and Full Control Sessions time out automatically after 5 minutes if there's no response from [Android: Google Mobile Services](https://www.android.com/gms/) on the end user device. Make sure the user accepts the prompt to start the session. |
-  | The device manufacturer or OS/Zebra MX/Samsung Knox version isn't supported | Make sure the device is supported. See [Plan Remote Help](remote-help-plan.md#supported-platforms) |
+  | The device manufacturer or OS/Zebra MX/Samsung Knox version isn't supported | Make sure the device is supported. See [Plan Remote Help](plan.md#supported-platforms) |
   | (On Samsung devices only) The Knox license on the device is expired/invalid or has network issues.  | Make sure that all Knox permissions have been granted, and that the device has an active Knox license; see [License activation errors](https://configure.samsungknox.com/files/knox-configure-getting-started/Content/license-activation-errors.htm) for troubleshooting Knox activation errors. |
   | (On Samsung devices only) Other apps are actively using the Samsung Knox remote desktop APIs (you're using another remote assistance app on the device). | Close or uninstall any other apps using remote viewing/control capabilities on the device. |
 

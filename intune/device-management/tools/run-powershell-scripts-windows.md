@@ -41,7 +41,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 > - Don't use scripts to collect personal data from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Remediations](../../intune-service/fundamentals/remediations.md).
+> For related information, see [Remediations](../../endpoint-analytics/remediations.md).
 
 ## Prerequisites
 

@@ -149,4 +149,4 @@ Hello for Business is an alternative sign-in method that uses a Microsoft Entra 
 
 ## Related content
 
-[Set up Intune](deployment-plan-setup.md).
+[Set up Intune](../fundamentals/deploy-setup-step-1.md).

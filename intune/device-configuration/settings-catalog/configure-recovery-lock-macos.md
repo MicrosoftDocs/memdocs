@@ -116,7 +116,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 ## Monitor Recovery Lock status and view the password
 
-When you assign the policy to devices, you can monitor its status using the [Per setting status report](../../intune-service/fundamentals/reports.md#per-setting-status-report-operational).
+When you assign the policy to devices, you can monitor its status using the [Per setting status report](../../device-management/reports/overview.md#per-setting-status-report-operational).
 
 If Recovery Lock is enabled, you can view the password in the report at **Passwords and keys** > **Recovery Lock Password**.
 

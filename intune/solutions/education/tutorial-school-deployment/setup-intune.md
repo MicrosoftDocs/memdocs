@@ -262,7 +262,7 @@ When the Intune service configured, you can configure policies and applications 
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/intune-service/fundamentals/licenses
+[MEM-1]: /intune/fundamentals/licensing/index
 [MEM-2]: ../../../intune-service/enrollment/enrollment-restrictions-set.md
 [MEM-4]: ../../../device-security/identity-protection/configure-tenant-wide-policy.md
 [INT-1]: /intune-education/what-is-intune-for-education

@@ -101,4 +101,4 @@ When you're ready to deploy Intune in your organization, the following resources
 > [Deploy or move to Microsoft Intune](../../fundamentals/get-started.md)
 
 > [!div class="nextstepaction"]
-> [Migration guide: Set up or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
+> [Migration guide: Set up or move to Microsoft Intune](../../fundamentals/setup-migration.md)

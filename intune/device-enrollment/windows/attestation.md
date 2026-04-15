@@ -173,7 +173,7 @@ To use the **Attest device** action, you require a role based permission known a
 
 - [TPM recommendations - Windows Security | Microsoft Learn](/windows/security/hardware-security/tpm/tpm-recommendations)
 
-- [Intune reports](../../intune-service/fundamentals/reports.md#device-enrollment-reports)
+- [Intune reports](../../device-management/reports/overview.md#device-enrollment-reports)
 
 - [How to update Firmware](https://support.microsoft.com/windows/update-your-security-processor-tpm-firmware-94205cbc-a492-8d79-cc55-1ecd6b0a8022)
 

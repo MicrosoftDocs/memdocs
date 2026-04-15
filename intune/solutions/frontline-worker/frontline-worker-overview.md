@@ -57,14 +57,14 @@ When you have this information, the next step is to identify the platforms you u
 
 Intune has built-in features that can be used for frontline worker devices, including:
 
-- **[Windows cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)**
+- **[Windows cloud configuration](../cloud-native-endpoints/cloud-configuration.md)**
 
   This feature can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
 
   For more information, go to:
 
-  - [Windows in cloud configuration overview](../../intune-service/fundamentals/cloud-configuration.md)
-  - [Step-by-step setup guide](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
+  - [Windows in cloud configuration overview](../cloud-native-endpoints/cloud-configuration.md)
+  - [Step-by-step setup guide](../cloud-native-endpoints/setup-cloud-configuration.md)
 
 - **[Remote Help](../../remote-help/overview.md)**
 
@@ -74,7 +74,7 @@ Intune has built-in features that can be used for frontline worker devices, incl
   - [macOS](../../remote-help/overview.md)
   - [Windows](../../remote-help/overview.md)
 
-- **[Specialty devices](../../intune-service/fundamentals/specialty-devices-with-intune.md)**
+- **[Specialty devices](../../device-management/specialty-devices.md)**
 
   These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, like Microsoft Teams Rooms devices. They can be managed using Intune policies.
 
@@ -130,4 +130,4 @@ For more information and to get started, go to:
 - [FLW for Windows devices](frontline-worker-overview-windows.md)
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
 - [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
-- [Migration guide: Set up or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
+- [Migration guide: Set up or move to Microsoft Intune](../../fundamentals/setup-migration.md)

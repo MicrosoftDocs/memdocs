@@ -22,7 +22,7 @@ Administrators can review the audit logs to track and monitor events for most In
 Users with the following permissions can review audit logs:
 
 - [Intune Administrator Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
-- Administrators assigned to an Intune role with **Audit data** - **Read** permissions. For a list of built-in Intune roles that have this permission, go to [Built-in role permissions for Microsoft Intune](role-based-access-control-reference.md).
+- Administrators assigned to an Intune role with **Audit data** - **Read** permissions. For a list of built-in Intune roles that have this permission, go to [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control/ref-built-in-roles.md).
 
 ## View the audit logs
 
@@ -66,7 +66,7 @@ When looking at the `.csv` file:
 
 - The **Target(s)** section lists multiple targets and the properties that were changed.
 
-For more information about this feature, including the prerequisites, go to [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
+For more information about this feature, including the prerequisites, go to [send log data to storage, event hubs, or log analytics](integrate-azure-monitor.md).
 
 ## Use Graph API to retrieve audit events
 
@@ -74,5 +74,5 @@ You can also use Graph API to get two years of audit events. For more informatio
 
 ## Related articles
 
-- [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md)
+- [Send log data to storage, event hubs, or log analytics](integrate-azure-monitor.md)
 - [Review client app protection logs](../app-management/protection/troubleshoot-protection-logs.md)

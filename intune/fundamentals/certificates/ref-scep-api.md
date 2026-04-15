@@ -442,6 +442,6 @@ Validating and testing that your solution is properly integrated with Intune is 
 ## See also
 
 - [Add third party CA overview](./third-party-ca-scep.md)
-- [Set up Intune](../../intune-service/fundamentals/deployment-plan-setup.md)
+- [Set up Intune](../../fundamentals/deploy-setup-step-1.md)
 - [Device enrollment](../../device-enrollment/guide.md)
 - [Configure SCEP certificate profiles](../../device-configuration/certificates/scep-profiles.md) (the Microsoft Network Device Enrollment Service server\connector setup isn't used for this scenario)

@@ -232,7 +232,7 @@ additionalContent: |
 
    ## See also
 
-   - [Deploy Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
+   - [Deploy Intune](../../fundamentals/setup-migration.md)
    - [Create a rollout plan](../../fundamentals/planning-guide.md)
    - [Android mobile app management policy settings in Microsoft Intune](ref-settings-android.md)
    - [iOS/iPadOS mobile app management policy settings](ref-settings-ios.md)

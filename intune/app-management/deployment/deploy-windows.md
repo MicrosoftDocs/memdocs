@@ -37,7 +37,7 @@ Specific app types are supported based on the version of Windows that your users
 | Store Link | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Microsoft Edge | No | Yes | Yes | Yes | Yes | 19H2+<sup>3 | No | No |
 
-<sup>1</sup> To unlock app management, upgrade your HoloLens device to [Holographic for Business](../../intune-service/fundamentals/windows-holographic-for-business.md).<br />
+<sup>1</sup> To unlock app management, upgrade your HoloLens device to [Holographic for Business](../../solutions/windows-holographic.md).<br />
 <sup>2</sup> Launch from the Company Portal only.<br />
 <sup>3</sup> For Edge app to install successfully, devices must also be assigned an S-Mode policy.
 

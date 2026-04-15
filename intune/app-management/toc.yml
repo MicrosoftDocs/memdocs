@@ -226,7 +226,7 @@ items:
       - name: Troubleshoot
         items:
           - name: Help users troubleshoot problems
-            href: /intune/intune-service/fundamentals/help-desk-operators
+            href: /intune/fundamentals/it-pro-support/help-desk-operators
           - name: Troubleshoot app installation problems
             href: /troubleshoot/mem/intune/troubleshoot-app-install?context=/intune/context
           - name: App installation error reference

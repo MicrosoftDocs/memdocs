@@ -42,7 +42,7 @@ With the Microsoft Intune family of products and services, you have the followin
   For more information on using Intune to manage your endpoints, go to:
 
   - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
-  - [Deployment guide: Setup or move to Microsoft Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
+  - [Deployment guide: Setup or move to Microsoft Intune](../../fundamentals/setup-migration.md)
   - [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
 
 - **[Microsoft Configuration Manager](../../configmgr/index.yml)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](../../configmgr/comanage/overview.md), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).

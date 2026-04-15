@@ -114,7 +114,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](../../device-configuration/monitor-device-profile.md).
 
-For information on the reporting data you can view, go to [Intune reports](../../intune-service/fundamentals/reports.md).
+For information on the reporting data you can view, go to [Intune reports](../../device-management/reports/overview.md).
 
 ### Common issues
 

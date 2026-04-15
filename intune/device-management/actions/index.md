@@ -268,7 +268,7 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-SCANQ]: quick-scan.md
 [RA-SMHS]: device-suspend-managed-home-screen.md 
 [RA-SYNC]: sync.md
-[RA-TVIEW]: ../../intune-service/fundamentals/teamviewer-support.md
+[RA-TVIEW]: ../../device-management/tools/teamviewer-legacy.md
 [RA-WIPE]: wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

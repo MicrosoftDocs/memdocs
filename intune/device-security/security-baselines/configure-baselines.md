@@ -98,7 +98,7 @@ The following guidance can be used anytime you create a new security baseline pr
 5. On the **Configuration settings** tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
 
    - Select a group to expand and review the available settings.
-   - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../../intune-service/fundamentals/settings-insight.md).
+   - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../../device-configuration/settings-insight.md).
    - Use the *Search* bar and specify keywords that filter the view to view only those groups that contain your search criteria.
 
    Each setting in a baseline has a default configuration preset for that baseline version. Some aren't configured, while others are set to configure specific values or conditions on a device. The default presets found in a baseline represent the recommended security posture from that product's security team. When configuring a baseline:

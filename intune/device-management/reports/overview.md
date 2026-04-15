@@ -31,7 +31,7 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Export** – You can quickly export reporting data generated from large tenants.
 
 > [!NOTE]
-> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices](../../intune-service/fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows," and search for "PC," the exported data contains Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices](../../device-management/reports/overview.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows," and search for "PC," the exported data contains Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 ## Who can access the data?
 

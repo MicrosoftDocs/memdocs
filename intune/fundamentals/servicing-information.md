@@ -24,7 +24,7 @@ An internal environment called Self Host is the first environment to receive the
 
 Updating Intune client applications is a different process. For devices that meet the prerequisites, the Intune management extension (IME) is installed automatically when certain features are assigned to a user or device. See [Intune management agent for macOS](../app-management/deployment/management-agent-macos.md), [Add, assign, & monitor a Win32 app](../app-management/deployment/add-win32.md#prerequisites), and [Add PowerShell scripts to Windows devices](../device-management/tools/run-powershell-scripts-windows.md) for details. The IMEs are frequently updated alongside with our monthly releases. After a tenant is successfully updated, devices with the IME installed download the new version of the IME as they check-in on their regular schedule, resulting in a phased deployment of the updates within a tenant. The IME download sized is around 10Mb.
 
-For Company Portal app, Microsoft is subject to the release requirements and processes of the Apple App Store, Google Play, and sometimes mobile carriers. It isn't always possible to align the Intune release updates with updates to the Company Portal app. For more information on the Company Portal app updates, go to [UI updates for Intune end-user apps](whats-new-app-ui.md).
+For Company Portal app, Microsoft is subject to the release requirements and processes of the Apple App Store, Google Play, and sometimes mobile carriers. It isn't always possible to align the Intune release updates with updates to the Company Portal app.
 
 ### How can I tell if a service update is complete for my tenant?
 

@@ -38,7 +38,7 @@ You must also:
 
 * [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../../fundamentals/setup-mdm-authority.md). You only need to do this once, when you first set up Intune for mobile device management.
 
-* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../intune-service/fundamentals/specialty-devices-with-intune.md).
+* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../device-management/specialty-devices.md).
 
 
 ## Create an enrollment profile

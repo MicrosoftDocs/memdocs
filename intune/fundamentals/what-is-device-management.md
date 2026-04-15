@@ -87,6 +87,6 @@ For more information, go to:
 ## Related articles
 
 - [Microsoft Intune planning guide](planning-guide.md)
-- [Manage user and group identities in Microsoft Intune](manage-identities.md)
+- [Manage user and group identities in Microsoft Intune](tenant-administration/identities.md)
 - [Manage your devices and control device features in Microsoft Intune](manage-devices.md)
 - [Manage your apps and app data in Microsoft Intune](manage-apps.md)

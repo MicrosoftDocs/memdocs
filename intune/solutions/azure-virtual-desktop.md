@@ -43,7 +43,7 @@ Cross-regional enrollments aren't supported, for example an Azure Virtual Deskto
 
 ### Configuration
 
-All VM limitations listed in [Using Windows virtual machines](windows-10-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
+All VM limitations listed in [Using Windows virtual machines](windows-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
 
 Also, the following profiles aren't currently supported:
 

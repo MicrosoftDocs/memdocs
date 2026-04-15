@@ -24,4 +24,4 @@ Every solution has its own requirements and options. For more information, see:
 - [Use TeamViewer to remotely administer Intune devices][RA-TVIEW]
 
 [RA-HELP]: ../../remote-help/overview.md
-[RA-TVIEW]: ../../intune-service/fundamentals/teamviewer-support.md
+[RA-TVIEW]: ../../device-management/tools/teamviewer-legacy.md

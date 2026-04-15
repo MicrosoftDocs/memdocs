@@ -373,7 +373,7 @@ When devices fail to onboard:
 
 Beyond the dedicated EDR Onboarding Status report, you can also view device onboarding status through Intune's Microsoft Defender Antivirus reports. These reports include onboarding status information for Windows MDM devices and provide another way to monitor your organization's Defender for Endpoint deployment:
 
-- **[Antivirus agent status report](../../intune-service/fundamentals/reports.md#antivirus-agent-status-report-organizational)**: Shows comprehensive device status including Defender for Endpoint onboarding state
+- **[Antivirus agent status report](../../device-management/reports/overview.md#antivirus-agent-status-report-organizational)**: Shows comprehensive device status including Defender for Endpoint onboarding state
 - **[Unhealthy endpoints report](./antivirus.md#unhealthy-endpoints)**: Displays devices with detected issues, including onboarding problems
 
 These reports are available at in the admin center at the following lcoations:  

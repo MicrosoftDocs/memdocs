@@ -101,7 +101,7 @@ conceptualContent:
       - title: Get started
         summary: Resources to see Intune capabilities, get access to the admin center, and plan your deployment.
         links:
-        - url: ./intune-service/fundamentals/account-sign-up.md
+        - url: ./fundamentals/account-sign-up.md
           itemType: get-started
           text: Sign up or sign in to Microsoft Intune
         - url: https://aka.ms/Intune_GuidedDemo
@@ -123,13 +123,13 @@ conceptualContent:
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
-        - url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
+        - url: ./fundamentals/platform-guide-windows.md
           itemType: how-to-guide
           text: Manage Windows devices
-        - url: ./intune-service/fundamentals/deployment-guide-platform-android.md
+        - url: ./fundamentals/platform-guide-android.md
           itemType: how-to-guide
           text: Manage Android devices
-        - url: ./intune-service/fundamentals/deployment-guide-platform-ios-ipados.md
+        - url: ./fundamentals/platform-guide-ios-ipados.md
           itemType: how-to-guide
           text: Manage iOS/iPadOS devices
         - text: Education
@@ -137,7 +137,7 @@ conceptualContent:
           url: ./intune-service/industry/education/introduction-intune-education.md
         - text: Government
           itemType: architecture
-          url: ./intune-service/fundamentals/intune-govt-service-description.md
+          url: ./fundamentals/government-service-description.md
 
       - title: Community and support
         summary: Check out Intune community resources for blogs, announcements, discussions, and more.

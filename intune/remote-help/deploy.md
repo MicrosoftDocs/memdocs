@@ -66,7 +66,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 Remote Help uses Microsoft Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-The built-in **Help Desk Operator** role includes all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](remote-help-plan.md#role-based-access-control-rbac).
+The built-in **Help Desk Operator** role includes all of the required permissions for Remote Help. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on the individual permissions required for Remote Help, see [Plan Remote Help](plan.md#role-based-access-control-rbac).
 
 ## Download Remote Help apps
 
@@ -163,7 +163,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 The macOS Remote Help native app is available to download from Microsoft and must be installed on the device to use full control.
 
 > [!TIP]
-> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](remote-help.md).
+> The native app is only required if full control of the helpers device is required, otherwise you can use [Remote Help web app](overview.md).
 
 #### Deploy macOS Remote Help
 
@@ -497,4 +497,4 @@ To apply conditional access policies to Remote Help, follow these steps:
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Using Remote Help >](remote-help-use.md)
+> [Next: Using Remote Help >](use-windows.md)

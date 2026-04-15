@@ -97,7 +97,7 @@ Admins can now download diagnostics logs for failed Autopilot device preparation
 
 Date added: *September 18, 2024*
 
-As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/intune/intune-service/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
+As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/intune/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
 
 <!-- MAXADO-9313795 / INADO-28687730 -->
 
@@ -140,5 +140,5 @@ Windows Autopilot device preparation is generally available. For an overview, se
 ## Related content
 
 - [What's new in Windows Autopilot](../whats-new.md).
-- [What's new in Microsoft Intune](/intune/intune-service/fundamentals/whats-new).
+- [What's new in Microsoft Intune](/intune/whats-new/index).
 - [What's new in Windows client](/windows/whats-new/).

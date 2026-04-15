@@ -171,7 +171,7 @@ If the app content isn't synced after several hours, delete the app and try agai
 
 ### Is there an Intune report available to view details about the Enterprise App Catalog apps for a specific device?
 
-Yes, the Managed Apps report provides a report of apps on a specific device that are currently installed, not installed, or available for install. For the device, the report provides details about the application, version, resolved intent, and installation status. For more information about this report, see [Managed Apps report](../../intune-service/fundamentals/reports.md#managed-apps-report-operational).
+Yes, the Managed Apps report provides a report of apps on a specific device that are currently installed, not installed, or available for install. For the device, the report provides details about the application, version, resolved intent, and installation status. For more information about this report, see [Managed Apps report](../../device-management/reports/overview.md#managed-apps-report-operational).
 
 
 ## Apps available in the Enterprise App Catalog

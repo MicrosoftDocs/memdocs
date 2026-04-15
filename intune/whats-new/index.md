@@ -18,8 +18,8 @@ Learn what's new each week in Microsoft Intune.
 You can also read:
 
 - [**Important notices**](#notices)
-- [Past releases](whats-new-archive.md) in the What's new archive
-- Information about [how Intune service updates are released](intune-service-servicing-information.md)
+- [Past releases](archive/index.md) in the What's new archive
+- Information about [how Intune service updates are released](../fundamentals/servicing-information.md)
 
 > [!NOTE]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and is in the following order:
@@ -68,7 +68,7 @@ Microsoft Intune now supports management of Android XR devices using Android Ent
 
 #### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
 
-There is a new TeamViewer integration in Microsoft Intune that simplifies onboarding and improves reliability for remote assistance workflows. The new connector replaces the existing TeamViewer connector experience and provides a more streamlined experience in the Intune admin center. If you're using the previous TeamViewer connector, you must migrate to the new connector within 12 months to maintain functionality. For more information about the new connector, see [Use the TeamViewer integration in Microsoft Intune](team-viewer-integration.md).  
+There is a new TeamViewer integration in Microsoft Intune that simplifies onboarding and improves reliability for remote assistance workflows. The new connector replaces the existing TeamViewer connector experience and provides a more streamlined experience in the Intune admin center. If you're using the previous TeamViewer connector, you must migrate to the new connector within 12 months to maintain functionality. For more information about the new connector, see [Use the TeamViewer integration in Microsoft Intune](../device-management/tools/setup-teamviewer.md).  
 
 ## Week of March 30, 2026 (Service release 2603)
 
@@ -397,7 +397,7 @@ For alternative step-by-step guidance, see the following resources:
 
 We've improved the update and reporting experience for Remote Help on macOS to make version management more reliable and transparent for IT admins.  
  
-After you deploy the latest Remote Help client (version 1.0.26012221) through Microsoft Intune, you can now view the full client version in your device inventory and during app upgrades. This improvement makes it easier to verify deployments. Remote Help installations deployed through Intune are also registered with Microsoft AutoUpdate (MAU), allowing Intune-managed macOS devices to automatically receive future Remote Help updates. For more information, see [Deploy Remote Help with Microsoft Intune](remote-help-deploy.md).
+After you deploy the latest Remote Help client (version 1.0.26012221) through Microsoft Intune, you can now view the full client version in your device inventory and during app upgrades. This improvement makes it easier to verify deployments. Remote Help installations deployed through Intune are also registered with Microsoft AutoUpdate (MAU), allowing Intune-managed macOS devices to automatically receive future Remote Help updates. For more information, see [Deploy Remote Help with Microsoft Intune](../remote-help/deploy.md).
 
 ## Week of March 2, 2026 (Service release 2602)
 
@@ -421,7 +421,7 @@ You can use assignment filters in policy assignments for DDM-based configuration
 > [!NOTE]
 > This feature is rolling out slowly and should be available for all customers by late March 2026.
 
-To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
+To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters/overview.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -522,7 +522,7 @@ A new setting that affects the Microsoft Entra account registration experience o
 
 Multi-administrator approval now supports device configuration policies created through the settings catalog and device compliance policies. When you turn on this feature, any changes you make, including creating, editing, or deleting a policy, must be approved by a second administrator before they take effect. This dual-authorization process helps protect your organization from unauthorized or accidental changes to role-based access control.
 
-For more information, see [Use Access policies to require Multi Admin Approval](multi-admin-approval.md).
+For more information, see [Use Access policies to require Multi Admin Approval](../fundamentals/role-based-access-control/multi-admin-approval.md).
 
 ### Device security
 
@@ -708,7 +708,7 @@ Apple rebranded **Rapid Security Responses** to **Background Security Improvemen
 
 #### More options for assignment filters > Device Management Type property for managed apps on Android and iOS/iPadOS<!-- 25040926 -->
 
-When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
+When you create policies for your managed apps, you can use [assignment filters](../fundamentals/filters/overview.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
 
 > [!NOTE]
 > This feature is rolling out slowly and should be available for all customers by late March 2026.
@@ -748,8 +748,8 @@ For iOS/iPadOS, the **Device Management Type** property for managed apps is:
 
 To learn more about filters, see:
 
-- [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune](filters-device-properties.md)
+- [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters/overview.md)
+- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune](../fundamentals/filters/ref-device-properties.md)
 
 > [!div class="checklist"]
 > Applies to:
@@ -1118,7 +1118,7 @@ To learn more about this feature, see [Explore Intune data with natural language
 
 #### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
 
-When you create a policy in Intune, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can create a rule using different [properties](filters-device-properties.md), like `deviceManagementType`.
+When you create a policy in Intune, you can use [assignment filters](../fundamentals/filters/overview.md) to assign a policy based on rules you create. You can create a rule using different [properties](../fundamentals/filters/ref-device-properties.md), like `deviceManagementType`.
 
 For managed devices, the Device Management Type property supports the following Android enrollment options:
 
@@ -1132,8 +1132,8 @@ For managed devices, the Device Management Type property supports the following 
 
 To learn more about assignment filters and the properties you can currently use, see:
 
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters/overview.md)
+- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](../fundamentals/filters/ref-device-properties.md)
 
 Applies to:
 
@@ -1291,7 +1291,7 @@ To get started with the settings catalog, see:
 
 #### New client version for Remote Help for macOS <!-- 35620986 -->
 
-With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](remote-help.md?tabs=macos).
+With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](../remote-help/overview.md?tabs=macos).
 
 ### Device security
 
@@ -1622,7 +1622,7 @@ For more information on this change, see [Plan for change:  Intune is moving to 
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
 
-For a list of supported OS version, see [Supported operating systems and browsers in Intune](supported-devices-browsers.md).
+For a list of supported OS version, see [Supported operating systems and browsers in Intune](../fundamentals/ref-supported-platforms.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1982,7 +1982,7 @@ For more information, see [Role-based access control in Microsoft Intune](../fun
 ## What's new archive
 <!-- Past announcements that are older than six months will be moved to the archive -->
 
-For previous months, see the [What's new archive](whats-new-archive.md).
+For previous months, see the [What's new archive](archive/index.md).
 
 ## Notices
 

@@ -151,4 +151,4 @@ Now when teachers use the Classroom app, they'll have full control over student 
 
 For more information about the Classroom app, see [Classroom help](https://help.apple.com/classroom/ipad/2.0/), on the Apple web site.
 
-If you want to configure shared iPad devices for students, see [How to configure Intune education settings for shared iPad devices](education-settings-configure-ios-shared.md).
+If you want to configure shared iPad devices for students, see [How to configure Intune education settings for shared iPad devices](ref-classroom-settings-ios-shared.md).

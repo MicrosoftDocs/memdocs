@@ -29,7 +29,7 @@ To get help, you must reach out to your support staff to request assistance. You
 ### [:::image type="icon" source="../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 > [!TIP]
-> The Remote Help app needs to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-remote-help-apps) section.  
+> The Remote Help app needs to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](deploy.md#install-remote-help-apps) section.  
 
 **Starting the session:**  
 
@@ -97,7 +97,7 @@ To request help, you must reach out to your support staff to request assistance,
 - Both the sharer and helper can end the session. To end the session, select **Leave** in the Remote Help app.
 
 > [!NOTE]
-> If Remote Help wasn't installed by your administrator, you can install Remote Help yourself by following the download instructions in the [Install Remote Help apps](remote-help-deploy.md#install-remote-help-apps) section.
+> If Remote Help wasn't installed by your administrator, you can install Remote Help yourself by following the download instructions in the [Install Remote Help apps](deploy.md#install-remote-help-apps) section.
 
 ### [:::image type="icon" source="../media/icons/16/android.svg"::: **Android**](#tab/android)
 

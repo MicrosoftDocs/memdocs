@@ -259,7 +259,7 @@ In the Intune admin center, you can use the built-in reporting features to help 
 6. Select the policy to see the devices. Then, select a specific device to see the setting that failed and possibly an error code.
 
 > [!TIP]
-> [Intune reports](../../intune-service/fundamentals/reports.md) is a great resource. For information about all the reporting data you can view, go to [Intune reports](../../intune-service/fundamentals/reports.md).
+> [Intune reports](../../device-management/reports/overview.md) is a great resource. For information about all the reporting data you can view, go to [Intune reports](../../device-management/reports/overview.md).
 
 For more information about conflict resolution, see:
 

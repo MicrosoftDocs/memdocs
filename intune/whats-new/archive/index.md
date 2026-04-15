@@ -139,8 +139,8 @@ Using cleanup rules, you can configure Intune to automatically clean up devices 
 With this feature, you can:
 
 - Configure individual device cleanup rules per platform, like Windows, iOS/iPadOS, macOS, and Android.
-- Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
-- Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
+- Use the [Audit logs](../../governance/monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
+- Use [role-based access control (RBAC)](../../fundamentals/role-based-access-control/overview.md) to customize the user roles that can create device cleanup rules.
 
 For more information, see [device cleanup rules](../../governance/configure-cleanup-rules.md).
 
@@ -328,7 +328,7 @@ With (PRS) V3, device reports only update when a device checks in. This behavior
 
 If a policy is removed but the device hasn't checked in, the report continues to show the last known status. The policy is removed during the next check-in, at which point the report is updated. This behavior improves accuracy but can differ from what customers experienced with (PRS) V1.
 
-To learn more about the Intune reports you can use, see [Intune reports](reports.md).
+To learn more about the Intune reports you can use, see [Intune reports](../../device-management/reports/overview.md).
 
 ### Device security
 
@@ -366,7 +366,7 @@ We added a new column, **Attest Status**, to the Windows hardware attestation re
 - HTTP bad request errors
 - Other attestation-related failures
 
-For more information about the report, see [Windows hardware attestation report](../../intune-service/fundamentals/reports.md#windows-hardware-attestation-report-organizational).
+For more information about the report, see [Windows hardware attestation report](../../device-management/reports/overview.md#windows-hardware-attestation-report-organizational).
 
 ## Week of June 9, 2025
 
@@ -458,7 +458,7 @@ We updated role-based access control (RBAC) for device limits. If you're current
 
 Android, iOS, and Mac devices are added to device inventory. Intune now collects a default set of inventory data including 74 Apple properties and 32 Android properties.
 
-For more information, see [View device details with Microsoft Intune](../../intune-service/fundamentals/device-inventory.md).
+For more information, see [View device details with Microsoft Intune](../../device-management/inventory-and-status/device-details.md).
 
 #### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
 
@@ -466,7 +466,7 @@ During an unattended Remote Help sessions on Android devices, the screen of the 
 
 This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices.
 
-For more information on Remote Help, see [Remote Help](remote-help.md).
+For more information on Remote Help, see [Remote Help](../../remote-help/overview.md).
 
 ### Device security
 
@@ -841,8 +841,8 @@ Remote Help now provides support for multi-session AVD with several users on a s
 For more information, see:
 
 - [Remote Help](../../remote-help/overview.md)
-- [Remote Help on windows](remote-help.md)
-- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md)
+- [Remote Help on windows](../../remote-help/overview.md)
+- [Using Azure Virtual Desktop multi-session with Microsoft Intune](../../solutions/azure-virtual-desktop-multi-session.md)
 
 #### Copilot assistant for device query<!-- 26933762 -->
 
@@ -1162,7 +1162,7 @@ Applies to:
 
 #### Use Support Assistant to resolve issues<!-- 29084113 -->
 
-Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](../../../intune-service/fundamentals/it-pro-support/get-support-admin-center.md).
+Support Assistant is now available in Intune. It leverages AI to enhance your help and support experience, ensuring more efficient issue resolution. Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic. Currently, the Support Assistant is in preview. You can enable and disable Support Assistant by choosing to opt in and opt out at any time. For related information, see [How to get support in the Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 ## Week of December 30, 2024
 
@@ -1243,7 +1243,7 @@ We're now supporting device management for Ubuntu 24.04 LTS. You can enroll and 
 
 For more information, see the following in Intune documentation:
 
-- [Deployment guide: Manage Linux devices in Microsoft Intune](../../intune-service/fundamentals/deployment-guide-platform-linux.md)
+- [Deployment guide: Manage Linux devices in Microsoft Intune](../../fundamentals/platform-guide-linux.md)
 - [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../../device-enrollment/guide-linux.md). To enroll Linux devices, ensure that they're running Ubuntu 20.04 LTS or higher.
 
 Applies to:
@@ -1426,7 +1426,7 @@ The SID update is available for user certificates across all platforms, and for 
 
 For more information, see:
 
-- [What's new for the certificate connector](../../../intune-service/fundamentals/certificates/connector/overview.md#september-19-2024)
+- [What's new for the certificate connector](../../fundamentals/certificates/connector/overview.md#september-19-2024)
 
 - [Apply PFX changes to certificate](../../device-configuration/certificates/pkcs-profiles.md)
 
@@ -1865,9 +1865,9 @@ A new `cpuArchitecture` device filter property is available for Windows and macO
 
 For more information on filters and the device properties you can use, see:
 
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [Filter properties](filters-device-properties.md)
-- [Supported workloads](filters-supported-workloads.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../fundamentals/filters/overview.md)
+- [Filter properties](../../fundamentals/filters/ref-device-properties.md)
+- [Supported workloads](../../fundamentals/filters/ref-supported-workloads.md)
 
 Applies to:
 
@@ -1970,7 +1970,7 @@ Plan 2 capabilities:
 
 - [Microsoft Tunnel for Mobile Application Management](../../device-security/microsoft-tunnel/mam.md)
 - [Firmware-over-the-air update](../../device-updates/android/setup-zebra-lifeguard.md)
-- [Specialty devices management](../../intune-service/fundamentals/specialty-devices-with-intune.md)
+- [Specialty devices management](../../device-management/specialty-devices.md)
 
 For more information, see:
 
@@ -2079,7 +2079,7 @@ Applies to:
 
 #### New support for Red Hat Enterprise Linux<!-- 25160548 -->
 
-Microsoft Intune now supports device management for Red Hat Enterprise Linux. You can enroll and manage Red Hat Enterprise Linux devices, and assign standard compliance policies, custom configuration scripts, and compliance scripts. For more information, see [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md) and [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../../device-enrollment/guide-linux.md).
+Microsoft Intune now supports device management for Red Hat Enterprise Linux. You can enroll and manage Red Hat Enterprise Linux devices, and assign standard compliance policies, custom configuration scripts, and compliance scripts. For more information, see [Deployment guide: Manage Linux devices in Microsoft Intune](../../fundamentals/platform-guide-linux.md) and [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../../device-enrollment/guide-linux.md).
 
 Applies to:
 
@@ -2093,7 +2093,7 @@ Use the new device attestation status report in Microsoft Intune to find out if 
 For more information, see:
 
 - [Windows enrollment attestation](../../device-enrollment/windows/attestation.md)
-- [Intune Reports](../../intune-service/fundamentals/reports.md#device-attestation-status-report)
+- [Intune Reports](../../device-management/reports/overview.md#device-attestation-status-report)
 
 #### Just-in-time registration and compliance remediation available for all iOS/iPadOS enrollments<!-- 27759589 -->
 
@@ -2121,7 +2121,7 @@ Applies to:
 
 There's a new `operatingSystemVersion` filter property. This property:
 
-- Is in [public preview](public-preview.md) and still being developed. So, some features, like **Preview devices**, don't work yet.
+- Is in [public preview](../../fundamentals/public-preview.md) and still being developed. So, some features, like **Preview devices**, don't work yet.
 
 - Should be used instead of the existing `OSVersion` property. The `OSVersion` property is being deprecated.
 
@@ -2164,8 +2164,8 @@ For managed apps, `operatingSystemVersion` applies to:
 
 For more information on filters and the device properties you can use, see:
 
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [Filter properties](filters-device-properties.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../fundamentals/filters/overview.md)
+- [Filter properties](../../fundamentals/filters/ref-device-properties.md)
 
 #### Government community cloud (GCC) support for Remote Help for macOS devices<!-- 25568551 -->
 
@@ -2177,7 +2177,7 @@ Applies to:
 
 For more information, see:
 
-- [Remote Help on macOS](remote-help.md)
+- [Remote Help on macOS](../../remote-help/overview.md)
 - [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
 
 ### Device security
@@ -2323,7 +2323,7 @@ Applies to:
 
 #### Updates to the Managed Apps report<!-- 26711898 -->
 
-The Managed Apps report now provides details about Enterprise App Catalog apps for a specific device. For more information about this report, see [Managed Apps report](../../intune-service/fundamentals/reports.md#managed-apps-report-operational).
+The Managed Apps report now provides details about Enterprise App Catalog apps for a specific device. For more information about this report, see [Managed Apps report](../../device-management/reports/overview.md#managed-apps-report-operational).
 
 ### Device configuration
 
@@ -2374,7 +2374,7 @@ Applies to:
 
 In the Intune admin center, you can select **Devices** > **By platform**, and view the policy options for the platform you select. These platform-specific pages are updated and include tabs for navigation.
 
-For a walkthrough of the Intune admin center, see [Tutorial: Walkthrough Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md).
+For a walkthrough of the Intune admin center, see [Tutorial: Walkthrough Microsoft Intune admin center](../../fundamentals/tutorial-admin-center-walkthrough.md).
 
 ### Device enrollment
 
@@ -2580,7 +2580,7 @@ For more information, see:
 
 We've released a new version of the Windows hardware attestation report that shows the value of settings attested by Device Health Attestation and Microsoft Azure Attestation for Windows. The Windows hardware attestation report is built on a new reporting infrastructure, and reports on new settings added to Microsoft Azure Attestation. The report is available in the admin center under **Reports** > **Device Compliance** > **Reports**.
 
-For more information, see [Intune reports](reports.md#windows-hardware-attestation-report-organizational).
+For more information, see [Intune reports](../../device-management/reports/overview.md#windows-hardware-attestation-report-organizational).
 
 The Windows health attestation report previously available under **Devices** > **Monitor** has been retired.
 
@@ -2802,8 +2802,8 @@ Remote Help now supports helpdesk connecting to a user's device and requesting f
 
 For more information, see:
 
-- [Remote Help on macOS](remote-help.md)
-- [Remote Help Web App](remote-help.md)
+- [Remote Help on macOS](../../remote-help/overview.md)
+- [Remote Help Web App](../../remote-help/overview.md)
 
 Applies to:
 
@@ -2865,14 +2865,14 @@ Applies to:
 
 #### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615 25825071-->
 
-The [Microsoft Intune Suite](intune-add-ons.md) includes advanced endpoint management and security features, including Remote Help.
+The [Microsoft Intune Suite](../../fundamentals/add-ons.md) includes advanced endpoint management and security features, including Remote Help.
 
 On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
 
 For more information on these features, see:
 
-- [Microsoft Intune for US Government GCC service description](intune-govt-service-description.md)
-- [Use Remote Help with Microsoft Intune](remote-help.md)
+- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
+- [Use Remote Help with Microsoft Intune](../../remote-help/overview.md)
 
 Applies to:
 
@@ -3022,7 +3022,7 @@ Applies to:
 
 #### Updates to assignment filters<!-- 12798031, 24801139 -->
 
-You can use [Intune assignment filters](filters.md) to assign a policy based on rules you create.
+You can use [Intune assignment filters](../../fundamentals/filters/overview.md) to assign a policy based on rules you create.
 
 Now, you can:
 
@@ -3031,7 +3031,7 @@ Now, you can:
 
 For more information on these features, see:
 
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../fundamentals/filters/overview.md)
 - [Data protection for Windows MAM](../../app-management/protection/enable-mam-windows.md)
 
 This feature applies to:
@@ -3282,8 +3282,8 @@ You can use filters on Endpoint Privilege Management (EPM) policies.
 
 For more information, see:
 
-- [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
-- [List of platforms, policies, and app types supported by filters in Intune](filters-supported-workloads.md)
+- [Use filters when assigning your apps, policies, and profiles in Intune](../../fundamentals/filters/overview.md)
+- [List of platforms, policies, and app types supported by filters in Intune](../../fundamentals/filters/ref-supported-workloads.md)
 
 Applies to:
 
@@ -3636,11 +3636,11 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 In Intune, you can view a new list of all device monitoring reports. You can find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane provides reports related to configuration, compliance, enrollment, and software updates. Additionally, there are other reports that you can view, such as **Device actions**.
 
-For more information, see [Intune reports](reports.md).
+For more information, see [Intune reports](../../device-management/reports/overview.md).
 
 #### Exported report data maintains search results<!-- 17723620 -->
 
-Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](../../device-management/reports/overview.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 #### Easy upload of diagnostic logs for Microsoft Tunnel servers<!-- 15728481 -->
 
@@ -3678,7 +3678,7 @@ For more information, see [Add an unmanaged macOS PKG app to Microsoft Intune](.
 
 Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments are now able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../../app-management/deployment/deploy-gcc-dod.md) and [Data protection for Windows MAM](../../app-management/protection/enable-mam-windows.md).
 
-In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](china.md).
+In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](../../fundamentals/china.md).
 
 ### Device configuration
 
@@ -3876,7 +3876,7 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 For more information, see:
 
 - [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)
-- [Try new Devices experience - Microsoft Learn](public-preview.md)
+- [Try new Devices experience - Microsoft Learn](../../fundamentals/public-preview.md)
 
 ### Device security
 
@@ -4214,7 +4214,7 @@ For more information, see [Set up web based device enrollment for iOS](../../dev
 
 The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons**, and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, the add-on capabilities you're licensed to use in your tenant, and support for new billing experiences in Microsoft admin center.
 
-For more information, see [Use Intune Suite add-ons capabilities](intune-add-ons.md).
+For more information, see [Use Intune Suite add-ons capabilities](../../fundamentals/add-ons.md).
 
 #### Remote Help for Android is now Generally available<!--17675897 -->
 
@@ -4226,7 +4226,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](remote-help.md).
+For more information, see [Remote Help on Android](../../remote-help/overview.md).
 
 ### Device security
 
@@ -4289,8 +4289,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 The following device compliance reports are out of public preview and are now generally available:
 
-- [Policy compliance](reports.md#policy-compliance-report-organizational)
-- [Setting compliance](reports.md#settings-compliance--organizational)
+- [Policy compliance](../../device-management/reports/overview.md#policy-compliance-report-organizational)
+- [Setting compliance](../../device-management/reports/overview.md#settings-compliance--organizational)
 
 With this move to general availability, the older versions of both reports have been retired from the Intune admin center and are no longer available.
 
@@ -4447,7 +4447,7 @@ This integration is now generally available for Android Enterprise Dedicated and
 
 Previously, this feature was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
-For licensing details, see [Intune add-ons](intune-add-ons.md).
+For licensing details, see [Intune add-ons](../../fundamentals/add-ons.md).
 
 ### Device enrollment
 
@@ -4478,7 +4478,7 @@ Applies to:
 - 12 Monterey
 - 13 Ventura
 
-For more information on Remote Help on macOS, see [Remote Help](remote-help.md).
+For more information on Remote Help on macOS, see [Remote Help](../../remote-help/overview.md).
 
 #### Management certificate expiration date<!-- 17648747  -->
 
@@ -4576,7 +4576,7 @@ The **UpdateOnboarding** setting for custom and built-in roles is modified to on
 
 The resource name is being updated from **Android for work** to **Android Enterprise**.
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Week of September 11, 2023
 
@@ -4590,7 +4590,7 @@ Applies to:
 
 - Windows
 
-For more information, see [Remote Help](remote-help.md).
+For more information, see [Remote Help](../../remote-help/overview.md).
 
 ## Week of September 4, 2023
 
@@ -4639,7 +4639,7 @@ With this update, be aware of the following limitations on Windows devices:
 
 Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies, you can protect a resource, like App deployments, by requiring any change to the deployment to be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
 
-For more information, see [Use Access policies to require multiple administrative approval](multi-admin-approval.md).
+For more information, see [Use Access policies to require multiple administrative approval](../../fundamentals/role-based-access-control/multi-admin-approval.md).
 
 ## Week of August 21, 2023 (Service release 2308)
 
@@ -4681,7 +4681,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](remote-help.md).
+For more information, see [Remote Help on Android](../../remote-help/overview.md).
 
 #### Group Policy analytics is generally available<!-- 24249203  -->
 Group Policy analytics is generally available (GA). Use Group Policy analytics to analyze your on-premises group policy objects (GPOs) for their migration to Intune policy settings.
@@ -4909,7 +4909,7 @@ For more information, see [Add Microsoft Store Apps to Microsoft Intune](../../a
 #### Introducing a new role-based access control (RBAC) permission under the resource Android for work<!--11298214 -->
 Introducing a new RBAC **Permission** for creating a custom role in Intune, under the resource **Android for work**. The permission **Update Enrollment Profile** allows the admin to manage or change both AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.
 
-For more information, see [Create custom role](create-custom-role.md).
+For more information, see [Create custom role](../../fundamentals/role-based-access-control/create-custom-role.md).
 
 ## Week of July 31, 2023
 
