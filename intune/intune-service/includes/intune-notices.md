@@ -173,7 +173,7 @@ Devices running Android versions 12 or below aren't affected by this change.
 Before September 30, 2025, review and update your policies as needed. Ensure users with devices running Android 13 or above are receiving timely security updates. You can use the [app protection status report](../apps/app-protection-policies-monitor.md#view-the-app-protection-status-report) to monitor the date of the last Android Security Patch received by the device and notify users to update as needed. The following admin options are available to help warn or block users:
 
 - For app protection policies, configure the **Min OS version** and **Min patch version** conditional launch settings. For more details, review [Android app protection policy settings in Microsoft Intune | Microsoft Learn](../apps/app-protection-policy-settings-android.md#conditional-launch)
-- For compliance policies, configure the **Minimum security patch level** compliance setting. For more details, review: [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md)
+- For compliance policies, configure the **Minimum security patch level** compliance setting. For more details, review: [Device compliance settings for Android Enterprise in Intune](../../device-security/compliance/ref-android-enterprise-settings.md)
 
 ### Plan for Change: New Intune connector for deploying Microsoft Entra hybrid joined devices using Windows Autopilot
 

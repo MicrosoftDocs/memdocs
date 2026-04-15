@@ -97,4 +97,4 @@ You can also automate Windows device enrollment. To learn more, see [Windows enr
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 6 - Set a required password length for Android devices](../../intune-service/protect/quickstart-set-password-length-android.md)
+> [Step 6 - Set a required password length for Android devices](../../device-security/compliance/quickstart-password-compliance-android.md)
