@@ -1,8 +1,6 @@
 ---
 title: Upgrade the Microsoft Tunnel Gateway server software
 description: Understand how Microsoft Tunnel Gateway upgrades to new versions of the tunnel software for Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 12/10/2025
 ms.topic: how-to
 ms.reviewer: ochukwunyere

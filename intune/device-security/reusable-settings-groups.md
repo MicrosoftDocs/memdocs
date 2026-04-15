@@ -164,7 +164,7 @@ If you have an E5 license, you can use Microsoft Defender for Endpoint to view d
 
 ## Use reusable groups for Endpoint Privilege Management
 
-For information about support for using reusable groups for Endpoint Privilege Management, see [Elevation Rules for Endpoint Privilege Management](../epm/ref-elevation-rules.md)
+For information about support for using reusable groups for Endpoint Privilege Management, see [Elevation Rules for Endpoint Privilege Management](../epm/create-elevation-rules.md)
 
 ## About policy conflicts
 

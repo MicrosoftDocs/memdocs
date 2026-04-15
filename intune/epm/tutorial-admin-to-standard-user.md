@@ -121,7 +121,7 @@ For more security recommendations, see [Security Recommendations](./deployment-p
 12. Assign to a group (for example Developers)
 13. **Select**, **Review**, and **Save**
 
-For more details on creating a rule, see [Create elevation rules](./ref-elevation-rules.md).
+For more details on creating a rule, see [Create elevation rules](./create-elevation-rules.md).
 
 ### Confirm the rule is functioning
 

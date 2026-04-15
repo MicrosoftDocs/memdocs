@@ -29,7 +29,7 @@ Use EPM policies with the *support approved* elevation type for files that need 
 
 > [!TIP]
 >
-> To review the four elevation types and other policy options, see [Windows elevation rules policy](./ref-elevation-rules.md).
+> To review the four elevation types and other policy options, see [Windows elevation rules policy](./create-elevation-rules.md).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 
@@ -80,7 +80,7 @@ For more information about all the permissions for managing EPM, see [Role-based
 
 ## Create policy for support approved file elevations
 
-To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](./ref-elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](./ref-elevation-rules.md)
+To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](./manage-elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](./create-elevation-rules.md)
 
 ## Manage pending elevation requests
 

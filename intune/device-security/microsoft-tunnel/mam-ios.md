@@ -1,8 +1,6 @@
 ---
 title: Use Microsoft Tunnel VPN with iOS/iPad devices that don't enroll with Microsoft Intune
 description: Add support for Mobile Application Management (MAM) for iOS to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune. Admins should use this article to create policies that support per-app VPN in line of business (LOB) apps.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/09/2025
 ms.topic: how-to
 ms.reviewer: ochukwunyere

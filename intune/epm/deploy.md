@@ -19,9 +19,9 @@ ms.collection:
 
 To deploy Endpoint Privilege Management (EPM), start by enabling reporting, then use reports to create rules for elevation. This article describes some common deployment scenarios and outlines the recommended deployment phases for your organization.
 
-- [Windows elevation settings policy](./ref-elevation-settings.md).
-- [Windows elevation rules policy](./ref-elevation-rules.md).
-- [Reusable settings groups](./ref-elevation-rules.md#reusable-settings-groups), which are optional configurations for your elevation rules.
+- [Windows elevation settings policy](./manage-elevation-settings.md).
+- [Windows elevation rules policy](./create-elevation-rules.md).
+- [Reusable settings groups](./create-elevation-rules.md#reusable-settings-groups), which are optional configurations for your elevation rules.
 
 ## Deployment overview
 
@@ -31,9 +31,9 @@ The common deployment phases are:
 
 :::image type="content" source="media/deploy/epm-deploy-phases.png" alt-text="The five phases to deploy EPM." border="false":::
 
-- **Phase 1: Auditing** - Enable EPM client and enable reporting collection using an [elevation settings policy](./ref-elevation-settings.md).
+- **Phase 1: Auditing** - Enable EPM client and enable reporting collection using an [elevation settings policy](./manage-elevation-settings.md).
 - **Phase 2: Persona identification** - Identity groups of users with common requirements.
-- **Phase 3: Build rules** - Use [EPM reports](./monitor-reports.md) to create [elevation rules](./ref-elevation-rules.md) for different personas.
+- **Phase 3: Build rules** - Use [EPM reports](./monitor-reports.md) to create [elevation rules](./create-elevation-rules.md) for different personas.
 - **Phase 4: Monitoring** - Iterate and refine rules, identify new scenarios.
 - **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](../device-configuration/endpoint-security/account-protection.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](./manage-support-approvals.md) so that users can request elevation for apps that aren't covered by rules.
 
@@ -52,4 +52,4 @@ The common deployment scenarios for EPM are:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Next: Create an elevation settings policy >](./ref-elevation-settings.md)
+> [Next: Create an elevation settings policy >](./manage-elevation-settings.md)

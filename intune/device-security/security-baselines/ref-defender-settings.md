@@ -1,8 +1,6 @@
 ---
 title: Settings list for the Microsoft Intune security baseline for Microsoft Defender for Endpoint
 description: View the settings in the Microsoft Intune security baseline for Microsoft Defender for Endpoint and each settings default value.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/10/2024
 ms.topic: reference
 ms.reviewer: juidaewo

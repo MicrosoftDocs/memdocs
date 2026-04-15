@@ -1,8 +1,6 @@
 ---
 title: Monitor security baselines deployed by Microsoft Intune
 description: Monitor device and per-setting results of security baselines you deploy with Microsoft Intune, and identify conflicts for devices.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/22/2024
 ms.topic: how-to
 ms.reviewer: juidaewo

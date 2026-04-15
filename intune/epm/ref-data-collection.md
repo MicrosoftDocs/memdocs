@@ -2,7 +2,7 @@
 title: Review the type of data that Microsoft Intune Endpoint Privilege Management collects
 description: View details about the type of data Endpoint Privilege Management can collect and store when used with Microsoft Intune.
 ms.date: 09/10/2025
-ms.topic: article
+ms.topic: reference
 ms.reviewer: mikedano
 ms.subservice: suite
 ms.collection:
@@ -26,7 +26,7 @@ Endpoint Privilege Management on devices can be configured to report on the foll
 - Diagnostic data
 - Usage data
 
-When configuring EPM, you configure the *Send elevation data for reporting* and *Reporting scope* settings in an Intune [Windows elevation settings policy](./ref-elevation-settings.md) to determine which data Intune reports to Microsoft.
+When configuring EPM, you configure the *Send elevation data for reporting* and *Reporting scope* settings in an Intune [Windows elevation settings policy](./manage-elevation-settings.md) to determine which data Intune reports to Microsoft.
 
 ## Diagnostic Data
 

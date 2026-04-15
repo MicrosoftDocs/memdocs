@@ -188,13 +188,13 @@ To help ensure a secure deployment of Endpoint Privilege Management, consider th
 
 ### Set a secure default elevation response
 
-Set the [default elevation response](./ref-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
+Set the [default elevation response](./manage-elevation-settings.md#about-windows-elevation-settings-policy) to **Require support approval** or **Deny** rather than **Require user confirmation**. These options ensure that elevation is controlled with predefined rules for known binaries, reducing the risk of users elevating arbitrary or potentially malicious executables.
 
 ### Require file path restrictions in all rule types
 
-When [configuring an elevation rule](./ref-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
+When [configuring an elevation rule](./create-elevation-rules.md#create-elevation-rules-policy), specify a required **File path**. While the *file path* is optional, it can be an important security check for rules that use automatic elevation or wildcard-based attributes when the path points to a location that standard users can't modify, such as a secured system directory. Use of a secured file location helps prevent executables or their dependent binaries from being tampered with or replaced before elevation.
 
-This recommendation applies to rules created [automatically](./ref-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](./monitor-reports.md) or [support approved](./manage-support-approvals.md) request, and for elevation rules that you create [manually](./ref-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
+This recommendation applies to rules created [automatically](./create-elevation-rules.md#automatically-configure-elevation-rules-for-windows-elevation-rules-policy) based on details from the [Elevation report](./monitor-reports.md) or [support approved](./manage-support-approvals.md) request, and for elevation rules that you create [manually](./create-elevation-rules.md#manually-configure-elevation-rules-for-windows-elevation-rules-policy).
 
 > [!IMPORTANT]
 > Files located on network shares aren't supported and shouldn't be used in rule definitions.

@@ -92,7 +92,7 @@ The following are a few examples of wildcard use for a Visual Studio setup file 
 - File path:
   - `C:\Users\*\Downloads\`
 
-For more information, see [Use variables in elevation rules](../../epm/ref-elevation-rules.md#use-variables-in-elevation-rules) in Configure policies for Endpoint Privilege Management.
+For more information, see [Use variables in elevation rules](../../epm/create-elevation-rules.md#use-variables-in-elevation-rules) in Configure policies for Endpoint Privilege Management.
 
 ### App management
 
@@ -405,7 +405,7 @@ For more information about this agent including prerequisites, see [Vulnerabilit
 
 Endpoint Privilege Management (EPM) elevation rules now include a new file elevation type of **Deny**. An EPM elevation rule set to *Deny* blocks the specified file from running in an elevated context. We recommend using file elevation rules to allow users to elevate specific files. But, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
 
-*Deny* rules support the same configuration options as other [elevation types](../../epm/ref-elevation-rules.md#creating-elevation-rules-with-endpoint-privilege-management) except for child processes, which aren't used.
+*Deny* rules support the same configuration options as other [elevation types](../../epm/create-elevation-rules.md#creating-elevation-rules-with-endpoint-privilege-management) except for child processes, which aren't used.
 
 For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../../epm/overview.md).
 
@@ -532,7 +532,7 @@ Microsoft Intune has a new icon. The Intune icon is being updated across platfor
 
 #### Endpoint Privilege Management elevation rule support for file arguments and parameters<!-- 28077130 -->
 
-File elevation rules for Endpoint Privilege Management (EPM) now support [command line file arguments](../../epm/ref-elevation-rules.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that isn't defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
+File elevation rules for Endpoint Privilege Management (EPM) now support [command line file arguments](../../epm/create-elevation-rules.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that isn't defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
 
 EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
 
@@ -1674,7 +1674,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For information about this new capability, see [Windows elevation rules policy](../../epm/ref-elevation-rules.md) in the *Configure policies for Endpoint Privilege management* article.
+For information about this new capability, see [Windows elevation rules policy](../../epm/create-elevation-rules.md) in the *Configure policies for Endpoint Privilege management* article.
 
 #### Introducing the Resource performance report for physical devices in Advanced Analytics<!-- 12659827 -->
 

@@ -1,8 +1,6 @@
 ---
 title: Learn about the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
-author: brenduns
-ms.author: brenduns
 ms.date: 03/27/2026
 ms.topic: article
 ms.reviewer: ochukwunyere

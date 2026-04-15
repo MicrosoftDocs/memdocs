@@ -1,8 +1,6 @@
 ---
 title: Configure security baseline policies in Microsoft Intune
 description: Deploy security baselines that establish a default and recommended security postures on Windows devices you manage with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 06/02/2025
 ms.topic: concept-article
 ms.reviewer: juidaewo
@@ -142,8 +140,8 @@ The following guidance can be used anytime you create a new security baseline pr
 When a new version for a baseline becomes available, plan to update your existing profiles to the new version.
 
 **When a new version of any baseline type is released:**
-- Existing profiles for that baseline type don’t automatically upgrade to the new version.
-- The settings in your existing profiles become read-only. While you can continue to use those profiles and edit their name, description, and assignments, you can’t modify the configuration of any settings in them.
+- Existing profiles for that baseline type don't automatically upgrade to the new version.
+- The settings in your existing profiles become read-only. While you can continue to use those profiles and edit their name, description, and assignments, you can't modify the configuration of any settings in them.
 
 **When you update the version of a baseline profile:**
 - Updates always use the latest available version of the same baseline type. You can't update a baseline to anything other than the most recently released version.
@@ -189,8 +187,8 @@ When a new version for a baseline becomes available, plan to update your existin
 
 ### Test the updated baseline
 
-During the update of a baseline, Intune creates a copy of the original profile but doesn’t include the group assignments. This means the new baseline instance doesn’t deploy to any devices at the time you make a copy or at the time you update it to a new version.
-After you update the profile to the latest version, you can edit the settings in that new profile instance. This includes assigning the new baseline profile to groups of devices and editing the profiles settings to meet your organization’s expectations.
+During the update of a baseline, Intune creates a copy of the original profile but doesn't include the group assignments. This means the new baseline instance doesn't deploy to any devices at the time you make a copy or at the time you update it to a new version.
+After you update the profile to the latest version, you can edit the settings in that new profile instance. This includes assigning the new baseline profile to groups of devices and editing the profiles settings to meet your organization's expectations.
 
 ## Update baselines made before May 2023 to a baseline version released in May 2023 or later
 
@@ -201,7 +199,7 @@ After May 2023, when a new version for a baseline is released, plan to update yo
 
 - All new profiles for the baseline type, like Microsoft Edge, use the new format. Creating a new baseline that uses an older baseline version isn't supported.
 
-- Baseline versions released before May 2023 don’t upgrade to the new format. Instead, create a new profile that uses the new format and configure the settings from the old baseline in that new baseline format. Recreation of the profile is a one-time process that is required to move a baseline from the old format to the new baseline format.
+- Baseline versions released before May 2023 don't upgrade to the new format. Instead, create a new profile that uses the new format and configure the settings from the old baseline in that new baseline format. Recreation of the profile is a one-time process that is required to move a baseline from the old format to the new baseline format.
 
   To assist you in this process, Intune can export the old profile to a CSV format that identifies each setting based on the name of the setting as it appears in the new profile version, along with its configuration.
 
@@ -252,9 +250,9 @@ With the information from an export, you can rapidly reconfigure the new baselin
 
    - **defaultJson** – This column identifies the default configuration for this setting as seen in the new baseline format. Our sample setting for the **SitePerProcess** CSP is set to **enabled** by default.
 
-   - **customizedJson** – The final column displays the configuration of each setting from the older profile version. This information helps you understand which settings in the new profile require modification to match the older profiles’ configuration. Our sample setting was set to **disabled**. All other settings display "NotApplicable" as they weren't modified from the default configuration in the older baseline version we have been using.
+   - **customizedJson** – The final column displays the configuration of each setting from the older profile version. This information helps you understand which settings in the new profile require modification to match the older profiles' configuration. Our sample setting was set to **disabled**. All other settings display "NotApplicable" as they weren't modified from the default configuration in the older baseline version we have been using.
 
-   You might note that the updated Microsoft Edge baseline profile has more than the 17 settings found in the older profile. The baseline export doesn’t identify these new settings, as they weren't available in the older baseline version you're reviewing.
+   You might note that the updated Microsoft Edge baseline profile has more than the 17 settings found in the older profile. The baseline export doesn't identify these new settings, as they weren't available in the older baseline version you're reviewing.
 
    Later, when you create and configure the new profile, you can use the list from the CSV export to ensure each setting from the previous profile is set in the new profile with the same configuration.
 
@@ -265,8 +263,8 @@ With the information from an export, you can rapidly reconfigure the new baselin
 
 When a new version for a baseline becomes available, plan to update your existing profiles to the new version:
 
-- Existing profiles don’t upgrade to new versions automatically.
-- Settings in baseline profiles that don’t use the latest version become read-only. You can continue using those older profiles, including editing their name, description, and assignments. However, you can't edit the settings in them or create new profiles based on those older versions.
+- Existing profiles don't upgrade to new versions automatically.
+- Settings in baseline profiles that don't use the latest version become read-only. You can continue using those older profiles, including editing their name, description, and assignments. However, you can't edit the settings in them or create new profiles based on those older versions.
 
 We recommend you [test the version](#test-the-conversion-and-updated-baseline) update on a copy of your existing profiles before you update your live profiles.
 

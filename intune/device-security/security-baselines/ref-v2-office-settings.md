@@ -1,8 +1,6 @@
 ---
 title: List of settings for the Microsoft 365 Apps for Enterprise security baseline in Intune
 description: View a list of the settings in the Microsoft Intune security baseline for Microsoft Office apps. This list includes the default values for settings as found in the default configuration of the baseline.
-author: brenduns
-ms.author: brenduns
 ms.date: 01/09/2025
 ms.topic: reference
 ms.reviewer: juidaewo

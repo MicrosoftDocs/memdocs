@@ -10,9 +10,9 @@ items:
       - name: Deploying EPM
         href: ./deploy.md
       - name: Create elevation settings policy
-        href: ./ref-elevation-settings.md
+        href: ./manage-elevation-settings.md
       - name: Create elevation rules policy
-        href: ./ref-elevation-rules.md
+        href: ./create-elevation-rules.md
       - name: EPM Tutorial - Shift Administrators to Standard User
         href: ./tutorial-admin-to-standard-user.md
   - name: Using EPM

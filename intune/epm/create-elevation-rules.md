@@ -2,7 +2,7 @@
 title: Creating elevation rules with Endpoint Privilege Management
 description: View guidance on how to create strong file elevation rules with Microsoft Intune Endpoint Privilege Management
 ms.date: 10/20/2025
-ms.topic: article
+ms.topic: how-to
 ms.reviewer: mikedano
 ms.subservice: suite
 ms.collection:
@@ -17,7 +17,7 @@ ms.collection:
 
 [!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
-Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](./ref-elevation-settings.md).
+Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](./manage-elevation-settings.md).
 
 In addition to the information in this article, remain aware of important [security recommendations](./deployment-planning.md#security-recommendations) when managing elevation rules.
 
@@ -35,7 +35,7 @@ Each elevation rule instructs EPM on how to:
 - **Identify the file using**:
 
   - *File name (including extension).* The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted. The file name (excluding extensions) can include use of [variables](#use-variables-in-elevation-rules) for single characters through use of a question mark `?` or strings through use of an asterisk `*`.
-  - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. Certificates must be trusted and valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see [Reusable settings groups](./ref-elevation-rules.md#reusable-settings-groups).
+  - *Certificate.* Certificates can be added directly to a rule, or by using a reusable settings group. Certificates must be trusted and valid. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see [Reusable settings groups](./create-elevation-rules.md#reusable-settings-groups).
 
 - **Validate the file**:
 
@@ -211,7 +211,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 2. On the **Elevation detail** pane, review the file details. This information is used by the elevation rule to identify the correct file. When ready, select **Create a rule with these file details**.
 
-   :::image type="content" source="./media/ref-elevation-rules/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/ref-elevation-rules/elevation-detail-pane.png":::
+   :::image type="content" source="./media/create-elevation-rules/elevation-detail-pane.png" alt-text="Image from the admin center UI of a file selected from the Elevation report." lightbox="./media/create-elevation-rules/elevation-detail-pane.png":::
 
 3. Select a policy option for the new elevation rule you're creating:
 
@@ -234,7 +234,7 @@ Use either of the following methods to create new elevation rules, which are add
    > [!TIP]
    > While optional, we [recommend use of a *File path*](./deployment-planning.md#require-file-path-restrictions-in-all-rule-types) that points to a location that standard users can't modify.
 
-   :::image type="content" source="./media/ref-elevation-rules/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/ref-elevation-rules/create-a-rule.png":::
+   :::image type="content" source="./media/create-elevation-rules/create-a-rule.png" alt-text="Image from the admin center UI of the 'create a rule' pane." lightbox="./media/create-elevation-rules/create-a-rule.png":::
 
 ### Manually configure elevation rules for Windows elevation rules policy
 
@@ -248,11 +248,11 @@ Use either of the following methods to create new elevation rules, which are add
 
 3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add more rules to this policy. Each new rule you add has an elevation type of User confirmed, which can be changed when you configure the rule.
 
-   :::image type="content" source="./media/ref-elevation-rules/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/ref-elevation-rules/new-elevation-rules-policy.png":::
+   :::image type="content" source="./media/create-elevation-rules/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/create-elevation-rules/new-elevation-rules-policy.png":::
 
    To configure a rule, select **Edit instance** to open its Rule properties page, and then configure the following:
 
-   :::image type="content" source="./media/ref-elevation-rules/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/ref-elevation-rules/elevation-rules.png":::
+   :::image type="content" source="./media/create-elevation-rules/elevation-rules.png" alt-text="Image of the elevation rules properties." lightbox="./media/create-elevation-rules/elevation-rules.png":::
 
    - **Rule name**: Specify a descriptive name for the rule. Name your rules so you can easily identify them later.
    - **Description** (Optional): Enter a description for the profile.
@@ -365,7 +365,7 @@ To add one or more arguments to an elevation rule, set **Restrict arguments** to
 > - File arguments are case sensitive; users must match the case exactly as defined in the rules.
 > - Don't define secrets as a file argument.
 
-:::image type="content" source="./media/ref-elevation-rules/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
+:::image type="content" source="./media/create-elevation-rules/add-argument.png" alt-text="Screen capture of the UI for configuring command line arguments.":::
 
 ## Reusable settings groups
 
@@ -375,7 +375,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Reusable settings (preview)** tab > and then select **Add**.
 
-   :::image type="content" source="./media/ref-elevation-rules/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/ref-elevation-rules/add-reusable-settings.png":::
+   :::image type="content" source="./media/create-elevation-rules/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/create-elevation-rules/add-reusable-settings.png":::
 
 2. On **Basics**, enter the following properties:
    - **Name**: Enter a descriptive name for the reusable group. Name groups so you can easily identify each later.
@@ -383,7 +383,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 3. In **Configuration settings**, select the folder icon for *Certificate file*, and browse to a **.CER** file to add it to this reusable group. The *Base 64 value* field fills in based on the certificate selected.
 
-   :::image type="content" source="./media/ref-elevation-rules/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/ref-elevation-rules/add-a-certificate.png":::
+   :::image type="content" source="./media/create-elevation-rules/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/create-elevation-rules/add-a-certificate.png":::
 
 4. In **Review + create**, review your settings, and then select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
 

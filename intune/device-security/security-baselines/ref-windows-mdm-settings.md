@@ -1,8 +1,6 @@
 ---
 title: Default configuration of Intune's Windows security baselines
 description: View the default setting configuration of the various Microsoft Intune security baselines for Windows.
-author: brenduns
-ms.author: brenduns
 ms.date: 04/03/2026
 ms.topic: reference
 ms.reviewer: juidaewoaa

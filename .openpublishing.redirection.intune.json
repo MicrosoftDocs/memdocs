@@ -3647,7 +3647,7 @@
     },
     {
       "source_path": "intune/intune/protect/epm-guidance-for-creating-rules.md",
-      "redirect_url": "/intune/epm/ref-elevation-rules",
+      "redirect_url": "/intune/epm/create-elevation-rules",
       "redirect_document_id": false
     },
     {
@@ -5927,7 +5927,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/epm-elevation-settings.md",
-      "redirect_url": "/intune/epm/ref-elevation-settings",
+      "redirect_url": "/intune/epm/manage-elevation-settings",
       "redirect_document_id": false
     },
     {
@@ -5967,7 +5967,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/epm-elevation-rules.md",
-      "redirect_url": "/intune/epm/ref-elevation-rules",
+      "redirect_url": "/intune/epm/create-elevation-rules",
       "redirect_document_id": false
     },
     {

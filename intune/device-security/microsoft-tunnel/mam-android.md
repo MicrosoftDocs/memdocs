@@ -1,8 +1,6 @@
 ---
 title: Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune
 description: Add support for Mobile Application Management (MAM) for Android to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune
-author: brenduns
-ms.author: brenduns
 ms.date: 03/27/2026
 ms.topic: how-to
 ms.reviewer: ochukwunyere
