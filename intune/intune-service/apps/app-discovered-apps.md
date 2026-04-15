@@ -12,7 +12,7 @@ ms.collection:
 # Intune Discovered Apps
 
 > [!TIP]
-> For Windows devices that need faster refresh cycles and richer app metadata, see [Enhanced app inventory](enhanced-app-inventory.md). Enhanced app inventory collects data every 4-8 hours with additional properties like install location, app size, and uninstall commands.
+> For Windows devices that need faster refresh cycles and richer app metadata, see [App inventory](enhanced-app-inventory.md). App inventory is the intended long-term replacement for Discovered apps and collects data multiple times per day with additional properties like install location, app size, and uninstall commands.
 
 Intune **discovered apps** is a list of detected apps on the Intune enrolled devices in your tenant. It acts as a software inventory for your tenant. **Discovered apps** is a separate report from the [app installation](apps-monitor.md) reports. For personal devices, Intune never collects information on applications that are unmanaged. On corporate devices, any app whether it's a managed app or not is collected for this report. The following table shows the expected behavior. In general, the report refreshes every seven days for each device, starting from its enrollment date. This refresh isn't performed weekly for the entire tenant. The only exception to this refresh cycle for the **Discovered apps** report is application information that the Intune Management Extension for Win32 Apps collects every 24 hours.
 
