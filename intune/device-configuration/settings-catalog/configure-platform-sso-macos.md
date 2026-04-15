@@ -93,14 +93,14 @@ In this step, use the information to learn the differences with the authenticati
 
 | Feature | Secure Enclave | Smart Card | Password |
 |---|---|---|---|
-|**Passwordless (phishing resistant)**|✅|✅|❌|
-|**TouchID supported for unlock**|✅|✅|✅|
-|**Can be used as passkey**|✅|❌|❌|
-|**MFA mandatory for setup** </br></br> Multifactor authentication (MFA) is always recommended|✅|✅|❌|
-|**Local Mac password synced with Entra ID**|❌|❌|✅|
-|**Supported on macOS 13.x +**|✅|❌|✅|
-|**Supported on macOS 14.x +**|✅|✅|✅|
-|**Optionally, allow new users to log in with Entra ID credentials (macOS 14.x +)**|✅|✅|✅|
+|**Passwordless (phishing resistant)**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|
+|**TouchID supported for unlock**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
+|**Can be used as passkey**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|
+|**MFA mandatory for setup** </br></br> Multifactor authentication (MFA) is always recommended|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|
+|**Local Mac password synced with Entra ID**|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
+|**Supported on macOS 13.x +**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
+|**Supported on macOS 14.x +**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
+|**Optionally, allow new users to log in with Entra ID credentials (macOS 14.x +)**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
 
 # [Secure Enclave (recommended)](#tab/secure-enclave)
 

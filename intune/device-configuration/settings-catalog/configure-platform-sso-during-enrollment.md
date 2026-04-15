@@ -32,7 +32,7 @@ This feature applies to:
 ## Before you begin
 
 - During enrollment, users are prompted to enter their Microsoft Entra organizational credentials at least twice. The first sign-in starts the regular enrollment process. The second sign-in authenticates the identity in Company Portal, which gets the SSO extension.
-- This feature requires three different policies - settings catalog policy, line-of-business app policy, and enrollment profile. All the policies and settings listed in this article are required and work together. If any of the steps are misconfigured or skipped, the enrollment fails. In this situation, [wipe](../device-management/actions/wipe.md) the device, follow the steps, and re-enroll the device.
+- This feature requires three different policies - settings catalog policy, line-of-business app policy, and enrollment profile. All the policies and settings listed in this article are required and work together. If any of the steps are misconfigured or skipped, the enrollment fails. In this situation, [wipe](../../device-management/actions/wipe.md) the device, follow the steps, and re-enroll the device.
 - Assign all the policies to the same **Assigned (static)** device groups that use this feature. You can create new groups for this feature and add the devices to those groups. If you assign these policies to different groups, Platform SSO during enrollment fails.
 
   Remember, the groups must be:
@@ -46,7 +46,7 @@ This feature applies to:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platform:
@@ -105,7 +105,7 @@ The Company Portal for macOS deploys and installs the Microsoft Enterprise SSO p
 
     - [Add macOS Line-of-Business (LOB) Apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md)
 
-3. Make it a required app and assign it to the same groups as the Platform SSO policy you created or updated in [Step 1](#step-1---create-or-update-the-settings-catalog-policy-that-configures-platform-sso).
+3. Make it a required app and assign it to the same groups as the Platform SSO policy you created or updated in [Step 1](#step-1---create-or-update-the-platform-sso-settings-catalog-policy).
 
 When Intune detects the Company Portal as a deployed policy, it sends the Company Portal with priority in the enrollment process.
 
@@ -124,12 +124,12 @@ When Intune detects the Company Portal as a deployed policy, it sends the Compan
     | **Await final configuration** | **Yes** |
     | **Locked enrollment** | **Yes** |
 
-3. Assign the profile to the same groups as the Platform SSO policy you created or updated in [Step 1](#step-1---create-or-update-the-settings-catalog-policy-that-configures-platform-sso).
+3. Assign the profile to the same groups as the Platform SSO policy you created or updated in [Step 1](#step-1---create-or-update-the-platform-sso-settings-catalog-policy).
 
 When devices enroll using this ADE profile, the Platform SSO policy and LOB app policy will automatically apply during Setup Assistant. When enrollment completes and users arrive at the desktop, they have a more integrated sign-in experience on the device and can access Microsoft Entra ID-joined resources.
 
 ## Related articles
 
 - [Platform SSO configuration guide for macOS devices using Microsoft Intune](configure-platform-sso-macos.md)
-- [Add macOS Line-of-Business (LOB) Apps to Microsoft Intune](../app-management/deployment/add-lob-macos.md)
-- [Set up automated device enrollment (ADE)](/device-enrollment/apple/setup-automated-macos.md)
+- [Add macOS Line-of-Business (LOB) Apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md)
+- [Set up automated device enrollment (ADE)](../../device-enrollment/apple/setup-automated-macos.md)
