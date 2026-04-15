@@ -86,10 +86,7 @@ The Platform SSO policy and the authentication method you use changes how users 
 - When you configure Platform SSO, users sign in to their macOS devices with the authentication method you configure.
 - When you don't use Platform SSO, users sign in to their macOS devices with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
 
-In this step, use the information to learn the differences with the authentication methods and how they affect the user sign-in experience.
-
-> [!TIP]
-> Microsoft recommends using **Secure Enclave** as the authentication method when configuring Platform SSO.
+In this step, use the information to learn the differences with the authentication methods and how they affect the user sign-in experience. Microsoft recommends using **Secure Enclave** as the authentication method when configuring Platform SSO.
 
 | Feature | Secure Enclave | Smart Card | Password |
 |---|---|---|---|
@@ -104,7 +101,7 @@ In this step, use the information to learn the differences with the authenticati
 
 # [Secure Enclave (recommended)](#tab/secure-enclave)
 
-When you configure Platform SSO with the **Secure Enclave** authentication method, the SSO plug-in uses hardware-bound cryptographic keys. It doesn't use the Microsoft Entra credentials to authenticate the user to apps and websites.
+When you configure Platform SSO with the **Secure Enclave** authentication method (recommended), the SSO plug-in uses hardware-bound cryptographic keys. It doesn't use the Microsoft Entra credentials to authenticate the user to apps and websites.
 
 For more information on Secure Enclave, go to [Secure Enclave](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/protecting_keys_with_the_secure_enclave) (opens Apple's web site).
 
