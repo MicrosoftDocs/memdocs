@@ -1,8 +1,6 @@
 ---
 title: Monitor Microsoft Defender for Endpoint with Microsoft Intune
 description: Monitor Microsoft Defender for Endpoint with Intune, including device compliance and onboarding status.
-author: brenduns
-ms.author: brenduns
 ms.date: 10/10/2024
 ms.topic: how-to
 ms.reviewer: aanavath

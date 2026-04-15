@@ -1,8 +1,6 @@
 ---
 title: Use Intune to remediate vulnerabilities found by Microsoft Defender for Endpoint
 description: Integrate Microsoft Defender Vulnerability Management with Intune to create security tasks, track remediation, and reduce vulnerability exposure across managed devices.
-author: brenduns
-ms.author: brenduns
 ms.date: 04/08/2026
 ms.topic: how-to
 ms.reviewer: aanavath

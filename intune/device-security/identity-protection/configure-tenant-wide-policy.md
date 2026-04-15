@@ -1,8 +1,6 @@
 ---
 title: Configure a tenant-wide Windows Hello for Business policy with Microsoft Intune
 description: Apply policy for Windows Hello for Business on devices at the time they enroll with Microsoft Intune
-author: lenewsad
-ms.author: lanewsad
 ms.date: 07/23/2024
 ms.topic: how-to
 ms.collection:
@@ -17,7 +15,7 @@ ms.reviewer: shpate
 
 With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows Autopilot out-of-box-experience (OOBE).
 
-For Windows devices, use of [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that’s tied to a device and uses a biometric or PIN.
+For Windows devices, use of [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that's tied to a device and uses a biometric or PIN.
 
 After device enrollment, or when you choose not to use the tenant-wide enrollment policy, Intune supports the following methods to manage Windows Hello on discrete groups of devices:
 

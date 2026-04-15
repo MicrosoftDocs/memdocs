@@ -281,17 +281,6 @@ items:
         href: ./intune-service/fundamentals/multi-admin-approval.md
         displayName: multi-admin approval, maa
 
-    - name: Configure security recommendations using Zero Trust
-      items:
-      - name: Configure security recommendations using Zero Trust
-        href: ./solutions/zero-trust/configure-security.md
-      - name: Secure tenants
-        href: ./solutions/zero-trust/configure-tenant-security.md
-      - name: Secure devices
-        href: ./solutions/zero-trust/configure-device-security.md
-      - name: Secure data
-        href: ./solutions/zero-trust/configure-data-security.md
-
   - name: Create and deploy Intune policies
     items:
 
@@ -326,7 +315,7 @@ items:
           href: ./device-security/security-baselines/toc.yml
 
         - name: Microsoft Defender for Endpoint
-          href: ./device-security/microsoft-defender.yml
+          href: ./device-security/microsoft-defender/toc.yml
 
         - name: Security tasks
           href: ./device-security/microsoft-defender/remediate-vulnerabilities.md
@@ -483,6 +472,7 @@ items:
             href: ./device-security/security-configurations/ios-ipados-personal.md
           - name: iOS/iPadOS supervised device security
             href: ./device-security/security-configurations/ios-ipados-supervised.md
+
         - name: Error codes and descriptions
           items:
           - name: Software update errors
@@ -690,7 +680,8 @@ items:
     - name: Create settings catalog policy and compare with on-premises ADMX
       href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
       displayName: admx, administrative template, windows, gpo
-    - name: "Zero Trust: Manage devices with Intune"
+
+    - name: "Zero Trust: Manage devices with Intune 🔗"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
 
     - name: Secure your corporate data using Edge for Business

@@ -1,8 +1,6 @@
 ---
 title: Configure Defender for Endpoint Web protection on Android devices in Microsoft Intune
 description: Use Intune policy to manage Microsoft Defender for Endpoint web protection settings on Android devices managed by Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/22/2024
 ms.topic: how-to
 ms.reviewer: aanavath

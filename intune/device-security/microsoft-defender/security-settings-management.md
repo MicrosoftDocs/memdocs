@@ -1,8 +1,6 @@
 ---
 title: Learn about using Intune to manage Microsoft Defender settings on devices that aren't enrolled with Intune
 description: Learn how to use Intune policy to manage Microsoft Defender security settings on devices that aren't enrolled with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/27/2025
 ms.topic: how-to
 ms.collection:
