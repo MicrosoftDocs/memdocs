@@ -30,7 +30,7 @@ If you still decide to have users enroll their Android devices with device admin
 6. Select the checkmark next to **Use device administrator to manage devices**.
 7. [Tell your users how to enroll their devices](../../user-help/enrollment/enroll-company-portal-android.md).
 
-After a user enrolls, you can begin managing their devices in Intune, including [assigning compliance policies](../../intune-service/protect/compliance-policy-create-android.md), [managing apps](../../app-management/overview.md), and more.
+After a user enrolls, you can begin managing their devices in Intune, including [assigning compliance policies](../../device-security/compliance/ref-android-administrator-settings.md), [managing apps](../../app-management/overview.md), and more.
 
 For information about other user tasks, see these articles:
 
@@ -65,5 +65,5 @@ Private space is a feature introduced with Android 15 that lets people create a 
  * After a user enrolls their personal device, if they attempt to enroll the private space, Intune will initiate the personal work profile enrollment flow. However, in this scenario the enrollment process will fail without any notification.
 
 ## Next steps
-- [Assign compliance policies](../../intune-service/protect/compliance-policy-create-android.md)
+- [Assign compliance policies](../../device-security/compliance/ref-android-administrator-settings.md)
 - [Managing apps](../../app-management/overview.md)

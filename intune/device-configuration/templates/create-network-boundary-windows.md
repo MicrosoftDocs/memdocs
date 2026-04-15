@@ -16,7 +16,7 @@ In a network boundary, you can add network domains, IPV4 and IPv6 ranges, proxy 
 
 In Intune, you can create a network boundary profile, and deploy this policy to your devices.
 
-For more information on using Microsoft Defender Application Guard in Intune, go to [Windows client settings to protect devices using Intune](../../intune-service/protect/endpoint-protection-windows-10.md#microsoft-defender-application-guard).
+For more information on using Microsoft Defender Application Guard in Intune, go to [Windows client settings to protect devices using Intune](../endpoint-security/ref-endpoint-protection-settings-windows.md#microsoft-defender-application-guard).
 
 This feature applies to:
 

@@ -34,7 +34,7 @@ Intune app protection policies help secure organizational data and help ensure c
 - **Health Checks**: Under **Device conditions** you can select **Max allowed device threat level**.
 
 > [!IMPORTANT]
-> Configure your [Mobile Threat Defense connectors](../../intune-service/protect/mobile-threat-defense.md#mobile-threat-defense-partners) before onboarding users to these policies. If your tenant uses both Microsoft Defender for Endpoint and another MTD partner and you don't designate a primary connector, Intune defaults to Microsoft Defender for Endpoint. For guidance on protecting unenrolled devices, see [Mobile Threat Defense for unenrolled devices](../../intune-service/protect/mtd-enable-unenrolled-devices.md).
+> Configure your [Mobile Threat Defense connectors](../../device-security/mobile-threat-defense/overview.md#mobile-threat-defense-partners) before onboarding users to these policies. If your tenant uses both Microsoft Defender for Endpoint and another MTD partner and you don't designate a primary connector, Intune defaults to Microsoft Defender for Endpoint. For guidance on protecting unenrolled devices, see [Mobile Threat Defense for unenrolled devices](../../device-security/mobile-threat-defense/enable-unenrolled-devices.md).
 
 ### Options for the threat level
 
@@ -109,12 +109,12 @@ Use the following steps to configure the MTD Connector.
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
 
     > [!NOTE]
-    > In this example, you select **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../../intune-service/protect/mobile-threat-defense.md#mobile-threat-defense-partners).
+    > In this example, you select **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../../device-security/mobile-threat-defense/overview.md#mobile-threat-defense-partners).
 
 5. Select **Create** to create the connector.
 
 > [!IMPORTANT]
-> The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. For more information, see [Connector status](../../intune-service/protect/mobile-threat-defense.md#connector-status).
+> The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. For more information, see [Connector status](../../device-security/mobile-threat-defense/overview.md#connector-status).
 
 ## Next step
 

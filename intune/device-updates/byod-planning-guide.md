@@ -61,9 +61,9 @@ If you combine your compliance policies with Conditional Access (CA), then you c
 
 For more information on compliance policies, go to:
 
-- [Create a compliance policy in Intune](../intune-service/protect/create-compliance-policy.md)
-- [Configure actions for noncompliant devices in Intune](../intune-service/protect/actions-for-noncompliance.md)
-- [Monitor results of your compliance policies in Intune](../intune-service/protect/compliance-policy-monitor.md)
+- [Create a compliance policy in Intune](../device-security/compliance/create-policy.md)
+- [Configure actions for noncompliant devices in Intune](../device-security/compliance/configure-noncompliance-actions.md)
+- [Monitor results of your compliance policies in Intune](../device-security/compliance/monitor-policy.md)
 
 ## Use app protection policies
 

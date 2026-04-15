@@ -168,7 +168,7 @@ This feature supports:
 >
 > Instead, use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. To learn more, go to [macOS settings catalog](./settings-catalog/index.md).
 
-[Endpoint protection](../intune-service/protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
+[Endpoint protection](./endpoint-security/configure-endpoint-protection.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
 To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
@@ -220,7 +220,7 @@ This feature supports:
 
 ## Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint](../intune-service/protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../device-security/microsoft-defender/overview.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 

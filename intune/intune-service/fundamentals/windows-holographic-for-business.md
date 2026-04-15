@@ -44,11 +44,11 @@ In the Company Portal app, end users can run the following actions:
 
 ## Compliance policy
 
-**[Create a device compliance policy](../protect/compliance-policy-create-windows.md)**.
+**[Create a device compliance policy](../../device-security/compliance/ref-windows-settings.md)**.
 
 Compliance policies are rules and settings that devices must meet to be compliant. Use these policies with Conditional Access to block access to company resources for devices that are noncompliant. In Intune, create compliance policies to allow or block access for devices running Windows Holographic for Business. For example, you can create a policy that requires BitLocker.
 
-For more information, go to **[Get started with compliance policies](../protect/device-compliance-get-started.md)**.
+For more information, go to **[Get started with compliance policies](../../device-security/compliance/overview.md)**.
 
 ## Deploy and manage apps
 
@@ -143,7 +143,7 @@ Before users enroll devices and access your company apps, including email, you c
 
 ## Windows Hello for Business
 
-**[Use Windows Hello for Business](../protect/windows-hello.md)**.
+**[Use Windows Hello for Business](../../device-security/identity-protection/configure-tenant-wide-policy.md)**.
 
 Hello for Business is an alternative sign-in method that uses a Microsoft Entra account to replace a password, smart card, or a virtual smart card. With Hello for Business, your Windows Holographic for Business devices can sign in with a PIN with a minimum length set by you.
 

@@ -25,7 +25,7 @@ Using a custom profile, you can configure and assign the following Android setti
 - [Create a Wi-Fi profile with a pre-shared key](/intune/device-configuration/templates/create-wifi-preshared-key)
 - [Create a per-app VPN profile](/intune/device-configuration/templates/configure-per-app-vpn-android)
 - [Allow and block apps for Samsung Knox Standard devices](/intune/device-configuration/templates/manage-apps-samsung-knox)
-- [Configure web protection in Microsoft Defender for Endpoint for Android](../../intune-service/protect/microsoft-defender-configure-android.md)
+- [Configure web protection in Microsoft Defender for Endpoint for Android](../../device-security/microsoft-defender/configure-web-protection-android.md)
 
 > [!IMPORTANT]
 > Only the settings listed can be configured in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->

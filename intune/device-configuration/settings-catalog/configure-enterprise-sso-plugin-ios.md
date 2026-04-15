@@ -49,7 +49,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Jamf Pro. For instructions, see [Deploying the Microsoft Authenticator App to End Users](https://learn.jamf.com/bundle/technical-paper-microsoft-intune-current/page/Deploying_the_Microsoft_Authenticator_App.html) on the Jamf Learning Hub.
 
 - The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
-- **[Jamf Pro and Intune integration for device compliance](../../intune-service/protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
+- **[Jamf Pro and Intune integration for device compliance](../../device-security/conditional-access-integration/setup-jamf-manually.md) is not required to use the SSO app extension.**
 
 # [Other MDMs](#tab/prereq-other-mdm)
 

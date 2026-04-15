@@ -217,4 +217,4 @@ When you deploy shell scripts or custom attributes for macOS devices from Micros
 
 ## Next steps
 
-- [Create a compliance policy in Microsoft Intune](../../intune-service/protect/create-compliance-policy.md)
+- [Create a compliance policy in Microsoft Intune](../../device-security/compliance/create-policy.md)

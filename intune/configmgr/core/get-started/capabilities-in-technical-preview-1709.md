@@ -118,7 +118,7 @@ When a Windows 10 device is enabled for co-management, you have the following re
 Before you switch workloads from Configuration Manager to Intune, create the profiles and policies you need in Intune to ensure your devices continue to be protected.
 You can create objects in Intune based on the objects that you have in Configuration Manager. Or, if your current strategy is based on legacy or traditional management, you might want to take a step back to rethink what policies and profiles you need for modern management. Use the following resources to create the policies and profiles.
 
-<!-- - [Device compliance policies](/mem/intune-service/protect/compliance-policy-create-windows)  -->
+<!-- - [Device compliance policies](/intune/device-security/compliance/ref-windows-settings)  -->
 - [Windows Update client policies](../../../device-updates/windows/ref-update-ring-settings.md)
 - [Device configuration profiles](../../../device-configuration/overview.md)
 

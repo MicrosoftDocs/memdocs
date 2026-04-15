@@ -86,7 +86,7 @@ The health state includes the following details:
 
 The health state is only sent for MAM enrolled users.  End users may stop sending data by signing out of their org account in protected applications.  Administrators may stop sending data by removing the Windows Security Connector from Microsoft Intune.
 
-For related information, see [create an MTD app protection policy for Windows](../../intune-service/protect/mtd-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows).
+For related information, see [create an MTD app protection policy for Windows](../../device-security/mobile-threat-defense/create-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows).
 
 ## Create Intune app protection policies
 
