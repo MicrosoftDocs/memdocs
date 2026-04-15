@@ -123,6 +123,7 @@ items:
         href: ./intune-service/fundamentals/remote-help-use.md
       - name: Troubleshooting Remote Help
         href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
+
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
 
@@ -304,28 +305,10 @@ items:
         displayName: compliant; noncompliant; mfa
 
       - name: Compliance rules to protect resources
-        items:
-        - name: Compliance overview
-          href: ./device-security/compliance/overview.md
-        - name: Create a policy
-          href: ./device-security/compliance/create-policy.md
-        - name: Custom compliance settings
-          href: ./device-security/compliance/custom-settings.md
-          items:
-          - name: JSON for custom settings
-            href: ./device-security/compliance/create-custom-json.md
-          - name: PowerShell script for custom settings
-            href: ./device-security/compliance/create-custom-script.md
-          - name: Windows Subsystem for Linux
-            href: ./device-security/compliance/configure-wsl.md
-        - name: Actions for noncompliance
-          href: ./device-security/compliance/configure-noncompliance-actions.md
-        - name: Monitor device compliance
-          href: ./device-security/compliance/monitor-policy.md
-        - name: Device compliance partners
-          href: ./device-security/compliance/third-party-partners.md
-        - name: Network access control
-          href: ./device-security/integrate-network-access-control.md
+        href: ./device-security/compliance/toc.yml
+
+      - name: Network access control
+        href: ./device-security/integrate-network-access-control.md
 
       - name: Conditional Access
         href: ./device-security/conditional-access-integration/toc.yml
@@ -387,8 +370,15 @@ items:
               href: ./device-security/microsoft-defender/security-settings-management.md
             - name: Manage endpoint security policies in Microsoft Defender
               href: /defender-endpoint/manage-security-policies?context=/intune/context
-        - name: Endpoint Privilege Management overview
-          href: ./epm/overview.md
+
+
+
+          - name: Endpoint Privilege Management (EPM)
+            href: ./epm/toc.yml
+
+
+
+
         - name: Tenant attach
           href: ./fundamentals/tenant-attach.md
         - name: Encrypt disks
