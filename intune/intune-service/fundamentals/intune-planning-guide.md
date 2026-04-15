@@ -80,11 +80,11 @@ Antivirus, malware scanning, responding to threats, and keep devices up-to-date 
 
 Some considerations:
 
-- **Antivirus (AV) and malware protection are a must**. Intune integrates with [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) and [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect your managed devices, personal devices, and apps.
+- **Antivirus (AV) and malware protection are a must**. Intune integrates with [Microsoft Defender for Endpoint](../../device-security/microsoft-defender/overview.md) and [different Mobile Threat Defense (MTD) partners](../../device-security/mobile-threat-defense/overview.md) to help protect your managed devices, personal devices, and apps.
 
   [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/microsoft-365/security/defender/microsoft-365-security-center-mde) to help monitor, and react to threats.
 
-- If a device is compromised, you want to **limit malicious impact using [Conditional Access](../protect/conditional-access.md)**.
+- If a device is compromised, you want to **limit malicious impact using [Conditional Access](../../device-security/conditional-access-integration/overview.md)**.
 
   For example, Microsoft Defender for Endpoint scans a device, and can determine if the device is compromised. Conditional Access can automatically block organization access on this device, including email.
 
@@ -131,7 +131,7 @@ In Intune, distributed IT benefits from the following features:
 
 - When admins create policies, you can require **[multiple admin approval](multi-admin-approval.md)** for specific policies, including policies that run scripts or deploy apps.
 
-- **[Endpoint Privilege Management](../protect/epm-overview.md)** allows standard non-admin user complete tasks that require elevated privileges, like  installing apps and updating device drivers. Endpoint Privilege Management is part of the [Intune Suite](intune-add-ons.md).
+- **[Endpoint Privilege Management](../../epm/overview.md)** allows standard non-admin user complete tasks that require elevated privileges, like  installing apps and updating device drivers. Endpoint Privilege Management is part of the [Intune Suite](intune-add-ons.md).
 
 ✅ **Task: Determine how you want to distribute your rules and settings**
 
@@ -303,7 +303,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
   - **[Windows Autopilot](/autopilot/enrollment-autopilot)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
   - **[Multi-factor authentication](../../device-enrollment/configure-multifactor-authentication.md) (MFA)**: Users must enter two or more verification methods, like a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, and organization-owned devices that require extra security.
-  - **[Conditional Access](../protect/conditional-access.md)**: If users and devices follow your rules, like a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
+  - **[Conditional Access](../../device-security/conditional-access-integration/overview.md)**: If users and devices follow your rules, like a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
   - **[Dynamic user groups and dynamic device groups](groups-add.md)**: Add users or devices automatically to groups when they meet criteria, like a city, job title, OS type, OS version, and more.
 
 - **Microsoft 365 apps** (included in the **Microsoft 365 E5** license) includes the apps that users rely on, including Outlook, Word, SharePoint, Teams, OneDrive, and more. You can deploy these apps to devices using Intune.
@@ -392,7 +392,7 @@ Some considerations:
 
 - **Be prepared to create new policies** in Intune. Intune includes several features that cover scenarios that might interest you. Some examples:
 
-  - **Security baselines**: On Windows client devices, [security baselines](../protect/security-baselines.md) are security settings that are preconfigured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at security baselines.
+  - **Security baselines**: On Windows client devices, [security baselines](../../device-security/security-baselines/overview.md) are security settings that are preconfigured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at security baselines.
 
     [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
 
@@ -405,7 +405,7 @@ Some considerations:
 
   - Secure e-mail: At a minimum, you might want to:
     - Create Outlook app protection policies.
-    - Enable [Conditional Access](../protect/conditional-access.md) for Exchange Online, or connecting to another on-premises email solution.
+    - Enable [Conditional Access](../../device-security/conditional-access-integration/overview.md) for Exchange Online, or connecting to another on-premises email solution.
 
   - Device settings: At a minimum, you might want to:
     - Require a six character PIN to unlock the device.
@@ -592,7 +592,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../../device-configuration/settings-catalog/tutorial-group-policy-migration.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../../solutions/tutorials/protect-email-enrolled-devices.md), [configuration](../../device-configuration/settings-catalog/tutorial-group-policy-migration.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 

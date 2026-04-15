@@ -1,6 +1,4 @@
 ---
-author: nicholasswhite
-ms.author: nwhite
 ms.topic: include
 ms.date: 09/08/2025
 ---

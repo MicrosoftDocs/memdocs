@@ -264,7 +264,7 @@ When the Intune service configured, you can configure policies and applications 
 
 [MEM-1]: /intune/intune-service/fundamentals/licenses
 [MEM-2]: ../../../intune-service/enrollment/enrollment-restrictions-set.md
-[MEM-4]: ../../../intune-service/protect/windows-hello.md
+[MEM-4]: ../../../device-security/identity-protection/configure-tenant-wide-policy.md
 [INT-1]: /intune-education/what-is-intune-for-education
 
 [MSFT-1]: https://www.microsoft.com/microsoft-365/microsoft-365-enterprise

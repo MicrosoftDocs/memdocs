@@ -60,7 +60,7 @@ Like enrollment restrictions, device compliance policies include both minimum an
 
 Organizations are using device compliance policies for the same scenarios as enrollment restrictions. These policies keep users on current, validated operating system versions in your organization. When end-user devices fall out of compliance, access to organizational resources can be blocked via Conditional Access until end users are within the supported operating system range for your organization. End users are notified that they're out of compliance and they're provided the steps to regain access.
 
-For more information, see [Get started with device compliance](../protect/device-compliance-get-started.md).
+For more information, see [Get started with device compliance](../../device-security/compliance/overview.md).
 
 ## Operating system version controls using Intune app protection policies
 
@@ -185,7 +185,7 @@ You can use the Intune capabilities described in this article to help you move y
 
 1. Use [device enrollment restrictions](../../device-enrollment/restrictions.md) to require operating system v2 as the minimum version to enroll the device. This ensures new end-user devices are compliant at enrollment time.
 2. Use Intune [app protection policies](../../app-management/protection/overview.md) to warn users when a protected app opens or resumes that the newer operating system v2 is required.
-3. Use [device compliance policies](../protect/device-compliance-get-started.md) to require operating system v2 as the minimum version for a device to be compliant. Use **Actions for noncompliance** to allow a seven-day grace period and to send end users an email notification with your timeline and requirements.
+3. Use [device compliance policies](../../device-security/compliance/overview.md) to require operating system v2 as the minimum version for a device to be compliant. Use **Actions for noncompliance** to allow a seven-day grace period and to send end users an email notification with your timeline and requirements.
    - These policies can inform end users that their devices need to be updated through email, the Intune Company Portal, and when the app is opened for apps enabled with an app protection policy.
    - You can run a compliance report to identify users that are out of compliance.
 4. Use Intune app protection policies to block users when an app opens or resumes if the device isn't running operating system v2.
@@ -198,5 +198,5 @@ You can use the Intune capabilities described in this article to help you move y
 Use the following resources to manage the operating system versions that are in use in your organization:
 
 - [Set device type restrictions](../../device-enrollment/restrictions.md)
-- [Get started with device compliance](../protect/device-compliance-get-started.md)
+- [Get started with device compliance](../../device-security/compliance/overview.md)
 - [How to create and assign app protection policies](../../app-management/protection/create-policy.md)

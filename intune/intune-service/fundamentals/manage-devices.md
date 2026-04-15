@@ -75,9 +75,9 @@ Conditional Access is a feature of Microsoft Entra ID. With Conditional Access, 
 
 For more information, go to:
 
-- [Use compliance policies to set rules for devices you manage](../protect/device-compliance-get-started.md)
-- [Monitor results of your device compliance policies](../protect/compliance-policy-monitor.md)
-- [Learn about Conditional Access and Intune](../protect/conditional-access.md)
+- [Use compliance policies to set rules for devices you manage](../../device-security/compliance/overview.md)
+- [Monitor results of your device compliance policies](../../device-security/compliance/monitor-policy.md)
+- [Learn about Conditional Access and Intune](../../device-security/conditional-access-integration/overview.md)
 
 ## Control device features and assign policies to device groups
 
@@ -110,7 +110,7 @@ In Intune, some common security tasks include:
 
   The MTD partners support different platforms, including Android, iOS/iPadOS, macOS, and Windows.
 
-  For more specific information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
+  For more specific information, go to [Mobile Threat Defense integration with Intune](../../device-security/mobile-threat-defense/overview.md)
 
 - **Use security baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
@@ -118,14 +118,14 @@ In Intune, some common security tasks include:
 
   For more specific information, go to:
 
-  - [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md)
+  - [Use security baselines to configure Windows devices in Intune](../../device-security/security-baselines/overview.md)
 
 - **Manage software updates, encrypt hard disks, configure built-in firewalls**, and more using built-in policy settings. You can also use Windows Autopatch for automatic patching of Windows, including Windows quality updates and Windows feature updates.
 
   For more information, go to:
 
-  - [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)
-  - [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
+  - [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security-policies.md)
+  - [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
 - **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, and restore a device to its factory settings. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.

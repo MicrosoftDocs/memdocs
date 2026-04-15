@@ -249,7 +249,7 @@ items:
             href: ./templates/ref-email-settings-ios.md
           - name: Endpoint protection (deprecated)
             displayName: apple, macos
-            href: ../intune-service/protect/endpoint-protection-macos.md
+            href: ./endpoint-security/ref-endpoint-protection-macos.md
           - name: Extensions (deprecated)
             displayName: kernel, system, macos
             href: ./templates/ref-kernel-extensions-settings-macos.md
@@ -310,10 +310,10 @@ items:
             href: ./templates/ref-email-settings-windows.md
           - name: Endpoint protection
             displayName: windows
-            href: ../intune-service/protect/endpoint-protection-windows-10.md
+            href: ./endpoint-security/ref-endpoint-protection-settings-windows.md
           - name: Identity protection (deprecated)
             displayName: hello, windows
-            href: ../intune-service/protect/identity-protection-windows-settings.md
+            href: ../device-security/identity-protection/ref-settings.md
           - name: Kiosk
             displayName: single app, multi app, dedicated device, windows
             href: ./templates/ref-kiosk-settings-windows.md

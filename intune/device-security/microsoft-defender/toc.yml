@@ -1,0 +1,17 @@
+items:
+  - name: Microsoft Defender for Endpoint
+    href: ./overview.md
+  - name: Configure Defender for Endpoint
+    href: ./configure-integration.md
+  - name: Deploy Defender for Endpoint on Android
+    href: ./deploy-android.md
+  - name: Android web protection
+    href: ./configure-web-protection-android.md
+  - name: Monitor Defender for Endpoint
+    href: ./monitor.md
+  - name: Microsoft Defender for Endpoint Security settings management
+    items:
+      - name: Microsoft Defender for Endpoint Security settings management
+        href: ./security-settings-management.md
+      - name: Manage endpoint security policies in Microsoft Defender
+        href: /defender-endpoint/manage-security-policies?context=/intune/context

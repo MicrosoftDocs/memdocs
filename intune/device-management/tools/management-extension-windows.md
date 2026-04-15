@@ -76,11 +76,11 @@ For devices meeting the prerequisites, the Intune management extension installs 
 
 - [PowerShell scripts](./run-powershell-scripts-windows.md)
 - [Remediations](../../intune-service/fundamentals/remediations.md)
-- [Discovery scripts for custom compliance](../../intune-service/protect/compliance-custom-script.md)
+- [Discovery scripts for custom compliance](../../device-security/compliance/create-custom-script.md)
 - [Win32 apps](../../app-management/deployment/add-win32.md)
 - [Endpoint analytics](../../endpoint-analytics/index.md)
 - [Remote Help](../../intune-service/fundamentals/remote-help.md)
-- [Managed Installers in Intune](../../intune-service/protect/endpoint-security-app-control-policy.md)
+- [Managed Installers in Intune](../../device-configuration/endpoint-security/manage-app-control.md)
 - [Update Windows BIOS using configuration MDM policy](../../device-configuration/templates/configure-bios-windows.md)
 
 > [!NOTE]

@@ -1,8 +1,6 @@
 ---
-author: nicholasswhite
 ms.topic: include
 ms.date: 10/14/2025
-ms.author: nwhite
 ---
 #### Level 2 enterprise enhanced data protection
 
