@@ -2,25 +2,25 @@ items:
   - name: Antivirus policy settings
     items:
       - name: macOS Defender Antivirus settings
-        href: ./endpoint-security-policies/ref-antivirus-defender-settings-macos.md
+        href: ./ref-antivirus-defender-settings-macos.md
       - name: Windows Defender Antivirus settings
-        href: ./endpoint-security-policies/ref-antivirus-defender-settings-windows.md
+        href: ./ref-antivirus-defender-settings-windows.md
       - name: Tenant attach Defender Antivirus settings
-        href: ./endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach.md
+        href: ./ref-antivirus-defender-settings-windows-tenant-attach.md
       - name: Tenant attach Windows Security settings
-        href: ./endpoint-security-policies/ref-windows-security-settings-tenant-attach.md
+        href: ./ref-windows-security-settings-tenant-attach.md
       - name: Windows Security experience settings
-        href: ./endpoint-security-policies/ref-security-experience-settings-windows.md
+        href: ./ref-security-experience-settings-windows.md
   - name: Disk encryption profile settings
-    href: ./endpoint-security-policies/ref-disk-encryption-settings.md
+    href: ./ref-disk-encryption-settings.md
     displayName: AWA; Add Work Account
   - name: Firewall policy settings
-    href: ./endpoint-security-policies/ref-firewall-settings.md
+    href: ./ref-firewall-settings.md
   - name: Tenant attach Firewall settings
-    href: ./endpoint-security-policies/ref-firewall-settings-tenant-attach.md
+    href: ./ref-firewall-settings-tenant-attach.md
   - name: Endpoint detection and response profile settings
-    href: ./endpoint-security-policies/ref-edr-settings.md
+    href: ./ref-edr-settings.md
   - name: Attack surface reduction profile settings
-    href: ./endpoint-security-policies/ref-attack-surface-reduction-settings.md
+    href: ./ref-attack-surface-reduction-settings.md
   - name: Account protection profile settings
-    href: ./endpoint-security-policies/ref-account-protection-settings.md
+    href: ./ref-account-protection-settings.md
