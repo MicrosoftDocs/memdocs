@@ -33,6 +33,9 @@ For general guidance on planning update deployments, see [Create a deployment pl
 
 Windows driver update policies let you control which driver updates are allowed to install on managed devices. You can choose between automatic approval of recommended drivers or require manual review for every update.
 
+> [!NOTE]
+> Windows driver update policies do not consider about CHID targeting drivers even if these are displayed as recommended driver. Recommended driver means the latest version for it. If the user updates to the CHID targeting driver, it must receive the driver update from Windows Update.
+
 ### Automatic approval of recommended drivers
 
 When automatic approval is enabled, the policy automatically approves and deploys each new recommended driver version for devices assigned to the policy. Recommended drivers are typically the latest versions published by the OEM and marked as required. Other available driver versions remain optional and appear as other drivers.
