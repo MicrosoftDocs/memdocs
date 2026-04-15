@@ -35,7 +35,7 @@ In addition, when you use [Configuration Manager](#configuration-manager) to man
 
 Deploy policies to configure and enforce security on enrolled devices. The following policy types work together to protect devices:
 
-**[Endpoint security policies](./endpoint-security.md)** - Focused security policies for specific protection areas:
+**[Endpoint security policies](./endpoint-security-policies.md)** - Focused security policies for specific protection areas:
 
 - **Account protection** - Windows Hello for Business, Credential Guard, and Windows LAPS
 - **Antivirus** - Microsoft Defender Antivirus configuration and exclusions
@@ -187,7 +187,7 @@ Conditional Access works across managed and unmanaged devices, helping create an
 Build your security posture with Intune:
 
 - **Plan your approach** - Review [Zero Trust security guidance](../solutions/zero-trust/configure-security.md) for Intune.
-- **Configure endpoint security** - Start with [endpoint security policies](./endpoint-security.md) for focused security configurations.
+- **Configure endpoint security** - Start with [endpoint security policies](./endpoint-security-policies.md) for focused security configurations.
 - **Implement compliance** - Deploy [device compliance policies](./compliance/overview.md) and [Conditional Access](./conditional-access-integration/overview.md).
 - **Protect data** - Configure [app protection policies](../app-management/protection/overview.md) for organizational data.
 - **Monitor and maintain** - Learn about [data security and sharing in Intune](../privacy/data-sharing/index.md).

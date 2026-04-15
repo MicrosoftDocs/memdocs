@@ -54,7 +54,7 @@ The following tasks are completed in the Configuration Manager console. If you'r
 1. [Confirm your Configuration Manager environment](#task-1-confirm-your-configuration-manager-environment)
 2. [Configure tenant attach and synchronize devices](#task-2-configure-tenant-attach-and-synchronize-devices)
 3. [Select devices to synchronize](#task-3-select-devices-to-synchronize)
-4. [Enable collections for endpoint security policies](#task-4-enable-collections-for-endpoint-security)
+4. [Enable collections for endpoint security policies](#task-4-enable-collections-for-endpoint-security-policies)
 
 > [!TIP]
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
@@ -64,7 +64,7 @@ The following tasks are completed in the Configuration Manager console. If you'r
 
 ### Task 1: Confirm your Configuration Manager environment
 
-Intune policies for Configuration Manager devices require different minimum versions of Configuration Manager, depending on when the policy was first released. Review the [Configuration Manager version requirements for Intune endpoint security policies](#configuration-manager-version-requirements-for-intune-endpoint-security) found earlier in this article to ensure your environment supports the policies you plan to use. A more recent version of Configuration Manager supports policies that require an earlier version.
+Intune policies for Configuration Manager devices require different minimum versions of Configuration Manager, depending on when the policy was first released. Review the [Configuration Manager version requirements for Intune endpoint security policies](#configuration-manager-version-requirements-for-intune-endpoint-security-policies) found earlier in this article to ensure your environment supports the policies you plan to use. A more recent version of Configuration Manager supports policies that require an earlier version.
 
 When a Configuration Manager hotfix is necessary, you can find the hotfix as an in-console update for Configuration Manager. For more information, see [Install in-console updates](../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
 
@@ -315,5 +315,5 @@ For more information about viewing device events for tenant attached devices, se
 
 ## Next steps
 
-- [Configure Endpoint security policies](../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
+- [Configure Endpoint security policies](../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
 - Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).

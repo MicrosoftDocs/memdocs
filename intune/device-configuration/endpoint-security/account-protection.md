@@ -128,4 +128,4 @@ Because the policy can contain multiple rules, consider the following points:
 
 ## Next steps
 
-[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security)
+[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies)

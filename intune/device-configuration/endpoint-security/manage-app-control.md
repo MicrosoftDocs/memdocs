@@ -473,4 +473,4 @@ Microsoft Entra hybrid-join devices require connectivity to an on-premises Domai
 
 ## Next Steps
 
-[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security)
+[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies)

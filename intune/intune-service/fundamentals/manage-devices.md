@@ -124,7 +124,7 @@ In Intune, some common security tasks include:
 
   For more information, go to:
 
-  - [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security.md)
+  - [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security-policies.md)
   - [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 

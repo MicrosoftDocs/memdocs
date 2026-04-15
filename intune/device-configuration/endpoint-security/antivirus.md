@@ -222,7 +222,7 @@ In addition to reports detailed in the following sections, additional reports fo
 
 ### Summary
 
-On the **Summary** page, you can [create new policies](./manage-policies.md#create-endpoint-security) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
+On the **Summary** page, you can [create new policies](./manage-policies.md#create-endpoint-security-policies) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
 
 ![Summary page of antivirus policy](./media/antivirus/antivirus-summary.png)
 
@@ -245,7 +245,7 @@ The information for this report is based on details available from the following
 
 ## Next steps
 
-[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security)
+[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies)
 
 View details for the Windows settings in the deprecated profiles for the deprecated *Windows 10 and later* platform:
 

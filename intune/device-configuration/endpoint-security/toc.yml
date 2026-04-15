@@ -1,6 +1,6 @@
 items:
   - name: Endpoint security overview
-    href: ../../device-security/endpoint-security.md
+    href: ../../device-security/endpoint-security-policies.md
   - name: Manage devices
     href: ../../device-management/manage-endpoint-security-devices.md
   - name: Use reusable settings groups

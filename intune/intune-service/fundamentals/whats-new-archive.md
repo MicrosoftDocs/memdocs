@@ -942,7 +942,7 @@ You can now use Intune to manage the configuration of the Microsoft Defender CSP
 
 You can use the following two Microsoft Intune options to configure DeviceControlEnabled. With both options, the setting appears as **Device Control Enabled**, and is found in the *Defender* category:
 
-- Configure a [**Device Control** template](../../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security), which is a profile for [Attack Surface Reduction](../../device-configuration/endpoint-security/attack-surface-reduction.md) policy.
+- Configure a [**Device Control** template](../../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security-policies), which is a profile for [Attack Surface Reduction](../../device-configuration/endpoint-security/attack-surface-reduction.md) policy.
 - Configure a [**Settings Catalog** profile](../../device-configuration/settings-catalog/index.md#create-the-policy) for Windows.
 
 Both the Device Control template and Settings Catalog support the following options for *Device Control Enabled*:
@@ -965,7 +965,7 @@ DefaultEnforcement manages the configuration of Device Control:
 
 You can use the following two Microsoft Intune options to configure DefaultEnforcement. With both options, the setting appears as **Default Enforcement**, and is found in the *Defender* category:
 
-- Configure a [**Device Control** template](../../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security), which is a profile for [Attack Surface Reduction](../../device-configuration/endpoint-security/attack-surface-reduction.md) policy.
+- Configure a [**Device Control** template](../../device-configuration/endpoint-security/manage-policies.md#create-endpoint-security-policies), which is a profile for [Attack Surface Reduction](../../device-configuration/endpoint-security/attack-surface-reduction.md) policy.
 - Configure a [**Settings Catalog** profile](../../device-configuration/settings-catalog/index.md#create-the-policy) for Windows.
 
 Both the Device Control template and Settings Catalog support the following options for *Default Enforcement*:
@@ -1906,7 +1906,7 @@ These changes apply to the following policies:
 - The functionally is the same as the previous platform names.
 - There are no additional tasks or actions for existing policies.
 
-For more information on endpoint security features in Intune, see [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security.md).
+For more information on endpoint security features in Intune, see [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security-policies.md).
 
 Applies to:
 

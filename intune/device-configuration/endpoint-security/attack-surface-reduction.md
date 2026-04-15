@@ -233,6 +233,6 @@ Policy merge doesn't compare or merge the configurations from different settings
 
 ## Next steps
 
-[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security).
+[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies).
 
 View details for the settings in profiles for [Attack surface reduction profiles](./ref-attack-surface-reduction-settings.md).

@@ -3632,7 +3632,7 @@
     },
     {
       "source_path": "intune/intune/protect/endpoint-security.md",
-      "redirect_url": "/intune/device-security/endpoint-security",
+      "redirect_url": "/intune/device-security/endpoint-security-policies",
       "redirect_document_id": false
     },
     {
@@ -6052,7 +6052,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security.md",
-      "redirect_url": "/intune/device-security/endpoint-security",
+      "redirect_url": "/intune/device-security/endpoint-security-policies",
       "redirect_document_id": false
     },
     {
@@ -6302,7 +6302,7 @@
     },
     {
       "redirect_document_id": false,
-      "redirect_url": "/intune/device-security/endpoint-security",
+      "redirect_url": "/intune/device-security/endpoint-security-policies",
       "source_path": "intune/device-configuration/endpoint-security/overview.md"
     },
     {

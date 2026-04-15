@@ -202,7 +202,7 @@ Additional common firewall rule issues:
 
 ## Next steps
 
-[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security)
+[Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies)
 
 View details for the settings in the deprecated Firewall profiles for the deprecated *Windows 10 and later* platform:
 
