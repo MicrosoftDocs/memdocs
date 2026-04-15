@@ -1,10 +1,10 @@
 items:
   - name: Endpoint security overview
-    href: ./overview.md
+    href: ../../device-security/endpoint-security.md
   - name: Manage devices
-    href: ./manage-devices.md
+    href: ../../device-management/manage-endpoint-security-devices.md
   - name: Use reusable settings groups
-    href: ./device-security/reusable-settings-groups.md
+    href: ../../device-security/reusable-settings-groups.md
   - name: Security policy
     items:
       - name: Manage security policies
@@ -25,13 +25,13 @@ items:
         href: ./configure-endpoint-protection.md
       - name: Firewall
         href: ./firewall.md
-  - name: Disk encryption policies
+  - name: Encrypt disks
     items:
       - name: Manage BitLocker policy
         href: ./encrypt-bitlocker-windows.md
       - name: Manage FileVault policy
         href: ./encrypt-filevault-macos.md
       - name: Monitor disk encryption
-        href: ./monitor-encryption.md
+        href: ../../device-management/monitor-encryption.md
       - name: Troubleshoot BitLocker policies
         href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies?context=/intune/context

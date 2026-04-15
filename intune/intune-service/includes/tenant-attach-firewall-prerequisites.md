@@ -9,7 +9,7 @@ ms.author: brenduns
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
-Manage [Firewall policy settings for Configuration Manager devices](../../device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach.md), when you use tenant attach.
+Manage [Firewall policy settings for Configuration Manager devices](../../device-configuration/endpoint-security/ref-firewall-settings-tenant-attach.md), when you use tenant attach.
 
 **Policy path**:
 

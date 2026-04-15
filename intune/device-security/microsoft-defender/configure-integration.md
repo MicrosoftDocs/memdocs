@@ -231,7 +231,7 @@ Use this option for granular control, specific device groups, or custom scope ta
 2. **Verify device onboarding**: After 15-30 minutes, devices should appear in the [Microsoft Defender portal](https://security.microsoft.com) under **Endpoints** > **Device inventory**.
 
 > [!TIP]
-> **Avoid policy conflicts:** Multiple policies managing the same settings can cause conflicts. See [Manage policy conflicts](../../device-configuration/endpoint-security-policies/manage-policies.md#manage-policy-conflicts) for resolution guidance.
+> **Avoid policy conflicts:** Multiple policies managing the same settings can cause conflicts. See [Manage policy conflicts](../../device-configuration/endpoint-security/manage-policies.md#manage-policy-conflicts) for resolution guidance.
 
 ### Onboard macOS devices
 
@@ -482,4 +482,4 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 ### Support resources
 
 - **Integration issues**: Check [troubleshooting guide](./monitor.md)
-- **Policy conflicts**: See [policy conflict resolution](../../device-configuration/endpoint-security-policies/manage-policies.md#manage-policy-conflicts)
+- **Policy conflicts**: See [policy conflict resolution](../../device-configuration/endpoint-security/manage-policies.md#manage-policy-conflicts)

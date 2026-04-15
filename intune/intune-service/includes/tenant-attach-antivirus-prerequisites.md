@@ -7,7 +7,7 @@ ms.author: brenduns
 
 #### Antivirus
 
-Manage [Antivirus settings for Configuration Manager devices](../../device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+Manage [Antivirus settings for Configuration Manager devices](../../device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md), when you use tenant attach.
 
 **Policy path**:
 

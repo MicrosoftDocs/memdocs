@@ -54,15 +54,15 @@ items:
       - name: Tenant attach data collection
         href: ../tenant-attach/data-collection.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Microsoft Defender Antivirus policy settings
-        href: ../../device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Windows Security experience Antivirus policy settings
-        href: ../../device-configuration/endpoint-security-policies/ref-windows-security-settings-tenant-attach.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Firewall policy settings
-        href: ../../device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../device-configuration/endpoint-security/ref-firewall-settings-tenant-attach.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Endpoint Detection and Response policy settings
-        href: ../../device-configuration/endpoint-security-policies/ref-edr-settings.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../device-configuration/endpoint-security/ref-edr-settings.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Attack surface reduction policy settings
-        href: ../../device-configuration/endpoint-security-policies/ref-attack-surface-reduction-settings.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+        href: ../../device-configuration/endpoint-security/ref-attack-surface-reduction-settings.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot tenant attach
       items:
       - name: Tenant attach and device actions

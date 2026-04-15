@@ -521,7 +521,7 @@ The information for this report is based on details available from the following
 Other reports for Microsoft Defender Antivirus include:
 
 - [Detected malware report](#detected-malware-report-organizational), an organizational report detailed in this article.
-- [Antivirus policy reports](../../device-configuration/endpoint-security-policies/antivirus.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
+- [Antivirus policy reports](../../device-configuration/endpoint-security/antivirus.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
 ### Detected malware report (Organizational)
 
@@ -539,11 +539,11 @@ The information for this report is based on details available from the [Defender
 Other reports for Microsoft Defender Antivirus include:
 
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
-- [Antivirus policy reports](../../device-configuration/endpoint-security-policies/antivirus.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
+- [Antivirus policy reports](../../device-configuration/endpoint-security/antivirus.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
 ### MDM Firewall status for Windows (Organizational)
 
-*This report is also described in [Endpoint security firewall policy](../../device-configuration/endpoint-security-policies/firewall.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
+*This report is also described in [Endpoint security firewall policy](../../device-configuration/endpoint-security/firewall.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 

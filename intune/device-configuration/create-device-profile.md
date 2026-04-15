@@ -95,7 +95,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Edition upgrade and mode switch (Windows)](./templates/configure-edition-upgrade-windows.md)
 - [Education (iOS, iPadOS)](../intune-service/fundamentals/education-settings-configure-ios.md)
 - [Email](./templates/configure-email.md)
-- [Endpoint protection (macOS, Windows)](./endpoint-security-policies/configure-endpoint-protection.md)
+- [Endpoint protection (macOS, Windows)](./endpoint-security/configure-endpoint-protection.md)
 - [Extensions (macOS)](./templates/configure-kernel-extensions-macos.md)
 - [Kiosk](./templates/configure-kiosk.md)
 - [Microsoft Defender for Endpoint (Windows)](../device-security/microsoft-defender/overview.md)

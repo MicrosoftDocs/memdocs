@@ -149,7 +149,7 @@ All other policies report as **Not applicable**.
 
 You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows. If that Platform is not available, the profile is not supported on multi-session VMs.
 
-For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security-policies/manage-policies.md)
+For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
 
 ## Application deployment
 

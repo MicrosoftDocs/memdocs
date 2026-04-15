@@ -16,7 +16,7 @@ ms.collection:
 
 Every Windows machine has a built-in local administrator account that can't be deleted, and which has full permissions to the device. Securing this account is an important step in securing your organization. Windows devices include *Windows Local Administrator Password Solution* ([LAPS](/windows-server/identity/laps/laps-overview)), a built-in solution to help manage local admin accounts.
 
-You can use Microsoft Intune endpoint security policies for [account protection](../../device-configuration/endpoint-security-policies/account-protection.md) to manage LAPS on devices that have enrolled with Intune. Intune policies can:
+You can use Microsoft Intune endpoint security policies for [account protection](../../device-configuration/endpoint-security/account-protection.md) to manage LAPS on devices that have enrolled with Intune. Intune policies can:
 
 - Enforce password requirements for local admin accounts
 - Back up a local admin account from devices to your Active Directory (AD) or Microsoft Entra
@@ -189,4 +189,4 @@ Because Windows LAPS can only manage one local admin account on a device at a ti
 
 - [Create policy for LAPS](./deploy-policy.md)
 - [View reports for LAPS](./monitor.md)
-- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection.md)
+- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security/account-protection.md)

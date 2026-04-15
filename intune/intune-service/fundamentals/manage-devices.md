@@ -124,8 +124,8 @@ In Intune, some common security tasks include:
 
   For more information, go to:
 
-  - [Manage endpoint security in Microsoft Intune](../../device-configuration/endpoint-security-policies/overview.md)
-  - [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security-policies/manage-policies.md)
+  - [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security.md)
+  - [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
 - **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, and restore a device to its factory settings. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.

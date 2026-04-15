@@ -320,7 +320,7 @@ items:
       - name: Endpoint security
         items:
         - name: Endpoint security policies
-          href: ./device-configuration/endpoint-security-policies/toc.yml
+          href: ./device-configuration/endpoint-security/toc.yml
 
         - name: Security baselines
           href: ./device-security/security-baselines/toc.yml
@@ -440,28 +440,28 @@ items:
           - name: Antivirus policy settings
             items:
               - name: macOS Defender Antivirus settings
-                href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-macos.md
+                href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-macos.md
               - name: Windows Defender Antivirus settings
-                href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows.md
+                href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows.md
               - name: Tenant attach Defender Antivirus settings
-                href: ./device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach.md
+                href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md
               - name: Tenant attach Windows Security settings
-                href: ./device-configuration/endpoint-security-policies/ref-windows-security-settings-tenant-attach.md
+                href: ./device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach.md
               - name: Windows Security experience settings
-                href: ./device-configuration/endpoint-security-policies/ref-security-experience-settings-windows.md
+                href: ./device-configuration/endpoint-security/ref-security-experience-settings-windows.md
           - name: Disk encryption profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-disk-encryption-settings.md
+            href: ./device-configuration/endpoint-security/ref-disk-encryption-settings.md
             displayName: AWA; Add Work Account
           - name: Firewall policy settings
-            href: ./device-configuration/endpoint-security-policies/ref-firewall-settings.md
+            href: ./device-configuration/endpoint-security/ref-firewall-settings.md
           - name: Tenant attach Firewall settings
-            href: ./device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach.md
+            href: ./device-configuration/endpoint-security/ref-firewall-settings-tenant-attach.md
           - name: Endpoint detection and response profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-edr-settings.md
+            href: ./device-configuration/endpoint-security/ref-edr-settings.md
           - name: Attack surface reduction profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-attack-surface-reduction-settings.md
+            href: ./device-configuration/endpoint-security/ref-attack-surface-reduction-settings.md
           - name: Account protection profile settings
-            href: ./device-configuration/endpoint-security-policies/ref-account-protection-settings.md
+            href: ./device-configuration/endpoint-security/ref-account-protection-settings.md
 
         - name: Security baseline settings
           items:

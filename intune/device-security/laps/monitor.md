@@ -85,4 +85,4 @@ For information about Microsoft Entra event logs, see [What are Microsoft Entra 
 
 - [Introduction to Intune policy for LAPS](./overview.md)
 - [Create policy for LAPS](./deploy-policy.md)
-- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/account-protection.md)
+- [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security/account-protection.md)

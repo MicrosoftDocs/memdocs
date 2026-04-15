@@ -330,7 +330,7 @@ For more information on Windows Defender configuration, including Microsoft Defe
 
 ### Microsoft Defender Firewall
 
-Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/firewall.md).
+Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security/firewall.md).
 
 Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running Windows.
 
@@ -343,12 +343,12 @@ Using the *domain* network profile allows you to separate firewall rules based o
 
 Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker.
 
-- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md).
+- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
-When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md) for more settings.
+When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) for more settings.
 
 **BitLocker**:
 

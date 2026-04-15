@@ -75,7 +75,7 @@ The Endpoint Protection workload includes the Defender suite of protection featu
 - Windows Defender Application Control
 - Windows Defender Security Center
 
-For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../device-configuration/endpoint-security-policies/ref-endpoint-protection-settings-windows.md).
+For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../device-configuration/endpoint-security/ref-endpoint-protection-settings-windows.md).
 
 > [!NOTE]
 > When you switch this workload, the Configuration Manager policies stay on the device until the Intune policies overwrite them. This behavior makes sure that the device still has protection policies during the transition.

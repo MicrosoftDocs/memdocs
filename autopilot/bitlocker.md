@@ -29,7 +29,7 @@ For more information about the recommended encryption algorithms to use, see [Bi
 
 ## Full disk or used space-only encryption
 
-There are two types of encryption, full disk or used space-only. Configuration of [silent enablement](/intune/device-configuration/endpoint-security-policies/encrypt-bitlocker-windows#silently-enable-bitlocker-on-devices) and hardware support for modern standby automatically determines the type of encryption used. The type of encryption used can be enforced by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, BitLocker uses the encryption type when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/intune/device-configuration/endpoint-security-policies/encrypt-bitlocker-windows#full-disk-vs-used-space-only-encryption).
+There are two types of encryption, full disk or used space-only. Configuration of [silent enablement](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows#silently-enable-bitlocker-on-devices) and hardware support for modern standby automatically determines the type of encryption used. The type of encryption used can be enforced by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, BitLocker uses the encryption type when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows#full-disk-vs-used-space-only-encryption).
 
 ## Configure a BitLocker policy for Windows Autopilot devices
 
@@ -99,4 +99,4 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 ## Related content
 
 - [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
-- [Manage BitLocker policy for Windows devices with Intune](/intune/device-configuration/endpoint-security-policies/encrypt-bitlocker-windows).
+- [Manage BitLocker policy for Windows devices with Intune](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows).

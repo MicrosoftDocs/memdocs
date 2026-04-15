@@ -1757,7 +1757,7 @@ Our Managed Installer policy is updated to add the capability to target individu
 
 If you previously had a tenant-wide managed installer policy in effect, that policy remains available with a group assignment to all your devices. This reconfiguration is equivalent to the previous tenant-wide configuration it had before. You can choose to use that converted policy or implement new policies with more granular control.
 
-For more information about configuring and using managed installers, see [Get started with managed installers](../../device-configuration/endpoint-security-policies/manage-app-control.md#get-started-with-managed-installers).
+For more information about configuring and using managed installers, see [Get started with managed installers](../../device-configuration/endpoint-security/manage-app-control.md#get-started-with-managed-installers).
 
 > [!div class="checklist"]
 > Applies to:

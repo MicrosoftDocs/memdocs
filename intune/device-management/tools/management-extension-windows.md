@@ -80,7 +80,7 @@ For devices meeting the prerequisites, the Intune management extension installs 
 - [Win32 apps](../../app-management/deployment/add-win32.md)
 - [Endpoint analytics](../../endpoint-analytics/index.md)
 - [Remote Help](../../intune-service/fundamentals/remote-help.md)
-- [Managed Installers in Intune](../../device-configuration/endpoint-security-policies/manage-app-control.md)
+- [Managed Installers in Intune](../../device-configuration/endpoint-security/manage-app-control.md)
 - [Update Windows BIOS using configuration MDM policy](../../device-configuration/templates/configure-bios-windows.md)
 
 > [!NOTE]

@@ -2,6 +2,8 @@
 title: Endpoint security in Microsoft Intune
 description: Learn how to manage endpoint security in Microsoft Intune. Configure security policies, deploy baselines, and integrate with Defender for Endpoint to protect devices.
 keywords: Intune security policies, endpoint protection Intune, configure endpoint security, device security Intune, Microsoft Defender Intune, security baselines, zero trust Intune, ransomware protection, endpoint security node, device compliance Intune, Endpoint Security Manager, attack surface reduction Intune
+author: brenduns
+ms.author: brenduns
 ms.date: 02/18/2026
 ms.topic: overview
 ms.collection:
@@ -22,7 +24,7 @@ From the Endpoint security node, you can configure policies, deploy security bas
 
 Use the Endpoint security node to address common security challenges:
 
-- **Protect against ransomware and malware** - Deploy antivirus policies with real-time protection, configure attack surface reduction rules, enable controlled folder access, and apply security baselines. For more information, see [Manage device security with endpoint security policies](./manage-policies.md).
+- **Protect against ransomware and malware** - Deploy antivirus policies with real-time protection, configure attack surface reduction rules, enable controlled folder access, and apply security baselines. For more information, see [Manage device security with endpoint security policies](../device-configuration/endpoint-security/manage-policies.md).
 
 - **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, deploy disk encryption, and enforce least privilege access with Endpoint Privilege Management (EPM). For more information, see [Zero Trust with Microsoft Intune](../../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
 
@@ -56,7 +58,7 @@ The following sections provide details on how each capability works and link to 
 
 The *All devices* view in Endpoint security displays all devices from your Microsoft Entra ID that are available in Intune. From this centralized view, you can monitor device compliance status across your organization, drill into specific devices to identify policy violations, and take immediate remediation actions such as restarting devices, initiating malware scans, or rotating encryption keys.
 
-This consolidated device view provides security admins with a single location to assess and remediate security issues across the entire fleet, regardless of platform or enrollment method. For more information, see [Manage devices with endpoint security in Microsoft Intune](./manage-devices.md).
+This consolidated device view provides security admins with a single location to assess and remediate security issues across the entire fleet, regardless of platform or enrollment method. For more information, see [Manage devices with endpoint security in Microsoft Intune](../device-management/manage-endpoint-security-devices.md).
 
 ### Security baselines
 
@@ -76,9 +78,9 @@ Endpoint security policies provide streamlined configuration options for specifi
 
 The Endpoint security node also includes device compliance and Conditional Access policies. While these policies aren't focused security policies for configuring endpoints, they're essential tools for managing device security posture and controlling access to corporate resources. Endpoint security also includes Endpoint Privilege Management policies that allow you to enforce least privilege access on Windows devices.
 
-![Manage policies](./media/overview/endpoint-security-policies.png)
+![Manage policies](./media/endpoint-security/endpoint-security.png)
 
-Endpoint security policies work alongside device configuration profiles and security baselines, so understanding which method to use for each scenario helps prevent configuration conflicts. For more information, see [Manage device security with endpoint security policies](./manage-policies.md).
+Endpoint security policies work alongside device configuration profiles and security baselines, so understanding which method to use for each scenario helps prevent configuration conflicts. For more information, see [Manage device security with endpoint security policies](../device-configuration/endpoint-security/manage-policies.md).
 
 ### Device compliance policies
 
@@ -242,7 +244,7 @@ Endpoint security supports:
 - **iOS/iPadOS** - Compliance policies, app protection policies. Defender for Endpoint can be deployed as an app for threat detection.
 - **Android** - Compliance policies, app protection policies. Defender for Endpoint can be deployed as an app for threat detection.
 
-Capabilities vary by platform. For detailed platform-specific features, see [Manage device security with endpoint security policies](./manage-policies.md).
+Capabilities vary by platform. For detailed platform-specific features, see [Manage device security with endpoint security policies](../device-configuration/endpoint-security/manage-policies.md).
 
 ### How long does it take for policies to apply to devices?
 

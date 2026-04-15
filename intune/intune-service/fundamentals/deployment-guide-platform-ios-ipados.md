@@ -50,7 +50,7 @@ Use the Intune endpoint security features to configure device security and to ma
 
 | Task | Detail |
 | ---- | ------ |
-|[Manage devices with endpoint security features](../../device-configuration/endpoint-security-policies/manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
+|[Manage devices with endpoint security features](../../device-management/manage-endpoint-security-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
 |[Enable mobile threat defense (MTD) connector for unenrolled devices](../../device-security/mobile-threat-defense/enable-unenrolled-devices.md)|Enable the MTD connection in Intune so that MTD partner apps can work with Intune and your policies. If you're not using Microsoft Defender for Endpoint, consider enabling the connector so that you can use another mobile threat defense solution.  |
 |[Create MTD app protection policy](../../device-security/mobile-threat-defense/create-app-protection-policy.md)|Create an Intune app protection policy that assesses risk and limits a device's corporate access based on the threat level.|
 |[Add MTD apps to unenrolled devices](../../device-security/mobile-threat-defense/add-apps-unenrolled-devices.md)|Make MTD apps available to people in your organization and configure Microsoft Authenticator for iOS/iPadOS. |

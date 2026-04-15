@@ -25,7 +25,7 @@ To deploy Endpoint Privilege Management (EPM), start by enabling reporting, then
 
 ## Deployment overview
 
-EPM can help control the elevation of applications in Intune and [Local Users and Groups](../device-configuration/endpoint-security-policies/account-protection.md) can be used to control the local administrators group and transition users from administrators to standard users.
+EPM can help control the elevation of applications in Intune and [Local Users and Groups](../device-configuration/endpoint-security/account-protection.md) can be used to control the local administrators group and transition users from administrators to standard users.
 
 The common deployment phases are:
 
@@ -35,7 +35,7 @@ The common deployment phases are:
 - **Phase 2: Persona identification** - Identity groups of users with common requirements.
 - **Phase 3: Build rules** - Use [EPM reports](./monitor-reports.md) to create [elevation rules](./ref-elevation-rules.md) for different personas.
 - **Phase 4: Monitoring** - Iterate and refine rules, identify new scenarios.
-- **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](../device-configuration/endpoint-security-policies/account-protection.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](./manage-support-approvals.md) so that users can request elevation for apps that aren't covered by rules.
+- **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](../device-configuration/endpoint-security/account-protection.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](./manage-support-approvals.md) so that users can request elevation for apps that aren't covered by rules.
 
 Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with [Zero Trust principles](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
 

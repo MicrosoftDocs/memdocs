@@ -2682,7 +2682,7 @@
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-rule-tool.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/firewall",
+      "redirect_url": "/intune/device-configuration/endpoint-security/firewall",
       "redirect_document_id": false
     },
     {

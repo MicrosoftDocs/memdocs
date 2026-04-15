@@ -8,7 +8,8 @@ ms.collection:
 - highpri
 - sub-secure-endpoints
 ms.reviewer: mattcall
-
+author: brenduns
+ms.author: brenduns
 ---
 
 # Manage devices with endpoint security in Microsoft Intune
@@ -32,7 +33,7 @@ The initial *All devices* view displays your devices and includes key informatio
 - When the device last checked in
 - And more
 
-:::image type="content" source="./media/manage-devices/all-device-view.png" alt-text="The all device view in the admin center." lightbox="./media/manage-devices/all-device-view.png":::
+:::image type="content" source="./media/manage-endpoint-security-devices/all-device-view.png" alt-text="The all device view in the admin center." lightbox="./media/manage-endpoint-security-devices/all-device-view.png":::
 
 While viewing device details, you can select a device to drill-in for more information.
 
@@ -76,7 +77,7 @@ To view information about the device configuration policies that apply to a devi
 
 To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
 
-![View endpoint security policy details](./media/manage-devices/view-policy-details.png)
+![View endpoint security policy details](./media/manage-endpoint-security-devices/view-policy-details.png)
 
 Devices that are managed by Configuration Manager don't display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
 
@@ -96,7 +97,7 @@ Remote actions are actions you can start or apply to a device from the Microsoft
 
 Remote actions display across the top of the devices *Overview* page. Actions that can't display because of limited space on your screen are available by selecting the ellipsis on the right side:
 
-![View additional actions](./media/manage-devices/view-additional-actions.png)
+![View additional actions](./media/manage-endpoint-security-devices/view-additional-actions.png)
 
 The remote actions that are available depend on how the device is managed:
 
@@ -131,17 +132,17 @@ The following Intune remote actions are of interest to the security admin, and a
 
 - Update Windows Defender security intelligence – Have the device update its malware definitions for Microsoft Defender Antivirus. This action doesn't start a scan.
 
-- [BitLocker key rotation](./encrypt-bitlocker-windows.md#rotate-bitlocker-recovery-keys) – Remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later, or Windows 11.
+- [BitLocker key rotation](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md#rotate-bitlocker-recovery-keys) – Remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later, or Windows 11.
 
   > [!IMPORTANT]
   > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 You can also use *bulk device actions* to manage some actions like *Retire* and *Wipe* for multiple devices at the same time. To learn more, see [bulk device actions](../../device-management/actions/index.md#bulk-device-actions).
 
-![Select bulk actions](./media/manage-devices/select-bulk-actions.png)
+![Select bulk actions](./media/manage-endpoint-security-devices/select-bulk-actions.png)
 
 Options you manage for devices don't take effect until the device checks in with Intune.
 
 ## Next steps
 
-[Manage endpoint security in Intune](./overview.md)
+[Manage endpoint security in Intune](../device-security/endpoint-security.md)

@@ -152,7 +152,7 @@ For more details on creating a rule, see [Create elevation rules](./ref-elevatio
 8. Assign to a group (for example `Developers`)
 9. Select **Save**
 
-For more information on the Local Users and Groups profiles, see [Account protection](../device-configuration/endpoint-security-policies/account-protection.md)
+For more information on the Local Users and Groups profiles, see [Account protection](../device-configuration/endpoint-security/account-protection.md)
 
 ## Phase 5: Monitoring
 

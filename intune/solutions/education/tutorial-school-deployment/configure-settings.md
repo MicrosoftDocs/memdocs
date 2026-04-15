@@ -349,9 +349,9 @@ Now that you've configured your device settings, you can configure applications 
 [WIN-1]: /windows/deployment/update/waas-manage-updates-wufb
 
 [MEM-1]: /intune/device-updates/windows
-[MEM-2]: /intune/device-configuration/endpoint-security-policies/antivirus
-[MEM-3]: /intune/device-configuration/endpoint-security-policies/encrypt-bitlocker-windows
-[MEM-4]: /intune/device-configuration/endpoint-security-policies/firewall
-[MEM-5]: /intune/device-configuration/endpoint-security-policies/deploy-edr
-[MEM-6]: /intune/device-configuration/endpoint-security-policies/attack-surface-reduction
-[MEM-7]: /intune/device-configuration/endpoint-security-policies/account-protection
+[MEM-2]: /intune/device-configuration/endpoint-security/antivirus
+[MEM-3]: /intune/device-configuration/endpoint-security/encrypt-bitlocker-windows
+[MEM-4]: /intune/device-configuration/endpoint-security/firewall
+[MEM-5]: /intune/device-configuration/endpoint-security/deploy-edr
+[MEM-6]: /intune/device-configuration/endpoint-security/attack-surface-reduction
+[MEM-7]: /intune/device-configuration/endpoint-security/account-protection

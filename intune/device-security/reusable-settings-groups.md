@@ -23,8 +23,8 @@ When you edit the settings in a reusable group, the changes you make automatical
 
 The following profiles support reusable groups:
 
-- [**Device control**](#add-reusable-groups-to-a-device-control-profile), available through endpoint security [Attack Surface Reduction](../device-configuration/endpoint-security-policies/attack-surface-reduction.md#attack-surface-reduction-profiles) policy.
-- [**Windows Firewall Rules**](#add-reusable-groups-to-a-windows-firewall-rule-profile), available through endpoint security [Firewall](../device-configuration/endpoint-security-policies/firewall.md#firewall-profiles) policy.
+- [**Device control**](#add-reusable-groups-to-a-device-control-profile), available through endpoint security [Attack Surface Reduction](../device-configuration/endpoint-security/attack-surface-reduction.md#attack-surface-reduction-profiles) policy.
+- [**Windows Firewall Rules**](#add-reusable-groups-to-a-windows-firewall-rule-profile), available through endpoint security [Firewall](../device-configuration/endpoint-security/firewall.md#firewall-profiles) policy.
 
 ## Overview of reusable settings groups
 
@@ -62,8 +62,8 @@ The following profiles support use of reusable settings groups:
 
 Each reusable settings group includes a subset of settings from the full profile you're creating the group for. Use the following links to view the settings you can configure in a settings group for each profile:
 
-- [Device Control](../device-configuration/endpoint-security-policies/attack-surface-reduction.md#reusable-settings-groups-for-device-control-profiles)
-- [Windows Firewall rules](../device-configuration/endpoint-security-policies/firewall.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
+- [Device Control](../device-configuration/endpoint-security/attack-surface-reduction.md#reusable-settings-groups-for-device-control-profiles)
+- [Windows Firewall rules](../device-configuration/endpoint-security/firewall.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
 
 **To create a reusable settings group**:
 

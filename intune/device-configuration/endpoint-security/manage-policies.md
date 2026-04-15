@@ -38,7 +38,7 @@ When conflicts occur, affected settings might fail to apply properly. Plan your 
 
 Access endpoint security policies from **Endpoint security** > **Manage** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-:::image type="content" source="./media/manage-policies/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
+:::image type="content" source="./media/manage-policies/endpoint-security.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
 
 **[Account protection](./account-protection.md)**  
 

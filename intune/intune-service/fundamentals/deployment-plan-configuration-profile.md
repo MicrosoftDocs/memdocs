@@ -79,8 +79,8 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | - [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security-policies/antivirus.md) (Microsoft Defender for Endpoint) |
+| macOS | - [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security/antivirus.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../../device-configuration/endpoint-security/antivirus.md) (Microsoft Defender for Endpoint) |
 
 ### Detection and response
 
@@ -94,8 +94,8 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/deploy-edr.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune endpoint detection and response profile](../../device-configuration/endpoint-security-policies/deploy-edr.md) (Microsoft Defender for Endpoint) |
+| macOS | [Intune endpoint detection and response profile](../../device-configuration/endpoint-security/deploy-edr.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune endpoint detection and response profile](../../device-configuration/endpoint-security/deploy-edr.md) (Microsoft Defender for Endpoint) |
 
 ### Firewall
 
@@ -109,8 +109,8 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) |
 | iOS/iPadOS | [Mobile threat defense partner](../../device-security/mobile-threat-defense/overview.md) |
-| macOS | [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security-policies/firewall.md) (Microsoft Defender for Endpoint) |
+| macOS | [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security/firewall.md) (Microsoft Defender for Endpoint) |
+| Windows client | - [Intune security baselines](../../device-security/security-baselines/overview.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../../device-configuration/endpoint-security/firewall.md) (Microsoft Defender for Endpoint) |
 
 ### Password policy
 
@@ -320,13 +320,13 @@ Microsoft recommends the following level 2 security policies:
 
   # [macOS](#tab/macos-disk)
 
-  On macOS devices, use a settings catalog policy (recommended) or an endpoint security policy (deprecated) to [configure and use FileVault](../../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md) for disk encryption.
+  On macOS devices, use a settings catalog policy (recommended) or an endpoint security policy (deprecated) to [configure and use FileVault](../../device-configuration/endpoint-security/encrypt-filevault-macos.md) for disk encryption.
 
   Secure Enclave is built into the operating system and automatically enabled. For more specific information, see [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
 
   # [Windows](#tab/windows-disk)
 
-  On Windows devices, use Intune endpoint protection policies that [manage BitLocker, including TPM](../../device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md) and [manage Windows settings, including secure boot](../../device-configuration/endpoint-security-policies/ref-endpoint-protection-settings-windows.md#windows-encryption).
+  On Windows devices, use Intune endpoint protection policies that [manage BitLocker, including TPM](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) and [manage Windows settings, including secure boot](../../device-configuration/endpoint-security/ref-endpoint-protection-settings-windows.md#windows-encryption).
 
 ---
 

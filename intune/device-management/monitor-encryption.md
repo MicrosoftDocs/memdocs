@@ -17,8 +17,8 @@ The Microsoft Intune encryption report is a centralized location to view details
 >
 > To configure Intune policies to manage encryption on devices, see:
 >
-> - [Manage BitLocker policy](./encrypt-bitlocker-windows.md)
-> - [Manage FileVault policy](./encrypt-filevault-macos.md)
+> - [Manage BitLocker policy](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md)
+> - [Manage FileVault policy](../device-configuration/endpoint-security/encrypt-filevault-macos.md)
 
 To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Manage devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
 
@@ -115,7 +115,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The device is already encrypted. Device user must decrypt the device to continue.
 
-    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](./encrypt-filevault-macos.md#assume-management-of-existing-filevault-encryption). Alternately, the user can manually decrypt their device so it can then be encrypted by Intune policy at a later time. However, we don't recommend manual decryption as doing so can leave a device unencrypted for a time.*
+    *Consider: Intune can't set up FileVault on a device that is already encrypted. However, after a device receives policy to enable FileVault, a user can [upload their personal recovery key to enable Intune to then manage encryption on that device](../device-configuration/endpoint-security/encrypt-filevault-macos.md#assume-management-of-existing-filevault-encryption). Alternately, the user can manually decrypt their device so it can then be encrypted by Intune policy at a later time. However, we don't recommend manual decryption as doing so can leave a device unencrypted for a time.*
 
   - FileVault needs the user to approve their management profile in macOS Catalina and higher.
 
@@ -187,17 +187,17 @@ For details on managing recovery keys, see the following Intune documentation:
 
 macOS FileVault:
 
-- [Retrieve personal recovery key](./encrypt-filevault-macos.md#recovery-key-access-locations)
-- [Rotate recovery keys](./encrypt-filevault-macos.md#recovery-key-rotation)
-- [Recover recovery keys](./encrypt-filevault-macos.md#recovery-key-access-locations)
+- [Retrieve personal recovery key](../device-configuration/endpoint-security/encrypt-filevault-macos.md#recovery-key-access-locations)
+- [Rotate recovery keys](../device-configuration/endpoint-security/encrypt-filevault-macos.md#recovery-key-rotation)
+- [Recover recovery keys](../device-configuration/endpoint-security/encrypt-filevault-macos.md#recovery-key-access-locations)
 
 Windows BitLocker:
 
-- [Rotate BitLocker recovery keys](./encrypt-bitlocker-windows.md#rotate-bitlocker-recovery-keys)
+- [Rotate BitLocker recovery keys](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md#rotate-bitlocker-recovery-keys)
 
 ## Next steps
 
-- [Manage BitLocker policy](./encrypt-bitlocker-windows.md)
+- [Manage BitLocker policy](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
-- [Manage FileVault policy](./encrypt-filevault-macos.md)
+- [Manage FileVault policy](../device-configuration/endpoint-security/encrypt-filevault-macos.md)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)

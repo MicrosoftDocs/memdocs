@@ -369,7 +369,7 @@ To create these policies, in the [Intune admin center](https://go.microsoft.com/
 
 For more information about FileVault, go to:
 
-- [Encrypt macOS devices with FileVault disk encryption with Intune](../../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md)
+- [Encrypt macOS devices with FileVault disk encryption with Intune](../../device-configuration/endpoint-security/encrypt-filevault-macos.md)
 - [Use FileVault to encrypt the startup disk on your Mac](https://support.apple.com/guide/mac-help/mh1710e6fa5b/mac) (opens Apple's website)
 
 ✅ **Configure the firewall**
@@ -388,7 +388,7 @@ To create these policies, in the [Intune admin center](https://go.microsoft.com/
 
 For more information about the macOS firewall, go to:
 
-- [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security-policies/firewall.md)
+- [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security/firewall.md)
 - [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/mh11783/mac) (opens Apple's website)
 
 ✅ **Configure Gatekeeper**

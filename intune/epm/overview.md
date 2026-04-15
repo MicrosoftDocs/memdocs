@@ -139,7 +139,7 @@ Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune A
   - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](./deployment-planning.md).
 
 - **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](./deploy.md).
-- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](./manage-support-approvals.md) and [elevations](./monitor-reports.md). You can [maintain and update your rules](./ref-elevation-rules.md) and [review user privileges](../device-configuration/endpoint-security-policies/account-protection.md).
+- **Manage EPM** - After you deploy EPM, you can monitor [support approved requests](./manage-support-approvals.md) and [elevations](./monitor-reports.md). You can [maintain and update your rules](./ref-elevation-rules.md) and [review user privileges](../device-configuration/endpoint-security/account-protection.md).
 
 ---
 

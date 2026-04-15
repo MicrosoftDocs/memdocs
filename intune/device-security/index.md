@@ -35,7 +35,7 @@ In addition, when you use [Configuration Manager](#configuration-manager) to man
 
 Deploy policies to configure and enforce security on enrolled devices. The following policy types work together to protect devices:
 
-**[Endpoint security policies](../device-configuration/endpoint-security-policies/overview.md)** - Focused security policies for specific protection areas:
+**[Endpoint security policies](./endpoint-security.md)** - Focused security policies for specific protection areas:
 
 - **Account protection** - Windows Hello for Business, Credential Guard, and Windows LAPS
 - **Antivirus** - Microsoft Defender Antivirus configuration and exclusions
@@ -59,17 +59,17 @@ The following security areas can be managed through these policies:
   - **Multi-factor authentication** - Use Microsoft Entra Conditional Access to require MFA, and use Intune to configure device PIN/password and other sign-in related settings as needed.
 
 - **Data encryption**
-  - **Windows** - Deploy [BitLocker](../device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md) for full disk encryption and [Personal Data Encryption (PDE)](../device-configuration/endpoint-security-policies/encrypt-bitlocker-windows.md#personal-data-encryption-pde) for file-level encryption on Windows 11.
-  - **macOS** - Manage [FileVault](../device-configuration/endpoint-security-policies/encrypt-filevault-macos.md) for full disk encryption.
+  - **Windows** - Deploy [BitLocker](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) for full disk encryption and [Personal Data Encryption (PDE)](../device-configuration/endpoint-security/encrypt-bitlocker-windows.md#personal-data-encryption-pde) for file-level encryption on Windows 11.
+  - **macOS** - Manage [FileVault](../device-configuration/endpoint-security/encrypt-filevault-macos.md) for full disk encryption.
 
 - **Software updates** - Control when and how devices receive updates:
   - **Android** - [FOTA updates](../device-updates/android/manage-fota.md) for OEM firmware, [Zebra LifeGuard OTA](../device-updates/android/setup-zebra-lifeguard.md) for Zebra devices.
   - **iOS/iPadOS and macOS** - [Configure update policies](../device-updates/apple/index.md) to manage OS versions and update schedules.
   - **Windows** - Configure [Windows Update behaviors](../device-updates/windows/index.md), schedule updates, and maintain feature update compliance.
 
-- **Application control** - Use [App Control for Business](../device-configuration/endpoint-security-policies/manage-app-control.md) policies to define which applications can run on Windows devices.
+- **Application control** - Use [App Control for Business](../device-configuration/endpoint-security/manage-app-control.md) policies to define which applications can run on Windows devices.
 
-- **Attack surface reduction** - Deploy [ASR policies](../device-configuration/endpoint-security-policies/attack-surface-reduction.md) to reduce vulnerabilities through exploit protection, device control, application isolation, and ASR rules.
+- **Attack surface reduction** - Deploy [ASR policies](../device-configuration/endpoint-security/attack-surface-reduction.md) to reduce vulnerabilities through exploit protection, device control, application isolation, and ASR rules.
 
 - **Security baselines** - Deploy preconfigured [security baselines](./security-baselines/overview.md) for Windows devices, Microsoft Edge, and Microsoft Defender for Endpoint that reflect Microsoft security team recommendations.
 
@@ -128,7 +128,7 @@ Extend Intune's cloud-based security policies to on-premises and hybrid-managed 
 - **Co-management** - Concurrently manage Windows devices with both Configuration Manager and Intune, with workload sliders to control which service manages specific capabilities.
 - **Tenant attach** - Synchronize Configuration Manager devices into the Microsoft Intune admin center for centralized visibility and management.
 
-Both approaches enable [Intune security policies](../device-configuration/endpoint-security-policies/manage-devices.md) on Configuration Manager devices, including endpoint security policies, compliance policies, certificate deployment (SCEP/PKCS), and security baselines. This creates a consistent security posture across cloud and on-premises managed devices.
+Both approaches enable [Intune security policies](../device-management/manage-endpoint-security-devices.md) on Configuration Manager devices, including endpoint security policies, compliance policies, certificate deployment (SCEP/PKCS), and security baselines. This creates a consistent security posture across cloud and on-premises managed devices.
 
 ### Mobile Threat Defense
 
@@ -145,7 +145,7 @@ Intune supports [Microsoft Defender for Endpoint](./microsoft-defender/overview.
 [Microsoft Defender for Endpoint deeply integrates with Intune](./microsoft-defender/overview.md) across Windows, macOS, Linux, Android, and iOS/iPadOS, creating a unified security platform that combines device management with advanced threat protection. This integration enables:
 
 - **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
-- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../device-configuration/endpoint-security-policies/antivirus.md) settings, [EDR onboarding](../device-configuration/endpoint-security-policies/deploy-edr.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
+- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../device-configuration/endpoint-security/antivirus.md) settings, [EDR onboarding](../device-configuration/endpoint-security/deploy-edr.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
 - **Vulnerability management** - [Security tasks](./microsoft-defender/remediate-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
 - **[Microsoft Tunnel](./microsoft-tunnel/overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 
@@ -187,7 +187,7 @@ Conditional Access works across managed and unmanaged devices, helping create an
 Build your security posture with Intune:
 
 - **Plan your approach** - Review [Zero Trust security guidance](../solutions/zero-trust/configure-security.md) for Intune.
-- **Configure endpoint security** - Start with [endpoint security policies](../device-configuration/endpoint-security-policies/overview.md) for focused security configurations.
+- **Configure endpoint security** - Start with [endpoint security policies](./endpoint-security.md) for focused security configurations.
 - **Implement compliance** - Deploy [device compliance policies](./compliance/overview.md) and [Conditional Access](./conditional-access-integration/overview.md).
 - **Protect data** - Configure [app protection policies](../app-management/protection/overview.md) for organizational data.
 - **Monitor and maintain** - Learn about [data security and sharing in Intune](../privacy/data-sharing/index.md).

@@ -283,7 +283,7 @@ For information about the currently available Intune security baselines, see [Se
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md) capability.
 
-- **Device control** policies are part of endpoint security [Attack surface reduction policy](../../device-configuration/endpoint-security-policies/attack-surface-reduction.md).
+- **Device control** policies are part of endpoint security [Attack surface reduction policy](../../device-configuration/endpoint-security/attack-surface-reduction.md).
 
 > [!div class="checklist"]
 > Applies to the following when you use the *Windows* platform:

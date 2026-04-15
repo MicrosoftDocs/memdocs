@@ -3207,27 +3207,27 @@
     },
     {
       "source_path": "intune/intune/protect/antivirus-microsoft-defender-settings-macos.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-microsoft-defender-settings-windows.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-security-experience-windows-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-security-experience-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-security-experience-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-windows-security-settings-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach",
       "redirect_document_id": false
     },
     {
@@ -3527,112 +3527,112 @@
     },
     {
       "source_path": "intune/intune/protect/encrypt-devices-filevault.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/encrypt-filevault-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-filevault-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/encrypt-devices.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/encrypt-bitlocker-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/encryption-monitor.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/monitor-encryption",
+      "redirect_url": "/intune/device-management/monitor-encryption",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-protection-configure.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/configure-endpoint-protection",
+      "redirect_url": "/intune/device-configuration/endpoint-security/configure-endpoint-protection",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-protection-macos.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-endpoint-protection-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-protection-windows-10.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-endpoint-protection-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-account-protection-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/account-protection",
+      "redirect_url": "/intune/device-configuration/endpoint-security/account-protection",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-account-protection-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-account-protection-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-account-protection-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-antivirus-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/antivirus",
+      "redirect_url": "/intune/device-configuration/endpoint-security/antivirus",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-app-control-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/manage-app-control",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-app-control",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-asr-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/attack-surface-reduction",
+      "redirect_url": "/intune/device-configuration/endpoint-security/attack-surface-reduction",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-asr-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-attack-surface-reduction-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-attack-surface-reduction-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-disk-encryption-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/disk-encryption",
+      "redirect_url": "/intune/device-configuration/endpoint-security/disk-encryption",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-disk-encryption-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-disk-encryption-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-disk-encryption-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-edr-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/deploy-edr",
+      "redirect_url": "/intune/device-configuration/endpoint-security/deploy-edr",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-edr-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-edr-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-edr-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/firewall",
+      "redirect_url": "/intune/device-configuration/endpoint-security/firewall",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings-tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-firewall-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-manage-devices.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/manage-devices",
+      "redirect_url": "/intune/device-management/manage-endpoint-security-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/manage-policies",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-policies",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/overview",
+      "redirect_url": "/intune/device-security/endpoint-security",
       "redirect_document_id": false
     },
     {
@@ -5572,7 +5572,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/antivirus-security-experience-windows-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-security-experience-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-security-experience-settings-windows",
       "redirect_document_id": false
     },
     {
@@ -5582,7 +5582,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-edr-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/deploy-edr",
+      "redirect_url": "/intune/device-configuration/endpoint-security/deploy-edr",
       "redirect_document_id": false
     },
     {
@@ -5592,12 +5592,12 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-manage-devices.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/manage-devices",
+      "redirect_url": "/intune/device-management/manage-endpoint-security-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-firewall-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/firewall",
+      "redirect_url": "/intune/device-configuration/endpoint-security/firewall",
       "redirect_document_id": false
     },
     {
@@ -5612,7 +5612,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach",
       "redirect_document_id": false
     },
     {
@@ -5692,7 +5692,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-asr-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/attack-surface-reduction",
+      "redirect_url": "/intune/device-configuration/endpoint-security/attack-surface-reduction",
       "redirect_document_id": false
     },
     {
@@ -5702,7 +5702,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-protection-macos.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-endpoint-protection-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-macos",
       "redirect_document_id": false
     },
     {
@@ -5737,17 +5737,17 @@
     },
     {
       "source_path": "intune/intune-service/protect/antivirus-microsoft-defender-settings-windows.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-protection-configure.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/configure-endpoint-protection",
+      "redirect_url": "/intune/device-configuration/endpoint-security/configure-endpoint-protection",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-firewall-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-firewall-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings",
       "redirect_document_id": false
     },
     {
@@ -5772,7 +5772,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-disk-encryption-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/disk-encryption",
+      "redirect_url": "/intune/device-configuration/endpoint-security/disk-encryption",
       "redirect_document_id": false
     },
     {
@@ -5797,12 +5797,12 @@
     },
     {
       "source_path": "intune/intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-windows-security-settings-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-antivirus-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/antivirus",
+      "redirect_url": "/intune/device-configuration/endpoint-security/antivirus",
       "redirect_document_id": false
     },
     {
@@ -5822,7 +5822,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-account-protection-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-account-protection-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-account-protection-settings",
       "redirect_document_id": false
     },
     {
@@ -5832,7 +5832,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-disk-encryption-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-disk-encryption-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-disk-encryption-settings",
       "redirect_document_id": false
     },
     {
@@ -5912,7 +5912,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-firewall-settings-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings-tenant-attach",
       "redirect_document_id": false
     },
     {
@@ -5937,7 +5937,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-account-protection-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/account-protection",
+      "redirect_url": "/intune/device-configuration/endpoint-security/account-protection",
       "redirect_document_id": false
     },
     {
@@ -5962,7 +5962,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/encryption-monitor.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/monitor-encryption",
+      "redirect_url": "/intune/device-management/monitor-encryption",
       "redirect_document_id": false
     },
     {
@@ -6027,7 +6027,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-edr-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-edr-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-edr-settings",
       "redirect_document_id": false
     },
     {
@@ -6042,7 +6042,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/antivirus-microsoft-defender-settings-macos.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-antivirus-defender-settings-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-macos",
       "redirect_document_id": false
     },
     {
@@ -6052,12 +6052,12 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/overview",
+      "redirect_url": "/intune/device-security/endpoint-security",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/encrypt-devices.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/encrypt-bitlocker-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows",
       "redirect_document_id": false
     },
     {
@@ -6072,7 +6072,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-asr-profile-settings.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-attack-surface-reduction-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-attack-surface-reduction-settings",
       "redirect_document_id": false
     },
     {
@@ -6092,7 +6092,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/manage-policies",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-policies",
       "redirect_document_id": false
     },
     {
@@ -6177,7 +6177,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-security-app-control-policy.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/manage-app-control",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-app-control",
       "redirect_document_id": false
     },
     {
@@ -6212,7 +6212,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/endpoint-protection-windows-10.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/ref-endpoint-protection-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-settings-windows",
       "redirect_document_id": false
     },
     {
@@ -6267,7 +6267,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/encrypt-devices-filevault.md",
-      "redirect_url": "/intune/device-configuration/endpoint-security-policies/encrypt-filevault-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-filevault-macos",
       "redirect_document_id": false
     },
     {
@@ -6299,6 +6299,21 @@
       "source_path": "intune/solutions/tutorials/tutorial-protect-email-unmanaged-devices.md",
       "redirect_url": "/intune/solutions/tutorials/protect-email-unmanaged-devices",
       "redirect_document_id": false
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/intune/device-security/endpoint-security",
+      "source_path": "intune/device-configuration/endpoint-security/overview.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/intune/device-management/manage-endpoint-security-devices",
+      "source_path": "intune/device-configuration/endpoint-security/manage-devices.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/intune/device-management/monitor-encryption",
+      "source_path": "intune/device-configuration/endpoint-security/monitor-encryption.md"
     }
   ]
 }
