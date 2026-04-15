@@ -11,7 +11,7 @@ ms.collection:
 ---
 # Use the Troubleshooting Dashboard to Help Users at Your Company
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 The troubleshooting pane lets help desk operators and Intune administrators view user information to address user help requests. Organizations that include a help desk can assign the [Help desk operator role](role-based-access-control.md#built-in-roles) to a group of Intune users. The help desk operator role can use the **Troubleshooting + support** pane help end users.
 
@@ -76,10 +76,10 @@ The **Devices** tab provides details for devices, such as OS, OS Version, Intune
 | Column | Description |
 |---|---|
 | Name               | The name of the device. |
-| Managed by         | Identifies how the device is managed. For more information, see [Available details by management type](../protect/endpoint-security-manage-devices.md#available-details-by-management-type). |
+| Managed by         | Identifies how the device is managed. For more information, see [Available details by management type](../../device-management/manage-endpoint-security-devices.md#available-details-by-management-type). |
 | Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
-| Intune compliant   | Identifies whether the device is compliant with Intune. Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md). |
-| Microsoft Entra compliant      | Identifies whether the device is compliant with Microsoft Entra ID. Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md). |
+| Intune compliant   | Identifies whether the device is compliant with Intune. Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md). |
+| Microsoft Entra compliant      | Identifies whether the device is compliant with Microsoft Entra ID. Should be **Yes**. If **No** is shown, there may be an issue with compliance policies, or the device isn't connecting to the Intune service. For example, the device may be turned off, or may not have a network connection. Eventually, the device becomes non-compliant, possibly after 30 days. For more information, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md). |
 | App lifecycle status | Denotes whether an app install failure or success has occurred on the individual device. |
 | OS                 | The Operating System installed on the device. |
 | OS version         | The Operating System version number of the device. |
@@ -172,8 +172,8 @@ The **Diagnostics** tab provides the device name or application, platform, creat
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
 
-- [Report a problem in Company Portal for iOS](../user-help/send-logs-to-microsoft-ios.md)
-- [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [Report a problem in Company Portal for iOS](../../user-help/diagnostics/collect-logs-ios.md)
+- [Report a problem in Company Portal or Intune app for Android](../../user-help/diagnostics/collect-logs-android.md)
 
 You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).
 

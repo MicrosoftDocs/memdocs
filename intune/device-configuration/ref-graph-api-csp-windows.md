@@ -19,7 +19,7 @@ This list applies to:
 
 - Windows 10 and later
 
-[!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 This article lists the Graph entities and their matching Windows CSPs and offset URIs.
 
@@ -2991,5 +2991,5 @@ To see the Windows 10 versions the following APIs apply, use the Windows 10 [con
 
 ## Next steps
 
-- [Device configuration overview](../intune-service/configuration/device-profiles.md)
+- [Device configuration overview](../device-configuration/overview.md)
 - [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site)

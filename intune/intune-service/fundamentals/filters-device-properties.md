@@ -20,7 +20,7 @@ You can use assignment filters on **managed devices** (devices enrolled in Intun
 
 This article provides a complete reference for managed device properties, managed app properties, and supported operators you can use in your assignment filters, and includes practical examples.
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Available properties
 
@@ -309,7 +309,7 @@ You can use the following device properties in your managed device filter rules:
 > [!NOTE]
 >
 > - In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
-> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> - [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 # [Managed app properties](#tab/managed-app)
 
@@ -370,7 +370,7 @@ You can use the following app properties in your managed app filter rules:
     | Android Enterprise | - Corporate-owned dedicated devices with Entra ID Shared mode<br/>- Corporate-owned dedicated devices without Entra ID Shared mode<br/>- Corporate-owned with work profile<br/>- Corporate-owned fully managed<br/>- Personally-owned work profile |
     | Managed | - Automated Device Enrollment user-associated devices<br/>- Automated Device Enrollment userless devices<br/>- Account Driven User Enrollment<br/>- Device Enrollment with Company Portal and Web Enrollment |
 
-  - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
+  - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../../app-management/configuration/configure-managed-apps.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
   - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).

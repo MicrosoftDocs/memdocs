@@ -25,15 +25,15 @@ MAM is available on the following platforms:
 
 This article provides recommendations on when to use MAM. It also includes an overview of the administrator and user tasks. For more specific information on MAM, go to:
 
-- [Microsoft Intune app management](../apps/app-management.md)
-- [Data protection for Windows MAM](../apps/protect-mam-windows.md)
+- [Microsoft Intune app management](../../app-management/overview.md)
+- [Data protection for Windows MAM](../../app-management/protection/enable-mam-windows.md)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 
-For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](../../device-enrollment/guide.md).
 
 ## MAM
 
@@ -53,11 +53,11 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 
 ### MAM administrator tasks
 
-This task list provides an overview. For more specific information, see [Microsoft Intune app management](../apps/app-management.md).
+This task list provides an overview. For more specific information, see [Microsoft Intune app management](../../app-management/overview.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md) or [configure your apps](../apps/app-configuration-policies-overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../apps/app-protection-policy-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
+- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../../app-management/ref-protected-apps.md) or [configure your apps](../../app-management/configuration/overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../../app-management/protection/ref-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
 
 - Tell users how to get different apps. For example, you can:
 
@@ -80,8 +80,8 @@ The specific tasks depend on how you tell users to install the apps.
 
 ## Related articles
 
-- [Android enrollment guide](deployment-guide-enrollment-android.md)
-- [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
-- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
-- [macOS enrollment guide](deployment-guide-enrollment-macos.md)
-- [Windows enrollment guide](deployment-guide-enrollment-windows.md)
+- [Android enrollment guide](../../device-enrollment/android/guide.md)
+- [iOS/iPadOS enrollment guide](../../device-enrollment/apple/guide-ios-ipados.md)
+- [Linux enrollment guide](../../device-enrollment/guide-linux.md)
+- [macOS enrollment guide](../../device-enrollment/apple/guide-macos.md)
+- [Windows enrollment guide](../../device-enrollment/windows/guide.md)

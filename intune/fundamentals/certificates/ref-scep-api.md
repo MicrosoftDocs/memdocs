@@ -428,12 +428,12 @@ Validating and testing that your solution is properly integrated with Intune is 
 1. Set up an [Intune trial account](../../intune-service/fundamentals/account-sign-up.md).
 2. Onboard the [SCEP Server in the Azure portal](#onboard-scep-server-in-azure) (in this article).
 3. [Configure the SCEP Server](./scep-infrastructure.md) with the IDs and key created when onboarding your SCEP server.
-4. [Enroll devices](../../intune-service/fundamentals/deployment-guide-enrollment.md) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
+4. [Enroll devices](../../device-enrollment/guide.md) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
 5. [Create a Trusted Root Certificate profile](./scep-infrastructure.md) for your test Certificate Authority.
 6. Create SCEP profiles to test the scenarios listed in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
-7. [Assign the profiles](../../intune-service/configuration/device-profile-assign.md) to users that enrolled their devices.
+7. [Assign the profiles](../../device-configuration/assign-device-profile.md) to users that enrolled their devices.
 8. Wait for the devices to sync with Intune. Or, manually [sync the devices](../../device-management/actions/sync.md).
-9. Confirm the Trusted Root Certificate and SCEP [profiles are deployed to the devices](../../intune-service/configuration/device-profile-monitor.md).
+9. Confirm the Trusted Root Certificate and SCEP [profiles are deployed to the devices](../../device-configuration/monitor-device-profile.md).
 10. Confirm the Trusted Root Certificate are installed on all the devices.
 11. Confirm the SCEP Certificates for the assigned profiles are installed on all the devices.
 12. Confirm the properties of the installed certificates match the properties set in the SCEP profile.
@@ -443,5 +443,5 @@ Validating and testing that your solution is properly integrated with Intune is 
 
 - [Add third party CA overview](./third-party-ca-scep.md)
 - [Set up Intune](../../intune-service/fundamentals/deployment-plan-setup.md)
-- [Device enrollment](../../intune-service/fundamentals/deployment-guide-enrollment.md)
+- [Device enrollment](../../device-enrollment/guide.md)
 - [Configure SCEP certificate profiles](../../device-configuration/certificates/scep-profiles.md) (the Microsoft Network Device Enrollment Service server\connector setup isn't used for this scenario)

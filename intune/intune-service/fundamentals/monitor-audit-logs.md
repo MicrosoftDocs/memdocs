@@ -48,7 +48,7 @@ For related information about audit logs, go to:
 
 - [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
 - [Use audit logs throughout Intune](../fundamentals/review-logs-using-azure-monitor.md#use-audit-logs-throughout-intune)
-- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/audit-export-delete.md)
+- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/manage-data-requests.md)
 
 ## Route logs to Azure Monitor
 
@@ -75,4 +75,4 @@ You can also use Graph API to get two years of audit events. For more informatio
 ## Related articles
 
 - [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md)
-- [Review client app protection logs](../apps/app-protection-policy-settings-log.md)
+- [Review client app protection logs](../../app-management/protection/troubleshoot-protection-logs.md)

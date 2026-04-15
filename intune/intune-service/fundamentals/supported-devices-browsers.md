@@ -44,14 +44,14 @@ Intune does not support using a cloned image of a computer that is already enrol
 
 ### Supported platforms for Microsoft Defender for Endpoint Integration
 
-For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md)
+For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Intune](../../device-security/microsoft-defender/security-settings-management.md)
 
 ### Supported Samsung Knox Standard devices
 
 Microsoft Intune only attempts Samsung Knox activation during enrollment on supported Knox devices. Devices that don't support Samsung Knox enroll as standard Android devices. For a list of devices that support Samsung Knox, see [Devices secured by Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace) on the Samsung Knox website. It's important to look for your device model number when verifying support, because some device models support Knox while others don't. Always verify Knox compatibility with your device reseller before you buy and deploy Samsung devices.
 
 > [!NOTE]
-> You may need to enable access to Samsung servers to enroll Samsung Knox devices. For more information about enrollment, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
+> You may need to enable access to Samsung servers to enroll Samsung Knox devices. For more information about enrollment, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../../device-enrollment/android/setup-samsung-knox-mobile.md).
 
 The Samsung device models in the following table don't support Knox solutions and features. Intune enrolls them as native Android devices.
 

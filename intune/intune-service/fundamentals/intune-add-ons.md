@@ -29,13 +29,13 @@ The following table provides a list of add-on capabilities and associated Intune
 
 | Capability | Standalone add-on | Intune Plan 2 | Intune Suite |
 |:-|:-:|:-:|:-:|
-| [Endpoint Privilege Management](../protect/epm-overview.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| [Enterprise App Management](../apps/apps-enterprise-app-management.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Endpoint Privilege Management](../../epm/overview.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Enterprise App Management](../../app-management/deployment/enterprise-app-catalog.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Advanced Analytics](../../advanced-analytics/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Remote Help](remote-help.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Microsoft Tunnel for Mobile Application Management](../../device-security/microsoft-tunnel/mam.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Cloud PKI](../../cloud-pki/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Firmware-over-the-air update](../../device-updates/android/setup-zebra-lifeguard.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Specialized devices management](specialty-devices-with-intune.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
@@ -45,11 +45,11 @@ The following table provides a list of add-on capabilities and associated Intune
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
-For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
+For more information, see [Endpoint Privilege Management](../../epm/overview.md).
 
 ### Microsoft Intune Enterprise App Management
 
-Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. In addition, Intune hosts Enterprise App Catalog apps in Microsoft storage. For more information, see [Microsoft Intune Enterprise Application Management](../apps/apps-enterprise-app-management.md).
+Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. In addition, Intune hosts Enterprise App Catalog apps in Microsoft storage. For more information, see [Microsoft Intune Enterprise Application Management](../../app-management/deployment/enterprise-app-catalog.md).
 
 ### Microsoft Intune Advanced Analytics
 
@@ -65,7 +65,7 @@ Remote Help is a cloud-based solution for secure help desk connections with role
 
 When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune.
 
-For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
+For more information, see [Microsoft Tunnel for Mobile Application Management](../../device-security/microsoft-tunnel/mam.md).
 
 ### Microsoft Cloud PKI
 
@@ -77,7 +77,7 @@ For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/inde
 
 Firmware over-the-air (FOTA) update allows you to remotely update the firmware of supported devices wirelessly with more control.
 
-For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/setup-zebra-lifeguard.md)
 
 ### Managing specialty devices with Microsoft Intune
 
@@ -151,10 +151,10 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 Learn more about:
 
 - [Remote Help](remote-help.md)
-- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+- [Microsoft Tunnel for Mobile Application Management](../../device-security/microsoft-tunnel/mam.md)
+- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../../device-updates/android/setup-zebra-lifeguard.md)
 - [Intune Advanced Analytics](../../advanced-analytics/index.md)
-- [Endpoint Privilege Management](../protect/epm-overview.md).
-- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Endpoint Privilege Management](../../epm/overview.md).
+- [Microsoft Tunnel for Mobile Application Management](../../device-security/microsoft-tunnel/mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)
 - [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)

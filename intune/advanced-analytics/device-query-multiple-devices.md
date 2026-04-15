@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Device query for multiple devices
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 Use Device query for multiple devices in Microsoft Intune to run Kusto Query Language (KQL) queries across device inventory data and identify trends across your managed fleet. This article explains prerequisites, how to create and run queries in the Intune admin center, how to work with results, and which operators, functions, and properties are supported.
 
@@ -44,7 +44,7 @@ Additional prerequisites for device query for multiple devices:
 > Device query for multiple devices supports devices that are:
 >
 > - Managed by Intune and marked as corporate owned.
-> - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
+> - Windows devices must have a [properties catalog policy](../device-configuration/collect-device-properties.md) deployed to them to collect inventory data.\
 >   For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 :::column-end:::
 :::row-end:::

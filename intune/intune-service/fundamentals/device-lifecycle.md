@@ -18,7 +18,7 @@ All devices that you manage have a *lifecycle*. Intune can help you manage this 
 
 ## Enroll
 
-Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and macOS). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](deployment-guide-enrollment.md). You can also manage Windows PCs by enrolling them with Intune (MDM).
+Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and macOS). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](../../device-enrollment/guide.md). You can also manage Windows PCs by enrolling them with Intune (MDM).
 
 ## Configure
 
@@ -26,15 +26,15 @@ Getting your devices enrolled is just the first step. To take advantage of all t
 
 Here are the types of configuration options that are available:
 
-- [**Device configuration profiles**](../configuration/device-profiles.md). These policies let you configure the features and capabilities of the devices that you manage. For example, you could require the use of a password on Android phones or disable the use of the camera on iPhones.
-- [**Company resource access**](../configuration/device-profiles.md). When you let your users access their work on their personal device, this can present you with challenges. For example, how do you ensure that all devices that need to access company email are configured correctly? How can you ensure that users can access the company network with a VPN connection without having to know complex settings? Intune can help to reduce this burden by automatically configuring the devices that you manage to access common company resources.
+- [**Device configuration profiles**](../../device-configuration/overview.md). These policies let you configure the features and capabilities of the devices that you manage. For example, you could require the use of a password on Android phones or disable the use of the camera on iPhones.
+- [**Company resource access**](../../device-configuration/overview.md). When you let your users access their work on their personal device, this can present you with challenges. For example, how do you ensure that all devices that need to access company email are configured correctly? How can you ensure that users can access the company network with a VPN connection without having to know complex settings? Intune can help to reduce this burden by automatically configuring the devices that you manage to access common company resources.
 
 ## Protect
 
 In the modern IT world, protecting devices from unauthorized access is one of the most important tasks that you perform. In addition to the items in the **Configure** step of the device lifecycle, Intune provides these capabilities that help protect devices you manage from unauthorized access or malicious attacks:
 
-- [**Multi-factor authentication**](../enrollment/multi-factor-authentication.md). Adding an extra layer of authentication to user sign-ins can help make devices even more secure. Many devices support multi-factor authentication that requires a second level of authentication, such as a phone call or text message, before users can gain access.
-- [**Windows Hello for Business settings**](../protect/windows-hello.md). Windows Hello for Business is an alternative sign-in method that lets users use a *gesture*—such as a fingerprint or Windows Hello—to sign in without needing a password.
+- [**Multi-factor authentication**](../../device-enrollment/configure-multifactor-authentication.md). Adding an extra layer of authentication to user sign-ins can help make devices even more secure. Many devices support multi-factor authentication that requires a second level of authentication, such as a phone call or text message, before users can gain access.
+- [**Windows Hello for Business settings**](../../device-security/identity-protection/configure-tenant-wide-policy.md). Windows Hello for Business is an alternative sign-in method that lets users use a *gesture*—such as a fingerprint or Windows Hello—to sign in without needing a password.
 
 ## Retire
 

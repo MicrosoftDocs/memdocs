@@ -80,8 +80,8 @@ For important details about using the different issuers, review guidance for tha
 > [!div class="checklist"]
 > Plan to deploy the relevant user-facing app to devices that enroll for a derived credential. Device users use the app to start the credential enrollment process.
 >
-> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../../intune-service/apps/store-apps-ios.md).
-> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../../intune-service/apps/store-apps-android.md).
+> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md).
+> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../../app-management/deployment/add-store-android.md).
 
 ## Plan for derived credentials
 
@@ -118,8 +118,8 @@ The following are key considerations for each supported partner. Become familiar
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-disa-purebred)
-- [Android Enterprise](../../intune-service/user-help/enroll-android-device-disa-purebred.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+- [iOS and iPadOS](../../user-help/enrollment/enroll-disa-purebred-ios.md)
+- [Android Enterprise](../../user-help/enrollment/enroll-disa-purebred-android.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -144,8 +144,8 @@ For information getting and configuring the DISA Purebred app, see [Deploy the D
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-entrust-datacard)
-- [Android Enterprise](../../intune-service/user-help/enroll-android-device-entrust-datacard.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
+- [iOS and iPadOS](../../user-help/enrollment/enroll-entrust-datacard-ios.md)
+- [Android Enterprise](../../user-help/enrollment/enroll-entrust-datacard-android.md)- *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -168,8 +168,8 @@ Review the platform-specific user workflow for the devices you'll use with deriv
 
 Review the platform-specific user workflow for the devices you'll use with derived credentials.
 
-- [iOS and iPadOS](/mem/intune-service/user-help/enroll-ios-device-intercede)
-- [Android Enterprise](../../intune-service/user-help/enroll-android-device-intercede.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
+- [iOS and iPadOS](../../user-help/enrollment/enroll-intercede-ios.md)
+- [Android Enterprise](../../user-help/enrollment/enroll-intercede-android.md) - *Corporate-Owned Work Profile* or *Fully managed devices*
 
 **Key requirements include**:
 
@@ -254,12 +254,12 @@ In addition to deploying the DISA Purebred app with Intune, the device must have
 
 2. Deploy the DISA Purebred application in Intune.
 
-   - See [Add an iOS line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-ios.md).
-   - See [Add an Android line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-android.md)
+   - See [Add an iOS line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-ios.md).
+   - See [Add an Android line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-android.md)
 
    Extra settings for the Purebred app might be required. Speak to your Purebred agent to understand which values should be included in your policies, or if you have a DoD issued Common Access Card (CAC) you can access the Purebred documentation online at https:\//cyber.mil/pki-pke/purebred/.
 
-3. If you choose to use a per-app VPN for the DISA Purebred application, see [Create a per-app VPN](../../intune-service/configuration/vpn-settings-configure.md).
+3. If you choose to use a per-app VPN for the DISA Purebred application, see [Create a per-app VPN](../../device-configuration/templates/configure-vpn.md).
 
 ## Use derived credentials for authentication and S/MIME signing and encryption
 
@@ -267,14 +267,14 @@ You can specify **Derived credential** for the following profile types and purpo
 
 - [Applications](#use-derived-credentials-for-app-authentication)
 - Email:
-  - [iOS and iPadOS](../../intune-service/configuration/email-settings-ios.md)
-  - [Android Enterprise](../../intune-service/configuration/email-settings-android-enterprise.md)
+  - [iOS and iPadOS](../../device-configuration/templates/ref-email-settings-ios.md)
+  - [Android Enterprise](../../device-configuration/templates/ref-email-settings-android-enterprise.md)
 - VPN:
-  - [iOS and iPadOS](../../intune-service/configuration/vpn-settings-apple.md)
+  - [iOS and iPadOS](../../device-configuration/templates/ref-vpn-settings-apple.md)
 - [S/MIME signing and encryption](./s-mime.md)
 - Wi-Fi:
-  - [iOS and iPadOS](../../intune-service/configuration/wi-fi-settings-apple.md)
-  - [Android Enterprise](../../intune-service/configuration/wi-fi-settings-android-enterprise.md)
+  - [iOS and iPadOS](../../device-configuration/templates/ref-wifi-settings-apple.md)
+  - [Android Enterprise](../../device-configuration/templates/ref-wifi-settings-android-enterprise.md)
 
   For Wi-Fi profiles, *Authentication method* is available only when the **EAP type** is set to one of the following values:
   - EAP – TLS
@@ -367,4 +367,4 @@ After you delete an issuer and then add a new one, device users must request a n
 
 ## Next steps
 
-[Create device configuration profiles](../../intune-service/configuration/device-profile-create.md)
+[Create device configuration profiles](../../device-configuration/create-device-profile.md)

@@ -22,7 +22,7 @@ The monthly release process involves many different environments and is deployed
 
 An internal environment called Self Host is the first environment to receive the release. Self Host is used only by the Intune engineering teams. After Self Host, the service release is deployed to the Microsoft tenant that manages many devices. Once the release is validated that there are no key issues with the service release, the release begins deploying to customer environments in a phased approach. Once all tenants are successfully updated, the Microsoft Intune admin center is updated. This phased approach helps identify issues before they affect the service or our customers.
 
-Updating Intune client applications is a different process. For devices that meet the prerequisites, the Intune management extension (IME) is installed automatically when certain features are assigned to a user or device. See [Intune management agent for macOS](../apps/lob-apps-macos-agent.md), [Add, assign, & monitor a Win32 app](../apps/apps-win32-add.md#prerequisites), and [Add PowerShell scripts to Windows devices](../apps/powershell-scripts.md) for details. The IMEs are frequently updated alongside with our monthly releases. After a tenant is successfully updated, devices with the IME installed download the new version of the IME as they check-in on their regular schedule, resulting in a phased deployment of the updates within a tenant. The IME download sized is around 10Mb.
+Updating Intune client applications is a different process. For devices that meet the prerequisites, the Intune management extension (IME) is installed automatically when certain features are assigned to a user or device. See [Intune management agent for macOS](../../app-management/deployment/management-agent-macos.md), [Add, assign, & monitor a Win32 app](../../app-management/deployment/add-win32.md#prerequisites), and [Add PowerShell scripts to Windows devices](../../device-management/tools/run-powershell-scripts-windows.md) for details. The IMEs are frequently updated alongside with our monthly releases. After a tenant is successfully updated, devices with the IME installed download the new version of the IME as they check-in on their regular schedule, resulting in a phased deployment of the updates within a tenant. The IME download sized is around 10Mb.
 
 For Company Portal app, Microsoft is subject to the release requirements and processes of the Apple App Store, Google Play, and sometimes mobile carriers. It isn't always possible to align the Intune release updates with updates to the Company Portal app. For more information on the Company Portal app updates, go to [UI updates for Intune end-user apps](whats-new-app-ui.md).
 
@@ -72,7 +72,7 @@ The following resources can help you understand privacy and personal data in Int
 - [Optional diagnostic data from Intune Client apps](../../privacy/data-handling/optional-diagnostic-data.md)
 - [Data collection in Intune](../../privacy/data-handling/data-collection.md)
 - [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
-- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/audit-export-delete.md)
+- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/manage-data-requests.md)
 
 ## Related content
 

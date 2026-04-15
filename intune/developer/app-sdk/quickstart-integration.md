@@ -27,11 +27,11 @@ The following diagram provides the process flow for the Intune App SDK for iOS a
 
 ### If your app is internal to your organization and won't be publicly available:
 
-You _**do not need**_ to register your app. For internal [line-of-business (LOB) apps](../../intune-service/apps/apps-add.md#app-types-in-microsoft-intune) that were written by or for your company, the IT administrator will deploy the app internally. Intune will detect that the app has been built with the SDK, and will let the IT administrator apply app protection policies to it. You can skip to the section [Enable your iOS or Android app for app protection policy](#enable-your-ios-or-android-app-for-app-protection-policy).
+You _**do not need**_ to register your app. For internal [line-of-business (LOB) apps](../../app-management/deployment/index.md#app-types-in-microsoft-intune) that were written by or for your company, the IT administrator will deploy the app internally. Intune will detect that the app has been built with the SDK, and will let the IT administrator apply app protection policies to it. You can skip to the section [Enable your iOS or Android app for app protection policy](#enable-your-ios-or-android-app-for-app-protection-policy).
 
 ### If your app will be released to a public app store, like the Apple App Store or Google Play:
 
-You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Partner productivity apps](../../intune-service/apps/apps-supported-intune-apps.md#partner-productivity-apps).
+You _**must**_ first register your app with Microsoft Intune and agree to the registration terms. IT administrators can then apply an app protection policy to the managed app, which will be listed as an [Partner productivity apps](../../app-management/ref-protected-apps.md#partner-productivity-apps).
 
 Until registration has been finished and confirmed by the Microsoft Intune team, Intune administrators won't have the option to apply app protection policy to your app's deep link. Microsoft will also add your app to its Microsoft Intune Partners page. There, the app's icon will be displayed to show that it supports Intune app protection policies.
 
@@ -68,7 +68,7 @@ If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.
 * [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
 
 > [!NOTE]
-> Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../../intune-service/apps/app-management.md).
+> Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../../app-management/overview.md).
 
 It's a good idea to sign up for a GitHub account that you can use to fork and pull from our repositories. GitHub lets developers communicate with our product team, open issues and receive quick responses, view release notes, and provide feedback to Microsoft. For questions on the Intune App SDK GitHub, contact msintuneappsdk@microsoft.com.
 
@@ -104,7 +104,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 * **Intune App SDK for Android**: The Intune App SDK for Android doesn't control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we don't collect any personally identifiable information (PII).
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../../intune-service/user-help/turn-off-microsoft-usage-data-collection-android.md).
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../../user-help/privacy/disable-usage-data-collection-android.md).
 
 ## Line-of-business app version numbers
 
@@ -160,7 +160,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
   * If you're testing your app on a mobile device using an end user account, ensure that you have given that account an Intune license by in the Microsoft 365 admin center website after logging in with an admin account, see [Assign Microsoft Intune license](../../fundamentals/licensing/assign-licenses.md).
 
-* **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../../intune-service/apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../../intune-service/apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting **Custom Apps**.
+* **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../../app-management/protection/ref-settings-ios.md) and [Android app protection policies](../../app-management/protection/ref-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting **Custom Apps**.
 
 * **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install).
 

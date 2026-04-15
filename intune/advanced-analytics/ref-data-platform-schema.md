@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Intune data platform schema
 
-This article details the properties supported by the Intune Data Platform. The Intune Data Platform can be accessed via [device query](device-query.md), [device query for multiple devices](device-query-multiple-devices.md), and [device inventory](../intune-service/configuration/properties-catalog.md).
+This article details the properties supported by the Intune Data Platform. The Intune Data Platform can be accessed via [device query](device-query.md), [device query for multiple devices](device-query-multiple-devices.md), and [device inventory](../device-configuration/collect-device-properties.md).
 
 Each table (entity) in this article lists the types of queries that are supported with the following information:
 

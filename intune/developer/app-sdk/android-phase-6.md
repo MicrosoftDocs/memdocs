@@ -52,7 +52,7 @@ App developers can use [delegated scopes](https://developer.android.com/work/ver
 - Allow app to access Android security logs
 - Allow app to access Android network activity logs
 
-Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings -> Corporate-owned > Applications](../../intune-service/configuration/device-restrictions-android-for-work.md).
+Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings -> Corporate-owned > Applications](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 For app implementation details, see [Android developer documentation - Delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes).
 
@@ -217,13 +217,13 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [Stage 7: App Participation Features]:android-phase-7.md
 
 <!-- Microsoft Learn documentation -->
-[App configuration policies for Microsoft Intune]:../../intune-service/apps/app-configuration-policies-overview.md
-[Enroll Android devices]:../../intune-service/fundamentals/deployment-guide-enrollment-android.md
-[application configuration policies for managed Android Enterprise devices]:../../intune-service/apps/app-configuration-policies-use-android.md
-[application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
+[App configuration policies for Microsoft Intune]:../../app-management/configuration/overview.md
+[Enroll Android devices]:../../device-enrollment/android/guide.md
+[application configuration policies for managed Android Enterprise devices]:../../app-management/configuration/configure-managed-android.md
+[application configuration policies for managed apps]:../../app-management/configuration/configure-managed-apps.md
 [Graph API documentation for MAM Targeted Config]:/graph/api/resources/intune-mam-targetedmanagedappconfiguration
-[Validate the applied app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md#validate-the-applied-app-configuration-policy
-[Android enterprise app configuration policies]:../../intune-service/apps/app-configuration-policies-overview.md#android-enterprise-app-configuration-policies
+[Validate the applied app configuration policy]:../../app-management/configuration/overview.md#validate-the-applied-app-configuration-policy
+[Android enterprise app configuration policies]:../../app-management/configuration/overview.md#android-enterprise-app-configuration-policies
 
 <!-- 3rd party links -->
 [managed configurations]:https://developer.android.com/work/managed-configurations

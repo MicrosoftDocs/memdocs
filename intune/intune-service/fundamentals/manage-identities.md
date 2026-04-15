@@ -25,7 +25,7 @@ From a service perspective, Intune uses Microsoft Entra ID for identity storage 
 This article discusses concepts and features you should consider when managing your identities.
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Use your existing users and groups
 
@@ -85,11 +85,11 @@ In Intune, you can create policies for both scenarios on Android, iOS/iPadOS, ma
 
 For more specific information, go to the enrollment guides for your platforms:
 
-- [Enrollment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
-- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
-- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
-- [Enrollment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
-- [Enrollment guide: Enroll Windows devices in Microsoft Intune](deployment-guide-enrollment-windows.md)
+- [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md)
+- [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../device-enrollment/apple/guide-ios-ipados.md)
+- [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../../device-enrollment/guide-linux.md)
+- [Enrollment guide: Enroll macOS devices in Microsoft Intune](../../device-enrollment/apple/guide-macos.md)
+- [Enrollment guide: Enroll Windows devices in Microsoft Intune](../../device-enrollment/windows/guide.md)
 
 ## Assign policies to users and groups
 
@@ -102,7 +102,7 @@ The settings catalog in Intune includes thousands of settings to manage iOS/iPad
 For more information on policies in Intune, go to:
 
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../../device-configuration/settings-catalog/index.md)
-- [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
+- [Common questions and answers with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md)
 
 ## Secure your user identities
 
@@ -119,12 +119,12 @@ Your user and group accounts access organization resources. You need to keep the
   For more information, go to:
 
   - [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-  - [Manage Windows Hello for Business on devices when devices enroll with Intune](../protect/windows-hello.md)
+  - [Manage Windows Hello for Business on devices when devices enroll with Intune](../../device-security/identity-protection/configure-tenant-wide-policy.md)
 
   To manage Windows Hello for Business, you use one of the following options:
 
-  - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
-  - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the **Microsoft Defender for Endpoint security** or **Security Baseline for Windows 10 and later** baselines.
+  - [During device enrollment](../../device-security/identity-protection/configure-tenant-wide-policy.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
+  - [Security baselines](../../device-security/security-baselines/overview.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the **Microsoft Defender for Endpoint security** or **Security Baseline for Windows 10 and later** baselines.
   - [Settings catalog](../../device-configuration/settings-catalog/index.md): The settings from endpoint security account protection profiles are available in the Intune settings catalog.
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and certificates can make access to these resources easier.
@@ -136,7 +136,7 @@ Your user and group accounts access organization resources. You need to keep the
   For more information, go to:
 
   - [Plan a Microsoft Entra multifactor authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted)
-  - [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
+  - [Require multifactor authentication for Intune device enrollments](../../device-enrollment/configure-multifactor-authentication.md)
 
 - **Zero Trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 

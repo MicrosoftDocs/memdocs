@@ -91,13 +91,13 @@ The Intune admin center has per-device and per-platform reporting information fo
 
 You can use the following reports to get more information on properties used for the assignment filter:
 
-- [App protection status report](../apps/app-protection-policies-monitor.md)
+- [App protection status report](../../app-management/protection/monitor-policies.md)
 - App configuration status report
 
   For more information about app configuration policies, go to:
 
-  - [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md)
-  - [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md)
+  - [App configuration policies for Microsoft Intune](../../app-management/configuration/overview.md)
+  - [App configuration policies for Intune App SDK managed apps](../../app-management/configuration/configure-managed-apps.md)
 
 ## Include vs. Exclude
 
@@ -127,7 +127,7 @@ Use the following table to help understand when you include or exclude devices:
   - Time3: In the Company Portal app, the user is prompted to choose a device category. Remember, enrollment and check-in is already completed.
   - Time4: On the next device check-in, the category property updates and now returns a different filter evaluation result. Remember, the app was already installed. And, it won't be automatically removed.
 
-  For approximate check-in times, go to [Intune policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+  For approximate check-in times, go to [Intune policy refresh intervals](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you can see a `We were not able to retrieve any filter evaluation results` message.
 
@@ -147,7 +147,7 @@ Overlapping can cause conflicts and Intune helps avoid conflicts.
 
 Intune prevents you from creating multiple assignments to the same Microsoft Entra group. It's not recommended to assign apps or policies to the same target user or device with more than one intent. For example, when you deploy an app, you can't select a group for an **Available** assignment, and then the same group for a **Required** assignment.
 
-An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, go to [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
+An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, go to [conflicts between app intents](../../app-management/deployment/assign-groups.md#how-conflicts-between-app-intents-are-resolved).
 
 :::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/device-multiple-groups.png":::
 
@@ -203,7 +203,7 @@ For example:
 - The GroupB assignment uses the **Uninstall** intent. The GroupB assignment uses FilterB, which uses Include mode.
 - DeviceA is a member of both groups: GroupA and GroupB.
 
-In this scenario, the winning app intent is **Required**. For more information, go to [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved). So, DeviceA must only evaluate FilterA. If DeviceA matches the rules in FilterA, DeviceA receives AppA as a required app.
+In this scenario, the winning app intent is **Required**. For more information, go to [conflicts between app intents](../../app-management/deployment/assign-groups.md#how-conflicts-between-app-intents-are-resolved). So, DeviceA must only evaluate FilterA. If DeviceA matches the rules in FilterA, DeviceA receives AppA as a required app.
 
 Apps use special behavior when resolving conflicts between **Required** and **Available** assignments. If a user or device is targeted with both **Available** and **Required** assignments, then it receives a merged intent called **Required and Available**. The device must evaluate filters used in both assignments. When it evaluates both filters, the device implements the same conflict resolution: [Filter mode](#filter-mode) and ["OR" logic when filter modes are the same](#use-or-logic-when-filter-modes-are-the-same).
 

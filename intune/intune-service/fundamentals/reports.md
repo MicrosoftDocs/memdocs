@@ -71,7 +71,7 @@ To see a generated report of device state, you can use the following steps:
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated.
 
-For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).
+For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../../device-security/microsoft-defender/overview.md).
 
 ### Device compliance trends report (Historical)
 
@@ -132,7 +132,7 @@ This report allows admins to:
 
 - View the configuration of the tenant-wide *Compliance policy setting* named **Mark devices with no compliance policy assigned as**. By default, this setting marks a device without an assigned policy as *Compliant*.
 
-  We recommend that this setting be configured to mark devices that aren't targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).
+  We recommend that this setting be configured to mark devices that aren't targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../../device-security/compliance/overview.md#compliance-policy-settings).
 
 To generate the report, use the following steps:
 
@@ -291,7 +291,7 @@ You can view the **Enrollment failures** report using the following steps:
 
 ### Enrollment time grouping  
 
-View the details of failed grouping attempts that happened with [enrollment time grouping](../enrollment/enrollment-time-grouping.md). 
+View the details of failed grouping attempts that happened with [enrollment time grouping](../../device-enrollment/setup-time-grouping.md). 
 
 You can view the enrollment time grouping report using the following steps:  
 
@@ -308,7 +308,7 @@ You can view the **Device attestation status report** report using the following
 2. Select **Reports** > **Device management** > **Device attestation status**.
 3. Use the drop-downs to filter by attestation status or device ownership.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
-5. For more information on the report, see [Windows enrollment attestation](../enrollment/windows-enrollment-attestation.md#device-attestation-status-report).
+5. For more information on the report, see [Windows enrollment attestation](../../device-enrollment/windows/attestation.md#device-attestation-status-report).
 
 ### Windows Autopilot deployments report (Operational)
 
@@ -364,7 +364,7 @@ You can view the **Windows Expedited update failures** report using the followin
 
 A Windows update report, the **Feature update failures** operational report provides failure details for devices that are targeted with a **Feature updates for Windows 10 and later** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting.
 
-Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/feature-updates.md).
+Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/manage-feature-updates.md).
 
 To view the **Feature update failures** report, use the following steps:
 
@@ -407,7 +407,7 @@ You can view the **Installation status for macOS devices** report using the foll
 
 A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
-For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/feature-updates.md).
+For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/manage-feature-updates.md).
 
 You can view the **Windows 10 and later feature updates** report using the following steps:
 
@@ -462,7 +462,7 @@ For more information about the difference between a *quick scan* and a *full sca
 > [!NOTE]
 > This report is also known as the **Configuration policy assignment failures** report.
 
-The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report shows a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
+The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report shows a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../../device-security/security-baselines/overview.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
 
 Role-based access control permissions are applied to the report to filter on the set of policies that an admin can see. Those Role-based access control permissions include the Security baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
 
@@ -521,7 +521,7 @@ The information for this report is based on details available from the following
 Other reports for Microsoft Defender Antivirus include:
 
 - [Detected malware report](#detected-malware-report-organizational), an organizational report detailed in this article.
-- [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
+- [Antivirus policy reports](../../device-configuration/endpoint-security/antivirus.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
 ### Detected malware report (Organizational)
 
@@ -539,11 +539,11 @@ The information for this report is based on details available from the [Defender
 Other reports for Microsoft Defender Antivirus include:
 
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
-- [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
+- [Antivirus policy reports](../../device-configuration/endpoint-security/antivirus.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
 ### MDM Firewall status for Windows (Organizational)
 
-*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
+*This report is also described in [Endpoint security firewall policy](../../device-configuration/endpoint-security/firewall.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows Firewall off report, which is only available from within the Endpoint security node.*
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
@@ -654,7 +654,7 @@ The **Resolved intent** column lists the needed installation result or availabil
 
 You can switch between displaying managed app details for the primary user and other users on a device, or display app details for the device without any user. The generated app details are displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists.
 
-When you select an app in the report, you can view the **Installation details** pane, along with the ability to collect diagnostics when applicable (such as for Win32 apps). Installation details include the history of installation related actions for the app. For instance, details might include whether the app was successfully assigned, whether the [Intune Management Extension](../apps/intune-management-extension.md) was successfully installed (if required by the app), when the device check-in was last completed, when the app was created, or whether the app installation was successful. When an app fails to install, you can see more details by selecting **Show details** in the **Installation details** pane.
+When you select an app in the report, you can view the **Installation details** pane, along with the ability to collect diagnostics when applicable (such as for Win32 apps). Installation details include the history of installation related actions for the app. For instance, details might include whether the app was successfully assigned, whether the [Intune Management Extension](../../device-management/tools/management-extension-windows.md) was successfully installed (if required by the app), when the device check-in was last completed, when the app was created, or whether the app installation was successful. When an app fails to install, you can see more details by selecting **Show details** in the **Installation details** pane.
 
 To see the report for a device, you can use the following steps:
 

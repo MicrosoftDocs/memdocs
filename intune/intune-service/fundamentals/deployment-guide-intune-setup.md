@@ -28,7 +28,7 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 > [!TIP]
 >
-> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 >
 > - As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
 
@@ -52,7 +52,7 @@ If you currently don't use any MDM or mobile application management (MAM) provid
   - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
   - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
   - [Step 4 - Create device configuration profiles to secure devices](deployment-plan-configuration-profile.md)
-  - [Step 5 - Enroll devices](deployment-guide-enrollment.md)
+  - [Step 5 - Enroll devices](../../device-enrollment/guide.md)
 
 - **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with Intune (cloud), then consider [tenant attach](#option-1---add-tenant-attach) (in this article) or [co-management](#option-2---set-up-co-management) (in this article).
 
@@ -86,7 +86,7 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     Give users specific unenroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime, dissatisfaction, and helpdesk calls.
 
-4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [Conditional Access](../protect/conditional-access.md)** to block devices until they enroll in Intune.
+4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [Conditional Access](../../device-security/conditional-access-integration/overview.md)** to block devices until they enroll in Intune.
 
     For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
@@ -103,7 +103,7 @@ Users must unenroll their devices from the current MDM provider before they enro
     For more information, go to:
 
     - [Step 5 – Enroll devices in Microsoft Intune](deployment-guide-enroll.md)
-    - [Intune enrollment deployment guide](deployment-guide-enrollment.md)
+    - [Intune enrollment deployment guide](../../device-enrollment/guide.md)
 
 > [!IMPORTANT]
 > Don't configure Intune and any existing third party MDM solution simultaneously to apply access controls to resources, including Exchange or SharePoint.
@@ -136,12 +136,12 @@ Recommendations:
 Helpful information:
 
 - [Get started with Intune](get-started-with-intune.md)
-- [Intune enrollment deployment guide](deployment-guide-enrollment.md)
+- [Intune enrollment deployment guide](../../device-enrollment/guide.md)
 - [Step 1 - Set up Intune and your tenant](deployment-plan-setup.md)
 
 ## Currently use Configuration Manager
 
-Configuration Manager supports Windows Servers, and Windows & macOS client devices. If your organization uses other platforms, you might need to reset the devices, and then enroll them in Intune. Once enrolled, they receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+Configuration Manager supports Windows Servers, and Windows & macOS client devices. If your organization uses other platforms, you might need to reset the devices, and then enroll them in Intune. Once enrolled, they receive the policies and profiles you create. For more information, see the [Intune enrollment deployment guide](../../device-enrollment/guide.md).
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
@@ -231,7 +231,7 @@ Specifically:
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
 - On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference).
 
-When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
+When moving devices from group policy, use [Group policy analytics](../../device-configuration/import-group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../../device-configuration/migrate-group-policy.md).
 
 Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
 
@@ -331,4 +331,4 @@ There are some policy types that can't be exported. There are some policy types 
 ## Related articles
 
 - [Get started with Intune](get-started-with-intune.md)
-- [Enrollment deployment guides](deployment-guide-enrollment.md)
+- [Enrollment deployment guides](../../device-enrollment/guide.md)

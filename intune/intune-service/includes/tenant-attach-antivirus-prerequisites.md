@@ -7,7 +7,7 @@ ms.author: brenduns
 
 #### Antivirus
 
-Manage [Antivirus settings for Configuration Manager devices](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md), when you use tenant attach.
+Manage [Antivirus settings for Configuration Manager devices](../../device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md), when you use tenant attach.
 
 **Policy path**:
 
@@ -30,6 +30,6 @@ Manage [Antivirus settings for Configuration Manager devices](../protect/antivir
 - Windows Server 2016 and later (x64)
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]

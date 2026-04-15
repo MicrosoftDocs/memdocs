@@ -103,7 +103,7 @@
         "configmgr/core/**/*": ["ConfigMgr"],
         "endpoint-analytics/**/*": ["Intune","advanced-analytics","endpoint-analytics"],
         "device-updates/**/*": ["Intune","device-updates"],
-        "intune-service/user-help/**/*": ["User help"]
+        "user-help/**/*": ["User help"]
       },
       "featureFlags": {
         "*.md" : [
@@ -115,45 +115,59 @@
       },
       "author": {
         "advanced-analytics/**/*": "paolomatarazzo",
+        "app-management/**/*": "nicholasswhite",
         "cloud-pki/**/*": "paolomatarazzo",
         "configmgr/**/*": "sccmavenger",
         "copilot/**/*": "mandiohlinger",
         "developer/**/*": "nicholasswhite",
+        "device-configuration/**/*": "mandiohlinger",
         "device-configuration/certificates/**/*": "paolomatarazzo",
-        "device-configuration/settings-catalog/**/*": "mandiohlinger",
+        "device-configuration/endpoint-security/**/*": "brenduns",
+        "device-enrollment/**/*": "lenewsad",
         "device-management/actions/**/*": "paolomatarazzo",
         "device-security/certificates/**/*": "paolomatarazzo",
+        "device-security/compliance/**/*": "lenewsad",
+        "device-security/conditional-access-integration/**/*": "lenewsad",
+        "device-security/identity-protection/**/*": "lenewsad",
+        "device-security/microsoft-defender/**/*": "brenduns",
+        "device-security/microsoft-tunnel/**/*": "brenduns",
+        "device-security/security-baselines/**/*": "brenduns",
         "device-updates/**/*": "paolomatarazzo",
         "endpoint-analytics/**/*": "paolomatarazzo",
+        "epm/**/*": "brenduns",
         "fundamentals/certificates/**/*": "paolomatarazzo",
         "fundamentals/licensing/**/*": "paolomatarazzo",
-        "intune-service/apps/**/*": "nicholasswhite",
-        "intune-service/configuration/**/*": "mandiohlinger",
-        "intune-service/enrollment/**/*": "lenewsad",
-        "intune-service/user-help/**/*": "lenewsad",
         "privacy/**/*": "paolomatarazzo",
-        "solutions/**/*": "mandiohlinger"
+        "solutions/**/*": "mandiohlinger",
+        "user-help/**/*": "lenewsad"
       },
       "ms.author": {
         "advanced-analytics/**/*": "paoloma",
+        "app-management/**/*": "nwhite",
         "cloud-pki/**/*": "paoloma",
         "configmgr/**/*": "dannygu",
         "copilot/**/*": "mandia",
         "developer/**/*": "nwhite",
+        "device-configuration/**/*": "mandia",
         "device-configuration/certificates/**/*": "paoloma",
-        "device-configuration/settings-catalog/**/*": "mandia",
+        "device-configuration/endpoint-security/**/*": "brenduns",
+        "device-enrollment/**/*": "lanewsad",
         "device-management/actions/**/*": "paoloma",
         "device-security/certificates/**/*": "paoloma",
+        "device-security/compliance/**/*": "lanewsad",
+        "device-security/conditional-access-integration/**/*": "lanewsad",
+        "device-security/identity-protection/**/*": "lanewsad",
+        "device-security/microsoft-defender/**/*": "brenduns",
+        "device-security/microsoft-tunnel/**/*": "brenduns",
+        "device-security/security-baselines/**/*": "brenduns",
         "device-updates/**/*": "paoloma",
         "endpoint-analytics/**/*": "paoloma",
+        "epm/**/*": "brenduns",
         "fundamentals/certificates/**/*": "paoloma",
         "fundamentals/licensing/**/*": "paoloma",
-        "intune-service/apps/**/*": "nwhite",
-        "intune-service/configuration/**/*": "mandia",
-        "intune-service/enrollment/**/*": "lanewsad",
-        "intune-service/user-help/**/*": "lanewsad",
         "privacy/**/*": "paoloma",
-        "solutions/**/*": "mandia"
+        "solutions/**/*": "mandia",
+        "user-help/**/*": "lanewsad"
       },
       "ms.collection": {
         "intune-service/device-updates/**/*": ["M365-identity-device-management","sub-updates"],
@@ -175,19 +189,22 @@
         "advanced-analytics/**/*": "suite",
         "cloud-pki/**/*": "suite",
         "developer/**/*": "developer",
+        "device-enrollment/**/*": "enrollment",
         "device-management/actions/**/*": "remote-actions",
         "device-updates/**/*": "protect",
         "endpoint-analytics/**/*": "endpoint-analytics",
         "intune-service/apps/**/*": "apps",
+        "app-management/**/*": "apps",
+        "device-management/tools/**/*": "apps",
+        "solutions/edge-data-security/**/*": "apps",
         "intune-service/configuration/**/*": "configuration",
-        "intune-service/enrollment/**/*": "enrollment",
         "intune-service/fundamentals/**/*": "fundamentals",
         "intune-service/industry/education/**/*": "education",
         "intune-service/protect/**/*": "protect",
-        "intune-service/user-help/**/*": "end-user"
+        "user-help/**/*": "end-user"
       },
       "ms.topic": {
-        "intune-service/user-help/**/*": "end-user-help"
+        "user-help/**/*": "end-user-help"
       },
       "titleSuffix": {
         "configmgr/**/*": "Configuration Manager"

@@ -113,7 +113,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows app deployment using Microsoft Intune](../../intune-service/apps/apps-windows-10-app-deploy.md)
+  - [Windows app deployment using Microsoft Intune](../../app-management/deployment/deploy-windows.md)
   - [Introduction to app management in Configuration Manager](/previous-versions/troubleshoot/configmgr/introduction-to-application-management)
   - [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11)
 
@@ -123,15 +123,15 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](../../device-configuration/settings-catalog/index.md).
 
-    You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
+    You can reference and analyze existing GPOs using [Group Policy analytics in Intune](../../device-configuration/import-group-policy-analytics.md), which allows you to see if settings within your GPOs are supported in the cloud. Group Policy analytics also allows you to create Intune policies from GPOs, if that's the right step for your organization. In general, we recommend that customers implement policies that conform to their requirements, instead of directly migrating existing GPOs to Intune. When you create policies based off your requirements, then you rationalize, optimize, and streamline your Intune policies.
 
   - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then you need to create new policies in Intune or Configuration Manager (with a [CMG](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md)).
 
     For more information, go to:
 
     - [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md)
-    - [Disk encryption policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-disk-encryption-policy.md)
-    - [Add Endpoint protection settings in Intune](../../intune-service/protect/endpoint-protection-configure.md)
+    - [Disk encryption policy for endpoint security in Intune](../../device-configuration/endpoint-security/disk-encryption.md)
+    - [Add Endpoint protection settings in Intune](../../device-configuration/endpoint-security/configure-endpoint-protection.md)
     - [Certificates in Configuration Manager](../../configmgr/core/plan-design/security/certificates-overview.md)
     - [BitLocker management in Configuration Manager](../../configmgr/protect/plan-design/bitlocker-management.md)
     - [Endpoint Protection in Configuration Manager](../../configmgr/protect/deploy-use/endpoint-protection.md)
@@ -155,7 +155,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
+    - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
     - [Management tasks for Configuration Manager apps](../../configmgr/apps/deploy-use/management-tasks-applications.md)
 
 - **Manage user data and settings**
@@ -418,7 +418,7 @@ These options aren't necessarily mutually exclusive. You can migrate a subset of
 
 - **Option 1: Start new** (recommended): Intune has many settings to configure and manage your endpoints. You can create a policy, add and configure settings in the policy, and then deploy the policy.
 
-  Many existing group policies include policies that might not apply to cloud-native endpoints. Starting fresh enables an organization to validate and simplify their existing enforced policies, while eliminating legacy, forgotten, or even harmful policies. Intune has built-in templates that group common settings together, like [VPN, Wi-Fi, endpoint protection, and more](../../intune-service/configuration/device-profiles.md).
+  Many existing group policies include policies that might not apply to cloud-native endpoints. Starting fresh enables an organization to validate and simplify their existing enforced policies, while eliminating legacy, forgotten, or even harmful policies. Intune has built-in templates that group common settings together, like [VPN, Wi-Fi, endpoint protection, and more](../../device-configuration/overview.md).
 
 - **Option 2: Migrate**: This option involves lifting the existing policies and shifting them to the Intune policy engine. It can be cumbersome and time consuming. For example, you may have many existing group policies and there will be differences with settings on-premises vs. in the cloud.
 
@@ -428,23 +428,23 @@ These options aren't necessarily mutually exclusive. You can migrate a subset of
 
 Intune also has built-in features that can help you configure your cloud-native endpoints:
 
-- **[Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
+- **[Group Policy analytics](../../device-configuration/import-group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
 
   If you use GPOs, then using this tool is a valuable first step.
 
-  For more information, go to [Group Policy analytics in Intune](../../intune-service/configuration/group-policy-analytics.md).
+  For more information, go to [Group Policy analytics in Intune](../../device-configuration/import-group-policy-analytics.md).
 
 - **[Settings catalog](../../device-configuration/settings-catalog/index.md)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration.
 
-  When combined with [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
+  When combined with [Group Policy analytics](../../device-configuration/import-group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
 
   For more information, go to [Settings catalog in Intune](../../device-configuration/settings-catalog/index.md).
 
-- **[Security baselines](../../intune-service/protect/security-baselines.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
+- **[Security baselines](../../device-security/security-baselines/overview.md)**: A security baseline is a group of pre-configured Windows settings. They help you apply and enforce granular security settings that are recommended by the security teams. When you create a security baseline, you can also customize each baseline to enforce only the settings you want.
 
   You can create a security baseline for Windows, Microsoft Edge, and more. If you're not sure where to start, or want the security settings recommended by security experts, then look at security baselines.
 
-  For more information, go to [Security baselines in Intune](../../intune-service/protect/security-baselines.md).
+  For more information, go to [Security baselines in Intune](../../device-security/security-baselines/overview.md).
 
 ## Use Windows Autopilot to provision new or existing Windows endpoints
 

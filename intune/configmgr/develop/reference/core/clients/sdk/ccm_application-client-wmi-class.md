@@ -7,6 +7,7 @@ ms.topic: reference
 ms.collection: tier3
 ---
 # CCM_Application Client WMI Class
+
 The `CCM_Application` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
@@ -58,21 +59,19 @@ Class CCM_Application : CCM_SoftwareBase
 ```
 
 ## Methods
+
  The following table lists the methods in the `CCM_Application` class.
 
--   [Cancel Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/cancel-method-in-class-ccm_application.md)
-
--   [DownloadContents Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/downloadcontents-method-in-class-ccm_application.md)
-
--   [GetPendingComponentList Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md)
-
--   [GetProperty Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_application.md)
-
--   [Install Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/install-method-in-class-ccm_application.md)
-
--   [Uninstall Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/uninstall-method-in-class-ccm_application.md)
+- [Cancel Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/cancel-method-in-class-ccm_application.md)
+- [DownloadContents Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/downloadcontents-method-in-class-ccm_application.md)
+- [GetPendingComponentList Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md)
+- [GetProperty Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_application.md)
+- [Install Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/install-method-in-class-ccm_application.md)
+- [Repair Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/repair-method-in-class-ccm_application.md)
+- [Uninstall Method in Class CCM_Application](../../../../../develop/reference/core/clients/sdk/uninstall-method-in-class-ccm_application.md)
 
 ## Properties
+
  `AllowedActions`
  Data type: `String` Array
 
@@ -215,18 +214,18 @@ Class CCM_Application : CCM_SoftwareBase
 |11|Application is currently enforcing dependencies.|
 |12|Application is currently enforcing.|
 |13|Application install/uninstall enforced and soft reboot is pending.|
-|14|Application installed/uninstalled and hard reboot is pending.|
+|14|Application installed/uninstalled and hard reboot are pending.|
 |15|Update is available but pending installation.|
 |16|Application failed to evaluate.|
 |17|Application is currently waiting for an active user session to enforce.|
-|18|Application is currently waiting for all users to logoff.|
-|19|Application is currently waiting for a user logon.|
+|18|Application is currently waiting for all users to sign out.|
+|19|Application is currently waiting for a user sign-in.|
 |20|Application in progress, waiting for retry.|
 |21|Application is waiting for presentation mode to be switched off.|
-|22|Application is pre-downloading content (downloading outside of install job).|
-|23|Application is pre-downloading dependent content (downloading outside of install job).|
+|22|Application is predownloading content (downloading outside of install job).|
+|23|Application is predownloading dependent content (downloading outside of install job).|
 |24|Application download failed (downloading during install job).|
-|25|Application pre-downloading failed (downloading outside of install job).|
+|25|Application predownloading failed (downloading outside of install job).|
 |26|Download success (downloading during install job).|
 |27|Post-enforce evaluation.|
 |28|Waiting for network connectivity.|
@@ -311,7 +310,7 @@ Class CCM_Application : CCM_SoftwareBase
 
  Qualifiers: [key]
 
- `true` if this is a device targeted application.
+ `true` if the application deployment is device targeted.
 
  `IsPreflightOnly`
  Data type: `Boolean`
@@ -495,7 +494,9 @@ Class CCM_Application : CCM_SoftwareBase
 ## Requirements
 
 ## Runtime Requirements
+
  For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
 ## Development Requirements
+
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

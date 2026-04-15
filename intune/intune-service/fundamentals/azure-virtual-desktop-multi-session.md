@@ -81,7 +81,7 @@ Only the following configuration profile templates are supported for Windows Ent
 - [Trusted certificate](../../device-configuration/certificates/trusted-root-profiles.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
 - [SCEP certificate](../../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
 - [PKCS certificate](../../device-configuration/certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
-- [VPN](../configuration/vpn-settings-configure.md#step-2---create-the-profile) - Device Tunnel only
+- [VPN](../../device-configuration/templates/configure-vpn.md#step-2---create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
 
@@ -143,13 +143,13 @@ All other policies report as **Not applicable**.
 > [!IMPORTANT]
 > You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
-[Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows Enterprise multi-session.
+[Conditional Access policies](../../device-security/conditional-access-integration/overview.md) support both user and device based configurations for Windows Enterprise multi-session.
 
 ## Endpoint security
 
 You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows. If that Platform is not available, the profile is not supported on multi-session VMs.
 
-For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
+For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../../device-configuration/endpoint-security/manage-policies.md)
 
 ## Application deployment
 
@@ -199,11 +199,11 @@ Deleting VMs from Azure will leave orphaned device records in the Microsoft Intu
 For more information, see:
 
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically remove devices with cleanup rules](../../governance/device-cleanup-rules.md)
+- [Automatically remove devices with cleanup rules](../../governance/configure-cleanup-rules.md)
 
 ## Security baselines
 
-Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../protect/security-baselines.md) and configure the recommended policies and values in the [Settings catalog](../../device-configuration/settings-catalog/index.md).
+Security baselines are available for Windows Enterprise multi-session. We recommend that you review the [Available security baselines](../../device-security/security-baselines/overview.md) and configure the recommended policies and values in the [Settings catalog](../../device-configuration/settings-catalog/index.md).
 
 ## Additional configurations that aren't supported on Windows Enterprise multi-session VMs
 

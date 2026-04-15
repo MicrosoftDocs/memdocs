@@ -7,7 +7,7 @@ ms.topic: concept-article
 
 # Resource performance report
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 The resource performance report gives you a clear view of processor and memory performance on Windows devices and how these factors affect user experience. By tracking the performance score, you can spot emerging hardware issues that may reduce productivity and take proactive steps before support tickets occur.
 

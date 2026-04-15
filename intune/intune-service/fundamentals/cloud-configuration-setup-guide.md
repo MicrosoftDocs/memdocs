@@ -50,7 +50,7 @@ This guide helps you create your own cloud configuration deployment. The followi
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Step 1 - Create a Microsoft Entra group
 
@@ -92,7 +92,7 @@ If you already use Windows Autopilot, then skip this step, and go to [Step 3 - D
 
 ### ✅ 1 - Enable automatic enrollment
 
-Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, see [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
+Enable automatic enrollment for the organization users that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, see [Enrollment guide -  Windows automatic enrollment](../../device-enrollment/windows/guide.md#windows-automatic-enrollment).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **Automatic Enrollment**.
@@ -195,7 +195,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 
 You can bulk enroll devices using a provisioning package created using Windows Configuration Designer or the **[Set up School PCs](/education/windows/use-set-up-school-pcs-app)** app.
 
-For more information on bulk enrollment, see [Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md).
+For more information on bulk enrollment, see [Bulk enrollment for Windows devices](../../device-enrollment/windows/create-bulk-package.md).
 
 With bulk enrollment:
 
@@ -210,7 +210,7 @@ With MDM automatic enrollment enabled in Intune, during the out-of-box experienc
 
 With this enrollment option, you:
 
-1. Configure a Microsoft Intune [custom profile](../configuration/custom-settings-windows-10.md) that restricts local administrators on devices. The [Policy CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) includes a sample policy definition XML that you can use in your custom profile.
+1. Configure a Microsoft Intune [custom profile](../../device-configuration/templates/configure-custom-settings-windows.md) that restricts local administrators on devices. The [Policy CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) includes a sample policy definition XML that you can use in your custom profile.
 
     > [!TIP]
     > In this custom profile, there's another setting that adds a group that can be local admins on the device. This local admin group should only include IT administrators in your environment.
@@ -276,7 +276,7 @@ The script is deployed to devices using in Intune. To add and deploy the script,
 
 If you previously removed the Microsoft Store app, you can redeploy it using Microsoft Intune. To re-add the Microsoft Store app (or any other apps you want to re-add), add the Microsoft Store app to your private organization app repository. Then, deploy the app to devices using Intune. The Microsoft Store app helps keep apps updated.
 
-Your private organization app repository can be the [Intune Company Portal app or website](../apps/company-portal-app.md).
+Your private organization app repository can be the [Intune Company Portal app or website](../../app-management/configuration/configure-company-portal.md).
 
 Using Intune, on Windows Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 
@@ -301,7 +301,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 ### ✅ 1 - Deploy Microsoft Edge
 
-1. [Add Microsoft Edge](../apps/apps-windows-edge.md) to Intune.
+1. [Add Microsoft Edge](../../app-management/deployment/add-edge-windows.md) to Intune.
 2. For **App settings**, select the **Stable Channel**.
 3. Assign the Microsoft Edge app to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -565,7 +565,7 @@ For information on troubleshooting app issues on individual devices, see [Troubl
 
 ### Security baseline
 
-You can monitor the installation status of your deployed security baseline. For more information, see [Monitor security baselines and profiles in Intune](../protect/security-baselines-monitor.md).
+You can monitor the installation status of your deployed security baseline. For more information, see [Monitor security baselines and profiles in Intune](../../device-security/security-baselines/monitor-baselines.md).
 
 ### Disk encryption profile
 
@@ -585,7 +585,7 @@ You can monitor the status of the Windows Update ring policy:
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 
-For more information on reporting for Windows Update rings, see [Reports for update rings policies](../../device-updates/windows/update-rings-reports.md).
+For more information on reporting for Windows Update rings, see [Reports for update rings policies](../../device-updates/windows/monitor-update-rings.md).
 
 ### Compliance policy
 
@@ -596,7 +596,7 @@ You can monitor the status of the compliance policy:
 
 The device compliance monitoring view has detailed information on the assignment status and assignment failures of your compliance policies. It also has views to quickly find noncompliant devices and take action.
 
-For more in-depth information on monitoring compliance policies in Intune, see [Monitor results of your Intune Device compliance policies](../protect/compliance-policy-monitor.md).
+For more in-depth information on monitoring compliance policies in Intune, see [Monitor results of your Intune Device compliance policies](../../device-security/compliance/monitor-policy.md).
 
 ## Related content
 

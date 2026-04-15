@@ -9,7 +9,7 @@ ms.author: brenduns
 
 *Support for devices managed by Configuration Manager is in Preview.*
 
-Manage [attack surface reduction settings for Configuration Manager devices](../protect/endpoint-security-asr-profile-settings.md#attack-surface-reduction-configmgr), when you use tenant attach.
+Manage [attack surface reduction settings for Configuration Manager devices](../../device-configuration/endpoint-security/ref-attack-surface-reduction-settings.md#attack-surface-reduction-configmgr), when you use tenant attach.
 
 **Policy path**:
 
@@ -31,4 +31,4 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 - Windows (x86, x64, ARM64)
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]

@@ -61,12 +61,12 @@ Before you can join Microsoft Entra and enroll in Intune, there are a few things
 - **Enrollment restrictions**
 Enrollment restrictions allow you to control what types of devices can enroll into management with Intune. For this guide to be successful, make sure *Windows (MDM)* enrollment is allowed, which is the default configuration.
 
-  For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune-service/enrollment/enrollment-restrictions-set.md).
+  For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../device-enrollment/restrictions.md).
 
 - **Microsoft Entra Device MDM settings**
   When you join a Windows device to Microsoft Entra, Microsoft Entra can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
 
-  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md).
+  To check your Microsoft Entra Device MDM settings are enabled properly, go to [Quickstart - Set up automatic enrollment in Intune](../../device-enrollment/windows/quickstart-automatic-mdm.md).
 
 - **Microsoft Entra company branding**
   Adding your corporate logo and images to Microsoft Entra ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
@@ -151,7 +151,7 @@ To limit the configurations from this guide to the test devices that you import 
 
 ### Step 5 - Configure the Enrollment Status Page
 
-The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../intune-service/enrollment/windows-enrollment-status.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Microsoft Entra dynamic group for the device*.
+The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Microsoft Entra dynamic group for the device*.
 
 - For the purposes of testing, we recommend the following settings, but feel free to adjust them as required:
   - **Show app and profile configuration progress** - Yes
@@ -231,15 +231,15 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
   - Select **configuration designer** for the settings format, as opposed to XML.
   - Select **Current Channel** for the update channel.
 
-  To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../intune-service/apps/apps-add-office365.md)
+  To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
 
 - **Company Portal app**
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal app is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the Company Portal app to sync their device with Intune, check compliance status, and so on.
 
-  To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../intune-service/apps/store-apps-company-portal-autopilot.md).
+  To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../app-management/deployment/add-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)
-  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../intune-service/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
+  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md) to install **Microsoft Whiteboard**.
 
 ## Phase 2 - Build a cloud-native Windows endpoint
 
@@ -282,7 +282,7 @@ This phase is designed to help you build out security settings for your organiza
 
 The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-#### [:::image type="icon" source="../../intune-service/media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+#### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
 
 In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 
@@ -307,9 +307,9 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 - Remediation action for Moderate severity threats: **Quarantine. Moves files to quarantine.**
 - Remediation action for High severity threats: **Quarantine. Moves files to quarantine.**
 
-#### [:::image type="icon" source="../../intune-service/media/icons/graph.svg"::: **Microsoft Graph**](#tab/graph)
+#### [:::image type="icon" source="../../media/icons/16/graph.svg"::: **Microsoft Graph**](#tab/graph)
 
-[!INCLUDE [graph-explorer-introduction](../../intune-service/includes/graph-explorer-intro.md)]
+[!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
 
 This creates a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
 
@@ -319,7 +319,7 @@ Content-Type: application/json
 
 {"name":"_MSLearn_Example_Windows - Defender Antivirus","description":"","settings":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"905921da-95e2-4a10-9e30-fe5540002ce1"},"value":"device_vendor_msft_policy_config_defender_allowbehaviormonitoring_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowbehaviormonitoring","settingInstanceTemplateReference":{"settingInstanceTemplateId":"8eef615a-1aa0-46f4-a25a-12cbe65de5ab"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"16fe8afd-67be-4c50-8619-d535451a500c"},"value":"device_vendor_msft_policy_config_defender_allowcloudprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowcloudprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"7da139f1-9b7e-407d-853a-c2e5037cdc70"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"fdf107fd-e13b-4507-9d8f-db4d93476af9"},"value":"device_vendor_msft_policy_config_defender_allowemailscanning_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowemailscanning","settingInstanceTemplateReference":{"settingInstanceTemplateId":"b0d9ee81-de6a-4750-86d7-9397961c9852"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"df4e6cbd-f7ff-41c8-88cd-fa25264a237e"},"value":"device_vendor_msft_policy_config_defender_allowioavprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowioavprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"fa06231d-aed4-4601-b631-3a37e85b62a0"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"0492c452-1069-4b91-9363-93b8e006ab12"},"value":"device_vendor_msft_policy_config_defender_allowrealtimemonitoring_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowrealtimemonitoring","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f0790e28-9231-4d37-8f44-84bb47ca1b3e"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"7b8c858c-a17d-4623-9e20-f34b851670ce"},"value":"device_vendor_msft_policy_config_defender_allowscanningnetworkfiles_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowscanningnetworkfiles","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f8f28442-0a6b-4b52-b42c-d31d9687c1cf"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"ab9e4320-c953-4067-ac9a-be2becd06b4a"},"value":"device_vendor_msft_policy_config_defender_allowscriptscanning_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowscriptscanning","settingInstanceTemplateReference":{"settingInstanceTemplateId":"000cf176-949c-4c08-a5d4-90ed43718db7"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_cloudextendedtimeout","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f61c2788-14e4-4e80-a5a7-bf2ff5052f63"},"simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationIntegerSettingValue","settingValueTemplateReference":{"settingValueTemplateId":"608f1561-b603-46bd-bf5f-0b9872002f75"},"value":50}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_daystoretaincleanedmalware","settingInstanceTemplateReference":{"settingInstanceTemplateId":"6f6d741c-1186-42e2-b2f2-8582febcfd60"},"simpleSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationIntegerSettingValue","settingValueTemplateReference":{"settingValueTemplateId":"214b6feb-c9b2-4a17-af54-d51c805473e4"},"value":30}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"ee58fb51-9ae5-408b-9406-b92b643f388a"},"value":"device_vendor_msft_policy_config_defender_enablenetworkprotection_2"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_enablenetworkprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f53ab20e-8af6-48f5-9fa1-46863e1e517e"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"2d790211-18cb-4e32-b8cc-97407e2c0b45"},"value":"device_vendor_msft_policy_config_defender_puaprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_puaprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"c0135c2a-f802-44f4-9b71-b0b976411b8c"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"6b4e3497-cfbb-4761-a152-de935bbf3f07"},"value":"device_vendor_msft_policy_config_defender_realtimescandirection_0"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_realtimescandirection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f5ff00a4-e5c7-44cf-a650-9c7619ff1561"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"826ed4b6-e04f-4975-9d23-6f0904b0d87e"},"value":"device_vendor_msft_policy_config_defender_submitsamplesconsent_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_submitsamplesconsent","settingInstanceTemplateReference":{"settingInstanceTemplateId":"bc47ce7d-a251-4cae-a8a2-6e8384904ab7"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"ed077fee-9803-44f3-b045-aab34d8e6d52"},"value":"device_vendor_msft_policy_config_defender_allowonaccessprotection_1"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_allowonaccessprotection","settingInstanceTemplateReference":{"settingInstanceTemplateId":"afbc322b-083c-4281-8242-ebbb91398b41"}}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationSetting","settingInstance":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance","groupSettingCollectionValue":[{"children":[{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"settingValueTemplateReference":{"settingValueTemplateId":"764256b4-e4d7-46d9-bbc8-003bf23591a1"},"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_highseveritythreats_quarantine"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_highseveritythreats","settingInstanceTemplateReference":{"settingInstanceTemplateId":"f55b8c9c-d831-460e-a041-e47e29f2aa17"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_severethreats","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_severethreats_quarantine"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_lowseveritythreats","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_lowseveritythreats_quarantine"}},{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance","settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_moderateseveritythreats","choiceSettingValue":{"@odata.type":"#microsoft.graph.deviceManagementConfigurationChoiceSettingValue","children":[],"value":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction_moderateseveritythreats_quarantine"}}]}],"settingInstanceTemplateReference":{"settingInstanceTemplateId":"f6394bc5-6486-4728-b510-555f5c161f2b"},"settingDefinitionId":"device_vendor_msft_policy_config_defender_threatseveritydefaultaction"}}],"roleScopeTagIds":["0"],"platforms":"windows10","technologies":"mdm,microsoftSense","templateReference":{"templateId":"804339ad-1553-4478-a742-138fb5807418_1"}}
 ```
-[!INCLUDE [graph-explorer-steps](../../intune-service/includes/graph-explorer-steps.md)]
+[!INCLUDE [graph-explorer-steps](../includes/graph-explorer-steps.md)]
 
 ---
 
@@ -330,7 +330,7 @@ For more information on Windows Defender configuration, including Microsoft Defe
 
 ### Microsoft Defender Firewall
 
-Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-firewall-policy.md).
+Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security/firewall.md).
 
 Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running Windows.
 
@@ -343,12 +343,12 @@ Using the *domain* network profile allows you to separate firewall rules based o
 
 Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker.
 
-- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../intune-service/protect/encrypt-devices.md).
+- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
-When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune-service/protect/encrypt-devices.md) for more settings.
+When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) for more settings.
 
 **BitLocker**:
 
@@ -434,11 +434,11 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows** > **Local admin password solution (Windows LAPS)** > **Create**.
 
-    For more information, go to [Create a LAPS policy in Intune](../../intune-service/protect/windows-laps-policy.md#create-a-laps-policy).
+    For more information, go to [Create a LAPS policy in Intune](../../device-security/laps/deploy-policy.md#create-a-laps-policy).
 
 ### Security Baselines
 
-You can use security baselines to apply a set of configurations that are known to increase the security of a Windows endpoint. For more information about security baselines, go to [Windows MDM security baseline settings for Intune](../../intune-service/protect/security-baseline-settings-mdm-all.md).
+You can use security baselines to apply a set of configurations that are known to increase the security of a Windows endpoint. For more information about security baselines, go to [Windows MDM security baseline settings for Intune](../../device-security/security-baselines/ref-windows-mdm-settings.md).
 
 Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation. Only apply the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
@@ -456,8 +456,8 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 
 *Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update client policies can be configured using:
 
-- [Windows update rings](../../device-updates/windows/update-rings.md)
-- [Windows Feature Updates](../../device-updates/windows/feature-updates.md)
+- [Windows update rings](../../device-updates/windows/manage-update-rings.md)
+- [Windows Feature Updates](../../device-updates/windows/manage-feature-updates.md)
 
 For more information, go to:
 
@@ -497,7 +497,7 @@ After users sign in, Microsoft Edge updates automatically. To trigger an update 
 Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"
 ```
 
-To deploy Microsoft Edge to previous versions of Windows, go to [Add Microsoft Edge for Windows to Microsoft Intune](../../intune-service/apps/apps-windows-edge.md).
+To deploy Microsoft Edge to previous versions of Windows, go to [Add Microsoft Edge for Windows to Microsoft Intune](../../app-management/deployment/add-edge-windows.md).
 
 #### Microsoft Edge Configuration
 
@@ -526,10 +526,10 @@ You can customize and set a standard start and taskbar layout using Intune.
   - For more information about start and taskbar customization, go to [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
   - To create a start and taskbar layout, go to [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
 
-  After the layout is created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+  After the layout is created, it can be uploaded to Intune by configuring a [Device Restrictions](../../device-configuration/templates/configure-device-restrictions.md) profile. The setting is under the *Start* category.
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ### Settings catalog
 
@@ -580,7 +580,7 @@ Following are some settings available in the settings catalog that might be rele
 
 ### Device Restrictions
 
-Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md).
+Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../device-configuration/templates/configure-device-restrictions.md).
 
 To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
@@ -597,7 +597,7 @@ To create a profile that uses the Device restrictions template, in the [Microsof
 
 Delivery Optimization is used to reduce bandwidth consumption by sharing the work of downloading supported packages among multiple endpoints. Delivery Optimization is a self-organizing distributed cache that enables clients to download those packages from alternate sources, like peers on the network. These peer sources supplement the traditional Internet-based servers. You can find out about all the settings available for Delivery Optimization and what types of downloads are supported at [Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization).
 
-To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](../../intune-service/configuration/delivery-optimization-windows.md) or a settings catalog profile.
+To apply Delivery Optimization settings, create an Intune [Delivery Optimization profile](../../device-configuration/templates/configure-delivery-optimization-windows.md) or a settings catalog profile.
 
 Some settings that are commonly used by organizations are:
 
@@ -622,7 +622,7 @@ For more information, go to [How to manage the local administrators group on Mic
 There are several options for creating your device configuration when considering a migration from Group Policy to cloud-native device management:
 
 - Start fresh and apply custom settings as required.
-- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md).
+- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy analytics](../../device-configuration/import-group-policy-analytics.md).
 - Use Group Policy analytics to create Device Configuration profiles directly for supported settings.
 
 The transition to a cloud-native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
@@ -631,11 +631,11 @@ To start fresh, review your current requirements and implement a minimal collect
 
 Migrating settings from existing Group Policies to MDM (Microsoft Intune) isn't the preferred approach. When you transition to cloud-native Windows, the intention shouldn't be to lift and shift existing group policy settings. Instead, consider the target audience and what settings they require. It's time consuming and likely impractical to review each group policy setting in your environment to determine its relevance and compatibility with a modern managed device. Avoid trying to assess every group policy and individual setting. Instead, focus on assessing those common policies that cover most devices and scenarios.
 
-Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud-native device if unresolved. Tools such as [Group Policy analytics](../../intune-service/configuration/group-policy-analytics.md) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
+Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud-native device if unresolved. Tools such as [Group Policy analytics](../../device-configuration/import-group-policy-analytics.md) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
 
 ### Scripts
 
-You can use PowerShell scripts for any settings or customizations that you need to configure outside of the in-built configuration profiles. For more information, go to [Add PowerShell scripts to Windows devices in Microsoft Intune](../../intune-service/apps/intune-management-extension.md).
+You can use PowerShell scripts for any settings or customizations that you need to configure outside of the in-built configuration profiles. For more information, go to [Add PowerShell scripts to Windows devices in Microsoft Intune](../../device-management/tools/management-extension-windows.md).
 
 ### Mapping Network Drives and Printers
 
@@ -659,11 +659,11 @@ For printing solutions, consider Universal Print. For more information, go to:
 
 Intune supports the deployment of many different Windows application types.
 
-- Windows Installer (MSI) – [Add a Windows line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-windows.md)
-- MSIX – [Add a Windows line-of-business app to Microsoft Intune](../../intune-service/apps/lob-apps-windows.md)
-- Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../intune-service/apps/apps-win32-app-management.md)
-- Store apps – [Add Microsoft Store apps to Microsoft Intune](../../intune-service/apps/store-apps-windows.md)
-- Web links – [Add web apps to Microsoft Intune](../../intune-service/apps/web-app.md)
+- Windows Installer (MSI) – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
+- MSIX – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
+- Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../app-management/deployment/win32.md)
+- Store apps – [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store-legacy.md)
+- Web links – [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md)
 
 If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits, including notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Windows Autopilot.
 
@@ -694,10 +694,10 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
-- Configure an Intune [device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
-- Add [Store Apps](../../intune-service/apps/store-apps-microsoft.md)
-- Add [Win32 apps](../../intune-service/apps/apps-win32-app-management.md)
+- Configure an Intune [device compliance policy](../../device-security/compliance/ref-windows-settings.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
+- Add [Store Apps](../../app-management/deployment/add-microsoft-store.md)
+- Add [Win32 apps](../../app-management/deployment/win32.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
-- Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
+- Deploy network profiles, including [VPN](../../device-configuration/templates/ref-vpn-settings-windows.md) and [Wi-Fi](../../device-configuration/templates/ref-wifi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
-- Security baseline for [Microsoft Edge](../../intune-service/protect/security-baseline-settings-edge.md)
+- Security baseline for [Microsoft Edge](../../device-security/security-baselines/ref-edge-settings.md)
