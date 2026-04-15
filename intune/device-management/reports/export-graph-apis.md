@@ -184,4 +184,4 @@ To ensure that the `exportJobs` API doesn't have too many concurrent requests, w
 ## Next steps
 
 - [Microsoft Graph documentation](/graph/)
-- [Intune reports](./reports.md)
+- [Intune reports](./overview.md)

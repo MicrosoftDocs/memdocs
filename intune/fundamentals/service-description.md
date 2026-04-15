@@ -41,7 +41,7 @@ Microsoft offers the Intune Onboarding benefit for eligible services in eligible
 
 Because the mobile device management ecosystem changes frequently with operating system updates and mobile app releases, Microsoft regularly updates Intune. You can learn about changes in the Intune service through the following sources:
 
-* [What's new in Microsoft Intune](whats-new.md) is updated monthly and can be updated weekly when, for example, apps such as the Company Portal app are updated.
+* [What's new in Microsoft Intune](../whats-new/index.md) is updated monthly and can be updated weekly when, for example, apps such as the Company Portal app are updated.
 
 * The [Microsoft Intune admin center](https://intune.microsoft.com) and the [Microsoft 365 admin center](https://admin.microsoft.com/) message centers announce service change notices and service health notices, including any issues in your environment that require action.
 

@@ -14,13 +14,13 @@ ms.collection:
 
 Managing and protecting user identities is a significant part of any endpoint management strategy and solution. Identity management includes the user accounts and groups that access your organization resources.
 
-:::image type="content" source="./media/manage-identities/identities-different-user-types.png" alt-text="Diagram that shows adding users to the Microsoft Intune admin center and assigning policies to different user and device types in Microsoft Intune." lightbox="./media/manage-identities/identities-different-user-types.png":::
+:::image type="content" source="./media/identities/identities-different-user-types.png" alt-text="Diagram that shows adding users to the Microsoft Intune admin center and assigning policies to different user and device types in Microsoft Intune." lightbox="./media/identities/identities-different-user-types.png":::
 
 Admins have to manage account membership, authorize and authenticate access to resources, manage settings that affect user identities, and secure & protect the identities from malicious intent.
 
-Microsoft Intune can do all these tasks, and more. [Intune is a cloud-based service](what-is-intune.md) that can manage user identities through policy, including security and authentication policies.
+Microsoft Intune can do all these tasks, and more. [Intune is a cloud-based service](../what-is-intune.md) that can manage user identities through policy, including security and authentication policies.
 
-From a service perspective, Intune uses Microsoft Entra ID for identity storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage these tasks in a central location designed for endpoint management.
+From a service perspective, Intune uses Microsoft Entra ID for identity storage and permissions. Using the [Microsoft Intune admin center](../tutorial-admin-center-walkthrough.md), you can manage these tasks in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your identities.
 
@@ -51,7 +51,7 @@ An important decision is to determine how to get the user accounts and groups in
 
 - You can also **import existing users and groups** from a CSV file into the Intune admin center, or create the users and groups from scratch. When adding groups, you can add users and devices to these groups to organize them by location, department, hardware, and more.
 
-  For more information on group management in Intune, go to [Add groups to organize users and devices](groups-add.md).
+  For more information on group management in Intune, go to [Add groups to organize users and devices](add-groups.md).
 
 By default, Intune automatically creates the **All users** and **All devices** groups. When your users and groups are available to Intune, then you can assign your policies to these users and groups.
 
@@ -71,7 +71,7 @@ Since Intune uses Microsoft Entra ID, you also have access to the built-in Micro
 
 Each role has its own create, read, update, or delete permissions as needed. You can also create custom roles if your admins need a specific permission. When you add or create your administrator-type of users and groups, you can assign these accounts to the different roles. The Intune admin center has this information in a central location and can be easily updated.
 
-For more information, go to [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
+For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../role-based-access-control/overview.md)
 
 ## Create user affinity when devices enroll
 
@@ -129,7 +129,7 @@ Your user and group accounts access organization resources. You need to keep the
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and certificates can make access to these resources easier.
 
-  For more information, go to [Use certificates for authentication in Microsoft Intune](../../certificates/overview.md).
+  For more information, go to [Use certificates for authentication in Microsoft Intune](../../fundamentals/certificates/overview.md).
 
 - **Multifactor authentication (MFA)** is a feature available with Microsoft Entra ID. For users to successfully authenticate, at least two different verification methods are required. When MFA is deployed to your environment, you can also require MFA when devices are enrolling into Intune.
 
@@ -140,9 +140,9 @@ Your user and group accounts access organization resources. You need to keep the
 
 - **Zero Trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 
-  For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
+  For more information, see [Zero Trust with Microsoft Intune](../zero-trust.md).
 
 ## Related articles
 
-- [Learn about managing devices in Intune](manage-devices.md)
-- [Learn about managing apps in Intune](manage-apps.md)
+- [Learn about managing devices in Intune](../manage-devices.md)
+- [Learn about managing apps in Intune](../manage-apps.md)

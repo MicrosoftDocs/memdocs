@@ -51,9 +51,9 @@ Use these considerations to prepare your organization for Remote Help.
   
 - Enable unenrolled device support only if needed: Allowing Remote Help on unenrolled devices (Entra registered only) is convenient for supporting personal devices, but it comes with reduced oversight (no device compliance info or limited audit data). Enable that feature thoughtfully and consider limiting which support staff can help unenrolled devices (perhaps via separate roles).
   
-- Network and firewall: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues. For more information, see [Network endpoints for Remote Help](intune-endpoints.md#remote-help).
+- Network and firewall: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues. For more information, see [Network endpoints for Remote Help](../fundamentals/endpoints.md#remote-help).
   
-- Support for Government Cloud is reduced: Remote Help is supported in Government Community Cloud (GCC) environments except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
+- Support for Government Cloud is reduced: Remote Help is supported in Government Community Cloud (GCC) environments except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/government-service-description.md).
   
 - Remote Help sharers, helpers, and devices must be in the same tenant: Remote Help's integration with compliance policies and role-based access control (RBAC) requires all participants to be in the same tenant.
   
@@ -92,7 +92,7 @@ This table shows the mode support by helper app and sharer app.
 |**Sharing from:</br>macOS webapp**|Unsupported|✅ View only|✅ View only</br>|
 |**Sharing from:</br>Windows webapp**|Unsupported|✅ View only|✅ View only</br>|
 
-For information about deploying the Remote Help apps, see [Deploy Remote Help](remote-help-deploy.md).
+For information about deploying the Remote Help apps, see [Deploy Remote Help](deploy.md).
 
 ## Authentication and permissions  
 
@@ -131,7 +131,7 @@ The following Intune built-in roles include Remote Help permissions:
 Remote Help has the following requirements: 
 
 - [Intune subscription](../fundamentals/licensing/index.md).  
-- [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
+- [Remote Help add on license or an Intune Suite license](../fundamentals/add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
 - [Supported platforms and devices](#supported-platforms).  
 - Intune-enrolled devices must be registered with Microsoft Entra.  
 
@@ -146,7 +146,7 @@ Remote Help has the following limitations:
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
   - macOS 13, 14, and 15
-- Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](intune-govt-service-description.md).
+- Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/government-service-description.md).
 
 ## Supported platforms
 
@@ -168,7 +168,7 @@ There are optional Windows updates for higher notification reliability:
 
 The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../device-management/tools/management-extension-windows.md).  
 
-We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [How to provide help on an AVD](remote-help-use.md#provide-help-on-an-avd). 
+We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [How to provide help on an AVD](use-windows.md#provide-help-on-an-avd). 
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
@@ -227,7 +227,7 @@ Remote Help isn't supported on Linux. However, the Remote Help web app might fun
 
 ## Network considerations
 
-Both the helper and sharer must be able to reach specific endpoints over port 443. For more information, see [Network endpoints for Remote Help](intune-endpoints.md#remote-help).
+Both the helper and sharer must be able to reach specific endpoints over port 443. For more information, see [Network endpoints for Remote Help](../fundamentals/endpoints.md#remote-help).
 
 Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remotehelp.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
 
@@ -371,4 +371,4 @@ Microsoft doesn't store any data about the sharer or the helper for longer than 
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Deploy Remote Help >](remote-help-deploy.md)
+> [Next: Deploy Remote Help >](deploy.md)

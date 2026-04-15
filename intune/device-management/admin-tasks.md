@@ -19,7 +19,7 @@ Admin tasks supports tasks from the following Intune capabilities:
 - [Device Offboarding tasks](../copilot/agents/device-offboarding-agent.md) - Found in the admin center at *Agents > Device Offboarding Agent*.
 - [Endpoint Privilege Management file elevation requests](../epm/manage-support-approvals.md#manage-pending-elevation-requests) – Found in the admin center at *Endpoint security > Endpoint Privilege Management*.
 - [Microsoft Defender security tasks](../device-security/microsoft-defender/remediate-vulnerabilities.md#work-with-security-tasks) - Found in the admin center at *Endpoint security > Security Tasks*.
-- [Multi Admin Approval requests](multi-admin-approval.md#approve-requests) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
+- [Multi Admin Approval requests](../fundamentals/role-based-access-control/multi-admin-approval.md#approve-requests) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
 
 ## Role-based access control for Admin tasks
 
@@ -32,7 +32,7 @@ When viewing Admin tasks, you can only see and manage tasks permitted by your as
 - [Device Offboarding tasks](../copilot/agents/device-offboarding-agent.md#prerequisites)
 - [Endpoint Privilege Management file elevation requests](../epm/manage-support-approvals.md#rbac-permissions-for-elevation-requests)
 - [Microsoft Defender security tasks](../device-security/microsoft-defender/remediate-vulnerabilities.md#prerequisites)
-- [Multi Admin Approval requests](multi-admin-approval.md#prerequisites-for-access-policies-and-approvers)
+- [Multi Admin Approval requests](../fundamentals/role-based-access-control/multi-admin-approval.md#prerequisites-for-access-policies-and-approvers)
 
 ## Manage admin tasks in the centralized view
 
@@ -69,5 +69,5 @@ Tasks are removed from this view when they are removed from their source node.
 
 - [Use Endpoint Privilege Management with Microsoft Intune](../epm/overview.md)
 - [Microsoft Defender security tasks](../device-security/microsoft-defender/remediate-vulnerabilities.md)
-- [Use Multi Admin Approval in Intune](multi-admin-approval.md)
+- [Use Multi Admin Approval in Intune](../fundamentals/role-based-access-control/multi-admin-approval.md)
 - [Device Offboarding Agent](../copilot/agents/device-offboarding-agent.md)

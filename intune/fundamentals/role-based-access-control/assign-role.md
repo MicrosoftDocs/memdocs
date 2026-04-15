@@ -11,7 +11,7 @@ ms.collection:
 
 # Assign  Microsoft Intune roles for role-based access control
 
-The information in this article can help you assign users Microsoft Intune [built-in](role-based-access-control.md#built-in-roles) or [custom](create-custom-role.md) role-based access control (RBAC) roles to users who administer your Intune subscription. RBAC roles are assigned to groups, and not individual users.
+The information in this article can help you assign users Microsoft Intune [built-in](overview.md#built-in-roles) or [custom](create-custom-role.md) role-based access control (RBAC) roles to users who administer your Intune subscription. RBAC roles are assigned to groups, and not individual users.
 
 Before you assign roles to groups, ensure you have sufficient groups for the different Intune administrative tasks, and review the membership of those groups. Each member of a group that is assigned an RBAC role receives the permissions granted by that role. Permissions from multiple groups are cumulative for a user and there are no options to deny specific permissions. However, you can [use Scope Tags with RBAC](../role-based-access-control/scope-tags.md) to limit the scope of what different groups of individuals can view and manage.
 
@@ -65,14 +65,14 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
    > When you assign a role to a group, every member of that group receives the permissions granted by that role. Only assign roles to groups for which you know the membership, and which don't include users that shouldn't receive the administrative privileges provided by the role.
 
    > [!NOTE]
-   > If your tenant allows [unlicensed admins](../../licensing/unlicensed-admins.md), Intune role assignments only apply to direct members of the assigned security group. Members of nested groups do not receive these assignments by default. However, if a user in a nested group has an Intune license, that user will receive the Intune role.
+   > If your tenant allows [unlicensed admins](../licensing/unlicensed-admins.md), Intune role assignments only apply to direct members of the assigned security group. Members of nested groups do not receive these assignments by default. However, if a user in a nested group has an Intune license, that user will receive the Intune role.
 
    Select **Next**.
 
 5. On the **Scope (Groups)** page, add groups that contain only the users or devices that the members of the Admin Groups you selected in the previous step should be allowed to manage. Then, select **Next**.
 
    > [!NOTE]
-   > The *All users* and *All devices* groups are [Intune virtual groups](groups-add.md#the-intune-all-users-and-all-devices-groups), not Microsoft Entra security groups. Therefore, you can't use them as parents for Microsoft Entra security groups in Scope (Groups) assignments. To assign  *All users* and *All devices* and specific Microsoft Entra security groups, add them separately. Otherwise, admins won't have access to specific Microsoft Entra user groups even if the role's Scope (Groups) is set to *All Users*.
+   > The *All users* and *All devices* groups are [Intune virtual groups](../tenant-administration/add-groups.md#the-intune-all-users-and-all-devices-groups), not Microsoft Entra security groups. Therefore, you can't use them as parents for Microsoft Entra security groups in Scope (Groups) assignments. To assign  *All users* and *All devices* and specific Microsoft Entra security groups, add them separately. Otherwise, admins won't have access to specific Microsoft Entra user groups even if the role's Scope (Groups) is set to *All Users*.
    >
    > Nesting is supported for Microsoft Entra security groups.
 

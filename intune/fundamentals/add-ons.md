@@ -32,11 +32,11 @@ The following table provides a list of add-on capabilities and associated Intune
 | [Endpoint Privilege Management](../epm/overview.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Enterprise App Management](../app-management/deployment/enterprise-app-catalog.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Advanced Analytics](../advanced-analytics/index.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
-| [Remote Help](remote-help.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
+| [Remote Help](../remote-help/overview.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Cloud PKI](../cloud-pki/index.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Firmware-over-the-air update](../device-updates/android/setup-zebra-lifeguard.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
-| [Specialized devices management](specialty-devices-with-intune.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
+| [Specialized devices management](../device-management/specialty-devices.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
 > For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
@@ -59,7 +59,7 @@ For more information, see [Intune Advanced Analytics](../advanced-analytics/inde
 
 ### Microsoft Intune Remote Help
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](remote-help.md).
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../remote-help/overview.md).
 
 ### Microsoft Tunnel for Mobile Application Management
 
@@ -83,7 +83,7 @@ For more information, see [Zebra LifeGuard Over-the-Air Integration with Microso
 
 Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
 
-For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
+For more information, see [Managing specialized devices with Microsoft Intune](../device-management/specialty-devices.md).
 
 ## Using the Intune add-ons page
 
@@ -150,11 +150,11 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 
 Learn more about:
 
-- [Remote Help](remote-help.md)
+- [Remote Help](../remote-help/overview.md)
 - [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md)
 - [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../device-updates/android/setup-zebra-lifeguard.md)
 - [Intune Advanced Analytics](../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../epm/overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md)
-- [Remote Help](..\fundamentals\remote-help.md)
-- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
+- [Remote Help](../remote-help/overview.md)
+- [Managing specialized devices with Microsoft Intune](../device-management/specialty-devices.md)

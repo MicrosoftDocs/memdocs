@@ -62,7 +62,7 @@ Creating, updating, or deleting scope tags requires an administrator assigned th
     - **Add All devices**: Users in the Admin Groups can manage all devices.
 
    > [!TIP]
-   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](role-based-access-control.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
+   > If you specify an exclude group for an assignment such as a policy or app assignment, it needs to either be nested in one of the RBAC assignment [scope groups](overview.md#about-intune-role-assignments), or it needs to be separately listed as a scope group in the RBAC role assignment.
 
 5. Choose **Next**
 6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups have access to Intune objects that also have the same scope tag. You can assign a maximum of 100 scope tags to a role.
@@ -157,5 +157,5 @@ To review the impact on your tenant and enable Scoped permissions:
 
 ## Next steps
 
-Learn how scope tags behave when there are [multiple role assignments](role-based-access-control.md#multiple-role-assignments).
-Manage your [roles](role-based-access-control.md) and [profiles](../../device-configuration/assign-device-profile.md).
+Learn how scope tags behave when there are [multiple role assignments](overview.md#multiple-role-assignments).
+Manage your [roles](overview.md) and [profiles](../../device-configuration/assign-device-profile.md).

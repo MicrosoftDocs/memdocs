@@ -570,4 +570,4 @@ This article is part of a five-step series that describes how to deploy Microsof
 2. [Add, configure, and protect apps](deploy-protect-apps-step-2.md)
 3. [Plan for compliance policies](deploy-compliance-step-3.md)
 4. 🡺 **Configure device features** (this article)
-5. [Enroll devices](deployment-guide-enroll.md)
+5. [Enroll devices](../device-enrollment/enroll-devices.md)

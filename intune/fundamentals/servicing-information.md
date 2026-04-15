@@ -41,11 +41,11 @@ In the following example, the tenant has the 2311 (November 2023) service releas
 
 Keeping up to date about releases and changes is an important part of your Intune deployment. Intune provides several ways to stay current about latest updates:
 
-- **[What's new in Intune](whats-new.md)**: Learn what's new in a Microsoft Intune release. When a feature is released, some information about that feature is added to this article. It also includes an overview of the current release, any notices, information about earlier releases, and other information.
+- **[What's new in Intune](../whats-new/index.md)**: Learn what's new in a Microsoft Intune release. When a feature is released, some information about that feature is added to this article. It also includes an overview of the current release, any notices, information about earlier releases, and other information.
 
   Content is published at the end of the current sprint, which is when the UI updates start deploying to the Microsoft Intune admin center.
 
-- **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
+- **[In development for Microsoft Intune](../whats-new/in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
 - **[Microsoft 365 Message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, a message is posted in the **Message center**. Or, you can view the same messages in the Message center at `admin.microsoft.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Intune admin center.
 - **[Microsoft Intune tenant status](../governance/tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
 

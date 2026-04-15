@@ -91,4 +91,4 @@ After the primary user is updated, it will also be updated in Intune and Microso
 
 ## Next steps
 
-[Manage your Intune devices](device-inventory.md).
+[Manage your Intune devices](device-details.md).

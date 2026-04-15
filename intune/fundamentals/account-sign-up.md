@@ -53,7 +53,7 @@ For more information, see [Best practices](/entra/identity/role-based-access-con
 
 After you sign up for a new subscription, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
-After completing the sign-up process, you're directed to the Microsoft 365 admin center to add users and assign them licenses. If you only have cloud-based accounts using your default *onmicrosoft.com* domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](configure-custom-domain.md) or [synchronize user account information](users-add.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
+After completing the sign-up process, you're directed to the Microsoft 365 admin center to add users and assign them licenses. If you only have cloud-based accounts using your default *onmicrosoft.com* domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](configure-custom-domain.md) or [synchronize user account information](tenant-administration/add-users.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
 
 ## Sign in to Microsoft Intune
 

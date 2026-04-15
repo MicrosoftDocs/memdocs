@@ -87,7 +87,7 @@ Users are stored in Microsoft Entra ID, which is also included with Microsoft 36
 
 You can add users or connect Active Directory to sync with Intune. This step is **required** unless your devices are "userless" kiosk devices.
 
-For guidance, see [Add users](users-add.md).
+For guidance, see [Add users](tenant-administration/add-users.md).
 
 Each person in your organization needs a user account before they can sign in and access Microsoft Intune. To create user accounts, add users to Intune. Once added, you can grant permissions and assign licenses to users. Later, you can assign different types of policies to users to help and protect them.
 
@@ -99,7 +99,7 @@ You must be a Microsoft Entra [License Administrator](/entra/identity/role-based
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with adding groups to Intune**
 
-Add groups to assign apps, settings, and other resources. For guidance, see [Add groups](groups-add.md).
+Add groups to assign apps, settings, and other resources. For guidance, see [Add groups](tenant-administration/add-groups.md).
 
 Intune uses Microsoft Entra groups to organize and manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. For instance, you can create groups to organize users or devices by geographic location, department, or hardware characteristics. Also, you can use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices based on groups.
 
@@ -140,25 +140,25 @@ Scope tags work with roles to limit which Intune objects, like devices, policies
 
     For guidance, see:
 
-    - [Role-based access control (RBAC) with Intune](role-based-access-control.md)
-    - [Built-in role permissions for Intune](role-based-access-control-reference.md)
-    - [Assign a role in Intune](assign-role.md)
+    - [Role-based access control (RBAC) with Intune](role-based-access-control/overview.md)
+    - [Built-in role permissions for Intune](role-based-access-control/ref-built-in-roles.md)
+    - [Assign a role in Intune](role-based-access-control/assign-role.md)
 
 2. Create your own custom roles with the exact set of permissions you need, and then assign to the admins based on their responsibilities. Custom roles let you define a precise set of permissions when built-in roles don't meet your requirements, or you want to implement least-privilege access. For example, you can create a custom role that only has permissions to create and update device compliance policies.
 
     For guidance, see:
 
-    - [Create a custom role in Intune](create-custom-role.md)
-    - [Built-in role permissions for Intune](role-based-access-control-reference.md)
-    - [Assign a role in Intune](assign-role.md)
+    - [Create a custom role in Intune](role-based-access-control/create-custom-role.md)
+    - [Built-in role permissions for Intune](role-based-access-control/ref-built-in-roles.md)
+    - [Assign a role in Intune](role-based-access-control/assign-role.md)
 
 3. Use scope tags to limit visibility of Intune objects. Scope tags control which objects admins can see. Roles control what actions they can take on those objects. Using RBAC together with scope tags helps ensure admins only have access to the resources they're responsible for.
 
-    For guidance, see [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md).
+    For guidance, see [Use role-based access control (RBAC) and scope tags for distributed IT](role-based-access-control/scope-tags.md).
 
 4. Configure Multi Admin Approval. To help protect against a compromised administrative account, this feature requires that a second administrative account must approve a change before the change is applied. It adds an extra layer of security by ensuring that high-impact changes, like wiping or deleting devices, require approval from multiple administrators.
 
-    For guidance, see [Configure Multi Admin Approval](multi-admin-approval.md).
+    For guidance, see [Configure Multi Admin Approval](role-based-access-control/multi-admin-approval.md).
 
 ## 8 - Set the mobile device management authority
 
@@ -188,4 +188,4 @@ This article is part of a five-step series that describes how to deploy Microsof
 2. [Add, configure, and protect apps](deploy-protect-apps-step-2.md)
 3. [Create compliance policies](deploy-compliance-step-3.md)
 4. [Configure device features and settings](deploy-configuration-step-4.md)
-5. [Enroll devices](deployment-guide-enroll.md)
+5. [Enroll devices](../device-enrollment/enroll-devices.md)

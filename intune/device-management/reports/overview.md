@@ -66,7 +66,7 @@ To see a generated report of device state, you can use the following steps:
 3. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
 4. Select **Generate report** (or **Generate again**) to retrieve current data.
 
-    :::image type="content" source="./media/intune-reports/intune-reports-02a.png" alt-text="Screenshot of the Device compliance report in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-02a.png":::
+    :::image type="content" source="./media/overview/intune-reports-02a.png" alt-text="Screenshot of the Device compliance report in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-02a.png":::
 
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated.
@@ -84,7 +84,7 @@ You can view the **Device compliance trends** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 30 day trend.
 
-    :::image type="content" source="./media/intune-reports/intune-reports-03.png" alt-text="Screenshot of the Device compliance trends report in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-03.png":::
+    :::image type="content" source="./media/overview/intune-reports-03.png" alt-text="Screenshot of the Device compliance trends report in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-03.png":::
 
 ### Noncompliant devices report (Organizational)
 
@@ -435,7 +435,7 @@ You can view the **Unhealthy endpoints** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Antivirus** > **Unhealthy endpoints** tab.
 
-For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
+For information about the actions you can take with this report, see [Bulk actions for device reports](overview.md#bulk-actions-for-device-reports).
 
 ### Active malware report (Operational)
 The **Active malware** report provides data to identify devices with malware problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. Additionally, this report provides the **Managed by** column. This column can be used to identity devices that are managed by Configuration Manager.
@@ -445,7 +445,7 @@ You can view the **Active malware** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Antivirus** > **Active malware** tab.
 
-For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
+For information about the actions you can take with this report, see [Bulk actions for device reports](overview.md#bulk-actions-for-device-reports).
 
 ### Bulk actions for device reports
 
@@ -547,7 +547,7 @@ Other reports for Microsoft Defender Antivirus include:
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
-:::image type="content" source="./media/intune-reports/select-firewall-reports.png" alt-text="Screenshot showing how to select firewall reports in the Microsoft Intune admin center." lightbox="./media/intune-reports/select-firewall-reports.png":::
+:::image type="content" source="./media/overview/select-firewall-reports.png" alt-text="Screenshot showing how to select firewall reports in the Microsoft Intune admin center." lightbox="./media/overview/select-firewall-reports.png":::
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and reports on the status of the firewall on your managed devices. You can filter returns for this report by using one or more of the status detail categories.
 
@@ -559,7 +559,7 @@ Status details include:
 - **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
 - **Not applicable** – The device doesn't support firewall reporting.
 
-:::image type="content" source="./media/intune-reports/firewall-status.png" alt-text="Screenshot of the Firewall Status report in the Microsoft Intune admin center." lightbox="./media/intune-reports/firewall-status.png":::
+:::image type="content" source="./media/overview/firewall-status.png" alt-text="Screenshot of the Firewall Status report in the Microsoft Intune admin center." lightbox="./media/overview/firewall-status.png":::
 
 ## Application reports
 
@@ -726,7 +726,7 @@ For related information, see [What is co-management?](../../configmgr/comanage/o
 ## Azure Monitor reports
 
 ### Azure Monitor integration reports (Specialist)
-You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](/azure/azure-monitor/overview) using [Log Analytics](reports.md#log-analytics) and [Azure Monitor workbooks](reports.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Microsoft Entra activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
+You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](/azure/azure-monitor/overview) using [Log Analytics](overview.md#log-analytics) and [Azure Monitor workbooks](overview.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Microsoft Entra activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
 
 > [!NOTE]
 > Complex reporting functionality requires an Azure subscription.
@@ -736,9 +736,9 @@ An example specialist report could correlate a set of device details, including 
 You can create and view custom reports using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](reports.md#diagnostic-settings).
+2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](overview.md#diagnostic-settings).
 
-    :::image type="content" source="./media/intune-reports/intune-reports-04.png" alt-text="Screenshot showing how to add a diagnostic setting in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-04.png":::
+    :::image type="content" source="./media/overview/intune-reports-04.png" alt-text="Screenshot showing how to add a diagnostic setting in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-04.png":::
 
 3. Select **Add diagnostic setting** to display the **Diagnostic settings** pane.
 
@@ -748,16 +748,16 @@ You can create and view custom reports using the following steps:
 4. Add a **Name** for the diagnostic settings.
 5. Select the **Send to Log Analytics** and **DeviceComplianceOrg** settings.
 
-    :::image type="content" source="./media/intune-reports/intune-reports-04a.png" alt-text="Screenshot of the Diagnostic settings pane in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-04a.png":::
+    :::image type="content" source="./media/overview/intune-reports-04a.png" alt-text="Screenshot of the Diagnostic settings pane in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-04a.png":::
 
 6. Select **Save**.
-7. Next, select **Log analytics** to create and run a new log query using [Log Analytics](reports.md#log-analytics).
+7. Next, select **Log analytics** to create and run a new log query using [Log Analytics](overview.md#log-analytics).
 
-   :::image type="content" source="./media/intune-reports/intune-reports-05.png" alt-text="Screenshot of a Log Analytics log query in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-05.png":::
+   :::image type="content" source="./media/overview/intune-reports-05.png" alt-text="Screenshot of a Log Analytics log query in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-05.png":::
 
-8. Select **Workbooks** to create or open an interactive report using [Azure Monitor workbooks](reports.md#workbooks).
+8. Select **Workbooks** to create or open an interactive report using [Azure Monitor workbooks](overview.md#workbooks).
 
-   :::image type="content" source="./media/intune-reports/intune-reports-07.png" alt-text="Screenshot of Azure Monitor workbooks for interactive reports in the Microsoft Intune admin center." lightbox="./media/intune-reports/intune-reports-07.png":::
+   :::image type="content" source="./media/overview/intune-reports-07.png" alt-text="Screenshot of Azure Monitor workbooks for interactive reports in the Microsoft Intune admin center." lightbox="./media/overview/intune-reports-07.png":::
 
 ### Diagnostic settings
 Each Azure resource requires its own diagnostic setting. The diagnostic setting defines the following for a resource:

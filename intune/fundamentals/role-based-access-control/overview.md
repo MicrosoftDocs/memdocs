@@ -31,7 +31,7 @@ To view a role in the **Intune admin center**, go to **Tenant administration** >
 - **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
 
 > [!NOTE]
-> In June 2021, Intune began supporting [unlicensed admins](../../licensing/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
+> In June 2021, Intune began supporting [unlicensed admins](../licensing/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
 
 ### Built-in roles
 
@@ -176,7 +176,7 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 
 To help you monitor and understand the permissions assigned across your Intune tenant, the Intune admin center includes several views. Go to **Tenant administration** > **Roles** and expand **Monitor** to access these views. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account and see its current scope of administrative privileges.
 
-:::image type="content" source="./media/role-based-access-control/rbac-monitor-node.png" alt-text="A screen capture of the options for monitoring RBAC from within the Intune admin center.":::
+:::image type="content" source="./media/overview/rbac-monitor-node.png" alt-text="A screen capture of the options for monitoring RBAC from within the Intune admin center.":::
 
 ### My permissions
 
@@ -198,7 +198,7 @@ The **Admin permissions** node provides a view of the specific permissions that 
 
 Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Permission* and *Action*.
 
-:::image type="content" source="./media/role-based-access-control/admin-permission-view.png" alt-text="A screen capture that shows an example of the Admin permissions view in the Intune admin center.":::
+:::image type="content" source="./media/overview/admin-permission-view.png" alt-text="A screen capture that shows an example of the Admin permissions view in the Intune admin center.":::
 
 ## Next steps
 

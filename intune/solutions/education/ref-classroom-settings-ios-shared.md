@@ -20,7 +20,7 @@ ms.collection:
 
 Intune supports the iOS/iPadOS Classroom app that helps teachers to guide learning, and control student devices in the classroom. In addition, to the Classroom app, Apple supports the ability for student iPad devices to be configured such that multiple students can share a single device. This document guides you to achieve this goal with Intune.
 
-For information about configuring dedicated (1:1) iPad devices to use the Classroom app, see [How to configure Intune settings for the iOS/iPadOS Classroom app](education-settings-configure-ios.md).
+For information about configuring dedicated (1:1) iPad devices to use the Classroom app, see [How to configure Intune settings for the iOS/iPadOS Classroom app](ref-classroom-settings-ios.md).
 
 ## Before you start
 

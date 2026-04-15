@@ -20,7 +20,7 @@ ms.collection:
 > - **TeamViewer (old)**: Previous remote assistance experience  
 > - **TeamViewer**: New remote assistance experience  
 >
-> For information about the previous connector, see [Use TeamViewer to remotely administer Intune devices](teamviewer-support.md).  
+> For information about the previous connector, see [Use TeamViewer to remotely administer Intune devices](teamviewer-legacy.md).  
 
 Devices managed by Microsoft Intune can be administered remotely using TeamViewer, a third-party remote assistance solution that you purchase separately. This article describes:
 
@@ -47,7 +47,7 @@ Before you configure the TeamViewer connector in Intune, make sure these require
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - The administrator configuring the TeamViewer connector must have a Microsoft Intune license. You can give administrators access to Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../../fundamentals/licensing/unlicensed-admins.md).
+> - The administrator configuring the TeamViewer connector must have a Microsoft Intune license. You can give administrators access to Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
 > - A TeamViewer account and license is required. Visit the [TeamViewer integration docs](https://www.teamviewer.com/en/integrations/microsoft-intune/) (opens the TeamViewer website) or contact the TeamViewer sales team for more information about account setup and required licenses.  
 :::column-end:::
 :::row-end:::
@@ -79,7 +79,7 @@ These Intune permissions allow you to delegate connector management and session 
 - *Remote assistance connectors/Read* and *Remote Tasks/Offer Remote assistance*: View the connector status and initiate TeamViewer sessions.  
 - *Remote assistance connectors/Read* and *Remote assistance connectors/Update*: View and modify the connector configuration.  
 
-If a user has *read* permission without *update* permission, they can still view the connector, but they can't edit any configurations. For more information about role requirements, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).  
+If a user has *read* permission without *update* permission, they can still view the connector, but they can't edit any configurations. For more information about role requirements, see [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).  
 
 ### Optimize setup  
 

@@ -61,7 +61,7 @@ Remediations require users of the devices to have one of the following licenses:
 
 ### Permissions
 
-- For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category. For more information, see [Role-based access control for Microsoft Intune](role-based-access-control.md).
+- For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category. For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 - An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time.
 
@@ -155,7 +155,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
 
    For information about enforcing script signature checks, see [Script requirements](#script-requirements).
 1. Select **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](filters.md).
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../fundamentals/filters/overview.md).
 
    >[!NOTE]
    > Don't mix user and device groups across include and exclude assignments.
@@ -174,7 +174,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Users must be Intune Admins or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
-- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
+- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](../fundamentals/endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
 - The [Intune Management Extension](../device-management/tools/management-extension-windows.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
 

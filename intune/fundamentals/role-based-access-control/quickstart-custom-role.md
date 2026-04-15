@@ -46,8 +46,8 @@ Intune includes several built-in RBAC roles that you can use. Microsoft recommen
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - [Create a user](../quickstart-create-user.md).
-> - [Create a group](../quickstart-create-group.md).
+> - [Create a user](../tenant-administration/quickstart-create-user.md).
+> - [Create a group](../tenant-administration/quickstart-create-group.md).
 :::column-end:::
 :::row-end:::
 
@@ -59,7 +59,7 @@ When you create a custom role, you can set permissions for a wide range of actio
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administrator** > **Roles**. Select **Create**. From the drop-down box, select **Intune role**. The *Add Custom Role* workflow opens.
 
-   :::image type="content" source="./media/quickstart-create-custom-role/add-custom-role.png" alt-text="Screenshot of Microsoft Intune admin center showing Tenant administration, All roles selected, and Create Intune role menu open." lightbox="./media/quickstart-create-custom-role/add-custom-role.png":::
+   :::image type="content" source="./media/quickstart-custom-role/add-custom-role.png" alt-text="Screenshot of Microsoft Intune admin center showing Tenant administration, All roles selected, and Create Intune role menu open." lightbox="./media/quickstart-custom-role/add-custom-role.png":::
 
 2. On the **Basics** page:
    - For **Name**, enter *Security operations*.
@@ -68,7 +68,7 @@ When you create a custom role, you can set permissions for a wide range of actio
 
 3. On the **Permissions** page, expand the *Corporate device identifiers* category and set *Read* to **Yes**:
 
-   :::image type="content" source="./media/quickstart-create-custom-role/corp-device-id-read.png" alt-text="Screenshot of Intune Add Custom Role, Permissions page with Corporate device identifiers expanded and Read set to Yes." lightbox="./media/quickstart-create-custom-role/corp-device-id-read.png":::
+   :::image type="content" source="./media/quickstart-custom-role/corp-device-id-read.png" alt-text="Screenshot of Intune Add Custom Role, Permissions page with Corporate device identifiers expanded and Read set to Yes." lightbox="./media/quickstart-custom-role/corp-device-id-read.png":::
 
    After configuring *Read* for Corporate device identifiers, expand the following additional categories, and make the same configuration by setting *Read* to **Yes**.
 
@@ -83,7 +83,7 @@ When you create a custom role, you can set permissions for a wide range of actio
 5. On **Review + Create**, select *Create*. Intune creates the custom role, which now appears on the **Intune roles | All roles** page in the Intune admin center, with a **Type** of *Custom Intune role*.
 
 > [!TIP]
-> For a list of permissions by role, see [Role-based access control (RBAC) reference](role-based-access-control-reference.md).
+> For a list of permissions by role, see [Role-based access control (RBAC) reference](ref-built-in-roles.md).
 
 ## Assign the role to a group
 
@@ -91,11 +91,11 @@ When you create a custom role, you can set permissions for a wide range of actio
 
 1. On **Intune roles - All roles**, select the custom **Security operations** role you created. In the role's *Overview*, select **Assignments**, and then select **Assign**.
 
-   :::image type="content" source="./media/quickstart-create-custom-role/assignment-workflow.png" alt-text="Screenshot of Microsoft Intune Security operations Assignments page with Assign button highlighted." lightbox="./media/quickstart-create-custom-role/assignment-workflow.png":::
+   :::image type="content" source="./media/quickstart-custom-role/assignment-workflow.png" alt-text="Screenshot of Microsoft Intune Security operations Assignments page with Assign button highlighted." lightbox="./media/quickstart-custom-role/assignment-workflow.png":::
 
 1. On **Basics**, enter *Sec Ops* for the name, and then select **Next**.
 
-1. On **Admin Groups**, select **Add groups** and then choose a group that contains the users you want to assign the role's permissions to. If you created the **Contoso Testers** group in [Step 3](quickstart-create-group.md) of this evaluation guide, select that group.
+1. On **Admin Groups**, select **Add groups** and then choose a group that contains the users you want to assign the role's permissions to. If you created the **Contoso Testers** group in [Step 3](../tenant-administration/quickstart-create-group.md) of this evaluation guide, select that group.
 
    After adding a group, choose **Select**, and then **Next** to continue to the next page of the workflow.
 
@@ -115,7 +115,7 @@ If you no longer want to use the custom role, you can delete it. In the [Microso
 
 ## Next steps
 
-In this evaluation step, you created a custom security operations role and assigned it to a group. For more information about roles in Intune, see [Role-based administration control (RBAC) with Microsoft Intune](role-based-access-control.md).
+In this evaluation step, you created a custom security operations role and assigned it to a group. For more information about roles in Intune, see [Role-based administration control (RBAC) with Microsoft Intune](overview.md).
 
 To continue evaluating Microsoft Intune, go to the next step:
 

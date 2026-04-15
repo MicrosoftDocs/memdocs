@@ -102,7 +102,7 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     For more information, go to:
 
-    - [Step 5 – Enroll devices in Microsoft Intune](deployment-guide-enroll.md)
+    - [Step 5 – Enroll devices in Microsoft Intune](../device-enrollment/enroll-devices.md)
     - [Intune enrollment deployment guide](../device-enrollment/guide.md)
 
 > [!IMPORTANT]

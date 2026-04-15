@@ -578,4 +578,4 @@ The following permissions are available when creating custom roles.
 ## Next steps
 
 - [Assign a role to a user](assign-role.md)
-- [Learn more about role-based access control in Intune](role-based-access-control.md)
+- [Learn more about role-based access control in Intune](overview.md)

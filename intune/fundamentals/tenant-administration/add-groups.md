@@ -59,8 +59,8 @@ For example, you might deploy an Intune compliance policy to the *all devices* g
 
 > [!TIP]
 > Consider the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:
-> - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-> - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](filters-performance-recommendations.md)
+> - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../filters/overview.md)
+> - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](../filters/performance-recommendations.md)
 
 ## Add groups to Intune
 
@@ -74,11 +74,11 @@ To create groups in the Microsoft Intune admin center:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**:
 
-   :::image type="content" source="./media/groups-add/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." lightbox="./media/groups-add/groups-add-new.png":::
+   :::image type="content" source="./media/add-groups/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." lightbox="./media/add-groups/groups-add-new.png":::
 
 2. The *New Group* pane opens, which is the same interface as found in Microsoft Entra:
 
-   :::image type="content" source="./media/groups-add/groups-add-properties.png" alt-text="Screenshot that shows the New group pane from Entra within the Intune admin center.":::
+   :::image type="content" source="./media/add-groups/groups-add-properties.png" alt-text="Screenshot that shows the New group pane from Entra within the Intune admin center.":::
 
    Configure the following options for the New Group:
    1. Set *Group type* to **Security**.
@@ -140,5 +140,5 @@ Use the following steps to delete an existing group:
 
 ## Related content
 
-- [Assign users licenses to Intune](../../licensing/assign-licenses.md)
+- [Assign users licenses to Intune](../licensing/assign-licenses.md)
 - [Assign Microsoft Intune roles to groups of users for role-based access control](../role-based-access-control/assign-role.md)

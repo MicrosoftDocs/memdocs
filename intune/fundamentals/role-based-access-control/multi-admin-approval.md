@@ -43,7 +43,7 @@ By default, the administrators who participate in the MAA workflow must have an 
 > [!CAUTION]
 > **This setting is irreversible.** Once enabled, you can't turn it off. Make sure your organization understands this limitation before proceeding.
 
-Before enabling this setting, review [Unlicensed admins](../../licensing/unlicensed-admins.md) for important limits and behavior details, including group membership caps and how long access changes take to take effect.
+Before enabling this setting, review [Unlicensed admins](../licensing/unlicensed-admins.md) for important limits and behavior details, including group membership caps and how long access changes take to take effect.
 
 ### Role 1: Access policy manager
 

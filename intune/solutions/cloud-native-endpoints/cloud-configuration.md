@@ -23,11 +23,11 @@ Cloud configuration is ideal for:
 
 Cloud config makes these devices easy to use, and secures these devices with Microsoft-recommended security features.
 
-To deploy cloud config, use the [Windows client cloud config setup guide](cloud-configuration-setup-guide.md) to create all the policies.
+To deploy cloud config, use the [Windows client cloud config setup guide](setup-cloud-configuration.md) to create all the policies.
 
 > [!TIP]
 > For a more comprehensive guide on Windows in cloud configuration, go to [Windows in cloud configuration](https://aka.ms/cloud-config).
 
 ## Related content
 
-- [Windows client cloud config step by step setup guide](cloud-configuration-setup-guide.md)
+- [Windows client cloud config step by step setup guide](setup-cloud-configuration.md)
