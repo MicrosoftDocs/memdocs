@@ -12,9 +12,9 @@ ms.collection:
 
 # Configure Platform Single Sign-On (PSSO) during Automated Device Enrollment for macOS devices
 
-On macOS devices, you can configure [Platform Single Sign-On (PSSO)](configure-platform-sso-macos.md) during Automated Device Enrollment (ADE). Users sign in with their Microsoft Entra account and immediately access Microsoft Entra ID resources. Platform SSO minimizes the number of times users need to enter their organizational credentials.
+On macOS devices, you can configure [Platform Single Sign-On (PSSO)](configure-platform-sso-macos.md) during Automated Device Enrollment (ADE). With Platform SSO,Users sign in with their Microsoft Entra account and can get immediate access to Microsoft Entra ID resources. Platform SSO also minimizes the number of times users need to enter their organizational credentials.
 
-When you add the Platform SSO policy and enable the Setup Assistant await final configuration phase of ADE enrollment, the policy runs during device registration. When users arrive at the desktop, they have a seamless sign-in experience and can access resources protected by Conditional Access right away.
+When you add the Platform SSO policy and enable the Setup Assistant await final configuration in an ADE enrollment profile, the Platform SSO policy runs during device registration. When users arrive at the desktop, they have a seamless sign-in experience and can access resources protected by Conditional Access right away.
 
 This feature:
 
@@ -23,7 +23,9 @@ This feature:
 - Allows Platform SSO credentials to be set up during initial device configuration.
 - Minimizes delays accessing resources protected by Conditional Access.
 
-This article lists and describes the settings you need to configure to enable Platform SSO during ADE with Setup Assistant. It also lists the steps to add a Platform SSO policy to an Automated Device Enrollment profile and configure it to run during Setup Assistant. To learn more about Platform SSO, see [Platform SSO configuration guide for macOS devices using Microsoft Intune](configure-platform-sso-macos.md).
+This article lists and describes the settings you need to configure to enable Platform SSO during ADE with Setup Assistant. It also lists the other required steps to use this feature, including adding the Compnay Portal as a line-of-business app, and configuring the enrollment profile.
+
+To learn more about Platform SSO, see [Platform SSO configuration guide for macOS devices using Microsoft Intune](configure-platform-sso-macos.md).
 
 This feature applies to:
 
