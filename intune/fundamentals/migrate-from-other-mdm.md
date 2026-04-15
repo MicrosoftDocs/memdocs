@@ -42,9 +42,9 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
   - **License administrator** - This Microsoft Entra role lets you assign Intune licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854). For more information on this role, see [Microsoft Entra built-in roles - License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator).
 
-  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](./role-based-access-control-reference.md#policy-and-profile-manager).
+  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager).
 
-  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](./role-based-access-control-reference.md#endpoint-security-manager).
+  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](role-based-access-control/ref-built-in-roles.md#endpoint-security-manager).
 
   - **Conditional Access Administrator** - This Microsoft Entra role lets you create and assign device-based Conditional Access policies in the [Microsoft Entra admin center](https://entra.microsoft.com/). For more information on this role, see [Microsoft Entra built-in roles - Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
 

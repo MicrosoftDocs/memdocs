@@ -20,14 +20,14 @@ Intune supports mobile device management (MDM) of iPads and iPhones to give user
 
 Before you begin, complete these prerequisites to enable iOS/iPadOS device management in Intune. For more detailed information about how to set up, onboard, or move to Intune, see the [Intune setup deployment guide](setup-migration.md).
 
-* [Add users](users-add.md) and [groups](groups-add.md)
+* [Add users](tenant-administration/add-users.md) and [groups](tenant-administration/add-groups.md)
 * [Assign licenses to users](./licensing/assign-licenses.md)
 * [Set mobile device management authority](setup-mdm-authority.md)
 * [Set up Apple MDM push (APNs) certificate](../device-enrollment/apple/create-mdm-push-certificate.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
 
-For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control/overview.md) and [Built-in role permissions for Intune](role-based-access-control/ref-built-in-roles.md).
 
 ## Plan for your deployment
 
@@ -133,7 +133,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | Task | Detail |
 | ---- | ------ |
 |[Take remote action on devices](../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
-|[Use TeamViewer to remotely administer Intune devices](./teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
+|[Use TeamViewer to remotely administer Intune devices](../device-management/tools/teamviewer-legacy.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
 |[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../device-security/microsoft-defender/remediate-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 
 ## Next steps

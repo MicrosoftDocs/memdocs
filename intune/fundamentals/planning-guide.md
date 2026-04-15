@@ -109,7 +109,7 @@ Some considerations:
 
     If you plan to use biometrics for authentication, be sure your devices support biometrics. Most modern devices do.
 
-  - Implement a [Zero Trust deployment](zero-trust-with-microsoft-intune.md). With Zero Trust, you use the features in Microsoft Entra ID and Microsoft Intune to secure all endpoints, uses password-less authentication, and more.
+  - Implement a [Zero Trust deployment](zero-trust.md). With Zero Trust, you use the features in Microsoft Entra ID and Microsoft Intune to secure all endpoints, uses password-less authentication, and more.
 
 - **Configure the data containment policies** that come with the Microsoft 365 apps. These policies help prevent organization data from being shared with other apps and storage locations that your IT doesn't manage.
 
@@ -123,13 +123,13 @@ Many organizations want to give different admins control over locations, departm
 
 In Intune, distributed IT benefits from the following features:
 
-- **[Scope tags](scope-tags.md)** use role-based access control (RBAC). So, only users in a specific group have permission to manage policies and profiles for users and devices in their scope.
+- **[Scope tags](role-based-access-control/scope-tags.md)** use role-based access control (RBAC). So, only users in a specific group have permission to manage policies and profiles for users and devices in their scope.
 
 - When you use **[device enrollment categories](../device-management/create-device-categories.md)**, devices are automatically added to groups based on categories you create. This feature used Microsoft Entra dynamic groups, and helps make managing devices easier.
 
   When users enroll their device, they choose a category, like Sales, IT admin, point-of-sale device, and so on. When the devices are added to a category, these device groups are ready to receive your policies.
 
-- When admins create policies, you can require **[multiple admin approval](multi-admin-approval.md)** for specific policies, including policies that run scripts or deploy apps.
+- When admins create policies, you can require **[multiple admin approval](role-based-access-control/multi-admin-approval.md)** for specific policies, including policies that run scripts or deploy apps.
 
 - **[Endpoint Privilege Management](../epm/overview.md)** allows standard non-admin user complete tasks that require elevated privileges, like  installing apps and updating device drivers. Endpoint Privilege Management is part of the [Intune Suite](add-ons.md).
 
@@ -139,12 +139,12 @@ Rules and settings are deployed using different policies. Some considerations:
 
 - Determine your admin structure. For example, you might want to separate by location, like **Charlotte IT Admins** or **Cambridge IT Admins**. You might want to separate by role, like **Network Admins** that control all network access, including VPN.
 
-  These categories become your [scope tags](scope-tags.md).
+  These categories become your [scope tags](role-based-access-control/scope-tags.md).
 
   For more information on creating admin groups, go to:
 
   - [Distributed IT environment with many admins in the same Microsoft Intune tenant](scale-guidelines.md)
-  - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
+  - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control/overview.md)
 
 - Sometimes organizations need to use Distributed IT in systems where a large number of local admins connect to a single Intune tenant. For example, a large organization has a single Intune tenant. The organization has a large number of local admins, and each admin manages a specific system, region, or location. Each admin needs to manage only their location, and not the entire organization.
 
@@ -248,13 +248,13 @@ If being mobile or supporting remote workers is important to your organization, 
 
   If you want to also control the hardware, then give users all the devices they need, including mobile phones. Invest in a hardware refresh plan so users continue to be productive, and get the newest built-in security features. Enroll these organization-owned devices in Intune, and manage them using policies.
 
-As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place. For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
+As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place. For more information, see [Zero Trust with Microsoft Intune](zero-trust.md).
 
 ### Manage desktop computers
 
 Intune can manage desktop computers running Windows. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
 
-For more information, go to [Windows client cloud config setup guide](cloud-configuration-setup-guide.md).
+For more information, go to [Windows client cloud config setup guide](../solutions/cloud-native-endpoints/setup-cloud-configuration.md).
 
 If your Windows devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called **co-management**. Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), Conditional Access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
@@ -268,7 +268,7 @@ For more information, go to:
 
 Your adoption of a mobile device management can depend on what your organization currently uses, including if that solution uses on-premises features or programs.
 
-The [setup deployment guide](deployment-guide-intune-setup.md) has some good information.
+The [setup deployment guide](setup-migration.md) has some good information.
 
 Some considerations:
 
@@ -304,7 +304,7 @@ Managing devices is a relationship with different services. Intune includes the 
   - **[Windows Autopilot](/autopilot/enrollment-autopilot)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
   - **[Multi-factor authentication](../device-enrollment/configure-multifactor-authentication.md) (MFA)**: Users must enter two or more verification methods, like a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, and organization-owned devices that require extra security.
   - **[Conditional Access](../device-security/conditional-access-integration/overview.md)**: If users and devices follow your rules, like a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
-  - **[Dynamic user groups and dynamic device groups](groups-add.md)**: Add users or devices automatically to groups when they meet criteria, like a city, job title, OS type, OS version, and more.
+  - **[Dynamic user groups and dynamic device groups](tenant-administration/add-groups.md)**: Add users or devices automatically to groups when they meet criteria, like a city, job title, OS type, OS version, and more.
 
 - **Microsoft 365 apps** (included in the **Microsoft 365 E5** license) includes the apps that users rely on, including Outlook, Word, SharePoint, Teams, OneDrive, and more. You can deploy these apps to devices using Intune.
 
@@ -388,13 +388,13 @@ Some considerations:
 
   In Intune, policies are applied to users and groups you create. There isn't a hierarchy. If two policies update the same setting, then the setting shows as a conflict. For more information on conflict behavior, go to [Common questions, issues, and resolutions with device policies and profiles](../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
-  After you review your policies, your AD global policies logically start to apply to groups you have, or groups you need. These groups include users and devices you want to target at the global level, site level, and so on. This task gives you an idea of the group structure you need in Intune. [Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments](filters-performance-recommendations.md) might be a good resource.
+  After you review your policies, your AD global policies logically start to apply to groups you have, or groups you need. These groups include users and devices you want to target at the global level, site level, and so on. This task gives you an idea of the group structure you need in Intune. [Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments](filters/performance-recommendations.md) might be a good resource.
 
 - **Be prepared to create new policies** in Intune. Intune includes several features that cover scenarios that might interest you. Some examples:
 
   - **Security baselines**: On Windows client devices, [security baselines](../device-security/security-baselines/overview.md) are security settings that are preconfigured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at security baselines.
 
-    [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
+    [Settings insight](../device-configuration/settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](../device-configuration/settings-insight.md).
 
   - **Settings catalog**: The [settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
   - **Group policy**: Use [group policy analytics](../device-configuration/import-group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
@@ -422,14 +422,14 @@ Some considerations:
 
   For more information on minimum recommended settings, go to:
 
-  - [Step 3 - Create compliance policies](deployment-plan-compliance-policies.md)
-  - [Step 4 - Create device configuration profiles](deployment-plan-configuration-profile.md)
+  - [Step 3 - Create compliance policies](deploy-compliance-step-3.md)
+  - [Step 4 - Create device configuration profiles](deploy-configuration-step-4.md)
 
 - **Review the current structure of your groups**. In Intune, you can create and assign policies to user groups, device groups, and dynamic user and device groups (requires Microsoft Entra ID P1 or P2).
 
   When you create groups in the cloud, like Intune or Microsoft 365, the groups are created in Microsoft Entra ID. You might not see the Microsoft Entra ID branding, but that's what you're using.
 
-  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](groups-add.md).
+  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](tenant-administration/add-groups.md).
 
   - Moving existing distribution lists (DL) to Microsoft Entra ID might be more challenging. Once they DLs are in Microsoft Entra ID, these groups are available to Intune and Microsoft 365. For more information, go to:
 
@@ -606,8 +606,8 @@ The community-based [Intune forum](https://social.technet.microsoft.com/Forums/h
 
 ## Related articles
 
-- [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+- [Migration guide: Set up or move to Microsoft Intune](setup-migration.md)
 - [Get started with your Microsoft Intune deployment](get-started.md)
 - [Protection and configuration levels](protection-configuration-levels.md)
-- [Zero Trust deployment approach](deployment-plan-zero-trust.md)
+- [Zero Trust deployment approach](zero-trust-deployment.md)
 - [Frontline worker device management in Microsoft Intune](../solutions/frontline-worker/frontline-worker-overview.md)

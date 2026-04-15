@@ -13,17 +13,17 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
-The troubleshooting pane lets help desk operators and Intune administrators view user information to address user help requests. Organizations that include a help desk can assign the [Help desk operator role](role-based-access-control.md#built-in-roles) to a group of Intune users. The help desk operator role can use the **Troubleshooting + support** pane help end users.
+The troubleshooting pane lets help desk operators and Intune administrators view user information to address user help requests. Organizations that include a help desk can assign the [Help desk operator role](../role-based-access-control/overview.md#built-in-roles) to a group of Intune users. The help desk operator role can use the **Troubleshooting + support** pane help end users.
 
 The **Troubleshooting + support** pane provides three options:
 
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
-- [Help and support](../../it-pro-support/get-support-admin-center.md) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune. For more information, see [Help and support](../../it-pro-support/get-support-admin-center.md).
+- [Help and support](./get-support-admin-center.md) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune. For more information, see [Help and support](./get-support-admin-center.md).
 
 Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 
 > [!NOTE]
-> For steps on adding a help desk operator role, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md)
+> For steps on adding a help desk operator role, see [Role-based administration control (RBAC) with Intune](../role-based-access-control/overview.md)
 
 When a user contacts support with a technical issue with Intune, the help desk operator enters and finds the user's name. Additionally, the help desk operator can filter by device if the user has multiple managed devices.
 
@@ -38,7 +38,7 @@ The **Troubleshooting** pane provides the following tabs for a selected user and
 - **Updates** - Provides the name, platform, and update type.
 - **Enrollment restrictions** - Provides the policy type, name, platform, and device limit.
 - **Diagnostics** - Provides the device name or application, platform, created date, and diagnostic log.
-- **ServiceNow incidents** - Provides a list of associated incidents for the selected user. For more information, go to [ServiceNow integration with Intune](service-now-integration.md).
+- **ServiceNow incidents** - Provides a list of associated incidents for the selected user. For more information, go to [ServiceNow integration with Intune](../../device-management/tools/setup-servicenow.md).
 
 ## View user troubleshooting details
 
@@ -87,7 +87,7 @@ The **Devices** tab provides details for devices, such as OS, OS Version, Intune
 
 ### Groups
 
-The **Groups** tab provides the group membership of all Microsoft Entra groups for a specific managed device. For related information, see [Device group membership report](reports.md#device-group-membership-report-organizational).
+The **Groups** tab provides the group membership of all Microsoft Entra groups for a specific managed device. For related information, see [Device group membership report](../../device-management/reports/overview.md#device-group-membership-report-organizational).
 
 | Column | Description |
 |---|---|
@@ -159,7 +159,7 @@ The **Enrollment restrictions** tab provides the policy type, name, platform, an
 The **Diagnostics** tab provides the device name or application, platform, created date, and diagnostic log.
 
 > [!NOTE]
-> To collect and access diagnostics you must have the Collect diagnostics permission added to your role. For more information, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md).
+> To collect and access diagnostics you must have the Collect diagnostics permission added to your role. For more information, see [Role-based administration control (RBAC) with Intune](../role-based-access-control/overview.md).
 
 | Column | Text |
 |---|---|
@@ -179,8 +179,8 @@ You can access and download user-submitted logs under [**Diagnostics**](#diagnos
 
 ## Next steps
 
-You can learn more about Role-based administration control (RBAC) to define roles in your organizational device, mobile application management, data protection tasks. For more information, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md).
+You can learn more about Role-based administration control (RBAC) to define roles in your organizational device, mobile application management, data protection tasks. For more information, see [Role-based administration control (RBAC) with Intune](../role-based-access-control/overview.md).
 
 Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
-Learn how to create a support ticket a get help when you need it. [Get support](../../it-pro-support/get-support-admin-center.md).
+Learn how to create a support ticket a get help when you need it. [Get support](./get-support-admin-center.md).

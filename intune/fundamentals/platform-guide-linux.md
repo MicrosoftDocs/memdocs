@@ -28,13 +28,13 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 
  Complete the following prerequisites as an Intune administrator to enable your tenant's endpoint management capabilities:
 
-* [Add users](users-add.md) and [groups](groups-add.md)
+* [Add users](tenant-administration/add-users.md) and [groups](tenant-administration/add-groups.md)
 * [Assign licenses to users](./licensing/assign-licenses.md)
 * [Set mobile device management authority](setup-mdm-authority.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
 
-For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control/overview.md) and [Built-in role permissions for Intune](role-based-access-control/ref-built-in-roles.md).
 
 For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see the [Intune setup deployment guide](setup-migration.md).
 

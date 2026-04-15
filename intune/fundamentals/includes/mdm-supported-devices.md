@@ -44,7 +44,7 @@ ms.date: 10/14/2025
 **Additional**
 
 - Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+)
-- Android open source project devices: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
+- Android open source project devices: [See here for the list of supported devices](../aosp-supported-devices.md)
 
 [!INCLUDE [android-supported-os](../../app-management/includes/android-supported-os.md)]
 
@@ -71,14 +71,14 @@ ms.date: 10/14/2025
 
 - Windows Holographic for Business
 
-  For more information about managing devices running Windows Holographic for Business, see [Windows Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
+  For more information about managing devices running Windows Holographic for Business, see [Windows Holographic for Business support](../../solutions/windows-holographic.md).
 
 > [!NOTE]
 > Not all Windows editions support all available operating system features being configured through MDM. For more information, see the [Windows configuration service provider reference docs](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Each CSP highlights which Windows editions are supported.
 
-Customers with Enterprise Management + Security (EMS) can also use [Microsoft Entra ID to register Windows devices](../enrollment/windows-enroll.md).
+Customers with Enterprise Management + Security (EMS) can also use [Microsoft Entra ID to register Windows devices](../../device-enrollment/windows/enable-automatic-mdm.md).
 
-For guidelines on using Windows virtual machines with Intune, see [Using Windows virtual machines](../fundamentals/windows-10-virtual-machines.md).
+For guidelines on using Windows virtual machines with Intune, see [Using Windows virtual machines](../../solutions/windows-virtual-machines.md).
 
 > [!IMPORTANT]
 >
@@ -89,10 +89,10 @@ For guidelines on using Windows virtual machines with Intune, see [Using Windows
 
 - Currently, you can use Intune to configure a single-app kiosk on Windows 11 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
-  For more information on dedicated kiosk devices in Intune, go to [Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md).
+  For more information on dedicated kiosk devices in Intune, go to [Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune](../../device-configuration/templates/configure-kiosk.md).
 
 - Management capabilities to deliver customized Start and Taskbar experiences are currently limited. For more information, see the following articles:
 
   - [Supported configuration service provider (CSP) policies for Windows 11 Start menu](/windows/configuration/supported-csp-start-menu-layout-windows)
   - [Supported configuration service provider (CSP) policies for Windows 11 taskbar](/windows/configuration/supported-csp-taskbar-windows)
-  - [Windows device settings to allow or restrict features using Intune](../configuration/device-restrictions-windows-10.md)
+  - [Windows device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-windows.md)

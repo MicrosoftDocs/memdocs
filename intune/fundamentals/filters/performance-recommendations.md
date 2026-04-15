@@ -12,7 +12,7 @@ ms.collection:
 
 # Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments
 
-When you create a policy, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can apply assignment filters to Intune-enrolled devices and Intune-managed apps. For an overview of assignment filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+When you create a policy, you can use [assignment filters](overview.md) to assign a policy based on rules you create. You can apply assignment filters to Intune-enrolled devices and Intune-managed apps. For an overview of assignment filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](overview.md).
 
 When you create assignment filters, there are some performance recommendations you should consider.
 
@@ -35,7 +35,7 @@ Let's review the grouping, targeting, and filtering features available in Intune
 
 Intune almost exclusively uses Microsoft Entra groups for grouping and targeting. When you select **Groups** in the Microsoft Intune admin center, you're looking at Microsoft Entra groups.
 
-:::image type="content" source="./media/filters-performance-recommendations/admin-center-all-groups.png" alt-text="Screenshot of the Intune admin center, groups, and all groups in Microsoft Intune." lightbox="./media/filters-performance-recommendations/admin-center-all-groups.png":::
+:::image type="content" source="./media/performance-recommendations/admin-center-all-groups.png" alt-text="Screenshot of the Intune admin center, groups, and all groups in Microsoft Intune." lightbox="./media/performance-recommendations/admin-center-all-groups.png":::
 
 Microsoft Entra groups are an important part of Intune because these groups are:
 
@@ -50,11 +50,11 @@ The **All users** and **All devices** groups are also highly scalable and optimi
 
 ### Assignment filters
 
-After the app or policy is assigned to a Microsoft Entra ID or virtual group, you can use [assignment filters](filters.md) to narrow the assignment scope of these apps and policies to specific user or device groups.
+After the app or policy is assigned to a Microsoft Entra ID or virtual group, you can use [assignment filters](overview.md) to narrow the assignment scope of these apps and policies to specific user or device groups.
 
 Your assignment filter filters devices in (or out) of that assignment based on device properties.
 
-:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot of the Intune admin center, the Microsoft Entra groups, virtual groups, and some filter properties in Microsoft Intune."lightbox="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png":::
+:::image type="content" source="./media/performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot of the Intune admin center, the Microsoft Entra groups, virtual groups, and some filter properties in Microsoft Intune."lightbox="./media/performance-recommendations/filters-azuread-virtual-groups.png":::
 
 Filtering is high performance, low latency applicability evaluation at device check-in without any need to precompute group membership.
 
@@ -140,7 +140,7 @@ When creating and managing assignments in Intune, incorporate some of these reco
 
 ## Related articles
 
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [Supported device properties when creating filters](filters-device-properties.md)
-- [Supported workloads when creating filters](filters-supported-workloads.md)
-- [Filter reports and troubleshooting](filters-reports-troubleshoot.md)
+- [Use filters when assigning your apps, policies, and profiles](overview.md)
+- [Supported device properties when creating filters](ref-device-properties.md)
+- [Supported workloads when creating filters](ref-supported-workloads.md)
+- [Filter reports and troubleshooting](troubleshoot.md)

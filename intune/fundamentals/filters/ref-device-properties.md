@@ -12,7 +12,7 @@ ms.collection:
 
 # App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune
 
-[Assignment filters in Intune](filters.md) let you refine app and policy targeting based on device and app properties. This reference article describes the properties, operators, and rule syntax you can use when creating filters for managed devices and managed apps.
+[Assignment filters in Intune](overview.md) let you refine app and policy targeting based on device and app properties. This reference article describes the properties, operators, and rule syntax you can use when creating filters for managed devices and managed apps.
 
 When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). Assignment filters allow you to narrow the scope of your assignments based on specific criteria.
 
@@ -453,7 +453,7 @@ When you create a filter, you can manually create simple or complex rules in the
 - You can use `Null` or `$Null` as a value with the `-Equals` and `-NotEquals` operators.
 - Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
 
-  For more information on the rule syntax editor and the rule builder, go to [Use filters when assigning your apps, policies, and profiles](filters.md)
+  For more information on the rule syntax editor and the rule builder, go to [Use filters when assigning your apps, policies, and profiles](overview.md)
 
 ### Supported operators
 
@@ -540,7 +540,7 @@ When you use the `operatingSystemVersion (Operating System Version)` property, y
 
 ## Related articles
 
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [Supported workloads when creating assignment filters](filters-supported-workloads.md)
-- [Filter performance recommendations](filters-performance-recommendations.md)
-- [Filter reports and troubleshooting](filters-reports-troubleshoot.md)
+- [Use filters when assigning your apps, policies, and profiles](overview.md)
+- [Supported workloads when creating assignment filters](ref-supported-workloads.md)
+- [Filter performance recommendations](performance-recommendations.md)
+- [Filter reports and troubleshooting](troubleshoot.md)

@@ -8,4 +8,4 @@ ms.date: 02/13/2026
 ms.localizationpriority: medium
 ---
 > [!TIP]
-> You can also manage these tasks from the centralized [**Admin tasks**](../admin-tasks.md) pane in the Intune admin center.
+> You can also manage these tasks from the centralized [**Admin tasks**](../device-management/admin-tasks.md) pane in the Intune admin center.

@@ -158,6 +158,6 @@ For more information, go to:
 
 ## Related articles
 
-- [Learn about managing identities in Intune](manage-identities.md)
+- [Learn about managing identities in Intune](tenant-administration/identities.md)
 - [Learn about managing devices in Intune](manage-devices.md)
 - [Frequently asked questions about application management and app protection](../app-management/protection/mam-faq.yml)

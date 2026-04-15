@@ -14,7 +14,7 @@ ms.collection:
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use assignment filters. For example, you can assign policies to Windows devices running a specific OS version.
 
-You can use assignment filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune). For more information, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
+You can use assignment filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune). For more information, go to [Use filters when assigning your apps, policies, and profiles](overview.md).
 
 Managed apps and managed devices are evaluated against these assignment filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Intune admin center.
 Use this article to learn more about the reporting features, and to help troubleshoot assignment filters and conflicts.
@@ -52,7 +52,7 @@ To see this report, use the following steps:
 
 In the following example, you can see this information for the **TestDevice**:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/filter-properties-single-device.png":::
+:::image type="content" source="./media/troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune." lightbox="./media/troubleshoot/filter-properties-single-device.png":::
 
 > [!IMPORTANT]
 > Filter evaluation reports for devices don't show the results of any Microsoft Entra Conditional Access evaluations. To troubleshoot Conditional Access issues, use the  Microsoft Entra sign-in logs. For more information, go to [Microsoft Entra sign-in logs overview](/entra/identity/monitoring-health/concept-sign-ins).
@@ -76,7 +76,7 @@ To see these reports, use the following steps:
 
 In the following example, you can see this information for the **Microsoft Word** store app:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other app filter properties for an app in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/filter-properties-single-app.png":::
+:::image type="content" source="./media/troubleshoot/filter-properties-single-app.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other app filter properties for an app in Microsoft Intune." lightbox="./media/troubleshoot/filter-properties-single-app.png":::
 
 > [!IMPORTANT]
 >
@@ -149,7 +149,7 @@ Intune prevents you from creating multiple assignments to the same Microsoft Ent
 
 An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, go to [conflicts between app intents](../../app-management/deployment/assign-groups.md#how-conflicts-between-app-intents-are-resolved).
 
-:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/device-multiple-groups.png":::
+:::image type="content" source="./media/troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune." lightbox="./media/troubleshoot/device-multiple-groups.png":::
 
 When you use assignment filters, conflict resolution is handled using the following methods:
 
@@ -167,7 +167,7 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is excluded, no filter, and then include when assigning policies in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/assignment-filter-precedence.png":::
+:::image type="content" source="./media/troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is excluded, no filter, and then include when assigning policies in Microsoft Intune." lightbox="./media/troubleshoot/assignment-filter-precedence.png":::
 
 For example:
 
@@ -211,15 +211,15 @@ Apps use special behavior when resolving conflicts between **Required** and **Av
 
 In the following example, there's a conflict between assignments because the same user/device is in both assignments:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Screenshot that shows an example assignment conflict when using filters in Microsoft Intune.":::
+:::image type="content" source="./media/troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Screenshot that shows an example assignment conflict when using filters in Microsoft Intune.":::
 
 The following matrix explains the effect, depending on the conflict scenario:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Screenshot that shows that the conflict effect depends on the setting configured when using filters in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/conflict-matrix.png":::
+:::image type="content" source="./media/troubleshoot/conflict-matrix.png" alt-text="Screenshot that shows that the conflict effect depends on the setting configured when using filters in Microsoft Intune." lightbox="./media/troubleshoot/conflict-matrix.png":::
 
 ## Related content
 
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [Supported device properties when creating filters](filters-device-properties.md)
-- [Supported workloads when creating filters](filters-supported-workloads.md)
-- [Filter performance recommendations](filters-performance-recommendations.md)
+- [Use filters when assigning your apps, policies, and profiles](overview.md)
+- [Supported device properties when creating filters](ref-device-properties.md)
+- [Supported workloads when creating filters](ref-supported-workloads.md)
+- [Filter performance recommendations](performance-recommendations.md)

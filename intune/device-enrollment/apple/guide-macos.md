@@ -201,7 +201,7 @@ For more specific information on this enrollment type, go to [Use Direct Enrollm
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ <br/><br/> If you have a large number of devices, then this method takes some time. |
 | Devices are associated with a single user. | ❌ <br/><br/> Not recommended. Devices that need user affinity should be enrolled using [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised). |
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
-| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [BYOD: Device enrollment](#byod-device-enrollment) (in this article). |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [MAM](../mam-without-enrollment.md) (opens another Microsoft article), or [BYOD: Device enrollment](#byod-device-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -230,7 +230,7 @@ For more information on this enrollment option, and its prerequisites, go to [ma
 
 ## Related articles
 
-- [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md)
+- [MAM](../mam-without-enrollment.md)
 - [Android enrollment guide](../android/guide.md)
 - [iOS/iPadOS enrollment guide](guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)

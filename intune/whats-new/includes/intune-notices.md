@@ -39,14 +39,14 @@ Plan to make the following changes before **January 19, 2026**:
 
 - For tenants with policies targeted to iOS apps: 
   - Notify your users that they need to upgrade to the latest version of the Microsoft apps. You can find the latest version of the apps in the [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
-  - Additionally, you can enable the following [Conditional Launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) settings: 
+  - Additionally, you can enable the following [Conditional Launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) settings: 
     - The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 20.8.0. 
     - The **Min app version** setting to warn users on older Microsoft apps. Note, this setting must be in a policy targeted to only the targeted app. 
 
 - For tenants with policies targeted to Android apps:
 
   - Notify your users that they need to upgrade to the latest version (v5.0.6726.0) of the [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app. 
-  - Additionally, you can enable the following [Conditional Launch](../apps/app-protection-policy-settings-ios.md#conditional-launch) device condition setting:
+  - Additionally, you can enable the following [Conditional Launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) device condition setting:
 
     - The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6726.0.
 
@@ -80,8 +80,8 @@ If you aren't the IT admin who can make this change, notify your networking team
 
 - [Azure Front Door](/azure/frontdoor/origin-security?tabs=app-service-functions&pivots=front-door-classic)
 - [Azure service tags](/azure/virtual-network/service-tags-overview)
-- [Intune network endpoints](../fundamentals/intune-endpoints.md#intune-core-service)
-- [US government network endpoints for Intune](../fundamentals/intune-us-government-endpoints.md)
+- [Intune network endpoints](../../fundamentals/endpoints.md#intune-core-service)
+- [US government network endpoints for Intune](../../fundamentals/endpoints-us-government.md)
 
 If you have a helpdesk, inform them about this upcoming change.
 
@@ -116,7 +116,7 @@ If devices cannot be upgraded in time, consider enrolling eligible devices in th
 
 ### Plan for Change: Intune is moving to support iOS/iPadOS 17 and later
 
-Later in calendar year 2025, we expect iOS 26 and iPadOS 26 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), requires [iOS 17/iPadOS 17 and higher](../fundamentals/supported-devices-browsers.md) shortly after the iOS/iPadOS 26 release.
+Later in calendar year 2025, we expect iOS 26 and iPadOS 26 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), requires [iOS 17/iPadOS 17 and higher](../../fundamentals/ref-supported-platforms.md) shortly after the iOS/iPadOS 26 release.
 
 #### How does this change affect you or your users?
 
@@ -136,7 +136,7 @@ To check which devices support iOS 17 or iPadOS 17 (if applicable), see the foll
 
 Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management (MDM), go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** and use the *Platform* and *Platform version* columns to filter.
 
-To manage the supported OS version in your organization, you can use Microsoft Intune controls for both MDM and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
+To manage the supported OS version in your organization, you can use Microsoft Intune controls for both MDM and APP. For more information, see [Manage operating system versions with Intune](../../device-updates/manage-os-versions.md).
 
 ### Plan for change: Intune is moving to support macOS 14 and higher later this year
 
@@ -170,9 +170,9 @@ Devices running Android versions 12 or below aren't affected by this change.
 
 #### How can you prepare?
 
-Before September 30, 2025, review and update your policies as needed. Ensure users with devices running Android 13 or above are receiving timely security updates. You can use the [app protection status report](../apps/app-protection-policies-monitor.md#view-the-app-protection-status-report) to monitor the date of the last Android Security Patch received by the device and notify users to update as needed. The following admin options are available to help warn or block users:
+Before September 30, 2025, review and update your policies as needed. Ensure users with devices running Android 13 or above are receiving timely security updates. You can use the [app protection status report](../../app-management/protection/monitor-policies.md#view-the-app-protection-status-report) to monitor the date of the last Android Security Patch received by the device and notify users to update as needed. The following admin options are available to help warn or block users:
 
-- For app protection policies, configure the **Min OS version** and **Min patch version** conditional launch settings. For more details, review [Android app protection policy settings in Microsoft Intune | Microsoft Learn](../apps/app-protection-policy-settings-android.md#conditional-launch)
+- For app protection policies, configure the **Min OS version** and **Min patch version** conditional launch settings. For more details, review [Android app protection policy settings in Microsoft Intune | Microsoft Learn](../../app-management/protection/ref-settings-android.md#conditional-launch)
 - For compliance policies, configure the **Minimum security patch level** compliance setting. For more details, review: [Device compliance settings for Android Enterprise in Intune](../../device-security/compliance/ref-android-enterprise-settings.md)
 
 ### Plan for Change: New Intune connector for deploying Microsoft Entra hybrid joined devices using Windows Autopilot
@@ -207,7 +207,7 @@ In an upcoming release, Intune app protection policies have new standalone setti
 If you configured the APP "Send Org data to other apps" setting to a value other than "All apps", then the new "Genmoji", "Writing Tools" and "Screen capture" settings are set to **Block** in your app protection policy to prevent changes to your current user experience.
 
 > [!NOTE]
-> If you configured an app configuration policy (ACP) to allow for screen capture, it overrides the APP setting. We recommend updating the new APP setting to **Allow** and removing the ACP setting. For more information about the screen capture control, review [iOS/iPadOS app protection policy settings | Microsoft Learn](../apps/app-protection-policy-settings-ios.md#data-protection).
+> If you configured an app configuration policy (ACP) to allow for screen capture, it overrides the APP setting. We recommend updating the new APP setting to **Allow** and removing the ACP setting. For more information about the screen capture control, review [iOS/iPadOS app protection policy settings | Microsoft Learn](../../app-management/protection/ref-settings-ios.md#data-protection).
 #### How can you prepare?
 
 Review and update your app protection policies if you'd like more granular controls for blocking or allowing specific AI features. (**Apps** > **Protection** > *select a policy* > **Properties** > **Basics** > **Apps** > **Data protection**)
@@ -232,11 +232,11 @@ We recently released updated versions of the Intune App SDK and the Intune App W
 
 #### How does this change affect you or your users?
 
-For apps that have updated to the latest Intune App SDK or Intune App Wrapping Tool versions screen capture will be blocked if you configured "Send Org data to other apps" to a value other than "All apps". To allow screen capture for your iOS/iPadOS devices, configure the [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) setting "com.microsoft.intune.mam.screencapturecontrol" to **Disabled**.
+For apps that have updated to the latest Intune App SDK or Intune App Wrapping Tool versions screen capture will be blocked if you configured "Send Org data to other apps" to a value other than "All apps". To allow screen capture for your iOS/iPadOS devices, configure the [Managed apps app configuration policy](../../app-management/configuration/configure-managed-apps.md) setting "com.microsoft.intune.mam.screencapturecontrol" to **Disabled**.
 
 #### How can you prepare?
 
-Review your app protection policies and if needed, create a [Managed apps app configuration policy](../apps/app-configuration-policies-managed-app.md) to allow screen capture by configuring the above setting *(Apps > App configuration policies > Create > Managed apps > Step 3 'Settings' under General configuration)*. For more information review, [iOS app protection policy settings – Data protection](../apps/app-protection-policy-settings-ios.md#data-protection) and [App configuration policies - Managed apps](../apps/app-configuration-policies-overview.md#managed-apps).
+Review your app protection policies and if needed, create a [Managed apps app configuration policy](../../app-management/configuration/configure-managed-apps.md) to allow screen capture by configuring the above setting *(Apps > App configuration policies > Create > Managed apps > Step 3 'Settings' under General configuration)*. For more information review, [iOS app protection policy settings – Data protection](../../app-management/protection/ref-settings-ios.md#data-protection) and [App configuration policies - Managed apps](../../app-management/configuration/overview.md#managed-apps).
 
 ### Plan for Change: Implement strong mapping for SCEP and PKCS certificates
 
@@ -312,8 +312,8 @@ While Intune won't prevent enrollment or management of devices on unsupported An
 
 Notify your helpdesk, if applicable, about this updated support statement. The following admin options are available to help warn or block users:
 
-- Configure a [conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch) setting for APP with a minimum OS version requirement to warn and/or block users.
+- Configure a [conditional launch](../../app-management/protection/ref-settings-android.md#conditional-launch) setting for APP with a minimum OS version requirement to warn and/or block users.
 - Use a device compliance policy and set the action for noncompliance to send a message to users before marking them as noncompliant.
-- Set [enrollment restrictions](../fundamentals/manage-os-versions.md) to prevent enrollment on devices running older versions.
+- Set [enrollment restrictions](../../device-updates/manage-os-versions.md) to prevent enrollment on devices running older versions.
 
-For more information, review: [Manage operating system versions with Microsoft Intune](../fundamentals/manage-os-versions.md).
+For more information, review: [Manage operating system versions with Microsoft Intune](../../device-updates/manage-os-versions.md).

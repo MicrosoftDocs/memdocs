@@ -156,6 +156,6 @@ Verify with:
 
 ## Related content
 
-- [Assign Microsoft Intune roles to groups of users for role-based access control](../../fundamentals/assign-role.md)
+- [Assign Microsoft Intune roles to groups of users for role-based access control](../role-based-access-control/assign-role.md)
 - [Set the MDM authority](../../fundamentals/setup-mdm-authority.md)
 

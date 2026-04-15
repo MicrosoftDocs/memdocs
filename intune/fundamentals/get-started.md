@@ -32,9 +32,9 @@ This article provides an overview of the steps to start your Intune deployment.
 
   - [Move to cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](planning-guide.md)
-  - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+  - [Deployment guide: Set up or move to Microsoft Intune](setup-migration.md)
   - [Protection and configuration levels](protection-configuration-levels.md)
-  - [Zero Trust deployment approach](deployment-plan-zero-trust.md)
+  - [Zero Trust deployment approach](zero-trust-deployment.md)
   - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/)
 
 - Determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
@@ -67,7 +67,7 @@ In this step:
 
 This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Microsoft Entra ID, including your domain, your users, and your groups.
 
-For more information, go to [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md).
+For more information, go to [Step 1 - Set up Microsoft Intune](deploy-setup-step-1.md).
 
 ## Step 2 - Add and protect apps
 
@@ -80,7 +80,7 @@ In this step:
 - App protection policies help protect organization data on personal devices.
 - MFA helps protect your organization's data from unauthorized access.
 
-For more information, go to [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md).
+For more information, go to [Step 2 - Add, configure, and protect apps with Intune](deploy-protect-apps-step-2.md).
 
 Every organization has a base set of apps that should be installed on devices. Before users enroll their devices, you can use Intune to assign these apps to their devices. During enrollment, the app policies are automatically deployed. When enrollment completes, the apps install and are ready to use.
 
@@ -102,7 +102,7 @@ In this step:
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Enable Conditional Access** to enforce your compliance policies.
 
-For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
+For more information, go to [Step 3 – Plan for compliance policies](deploy-compliance-step-3.md).
 
 MDM solutions like Intune can set rules that devices should meet, and can report the compliance states of these rules. These rules are called compliance policies. When you combine compliance policies with Conditional Access, you can require devices meet certain security requirements before they can access your organization's data.
 
@@ -123,7 +123,7 @@ In this step:
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
 
-For more information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
+For more information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deploy-configuration-step-4.md).
 
 Your organization can have a base set of device and security features that should be configured or should be blocked. These settings are added to device configuration and endpoint security profiles. Microsoft recommends you assign key security and device configuration policies during enrollment. When enrollment starts, the device configuration profiles are automatically assigned. When enrollment completes, these device and security features are configured.
 
@@ -175,12 +175,12 @@ If you use Configuration Manager, then there are two steps to cloud attach your 
 
 If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
 
-For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).
+For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Set up or move to Microsoft Intune](setup-migration.md).
 
 ## Next steps
 
-- [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md)
-- [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
-- [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
-- [Step 4 - Configure device features and settings to secure devices and access organization resources](deployment-plan-configuration-profile.md)
+- [Step 1 - Set up Microsoft Intune](deploy-setup-step-1.md)
+- [Step 2 - Add, configure, and protect apps with Intune](deploy-protect-apps-step-2.md)
+- [Step 3 – Plan for compliance policies](deploy-compliance-step-3.md)
+- [Step 4 - Configure device features and settings to secure devices and access organization resources](deploy-configuration-step-4.md)
 - [Step 5 - Enrollment guidance: Enroll devices in Microsoft Intune](../device-enrollment/guide.md)

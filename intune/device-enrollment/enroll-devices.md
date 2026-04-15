@@ -26,7 +26,7 @@ This article describes:
 * Post-enrollment monitoring, troubleshooting, and resources.
 
 ## Getting started
-If this is your first time deploying enrollment profiles with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment profile to more pilot groups. For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](intune-planning-guide.md#step-5---create-a-rollout-plan).
+If this is your first time deploying enrollment profiles with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment profile to more pilot groups. For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](../fundamentals/planning-guide.md#step-5---create-a-rollout-plan).
 
 Registration in Microsoft Entra ID is a required step for Intune management. Before a device can enroll in Intune, the user of the device must authenticate and establish a device identity in your org's Microsoft Entra ID. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Identity options include:
    * *Microsoft Entra registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Microsoft Entra ID work account.
@@ -227,8 +227,8 @@ Additional enrollment guides are available throughout the Microsoft Intune docum
 
 This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
 
-1. [Set up Microsoft Intune](deployment-plan-setup.md)
-2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
-3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
-4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+1. [Set up Microsoft Intune](../fundamentals/deploy-setup-step-1.md)
+2. [Add, configure, and protect apps](../fundamentals/deploy-protect-apps-step-2.md)
+3. [Plan for compliance policies](../fundamentals/deploy-compliance-step-3.md)
+4. [Create device configuration profiles](../fundamentals/deploy-configuration-step-4.md)
 5. 🡺 **Enroll devices** (this article)

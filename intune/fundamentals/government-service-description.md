@@ -44,7 +44,7 @@ These government instances are also known as **IL4** and **IL5**, where **IL** r
 
 - There isn't a built-in way to migrate from the commercial service to the government cloud, and vice versa. To migrate, devices need to unenroll from the current tenant, and then re-enroll to the new tenant.
 
-  This approach is similar to unenrolling from another mobile device management (MDM) service and enrolling in Intune. For more information, go to [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md#currently-use-a-third-party-mdm-provider).
+  This approach is similar to unenrolling from another mobile device management (MDM) service and enrolling in Intune. For more information, go to [Deployment guide: Setup or move to Microsoft Intune](setup-migration.md#currently-use-a-third-party-mdm-provider).
 
 - In the government cloud, the Intune service instance is shared with GCC High and DoD tenants. This architecture is slightly different than other services, such as Microsoft 365 and Azure.
 
@@ -75,7 +75,7 @@ The following features are available and supported in Microsoft GCC High and/or 
 | Microsoft Defender for Endpoint security settings management | ✅ <br/><br/> On devices onboarded to Defender but not enrolled in Intune, you can use Intune endpoint security policies to manage Defender security settings. <br/><br/>This support extends to the US Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments. <br/><br/>For more information on this feature, go to [Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md). |
 | Platform support | ✅ <br/><br/> You can use the same operating systems - Android, Android Open Source Project (AOSP), iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](ref-supported-platforms.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
 | Windows Autopilot device preparation | ✅ <br/><br/> Some features are available now, such as user-driven deployments, and some are still [in the planning phase](#in-the-planning-phase). For more information on the recent changes to Windows Autopilot device preparation, go to [Blog: Windows deployment with the next generation of Windows Autopilot](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169). <br/><br/> To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
-| Log Analytics | ✅ <br/><br/> You can send Intune log data to Azure Storage, Event Hubs, or Log Analytics. <br/><br/> For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
+| Log Analytics | ✅ <br/><br/> You can send Intune log data to Azure Storage, Event Hubs, or Log Analytics. <br/><br/> For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](../governance/integrate-azure-monitor.md). |
 | Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | For more information on these plans, go to [Use Intune Suite add-on capabilities](add-ons.md). <br/><br/> The following Plan 2 features support the GCC High and DoD environments: </br>- [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md) </br>- [Firmware-over-the-air update](../device-updates/android/manage-fota.md) </br>- [Specialty devices management](../device-management/specialty-devices.md) </br></br>  The following Microsoft Intune Suite features support the GCC High and DoD environments: </br>- [Endpoint Privilege Management](../epm/overview.md) </br>- [Advanced Analytics](../advanced-analytics/index.md)|
 
 ### In the planning phase
@@ -102,7 +102,7 @@ The following features aren't available and won't be supported for GCC High and 
 | Microsoft Store for Business | ❌ |
 | On-premises Exchange Connector | ❌ |
 | Windows Subscription Activation | ❌ |
-| [TeamViewer connector](./teamviewer-support.md) </br>or TeamViewer feature | ❌ |
+| [TeamViewer connector](../device-management/tools/teamviewer-legacy.md) </br>or TeamViewer feature | ❌ |
 
 ## Next steps
 

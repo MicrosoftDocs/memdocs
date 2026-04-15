@@ -12,7 +12,7 @@ ms.collection:
 
 # List of platforms, policies, and app types supported by assignment filters in Microsoft Intune
 
-[Assignment filters in Intune](filters.md) help you target policies to specific devices and apps based on criteria, like OS version or device properties. You can use filters when assigning apps, compliance policies, device configuration profiles, and app configuration policies to **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune).
+[Assignment filters in Intune](overview.md) help you target policies to specific devices and apps based on criteria, like OS version or device properties. You can use filters when assigning apps, compliance policies, device configuration profiles, and app configuration policies to **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune).
 
 This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support assignment filters. It also lists the workloads that aren't supported.
 
@@ -352,7 +352,7 @@ The following features on managed devices don't support using assignment filters
 - Custom compliance policies for Windows (preview)
 - App protection policies for Android and iOS/iPadOS
 
-  You can use assignment filters on app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).
+  You can use assignment filters on app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](overview.md).
 
 - End user experiences customization policies
 - Enrollment notifications
@@ -371,5 +371,5 @@ The following features on managed devices don't support using assignment filters
 
 ## Related content
 
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [Supported device properties when creating assignment filters](filters-device-properties.md)
+- [Use filters when assigning your apps, policies, and profiles](overview.md)
+- [Supported device properties when creating assignment filters](ref-device-properties.md)

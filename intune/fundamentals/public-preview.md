@@ -30,5 +30,5 @@ When working with features in public preview, these features:
 
 ## Related articles
 
-- Review the [important notices](whats-new.md#notices).
-- See what's [in development](in-development.md).
+- Review the [important notices](../whats-new/index.md#notices).
+- See what's [in development](../whats-new/in-development.md).

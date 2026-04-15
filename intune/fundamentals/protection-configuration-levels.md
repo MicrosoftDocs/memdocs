@@ -74,7 +74,7 @@ Microsoft recommends that you put these configurations in place before you allow
 
 - **Actions for noncompliance** are automatically included with each platform specific policy. These actions are one or more time-ordered actions you configure. They apply to the devices that fail to meet the compliance requirements of your policy. By default, marking a device as noncompliant is an immediate action that comes with each policy.
 
-For more information, see [Level 1 - Minimal device compliance](./deployment-plan-compliance-policies.md#level-1---minimal-device-compliance).
+For more information, see [Level 1 - Minimal device compliance](deploy-compliance-step-3.md#level-1---minimal-device-compliance).
 
 ### Device configuration (level 1)
 
@@ -94,7 +94,7 @@ In this level, include settings that focus on security and resource access. Spec
   - VPN for remote access
   - Wi-Fi for on-premises access
 
-For more information, see [Step 4 - Create device configuration profiles to secure devices and create connections to organization resources](deployment-plan-configuration-profile.md).
+For more information, see [Step 4 - Create device configuration profiles to secure devices and create connections to organization resources](deploy-configuration-step-4.md).
 
 ## Level 2 - Enhanced protection and configuration
 
@@ -153,7 +153,7 @@ At this level, add more granular options to your compliance policies. Many of th
   - Require secure boot to be enabled (Windows)
   - Trusted Platform Module (Windows)
 
-For more information, see [Level 2 - Enhanced device compliance settings](./deployment-plan-compliance-policies.md#level-2---enhanced-device-compliance-settings).
+For more information, see [Level 2 - Enhanced device compliance settings](deploy-compliance-step-3.md#level-2---enhanced-device-compliance-settings).
 
 ### Device configuration (level 2)
 
@@ -164,7 +164,7 @@ In this level, you expand on the settings and features you configured in level 1
 - Configure more granular device features, settings, and behaviors.
 - Determine if any on-premises Group Policy Objects (GPOs) are available in Intune.
 
-For more specific information on device configuration policies at this level, see [Level 2 - Enhanced protection and configuration](deployment-plan-configuration-profile.md#level-2---enhanced-protection-and-configuration).
+For more specific information on device configuration policies at this level, see [Level 2 - Enhanced protection and configuration](deploy-configuration-step-4.md#level-2---enhanced-protection-and-configuration).
 
 ## Level 3 - High protection and configuration
 
@@ -211,7 +211,7 @@ At this level, you can expand on Intune's built-in compliance features through t
 - Use scripts to add custom compliance settings to your policies for settings that aren't available from within the Intune UI. (Windows, Linux)
 - Use compliance policy data with Conditional Access policies to gate access to your organization's resources.
 
-For more information, see [Level 3 - Advanced device compliance configurations](./deployment-plan-compliance-policies.md#level-3---advanced-device-compliance-configurations).
+For more information, see [Level 3 - Advanced device compliance configurations](deploy-compliance-step-3.md#level-3---advanced-device-compliance-configurations).
 
 ### Device configuration (level 3)
 
@@ -238,10 +238,10 @@ This level focuses on enterprise-level services and features, and it can require
 - Configure specialized devices like kiosks and shared devices.
 - Deploy scripts, if needed.
 
-For more specific information on device configuration policies at this level, see [Level 3 - High protection and configuration](deployment-plan-configuration-profile.md#level-3---high-protection-and-configuration).
+For more specific information on device configuration policies at this level, see [Level 3 - High protection and configuration](deploy-configuration-step-4.md#level-3---high-protection-and-configuration).
 
 ## Related articles
 
 For a complete list of all the device configuration profiles you can create, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../device-configuration/overview.md).
 
-For a Zero Trust-focused deployment approach, see [Zero Trust deployment approach with Microsoft Intune](deployment-plan-zero-trust.md). This framework provides a seven-layer progressive deployment strategy aligned with Zero Trust security principles.
+For a Zero Trust-focused deployment approach, see [Zero Trust deployment approach with Microsoft Intune](zero-trust-deployment.md). This framework provides a seven-layer progressive deployment strategy aligned with Zero Trust security principles.

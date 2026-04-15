@@ -55,7 +55,7 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 
 This task list provides an overview. For more specific information, see [Microsoft Intune app management](../app-management/overview.md).
 
-- Be sure your devices are [supported](supported-devices-browsers.md).
+- Be sure your devices are [supported](../fundamentals/ref-supported-platforms.md).
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../app-management/ref-protected-apps.md) or [configure your apps](../app-management/configuration/overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../app-management/protection/ref-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
 

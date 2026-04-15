@@ -42,7 +42,7 @@ Devices owned by your organization should be enrolled in your MDM service, like 
 For more information and guidance, go to:
 
 - [Microsoft Intune planning guide](planning-guide.md)
-- [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
+- [Deployment guide: Setup or move to Microsoft Intune](setup-migration.md)
 
 ## Use your existing devices and use new devices
 
@@ -55,14 +55,14 @@ If your organization is investing in new devices, then we recommend you start wi
 For more information and guidance, go to:
 
 - [Microsoft Intune planning guide](planning-guide.md)
-- [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
+- [Deployment guide: Setup or move to Microsoft Intune](setup-migration.md)
 
 For more specific information by platform, go to:
 
-- [Android platform deployment guide](deployment-guide-platform-android.md)
-- [iOS/iPadOS platform deployment guide](deployment-guide-platform-ios-ipados.md)
+- [Android platform deployment guide](platform-guide-android.md)
+- [iOS/iPadOS platform deployment guide](platform-guide-ios-ipados.md)
 - [Linux enrollment deployment guide](../device-enrollment/guide-linux.md)
-- [macOS platform deployment guide](deployment-guide-platform-macos.md)
+- [macOS platform deployment guide](platform-guide-macos.md)
 - [Windows enrollment deployment guide](../device-enrollment/windows/guide.md)
 
 ## Check the compliance health of your devices
@@ -134,5 +134,5 @@ In Intune, some common security tasks include:
 
 ## Related articles
 
-- [Learn about managing identities in Intune](manage-identities.md)
+- [Learn about managing identities in Intune](tenant-administration/identities.md)
 - [Learn about managing apps in Intune](manage-apps.md)
