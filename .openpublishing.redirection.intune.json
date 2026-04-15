@@ -3182,92 +3182,92 @@
     },
     {
       "source_path": "intune/intune/protect/actions-for-noncompliance.md",
-      "redirect_url": "/intune/intune-service/protect/actions-for-noncompliance",
+      "redirect_url": "/intune/device-security/compliance/configure-noncompliance-actions",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/advanced-threat-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/advanced-threat-protection-configure",
+      "redirect_url": "/intune/device-security/microsoft-defender/configure-integration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/advanced-threat-protection-manage-android.md",
-      "redirect_url": "/intune/intune-service/protect/advanced-threat-protection-manage-android",
+      "redirect_url": "/intune/device-security/microsoft-defender/configure-web-protection-android",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/advanced-threat-protection-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/advanced-threat-protection-monitor",
+      "redirect_url": "/intune/device-security/microsoft-defender/monitor",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/advanced-threat-protection.md",
-      "redirect_url": "/intune/intune-service/protect/advanced-threat-protection",
+      "redirect_url": "/intune/device-security/microsoft-defender/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-microsoft-defender-settings-macos.md",
-      "redirect_url": "/intune/intune-service/protect/antivirus-microsoft-defender-settings-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md",
-      "redirect_url": "/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-microsoft-defender-settings-windows.md",
-      "redirect_url": "/intune/intune-service/protect/antivirus-microsoft-defender-settings-windows",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-security-experience-windows-settings.md",
-      "redirect_url": "/intune/intune-service/protect/antivirus-security-experience-windows-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-security-experience-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md",
-      "redirect_url": "/intune/intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/app-based-conditional-access-intune-create.md",
-      "redirect_url": "/intune/intune-service/protect/app-based-conditional-access-intune-create",
+      "redirect_url": "/intune/device-security/conditional-access-integration/create-app-based-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/app-based-conditional-access-intune.md",
-      "redirect_url": "/intune/intune-service/protect/app-based-conditional-access-intune",
+      "redirect_url": "/intune/device-security/conditional-access-integration/app-based-policies",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/app-modern-authentication-block.md",
-      "redirect_url": "/intune/intune-service/protect/app-modern-authentication-block",
+      "redirect_url": "/intune/device-security/conditional-access-integration/block-no-modern-auth",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/atp-manage-vulnerabilities.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-manage-vulnerabilities",
+      "redirect_url": "/intune/device-security/microsoft-defender/remediate-vulnerabilities",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/better-mobile-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/better-mobile-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-better-mobile",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/better-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/better-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/better-mobile",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/blackberry-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/blackberry-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/blackberry",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/blackberry-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/blackberry-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-blackberry",
       "redirect_document_id": false
     },
     {
@@ -3337,167 +3337,167 @@
     },
     {
       "source_path": "intune/intune/protect/checkpoint-sandblast-mobile-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/checkpoint-sandblast-mobile-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/checkpoint-harmony",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/checkpoint-sandblast-mobile-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/checkpoint-sandblast-mobile-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-checkpoint-harmony",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/client-apps-optional-data.md",
-      "redirect_url": "/intune/intune-service/protect/client-apps-optional-data",
+      "redirect_url": "/intune/privacy/data-handling/optional-diagnostic-data",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-custom-json.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-custom-json",
+      "redirect_url": "/intune/device-security/compliance/create-custom-json",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-custom-script.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-custom-script",
+      "redirect_url": "/intune/device-security/compliance/create-custom-script",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-android-aosp.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-android-aosp",
+      "redirect_url": "/intune/device-security/compliance/ref-android-aosp-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-android-for-work.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-android-for-work",
+      "redirect_url": "/intune/device-security/compliance/ref-android-enterprise-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-android.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-android",
+      "redirect_url": "/intune/device-security/compliance/ref-android-administrator-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-ios.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-ios",
+      "redirect_url": "/intune/device-security/compliance/ref-ios-ipados-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-linux.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-linux",
+      "redirect_url": "/intune/device-security/compliance/ref-linux-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-mac-os.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-mac-os",
+      "redirect_url": "/intune/device-security/compliance/ref-macos-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-windows-8-1.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-windows-8-1",
+      "redirect_url": "/intune/device-security/compliance/ref-windows-8-1-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-create-windows.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-create-windows",
+      "redirect_url": "/intune/device-security/compliance/ref-windows-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-policy-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-policy-monitor",
+      "redirect_url": "/intune/device-security/compliance/monitor-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-use-custom-settings.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-use-custom-settings",
+      "redirect_url": "/intune/device-security/compliance/custom-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/compliance-wsl.md",
-      "redirect_url": "/intune/intune-service/protect/compliance-wsl",
+      "redirect_url": "/intune/device-security/compliance/configure-wsl",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/conditional-access-assign-jamf.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access-assign-jamf",
+      "redirect_url": "/intune/device-security/conditional-access-integration/assign-jamf-policies",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/conditional-access-exchange-create.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access-exchange-create",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/conditional-access-integrate-jamf.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access-integrate-jamf",
+      "redirect_url": "/intune/device-security/conditional-access-integration/setup-jamf-manually",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/conditional-access-intune-common-ways-use.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access-intune-common-ways-use",
+      "redirect_url": "/intune/device-security/conditional-access-integration/scenarios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/conditional-access-jamf-cloud-connector.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access-jamf-cloud-connector",
+      "redirect_url": "/intune/device-security/conditional-access-integration/configure-jamf-cloud-connector",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/conditional-access.md",
-      "redirect_url": "/intune/intune-service/protect/conditional-access",
+      "redirect_url": "/intune/device-security/conditional-access-integration/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/create-compliance-policy.md",
-      "redirect_url": "/intune/intune-service/protect/create-compliance-policy",
+      "redirect_url": "/intune/device-security/compliance/create-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/create-conditional-access-intune.md",
-      "redirect_url": "/intune/intune-service/protect/create-conditional-access-intune",
+      "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/crowdstrike-falcon-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/crowdstrike-falcon-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/crowdstrike-falcon",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/crowdstrike-falcon-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/crowdstrike-falcon-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-crowdstrike-falcon",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-apple-sends-to-intune.md",
-      "redirect_url": "/intune/intune-service/protect/data-apple-sends-to-intune",
+      "redirect_url": "/intune/privacy/data-sharing/ref-apple-to-intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-enable-windows-data.md",
-      "redirect_url": "/intune/intune-service/protect/data-enable-windows-data",
+      "redirect_url": "/intune/privacy/enable-windows-diagnostic-data",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-google-sends-to-intune.md",
-      "redirect_url": "/intune/intune-service/protect/data-google-sends-to-intune",
+      "redirect_url": "/intune/privacy/data-sharing/ref-google-to-intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-intune-sends-to-apple.md",
-      "redirect_url": "/intune/intune-service/protect/data-intune-sends-to-apple",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-intune-sends-to-google.md",
-      "redirect_url": "/intune/intune-service/protect/data-intune-sends-to-google",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-google",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-intune-sends-to-zebra.md",
-      "redirect_url": "/intune/intune-service/protect/data-intune-sends-to-zebra",
+      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-zebra",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/data-jamf-sends-to-intune.md",
-      "redirect_url": "/intune/intune-service/protect/data-jamf-sends-to-intune",
+      "redirect_url": "/intune/privacy/data-sharing/ref-jamf-to-intune",
       "redirect_document_id": false
     },
     {
@@ -3512,362 +3512,362 @@
     },
     {
       "source_path": "intune/intune/protect/device-compliance-get-started.md",
-      "redirect_url": "/intune/intune-service/protect/device-compliance-get-started",
+      "redirect_url": "/intune/device-security/compliance/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/device-compliance-partners.md",
-      "redirect_url": "/intune/intune-service/protect/device-compliance-partners",
+      "redirect_url": "/intune/device-security/compliance/third-party-partners",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/device-protect.md",
-      "redirect_url": "/intune/intune-service/protect/device-protect",
+      "redirect_url": "/intune/device-security/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/encrypt-devices-filevault.md",
-      "redirect_url": "/intune/intune-service/protect/encrypt-devices-filevault",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-filevault-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/encrypt-devices.md",
-      "redirect_url": "/intune/intune-service/protect/encrypt-devices",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/encryption-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/encryption-monitor",
+      "redirect_url": "/intune/device-management/monitor-encryption",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-protection-configure",
+      "redirect_url": "/intune/device-configuration/endpoint-security/configure-endpoint-protection",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-protection-macos.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-protection-macos",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-protection-windows-10.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-protection-windows-10",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-settings-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-account-protection-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-account-protection-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/account-protection",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-account-protection-profile-settings.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-account-protection-profile-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-account-protection-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-antivirus-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-antivirus-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/antivirus",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-app-control-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-app-control-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-app-control",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-asr-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-asr-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/attack-surface-reduction",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-asr-profile-settings.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-asr-profile-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-attack-surface-reduction-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-disk-encryption-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-disk-encryption-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/disk-encryption",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-disk-encryption-profile-settings.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-disk-encryption-profile-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-disk-encryption-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-edr-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-edr-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/deploy-edr",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-edr-profile-settings.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-edr-profile-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-edr-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-firewall-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/firewall",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings-tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-firewall-profile-settings.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-firewall-profile-settings",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-manage-devices.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-manage-devices",
+      "redirect_url": "/intune/device-management/manage-endpoint-security-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security-policy.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security-policy",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-policies",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/endpoint-security.md",
-      "redirect_url": "/intune/intune-service/protect/endpoint-security",
+      "redirect_url": "/intune/device-security/endpoint-security-policies",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-data-collection.md",
-      "redirect_url": "/intune/intune-service/protect/epm-data-collection",
+      "redirect_url": "/intune/epm/ref-data-collection",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-deployment-considerations-ki.md",
-      "redirect_url": "/intune/intune-service/protect/epm-deployment-considerations-ki",
+      "redirect_url": "/intune/epm/deployment-planning",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-guidance-for-creating-rules.md",
-      "redirect_url": "/intune/intune-service/protect/epm-guidance-for-creating-rules",
+      "redirect_url": "/intune/epm/create-elevation-rules",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-overview.md",
-      "redirect_url": "/intune/intune-service/protect/epm-overview",
+      "redirect_url": "/intune/epm/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-policies.md",
-      "redirect_url": "/intune/intune-service/protect/epm-policies",
+      "redirect_url": "/intune/epm/deploy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-reports.md",
-      "redirect_url": "/intune/intune-service/protect/epm-reports",
+      "redirect_url": "/intune/epm/monitor-reports",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/epm-support-approved.md",
-      "redirect_url": "/intune/intune-service/protect/epm-support-approved",
+      "redirect_url": "/intune/epm/manage-support-approvals",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/exchange-connector-install.md",
-      "redirect_url": "/intune/intune-service/protect/exchange-connector-install",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/exchange-online-protect.md",
-      "redirect_url": "/intune/intune-service/protect/exchange-online-protect",
+      "redirect_url": "/intune/device-security/conditional-access-integration/manage-exchange-access",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/fota-updates-android.md",
-      "redirect_url": "/intune/intune-service/protect/fota-updates-android",
+      "redirect_url": "/intune/device-updates/android/manage-fota",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/identity-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/identity-protection-configure",
+      "redirect_url": "/intune/device-security/identity-protection/deploy-group-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/identity-protection-windows-settings.md",
-      "redirect_url": "/intune/intune-service/protect/identity-protection-windows-settings",
+      "redirect_url": "/intune/device-security/identity-protection/ref-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/jamf-managed-device-compliance-with-entra-id.md",
-      "redirect_url": "/intune/intune-service/protect/jamf-managed-device-compliance-with-entra-id",
+      "redirect_url": "/intune/device-security/compliance/jamf-entra-id",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/jamf-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/jamf-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-jamf",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/jamf-mtd-connector.md",
-      "redirect_url": "/intune/intune-service/protect/jamf-mtd-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/jamf",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/lookout-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/lookout-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/lookout",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/lookout-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/lookout-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-lookout",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/managed-software-updates-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/apple",
+      "redirect_url": "/intune/device-updates/apple/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mde-security-integration.md",
-      "redirect_url": "/intune/intune-service/protect/mde-security-integration",
+      "redirect_url": "/intune/device-security/microsoft-defender/security-settings-management",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-audit-logs.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-audit-logs",
+      "redirect_url": "/intune/cloud-pki/audit-logs",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-configure-byoca.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-configure-byoca",
+      "redirect_url": "/intune/cloud-pki/configure-byoca",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-configure-ca.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-configure-ca",
+      "redirect_url": "/intune/cloud-pki/configure-ca",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-delete.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-delete",
+      "redirect_url": "/intune/cloud-pki/delete-ca",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-deployment.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-deployment",
+      "redirect_url": "/intune/cloud-pki/deployment-models",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-fundamentals.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-fundamentals",
+      "redirect_url": "/intune/cloud-pki/fundamentals",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-monitor",
+      "redirect_url": "/intune/cloud-pki/monitor-certificates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-cloud-pki-overview.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-cloud-pki-overview",
+      "redirect_url": "/intune/cloud-pki",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-conditional-access.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-conditional-access",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/conditional-access",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-configure.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-configure",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/install",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-mam-android.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-mam-android",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/mam-android",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-mam-ios.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-mam-ios",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/mam-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-mam.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-mam",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/mam",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-monitor",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/monitor",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-overview.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-overview",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-prerequisites.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-prerequisites",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/prerequisites",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-reference.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-reference",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/ref-file-commands",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/microsoft-tunnel-upgrade.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-tunnel-upgrade",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/upgrade",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mobile-threat-defense.md",
-      "redirect_url": "/intune/intune-service/protect/mobile-threat-defense",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mtd-add-apps-unenrolled-devices.md",
-      "redirect_url": "/intune/intune-service/protect/mtd-add-apps-unenrolled-devices",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/add-apps-unenrolled-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mtd-app-protection-policy.md",
-      "redirect_url": "/intune/intune-service/protect/mtd-app-protection-policy",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/create-app-protection-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mtd-apps-ios-app-configuration-policy-add-assign.md",
-      "redirect_url": "/intune/intune-service/protect/mtd-apps-ios-app-configuration-policy-add-assign",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/assign-apps",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mtd-connector-enable.md",
-      "redirect_url": "/intune/intune-service/protect/mtd-connector-enable",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/enable-connector",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mtd-device-compliance-policy-create.md",
-      "redirect_url": "/intune/intune-service/protect/mtd-device-compliance-policy-create",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/create-compliance-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/mtd-enable-unenrolled-devices.md",
-      "redirect_url": "/intune/intune-service/protect/mtd-enable-unenrolled-devices",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/enable-unenrolled-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/network-access-control-integrate.md",
-      "redirect_url": "/intune/intune-service/protect/network-access-control-integrate",
+      "redirect_url": "/intune/device-security/integrate-network-access-control",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/pradeo-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/pradeo-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/pradeo",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/pradeo-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/pradeo-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-pradeo",
       "redirect_document_id": false
     },
     {
@@ -3882,12 +3882,12 @@
     },
     {
       "source_path": "intune/intune/protect/privacy-data-secure-share.md",
-      "redirect_url": "/intune/intune-service/protect/privacy-data-secure-share",
+      "redirect_url": "/intune/privacy/data-sharing",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/privacy-data-store-process.md",
-      "redirect_url": "/intune/intune-service/protect/privacy-data-store-process",
+      "redirect_url": "/intune/privacy/data-handling/data-storage-processing",
       "redirect_document_id": false
     },
     {
@@ -3897,17 +3897,17 @@
     },
     {
       "source_path": "intune/intune/protect/privacy-personal-data.md",
-      "redirect_url": "/intune/intune-service/protect/privacy-personal-data",
+      "redirect_url": "/intune/privacy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/quickstart-send-notification.md",
-      "redirect_url": "/intune/intune-service/protect/quickstart-send-notification",
+      "redirect_url": "/intune/device-security/compliance/quickstart-noncompliance-notification",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/quickstart-set-password-length-android.md",
-      "redirect_url": "/intune/intune-service/protect/quickstart-set-password-length-android",
+      "redirect_url": "/intune/device-security/compliance/quickstart-password-compliance-android",
       "redirect_document_id": false
     },
     {
@@ -3917,7 +3917,7 @@
     },
     {
       "source_path": "intune/intune/protect/reusable-settings-groups.md",
-      "redirect_url": "/intune/intune-service/protect/reusable-settings-groups",
+      "redirect_url": "/intune/device-security/reusable-settings-groups",
       "redirect_document_id": false
     },
     {
@@ -3927,157 +3927,157 @@
     },
     {
       "source_path": "intune/intune/protect/security-baseline-hololens2-advanced.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-hololens2-advanced",
+      "redirect_url": "/intune/device-security/security-baselines/ref-hololens2-advanced-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-hololens2-standard.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-hololens2-standard",
+      "redirect_url": "/intune/device-security/security-baselines/ref-hololens2-standard-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-defender.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-defender",
+      "redirect_url": "/intune/device-security/security-baselines/ref-defender-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-edge.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-edge",
+      "redirect_url": "/intune/device-security/security-baselines/ref-edge-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-mdm-all.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-mdm-all",
+      "redirect_url": "/intune/device-security/security-baselines/ref-windows-mdm-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-settings-windows-365.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-settings-windows-365",
+      "redirect_url": "/intune/device-security/security-baselines/ref-windows-365-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-v2-edge-settings.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-v2-edge-settings",
+      "redirect_url": "/intune/device-security/security-baselines/ref-v2-edge-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baseline-v2-office-settings.md",
-      "redirect_url": "/intune/intune-service/protect/security-baseline-v2-office-settings",
+      "redirect_url": "/intune/device-security/security-baselines/ref-v2-office-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baselines-configure.md",
-      "redirect_url": "/intune/intune-service/protect/security-baselines-configure",
+      "redirect_url": "/intune/device-security/security-baselines/configure-baselines",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baselines-monitor.md",
-      "redirect_url": "/intune/intune-service/protect/security-baselines-monitor",
+      "redirect_url": "/intune/device-security/security-baselines/monitor-baselines",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/security-baselines.md",
-      "redirect_url": "/intune/intune-service/protect/security-baselines",
+      "redirect_url": "/intune/device-security/security-baselines/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/sentinelone-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/sentinelone-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/sentinelone",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/sentinelone-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/sentinelone-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-sentinelone",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/skycure-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/skycure-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/symantec",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/skycure-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/skycure-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-symantec",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-update-agent-error-codes.md",
-      "redirect_url": "/intune/intune-service/protect/software-update-agent-error-codes",
+      "redirect_url": "/intune/device-updates/windows/ref-agent-error-codes",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-android.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-guide-android",
+      "redirect_url": "/intune/device-updates/android/planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-ios-ipados.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-ios-ipados",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-ios-ipados",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-macos",
+      "redirect_url": "/intune/device-updates/apple/planning-guide-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-personal-byod.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-guide-personal-byod",
+      "redirect_url": "/intune/device-updates/byod-planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-ios.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-ios",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-macos.md",
-      "redirect_url": "/intune/intune-service/protect/updates/software-updates-macos",
+      "redirect_url": "/intune/device-updates/apple/deprecated-mdm-policies-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/sophos-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/sophos-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-sophos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/sophos-mtd-connector.md",
-      "redirect_url": "/intune/intune-service/protect/sophos-mtd-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/sophos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/tenant-attach-intune.md",
-      "redirect_url": "/intune/intune-service/protect/tenant-attach-intune",
+      "redirect_url": "/intune/fundamentals/tenant-attach",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/trellix-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/trellix-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/trellix",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/trellix-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/trellix-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-trellix",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/trend-micro-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/trend-micro-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/trend-micro",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/trend-micro-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/trend-micro-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-trend-micro",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/tutorial-protect-email-on-enrolled-devices.md",
-      "redirect_url": "/intune/intune-service/protect/tutorial-protect-email-on-enrolled-devices",
+      "redirect_url": "/intune/solutions/tutorials/protect-email-enrolled-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/tutorial-protect-email-on-unmanaged-devices.md",
-      "redirect_url": "/intune/intune-service/protect/tutorial-protect-email-on-unmanaged-devices",
+      "redirect_url": "/intune/solutions/tutorials/protect-email-unmanaged-devices",
       "redirect_document_id": false
     },
     {
@@ -4087,7 +4087,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-feature-updates.md",
-      "redirect_url": "/intune/intune-service/protect/windows-10-feature-updates",
+      "redirect_url": "/intune/device-updates/windows/manage-feature-updates",
       "redirect_document_id": false
     },
     {
@@ -4097,7 +4097,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-driver-updates-overview.md",
-      "redirect_url": "/intune/intune-service/protect/windows-driver-updates-overview",
+      "redirect_url": "/intune/device-updates/windows/manage-driver-updates",
       "redirect_document_id": false
     },
     {
@@ -4107,7 +4107,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-hello.md",
-      "redirect_url": "/intune/intune-service/protect/windows-hello",
+      "redirect_url": "/intune/device-security/identity-protection/configure-tenant-wide-policy",
       "redirect_document_id": false
     },
     {
@@ -4117,57 +4117,57 @@
     },
     {
       "source_path": "intune/intune/protect/windows-laps-overview.md",
-      "redirect_url": "/intune/intune-service/protect/windows-laps-overview",
+      "redirect_url": "/intune/device-security/laps/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-laps-policy.md",
-      "redirect_url": "/intune/intune-service/protect/windows-laps-policy",
+      "redirect_url": "/intune/device-security/laps/deploy-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-laps-reports.md",
-      "redirect_url": "/intune/intune-service/protect/windows-laps-reports",
+      "redirect_url": "/intune/device-security/laps/monitor",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-update-compatibility-reports.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-compatibility-reports",
+      "redirect_url": "/intune/device-updates/windows/monitor-compatibility",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-update-for-business-configure.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-for-business-configure",
+      "redirect_url": "/intune/device-updates/windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-update-reports.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-reports",
+      "redirect_url": "/intune/device-updates/windows/reports",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-update-rollout-options.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-rollout-options",
+      "redirect_url": "/intune/device-updates/windows/configure-rollout-options",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/windows-update-settings.md",
-      "redirect_url": "/intune/intune-service/protect/windows-update-settings",
+      "redirect_url": "/intune/device-updates/windows/ref-update-ring-settings",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/zebra-lifeguard-ota-integration.md",
-      "redirect_url": "/intune/intune-service/protect/zebra-lifeguard-ota-integration",
+      "redirect_url": "/intune/device-updates/android/setup-zebra-lifeguard",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/zimperium-mobile-threat-defense-connector.md",
-      "redirect_url": "/intune/intune-service/protect/zimperium-mobile-threat-defense-connector",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/zimperium",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/zimperium-mtd-connector-integration.md",
-      "redirect_url": "/intune/intune-service/protect/zimperium-mtd-connector-integration",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-zimperium",
       "redirect_document_id": false
     },
     {
@@ -4857,7 +4857,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/atp-manage-vulnerabilities.md",
-      "redirect_url": "/intune/intune-service/protect/microsoft-defender-manage-vulnerabilities",
+      "redirect_url": "/intune/device-security/microsoft-defender/remediate-vulnerabilities",
       "redirect_document_id": false
     },
     {
@@ -5529,6 +5529,791 @@
       "source_path": "intune/app-management/protection/ref-settings-log.md",
       "redirect_url": "/intune/app-management/protection/troubleshoot-protection-logs",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-defender-deploy-android.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/deploy-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-monitor.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/sophos-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-sophos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/ios-ipados-device-compliance-security-configurations.md",
+      "redirect_url": "/intune/device-security/security-configurations/ios-ipados-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/app-based-conditional-access-intune-create.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/create-app-based-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/device-compliance-partners.md",
+      "redirect_url": "/intune/device-security/compliance/third-party-partners",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/blackberry-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-blackberry",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/exchange-online-protect.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/manage-exchange-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/antivirus-security-experience-windows-settings.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-security-experience-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-transition-administrator-to-standard-user.md",
+      "redirect_url": "/intune/epm/tutorial-admin-to-standard-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-edr-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/deploy-edr",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/tutorial-protect-email-on-unmanaged-devices.md",
+      "redirect_url": "/intune/solutions/tutorials/protect-email-unmanaged-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-manage-devices.md",
+      "redirect_url": "/intune/device-management/manage-endpoint-security-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-firewall-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/firewall",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-android-aosp.md",
+      "redirect_url": "/intune/device-security/compliance/ref-android-aosp-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/pradeo-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/pradeo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/trellix-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-trellix",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-overview.md",
+      "redirect_url": "/intune/epm/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/sentinelone-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-sentinelone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/better-mobile-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-better-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/jamf-mtd-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/jamf",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/conditional-access-intune-common-ways-use.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mtd-add-apps-unenrolled-devices.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/add-apps-unenrolled-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-hololens2-standard.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-hololens2-standard-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-defender-integrate.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/configure-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-settings-mdm-all.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-windows-mdm-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/skycure-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-symantec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baselines-configure.md",
+      "redirect_url": "/intune/device-security/security-baselines/configure-baselines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mtd-enable-unenrolled-devices.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/enable-unenrolled-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-mam.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/mam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-settings-edge.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-edge-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-asr-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/attack-surface-reduction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/better-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/better-mobile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-protection-macos.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/quickstart-send-notification.md",
+      "redirect_url": "/intune/device-security/compliance/quickstart-noncompliance-notification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/zero-trust-configure-security.md",
+      "redirect_url": "/intune/solutions/zero-trust/configure-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baselines-monitor.md",
+      "redirect_url": "/intune/device-security/security-baselines/monitor-baselines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-hello.md",
+      "redirect_url": "/intune/device-security/identity-protection/configure-tenant-wide-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/lookout-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/lookout",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-mam-ios.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/mam-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/antivirus-microsoft-defender-settings-windows.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-protection-configure.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/configure-endpoint-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-firewall-profile-settings.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/blackberry-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/blackberry",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-laps-policy.md",
+      "redirect_url": "/intune/device-security/laps/deploy-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-frequently-asked-questions.md",
+      "redirect_url": "/intune/epm/frequently-asked-questions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-settings-windows-365.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-windows-365-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-disk-encryption-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/disk-encryption",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/iverify-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-iverify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mde-security-integration.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/security-settings-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/ios-ipados-supervised-device-security-configurations.md",
+      "redirect_url": "/intune/device-security/security-configurations/ios-ipados-supervised",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/zimperium-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-zimperium",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-antivirus-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/antivirus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/zero-trust-secure-devices.md",
+      "redirect_url": "/intune/solutions/zero-trust/configure-device-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-windows-8-1.md",
+      "redirect_url": "/intune/device-security/compliance/ref-windows-8-1-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-mam-android.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/mam-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-account-protection-profile-settings.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-account-protection-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-laps-overview.md",
+      "redirect_url": "/intune/device-security/laps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-disk-encryption-profile-settings.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-disk-encryption-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/tenant-attach-intune.md",
+      "redirect_url": "/intune/fundamentals/tenant-attach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/lookout-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-lookout",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/create-compliance-policy.md",
+      "redirect_url": "/intune/device-security/compliance/create-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-defender-manage-vulnerabilities.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/remediate-vulnerabilities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/jamf-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-jamf",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-custom-json.md",
+      "redirect_url": "/intune/device-security/compliance/create-custom-json",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-v2-edge-settings.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-v2-edge-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-mac-os.md",
+      "redirect_url": "/intune/device-security/compliance/ref-macos-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-overview.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baselines.md",
+      "redirect_url": "/intune/device-security/security-baselines/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/crowdstrike-falcon-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/crowdstrike-falcon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/zero-trust-secure-data.md",
+      "redirect_url": "/intune/solutions/zero-trust/configure-data-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/jamf-managed-device-compliance-with-entra-id.md",
+      "redirect_url": "/intune/device-security/compliance/jamf-entra-id",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-monitor.md",
+      "redirect_url": "/intune/device-security/compliance/monitor-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/conditional-access-integrate-jamf.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/setup-jamf-manually",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-firewall-settings-tenant-attach",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/reusable-settings-groups.md",
+      "redirect_url": "/intune/device-security/reusable-settings-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-laps-reports.md",
+      "redirect_url": "/intune/device-security/laps/monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-elevation-settings.md",
+      "redirect_url": "/intune/epm/manage-elevation-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-prerequisites.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-account-protection-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/account-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/skycure-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/symantec",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/conditional-access-assign-jamf.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/assign-jamf-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-deploy.md",
+      "redirect_url": "/intune/epm/deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/quickstart-set-password-length-android.md",
+      "redirect_url": "/intune/device-security/compliance/quickstart-password-compliance-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/encryption-monitor.md",
+      "redirect_url": "/intune/device-management/monitor-encryption",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-elevation-rules.md",
+      "redirect_url": "/intune/epm/create-elevation-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/iverify-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/iverify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/actions-for-noncompliance.md",
+      "redirect_url": "/intune/device-security/compliance/configure-noncompliance-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-configure.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/identity-protection-configure.md",
+      "redirect_url": "/intune/device-security/identity-protection/deploy-group-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mtd-device-compliance-policy-create.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/create-compliance-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mtd-apps-ios-app-configuration-policy-add-assign.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/assign-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/trend-micro-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-trend-micro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/trellix-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/trellix",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-conditional-access.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/pradeo-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-pradeo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-reports.md",
+      "redirect_url": "/intune/epm/monitor-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-edr-profile-settings.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-edr-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/network-access-control-integrate.md",
+      "redirect_url": "/intune/device-security/integrate-network-access-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-use-custom-settings.md",
+      "redirect_url": "/intune/device-security/compliance/custom-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/antivirus-microsoft-defender-settings-macos.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-antivirus-defender-settings-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-defender-configure-android.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/configure-web-protection-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security.md",
+      "redirect_url": "/intune/device-security/endpoint-security-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/encrypt-devices.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/device-protect.md",
+      "redirect_url": "/intune/device-security/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/sophos-mtd-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/sophos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-asr-profile-settings.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-attack-surface-reduction-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-ios.md",
+      "redirect_url": "/intune/device-security/compliance/ref-ios-ipados-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/android-personally-owned-security-configurations.md",
+      "redirect_url": "/intune/device-security/security-configurations/android-personally-owned",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-windows.md",
+      "redirect_url": "/intune/device-security/compliance/ref-windows-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/checkpoint-sandblast-mobile-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/checkpoint-harmony",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/identity-protection-windows-settings.md",
+      "redirect_url": "/intune/device-security/identity-protection/ref-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/trend-micro-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/trend-micro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-plan.md",
+      "redirect_url": "/intune/epm/deployment-planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mobile-threat-defense.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mtd-connector-enable.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/enable-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/conditional-access-jamf-cloud-connector.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/configure-jamf-cloud-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-wsl.md",
+      "redirect_url": "/intune/device-security/compliance/configure-wsl",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-android.md",
+      "redirect_url": "/intune/device-security/compliance/ref-android-administrator-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/sentinelone-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/sentinelone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-defender-with-intune.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/app-based-conditional-access-intune.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/app-based-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/crowdstrike-falcon-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-crowdstrike-falcon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/mtd-app-protection-policy.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/create-app-protection-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/ios-ipados-personal-device-security-configurations.md",
+      "redirect_url": "/intune/device-security/security-configurations/ios-ipados-personal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-reference.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/ref-file-commands",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-security-app-control-policy.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/manage-app-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-v2-office-settings.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-v2-office-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-settings-defender.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-defender-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/conditional-access.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-data-collection.md",
+      "redirect_url": "/intune/epm/ref-data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-support-approved.md",
+      "redirect_url": "/intune/epm/manage-support-approvals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-tunnel-upgrade.md",
+      "redirect_url": "/intune/device-security/microsoft-tunnel/upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/endpoint-protection-windows-10.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/ref-endpoint-protection-settings-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/tutorial-protect-email-on-enrolled-devices.md",
+      "redirect_url": "/intune/solutions/tutorials/protect-email-enrolled-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-custom-script.md",
+      "redirect_url": "/intune/device-security/compliance/create-custom-script",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/device-compliance-get-started.md",
+      "redirect_url": "/intune/device-security/compliance/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-linux.md",
+      "redirect_url": "/intune/device-security/compliance/ref-linux-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/android-fully-managed-security-configurations.md",
+      "redirect_url": "/intune/device-security/security-configurations/android-fully-managed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/compliance-policy-create-android-for-work.md",
+      "redirect_url": "/intune/device-security/compliance/ref-android-enterprise-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/security-baseline-hololens2-advanced.md",
+      "redirect_url": "/intune/device-security/security-baselines/ref-hololens2-advanced-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/app-modern-authentication-block.md",
+      "redirect_url": "/intune/device-security/conditional-access-integration/block-no-modern-auth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-defender-monitor.md",
+      "redirect_url": "/intune/device-security/microsoft-defender/monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/zimperium-mobile-threat-defense-connector.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/zimperium",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/encrypt-devices-filevault.md",
+      "redirect_url": "/intune/device-configuration/endpoint-security/encrypt-filevault-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-known-issues.md",
+      "redirect_url": "/intune/epm/troubleshoot-known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/zero-trust-secure-tenant.md",
+      "redirect_url": "/intune/solutions/zero-trust/configure-tenant-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/checkpoint-sandblast-mobile-mtd-connector-integration.md",
+      "redirect_url": "/intune/device-security/mobile-threat-defense/setup-checkpoint-harmony",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-enrollment/apple/setup-laps-macos.md",
+      "redirect_url": "/intune/device-security/laps/setup-laps-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/solutions/tutorials/tutorial-protect-email-enrolled-devices.md",
+      "redirect_url": "/intune/solutions/tutorials/protect-email-enrolled-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/solutions/tutorials/tutorial-protect-email-unmanaged-devices.md",
+      "redirect_url": "/intune/solutions/tutorials/protect-email-unmanaged-devices",
+      "redirect_document_id": false
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/intune/device-security/endpoint-security-policies",
+      "source_path": "intune/device-configuration/endpoint-security/overview.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/intune/device-management/manage-endpoint-security-devices",
+      "source_path": "intune/device-configuration/endpoint-security/manage-devices.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/intune/device-management/monitor-encryption",
+      "source_path": "intune/device-configuration/endpoint-security/monitor-encryption.md"
     }
   ]
 }

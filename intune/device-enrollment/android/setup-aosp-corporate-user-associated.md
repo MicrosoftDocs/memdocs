@@ -211,7 +211,7 @@ The following are known limitations when working with AOSP devices in Intune:
 
 * [Create an Android (AOSP) device configuration policy](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) to restrict settings on devices.
 
-* [Create an Android (AOSP) device compliance policy](../../intune-service/protect/compliance-policy-create-android-aosp.md).
+* [Create an Android (AOSP) device compliance policy](../../device-security/compliance/ref-android-aosp-settings.md).
 
 * Create a policy that requires users to accept your [terms and conditions](../create-terms-and-conditions.md) before enrollment.
 

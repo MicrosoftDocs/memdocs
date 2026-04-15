@@ -86,7 +86,7 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     Give users specific unenroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime, dissatisfaction, and helpdesk calls.
 
-4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [Conditional Access](../protect/conditional-access.md)** to block devices until they enroll in Intune.
+4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [Conditional Access](../../device-security/conditional-access-integration/overview.md)** to block devices until they enroll in Intune.
 
     For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 

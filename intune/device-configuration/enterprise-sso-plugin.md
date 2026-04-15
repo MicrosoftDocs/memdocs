@@ -2,7 +2,7 @@
 title: Single sign-on (SSO) for iOS/iPadOS and macOS
 description: Overview of Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers. The Enterprise SSO plug-in is available on iOS/iPadOS and macOS devices.
 ms.date: 02/10/2026
-ms.topic: how-to
+ms.topic: overview
 ms.reviewer: beflamm, arnab
 ms.collection:
 - M365-identity-device-management

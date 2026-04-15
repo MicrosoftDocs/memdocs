@@ -565,7 +565,7 @@ For information on troubleshooting app issues on individual devices, see [Troubl
 
 ### Security baseline
 
-You can monitor the installation status of your deployed security baseline. For more information, see [Monitor security baselines and profiles in Intune](../protect/security-baselines-monitor.md).
+You can monitor the installation status of your deployed security baseline. For more information, see [Monitor security baselines and profiles in Intune](../../device-security/security-baselines/monitor-baselines.md).
 
 ### Disk encryption profile
 
@@ -596,7 +596,7 @@ You can monitor the status of the compliance policy:
 
 The device compliance monitoring view has detailed information on the assignment status and assignment failures of your compliance policies. It also has views to quickly find noncompliant devices and take action.
 
-For more in-depth information on monitoring compliance policies in Intune, see [Monitor results of your Intune Device compliance policies](../protect/compliance-policy-monitor.md).
+For more in-depth information on monitoring compliance policies in Intune, see [Monitor results of your Intune Device compliance policies](../../device-security/compliance/monitor-policy.md).
 
 ## Related content
 

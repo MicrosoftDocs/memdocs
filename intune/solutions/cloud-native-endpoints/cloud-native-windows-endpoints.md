@@ -330,7 +330,7 @@ For more information on Windows Defender configuration, including Microsoft Defe
 
 ### Microsoft Defender Firewall
 
-Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-firewall-policy.md).
+Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../device-configuration/endpoint-security/firewall.md).
 
 Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running Windows.
 
@@ -343,12 +343,12 @@ Using the *domain* network profile allows you to separate firewall rules based o
 
 Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker.
 
-- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../intune-service/protect/encrypt-devices.md).
+- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
-When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../intune-service/protect/encrypt-devices.md) for more settings.
+When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) for more settings.
 
 **BitLocker**:
 
@@ -434,11 +434,11 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows** > **Local admin password solution (Windows LAPS)** > **Create**.
 
-    For more information, go to [Create a LAPS policy in Intune](../../intune-service/protect/windows-laps-policy.md#create-a-laps-policy).
+    For more information, go to [Create a LAPS policy in Intune](../../device-security/laps/deploy-policy.md#create-a-laps-policy).
 
 ### Security Baselines
 
-You can use security baselines to apply a set of configurations that are known to increase the security of a Windows endpoint. For more information about security baselines, go to [Windows MDM security baseline settings for Intune](../../intune-service/protect/security-baseline-settings-mdm-all.md).
+You can use security baselines to apply a set of configurations that are known to increase the security of a Windows endpoint. For more information about security baselines, go to [Windows MDM security baseline settings for Intune](../../device-security/security-baselines/ref-windows-mdm-settings.md).
 
 Baselines can be applied using the suggested settings and customized as per your requirements. Some settings within baselines might cause unexpected results or be incompatible with apps and services running on your Windows endpoints. As a result, baselines should be tested in isolation. Only apply the baseline to a selective group of test endpoints without any other configuration profiles or settings.
 
@@ -694,10 +694,10 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
-- Configure an Intune [device compliance policy](../../intune-service/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
+- Configure an Intune [device compliance policy](../../device-security/compliance/ref-windows-settings.md) that can allow or deny access to resources based on a Microsoft Entra [Conditional Access policy](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
 - Add [Store Apps](../../app-management/deployment/add-microsoft-store.md)
 - Add [Win32 apps](../../app-management/deployment/win32.md)
 - [Use certificates for authentication in Intune](../../fundamentals/certificates/overview.md)
 - Deploy network profiles, including [VPN](../../device-configuration/templates/ref-vpn-settings-windows.md) and [Wi-Fi](../../device-configuration/templates/ref-wifi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
-- Security baseline for [Microsoft Edge](../../intune-service/protect/security-baseline-settings-edge.md)
+- Security baseline for [Microsoft Edge](../../device-security/security-baselines/ref-edge-settings.md)

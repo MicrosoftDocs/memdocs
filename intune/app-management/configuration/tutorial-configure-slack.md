@@ -212,4 +212,4 @@ In this tutorial:
 - You created app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android personally-owned work profile devices.
 - You created Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
-To learn more about app configuration policies, see [App configuration policies for Microsoft Intune](./overview.md). To learn more about device compliance policies, see [Set rules on devices to allow access to resources in your organization using Intune](../../intune-service/protect/device-compliance-get-started.md).
+To learn more about app configuration policies, see [App configuration policies for Microsoft Intune](./overview.md). To learn more about device compliance policies, see [Set rules on devices to allow access to resources in your organization using Intune](../../device-security/compliance/overview.md).
