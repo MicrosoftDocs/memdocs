@@ -19,7 +19,7 @@ At a high level, the Microsoft Tunnel requires:
 
 - A *Microsoft Intune Plan 1* subscription.
   > [!NOTE]
-  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](./mam.md), which is an [Intune add-on](../../intune-service/fundamentals/intune-add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
+  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](./mam.md), which is an [Intune add-on](../../fundamentals/add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
 
 - To complete setup of Microsoft Tunnel, the account you'll use to register Tunnel Gateway with Microsoft Intune and your Intune tenant must be assigned the Microsoft Entra ID role of *Intune Administrator* and be assigned an Intune license.
 
@@ -46,7 +46,7 @@ Microsoft Tunnel is supported with the following sovereign cloud environments:
 
 Microsoft Tunnel isn't supported on Microsoft Azure operated by 21Vianet.
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
 
 ## Linux server
 
@@ -424,7 +424,7 @@ Support for a Proxy is limited to the following platforms:
 
 ## Permissions
 
-To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add them to [custom roles you create](../../intune-service/fundamentals/create-custom-role.md) for your Intune tenant.
+To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add them to [custom roles you create](../../fundamentals/role-based-access-control/create-custom-role.md) for your Intune tenant.
 
 While configuring a role, on the **Permissions** page, expand **Microsoft Tunnel Gateway** and then select the permissions you want to grant.
 

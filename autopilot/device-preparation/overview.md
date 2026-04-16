@@ -66,7 +66,7 @@ New features in Windows Autopilot device preparation include:
   - PowerShell scripts status
   - Deployment time. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 
-- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/intune/intune-service/fundamentals/intune-govt-service-description) environments.
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/intune/fundamentals/government-service-description) environments.
 
 > [!IMPORTANT]
 >

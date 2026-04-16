@@ -91,7 +91,7 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 <!-- role links -->
 
 
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
 <!-- API links -->
 

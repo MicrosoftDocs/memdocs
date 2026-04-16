@@ -109,7 +109,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
 1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
 

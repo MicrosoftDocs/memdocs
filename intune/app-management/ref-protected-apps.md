@@ -6,7 +6,6 @@ ms.topic: reference
 ms.reviewer: cdemello
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Microsoft Intune Protected Apps
@@ -321,5 +320,5 @@ To learn how to add apps for each platform to Intune, see:
 - [Microsoft 365 apps for macOS](./deployment/add-microsoft-365-macos.md)
 - [Built-in apps](./deployment/add-built-in.md)
 - [Win32 apps](./deployment/add-win32.md)
-- [Enterprise App Catalog app (Win32)](./deployment/add-enterprise-catalog.md)
+- [Enterprise App Catalog app (Win32)](./deployment/add-enterprise-catalog-app.md)
 - 

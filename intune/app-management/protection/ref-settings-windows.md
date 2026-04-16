@@ -6,7 +6,6 @@ ms.topic: article
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # App Protection Policy Settings for Windows

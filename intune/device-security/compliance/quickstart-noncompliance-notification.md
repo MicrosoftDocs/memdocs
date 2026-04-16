@@ -33,7 +33,7 @@ When a device isn't compliant, a common action is to email the device user. You 
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -43,7 +43,7 @@ When a device isn't compliant, a common action is to email the device user. You 
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Policy and Profile manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
+> - Built-in **[Policy and Profile manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 

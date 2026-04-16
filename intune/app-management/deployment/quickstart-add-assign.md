@@ -22,7 +22,7 @@ In this article, you use Intune to add and assign an app to your company's workf
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -32,7 +32,7 @@ In this article, you use Intune to add and assign an app to your company's workf
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Application Manager](../../intune-service/fundamentals/role-based-access-control-reference.md#application-manager)** Microsoft Intune role
+> - Built-in **[Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -42,15 +42,15 @@ In this article, you use Intune to add and assign an app to your company's workf
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - [Create a user](../../intune-service/fundamentals/quickstart-create-user.md).
-> - [Create a group](../../intune-service/fundamentals/quickstart-create-group.md).
+> - [Create a user](../../fundamentals/tenant-administration/quickstart-create-user.md).
+> - [Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md).
 > - [Enroll a device](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md)
 :::column-end:::
 :::row-end:::
 
 ## Add the app to Intune
 
-When you add an app to Intune, you assign that app to the users and groups that need it. You can choose to assign the app to any group you choose, including the group you created in [Step 3 - Create a group](../../intune-service/fundamentals/quickstart-create-group.md).
+When you add an app to Intune, you assign that app to the users and groups that need it. You can choose to assign the app to any group you choose, including the group you created in [Step 3 - Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md).
 
 Use the following steps to add an app to Intune:
 
@@ -59,7 +59,7 @@ Use the following steps to add an app to Intune:
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** step and select **Next**.
 5. Confirm the default settings in the **App settings** step and select **Next**.
-6. Select the group assignments for the app. You can select the group you created in [Step 3 - Create a group](../../intune-service/fundamentals/quickstart-create-group.md). For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+6. Select the group assignments for the app. You can select the group you created in [Step 3 - Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md). For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 7. Select **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 8. When you're done, select **Create** to add the app to Intune.
 

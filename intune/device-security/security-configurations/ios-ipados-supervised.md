@@ -8,7 +8,6 @@ ms.topic: reference
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # iOS/iPadOS supervised device security configurations examples

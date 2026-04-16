@@ -25,7 +25,7 @@ This article applies to:
 
 ## Prerequisites
 
-- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Create the profile
 
@@ -72,7 +72,7 @@ This policy gives an example of how to block (or allow) features that affect USB
     :::image type="content" source="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png" alt-text="Screenshot that shows the restrict USB settings in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png":::
 
 9. Select **Next**.
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
