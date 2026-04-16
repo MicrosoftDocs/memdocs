@@ -72,7 +72,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
     This report shows information about the user that last checked-in. Select **Generate report** to see the latest policy assignment states for the devices that received the policy. You can also filter the assignment status to see only errors, conflicts, and more.
 
-    It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different.
+    It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different. The device assignment status report can take up to 24-48 hours to reflect recent assignment or group membership changes, especially on large tenants with many devices. The other reports depend on each device's last check-in, so devices that haven't checked-in recently may show outdated status.
 
 4. Go back to **Device and user check-in status** and select **Per setting status**:
 
