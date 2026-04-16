@@ -352,6 +352,9 @@ items:
               - name: Platform SSO scenarios
                 displayName: single sign-on, macos
                 href: ./device-configuration/settings-catalog/configure-platform-sso-scenarios-macos.md
+              - name: Add Platform SSO to ADE profile
+                displayName: single sign-on, macos
+                href: ./device-configuration/settings-catalog/configure-platform-sso-during-enrollment.md
             - name: Enterprise SSO app extension plug-in
               displayName: single sign-on, macos
               href: ./device-configuration/templates/configure-enterprise-sso-plugin-macos.md
