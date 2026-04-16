@@ -262,7 +262,7 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-RETIRE]: retire.md
 [RA-RL]: rotate-recovery-lock-passcode.md 
 [RA-RMHS]: device-restore-managed-home-screen.md
-[RA-ROTLAP]: ../../intune-service/protect/windows-laps-policy.md#manually-rotate-passwords
+[RA-ROTLAP]: ../../device-security/laps/deploy-policy.md#manually-rotate-passwords
 [RA-SCAN]: device-scan-defender.md
 [RA-SCANF]: full-scan.md
 [RA-SCANQ]: quick-scan.md

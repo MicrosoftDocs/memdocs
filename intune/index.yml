@@ -54,12 +54,12 @@ productDirectory:
     - title: Device security
       imageSrc: ./media/icons/hub-page/device-security.svg
       summary: Secure devices using endpoint security policies, security baselines, and Defender integrations in Intune.
-      url: ./intune-service/protect/device-protect.md
+      url: ././device-security/index.md
 
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
       summary: Evaluate device compliance in Intune and integrate compliance with Conditional Access to protect access to resources.
-      url: ./intune-service/protect/device-compliance-get-started.md
+      url: ././device-security/compliance/overview.md
 
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg

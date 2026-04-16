@@ -58,7 +58,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 4. Click **Next: Application management**.
    On the **Application management** page you can optionally [add apps](../../app-management/deployment/index.md), [app configuration policies](../../app-management/configuration/overview.md), and [app protection policies](../../app-management/protection/overview.md) to your policy set. For information about app management, see [What is Microsoft Intune app management?](../../app-management/overview.md).
 5. Click **Next: Device management**.
-   The **Device management** page allows you to add device management objects to your policy set, such as [device configuration profiles](../../device-configuration/overview.md) and [device compliance policies](../protect/device-compliance-get-started.md). Be sure to include all associated objects, such as other policies, certificates, and security baseline profiles.
+   The **Device management** page allows you to add device management objects to your policy set, such as [device configuration profiles](../../device-configuration/overview.md) and [device compliance policies](../../device-security/compliance/overview.md). Be sure to include all associated objects, such as other policies, certificates, and security baseline profiles.
 6. Click **Next: Device enrollment**.
    The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [Windows Autopilot deployment profiles](/autopilot/enrollment-autopilot), and [enrollment status page profiles](../../device-enrollment/windows/setup-status-page.md).
 7. Click **Next: Assignments**.

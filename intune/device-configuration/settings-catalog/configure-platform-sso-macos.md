@@ -322,7 +322,7 @@ You can configure Platform SSO with other mobile device management services (MDM
 
   The configuration steps in your MDM service can be different. We recommend you work with your MDM service vendor to correctly configure and deploy these Platform SSO settings.
 
-- Device registration with Platform SSO is more secure and uses hardware-bound device certificates. These changes can affect some MDM flows, like integration with [device compliance partners](../../intune-service/protect/device-compliance-partners.md).
+- Device registration with Platform SSO is more secure and uses hardware-bound device certificates. These changes can affect some MDM flows, like integration with [device compliance partners](../../device-security/compliance/third-party-partners.md).
 
   You should talk to your MDM service vendor to understand if the MDM tested Platform SSO, certified that their software works properly with Platform SSO, and is ready to support customers using Platform SSO.
 

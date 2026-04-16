@@ -1,6 +1,4 @@
 ---
-author: ErikjeMS
-ms.author: erikje
 ms.topic: include
 ms.date: 08/13/2025
 ---

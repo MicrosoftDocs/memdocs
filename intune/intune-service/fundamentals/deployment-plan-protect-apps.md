@@ -267,7 +267,7 @@ You can use device compliance policies with Conditional Access to make sure that
 
 For more information about protecting Exchange Online, go to the following topic:
 
-- [Tutorial: Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
+- [Tutorial: Protect Exchange Online email on managed devices](../../solutions/tutorials/protect-email-enrolled-devices.md)
 
 ### End-user requirements to use app protection policies
 

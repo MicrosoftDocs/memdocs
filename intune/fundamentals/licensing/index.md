@@ -94,7 +94,7 @@ You can purchase device licenses based on your estimated usage. Microsoft Intune
 When a device is enrolled by using a device license, the following Intune functions aren't supported:
 
 - [Intune app protection policies](../../app-management/protection/overview.md)
-- [Conditional Access](../../intune-service/protect/conditional-access.md)
+- [Conditional Access](../../device-security/conditional-access-integration/overview.md)
 - User-based management features, such as email and calendaring
 
 ## Confirm your licenses

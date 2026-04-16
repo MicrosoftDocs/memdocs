@@ -45,7 +45,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     ![Block devices](./media/migrate-device-admin-to-work-profile/block-devices.png)
 
-1. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../../intune-service/protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
+1. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../../device-security/compliance/configure-noncompliance-actions.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
     ![Noncompliance actions](media/migrate-device-admin-to-work-profile/noncompliance-actions.png)
 

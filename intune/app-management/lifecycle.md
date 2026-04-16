@@ -34,7 +34,7 @@ As part of the app lifecycle, new versions of apps are regularly released. Intun
 
 Intune gives you many ways to help protect the data in your apps. The main methods are:
 
-- [Conditional Access](../intune-service/protect/conditional-access.md), which controls access to email and other services based on conditions that you specify. Conditions include device types or compliance with a [device compliance policy](../intune-service/protect/device-compliance-get-started.md) that you deployed.
+- [Conditional Access](../device-security/conditional-access-integration/overview.md), which controls access to email and other services based on conditions that you specify. Conditions include device types or compliance with a [device compliance policy](../device-security/compliance/overview.md) that you deployed.
 - [App protection policies](./protection/overview.md) works with individual apps to help protect the company data that they use. For example, you can restrict copying data between unmanaged apps and apps that you manage, or you can prevent apps from running on devices that have been jailbroken or rooted.
 
 ## Retire

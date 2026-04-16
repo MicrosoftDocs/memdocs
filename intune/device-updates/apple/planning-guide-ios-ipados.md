@@ -62,8 +62,8 @@ Automatic updates work together with other update policies, which can provide a 
 Using Intune policies, you can also force users to update their devices:
 
 - Use [Enrollment Restrictions](../../device-enrollment/create-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
-- Create [compliance policies](../../intune-service/protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
-- Create [Conditional Access (CA) policies](../../intune-service/protect/conditional-access.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
+- Create [compliance policies](../../device-security/compliance/ref-ios-ipados-settings.md) to determine the devices that aren't updated.
+- Create [Conditional Access (CA) policies](../../device-security/conditional-access-integration/overview.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
 
 #### What you need to know
 

@@ -55,14 +55,14 @@ Configure the enrollment methods and experience for company-owned and personal m
 
 Create compliance policies to define the rules and conditions that users and devices must meet to access your protected resources. This is how you ensure that devices accessing your data meet your standards. Intune marks devices that fall short of your requirements as *noncompliant* and takes action (such as sending the user a notification, restricting access, or wiping the device) according to your configurations.
 
-If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).
+If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../../device-security/compliance/overview.md).
 
 | Task | Detail |
 | ---- | ------ |
-| [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |
-| [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |
-| Create [a device-based](/entra/identity/conditional-access/policy-all-users-device-compliance) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |
+| [Create a compliance policy](../../device-security/compliance/create-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |
+| [Add actions for noncompliance](../../device-security/compliance/configure-noncompliance-actions.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |
+| Create [a device-based](/entra/identity/conditional-access/policy-all-users-device-compliance) or [app-based](../../device-security/conditional-access-integration/create-app-based-policy.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |
+|[Block access to apps that don't use modern authentication](../../device-security/conditional-access-integration/block-no-modern-auth.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |
 
 
 ## Configure device settings
@@ -87,9 +87,9 @@ Use the Intune endpoint security features to configure device security and to ma
 
 | Task | Detail |
 | ---- | ------ |
-|[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
-|[Use Conditional Access to limit access to Microsoft Tunnel](../protect/microsoft-tunnel-conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. |
-|[Add endpoint protection settings](../protect/microsoft-tunnel-conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../protect/endpoint-protection-macos.md).   |
+|[Manage devices with endpoint security features](../../device-management/manage-endpoint-security-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
+|[Use Conditional Access to limit access to Microsoft Tunnel](../../device-security/microsoft-tunnel/conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. |
+|[Add endpoint protection settings](../../device-security/microsoft-tunnel/conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../../device-configuration/endpoint-security/ref-endpoint-protection-macos.md).   |
 
 
 ## Set up secure authentication methods
@@ -128,7 +128,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 | ---- | ------ |
 |[Take remote action on devices](../../device-management/actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
-|[Use security tasks to view threats and vulnerabilities](../protect/microsoft-defender-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
+|[Use security tasks to view threats and vulnerabilities](../../device-security/microsoft-defender/remediate-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 
 ## Next steps
 

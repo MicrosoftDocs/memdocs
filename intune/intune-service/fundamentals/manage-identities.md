@@ -119,12 +119,12 @@ Your user and group accounts access organization resources. You need to keep the
   For more information, go to:
 
   - [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-  - [Manage Windows Hello for Business on devices when devices enroll with Intune](../protect/windows-hello.md)
+  - [Manage Windows Hello for Business on devices when devices enroll with Intune](../../device-security/identity-protection/configure-tenant-wide-policy.md)
 
   To manage Windows Hello for Business, you use one of the following options:
 
-  - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
-  - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the **Microsoft Defender for Endpoint security** or **Security Baseline for Windows 10 and later** baselines.
+  - [During device enrollment](../../device-security/identity-protection/configure-tenant-wide-policy.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
+  - [Security baselines](../../device-security/security-baselines/overview.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the **Microsoft Defender for Endpoint security** or **Security Baseline for Windows 10 and later** baselines.
   - [Settings catalog](../../device-configuration/settings-catalog/index.md): The settings from endpoint security account protection profiles are available in the Intune settings catalog.
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and certificates can make access to these resources easier.
