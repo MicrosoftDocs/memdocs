@@ -49,7 +49,7 @@ items:
                   - name: Step 3 - Create a group
                     href: ./fundamentals/tenant-administration/quickstart-create-group.md
                   - name: Step 4 - Set up automatic enrollment
-                    href: /intune/device-enrollment/windows/quickstart-automatic-mdm
+                    href: ./device-enrollment/windows/quickstart-automatic-mdm.md
                   - name: Step 5 - Enroll your Windows device
                     href: /intune/device-enrollment/windows/quickstart-first-device
                   - name: Step 6 - Create a device compliance policy
@@ -400,9 +400,9 @@ items:
                         href: ./device-security/security-baselines/ref-v2-edge-settings.md
                       - name: Microsoft Edge baseline settings (version 85 and older)
                         href: ./device-security/security-baselines/ref-edge-settings.md
-                      - name: HoloLens 2 - Advanced security baseline settings
-                        href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
                       - name: HoloLens 2 - Standard security baseline settings
+                        href: ./device-security/security-baselines/ref-hololens2-standard-settings.md
+                      - name: HoloLens 2 - Advanced security baseline settings
                         href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
                       - name: Windows 365 baseline settings
                         href: ./device-security/security-baselines/ref-windows-365-settings.md
