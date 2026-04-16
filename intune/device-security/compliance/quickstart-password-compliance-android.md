@@ -30,7 +30,7 @@ An Intune device compliance policy specifies the rules and settings that devices
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -40,7 +40,7 @@ An Intune device compliance policy specifies the rules and settings that devices
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Policy and Profile manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Microsoft Intune role
+> - Built-in **[Policy and Profile manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -64,7 +64,7 @@ Create a device compliance policy that requires your Android users to enter a pa
 
     :::image type="content" source="./media/quickstart-password-compliance-android/quickstart-set-password-length-android-01.png" alt-text="Screenshot of Microsoft Intune admin center showing Compliance settings for Android with password requirements highlighted." lightbox="./media/quickstart-password-compliance-android/quickstart-set-password-length-android-01.png":::
 
-1. On the **Assignments**, you can optionally assign the policy to the user or group you created in [Step 2 - Create a user and assign a license](../../intune-service/fundamentals/quickstart-create-user.md) and [Step 3 - Create a group](../../intune-service/fundamentals/quickstart-create-group.md) evaluation steps.
+1. On the **Assignments**, you can optionally assign the policy to the user or group you created in [Step 2 - Create a user and assign a license](../../fundamentals/tenant-administration/quickstart-create-user.md) and [Step 3 - Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md) evaluation steps.
 
 1. When done, select **Next** until you reach the **Review + create** step. Then, select **Create** to create the policy.
 

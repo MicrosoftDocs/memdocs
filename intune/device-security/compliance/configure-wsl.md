@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
-- highpri
 - compliance
 - sub-device-compliance
 ---
@@ -100,7 +99,7 @@ This section describes the known limitations with using the Intune WSL plugin fo
 
 - [Create a compliance policy](./create-policy.md#create-the-policy), and set the **Platform** to **Windows 10 and later**. For more information about the compliance settings for Windows Subsystem for Linux, see [Windows Subsystem for Linux](./ref-windows-settings.md#windows-subsystem-for-linux).
 
-- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
 
 - [Monitor your compliance policies](./monitor-policy.md).
 

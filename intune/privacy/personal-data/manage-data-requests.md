@@ -2,7 +2,7 @@
 title: Audit, export or delete personal data collected by Intune
 description: Learn how to audit, export, or delete personal data that is collected by Intune.
 ms.date: 04/10/2025
-ms.topic: article
+ms.topic: how-to
 ms.reviewer: kerimh
 ms.collection:
 - M365-identity-device-management
@@ -24,7 +24,7 @@ Audit logs provide tenant admins with a record of activities that generate a cha
 
 For security purposes, Intune maintains audit logs for user and device actions for two years. These logs are automatically deleted after the two-year retention period.
 
-To review audit logs, see [Audit logs for Intune activities](../../intune-service/fundamentals/monitor-audit-logs.md).
+To review audit logs, see [Audit logs for Intune activities](../../governance/monitor-audit-logs.md).
 
 Admins can't delete audit logs.
 

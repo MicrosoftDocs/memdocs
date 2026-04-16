@@ -92,6 +92,6 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 ## Next steps
 
-- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
 - [Monitor your compliance policies](./monitor-policy.md).
 - See the [compliance policy settings for Windows](./ref-windows-settings.md) devices.

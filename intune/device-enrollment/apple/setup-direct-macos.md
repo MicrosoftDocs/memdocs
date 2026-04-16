@@ -41,9 +41,9 @@ Devices that are already enrolled in Intune do not get an ACME certificate unles
 
 ## Prerequisites
 
-- Physical access to [supported devices](../../intune-service/fundamentals/supported-devices-browsers.md#apple).
+- Physical access to [supported devices](../../fundamentals/ref-supported-platforms.md#apple).
 - Access to Microsoft Intune admin center and Apple Configurator.
-- Set [MDM authority](../../intune-service/fundamentals/mdm-authority-set.md).
+- Set [MDM authority](../../fundamentals/setup-mdm-authority.md).
 - [An Apple MDM push certificate](create-mdm-push-certificate.md).
 - Administrator rights on the Macs you're enrolling.
 
@@ -100,7 +100,7 @@ The Mac is now enrolled in Microsoft Intune and ready-to-manage. Other profiles 
 
 Start managing enrolled devices in the Microsoft Intune admin center.
 
-- [Tutorial - Walkthrough the Microsoft Intune admin center](../../intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Tutorial - Walkthrough the Microsoft Intune admin center](../../fundamentals/tutorial-admin-center-walkthrough.md)
 - [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md)
-- [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
 

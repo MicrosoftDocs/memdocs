@@ -65,9 +65,9 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     > [!NOTE]
     > On Windows devices it is expected that the configured icon does not apply within the start menu. The Microsoft Edge logo is displayed instead.
 6. Click **Next** to display the **Scope tags** page.
-7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 8. Click **Next** to display the **Assignments** page.
-1. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+1. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 > [!NOTE]
 > iOS/iPadOS and macOS web clips that are assigned as **Required** cannot be installed as removable. To remove these web clips, you must change their assignment to **Uninstall**. If you delete the assignment without first changing it to **Uninstall**, the web clip will remain on the device and cannot be removed by the user.
 10. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.

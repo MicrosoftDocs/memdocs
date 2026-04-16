@@ -23,7 +23,7 @@ Monitor the state of devices that have the Microsoft Defender for Endpoint compl
 
 3. Find your Microsoft Defender for Endpoint policy in the list, and see which devices are compliant or noncompliant.
 
-For more information about reports, see [Intune reports](../../intune-service/fundamentals/reports.md).
+For more information about reports, see [Intune reports](../../device-management/reports/overview.md).
 
 ## View onboarding status
 

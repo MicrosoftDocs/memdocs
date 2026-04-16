@@ -2,7 +2,7 @@
 title: Common issues and resolutions with cloud-native endpoints
 description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply.
 ms.date: 05/30/2024
-ms.topic: article
+ms.topic: troubleshooting
 ms.reviewer: ahamil, jasandys, wicale
 ms.collection:
   - M365-identity-device-management

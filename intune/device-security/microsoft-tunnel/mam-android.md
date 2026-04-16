@@ -20,7 +20,7 @@ Applies to:
 
 - Android Enterprise
 
-To extend your existing [Microsoft Tunnel configuration](./install.md) to support [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md), create and deploy three profiles that configure this support on your unenrolled devices:
+To extend your existing [Microsoft Tunnel configuration](./install.md) to support [MAM](../../device-enrollment/mam-without-enrollment.md), create and deploy three profiles that configure this support on your unenrolled devices:
 
 - App configuration policy for Microsoft Defender. This policy configures Microsoft Defender for Endpoint on a device as the VPN tunnel client app.
 - App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, which automatically connects and disconnects the VPN tunnel when switching from a Microsoft "Work or school" account to a Microsoft "personal account" in Microsoft Edge.
@@ -71,7 +71,7 @@ Microsoft Tunnel for MAM on Android isn't supported on Microsoft Azure operated 
 
 Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
 
 ## Configure policies to support Microsoft Tunnel for MAM
 

@@ -166,7 +166,7 @@ To allow Microsoft Entra join:
 > - Intune Administrator
 > - Password Administrator
 >
-> For more information, see [Give admin permissions in Microsoft Intune admin center](../../../intune-service/fundamentals/users-add.md).
+> For more information, see [Give admin permissions in Microsoft Intune admin center](../../../fundamentals/tenant-administration/add-users.md).
 
 ### Enable storage of local administrator passwords (optional)
 

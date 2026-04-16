@@ -216,5 +216,5 @@ Device query supports the following entities. To learn more about what propertie
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: ../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator

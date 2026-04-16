@@ -6,8 +6,6 @@ ms.topic: concept-article
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - compliance
 - sub-device-compliance
 ---

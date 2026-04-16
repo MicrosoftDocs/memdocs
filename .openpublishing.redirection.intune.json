@@ -407,7 +407,7 @@
     },
     {
       "source_path": "intune/intune-service/enrollment/android-enroll.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-android",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
@@ -427,7 +427,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md",
-      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
@@ -442,7 +442,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/guided-scenarios-overview.md",
-      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
@@ -457,7 +457,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/tenant-status.md",
-      "redirect_url": "/intune/fundamentals/tenant-status",
+      "redirect_url": "/intune/governance/tenant-status",
       "redirect_document_id": false
     },
     {
@@ -517,7 +517,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
+      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
@@ -2462,552 +2462,552 @@
     },
     {
       "source_path": "intune/intune/fundamentals/account-sign-up.md",
-      "redirect_url": "/intune/intune-service/fundamentals/account-sign-up",
+      "redirect_url": "/intune/fundamentals/account-sign-up",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/android-os-project-supported-devices.md",
-      "redirect_url": "/intune/intune-service/fundamentals/android-os-project-supported-devices",
+      "redirect_url": "/intune/fundamentals/aosp-supported-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/assign-role.md",
-      "redirect_url": "/intune/intune-service/fundamentals/assign-role",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/assign-role",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/azure-virtual-desktop-multi-session.md",
-      "redirect_url": "/intune/intune-service/fundamentals/azure-virtual-desktop-multi-session",
+      "redirect_url": "/intune/solutions/azure-virtual-desktop-multi-session",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/azure-virtual-desktop.md",
-      "redirect_url": "/intune/intune-service/fundamentals/azure-virtual-desktop",
+      "redirect_url": "/intune/solutions/azure-virtual-desktop",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/china-endpoints.md",
-      "redirect_url": "/intune/intune-service/fundamentals/china-endpoints",
+      "redirect_url": "/intune/fundamentals/endpoints-china",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/china.md",
-      "redirect_url": "/intune/intune-service/fundamentals/china",
+      "redirect_url": "/intune/fundamentals/china",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/cloud-configuration-setup-guide.md",
-      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/cloud-configuration.md",
-      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-configuration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/compliance-in-intune.md",
-      "redirect_url": "/intune/intune-service/fundamentals/compliance-in-intune",
+      "redirect_url": "/intune/fundamentals/compliance-in-intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/create-custom-role.md",
-      "redirect_url": "/intune/intune-service/fundamentals/create-custom-role",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/create-custom-role",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/custom-domain-name-configure.md",
-      "redirect_url": "/intune/intune-service/fundamentals/custom-domain-name-configure",
+      "redirect_url": "/intune/fundamentals/configure-custom-domain",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enroll.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enroll",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment-android.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-android",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment-ios-ipados.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-ios-ipados",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment-linux.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-linux",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment-macos.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-macos",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment-mamwe.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
+      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment-windows.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-windows",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-enrollment.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-intune-setup.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-intune-setup",
+      "redirect_url": "/intune/fundamentals/setup-migration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-platform-android.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-platform-android",
+      "redirect_url": "/intune/fundamentals/platform-guide-android",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-platform-ios-ipados.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-platform-ios-ipados",
+      "redirect_url": "/intune/fundamentals/platform-guide-ios-ipados",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-platform-linux.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-platform-linux",
+      "redirect_url": "/intune/fundamentals/platform-guide-linux",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-platform-macos.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-platform-macos",
+      "redirect_url": "/intune/fundamentals/platform-guide-macos",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-guide-platform-windows.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-platform-windows",
+      "redirect_url": "/intune/fundamentals/platform-guide-windows",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-plan-compliance-policies.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-plan-compliance-policies",
+      "redirect_url": "/intune/fundamentals/deploy-compliance-step-3",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-plan-configuration-profile.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-plan-configuration-profile",
+      "redirect_url": "/intune/fundamentals/deploy-configuration-step-4",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-plan-protect-apps.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-plan-protect-apps",
+      "redirect_url": "/intune/fundamentals/deploy-protect-apps-step-2",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/deployment-plan-setup.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-plan-setup",
+      "redirect_url": "/intune/fundamentals/deploy-setup-step-1",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/intune-service/fundamentals/device-lifecycle",
+      "redirect_url": "/intune/fundamentals/device-lifecycle",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/education-settings-configure-ios-shared.md",
-      "redirect_url": "/intune/intune-service/fundamentals/education-settings-configure-ios-shared",
+      "redirect_url": "/intune/solutions/education/ref-classroom-settings-ios-shared",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/education-settings-configure-ios.md",
-      "redirect_url": "/intune/intune-service/fundamentals/education-settings-configure-ios",
+      "redirect_url": "/intune/solutions/education/ref-classroom-settings-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/filters-device-properties.md",
-      "redirect_url": "/intune/intune-service/fundamentals/filters-device-properties",
+      "redirect_url": "/intune/fundamentals/filters/ref-device-properties",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/filters-performance-recommendations.md",
-      "redirect_url": "/intune/intune-service/fundamentals/filters-performance-recommendations",
+      "redirect_url": "/intune/fundamentals/filters/performance-recommendations",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/filters-reports-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/fundamentals/filters-reports-troubleshoot",
+      "redirect_url": "/intune/fundamentals/filters/troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/filters-supported-workloads.md",
-      "redirect_url": "/intune/intune-service/fundamentals/filters-supported-workloads",
+      "redirect_url": "/intune/fundamentals/filters/ref-supported-workloads",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/filters.md",
-      "redirect_url": "/intune/intune-service/fundamentals/filters",
+      "redirect_url": "/intune/fundamentals/filters/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/free-trial-sign-up.md",
-      "redirect_url": "/intune/intune-service/fundamentals/free-trial-sign-up",
+      "redirect_url": "/intune/fundamentals/free-trial-sign-up",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/get-started-with-intune.md",
-      "redirect_url": "/intune/intune-service/fundamentals/get-started-with-intune",
+      "redirect_url": "/intune/fundamentals/get-started",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/groups-add.md",
-      "redirect_url": "/intune/intune-service/fundamentals/groups-add",
+      "redirect_url": "/intune/fundamentals/tenant-administration/add-groups",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/groups-get-started.md",
-      "redirect_url": "/intune/intune-service/fundamentals/groups-get-started",
+      "redirect_url": "/intune/fundamentals/tenant-administration/classic-groups",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/guided-scenarios-cloud-managed-pc.md",
-      "redirect_url": "/intune/intune-service/fundamentals/guided-scenarios-cloud-managed-pc",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/guided-scenarios-edge.md",
-      "redirect_url": "/intune/intune-service/fundamentals/guided-scenarios-edge",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/guided-scenarios-office-mobile.md",
-      "redirect_url": "/intune/intune-service/fundamentals/guided-scenarios-office-mobile",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/guided-scenarios-overview.md",
-      "redirect_url": "/intune/intune-service/fundamentals/guided-scenarios-overview",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/help-desk-operators.md",
-      "redirect_url": "/intune/intune-service/fundamentals/help-desk-operators",
+      "redirect_url": "/intune/fundamentals/it-pro-support/help-desk-operators",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/high-level-architecture.md",
-      "redirect_url": "/intune/intune-service/fundamentals/high-level-architecture",
+      "redirect_url": "/intune/fundamentals/architecture",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/in-development.md",
-      "redirect_url": "/intune/intune-service/fundamentals/in-development",
+      "redirect_url": "/intune/whats-new/in-development",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-add-ons.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-add-ons",
+      "redirect_url": "/intune/fundamentals/add-ons",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-endpoints.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-endpoints",
+      "redirect_url": "/intune/fundamentals/endpoints",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-govt-service-description.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-govt-service-description",
+      "redirect_url": "/intune/fundamentals/government-service-description",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-legacy-pc-client.md",
-      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
+      "redirect_url": "/intune/fundamentals/tutorial-admin-center-walkthrough",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-planning-guide.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-planning-guide",
+      "redirect_url": "/intune/fundamentals/planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-scale-guidelines.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-scale-guidelines",
+      "redirect_url": "/intune/fundamentals/scale-guidelines",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-service-servicing-information.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-service-servicing-information",
+      "redirect_url": "/intune/fundamentals/servicing-information",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/intune-us-government-endpoints.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-us-government-endpoints",
+      "redirect_url": "/intune/fundamentals/endpoints-us-government",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/licenses-assign.md",
-      "redirect_url": "/intune/intune-service/fundamentals/licenses-assign",
+      "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/licenses.md",
-      "redirect_url": "/intune/intune-service/fundamentals/licenses",
+      "redirect_url": "/intune/fundamentals/licensing/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/manage-apps.md",
-      "redirect_url": "/intune/intune-service/fundamentals/manage-apps",
+      "redirect_url": "/intune/fundamentals/manage-apps",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/manage-devices.md",
-      "redirect_url": "/intune/intune-service/fundamentals/manage-devices",
+      "redirect_url": "/intune/fundamentals/manage-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/manage-identities.md",
-      "redirect_url": "/intune/intune-service/fundamentals/manage-identities",
+      "redirect_url": "/intune/fundamentals/tenant-administration/identities",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/manage-os-versions.md",
-      "redirect_url": "/intune/intune-service/fundamentals/manage-os-versions",
+      "redirect_url": "/intune/device-updates/manage-os-versions",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/mdm-authority-set.md",
-      "redirect_url": "/intune/intune-service/fundamentals/mdm-authority-set",
+      "redirect_url": "/intune/fundamentals/setup-mdm-authority",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/microsoft-intune-service-description.md",
-      "redirect_url": "/intune/intune-service/fundamentals/microsoft-intune-service-description",
+      "redirect_url": "/intune/fundamentals/service-description",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/migrate-to-intune.md",
-      "redirect_url": "/intune/intune-service/fundamentals/migrate-to-intune",
+      "redirect_url": "/intune/fundamentals/migrate-from-other-mdm",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/monitor-audit-logs.md",
-      "redirect_url": "/intune/intune-service/fundamentals/monitor-audit-logs",
+      "redirect_url": "/intune/governance/monitor-audit-logs",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/multi-admin-approval.md",
-      "redirect_url": "/intune/intune-service/fundamentals/multi-admin-approval",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/multi-admin-approval",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/policy-map-access-requirements.md",
-      "redirect_url": "/intune/intune-service/fundamentals/policy-map-access-requirements",
+      "redirect_url": "/intune/fundamentals/ref-policy-map-access-requirements",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/policy-map-configurations.md",
-      "redirect_url": "/intune/intune-service/fundamentals/policy-map-configurations",
+      "redirect_url": "/intune/fundamentals/ref-policy-map-configurations",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/policy-map-miscellaneous.md",
-      "redirect_url": "/intune/intune-service/fundamentals/policy-map-miscellaneous",
+      "redirect_url": "/intune/fundamentals/ref-policy-map-miscellaneous",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/policy-sets.md",
-      "redirect_url": "/intune/intune-service/fundamentals/policy-sets",
+      "redirect_url": "/intune/fundamentals/policy-sets",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/powershell-scripts-remediation.md",
-      "redirect_url": "/intune/intune-service/fundamentals/powershell-scripts-remediation",
+      "redirect_url": "/intune/device-management/tools/ref-remediation-scripts",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/protection-configuration-levels.md",
-      "redirect_url": "/intune/intune-service/fundamentals/protection-configuration-levels",
+      "redirect_url": "/intune/fundamentals/protection-configuration-levels",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/public-preview.md",
-      "redirect_url": "/intune/intune-service/fundamentals/public-preview",
+      "redirect_url": "/intune/fundamentals/public-preview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/quickstart-create-custom-role.md",
-      "redirect_url": "/intune/intune-service/fundamentals/quickstart-create-custom-role",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/quickstart-custom-role",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/quickstart-create-group.md",
-      "redirect_url": "/intune/intune-service/fundamentals/quickstart-create-group",
+      "redirect_url": "/intune/fundamentals/tenant-administration/quickstart-create-group",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/quickstart-create-user.md",
-      "redirect_url": "/intune/intune-service/fundamentals/quickstart-create-user",
+      "redirect_url": "/intune/fundamentals/tenant-administration/quickstart-create-user",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remediations.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remediations",
+      "redirect_url": "/intune/device-management/tools/deploy-remediations",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-android-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remote-help-android-troubleshoot",
+      "redirect_url": "/intune/remote-help/troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-android.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remote-help-android",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-macos.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remote-help-macos",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-webapp.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remote-help-webapp",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-windows.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remote-help-windows",
+      "redirect_url": "/intune/remote-help/start-session",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help.md",
-      "redirect_url": "/intune/intune-service/fundamentals/remote-help",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/reports-export-graph-apis.md",
-      "redirect_url": "/intune/intune-service/fundamentals/reports-export-graph-apis",
+      "redirect_url": "/intune/device-management/reports/export-graph-apis",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/reports-export-graph-available-reports.md",
-      "redirect_url": "/intune/intune-service/fundamentals/reports-export-graph-available-reports",
+      "redirect_url": "/intune/device-management/reports/ref-graph-available-reports",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/reports.md",
-      "redirect_url": "/intune/intune-service/fundamentals/reports",
+      "redirect_url": "/intune/device-management/reports/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/review-logs-using-azure-monitor.md",
-      "redirect_url": "/intune/intune-service/fundamentals/review-logs-using-azure-monitor",
+      "redirect_url": "/intune/governance/integrate-azure-monitor",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/role-based-access-control-reference.md",
-      "redirect_url": "/intune/intune-service/fundamentals/role-based-access-control-reference",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/ref-built-in-roles",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/role-based-access-control.md",
-      "redirect_url": "/intune/intune-service/fundamentals/role-based-access-control",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/scope-tags.md",
-      "redirect_url": "/intune/intune-service/fundamentals/scope-tags",
+      "redirect_url": "/intune/fundamentals/role-based-access-control/scope-tags",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/service-now-integration.md",
-      "redirect_url": "/intune/intune-service/fundamentals/service-now-integration",
+      "redirect_url": "/intune/device-management/tools/setup-servicenow",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/settings-insight.md",
-      "redirect_url": "/intune/intune-service/fundamentals/settings-insight",
+      "redirect_url": "/intune/device-configuration/settings-insight",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/specialty-devices-with-intune.md",
-      "redirect_url": "/intune/intune-service/fundamentals/specialty-devices-with-intune",
+      "redirect_url": "/intune/device-management/specialty-devices",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/supported-devices-browsers.md",
-      "redirect_url": "/intune/intune-service/fundamentals/supported-devices-browsers",
+      "redirect_url": "/intune/fundamentals/ref-supported-platforms",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/surface-management-portal.md",
-      "redirect_url": "/intune/intune-service/fundamentals/surface-management-portal",
+      "redirect_url": "/intune/device-management/tools/surface-management-portal",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/tenant-status.md",
-      "redirect_url": "/intune/operations/tenant-status",
+      "redirect_url": "/intune/governance/tenant-status",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/try-intune-overview.md",
-      "redirect_url": "/intune/intune-service/fundamentals/try-intune-overview",
+      "redirect_url": "/intune/fundamentals/try-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/tutorial-walkthrough-endpoint-manager.md",
-      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
+      "redirect_url": "/intune/fundamentals/tutorial-admin-center-walkthrough",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/unlicensed-admins.md",
-      "redirect_url": "/intune/intune-service/fundamentals/unlicensed-admins",
+      "redirect_url": "/intune/fundamentals/licensing/unlicensed-admins",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/users-add.md",
-      "redirect_url": "/intune/intune-service/fundamentals/users-add",
+      "redirect_url": "/intune/fundamentals/tenant-administration/add-users",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/what-is-device-management.md",
-      "redirect_url": "/intune/intune-service/fundamentals/what-is-device-management",
+      "redirect_url": "/intune/fundamentals/what-is-device-management",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/what-is-intune.md",
-      "redirect_url": "/intune/intune-service/fundamentals/what-is-intune",
+      "redirect_url": "/intune/fundamentals/what-is-intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/whats-new-app-ui.md",
-      "redirect_url": "/intune/intune-service/fundamentals/whats-new-app-ui",
+      "redirect_url": "/intune/whats-new/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/whats-new-archive.md",
-      "redirect_url": "/intune/intune-service/fundamentals/whats-new-archive",
+      "redirect_url": "/intune/whats-new/archive/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/whats-new.md",
-      "redirect_url": "/intune/intune-service/fundamentals/whats-new",
+      "redirect_url": "/intune/whats-new/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/windows-10-virtual-machines.md",
-      "redirect_url": "/intune/intune-service/fundamentals/windows-10-virtual-machines",
+      "redirect_url": "/intune/solutions/windows-virtual-machines",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/windows-holographic-for-business.md",
-      "redirect_url": "/intune/intune-service/fundamentals/windows-holographic-for-business",
+      "redirect_url": "/intune/solutions/windows-holographic",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/zero-trust-with-microsoft-intune.md",
-      "redirect_url": "/intune/intune-service/fundamentals/zero-trust-with-microsoft-intune",
+      "redirect_url": "/intune/fundamentals/zero-trust",
       "redirect_document_id": false
     },
     {
@@ -3502,7 +3502,7 @@
     },
     {
       "source_path": "intune/intune/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
+      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
@@ -4177,7 +4177,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/chrome-enterprise-device-details.md",
-      "redirect_url": "/intune/intune-service/fundamentals/chrome-enterprise-device-details",
+      "redirect_url": "/intune/device-management/inventory-and-status/chrome-enterprise-details",
       "redirect_document_id": false
     },
     {
@@ -4207,7 +4207,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/device-inventory.md",
-      "redirect_url": "/intune/intune-service/fundamentals/device-inventory",
+      "redirect_url": "/intune/device-management/inventory-and-status/device-details",
       "redirect_document_id": false
     },
     {
@@ -4282,7 +4282,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/find-primary-user.md",
-      "redirect_url": "/intune/intune-service/fundamentals/find-primary-user",
+      "redirect_url": "/intune/device-management/inventory-and-status/find-primary-user",
       "redirect_document_id": false
     },
     {
@@ -4302,7 +4302,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/teamviewer-support.md",
-      "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
+      "redirect_url": "/intune/device-management/tools/teamviewer-legacy",
       "redirect_document_id": false
     },
     {
@@ -5166,6 +5166,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe.md",
+      "redirect_document_id": true,
+      "redirect_url": "/intune/device-enrollment/mam-without-enrollment"
+    },
+    {
       "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment.md",
       "redirect_document_id": true,
       "redirect_url": "/intune/device-enrollment/guide"
@@ -5194,6 +5199,46 @@
       "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-linux.md",
       "redirect_document_id": true,
       "redirect_url": "/intune/device-enrollment/guide-linux"
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/azure-virtual-desktop-multi-session.md",
+      "redirect_url": "/intune/solutions/azure-virtual-desktop-multi-session",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/azure-virtual-desktop.md",
+      "redirect_url": "/intune/solutions/azure-virtual-desktop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/cloud-configuration.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/cloud-configuration-setup-guide.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/education-settings-configure-ios-shared.md",
+      "redirect_url": "/intune/solutions/education/ref-classroom-settings-ios-shared",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/education-settings-configure-ios.md",
+      "redirect_url": "/intune/solutions/education/ref-classroom-settings-ios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/windows-10-virtual-machines.md",
+      "redirect_url": "/intune/solutions/windows-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/windows-holographic-for-business.md",
+      "redirect_url": "/intune/solutions/windows-holographic",
+      "redirect_document_id": true
     },
     {
       "source_path": "intune/governance/device-cleanup-rules.md",
