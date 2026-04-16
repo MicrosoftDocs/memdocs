@@ -5166,11 +5166,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/fundamentals/deployment-guide-enroll.md",
-      "redirect_document_id": true,
-      "redirect_url": "/intune/device-enrollment/enroll-devices"
-    },
-    {
       "source_path": "intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe.md",
       "redirect_document_id": true,
       "redirect_url": "/intune/device-enrollment/mam-without-enrollment"
