@@ -1,8 +1,6 @@
 ---
 title: Step 5 – Enroll devices in Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and Windows devices in Intune.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 4/3/2024
 ms.topic: how-to
 ms.collection:

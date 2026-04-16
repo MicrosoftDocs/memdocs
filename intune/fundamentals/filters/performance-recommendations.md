@@ -1,8 +1,6 @@
 ---
 title: Assignment Filter Performance Tips for Intune
 description: Optimize Microsoft Intune performance with assignment filters. Learn to use virtual groups, reuse groups, and apply filters effectively. Improve policy deployment speed with incremental group changes, and use assignment filters to include and exclude.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 11/19/2025
 ms.topic: article
 ms.reviewer: mattcall

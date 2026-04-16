@@ -1,8 +1,6 @@
 ---
 title: Platforms and policy types supported by assignment filters
 description: Learn which apps, compliance policies, and device configuration profiles and their platforms support assignment filters in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/31/2026
 ms.topic: reference
 ms.reviewer: mattcall

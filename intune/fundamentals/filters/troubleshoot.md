@@ -1,8 +1,6 @@
 ---
 title: Assignment filter reports & troubleshooting
 description: Learn how to use assignment filter reports to troubleshoot policies in Microsoft Intune. View filter evaluation results, resolve conflicts, and understand include vs. exclude modes.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 11/19/2025
 ms.topic: how-to
 ms.reviewer: mattcall, abalwan

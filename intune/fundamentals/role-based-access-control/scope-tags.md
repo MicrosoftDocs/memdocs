@@ -1,8 +1,6 @@
 ---
 title: Use role-based access control (RBAC) and scope tags for distributed IT
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
-author: brenduns
-ms.author: brenduns
 ms.date: 04/09/2026
 ms.topic: how-to
 ai-usage: ai-assisted

@@ -261,23 +261,7 @@ items:
         href: ./fundamentals/setup-mdm-authority.md
 
     - name: Manage roles and permissions
-      items:
-      - name: Role-based access control
-        href: ./fundamentals/role-based-access-control/overview.md
-      - name: Built-in roles permissions reference
-        href: ./fundamentals/role-based-access-control/ref-built-in-roles.md
-      - name: Assign a role to a user
-        href: ./fundamentals/role-based-access-control/assign-role.md
-      - name: Create a custom role
-        href: ./fundamentals/role-based-access-control/create-custom-role.md
-      - name: Use scope tags to determine what admins can see
-        href: ./fundamentals/role-based-access-control/scope-tags.md
-      - name: Determine admin structure
-        href: ./fundamentals/scale-guidelines.md
-        displayName: distributed IT, many admins, scale, guidelines
-      - name: Configure multiple admin approvals
-        href: ./fundamentals/role-based-access-control/multi-admin-approval.md
-        displayName: multi-admin approval, maa
+      href: ./fundamentals/role-based-access-control/toc.yml
 
   - name: Create and deploy Intune policies
     items:

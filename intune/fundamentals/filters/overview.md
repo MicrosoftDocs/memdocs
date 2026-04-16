@@ -1,8 +1,6 @@
 ---
 title: Create assignment filters in Microsoft Intune
 description: Create assignment filters in Microsoft Intune to target policies based on device properties like OS version or manufacturer. Learn to create, update, and delete filters for managed devices and apps.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: mattcall

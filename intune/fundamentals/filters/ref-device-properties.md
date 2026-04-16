@@ -1,8 +1,6 @@
 ---
 title: Assignment filter properties and operators reference
 description: Reference guide for device and app properties, operators, and rule syntax when creating assignment filters in Microsoft Intune. Includes examples and supported values.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 02/24/2026
 ms.topic: reference
 ms.reviewer: mattcall

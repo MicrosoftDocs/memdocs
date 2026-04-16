@@ -1,8 +1,6 @@
 ---
 title: Microsoft Intune built-in roles reference
 description: Permissions reference for built-in roles for Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 02/04/2026
 ms.topic: reference
 

@@ -136,10 +136,13 @@
         "endpoint-analytics/**/*": "paolomatarazzo",
         "epm/**/*": "brenduns",
         "fundamentals/certificates/**/*": "paolomatarazzo",
+        "fundamentals/filters/**/*": "mandiohlinger",
         "fundamentals/licensing/**/*": "paolomatarazzo",
+        "fundamentals/role-based-access-control/**/*": "brenduns",
         "privacy/**/*": "paolomatarazzo",
         "solutions/**/*": "mandiohlinger",
-        "user-help/**/*": "lenewsad"
+        "user-help/**/*": "lenewsad",
+        "whats-new/**/*": "brenduns"
       },
       "ms.author": {
         "advanced-analytics/**/*": "paoloma",
@@ -164,10 +167,13 @@
         "endpoint-analytics/**/*": "paoloma",
         "epm/**/*": "brenduns",
         "fundamentals/certificates/**/*": "paoloma",
+        "fundamentals/filters/**/*": "mandia",
         "fundamentals/licensing/**/*": "paoloma",
+        "fundamentals/role-based-access-control/**/*": "brenduns",
         "privacy/**/*": "paoloma",
         "solutions/**/*": "mandia",
-        "user-help/**/*": "lanewsad"
+        "user-help/**/*": "lanewsad",
+        "whats-new/**/*": "brenduns"
       },
       "ms.collection": {
         "intune-service/device-updates/**/*": ["M365-identity-device-management","sub-updates"],

@@ -1,8 +1,6 @@
 ---
 title: What's new in previous months in the Microsoft Intune
 description: Review older announcements from the Intune what's new page
-author: brenduns
-ms.author: brenduns
 ms.date: 03/02/2026
 ms.topic: whats-new
 

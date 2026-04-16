@@ -1,8 +1,6 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 04/07/2026
 ms.topic: whats-new
 ms.reviewer: intuner

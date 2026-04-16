@@ -2,8 +2,6 @@
 title: Create and assign a custom role in Intune
 description: Learn how to create and assign a custom Intune RBAC role with specific permissions for security operations. Follow this guide to implement least privilege access.
 services: microsoft-intune
-author: brenduns
-ms.author: brenduns
 ms.topic: how-to
 ms.date: 01/20/2026
 
