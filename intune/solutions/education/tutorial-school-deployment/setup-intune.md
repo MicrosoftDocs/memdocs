@@ -44,7 +44,7 @@ Before configuring settings with Intune, consider the following prerequisites:
   - As part of a [Microsoft 365 Education subscription][MSFT-2]
 - **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows, Windows 11 SE, and iPadOS
 - **Intune device platforms.** Intune can manage devices running a supported version of Windows, Windows 11 SE, iOS, iPadOS, macOS, Android, and Linux
-- **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md) for a list of endpoints.
+- **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](../../../fundamentals/endpoints.md) for a list of endpoints.
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
 
@@ -262,7 +262,7 @@ When the Intune service configured, you can configure policies and applications 
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/intune-service/fundamentals/licenses
+[MEM-1]: /intune/fundamentals/licensing/index
 [MEM-2]: ../../../intune-service/enrollment/enrollment-restrictions-set.md
 [MEM-4]: ../../../device-security/identity-protection/configure-tenant-wide-policy.md
 [INT-1]: /intune-education/what-is-intune-for-education

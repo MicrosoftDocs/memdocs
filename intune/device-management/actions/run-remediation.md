@@ -65,12 +65,12 @@ To learn more about remediations in Microsoft Intune—including what they are, 
 
 <!-- role links -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
 <!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-initiateondemandproactiveremediation
 
-[LEARN-1]: ../../intune-service/fundamentals/remediations.md
+[LEARN-1]: ../tools/deploy-remediations.md

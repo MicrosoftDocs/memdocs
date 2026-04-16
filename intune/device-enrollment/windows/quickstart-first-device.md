@@ -7,7 +7,6 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Step 5 - Enroll a Windows device in Microsoft Intune
@@ -28,7 +27,7 @@ In this article, you:
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -49,7 +48,7 @@ In this article, you:
 :::column span="3":::
 > To complete this step, you must:
 > - Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-automatic-mdm.md).
-> - Be using a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md).
+> - Be using a [supported Windows version](../../fundamentals/ref-supported-platforms.md).
 :::column-end:::
 :::row-end:::
 
@@ -65,7 +64,7 @@ These steps guide you through using the Settings app on a Windows device to enro
 
     :::image type="content" source="./media/quickstart-first-device/quickstart-enroll-windows-device-04.png" alt-text="Screenshot of Windows Settings, Accounts section, showing Access work or school with Connect button highlighted." lightbox="./media/quickstart-first-device/quickstart-enroll-windows-device-04.png":::
 
-4. Enter the username and password for your work account. If you followed the [create a user and assign a license](../../intune-service/fundamentals/quickstart-create-user.md) evaluation step, you can use the user account that you created.
+4. Enter the username and password for your work account. If you followed the [create a user and assign a license](../../fundamentals/tenant-administration/quickstart-create-user.md) evaluation step, you can use the user account that you created.
 
 5. Wait for your device to finish registering. When you see the **You're all set!** screen, select **Done**. Your work account should now be visible under **Accounts**.
 

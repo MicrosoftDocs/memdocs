@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Create a Settings Catalog policy using your imported GPOs in Microsoft Intune
@@ -31,7 +30,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   - A role that has the **Security baselines** permission and the **Device configurations/Create** permission
 
-  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../intune-service/fundamentals/role-based-access-control.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions).
+  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../fundamentals/role-based-access-control/overview.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../fundamentals/role-based-access-control/create-custom-role.md#custom-role-permissions).
 
 - Import your on-premises GPOs, and review the results.
 
@@ -88,7 +87,7 @@ After you [import your GPOs](./import-group-policy-analytics.md#import-gpos-and-
 
     Select **Next**.
 
-7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
 8. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](./assign-device-profile.md).
 

@@ -2,7 +2,7 @@
 title: Mobile Application Management (MAM) and Android Enterprise Personally-Owned Work Profiles in Microsoft Intune
 description: See the available features when deciding to use Mobile Application Management (MAM) and/or Android Enterprise personally-owned work profiles for personal or BYOD Android devices in Microsoft Intune.
 ms.date: 06/12/2025
-ms.topic: article
+ms.topic: concept-article
 ms.reviewer: esalter
 ms.collection:
 - Android

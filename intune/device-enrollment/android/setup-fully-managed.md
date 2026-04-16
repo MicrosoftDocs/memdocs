@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up enrollment for Android Enterprise fully managed devices
@@ -22,7 +21,7 @@ You and your device users can initiate enrollment by entering or scanning an enr
 ## Step 1: Prerequisites
 Complete these prerequisites to ensure a successful enrollment.
 
-* You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../../intune-service/fundamentals/mdm-authority-set.md).
+* You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../../fundamentals/setup-mdm-authority.md).
 
 * Devices must:
   - Run Android OS version 10.0 and later.
@@ -104,7 +103,7 @@ To create a new enrollment profile:
    > Be sure to select a device group, not a user group.
 
 1. Select **Next** to continue to **Scope tags**.
-1. Apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Scope tags are optional. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+1. Apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Scope tags are optional. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 1. Select **Next** to continue to **Review + create**.
 1. Review the summary of your profile, and then select **Create** to finalize it.
 

@@ -24,7 +24,7 @@ Review the existing Microsoft Entra ID groups and determine if they're applicabl
 
 The key to avoiding policy conflicts is to understand if existing policies targeted at the same set of users or devices contain the same settings. If a new policy has settings that overlap with existing ones for the same users or devices, either exclude those users or devices from the old policies or remove the overlapping settings.
 
-You can exclude groups of devices or users using the "exclude group" option or by excluding devices using [filters](../../../intune-service/fundamentals/filters.md).
+You can exclude groups of devices or users using the "exclude group" option or by excluding devices using [filters](../../../fundamentals/filters/overview.md).
 
 > [!TIP]
 > For more information about grouping and targeting, see [Plan Education device grouping and targeting](grouping-and-targeting.md).

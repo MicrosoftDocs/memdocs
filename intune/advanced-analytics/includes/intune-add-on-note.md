@@ -5,4 +5,4 @@ ms.date: 02/22/2023
 ms.author: mandia
 ---
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md).

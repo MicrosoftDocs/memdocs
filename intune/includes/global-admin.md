@@ -9,4 +9,4 @@ ms.author: mandia
 
 The [Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/privileged-roles-permissions) role is a highly privileged role, and should only be used when another role can't be used. This feature requires the Global Administrator role.
 
-To reduce risk, assign the least-privileged role that can complete the task. For more information on the built-in Intune roles and what they can do, see [Role-based access control (RBAC) with Intune](../intune-service/fundamentals/role-based-access-control.md) and [Built-in role permissions for Intune](../intune-service/fundamentals/role-based-access-control-reference.md).
+To reduce risk, assign the least-privileged role that can complete the task. For more information on the built-in Intune roles and what they can do, see [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control/overview.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control/ref-built-in-roles.md).
