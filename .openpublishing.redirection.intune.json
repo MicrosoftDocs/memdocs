@@ -5201,6 +5201,51 @@
       "redirect_url": "/intune/device-enrollment/guide-linux"
     },
     {
+      "source_path": "intune/intune-service/fundamentals/deployment-guide-enroll.md",
+      "redirect_url": "/intune/device-enrollment/enroll-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/azure-virtual-desktop-multi-session.md",
+      "redirect_url": "/intune/solutions/azure-virtual-desktop-multi-session",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/azure-virtual-desktop.md",
+      "redirect_url": "/intune/solutions/azure-virtual-desktop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/cloud-configuration.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/cloud-configuration-setup-guide.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/education-settings-configure-ios-shared.md",
+      "redirect_url": "/intune/solutions/education/ref-classroom-settings-ios-shared",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/education-settings-configure-ios.md",
+      "redirect_url": "/intune/solutions/education/ref-classroom-settings-ios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/windows-10-virtual-machines.md",
+      "redirect_url": "/intune/solutions/windows-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/windows-holographic-for-business.md",
+      "redirect_url": "/intune/solutions/windows-holographic",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "intune/governance/device-cleanup-rules.md",
       "redirect_url": "/intune/governance/configure-cleanup-rules",
       "redirect_document_id": false
