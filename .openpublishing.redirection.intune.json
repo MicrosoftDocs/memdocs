@@ -5201,11 +5201,6 @@
       "redirect_url": "/intune/device-enrollment/guide-linux"
     },
     {
-      "source_path": "intune/intune-service/fundamentals/deployment-guide-enroll.md",
-      "redirect_url": "/intune/device-enrollment/enroll-devices",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "intune/intune-service/fundamentals/azure-virtual-desktop-multi-session.md",
       "redirect_url": "/intune/solutions/azure-virtual-desktop-multi-session",
       "redirect_document_id": true
