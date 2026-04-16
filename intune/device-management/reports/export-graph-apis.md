@@ -1,8 +1,6 @@
 ---
 title: Use Graph APIs to Export Intune Reports
 description: Learn about exporting Intune reports using Graph APIs.
-author: nicholasswhite
-ms.author: nwhite
 ms.topic: how-to
 ms.date: 02/28/2025
 ms.reviewer: davidra
@@ -179,7 +177,7 @@ To ensure that the `exportJobs` API doesn't have too many concurrent requests, w
 
 - **The APIs will support up to 100 requests per tenant per minute**: This support covers all users and apps in a tenant. Any additional requests initiated by either users or apps in the tenant within the same minute will be throttled.
   - If the APIs are initiated by a user, up to 8 requests will be allowed by the same user within a minute. Subsequent requests by the same user within the same minute will be throttled.
-  -	If the APIs are initiated by an app, then up to 48 requests will be allowed by the same app within a minute. Subsequent requests by the same app within the same minute will be throttled.
+  -    If the APIs are initiated by an app, then up to 48 requests will be allowed by the same app within a minute. Subsequent requests by the same app within the same minute will be throttled.
 
 ## Next steps
 
