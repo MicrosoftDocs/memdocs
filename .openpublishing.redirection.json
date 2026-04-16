@@ -3306,7 +3306,7 @@
     },
     {
       "source_path": "intune/intune-service/apps/apps-add-enterprise-app.md",
-      "redirect_url": "/intune/app-management/deployment/add-enterprise-catalog",
+      "redirect_url": "/intune/app-management/deployment/add-enterprise-catalog-app",
       "redirect_document_id": false
     },
     {
@@ -3381,7 +3381,17 @@
     },
     {
       "source_path": "intune/intune-service/apps/apps-enterprise-app-management.md",
-      "redirect_url": "/intune/app-management/deployment/enterprise-app-catalog",
+      "redirect_url": "/intune/app-management/deployment/enterprise-app-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/deployment/enterprise-app-catalog.md",
+      "redirect_url": "/intune/app-management/deployment/enterprise-app-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/app-management/deployment/add-enterprise-catalog.md",
+      "redirect_url": "/intune/app-management/deployment/add-enterprise-catalog-app",
       "redirect_document_id": false
     },
     {

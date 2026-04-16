@@ -457,7 +457,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/tenant-status.md",
-      "redirect_url": "/intune/fundamentals/tenant-status",
+      "redirect_url": "/intune/governance/tenant-status",
       "redirect_document_id": false
     },
     {
@@ -2947,7 +2947,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/tenant-status.md",
-      "redirect_url": "/intune/operations/tenant-status",
+      "redirect_url": "/intune/governance/tenant-status",
       "redirect_document_id": false
     },
     {

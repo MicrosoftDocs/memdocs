@@ -73,7 +73,7 @@ The following table lists the specific app types and how you can add them in the
 | [Cross platform web apps](./add-web.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../configuration/manage-system-apps-android.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | [Windows app (Win32)](./add-win32.md)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
-| [Enterprise App Catalog app (Win32)](./add-enterprise-catalog.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
+| [Enterprise App Catalog app (Win32)](./add-enterprise-catalog-app.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
 | [macOS LOB apps](./add-lob-macos.md) | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | [macOS apps (DMG)](./add-dmg-macos.md) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
 | [macOS apps (PKG)](./add-unmanaged-pkg-macos.md) | LOB app  | Select **macOS app (PKG)** as the app type, select the **App package** file, and then select an installation file with the extension *.pkg*. This app type is used to add an unmanaged macOS PKG app to Intune.  |
@@ -264,4 +264,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](./add-built-in.md)
 - [Android Enterprise system app](../configuration/manage-system-apps-android.md)
 - [Win32 apps](./win32.md)
-- [Enterprise App Catalog app (Win32)](./add-enterprise-catalog.md)
+- [Enterprise App Catalog app (Win32)](./add-enterprise-catalog-app.md)

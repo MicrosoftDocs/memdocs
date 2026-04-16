@@ -239,7 +239,7 @@ For more information about Intune's related app protection policies, see [iOS ap
 
 Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you can select apps from the Enterprise App Catalog as blocking apps in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This feature allows you to ensure those apps are delivered before the user can access the desktop.
 
-For related information, see [Set up the Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog.md).
+For related information, see [Set up the Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog-app.md).
 
 > [!div class="checklist"]
 > Applies to:
@@ -1449,7 +1449,7 @@ Applies to:
 
 #### Streamlined app creation experience for apps from Enterprise App Catalog<!-- 29411991 -->
 
-We've streamlined the way apps from [Enterprise App Catalog](../../app-management/deployment/add-enterprise-catalog.md) are added to Intune. We now provide a direct app link rather than duplicating the app binaries and metadata. App contents now download from a `*.manage.microsoft.com` subdomain. This update helps to improve the latency when adding an app to Intune. When you add an app from Enterprise App Catalog, it syncs immediately and is ready for additional action from within Intune.
+We've streamlined the way apps from [Enterprise App Catalog](../../app-management/deployment/add-enterprise-catalog-app.md) are added to Intune. We now provide a direct app link rather than duplicating the app binaries and metadata. App contents now download from a `*.manage.microsoft.com` subdomain. This update helps to improve the latency when adding an app to Intune. When you add an app from Enterprise App Catalog, it syncs immediately and is ready for additional action from within Intune.
 
 #### Update Enterprise App Catalog apps<!-- 24875279 -->
 
@@ -2013,7 +2013,7 @@ Intune supports the capability to deploy DMG and PKG apps as **Available** in th
 
 #### Newly available Enterprise App Catalog apps for Intune<!-- 28691663 -->
 
-The Enterprise App Catalog has updated to include additional apps. For a complete list of supported apps, see [Apps available in the Enterprise App Catalog](../../app-management/deployment/enterprise-app-catalog.md#apps-available-in-the-enterprise-app-catalog).
+The Enterprise App Catalog has updated to include additional apps. For a complete list of supported apps, see [Apps available in the Enterprise App Catalog](../../app-management/deployment/enterprise-app-management.md#apps-available-in-the-enterprise-app-catalog).
 
 #### The Intune App SDK and Intune App Wrapping Tool are now in a different GitHub repo<!-- 27264674, 27264632 -->
 
@@ -3481,8 +3481,8 @@ Enterprise Application Management provides an Enterprise App Catalog of Win32 ap
 For more information, see:
 
 - [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
-- [Microsoft Intune Enterprise Application Management](../../app-management/deployment/enterprise-app-catalog.md)
-- [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog.md)
+- [Microsoft Intune Enterprise Application Management](../../app-management/deployment/enterprise-app-management.md)
+- [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog-app.md)
 
 #### Microsoft Intune Advanced Analytics<!--25194145 -->
 

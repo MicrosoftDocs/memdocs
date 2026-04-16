@@ -26,7 +26,7 @@ In addition to supporting extensive management capabilities, Win32 app managemen
 Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Windows app management, Intune-only customers have greater management capabilities for their Win32 apps. This article provides an overview of the Intune Win32 app management features and related information.
 
 > [!NOTE]
-> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog.md).
+> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog-app.md).
 
 > [!IMPORTANT]
 > When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Windows Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported.
@@ -209,7 +209,7 @@ To view an app using the relationship viewer:
 For related information, see the following resources:
 - [Add Win32 app supersedence](./configure-win32-supersedence.md)
 - [App relationship viewer](./win32.md#app-relationship-viewer)
-- [Microsoft Intune Enterprise Application Management](./enterprise-app-catalog.md)
+- [Microsoft Intune Enterprise Application Management](./enterprise-app-management.md)
 
 ## Next steps
 

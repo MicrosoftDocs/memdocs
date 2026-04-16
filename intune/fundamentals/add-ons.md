@@ -30,7 +30,7 @@ The following table provides a list of add-on capabilities and associated Intune
 | Capability | Standalone add-on | Intune Plan 2 | Intune Suite |
 |:-|:-:|:-:|:-:|
 | [Endpoint Privilege Management](../epm/overview.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
-| [Enterprise App Management](../app-management/deployment/enterprise-app-catalog.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
+| [Enterprise App Management](../app-management/deployment/enterprise-app-management.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Advanced Analytics](../advanced-analytics/index.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Remote Help](../remote-help/overview.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
@@ -49,7 +49,7 @@ For more information, see [Endpoint Privilege Management](../epm/overview.md).
 
 ### Microsoft Intune Enterprise App Management
 
-Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. In addition, Intune hosts Enterprise App Catalog apps in Microsoft storage. For more information, see [Microsoft Intune Enterprise Application Management](../app-management/deployment/enterprise-app-catalog.md).
+Enterprise App Management is an Intune Suite add-on that is available for trial and purchase. Enterprise Application Management provides an Enterprise App Catalog of Win32 applications that are easily accessible in Intune. You can add these applications to your tenant by selecting them from the Enterprise App Catalog. When you add an Enterprise App Catalog app to your Intune tenant, default installation, requirements, and detection settings are automatically provided. You can modify these settings as well. In addition, Intune hosts Enterprise App Catalog apps in Microsoft storage. For more information, see [Microsoft Intune Enterprise Application Management](../app-management/deployment/enterprise-app-management.md).
 
 ### Microsoft Intune Advanced Analytics
 

@@ -16,7 +16,7 @@ ms.collection:
 After you've [prepared a Win32 app to be uploaded to Intune](./create-win32-package.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](./create-win32-package.md).
 
 > [!NOTE]
-> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog.md).
+> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog-app.md).
 
 ## Prerequisites
 

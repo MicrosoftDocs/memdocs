@@ -127,7 +127,7 @@ If an app fails automated checks, it moves to manual validation and requires mor
 
 ### How many applications are in the catalog?
 
-For a complete list of applications, see [Apps available in the Enterprise App Catalog](./enterprise-app-catalog.md#apps-available-in-the-enterprise-app-catalog).
+For a complete list of applications, see [Apps available in the Enterprise App Catalog](./enterprise-app-management.md#apps-available-in-the-enterprise-app-catalog).
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
@@ -176,7 +176,7 @@ Yes, the Managed Apps report provides a report of apps on a specific device that
 
 ## Apps available in the Enterprise App Catalog
 
-There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](./add-enterprise-catalog.md#add-a-windows-catalog-app-win32-to-intune).
+There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](./add-enterprise-catalog-app.md#add-a-windows-catalog-app-win32-to-intune).
 
 More apps are available on an ongoing basis in the Enterprise App Catalog.
 
@@ -1123,6 +1123,6 @@ The following table of Enterprise Apps is available within Intune:
 
 ## Next steps
 
-- [Add an Enterprise App Catalog app to Microsoft Intune](./add-enterprise-catalog.md)
+- [Add an Enterprise App Catalog app to Microsoft Intune](./add-enterprise-catalog-app.md)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)

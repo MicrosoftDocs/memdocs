@@ -31,7 +31,7 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 
 ## App update availability
 
-Microsoft established Service Level Objectives (SLOs) to provide predictable timelines for when app updates become available in the Enterprise App Catalog. Most app updates complete automated validation and are available within 24 hours. Updates requiring manual testing typically complete within seven days. For more information about SLOs and processing timelines, see [Enterprise App Management overview](./enterprise-app-catalog.md).
+Microsoft established Service Level Objectives (SLOs) to provide predictable timelines for when app updates become available in the Enterprise App Catalog. Most app updates complete automated validation and are available within 24 hours. Updates requiring manual testing typically complete within seven days. For more information about SLOs and processing timelines, see [Enterprise App Management overview](./enterprise-app-management.md).
 
 ## Add a Windows catalog app (Win32) to Intune
 
@@ -55,7 +55,7 @@ The **App information** steps allow you to select an app from the Enterprise App
 4. Choose **Select** to update the **App information** step.
    App details are populated into appropriate fields.
 
-   :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-01.png" alt-text="Include app information when adding a Enterprise App Catalog app":::
+   :::image type="content" source="./media/enterprise-app-management/apps-add-enterprise-app-01.png" alt-text="Include app information when adding a Enterprise App Catalog app":::
 
 The **App information** step provides the fields:
 
@@ -209,7 +209,7 @@ The **Rules format** provides the following options:
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
         - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location shows as the app version in reporting. This might differ from the version of the app properties. Only one detection rule can have this setting. Adding this setting to another rule for this app clears it from the prior rule.
 
-          :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-09.png" alt-text="Screenshot of file detection rule.":::
+          :::image type="content" source="./media/enterprise-app-management/apps-add-enterprise-app-09.png" alt-text="Screenshot of file detection rule.":::
 
     - **Registry**: Verify based on value, string, integer, or version.
         - **Key path**: The full path of the registry entry that contains the value to detect. A valid syntax is HKEY_LOCAL_MACHINE\Software\WinRAR or HKLM\Software\WinRAR.
@@ -218,7 +218,7 @@ The **Rules format** provides the following options:
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
         - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location shows as the app version in reporting. This might differ from the version of the app properties. Only one detection rule can have this setting. Adding this setting to another rule for this app clears it from the prior rule.
 
-          :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-08.png" alt-text="Screenshot of registry detection rule.":::
+          :::image type="content" source="./media/enterprise-app-management/apps-add-enterprise-app-08.png" alt-text="Screenshot of registry detection rule.":::
 
 - **Use a custom detection script**: Specify the PowerShell script that is used to detect this app.
 

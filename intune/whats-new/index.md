@@ -1008,7 +1008,7 @@ For more information about Managed Google Play store layout options, see [Approv
 
 Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
 
-For more information, see [Enterprise App Management overview](../app-management/deployment/enterprise-app-catalog.md).
+For more information, see [Enterprise App Management overview](../app-management/deployment/enterprise-app-management.md).
 
 #### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
 
@@ -1371,7 +1371,7 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 
 You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
 
-For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../app-management/deployment/add-enterprise-catalog.md).
+For more information, see [Add an Enterprise App Catalog app to Microsoft Intune](../app-management/deployment/add-enterprise-catalog-app.md).
 
 > [!div class="checklist"]
 > Applies to:

@@ -34,7 +34,7 @@ Enterprise App Management enables you to easily discover and deploy applications
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../../fundamentals/add-ons.md).
 
-For more information, see [Enterprise Application Management](../../../app-management/deployment/enterprise-app-catalog.md).
+For more information, see [Enterprise Application Management](../../../app-management/deployment/enterprise-app-management.md).
 
 #### Win32 apps (MSI, exe)
 

@@ -71,9 +71,9 @@ items:
               - name: Enterprise App Management
                 items:
                   - name: Enterprise App Management overview
-                    href: ./deployment/enterprise-app-catalog.md
+                    href: ./deployment/enterprise-app-management.md
                   - name: Add an Enterprise App Catalog app (Win32)
-                    href: ./deployment/add-enterprise-catalog.md
+                    href: ./deployment/add-enterprise-catalog-app.md
               - name: macOS LOB apps
                 href: ./deployment/add-lob-macos.md
               - name: macOS app management

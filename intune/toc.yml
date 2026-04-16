@@ -102,9 +102,9 @@ items:
     - name: Enterprise App Management
       items:
       - name: Enterprise App Management overview
-        href: /intune/app-management/deployment/enterprise-app-catalog
+        href: /intune/app-management/deployment/enterprise-app-management
       - name: Add an Enterprise App Catalog app (Win32)
-        href: /intune/app-management/deployment/add-enterprise-catalog
+        href: /intune/app-management/deployment/add-enterprise-catalog-app
 
     - name: Microsoft Cloud PKI
       href: ./cloud-pki/toc.yml
