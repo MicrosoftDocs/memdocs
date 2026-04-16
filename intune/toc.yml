@@ -112,13 +112,13 @@ items:
     - name: Remote Help
       items:
       - name: Remote Help overview
-        href: ./remote-help/overview.md
+        href: ./remote-help/index.md
       - name: Planning Remote Help
         href: ./remote-help/plan.md
       - name: Deploying Remote Help
         href: ./remote-help/deploy.md
       - name: Using Remote Help
-        href: ./remote-help/use-windows.md
+        href: ./remote-help/start-session.md
       - name: Troubleshooting Remote Help
         href: ./remote-help/troubleshoot.md
 
@@ -566,7 +566,7 @@ items:
     - name: Remote Help with ServiceNow integration
       href: ./device-management/tools/setup-servicenow.md
     - name: Remote Help with the Intune Suite
-      href: ./remote-help/overview.md
+      href: ./remote-help/index.md
     - name: Use the TeamViewer integration 
       href: ./device-management/tools/setup-teamviewer.md    
     - name: TeamViewer for remote administration (old)
@@ -574,9 +574,9 @@ items:
     - name: Remediations that fix common support issues
       items:
       - name: Use Remediations
-        href: ./endpoint-analytics/remediations.md
+        href: ./device-management/tools/deploy-remediations.md
       - name: Powershell scripts for Remediations
-        href: ./endpoint-analytics/ref-remediation-scripts.md
+        href: ./device-management/tools/ref-remediation-scripts.md
     - name: Using the Intune docs
       href: ./fundamentals/use-docs.md
     - name: Get support in the Intune admin center
@@ -592,7 +592,7 @@ items:
     - name: Government
       items:
       - name: Intune US Government service description
-        href: ./fundamentals/government-service-description.md
+        href: ./fundamentals/government-service.md
       - name: Intune US government endpoints
         href: ./fundamentals/endpoints-us-government.md
       - name: Deploy apps to Government environments

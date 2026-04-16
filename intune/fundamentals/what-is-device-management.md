@@ -8,8 +8,6 @@ ms.topic: overview
 ms.reviewer: davguy
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # What does device management mean for organizations?

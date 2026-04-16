@@ -6,8 +6,6 @@ ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # In development for Microsoft Intune
@@ -268,7 +266,7 @@ After the defined time elapses, or when the *restore managed home screen* action
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
 
-The new baseline will be available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service-description.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+The new baseline will be available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:

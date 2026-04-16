@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Enroll your Android Enterprise dedicated, fully managed, or corporate-owned with work profile devices

@@ -9,7 +9,7 @@ ms.author: nwhite
 
 # PowerShell Scripts for Remediations
 
-This article includes sample scripts that customers can implement or use as templates to learn how to create their own. Use the information provided here to create script packages for [Remediations](remediations.md).
+This article includes sample scripts that customers can implement or use as templates to learn how to create their own. Use the information provided here to create script packages for [Remediations](deploy-remediations.md).
 
 ## Script descriptions
 
@@ -255,4 +255,4 @@ catch{
 
 ## Next steps
 
-For information about deploying script packages, see [Remediations](remediations.md).
+For information about deploying script packages, see [Remediations](deploy-remediations.md).

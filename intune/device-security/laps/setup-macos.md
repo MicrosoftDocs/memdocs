@@ -8,7 +8,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune

@@ -7,8 +7,6 @@ ms.date: 04/22/2024
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune

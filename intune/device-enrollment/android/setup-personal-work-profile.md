@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up enrollment of Android Enterprise personally owned work profile devices

@@ -7,8 +7,6 @@ ms.reviewer: aanavath
 ai.usage: ai-assisted 
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - sub-secure-endpoints
 ---
 

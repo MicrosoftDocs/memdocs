@@ -8,8 +8,6 @@ ms.topic: overview
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - essentials-get-started
 ---
 

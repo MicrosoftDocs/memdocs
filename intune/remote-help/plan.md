@@ -1,17 +1,12 @@
 ---
 title: Plan for Remote Help with Microsoft Intune
 description: Learn about the requirements and capabilities of Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
-author: lenewsad
-ms.author: lanewsad
 ms.date: 10/16/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: karawang
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
  # Planning for Remote Help with Microsoft Intune
@@ -53,7 +48,7 @@ Use these considerations to prepare your organization for Remote Help.
   
 - Network and firewall: Verify that corporate network policies don't interfere with Remote Help. The app communicates over port 443 to Azure cloud endpoints. If your users are on a corporate network, ensure proxy or SSL inspection doesn't break the connection. If your proxy servers are using SSL inspection, the domains listed for Remote Help should be excluded to avoid issues. For more information, see [Network endpoints for Remote Help](../fundamentals/endpoints.md#remote-help).
   
-- Support for Government Cloud is reduced: Remote Help is supported in Government Community Cloud (GCC) environments except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/government-service-description.md).
+- Support for Government Cloud is reduced: Remote Help is supported in Government Community Cloud (GCC) environments except in Azure Virtual Desktop (AVD). Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/government-service.md).
   
 - Remote Help sharers, helpers, and devices must be in the same tenant: Remote Help's integration with compliance policies and role-based access control (RBAC) requires all participants to be in the same tenant.
   
@@ -146,7 +141,7 @@ Remote Help has the following limitations:
   - Windows 365
   - Samsung and Zebra devices enrolled as Android Enterprise dedicated devices
   - macOS 13, 14, and 15
-- Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/government-service-description.md).
+- Remote Help isn't supported on GCC High or DoD (U.S. Department of Defense) tenants. For more information, go to [Microsoft Intune for US Government GCC High and DoD service description](../fundamentals/government-service.md).
 
 ## Supported platforms
 

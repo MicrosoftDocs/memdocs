@@ -8,8 +8,6 @@ ms.date: 02/18/2026
 ms.topic: overview
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - sub-secure-endpoints
 ms.reviewer: mattcall
 ---

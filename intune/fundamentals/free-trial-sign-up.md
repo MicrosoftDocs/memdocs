@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Step 1 - Sign up for a free trial and configure a Microsoft Intune tenant

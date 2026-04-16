@@ -7,7 +7,6 @@ Customer intent: As an Intune admin, I want to set up automated device enrollmen
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business Manager

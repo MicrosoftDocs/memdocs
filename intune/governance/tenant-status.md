@@ -8,7 +8,6 @@ ms.topic: concept-article
 ms.reviewer: crisk
 ms.collection:
 - M365-identity-device-management
-- highpri
 - help-support
 ---
 

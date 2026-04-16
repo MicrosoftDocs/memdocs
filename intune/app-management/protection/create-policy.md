@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_Protect
 ---
 # How to Create and Assign App Protection Policies

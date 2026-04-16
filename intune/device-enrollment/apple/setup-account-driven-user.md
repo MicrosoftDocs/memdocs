@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: rishitasarin
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up account driven Apple User Enrollment

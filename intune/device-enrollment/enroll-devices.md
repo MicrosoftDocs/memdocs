@@ -5,8 +5,6 @@ ms.date: 4/3/2024
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Step 5 – Enroll devices in Microsoft Intune

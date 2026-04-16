@@ -7,7 +7,6 @@ ms.date: 01/27/2026
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Step 4 - Set up automatic enrollment for Windows devices

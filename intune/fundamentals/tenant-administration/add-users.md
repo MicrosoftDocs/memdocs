@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Add and manage users for Microsoft Intune

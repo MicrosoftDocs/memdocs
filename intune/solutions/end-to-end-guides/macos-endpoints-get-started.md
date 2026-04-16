@@ -707,7 +707,7 @@ Remote Help is a cloud-based solution for secure help desk connections that use 
 
 For more information, go to:
 
-- [Use Remote Help on macOS to assist authenticated users](../../remote-help/overview.md)
+- [Use Remote Help on macOS to assist authenticated users](../../remote-help/index.md)
 - [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
 
 ### Custom attributes

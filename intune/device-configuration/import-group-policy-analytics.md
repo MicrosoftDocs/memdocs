@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Import and analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune

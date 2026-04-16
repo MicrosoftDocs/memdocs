@@ -73,4 +73,4 @@ To learn more about remediations in Microsoft Intune—including what they are, 
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-initiateondemandproactiveremediation
 
-[LEARN-1]: ../../endpoint-analytics/remediations.md
+[LEARN-1]: ../tools/deploy-remediations.md

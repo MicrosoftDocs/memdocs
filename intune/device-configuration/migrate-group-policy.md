@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Create a Settings Catalog policy using your imported GPOs in Microsoft Intune

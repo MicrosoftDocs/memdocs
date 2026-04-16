@@ -8,7 +8,6 @@ ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Win32
 - FocusArea_Apps_LOB
 ---

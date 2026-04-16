@@ -7,7 +7,6 @@ author: nicholasswhite
 ms.author: nwhite
 ms.reviewer: jocallah
 ms.collection:
-- highpri
 - M365-identity-device-management
 ---
 
@@ -47,7 +46,7 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 
     **OR**
 
-  - Device is [co-managed](../configmgr/comanage/overview.md) running Windows.
+  - Device is [co-managed](../../configmgr/comanage/overview.md) running Windows.
 
 ### Licensing
 
@@ -61,7 +60,7 @@ Remediations require users of the devices to have one of the following licenses:
 
 ### Permissions
 
-- For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category. For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
+- For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category. For more information, see [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 - An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time.
 
@@ -134,7 +133,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations**.
 1. Choose the **Create script package** button to create a script package.
 
-    :::image type="content" source="./media/remediations/remediations-create.png" alt-text="Screenshot that shows the create script package button in the Remediations page in Microsoft Intune." lightbox="./media/remediations/remediations-create.png":::
+    :::image type="content" source="./media/deploy-remediations/remediations-create.png" alt-text="Screenshot that shows the create script package button in the Remediations page in Microsoft Intune." lightbox="./media/deploy-remediations/remediations-create.png":::
 
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
 1. On the **Settings** step, upload both the **Detection script file** and the **Remediation script file** by doing the following steps:
@@ -146,7 +145,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
 
-    :::image type="content" source="./media/remediations/remediations-script-settings.png" alt-text="Screenshot that shows the custom script settings in the Remediations page in Microsoft Intune." lightbox="./media/remediations/remediations-script-settings.png":::
+    :::image type="content" source="./media/deploy-remediations/remediations-script-settings.png" alt-text="Screenshot that shows the custom script settings in the Remediations page in Microsoft Intune." lightbox="./media/deploy-remediations/remediations-script-settings.png":::
 
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](ref-remediation-scripts.md#script-descriptions).
@@ -155,7 +154,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
 
    For information about enforcing script signature checks, see [Script requirements](#script-requirements).
 1. Select **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../fundamentals/filters/overview.md).
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../../fundamentals/filters/overview.md).
 
    >[!NOTE]
    > Don't mix user and device groups across include and exclude assignments.
@@ -174,9 +173,9 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Users must be Intune Admins or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
-- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](../fundamentals/endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
+- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](../../fundamentals/endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
-- The [Intune Management Extension](../device-management/tools/management-extension-windows.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
+- The [Intune Management Extension](./management-extension-windows.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
 
 ### How to run a Remediation script on-demand
 
@@ -217,11 +216,11 @@ The client reports Remediation information at the following times:
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations**, you can see an overview of your detection and remediation status.
 
-    :::image type="content" source="./media/remediations/remediations-report-overview.png" alt-text="Screenshot that shows the Remediations report overview page in Microsoft Intune." lightbox="./media/remediations/remediations-report-overview.png":::
+    :::image type="content" source="./media/deploy-remediations/remediations-report-overview.png" alt-text="Screenshot that shows the Remediations report overview page in Microsoft Intune." lightbox="./media/deploy-remediations/remediations-report-overview.png":::
 
 1. Select **Device status** to get status details for each device in your deployment.
 
-    :::image type="content" source="./media/remediations/remediations-device-status.png" alt-text="Screenshot that shows the Remediations device status page in Microsoft Intune." lightbox="./media/remediations/remediations-device-status.png":::
+    :::image type="content" source="./media/deploy-remediations/remediations-device-status.png" alt-text="Screenshot that shows the Remediations device status page in Microsoft Intune." lightbox="./media/deploy-remediations/remediations-device-status.png":::
 
 ## Export script output
 <!-- 10198545 -->
@@ -239,10 +238,10 @@ You can view the status of Remediations that are assigned or run on-demand to a 
 
 When you apply filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
 
-[!INCLUDE [platform-scripts-export-api](../device-management/includes/platform-scripts-export-api.md)]
+[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
 
 ## Next steps
 
 - Get the [PowerShell scripts](ref-remediation-scripts.md) for Remediations.
 
-- Learn more about [PowerShell script security](../configmgr/apps/deploy-use/learn-script-security.md).
+- Learn more about [PowerShell script security](../../configmgr/apps/deploy-use/learn-script-security.md).

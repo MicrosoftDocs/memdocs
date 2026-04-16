@@ -73,7 +73,7 @@ Supported licenses:
 Features that require license verification include:
 
 - [Compatibility reports for Windows updates](../device-updates/windows/monitor-compatibility.md)
-- [Remediations](../endpoint-analytics/remediations.md)
+- [Remediations](../device-management/tools/deploy-remediations.md)
 
 ## Next steps
 

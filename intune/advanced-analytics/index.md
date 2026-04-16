@@ -105,7 +105,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 >   > [!NOTE]
 >   >
 >   > Support for Advanced Analytics in DoD environments doesn't include the [*Device query*](device-query.md) functionality or the [*Resource performance*](resource-performance.md) report.
->   For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service-description.md).
+>   For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service.md).
 
 :::column-end:::
 :::row-end:::

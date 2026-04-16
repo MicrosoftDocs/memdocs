@@ -464,7 +464,7 @@ During an unattended Remote Help sessions on Android devices, the screen of the 
 
 This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices.
 
-For more information on Remote Help, see [Remote Help](../../remote-help/overview.md).
+For more information on Remote Help, see [Remote Help](../../remote-help/index.md).
 
 ### Device security
 
@@ -838,8 +838,8 @@ Remote Help now provides support for multi-session AVD with several users on a s
 
 For more information, see:
 
-- [Remote Help](../../remote-help/overview.md)
-- [Remote Help on windows](../../remote-help/overview.md)
+- [Remote Help](../../remote-help/index.md)
+- [Remote Help on windows](../../remote-help/index.md)
 - [Using Azure Virtual Desktop multi-session with Microsoft Intune](../../solutions/azure-virtual-desktop-multi-session.md)
 
 #### Copilot assistant for device query<!-- 26933762 -->
@@ -1410,7 +1410,7 @@ This requirement isn't applicable to device certificates used with Microsoft Ent
 
 In public preview, customer tenants in US Government Community (GCC) High, and Department of Defense (DoD) environments can now use Intune to manage the Defender security settings on the devices that onboarded to Defender without enrolling those devices with Intune. This capability is known as [Defender for Endpoint security settings management](../../device-security/microsoft-defender/security-settings-management.md).
 
-For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../../fundamentals/government-service-description.md).
+For more information about the Intune features supported in GCC High and DoD environments, see [Intune US Government service description](../../fundamentals/government-service.md).
 
 ## Week of September 30, 2024
 
@@ -1973,7 +1973,7 @@ Plan 2 capabilities:
 For more information, see:
 
 - [Use Microsoft Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
-- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
+- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md)
 
 ### Device enrollment
 
@@ -1989,7 +1989,7 @@ ACME is supported for Apple Device Enrollment, Apple Configurator enrollment, an
 - iPadOS 16.1 or later
 - macOS 13.1 or later
 
-This capability is also supported in [GCC High tenants](../../fundamentals/government-service-description.md).
+This capability is also supported in [GCC High tenants](../../fundamentals/government-service.md).
 
 ## Week of July 22, 2024 (Service release 2407)
 
@@ -2175,8 +2175,8 @@ Applies to:
 
 For more information, see:
 
-- [Remote Help on macOS](../../remote-help/overview.md)
-- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
+- [Remote Help on macOS](../../remote-help/index.md)
+- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md)
 
 ### Device security
 
@@ -2313,7 +2313,7 @@ Certification authorities created with a licensed Intune Suite or Cloud PKI stan
 
 #### US GCC and GCC High support for Managed Home Screen<!-- 25827679 -->
 
-Managed Home Screen (MHS) now supports sign-in for the US Government Community (GCC), US Government Community (GCC) High, and U.S. Department of Defense (DoD) environments. For more information, see [Configure the Managed Home Screen](../../app-management/configuration/configure-managed-home-screen.md) and [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md).
+Managed Home Screen (MHS) now supports sign-in for the US Government Community (GCC), US Government Community (GCC) High, and U.S. Department of Defense (DoD) environments. For more information, see [Configure the Managed Home Screen](../../app-management/configuration/configure-managed-home-screen.md) and [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
 
 Applies to:
 
@@ -2489,7 +2489,7 @@ This feature is available for Windows 11 devices enrolling via Windows Autopilot
 
 #### New primary endpoint for Remote Help
 
-To improve the experience for [Remote Help](../../remote-help/overview.md) on Windows, Web, and macOS devices, we have updated the primary endpoint for Remote Help:
+To improve the experience for [Remote Help](../../remote-help/index.md) on Windows, Web, and macOS devices, we have updated the primary endpoint for Remote Help:
 
 - Old primary endpoint: `https://remoteassistance.support.services.microsoft.com`
 - New primary endpoint: `https://remotehelp.microsoft.com`
@@ -2800,8 +2800,8 @@ Remote Help now supports helpdesk connecting to a user's device and requesting f
 
 For more information, see:
 
-- [Remote Help on macOS](../../remote-help/overview.md)
-- [Remote Help Web App](../../remote-help/overview.md)
+- [Remote Help on macOS](../../remote-help/index.md)
+- [Remote Help Web App](../../remote-help/index.md)
 
 Applies to:
 
@@ -2869,8 +2869,8 @@ On Windows and enrolled Android Enterprise dedicated devices, you can use remote
 
 For more information on these features, see:
 
-- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md)
-- [Use Remote Help with Microsoft Intune](../../remote-help/overview.md)
+- [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md)
+- [Use Remote Help with Microsoft Intune](../../remote-help/index.md)
 
 Applies to:
 
@@ -4224,7 +4224,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](../../remote-help/overview.md).
+For more information, see [Remote Help on Android](../../remote-help/index.md).
 
 ### Device security
 
@@ -4476,7 +4476,7 @@ Applies to:
 - 12 Monterey
 - 13 Ventura
 
-For more information on Remote Help on macOS, see [Remote Help](../../remote-help/overview.md).
+For more information on Remote Help on macOS, see [Remote Help](../../remote-help/index.md).
 
 #### Management certificate expiration date<!-- 17648747  -->
 
@@ -4588,7 +4588,7 @@ Applies to:
 
 - Windows
 
-For more information, see [Remote Help](../../remote-help/overview.md).
+For more information, see [Remote Help](../../remote-help/index.md).
 
 ## Week of September 4, 2023
 
@@ -4679,7 +4679,7 @@ Applies to:
 
 - Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
-For more information, see [Remote Help on Android](../../remote-help/overview.md).
+For more information, see [Remote Help on Android](../../remote-help/index.md).
 
 #### Group Policy analytics is generally available<!-- 24249203  -->
 Group Policy analytics is generally available (GA). Use Group Policy analytics to analyze your on-premises group policy objects (GPOs) for their migration to Intune policy settings.

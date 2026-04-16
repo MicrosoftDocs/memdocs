@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: abalwan
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Create VPN profiles to connect to VPN servers in Intune

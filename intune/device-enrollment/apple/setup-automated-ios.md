@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up automated device enrollment (ADE) for iOS/iPadOS

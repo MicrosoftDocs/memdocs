@@ -8,7 +8,6 @@ ms.topic: article
 ms.reviewer: madakeva
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Windows Enterprise multi-session remote desktops

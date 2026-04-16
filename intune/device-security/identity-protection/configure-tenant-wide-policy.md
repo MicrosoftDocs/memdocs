@@ -5,7 +5,6 @@ ms.date: 07/23/2024
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 - identity-protection
 - sub-secure-endpoints
 ms.reviewer: shpate

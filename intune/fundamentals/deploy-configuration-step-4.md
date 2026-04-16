@@ -7,7 +7,6 @@ ms.date: 03/18/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Step 4 - Configure device features and settings to secure devices and access resources

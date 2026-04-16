@@ -7,8 +7,6 @@ ms.topic: concept-article
 ms.reviewer: ankurgoyal, rashok
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - security-copilot
 - msec-ai-copilot
 ---

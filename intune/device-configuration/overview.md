@@ -6,8 +6,6 @@ ms.topic: overview
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune

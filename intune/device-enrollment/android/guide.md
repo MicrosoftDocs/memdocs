@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: chmaguir, priyar
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Enroll Android devices in Microsoft Intune

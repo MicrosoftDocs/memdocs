@@ -8,7 +8,6 @@ ms.topic: tutorial
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
-- highpri
 - essentials-manage
 ---
 

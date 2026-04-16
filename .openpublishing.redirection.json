@@ -782,7 +782,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/introduction-intune-government.md",
-      "redirect_url": "/intune/fundamentals/government-service-description",
+      "redirect_url": "/intune/fundamentals/government-service",
       "redirect_document_id": false
     },
     {
@@ -1842,7 +1842,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/remote-help.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
@@ -1857,7 +1857,7 @@
     },
     {
       "source_path": "intune/analytics/proactive-remediations.md",
-      "redirect_url": "/intune/endpoint-analytics/remediations",
+      "redirect_url": "/intune/device-management/tools/deploy-remediations",
       "redirect_document_id": false
     },
     {
@@ -1867,7 +1867,7 @@
     },
     {
       "source_path": "intune/analytics/remediations.md",
-      "redirect_url": "/intune/endpoint-analytics/remediations",
+      "redirect_url": "/intune/device-management/tools/deploy-remediations",
       "redirect_document_id": false
     },
     {
@@ -2761,22 +2761,22 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/remote-help-android.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/fundamentals/remote-help-windows.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/fundamentals/remote-help-macos.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/fundamentals/remote-help-webapp.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
@@ -4371,7 +4371,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/remote-help.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
@@ -4386,7 +4386,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/remote-help-use.md",
-      "redirect_url": "/intune/remote-help/use-windows",
+      "redirect_url": "/intune/remote-help/start-session",
       "redirect_document_id": false
     },
     {
@@ -4436,12 +4436,12 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/remediations.md",
-      "redirect_url": "/intune/endpoint-analytics/remediations",
+      "redirect_url": "/intune/device-management/tools/deploy-remediations",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/fundamentals/powershell-scripts-remediation.md",
-      "redirect_url": "/intune/endpoint-analytics/ref-remediation-scripts",
+      "redirect_url": "/intune/device-management/tools/ref-remediation-scripts",
       "redirect_document_id": false
     },
     {
@@ -4556,7 +4556,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/intune-govt-service-description.md",
-      "redirect_url": "/intune/fundamentals/government-service-description",
+      "redirect_url": "/intune/fundamentals/government-service",
       "redirect_document_id": false
     },
     {

@@ -8,7 +8,6 @@ ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
 - macOS
-- highpri
 - FocusArea_Apps_MacOS
 ---
 

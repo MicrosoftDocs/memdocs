@@ -6,7 +6,6 @@ ms.topic: article
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Use custom settings for Windows client devices in Intune

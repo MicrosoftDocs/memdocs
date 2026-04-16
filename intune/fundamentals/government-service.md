@@ -37,7 +37,7 @@ Intune has two service instances:
 
 These government instances are also known as **IL4** and **IL5**, where **IL** refers to Impact Level.
 
-:::image type="content" source="./media/government-service-description/migration-public-government-cloud.png" alt-text="Screenshot that shows the Microsoft government cloud, including GCC High and DoD services, is physically separate from the public cloud and commercial cloud instances.":::
+:::image type="content" source="./media/government-service/migration-public-government-cloud.png" alt-text="Screenshot that shows the Microsoft government cloud, including GCC High and DoD services, is physically separate from the public cloud and commercial cloud instances.":::
 
 ### What you need to know
 

@@ -7,7 +7,6 @@ ms.date: 11/22/2023
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 <!-- >
 # Configure compliance policies

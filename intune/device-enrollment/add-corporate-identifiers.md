@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Identify devices as corporate-owned  

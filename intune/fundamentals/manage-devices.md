@@ -7,7 +7,6 @@ ms.date: 02/20/2025
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Learn about managing and securing your devices in Microsoft Intune

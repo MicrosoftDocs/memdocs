@@ -7,8 +7,6 @@ ms.date: 06/24/2024
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Microsoft Intune enrollment

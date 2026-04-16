@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: madakeva, davguy
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up the Enrollment Status Page

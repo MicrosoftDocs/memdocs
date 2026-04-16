@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Add Microsoft Store Apps to Microsoft Intune

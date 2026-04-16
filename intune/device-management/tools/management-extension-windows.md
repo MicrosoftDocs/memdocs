@@ -9,7 +9,6 @@ ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Win32
 ---
 
@@ -75,11 +74,11 @@ The Intune management extension has the following prerequisites. When the prereq
 For devices meeting the prerequisites, the Intune management extension installs automatically when certain features are assigned to a user or device. Installation occurs when the following features are assigned:
 
 - [PowerShell scripts](./run-powershell-scripts-windows.md)
-- [Remediations](../../endpoint-analytics/remediations.md)
+- [Remediations](./deploy-remediations.md)
 - [Discovery scripts for custom compliance](../../device-security/compliance/create-custom-script.md)
 - [Win32 apps](../../app-management/deployment/add-win32.md)
 - [Endpoint analytics](../../endpoint-analytics/index.md)
-- [Remote Help](../../remote-help/overview.md)
+- [Remote Help](../../remote-help/index.md)
 - [Managed Installers in Intune](../../device-configuration/endpoint-security/manage-app-control.md)
 - [Update Windows BIOS using configuration MDM policy](../../device-configuration/templates/configure-bios-windows.md)
 

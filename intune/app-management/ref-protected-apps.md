@@ -6,7 +6,6 @@ ms.topic: reference
 ms.reviewer: cdemello
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Microsoft Intune Protected Apps

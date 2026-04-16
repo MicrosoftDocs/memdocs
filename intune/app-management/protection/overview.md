@@ -8,7 +8,6 @@ ms.custom: intune-azure, get-started
 ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # App Protection Policies Overview

@@ -81,7 +81,7 @@ Endpoint Privilege Management is supported with the following sovereign cloud en
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service.md).
 
 ## Important concepts for Endpoint Privilege Management
 

@@ -67,7 +67,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 - iPadOS 16.1 or later
 
-This capability is also supported in [GCC High tenants](../../fundamentals/government-service-description.md).
+This capability is also supported in [GCC High tenants](../../fundamentals/government-service.md).
 
 ## Known issues and limitations
 

@@ -6,8 +6,6 @@ ms.topic: how-to
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment time grouping in Microsoft Intune

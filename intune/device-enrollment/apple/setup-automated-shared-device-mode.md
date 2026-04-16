@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up enrollment for devices in shared device mode

@@ -9,7 +9,6 @@ ms.reviewer: priyar
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Managing specialty devices with Microsoft Intune
@@ -35,7 +34,7 @@ Specialty device management is supported with the following sovereign cloud envi
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service.md).
 
 ## Next Steps
 

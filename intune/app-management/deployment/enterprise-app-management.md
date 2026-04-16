@@ -7,7 +7,6 @@ ms.reviewer: dguilory
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_EAC
 ---
 

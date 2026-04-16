@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Enroll Windows client devices in Microsoft Intune

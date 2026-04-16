@@ -7,7 +7,6 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Step 5 - Enroll a Windows device in Microsoft Intune

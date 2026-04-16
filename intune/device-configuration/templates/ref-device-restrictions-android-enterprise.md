@@ -8,8 +8,6 @@ params:
 ms.reviewer: cchristenson, arnab
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Android template device settings list to restrict features using Intune

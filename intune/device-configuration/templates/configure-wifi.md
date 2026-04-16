@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: abalwan
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune

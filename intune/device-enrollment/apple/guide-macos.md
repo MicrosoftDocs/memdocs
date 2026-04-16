@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: auherrin, dregan, annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Enroll macOS devices in Microsoft Intune

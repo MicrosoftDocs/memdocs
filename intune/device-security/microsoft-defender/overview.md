@@ -8,7 +8,6 @@ ai-usage: ai-assisted
 
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ---
 

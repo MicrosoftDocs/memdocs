@@ -8,7 +8,6 @@ ms.topic: overview
 ms.reviewer: Lavanya.lakshman
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Settings insight

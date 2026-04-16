@@ -7,8 +7,6 @@ ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - FocusArea_Apps_AppManagement
 ---
 

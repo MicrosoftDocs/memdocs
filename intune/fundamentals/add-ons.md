@@ -9,7 +9,6 @@ ms.reviewer: aanavath
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Use Microsoft Intune Suite add-on capabilities
@@ -32,7 +31,7 @@ The following table provides a list of add-on capabilities and associated Intune
 | [Endpoint Privilege Management](../epm/overview.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Enterprise App Management](../app-management/deployment/enterprise-app-management.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Advanced Analytics](../advanced-analytics/index.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
-| [Remote Help](../remote-help/overview.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
+| [Remote Help](../remote-help/index.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Cloud PKI](../cloud-pki/index.md) | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
 | [Firmware-over-the-air update](../device-updates/android/setup-zebra-lifeguard.md) |  | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../media/icons/16/check.svg" border="false"::: |
@@ -59,7 +58,7 @@ For more information, see [Intune Advanced Analytics](../advanced-analytics/inde
 
 ### Microsoft Intune Remote Help
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../remote-help/overview.md).
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../remote-help/index.md).
 
 ### Microsoft Tunnel for Mobile Application Management
 
@@ -150,11 +149,11 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 
 Learn more about:
 
-- [Remote Help](../remote-help/overview.md)
+- [Remote Help](../remote-help/index.md)
 - [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md)
 - [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../device-updates/android/setup-zebra-lifeguard.md)
 - [Intune Advanced Analytics](../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../epm/overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md)
-- [Remote Help](../remote-help/overview.md)
+- [Remote Help](../remote-help/index.md)
 - [Managing specialized devices with Microsoft Intune](../device-management/specialty-devices.md)

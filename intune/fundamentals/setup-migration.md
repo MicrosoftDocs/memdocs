@@ -8,8 +8,6 @@ ms.topic: upgrade-and-migration-article
 ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Migration guide: Set up or move to Microsoft Intune

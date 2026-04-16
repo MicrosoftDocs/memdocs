@@ -8,8 +8,6 @@ ms.topic: upgrade-and-migration-article
 ms.reviewer: davguy
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Microsoft Intune planning guide

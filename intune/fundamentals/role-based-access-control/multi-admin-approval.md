@@ -7,7 +7,6 @@ ai-usage: ai-assisted
 ms.reviewer: davidra
 ms.collection:
 - M365-identity-device-management
-- highpri
 - setup
 ---
 

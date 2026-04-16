@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: dagerrit
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set the mobile device management authority

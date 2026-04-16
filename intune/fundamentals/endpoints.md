@@ -8,8 +8,6 @@ ms.topic: reference
 ms.reviewer: angrobe
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Network endpoints for Microsoft Intune
@@ -312,7 +310,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../app-management/deployment/win32.md), [PowerShell scripts](../device-management/tools/run-powershell-scripts-windows.md), [remediations](../endpoint-analytics/remediations.md), [endpoint analytics](../endpoint-analytics/index.md), [custom compliance policies](../device-security/compliance/custom-settings.md) or [BIOS configuration profiles](../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../app-management/deployment/win32.md), [PowerShell scripts](../device-management/tools/run-powershell-scripts-windows.md), [remediations](../device-management/tools/deploy-remediations.md), [endpoint analytics](../endpoint-analytics/index.md), [custom compliance policies](../device-security/compliance/custom-settings.md) or [BIOS configuration profiles](../device-configuration/templates/configure-bios-windows.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 

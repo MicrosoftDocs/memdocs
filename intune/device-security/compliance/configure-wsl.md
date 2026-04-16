@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
-- highpri
 - compliance
 - sub-device-compliance
 ---

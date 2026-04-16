@@ -7,7 +7,6 @@ ms.date: 03/18/2026
 ms.topic: install-set-up-deploy
 ms.collection:
 - M365-identity-device-management
-- highpri
 - ContentFreshnessFY24
 ---
 

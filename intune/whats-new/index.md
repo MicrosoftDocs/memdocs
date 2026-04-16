@@ -6,7 +6,6 @@ ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management
-- highseo
 ---
 
 # What's new in Microsoft Intune
@@ -245,7 +244,7 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 
 #### Remote Help connectivity update for Windows devices<!-- 29252975 -->
 
-We've improved connectivity when using the [Launch Remote Help](../remote-help/use-windows.md#provide-help) capability in the Intune admin center for Windows devices. For the best experience, we recommend updating firewall rules to include this new endpoint:
+We've improved connectivity when using the [Launch Remote Help](../remote-help/start-session.md#provide-help) capability in the Intune admin center for Windows devices. For the best experience, we recommend updating firewall rules to include this new endpoint:
 
 - `*.trouter.communications.svc.cloud.microsoft`
 
@@ -1289,7 +1288,7 @@ To get started with the settings catalog, see:
 
 #### New client version for Remote Help for macOS <!-- 35620986 -->
 
-With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](../remote-help/overview.md?tabs=macos).
+With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](../remote-help/index.md?tabs=macos).
 
 ### Device security
 

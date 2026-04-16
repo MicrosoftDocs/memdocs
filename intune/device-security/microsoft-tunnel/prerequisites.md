@@ -46,7 +46,7 @@ Microsoft Tunnel is supported with the following sovereign cloud environments:
 
 Microsoft Tunnel isn't supported on Microsoft Azure operated by 21Vianet.
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
 
 ## Linux server
 

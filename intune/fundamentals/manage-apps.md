@@ -7,7 +7,6 @@ ms.date: 02/19/2025
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Learn about managing your apps and app data in Microsoft Intune

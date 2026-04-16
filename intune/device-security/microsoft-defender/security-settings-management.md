@@ -5,7 +5,6 @@ ms.date: 08/27/2025
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ms.reviewer: laarrizz
 ---
@@ -58,7 +57,7 @@ The Defender for Endpoint security settings management scenario is supported in 
 
 For more information, see:
 
-- [Intune US Government service description](../../fundamentals/government-service-description.md)
+- [Intune US Government service description](../../fundamentals/government-service.md)
 - [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov)
 - [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 

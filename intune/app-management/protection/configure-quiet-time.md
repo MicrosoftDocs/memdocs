@@ -5,7 +5,6 @@ ms.date: 09/23/2024
 ms.topic: overview
 ms.reviewer: cdemello
 ms.collection:
-- highpri
 ---
 
 # Quiet Time Policies for iOS/iPadOS and Android Apps

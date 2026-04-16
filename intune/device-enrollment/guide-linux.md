@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 

@@ -66,13 +66,13 @@ Intune has built-in features that can be used for frontline worker devices, incl
   - [Windows in cloud configuration overview](../cloud-native-endpoints/cloud-configuration.md)
   - [Step-by-step setup guide](../cloud-native-endpoints/setup-cloud-configuration.md)
 
-- **[Remote Help](../../remote-help/overview.md)**
+- **[Remote Help](../../remote-help/index.md)**
 
   This feature is cloud-based solution that secures help desk connections. With these connections, your support staff can remote connect to FLW devices on:
 
-  - [Android](../../remote-help/overview.md)
-  - [macOS](../../remote-help/overview.md)
-  - [Windows](../../remote-help/overview.md)
+  - [Android](../../remote-help/index.md)
+  - [macOS](../../remote-help/index.md)
+  - [Windows](../../remote-help/index.md)
 
 - **[Specialty devices](../../device-management/specialty-devices.md)**
 

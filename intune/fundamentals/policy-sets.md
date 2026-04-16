@@ -8,7 +8,6 @@ ms.topic: article
 ms.reviewer: DaGerrit
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Use Policy Sets to Group Collections of Management Objects

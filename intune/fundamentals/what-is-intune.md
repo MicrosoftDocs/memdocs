@@ -9,8 +9,6 @@ ms.reviewer: davguy
 ms.collection:
 - essentials-overview
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Microsoft Intune securely manages identities, manages apps, and manages devices

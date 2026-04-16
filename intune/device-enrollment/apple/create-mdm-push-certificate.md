@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Get an Apple MDM push certificate

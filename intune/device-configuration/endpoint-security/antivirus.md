@@ -5,7 +5,6 @@ ms.date: 05/19/2025
 ms.topic: reference
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ms.reviewer: mattcall
 

@@ -7,7 +7,6 @@ ai-assisted: true
 ms.reviewer: davidra
 ms.collection:
 - M365-identity-device-management
-- highpri
 - essentials-security
 ---
 

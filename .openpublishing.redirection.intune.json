@@ -2822,7 +2822,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/powershell-scripts-remediation.md",
-      "redirect_url": "/intune/endpoint-analytics/ref-remediation-scripts",
+      "redirect_url": "/intune/device-management/tools/ref-remediation-scripts",
       "redirect_document_id": false
     },
     {
@@ -2852,7 +2852,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/remediations.md",
-      "redirect_url": "/intune/endpoint-analytics/remediations",
+      "redirect_url": "/intune/device-management/tools/deploy-remediations",
       "redirect_document_id": false
     },
     {
@@ -2862,27 +2862,27 @@
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-android.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-macos.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-webapp.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help-windows.md",
-      "redirect_url": "/intune/remote-help/use-windows",
+      "redirect_url": "/intune/remote-help/start-session",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/fundamentals/remote-help.md",
-      "redirect_url": "/intune/remote-help/overview",
+      "redirect_url": "/intune/remote-help/index",
       "redirect_document_id": false
     },
     {

@@ -76,7 +76,7 @@ Admins or end users initiate these check-ins when they run certain actions on a 
 
 - **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/compliance/validate-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/apps/manage-apps-company-portal-website.md#available-and-required-apps).
 
-- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../device-management/actions/sync.md), [remote lock](../device-management/actions/remote-lock.md), or [reset passcode](../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../remote-help/overview.md) don't cause a device check-in.
+- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../device-management/actions/sync.md), [remote lock](../device-management/actions/remote-lock.md), or [reset passcode](../device-management/actions/reset-passcode.md). Other actions like [remotely assist users](../remote-help/index.md) don't cause a device check-in.
 
 ## Company portal
 

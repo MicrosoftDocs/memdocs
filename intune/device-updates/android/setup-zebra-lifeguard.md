@@ -39,7 +39,7 @@ Zebra LifeGuard Over-the-Air updates are supported with the following sovereign 
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
 
 ## Supported Devices
 

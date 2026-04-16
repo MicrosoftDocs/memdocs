@@ -6,8 +6,6 @@ ms.topic: article
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - compliance
 - sub-device-compliance
 ---

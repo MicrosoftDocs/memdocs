@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
-- highpri
 - compliance
 - sub-certificates
 

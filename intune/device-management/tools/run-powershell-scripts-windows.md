@@ -3,13 +3,11 @@ title: Add PowerShell Scripts to Windows Devices in Microsoft Intune
 description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows devices in Microsoft Intune. Read common issues and resolutions.
 ms.date: 10/02/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 author: nicholasswhite
 ms.author: nwhite
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Win32
 ---
 
@@ -41,7 +39,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 > - Don't use scripts to collect personal data from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Remediations](../../endpoint-analytics/remediations.md).
+> For related information, see [Remediations](./deploy-remediations.md).
 
 ## Prerequisites
 

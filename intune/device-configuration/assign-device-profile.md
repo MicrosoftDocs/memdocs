@@ -7,7 +7,6 @@ ms.topic: how-to
 ms.reviewer: gokarthi
 ms.collection:
 - M365-identity-device-management
-- highpri
 - msec-ai-copilot
 ---
 

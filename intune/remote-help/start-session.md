@@ -1,17 +1,12 @@
 ---
 title: Using Remote Help on Windows to Assist Authenticated Users 
 description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
-author: lenewsad
-ms.author: lanewsad
 ms.date: 10/16/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: Karawang
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Using Remote Help with Microsoft Intune
@@ -75,16 +70,16 @@ To request help, you must reach out to your support staff to request assistance,
 1. When the session connection begins, a trust screen is displayed with the helper's information including their full name, job title, company, profile picture, and verified domain. At this time, the helper requests a session with full control of your device or view only-screen sharing. You can either choose to **Allow** or to **Decline** the request.  
 1. You might see a prompt to allow `remotehelp.microsoft.com` to use your microphone. Select **Don't Allow** as this permission isn't needed for screen sharing.
    
-     :::image type="content" source="media/overview/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
+     :::image type="content" source="media/index/remote-help-microphone-permission.png" alt-text="An example of the microphone permission prompt highlighting the Don't Allow option":::
    
 1. Select **Share screen** to continue. You might see a prompt to allow `remotehelp.microsoft.com` share your screen. Select **Allow** to continue.
 1. macOS shows a menu with one of two options:  
    - **Green camera icon**: Choose **Screen**, and then move your mouse to select the screen share.
 
-     :::image type="content" source="media/overview/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
+     :::image type="content" source="media/index/remote-help-screen-share.png" alt-text="A screenshot of the macOS screen  sharing dialog to allow screen sharing for Microsoft Remote Help":::
    - **Yellow microphone icon** (if you selected to allow the microphone permission): Select the microphone icon. Select the **grey icon**, and then select **Screen**. Move your cursor to the screen you want to share and select **Share this screen**.  
 
-     :::image type="content" source="media/overview/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
+     :::image type="content" source="media/index/remote-help-screen-share-microphone.png" alt-text="A screenshot of the macOS microphone sharing dialog to allow screen sharing for Microsoft Remote Help":::
 
 1. After the session is established, the helper can help resolve any issues on the device.
 

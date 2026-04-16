@@ -140,6 +140,7 @@
         "fundamentals/licensing/**/*": "paolomatarazzo",
         "fundamentals/role-based-access-control/**/*": "brenduns",
         "privacy/**/*": "paolomatarazzo",
+        "remote-help/**/*": "lenewsad",
         "solutions/**/*": "mandiohlinger",
         "user-help/**/*": "lenewsad",
         "whats-new/**/*": "brenduns"
@@ -171,6 +172,7 @@
         "fundamentals/licensing/**/*": "paoloma",
         "fundamentals/role-based-access-control/**/*": "brenduns",
         "privacy/**/*": "paoloma",
+        "remote-help/**/*": "lanewsad",
         "solutions/**/*": "mandia",
         "user-help/**/*": "lanewsad",
         "whats-new/**/*": "brenduns"

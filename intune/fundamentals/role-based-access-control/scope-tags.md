@@ -6,7 +6,6 @@ ms.topic: how-to
 ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Use role-based access control (RBAC) and scope tags for distributed IT

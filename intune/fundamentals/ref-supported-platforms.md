@@ -8,7 +8,6 @@ ms.topic: reference
 ms.reviewer: priyar
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Supported operating systems and browsers in Intune

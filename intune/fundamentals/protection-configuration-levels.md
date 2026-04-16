@@ -7,7 +7,6 @@ ms.date: 03/17/2026
 ms.topic: concept-article
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Levels of protection and configuration in Microsoft Intune

@@ -6,8 +6,6 @@ ms.topic: article
 ms.reviewer: ochukwunyere
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - sub-infrastructure
 ---
 

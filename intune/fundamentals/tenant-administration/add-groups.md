@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: scottduf
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Use groups to organize users and devices for Microsoft Intune

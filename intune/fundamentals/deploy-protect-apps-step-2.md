@@ -8,7 +8,6 @@ ms.topic: article
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 # Step 2 - Add, Configure, and Protect Apps with Intune
 

@@ -8,7 +8,6 @@ ms.topic: how-to
 ms.reviewer: davguy
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # See device details in Intune

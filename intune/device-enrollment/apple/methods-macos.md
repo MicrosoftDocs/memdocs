@@ -6,7 +6,6 @@ ms.topic: overview
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up enrollment for macOS devices in Intune

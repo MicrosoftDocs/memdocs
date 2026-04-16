@@ -7,7 +7,6 @@ ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
 - macOS
-- highpri
 ---
 
 # Microsoft Intune Management Agent for macOS

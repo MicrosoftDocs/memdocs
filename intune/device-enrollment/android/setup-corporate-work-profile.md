@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile

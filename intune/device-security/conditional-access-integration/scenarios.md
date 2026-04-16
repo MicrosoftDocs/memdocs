@@ -6,7 +6,6 @@ ms.topic: article
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
-- highpri
 - conditional-access
 - sub-device-compliance
 ---

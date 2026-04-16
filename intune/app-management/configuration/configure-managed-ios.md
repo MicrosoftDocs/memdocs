@@ -7,7 +7,6 @@ ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
-- highpri
 ---
 
 # Add App Configuration Policies for Managed iOS/iPadOS Devices

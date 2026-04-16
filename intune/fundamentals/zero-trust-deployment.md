@@ -7,10 +7,8 @@ ms.date: 02/24/2026
 ms.topic: concept-article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
 ms.collection:
 - M365-identity-device-management
-- highpri
 - zerotrust-services
 ---
 
