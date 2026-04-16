@@ -134,6 +134,8 @@ The app you have created appears in the apps list where you can assign it to the
 
 > [!NOTE]
 > If the *.dmg* file contains multiple apps, then Microsoft Intune will only report that the app is successfully installed when all installed apps are detected on the device.
+>
+> When you upload a new version of an available app to Intune, users must select **Install** or **Reinstall** in Company Portal to update the app on their device.
 
 ## Next steps
 
