@@ -23,7 +23,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 ## Prerequisites
 
-- A [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md)
+- A [supported Windows version](../../fundamentals/ref-supported-platforms.md)
 - Any pre-installed versions of Microsoft Edge *version 77 and later* for all channels in user context will be overwritten with Edge installed in system context.
 
 ## Configure the app in Intune
@@ -105,7 +105,7 @@ When you need to uninstall Microsoft Edge from user's devices, use the following
 
 ## Troubleshooting
 **Microsoft Edge version 77 and later for Windows:**<br>
-Intune uses the Intune management extension to download and deploy the Microsoft Edge installer to assigned Windows devices, then communicates the deployment settings to the Microsoft Edge installer, which downloads and installs the Microsoft Edge browser directly from the CDN. Reference the [prerequisites for the Intune management extension](../../device-management/tools/management-extension-windows.md#prerequisites), and the best practices outlined in accessing Azure Update Service and the CDN to ensure that your network configuration permits Windows devices to access these locations. In addition, to allow access to installation files from a CDN to install the browser, you need to allow access to Windows Update endpoints. For more information, see [Manage connection endpoints for Windows 10, version 1809 – Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) and [Network endpoints for Microsoft Intune](../../intune-service/fundamentals/intune-endpoints.md).
+Intune uses the Intune management extension to download and deploy the Microsoft Edge installer to assigned Windows devices, then communicates the deployment settings to the Microsoft Edge installer, which downloads and installs the Microsoft Edge browser directly from the CDN. Reference the [prerequisites for the Intune management extension](../../device-management/tools/management-extension-windows.md#prerequisites), and the best practices outlined in accessing Azure Update Service and the CDN to ensure that your network configuration permits Windows devices to access these locations. In addition, to allow access to installation files from a CDN to install the browser, you need to allow access to Windows Update endpoints. For more information, see [Manage connection endpoints for Windows 10, version 1809 – Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) and [Network endpoints for Microsoft Intune](../../fundamentals/endpoints.md).
 
 ## Next steps
 - [Assign apps to groups](./assign-groups.md)

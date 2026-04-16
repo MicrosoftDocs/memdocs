@@ -2,7 +2,7 @@
 title: Data security and sharing in Intune
 description: Learn how personal data is secured and shared in Intune.
 ms.date: 12/07/2023
-ms.topic: article
+ms.topic: overview
 ms.reviewer: angerobe
 ms.collection:
 - M365-identity-device-management

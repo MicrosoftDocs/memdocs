@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Device staging overview

@@ -150,7 +150,7 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/intune-service/fundamentals/intune-endpoints
+[MEM-1]: /intune/fundamentals/endpoints
 [MEM-2]: /autopilot/oem-registration
 [MEM-3]: /autopilot/enrollment-autopilot#create-an-autopilot-device-group-using-intune
 [MEM-4]: /autopilot/profiles
@@ -160,7 +160,7 @@ With the devices joined to Microsoft Entra tenant and managed by Intune, you can
 
 [MSFT-1]: https://partner.microsoft.com/
 
-[INT-1]: /intune/intune-service/fundamentals/intune-endpoints
+[INT-1]: /intune/fundamentals/endpoints
 
 [M365-1]: https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2
 

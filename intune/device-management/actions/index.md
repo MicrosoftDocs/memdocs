@@ -245,7 +245,7 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: fresh-start.md
 [RA-FV]: rotate-filevault-recovery-key.md
-[RA-HELP]: ../../intune-service/fundamentals/remote-help.md
+[RA-HELP]: ../../remote-help/index.md
 [RA-LOCATE]: locate.md
 [RA-LOCK]: remote-lock.md
 [RA-LOGOUT]: logout-user.md
@@ -268,7 +268,7 @@ Remote device actions in Intune empower IT pros to manage devices efficiently an
 [RA-SCANQ]: quick-scan.md
 [RA-SMHS]: device-suspend-managed-home-screen.md 
 [RA-SYNC]: sync.md
-[RA-TVIEW]: ../../intune-service/fundamentals/teamviewer-support.md
+[RA-TVIEW]: ../../device-management/tools/teamviewer-legacy.md
 [RA-WIPE]: wipe.md
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

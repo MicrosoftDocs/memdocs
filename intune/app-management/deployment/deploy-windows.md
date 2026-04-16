@@ -7,7 +7,6 @@ ms.reviewer: priyar
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Deploy
 ---
 
@@ -18,7 +17,7 @@ Microsoft Intune supports a variety of app types and deployment scenarios on Win
 A Line-of-business (LOB) app is the app type supported on Windows devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.
 
 > [!NOTE]
-> To deploy modern apps, you need to use [supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md).
+> To deploy modern apps, you need to use [supported Windows versions](../../fundamentals/ref-supported-platforms.md).
 >
 > LOB app deployment isn't supported on devices running Windows Home editions.
 
@@ -37,7 +36,7 @@ Specific app types are supported based on the version of Windows that your users
 | Store Link | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Microsoft Edge | No | Yes | Yes | Yes | Yes | 19H2+<sup>3 | No | No |
 
-<sup>1</sup> To unlock app management, upgrade your HoloLens device to [Holographic for Business](../../intune-service/fundamentals/windows-holographic-for-business.md).<br />
+<sup>1</sup> To unlock app management, upgrade your HoloLens device to [Holographic for Business](../../solutions/windows-holographic.md).<br />
 <sup>2</sup> Launch from the Company Portal only.<br />
 <sup>3</sup> For Edge app to install successfully, devices must also be assigned an S-Mode policy.
 

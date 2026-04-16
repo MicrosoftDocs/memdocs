@@ -81,7 +81,7 @@ Endpoint Privilege Management supports running files that are locally stored on 
 
 ## Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
-Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
+Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ### Certain Windows functions, such as control panel items or configurations in the settings app can't be elevated with EPM
 

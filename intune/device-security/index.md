@@ -21,7 +21,7 @@ Intune can also integrate with third-party products that provide device complian
 
 ## Platform support
 
-From the Microsoft Intune admin center, Intune [supports managed devices](../intune-service/fundamentals/supported-devices-browsers.md#intune-supported-operating-systems) that run:
+From the Microsoft Intune admin center, Intune [supports managed devices](../fundamentals/ref-supported-platforms.md#intune-supported-operating-systems) that run:
 
 - Android
 - iOS/iPadOS
@@ -180,13 +180,13 @@ Conditional Access works across managed and unmanaged devices, helping create an
 - Common elevated scenarios: application installations, driver updates, Windows diagnostics.
 
 > [!TIP]
-> EPM is available as an [Intune add-on](../intune-service/fundamentals/intune-add-ons.md) for Windows devices and requires an additional license.
+> EPM is available as an [Intune add-on](../fundamentals/add-ons.md) for Windows devices and requires an additional license.
 
 ## Next steps
 
 Build your security posture with Intune:
 
-- **Plan your approach** - Review [Zero Trust security guidance](../solutions/zero-trust/configure-security.md) for Intune.
+- **Plan your approach** - Review [Zero Trust security guidance](./ref-zero-trust-security.md) for Intune.
 - **Configure endpoint security** - Start with [endpoint security policies](./endpoint-security-policies.md) for focused security configurations.
 - **Implement compliance** - Deploy [device compliance policies](./compliance/overview.md) and [Conditional Access](./conditional-access-integration/overview.md).
 - **Protect data** - Configure [app protection policies](../app-management/protection/overview.md) for organizational data.

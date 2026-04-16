@@ -41,7 +41,7 @@ Access to [Apple School Manager](https://school.apple.com/) or [Apple Business M
 
 Before you begin, ensure the following tasks are complete:
 
-- Set the [mobile device management authority](../../intune-service/fundamentals/mdm-authority-set.md) in your tenant.
+- Set the [mobile device management authority](../../fundamentals/setup-mdm-authority.md) in your tenant.
 - Get an [Apple MDM Push certificate](create-mdm-push-certificate.md).
 
 ## Create enrollment program token

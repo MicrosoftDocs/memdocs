@@ -425,7 +425,7 @@ Uploads a list of revocation results from a third party CA to Intune.
 
 Validating and testing that your solution is properly integrated with Intune is a must. The following lists an overview of the steps:
 
-1. Set up an [Intune trial account](../../intune-service/fundamentals/account-sign-up.md).
+1. Set up an [Intune trial account](../../fundamentals/account-sign-up.md).
 2. Onboard the [SCEP Server in the Azure portal](#onboard-scep-server-in-azure) (in this article).
 3. [Configure the SCEP Server](./scep-infrastructure.md) with the IDs and key created when onboarding your SCEP server.
 4. [Enroll devices](../../device-enrollment/guide.md) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
@@ -442,6 +442,6 @@ Validating and testing that your solution is properly integrated with Intune is 
 ## See also
 
 - [Add third party CA overview](./third-party-ca-scep.md)
-- [Set up Intune](../../intune-service/fundamentals/deployment-plan-setup.md)
+- [Set up Intune](../../fundamentals/deploy-setup-step-1.md)
 - [Device enrollment](../../device-enrollment/guide.md)
 - [Configure SCEP certificate profiles](../../device-configuration/certificates/scep-profiles.md) (the Microsoft Network Device Enrollment Service server\connector setup isn't used for this scenario)

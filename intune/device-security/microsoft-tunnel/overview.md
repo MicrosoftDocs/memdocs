@@ -6,8 +6,6 @@ ms.topic: article
 ms.reviewer: ochukwunyere
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - sub-infrastructure
 ---
 
@@ -19,7 +17,7 @@ This article introduces the core Microsoft Tunnel, how it works, and its archite
 
 If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](./prerequisites.md), and then [Configure the Microsoft Tunnel](./install.md).
 
-After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for Mobile Application Management](./mam.md) (Tunnel for MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. Tunnel for MAM is available when you add *Microsoft Intune Plan 2* or *Microsoft Intune Suite* as an [add-on license](../../intune-service/fundamentals/intune-add-ons.md) to your Tenant.
+After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for Mobile Application Management](./mam.md) (Tunnel for MAM). Tunnel for MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. Tunnel for MAM is available when you add *Microsoft Intune Plan 2* or *Microsoft Intune Suite* as an [add-on license](../../fundamentals/add-ons.md) to your Tenant.
 
 > [!NOTE]
 >
@@ -135,7 +133,7 @@ The following information outlines where break and inspect isn't supported. Refe
 
   - Tunnel Gateway doesn't support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
   - The use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway isn't supported and causes client connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
-  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
+  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../../fundamentals/endpoints.md#access-for-managed-devices).
 
 **Additional details**:
 

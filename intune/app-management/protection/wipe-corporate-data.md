@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # How to Wipe Only Corporate Data From Intune-Managed Apps

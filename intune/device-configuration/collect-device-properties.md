@@ -57,7 +57,7 @@ This feature applies to:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 > - A [custom role](./templates/configure-custom-settings.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
-> - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../intune-service/fundamentals/role-based-access-control-reference.md).
+> - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control/ref-built-in-roles.md).
 :::column-end:::
 :::row-end:::
 
@@ -85,7 +85,7 @@ Use the following steps to create a properties catalog profile and assign it to 
 
     Select **Next**.
 
-6. Optional. In **Scope (Tags)**, select any scope tags you want to assign to the profile. To learn more about scope tags, see [Use scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+6. Optional. In **Scope (Tags)**, select any scope tags you want to assign to the profile. To learn more about scope tags, see [Use scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
