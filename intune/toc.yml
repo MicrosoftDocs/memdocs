@@ -63,9 +63,9 @@ items:
         - name: Step 5 - Enroll your Windows device
           href: /intune/device-enrollment/windows/quickstart-first-device
         - name: Step 6 - Create a device compliance policy
-          href: ./intune-service/protect/quickstart-set-password-length-android.md
+          href: ./device-security/compliance/quickstart-password-compliance-android.md
         - name: Step 7 - Send notifications to noncompliant devices
-          href: ./intune-service/protect/quickstart-send-notification.md
+          href: ./device-security/compliance/quickstart-noncompliance-notification.md
         - name: Step 8 - Add and assign an app
           href: ./app-management/deployment/quickstart-add-assign.md
         - name: Step 9 - Create and assign an app protection policy
@@ -77,9 +77,9 @@ items:
       - name: Try Intune scenarios
         items:
         - name: Protect email on managed devices
-          href: ./intune-service/protect/tutorial-protect-email-on-enrolled-devices.md
+          href: ./solutions/tutorials/protect-email-enrolled-devices.md
         - name: Protect email on unmanaged devices
-          href: ./intune-service/protect/tutorial-protect-email-on-unmanaged-devices.md
+          href: ./solutions/tutorials/protect-email-unmanaged-devices.md
         - name: Configure Slack to use Intune
           href: ./app-management/configuration/tutorial-configure-slack.md
         - name: Set up just in time (JIT) registration
@@ -99,35 +99,7 @@ items:
       href: ./intune-service/fundamentals/intune-add-ons.md
 
     - name: Endpoint Privilege Management (EPM)
-      items:
-      - name: EPM Overview
-        href: ./intune-service/protect/epm-overview.md
-      - name: Planning EPM
-        href: ./intune-service/protect/epm-plan.md
-      - name: Data and privacy for EPM
-        href: ./intune-service/protect/epm-data-collection.md
-      - name: Deploying EPM
-        items:
-        - name: Deploying EPM
-          href: ./intune-service/protect/epm-deploy.md
-        - name: Create elevation settings policy
-          href: ./intune-service/protect/epm-elevation-settings.md
-        - name: Create elevation rules policy
-          href: ./intune-service/protect/epm-elevation-rules.md
-        - name: EPM Tutorial - Shift Administrators to Standard User
-          href: ./intune-service/protect/epm-transition-administrator-to-standard-user.md
-      - name: Using EPM
-        items:
-        - name: Support approved requests
-          href: ./intune-service/protect/epm-support-approved.md
-      - name: Troubleshoot and Monitor
-        items:
-        - name: Reports
-          href: ./intune-service/protect/epm-reports.md
-        - name: FAQs
-          href: ./intune-service/protect/epm-frequently-asked-questions.md
-        - name: Known Issues
-          href: ./intune-service/protect/epm-known-issues.md
+      href: ./epm/toc.yml
 
     - name: Enterprise App Management
       items:
@@ -151,6 +123,7 @@ items:
         href: ./intune-service/fundamentals/remote-help-use.md
       - name: Troubleshooting Remote Help
         href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
+
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
 
@@ -308,17 +281,6 @@ items:
         href: ./intune-service/fundamentals/multi-admin-approval.md
         displayName: multi-admin approval, maa
 
-    - name: Configure security recommendations using Zero Trust
-      items:
-      - name: Configure security recommendations using Zero Trust
-        href: ./intune-service/protect/zero-trust-configure-security.md
-      - name: Secure tenants
-        href: ./intune-service/protect/zero-trust-secure-tenant.md
-      - name: Secure devices
-        href: ./intune-service/protect/zero-trust-secure-devices.md
-      - name: Secure data
-        href: ./intune-service/protect/zero-trust-secure-data.md
-
   - name: Create and deploy Intune policies
     items:
 
@@ -328,275 +290,50 @@ items:
     - name: Protect and secure Data and Devices
       items:
       - name: Device protection overview
-        href: ./intune-service/protect/device-protect.md
+        href: ./device-security/index.md
         displayName: compliant; noncompliant; mfa
 
       - name: Compliance rules to protect resources
-        items:
-        - name: Compliance overview
-          href: ./intune-service/protect/device-compliance-get-started.md
-        - name: Create a policy
-          href: ./intune-service/protect/create-compliance-policy.md
-        - name: Custom compliance settings
-          href: ./intune-service/protect/compliance-use-custom-settings.md
-          items:
-          - name: JSON for custom settings
-            href: ./intune-service/protect/compliance-custom-json.md
-          - name: PowerShell script for custom settings
-            href: ./intune-service/protect/compliance-custom-script.md
-          - name: Windows Subsystem for Linux
-            href: ./intune-service/protect/compliance-wsl.md
-        - name: Actions for noncompliance
-          href: ./intune-service/protect/actions-for-noncompliance.md
-        - name: Monitor device compliance
-          href: ./intune-service/protect/compliance-policy-monitor.md
-        - name: Device compliance partners
-          href: ./intune-service/protect/device-compliance-partners.md
-        - name: Network access control
-          href: ./intune-service/protect/network-access-control-integrate.md
+        href: ./device-security/compliance/toc.yml
+
+      - name: Network access control
+        href: ./device-security/integrate-network-access-control.md
+        displayName: NAC
 
       - name: Conditional Access
-        items:
-        - name: Conditional Access overview
-          href: ./intune-service/protect/conditional-access.md
-          displayName: ca
-        - name: Common ways to use Conditional Access
-          href: ./intune-service/protect/conditional-access-intune-common-ways-use.md
-        - name: App-based Conditional Access
-          href: ./intune-service/protect/app-based-conditional-access-intune.md
-        - name: Set up app-based Conditional Access
-          href: ./intune-service/protect/app-based-conditional-access-intune-create.md
-        - name: Block apps that don't use modern authentication (MSAL)
-          href: ./intune-service/protect/app-modern-authentication-block.md
-        - name: Troubleshoot Conditional Access
-          href: /troubleshoot/mem/intune/troubleshoot-conditional-access?context=/intune/context
-        - name: Jamf Cloud connector
-          items:
-          - name: Use the Jamf Cloud connector
-            href: ./intune-service/protect/conditional-access-jamf-cloud-connector.md
-          - name: Integrate Jamf Pro with Intune for compliance
-            href: ./intune-service/protect/conditional-access-integrate-jamf.md
-          - name: Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID
-            href: ./intune-service/protect/jamf-managed-device-compliance-with-entra-id.md
-          - name: Enforce compliance on Macs managed with Jamf Pro
-            href: ./intune-service/protect/conditional-access-assign-jamf.md
-          - name: Troubleshoot Jamf Pro integration
-            href: /troubleshoot/mem/intune/troubleshoot-jamf?context=/intune/context
+        href: ./device-security/conditional-access-integration/toc.yml
 
       - name: Software updates
         href: ./device-updates/toc.yml
 
       - name: Endpoint security
         items:
-        - name: Endpoint security overview
-          href: ./intune-service/protect/endpoint-security.md
-        - name: Manage devices
-          href: ./intune-service/protect/endpoint-security-manage-devices.md
-        - name: Security baselines
-          items:
-          - name: Security baselines overview
-            href: ./intune-service/protect/security-baselines.md
-          - name: Manage security baselines
-            href: ./intune-service/protect/security-baselines-configure.md
-          - name: Monitor your baselines
-            href: ./intune-service/protect/security-baselines-monitor.md
-        - name: Security tasks
-          href: ./intune-service/protect/microsoft-defender-manage-vulnerabilities.md
-        - name: Security policy
-          items:
-          - name: Manage security policies
-            href: ./intune-service/protect/endpoint-security-policy.md
-          - name: Use reusable settings groups
-            href: ./intune-service/protect/reusable-settings-groups.md
-          - name: Account protection
-            href: ./intune-service/protect/endpoint-security-account-protection-policy.md
-          - name: Antivirus
-            href: ./intune-service/protect/endpoint-security-antivirus-policy.md
-          - name: Application Control
-            href: ./intune-service/protect/endpoint-security-app-control-policy.md
-          - name: Attack surface reduction
-            href: ./intune-service/protect/endpoint-security-asr-policy.md
-          - name: Disk encryption
-            href: ./intune-service/protect/endpoint-security-disk-encryption-policy.md
-          - name: Endpoint detection and response
-            href: ./intune-service/protect/endpoint-security-edr-policy.md
-          - name: Firewall
-            href: ./intune-service/protect/endpoint-security-firewall-policy.md
-        - name: Microsoft Defender for Endpoint
-          items:
-          - name: Microsoft Defender for Endpoint
-            href: ./intune-service/protect/microsoft-defender-with-intune.md
-          - name: Configure Defender for Endpoint
-            href: ./intune-service/protect/microsoft-defender-integrate.md
-          - name: Deploy Defender for Endpoint on Android
-            href: ./intune-service/protect/microsoft-defender-deploy-android.md
-          - name: Android web protection
-            href: ./intune-service/protect/microsoft-defender-configure-android.md
-          - name: Monitor Defender for Endpoint
-            href: ./intune-service/protect/microsoft-defender-monitor.md
-          - name: Microsoft Defender for Endpoint Security settings management
-            items:
-            - name: Microsoft Defender for Endpoint Security settings management
-              href: ./intune-service/protect/mde-security-integration.md
-            - name: Manage endpoint security policies in Microsoft Defender
-              href: /defender-endpoint/manage-security-policies?context=/intune/context
-        - name: Endpoint Privilege Management overview
-          href: ./intune-service/protect/epm-overview.md
-        - name: Tenant attach
-          href: ./intune-service/protect/tenant-attach-intune.md
-        - name: Encrypt disks
-          items:
-          - name: Manage BitLocker policy
-            href: ./intune-service/protect/encrypt-devices.md
-          - name: Manage FileVault policy
-            href: ./intune-service/protect/encrypt-devices-filevault.md
-          - name: Monitor disk encryption
-            href: ./intune-service/protect/encryption-monitor.md
-          - name: Troubleshoot BitLocker policies
-            href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies?context=/intune/context
-        - name: Endpoint protection
-          href: ./intune-service/protect/endpoint-protection-configure.md
+        - name: Endpoint security policies
+          href: ./device-configuration/endpoint-security/toc.yml
 
-      - name: Identity security
+        - name: Security baselines
+          href: ./device-security/security-baselines/toc.yml
+
+        - name: Microsoft Defender for Endpoint
+          href: ./device-security/microsoft-defender/toc.yml
+
+        - name: Security tasks
+          href: ./device-security/microsoft-defender/remediate-vulnerabilities.md
+
+        - name: Endpoint Privilege Management (EPM)
+          href: ./epm/toc.yml
+
+        - name: Tenant attach
+          href: ./fundamentals/tenant-attach.md
+
+      - name: Identity and access
         items:
-        - name: Windows Hello identity protection
+        - name: Windows Hello for Business
           items:
           - name: Windows Hello at device enrollment
-            href: ./intune-service/protect/windows-hello.md
+            href: ./device-security/identity-protection/configure-tenant-wide-policy.md
           - name: Windows Hello after device enrollment
-            href: ./intune-service/protect/identity-protection-configure.md
-        - name: Windows LAPS
-          items:
-          - name: Intune support for Windows LAPS
-            href: ./intune-service/protect/windows-laps-overview.md
-          - name: Deploy LAPS policy
-            href: ./intune-service/protect/windows-laps-policy.md
-          - name: Reports for LAPS policy
-            href: ./intune-service/protect/windows-laps-reports.md
-
-      - name: Mobile Threat Defense partners
-        href: ./intune-service/protect/mobile-threat-defense.md
-        displayName: MTD
-        items:
-        - name: MTD on unenrolled devices
-          items:
-          - name: Add MTD apps to unenrolled devices
-            href: ./intune-service/protect/mtd-add-apps-unenrolled-devices.md
-          - name: Create an MTD app protection policy
-            href: ./intune-service/protect/mtd-app-protection-policy.md
-          - name: Enable MTD for unenrolled devices
-            href: ./intune-service/protect/mtd-enable-unenrolled-devices.md
-        - name: MTD on enrolled devices
-          items:
-          - name: Add MTD apps to enrolled devices
-            href: ./intune-service/protect/mtd-apps-ios-app-configuration-policy-add-assign.md
-          - name: Create an MTD device compliance policy
-            href: ./intune-service/protect/mtd-device-compliance-policy-create.md
-          - name: Enable MTD for enrolled devices
-            href: ./intune-service/protect/mtd-connector-enable.md
-        - name: MTD apps
-          items:
-          - name: Set up Better Mobile
-            href: ./intune-service/protect/better-mobile-threat-defense-connector.md
-            items:
-            - name: Better Mobile and Intune integration
-              href: ./intune-service/protect/better-mobile-mtd-connector-integration.md
-              displayName: sso
-          - name: Set up BlackBerry Protect Mobile
-            href: ./intune-service/protect/blackberry-mobile-threat-defense-connector.md
-            items:
-            - name: BlackBerry and Intune integration
-              href: ./intune-service/protect/blackberry-mtd-connector-integration.md
-          - name: Set up Check Point Harmony
-            href: ./intune-service/protect/checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-            items:
-            - name: Check Point Harmony and Intune integration
-              href: ./intune-service/protect/checkpoint-sandblast-mobile-mtd-connector-integration.md
-          - name: Set up CrowdStrike
-            href: ./intune-service/protect/crowdstrike-falcon-defense-connector.md
-            items:
-            - name: CrowdStrike Falcon and Intune integration
-              href: ./intune-service/protect/crowdstrike-falcon-mtd-connector-integration.md
-          - name: Set up iVerify
-            href: ./intune-service/protect/iverify-mobile-threat-defense-connector.md
-            items:
-            - name: iVerify and Intune integration
-              href: ./intune-service/protect/iverify-mtd-connector-integration.md
-          - name: Set up Jamf
-            href: ./intune-service/protect/jamf-mtd-connector.md
-            items:
-            - name: Jamf and Intune integration
-              href: ./intune-service/protect/jamf-mtd-connector-integration.md
-          - name: Set up Lookout
-            href: ./intune-service/protect/lookout-mobile-threat-defense-connector.md
-            items:
-            - name: Lookout and Intune integration
-              href: ./intune-service/protect/lookout-mtd-connector-integration.md
-          - name: Set up Trellix Mobile Security
-            href: ./intune-service/protect/trellix-mobile-threat-defense-connector.md
-            items:
-            - name: Trellix Mobile Security and Intune integration
-              href: ./intune-service/protect/trellix-mtd-connector-integration.md
-          - name: Set up Pradeo
-            href: ./intune-service/protect/pradeo-mobile-threat-defense-connector.md
-            items:
-            - name: Pradeo and Intune integration
-              href: ./intune-service/protect/pradeo-mtd-connector-integration.md
-          - name: Set up SentinelOne Mobile
-            href: ./intune-service/protect/sentinelone-mobile-threat-defense-connector.md
-            items:
-            - name: SentinelOne Mobile and Intune integration
-              href: ./intune-service/protect/sentinelone-mtd-connector-integration.md
-          - name: Set up Sophos Mobile
-            href: ./intune-service/protect/sophos-mtd-connector.md
-            items:
-            - name: Sophos Mobile and Intune integration
-              href: ./intune-service/protect/sophos-mtd-connector-integration.md
-          - name: Set up Symantec
-            href: ./intune-service/protect/skycure-mobile-threat-defense-connector.md
-            items:
-            - name: Symantec and Intune integration
-              href: ./intune-service/protect/skycure-mtd-connector-integration.md
-          - name: Set up Trend Micro Mobile Security as a Service
-            href: ./intune-service/protect/trend-micro-mobile-threat-defense-connector.md
-            items:
-            - name: Trend Micro Mobile Security as a Service and Intune integration
-              href: ./intune-service/protect/trend-micro-mtd-connector-integration.md
-          - name: Set up Zimperium
-            href: ./intune-service/protect/zimperium-mobile-threat-defense-connector.md
-            items:
-            - name: Zimperium and Intune integration
-              href: ./intune-service/protect/zimperium-mtd-connector-integration.md
-
-      - name: Passwordless, certificates, and single sign-on
-        items:
-        - name: Microsoft Cloud PKI
-          href: ./cloud-pki/toc.yml
-        - name: Certificates
-          href: ./fundamentals/certificates/toc.yml
-        - name: Microsoft Tunnel VPN gateway
-          items:
-          - name: Microsoft Tunnel overview
-            href: ./intune-service/protect/microsoft-tunnel-overview.md
-          - name: Microsoft Tunnel prerequisites
-            href: ./intune-service/protect/microsoft-tunnel-prerequisites.md
-          - name: Configure Microsoft Tunnel
-            href: ./intune-service/protect/microsoft-tunnel-configure.md
-          - name: Microsoft Tunnel for MAM
-            items:
-            - name: Microsoft Tunnel for MAM Overview
-              href: ./intune-service/protect/microsoft-tunnel-mam.md
-            - name: MAM Tunnel for Android
-              href: ./intune-service/protect/microsoft-tunnel-mam-android.md
-            - name: MAM Tunnel for iOS
-              href: ./intune-service/protect/microsoft-tunnel-mam-ios.md
-          - name: Monitor Microsoft Tunnel
-            href: ./intune-service/protect/microsoft-tunnel-monitor.md
-          - name: Upgrade Microsoft Tunnel
-            href: ./intune-service/protect/microsoft-tunnel-upgrade.md
-          - name: Microsoft Tunnel with Conditional Access
-            href: ./intune-service/protect/microsoft-tunnel-conditional-access.md
-
+            href: ./device-security/identity-protection/deploy-group-policy.md
         - name: Single sign-on (SSO) for Apple devices
           items:
           - name: SSO overview & options
@@ -621,6 +358,33 @@ items:
             - name: Enterprise SSO app extension plug-in
               displayName: single sign-on, macos
               href: ./device-configuration/templates/configure-enterprise-sso-plugin-macos.md
+        - name: LAPS
+          items:
+          - name: Windows LAPS overview
+            href: ./device-security/laps/overview.md
+          - name: Deploy Windows LAPS policy
+            href: ./device-security/laps/deploy-policy.md
+          - name: Windows LAPS reports
+            href: ./device-security/laps/monitor.md
+          - name: macOS LAPS
+            href: ./device-security/laps/setup-macos.md
+
+      - name: Certificates and PKI
+        items:
+        - name: Microsoft Cloud PKI
+          href: ./cloud-pki/toc.yml
+        - name: Certificates
+          href: ./fundamentals/certificates/toc.yml
+
+      - name: Microsoft Tunnel VPN gateway
+        href: ./device-security/microsoft-tunnel/toc.yml
+
+      - name: Mobile Threat Defense partners
+        href: ./device-security/mobile-threat-defense/toc.yml
+        displayName: MTD
+
+
+# Reference content
 
       - name: Settings lists reference
         items:
@@ -629,80 +393,89 @@ items:
         - name: Compliance policy settings
           items:
           - name: Compliance settings - Android device administrator
-            href: ./intune-service/protect/compliance-policy-create-android.md
+            href: ./device-security/compliance/ref-android-administrator-settings.md
           - name: Compliance settings - Android (AOSP)
-            href: ./intune-service/protect/compliance-policy-create-android-aosp.md
+            href: ./device-security/compliance/ref-android-aosp-settings.md
           - name: Compliance settings - Android Enterprise
-            href: ./intune-service/protect/compliance-policy-create-android-for-work.md
+            href: ./device-security/compliance/ref-android-enterprise-settings.md
           - name: Compliance settings - iOS
-            href: ./intune-service/protect/compliance-policy-create-ios.md
+            href: ./device-security/compliance/ref-ios-ipados-settings.md
           - name: Compliance settings - Linux
-            href: ./intune-service/protect/compliance-policy-create-Linux.md
+            href: ./device-security/compliance/ref-linux-settings.md
           - name: Compliance settings - macOS
-            href: ./intune-service/protect/compliance-policy-create-mac-os.md
+            href: ./device-security/compliance/ref-macos-settings.md
           - name: Compliance settings - Windows
-            href: ./intune-service/protect/compliance-policy-create-windows.md
+            href: ./device-security/compliance/ref-windows-settings.md
           - name: Compliance settings - Windows 8.1
-            href: ./intune-service/protect/compliance-policy-create-windows-8-1.md
+            href: ./device-security/compliance/ref-windows-8-1-settings.md
+
         - name: Endpoint security policy settings
           items:
           - name: Antivirus policy settings
             items:
-            - name: macOS Defender Antivirus settings
-              href: ./intune-service/protect/antivirus-microsoft-defender-settings-macos.md
-            - name: Windows Defender Antivirus settings
-              href: ./intune-service/protect/antivirus-microsoft-defender-settings-windows.md
-            - name: Tenant attach Defender Antivirus settings
-              href: ./intune-service/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md
-            - name: Tenant attach Windows Security settings
-              href: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
-            - name: Windows Security experience settings
-              href: ./intune-service/protect/antivirus-security-experience-windows-settings.md
+              - name: macOS Defender Antivirus settings
+                href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-macos.md
+              - name: Windows Defender Antivirus settings
+                href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows.md
+              - name: Tenant attach Defender Antivirus settings
+                href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md
+              - name: Tenant attach Windows Security settings
+                href: ./device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach.md
+              - name: Windows Security experience settings
+                href: ./device-configuration/endpoint-security/ref-security-experience-settings-windows.md
           - name: Disk encryption profile settings
-            href: ./intune-service/protect/endpoint-security-disk-encryption-profile-settings.md
+            href: ./device-configuration/endpoint-security/ref-disk-encryption-settings.md
             displayName: AWA; Add Work Account
           - name: Firewall policy settings
-            href: ./intune-service/protect/endpoint-security-firewall-profile-settings.md
+            href: ./device-configuration/endpoint-security/ref-firewall-settings.md
           - name: Tenant attach Firewall settings
-            href: ./intune-service/protect/endpoint-security-firewall-profile-settings-tenant-attach.md
+            href: ./device-configuration/endpoint-security/ref-firewall-settings-tenant-attach.md
           - name: Endpoint detection and response profile settings
-            href: ./intune-service/protect/endpoint-security-edr-profile-settings.md
+            href: ./device-configuration/endpoint-security/ref-edr-settings.md
           - name: Attack surface reduction profile settings
-            href: ./intune-service/protect/endpoint-security-asr-profile-settings.md
+            href: ./device-configuration/endpoint-security/ref-attack-surface-reduction-settings.md
           - name: Account protection profile settings
-            href: ./intune-service/protect/endpoint-security-account-protection-profile-settings.md
+            href: ./device-configuration/endpoint-security/ref-account-protection-settings.md
+
         - name: Security baseline settings
           items:
           - name: Windows MDM baseline settings
-            href: ./intune-service/protect/security-baseline-settings-mdm-all.md
+            href: ./device-security/security-baselines/ref-windows-mdm-settings.md
           - name: Microsoft Defender for Endpoint baseline settings
-            href: ./intune-service/protect/security-baseline-settings-defender.md
+            href: ./device-security/security-baselines/ref-defender-settings.md
           - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
-            href: ./intune-service/protect/security-baseline-v2-office-settings.md
+            href: ./device-security/security-baselines/ref-v2-office-settings.md
           - name: Microsoft Edge baseline settings (version 112 and higher)
-            href: ./intune-service/protect/security-baseline-v2-edge-settings.md
+            href: ./device-security/security-baselines/ref-v2-edge-settings.md
           - name: Microsoft Edge baseline settings (version 85 and older)
-            href: ./intune-service/protect/security-baseline-settings-edge.md
+            href: ./device-security/security-baselines/ref-edge-settings.md
           - name: HoloLens 2 - Advanced security baseline settings
-            href: ./intune-service/protect/security-baseline-hololens2-advanced.md
+            href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
           - name: HoloLens 2 - Standard security baseline settings
-            href: ./intune-service/protect/security-baseline-hololens2-advanced.md
+            href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
           - name: Windows 365 baseline settings
-            href: ./intune-service/protect/security-baseline-settings-windows-365.md
+            href: ./device-security/security-baselines/ref-windows-365-settings.md
+
         - name: Microsoft Tunnel command-line tools
-          href: ./intune-service/protect/microsoft-tunnel-reference.md
+          href: ./device-security/microsoft-tunnel/ref-file-commands.md
+
+
+
+
+
         - name: Zero Trust security configuration examples
           items:
           - name: Android fully managed compliance and security
-            href: ./intune-service/protect/android-fully-managed-security-configurations.md
+            href: ./device-security/security-configurations/android-fully-managed.md
           - name: Android personally-owned compliance and security
-            href: ./intune-service/protect/android-personally-owned-security-configurations.md
+            href: ./device-security/security-configurations/android-personally-owned.md
           - name: iOS/iPadOS device compliance
-            href: ./intune-service/protect/ios-ipados-device-compliance-security-configurations.md
+            href: ./device-security/security-configurations/ios-ipados-compliance.md
           - name: iOS/iPadOS personal device security
-            href: ./intune-service/protect/ios-ipados-personal-device-security-configurations.md
+            href: ./device-security/security-configurations/ios-ipados-personal.md
           - name: iOS/iPadOS supervised device security
-            href: ./intune-service/protect/ios-ipados-supervised-device-security-configurations.md
+            href: ./device-security/security-configurations/ios-ipados-supervised.md
+
         - name: Error codes and descriptions
           items:
           - name: Software update errors
@@ -910,10 +683,9 @@ items:
     - name: Create settings catalog policy and compare with on-premises ADMX
       href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
       displayName: admx, administrative template, windows, gpo
-    - name: "Zero Trust: Manage devices with Intune"
+
+    - name: "Zero Trust: Manage devices with Intune 🔗"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
-    - name: Protect Exchange Online
-      href: ./intune-service/protect/exchange-online-protect.md
 
     - name: Secure your corporate data using Edge for Business
       href: ./solutions/edge-data-security/toc.yml

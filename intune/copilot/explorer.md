@@ -66,7 +66,7 @@ You can explore several Intune resources and the relationships between them. The
 - Device Configuration
 - Device updates
 - Devices (device properties)
-- [Endpoint Privilege Management](../intune-service/protect/epm-overview.md)
+- [Endpoint Privilege Management](../epm/overview.md)
 - Role based access control (RBAC)
 - Users and groups
 - Windows Autopilot deployments

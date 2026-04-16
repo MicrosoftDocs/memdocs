@@ -30,7 +30,7 @@ Organizations can use Microsoft Entra Conditional Access policies to ensure that
    > This policy ensures mobile users can access all Microsoft 365 endpoints using the applicable apps.
 
 > [!NOTE]
-> To leverage app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../../intune-service/protect/app-based-conditional-access-intune.md).
+> To leverage app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../../device-security/conditional-access-integration/app-based-policies.md).
 
 ## Create Intune app protection policies
 

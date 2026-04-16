@@ -53,7 +53,7 @@ Some settings are only available for some VPN clients, such as Cisco, F5, and mo
 
 ::: zone pivot="ios-ipados"
 
-- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../../intune-service/protect/microsoft-tunnel-overview.md), which supports split tunneling.
+- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../../device-security/microsoft-tunnel/overview.md), which supports split tunneling.
 
 - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./configure-per-app-vpn-ios.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../../device-enrollment/apple/guide-ios-ipados.md).
 
@@ -132,7 +132,7 @@ Select the VPN connection type from the following list of vendors:
   - Enable NAC in the VPN profile.
 
   > [!IMPORTANT]
-  > The [network access control (NAC) service is deprecated](../../intune-service/protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
+  > The [network access control (NAC) service is deprecated](../../device-security/integrate-network-access-control.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
   >
   > To use the CR Service and prevent downtime with your VPN connection, redeploy this same VPN device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service and receives the VPN configuration profile, then the CR Service changes are automatically deployed to the device. And, your VPN connections should continue to work.
 
@@ -157,7 +157,7 @@ Select the VPN connection type from the following list of vendors:
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
-  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../device-security/microsoft-tunnel/overview.md).
 
 ::: zone-end
 
@@ -496,7 +496,7 @@ These settings apply to the following VPN connection types:
 
 - **Per-app VPN**: **Enable** associates a specific app to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../../app-management/deployment/assign-groups.md).
 
-  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../device-security/microsoft-tunnel/overview.md).
 
 - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
 

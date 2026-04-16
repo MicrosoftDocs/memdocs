@@ -44,7 +44,7 @@ There are unique app icons in the work profile to help users differentiate betwe
 
 The settings available in Intune, ranging from enrollment to device configuration to compliance, allow you to tailor the level of protection to your organization's needs. For more information about applicable settings, see:
 
-* [Device compliance settings for Android Enterprise in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md)
+* [Device compliance settings for Android Enterprise in Intune](../../device-security/compliance/ref-android-enterprise-settings.md)
 * [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)
 
 ## App publishing and distribution
@@ -79,7 +79,7 @@ For more information about app protection policies for the work profile, see the
 
 * [Overview of app protection policies](../../app-management/protection/overview.md)
 
-* [Add a device compliance policy for work profile devices in Intune](../../intune-service/protect/compliance-policy-create-android-for-work.md)
+* [Add a device compliance policy for work profile devices in Intune](../../device-security/compliance/ref-android-enterprise-settings.md)
 
 ## VPN profiles
 

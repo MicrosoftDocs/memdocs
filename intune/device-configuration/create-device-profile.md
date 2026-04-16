@@ -17,7 +17,7 @@ Device configuration profiles allow you to add and configure device settings, an
 
 - **Baselines**: On Windows devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then use security baselines.
 
-  For more information, go to [Security baselines](../intune-service/protect/security-baselines.md).
+  For more information, go to [Security baselines](../device-security/security-baselines/overview.md).
 
 - **Settings catalog**: On your Apple, Android, and Windows devices, you can use the settings catalog to configure device features and settings. The settings catalog has all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
@@ -95,10 +95,10 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Edition upgrade and mode switch (Windows)](./templates/configure-edition-upgrade-windows.md)
 - [Education (iOS, iPadOS)](../intune-service/fundamentals/education-settings-configure-ios.md)
 - [Email](./templates/configure-email.md)
-- [Endpoint protection (macOS, Windows)](../intune-service/protect/endpoint-protection-configure.md)
+- [Endpoint protection (macOS, Windows)](./endpoint-security/configure-endpoint-protection.md)
 - [Extensions (macOS)](./templates/configure-kernel-extensions-macos.md)
 - [Kiosk](./templates/configure-kiosk.md)
-- [Microsoft Defender for Endpoint (Windows)](../intune-service/protect/microsoft-defender-with-intune.md)
+- [Microsoft Defender for Endpoint (Windows)](../device-security/microsoft-defender/overview.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](./templates/configure-zebra-mx-android.md)
 - [Network boundary (Windows)](./templates/create-network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](./templates/configure-oemconfig-android.md)
@@ -191,7 +191,7 @@ At any time, users can open the Company Portal app, and sync the device to immed
 
 When creating profiles, consider the following recommendations:
 
-- Name your policies so you know what they are, and what they do. All [compliance policies](../intune-service/protect/create-compliance-policy.md) and [configuration profiles](./create-device-profile.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
+- Name your policies so you know what they are, and what they do. All [compliance policies](../device-security/compliance/create-policy.md) and [configuration profiles](./create-device-profile.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
 
   Some configuration profile examples include:
 
