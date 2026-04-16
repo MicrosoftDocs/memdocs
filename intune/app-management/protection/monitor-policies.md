@@ -65,4 +65,4 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 ## See also
 
 - [How to create and assign app protection policies](./create-policy.md)
-- [Intune reports](../../intune-service/fundamentals/reports.md)
+- [Intune reports](../../device-management/reports/overview.md)

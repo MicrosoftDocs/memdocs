@@ -22,7 +22,7 @@ In this article, you learn how to create and assign an app protection policy in 
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 :::column-end:::
 :::row-end:::
 
@@ -32,7 +32,7 @@ In this article, you learn how to create and assign an app protection policy in 
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Application Manager](../../intune-service/fundamentals/role-based-access-control-reference.md#application-manager)** Microsoft Intune role
+> - Built-in **[Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
 
@@ -42,8 +42,8 @@ In this article, you learn how to create and assign an app protection policy in 
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - [Create a user](../../intune-service/fundamentals/quickstart-create-user.md).
-> - [Create a group](../../intune-service/fundamentals/quickstart-create-group.md).
+> - [Create a user](../../fundamentals/tenant-administration/quickstart-create-user.md).
+> - [Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md).
 > - [Enroll a device](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md)
 > - [Add and assign an app](../deployment/quickstart-add-assign.md).
 :::column-end:::
@@ -82,4 +82,4 @@ In this article, you created and assigned an app protection policy. Users of the
 To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 10 - Create and assign a custom role](../../intune-service/fundamentals/quickstart-create-custom-role.md)
+> [Step 10 - Create and assign a custom role](../../fundamentals/role-based-access-control/quickstart-custom-role.md)

@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up automated device enrollment (ADE) for iOS/iPadOS
@@ -29,7 +28,7 @@ The following table shows the features and scenarios supported with automated de
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as dedicated devices. | ✔️ |
 | Devices are in shared device mode. | ✔️ |
-| Devices are personal or bring-your-own (BYOD). | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](setup-user-company-portal.md). |
+| Devices are personal or bring-your-own (BYOD). | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../mam-without-enrollment.md), or [User and Device enrollment](setup-user-company-portal.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> If you want to fully manage a device in Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -465,7 +464,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
   To summarize, if a device has a user, the user needs to have an assigned Intune license. If the device doesn't have an Intune-licensed user, the device needs to have an Intune device license.
 
-  For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and the [Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md).
+  For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and the [Intune planning guide](../../fundamentals/planning-guide.md).
 
 - A device that is already activated needs to be wiped before it can enroll properly with automated device enrollment. After you wipe it but before activating it again, you can apply the enrollment profile. See [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516)
 

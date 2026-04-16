@@ -29,7 +29,7 @@ Trial subscriptions help you avoid affecting a production environment with wrong
 
 This tutorial requires a test tenant with the following subscriptions:
 
-- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md))
+- Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../../fundamentals/free-trial-sign-up.md))
 - Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 

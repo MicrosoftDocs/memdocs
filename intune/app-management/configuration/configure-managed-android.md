@@ -72,9 +72,9 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     > Changing the **Connected apps** setting to **Not Configured** won't remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 13. Select **Next** to display the **Scope tags** page.
-14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 15. Select **Next** to display the **Assignments** page.
-16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../../intune-service/fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
+16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../../fundamentals/filters/overview.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/configure-managed-android/app-configuration-policies-use-android-02.png" :::
 
@@ -82,7 +82,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     :::image type="content" alt-text="Screenshot of policy assignments - All Users dropdown option" source="./media/configure-managed-android/app-configuration-policies-use-android-03.png" :::
 
-18. [Optional] select **Edit filter** to add a [filter](../../intune-service/fundamentals/filters.md) and refine the assignment scope.
+18. [Optional] select **Edit filter** to add a [filter](../../fundamentals/filters/overview.md) and refine the assignment scope.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/configure-managed-android/app-configuration-policies-use-android-04.png" :::
 

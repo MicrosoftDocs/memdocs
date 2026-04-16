@@ -26,7 +26,7 @@ Microsoft Intune supports web-based device enrollment on devices running iOS/iPa
 
 Before you begin, complete the following tasks:
 
-- [Set mobile device management (MDM) authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
 - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
 
 ## Best practices

@@ -6,7 +6,6 @@ ms.topic: article
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # iOS App Protection Policy Settings

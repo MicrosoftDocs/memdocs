@@ -7,7 +7,6 @@ ms.reviewer: ilwu
 ms.collection:
 - Microsoft 365-identity-device-management
 - Android
-- highpri
 - FocusArea_Apps_SpecificApp
 ---
 

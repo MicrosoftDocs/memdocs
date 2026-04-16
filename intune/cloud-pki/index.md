@@ -131,14 +131,14 @@ The following permissions are available to assign to custom Intune roles. These 
 * Create certificate authorities: Any user assigned this permission can create a root or issuing CA.
 * Revoke issued leaf certificates: Any user assigned this permission has the ability to manually revoke a certificate issued by an issuing CA. This permission also requires the *read CA* permission.
 
-You can assign scope tags to the root and issuing CAs. For more information about how to create custom roles and scope tags, see [Role-based access control with Microsoft Intune](../intune-service/fundamentals/scope-tags.md).
+You can assign scope tags to the root and issuing CAs. For more information about how to create custom roles and scope tags, see [Role-based access control with Microsoft Intune](../fundamentals/role-based-access-control/scope-tags.md).
 
 ## Try Microsoft Cloud PKI
 
 You can try out the Microsoft Cloud PKI feature in the Intune admin center during a trial period. Available trials include:
 
 * [Microsoft Intune Suite trial](https://www.microsoft.com/security/business/microsoft-intune-pricing)
-* [Standalone add-on trial](../intune-service/fundamentals/intune-add-ons.md#try-or-buy-intune-add-ons)
+* [Standalone add-on trial](../fundamentals/add-ons.md#try-or-buy-intune-add-ons)
 
 During the trial period, you can create up to six CAs in your tenant. Cloud PKI CAs created during the trial use software-backed keys, and use `System.Security.Cryptography.RSA` to generate and sign the keys. You can continue to use the CAs after purchasing a Cloud PKI license. However, the keys remain software-backed, and can't be converted to HSM backed keys. The Microsoft Intune service managed CA keys. No Azure subscription is required for Azure HSM capabilities.
 
@@ -153,7 +153,7 @@ Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Int
 
 ## Known issues and limitations
 
-For the latest changes and additions, see [What's new in Microsoft Intune](../intune-service/fundamentals/whats-new.md).
+For the latest changes and additions, see [What's new in Microsoft Intune](../whats-new/index.md).
 
 * You can create up to six CAs in an Intune tenant.
   * Licensed Cloud PKI - A total of 6 CAs can be created using Azure mHSM keys.

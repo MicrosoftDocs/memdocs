@@ -32,7 +32,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 ## Prerequisites
 
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
 - [An Apple MDM push certificate](create-mdm-push-certificate.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
@@ -62,7 +62,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. Choose **Create** to save the profile.
 
 ## Create a device group
-You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name.
 

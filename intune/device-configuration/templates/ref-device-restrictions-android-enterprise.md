@@ -8,8 +8,6 @@ params:
 ms.reviewer: cchristenson, arnab
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Android template device settings list to restrict features using Intune
@@ -567,7 +565,7 @@ Use these settings to configure a kiosk-style experience on your dedicated or fu
   >
   > - Users on fully managed, and corporate-owned work profile devices aren't prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   >
-  >   To apply the device password settings during device enrollment, assign the device restriction profile to users (no [filters](../../intune-service/fundamentals/filters.md)). Don't assign the profile to devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
+  >   To apply the device password settings during device enrollment, assign the device restriction profile to users (no [filters](../../fundamentals/filters/overview.md)). Don't assign the profile to devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
   > - On dedicated devices, if the device is set up with single or multi-app kiosk mode, then users are prompted to set a password. Screens force and guide users to create a compliant password before they can continue using the device.
   > - On dedicated devices that aren't using kiosk mode, users aren't notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
 

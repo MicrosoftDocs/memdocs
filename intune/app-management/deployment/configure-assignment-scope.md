@@ -14,7 +14,7 @@ In Intune, you can determine who has access to an app by assigning groups of use
 
 To set the availability of an app, you include and exclude app assignments to a group of users or devices by using a combination of include and exclude group assignments. This capability can be useful when you make the app available by including a large group, and then narrow the selected users by also excluding a smaller group. The smaller group might be a test group or an executive group.
 
-As a best practice, create and assign apps specifically for your user groups, and separately for your device groups. For more information on groups, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+As a best practice, create and assign apps specifically for your user groups, and separately for your device groups. For more information on groups, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
 When working with group assignments, if Microsoft Entra soft-deletes groups, Intune displays them as soft deleted in the console and their assignments are removed. Restoring the groups restores their assignments.
 

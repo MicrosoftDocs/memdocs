@@ -53,7 +53,7 @@ To view classic Conditional Access policies, in [Azure](https://portal.azure.com
 
 > [!NOTE]
 >
-> Ensure your tenant's MDM Authority is [set to Intune](../../intune-service/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
+> Ensure your tenant's MDM Authority is [set to Intune](../../fundamentals/setup-mdm-authority.md#set-mdm-authority-to-intune) to see the full list of toggle options.
 
 You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
 

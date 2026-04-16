@@ -63,9 +63,9 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 ## Remediations
 
-[Remediations](../../intune-service/fundamentals/remediations.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../endpoint-analytics/scores.md)
+[Remediations](../../device-management/tools/deploy-remediations.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../endpoint-analytics/scores.md)
 
-:::image type="content" source="../../intune-service/fundamentals/media/remediations/remediations-create.png" alt-text="Screenshot of Remediations in Intune admin center." lightbox="../../intune-service/fundamentals/media/remediations/remediations-create.png":::
+:::image type="content" source="../../device-management/tools/media/deploy-remediations/remediations-create.png" alt-text="Screenshot of Remediations in Intune admin center." lightbox="../../device-management/tools/media/deploy-remediations/remediations-create.png":::
 
 ## Co-management
 
