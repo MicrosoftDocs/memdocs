@@ -7,7 +7,6 @@ ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
 - macOS
-- highpri
 ---
 
 # Microsoft Intune Management Agent for macOS
@@ -55,4 +54,4 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 - The app you've created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../intune-service/fundamentals/device-lifecycle.md)
+- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md)

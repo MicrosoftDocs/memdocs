@@ -99,9 +99,9 @@ For more information, see [Manage mobile devices with Configuration Manager and 
 For a complete list of supported platforms, see the following articles:
 
 - [Supported operating systems for clients and devices for Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Intune supported configurations](/mem/intune-service/fundamentals/supported-devices-browsers)
+- [Intune supported configurations](/mem/fundamentals/ref-supported-platforms)
 
-Microsoft recommends using Intune to manage Android, iOS, and Windows 10/11 mobile devices. For more information, see [What is Microsoft Intune?](/mem/intune-service/fundamentals/what-is-intune).
+Microsoft recommends using Intune to manage Android, iOS, and Windows 10/11 mobile devices. For more information, see [What is Microsoft Intune?](/mem/fundamentals/what-is-intune).
 
 ### <a name="bkmk_comp2"></a> Compare solutions by management functionality
 

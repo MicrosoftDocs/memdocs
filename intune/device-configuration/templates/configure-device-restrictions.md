@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Configure device restriction settings in Microsoft Intune
@@ -67,7 +66,7 @@ This article shows you how to create a device restrictions profile. You can also
     - [Windows](./ref-device-restrictions-windows.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, like `US-NC IT Team` or `JohnGlenn_ITDepartment`. For information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, like `US-NC IT Team` or `JohnGlenn_ITDepartment`. For information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

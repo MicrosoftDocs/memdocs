@@ -39,11 +39,11 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 ### Configuration Manager version requirements for Intune endpoint security policies
 
-[!INCLUDE [Antivirus policy prerequisites](../intune-service/includes/tenant-attach-antivirus-prerequisites.md)]
+[!INCLUDE [Antivirus policy prerequisites](../includes/tenant-attach-antivirus-prerequisites.md)]
 
-[!INCLUDE [endpoint detection and response policy prerequisites](../intune-service/includes/tenant-attach-edr-prerequisites.md)]
+[!INCLUDE [endpoint detection and response policy prerequisites](./includes/tenant-attach-edr-prerequisites.md)]
 
-[!INCLUDE [Firewall policy prerequisites](../intune-service/includes/tenant-attach-firewall-prerequisites.md)]
+[!INCLUDE [Firewall policy prerequisites](../includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Set up Configuration Manager to support Intune policies
 

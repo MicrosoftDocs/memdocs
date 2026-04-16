@@ -679,7 +679,7 @@ Now that you configured your cloud-native Windows endpoint and provisioned it wi
 - [Overview of Windows Autopilot](/autopilot/overview)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
-If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](../../intune-service/fundamentals/deployment-guide-enroll.md).
+If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](../../device-enrollment/enroll-devices.md).
 
 ## Follow the cloud-native endpoints guidance
 

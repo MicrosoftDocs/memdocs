@@ -1,0 +1,17 @@
+items:
+  - name: Role-based access control overview
+    href: ./overview.md
+  - name: Built-in roles permissions reference
+    href: ./ref-built-in-roles.md
+  - name: Assign a role to a user
+    href: ./assign-role.md
+  - name: Create a custom role
+    href: ./create-custom-role.md
+  - name: Use scope tags to determine what admins can see
+    href: ./scope-tags.md
+  - name: Determine admin structure
+    href: ../scale-guidelines.md
+    displayName: distributed IT, many admins, scale, guidelines
+  - name: Configure multiple admin approvals
+    href: ./multi-admin-approval.md
+    displayName: multi-admin approval, maa

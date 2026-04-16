@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Add device enrollment managers

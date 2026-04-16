@@ -7,7 +7,6 @@ ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 ---
 
 # Add and assign the Windows Company Portal app for Intune managed devices

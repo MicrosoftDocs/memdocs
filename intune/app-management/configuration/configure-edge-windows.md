@@ -7,7 +7,6 @@ ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 ---
 
 # Configure Microsoft Edge for Windows with Intune

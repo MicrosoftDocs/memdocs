@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: abstarr
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_SpecificApp
 ---
 
@@ -21,7 +20,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you help provide a familiar and helpful experience for your end users. To configure these customizations, sign in as an [Intune administrator](../../intune-service/fundamentals/role-based-access-control-reference.md) with sufficient permissions. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization**. Here you edit the default policy or create up to 25 user group targeted policies. Targeting policies to device groups isn't supported. These settings apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you help provide a familiar and helpful experience for your end users. To configure these customizations, sign in as an [Intune administrator](../../fundamentals/role-based-access-control/ref-built-in-roles.md) with sufficient permissions. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant Administration** > **Customization**. Here you edit the default policy or create up to 25 user group targeted policies. Targeting policies to device groups isn't supported. These settings apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
@@ -99,7 +98,7 @@ Support for the device enrollment setting requires end users have these Company 
 >
 > These settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../../intune-service/enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device is configured for KME and device enrollment is set to Unavailable, the device doesn't enroll during the out of box flow.
 >
-> For the Android Company Portal app, Intune detects if the user's device is set up for [app protection policies without enrollment](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md). In this case, the user doesn't get prompted to enroll in the Company Portal. This behavior happens even if you configure the device enrollment setting to prompt enrollment. This behavior applies to all Android device types except Surface Duo devices.
+> For the Android Company Portal app, Intune detects if the user's device is set up for [app protection policies without enrollment](../../device-enrollment/mam-without-enrollment.md). In this case, the user doesn't get prompted to enroll in the Company Portal. This behavior happens even if you configure the device enrollment setting to prompt enrollment. This behavior applies to all Android device types except Surface Duo devices.
 
 |    Device enrollment   options    |    Description    |    Checklist prompts    |    Notification    |    Device details status    |    App visibility (for an app that requires enrollment)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
@@ -287,7 +286,7 @@ Some platforms and configurations don't support self-service device actions. Thi
 
 App users can share their logs with you when requesting help through the Intune Company Portal app or Microsoft Intune app. If you're using Azure Government, users get to select their sharing preference when they initiate the sharing process. If you're not using Azure Government, user-submitted logs are sent directly to Microsoft support or the admin center.
 
-You can download user-submitted mobile app diagnostics in the admin center for the Android, AOSP, and Windows versions of the Company Portal app. To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../../intune-service/fundamentals/help-desk-operators.md).
+You can download user-submitted mobile app diagnostics in the admin center for the Android, AOSP, and Windows versions of the Company Portal app. To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../../fundamentals/it-pro-support/help-desk-operators.md).
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we don't sell any data collected by our service to any third parties for any reason.

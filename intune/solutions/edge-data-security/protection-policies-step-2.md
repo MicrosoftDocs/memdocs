@@ -6,8 +6,6 @@ ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- highpri
-- highseo
 - FocusArea_Apps_AppManagement
 zone_pivot_groups: app-protection-platforms
 ---

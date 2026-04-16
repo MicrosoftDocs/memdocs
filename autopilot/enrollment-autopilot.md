@@ -33,7 +33,7 @@ appliesto:
 
       For more information, see [Use cloud groups to manage role assignments in Microsoft Entra ID](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/intune/intune-service/fundamentals/groups-add).
+    - **Membership type**: Select how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/intune/fundamentals/tenant-administration/add-groups).
 
     - **Owners**: Select users that own the group. Owners can also delete this group.
 

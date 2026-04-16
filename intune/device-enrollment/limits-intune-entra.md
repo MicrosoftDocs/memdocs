@@ -6,7 +6,6 @@ ms.topic: concept-article
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Understand Intune and Microsoft Entra device limit restrictions  

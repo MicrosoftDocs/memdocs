@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: auherrin, dregan, annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune
@@ -56,7 +54,7 @@ For more specific information on this enrollment type, go to:
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
-| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../mam-without-enrollment.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
 | You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using [Apple Configurator](#apple-configurator-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specific apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
@@ -67,7 +65,7 @@ For more specific information on this enrollment type, go to:
 
 This task list provides an overview. For more specific information, go to [Apple Business Manager enrollment](setup-automated-ios.md) or [Apple School Manager enrollment](school-manager.md).
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (.p7m) is active. For more specific information, go to [Get an Apple ADE token](setup-automated-ios.md#get-an-apple-automated-device-enrollment-token).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
@@ -232,7 +230,7 @@ For more specific information on this enrollment type, go to [Apple Configurator
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ <br/><br/> If you have a large number of devices, then this method takes some time. |
 | Devices are associated with a single user. | ✅ |
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
-| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../mam-without-enrollment.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specific apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
@@ -243,7 +241,7 @@ For more specific information on this enrollment type, go to [Apple Configurator
 This task list provides an overview. For more specific information, go to [Apple Configurator enrollment](setup-configurator-ios.md).
 
 - Requires access to a Mac computer with a USB port.
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. We recommend using the Company Portal app.
 
@@ -360,7 +358,7 @@ For the specific enrollment steps, and its prerequisites, go to [Set up account 
 
 This list provides an overview of the tasks required of administrators.
 
-- Be sure your devices are [supported](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment profile. When you create the enrollment profile, you have the following options:
 
@@ -436,7 +434,7 @@ For more information about the user experience, go to [Prepare employees for enr
 
 ## Related articles
 
-- [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md)
+- [MAM](../mam-without-enrollment.md)
 - [Android enrollment guide](../android/guide.md)
 - [Linux enrollment guide](../guide-linux.md)
 - [macOS enrollment guide](guide-macos.md)
