@@ -282,7 +282,7 @@ The passwordless methods available to users depend on both the device platform a
 >
 > - [Use certificates for authentication in Microsoft Intune](../fundamentals/certificates/overview.md)
 > - [Microsoft Cloud PKI overview](../cloud-pki/index.md)
-> - [Certificate Connector for Microsoft Intune](../fundamentals/fundamentals/certificates/connector/overview.md)
+> - [Certificate Connector for Microsoft Intune](../fundamentals/certificates/connector/overview.md)
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::column-end:::
 :::row-end:::
