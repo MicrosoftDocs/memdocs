@@ -171,7 +171,7 @@ To support LAPS:
 - There are two new role-based access control permissions for *Enrollment program* that can grant an administrative account permission to view a managed devices password, and to rotate that password.
 - By default, these permissions aren't part of any built-in Intune RBAC role, and must be explicitly assigned to admins through custom roles.
 
-To learn about all the details for this new capability, see [Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune](/intune/device-security/laps/setup-laps-macos).
+To learn about all the details for this new capability, see [Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune](../../device-security/laps/setup-macos.md).
 
 ### Intune apps
 

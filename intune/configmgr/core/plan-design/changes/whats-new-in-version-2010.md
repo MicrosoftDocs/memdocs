@@ -86,7 +86,7 @@ Microsoft is increasing transparency by categorizing the diagnostic data that Wi
 
 If you previously configured devices for **Enhanced** or **Enhanced (Limited)**, in an upcoming release of Windows 10, they'll use the **Required** level. This change may impact the functionality of Desktop Analytics.
 
-For more information, see [Enable data sharing](../../../../device-updates/windows/monitor-compatibility.md#support-for-new-windows-10-diagnostic-data-levels).
+For more information, see [Enable data sharing](../../../../device-updates/windows/monitor-compatibility.md).
 
 ### Support for Windows 10 Enterprise LTSC 2019
 
@@ -94,7 +94,7 @@ For more information, see [Enable data sharing](../../../../device-updates/windo
 
 The Windows 10 long-term servicing channel (LTSC) was designed for devices where functionality and features don't change over time. This servicing model prevents Windows 10 Enterprise LTSC devices from receiving the usual feature updates. It provides only quality updates to make sure that device security stays up to date. Some customers want to shift from LTSC to the semi-annual servicing channel, to have access to new features, services, and other major changes. You can now use Configuration Manager to enroll LTSC devices to Desktop Analytics. Once you enroll these devices, you can evaluate them in your deployment plans.
 
-For more information, see [Desktop Analytics prerequisites](../../../../device-updates/windows/monitor-compatibility.md#prerequisites)
+For more information, see [Desktop Analytics prerequisites](../../../../device-updates/windows/monitor-compatibility.md)
 
 ## Site infrastructure
 
