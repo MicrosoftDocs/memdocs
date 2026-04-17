@@ -13,6 +13,11 @@ ms.collection:
 
 The Managed Home Screen app is for corporate-owned Android Enterprise dedicated devices and fully managed, user-affiliated devices that are enrolled in Intune and run in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
+> [!WARNING]
+> Managed Home Screen provides a controlled user experience but does not, by itself, block access to all Android system features. The overall security and integrity of a kiosk configuration depends on the combination of Managed Home Screen settings and device configuration restrictions applied to the device.  
+>  
+> Administrators should carefully review and configure device restriction settings to ensure end users cannot access system settings, modify network or security configuration, or perform actions such as a device reset. For more information, see https://learn.microsoft.com/intune/intune-service/configuration/device-restrictions-android-for-work.
+
 ## When to configure the Microsoft Managed Home Screen app
 
  [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
