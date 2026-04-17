@@ -310,14 +310,16 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 > **Description**: Provides basic network adapter information.\
 > **Supported Features**: Inventory, Device query for multiple devices.\
-> **Supported platforms**: Windows
+> **Supported platforms**: Android, iOS, iPadOS, macOS, Windows
 
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
-| `Identifier` | String | Unique identifier of the adapter from other devices on the system. |Windows|
+| `Identifier` | String | Unique identifier of the adapter from other devices on the system. |Android, iOS, iPadOS, macOS, Windows|
 | `MacAddress`| String | Hardware identification number that uniquely identifies each device on a network. |Android, iOS, iPadOS, macOS |
 | `Manufacturer` | String | Name of the network adapter's manufacturer. |Windows|
-| `Type` | String | Network medium in use. |Windows|
+| `Type` | String | Network medium in use. |Android, iOS, iPadOS, macOS, Windows|
+| `IpAddressV4` | String | Internet Protocol version 4 address is a unique identifier for a device on a network that uses the IPv4 protocol. |Android|
+| `SubnetAddressV4` | String | Network identifier derived by applying a subnet mask to an IPv4 address, which helps in organizing and managing devices within the network. |Android|
 
 > [!NOTE]
 > Inventory only reports up to 20 network adapters per device.
@@ -325,7 +327,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 ## `OsVersion`
 
 > **Description**: A single record containing the operating system name and version of the device.\
-> **Supported platforms**: Android, iOS, iPadOS, Windows\
+> **Supported platforms**: Android, iOS, iPadOS, macOS, Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand (Windows only), Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -340,6 +342,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `InstallDateTime` | datetime (UTC) | The install date time of the OS. |Windows single device query, Windows multi device query |
 |`AppleSupplementalOSVersion` |String |The OS version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
 |`AppleSupplementalBuildVersion` |String |The OS build version that contains the Rapid Security Response version, which is designated by a letter. |iOS, iPadOS, macOS |
+| `AndroidSecurityPatchLevel` | String | Date format for the security patch level. Policies can be applied against this setting and organizations use it to determine risk. |Android|
 
 ## `Process`
 
@@ -391,15 +394,31 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `SimInfo`
 
-> **Description**: Information on the Sim cards found on the device\
-> **Supported platforms**: Windows\
+> **Description**: Information on the SIM cards found on the device\
+> **Supported platforms**: Android, iOS, iPadOS, macOS, Windows\
 > **Supported for**: Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
-| `WindowsESimId` | String | The ID of an eSIM found on the device |Windows|
-| `Eid` | String | The electronic identification number of the device |Windows|
-| `isActive` | Boolean | Whether the eSIM is active or not |Windows|
+| `SlotId` | String | Identifies the slot of the SIM card. |iOS, iPadOS|
+| `WindowsESimId` | String | The ID of an eSIM found on the device. |Windows|
+| `ConfiguredBy` | String | Whether an eSIM is user or admin configured. Possible values: UNSPECIFIED, ADMIN_CONFIGURED, USER_CONFIGURED. |Android|
+| `CurrentCarrierNetwork` | String | Name of the current carrier network. |iOS, iPadOS|
+| `CarrierSettingsVersion` | String | The version of the carrier settings. |iOS, iPadOS|
+| `CurrentMcc` | String | Current Mobile Country Code. |iOS, iPadOS|
+| `CurrentMnc` | String | Current Mobile Network Code. |iOS, iPadOS|
+| `Iccid` | String | Integrated Circuit Card Identifier - Unique identifier used by organization to audit and track phones. |Android, iOS, iPadOS|
+| `Imei` | String | International Mobile Equipment Identity - Unique identifier for the device. |Android, iOS, iPadOS|
+| `Imsi` | String | International Mobile Subscriber Identity - Unique identifier for a specific cellular user. |Android|
+| `Eid` | String | Embedded SIM Identifier - Unique identifier for embedded SIM. |Android, iOS, iPadOS, Windows|
+| `Meid` | String | Mobile Equipment Identifier - Unique identifier for the device. |Android, iOS, iPadOS|
+| `DataPreferred` | Boolean | The preferred subscription for data. |iOS, iPadOS|
+| `IsActive` | Boolean | Indicates whether the eUICC is active. |Android, Windows|
+| `IsRoaming` | Boolean | Determines if roaming is enabled or not. |iOS, iPadOS|
+| `VoicePreferred` | Boolean | Is preferred voice subscription enabled. |iOS, iPadOS|
+| `Label` | String | Label the user assigned to the SIM. |iOS, iPadOS|
+| `PhoneNumber` | String | Phone Number associated with the SIM. |Android, iOS, iPadOS|
+| `SubscriberCarrierNetwork` | String | Name of the home carrier network. |Android, iOS, iPadOS|
 
 ## `SystemEnclosure`
 
