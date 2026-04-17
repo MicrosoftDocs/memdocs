@@ -202,6 +202,8 @@ To configure the Platform SSO policy, use the steps in this section to create an
     > There are more Platform SSO settings you can add to the policy that configure different scenarios, like enabling Kerberos SSO, using Touch ID biometric authentication, and enabling SSO on non-Microsoft apps. To learn more about these scenarios and their required settings, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).
     >
     > If you don't configure the optional scenario settings initially, you can always edit the policy later.
+    > [!NOTE]
+    > If after a successful PSSO registration, Platform SSO > Authentication Method or Platform SSO > Use Shared Device Keys setting is updated in the same profile, it will cause a device re-registration. For all the other settings, if profile is removed and re-targeted, it will cause a device re-registration. 
 
 8. Configure the following required settings:
 
