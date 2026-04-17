@@ -61,9 +61,9 @@ Use one of the ways documented above to deploy the macOS Company Portal to the d
 
 Users must sign into the Company Portal to complete Microsoft Entra authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the enrollment and reach the home screen of the macOS device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
-For more information about configuring Setup Assistant with modern authentication for macOS, see [Create an Apple enrollment profile](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
+For more information about configuring Setup Assistant with modern authentication for macOS, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile).
 
 ## Next steps
 - To learn more about assigning apps, see [Assign apps to groups](./assign-groups.md).
-- To learn more about configuring Automated Device Enrollment, see [Automated Device Enrollment for macOS](../../intune-service/enrollment/device-enrollment-program-enroll-macos.md).
+- To learn more about configuring Automated Device Enrollment, see [Automated Device Enrollment for macOS](../../device-enrollment/apple/setup-automated-macos.md).
 - To learn more about configuring Microsoft AutoUpdate settings on macOS, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-updates).

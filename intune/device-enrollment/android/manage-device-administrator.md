@@ -36,7 +36,7 @@ For information about other user tasks, see these articles:
 
 - [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
 
-- [Android device enrollment overview ](../../user-help/enrollment/enrollment-benefits-android.md)
+- [Android device enrollment overview ](../../user-help/enrollment/benefits-android.md)
 
 ## Block device administrator enrollment
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](../restrictions.md).

@@ -895,8 +895,8 @@ The screens you can skip during macOS enrollment include:
 
 For more information about available Setup Assistant skipkeys, see:
 
-- [Set up automated device enrollment for iOS/iPadOS]( ../intune-service/enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)  
-- [Set up automated device enrollment for macOS]( ../intune-service/enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+- [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)  
+- [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
 ## Week of December 1, 2025
 
