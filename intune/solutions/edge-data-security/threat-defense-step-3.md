@@ -2,6 +2,8 @@
 title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
 description: Step 3. Integrate Mobile Threat Defense signals with Microsoft Edge for Business app protection policies in Microsoft Intune.
 ms.date: 01/26/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:

@@ -493,7 +493,7 @@ Using the [Intune settings catalog](../../device-configuration/settings-catalog/
 
 ✅ **Use the macOS Evaluation Utility**
 
-The Mac Evaluation Utility confirms that your Mac has the configuration and settings recommended by Apple. To access the Mac Evaluation Utility, sign into [Apple Seed for IT](https://beta.apple.com/it) (opens Apple's website) > **Resources**.
+The Mac Evaluation Utility confirms that your Mac has the configuration and settings recommended by Apple. To access the Mac Evaluation Utility, sign into [Apple Seed for IT](https://beta.apple.com/for-it) (opens Apple's website) > **Resources**.
 
 ## Phase 4 - Apply organization specific customizations
 
