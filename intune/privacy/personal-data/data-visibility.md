@@ -22,7 +22,7 @@ Admins can see end user personal information in various Nodes of the Intune UI i
 
 - [See device details](../../device-management/inventory-and-status/device-details.md) in Intune explains how you can review details about an end user's device.
 - [Monitor app information and assignments](../../app-management/monitor-assignments.md) explains how to see details about apps installed on an end user's device.
-- The [What information can my company see when I enroll my device? article](../../user-help/enrollment/enrollment-data-visibility.md) gives end users a list of data that their company can and can't see. It's best to clearly tell your users what kind of data you're collecting and why you're collecting it. This article can be the first step in that transparency.
+- The [What information can my company see when I enroll my device? article](../../user-help/enrollment/data-visibility.md) gives end users a list of data that their company can and can't see. It's best to clearly tell your users what kind of data you're collecting and why you're collecting it. This article can be the first step in that transparency.
 
 ### Who can view the data?
 

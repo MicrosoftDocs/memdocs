@@ -491,7 +491,7 @@ Passwordless often depends on the device being in the right state before users c
 
 - [Supported device platforms and versions](../fundamentals/ref-supported-platforms.md)
 - [Device enrollment or registration](../device-enrollment/enroll-devices.md)
-- [Required apps and brokers](../intune-service/apps/apps-add.md)
+- [Required apps and brokers](../app-management/deployment/index.md)
 - [Method-specific configuration profiles and identity prerequisites](../device-configuration/overview.md)
 
 ### Verification and ongoing operations

@@ -73,9 +73,9 @@ Let's begin with the creation and configuration of your Microsoft Entra tenant a
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/fundamentals/what-is-intune
+[MEM-1]: ../../../fundamentals/what-is-intune.md
 [MEM-2]: /mem/configmgr/core/understand/introduction
 [MEM-4]: /autopilot/windows-autopilot
-[MEM-5]: /intune/device-management/tools/surface-management-portal
+[MEM-5]: ../../../device-management/tools/surface-management-portal.md
 
 [INT-1]: /intune-education/what-is-intune-for-education

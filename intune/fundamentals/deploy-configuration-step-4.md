@@ -452,7 +452,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   You can configure LAPS on new and existing macOS automated device enrollment (ADE) profiles. Devices are provisioned with a local administrator account that has a strong, encrypted, and randomized admin password, which is stored and encrypted by Intune.
 
-  For more information, see [macOS LAPS in Intune](../device-enrollment/apple/setup-laps-macos.md).
+  For more information, see [macOS LAPS in Intune](/intune/device-security/laps/setup-laps-macos).
 
   # [Windows](#tab/windows-laps)
 

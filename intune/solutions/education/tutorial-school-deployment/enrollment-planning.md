@@ -29,7 +29,7 @@ There are three main methods for joining Windows devices to Microsoft Entra ID a
 - **Automatic Intune enrollment with Windows Autopilot.** Windows Autopilot is a collection of cloud services to configure the out-of-box experience, enabling light-touch or zero-touch deployment scenarios. You can optionally use [Windows Autopilot for pre-provisioned deployment](/autopilot/pre-provision) to enroll Windows Autopilot-registered devices with required apps and settings so that they're nearly ready for school use when students receive them. Students just have to connect to Wi-Fi and complete the remaining setup steps.
 
 > [!TIP]
-> For details about bring your own device (BYOD) or enrollment with co-management, see [Enrollment guide: Enroll Windows client devices in Microsoft Intune](/intune/device-enrollment/windows/guide).
+> For details about bring your own device (BYOD) or enrollment with co-management, see [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../../../device-enrollment/windows/guide.md).
 
 ### Provisioning package overview
 
@@ -88,7 +88,7 @@ There are three main methods for joining iOS devices to Microsoft Entra ID and g
 - **Enroll with Apple Configurator.** Apple Configurator on Mac can be used to apply configuration including enrollment information to one or more iPhones or iPads. This scenario is best suited for when devices aren't registered in Apple School Manager (for example - donated devices) or IT doesn't have physical access to the devices.
 
 > [!TIP]
-> For a more in depth guide about enrollment and choosing the right option, see [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](/intune/device-enrollment/apple/guide-ios-ipados)
+> For a more in depth guide about enrollment and choosing the right option, see [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../../../device-enrollment/apple/guide-ios-ipados.md)
 
 ::: zone-end
 

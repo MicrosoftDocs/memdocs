@@ -200,8 +200,8 @@ For more information, see [Updates and upgrade][INT-6].
 
 It is important to keep iOS devices up to date with the latest security updates. You can create control updates with Intune using three different methods:
 
-- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](/intune/device-updates/apple/index).
-- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](/intune/device-updates/apple/deprecated-mdm-policies-ios).
+- **Option 1** - iOS and iPadOS 17.0 and newer devices (recommended) - [Managed software update policy](../../../device-updates/apple/index.md).
+- **Option 2** - iOS and iPadOS 17.0 and older (recommended) - [Software update policy](../../../device-updates/apple/deprecated-mdm-policies-ios.md).
 - **Option 3** (not recommended) - End users manually install the updates.
 
 At **Devices** > **Manage devices** > **Configuration** > **Create** > **Settings catalog** > **Restrictions**, you can use the following settings to delay how long after an update is released that users can manually install the updates.
@@ -210,9 +210,9 @@ At **Devices** > **Manage devices** > **Configuration** > **Create** > **Setting
 - **Delay default visibility of software updates**: 0-90
 
 > [!TIP]
-> The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](/intune/device-updates/apple/index).
+> The **Settings Catalog** > **Declarative Device Management** > **Software Update** settings take precedence over the **Settings Catalog** > **Restrictions** settings. For more information, go to [Precedence of settings in iOS updates policy](../../../device-updates/apple/index.md).
 
-For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/intune/device-updates/apple/planning-guide-ios-ipados).
+For more information, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](../../../device-updates/apple/planning-guide-ios-ipados.md).
 
 ### [Intune For Education](#tab/intune-for-education)
 
@@ -225,7 +225,7 @@ To create a iOS update restrictions policy:
 1. Expand the category **Update restrictions**.
 1. Configure the required settings as needed.
 
-For more information about the other update options in the Intune console, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](/intune/device-updates/apple/planning-guide-ios-ipados).
+For more information about the other update options in the Intune console, see [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](../../../device-updates/apple/planning-guide-ios-ipados.md).
 
 ::: zone-end
 
@@ -349,9 +349,9 @@ Now that you've configured your device settings, you can configure applications 
 [WIN-1]: /windows/deployment/update/waas-manage-updates-wufb
 
 [MEM-1]: /intune/device-updates/windows
-[MEM-2]: /intune/device-configuration/endpoint-security/antivirus
-[MEM-3]: /intune/device-configuration/endpoint-security/encrypt-bitlocker-windows
-[MEM-4]: /intune/device-configuration/endpoint-security/firewall
-[MEM-5]: /intune/device-configuration/endpoint-security/deploy-edr
-[MEM-6]: /intune/device-configuration/endpoint-security/attack-surface-reduction
-[MEM-7]: /intune/device-configuration/endpoint-security/account-protection
+[MEM-2]: ../../../device-configuration/endpoint-security/antivirus.md
+[MEM-3]: ../../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md
+[MEM-4]: ../../../device-configuration/endpoint-security/firewall.md
+[MEM-5]: ../../../device-configuration/endpoint-security/deploy-edr.md
+[MEM-6]: ../../../device-configuration/endpoint-security/attack-surface-reduction.md
+[MEM-7]: ../../../device-configuration/endpoint-security/account-protection.md
