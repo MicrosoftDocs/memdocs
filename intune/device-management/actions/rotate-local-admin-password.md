@@ -99,5 +99,5 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 [CSP-1]: /windows/client-management/mdm/laps-csp
 
 [LEARN-1]: /windows-server/identity/laps/laps-overview
-[LEARN-2]: ../../device-enrollment/apple/setup-laps-macos.md
+[LEARN-2]: ../../device-security/laps/setup-macos.md
 [MAC-ADE]: ../../device-enrollment/apple/setup-automated-macos.md
