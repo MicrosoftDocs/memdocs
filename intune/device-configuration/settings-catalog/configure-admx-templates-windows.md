@@ -7,7 +7,6 @@ ms.topic: how-to
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
 - msec-ai-copilot
 ---
 
@@ -67,7 +66,7 @@ This article describes the steps to use the administrative templates in the sett
     :::image type="content" source="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-sample-setting.png" alt-text="See a sample setting in the settings catalog in Microsoft Intune and Intune admin center that you can configure" lightbox="./media/configure-admx-templates-windows/settings-catalog-administrative-templates-sample-setting.png":::
 
 10. Select **Next**.
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

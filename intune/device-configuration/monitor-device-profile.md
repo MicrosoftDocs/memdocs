@@ -1,7 +1,7 @@
 ---
 title: See device configuration policies with Microsoft Intune
 description: See and manage the device configuration policy details in Microsoft Intune. Look at a graphical chart of the number of devices assigned to a policy, and see which devices have policies assigned or deployed. Can also troubleshoot policies that have conflict settings.
-ms.date: 09/17/2025
+ms.date: 04/16/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: laarrizz
@@ -32,7 +32,7 @@ At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft
 - **Read Only Operator**: This role can view existing policies and view reports. It can't make any changes.
 - **Policy and Profile manager**: This role can view existing policies and reports, and can make any changes.
 
-For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 ## View and filter existing policies
 
@@ -46,7 +46,7 @@ For information on the built-in roles in Intune, and what they can do, go to [Ro
     :::image type="content" source="./media/monitor-device-profile/filter-policies.png" alt-text="Screenshot that shows the Add filter option to filter existing policies in Microsoft Intune and Intune admin center.":::
 
 > [!NOTE]
-> For more in-depth reporting information about device configuration policies, go to [Intune reports](../intune-service/fundamentals/reports.md).
+> For more in-depth reporting information about device configuration policies, go to [Intune reports](../device-management/reports/overview.md).
 
 ## View details on a policy
 
@@ -72,7 +72,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
     This report shows information about the user that last checked-in. Select **Generate report** to see the latest policy assignment states for the devices that received the policy. You can also filter the assignment status to see only errors, conflicts, and more.
 
-    It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different.
+    It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different. The device assignment status report can take 24-48 hours to reflect recent assignment or group membership changes, especially on large tenants with many devices. Other reports depend on each device's last check-in, so devices that haven't checked-in recently can show outdated statuses.
 
 4. Go back to **Device and user check-in status** and select **Per setting status**:
 
@@ -95,8 +95,8 @@ After you create your device configuration policy, Intune provides reporting dat
 6. Back in **Device and user check-in status**, the following property information for the specific policy is available for you to view and edit:
 
     - **Basics**: See the policy name and description.
-    - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../intune-service/fundamentals/filters.md) in the policy.
-    - **Scope tags**: See any existing [scope tags](../intune-service/fundamentals/scope-tags.md) used in the policy.
+    - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters/overview.md) in the policy.
+    - **Scope tags**: See any existing [scope tags](../fundamentals/role-based-access-control/scope-tags.md) used in the policy.
     - **Configuration settings**: See the settings you configured in the policy.
     - **Applicability Rules**: On your Windows devices, go to the [applicability rules](./create-device-profile.md#applicability-rules) used in the policy.
 
@@ -135,7 +135,7 @@ After you create your device configuration policy, Intune provides reporting dat
     - Certificates
 
 > [!TIP]
-> In **Devices**, select **Monitor**. This area lists all reports you can use, including reports for device configuration, compliance, enrollment, and software updates. For more information on all the Intune reports, go to [Intune reports](../intune-service/fundamentals/reports.md).
+> In **Devices**, select **Monitor**. This area lists all reports you can use, including reports for device configuration, compliance, enrollment, and software updates. For more information on all the Intune reports, go to [Intune reports](../device-management/reports/overview.md).
 
 ## View conflicts
 

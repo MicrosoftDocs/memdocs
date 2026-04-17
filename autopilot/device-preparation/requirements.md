@@ -108,8 +108,8 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
 
-- [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints).
-- [Network requirements for PowerShell scripts and Win32 apps](/intune/intune-service/fundamentals/intune-endpoints).
+- [Network endpoints for Microsoft Intune](/intune/fundamentals/endpoints).
+- [Network requirements for PowerShell scripts and Win32 apps](/intune/fundamentals/endpoints).
 
 #### Windows Autopilot device preparation automatic device diagnostics collection
 
@@ -196,7 +196,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/intune-service/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licensing/assign-licenses).
 
 Additionally, the following are also recommended, but not required:
 
@@ -312,12 +312,12 @@ To create a custom role with these permissions for use with Windows Autopilot de
 
         > [!NOTE]
         >
-        > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
+        > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
    1. In the **Review + create** page, verify that all permissions are correct, and then select **Create**.
 
 1. The new custom Windows Autopilot device preparation role can now be assigned to users who administer Windows Autopilot device preparation.
 
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](/intune/intune-service/fundamentals/role-based-access-control).
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](/intune/fundamentals/role-based-access-control/overview).
 
 ---

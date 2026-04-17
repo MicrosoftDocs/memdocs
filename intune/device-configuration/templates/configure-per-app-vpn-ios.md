@@ -59,7 +59,7 @@ Create or choose an existing group in Microsoft Entra ID. This group:
 - Must include the users or devices that will use per-app VPN.
 - Will receive all the Intune policies you create in this article.
 
-For the steps to create a new group, go to [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+For the steps to create a new group, go to [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
 ## Step 2 - Create a trusted certificate profile
 

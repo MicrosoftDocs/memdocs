@@ -5,4 +5,4 @@ ms.date: 02/06/2025
 ms.author: mandia
 ---
 > [!NOTE]
-> This capability is available when you add Microsoft Intune Plan 2 or Microsoft Intune Suite as an add-on license. For more information, see [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md).
+> This capability is available when you add Microsoft Intune Plan 2 or Microsoft Intune Suite as an add-on license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).

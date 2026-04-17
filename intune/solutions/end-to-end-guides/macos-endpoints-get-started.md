@@ -58,7 +58,7 @@ In this phase, you check the requirements, integrate Intune with Apple Business 
 
 To successfully prepare and deploy your macOS endpoint, the endpoint requires access to several public Internet services.
 
-- Start your testing on an open network. Or, in your organization network, provide access to all the endpoints listed at [Network endpoints for Microsoft Intune](../../intune-service/fundamentals/intune-endpoints.md). Then, you can use your organization network to test your configuration.
+- Start your testing on an open network. Or, in your organization network, provide access to all the endpoints listed at [Network endpoints for Microsoft Intune](../../fundamentals/endpoints.md). Then, you can use your organization network to test your configuration.
 
 - If your wireless network requires certificates, you can start with an Ethernet connection during testing. The Ethernet connection gives you some time to determine the best approach for the wireless connections that devices need.
 
@@ -79,7 +79,7 @@ Specifically:
 
   To create a Microsoft Entra group, use the Intune admin center. When you create a group in Intune, you're creating an Entra group. You don't see the Entra branding, but that's what you're using.
 
-  For more information, go to [Create a group to manage users in Intune](../../intune-service/fundamentals/quickstart-create-group.md).
+  For more information, go to [Create a group to manage users in Intune](../../fundamentals/tenant-administration/quickstart-create-group.md).
 
 - **Enrollment Restrictions**
 
@@ -131,7 +131,7 @@ The high-level steps to configure Apple Business Manager (or Apple School Manage
 3. In Apple Business Manager, assign devices to your Intune MDM.
 4. In Intune, assign the ADE profiles to your macOS devices.
 
-When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
+When you use macOS ADE enrollment profiles, we recommend configuring [macOS account configuration with LAPS](../../device-security/laps/setup-macos.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
 
 ### Step 5 - Target devices
 
@@ -145,7 +145,7 @@ macOS devices with user affinity can be targeted for profiles and apps using use
 
   Policies and apps targeted to the **All Devices** group apply faster after enrollment than dynamic groups. Not all configuration profiles (like macOS scripts) support filters.
 
-  For more information on assignment filters, go to [Create filters in Microsoft Intune](../../intune-service/fundamentals/filters.md).
+  For more information on assignment filters, go to [Create filters in Microsoft Intune](../../fundamentals/filters/overview.md).
 
 - **Option 2 – Microsoft Entra dynamic group based on enrollmentProfileName**
 
@@ -707,8 +707,8 @@ Remote Help is a cloud-based solution for secure help desk connections that use 
 
 For more information, go to:
 
-- [Use Remote Help on macOS to assist authenticated users](../../intune-service/fundamentals/remote-help.md)
-- [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
+- [Use Remote Help on macOS to assist authenticated users](../../remote-help/index.md)
+- [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
 
 ### Custom attributes
 
@@ -728,6 +728,6 @@ For more information, go to [Tutorial: Configure Apple Business Manager for auto
 
 ## Related articles
 
-- [macOS platform guide](../../intune-service/fundamentals/deployment-guide-platform-macos.md)
-- [Microsoft Intune securely manages identities, manages apps, and manages devices](../../intune-service/fundamentals/what-is-intune.md)
-- [macOS account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md)
+- [macOS platform guide](../../fundamentals/platform-guide-macos.md)
+- [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
+- [macOS account configuration with LAPS](../../device-security/laps/setup-macos.md)

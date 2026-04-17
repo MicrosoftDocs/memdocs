@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up iOS/iPadOS device enrollment with Apple Configurator
@@ -33,7 +32,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 ## Prerequisites
 
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../../intune-service/fundamentals/mdm-authority-set.md)
+- [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
 - [An Apple MDM push certificate](create-mdm-push-certificate.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables

@@ -2,7 +2,7 @@
 title: Data storage and processing in Intune
 description: Learn how personal data is stored and processed in Intune.
 ms.date: 06/25/2025
-ms.topic: article
+ms.topic: conceptual
 ms.reviewer: bradyw
 ms.collection:
 - M365-identity-device-management

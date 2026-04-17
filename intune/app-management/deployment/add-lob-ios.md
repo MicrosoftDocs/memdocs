@@ -65,14 +65,14 @@ You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of
 
 ## Step 2 - Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Choose **Select scope tags** to optionally add scope tags for the app.
 2. Select **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, **Available with or without enrollment**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+1. Select the **Required**, **Available for enrolled devices**, **Available with or without enrollment**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 1. Select **Next** to display the **Review + create** page.
 
@@ -116,5 +116,5 @@ For an iOS LOB app targeted with available intent, auto update of the applicatio
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. See [How to monitor app information and assignments](../monitor-assignments.md).
 
-- Learn more about the context of your app in Intune. See [Overview of device and app lifecycles](../../intune-service/fundamentals/device-lifecycle.md).
+- Learn more about the context of your app in Intune. See [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md).
 

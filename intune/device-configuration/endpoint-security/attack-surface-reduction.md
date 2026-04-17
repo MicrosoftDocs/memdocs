@@ -5,7 +5,6 @@ ms.date: 03/06/2026
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ms.reviewer: laarrizz
 
@@ -141,7 +140,7 @@ Profiles supported for this scenario include:
 
 ### Devices managed by Configuration Manager
 
-[!INCLUDE [Attack surface reduction prerequisites](../../intune-service/includes/tenant-attach-asr-prerequisites.md)]
+[!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
 
 ### Reusable settings groups for Device control profiles
 

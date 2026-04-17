@@ -1,0 +1,16 @@
+items:
+- name: Create an assignment filter
+  displayName: assignment filter, android, ios, ipados, macos, windows
+  href: overview.md
+- name: Assignment filter properties
+  displayName: assignment filter, android, ios, ipados, macos, windows
+  href: ref-device-properties.md
+- name: Supported workloads
+  displayName: assignment filter, android, ios, ipados, macos, windows
+  href: ref-supported-workloads.md
+- name: Reporting and conflict resolution
+  displayName: assignment filter, android, ios, ipados, macos, windows
+  href: troubleshoot.md
+- name: Performance recommendations
+  displayName: assignment filter, android, ios, ipados, macos, windows
+  href: performance-recommendations.md

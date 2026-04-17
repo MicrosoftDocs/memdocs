@@ -36,7 +36,7 @@ The following metrics are weighted and used to compute the **Work from anywhereâ
 - [Cloud provisioning](#cloud-provisioning)
 
 > [!NOTE]
-> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
+> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
 #### Windows
 
@@ -52,7 +52,7 @@ The **Cloud management** metric measures the percent of PCs that have attached t
 
 Benefits of each cloud management type:<!--IN7207657-->
 
-| Benefits | [**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md) | [**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md) | [**Co-management**](../configmgr/comanage/overview.md) | [**Intune**](../intune-service/fundamentals/what-is-intune.md) |
+| Benefits | [**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md) | [**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md) | [**Co-management**](../configmgr/comanage/overview.md) | [**Intune**](../fundamentals/what-is-intune.md) |
 |--|:--:|:--:|:--:|:--:|
 | Manage your clients anywhere |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
 | View and take action on all Windows PCs from Microsoft Intune admin center |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |

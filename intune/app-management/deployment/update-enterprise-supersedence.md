@@ -19,7 +19,7 @@ Guided update supersedence for Enterprise App Management allows you to check for
 In the **Overview** pane for a selected Enterprise App Catalog app, you can view the available updates by selecting the tile **Enterprise App Catalog apps with available updates**.
 
 > [!NOTE]
-> Microsoft has established Service Level Objectives (SLOs) for app update availability. Most app updates are available within 24 hours of vendor release, while those requiring manual validation typically become available within seven days. For details, see [Enterprise App Management overview](./enterprise-app-catalog.md).
+> Microsoft has established Service Level Objectives (SLOs) for app update availability. Most app updates are available within 24 hours of vendor release, while those requiring manual validation typically become available within seven days. For details, see [Enterprise App Management overview](./enterprise-app-management.md).
 
 The **Enterprise App Catalog apps with updates** pane provides a list of Enterprise App Catalog apps that can be updated. This list provides the following app details:
 - **App name**: - The name of the app.
@@ -48,7 +48,7 @@ The **Enterprise App Catalog apps with updates** pane provides a list of Enterpr
 
 ## Next steps
 
-- [Microsoft Intune Enterprise Application Management](./enterprise-app-catalog.md)
-- [Add an Enterprise App Catalog app to Microsoft Intune](./add-enterprise-catalog.md)
+- [Microsoft Intune Enterprise Application Management](./enterprise-app-management.md)
+- [Add an Enterprise App Catalog app to Microsoft Intune](./add-enterprise-catalog-app.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)

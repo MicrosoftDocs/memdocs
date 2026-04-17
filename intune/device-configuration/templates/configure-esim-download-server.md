@@ -105,7 +105,7 @@ After the initial configuration is complete, the following process unfolds for e
 
 ## Step 1 - Create a devices group
 
-Create a device group that includes the eSIM capable devices. [Add groups](../../intune-service/fundamentals/groups-add.md) lists the steps.
+Create a device group that includes the eSIM capable devices. [Add groups](../../fundamentals/tenant-administration/add-groups.md) lists the steps.
 
 > [!NOTE]
 > We recommend creating a static Microsoft Entra device group that includes your eSIM devices. Using a group confirms that you target only eSIM devices.

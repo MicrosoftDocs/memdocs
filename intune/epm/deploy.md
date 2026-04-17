@@ -37,7 +37,7 @@ The common deployment phases are:
 - **Phase 4: Monitoring** - Iterate and refine rules, identify new scenarios.
 - **Phase 5: Review user privileges** - Identify and optionally move users from administrator to standard user using [Local Users and Groups](../device-configuration/endpoint-security/account-protection.md#manage-local-groups-on-windows-devices). Consider enabling [support approved elevation](./manage-support-approvals.md) so that users can request elevation for apps that aren't covered by rules.
 
-Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with [Zero Trust principles](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
+Repeat phases 2 to 5 continuously to ensure your users have least privilege in line with [Zero Trust principles](../fundamentals/zero-trust.md).
 
 The common deployment scenarios for EPM are:
 

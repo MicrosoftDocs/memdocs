@@ -2,7 +2,7 @@
 title: Prerequisites for the Certificate Connector for Microsoft Intune
 description: Review the software and network prerequisites for use of the Certificate Connector for Microsoft Intune.
 ms.date: 10/09/2024
-ms.topic: article
+ms.topic: checklist
 ms.collection:
 - M365-identity-device-management
 - certificates
@@ -29,7 +29,7 @@ Requirements for the computer where you install the connector software:
 
 - Transport Layer Security (TLS) 1.2. For more information, see [Enable support for TLS 1.2 in your environment](/troubleshoot/azure/active-directory/enable-support-tls-environment) in the Microsoft Entra documentation.
 
-- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md).
+- The server must meet the same network requirements as managed devices. See [Network endpoints for Microsoft Intune](../../../fundamentals/endpoints.md).
 
 - To support automatic updates of the connector software, the server must have access to the **Azure update service**:
   - Port: **443**

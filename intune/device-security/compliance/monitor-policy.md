@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
-- highpri
 - compliance
 - sub-device-compliance
 ---
@@ -44,7 +43,7 @@ When viewing compliance status details and reports, be aware of the following im
 
 - Devices must be enrolled into Intune to receive device compliance policies.
 
-- The tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can identify the noncompliant devices in the [Devices without compliance policy organization report](../../intune-service/fundamentals/reports.md#devices-without-compliance-policy-organizational).
+- The tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings) include the setting **Mark devices with no compliance policy assigned as**. The default configuration marks devices without an assigned compliance policy as *compliant*. We recommend configuring this setting so that these devices are marked as *noncompliant*. Then you can identify the noncompliant devices in the [Devices without compliance policy organization report](../../device-management/reports/overview.md#devices-without-compliance-policy-organizational).
 
 - Compliance reports show the compliance status for the last user on the device. For device-targeted policies, *System account* appears as the user principal name in the report if no user is signed in during the device's last compliance check.
 
@@ -82,8 +81,8 @@ You can access the device compliance dashboard in the [Microsoft Intune admin ce
 
 - [Device compliance status](#device-compliance-status)
 - [Devices without compliance](#devices-without-compliance)
-- [Policy compliance](../../intune-service/fundamentals/reports.md#policy-compliance-report-organizational) (Link opens the *Intune reports* article)
-- [Setting compliance](../../intune-service/fundamentals/reports.md#settings-compliance--organizational) (Link opens the *Intune reports* article)
+- [Policy compliance](../../device-management/reports/overview.md#policy-compliance-report-organizational) (Link opens the *Intune reports* article)
+- [Setting compliance](../../device-management/reports/overview.md#settings-compliance--organizational) (Link opens the *Intune reports* article)
 
 <!-- outdated image, need to replace. :::image type="content" source="./media/monitor-policy/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab."::: -->
 
@@ -119,7 +118,7 @@ The **Devices without compliance policy** tile displays a count of devices that 
 If you select this tile, Intune displays a *Device status* view that lists each device that doesn’t have a compliance policy. This view includes the *Device* name, the *User Principal Name* associated with the device, the devices compliance *Status*, and the *Device model*.
 
 > [!TIP]
-> Intune includes an organizational report that identifies all devices in your tenant that have not been assigned a compliance policy. See [Devices without compliance policy (Organizational)](../../intune-service/fundamentals/reports.md#devices-without-compliance-policy-organizational).
+> Intune includes an organizational report that identifies all devices in your tenant that have not been assigned a compliance policy. See [Devices without compliance policy (Organizational)](../../device-management/reports/overview.md#devices-without-compliance-policy-organizational).
 
 ## Policy-based device compliance reports
 
@@ -219,7 +218,7 @@ In addition to reports that are available through individual compliance policies
 
 To view these reports, open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Reports** > **Device compliance**, and select the **Reports** tab.
 
-For more information about these reports, see [Device compliance reports](../../intune-service/fundamentals/reports.md#device-compliance-reports) in the **Intune reports** article.
+For more information about these reports, see [Device compliance reports](../../device-management/reports/overview.md#device-compliance-reports) in the **Intune reports** article.
 
 ## Other compliance reports
 

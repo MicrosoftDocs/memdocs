@@ -74,21 +74,19 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 1. Open Company Portal on the device you'll be using to access your work resources.
 
-2. Select **Sign in from another device**.
+1. Select **Sign in from another device**.
 
-3. Write down the one-time, sign-in code that appears on screen (or just keep this screen handy for the next couple steps).
+1. Write down the one-time, sign-in code that appears on screen (or just keep this screen handy for the next couple steps).
 
    ![Instructions are provided to go to the https://microsoft.com/devicelogin page, with a unique passcode, from your work computer, then to use the code to sign in.](./media/index/cp_ios_aad_signin_after_1804_006.png)
 
-3. Switch to your other device (the one you're using to authenticate) and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
+1. Switch to your other device (the one you're using to authenticate) and go to [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin).
 
-4. When prompted to, enter the code.
+1. When prompted to, enter the code.
 
-   ![An image of the user's browser on their work computer rather than their Company Portal app. The "Device login" page displayed prompts the user for the code they received in the Company Portal app.](../../intune-service/fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
+1. Select  __Continue__ to allow the Company Portal to sign in on your work device.
 
-4. Select  __Continue__ to allow the Company Portal to sign in on your work device.
-
-5. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.
+1. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.
 
 The following articles describe the enrollment instructions for smart card-enabled devices. These articles include the sign-in-from-another-device method.
 

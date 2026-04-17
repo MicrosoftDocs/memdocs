@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Authentication methods for automated device enrollment in Intune
@@ -100,7 +99,7 @@ To set up JIT Registration with automated device enrollment:
 3. When you get to the **Assignments** page in the enrollment profile, assign the profile to the devices synced from Apple Business Manager and Apple School Manager. After you assign the profile, employees and students can complete setup and authentication on their devices.
 
    > [!NOTE]
-   > The Company Portal is still sent to devices as a required app, even though it isn't required for Microsoft Entra registration or compliance. Device users can use the Company Portal app to [gather and upload logs](../../intune-service/user-help/send-logs-to-microsoft-ios.md) if they experience issues in the app.
+   > The Company Portal is still sent to devices as a required app, even though it isn't required for Microsoft Entra registration or compliance. Device users can use the Company Portal app to [gather and upload logs](../../user-help/diagnostics/collect-logs-ios.md) if they experience issues in the app.
 
 ### Example of successful authentication
 
