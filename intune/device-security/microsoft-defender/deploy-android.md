@@ -23,7 +23,7 @@ Use Microsoft Intune to deploy and configure Defender for Endpoint on Android de
 
 - **Licenses:** Assign users both a Intune license and a Defender for Endpoint license. For licensing details, see [Microsoft Defender for Endpoint licensing requirements](/defender-endpoint/minimum-requirements#licensing-requirements).
 
-- **Enrollment:** Enroll devices in Intune by using one of the following [Android Enterprise](/intune/device-enrollment/android/enterprise-work-profile) enrollment types:
+- **Enrollment:** Enroll devices in Intune by using one of the following [Android Enterprise](../../device-enrollment/android/enterprise-work-profile.md) enrollment types:
   - Personally-owned devices with a work profile
   - Corporate-owned devices with a work profile
   - Corporate-owned, fully managed user device enrollment
@@ -32,7 +32,7 @@ Use Microsoft Intune to deploy and configure Defender for Endpoint on Android de
 
 - **Android OS version:** For supported OS versions, see [System requirements](/defender-endpoint/microsoft-defender-endpoint-android#system-requirements) for Defender for Endpoint on Android.
 
-- **Managed Google Play:** Before you can add and assign apps for Android Enterprise devices, [connect your Intune tenant to Managed Google Play](/intune/device-enrollment/android/connect-managed-google-play).
+- **Managed Google Play:** Before you can add and assign apps for Android Enterprise devices, [connect your Intune tenant to Managed Google Play](../../device-enrollment/android/connect-managed-google-play.md).
 
 - **Intune–Defender connection:** Enable the Intune service-to-service connection with Defender for Endpoint. Without it, onboarding status, device risk signals, and EDR visibility in Intune aren't available. For more information, see [Configure Microsoft Defender for Endpoint with Intune and Onboard Devices](./configure-integration.md).
 

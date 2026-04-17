@@ -82,14 +82,14 @@ When the device is enrolled in Intune, it starts to receive the Intune policies 
 
 ## Clean up resources
 
-To unenroll the device, see [Remove your Windows device from management](../../user-help/unenrollment/remove-enrollment-windows.md).
+To unenroll the device, see [Remove your Windows device from management](../../user-help/unenrollment/unenroll-windows.md).
 
 ## Next steps
 
 In this task, you learned how to enroll a Windows device into Intune. For more information about the user experience on the device, see the following resources:
 
-- [Windows device enrollment with Intune Company Portal](../../user-help/enrollment/enrollment-overview-windows.md)
-- [What info can your company see when you enroll your device?](../../user-help/enrollment/enrollment-data-visibility.md)
+- [Windows device enrollment with Intune Company Portal](../../user-help/enrollment/overview-windows.md)
+- [What info can your company see when you enroll your device?](../../user-help/enrollment/data-visibility.md)
 
 You can also automate Windows device enrollment. To learn more, see [Windows enrollment guide for Microsoft Intune](guide.md).
 

@@ -64,7 +64,7 @@ After you deploy policy to encrypt a device disk, see the following articles for
 
 - [Manage encryption on Windows](./encrypt-bitlocker-windows.md)
 - [Manage encryption on macOS](./encrypt-filevault-macos.md#monitor-and-manage-filevault)
-- [Monitor device encryption](./monitor-encryption.md)
+- [Monitor device encryption](../../device-management/monitor-encryption.md)
 
 ## Next steps
 

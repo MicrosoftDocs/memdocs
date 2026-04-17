@@ -2,6 +2,8 @@
 title: Intune Graph API - Reports and Properties
 description: Learn about Intune reports and properties provided via Graph API.
 ms.date: 09/08/2025
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: article
 ms.reviewer: davidra
 #ms.custom:

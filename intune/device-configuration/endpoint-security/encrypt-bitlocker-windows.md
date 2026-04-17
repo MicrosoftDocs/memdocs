@@ -28,7 +28,7 @@ Intune supports two primary BitLocker encryption approaches:
 - **Silent BitLocker encryption** - Automatic encryption without user interaction or administrative privileges required on the device. Ideal for organizations that want to ensure all managed devices are encrypted without depending on end-user action.
 
 > [!TIP]
-> Intune provides a built-in [encryption report](./monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
+> Intune provides a built-in [encryption report](../../device-management/monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 
 ## Prerequisites
 
@@ -275,7 +275,7 @@ The 'Conversion Status' field shows either *Used Space Only Encrypted* or *Fully
 
 :::image type="content" source="./media/encrypt-bitlocker-windows/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](./monitor-encryption.md).
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../../device-management/monitor-encryption.md).
 
 ### Control encryption type with Settings Catalog
 
@@ -448,7 +448,7 @@ For silent BitLocker enablement, recovery keys are automatically backed up to Mi
 ## Next steps
 
 - [Manage FileVault policy for macOS devices](./encrypt-filevault-macos.md)
-- [Monitor disk encryption](./monitor-encryption.md)
+- [Monitor disk encryption](../../device-management/monitor-encryption.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for BitLocker policies](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
 - [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)
