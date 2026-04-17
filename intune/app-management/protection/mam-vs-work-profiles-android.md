@@ -21,7 +21,7 @@ The MAM and the Android Enterprise personally-owned work profile deployment scen
 
 - **End-user privacy**: MAM separates end user and organization content in managed applications and Android Enterprise personally-owned work profiles separate end users content on the device, and data managed by the mobile device management (MDM) administrator. In both scenarios, IT admins enforce policies, such as PIN-only authentication on organization-managed apps or identities. IT admins are unable to read, access, or erase data that's owned or controlled by end users.
 
-Whether you choose MAM or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide. For more information related to managed Android devices, see [Manage Android personally-owned/corporate-owned work profile devices with Intune](../../intune-service/enrollment/android-enterprise-overview.md).
+Whether you choose MAM or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide. For more information related to managed Android devices, see [Manage Android personally-owned/corporate-owned work profile devices with Intune](../../device-enrollment/android/enterprise-work-profile.md).
 
 ## About Intune app protection policies
 
@@ -39,7 +39,7 @@ Individual Android apps are enabled for APP in a few ways:
 
     For more information on this tool, see [prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md).
 
-To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](/intune/app-management/ref-protected-apps).
+To see a list of apps enabled with APP, see [managed apps with a rich set of mobile application protection policies](../ref-protected-apps.md).
 
 ## Deployment scenarios
 

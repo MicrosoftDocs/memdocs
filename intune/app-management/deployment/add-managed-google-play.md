@@ -31,8 +31,8 @@ To make it easier for you to configure and use Android Enterprise management, up
 
 ## Before you start
 
-- Make sure you connect your Intune tenant to Managed Google Play. For more information, see [Connect your Intune account to your Managed Google Play account](../../intune-service/enrollment/connect-intune-android-enterprise.md).
-- If you intend to enroll personally owned work profile devices, make sure you configure Intune and Android personally owned work profiles to work together in the **Enrollment** workload of the portal. For more information, see [Enroll Android devices](../../intune-service/enrollment/android-work-profile-enroll.md).
+- Make sure you connect your Intune tenant to Managed Google Play. For more information, see [Connect your Intune account to your Managed Google Play account](../../device-enrollment/android/connect-managed-google-play.md).
+- If you intend to enroll personally owned work profile devices, make sure you configure Intune and Android personally owned work profiles to work together in the **Enrollment** workload of the portal. For more information, see [Enroll Android devices](../../device-enrollment/android/setup-personal-work-profile.md).
 
 >[!NOTE]
 >When you work with Microsoft Intune, we recommend that you use either the Microsoft Edge or Google Chrome browser.
@@ -48,7 +48,7 @@ There are three types of apps that are available with Managed Google Play:
 ## Managed Google Play store apps
 
 > [!NOTE]
-> Most newly created items in Intune take on the scope tags of the creator. This isn't the case for Managed Google Play Store apps. Admins can assign a scope tag to apply to all newly synced Managed Google Play apps on the Managed Google Play connector pane. For more information, see [Connect your Intune Account to your Managed Google Play account](../../intune-service/enrollment/connect-intune-android-enterprise.md).
+> Most newly created items in Intune take on the scope tags of the creator. This isn't the case for Managed Google Play Store apps. Admins can assign a scope tag to apply to all newly synced Managed Google Play apps on the Managed Google Play connector pane. For more information, see [Connect your Intune Account to your Managed Google Play account](../../device-enrollment/android/connect-managed-google-play.md).
 Browse and approve store apps in a view hosted within Intune. This view opens directly in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and doesn't require you to reauthenticate with a different account.
 
 ### Add a Managed Google Play store app directly in the Microsoft Intune admin center
@@ -61,7 +61,7 @@ Browse and approve store apps in a view hosted within Intune. This view opens di
     > [!NOTE]
     > You can create an app collection to organize apps and control the order that collections are displayed for your organization. For more information, see [Use Collections in Managed Google Play](./add-managed-google-play.md#use-collections-in-managed-google-play).
     >
-    > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../../intune-service/enrollment/connect-intune-android-enterprise.md).
+    > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../../device-enrollment/android/connect-managed-google-play.md).
 
 5. Select an app to view the app details.
 6. Choose **Select** to select the app.
@@ -203,7 +203,7 @@ If you have approved an app from the store and don't see it in the **Apps** work
 
 When the app is displayed in the **App licenses** node of the **Apps** workload pane, you can [assign it just as you would assign any other app](./assign-groups.md) by assigning the app to groups of users.
 
-After you assign the app, it's installed (or available for install) on the devices of the users that you targeted. The user of the device isn't asked to approve the installation. For more information about Android Enterprise personally owned work profile devices, see [Set up enrollment of Android Enterprise personally owned work profile devices](../../intune-service/enrollment/android-work-profile-enroll.md).
+After you assign the app, it's installed (or available for install) on the devices of the users that you targeted. The user of the device isn't asked to approve the installation. For more information about Android Enterprise personally owned work profile devices, see [Set up enrollment of Android Enterprise personally owned work profile devices](../../device-enrollment/android/setup-personal-work-profile.md).
 
 On both work profile devices and corporate-owned devices, you can use Intune to make apps available for device groups through the Managed Google Play store. Previously, apps could only be made available to user groups. Also, you can use Intune to configure the app update priority on devices with a work profile. Also, you can use Intune to make required apps available for users through the Managed Google Play store.
 
@@ -212,7 +212,7 @@ On both work profile devices and corporate-owned devices, you can use Intune to 
 
 ## Assign a Managed Google Play app to Android Enterprise fully managed devices
 
-[Android Enterprise fully managed devices](../../intune-service/enrollment/android-fully-managed-enroll.md) are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Users on fully managed devices can get their available company apps from the Managed Google Play app on their device.
+[Android Enterprise fully managed devices](../../device-enrollment/android/setup-fully-managed.md) are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Users on fully managed devices can get their available company apps from the Managed Google Play app on their device.
 
 By default, an Android Enterprise fully managed device doesn't allow employees to install any apps that aren't approved by the organization. Also, employees aren't able to remove any installed apps against policy. If you wish to allow users to access the full Google Play store to install apps rather than only having access to the approved apps in Managed Google Play store, you can set the **Allow access to all apps in Google Play store** to **Allow**. With this setting, the user can access all the apps in the Google Play store using their corporate account, however purchases might be limited. You can remove the limited purchases restriction by allowing users to add new accounts to the device. Doing so enables end users to have the ability to purchase apps from the Google Play store using personal accounts and conduct in-app purchases. For more information, see [Android Enterprise device settings to allow or restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
@@ -282,11 +282,11 @@ When necessary, you can delete Managed Google Play apps from Microsoft Intune. T
 > [!NOTE]
 > If an app is unapproved or deleted from the managed Google Play store, it isn't removed from the Intune client apps list. This allows you to still target an uninstall policy to users even if the app is unapproved.
 >
-> To turn off Android Enterprise enrollment and management, see [Disconnect your Android Enterprise administrative account](../../intune-service/enrollment/connect-intune-android-enterprise.md#disconnect-your-android-enterprise-administrative-account).
+> To turn off Android Enterprise enrollment and management, see [Disconnect your Android Enterprise administrative account](../../device-enrollment/android/connect-managed-google-play.md#disconnect-your-android-enterprise-administrative-account).
 
 ## Android Enterprise system apps
 
-You can enable an Android Enterprise system app for [Android Enterprise dedicated devices](../../intune-service/enrollment/android-kiosk-enroll.md) or [fully managed devices](../../intune-service/enrollment/android-fully-managed-enroll.md). For more information about adding an Android Enterprise system app, see [Add Android Enterprise system apps to Microsoft Intune](../configuration/manage-system-apps-android.md).
+You can enable an Android Enterprise system app for [Android Enterprise dedicated devices](../../device-enrollment/android/setup-dedicated.md) or [fully managed devices](../../device-enrollment/android/setup-fully-managed.md). For more information about adding an Android Enterprise system app, see [Add Android Enterprise system apps to Microsoft Intune](../configuration/manage-system-apps-android.md).
 
 <a name='mam-policies-with-ae-dedicated-devices-enrolled-with-azure-ad-shared-mode'></a>
 

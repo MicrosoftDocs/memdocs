@@ -88,7 +88,7 @@ Employees and students can unenroll their devices in the Intune Company Portal a
 * Send them a custom notification about device requirements and next steps. For more information, see [Send notifications](../../device-management/actions/send-custom-notification.md).
 * Use your organization's internal communication channels, such as email, to inform them of device requirements and next steps.
 
-For removal steps that Android device users can do themselves, see [Unenroll Android device](../../user-help/unenrollment/remove-enrollment-android.md#remove-device-in-company-portal-app).
+For removal steps that Android device users can do themselves, see [Unenroll Android device](../../user-help/unenrollment/unenroll-android.md#remove-device-in-company-portal-app).
 
 ## Best practices
 This section contains best practices for setting up mobile application management.
