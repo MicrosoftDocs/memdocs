@@ -52,7 +52,7 @@ The Intune management extension has the following prerequisites. When the prereq
 
   - Devices manually enrolled in Intune, which occurs when:
 
-    - [Automatic enrollment to Intune](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md) is enabled in Microsoft Entra ID. Users sign in to devices using a local user account and manually join the device to Microsoft Entra ID. Then, they sign in to the device using their Microsoft Entra account.
+    - [Automatic enrollment to Intune](../../device-enrollment/windows/quickstart-automatic-mdm.md) is enabled in Microsoft Entra ID. Users sign in to devices using a local user account and manually join the device to Microsoft Entra ID. Then, they sign in to the device using their Microsoft Entra account.
 
     OR
 
@@ -130,7 +130,7 @@ To check if the device is automatically enrolled:
 4. Open the `MDMDiagReport` in a web browser.
 5. Search for the **MDMDeviceWithAAD** property. If the property exists, the device is automatically enrolled. If this property doesn't exist, the device isn't automatically enrolled.
 
-[Enable Windows automatic enrollment](../../intune-service/enrollment/windows-enroll.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
+[Enable Windows automatic enrollment](../../device-enrollment/windows/enable-automatic-mdm.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
 
 ### Issue: Microsoft Intune Windows Agent app gets automatically disabled
 

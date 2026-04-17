@@ -48,8 +48,8 @@ Intune leverages other Microsoft services for compliance, including:
 
 Microsoft Intune helps enforce compliance policies and protect organizational data specifically for Intune:
 
-- **Conditional Access**: Ensures only compliant devices and apps managed by Intune can access sensitive data. See [Conditional Access](/intune/device-security/conditional-access-integration/overview).
-- **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](/intune/device-security/compliance/overview).
+- **Conditional Access**: Ensures only compliant devices and apps managed by Intune can access sensitive data. See [Conditional Access](../device-security/conditional-access-integration/overview.md).
+- **Device Compliance Enforcement**: Enforces device compliance policies to meet organizational security requirements. See [Device Compliance Policies](../device-security/compliance/overview.md).
 
 For more information about Intune compliance capabilities, visit the [Microsoft Intune documentation](/intune).
 

@@ -5042,7 +5042,7 @@
     },
     {
       "source_path": "intune/intune-service/enrollment/macos-laps.md",
-      "redirect_url": "/intune/device-enrollment/apple/setup-laps-macos",
+      "redirect_url": "/intune/device-security/laps/setup-macos",
       "redirect_document_id": false
     },
     {
@@ -6332,7 +6332,7 @@
     },
     {
       "source_path": "intune/device-enrollment/apple/setup-laps-macos.md",
-      "redirect_url": "/intune/device-security/laps/setup-laps-macos",
+      "redirect_url": "/intune/device-security/laps/setup-macos",
       "redirect_document_id": false
     },
     {
