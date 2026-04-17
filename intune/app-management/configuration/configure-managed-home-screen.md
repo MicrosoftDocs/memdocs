@@ -16,7 +16,7 @@ The Managed Home Screen app is for corporate-owned Android Enterprise dedicated 
 > [!WARNING]
 > Managed Home Screen provides a controlled user experience but does not, by itself, block access to all Android system features. The overall security and integrity of a kiosk configuration depends on the combination of Managed Home Screen settings and device configuration restrictions applied to the device.  
 >  
-> Administrators should carefully review and configure device restriction settings to ensure end users cannot access system settings, modify network or security configuration, or perform actions such as a device reset. For more information, see https://learn.microsoft.com/intune/intune-service/configuration/device-restrictions-android-for-work.
+> Administrators should carefully review and configure device restriction settings to ensure end users cannot access system settings, modify network or security configuration, or perform actions such as a device reset. For more information, see [Android template device settings list to restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 ## When to configure the Microsoft Managed Home Screen app
 
