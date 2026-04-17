@@ -403,7 +403,7 @@ This list provides an overview of the tasks required of administrators.
 
 Your users must do the following steps.
 
-1. Go to the Apple App Store, and [install the Intune Company Portal app](../../user-help/company-portal/company-portal.md).
+1. Go to the Apple App Store, and [install the Intune Company Portal app](../../user-help/company-portal/index.md).
 2. Open the Company Portal app, and sign in with their work or school account (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-ios.md).

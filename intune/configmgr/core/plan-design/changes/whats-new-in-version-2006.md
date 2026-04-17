@@ -128,7 +128,7 @@ For more information, see [Renew secret key](../../servers/deploy/configure/azur
 
 ### Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/device-updates/windows/monitor-compatibility).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../../device-updates/windows/monitor-compatibility.md).
 
 #### Change to diagnostic data labels
 
@@ -145,7 +145,7 @@ To better align with the Desktop Analytics requirements for Windows diagnostic d
 
 If you previously configured any devices at the **Enhanced** level, when you upgrade to version 2006, they'll revert to **Optional (limited)**. They will then send less data to Microsoft. This change shouldn't impact what you see in Desktop Analytics.
 
-For more information, see [Enable data sharing for Desktop Analytics](/intune/device-updates/windows/monitor-compatibility).
+For more information, see [Enable data sharing for Desktop Analytics](../../../../device-updates/windows/monitor-compatibility.md).
 
 ## <a name="bkmk_real"></a> Real-time management
 
