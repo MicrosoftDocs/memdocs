@@ -74,6 +74,8 @@ items:
                     href: ./deployment/enterprise-app-management.md
                   - name: Add an Enterprise App Catalog app (Win32)
                     href: ./deployment/add-enterprise-catalog-app.md
+                  - name: Guided update supersedence
+                    href: ./deployment/update-enterprise-supersedence
               - name: macOS LOB apps
                 href: ./deployment/add-lob-macos.md
               - name: macOS app management
