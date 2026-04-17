@@ -48,7 +48,7 @@ When viewing compliance status details and reports, be aware of the following im
 
 - Compliance reports show the compliance status for the last user on the device. For device-targeted policies, *System account* appears as the user principal name in the report if no user is signed in during the device's last compliance check.
 
-## Reporting considerations for compliance policies
+## Known reporting behaviors  
 
 Device compliance state in Microsoft Intune is continually evaluated as changes occur on the device. This ongoing evaluation process helps ensure that a device’s compliance posture remains up to date.  
 
