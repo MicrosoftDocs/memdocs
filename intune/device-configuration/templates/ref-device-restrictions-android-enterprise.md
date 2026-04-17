@@ -193,8 +193,12 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the device home and overview buttons.
   - **Home button only**: Users can see and select the home button. They can't see or select the overview buttons.
   - **Home and overview buttons**: Users can see and select the home and overview buttons.
-
-    When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.
+ 
+    > [!IMPORTANT]
+    > When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens.
+  
+    > [!WARNING]
+    > If the **Overview** button is enabled and **End-user access to device settings** is not explicitly blocked, users may be able to access Android system settings without device authentication. This can allow network changes, security configuration changes, or a full device reset.
 
   This setting applies to:
 
