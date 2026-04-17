@@ -2,6 +2,8 @@
 title: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business
 description: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business.
 ms.date: 01/23/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
