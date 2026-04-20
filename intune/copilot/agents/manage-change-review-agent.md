@@ -1,7 +1,7 @@
 ---
 title: Use the Change Review Agent
 description: Learn how to use the Change Review Agent in Microsoft Intune.
-ms.date: 11/17/2025
+ms.date: 04/27/2026
 ms.topic: how-to
 author: brenduns
 ms.author: brenduns
@@ -32,7 +32,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
- 
+
 The Overview tab includes:
 
 - **Agent status** - Various tiles introduce the agent, detail whether the agent is available and its current run status.
@@ -83,10 +83,12 @@ The agent doesn't support scheduled runs and must be started manually each time 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
 2. Select **Run**, located above the agent's tab selection.
 
-
 ## Manage agent suggestions
 
 Use the Change Review Agent node to review and manage (approve or reject) Multi Admin Approval script requests.
+
+> [!TIP]
+> Agent suggestions are also available inline in the **Multi Admin Approval** node. On the **All requests** tab, an **Agent Response** column displays when a suggestion is available. Select the suggestion to open and complete the approval workflow without leaving Multi Admin Approval. For more information, see [Change Review Agent suggestions in Multi Admin Approval](../../fundamentals/role-based-access-control/multi-admin-approval.md#change-review-agent-suggestions-in-multi-admin-approval).
 
 To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent's review for that request. The detailed view is named after the selected suggestion and includes the agent's recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
 

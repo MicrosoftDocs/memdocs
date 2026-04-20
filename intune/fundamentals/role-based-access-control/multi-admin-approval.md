@@ -1,10 +1,11 @@
 ---
 title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
-ms.date: 04/10/2026
+ms.date: 04/27/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 - setup
@@ -84,11 +85,17 @@ When an admin edits or creates a new object for an area that's protected by an a
 - The *business justification* becomes part of the approval request for the change.
 - An admin who submitted a change can view the status of their requests in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My requests** page.
 
-After a change is submitted, an *approver* can navigate to the **All request** page of the **Multi Admin Approval** node, or go to **Tenant administration** > **Admin Tasks** to manage the requests. Both locations provide the list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
+After a change is submitted, an *approver* can navigate to the **All requests** page of the **Multi Admin Approval** node, or go to **Tenant administration** > **Admin Tasks** to manage the requests. Both locations provide the list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
 
 - The approver selects the *Business justification* link for the request. This action opens the Access policy request pane where you can view more information about the change, including the full details provided in the Business justification field of the request.
 - On the Access policy request pane, the approver can enter notes in the **Approver notes** field, and then select an option to **Approve request** or **Reject request**. These notes are added to the request and are visible to the individual who requested the change when they review their requests on the **My requests** page. For example, if the request is rejected, the reason for the rejection can be passed back to the requestor through the Approver notes.
-- Individuals who submit a request and are also members of the approval group for that can see their own requests on the All request page. However, they can't approve their own requests.
+- Individuals who submit a request and are also members of the approval group for that can see their own requests on the All requests page. However, they can't approve their own requests.
+
+### Change Review Agent suggestions in Multi Admin Approval
+
+When the [Change Review Agent](../../copilot/agents/change-review-agent.md) is set up and has completed a run, the **All requests** tab displays an **Agent Response** column for Windows PowerShell script requests. When a suggestion is available, you can select it to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
+
+Change Review Agent suggestions continue to be available in the [agent's primary experience](../../copilot/agents/manage-change-review-agent.md) as well. For more information about the agent, see [Change Review Agent overview](../../copilot/agents/change-review-agent.md).
 
 If a change is approved, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. The original requestor needs to view the request, and choose **Complete** to initiate the change. After being successfully processed, the status updates to **Completed**.
 
