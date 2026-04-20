@@ -21,7 +21,7 @@ This article applies to:
 
 - Android devices owned by the organization and enrolled in Intune
 
-For an overview on FLW devices in Intune, go to [FLW device management in Intune](frontline-worker-overview.md).
+For an overview on FLW devices in Intune, go to [FLW device management in Intune](index.md).
 
 Use this article to get started with Android FLW devices in Intune. Specifically:
 
@@ -34,7 +34,7 @@ Use this article to get started with Android FLW devices in Intune. Specifically
 
 Intune supports different enrollment options for Android devices, as shown in the following image:
 
-:::image type="content" source="./media/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/android-flw-enrollment-options.png":::
+:::image type="content" source="./media/android/enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/android/enrollment-options.png":::
 
 This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
 
@@ -46,7 +46,7 @@ For FLW Android devices, you should use **Android Enterprise** or **Android Open
 
 You can use the following image to help decide the path that's best for your FLW devices:
 
-:::image type="content" source="./media//android-flw-options.png" alt-text="Diagram that shows Android Enterprise frontline worker scenario path in Microsoft Intune." lightbox="./media//android-flw-options.png":::
+:::image type="content" source="./media/android/scenario-options.png" alt-text="Diagram that shows Android Enterprise frontline worker scenario path in Microsoft Intune." lightbox="./media/android/scenario-options.png":::
 
 Make sure you know what the device is doing and its use case. Android device manufacturers (OEMs) offer different devices, some might be specialty devices and others might be more generic.
 
@@ -157,7 +157,7 @@ The following scenarios are common for FLW:
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode**. Set it to **Not configured**:
 
-      :::image type="content" source="./media/android-dedicated-device-kiosk-not-configured.png" alt-text="Dedicated device is the enrollment profile type and kiosk mode isn't configured in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android-dedicated-device-kiosk-not-configured.png":::
+      :::image type="content" source="./media/android/kiosk-not-configured.png" alt-text="Dedicated device is the enrollment profile type and kiosk mode isn't configured in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android/kiosk-not-configured.png":::
 
 - **Scenario 2: Locked screen device with pinned apps**
 
@@ -181,7 +181,7 @@ The following scenarios are common for FLW:
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** > **Multi-app** > **Add**. Add the apps you want in multi-app kiosk mode:
 
-      :::image type="content" source="./media/android-dedicated-device-kiosk-multi-app.png" alt-text="Enrollment profile type is set to dedicated device, and kiosk mode is set to multi app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android-dedicated-device-kiosk-multi-app.png":::
+      :::image type="content" source="./media/android/kiosk-multi-app.png" alt-text="Enrollment profile type is set to dedicated device, and kiosk mode is set to multi app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android/kiosk-multi-app.png":::
 
   3. Configure the Microsoft Managed Home Screen (MHS) app using one of the following options:
 
@@ -214,7 +214,7 @@ The following scenarios are common for FLW:
 
       In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** **Configuration** > **Templates** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and select **Single app**:
 
-      :::image type="content" source="./media/android-dedicated-device-kiosk-single-app.png" alt-text="Enrollment profile type is set to dedicated device, and the kiosk mode is set to single app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android-dedicated-device-kiosk-single-app.png":::
+      :::image type="content" source="./media/android/kiosk-single-app.png" alt-text="Enrollment profile type is set to dedicated device, and the kiosk mode is set to single app in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/android/kiosk-single-app.png":::
 
 ## Microsoft Entra shared device mode for Android Enterprise dedicated devices
 
@@ -222,7 +222,7 @@ Microsoft Entra shared device mode (SDM) is another option for **Android Enterpr
 
 Microsoft Entra SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). It compliments **Scenario 1** (Device wide access with multiple apps) and **Scenario 2** (Locked screen device with pinned apps) described at [Step 3 - Home screen and device experience](#step-3---home-screen-and-device-experience) (in this article).
 
-For more information on Microsoft Entra shared device mode (SDM), go to [Microsoft Entra shared device mode for FLW](frontline-worker-overview.md#microsoft-entra-shared-device-mode-for-flw).
+For more information on Microsoft Entra shared device mode (SDM), go to [Microsoft Entra shared device mode for FLW](index.md#microsoft-entra-shared-device-mode-for-flw).
 
 **What you need to know**:
 
@@ -238,6 +238,6 @@ For more information on Microsoft Entra shared device mode (SDM), go to [Microso
 
 ## Related articles
 
-- [Frontline worker device management overview in Microsoft Intune](frontline-worker-overview.md)
-- [FLW for iOS/iPadOS devices](frontline-worker-overview-ios-ipados.md)
-- [FLW for Windows devices](frontline-worker-overview-windows.md)
+- [Frontline worker device management overview in Microsoft Intune](index.md)
+- [FLW for iOS/iPadOS devices](ios-ipados.md)
+- [FLW for Windows devices](windows.md)

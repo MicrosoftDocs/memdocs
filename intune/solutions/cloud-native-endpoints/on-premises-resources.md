@@ -17,7 +17,7 @@ This feature applies to:
 
 - Windows cloud-native endpoints
 
-For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](overview.md).
 
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
@@ -101,12 +101,12 @@ The following steps are an overview. For more specific information, including de
 
 ## Follow the cloud-native endpoints guidance
 
-1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
-2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+1. [Overview: What are cloud-native endpoints?](overview.md)
+2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
 4. 🡺 **Concept: Cloud-native endpoints and on-premises resources** (*You are here*)
-5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
-6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+5. [High level planning guide](planning-guide.md)
+6. [Known issues and important information](troubleshoot.md)
 
 ## Helpful online resources
 

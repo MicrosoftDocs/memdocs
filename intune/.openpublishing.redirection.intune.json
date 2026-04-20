@@ -71,56 +71,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/app-management/ref-bundle-ids.md",
-      "redirect_url": "/intune/app-management/collect-bundle-ids",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/add-enterprise-catalog.md",
-      "redirect_url": "/intune/app-management/deployment/add-enterprise-catalog-app",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/configure-assignment-filters.md",
-      "redirect_url": "/intune/app-management/deployment/configure-assignment-scope",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/win32-packaging.md",
-      "redirect_url": "/intune/app-management/deployment/create-win32-package",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/enterprise-app-catalog.md",
-      "redirect_url": "/intune/app-management/deployment/enterprise-app-management",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/lob-app-versioning.md",
-      "redirect_url": "/intune/app-management/deployment/ref-lob-app-versioning",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/win32-overview.md",
-      "redirect_url": "/intune/app-management/deployment/win32",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/protection/data-transfer-exceptions.md",
-      "redirect_url": "/intune/app-management/protection/create-data-transfer-exceptions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/protection/ref-settings-log.md",
-      "redirect_url": "/intune/app-management/protection/troubleshoot-protection-logs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/wipe-corporate-data.md",
-      "redirect_url": "/intune/app-management/protection/wipe-corporate-data",
-      "redirect_document_id": false
-    },
-    {
       "source_path_from_root": "/intune/cloud-pki/delete.md",
       "redirect_url": "/intune/cloud-pki/delete-ca",
       "redirect_document_id": false
@@ -836,93 +786,63 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/configure-cleanup-rules",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/governance/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/configure-cleanup-rules",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/analytics/powershell-scripts.md",
-      "redirect_url": "/intune/intune-service/fundamentels/powershell-scripts-remediation",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/apple-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-apple-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/google-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-google-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/intune-to-apple.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-apple",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/intune-to-google.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-google",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/intune-to-zebra.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-zebra",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/jamf-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-jamf-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/windows-diagnostic-data.md",
-      "redirect_url": "/intune/privacy/enable-windows-diagnostic-data",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/personal-data/view-correct.md",
-      "redirect_url": "/intune/privacy/personal-data/data-visibility",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/personal-data/audit-export-delete.md",
-      "redirect_url": "/intune/privacy/personal-data/manage-data-requests",
-      "redirect_document_id": false
-    },
-    {
       "source_path_from_root": "/intune/azure-ad-joined-hybrid-azure-ad-joined.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/entra-join-types",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-known-issues.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-on-premises.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/on-premises-resources",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-overview.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-planning-guide.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-windows-endpoints.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/entra-join-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/on-premises-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/planning-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/troubleshoot",
       "redirect_document_id": false
     },
     {
@@ -1019,6 +939,26 @@
       "source_path_from_root": "/intune/user-help/unenrollment/remove-enrollment-windows.md",
       "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview.md",
+      "redirect_url": "/intune/solutions/frontline-worker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-android.md",
+      "redirect_url": "/intune/solutions/frontline-worker/android",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-ios-ipados.md",
+      "redirect_url": "/intune/solutions/frontline-worker/ios-ipados",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-windows.md",
+      "redirect_url": "/intune/solutions/frontline-worker/windows",
+      "redirect_document_id": true
     }
   ]
 }
