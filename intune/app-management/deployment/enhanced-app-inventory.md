@@ -14,12 +14,12 @@ App inventory provides faster, more detailed visibility into the applications in
 
 ## How app inventory works
 
-App inventory expands the existing device inventory agent on Windows devices to also collect application data and upload it to the Intune service. The device inventory agent:
+App inventory expands the existing device inventory agent on Windows devices to also collect application data and upload it to the Intune service. The app inventory agent:
 
 - Collects Win32 apps from the Windows registry uninstall keys (`HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall` and per-user keys), including 32-bit apps on 64-bit systems
 - Collects Windows Store apps using the package manager API
 - Uploads delta changes to reduce bandwidth and processing time
-- Reports data to the **All apps** page in the Intune admin center
+- Reports data to the **All apps** page on each device in the Intune admin center
 
 > [!IMPORTANT]
 > Unlike Discovered apps, which collect inventory automatically, app inventory requires you to create and assign a device configuration policy to enable collection. Devices don't report app inventory data until a policy is assigned.
@@ -97,10 +97,11 @@ If more than one policy targets the same device, the device merges the settings.
 After devices check in with the inventory policy, you can view the collected app data.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **Monitor** > **All apps**.
-3. Select the **App Inventory** tab.
+2. Select **Devices** > **All devices**, and then select a device.
+3. Select **All Apps**.
+4. Select the **App Inventory** tab.
 
-The **All apps** page brings both managed apps and inventoried apps into the same location, making it easier to explore and navigate between these related data sets. The **App Inventory** tab displays the list of applications detected across your devices, including all the properties you selected in the inventory policy.
+The **All apps** page on each device brings both managed apps and inventoried apps into the same view. App inventory reports all applications detected on the device regardless of how they were installed, including apps that are also deployed as managed apps. Because inventory data is collected directly from the device, the app names, versions, and other properties reflect the installed values and might not directly match the names and metadata defined in your managed app assignments. The **App Inventory** tab displays the full list of applications detected on the device, including all the properties you selected in the inventory policy.
 
 ### Required properties and report column mapping
 
@@ -112,12 +113,13 @@ Some properties in the Properties catalog appear under different column names in
 | Install Scope User Id | User Entra ID |
 | Install Scope User Name | User Name |
 | Platform Specific App Id | Package Name |
+| Platform Specific App Id | MSI Product Code |
 
 ## Data collection details
 
 ### Refresh cycle
 
-App inventory collects data more frequently than Discovered apps. For active devices, collection runs multiple times per day, triggered by the MMPC sync/check-in cycle.
+App inventory collects data more frequently than Discovered apps. For active devices, collection runs multiple times per day, triggered by the MMPC sync/check-in cycle. For more information about device check-in intervals, see [Policy refresh intervals](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 ### App collection sources
 
@@ -151,8 +153,8 @@ If the app inventory policy is removed from a device, the device inventory agent
 | Refresh cycle | Seven days (24 hours for Win32 via IME) | Multiple times per day |
 | Properties collected | App name, platform, version, publisher, device count | App name, version, publisher + install location, install date, size, architecture, uninstall command, modify command, platform-specific ID, languages, install scope, and more |
 | Supported platforms | Windows, iOS/iPadOS, macOS, Android, AOSP | Windows (macOS, iOS/iPadOS, and Android support planned) |
-| Admin center location | **Apps** > **Monitor** > **Discovered apps** | **Apps** > **Monitor** > **All apps** > **App Inventory** tab |
-| Install scope tracking | No | Yes (Device or User) |
+| Admin center location | **Apps** > **Monitor** > **Discovered apps**, and per-device under **Devices** > *device* > **Discovered apps** | **Devices** > *device* > **All Apps** > **App Inventory** tab |
+| Per-user installed app handling | Last logged-in user | Multi-user support |
 
 Both features can run simultaneously. App inventory doesn't disable Discovered apps.
 
