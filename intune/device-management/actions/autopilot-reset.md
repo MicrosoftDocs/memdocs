@@ -72,10 +72,10 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 
 <!-- role links -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
 <!-- API links -->
 

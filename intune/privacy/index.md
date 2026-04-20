@@ -2,7 +2,7 @@
 title: Privacy and personal data in Intune
 description: Learn what personal data is collected and processed in Intune.
 ms.date: 04/07/2025
-ms.topic: article
+ms.topic: overview
 ms.reviewer: intuneprivacy
 ms.collection:
 - M365-identity-device-management

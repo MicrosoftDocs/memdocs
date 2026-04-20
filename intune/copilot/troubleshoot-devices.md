@@ -14,7 +14,7 @@ ms.collection:
 
 Microsoft Security Copilot is a generative-AI security analysis tool that can help your organization get information quickly. Copilot is [built into Microsoft Intune](index.md). It can help IT admins manage and troubleshoot devices.
 
-Copilot uses your Intune data. Admins can only access the data that they have permissions to, which includes the [role based access control (RBAC) roles](../intune-service/fundamentals/role-based-access-control.md) and [scope tags](../intune-service/fundamentals/scope-tags.md) assigned to them. For more information, see [Copilot in Intune FAQ](faq.md).
+Copilot uses your Intune data. Admins can only access the data that they have permissions to, which includes the [role based access control (RBAC) roles](../fundamentals/role-based-access-control/overview.md) and [scope tags](../fundamentals/role-based-access-control/scope-tags.md) assigned to them. For more information, see [Copilot in Intune FAQ](faq.md).
 
 With Copilot in Intune, you can:
 

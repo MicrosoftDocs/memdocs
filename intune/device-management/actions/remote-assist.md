@@ -23,5 +23,5 @@ Every solution has its own requirements and options. For more information, see:
 - [Use Remote Help with Microsoft Intune][RA-HELP]
 - [Use TeamViewer to remotely administer Intune devices][RA-TVIEW]
 
-[RA-HELP]: ../../intune-service/fundamentals/remote-help.md
-[RA-TVIEW]: ../../intune-service/fundamentals/teamviewer-support.md
+[RA-HELP]: ../../remote-help/index.md
+[RA-TVIEW]: ../../device-management/tools/teamviewer-legacy.md

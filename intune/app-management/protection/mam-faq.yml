@@ -41,11 +41,11 @@ sections:
     questions:
       - question: Which apps can be managed by app protection policies?
         answer: |
-          Any app integrated with the [Intune App SDK](../../developer/app-sdk/index.md) or wrapped by the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md) can be managed using Intune app protection policies. See the official list of [Intune-managed apps](/intune/app-management/ref-protected-apps) available for public use.
+          Any app integrated with the [Intune App SDK](../../developer/app-sdk/index.md) or wrapped by the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md) can be managed using Intune app protection policies. See the official list of [Intune-managed apps](../ref-protected-apps.md) available for public use.
 
       - question: What are the baseline requirements to use app protection policies on an Intune-managed app?
         answer: |
-          - The end user must have a Microsoft Entra account. For more information on how to create Intune users in Microsoft Entra ID, see [Add users and give administrative permission to Intune](../../intune-service/fundamentals/users-add.md).
+          - The end user must have a Microsoft Entra account. For more information on how to create Intune users in Microsoft Entra ID, see [Add users and give administrative permission to Intune](../../fundamentals/tenant-administration/add-users.md).
 
           - The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. For more information on how to assign Intune licenses to end users, see [Manage Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
@@ -232,8 +232,8 @@ additionalContent: |
 
    ## See also
 
-   - [Deploy Intune](../../intune-service/fundamentals/deployment-guide-intune-setup.md)
-   - [Create a rollout plan](../../intune-service/fundamentals/intune-planning-guide.md)
+   - [Deploy Intune](../../fundamentals/setup-migration.md)
+   - [Create a rollout plan](../../fundamentals/planning-guide.md)
    - [Android mobile app management policy settings in Microsoft Intune](ref-settings-android.md)
    - [iOS/iPadOS mobile app management policy settings](ref-settings-ios.md)
    - [App protection policies policy refresh](policy-delivery-timing.md)

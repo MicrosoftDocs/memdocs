@@ -85,7 +85,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 Multi-domain support section removed
 -->
 
-- The Intune Connector for Active Directory requires the [same endpoints as Intune](/intune/intune-service/fundamentals/intune-endpoints).
+- The Intune Connector for Active Directory requires the [same endpoints as Intune](/intune/fundamentals/endpoints).
 
 ---
 
@@ -247,7 +247,7 @@ Windows Autopilot deployment profiles are used to configure the Windows Autopilo
 
 1. Select **Next**.
 
-1. On the **Scope tags** page, select [scope tags](/intune/intune-service/fundamentals/scope-tags) for this profile.
+1. On the **Scope tags** page, select [scope tags](/intune/fundamentals/role-based-access-control/scope-tags) for this profile.
 
 1. Select **Next**.
 

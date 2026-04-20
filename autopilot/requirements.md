@@ -123,7 +123,7 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 ##### Microsoft Intune
 
-Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints).
+Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/intune/fundamentals/endpoints).
 
 ##### Windows Autopilot automatic device diagnostics collection
 
@@ -230,7 +230,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/intune-service/fundamentals/licenses-assign).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licensing/assign-licenses).
 
 Additionally, the following are also recommended (but not required):
 

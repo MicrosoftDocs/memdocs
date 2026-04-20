@@ -30,7 +30,7 @@ To configure device categories, you must be an [Intune Administrator](/entra/ide
 
 Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../app-management/configuration/configure-company-portal.md#device-categories) first, and then create your categories.
 
-If Multi Admin Approval access policies are enabled for device actions, creating new categories, editing existing ones, and deleting device categories might require approval from a second administrator. To learn more, see [Use Access policies to require Multi Admin Approval](../intune-service/fundamentals/multi-admin-approval.md).
+If Multi Admin Approval access policies are enabled for device actions, creating new categories, editing existing ones, and deleting device categories might require approval from a second administrator. To learn more, see [Use Access policies to require Multi Admin Approval](../fundamentals/role-based-access-control/multi-admin-approval.md).
 
 ## Step 1: Create device category in Intune
 
@@ -40,7 +40,7 @@ If Multi Admin Approval access policies are enabled for device actions, creating
 1. Choose **Create** to add a new category.
 1. Enter the name of the new category, such as `HR` and an optional description.
 1. Select **Next**.
-1. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the category to specific IT groups. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+1. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the category to specific IT groups. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 1. Select **Next**.
 1. Select **Create**. The new category is added to your **Device categories** list.
 

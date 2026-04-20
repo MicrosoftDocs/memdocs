@@ -7,7 +7,6 @@ ms.date: 10/09/2024
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 - certificates
 - sub-certificates
 ---

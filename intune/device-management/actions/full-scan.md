@@ -62,9 +62,9 @@ This action is ideal when a device is suspected of compromise or when validating
 
 <!-- role links -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
 
 <!-- API links -->
 

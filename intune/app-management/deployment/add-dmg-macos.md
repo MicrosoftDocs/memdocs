@@ -8,7 +8,6 @@ ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
 - macOS
-- highpri
 - FocusArea_Apps_LOB
 - FocusArea_Apps_MacOS
 ---
@@ -105,13 +104,13 @@ You can use detection rules to choose how an app installation is detected on a m
 
 ## Step 4 – Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
     1. Click Select scope tags to optionally add scope tags for the app.
     2. Click Next to display the Assignments page.
 
 ## Step 5 - Assignments
 
-You can select the **Required**, **Available**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+You can select the **Required**, **Available**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 > [!NOTE]
 > A macOS app deployed using Intune agent will not automatically be removed from the device when the device is retired. The app and data it contains will remain on the device. It is recommended that the app is removed prior to retiring the device.
@@ -134,12 +133,14 @@ The app you have created appears in the apps list where you can assign it to the
 
 > [!NOTE]
 > If the *.dmg* file contains multiple apps, then Microsoft Intune will only report that the app is successfully installed when all installed apps are detected on the device.
+>
+> When you upload a new version of an available app to Intune, users must select **Install** or **Reinstall** in Company Portal to update the app on their device.
 
 ## Next steps
 
 - The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../intune-service/fundamentals/device-lifecycle.md)
+- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md)
 
 ## Known issues
 

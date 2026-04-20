@@ -43,11 +43,11 @@ After you enable this setting, users who sign in to the Microsoft Intune admin c
 
 ## Related content
 
-- [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
+- [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
 
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
-[Intune role administrator]: ../../intune-service/fundamentals/role-based-access-control-reference.md
-[Custom role]: ../../intune-service/fundamentals/create-custom-role.md
+[Intune role administrator]: ../../fundamentals/role-based-access-control-reference.md
+[Custom role]: ../../fundamentals/create-custom-role.md
