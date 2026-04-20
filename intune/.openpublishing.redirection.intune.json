@@ -71,56 +71,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/app-management/ref-bundle-ids.md",
-      "redirect_url": "/intune/app-management/collect-bundle-ids",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/add-enterprise-catalog.md",
-      "redirect_url": "/intune/app-management/deployment/add-enterprise-catalog-app",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/configure-assignment-filters.md",
-      "redirect_url": "/intune/app-management/deployment/configure-assignment-scope",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/win32-packaging.md",
-      "redirect_url": "/intune/app-management/deployment/create-win32-package",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/enterprise-app-catalog.md",
-      "redirect_url": "/intune/app-management/deployment/enterprise-app-management",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/lob-app-versioning.md",
-      "redirect_url": "/intune/app-management/deployment/ref-lob-app-versioning",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/deployment/win32-overview.md",
-      "redirect_url": "/intune/app-management/deployment/win32",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/protection/data-transfer-exceptions.md",
-      "redirect_url": "/intune/app-management/protection/create-data-transfer-exceptions",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/protection/ref-settings-log.md",
-      "redirect_url": "/intune/app-management/protection/troubleshoot-protection-logs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/app-management/wipe-corporate-data.md",
-      "redirect_url": "/intune/app-management/protection/wipe-corporate-data",
-      "redirect_document_id": false
-    },
-    {
       "source_path_from_root": "/intune/cloud-pki/delete.md",
       "redirect_url": "/intune/cloud-pki/delete-ca",
       "redirect_document_id": false
@@ -833,61 +783,6 @@
     {
       "source_path_from_root": "/intune/use-docs.md",
       "redirect_url": "/intune/fundamentals/use-docs",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/configure-cleanup-rules",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/governance/device-cleanup-rules.md",
-      "redirect_url": "/intune/governance/configure-cleanup-rules",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/apple-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-apple-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/google-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-google-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/intune-to-apple.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-apple",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/intune-to-google.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-google",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/intune-to-zebra.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-intune-to-zebra",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/data-sharing/jamf-to-intune.md",
-      "redirect_url": "/intune/privacy/data-sharing/ref-jamf-to-intune",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/windows-diagnostic-data.md",
-      "redirect_url": "/intune/privacy/enable-windows-diagnostic-data",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/personal-data/view-correct.md",
-      "redirect_url": "/intune/privacy/personal-data/data-visibility",
-      "redirect_document_id": false
-    },
-    {
-      "source_path_from_root": "/intune/privacy/personal-data/audit-export-delete.md",
-      "redirect_url": "/intune/privacy/personal-data/manage-data-requests",
       "redirect_document_id": false
     },
     {
