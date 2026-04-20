@@ -171,7 +171,7 @@ For more information, go to:
 
 ## Learn more
 
-- [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
+- [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/overview.md)
 - [Compare Microsoft 365 features and licensing](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)
 - [Learn more about Microsoft Intune licensing](../fundamentals/licensing/index.md)
 - [Get started with Microsoft Intune](./get-started.md)
