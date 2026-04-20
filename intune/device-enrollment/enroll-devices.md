@@ -82,7 +82,7 @@ If you're looking for more control, including where the terms appear, consider c
 For more information, see [Terms and conditions for user access](../device-enrollment/create-terms-and-conditions.md).
 
 ### Require multifactor authentication
-Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a Conditional Access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.
+Require users to authenticate via multifactor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a Conditional Access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../device-enrollment/configure-multifactor-authentication.md).
 
@@ -137,9 +137,9 @@ Complete the following prerequisites before you create the enrollment profile fo
 
 * Upload an Apple MDM push certificate to Intune. For more information, see [Get MDM push certificate](../device-enrollment/apple/create-mdm-push-certificate.md).
 * Get an Apple enrollment program token  if you plan to enroll devices via Apple automated device enrollment.    For more information, see:
-  * [Get Apple enrollment program token for iOS/iPadOS](../../device-enrollment/apple/token-setup-apple.md#create-an-enrollment-program-token)  
+  * [Get Apple enrollment program token for iOS/iPadOS](../device-enrollment/apple/token-setup-apple.md)  
 
-  * [Get Apple enrollment program token for macOS](../../device-enrollment/apple/token-setup-macos.md#create-an-enrollment-program-token)  
+  * [Get Apple enrollment program token for macOS](../device-enrollment/apple/token-setup-macos.md#create-an-enrollment-program-token)  
 
 ### Apple enrollment solutions
 The following table describes the enrollment solutions for devices running iOS/iPadOS and macOS.

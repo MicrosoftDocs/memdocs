@@ -3400,7 +3400,7 @@ Applies to:
 
 - macOS 10.11 and later
 
-For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile).
+For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-profile).
 
 #### Await final configuration for macOS automated device enrollment now generally available<!-- 24973562 -->
 
@@ -3414,7 +3414,7 @@ Applies to:
 
 - macOS 10.11 and later
 
-For information about how to enable await final configuration, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile).
+For information about how to enable await final configuration, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-profile).
 
 ### Device management
 

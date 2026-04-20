@@ -697,7 +697,7 @@ For your Mac devices to maintain their connection to Intune and continue enrolli
 
   You should monitor the sync status for any problems that require attention.
 
-  For more information, go to [sync managed devices](../../device-enrollment/apple/setup-automated-macos.md#sync-managed-devices).
+  For more information, go to [sync managed devices](../../device-enrollment/apple/manage-devices-tokens-macos.md#sync-managed-devices).
 
 ### Remote Help
 
