@@ -1044,6 +1044,26 @@
       "source_path_from_root": "/intune/user-help/unenrollment/remove-enrollment-windows.md",
       "redirect_url": "/intune/user-help/unenrollment/unenroll-windows",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview.md",
+      "redirect_url": "/intune/solutions/frontline-worker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-android.md",
+      "redirect_url": "/intune/solutions/frontline-worker/android",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-ios-ipados.md",
+      "redirect_url": "/intune/solutions/frontline-worker/ios-ipados",
+      "redirect_document_id": true
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-windows.md",
+      "redirect_url": "/intune/solutions/frontline-worker/windows",
+      "redirect_document_id": true
     }
   ]
 }
