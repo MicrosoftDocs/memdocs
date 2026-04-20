@@ -16,9 +16,9 @@ Some popular examples of frontline workers include healthcare, emergency respond
 
 The articles in this section apply to:
 
-- [FLW Android devices owned by the organization and enrolled in Intune](frontline-worker-overview-android.md)
-- [FLW iOS and iPadOS devices owned by the organization and enrolled in Intune](frontline-worker-overview-ios-ipados.md)
-- [FLW Windows devices owned by the organization and enrolled in Intune](frontline-worker-overview-windows.md)
+- [FLW Android devices owned by the organization and enrolled in Intune](android.md)
+- [FLW iOS and iPadOS devices owned by the organization and enrolled in Intune](ios-ipados.md)
+- [FLW Windows devices owned by the organization and enrolled in Intune](windows.md)
 
 > [!NOTE]
 > FLW devices are typically owned by the organization. End user personal devices can be used as FLW devices, but personal devices aren't covered in these articles. This set of articles focus on corporate-owned devices.
@@ -97,8 +97,8 @@ Some of the benefits of Entra SDM include:
 
 Shared device mode (SDM) is a feature of Microsoft Entra. It's not an Intune feature. On Android, Entra SDM and Intune can work together. On iOS/iPadOS, you must use Entra SDM or use Intune. For more information, go to the following articles:
 
-- [Frontline worker for Android devices in Microsoft Intune](frontline-worker-overview-android.md)
-- [Frontline worker for iOS/iPadOS devices in Microsoft Intune](frontline-worker-overview-ios-ipados.md)
+- [Frontline worker for Android devices in Microsoft Intune](android.md)
+- [Frontline worker for iOS/iPadOS devices in Microsoft Intune](ios-ipados.md)
 
 For more information on Entra SDM, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
@@ -125,9 +125,9 @@ For more information and to get started, go to:
 
 ## Related articles
 
-- [FLW for Android devices](frontline-worker-overview-android.md)
-- [FLW for iOS/iPadOS devices](frontline-worker-overview-ios-ipados.md)
-- [FLW for Windows devices](frontline-worker-overview-windows.md)
+- [FLW for Android devices](android.md)
+- [FLW for iOS/iPadOS devices](ios-ipados.md)
+- [FLW for Windows devices](windows.md)
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
 - [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](../../fundamentals/setup-migration.md)
