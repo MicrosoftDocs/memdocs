@@ -23,7 +23,7 @@ This article applies to:
 
 - Windows devices owned by the organization and enrolled in Intune
 
-For an overview on FLW devices in Intune, go to [FLW device management in Intune](frontline-worker-overview.md).
+For an overview on FLW devices in Intune, go to [FLW device management in Intune](index.md).
 
 Use this article to get started with Windows FLW devices in Intune. Specifically:
 
@@ -128,11 +128,11 @@ To get started, use the following links:
 
     The following example shows the kiosk profile settings for a single app. Make sure you add the app to Intune before you configure the kiosk profile.
 
-    :::image type="content" source="./media/windows-kiosk-single-app.png" alt-text="The kiosk device configuration profile settings for a single app on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-single-app.png":::
+    :::image type="content" source="./media/windows/kiosk-single-app.png" alt-text="The kiosk device configuration profile settings for a single app on Windows devices in Microsoft Intune." lightbox="./media/windows/kiosk-single-app.png":::
 
     The following example shows the kiosk profile settings for multiple apps. Make sure you add the apps to Intune before you configure the kiosk profile.
 
-    :::image type="content" source="./media/windows-kiosk-multi-app.png" alt-text="The kiosk device configuration profile settings for multiple apps on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-multi-app.png":::
+    :::image type="content" source="./media/windows/kiosk-multi-app.png" alt-text="The kiosk device configuration profile settings for multiple apps on Windows devices in Microsoft Intune." lightbox="./media/windows/kiosk-multi-app.png":::
 
 ### Scenario 2 - Device wide access with many apps
 
@@ -147,7 +147,7 @@ To get started, use the following links:
 1. [Add apps to Microsoft Intune](../../app-management/deployment/index.md). When the apps are added, you create app policies that deploy the apps to the devices.
 2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../device-configuration/templates/ref-device-restrictions-windows.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../device-configuration/settings-catalog/index.md).
 
-    :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
+    :::image type="content" source="./media/windows/device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
 
 ## Windows 365 Cloud PCs
 
@@ -164,6 +164,6 @@ For information on Windows 365 Cloud PCs, and to learn more, go to:
 
 ## Related articles
 
-- [Frontline worker device management overview in Microsoft Intune](frontline-worker-overview.md)
-- [FLW for Android devices](frontline-worker-overview-android.md)
-- [FLW for iOS/iPadOS devices](frontline-worker-overview-ios-ipados.md)
+- [Frontline worker device management overview in Microsoft Intune](index.md)
+- [FLW for Android devices](android.md)
+- [FLW for iOS/iPadOS devices](ios-ipados.md)
