@@ -449,7 +449,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 > **Description**: System information of the device.\
 > **Supported platforms**: Windows\
-> **Supported for**: single device query on-demand.
+> **Supported for**: single device query on-demand, Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
