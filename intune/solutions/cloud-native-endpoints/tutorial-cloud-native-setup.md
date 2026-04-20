@@ -20,7 +20,7 @@ ms.collection:
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
-This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, see [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, see [What are cloud-native endpoints](overview.md).
 
 This feature applies to:
 
@@ -32,7 +32,7 @@ Use the five ordered phases in this guide, which build on each other to help you
 
 **Phases**:
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/phases.png" alt-text="Five phases for setting up cloud-native Windows endpoints using Microsoft Intune and Windows Autopilot.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phases.png" alt-text="Five phases for setting up cloud-native Windows endpoints using Microsoft Intune and Windows Autopilot.":::
 
 - [Phase 1](#phase-1--set-up-your-environment) – Set up your environment
 - [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint) – Build your first cloud-native Windows endpoint
@@ -44,7 +44,7 @@ At the end of this guide, you have a cloud-native Windows endpoint ready to star
 
 ## Phase 1 – Set up your environment
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/phase-1.png" alt-text="Image that shows phase 1, set up your environment for cloud native endpoints with Microsoft Intune":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-1.png" alt-text="Image that shows phase 1, set up your environment for cloud native endpoints with Microsoft Intune":::
 
 Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](/autopilot/overview), and creating some settings and applications.
 
@@ -219,7 +219,7 @@ After you created the profile and added your settings, assign the profile to the
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Screenshot that shows an example of a settings catalog profile in Microsoft Intune.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/settings-catalog-example.png" alt-text="Screenshot that shows an example of a settings catalog profile in Microsoft Intune.":::
 
 ### Step 9 - Create and assign some applications
 
@@ -243,7 +243,7 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
 
 ## Phase 2 - Build a cloud-native Windows endpoint
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/phase-2.png" alt-text="Phase 2.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-2.png" alt-text="Phase 2.":::
 
 To build your first cloud-native Windows endpoint, use the same virtual machine or physical device that you gathered and then uploaded the hardware hash to the Windows Autopilot service in [Phase 1 > Step 3](#phase-1--set-up-your-environment). With this device, go through the Windows Autopilot process.
 
@@ -267,7 +267,7 @@ Some things to check out on your new cloud-native Windows endpoint:
 
 ## Phase 3 – Secure your cloud-native Windows endpoint
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/phase-3.png" alt-text="Phase 3.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-3.png" alt-text="Phase 3.":::
 
 This phase is designed to help you build out security settings for your organization. This section draws your attention to the various Endpoint Security components in Microsoft Intune including:
 
@@ -468,7 +468,7 @@ If you'd like more granular control for Windows Updates and you use Configuratio
 
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-4.png" alt-text="Phase 4.":::
 
 In this phase, you apply organization-specific settings, apps, and review your on-premises configuration. The phase helps you build any customizations specific to your organization. Notice the various components of Windows, how you can review existing configurations from an on-premises AD Group Policy environment, and apply them to cloud-native endpoints. There are sections for each of the following areas:
 
@@ -672,7 +672,7 @@ If you have applications that use MSI, EXE, or script installers, you can deploy
 
 ## Phase 5 – Deploy at scale with Windows Autopilot
 
-:::image type="content" source="../media/cloud-native-windows-endpoints/phase-5.png" alt-text="Phase 5.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-5.png" alt-text="Phase 5.":::
 
 Now that you configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
@@ -683,12 +683,12 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 
 ## Follow the cloud-native endpoints guidance
 
-1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
+1. [Overview: What are cloud-native endpoints?](overview.md)
 2. 🡺 **Tutorial: Get started with cloud-native Windows endpoints** (*You are here*)
-3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
-6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
+4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
+5. [High level planning guide](planning-guide.md)
+6. [Known issues and important information](troubleshoot.md)
 
 ## Helpful online resources
 

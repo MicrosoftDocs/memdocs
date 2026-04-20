@@ -28,7 +28,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
   The following articles are good resources:
 
-  - [Move to cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
+  - [Move to cloud-native endpoints](../solutions/cloud-native-endpoints/overview.md)
   - [Planning guide to move to Microsoft Intune](planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](setup-migration.md)
   - [Protection and configuration levels](protection-configuration-levels.md)
