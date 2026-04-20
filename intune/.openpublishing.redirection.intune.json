@@ -846,11 +846,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/analytics/powershell-scripts.md",
-      "redirect_url": "/intune/intune-service/fundamentels/powershell-scripts-remediation",
-      "redirect_document_id": false
-    },
-    {
       "source_path_from_root": "/intune/privacy/data-sharing/apple-to-intune.md",
       "redirect_url": "/intune/privacy/data-sharing/ref-apple-to-intune",
       "redirect_document_id": false
@@ -897,32 +892,62 @@
     },
     {
       "source_path_from_root": "/intune/azure-ad-joined-hybrid-azure-ad-joined.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/entra-join-types",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-known-issues.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-on-premises.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/on-premises-resources",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-overview.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-endpoints-planning-guide.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/planning-guide",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/cloud-native-windows-endpoints.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/entra-join-types",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/on-premises-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/planning-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/troubleshoot",
       "redirect_document_id": false
     },
     {

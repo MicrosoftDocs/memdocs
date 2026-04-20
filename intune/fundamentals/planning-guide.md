@@ -376,7 +376,7 @@ With these goals in mind, create a baseline of your policies. If you have multip
 This task includes looking at services that could move to the cloud. Remember, instead of looking at what you've always done, determine the goal.
 
 > [!TIP]
-> [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md) is good resource.
+> [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/overview.md) is good resource.
 
 Some considerations:
 
