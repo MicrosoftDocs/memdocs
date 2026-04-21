@@ -3,7 +3,7 @@ title: Use EPM support approvals for file elevation requests with Intune
 description: Manage support approvals for elevation requests when you use Endpoint Privilege Management for Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/24/2026
+ms.date: 04/27/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.subservice: suite
@@ -23,7 +23,7 @@ This article explains how to use the **support approved** workflow with Endpoint
 
 Support approved elevations allow you to require approval before an elevation being allowed. You can use the support approved functionality as part of an elevation rule, or as default client behavior. Requests that are submitted require Intune administrators to approve the request on a case-by-case basis.
 
-Support approved elevation requests can be submitted by all users of a device.
+Elevation requests that require support approval can be submitted by all users of a device.
 
 When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is notified, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
