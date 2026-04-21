@@ -33,7 +33,11 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 ## Limitations
 
-Automated device enrollment via Apple Business Manager and Apple School Manager isn't supported with [device enrollment manager accounts](../setup-enrollment-manager.md).
+Automated device enrollment via Apple Business Manager and Apple School Manager isn't supported with [device enrollment manager accounts](../setup-enrollment-manager.md).  
+
+## Related configurations  
+
+If your organization uses Apple access management, you can optionally configure Apple access management settings in Apple Business or Apple School Manager to control which organization-owned Macs users can sign in to with Apple accounts and which apps and services are available. These settings are configured in Apple and enforced by Microsoft Intune after enrollment. They aren’t required to complete ADE setup. For more information, see [Configure service access for Apple accounts](account-service-access.md).  
 
 ## Prerequisites
 

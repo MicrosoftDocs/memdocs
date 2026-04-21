@@ -51,7 +51,7 @@ Before you create the enrollment profile, you must have:
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
 * New or wiped devices purchased from Apple Business Manager or Apple School Manager.
      > [!Tip]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
+     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
 
 ## Before you begin
 Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.
@@ -83,7 +83,11 @@ Supervised mode provides more management control over corporate-owned devices, s
 
 Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](enable-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment.
 
-<a name='enrolling-devices-in-azure-ad-shared-device-mode'></a>
+<a name='enrolling-devices-in-azure-ad-shared-device-mode'></a>  
+
+## Related configurations  
+
+If your organization uses Apple access management, you can optionally configure Apple access management settings in Apple Business or Apple School Manager to control which organization-owned iOS/iPadOS devices users can sign in to with Apple accounts and which apps and services are available. These settings are configured in Apple and enforced by Microsoft Intune after enrollment. They aren’t required to complete ADE setup. For more information, see [Configure service access for Apple accounts](account-service-access.md).  
 
 ### Enrolling devices in shared device mode
 
