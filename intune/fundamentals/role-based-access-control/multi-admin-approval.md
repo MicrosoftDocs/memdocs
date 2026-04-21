@@ -5,7 +5,7 @@ ms.date: 04/27/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
-ai-usage: ai-assisted
+
 ms.collection:
 - M365-identity-device-management
 - setup
@@ -73,8 +73,9 @@ To approve or reject MAA requests submitted by other admins, an account must mee
 
 ### Role 3: Change requestor
 
-To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device. 
-> [!NOTE]
+To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device.
+
+> [!NOTE]  
 > - An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
 > - Changes submitted by a Global Administrator or Intune Administrator account must still be approved by a different administrator.
 
