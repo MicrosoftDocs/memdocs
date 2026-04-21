@@ -10,8 +10,6 @@ ms.collection:
 
 # Add Microsoft Store Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports Universal Windows Platform (UWP) apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.
 
 > [!IMPORTANT]
