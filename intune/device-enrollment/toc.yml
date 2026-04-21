@@ -13,9 +13,6 @@ items:
   - name: Add device enrollment manager
     href: ./setup-enrollment-manager.md
     displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
-  - name: Configure Apple account service access
-    href: ./intune-service/enrollment/account-service-access.md
-    displayName: device management; apple business manager; apple school manager   
   - name: Configure Chrome Enterprise connector
     href: ./configure-chrome-enterprise-connector.md
     displayName: chrome os; connector; device management; google admin
@@ -166,6 +163,9 @@ items:
     items:
     - name: Back up and restore for Automated Device Enrollment
       href: ./apple/backup-restore-ios.md
+    - name: Configure Apple account service access
+      href: ./apple//account-service-access.md
+      displayName: device management; apple business manager; apple school manager   
 - name: Set up Linux enrollment
   items:
   - name: Get started with Linux enrollment

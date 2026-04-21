@@ -60,7 +60,7 @@ To configure service access for Apple accounts, ensure your environment meets th
 > [!IMPORTANT] 
 > These settings apply to all Apple accounts regardless of whether a sign in is actively happening. If the setting is changed and the device doesn't meet the requirement, the account is automatically signed out.  
 
-## Configure service access   
+## Configure service access  
 
 Service access settings are configured in Apple Business or Apple School Manager. Microsoft Intune doesn’t configure these settings directly. Instead, Intune issues a management token that Apple uses during device activation to confirm the device’s Intune assignment.  
 
