@@ -9,8 +9,6 @@ ms.collection:
 
 # Quiet Time Policies for iOS/iPadOS and Android Apps
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours.
 
 ## Quiet time policy types

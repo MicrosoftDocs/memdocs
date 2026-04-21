@@ -10,8 +10,6 @@ ms.collection:
 
 # App Protection Policy Settings for Windows
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 This article describes app protection policy (APP) settings for Windows. The policy settings that are described can be [configured](./create-policy.md) for an app protection policy on the **Settings** pane in the Intune admin center when you create a new policy.
 
 You can enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability is known as [Windows MAM](./enable-mam-windows.md) and provides functionality using Intune Application Configuration Policies (ACP), Intune app protection policies, Windows Security Center client threat defense, and Application Protection Conditional Access. For more information about Windows MAM, see [Data protection for Windows MAM](./enable-mam-windows.md), [Create an MTD app protection policy for Windows](../../device-security/mobile-threat-defense/create-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows), and [Configure Microsoft Edge for Windows with Intune](../configuration/configure-edge-windows.md).

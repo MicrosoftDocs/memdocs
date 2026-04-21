@@ -92,12 +92,12 @@ For more specific information on this enrollment type, go to [Automatically enro
 | --- | --- |
 | Devices are owned by the organization or school. | ✅ |
 | You have new devices. | ✅ |
-| You have existing devices. | ✅ <br/><br/> To enroll existing devices, go to [Enroll Macs after Setup Assistant](setup-automated-macos.md#distribute-devices) (opens another Microsoft article). |
+| You have existing devices. | ✅ <br/><br/> To enroll existing devices, go to [Enroll Macs after Setup Assistant](setup-automated-macos.md) (opens another Microsoft article). |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [Device enrollment](#byod-device-enrollment) (in this article). |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use [Device enrollment](#byod-device-enrollment) to manage specifics apps on the device. Since these devices are organization-owned, we recommend to enroll in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use [Device enrollment](#byod-device-enrollment) to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -108,7 +108,7 @@ This task list provides an overview. For more specific information, go to [Autom
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - You need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Create enrollment program token](setup-automated-macos.md#create-enrollment-program-token).
+- Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Set up a macOS ADE token](token-setup-macos.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - Decide how you want users to authenticate on their devices: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended). Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 

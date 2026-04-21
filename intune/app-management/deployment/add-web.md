@@ -11,8 +11,6 @@ ms.collection:
 
 # Add Web Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Intune supports a variety of app types, including web apps. A web app is a client-server application. The server provides the web app, which includes the UI, content, and functionality. Additionally, modern web-hosting platforms commonly offer security, load balancing, and other benefits. A web app is separately maintained on the web. You use Microsoft Intune to point to this app type. You also assign the groups of users that can access this app.
 
 Before you can manage and assign an app for your users, add the app to Intune.
