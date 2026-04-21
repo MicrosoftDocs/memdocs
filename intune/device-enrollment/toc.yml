@@ -178,7 +178,7 @@ items:
     - name: Set up automated device enrollment for macOS
       href: ./apple/setup-automated-macos.md
     - name: Set up macOS account configuration with LAPS
-      href: ./apple/setup-laps-macos.md
+      href: ../device-security/laps/setup-macos.md
     - name: Set up Direct Enrollment for macOS
       href: ./apple/setup-direct-macos.md
   - name: Enrollment configurations

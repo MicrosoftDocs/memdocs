@@ -30,7 +30,7 @@ This feature applies to:
 
 - Windows cloud-native endpoints
 
-This article describes some of the differences between Microsoft Entra joined and hybrid Microsoft Entra joined devices. For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+This article describes some of the differences between Microsoft Entra joined and hybrid Microsoft Entra joined devices. For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](overview.md).
 
 ## Microsoft Entra joined
 
@@ -88,7 +88,7 @@ If the devices can't connect to the DC, then users might be prevented from signi
 
 Many organizations with existing domain joined devices want the benefits and features of Microsoft Entra and endpoint management. If your devices can't be fully cloud-native yet, then you can register these existing devices with Microsoft Entra. When you register existing devices in Microsoft Entra, a [device identity](/entra/identity/devices/overview) is created, and your devices are hybrid Microsoft Entra joined. They're not considered cloud-native endpoints.
 
-If your organization is ready and wants to be cloud-native, then [Microsoft Entra joined](#microsoft-entra-joined) (in this article) is the correct choice. Existing devices need to be reset. For more specific information and guidance, go to the [High level planning guide](cloud-native-endpoints-planning-guide.md).
+If your organization is ready and wants to be cloud-native, then [Microsoft Entra joined](#microsoft-entra-joined) (in this article) is the correct choice. Existing devices need to be reset. For more specific information and guidance, go to the [High level planning guide](planning-guide.md).
 
 ### Hybrid Microsoft Entra joined resources
 
@@ -131,7 +131,7 @@ It's possible there are blockers and challenges outside of Microsoft's control t
 
 Remember, moving to Microsoft Entra Join isn't an all or nothing proposition. Moving devices to Microsoft Entra Join takes time, even with or without blockers or inhibitors.
 
-If you identify a potential blocker that's preventing you from using Microsoft Entra Join, then determine the scope, impact, and solution. The [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md) can help.
+If you identify a potential blocker that's preventing you from using Microsoft Entra Join, then determine the scope, impact, and solution. The [High level planning guide to move to cloud-native endpoints](planning-guide.md) can help.
 
 #### Can Microsoft Entra Join and Hybrid Microsoft Entra Join endpoints coexist in the same environment?
 
@@ -143,7 +143,7 @@ Having a mixed environment does increase complexity, maintenance, and support co
 
 Yes, users on Microsoft Entra Join systems can access on-premises resources.
 
-Microsoft Entra Join endpoints can access on-premises resources, and can use single sign-on (SSO). For more specific information, go to [Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md).
+Microsoft Entra Join endpoints can access on-premises resources, and can use single sign-on (SSO). For more specific information, go to [Cloud-native endpoints and on-premises resources](on-premises-resources.md).
 
 #### What device join states can Intune manage?
 
@@ -175,9 +175,9 @@ The cloud solution is to Microsoft Entra Join your endpoints. The endpoints and 
 
 ## Follow the cloud-native endpoints guidance
 
-1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
-2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
+1. [Overview: What are cloud-native endpoints?](overview.md)
+2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
 3. 🡺 **Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined** (*You are here*)
-4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
-6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
+5. [High level planning guide](planning-guide.md)
+6. [Known issues and important information](troubleshoot.md)

@@ -60,7 +60,7 @@ When a Windows endpoint, like a Windows device, joins an on-premises Active Dire
 
 These machine accounts are local to the on-premises environment and can't be used on devices that are joined to Microsoft Entra ID. In this situation, you need to switch to user-based authentication to authenticate to on-premises programs, services, and apps.
 
-For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md).
+For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](../../solutions/cloud-native-endpoints/troubleshoot.md).
 
 ## Roles and permissions control access
 

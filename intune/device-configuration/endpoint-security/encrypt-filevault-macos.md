@@ -19,7 +19,7 @@ FileVault disk encryption is available on devices running **macOS 10.13 or later
 > FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and can't be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
 
 > [!TIP]
-> Intune provides a built-in [encryption report](./monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
+> Intune provides a built-in [encryption report](../../device-management/monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
 
 ## FileVault encryption scenarios
 
@@ -249,7 +249,7 @@ FileVault deployment occurs in two distinct phases:
 
 ### View encryption status
 
-To view information about devices that receive FileVault policy, see [Monitor disk encryption](./monitor-encryption.md).
+To view information about devices that receive FileVault policy, see [Monitor disk encryption](../../device-management/monitor-encryption.md).
 
 Monitor FileVault deployment through multiple Intune interfaces:
 
@@ -464,7 +464,7 @@ FileVault encryption integrates with Intune compliance policies:
 
 ## Next steps
 
-- [Monitor disk encryption across your environment](./monitor-encryption.md)
+- [Monitor disk encryption across your environment](../../device-management/monitor-encryption.md)
 - [Configure BitLocker encryption for Windows devices](./encrypt-bitlocker-windows.md)
 - [FileVault settings reference for endpoint security policies](./ref-disk-encryption-settings.md#filevault)
 - [Apple FileVault deployment guide](https://support.apple.com/guide/deployment/dep32bf53500/web) *(opens Apple's website)*

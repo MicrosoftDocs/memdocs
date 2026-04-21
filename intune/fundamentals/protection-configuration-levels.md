@@ -226,7 +226,7 @@ This level focuses on enterprise-level services and features, and it can require
 
   For information, see:
 
-  - [macOS LAPS in Intune](../device-enrollment/apple/setup-laps-macos.md)
+  - [macOS LAPS in Intune](../device-security/laps/setup-macos.md)
   - [Windows LAPS in Intune](../device-security/laps/overview.md)
 
 - Protect Windows devices using Endpoint Privilege Management (EPM). EPM helps you run your organization's users as standard users (without administrator rights) and enables those same users to complete tasks that require elevated privileges.

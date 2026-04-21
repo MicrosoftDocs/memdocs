@@ -265,7 +265,7 @@ With the applications configured, you can now deploy students' and teachers' dev
 
 [EDU-1]: /education/windows/tutorial-deploy-apps-winse
 
-[MEM-1]: /intune/app-management/deployment/add-win32
+[MEM-1]: ../../../app-management/deployment/add-win32.md
 
 [INT-1]: /intune-education/express-configuration-intune-edu
 [INT-2]: /intune-education/add-web-apps-edu

@@ -1,12 +1,12 @@
 items:
 - name: FLW Overview
-  href: frontline-worker-overview.md
+  href: index.md
 - name: Android FLW
   displayName: Android Enterprise, ae, aosp, kiosk
-  href: frontline-worker-overview-android.md
+  href: android.md
 - name: iOS/iPadOS FLW
   displayName: ios, ipados, shared ipad, kiosk
-  href: frontline-worker-overview-ios-ipados.md
+  href: ios-ipados.md
 - name: Windows FLW
   displayName: kiosk, multi-app, single-app
-  href: frontline-worker-overview-windows.md
+  href: windows.md

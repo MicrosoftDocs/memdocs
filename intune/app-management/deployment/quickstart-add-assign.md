@@ -44,7 +44,7 @@ In this article, you use Intune to add and assign an app to your company's workf
 > To complete this step, you must:
 > - [Create a user](../../fundamentals/tenant-administration/quickstart-create-user.md).
 > - [Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md).
-> - [Enroll a device](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md)
+> - [Enroll a device](../../device-enrollment/windows/quickstart-automatic-mdm.md)
 :::column-end:::
 :::row-end:::
 
@@ -82,7 +82,7 @@ You now have assigned the app to another group.
 
 End users must install and use the Company Portal app to install an app made available by Intune. You, acting as an end user, can use the following steps to verify that the app is available to the user on Intune-enrolled devices.
 
-1. Sign in to your enrolled Windows device. You can use the device you enrolled in [Step 5 - Enroll a Windows device in Microsoft Intune](../../intune-service/enrollment/quickstart-enroll-windows-device.md).
+1. Sign in to your enrolled Windows device. You can use the device you enrolled in [Step 5 - Enroll a Windows device in Microsoft Intune](../../device-enrollment/windows/quickstart-first-device.md).
 
     > [!IMPORTANT]
     > - The device must be enrolled in Intune.

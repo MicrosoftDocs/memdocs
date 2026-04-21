@@ -115,7 +115,7 @@ When new cloud-based features are available in the Microsoft Intune admin center
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/device-updates/windows/monitor-compatibility).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../../device-updates/windows/monitor-compatibility.md).
 
 ### Connection Health dashboard shows client connection issues
 
@@ -125,7 +125,7 @@ Use the Desktop Analytics Connection Health dashboard in Configuration Manager t
 
 - **Connectivity status**: If your clients use a proxy server to access the Desktop Analytics cloud service, Configuration Manager now displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll because of proxy authentication.<!-- 4963383 -->
 
-For more information, see [Monitor connection health](/intune/device-updates/windows/monitor-compatibility).
+For more information, see [Monitor connection health](../../../../device-updates/windows/monitor-compatibility.md).
 
 ## <a name="bkmk_real"></a> Real-time management
 

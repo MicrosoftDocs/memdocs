@@ -44,7 +44,7 @@ In this article, you learn how to create and assign an app protection policy in 
 > To complete this step, you must:
 > - [Create a user](../../fundamentals/tenant-administration/quickstart-create-user.md).
 > - [Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md).
-> - [Enroll a device](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md)
+> - [Enroll a device](../../device-enrollment/windows/quickstart-automatic-mdm.md)
 > - [Add and assign an app](../deployment/quickstart-add-assign.md).
 :::column-end:::
 :::row-end:::
