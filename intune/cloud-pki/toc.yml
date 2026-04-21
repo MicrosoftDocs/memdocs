@@ -7,17 +7,17 @@ items:
 - name: Configure and deploy
   items:
   - name: Deployment overview
-    href: deploy.md
+    href: deployment-models.md
   - name: Configure root and issuing CA for Cloud PKI
     href: configure-ca.md
     displayName: root, certification, authority, ca, issuing, BYO
   - name: Configure bring your own CA for Cloud PKI
     href: configure-byoca.md
   - name: Manage expiring Cloud PKI CAs
-    href: renew-ca.md
+    href: manage-ca-expiration.md
 - name: Monitor issued certificates
-  href: monitor.md
+  href: monitor-certificates.md
 - name: Get audit logs
   href: audit-logs.md
 - name: Pause, revoke, and delete CA
-  href: delete.md
+  href: delete-ca.md

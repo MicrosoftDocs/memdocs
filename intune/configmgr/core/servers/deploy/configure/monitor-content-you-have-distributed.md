@@ -193,7 +193,7 @@ Displays the sources from which clients got content:
 >
 > - Deploy Windows express updates
 >
-> For more information, see [Manage Express installation files for Windows updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+> For more information, see [Manage Express installation files for Windows updates](/previous-versions/troubleshoot/configmgr/manage-express-installation-files-for-windows-10-updates).
 
 #### Content downloads using fallback source
 

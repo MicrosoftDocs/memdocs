@@ -180,7 +180,7 @@ Look in `StateMessage.log`. In the following example, you see that `TaskID` is n
 ``` XML
 StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
 <Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1
-</ClientType><ClientID>GUID:DBAC52C9-57E6-47D7-A8D6-E0A5A64B57E6</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
+</ClientType><ClientID>GUID:00001111-aaaa-2222-bbbb-3333cccc4444</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
 <NetBIOSName>R613924</NetBIOSName><CodePage>437</CodePage>
 <SystemDefaultLCID>1033</SystemDefaultLCID><Priority>0</Priority></Machine></Identification>
 <ReportDetails><ReportContent>State Message Data</ReportContent><ReportType>Full</ReportType>
@@ -199,7 +199,7 @@ Open `statesys.log` to see if the message is received and processed. In the foll
 ``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
 16"?>~~<Report><ReportHeader><Identification><Machine><ClientInstalled>1</ClientInstalled><ClientType>1
-</ClientType><ClientID>GUID:DBAC52C9-57E6-47D7-A8D6-E0A5A64B57E6</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
+</ClientType><ClientID>GUID:00001111-aaaa-2222-bbbb-3333cccc4444</ClientID><ClientVersion>5.00.8670.1000</ClientVersion>
 <NetBIOSName>R613924</NetBIOSName><CodePage>437</CodePage>
 <SystemDefaultLCID>1033</SystemDefaultLCID><Priority>0</Priority></Machine></Identification>
 <ReportDetails><ReportContent>State Message Data</ReportContent><ReportType>Full</ReportType>

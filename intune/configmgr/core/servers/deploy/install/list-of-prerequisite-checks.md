@@ -709,7 +709,7 @@ Starting in version 2203, this warning appears if there are site system roles in
 
 For more information, see [Remove a site system role](uninstall-sites-and-hierarchies.md#bkmk_role).
 
-The device management point is also deprecated. It's a management point that you allow for mobile and macOS devices. You can entirely remove the role, or you can reconfigure the management point. On the properties of the management point site system role, disable the option to **Allow mobile devices and Mac Computer to use this management point**, This option effectively turns the _device_ management point into a regular management point. For more information, see [Configure roles for on-premises MDM](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md#configure-roles).
+The device management point is also deprecated. It's a management point that you allow for mobile and macOS devices. You can entirely remove the role, or you can reconfigure the management point. On the properties of the management point site system role, disable the option to **Allow mobile devices and Mac Computer to use this management point**, This option effectively turns the _device_ management point into a regular management point. For more information, see [Configure roles for on-premises MDM](/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm#configure-roles).
 
 ### Check if the site uses Microsoft Operations Management Suite (OMS) Connector
 

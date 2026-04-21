@@ -162,7 +162,7 @@ When you select **Create** from the Server app dialog, it opens the Create Serve
 - **HomePage URL**: This value isn't used by Configuration Manager, but required by Microsoft Entra ID. By default this value is `https://ConfigMgrService`.
 - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
-  - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+  - `api://{tenantId}/{string}`, for example, `api://aaaabbbb-0000-cccc-1111-dddd2222eeee/ConfigMgrService`
   - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
 - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
@@ -206,7 +206,7 @@ When you select **Import** from the Client App dialog, it opens the Import apps 
 After entering the information, select **Verify**. Then select **OK** to close the Import apps dialog. This action returns to the [Client App dialog](#client-app-dialog).
 
 > [!TIP]
-> When you register the app in Microsoft Entra ID, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/a26a653e-17aa-43eb-ab36-0e36c7d29f49`.<!-- SCCMDocs#1135 -->
+> When you register the app in Microsoft Entra ID, you may need to manually specify the following **Redirect URI**: `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Specify the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/00001111-aaaa-2222-bbbb-3333cccc4444`.<!-- SCCMDocs#1135 -->
 
 #### Create Client Application dialog
 

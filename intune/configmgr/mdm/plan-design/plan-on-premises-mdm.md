@@ -19,7 +19,7 @@ There are several key areas to review when you're planning to implement on-premi
 - Device enrollment
 
 > [!IMPORTANT]
-> While the site or any mobile device doesn't connect to Microsoft Intune, your organization still requires Intune licenses to use this feature. For more information, see [Microsoft Intune licensing](/mem/intune-service/fundamentals/licenses).
+> While the site or any mobile device doesn't connect to Microsoft Intune, your organization still requires Intune licenses to use this feature. For more information, see [Microsoft Intune licensing](/mem/fundamentals/licensing/index).
 
 Consider the following requirements before preparing the Configuration Manager infrastructure to handle on-premises MDM.
 
@@ -71,4 +71,4 @@ For more information, see [Set up device enrollment for on-premises MDM](../get-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Install site system roles](../get-started/install-site-system-roles-for-on-premises-mdm.md)
+> [Install site system roles](/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm)

@@ -1,0 +1,9 @@
+items:
+- name: Windows LAPS overview
+  href: overview.md
+- name: Deploy Windows LAPS policy
+  href: deploy-policy.md
+- name: Windows LAPS reports
+  href: monitor.md
+- name: macOS LAPS
+  href: setup-macos.md

@@ -34,7 +34,7 @@ The following entries are logged in **ccmsetup.log** of the client:
 
 ```log
 Getting AAD info from CMG 'CMG.CLOUDAPP.NET'
-SMS CCM 5.0: Host=CMG.CLOUDAPP.NET, Path=/CCM_Proxy_ServerAuth/AADAuthInfo?TenantID=9aaf466a-3f40-4468-b3cd-f0010f21f05a, Port=443, Protocol=https, CcmTokenAuth=0, Flags=0x1304, Options=0xe0
+SMS CCM 5.0: Host=CMG.CLOUDAPP.NET, Path=/CCM_Proxy_ServerAuth/AADAuthInfo?TenantID=aaaabbbb-0000-cccc-1111-dddd2222eeee, Port=443, Protocol=https, CcmTokenAuth=0, Flags=0x1304, Options=0xe0
 Created connection on port 443
 Enabled SSL revocation check.
 ```
@@ -51,7 +51,7 @@ Enabled SSL revocation check.
 On a Windows Azure AD domain-joined device, ccmsetup uses the Microsoft Entra properties to request a Microsoft Entra token calling the ADALOperation provider. The following entries are logged in **ccmsetup.log** on the client:
 
 ``` Log
-Getting AAD (device) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8b, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
+Getting AAD (device) token with: ClientId = 00001111-aaaa-2222-bbbb-3333cccc4444, ResourceUrl = https://ConfigMgrService, AccountId = https://login.microsoftonline.com/common/oauth2/token
 ```
 
 If the device token request fails, ccmsetup falls back to try requesting a Microsoft Entra user token. If the device can't get either a Microsoft Entra device or user token, ccmsetup doesn't continue.
@@ -66,7 +66,7 @@ Unknown error (Error: D0090016; Source: Unknown)
 Failed to get AAD token for 'S-1-5-18' from WAM API. Error 0xd0090016
 Falling back to get user 'S-1-5-21-1527250992-855612568-2252598708-1604' token for system...
 Getting AAD (user) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8, ResourceUrl = https://ConfigMgrService, AccountId = 149FC29A-ECE3-123-A3C1-123456F035A6E
-Retrieved AAD token for AAD user 'e8838041-db7a-42d5-b9ae-78813910e4cc'
+Retrieved AAD token for AAD user '00aa00aa-bb11-cc22-dd33-44ee44ee44ee'
 ```
 
 ### 3. Configuration Manager client token request
@@ -108,9 +108,9 @@ The following entries are logged in **CCM_STS.log** of the site system that host
 ``` Log
 ProcessRequest - Start
 Incoming request URL: https://MP.MYCORP.COM/CCM_STS
-Validated AAD token. TokenType: UDA TenantId: 2ca9a796-a1a6-43ec-88f1-5935b32155c5 UserId: e8838041-db7a-42d5-b9ae-78813910e4cc DeviceId: 8d2b4ff9-0172-4998-9851-b5324303385f OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:
+Validated AAD token. TokenType: UDA TenantId: bbbbcccc-1111-dddd-2222-eeee3333ffff UserId: 00aa00aa-bb11-cc22-dd33-44ee44ee44ee DeviceId: 00aa00aa-bb11-cc22-dd33-44ee44ee44ee OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:
 TokenType is UDA
-Created SCCM token, token type: UDA, hierarchyId: 8ed3174b-e814-41b5-b51c-fb368f0d4003, userId: 23bbbba2-702e-4db4-8fd9-3b4fe3a5175d, deviceId: GUID:13E80CEF-5698-4C63-9ED6-E58FBFF78C38
+Created SCCM token, token type: UDA, hierarchyId: 8ed3174b-e814-41b5-b51c-fb368f0d4003, userId: 22cc22cc-dd33-ee44-ff55-66aa66aa66aa, deviceId: GUID:33dd33dd-ee44-ff55-aa66-77bb77bb77bb
 Issued token
 Return token to client
 ```
@@ -158,7 +158,7 @@ RegEndPoint: Event notification: CCM_RemoteClient_Reassigned
 RegEndPoint: Received notification for site assignment change from '<none>' to 'MEM'.
      ...
 [RegTask] - Starting registration, attempt 1.
-[RegTask] - Client is not registered. Sending registration request for GUID:C66EE0FD-08E7-4B38-B282-7E6954B71139 ...
+[RegTask] - Client is not registered. Sending registration request for GUID:22223333-cccc-4444-dddd-5555eeee6666 ...
 Registering client using AAD auth.
 ```
 
@@ -169,8 +169,8 @@ Registering client using AAD auth.
 The client requests a new Microsoft Entra token to register using Microsoft Entra authentication. It prefers a device token, but if it's not available, the client falls back to request a Microsoft Entra user token. The following entries are logged in **ADALOperationProvider.log** of the client:
 
 ``` Log
-Getting AAD (user) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8, ResourceUrl = https://ConfigMgrService, AccountId = 9756a359-f76a-47d5-8662-9a837012fc35
-Retrieved AAD token for AAD user 'e8838041-db7a-42d5-b9ae-78813910e4cc'
+Getting AAD (user) token with: ClientId = 0b7c8ab3-9ea1-4ffa-b2b9-8ffdd944bd8, ResourceUrl = https://ConfigMgrService, AccountId = 11112222-bbbb-3333-cccc-4444dddd5555
+Retrieved AAD token for AAD user '00aa00aa-bb11-cc22-dd33-44ee44ee44ee'
 ```
 
 ### 3. Registration request
@@ -182,8 +182,8 @@ The registration component on the management point handles the client registrati
 The following entries are logged in the **MP_RegistrationManager.log** of the site system that hosts the management point that handles the client request:
 
 ``` Log
-Registering device using AAD auth: DeviceId='8d2b4ff9-0172-4998-9851-b5324303385f ', TenantId='c8c82542-203c-4df9-9d86-cdd4dae67e0a'
-Processing Registration request from Client 'GUID:C66EE0FD-08E7-4B38-B282-7E6954B71139'
+Registering device using AAD auth: DeviceId='11bb11bb-cc22-dd33-ee44-55ff55ff55ff ', TenantId='ccccdddd-2222-eeee-3333-ffff4444aaaa'
+Processing Registration request from Client 'GUID:22223333-cccc-4444-dddd-5555eeee6666'
 ```
 
 #### 3.2 Configuration Manager client is registered
@@ -191,7 +191,7 @@ Processing Registration request from Client 'GUID:C66EE0FD-08E7-4B38-B282-7E6954
 If registration succeeds, the client gets a confirmation message of registration with **Approval 3** for Microsoft Entra ID-based registration. The following entries are logged in **ClientIDManagerStartup.log** of the client:
 
 ``` Log
-[RegTask] - Client is registered. Server assigned ClientID is GUID:C66EE0FD-08E7-4B38-B282-7E6954B71139. Approval status 3
+[RegTask] - Client is registered. Server assigned ClientID is GUID:22223333-cccc-4444-dddd-5555eeee6666. Approval status 3
 ```
 
 ### 4. Configuration Manager client token request
@@ -228,9 +228,9 @@ The following entries are logged in **CCM_STS.log** of the site system that host
 ``` Log
 ProcessRequest - Start
 Incoming request URL: https://MP.MYCORP.COM/CCM_STS
-Validated AAD token. TokenType: UDA TenantId: 2ca9a796-a1a6-43ec-88f1-5935b32155c5 UserId: e8838041-db7a-42d5-b9ae-78813910e4cc DeviceId: 8d2b4ff9-0172-4998-9851-b5324303385f OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:
+Validated AAD token. TokenType: UDA TenantId: bbbbcccc-1111-dddd-2222-eeee3333ffff UserId: 00aa00aa-bb11-cc22-dd33-44ee44ee44ee DeviceId: 00aa00aa-bb11-cc22-dd33-44ee44ee44ee OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:
 TokenType is UDA
-Created SCCM token, token type: UDA, hierarchyId: 8ed3174b-e814-41b5-b51c-fb368f0d4003, userId: 23bbbba2-702e-4db4-8fd9-3b4fe3a5175d, deviceId: GUID:13E80CEF-5698-4C63-9ED6-E58FBFF78C38
+Created SCCM token, token type: UDA, hierarchyId: 8ed3174b-e814-41b5-b51c-fb368f0d4003, userId: 22cc22cc-dd33-ee44-ff55-66aa66aa66aa, deviceId: GUID:33dd33dd-ee44-ff55-aa66-77bb77bb77bb
 Issued token
 Return token to client
 ```

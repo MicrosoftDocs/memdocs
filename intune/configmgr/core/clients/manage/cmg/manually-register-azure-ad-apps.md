@@ -21,12 +21,15 @@ When you integrate the site, you create app registrations in Microsoft Entra ID.
 - **Web app** (also referred to as a _server_ app in Configuration Manager)
 - **Native app** (also referred to as a _client_ app in Configuration Manager)
 
-There are two methods to create these apps, both of which require a **global administrator** role in Microsoft Entra ID:
+There are two methods to create these apps, both of which require a **Global Administrator** role in Microsoft Entra ID:
 
 - Use Configuration Manager to automate the creation of the apps when you integrate the site.
 - Manually create the apps in advance, and then import them when you integrate the site.
 
 This article provides the specific details for the second method. Pair these instructions with the procedures in the [Configure Microsoft Entra ID for CMG](configure-azure-ad.md) article to complete the process.
+
+> [!IMPORTANT]
+> [!INCLUDE [global-administrator](../../../../includes/global-administrator-configmgr.md)]
 
 ## Get tenant details
 
@@ -87,7 +90,7 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
     1. For the Application ID URI, select **Add**. Specify a URI that's unique for the tenant. You'll use this value later as the _App ID URI_. Use one of the following recommended formats:<!-- 10617402 -->
 
-       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+       - `api://{tenantId}/{string}`, for example, `api://aaaabbbb-0000-cccc-1111-dddd2222eeee/ConfigMgrService`
        - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
         Select **Save**.
@@ -136,7 +139,7 @@ The web (server) app for CMG is now registered in Microsoft Entra ID.
 
         1. In the Configure platforms pane, select **Mobile and desktop applications**.
 
-        1. In the **Configure Desktop + devices** pane, under Custom redirect URIs, specify `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Use the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/2afe572e-d268-4c77-a22d-fdca617e2255`. <!-- this example GUID is just the ms.assetid of this article :) -->
+        1. In the **Configure Desktop + devices** pane, under Custom redirect URIs, specify `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Use the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/00001111-aaaa-2222-bbbb-3333cccc4444`.
 
         1. Select **Configure**.
 
@@ -158,7 +161,7 @@ The web (server) app for CMG is now registered in Microsoft Entra ID.
 
     Select **Save**.
 
-The native (client) app for CMG is now registered in Microsoft Entra ID. This step also concludes the process in the Azure portal. The role of the Azure global administrator is done.
+The native (client) app for CMG is now registered in Microsoft Entra ID. This step also concludes the process in the Azure portal. The role of the Microsoft Entra Global Administrator is done.
 
 ## Import the apps to Configuration Manager
 

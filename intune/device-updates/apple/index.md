@@ -65,7 +65,7 @@ When designing your Apple device update strategy, align with your organization's
 
 # [**Latest version**](#tab/automatic-updates)
 
-1. [Create a settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
+1. [Create a settings catalog policy](../../device-configuration/settings-catalog/index.md) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
    |--|--|--|
@@ -75,11 +75,11 @@ When designing your Apple device update strategy, align with your organization's
    > [!NOTE]
    > Once an update enforcement is assigned, the update may install before the deadline if the device is idle or automatic update actions are configured to Always On. 
    
-1. [Assign the policy](/intune/intune-service/configuration/device-profile-assign) to a group to target users or devices.
+1. [Assign the policy](../../device-configuration/assign-device-profile.md) to a group to target users or devices.
 
 # [**Targeted version**](#tab/manual-updates)
 
-1. [Create a settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
+1. [Create a settings catalog policy](../../device-configuration/settings-catalog/index.md) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
     |--|--|--|
@@ -88,11 +88,11 @@ When designing your Apple device update strategy, align with your organization's
     | **Declarative Device Management** > **Software Update** | **Target Date Time**<br> Select or manually enter the date and the time that specifies when to force the installation of the software update.<br><br>The **Target Date Time** setting schedules the update using the local timezone of the device. For example, an admin configures an update to install at 2PM. The policy schedules the update to happen at 2PM in the local timezone of devices that receive the policy.<br><br>If the user doesn't trigger the software update before this time, then a one-minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.<br>If the device is powered off when the deadline is met, when the device powers back on, there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.|
     | **Declarative Device Management** > **Software Update** | **Target OS Version**<br><br> Select or manually enter the target OS version to update the device to. This value is the OS version number, like `26.0`. You can also include a supplemental version identifier, like `26.0.1`.|
 
-1. [Assign the policy](/intune/intune-service/configuration/device-profile-assign) to a group to target users or devices.
+1. [Assign the policy](../../device-configuration/assign-device-profile.md) to a group to target users or devices.
 
 ---
 
-For more information about configuring Software Update policies and the available settings, see [Software Update](../../intune-service/configuration/apple-settings-catalog-configurations.md#software-update).
+For more information about configuring Software Update policies and the available settings, see [Software Update](../../device-configuration/settings-catalog/ref-apple-settings.md#software-update).
 
 ## Software Update Settings
 
@@ -104,21 +104,21 @@ When you configure software updates, you might want to manage aspects of the sof
 - Suppress update notifications up to one hour before the enforcement deadline.
 - Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
 
-For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../intune-service/configuration/apple-settings-catalog-configurations.md#software-update-settings).
+For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../device-configuration/settings-catalog/ref-apple-settings.md#software-update-settings).
 
 ## Monitor policy settings deployment
 
-Software update policy settings use the same reporting as other device configuration policies. For more information, see [Monitor device configuration policies](../../intune-service/configuration/device-profile-monitor.md).
+Software update policy settings use the same reporting as other device configuration policies. For more information, see [Monitor device configuration policies](../../device-configuration/monitor-device-profile.md).
 
 A policy that reports *Success* only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update.\
 After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.
 
-To monitor the update status of your Apple devices, see [View Software Update Reports for Apple Devices](reports.md).
+To monitor the update status of your Apple devices, see [View Software Update Reports for Apple Devices](monitor-reports.md).
 
 ## Related articles
 
-- [View Software Update Reports for Apple Devices](reports.md)
-- [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
-- [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
+- [View Software Update Reports for Apple Devices](monitor-reports.md)
+- [Software updates planning guide for supervised iOS/iPadOS devices in Intune](planning-guide-ios-ipados.md)
+- [Software updates planning guide for managed macOS devices in Intune](planning-guide-macos.md)
 
 To learn more about the Apple declarative device management process, see [Installing and enforcing software updates for Apple devices](https://support.apple.com/guide/deployment/installing-and-enforcing-software-updates-depd30715cbb/web) in the Apple documentation.

@@ -14,16 +14,16 @@ highlightedContent:
   items:
     - title: What is Microsoft Intune?
       itemType: overview
-      url: ./intune-service/fundamentals/what-is-intune.md
+      url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: whats-new
-      url: ./intune-service/fundamentals/whats-new.md
+      url: ./whats-new/index.md
     - title: Features in development
       itemType: whats-new
-      url: ./intune-service/fundamentals/in-development.md
+      url: ./whats-new/in-development.md
     - title: Microsoft Intune Suite add-ons
       itemType: overview
-      url: ./intune-service/fundamentals/intune-add-ons.md
+      url: ./fundamentals/add-ons.md
 
 
 productDirectory:
@@ -34,17 +34,17 @@ productDirectory:
     - title: Device enrollment
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
       summary: Enroll and prepare devices for management, including Windows Autopilot scenarios.
-      url: ./intune-service/fundamentals/deployment-guide-enrollment.md
+      url: ./device-enrollment/guide.md
 
     - title: Device configuration
       imageSrc: ./media/icons/hub-page/devices.svg
       summary: Configure settings and features across managed devices.
-      url: ./intune-service/configuration/device-profiles.md
+      url: ./device-configuration/overview.md
 
     - title: Application management
       imageSrc: ./media/icons/hub-page/apps.svg
       summary: Deploy and manage apps across platforms.
-      url: ./intune-service/apps/app-management.md
+      url: ./app-management/overview.md
 
     - title: Device updates 
       imageSrc: ./media/icons/hub-page/device-updates.svg
@@ -54,17 +54,17 @@ productDirectory:
     - title: Device security
       imageSrc: ./media/icons/hub-page/device-security.svg
       summary: Secure devices using endpoint security policies, security baselines, and Defender integrations in Intune.
-      url: ./intune-service/protect/device-protect.md
+      url: ././device-security/index.md
 
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
       summary: Evaluate device compliance in Intune and integrate compliance with Conditional Access to protect access to resources.
-      url: ./intune-service/protect/device-compliance-get-started.md
+      url: ././device-security/compliance/overview.md
 
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Protect corporate data at the app level without requiring device enrollment.
-      url: ./intune-service/apps/app-protection-policy.md
+      url: ./app-management/protection/overview.md
 
     - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/agent.svg
@@ -79,12 +79,12 @@ productDirectory:
     - title: Remote actions and support
       imageSrc: ./media/icons/hub-page/remote-actions.svg
       summary: Take actions on devices and help users remotely.
-      url: ./intune-service/remote-actions/index.md
+      url: device-management/actions/index.md
 
     - title: Administration and governance
       imageSrc: ./media/icons/hub-page/administration.svg
       summary: Manage administrative access, roles, scope, and governance features to operate Intune securely and at scale.
-      url: ./intune-service/fundamentals/role-based-access-control.md
+      url: ./fundamentals/role-based-access-control/overview.md
 
     - title: Configuration Manager and co-management 
       imageSrc: ./media/icons/hub-page/co-management.svg
@@ -101,32 +101,35 @@ conceptualContent:
       - title: Get started
         summary: Resources to see Intune capabilities, get access to the admin center, and plan your deployment.
         links:
-        - url: ./intune-service/fundamentals/account-sign-up.md
+        - url: ./fundamentals/account-sign-up.md
           itemType: get-started
           text: Sign up or sign in to Microsoft Intune
         - url: https://aka.ms/Intune_GuidedDemo
           itemType: get-started
           text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/licenses.md
+        - url: ./fundamentals/licensing/index.md
           itemType: get-started
           text: Microsoft Intune licensing
-        - url: ./intune-service/fundamentals/intune-planning-guide.md
+        - url: ./fundamentals/planning-guide.md
           itemType: get-started
           text: Plan your Intune deployment
-        - url: ./intune-service/fundamentals/supported-devices-browsers.md
+        - url: ./fundamentals/ref-supported-platforms.md
           itemType: get-started
           text: Supported platforms and requirements
+        - url: ./privacy-compliance.yml
+          itemType: overview
+          text: Privacy and compliance
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
-        - url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
+        - url: ./fundamentals/platform-guide-windows.md
           itemType: how-to-guide
           text: Manage Windows devices
-        - url: ./intune-service/fundamentals/deployment-guide-platform-android.md
+        - url: ./fundamentals/platform-guide-android.md
           itemType: how-to-guide
           text: Manage Android devices
-        - url: ./intune-service/fundamentals/deployment-guide-platform-ios-ipados.md
+        - url: ./fundamentals/platform-guide-ios-ipados.md
           itemType: how-to-guide
           text: Manage iOS/iPadOS devices
         - text: Education
@@ -134,7 +137,7 @@ conceptualContent:
           url: ./intune-service/industry/education/introduction-intune-education.md
         - text: Government
           itemType: architecture
-          url: ./intune-service/fundamentals/intune-govt-service-description.md
+          url: ./fundamentals/government-service.md
 
       - title: Community and support
         summary: Check out Intune community resources for blogs, announcements, discussions, and more.
@@ -154,6 +157,10 @@ conceptualContent:
           - text: Feedback for Intune
             itemType: whats-new
             url: https://aka.ms/IntuneFeedback
+          - url: ./user-help/index.yml
+            itemType: overview
+            text: User help documentation
+
 
 
       - title: Related services

@@ -1,0 +1,21 @@
+items:
+  - name: Microsoft Tunnel overview
+    href: ./overview.md
+  - name: Microsoft Tunnel prerequisites
+    href: ./prerequisites.md
+  - name: Configure Microsoft Tunnel
+    href: ./install.md
+  - name: Microsoft Tunnel for MAM
+    items:
+      - name: Microsoft Tunnel for MAM Overview
+        href: ./mam.md
+      - name: MAM Tunnel for Android
+        href: ./mam-android.md
+      - name: MAM Tunnel for iOS
+        href: ./mam-ios.md
+  - name: Monitor Microsoft Tunnel
+    href: ./monitor.md
+  - name: Upgrade Microsoft Tunnel
+    href: ./upgrade.md
+  - name: Microsoft Tunnel with Conditional Access
+    href: ./conditional-access.md

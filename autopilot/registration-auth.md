@@ -39,11 +39,11 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
     1. Select the **Request a reseller relationship** link:
 
-        :::image type="content" source="images/csp1.png" alt-text="Request a reseller relationship.":::
+        :::image type="content" source="images/csp1.png" alt-text="Request a reseller relationship." lightbox="images/csp1.png":::
 
     1. Select the checkbox indicating if delegated admin rights are desired:
 
-        :::image type="content" source="images/csp2.png" alt-text="Delegated rights.":::
+        :::image type="content" source="images/csp2.png" alt-text="Delegated rights." lightbox="images/csp2.png":::
 
         > [!NOTE]
         >
@@ -51,31 +51,28 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
     1. Send the template in the previous step to the customer via email.
 
-1. Customer with Microsoft Admin Center global administrator privileges selects the link in email. The link takes them to the following [Microsoft 365 admin center](https://admin.microsoft.com/) page:
+1. Customer with Microsoft 365 admin center Global Administrator privileges selects the link in email. The link takes them to the following [Microsoft 365 admin center](https://admin.microsoft.com/) page:
 
-    :::image type="content" source="images/csp3a.png" alt-text="Screenshot of Accept agreement and authorize partner page - delegated admin rights.":::
+    :::image type="content" source="images/csp3a.png" alt-text="Screenshot of Accept agreement and authorize partner page - delegated admin rights." lightbox="images/csp3a.png":::
 
     The above image is what the customer sees if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
 
-    :::image type="content" source="images/csp3b.png" alt-text="Screenshot of Accept agreement and authorize partner page.":::
+    :::image type="content" source="images/csp3b.png" alt-text="Screenshot of Accept agreement and authorize partner page." lightbox="images/csp3b.png":::
 
-    > [!NOTE]
-    >
-    > A user without global administrator privileges who selects the link sees a message similar to the following message:
+    A user without Global Administrator privileges who selects the link sees a message similar to the following message:
 
-    :::image type="content" source="images/csp4.png" alt-text="Screenshot of permission page.":::
+    :::image type="content" source="images/csp4.png" alt-text="Screenshot of permission page." lightbox="images/csp4.png":::
 
 1. Customer selects the **Yes** checkbox, followed by the **Accept** button. Authorization happens instantaneously.
 
 1. To check that the authorization request is complete, the CSP can check the **Customers** list in their Microsoft Partner Center account. If the customer is in the list, the request is complete. For example:
 
-    :::image type="content" source="images/csp5.png" alt-text="Customers.":::
+    :::image type="content" source="images/csp5.png" alt-text="Customers." lightbox="images/csp5.png":::
 
 <!-- MAXADO-9048730 -->
 
 > [!IMPORTANT]
->
-> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
+> [!INCLUDE [global-administrator](../autopilot/includes/global-administrator.md)]
 
 ## OEM authorization
 
@@ -85,17 +82,15 @@ OEMs who are eligible of using Direct API solution have a unique link to provide
 
 1. OEM emails link to their customer.
 
-1. Customer signs into the [Microsoft 365 admin center](https://admin.microsoft.com/) using a cloud-native account (for example, [domain].onmicrosoft.com) with global administrator privileges.
+1. Customer signs into the [Microsoft 365 admin center](https://admin.microsoft.com/) using a cloud-native account (for example, [domain].onmicrosoft.com) with Global Administrator privileges.
 
 1. Customer selects the link in the email, which takes them directly to the following page:
 
-    :::image type="content" source="images/csp6.png" alt-text="Screenshot of Accept partner invitation page.":::
+    :::image type="content" source="images/csp6.png" alt-text="Screenshot of Accept partner invitation page." lightbox="images/csp6.png":::
 
-    > [!NOTE]
-    >
-    > A user without global admin privileges who selects the link sees a message similar to the following message:
+    A user without Global Administrator privileges who selects the link sees a message similar to the following message:
 
-    :::image type="content" source="images/csp7.png" alt-text="Screenshot of MSfB permission required page.":::
+    :::image type="content" source="images/csp7.png" alt-text="Screenshot of MSfB permission required page." lightbox="images/csp7.png":::
 
 1. Customer selects the **Yes** checkbox, followed by the **Accept** button, and they're done. Authorization happens instantaneously.
 
@@ -107,11 +102,8 @@ OEMs who are eligible of using Direct API solution have a unique link to provide
 
     > [!NOTE]
     >
-    > This API is discussed in the latest version of the [API Whitepaper, p. 14ff](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx). This link is only accessible by Microsoft Device Partners. As discussed in this article, it's a best practice recommendation for OEM partners to run the API check to confirm customer consent is received before attempting to register devices. This check can help avoid errors in the registration process.
-
-    > [!NOTE]
-    >
-    > During the OEM authorization registration process, no delegated admin permissions are granted to the OEM.
+    > - This API is discussed in the [API Whitepaper, p. 14ff](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx). This link is only accessible by Microsoft Device Partners. As discussed in this article, it's a best practice recommendation for OEM partners to run the API check to confirm customer consent is received before attempting to register devices. This check can help avoid errors in the registration process.
+    > - During the OEM authorization registration process, no delegated admin permissions are granted to the OEM.
 
 ## Summary
 

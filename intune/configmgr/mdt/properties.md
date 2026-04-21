@@ -130,7 +130,7 @@ Account credentials that will be used when promoting the server to a domain cont
 
 |**Example**|
 |-|
-|`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=complex_password`|
+|`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password>`|
 
 ### Administrators
 
@@ -4002,7 +4002,7 @@ Instead of generating a random recovery password, the **Enable BitLocker** task 
 
 |**Example**|
 |-|
-|`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerRecoveryPassword=621280128854709621167486709731081433315062587367 OSDBitLockerStartupKeyDrive=C:`|
+|`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerRecoveryPassword=<48_digit_numerical_password> OSDBitLockerStartupKeyDrive=C:`|
 
 ### OSDBitLockerStartupKey
 
@@ -5994,8 +5994,8 @@ Specifies the users who will be assigned affinity with a specific device using t
 | CustomSettings.ini | ✅ | \| |  |  |
 | MDT DB | ✅ | \| | ZTI (Configuration Manager) | ✅ |
 
-|     **Value**     |                                                                                                                                                                **Description**                                                                                                                                                                |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Value**  |  **Description**   |
+|---|---|
 | *user1, user2, ...* | The comma-separated list of users in *Domain\User_Name* format that will be assigned affinity with the target device.<br><br> Note:<br><br> You can only use the NetBIOS domain name in this value, such as *Fabrikam\Ken*. You cannot use the fully qualified domain name (fabrikam.com\Ken) or the UPN notation (ken@fabrikam.com). |
 
 |**Example**|

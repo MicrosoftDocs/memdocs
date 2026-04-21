@@ -1,0 +1,55 @@
+items:
+  - name: Copilot in Intune
+    displayName: ai, copilot
+    href: ./index.md
+  - name: Explore your Intune data
+    displayName: ai, copilot, explore, data, query
+    href: ./explorer.md
+  - name: Troubleshoot a device using Copilot
+    href: ./troubleshoot-devices.md
+  - name: Copilot in Intune FAQ
+    href: ./faq.md
+  - name: Intune plugin in Security Copilot
+    href: ./security-copilot.md
+  - name: Copilot in Surface Management Portal
+    displayName: ai, copilot, surface, models, fleet, warranty
+    href: /surface/security-copilot-surface-management-portal?context=/intune/context
+  - name: Copilot in Windows 365 Cloud PCs
+    href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
+  - name: Security Copilot agents in Microsoft Intune
+    items:
+      - name: Overview
+        href: ./agents/index.md
+        displayName: security copilot agent
+      - name: Change Review Agent
+        items:
+          - name: Get started
+            href: ./agents/change-review-agent.md
+            displayName: Change Review Agent
+          - name: Use the agent
+            href: ./agents/manage-change-review-agent.md
+            displayName: Change Review Agent
+      - name: Device Offboarding Agent
+        items:
+          - name: Get started
+            href: ./agents/device-offboarding-agent.md
+            displayName: Device Offboarding Agent
+          - name: Use the agent
+            href: ./agents/manage-device-offboarding-agent.md
+            displayName: Device Offboarding Agent
+      - name: Policy Configuration Agent
+        items:
+          - name: Get started
+            href: ./agents/policy-configuration-agent.md
+            displayName: Policy Configuration Agent
+          - name: Use the agent
+            href: ./agents/manage-policy-configuration-agent.md
+            displayName: Policy Configuration Agent
+      - name: Vulnerability Remediation Agent
+        items:
+          - name: Get started
+            href: ./agents/vulnerability-remediation-agent.md
+            displayName: Vulnerability Remediation Agent
+          - name: Use the agent
+            href: ./agents/manage-vulnerability-remediation-agent.md
+            displayName: Vulnerability Remediation Agent

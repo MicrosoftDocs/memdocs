@@ -1,0 +1,31 @@
+items:
+- name: Windows in cloud configuration
+  items:
+  - name: Overview
+    displayName: cloud config, flw, windows
+    href: cloud-configuration.md
+  - name: Step-by-step guide
+    displayName: cloud config, flw, windows
+    href: setup-cloud-configuration.md
+- name: Move to cloud native endpoints
+  items:
+  - name: Overview and benefits
+    displayName: cloud native endpoints, windows
+    href: overview.md
+  - name: Tutorial-Get started with cloud native Windows endpoints
+    displayName: cloud native endpoints, windows
+    href: tutorial-cloud-native-setup.md
+  - name: Microsoft Entra concepts and on-premises resources
+    items:
+    - name: Microsoft Entra joined vs. Microsoft Entra hybrid joined
+      displayName: cloud native endpoints, windows
+      href: entra-join-types.md
+    - name: Access on-premises resources
+      displayName: cloud native endpoints, windows
+      href: on-premises-resources.md
+  - name: Planning guide
+    displayName: cloud native endpoints, windows
+    href: planning-guide.md
+  - name: Known issues
+    displayName: cloud native endpoints, windows
+    href: troubleshoot.md
