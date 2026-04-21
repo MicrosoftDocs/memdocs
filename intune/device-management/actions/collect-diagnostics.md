@@ -81,6 +81,9 @@ The *collect diagnostics* remote action lets you collect and download managed de
 
 ## How to collect diagnostics
 
+> [!NOTE]
+> Diagnostics can't be collected or downloaded by calling Microsoft Graph directly. Use the Intune admin center to collect and download diagnostics.
+
 ::: zone pivot="android,ios"
 
 The Microsoft 365 remote application diagnostics enables admins to request Intune app protection diagnostics and Microsoft 365 application diagnostics (where applicable).
