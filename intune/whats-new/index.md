@@ -204,6 +204,17 @@ This feature is initially available for Windows, with additional platforms to fo
 > Applies to:
 >
 > - Windows 10/11
+
+### Tenant administration
+
+#### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
+
+The [Change Review Agent](../copilot/agents/change-review-agent.md) now provides risk-based recommendations directly in the Multi Admin Approval experience for Windows PowerShell scripts. On the *My requests* and *All requests* tabs, a new **Agent Response** column displays when a suggestion is available. You can then select the suggestion to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
+
+Change Review Agent suggestions continue to be available in the agent's primary experience as well.
+
+For more information, see [Change Review Agent suggestions in Multi Admin Approval](../fundamentals/role-based-access-control/multi-admin-approval.md#change-review-agent-suggestions-in-multi-admin-approval).
+
 ## Week of April 20, 2026  
 
 ### Device security  
