@@ -41,6 +41,6 @@ To access and use the Surface Management Portal:
 
 <!-- Reference links in article -->
 
-[INT-1]: /intune/device-configuration/templates/ref-dfci-settings-windows
+[INT-1]: ../../../device-configuration/templates/ref-dfci-settings-windows.md
 [MEM-1]: /autopilot/dfci-management
 [SURF-1]: /surface/surface-manage-dfci-guide

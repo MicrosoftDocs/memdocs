@@ -94,9 +94,9 @@ Support for the device enrollment setting requires end users have these Company 
 [!INCLUDE [android-company-portal-version-support](../../includes/android-company-portal-version-support.md)]
 
 > [!IMPORTANT]
-> These settings don't apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../../intune-service/enrollment/device-enrollment-program-enroll-ios.md). Regardless of configuration, these devices enroll during the out of box flow. The Company Portal prompts users to sign in when they launch it.
+> These settings don't apply to iOS/iPadOS devices configured to enroll with [Automated Device Enrollment](../../device-enrollment/apple/setup-automated-ios.md). Regardless of configuration, these devices enroll during the out of box flow. The Company Portal prompts users to sign in when they launch it.
 >
-> These settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../../intune-service/enrollment/android-samsung-knox-mobile-enroll.md) (KME). If a device is configured for KME and device enrollment is set to Unavailable, the device doesn't enroll during the out of box flow.
+> These settings do apply to Android devices configured with [Samsung Knox Mobile Enrollment](../../device-enrollment/android/setup-samsung-knox-mobile.md) (KME). If a device is configured for KME and device enrollment is set to Unavailable, the device doesn't enroll during the out of box flow.
 >
 > For the Android Company Portal app, Intune detects if the user's device is set up for [app protection policies without enrollment](../../device-enrollment/mam-without-enrollment.md). In this case, the user doesn't get prompted to enroll in the Company Portal. This behavior happens even if you configure the device enrollment setting to prompt enrollment. This behavior applies to all Android device types except Surface Duo devices.
 
@@ -124,7 +124,7 @@ Show or hide the device category prompt in Intune Company Portal.
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Let users select device categories in the Company Portal| N/A | If your tenant has device categories set up, users on targeted devices are prompted to choose a category when they sign in to Company Portal. Select **Block** to hide the prompt across all platforms. Select **Show** to display the prompt.   <br> <br> The category selection prompt goes away once someone chooses a category, and doesn't reappear. This setting is intended to be used with device categories. If there are no device categories in your tenant, no selection prompt appears. For more information about creating device categories, see [Categorize devices into groups](../../intune-service/enrollment/device-group-mapping.md).
+| Let users select device categories in the Company Portal| N/A | If your tenant has device categories set up, users on targeted devices are prompted to choose a category when they sign in to Company Portal. Select **Block** to hide the prompt across all platforms. Select **Show** to display the prompt.   <br> <br> The category selection prompt goes away once someone chooses a category, and doesn't reappear. This setting is intended to be used with device categories. If there are no device categories in your tenant, no selection prompt appears. For more information about creating device categories, see [Categorize devices into groups](../../device-management/create-device-categories.md).
 
 ### App sources
 

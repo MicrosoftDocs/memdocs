@@ -53,6 +53,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of April 20, 2026  
+
+### Device security  
+
+#### New reporting considerations for compliance policies<!-- 37266708 -->
+
+New guidance has been added to the Microsoft Intune compliance policy reporting documentation to help explain how device compliance results appear in Intune reports. This update clarifies expected reporting behavior related to device check-in timing and user association, helping you better interpret compliance policy reports. For more information, see [Known reporting behaviors](../device-security/compliance/monitor-policy.md#known-reporting-behaviors).  
+
 ## Week of April 6, 2026 
 
 ### Device enrollment  
@@ -895,8 +903,8 @@ The screens you can skip during macOS enrollment include:
 
 For more information about available Setup Assistant skipkeys, see:
 
-- [Set up automated device enrollment for iOS/iPadOS]( ../intune-service/enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)  
-- [Set up automated device enrollment for macOS]( ../intune-service/enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+- [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)  
+- [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
 ## Week of December 1, 2025
 

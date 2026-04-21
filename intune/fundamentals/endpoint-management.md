@@ -81,7 +81,7 @@ The admin center also plugs-in other key device management services, including:
 - [**Microsoft Entra Privileged Identity Management** to monitor access to important resources](/azure/active-directory/privileged-identity-management/pim-configure)
 - [**Microsoft Tunnel** VPN gateway solution that runs on Linux](../device-security/microsoft-tunnel/overview.md)
 - [**Mobile threat defense** partners](../device-security/mobile-threat-defense/overview.md)
-- [**Remote Help** for remote assistance](/intune/remote-help/index)
+- [**Remote Help** for remote assistance](../remote-help/index.md)
 - [**TeamViewer** for remote administration](../device-management/tools/teamviewer-legacy.md)
 - [**Windows 365** for your Windows virtual machines](/windows-365/overview)
 - [**Windows Autopatch** to automate updates](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
@@ -171,7 +171,7 @@ For more information, go to:
 
 ## Learn more
 
-- [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
+- [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/overview.md)
 - [Compare Microsoft 365 features and licensing](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)
 - [Learn more about Microsoft Intune licensing](../fundamentals/licensing/index.md)
 - [Get started with Microsoft Intune](./get-started.md)

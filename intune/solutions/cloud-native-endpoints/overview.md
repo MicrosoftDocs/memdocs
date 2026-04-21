@@ -27,20 +27,20 @@ In this set of articles, you will:
 
 - ✅ **Step through a tutorial** that creates a Windows device that's cloud-native:
 
-  - [Tutorial: Get started with cloud-native Windows endpoints with Microsoft Intune](cloud-native-windows-endpoints.md)
+  - [Tutorial: Get started with cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
 
 - ✅ **Learn more about the Microsoft Entra concepts** that are part of cloud-native endpoints, including accessing on-premises resources:
 
-  - [Entra joined vs. Hybrid Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-  - [Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+  - [Entra joined vs. Hybrid Entra joined](entra-join-types.md)
+  - [Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 
 - ✅ **Get guidance and advice** on moving your workloads and your organization to become cloud-native:
 
-  - [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md)
+  - [High level planning guide to move to cloud-native endpoints](planning-guide.md)
 
 - ✅ **Read about some scenarios** that can affect your cloud-native migration:
 
-  - [Known issues and important information](cloud-native-endpoints-known-issues.md)
+  - [Known issues and important information](troubleshoot.md)
 
 ## What are cloud-native endpoints
 
@@ -110,7 +110,7 @@ Cloud-native endpoints provide many benefits to end users and IT:
 
 ## How to get started
 
-The [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md) is a good resource. It covers the following areas:
+The [High level planning guide to move to cloud-native endpoints](planning-guide.md) is a good resource. It covers the following areas:
 
 - **Plan**: When ready to move to cloud-native endpoints, organizations focus on several key areas:
 
@@ -118,17 +118,17 @@ The [High level planning guide to move to cloud-native endpoints](cloud-native-e
   - Be prepared to change operational processes and procedures.
   - Get your end users ready for change.
 
-  For more specific information, go to the [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md).
+  For more specific information, go to the [High level planning guide to move to cloud-native endpoints](planning-guide.md).
 
 - **Create a Proof of Concept**: Do an initial proof of concept (POC). The goal is to understand changes and their impact.
 
-  For more specific information, go to the [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md).
+  For more specific information, go to the [High level planning guide to move to cloud-native endpoints](planning-guide.md).
 
 ## Follow the cloud-native endpoints guidance
 
 1. 🡺 **Overview: What are cloud-native endpoints?** (*You are here*)
-2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Entra joined vs. Hybrid Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
-6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
+3. [Concept: Entra joined vs. Hybrid Entra joined](entra-join-types.md)
+4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
+5. [High level planning guide](planning-guide.md)
+6. [Known issues and important information](troubleshoot.md)
