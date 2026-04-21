@@ -1901,7 +1901,7 @@ These changes apply to the following policies:
 ##### What you need to know
 
 - This change is only in the user experience (UX) that admins see when they create a new policy. There is no effect on devices.
-- The functionally is the same as the previous platform names.
+- The functionality is the same as the previous platform names.
 - There are no additional tasks or actions for existing policies.
 
 For more information on endpoint security features in Intune, see [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security-policies.md).
@@ -2471,7 +2471,7 @@ For more information about current RBAC permissions and built-in roles, see:
 
 > [!IMPORTANT]
 >
-> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, it's availability will be announced in this [What's new in Microsoft Intune](../index.md) article.
+> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, its availability will be announced in this [What's new in Microsoft Intune](../index.md) article.
 
 ## Week of June 3, 2024
 
@@ -3730,7 +3730,7 @@ We added a new health metric for Microsoft Tunnel named **TLS certificate revoca
 
 This metric runs as part of the existing Tunnel Health checks, and supports the following status:
 
-- *Healthy*: The TLs certificate isn't revoked
+- *Healthy*: The TLS certificate isn't revoked
 - *Warning*: Unable to check if the TLS certificate is revoked
 - *Unhealthy*: The TLS certificate is revoked, and should be updated
 

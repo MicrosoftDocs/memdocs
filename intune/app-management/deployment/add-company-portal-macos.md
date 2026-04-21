@@ -59,7 +59,7 @@ When creating an Automated Device Enrollment profile, you can choose the **Setup
 
 Use one of the ways documented above to deploy the macOS Company Portal to the devices enrolling with Setup Assistant with modern authentication so that the end user can authenticate and complete Microsoft Entra registration.
 
-Users must sign into the Company Portal to complete Microsoft Entra authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the enrollment and reach the home screen of the macOS device. If the tenant has multi-factor authentication turned on for these devices or users, the users will be asked to complete multi-factor authentication during Setup Assistant. Multi-factor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+Users must sign into the Company Portal to complete Microsoft Entra authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the enrollment and reach the home screen of the macOS device. If the tenant has multifactor authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during Setup Assistant. Multifactor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
 For more information about configuring Setup Assistant with modern authentication for macOS, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-profile).
 

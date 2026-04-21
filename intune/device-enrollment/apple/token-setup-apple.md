@@ -89,7 +89,7 @@ For more information and steps, see [Assign, reassign, or unassign devices in Ap
 
 Intune automatically connects with Apple Business Manager to sync device information from your enrollment program account.
 
-## Renew an enrollment program token
+## Renew an enrollment program token  
 
 Renew your enrollment program token yearly. The Intune admin center shows the token expiration date. Also renew the token in these situations:
 

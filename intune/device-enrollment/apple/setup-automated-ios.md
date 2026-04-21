@@ -330,29 +330,6 @@ You can pick a default profile to be applied to all devices that enroll with a s
 > [!NOTE]
 > Ensure that **Device Type Restrictions** under **Enrollment Restrictions** doesn't have the default **All Users** policy set to block the iOS/iPadOS platform. This setting causes automated enrollment to fail and your device shows as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which permits corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled through a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.  
 
-## Distribute devices
-
-You enabled management and syncing between Apple and Intune and assigned a profile so your ADE devices can be enrolled. You're now ready to distribute devices to users. Some things to know:
-
-- To use devices enrolled with user affinity, users must have an Intune license assigned.
-- Devices enrolled without user affinity typically don't have any associated users. These devices need to have an Intune device license. If a device without user affinity is used by an Intune-licensed user, a device license isn't needed.
-
-  To summarize, if a device has a user, the user needs to have an assigned Intune license. If the device doesn't have an Intune-licensed user, the device needs to have an Intune device license.
-
-  For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and the [Intune planning guide](../../fundamentals/planning-guide.md).
-
-- A device that is already activated needs to be wiped before it can enroll properly with automated device enrollment. After you wipe it but before activating it again, you can apply the enrollment profile. See [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516)
-
-- If you're enrolling with ADE and user affinity, the following error can happen during setup:
-
-  `The SCEP server returned an invalid response.`
-
-   You can resolve this error by trying to download the management again within 15 minutes. After 15 minutes, you have to factory reset the device to resolve the error. This error occurs because of a 15 minute time limit on SCEP certificates, which is enforced for security.
-
-## End user experience
-For information on the end-user experience, see:
-- [ADE end user tasks](guide-ios-ipados.md#ade-end-user-tasks)
-- [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)
 
 ## Re-enroll a device
 Complete these steps to re-enroll a device that already went through automated device enrollment.
@@ -360,63 +337,7 @@ Complete these steps to re-enroll a device that already went through automated d
 1. There are two options for resetting the device:
     * Wipe the device in the Microsoft Intune admin center.
     * Retire the device in the admin center, and then reset the device to factory settings using the Settings app, Apple Configurator 2, or iTunes.
-2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.
-
-## Renew an Automated Device Enrollment token
-
-It's important to renew your enrollment program token yearly. The Intune admin center shows the expiration date.
-
-- If the Apple ID password changes for the user who set up the token in Apple Business Manager, renew your enrollment program token in Intune and Apple Business Manager.
-- If the user who set up the token in Apple Business Manager leaves the organization, renew your enrollment program token in Intune and Apple Business Manager.
-- When you change the Apple ID used to create the ADE token, the change doesn't affect currently enrolled devices with that token, until they re-enroll. This behavior is unlike the Apple Push Notification Service (APNS) certificate used for the tenant. The APNS certificate can be changed with help from Apple Support. Otherwise, to make changes, all devices must re-enroll.
-
-### Renew your tokens
-
-1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has an Administrator or Device Enrollment Manager role.
-2. Select **Settings**. Under **MDM Servers**, select the MDM server associated with the token file that you want to renew. Select **Download Token**.
-
-    :::image type="content" source="./media/setup-automated-macos/download-token.png" alt-text="Screenshot that shows how to renew and download an Apple token in Apple Business Manager.":::
-
-3. Select **Download Server Token**.
-
-    > [!NOTE]
-    > As it says in the prompt, don't select **Download Server Token** if you don't intend to renew the token. Doing so will invalidate the token being used by Intune (or any other MDM solution). If you already downloaded the token, be sure to continue with the next steps until the token is renewed.
-
-4. After you download the token, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-5. Select **Devices** > **Enrollment**.
-6. Choose **Enrollment program tokens**.
-7. Select the token.
-8. Select **Renew token**. Enter the **Apple ID** used to create the original token (if it's not already filled-in):
-
-    :::image type="content" source="./media/setup-automated-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page." lightbox="./media/setup-automated-ios/renewtoken.png":::
-
-9. Upload the newly downloaded token.
-
-10. Select **Next** to go to the **Scope tags** page. Assign scope tags if you want to.
-
-11. Select **Renew token**. Wait for confirmation that the token renewal is done.
-
-    :::image type="content" source="./media/setup-automated-ios/confirmation.png" alt-text="Screenshot that shows the confirmation message.":::
-
-## Delete an Automated Device Enrollment token from Intune
-
-You can delete an enrollment profile token from Intune as long as:
-
-- No devices are assigned to the token.
-- No devices are assigned to the default profile.
-- There are no enrollment profiles under that token.
-
-To delete an enrollment profile token:
-
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
-1. Select the **Apple** tab.
-1. Choose **Enrollment Program Tokens**
-1. Select the token, and then select **Devices**.
-1. Delete all the devices assigned to the token.
-1. Return to **Enrollment program tokens**. Select the token, and then select **Profiles**.
-1. If there's a default profile or any other enrollment profile, they must all be deleted.
-1. Return to **Enrollment program tokens**. Select the token, and then select **Delete**.
->>>>>>> upstream/main
+2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.  
 
 ## Limitations
 
