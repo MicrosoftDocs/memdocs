@@ -55,6 +55,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 ## Week of April 27, 2026 (Service release 2604)
 
+### Microsoft Intune Suite
+
+#### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
+
+Intune's Endpoint Privilege Management (EPM) now supports [support approved elevation requests](../epm/manage-support-approvals.md) from all users of a device. This update expands the utility of support approved file elevations and helps to improve scenarios that involve shared devices.
+
+Previously, file elevation requests that require support approval were supported from only a device's primary user or the user who enrolled the device.
+
+For more information about this type of elevation request, see [Support approved file elevations for Endpoint Privilege Management](../epm/manage-support-approvals.md).
+
 ### Device configuration
 
 #### Configure credential manager permissions for Android Enterprise devices<!-- 31358911 -->

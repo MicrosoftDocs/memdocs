@@ -46,10 +46,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
-### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
-
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../epm/manage-support-approvals.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
-
 <!-- ***********************************************-->
 
 ## App management
