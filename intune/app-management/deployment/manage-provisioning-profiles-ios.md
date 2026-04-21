@@ -11,8 +11,6 @@ ms.collection:
 
 # Use iOS App Provisioning Profiles to Prevent Your Apps From Expiring
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 ## Introduction
 
 Apple iOS/iPadOS line-of-business apps that are assigned to iPhones and iPads are built with an included provisioning profile and code that is signed with a certificate. When the app is run, iOS/iPadOS confirms the integrity of the iOS/iPadOS app and enforces policies that are defined by the provisioning profile. The following validations happen:
