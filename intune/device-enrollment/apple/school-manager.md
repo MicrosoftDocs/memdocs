@@ -10,8 +10,6 @@ ms.collection:
 
 # Set up iOS/iPadOS device enrollment with Apple School Manager
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Set up Microsoft Intune to enroll iOS/iPadOS devices purchased through [Apple School Manager](https://school.apple.com/). Using Intune with Apple School Manager, you can enroll large numbers of iOS/iPadOS devices without ever touching them. When a student or teacher turns on the device, Apple Setup Assistant runs with preconfigured settings and the device enrolls into management.
 
 
