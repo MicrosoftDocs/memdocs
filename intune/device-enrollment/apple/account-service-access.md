@@ -36,7 +36,7 @@ To configure service access for Apple accounts, ensure your environment meets th
 :::column-end:::
 :::column span="3":::
 
-> You must have sufficient permissions in Apple Business or Apple School Manager to manage Apple account service access. For current role requirements, see [Customize user access to apps and services using Apple Business](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).  
+> You must have sufficient permissions in Apple Business or Apple School Manager to manage Apple account service access. For current role requirements, see [Customize user access to apps and services using Apple Business](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web) (opens Apple support site).  
 
 :::column-end:::
 :::row-end:::
@@ -82,7 +82,7 @@ In Apple Business or Apple School Manager, you can configure settings that contr
 > [!NOTE]
 > For devices enrolled through automated device enrollment (ADE), the **Managed devices only** and **Supervised devices only** options behave the same. ADE devices are both managed and supervised by default.  
 
-These controls apply to organization-owned devices and are defined by Apple as part of their access management model. For detailed instructions and descriptions of available settings, see [Service access with Managed Apple Accounts](https://support.apple.com/guide/apple-business-manager/service-access-with-managed-apple-accounts-axm171b3ee95/web)(opens Apple support site).    
+These controls apply to organization-owned devices and are defined by Apple as part of their access management model. For detailed instructions and descriptions of available settings, see [Service access with Managed Apple Accounts](https://support.apple.com/guide/apple-business-manager/service-access-with-managed-apple-accounts-axm171b3ee95/web) (opens Apple support site).    
 
 ### How service access enforcement works   
 
