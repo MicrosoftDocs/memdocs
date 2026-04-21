@@ -98,9 +98,9 @@ You can also create a new profile if you want to target a different set of devic
 
 ::: zone-end
 
-## General settings
+## Review data collection and sharing settings
 
-To review the current configuration of endpoint analyticss:
+To review the current configuration of endpoint analytics:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Analytics** > [**Endpoint analytics**][INT-EA].
     :::image type="content" source="media/configure/settings.png" lightbox="media/configure/settings.png" alt-text="Endpoint analytics general settings page." border="false":::
