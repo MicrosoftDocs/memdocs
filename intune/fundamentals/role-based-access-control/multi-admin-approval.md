@@ -94,7 +94,7 @@ After a change is submitted, an *approver* can navigate to the **All requests** 
 
 ### Change Review Agent suggestions in Multi Admin Approval
 
-When the [Change Review Agent](../../copilot/agents/change-review-agent.md) is set up and has completed a run, the **All requests** tab displays an **Agent Response** column for Windows PowerShell script requests. When a suggestion is available, you can select it to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
+When the [Change Review Agent](../../copilot/agents/change-review-agent.md) is set up and has completed a run, the **My requests** and **All requests** tabs display an **Agent Response** column for Windows PowerShell script requests. When a suggestion is available, you can select it to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
 
 Change Review Agent suggestions continue to be available in the [agent's primary experience](../../copilot/agents/manage-change-review-agent.md) as well. For more information about the agent, see [Change Review Agent overview](../../copilot/agents/change-review-agent.md).
 
