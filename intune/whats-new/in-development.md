@@ -141,13 +141,13 @@ You will be able to use Apple access management settings in Apple Business Manag
 
 On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:
 
-- In a settings catalog policy, add and configure the `EnableRegistrationDuringSetup` setting, save your policy and assign to a static group.
+- In a settings catalog policy, add and configure the `EnableRegistrationDuringSetup` setting, save your policy, and assign to a static group.
 - Configure the Automated Device Enrollment policy to use Setup Assistant with modern authentication and enable await final configuration. 
 - During enrollment, users sign in twice:
   - The first sign-in starts the regular enrollment process.
   - The second sign-in authenticates the user identity in Company Portal and gets the SSO extension.
 
-  In a future update (no ETA), there will be updates that reduce number of sign-ins for PSSO during the Setup Assistant flow. (Can we just say "We're working on updates to reduce number of sign-ins for PSSO during SA" instead of say "no ETA")
+  We're working on updates to reduce number of sign-ins for Platform SSO during Setup Assistant.
 
 When this feature is enabled, users have access to resources immediately when they arrive at desktop.
 
@@ -155,7 +155,7 @@ Prerequisites:
 
 - Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
 - The ADE enrollment profile must be configured to use Setup Assistant with modern authentication and have Await final configuration setting turned on.
-- Before you enroll, create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting and assign to the device via static group. 
+- Before you enroll, create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **Enable Registration During Setup** setting and assign to the device via static group. 
 - Before you enroll, deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
 
 > [!div class="checklist"]
