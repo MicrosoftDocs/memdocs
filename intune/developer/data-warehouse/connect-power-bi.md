@@ -11,8 +11,6 @@ ms.collection:
 
 # Connect to the Data Warehouse With Power BI
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
-
 > [!IMPORTANT]
 > The Intune Data Warehouse (beta) connector in Power BI (connector v1) is being retired. Power BI reports that use connector v1 need to be migrated to the Intune connector v2 or the OData Feed connector. Power BI reports created after November 2025 already use connector v2 and aren't affected. For migration steps, see [Migrate from connector v1](#migrate-from-connector-v1).
 
