@@ -123,9 +123,9 @@ items:
     - name: Set up Apple Automated Device Enrollment
       items:
       - name: Overview of Apple Automated Device Enrollment
-        href: ./apple/automated-device-enrollment-overview-apple.md
+        href: ./apple/overview-automated-enrollment-apple.md
       - name: Set up an enrollment token
-        href: ./apple/token-setup-apple.md
+        href: ./apple/setup-apple-token.md
       - name: Choose enrollment authentication method
         href: ./apple/ref-automated-authentication-methods.md
       - name: Create an enrollment profile for iOS/iPadOS
@@ -183,9 +183,9 @@ items:
     - name: Set up Apple Automated Device Enrollment
       items:
       - name: Overview of Apple Automated Device Enrollment for macOS
-        href: ./apple/automated-device-enrollment-overview-macos.md
+        href: ./apple/overview-automated-enrollment-macos.md
       - name: Set up a macOS enrollment token
-        href: ./apple/token-setup-macos.md
+        href: ./apple/setup-macos-token.md
       - name: Set up an enrollment profile for macOS
         href: ./apple/setup-automated-macos.md
       - name: Manage ADE devices and tokens
