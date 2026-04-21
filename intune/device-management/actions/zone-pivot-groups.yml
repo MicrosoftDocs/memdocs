@@ -3,7 +3,7 @@ groups:
 
 - id: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: windows
     title: Windows
@@ -18,7 +18,7 @@ groups:
 
 - id: 51e33912-415a-402f-8201-8acebf3e4991
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: windows
     title: Windows
@@ -31,7 +31,7 @@ groups:
 
 - id: d4b2a9c3-d659-4922-8403-9b50d065fc07
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: windows
     title: Windows
@@ -42,7 +42,7 @@ groups:
 
 - id: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: ios
     title: iOS/iPadOS
@@ -53,7 +53,7 @@ groups:
 
 - id: 22f7442d-9384-49c8-abff-aaa058b30589
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: ios
     title: iOS/iPadOS
@@ -62,7 +62,7 @@ groups:
 
 - id: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: ios
     title: iOS/iPadOS
@@ -71,7 +71,7 @@ groups:
 
 - id: 2fce401c-16eb-4314-8d26-844d8612f9c5
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: windows
     title: Windows
@@ -80,7 +80,7 @@ groups:
 
 - id: 46b8d067-28e2-43a6-97b2-ffcc8414e503
   title: Device platform
-  prompt: "Choose the platform to run remote actions on:"
+  prompt: "Choose the platform to run device actions on:"
   pivots:
   - id: ios
     title: iOS/iPadOS
