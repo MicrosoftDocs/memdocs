@@ -18,7 +18,7 @@ The *remove user* device action in Microsoft Intune deletes a selected user's ca
 :::column-end:::
 :::column span="3":::
 
-> this action is supported on the following platform:
+> This action supports the following platforms:
 >
 > - iPadOS (Shared iPad mode only)
 

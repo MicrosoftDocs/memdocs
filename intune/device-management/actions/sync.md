@@ -21,7 +21,8 @@ For more information about the standard Intune policy check-in frequencies, see 
 :::column-end:::
 :::column span="3":::
 
-> this action is supported on the following platform:
+> This action supports the following platforms:
+>
 > - Android
 > - iOS/iPadOS
 > - macOS

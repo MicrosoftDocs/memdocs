@@ -19,7 +19,7 @@ this action is useful in environments where multiple users access the same devic
 :::column-end:::
 :::column span="3":::
 
-> this action is supported on the following platform:
+> This action supports the following platforms:
 >
 > - iPadOS (Shared iPad mode only)
 

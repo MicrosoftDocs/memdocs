@@ -24,7 +24,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 :::column-end:::
 :::column span="3":::
 
-> this action is supported on the following platform:
+> This action supports the following platforms:
 >
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
