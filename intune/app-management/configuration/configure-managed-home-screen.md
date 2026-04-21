@@ -1,7 +1,7 @@
 ---
 title: Configure the Microsoft Managed Home Screen App
 description: Learn how to configure the Microsoft Managed Home Screen app.
-ms.date: 03/09/2026
+ms.date: 04/21/2026
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
@@ -13,10 +13,9 @@ ms.collection:
 
 The Managed Home Screen app is for corporate-owned Android Enterprise dedicated devices and fully managed, user-affiliated devices that are enrolled in Intune and run in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
-> [!WARNING]
-> Managed Home Screen provides a controlled user experience but does not, by itself, block access to all Android system features. The overall security and integrity of a kiosk configuration depends on the combination of Managed Home Screen settings and device configuration restrictions applied to the device.  
->  
-> Administrators should carefully review and configure device restriction settings to ensure end users cannot access system settings, modify network or security configuration, or perform actions such as a device reset. For more information, see [Android template device settings list to restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
+The Managed Home Screen app configuration policy and a device configuration restrictions policy work together. The Managed Home Screen app provides a controlled user experience but doesn't block access to all Android system features. The security and integrity of a kiosk configuration depends on the Managed Home Screen settings described in this article and the [device configuration restrictions](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) applied to the device.
+
+Administrators should review and configure device restriction settings to ensure end users can't access system settings, modify network or security configuration, or perform actions such as a device reset. For a list of restrictions that you can configure, see [Android template device settings list to restrict features using Intune](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 ## When to configure the Microsoft Managed Home Screen app
 
