@@ -2,7 +2,7 @@
 title: Privacy and personal data in Intune
 description: Learn what personal data is collected and processed in Intune.
 ms.date: 04/07/2025
-ms.topic: article
+ms.topic: overview
 ms.reviewer: intuneprivacy
 ms.collection:
 - M365-identity-device-management
@@ -20,11 +20,11 @@ To help Intune admins understand how your data's privacy is protected, this arti
 
 Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
 
-[!INCLUDE [GDPR-related guidance](./includes/gdpr-dsr-and-stp-note.md)]
+[!INCLUDE [GDPR-related guidance](includes/gdpr-dsr-and-stp-note.md)]
 
 ## Your company terms and conditions
 
-In addition to the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement), you can [include privacy statements in your company's terms and conditions for end users](../intune-service/apps/company-portal-app.md). Such privacy statements can include information about the usage and privacy of the end user's personal data.
+In addition to the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement), you can [include privacy statements in your company's terms and conditions for end users](../app-management/configuration/configure-company-portal.md). Such privacy statements can include information about the usage and privacy of the end user's personal data.
 
 You can display your company's terms and conditions in the Intune Company Portal app. This way, users can review the terms and conditions, including the privacy statement, before they enroll in Intune and access company assets and data.
 

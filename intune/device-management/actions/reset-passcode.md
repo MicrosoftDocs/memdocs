@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Reset Passcode"
+title: "Device Action: Reset Passcode"
 description: Learn how to reset a passcode with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: reset passcode
+# Device action: reset passcode
 
-With the *reset passcode* action in Microsoft Intune, you can remotely reset a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device or work profile.
+With the *reset passcode* action in Microsoft Intune, you can remotely reset a device passcode to help users regain access to their devices without requiring a full device wipe. this action is especially useful when a user forgets their passcode or is locked out of their device or work profile.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ With the *reset passcode* action in Microsoft Intune, you can remotely reset a d
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
@@ -35,7 +35,7 @@ With the *reset passcode* action in Microsoft Intune, you can remotely reset a d
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -68,7 +68,7 @@ The following table summarizes the passcode reset types based on platform:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Reset passcode**.
+1. At the top of the device overview pane, find the row of action icons. Select **Reset passcode**.
 1. A new passcode is presented to the admin.
 
 The new passcode must be entered on the device, and it's displayed in the admin center for seven days.
@@ -89,8 +89,8 @@ For work profile passcode reset, users get notified to activate their reset pass
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
 [INT-1]:/intune/device-configuration/settings-catalog/ref-android-settings
 
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-resetpasscode

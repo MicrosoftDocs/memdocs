@@ -31,8 +31,8 @@ The Microsoft Intune family of products is an integrated solution for managing a
 The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
 - [Configuration Manager](/configmgr)
-- [Intune](/mem/intune-service/fundamentals/account-sign-up)
-- [Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports)
+- [Intune](/mem/fundamentals/account-sign-up)
+- [Desktop Analytics](../../../../device-updates/windows/monitor-compatibility.md)
 - [Windows Autopilot](/autopilot/enrollment-autopilot)
 - Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
 
@@ -78,7 +78,7 @@ For more information, see [Extend and migrate on-premises site to Microsoft Azur
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../../device-updates/windows/monitor-compatibility.md).
 
 ## <a name="bkmk_real"></a> Real-time management
 

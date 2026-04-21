@@ -42,7 +42,7 @@ To learn more about the settings catalog, see [Settings catalog overview](index.
 :::column span="3":::
 > To configure the policy, use an account with the following role:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
@@ -72,7 +72,7 @@ These settings apply to the Android Enterprise enrollment types where Intune con
 - Dedicated devices
 - Corporate-owned devices with a work profile
 
-To learn more about the different Android enrollment types, see [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+To learn more about the different Android enrollment types, see [Android Enrollment guide](../../device-enrollment/android/guide.md).
 
 ### Device restriction
 

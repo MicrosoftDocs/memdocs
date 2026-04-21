@@ -239,14 +239,14 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 
 <!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:../../intune-service/developer/app-sdk.md
-[Microsoft Intune app management]:../../intune-service/apps/app-management.md
-[Android app protection policy settings]:../../intune-service/apps/app-protection-policy-settings-android.md
+[Microsoft Intune app management]:../../app-management/overview.md
+[Android app protection policy settings]:../../app-management/protection/ref-settings-android.md
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
-[application configuration policies for managed Android Enterprise devices]:../../intune-service/apps/app-configuration-policies-use-android.md
-[application configuration policies for managed apps]:../../intune-service/apps/app-configuration-policies-managed-app.md
+[application configuration policies for managed Android Enterprise devices]:../../app-management/configuration/configure-managed-android.md
+[application configuration policies for managed apps]:../../app-management/configuration/configure-managed-apps.md
 [App Wrapping Tool for Android]:../../intune-service/developer/app-wrapper-prepare-android.md
 [Prepare line-of-business apps for app protection policies]:../../intune-service/developer/apps-prepare-mobile-application-management.md
 [Turn off Microsoft usage data collection]:../../intune-service/user-help/turn-off-microsoft-usage-data-collection-android.md
@@ -254,12 +254,12 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
-[Set up Intune]:../../intune-service/fundamentals/deployment-plan-setup.md
-[Create users]:../../intune-service/fundamentals/users-add.md
-[Create groups]:../../intune-service/fundamentals/groups-add.md
-[Assign licenses]:../../intune-service/fundamentals/licenses-assign.md
-[Create and assign app protection policies]:../../intune-service/apps/app-protection-policies.md
-[app configuration policy]:../../intune-service/apps/app-configuration-policies-overview.md
+[Set up Intune]:../../fundamentals/deploy-setup-step-1.md
+[Create users]:../../fundamentals/tenant-administration/add-users.md
+[Create groups]:../../fundamentals/tenant-administration/add-groups.md
+[Assign licenses]:../../fundamentals/licensing/assign-licenses.md
+[Create and assign app protection policies]:../../app-management/protection/create-policy.md
+[app configuration policy]:../../app-management/configuration/overview.md
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration
 
 <!-- Other Microsoft links -->

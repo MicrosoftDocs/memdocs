@@ -10,14 +10,12 @@ ms.collection:
 
 # Change Log for the Intune Data Warehouse API
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
-
 Keep current on updates to the Intune Data Warehouse.
 
 ## 2202
 _Released February 2022_
 
-The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../../intune-service/fundamentals/reports-export-graph-apis.md).
+The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../../device-management/reports/export-graph-apis.md).
 
 ## 2105
 _Released May 2021_
@@ -27,7 +25,7 @@ The `IntuneAosp` property value is now supported in the `managementAgentType` en
 ## 2103
 _Released March 2021_
 
-The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../../intune-service/fundamentals/reports-export-graph-apis.md).
+The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../../device-management/reports/export-graph-apis.md).
 
 ## 2007
 _Released July 2020_
@@ -322,5 +320,5 @@ You can now build reports and data visualizations using the user device associat
 - The entity, [**IntuneManagementExtension**](ref-intune-management-extension.md), added. **IntuneManagementExtension** contains entities for mobile devices that track information such as version and installation status.
 
 ## Next steps
-- Learn [what's new each week in Intune](../../intune-service/fundamentals/whats-new.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
+- Learn [what's new each week in Intune](../../whats-new/index.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
 - Read the [Microsoft Intune Blog](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog).

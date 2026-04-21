@@ -5,8 +5,6 @@ ms.date: 06/26/2025
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - certificates
 - sub-certificates
 ---
@@ -20,17 +18,17 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../../fundamentals/certificates/scep-infrastructure.md#pin-requirement-for-android-enterprise).
 
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
 >
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](./trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator).
 
- [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+ [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
 ## Update certificate connector: Strong mapping requirements for KB5014754
 
@@ -410,13 +408,13 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
 9. Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
     Select **Next**.
 
 11. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
-    For more information, see [Applicability rules](../../intune-service/configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+    For more information, see [Applicability rules](../../device-configuration/create-device-profile.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
 12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
@@ -460,7 +458,7 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## Assign the certificate profile
 
-Assign SCEP certificate profiles the same way you [deploy device profiles](../../intune-service/configuration/device-profile-assign.md) for other purposes.
+Assign SCEP certificate profiles the same way you [deploy device profiles](../../device-configuration/assign-device-profile.md) for other purposes.
 
 > [!IMPORTANT]
 > To use a SCEP certificate profile, a device must have also received the trusted certificate profile that provisions it with your Trusted Root CA certificate. We recommend you deploy both the trusted root certificate profile and SCEP certificate profile to the same groups.
@@ -484,6 +482,6 @@ Consider the following before you continue:
 
 ## Next steps
 
-[Assign profiles](../../intune-service/configuration/device-profile-assign.md)
+[Assign profiles](../../device-configuration/assign-device-profile.md)
 
 [Troubleshoot deployment of SCEP certificate profiles](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)

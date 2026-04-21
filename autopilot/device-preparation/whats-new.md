@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 01/30/2026
+ms.date: 04/10/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: whats-new
@@ -22,6 +22,12 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
+
+## Managed installer policy support during Windows Autopilot device preparation<!-- 31776436 -->  
+
+Date added: *April 10, 2026*
+
+Microsoft Intune now supports the managed installer policy for apps during Windows Autopilot device preparation. The policy will be applied during the out-of-box experience (OOBE) before Win32, Microsoft Store, and Enterprise App Catalog apps install. These app types were previously skipped to prevent app installation conflicts and deployment failures. This update helps ensure supported apps install reliably during user-driven and automatic Autopilot scenarios.  
 
 ## Admins can configure up to 25 apps to install during Autopilot device preparation 
 
@@ -64,7 +70,7 @@ Date added: *June 26, 2025*
 
 Autopilot device preparation now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog in the device preparation policy. This allows you to ensure those apps are delivered before the user can access the desktop.
 
-For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/app-management/deployment/add-enterprise-catalog).
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
 
@@ -91,7 +97,7 @@ Admins can now download diagnostics logs for failed Autopilot device preparation
 
 Date added: *September 18, 2024*
 
-As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/intune/intune-service/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
+As part of the 2409 Intune release, we're announcing support for Windows Autopilot Device Preparation policy in [Intune operated by 21Vianet in China](/intune/fundamentals/china) cloud. Customers with tenants located in China can now provision devices and manage through Microsoft Intune. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
 
 <!-- MAXADO-9313795 / INADO-28687730 -->
 
@@ -134,5 +140,5 @@ Windows Autopilot device preparation is generally available. For an overview, se
 ## Related content
 
 - [What's new in Windows Autopilot](../whats-new.md).
-- [What's new in Microsoft Intune](/intune/intune-service/fundamentals/whats-new).
+- [What's new in Microsoft Intune](/intune/whats-new/index).
 - [What's new in Windows client](/windows/whats-new/).

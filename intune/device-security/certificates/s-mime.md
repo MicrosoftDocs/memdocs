@@ -32,7 +32,7 @@ To use signing certificates, create a template on your certificate authority (CA
 
 Signing certificates in Intune use PKCS certificates. [Configure and use PKCS certificates](../../device-configuration/certificates/pkcs-profiles.md) describes how to deploy and use PKCS certificate in your Intune environment. These steps include:
 
-- Install and configure the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/setup-connector.md) to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Install and configure the [Certificate Connector for Microsoft Intune](../../fundamentals/certificates/connector/setup-connector.md) to support PKCS certificate requests. The connector has the same network requirements as [managed devices](../../fundamentals/endpoints.md#access-for-managed-devices).
 - Create a trusted root certificate profile for your devices. This step includes using trusted root and intermediate certificates for your certification authority, and then deploying the profile to devices.
 - Create a PKCS certificate profile using the certificate template you created. This profile issues signing certificates to devices, and deploys the PKCS certificate profile to devices.
 
@@ -63,7 +63,7 @@ To deploy a PKCS certificate imported in Intune used for email encryption, follo
 
 ## S/MIME email profiles
 
-Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../../intune-service/configuration/email-settings-ios.md).
+Once you have created S/MIME signing and encryption certificate profiles, you can [enable S/MIME for iOS/iPadOS native mail](../../device-configuration/templates/ref-email-settings-ios.md).
 
 ## Next steps
 

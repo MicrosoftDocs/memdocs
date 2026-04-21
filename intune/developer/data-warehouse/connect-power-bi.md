@@ -33,7 +33,7 @@ There are also trends highlighted for the enrollment, compliance, device configu
 
 The following steps show you how to download the Power BI file and how to use the OData link with Power BI.
 
-[!INCLUDE [reports-credential-reqs](../../intune-service/includes/reports-credential-reqs.md)]
+[!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
 
 ## Install Power BI
 

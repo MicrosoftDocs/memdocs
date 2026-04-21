@@ -11,7 +11,7 @@ ms.collection:
 
 # Configure infrastructure to support SCEP with Intune
 
-[!INCLUDE [azure_portal](../../intune-service/includes/strong-mapping-cert.md)]
+[!INCLUDE [azure_portal](../includes/strong-mapping-cert.md)]
 
 Intune supports use of the Simple Certificate Enrollment Protocol (SCEP) to [authenticate connections to your apps and corporate resources](./overview.md). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). When your infrastructure supports SCEP, you can use Intune *SCEP certificate* profiles (a type of device profile in Intune) to deploy the certificates to your devices.
 

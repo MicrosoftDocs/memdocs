@@ -25,7 +25,7 @@ This feature applies to:
 
 - Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
-- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 - Add and enable [Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
 
@@ -49,7 +49,7 @@ Use an Intune policy to set the update channel for Microsoft 365 apps. The updat
     > - It's recommended to update more frequently. Semi-annually is only used as an example.
     > - For information on the different update channels, go to [Overview of update channels for Microsoft 365 Apps](/microsoft-365-apps/updates/overview-update-channels).
 
-3. When the policy is ready, [assign the policy](../../intune-service/configuration/device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
+3. When the policy is ready, [assign the policy](../../device-configuration/assign-device-profile.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
 
     - [Sync the policy in Intune](../../device-management/actions/sync.md)
     - [Manually sync the policy on the device](../../user-help/device-actions/sync-device-windows.md#sync-from-settings-app)

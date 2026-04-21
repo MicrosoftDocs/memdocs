@@ -1,5 +1,5 @@
 ---
-title: "Remote Device Action: Collect Diagnostics"
+title: "Device Action: Collect Diagnostics"
 description: Learn how to collect diagnostics with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
@@ -7,11 +7,11 @@ ms.reviewer: jlynn
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
-# Remote device action: collect diagnostics
+# Device action: collect diagnostics
 
-Collecting diagnostics in Microsoft Intune is a powerful remote action that enables IT administrators to gather troubleshooting data from managed devices without interrupting users. This feature is essential for identifying and resolving issues related to device compliance, app performance, or enrollment failures—especially in large or distributed environments where hands-on access to devices is limited. For example, if a Windows device fails during Autopilot provisioning, Intune can automatically collect logs from the device and upload them for review, helping admins pinpoint the root cause quickly. This feature can also be used in bulk across up to 25 devices at once, streamlining diagnostics at scale.
+Collecting diagnostics in Microsoft Intune is a powerful action that enables IT administrators to gather troubleshooting data from managed devices without interrupting users. This feature is essential for identifying and resolving issues related to device compliance, app performance, or enrollment failures—especially in large or distributed environments where hands-on access to devices is limited. For example, if a Windows device fails during Autopilot provisioning, Intune can automatically collect logs from the device and upload them for review, helping admins pinpoint the root cause quickly. This feature can also be used in bulk across up to 25 devices at once, streamlining diagnostics at scale.
 
-The *collect diagnostics* remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
+The *collect diagnostics* action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ The *collect diagnostics* remote action lets you collect and download managed de
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - Android (via app protection)
 > - iOS/iPadOS (via app protection)
@@ -40,7 +40,7 @@ The *collect diagnostics* remote action lets you collect and download managed de
 :::column-end:::
 :::column span="3":::
 
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -79,7 +79,10 @@ The *collect diagnostics* remote action lets you collect and download managed de
 >
 > The data is stored in Microsoft support systems and isn't subject to Intune data management policies or protections. Some applications might collect and store data using systems other than Intune.
 
-## How to collect diagnostics
+## How to collect diagnostics from the Intune admin center
+
+> [!NOTE]
+> Diagnostics can't be collected or downloaded by calling Microsoft Graph directly. Use the Intune admin center to collect and download diagnostics.
 
 ::: zone pivot="android,ios"
 
@@ -120,7 +123,7 @@ Requirements to collect diagnostics from an M365 application:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the third setting is enabled.
-3. Create and deploy an Intune App Protection policy to a user, more information [here](../../intune-service/apps/app-protection-policies.md).
+3. Create and deploy an Intune App Protection policy to a user, more information [here](../../app-management/protection/create-policy.md).
 4. Confirm the application has been managed by Intune App Protection policy. You can check locally on the device and/or by loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:
@@ -152,7 +155,7 @@ Diagnostics take approximately 30 minutes to be delivered from an end user's dev
 
 <!--1895390-->
 
-The collect diagnostics remote action can also be configured to automatically collect and upload Windows devices logs upon a Windows Autopilot failure on a device. When a Windows Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
+The collect diagnostics action can also be configured to automatically collect and upload Windows devices logs upon a Windows Autopilot failure on a device. When a Windows Autopilot failure occurs, logs are processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
@@ -165,7 +168,7 @@ To use the *Collect diagnostics* action:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Collect diagnostics**.
+1. At the top of the device overview pane, find the row of action icons. Select **Collect diagnostics**.
 1. To confirm, select **Yes**. A pending notification appears on the device's **Overview** page.
 1. To check the status of the action, select **Monitor** > **Device diagnostics**.
 1. After the action completes, select **...** > **Download** in the row for the action > **Yes**.
@@ -180,7 +183,7 @@ To view the diagnostics collected after a Windows Autopilot failure:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Diagnostics** > **Download**.
+1. At the top of the device overview pane, find the row of action icons. Select **Diagnostics** > **Download**.
 1. The data zip file is added to your download tray and you can save it to your computer.
 
 ### Data collected
@@ -293,7 +296,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 
 ### Disable device diagnostics
 
-The *collect diagnostics* remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
+The *collect diagnostics* action is enabled by default. You can disable the **Collect diagnostics** action for all devices by following these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.
@@ -348,8 +351,8 @@ Currently there are the two main issues that could cause device diagnostics to f
 
 [ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 

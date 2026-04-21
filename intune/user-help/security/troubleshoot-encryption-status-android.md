@@ -17,7 +17,7 @@ Certain Android devices require you to create a startup PIN for security purpose
 
 This section only applies to the Company Portal app. Some devices will give you a choice between encrypting the entire device or just the used space. Choose the option to encrypt the entire device. If you selected to encrypt only the used space:
 
-1. [Remove this device from the Company Portal](../unenrollment/remove-enrollment-android.md).
+1. [Remove this device from the Company Portal](../unenrollment/unenroll-android.md).
 2. Decrypt the used space.
 3. Encrypt the entire device.
 4. Re-enroll the device.
@@ -30,7 +30,7 @@ This section only applies to the Company Portal app. If your device offers you t
 
 Some Android devices on version 7.0 and later encrypt data in ways that are inconsistent with certain Android platform standards. These encryption methods put device information at risk. As a result, these devices aren't supported.
 
-For a non-exhaustive list of supported Android devices, see the article [Supported operating systems and browsers in Intune](../../intune-service/fundamentals/supported-devices-browsers.md#supported-samsung-knox-standard-devices). If your device isn't listed, refer to the device manufacturer or contact your support person.
+For a non-exhaustive list of supported Android devices, see the article [Supported operating systems and browsers in Intune](../../fundamentals/ref-supported-platforms.md#supported-samsung-knox-standard-devices). If your device isn't listed, refer to the device manufacturer or contact your support person.
 
 > [!NOTE]
 > Microsoft works with manufacturers to address any issues we find while testing or that users report to us. We update this article whenever new information is available.

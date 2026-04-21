@@ -12,9 +12,9 @@ ms.collection:
 
 # Microsoft Tunnel for MAM iOS SDK Developer Guide
 
-[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-plan2-suite-note.md)]
+[!INCLUDE [intune-add-on-note](../../includes/intune-plan2-suite-note.md)]
 
-The Microsoft Tunnel for MAM iOS SDK developer guide is a resource for developers. It helps developers integrate and configure the SDK into an iOS/iPadOS app. For an overview of the Microsoft Tunnel for MAM, see [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../intune-service/protect/microsoft-tunnel-mam-ios.md).
+The Microsoft Tunnel for MAM iOS SDK developer guide is a resource for developers. It helps developers integrate and configure the SDK into an iOS/iPadOS app. For an overview of the Microsoft Tunnel for MAM, see [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../device-security/microsoft-tunnel/mam-ios.md).
 
 This guide covers different parts of the integration process in your Xcode app project, including installing the frameworks, configuring the `info.plist` file, build settings, key sharing, and implementing the SDK's delegate methods.
 
@@ -85,7 +85,7 @@ The following image describes the flow from a managed app that's successfully in
 2. A TCP Connect happens, which is a TLS Handshake between the token and the tunnel server.
 3. If UDP is enabled on the Microsoft Tunnel Gateway, then a data-channel connection using DTLS is made. If UDP is disabled, then TCP establishes the data channel to Tunnel gateway.
 
-   For more information, see the TCP and UDP notes in the [Microsoft Tunnel overview - architecture](../../intune-service/protect/microsoft-tunnel-overview.md#architecture).
+   For more information, see the TCP and UDP notes in the [Microsoft Tunnel overview - architecture](../../device-security/microsoft-tunnel/overview.md#architecture).
 
 4. When the mobile app makes a connection to an on-premises corporate resource:
 
@@ -105,7 +105,7 @@ This section lists and describes the Xcode tasks you must complete, including:
 
 ### Step 1 - Add the frameworks and libraries
 
-The following frameworks include the necessary APIs and delegate methods for communicating with the [Intune Microsoft Tunnel Gateway](../../intune-service/protect/microsoft-tunnel-overview.md). They implement the Microsoft Tunnel VPN features within the app.
+The following frameworks include the necessary APIs and delegate methods for communicating with the [Intune Microsoft Tunnel Gateway](../../device-security/microsoft-tunnel/overview.md). They implement the Microsoft Tunnel VPN features within the app.
 
 To enable the Tunnel for MAM iOS SDK, use the following steps:
 
@@ -143,7 +143,7 @@ To enable the Tunnel for MAM iOS SDK, use the following steps:
 
 In the `info.plist` for the Xcode app project, confirm the following settings:
 
-- **Bundle ID**: Make sure the same Bundle ID listed in the [Microsoft Entra App registration for the iOS mobile app](../../intune-service/protect/microsoft-tunnel-mam-ios.md) is the same Bundle ID in your app project:
+- **Bundle ID**: Make sure the same Bundle ID listed in the [Microsoft Entra App registration for the iOS mobile app](../../device-security/microsoft-tunnel/mam-ios.md) is the same Bundle ID in your app project:
 
   To check the Bundle ID:
 
@@ -321,8 +321,8 @@ No user identifiable information is collected.
 
 ## Known issues
 
-For more known issues, see the [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../intune-service/protect/microsoft-tunnel-mam-ios.md#known-issues).
+For more known issues, see the [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../device-security/microsoft-tunnel/mam-ios.md#known-issues).
 
 ## Next steps
 
-[Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../intune-service/protect/microsoft-tunnel-mam-ios.md)
+[Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../device-security/microsoft-tunnel/mam-ios.md)

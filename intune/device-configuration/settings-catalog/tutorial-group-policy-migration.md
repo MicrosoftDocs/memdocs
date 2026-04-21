@@ -45,7 +45,7 @@ This feature applies to:
 
   For more information on what you get with the different Microsoft 365 licenses, go to [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, go to [Set the mobile device management authority](../../intune-service/fundamentals/mdm-authority-set.md).
+- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, go to [Set the mobile device management authority](../../fundamentals/setup-mdm-authority.md).
 
   :::image type="content" source="./media/tutorial-group-policy-migration/tenant-status.png" alt-text="Screenshot that shows how to set the MDM authority to Microsoft Intune in your tenant status.":::
 
@@ -111,7 +111,7 @@ In Intune, policies are applied to users and groups you create. There isn't a hi
 - If two compliance policies are in conflict, then the most restrictive policy applies.
 - If two configuration profiles are in conflict, then the setting isn't applied.
 
-For more information, go to [Common questions, issues, and resolutions with device policies and profiles](../../intune-service/configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+For more information, go to [Common questions, issues, and resolutions with device policies and profiles](../../device-configuration/troubleshoot-device-profiles.md#compliance-and-device-configuration-policies-that-conflict).
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, like a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
@@ -176,7 +176,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
 - Your Microsoft Entra ID license can include other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Conditional Access](/entra/identity/conditional-access/overview).
 
-- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](../../intune-service/configuration/device-profile-assign.md#user-groups-vs-device-groups).
+- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](../../device-configuration/assign-device-profile.md#user-groups-vs-device-groups).
 
 - Remember, a user can belong to multiple groups. Consider some of the other dynamic user and device groups you can create, like:
 
@@ -339,7 +339,7 @@ In this section, you created some settings catalog policies, and assigned them t
 
 ## Policy best practices
 
-When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](../../intune-service/configuration/device-profile-create.md#recommendations).
+When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](../../device-configuration/create-device-profile.md#recommendations).
 
 ## Clean up resources
 

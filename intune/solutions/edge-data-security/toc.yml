@@ -1,0 +1,17 @@
+items:
+  - name: Overview
+    href: ./overview.md
+  - name: Step 1. Create Microsoft Entra Conditional Access
+    href: ./conditional-access-step-1.md
+  - name: Step 2. Create an app protection policy
+    href: ./protection-policies-step-2.md
+  - name: Step 3. Integrate Mobile Threat Defense
+    href: ./threat-defense-step-3.md
+  - name: Step 4. Create app configuration policies
+    href: ./app-configuration-step-4.md
+  - name: Step 5. Create Settings Catalog policies
+    href: ./settings-catalog-step-5.md
+  - name: Step 6. Understand end user experience
+    href: ./end-user-experience-step-6.md
+  - name: Step 7. Troubleshoot
+    href: ./troubleshoot-step-7.md

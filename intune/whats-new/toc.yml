@@ -1,0 +1,9 @@
+items:
+- name: What's new
+  href: index.md
+- name: Features in development
+  href: in-development.md
+- name: Important notices
+  href: index.md#notices
+- name: Public preview
+  href: ../fundamentals/public-preview.md

@@ -53,4 +53,4 @@ Retrieve a personal BitLocker recovery key in the Company Portal app. The recove
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage encryption, see [Manage policy for Windows devices with Microsoft Intune](../../intune-service/protect/encrypt-devices.md).
+If you're an IT support person and want to configure and manage encryption, see [Manage policy for Windows devices with Microsoft Intune](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md).

@@ -13,7 +13,7 @@ ms.collection:
 
 Use the Microsoft Intune App Wrapping Tool for iOS to enable Intune app protection policies for in-house iOS apps without changing the code of the app itself.
 
-The tool is a macOS command-line application that creates a wrapper around an app. Once an app is processed, you can change the app's functionality by deploying [app protection policies](../../intune-service/apps/app-protection-policies.md) to it.
+The tool is a macOS command-line application that creates a wrapper around an app. Once an app is processed, you can change the app's functionality by deploying [app protection policies](../../app-management/protection/create-policy.md) to it.
 
 To download the tool, see [Microsoft Intune App Wrapping Tool for iOS](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios) on GitHub.
 
@@ -445,5 +445,5 @@ Use the following security and privacy best practices when you use the App Wrapp
 ## Additional resources
 
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](integration-methods.md)
-- [Common questions, issues, and resolutions with device policies and profiles](../../intune-service/configuration/device-profile-troubleshoot.md)
+- [Common questions, issues, and resolutions with device policies and profiles](../../device-configuration/troubleshoot-device-profiles.md)
 - [Use the SDK to enable apps for mobile application management](index.md)

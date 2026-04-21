@@ -100,12 +100,12 @@ When you add an application through the Microsoft Entra admin center, you can ch
 
 The following Intune API permissions are available when adding an application through the Microsoft Entra admin center:
 
-  - **get_device_compliance** - This API permission is used to get device state and compliance information from Microsoft Intune. This API permission is used by Network Access Control partners. For more information, see [Network Access Control integration with Intune](../intune-service/protect/network-access-control-integrate.md).
-  - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Microsoft Entra group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](../intune-service/protect/device-compliance-partners.md).
+  - **get_device_compliance** - This API permission is used to get device state and compliance information from Microsoft Intune. This API permission is used by Network Access Control partners. For more information, see [Network Access Control integration with Intune](../device-security/integrate-network-access-control.md).
+  - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Microsoft Entra group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](../device-security/compliance/third-party-partners.md).
   - **pfx_cert_provider** - This API permission is used to send PFX certificates to Intune for a specific user. Intune delivers the certificate to all devices enrolled by the user. For more information, see [PFX Import Powershell](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
   - **scep_challenge_provider** - This API permission is used to send SCEP challenges to Intune for certificate request validation. It is used by Certification Authority partners. For more information, see [Partner Certification Authority](../fundamentals/certificates/third-party-ca-scep.md).
-  - **update_device_attributes** - This API permission is used to send device information to Intune from device compliance and mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../intune-service/protect/mobile-threat-defense.md) and [Third party device compliance partners](../intune-service/protect/device-compliance-partners.md).
-  - **update_device_health** - This API permission is used to send device health and threat status information to Intune from mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../intune-service/protect/mobile-threat-defense.md).
+  - **update_device_attributes** - This API permission is used to send device information to Intune from device compliance and mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../device-security/mobile-threat-defense/overview.md) and [Third party device compliance partners](../device-security/compliance/third-party-partners.md).
+  - **update_device_health** - This API permission is used to send device health and threat status information to Intune from mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../device-security/mobile-threat-defense/overview.md).
 
 If you are a partner interested in integrating with Intune using these API permissions, contact the [Microsoft Intelligent Security Association](https://www.microsoft.com/security/business/intelligent-security-association)] team for information.
 
@@ -124,8 +124,6 @@ At this point, you may also:
     To do so:
 
   1. Choose **Manifest** from the application pane.
-
-     <img src="../intune-service/media/azure-ad-edit-mft.png" width="295" height="114" alt="The Edit manifest blade" />
 
   2. Change the value of the `availableToOtherTenants` setting to `true`.
 
@@ -391,7 +389,7 @@ This example shows how to use C# to retrieve a list of devices associated with y
 
 2. Enter a name for your project and provide other details as desired.
 
-    <img src="../intune-service/media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
+    <img src="./media/configure-graph-api-access/entra-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
 3. Use the Solution Explorer to add the Microsoft MSAL NuGet package to the project:
 
@@ -515,17 +513,11 @@ To invite the user to be a guest of your tenant:
 
 1. Choose **Add a guest user** from the **Quick tasks** panel.
 
-    <img src="../intune-service/media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
-
 2. Enter the client's email address and (optionally) add a personalized message for the invite.
-
-    <img src="../intune-service/media/azure-ad-guest-invite.png" width="203" height="106" alt="Inviting an external user as a guest" />
 
 3. Choose **Invite**.
 
 This sends an invite to the user.
-
-   <img src="../intune-service/media/aad-multiple-tenant-invitation.png" width="624" height="523" alt="A sample guest invitation">
 
    The user needs to choose the **Get Started** link to accept your invitation.
 

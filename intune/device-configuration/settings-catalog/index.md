@@ -37,7 +37,7 @@ This feature applies to:
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
 
-  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../intune-service/enrollment/apple-user-enrollment-with-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
+  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../device-enrollment/apple/setup-user-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 
 - **macOS**
 
@@ -53,7 +53,7 @@ This feature applies to:
 
 
   - [Built-in macOS features replacing plist files](common-tasks.md#built-in-macos-features-replacing-plist-files)
-  - [Add a property list file to macOS devices using Microsoft Intune](../../intune-service/configuration/preference-file-settings-macos.md).
+  - [Add a property list file to macOS devices using Microsoft Intune](../../device-configuration/templates/configure-preference-file-macos.md).
 
 
 - **Windows**
@@ -78,7 +78,7 @@ You create the policy by using the settings catalog profile type.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in role, at a minimum.
 
-    For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+    For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -127,11 +127,11 @@ You create the policy by using the settings catalog profile type.
    >    You can add multiple values in a single field, but you might experience a character limit.
 
 9. Select **Next**.
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
-11. In **Assignments**, select the users or groups that will receive your profile. For more information, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
+11. In **Assignments**, select the users or groups that will receive your profile. For more information, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
     Select **Next**.
 
@@ -259,12 +259,12 @@ In the Intune admin center, you can use the built-in reporting features to help 
 6. Select the policy to see the devices. Then, select a specific device to see the setting that failed and possibly an error code.
 
 > [!TIP]
-> [Intune reports](../../intune-service/fundamentals/reports.md) is a great resource. For information about all the reporting data you can view, go to [Intune reports](../../intune-service/fundamentals/reports.md).
+> [Intune reports](../../device-management/reports/overview.md) is a great resource. For information about all the reporting data you can view, go to [Intune reports](../../device-management/reports/overview.md).
 
 For more information about conflict resolution, see:
 
-- [Monitor device profiles](../../intune-service/configuration/device-profile-monitor.md#view-conflicts)
-- [Common questions and answers with device policies](../../intune-service/configuration/device-profile-troubleshoot.md)
+- [Monitor device profiles](../../device-configuration/monitor-device-profile.md#view-conflicts)
+- [Common questions and answers with device policies](../../device-configuration/troubleshoot-device-profiles.md)
 
 # [Copilot](#tab/copilot-conflicts)
 
@@ -323,5 +323,5 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 
 - [Tasks you can complete using the settings catalog in Intune](common-tasks.md)
 - [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md)
-- [Assign the profile](../../intune-service/configuration/device-profile-assign.md), and [monitor its status](../../intune-service/configuration/device-profile-monitor.md).
+- [Assign the profile](../../device-configuration/assign-device-profile.md), and [monitor its status](../../device-configuration/monitor-device-profile.md).
 - [Overview of Microsoft Copilot for Intune](../../copilot/index.md)

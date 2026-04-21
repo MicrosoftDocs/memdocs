@@ -102,7 +102,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](manage-p
 >   To learn about the Security Copilot roles, see [Security Copilot roles and permissions](/copilot/security/authentication).
 >
 > :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
-> - [Read only operator](../../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> - [Read only operator](../../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator) or a [Custom role](../../fundamentals/role-based-access-control/overview.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
 > ---
@@ -113,7 +113,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](manage-p
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
 > :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
-> - [Read only operator](../../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> - [Read only operator](../../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator) or a [Custom role](../../fundamentals/role-based-access-control/overview.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
 > ---
@@ -124,7 +124,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](manage-p
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
 > :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
-> - [Policy and Profile manager](../../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) or a [Custom role](../../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> - [Policy and Profile manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager) or a [Custom role](../../fundamentals/role-based-access-control/overview.md#custom-roles) with the following permissions:
 >   - Device configurations/Create
 >   - Device configurations/Update
 
