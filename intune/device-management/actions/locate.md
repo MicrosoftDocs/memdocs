@@ -1,15 +1,14 @@
 ---
-title: "Remote Device Action: Find lost devices"
+title: "Device Action: Locate Device"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
 ms.date: 10/27/2025
 ms.topic: how-to
-ms.reviewer: shsivaku
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 ---
 
-# Remote device action: locate device
+# Device action: locate device
 
-The *locate device* device remote action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
+The *locate device* device action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
 Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](play-lost-mode-sound.md), or [display custom messages](lost-mode.md).
 
@@ -22,7 +21,7 @@ Depending on the platform, Intune can also report the last known location if the
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -38,7 +37,7 @@ Depending on the platform, Intune can also report the last known location if the
 :::column span="3":::
 ::: zone pivot="ios"
 
-> To use this remote action, make sure devices meet the following requirements:
+> To use this action, make sure devices meet the following requirements:
 >
 > - Enable [Lost Mode](lost-mode.md)
 
@@ -46,7 +45,7 @@ Depending on the platform, Intune can also report the last known location if the
 
 ::: zone pivot="android"
 
-> To use this remote action, make sure devices meet the following requirements:
+> To use this action, make sure devices meet the following requirements:
 >
 > - Location services must be turned on.
 > - Intune app is installed.
@@ -92,7 +91,7 @@ For more information about device restrictions, see [Android template device set
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -102,7 +101,7 @@ For more information about device restrictions, see [Android template device set
 >
 >::: zone pivot="android"
 >
-> For Android devices, the remote action is available only if the admin can read the policies that configure device location.
+> For Android devices, the action is available only if the admin can read the policies that configure device location.
 >
 > The account must:
 > - Have the **Device configuration/Read** permission.
@@ -116,7 +115,7 @@ For more information about device restrictions, see [Android template device set
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Locate device**.
+1. At the top of the device overview pane, find the row of action icons. Select **Locate device**.
 1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
 
 ::: zone pivot="android"

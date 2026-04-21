@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Full Scan"
+title: "Device Action: Full Scan"
 description: Learn how to initiate on demand Microsoft Defender full scan with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: full scan
+# Device action: full scan
 
-The *full scan* remote action in Intune lets IT admins trigger a comprehensive malware scan on managed Windows devices using Microsoft Defender Antivirus. It checks all files and running processes, helping detect threats missed by quick scans.
+The *full scan* action in Intune lets IT admins trigger a comprehensive malware scan on managed Windows devices using Microsoft Defender Antivirus. It checks all files and running processes, helping detect threats missed by quick scans.
 
 This action is ideal when a device is suspected of compromise or when validating security baselines. Instead of waiting for scheduled scans or relying on user action, admins can launch a full scan directly from the Intune admin center.
 
@@ -20,7 +20,7 @@ This action is ideal when a device is suspected of compromise or when validating
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - Windows
 
@@ -33,7 +33,7 @@ This action is ideal when a device is suspected of compromise or when validating
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
@@ -46,12 +46,12 @@ This action is ideal when a device is suspected of compromise or when validating
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Full scan**.
+1. At the top of the device overview pane, find the row of action icons. Select **Full scan**.
 
 ## Reference links
 
 - Microsoft Graph API: [windowsDefenderScan action][GRAPH-1]
-- Configuration service provider (CSP) used to initiate the remote action: [Defender CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [Defender CSP][CSP-1]
 
 <!--links-->
 

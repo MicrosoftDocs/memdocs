@@ -22,7 +22,7 @@ Use this article to sync iOS/iPadOS devices with Apple Business Manager, manage 
 
 Before completing the tasks in this article:
 
-- [Set up an iOS/iPadOS ADE token](token-setup-apple.md)
+- [Set up an iOS/iPadOS ADE token](setup-apple-token.md)
 - [Create an enrollment profile for iOS/iPadOS and assign it to devices](setup-automated-ios.md)
 
 ## Sync managed devices
@@ -80,4 +80,4 @@ For information on the end-user experience on iOS/iPadOS, see:
 
 ## Next steps
 
-To renew or delete your token, see [Set up an iOS/iPadOS ADE token](token-setup-apple.md).  
+To renew or delete your token, see [Set up an iOS/iPadOS ADE token](setup-apple-token.md).  
