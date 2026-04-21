@@ -13,6 +13,8 @@ ms.collection:
 **Applies to:**
 * Windows 11  
 * Android
+* visonOS
+* tvOS  
 
 Set up enrollment time grouping to speed up app and policy provisioning during device enrollment. With enrollment time grouping, you can add a Microsoft Entra security group in the enrollment profile so that devices are added to the group during enrollment, rather than after. You can then assign required apps and policy configuration to the group. This preknowledge of the security group that the device will become member of after enrollment enables Intune to deliver the configurations to the device quickly on enrollment, reducing post-enrollment latency and improving time to productivity.
 
@@ -27,6 +29,8 @@ Enrollment time grouping is supported on devices provisioned via:
 * [Windows Autopilot device preparation](/autopilot/device-preparation/overview)
 
 * [Android Enterprise](android/guide.md)
+
+* [Automated device enrollment for tvOS and visionOS](./apple/automated-device-enrollment-overview-apple.md  )
 
 For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment profile, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.
 
@@ -107,6 +111,10 @@ You can add one static Microsoft Entra security group per enrollment profile. As
 
    - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](android/setup-fully-managed.md)
 
+   - tvOS:[Set up enrollment profile for tvOS](apple/setup-automated-tvos.md)  
+
+   - visionOS:[Set up enrollment profile visionOS](apple/setup-automated-visionos.md) 
+
     >[!TIP]
     > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token or the corporate owned work profile (default) token.
 
@@ -126,6 +134,7 @@ To access reporting for enrollment time grouping, go to **Devices** > **Monitor*
 - Android Enterprise fully managed enrollment  
 - Android Enterprise corporate-owned work profile enrollment  
 - Android Enterprise dedicated enrollment  
+- Apple mobile automated device enrollment  
 
 Recently updated information can take up to 20 minutes to appear in the report. You must have the *Microsoft.Intune/ManagedDevices/Read* RBAC permission to view the report.
 

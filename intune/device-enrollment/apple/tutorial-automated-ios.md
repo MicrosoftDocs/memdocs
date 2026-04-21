@@ -33,18 +33,19 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 Create an MDM server profile for Microsoft Intune in Apple Business Manager. The token you download in this step will enable the connection between Microsoft Intune and Apple Business Manager in a later step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** and expand **By platform**. Select **iOS/iPadOS**.
-3. Expand **Device onboarding**, and then select **Enrollment**.
-4. Select **Enrollment program tokens**.
-5. Select **Create**.
-6. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
-7. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
-8. Select **Create a token via Apple Business Manager** and sign in to Apple Business Manager with your company Apple ID.
+1. Go to **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**.
+1. Select **Apple mobile**.  
+1. Select **Enrollment program tokens**.
+1. Select **Create**.
+1. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
+1. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
+1. Select **Create a token via Apple Business Manager** and sign in to Apple Business Manager with your company Apple ID.
 
     >[!IMPORTANT]
     > While you're in Apple Business Manager, don't close the browser tab with Microsoft Intune. You'll return to it later.
 
-6. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-automated-ios.md#step-2-assign-devices).
+1. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-automated-ios.md#step-2-assign-devices).
 
 ## Step 2: Assign devices
 
@@ -54,11 +55,11 @@ While you're in Apple Business Manager, assign devices to your new MDM server (*
 Return to the Microsoft Intune admin center to upload the MDM server token to Intune. After you upload the token, Microsoft Intune can sync and enroll iOS/iPadOS devices assigned to *TestMDMServer*.
 
 1. For **Apple ID**, enter the Apple ID you used to create the token.
-2. For **Apple token**, upload the server token you saved earlier. The file must be in P7M format.
-3. Select **Next**.
-4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
-5. Select **Next**.
-6. On **Review + create**, select **Create** to finish linking Microsoft Intune and Apple Business Manager.
+1. For **Apple token**, upload the server token you saved earlier. The file must be in P7M format.
+1. Select **Next**.
+1. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
+1. Select **Next**.
+1. On **Review + create**, select **Create** to finish linking Microsoft Intune and Apple Business Manager.
 
 Microsoft Intune automatically syncs with Apple Business Manager. Devices can take up to 12 hours to appear in the admin center. You can wait for these devices to sync, or manually start the sync. To start the sync yourself, select your token from the list in the admin center, and then choose **Devices** > **Sync**.
 

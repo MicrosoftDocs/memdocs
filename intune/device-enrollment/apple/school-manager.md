@@ -8,10 +8,15 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Set up iOS/iPadOS device enrollment with Apple School Manager
+# Set up device enrollment with Apple School Manager  
 
-Set up Microsoft Intune to enroll iOS/iPadOS devices purchased through [Apple School Manager](https://school.apple.com/). Using Intune with Apple School Manager, you can enroll large numbers of iOS/iPadOS devices without ever touching them. When a student or teacher turns on the device, Apple Setup Assistant runs with preconfigured settings and the device enrolls into management.
+Set up Microsoft Intune to enroll Apple mobile devices purchased through [Apple School Manager](https://school.apple.com/). Using Intune with Apple School Manager, you can enroll large numbers of devices without ever touching them. When a student or teacher turns on the device, Apple Setup Assistant runs with preconfigured settings and the device enrolls into management.  
 
+## Supported platforms  
+
+Microsoft Intunee supports automated device enrollment (ADE) for Apple mobile devices, which include iOS/iPadOS, tvOS, and visionOS. 
+
+Intune supports ADE for visionOS and tvOS devices using enrollment without user affinity. These devices are enrolled as corporate‑owned and receive device‑targeted policies. Configuration is delivered using custom configuration profiles.  
 
 ## Prerequisites
 

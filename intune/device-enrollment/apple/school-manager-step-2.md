@@ -15,10 +15,13 @@ After you get your Apple token, you can create an enrollment profile for school 
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
-1. Select the **Apple** tab.
+1. Select the **Apple mobile** tab.
 1. Under **Bulk Enrollment Methods**, choose **Enrollment program tokens**.
 1. Choose a token, and then select **Profiles**.
-1. Select **Create profile** > **iOS/iPadOS**.
+1. Select **Create profile** and choose the platform you're configuring: 
+    - iOS/iPadOS
+    - tvOS
+    - visionOS  
 
 1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
 
@@ -27,7 +30,7 @@ After you get your Apple token, you can create an enrollment profile for school 
    You can use the name you enter here to create a dynamic group in Microsoft Entra ID. To assign devices with this enrollment profile to a group, for example, enter the name in the *enrollmentProfileName* parameter in your dynamic group rules. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
 
-1. For **User Affinity**, decide if devices with this profile must enroll with an assigned user or without an assigned user.
+1. For **User Affinity**, decide if devices with this profile must enroll with an assigned user or without an assigned user. User affinity isn't supported on tvOS and visionOS devices.  
     - **Enroll with User Affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. This option also lets users authenticate their devices by using the company portal. If using Active Directory Federation Services (AD FS), user affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint).   Apple School Manager's Shared iPad mode requires user enroll without user affinity.
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
@@ -42,7 +45,7 @@ After you get your Apple token, you can create an enrollment profile for school 
     >
     > These features aren't supported when authenticating with Apple Setup Assistant.
 
-1. Choose **Device Management Settings**. Decide if you want devices using this profile to be supervised. *Supervision* gives you more management options and disables Apple Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
+1. Choose **Device Management Settings**. Decide if you want devices using this profile to be supervised. *Supervision* gives you more management options and disables Apple Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of devices.
 
     Users are notified that their devices are supervised in two ways:
 
@@ -50,9 +53,9 @@ After you get your Apple token, you can create an enrollment profile for school 
    - The **Settings** > **General** > **About** screen says: "This iPhone is supervised. Contoso can monitor your Internet traffic and locate this device."
 
      > [!NOTE]
-     > A device enrolled without supervision can only be reset to supervised by using the Apple Configurator. Resetting the device in this manner requires connecting an iOS/iPadOS device to a Mac with a USB cable. For more information, see the [Apple Configurator docs](https://support.apple.com/guide/apple-configurator-mac) (opens Apple Support).
+     > A device enrolled without supervision can only be reset to supervised by using the Apple Configurator. Resetting the device in this manner requires connecting a device to a Mac with a USB cable. For more information, see the [Apple Configurator docs](https://support.apple.com/guide/apple-configurator-mac) (opens Apple Support).
 
-1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the supervised management mode set to *yes*.
+1. Choose if you want locked enrollment for devices using this profile. **Locked enrollment** disables Apple settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. Such devices must have the supervised management mode set to *yes*.
 
 1. You can let multiple users sign on to enrolled iPads by using a managed Apple ID. To do so, choose **Yes** under **Shared iPad** (this option requires **Enroll without User Affinity** and **Supervised** mode set to **Yes**.) Managed Apple IDs are created in the Apple School Manager portal. Learn more about [shared iPad](../../solutions/education/ref-classroom-settings-ios-shared.md) and [shared iPad requirements for Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 

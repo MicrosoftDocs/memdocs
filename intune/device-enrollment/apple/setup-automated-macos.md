@@ -9,34 +9,29 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Set up an enrollment profile for macOS ADE
+# Set up automated device enrollment for macOS   
 
 *Applies to macOS*
 
 This article describes how to create an enrollment profile for macOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment for macOS](automated-device-enrollment-overview-macos.md).
 
 > [!NOTE]
-> The steps in this article are the same whether you're using Apple Business Manager or Apple School Manager. For brevity, we refer to *Apple Business Manager* only throughout the steps in this article, except where clarification is necessary.
-
-## Certificates
-
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. ACME is supported on macOS 13.1 or later. Already-enrolled devices don't receive an ACME certificate unless they re-enroll. For details, see [Certificates](automated-device-enrollment-overview-macos.md#certificates) in the ADE overview.
+> The steps in this article are the same whether you're using Apple Business or Apple School Manager. For brevity, we refer to *Apple Business* only throughout the steps in this article, except where clarification is necessary.  
 
 ## Prerequisites
 
 Before you create the enrollment profile, you must have:
 
-* Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
+* Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
 * An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](token-setup-macos.md).
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
-* New or wiped devices purchased through Apple Business Manager or Apple School Manager.
+* New or wiped devices purchased through Apple Business or Apple School Manager.
      > [!TIP]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
-
+     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
 
 ## Deploy the Company Portal app  
 
-When enrolling macOS devices using ADE with user affinity and Setup Assistant with modern authentication, users must sign in to the Company Portal app with their Microsoft Entra credentials to complete device registration in Microsoft Entra ID. To add the Company Portal app to macOS devices, see [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).
+When enrolling macOS devices using ADE with user affinity and Setup Assistant with modern authentication, users must sign in to the Company Portal app with their Microsoft Entra credentials to complete device registration in Microsoft Entra ID. To add the Company Portal app to macOS devices, see [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).  
 
 ## Create an enrollment profile
 
@@ -53,7 +48,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
     ![Create a profile screenshot.](./media/setup-automated-macos/image04.png)
 
    > [!IMPORTANT]
-   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business Manager or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
+   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
 
 1. For **Basics**, enter a name and description for the profile so that you can distinguish it from other enrollment profiles. These details aren't visible to device users.
 
@@ -177,7 +172,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Appearance** | Shows the appearance pane where users can select an appearance mode. For macOS 10.14 and later. |
 | **Screen Time** | Shows the macOS Screen Time setup pane, a feature users can enable to gain insight on screen-time, and app and website activity. For macOS 10.15 and later. |
 | **Privacy** | Shows the privacy setup pane to the user. For macOS 10.13.4 and later. |
-| **Accessibility** | Shows the accessibility setup screen to the user. If this screen is hidden, the user can't use the macOS Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have a serial number in Apple School Manager or Apple Business Manager. |
+| **Accessibility** | Shows the accessibility setup screen to the user. If this screen is hidden, the user can't use the macOS Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have a serial number in Apple School Manager or Apple Business. |
 | **Auto unlock with Apple Watch**| Shows the macOS Unlock with Apple Watch pane, where users can configure their Apple Watch to unlock their Mac. For macOS 12.0 and later.
 | **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.|
 | **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane after devices complete a software upgrade. If you hide this screen, devices get the default macOS Sonoma wallpaper. For macOS 14.1 and later.|

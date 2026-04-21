@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune
+# Enrollment guide: Enroll Apple mobile devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling iOS/iPadOS devices:
 
@@ -38,11 +38,11 @@ For all Intune-specific prerequisites and configurations needed to prepare your 
 
 ## Automated Device Enrollment (ADE) (supervised)
 
-Previously called Apple Device Enrollment Program (DEP). Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
+Use on devices owned by your organization. This option configures settings using Apple Business or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
 
 For more specific information on this enrollment type, go to:
 
-- [Apple Business Manager enrollment](setup-automated-ios.md)
+- [Apple Business enrollment](setup-automated-ios.md)
 - [Apple School Manager enrollment](school-manager.md): For more information on Apple School Manager, go to [Apple education](https://www.apple.com/education/k12/it/) (opens Apple's web site).
 
 ---
@@ -52,7 +52,7 @@ For more specific information on this enrollment type, go to:
 | Devices are owned by the organization or school. | ✅ |
 | You have new devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
-| Devices are associated with a single user. | ✅ |
+| Devices are associated with a single user. | ✅ <br/><br/> Supported for iOS/iPadOS. not tvOS or visionOS.|
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../mam-without-enrollment.md) (opens another Microsoft article), or [User and Device enrollment](#byod-user-and-device-enrollment) (in this article). |
 | You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using [Apple Configurator](#apple-configurator-enrollment) (in this article). |
@@ -63,13 +63,13 @@ For more specific information on this enrollment type, go to:
 
 ### ADE administrator tasks
 
-This task list provides an overview. For more specific information, go to [Apple Business Manager enrollment](setup-automated-ios.md) or [Apple School Manager enrollment](school-manager.md).
+This task list provides an overview. For more specific information, go to [Apple Business enrollment](setup-automated-ios.md) or [Apple School Manager enrollment](school-manager.md).
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
-- Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (.p7m) is active. For more specific information, go to [Set up an iOS/iPadOS ADE token](token-setup-apple.md).
-- Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
-- Decide [how users will authenticate](setup-automated-ios.md#choose-an-authentication-method) their devices: the **Setup Assistant with modern authentication** (recommended), **Company Portal** app, or **Setup Assistant (legacy)** (no longer recommended). Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication.
+- Need access to the [Apple Business portal](https://business.apple.com/) or the [Apple School Manager (ASM) portal](https://school.apple.com/).
+- Be sure the Apple token (.p7m) is active. For more specific information, go to [Set up an Apple mobile ADE token](token-setup-apple.md).
+- Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll Apple mobile devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
+- Decide [how users will authenticate](setup-automated-ios.md#choose-an-authentication-method) their iOS/iPadOS devices: the **Setup Assistant with modern authentication** (recommended) or **Company Portal** app. Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication. User affinity isn't supported on tvOS and visionOS so you don't need to select an authentication method for those devices.  
 
   - Select the **Company Portal** app when:
 
@@ -89,13 +89,7 @@ This task list provides an overview. For more specific information, go to [Apple
     - You want to prompt users to reset their expired passwords during enrollment.
     - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, like Conditional Access.
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
-    - You want users to use the device, even when the Company Portal app isn't installed.
-
-  - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
-
-    - You want to wipe the device.
-    - You don't want to use modern authentication features, like MFA.
-    - You don't want to register devices in Microsoft Entra ID. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
+    - You want users to use the device, even when the Company Portal app isn't installed.  
 
       If you want devices registered in Microsoft Entra ID, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant (legacy), you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
 
@@ -223,8 +217,8 @@ For more specific information on this enrollment type, go to [Apple Configurator
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You need a wired connection, or are having a network issue. | ✅ |
-| Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✅ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
-| A country/region doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✅ <br/><br/> If your country/region supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
+| Your organization doesn't want administrators to use Apple Business or ASM portals, or doesn't want to set up all the requirements.  | ✅ <br/><br/> The idea of *not* using the Apple Business or ASM portals is to give administrators less control.|
+| A country/region doesn't support Apple Business or Apple School Manager (ASM). | ✅ <br/><br/> If your country/region supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
 | Devices are owned by the organization or school. | ✅ |
 | You have new or existing devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ <br/><br/> If you have a large number of devices, then this method takes some time. |
