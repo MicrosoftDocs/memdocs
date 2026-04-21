@@ -108,7 +108,7 @@ This task list provides an overview. For more specific information, go to [Autom
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - You need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Set up a macOS ADE token](token-setup-macos.md).
+- Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Set up a macOS ADE token](setup-macos-token.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - Decide how you want users to authenticate on their devices: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended). Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 

@@ -13,21 +13,21 @@ ms.collection:
 
 *Applies to macOS*
 
-This article describes how to create an enrollment profile for macOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment for macOS](automated-device-enrollment-overview-macos.md).
+This article describes how to create an enrollment profile for macOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment for macOS](overview-automated-enrollment-macos.md).
 
 > [!NOTE]
 > The steps in this article are the same whether you're using Apple Business Manager or Apple School Manager. For brevity, we refer to *Apple Business Manager* only throughout the steps in this article, except where clarification is necessary.
 
 ## Certificates
 
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. ACME is supported on macOS 13.1 or later. Already-enrolled devices don't receive an ACME certificate unless they re-enroll. For details, see [Certificates](automated-device-enrollment-overview-macos.md#certificates) in the ADE overview.
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. ACME is supported on macOS 13.1 or later. Already-enrolled devices don't receive an ACME certificate unless they re-enroll. For details, see [Certificates](overview-automated-enrollment-macos.md#certificates) in the ADE overview.
 
 ## Prerequisites
 
 Before you create the enrollment profile, you must have:
 
 * Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
-* An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](token-setup-macos.md).
+* An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](setup-macos-token.md).
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
 * New or wiped devices purchased through Apple Business Manager or Apple School Manager.
      > [!TIP]
@@ -208,5 +208,5 @@ Optionally, you can select a default enrollment profile. The default profile is 
 ## Next steps
 
 - To sync devices, distribute devices to users, and manage tokens, see [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md).
-- To renew or delete your enrollment program token, see [Set up a macOS ADE token](token-setup-macos.md).  
+- To renew or delete your enrollment program token, see [Set up a macOS ADE token](setup-macos-token.md).  
 - Use [Remote Device Actions in Microsoft Intune](../../device-management/actions/index.md) to remotely manage enrolled Macs.  
