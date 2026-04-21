@@ -12,8 +12,6 @@ ms.collection:
 
 # Add Android Store Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune.
 
 ## Add an app

@@ -12,8 +12,6 @@ ms.collection:
 
 # Add App Configuration Policies for Managed Android Enterprise Devices
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 App configuration policies in Microsoft Intune supply settings to Managed Google Play apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
 
 Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
