@@ -20,7 +20,7 @@ Automated device enrollment (ADE) is an Apple enrollment method for corporate-ow
 
 ## Supported platforms
 
-Intune supports automated device enrollment for iOS/iPadOS. For macOS, see [Overview of Apple Automated Device Enrollment for macOS](automated-device-enrollment-overview-macos.md).
+Intune supports automated device enrollment for iOS/iPadOS. For macOS, see [Overview of Apple Automated Device Enrollment for macOS](overview-automated-enrollment-macos.md).
 
 | Platform | Setup article |
 |----------|---------------|
@@ -54,7 +54,7 @@ Devices that are already enrolled don't receive an ACME certificate unless they 
 
 Setting up ADE in Intune involves three main tasks:
 
-1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business Manager. This is typically a one-time setup task per token. For steps, see [Set up an iOS/iPadOS ADE token](token-setup-apple.md).
+1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business Manager. This is typically a one-time setup task per token. For steps, see [Set up an iOS/iPadOS ADE token](setup-apple-token.md).
 
 2. **Create and assign an enrollment profile**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the profile to device groups. For steps, see [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md).
 
@@ -70,6 +70,6 @@ Before setting up ADE for any Apple platform, ensure the following are in place:
 
 ## Next steps
 
-- [Set up an iOS/iPadOS ADE token](token-setup-apple.md)
+- [Set up an iOS/iPadOS ADE token](setup-apple-token.md)
 - [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md)
 - [Manage iOS/iPadOS ADE devices and tokens](manage-devices-tokens-apple.md)

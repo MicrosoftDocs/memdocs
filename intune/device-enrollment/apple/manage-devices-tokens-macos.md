@@ -22,7 +22,7 @@ Use this article to sync macOS devices with Apple Business Manager, manage your 
 
 Before completing the tasks in this article:
 
-- [Set up a macOS ADE token](token-setup-macos.md)
+- [Set up a macOS ADE token](setup-macos-token.md)
 - [Create an enrollment profile for macOS and assign it to devices](setup-automated-macos.md)
 
 ## Sync managed devices
@@ -79,5 +79,5 @@ Distribute prepared Mac devices throughout your organization.
 
 ## Next steps
 
-- To renew or delete your enrollment program token, see [Set up a macOS ADE token](token-setup-macos.md).
+- To renew or delete your enrollment program token, see [Set up a macOS ADE token](setup-macos-token.md).
 - Use [Remote Device Actions in Microsoft Intune](../../device-management/actions/index.md) to remotely manage enrolled Macs.

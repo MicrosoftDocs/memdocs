@@ -42,7 +42,7 @@ Devices that are already enrolled don't receive an ACME certificate unless they 
 
 Setting up ADE in Intune involves three main tasks:
 
-1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business Manager. This is typically a one-time setup task per token. For steps, see [Set up a macOS ADE token](token-setup-macos.md).
+1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business Manager. This is typically a one-time setup task per token. For steps, see [Set up a macOS ADE token](setup-macos-token.md).
 
 2. **Create and assign an enrollment profile**: Configure the enrollment experience for your Mac devices, including user affinity and Setup Assistant screens. Then assign the profile to device groups. For steps, see [Set up an enrollment profile for macOS](setup-automated-macos.md).
 
@@ -58,6 +58,6 @@ Before setting up ADE for macOS, ensure the following are in place:
 
 ## Next steps
 
-- [Set up a macOS ADE token](token-setup-macos.md)
+- [Set up a macOS ADE token](setup-macos-token.md)
 - [Set up an enrollment profile for macOS](setup-automated-macos.md)
 - [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md)
