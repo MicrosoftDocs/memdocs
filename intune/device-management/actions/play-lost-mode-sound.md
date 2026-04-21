@@ -1,20 +1,19 @@
 ---
-title: "Remote Device Action: Play Lost Mode Sound"
-description: Learn how to use the Play lost device sound remote action in Microsoft Intune to trigger an audible alert on a lost, stolen, or misplaced device—helping users locate it quickly and securely.
+title: "Device Action: Play Lost Mode Sound"
+description: Learn how to use the Play lost device sound action in Microsoft Intune to trigger an audible alert on a lost, stolen, or misplaced device—helping users locate it quickly and securely.
 ms.date: 10/27/2025
 ms.topic: how-to
-ms.reviewer: shsivaku
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remote device action: play lost mode sound
+# Device action: play lost mode sound
 
-Microsoft Intune provides platform-specific remote actions to help locate a lost or misplaced device by triggering an audible alert—even if the device is locked or silenced.
+Microsoft Intune provides platform-specific device actions to help locate a lost or misplaced device by triggering an audible alert—even if the device is locked or silenced.
 
 - On iOS/iPadOS, use the *play Lost Mode sound* action. This action is available when the device is in [Lost Mode](lost-mode.md) and supervised.
 - On Android Enterprise devices, use the *Play lost device sound* action. This action is supported for corporate-owned devices enrolled with Android Enterprise.
 
-These remote actions are especially useful in environments where devices are shared or frequently moved—such as classrooms, labs, or enterprise workspaces. Playing a sound helps users or administrators locate the device quickly and securely, supporting recovery efforts when a device is lost.
+These device actions are especially useful in environments where devices are shared or frequently moved—such as classrooms, labs, or enterprise workspaces. Playing a sound helps users or administrators locate the device quickly and securely, supporting recovery efforts when a device is lost.
 
 ## Prerequisites
 
@@ -25,7 +24,7 @@ These remote actions are especially useful in environments where devices are sha
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -39,14 +38,14 @@ These remote actions are especially useful in environments where devices are sha
 :::column span="3":::
 ::: zone pivot="ios"
 
-> To use this remote action, make sure devices meet the following requirements:
+> To use this action, make sure devices meet the following requirements:
 >
 > - Enable [Lost Mode](lost-mode.md)
 
 ::: zone-end
 
 ::: zone pivot="android"
-> To use this remote action, make sure devices meet the following requirements:
+> To use this action, make sure devices meet the following requirements:
 >
 > - Intune app is installed.
 
@@ -61,7 +60,7 @@ These remote actions are especially useful in environments where devices are sha
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -75,10 +74,10 @@ These remote actions are especially useful in environments where devices are sha
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
 ::: zone pivot="ios"
-3. At the top of the device overview pane, locate the row of remote action icons. Select **Play Lost Mode sound (supervised only)**.
+3. At the top of the device overview pane, locate the row of action icons. Select **Play Lost Mode sound (supervised only)**.
 ::: zone-end
 ::: zone pivot="android"
-3. At the top of the device overview pane, locate the row of remote action icons. Select **Play lost device sound**.
+3. At the top of the device overview pane, locate the row of action icons. Select **Play lost device sound**.
 ::: zone-end
 4. Select the duration for the sound to play on the device, and then select **Yes**.
 
