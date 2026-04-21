@@ -70,7 +70,7 @@ You can monitor the run status of all assigned scripts for users and devices by 
 - **Scripts** > **select the script to monitor** > **User status**
 
 >[!IMPORTANT]
-> Irrespective of the selected **Script frequency**, the script run status is reported only the first time a script is run. Script run status is not updated on subsequent runs. However, updated scripts are treated as new scripts and will report the run status again.
+> Irrespective of the selected **Script frequency**, the script run status is reported only when status changes from last report. For example, if script reported "success" in last run and "failure" in the current run, both status and last updated timestamp are reflected with the current run information. If the script status remains same throughout each sync, last updated timestamp is updated every 7 days from the first run. 
 
 Once a script runs, it returns one of the following statuses:
 
