@@ -119,7 +119,7 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 - Be prepared to create new policies. The built-in features of modern endpoint management, like Microsoft Intune, may have better options to create and deploy policies.
 
-  The [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md#move-from-group-policy-objects-gpos) is a good resource.
+  The [High level planning guide to move to cloud-native endpoints](planning-guide.md#move-from-group-policy-objects-gpos) is a good resource.
 
 - Don't migrate all your policies. Remember, your old policies might not make sense with cloud-native endpoints.
 
