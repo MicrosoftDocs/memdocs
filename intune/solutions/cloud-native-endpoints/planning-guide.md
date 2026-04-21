@@ -22,7 +22,7 @@ This feature applies to:
 
 Moving your Windows endpoints to cloud-native has many advantages, including long term advantages. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
 
-For more information on the benefits to the organization and your users, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
+For more information on the benefits to the organization and your users, go to [What are cloud-native endpoints](overview.md).
 
 To be successful, consider the key areas described in this article for your planning and deployment. With proper planning, communications, and process updates, your organization can be cloud-native.
 
@@ -197,7 +197,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
   > - Isn't used in cloud-native solutions.
   > - Doesn't solve any connectivity issues for resources that require authentication through Microsoft Entra.
   > - Isn't the answer or work-around for any domain authentication requirements through Microsoft Entra.
-  > - Doesn't address the machine authentication challenges listed at [Known Issues and important information](cloud-native-endpoints-known-issues.md).
+  > - Doesn't address the machine authentication challenges listed at [Known Issues and important information](troubleshoot.md).
   >
   > For a deeper understanding of Microsoft Entra Kerberos and the scenarios it can address, go to the following blogs:
   >
@@ -335,7 +335,7 @@ When endpoints are fully cloud-native, user data is stored in a cloud storage pr
 
 For more information, go to:
 
-- [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+- [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
 - [Configure hybrid Microsoft Entra join](/entra/identity/devices/how-to-hybrid-join)
 
 > [!NOTE]
@@ -465,7 +465,7 @@ Some of the benefits include:
 > [!NOTE]
 > It's not recommended to use Windows Autopilot to hybrid Microsoft Entra join newly provisioned endpoints. It works, but there are some challenges. On newly provisioned endpoints, use Windows Autopilot to Microsoft Entra join (not hybrid Microsoft Entra join).
 >
-> To help determine the join method that's right for your organization, go to [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md).
+> To help determine the join method that's right for your organization, go to [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md).
 
 For more information on Windows Autopilot, go to:
 
@@ -475,9 +475,9 @@ For more information on Windows Autopilot, go to:
 
 ## Follow the cloud-native endpoints guidance
 
-1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
-2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+1. [Overview: What are cloud-native endpoints?](overview.md)
+2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
+3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
+4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. 🡺 **High level planning guide** (*You are here*)
-6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+6. [Known issues and important information](troubleshoot.md)
