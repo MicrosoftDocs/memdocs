@@ -11,7 +11,7 @@ ms.collection:
 
 # Overview of Apple Automated Device Enrollment for Apple mobile   
 
-Automated device enrollment (ADE) is an Apple enrollment method for corporate-owned devices purchased through Apple Business or Apple School Manager. With ADE, you configure and deploy enrollment profiles to devices over the air — without touching the devices. When someone turns on a device for the first time, Apple Setup Assistant guides them through setup and enrollment automatically.    
+Automated device enrollment (ADE) is an Apple enrollment method for corporate-owned devices purchased through Apple Business or Apple School Manager. With ADE, you configure and deploy enrollment policies to devices over the air — without touching the devices. When someone turns on a device for the first time, Apple Setup Assistant guides them through setup and enrollment automatically.    
 
 > [!NOTE]
 > The steps in ADE articles are the same whether you're using Apple Business or Apple School Manager. For brevity, those articles refer to *Apple Business* only, except where clarification is necessary.  
@@ -22,9 +22,9 @@ Microsoft Intunee supports automated device enrollment for Apple mobile devices,
 
 | Platform | Setup article |What it's for|
 |----------|---------------|-------------|
-| iOS/iPadOS | [Create an enrollment profile for iOS/iPadOS](setup-automated-ios.md) | User affinity, no user affinity|
-| tvOS| [Create an enrollment profile for tvOS](setup-automated-tv-os.md)| No user affinity|
-| visionOS| [Create an enrollment profile for visionOS](setup-automated-vision-os.md)| No user affinity|
+| iOS/iPadOS | [Create an enrollment policy for iOS/iPadOS](setup-automated-ios.md) | User affinity, no user affinity|
+| tvOS| [Create an enrollment policy for tvOS](setup-automated-tv-os.md)| No user affinity|
+| visionOS| [Create an enrollment policy for visionOS](setup-automated-vision-os.md)| No user affinity|
 
 Intune supports ADE for visionOS and tvOS devices using enrollment without user affinity. These devices are enrolled as corporate‑owned and receive device‑targeted policies. Configuration is delivered using custom configuration profiles.  
 
@@ -37,7 +37,7 @@ For macOS, see [Overview of Apple Automated Device Enrollment for macOS](overvie
 | Supervised mode | ✅ ADE devices are supervised by default, giving you more management control. |
 | Corporate-owned devices | ✅ Designed for devices purchased through Apple Business or Apple School Manager. |
 | Zero-touch deployment | ✅ Devices can ship directly to users. Enrollment starts when they turn on the device. |
-| Bulk enrollment | ✅ Enroll a few devices or thousands using a single enrollment profile. |
+| Bulk enrollment | ✅ Enroll a few devices or thousands using a single enrollment policy. |
 | Devices with a single assigned user | ✅ Supported on iOS/iPadOS, not tvOS or visionOS.|
 | Userless devices (kiosk, shared-use) | ✅ Supported on all Apple mobile platforms. |
 | Microsoft Entra shared device mode | ✅ Supported on iOS/iPadOS for frontline worker scenarios. |
@@ -53,7 +53,7 @@ Setting up ADE in Intune involves three main tasks:
 
 1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business. This is typically a one-time setup task per token. For more information, see [Set up enrollment token](setup-apple-token.md).  
 
-2. **Create and assign an enrollment profile**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the profile to device groups. 
+2. **Create and assign an enrollment policy**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the profile to device groups. 
 
 3. **Sync and distribute devices**: Sync device records from Apple Business to Intune, then distribute devices to users. Enrollment starts automatically through Apple Setup Assistant when a device is turned on. For more information, see [Managed Apple mobile devices and tokens](manage-devices-tokens-apple.md).  
 
@@ -61,7 +61,7 @@ Setting up ADE in Intune involves three main tasks:
 
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop.
 
-Corporate-owned devices running iOS/iPadOS 11 and later and enrolled through automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Enable supervised mode](enable-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment.  
+Corporate-owned devices running iOS/iPadOS 11 and later and enrolled through automated device enrollment should always be in supervised mode, which you can turn on in the enrollment policy. For more information about supervised mode, see [Enable supervised mode](enable-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment.  
 
 ## Certificates
 

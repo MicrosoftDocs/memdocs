@@ -17,7 +17,7 @@ During enrollment, Intune installs a Mobile Device Management (MDM) certificate 
 
 - Enrollment policies that limit the number or type of devices someone can enroll.
 - Compliance policies that help users and devices meet your rules.
-- Configuration profiles that configure work-appropriate features and settings on devices.
+- Configuration policiess that configure work-appropriate features and settings on devices.
 
 :::image type="content" source="media/guide/mdm-certificate.png" alt-text="Diagram that shows the device enrolls, the object is created in Microsoft Entra ID, and the MDM certificate is pushed to these devices in Microsoft Intune.":::
 
@@ -123,7 +123,7 @@ There's an enrollment guide for every platform. Choose your scenario, and get st
 
 - [Application management without enrollment](./mam-without-enrollment.md)
 - [Android](android/guide.md)
-- [iOS/iPadOS](apple/guide-ios-ipados.md)
+- [Apple mobile](apple/guide-ios-ipados.md)
 - [Linux](guide-linux.md)
 - [macOS](apple/guide-macos.md)
 - [Windows](windows/guide.md)
@@ -136,7 +136,7 @@ There's also a visual guide of the different enrollment options for each platfor
 
 ## Pilot groups
 
-When assigning your profiles, start small, and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. Then, assign the enrollment profile to more pilot groups.
+When assigning your policies, start small, and use a staged approach. Assign the enrollment policy to a pilot or test group. After initial testing, add more users to the pilot group. Then, assign the enrollment policy to more pilot groups.
 
 For more information and suggestions, go to the [Planning guide: Step 5 - Create a rollout plan](../fundamentals/planning-guide.md#step-5---create-a-rollout-plan).
 

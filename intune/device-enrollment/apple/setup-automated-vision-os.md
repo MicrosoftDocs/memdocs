@@ -13,10 +13,10 @@ ms.collection:
 
 *Applies to visionOS*
 
-This article describes how to create a visionOS enrollment policy for Apple automated device enrollment (ADE) in Microsoft Intune. This type of enrollment profile is for devices without user affinity. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).
+This article describes how to create a visionOS enrollment policy for Apple automated device enrollment (ADE) in Microsoft Intune. This type of enrollment policy is for devices without user affinity. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).
 
 ## Prerequisites
-Before you create the enrollment profile, you must have:
+Before you create the enrollment policy, you must have:
 
 * Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
 * An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).
@@ -41,9 +41,9 @@ Deploy the app as a required VPP app [with device licensing](../../intune-servic
 
 To enable automatic app updates for Company Portal, go to your app token settings in the admin center and change **Automatic app updates** to **Yes**. See [Upload an Apple VPP or Apple Business location token](../../intune-service/apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token) for the steps to access your token settings. If you don't enable automatic updates, the device user must manually check for them.
 
-## Create an enrollment profile
+## Create an enrollment policy
 
-Create a visionOS enrollment profile for userless automated device enrollment. A device enrollment profile defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment profiles per enrollment token.
+Create a visionOS enrollment policy for userless automated device enrollment. A device enrollment policy defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment policies per enrollment token.
 
 > [!NOTE]
 > Devices are blocked from enrolling when there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.
@@ -61,7 +61,7 @@ Create a visionOS enrollment profile for userless automated device enrollment. A
    > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
 
     > [!IMPORTANT]
-    > If you make changes to an existing enrollment profile, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.
+    > If you make changes to an existing enrollment policy, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.
 
 1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list.
 
@@ -84,9 +84,9 @@ Create a visionOS enrollment profile for userless automated device enrollment. A
            >[!NOTE]
            > Only device configuration policies start installing during the awaiting final configuration screen, and applications aren't included in this.
 
-         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles.
+         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment policies.
 
-      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment profiles.
+      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment policies.
 
 1. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template:
  1. Under **Apply device name template**, select **Yes**.
@@ -114,11 +114,11 @@ Create a visionOS enrollment profile for userless automated device enrollment. A
 
 You can use the enrollment **Name** field to create a dynamic group in Microsoft Entra ID. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
-You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
+You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment policy.
 
 Before device setup, make sure the enrolling user is a member of a Microsoft Entra user group.  
 
-If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
+If you assign dynamic groups to enrollment policies, there might be a delay in delivering applications and policies to devices after the enrollment.
 
 ### Setup Assistant screen reference
 The following table describes the Setup Assistant screens shown during automated device enrollment for visionOS. For more information about how each Setup Assistant screen affects the user experience, see [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web) (opens Apple support site).  
@@ -142,9 +142,9 @@ The following table describes the Setup Assistant screens shown during automated
 | **Intelligence** | Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. |
 | **Get Started** | Shows users the Get Started pane. |
 
-## Assign an enrollment profile to devices
+## Assign an enrollment policy to devices
 
-Before devices can be enrolled, you need to assign an enrollment profile to them.
+Before devices can be enrolled, you need to assign an enrollment policy to them.
 
 >[!NOTE]
 >You can also assign serial numbers to profiles in the **Apple Serial Numbers** pane.
@@ -156,7 +156,7 @@ Before devices can be enrolled, you need to assign an enrollment profile to them
 2. Select an enrollment token.
 3. Select **Devices**.
 5. Select all devices you want to assign, and then select **Assign profile**.
-4. Under **Assign profile**, choose the automated device enrollment profile you created for the devices, and then select **Assign**.
+4. Under **Assign profile**, choose the automated device enrollment policy you created for the devices, and then select **Assign**.
 
 ### Assign a default profile
 
@@ -172,7 +172,7 @@ You can pick a default profile to be applied to all devices that enroll with a s
 
 ## Next steps
 
-- To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
+- To sync devices, assign enrollment policies, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
 
 - To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md). 
 

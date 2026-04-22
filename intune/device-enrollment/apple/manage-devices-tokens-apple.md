@@ -87,7 +87,7 @@ You can delete an enrollment program token from Intune as long as:
 
 - No devices are assigned to the token.
 - No devices are assigned to the default profile.
-- There are no enrollment profiles under that token.
+- There are no enrollment policies under that token.
 
 To delete an enrollment program token:
 
@@ -97,7 +97,7 @@ To delete an enrollment program token:
 1. Select the token, and then select **Devices**.
 1. Delete all devices assigned to the token.
 1. Return to **Enrollment program tokens**. Select the token, and then select **Profiles**.
-1. Delete all enrollment profiles listed, including any default profile.
+1. Delete all enrollment policies listed, including any default profile.
 1. Return to **Enrollment program tokens**. Select the token, and then select **Delete**.
 
 ## Limits  
@@ -105,7 +105,7 @@ If you exceed 200,000 devices per token, you might experience sync problems. Spl
 
 | Resource | Maximum |
 |----------|---------|
-| Enrollment profiles per token | 1,000 |
+| enrollment policies per token | 1,000 |
 | ADE devices per profile | 200,000 |
 | ADE tokens per Intune account | 2,000 |
 | ADE devices per token | 200,000 |  
@@ -114,7 +114,7 @@ If you exceed 200,000 devices per token, you might experience sync problems. Spl
 
 Users on devices enrolled with user affinity must have an Intune license assigned. Devices enrolled without user affinity need an Intune device license, unless an Intune-licensed user is associated with the device. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and the [Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md).  
 
-A device that is already activated needs to be wiped before it can enroll with automated device enrollment. After you wipe it but before activating it again, you can apply the enrollment profile. For more information, see [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516) (opens Apple support site).   
+A device that is already activated needs to be wiped before it can enroll with automated device enrollment. After you wipe it but before activating it again, you can apply the enrollment policy. For more information, see [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516) (opens Apple support site).   
 
 If you're enrolling with ADE and user affinity, the following error can happen during setup:  
 

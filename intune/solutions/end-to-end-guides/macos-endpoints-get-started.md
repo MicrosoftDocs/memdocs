@@ -290,7 +290,7 @@ To enroll your first organization macOS endpoint, make sure the macOS device is:
 > [!div class="checklist"]
 >
 > - [Registered in Apple Business Manager (or Apple School Manager) and assigned to your Intune MDM](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web) (opens Apple's website)
-> - [Assigned an enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#assign-an-enrollment-profile-to-devices)
+> - [Assigned an enrollment policy in Intune](../../device-enrollment/apple/setup-automated-macos.md#assign-an-enrollment-policy-to-devices)
 
 The high-level steps to enroll your first macOS endpoint with Intune are:
 

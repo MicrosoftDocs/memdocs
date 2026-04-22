@@ -128,11 +128,11 @@ items:
         href: ./apple/setup-apple-token.md
       - name: Choose enrollment authentication method
         href: ./apple/ref-automated-authentication-methods.md
-      - name: Create an enrollment profile for iOS/iPadOS
+      - name: Create an enrollment policy for iOS/iPadOS
         href: ./apple/setup-automated-ios.md
-      - name: Create an enrollment profile for tvOS
+      - name: Create an enrollment policy for tvOS
         href: ./apple/setup-automated-tv-os.md
-      - name: Create an enrollment profile for visionOS
+      - name: Create an enrollment policy for visionOS
         href: ./apple/setup-automated-vision-os.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-apple.md
@@ -190,7 +190,7 @@ items:
         href: ./apple/overview-automated-enrollment-macos.md
       - name: Set up a macOS enrollment token
         href: ./apple/setup-macos-token.md
-      - name: Set up an enrollment profile for macOS
+      - name: Set up an enrollment policy for macOS
         href: ./apple/setup-automated-macos.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-macos.md
