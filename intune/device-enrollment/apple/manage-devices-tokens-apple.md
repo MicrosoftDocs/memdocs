@@ -21,16 +21,6 @@ This article applies to:
 - tvOS
 - visionOS  
 
-## Prerequisites
-
-Before completing the tasks in this article:
-
-- [Set up an Apple mobile automated device enrollment (ADE) token](setup-apple-token.md)  
-- Create an enrollment profile and assign it to devices:
-    - [Create enrollment profile for iOS/iPadOS](setup-automated-ios.md)
-    - [Create enrollment profile for tvOS](setup-automated-tv-os.md)
-    - [Create enrollment profile for visionOS](setup-automated-vision-os.md)
-
 ## Sync managed devices
 
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. After creating a token, sync Intune with Apple to see your managed devices in the Microsoft Intune admin center.
@@ -55,6 +45,14 @@ To comply with Apple's terms for acceptable enrollment program traffic, Microsof
 - A delta sync runs automatically every 12 hours. You can also trigger a sync manually by selecting **Sync**, no more than once every 15 minutes. All sync requests have 15 minutes to finish. The **Sync** button becomes inactive until the sync completes.
 
 - Apple Business and Apple School Manager sync approximately 3,000 devices to Intune per minute. If you have more than 200,000 devices per token, we recommend waiting for all devices to finish syncing before manually triggering another sync (total devices ÷ 3,000 devices per minute = estimated wait time).  
+
+## Re-enroll a device
+Complete these steps to re-enroll a device that already went through automated device enrollment.
+
+1. There are two options for resetting the device:
+    * Wipe the device in the Microsoft Intune admin center.
+    * Retire the device in the admin center, and then reset the device to factory settings using the Settings app or Apple Configurator 2.
+2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.  
 
 ## Renew your token
 

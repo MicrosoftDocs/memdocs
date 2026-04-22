@@ -292,15 +292,6 @@ You can pick a default profile to be applied to all devices that enroll with a s
 > [!NOTE]
 > Ensure that **Device Type Restrictions** under **Enrollment Restrictions** doesn't have the default **All Users** policy set to block the iOS/iPadOS platform. This setting causes automated enrollment to fail and your device shows as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which permits corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled through a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.  
 
-
-## Re-enroll a device
-Complete these steps to re-enroll a device that already went through automated device enrollment.
-
-1. There are two options for resetting the device:
-    * Wipe the device in the Microsoft Intune admin center.
-    * Retire the device in the admin center, and then reset the device to factory settings using the Settings app, Apple Configurator 2, or iTunes.
-2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.  
-
 ## Limitations
 
 These Setup Assistant screens don't work correctly on devices running iOS/iPadOS 14.5 and later:  

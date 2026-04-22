@@ -150,15 +150,7 @@ You can pick a default profile to be applied to all devices that enroll with a s
 4. Select a profile in the list, and then select **Save**. From here, Intune applies the profile to all devices that enroll with the selected enrollment token.
 
 > [!NOTE]
-> Ensure that **Device Type Restrictions** under **Enrollment Restrictions** doesn't have the default **All Users** policy set to block the tvOS platform. This setting causes automated enrollment to fail and your device shows as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which permits corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled through a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.
-
-## Re-enroll a device
-Complete these steps to re-enroll a device that already went through automated device enrollment.
-
-1. There are two options for resetting the device:
-    * Wipe the device in the Microsoft Intune admin center.
-    * Retire the device in the admin center, and then reset the device to factory settings using the Settings app or Apple Configurator 2.
-2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.
+> Ensure that **Device Type Restrictions** under **Enrollment Restrictions** doesn't have the default **All Users** policy set to block the tvOS platform. This setting causes automated enrollment to fail and your device shows as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which permits corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled through a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.  
 
 ## Next steps
 

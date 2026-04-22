@@ -22,9 +22,9 @@ Microsoft Intunee supports automated device enrollment for Apple mobile devices,
 
 | Platform | Setup article |What it's for|
 |----------|---------------|-------------|
-| iOS/iPadOS | [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md) | User affinity, no user affinity|
-| tvOS| [Set up an enrollment profile for tvOS](setup-automated-tv-os.md)| No user affinity|
-| visionOS| [Set up an enrollment profile for visionOS](setup-automated-vision-os.md)| No user affinity|
+| iOS/iPadOS | [Create an enrollment profile for iOS/iPadOS](setup-automated-ios.md) | User affinity, no user affinity|
+| tvOS| [Create an enrollment profile for tvOS](setup-automated-tv-os.md)| No user affinity|
+| visionOS| [Create an enrollment profile for visionOS](setup-automated-vision-os.md)| No user affinity|
 
 Intune supports ADE for visionOS and tvOS devices using enrollment without user affinity. These devices are enrolled as corporate‑owned and receive device‑targeted policies. Configuration is delivered using custom configuration profiles.  
 
@@ -51,17 +51,17 @@ For macOS, see [Overview of Apple Automated Device Enrollment for macOS](overvie
 
 Setting up ADE in Intune involves three main tasks:
 
-1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business. This is typically a one-time setup task per token. For steps, see [Set up an iOS/iPadOS ADE token](setup-apple-token.md).
+1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business. This is typically a one-time setup task per token. For more information, see [Set up enrollment token](setup-apple-token.md).  
 
-2. **Create and assign an enrollment profile**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the profile to device groups. For steps, see [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md).
+2. **Create and assign an enrollment profile**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the profile to device groups. 
 
-3. **Sync and distribute devices**: Sync device records from Apple Business to Intune, then distribute devices to users. Enrollment starts automatically through Apple Setup Assistant when a device is turned on. For steps, see [Manage iOS/iPadOS ADE devices and tokens](manage-devices-tokens-apple.md).
+3. **Sync and distribute devices**: Sync device records from Apple Business to Intune, then distribute devices to users. Enrollment starts automatically through Apple Setup Assistant when a device is turned on. For more information, see [Managed Apple mobile devices and tokens](manage-devices-tokens-apple.md).  
 
 ## What is supervised mode?
 
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop.
 
-Corporate-owned devices running iOS/iPadOS 11 and later and enrolled through automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](enable-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment.  
+Corporate-owned devices running iOS/iPadOS 11 and later and enrolled through automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Enable supervised mode](enable-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment.  
 
 ## Certificates
 
@@ -98,9 +98,3 @@ Additionally, decide how you want users to authenticate:
 > We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
 
 tvOS and visionOS enrollment happens without user affinity. Authentication selection isn't required for these types of devices. For more information about authentication options, see [Authentication methods for automated device enrollment](ref-automated-authentication-methods.md).  
-
-## Next steps
-
-- [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md) 
-- [Set up an enrollment profile for tvOS](setup-automated-tv-os.md)  
-- [Set up an enrollment profile for visionOS](setup-automated-vision-os.md)  
