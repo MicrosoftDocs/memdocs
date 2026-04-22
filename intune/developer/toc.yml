@@ -1,5 +1,5 @@
 items:
-  - name: Microsoft Intune application developer documentation
+  - name: Developer documentation
     href: ./index.yml
 
   - name: Access Intune APIs in Microsoft Graph
