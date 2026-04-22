@@ -35,9 +35,9 @@ The following table contains the possible values for the `reportName` parameter 
 | AllAppsList | Under **Apps** > **All Apps** |
 | AllDeviceCertificates | Under **Devices** > **Monitor** > **Certificates** |
 | AppInstallStatusAggregate | Under **Apps** > **Monitor** > **App install status** |
-| AppInvAggregate | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
-| AppInvByDevice | Under **Devices** > **All Devices** > **Device** > **Discovered Apps**  |
-| AppInvRawData | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
+| AppInvAggregate | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
+| AppInvByDevice | Under **Devices** > **All Devices** > **Device** > **Discovered Apps**  |
+| AppInvRawData | Under **Apps** > **Monitor** > **Discovered apps** > **Export**  |
 | AutopilotV1DeploymentStatus | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
 | AutopilotV2DeploymentStatus | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
 | AutopilotV2DeploymentStatusDetailedAppInfo | Under **Devices** > **Windows** > **Enrollment** > **Windows Autopilot** |
@@ -83,7 +83,7 @@ The following table contains the possible values for the `reportName` parameter 
 | DeviceRunStatesByProactiveRemediation | Under **Reports** > **Endpoint Analytics** > **Proactive remediations** > *Select a remediation* > **Device status** |
 | DeviceRunStatesByScript | Under **Devices** > **Manage devices** > **Scripts and remediations** > *select specific script* > **Device status** |
 | Devices | All devices list |
-| DevicesByAppInv | Under **Apps** > **Monitor** > **Discovered apps** > **Discovered app**> **Export**  |
+| DevicesByAppInv | Under **Apps** > **Monitor** > **Discovered apps** > **Discovered app**> **Export**  |
 | DevicesStatusByPolicyPlatformComplianceReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
 | DevicesStatusByPolicyPlatformComplianceReportV3 | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
 | DevicesStatusBySettingReport | Under **Reports** > **Device management** > **Device Compliance** > **Reports** |
@@ -148,7 +148,7 @@ The following table contains the possible values for the `reportName` parameter 
 | EpmInsightsElevationTrend | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
 | EpmInsightsMostFrequentElevations | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
 | EpmInsightsReport | Under **Endpoint security** > **Manage** > **Endpoint Privilege Management** > **Elevation report** |
-| FeatureUpdateDeviceState | Under **Reports** > **Window Updates** > **Reports** > **Windows Feature Update Report**  |
+| FeatureUpdateDeviceState | Under **Reports** > **Window Updates** > **Reports** > **Windows Feature Update Report**  |
 | FeatureUpdatePolicyFailuresAggregate | Under **Devices** > **Monitor** > **Failure for feature updates** |
 | FeatureUpdatePolicyStatusSummary | Under **Devices** > **Manage updates** > **Windows updates** > **Feature updates** |
 | FilteredAppsList | Under **Apps** > **All Apps** |
