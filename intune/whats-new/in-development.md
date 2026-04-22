@@ -141,22 +141,23 @@ You will be able to use Apple access management settings in Apple Business Manag
 
 On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:
 
-- In a settings catalog policy, add and configure the `EnableRegistrationDuringSetup` setting, and save your policy.
-- In Setup Assistant > **Await final configuration**, add the settings catalog policy.
+- In a settings catalog policy, add and configure the `Enable Registration During Setup` setting, save your policy, and assign it to a static group.
+- Configure the Automated Device Enrollment policy to use Setup Assistant with modern authentication and enable await final configuration. 
 - During enrollment, users sign in twice:
   - The first sign-in starts the regular enrollment process.
   - The second sign-in authenticates the user identity in Company Portal and gets the SSO extension.
 
-  In a future update (no ETA), there will be updates that reduce number of sign-ins for PSSO during the Setup Assistant flow.
+  We're working on updates to reduce the number of sign-ins for Platform SSO during Setup Assistant.
 
 When this feature is enabled, users have access to resources immediately when they arrive at desktop.
 
 Prerequisites:
 
+- Before you enroll:
+  - Create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **Enable Registration During Setup** setting and assign to the device via static group. 
+  - Deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
 - Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
-- The ADE enrollment profile must be configured to use Setup Assistant with modern authentication.
-- Before you enroll, create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **EnableRegistrationDuringSetup** setting. In the **[Await final configuration](../device-enrollment/apple/setup-automated-macos.md)** in Setup Assistant, add the settings catalog policy.
-- Before you enroll, deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
+- The ADE enrollment profile must be configured to use Setup Assistant with modern authentication and have the **Await final configuration** setting turned on.
 
 > [!div class="checklist"]
 > Applies to:

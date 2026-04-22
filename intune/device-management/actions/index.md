@@ -1,17 +1,17 @@
 ---
-title: Remote Device Actions - Wipe, Lock, Locate, and More
-description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, macOS, Windows, and ChromeOS devices. Learn about available remote actions, prerequisites, and bulk actions for IT admins.
+title: Device Actions - Wipe, Lock, Locate, and More
+description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, macOS, Windows, and ChromeOS devices. Learn about available device actions, prerequisites, and bulk actions for IT admins.
 ms.date: 03/09/2026
 ms.topic: overview
 ---
 
-# Remote device actions
+# Device actions
 
-In today's hybrid work environment, IT professionals manage and secure devices across diverse locations and platforms—often without physical access. Microsoft Intune's remote device actions provide a powerful toolkit to meet this challenge. These actions enable IT pros to respond quickly to incidents, enforce compliance, and maintain productivity, all from the cloud. Whether it's locking a lost device, resetting a password, or triggering a malware scan, remote actions help ensure that users stay protected and supported—wherever they are.
+In today's hybrid work environment, IT professionals manage and secure devices across diverse locations and platforms—often without physical access. Microsoft Intune's device actions provide a powerful toolkit to meet this challenge. These actions enable IT pros to respond quickly to incidents, enforce compliance, and maintain productivity, all from the cloud. Whether it's locking a lost device, resetting a password, or triggering a malware scan, device actions help ensure that users stay protected and supported—wherever they are.
 
-## When remote actions are useful
+## When device actions are useful
 
-Remote actions are especially valuable in scenarios where time and access are limited. For example:
+Device actions are especially valuable in scenarios where time and access are limited. For example:
 
 - A device is reported lost or stolen—IT can remotely wipe or lock it to protect sensitive data.
 - A device is malfunctioning—IT can restart it or run diagnostics without needing to be on-site.
@@ -22,17 +22,17 @@ These capabilities reduce downtime, improve security posture, and streamline sup
 
 ## Prerequisites
 
-Each remote action has its own prerequisites, which the respective documentation details. In general:
+Each action has its own prerequisites, which the respective documentation details. In general:
 
 - Devices must be enrolled in Intune.
 - Devices must be connected to the Internet to receive remote commands.
 - Some actions might require specific Intune roles or permissions.
 
-## Available remote actions
+## Available device actions
 
-Microsoft Intune supports remote device actions across multiple platforms. The availability of specific actions depends on the platform and the device's configuration. This cross-platform support ensures that IT pros can manage a diverse device ecosystem with consistent tools and workflows.
+Microsoft Intune supports device actions across multiple platforms. The availability of specific actions depends on the platform and the device's configuration. This cross-platform support ensures that IT pros can manage a diverse device ecosystem with consistent tools and workflows.
 
-Select one of the following tabs to learn more about the available remote actions for each platform:
+Select one of the following tabs to learn more about the available device actions for each platform:
 
 # [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
@@ -131,30 +131,30 @@ Select one of the following tabs to learn more about the available remote action
 
 ---
 
-## Execute a remote device action from the Intune admin center
+## Execute a device action from the Intune admin center
 
-Every remote device action has its own steps, which the respective documentation details. In general:
+Every device action has its own steps, which the respective documentation details. In general:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, a row displays available remote actions. Each icon represents a specific action (such as **Restart**, **Wipe**, or **Locate device**). Depending on your screen resolution or window size, the overflow menu (**...**) might hide some actions.
+1. At the top of the device overview pane, a row displays available device actions. Each icon represents a specific action (such as **Restart**, **Wipe**, or **Locate device**). Depending on your screen resolution or window size, the overflow menu (**...**) might hide some actions.
 1. Select the desired action.
 1. Complete any required fields, then confirm the action.
 
 > [!NOTE]
 > The **Retire**, **Wipe**, and **Delete** actions take precedence over all other actions. A device with multiple pending actions only carries out a Retire, Wipe, or Delete. The system ignores all other pending actions.
 
-## Check the status of the remote action
+## Check the status of the action
 
-To check the status of the remote action, select **Devices** > [**Device actions**][INT-AC].
+To check the status of the action, select **Devices** > [**Device actions**][INT-AC].
 
 ## Bulk device actions
 
-Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk remote actions, so IT admins can perform tasks on up to 100 devices at the same time. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
+Managing devices at scale is a common challenge for IT pros, especially in environments like schools, enterprises, or frontline operations. Microsoft Intune supports bulk device actions, so IT admins can perform tasks on up to 100 devices at the same time. This capability streamlines operations, reduces manual effort, and ensures consistent policy enforcement across large device fleets.
 
 For example, at the end of a school year, IT admins can use bulk wipe to securely reset student devices before reassigning them for the next term. This approach saves time and ensures that sensitive data is removed efficiently across all devices.
 
-Select one of the following tabs to learn more about the available bulk remote actions for each platform:
+Select one of the following tabs to learn more about the available bulk device actions for each platform:
 
 # [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
@@ -215,7 +215,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 
 ## Execute a bulk device action
 
-Each bulk remote action has its own steps. The documentation for each action provides detailed instructions. In general, follow these steps:
+Each bulk action has its own steps. The documentation for each action provides detailed instructions. In general, follow these steps:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **All devices** > [**Bulk device actions**][INT-AC2].
 1. On the **Basics** page, select an **OS** and **Device action** from the dropdowns. Some device actions have more options or fields to fill in. Select **Next**.
@@ -229,7 +229,7 @@ Each bulk remote action has its own steps. The documentation for each action pro
 
 ## Next steps
 
-Remote device actions in Intune empower IT pros to manage devices efficiently and securely—whether individually or at scale. Explore the documentation linked in this article to learn more about each action and how to integrate them into your device management workflows.
+Device actions in Intune empower IT pros to manage devices efficiently and securely—whether individually or at scale. Explore the documentation linked in this article to learn more about each action and how to integrate them into your device management workflows.
 
 <!--links-->
 

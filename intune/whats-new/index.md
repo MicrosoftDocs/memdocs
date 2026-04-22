@@ -61,6 +61,28 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 New guidance has been added to the Microsoft Intune compliance policy reporting documentation to help explain how device compliance results appear in Intune reports. This update clarifies expected reporting behavior related to device check-in timing and user association, helping you better interpret compliance policy reports. For more information, see [Known reporting behaviors](../device-security/compliance/monitor-policy.md#known-reporting-behaviors).  
 
+### Monitor and troubleshoot
+
+#### Intune Data Warehouse (beta) connector retirement in Power BI<!-- 37106409 -->
+
+The Intune Data Warehouse (beta) connector v1 in Power BI is retired. If you use Power BI reports that rely on this connector, you need to transition to Intune connector v2 or the OData Feed connector before the transition completes. Power BI reports created after November 2025 already use connector v2, while reports created before that date may still use the beta connector and need updating. This change improves the long-term reliability and supportability of Intune data access.
+
+**Customer impact**: This change does not introduce new user interface experiences. Customers who still rely on the Intune Data Warehouse (beta) connector in Power BI may be affected if they have not transitioned to supported alternatives. Customers already using supported and documented data access options do not experience disruption.
+
+**Required customer action**: Review the published guidance and transition away from the Intune Data Warehouse (beta) connector in Power BI before the transition completes. Customers who do not take action lose access to data through the beta connector after it is retired.
+
+**Timing and rollout**: Customer communications begin in late April 2026. The transition occurs gradually over two weeks starting April 20, 2026.
+
+For more information, see [Use the Microsoft Intune Data Warehouse](../developer/data-warehouse/create-reports.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+> - iOS/iPadOS
+> - macOS
+> - Android
+
 ## Week of April 6, 2026 
 
 ### Device enrollment  

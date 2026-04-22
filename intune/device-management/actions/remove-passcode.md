@@ -1,13 +1,14 @@
 ---
-title: "Remote Device Action: Remove Passcode"
-description: Learn how to remove a passcode with Microsoft Intune.
-ms.date: 10/27/2025
+title: "Device Action: Remove Passcode"
+description: Microsoft Intune remove passcode action helps you unlock devices remotely when users forget their passcodes. Discover how to use this feature.
+#customer intent: As a help desk operator, I want to remove a forgotten passcode from a managed iOS device so that the user can regain access without wiping the device.
+ms.date: 04/21/2026
 ms.topic: how-to
 ---
 
-# Remote device action: remove passcode
+# Device action: remove passcode
 
-With the *remove passcode* action in Microsoft Intune, you can remotely remove a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device.
+By using the *remove passcode* action in Microsoft Intune, you can remotely remove a device passcode. This action helps users regain access to their devices without requiring a full device wipe. this action is especially useful when a user forgets their passcode or is locked out of their device.
 
 ## Prerequisites
 
@@ -18,7 +19,7 @@ With the *remove passcode* action in Microsoft Intune, you can remotely remove a
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > > - iOS/iPadOS
 
 :::column-end:::
@@ -30,7 +31,7 @@ With the *remove passcode* action in Microsoft Intune, you can remotely remove a
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -44,14 +45,14 @@ With the *remove passcode* action in Microsoft Intune, you can remotely remove a
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Remove passcode**.
+1. At the top of the device overview pane, find the row of action icons. Select **Remove passcode**.
 
 ## User experience
 
-Once the passcode is removed, if there's a passcode policy set, the device prompts the user to set a new passcode in Settings.
+After the passcode is removed, if there's a passcode policy set, the device prompts the user to set a new passcode in Settings.
 
 > [!IMPORTANT]
-> If the Remove passcode action fails, Intune might have stored the wrong unlock token, and you need to **Wipe** the device to regain access.
+> If the **Remove passcode** action fails, Intune might have stored the wrong unlock token. You need to **Wipe** the device to regain access.
 
 ## Reference links
 

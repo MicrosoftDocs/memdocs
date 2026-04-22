@@ -13,8 +13,6 @@ ms.collection:
 
 # How to Add macOS Line-of-Business (LOB) Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune.
 
 > [!NOTE]
