@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/15/2026
+ms.date: 04/28/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ai-usage: ai-assisted
@@ -31,10 +31,18 @@ Before you create the enrollment profile, you must have:
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
 * New or wiped devices purchased through Apple Business Manager or Apple School Manager.
      > [!TIP]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
+     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state. 
+
+### Configure platform SSO
+
+If you want Microsoft Entra ID single sign-on (SSO) to be available to users during Setup Assistant, you must create a platform SSO policy before devices enroll.
+
+Platform SSO policies are deployed to enrolling macOS devices during automated device enrollment (ADE) and allow users to sign in with their organization credentials during device setup. This configuration enables users to automatically access Microsoft Entra–protected apps and resources after enrollment.
+
+For more information, see [Configure Platform SSO during automated device enrollment for macOS](../../device-configuration/settings-catalog/configure-platform-sso-during-enrollment.md).   
 
 
-## Deploy the Company Portal app  
+### Deploy the Company Portal app  
 
 When enrolling macOS devices using ADE with user affinity and Setup Assistant with modern authentication, users must sign in to the Company Portal app with their Microsoft Entra credentials to complete device registration in Microsoft Entra ID. To add the Company Portal app to macOS devices, see [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).
 
