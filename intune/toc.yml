@@ -256,13 +256,13 @@ items:
         href: ./device-configuration/index.yml
 
       - name: Device enrollment documentation
-        href: /intune/device-enrollment/index.yml
+        href: /intune/device-enrollment?context=/intune/context
 
       - name: Device management documentation
-        href: /intune/device-management/index.yml
+        href: /intune/device-management?context=/intune/context
 
       - name: Application management documentation
-        href: /intune/application-management/index.yml
+        href: /intune/application-management
         
       - name: Create and deploy Intune policies
         items:
