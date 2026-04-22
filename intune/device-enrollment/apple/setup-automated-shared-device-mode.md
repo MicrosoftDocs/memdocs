@@ -92,7 +92,7 @@ Configure a single-sign on (SSO) app extension policy for shared device mode. Cr
 You can configure the rest of the policy to meet your organization's needs. When you're done configuring the policy, assign it to **All devices** and then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter).
 
 For more information about creating an SSO app extension policy, see:
-* [Create a device configuration policy](../../device-configuration/templates/configure-device-features-apple.md#create-the-policy)
+* [Create a device configuration policy](../../device-configuration/templates/configure-device-features-apple.md#create-the-profile)
 * [Single-sign on (SSO) app extension settings](../../device-configuration/templates/configure-device-features-apple.md#single-sign-on-sso)
 
 ## Step 5: Assign the Microsoft Authenticator app
