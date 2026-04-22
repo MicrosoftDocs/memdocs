@@ -13,6 +13,7 @@ ms.collection:
 
 Automated device enrollment (ADE) is an Apple enrollment method for corporate-owned devices purchased through Apple Business or Apple School Manager. With ADE, you configure and deploy enrollment policies to devices over the air — without touching the devices. When someone turns on a device for the first time, Apple Setup Assistant guides them through setup and enrollment automatically.    
 
+
 > [!NOTE]
 > The steps in ADE articles are the same whether you're using Apple Business or Apple School Manager. For brevity, those articles refer to *Apple Business* only, except where clarification is necessary.  
 
@@ -26,9 +27,10 @@ Microsoft Intunee supports automated device enrollment for Apple mobile devices,
 | tvOS| [Create an enrollment policy for tvOS](setup-automated-tv-os.md)| No user affinity|
 | visionOS| [Create an enrollment policy for visionOS](setup-automated-vision-os.md)| No user affinity|
 
-Intune supports ADE for visionOS and tvOS devices using enrollment without user affinity. These devices are enrolled as corporate‑owned and receive device‑targeted policies. Configuration is delivered using custom configuration profiles.  
 
-For macOS, see [Overview of Apple Automated Device Enrollment for macOS](overview-automated-enrollment-macos.md).  
+tvOS and visionOS support automated device enrollment without user affinity only. These platforms enroll using a userless provisioning model and support device-targeted management policies. Device setup is completed through Apple Setup Assistant and device-targeted policies are applied after enrollment.    
+
+For macOS information, see [Overview of Apple Automated Device Enrollment for macOS](overview-automated-enrollment-macos.md).  
 
 ## Supported scenarios
 
@@ -65,7 +67,14 @@ Corporate-owned devices running iOS/iPadOS 11 and later and enrolled through aut
 
 ## Certificates
 
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. ACME is supported on iOS 16.0 and iPadOS 16.1 or later. Already-enrolled devices don't receive an ACME certificate unless they re-enroll. For details, see [Certificates](overview-automated-enrollment-apple.md#certificates) in the ADE overview. 
+This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. ACME provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
+
+ACME is supported on:
+- iOS 16.0 or later
+- iPadOS 16.1 or later  
+- tvOS
+- visionOS  
+  
 
 ## Enrolling devices in shared device mode
 
@@ -99,6 +108,7 @@ Additionally, decide how you want users to authenticate:
   - Not recommended or supported.  
 
 > [!IMPORTANT]
-> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
+> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.  
 
 tvOS and visionOS enrollment happens without user affinity. Authentication selection isn't required for these types of devices. For more information about authentication options, see [Authentication methods for automated device enrollment](ref-automated-authentication-methods.md).  
+

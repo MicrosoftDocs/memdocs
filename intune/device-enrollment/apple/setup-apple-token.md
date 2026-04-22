@@ -29,7 +29,11 @@ This article applies to:
 
 ## Create an enrollment program token
 
-You need access to both the Microsoft Intune admin center and Apple Business to complete these steps. Keep both open in your browser throughout the process.
+You need access to both the Microsoft Intune admin center and Apple Business to complete these steps. Keep both open in your browser throughout the process.  
+
+## Scope tags  
+
+For tvOS and visionOS devices, ADE enrollment policies inherit the scope tag assigned to the enrollment program token at the time the policy is created. Changes made later to the token’s scope tag aren’t reflected in existing tvOS or visionOS enrollment policies. To ensure correct RBAC visibility, assign the intended scope tag to your enrollment program token before creating enrollment policies for tvOS or visionOS devices.  
 
 ### Step 1: Download the Intune public key certificate
 

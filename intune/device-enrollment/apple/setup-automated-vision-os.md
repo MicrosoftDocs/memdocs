@@ -13,7 +13,18 @@ ms.collection:
 
 *Applies to visionOS*
 
-This article describes how to create a visionOS enrollment policy for Apple automated device enrollment (ADE) in Microsoft Intune. This type of enrollment policy is for devices without user affinity. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).
+This article describes how to create a visionOS enrollment policy for Apple automated device enrollment (ADE) in Microsoft Intune. This type of enrollment policy is for devices without user affinity. Device setup is completed through Apple Setup Assistant and device-targeted policies are applied after enrollment. 
+
+For an overview of ADE and its features, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).  
+
+
+## Limitations  
+  
+- Enrollment occurs without user affinity.   
+- Compliance policies aren't supported.  
+- Setup Assistant screens can't be configured in enrollment policies.  
+- Settings catalog–based configuration profiles aren’t supported for visionOS. Upload custom .plist configuration profiles instead.  
+- - In the admin center, hardware inventory for visionOS devices enrolled through ADE currently shows the storage capacity value as 0. This value doesn't reflect the actual available device storage.   
 
 ## Prerequisites
 Before you create the enrollment policy, you must have:
