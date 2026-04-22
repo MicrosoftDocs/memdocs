@@ -196,10 +196,6 @@ items:
                 href: ./fundamentals/platform-guide-linux.md
               - name: Windows Holographic platform guide
                 href: ./solutions/windows-holographic.md
-              - name: Manage specialty devices with Intune
-                href: ./device-management/specialty-devices.md
-              - name: Microsoft Surface Management Portal
-                href: ./device-management/tools/surface-management-portal.md
 
           - name: Software updates planning guides
             items:
@@ -469,8 +465,6 @@ items:
         items:
           - name: Tenant status and health
             href: ./governance/tenant-status.md
-          - name: Manage admin tasks
-            href: ./device-management/admin-tasks.md
           - name: Device cleanup rules
             href: ./governance/configure-cleanup-rules.md
 
@@ -482,61 +476,65 @@ items:
 
           - name: View reports and monitor status
             items:
-              - name: Reports
-                items:
-                  - name: Intune reports
-                    href: ./device-management/reports/overview.md
-                  - name: Export reports using Graph
-                    href: ./device-management/reports/export-graph-apis.md
-                  - name: Intune reports and properties using Graph
-                    href: ./device-management/reports/ref-graph-available-reports.md
-                  - name: Use the Intune Data Warehouse
-                    href: ./developer/data-warehouse/create-reports.md
-              - name: Monitor
-                items:
-                  - name: Audit logs for Intune activities
-                    href: ./governance/monitor-audit-logs.md
-                  - name: Review logs with Azure Monitor
-                    href: ./governance/integrate-azure-monitor.md
-                  - name: Device configuration profile status
-                    href: ./device-configuration/monitor-device-profile.md
-
-          - name: Get device details
-            items:
-              - name: Find the primary user
-                href: ./device-management/inventory-and-status/find-primary-user.md
-              - name: View device details
-                href: ./device-management/inventory-and-status/device-details.md
-              - name: View ChromeOS device information
-                href: ./device-management/inventory-and-status/chrome-enterprise-details.md
+              - name: Intune reports overview
+                href: ./device-management/reports/overview.md
+              - name: Export reports using Graph API
+                href: ./device-management/reports/export-graph-apis.md
+              - name: Graph API report reference
+                href: ./device-management/reports/ref-graph-available-reports.md
+              - name: Enrollment reports
+                href: ./device-enrollment/monitor-reports.md
+              - name: Device configuration profile status
+                href: ./device-configuration/monitor-device-profile.md
+              - name: Windows update ring reports
+                href: ./device-updates/windows/monitor-update-rings.md
+              - name: Windows feature update reports
+                href: ./device-updates/windows/monitor-feature-updates.md
+              - name: Windows quality update reports
+                href: ./device-updates/windows/monitor-quality-updates.md
+              - name: Windows driver update reports
+                href: ./device-updates/windows/monitor-driver-updates.md
+              - name: Apple software update reports
+                href: ./device-updates/apple/monitor-reports.md
+              - name: Endpoint analytics reports
+                href: ./endpoint-analytics/index.md
+              - name: Endpoint Privilege Management reports
+                href: ./epm/monitor-reports.md
+              - name: Windows LAPS reports
+                href: ./device-security/laps/monitor.md
+              - name: Intune Data Warehouse
+                href: ./developer/data-warehouse/create-reports.md
+              - name: Audit logs for Intune activities
+                href: ./governance/monitor-audit-logs.md
+              - name: Review logs with Azure Monitor
+                href: ./governance/integrate-azure-monitor.md
 
       - name: Manage devices
         href: ./device-management/toc.yml
 
-      - name: Support your users
+      - name: Support and troubleshooting
         items:
-          - name: Use the Help Desk users operator role
+          - name: Help Desk operator role
             href: ./fundamentals/it-pro-support/help-desk-operators.md
-          - name: Remote Help with ServiceNow integration
-            href: ./device-management/tools/setup-servicenow.md
-          - name: Remote Help with the Intune Suite
+          - name: Get support in the Intune admin center
+            href: ./fundamentals/it-pro-support/get-support-admin-center.md
+          - name: Remote Help
             href: ./remote-help/index.md
-          - name: Use the TeamViewer integration
+          - name: Remote Help with ServiceNow
+            href: ./device-management/tools/setup-servicenow.md
+          - name: TeamViewer integration
             href: ./device-management/tools/setup-teamviewer.md
-          - name: TeamViewer for remote administration (old)
-            href: ./device-management/tools/teamviewer-legacy.md
-          - name: Remediations that fix common support issues
+          - name: Remediations
             items:
               - name: Use Remediations
                 href: ./device-management/tools/deploy-remediations.md
-              - name: Powershell scripts for Remediations
+              - name: PowerShell scripts for Remediations
                 href: ./device-management/tools/ref-remediation-scripts.md
-          - name: Using the Intune docs
-            href: ./fundamentals/use-docs.md
-          - name: Get support in the Intune admin center
-            href: ./fundamentals/it-pro-support/get-support-admin-center.md
           - name: Troubleshoot issues
             href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
+          - name: User help documentation
+            href: /intune/user-help
+            displayName: company portal, device user
 
       - name: Industry guides
         items:
@@ -586,10 +584,6 @@ items:
 
       - name: Developer guidance
         href: ./developer/toc.yml
-
-      - name: User help documentation
-        href: /intune/user-help
-        displayName: end user
 
       - name: Privacy and compliance
         href: /intune/privacy-compliance

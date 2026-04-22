@@ -79,7 +79,7 @@ productDirectory:
     - title: Device management and support
       imageSrc: ./media/icons/hub-page/remote-actions.svg
       summary: Manage devices with actions and help users remotely.
-      url: device-management/index.md
+      url: device-management/index.yml
 
     - title: Administration and governance
       imageSrc: ./media/icons/hub-page/administration.svg
