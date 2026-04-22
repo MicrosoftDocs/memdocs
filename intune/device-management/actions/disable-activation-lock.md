@@ -1,12 +1,12 @@
 ---
-title: "Remote Device Action: Disable Activation Lock"
+title: "Device Action: Disable Activation Lock"
 description: Learn how to use Microsoft Intune to disable Activation Lock on Apple devices.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
 ---
 
-# Remote device action: disable Activation Lock
+# Device action: disable Activation Lock
 
 Activation Lock is a security feature built into the *Find My* app on iOS/iPadOS and macOS devices. When enabled, it prevents unauthorized access by requiring the user's Apple ID and password to:
 
@@ -56,7 +56,7 @@ The business benefits of using Intune to manage Activation Lock are:
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
@@ -102,7 +102,7 @@ The business benefits of using Intune to manage Activation Lock are:
 :::column-end:::
 :::column span="3":::
 
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - Intune Service Administrator
 > - [Custom role][INT-RC] that includes:
@@ -112,14 +112,14 @@ The business benefits of using Intune to manage Activation Lock are:
 :::column-end:::
 :::row-end:::
 
-## How to use disable Activation Lock
+## How to disable Activation Lock from the Intune admin center
 
-The Disable Activation Lock remote device action in Intune removes Activation Lock without requiring the user's Apple ID and password. However, if the Find My app is launched after this action, Activation Lock will be automatically re-enabled.
+The Disable Activation Lock device action in Intune removes Activation Lock without requiring the user's Apple ID and password. However, if the Find My app is launched after this action, Activation Lock will be automatically re-enabled.
 To avoid re-locking the device, make sure you have physical possession of the device before disabling Activation Lock.
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Disable Activation Lock**.
+1. At the top of the device overview pane, find the row of action icons. Select **Disable Activation Lock**.
 1. Select **Hardware**, then find and copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!IMPORTANT]
@@ -128,11 +128,11 @@ To avoid re-locking the device, make sure you have physical possession of the de
 To retrieve the `activationLockBypassCode` property using Microsoft Graph, you must explicitly include it in your query.
 If you send an unfiltered request for the device object, Graph returns a default set of properties—and `activationLockBypassCode` will be `null`.
 
-## How to use the Activation Lock bypass code
+## How to use the Activation Lock bypass code from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Wipe**.
+1. At the top of the device overview pane, find the row of action icons. Select **Wipe**.
 ::: zone pivot="ios"
 3. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This step removes the account from the device.
 ::: zone-end
