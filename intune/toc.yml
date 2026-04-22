@@ -263,6 +263,9 @@ items:
 
       - name: Application management documentation
         href: /intune/application-management?context=/intune/context
+
+      - name: Device security documentation
+        href: /intune/device-security/index.yml
         
       - name: Create and deploy Intune policies
         items:

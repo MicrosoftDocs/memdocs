@@ -1,0 +1,151 @@
+### YamlMime:Landing
+
+title: Device security
+summary: Protect organizational data and devices by managing compliance, security baselines, endpoint protection, identity, and network access with Microsoft Intune.
+
+metadata:
+  title: Device security
+  description: Manage device compliance, security baselines, Microsoft Defender integration, VPN tunnels, identity protection, and threat defense with Microsoft Intune.
+  ms.topic: landing-page
+  ms.date: 04/22/2026
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with device security
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Protect data and devices with Microsoft Intune
+        url: index.md
+      - text: Endpoint security in Microsoft Intune
+        url: endpoint-security-policies.md
+    - linkListType: how-to-guide
+      links:
+      - text: Network access control integration with Microsoft Intune
+        url: integrate-network-access-control.md
+    - linkListType: reference
+      links:
+      - text: Configure Microsoft Intune for increased security
+        url: ref-zero-trust-security.md
+
+  - title: Device compliance
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Third-party device compliance partners support in Microsoft Intune
+        url: compliance/third-party-partners.md
+    - linkListType: concept
+      links:
+      - text: Device compliance policies in Microsoft Intune
+        url: compliance/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create device compliance policies in Microsoft Intune
+        url: compliance/create-policy.md
+      - text: Configure compliance policies with actions for noncompliance
+        url: compliance/configure-noncompliance-actions.md
+      - text: Monitor results of your device compliance policies
+        url: compliance/monitor-policy.md
+    - linkListType: reference
+      links:
+      - text: Windows compliance settings in Microsoft Intune
+        url: compliance/ref-windows-settings.md
+
+  - title: Security baselines
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Learn about Intune security baselines for Windows devices
+        url: security-baselines/overview.md
+    - linkListType: concept
+      links:
+      - text: Configure security baseline policies in Microsoft Intune
+        url: security-baselines/configure-baselines.md
+    - linkListType: how-to-guide
+      links:
+      - text: Monitor security baselines deployed by Microsoft Intune
+        url: security-baselines/monitor-baselines.md
+    - linkListType: reference
+      links:
+      - text: Default configuration of Intune's Windows security baselines
+        url: security-baselines/ref-windows-mdm-settings.md
+
+  - title: Microsoft Defender for Endpoint
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Integrate Microsoft Defender for Endpoint with Intune
+        url: microsoft-defender/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure Microsoft Defender for Endpoint and onboard devices
+        url: microsoft-defender/configure-integration.md
+      - text: Manage Microsoft Defender settings on unenrolled devices
+        url: microsoft-defender/security-settings-management.md
+      - text: Remediate vulnerabilities found by Microsoft Defender for Endpoint
+        url: microsoft-defender/remediate-vulnerabilities.md
+
+  - title: Microsoft Tunnel VPN
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Microsoft Tunnel VPN solution for Microsoft Intune
+        url: microsoft-tunnel/overview.md
+      - text: Microsoft Tunnel with Mobile Application Management
+        url: microsoft-tunnel/mam.md
+    - linkListType: how-to-guide
+      links:
+      - text: Prerequisites for Microsoft Tunnel VPN
+        url: microsoft-tunnel/prerequisites.md
+      - text: Install the Microsoft Tunnel VPN for Microsoft Intune
+        url: microsoft-tunnel/install.md
+      - text: Upgrade the Microsoft Tunnel Gateway server software
+        url: microsoft-tunnel/upgrade.md
+
+  - title: Conditional Access
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Use Conditional Access with Microsoft Intune compliance policies
+        url: conditional-access-integration/overview.md
+    - linkListType: concept
+      links:
+      - text: Scenarios for using Conditional Access with Microsoft Intune
+        url: conditional-access-integration/scenarios.md
+    - linkListType: how-to-guide
+      links:
+      - text: Use app-based Conditional Access policies with Intune
+        url: conditional-access-integration/app-based-policies.md
+      - text: Manually configure Jamf Pro integration with Microsoft Intune
+        url: conditional-access-integration/setup-jamf-manually.md
+
+  - title: Manage identity and access
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Configure a tenant-wide Windows Hello for Business policy
+        url: identity-protection/configure-tenant-wide-policy.md
+      - text: Deploy policy for Windows Hello to groups of Windows devices
+        url: identity-protection/deploy-group-policy.md
+      - text: Overview of Windows LAPS with Microsoft Intune
+        url: laps/overview.md
+      - text: Deploy Intune policies to manage Windows LAPS
+        url: laps/deploy-policy.md
+
+  - title: Mobile Threat Defense
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Mobile Threat Defense with Microsoft Intune
+        url: mobile-threat-defense/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create Mobile Threat Defense compliance policies in Intune
+        url: mobile-threat-defense/create-compliance-policy.md
+      - text: Enable Mobile Threat Defense connector in Microsoft Intune
+        url: mobile-threat-defense/enable-connector.md
+      - text: Add and assign MTD apps to Microsoft Intune
+        url: mobile-threat-defense/assign-apps.md
