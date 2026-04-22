@@ -30,7 +30,7 @@ In this article, you will:
 
 
 * Complete all [prerequisites for Apple Automated Device Enrollment](setup-automated-ios.md#prerequisites).
-* Read [Before you begin](setup-automated-ios.md#before-you-begin) for best practices and recommendations for automated device enrollment.
+* Read [Before you begin](overview-automated-enrollment-apple.md#before-you-begin) for best practices and recommendations for automated device enrollment.
 
 
 ## Step 1: Create an Apple enrollment policy
