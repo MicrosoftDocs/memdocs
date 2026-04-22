@@ -20,13 +20,13 @@ items:
   topicHref: /intune/index
 
 - name: Microsoft Intune
-  tocHref: /troubleshoot/
-  topicHref: /intune/index
-
-- name: Microsoft Intune
   tocHref: /windows-365/
   topicHref: /intune/index
 
 - name: Microsoft Intune
   tocHref: /windows/deployment/windows-autopatch/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /troubleshoot/mem/
   topicHref: /intune/index

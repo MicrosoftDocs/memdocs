@@ -99,5 +99,5 @@ items:
     displayName: remote action
   - name: Wipe
     href: wipe.md
-- name: Troubleshoot device actions 🔗
-  href: /troubleshoot/mem/intune/troubleshoot-device-actions
+- name: Troubleshoot device actions
+  href: /troubleshoot/mem/intune/troubleshoot-device-actions?context=/intune/context

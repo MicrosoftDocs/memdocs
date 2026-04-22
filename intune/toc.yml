@@ -252,6 +252,15 @@ items:
             - name: Secure data
               href: ./device-security/ref-zero-trust-data.md
 
+      - name: Device configuration documentation
+        href: ./device-configuration/index.yml
+
+      - name: Device enrollment documentation
+        href: /intune/device-enrollment/index.yml
+
+      - name: Device management documentation
+        href: /intune/device-management/index.yml
+        
       - name: Create and deploy Intune policies
         items:
           - name: Manage apps
@@ -425,12 +434,6 @@ items:
                       - name: Software update errors
                         href: ./device-updates/windows/ref-agent-error-codes.md
 
-          - name: Configure devices
-            href: ./device-configuration/toc.yml
-
-          - name: Enroll devices in Microsoft Intune
-            href: /intune/device-enrollment/index.yml
-
           - name: Assign and deploy policies
             items:
               - name: Assign policies to users & groups
@@ -508,9 +511,6 @@ items:
                 href: ./governance/monitor-audit-logs.md
               - name: Review logs with Azure Monitor
                 href: ./governance/integrate-azure-monitor.md
-
-      - name: Manage devices
-        href: /intune/device-management/index.yml
 
       - name: Support and troubleshooting
         items:
