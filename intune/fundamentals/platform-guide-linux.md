@@ -61,7 +61,7 @@ You can enforce device compliance policies based on Linux distribution type, ver
 
 Enrollment is supported on Linux desktops running:
 
-* Ubuntu LTS, version 24.04, 22.04 or 20.04.
+* Ubuntu LTS, version 26.04 and 24.04 LTS 
 * RedHat Enterprise Linux 9
 * RedHat Enterprise Linux 10
 
