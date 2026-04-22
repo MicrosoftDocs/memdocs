@@ -29,7 +29,7 @@ Remote device actions give you management controls on the device without interfe
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.
 
-For more information on these actions, see [Available remote actions](../../device-management/actions/index.md#available-remote-actions).
+For more information on these actions, see [Available device actions](../../device-management/actions/index.md#available-device-actions).
 
 ## Case studies
 
@@ -38,7 +38,7 @@ The global consulting firm Avanade regularly uses remote actions to manage the d
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
 
-For more information on how to use these remote actions, see [Available device actions](../../device-management/actions/index.md#available-remote-actions).
+For more information on how to use these device actions, see [Available device actions](../../device-management/actions/index.md#available-device-actions).
 
 ## Value proposition
 
