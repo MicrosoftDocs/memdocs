@@ -689,7 +689,7 @@ For your Mac devices to maintain their connection to Intune and continue enrolli
 
   When you set up a connection between Apple Business Manager (or Apple School Manager) and Intune, a certificate is used. This certificate must be renewed yearly. If this certificate isn't renewed, changes from Apple Business Manager (or Apple School Manager) can't sync to Intune.
 
-  For more information, go to [Renew a macOS enrollment token](../../device-enrollment/apple/token-setup-macos.md#renew-an-enrollment-program-token).
+  For more information, go to [Renew a macOS enrollment token](../../device-enrollment/apple/setup-macos-token.md#renew-an-enrollment-program-token).
 
 - **Apple Automated Device Enrollment sync status**
 

@@ -137,9 +137,9 @@ Complete the following prerequisites before you create the enrollment profile fo
 
 * Upload an Apple MDM push certificate to Intune. For more information, see [Get MDM push certificate](../device-enrollment/apple/create-mdm-push-certificate.md).
 * Get an Apple enrollment program token  if you plan to enroll devices via Apple automated device enrollment.    For more information, see:
-  * [Get Apple enrollment program token for iOS/iPadOS](../device-enrollment/apple/token-setup-apple.md)  
+  * [Get Apple enrollment program token for iOS/iPadOS](../device-enrollment/apple/setup-apple-token.md)  
 
-  * [Get Apple enrollment program token for macOS](../device-enrollment/apple/token-setup-macos.md#create-an-enrollment-program-token)  
+  * [Get Apple enrollment program token for macOS](../device-enrollment/apple/setup-macos-token.md#create-an-enrollment-program-token)  
 
 ### Apple enrollment solutions
 The following table describes the enrollment solutions for devices running iOS/iPadOS and macOS.
