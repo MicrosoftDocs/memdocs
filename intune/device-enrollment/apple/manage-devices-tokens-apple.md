@@ -128,4 +128,12 @@ You can resolve this error by trying to download the management profile again wi
 
 For information about the end user experience, see:
 - [ADE end user tasks](guide-ios-ipados.md#ade-end-user-tasks)
+<<<<<<< HEAD
 - [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)  
+=======
+- [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)
+
+## Next steps
+
+To renew or delete your token, see [Set up an iOS/iPadOS ADE token](setup-apple-token.md).  
+>>>>>>> upstream/release-intune-2604

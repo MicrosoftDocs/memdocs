@@ -14,7 +14,7 @@ ms.collection:
 *Applies to iOS/iPadOS*
 
 
-This article describes how to create an enrollment policy for iOS/iPadOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](automated-device-enrollment-overview-apple.md).  
+This article describes how to create an enrollment policy for iOS/iPadOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).  
 
 
 ## Prerequisites
@@ -313,5 +313,5 @@ Hide both screens on devices running iOS/iPadOS 14.5 and later. If you want to r
 ## Next steps  
 
 - To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
-- To renew or delete your enrollment program token, see [Set up an ADE token](token-setup-apple.md).
+- To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).
 - For troubleshooting, see [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).
