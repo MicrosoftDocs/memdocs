@@ -8,7 +8,7 @@ metadata:
   description: Run remote actions, manage scripts and remediations, view device inventory, and export reports in Microsoft Intune.
   ms.topic: landing-page
   ms.date: 04/22/2026
-  ma.author: paoloma
+  ms.author: paoloma
   author: paolomatarazzo
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
@@ -20,8 +20,10 @@ landingContent:
       links:
       - text: Manage devices with endpoint security
         url: manage-endpoint-security-devices.md
-      - text: Centrally manage Admin Tasks
+      - text: Centrally manage admin tasks
         url: admin-tasks.md
+      - text: Manage specialty devices
+        url: specialty-devices.md
     - linkListType: how-to-guide
       links:
       - text: Categorize devices into groups
@@ -37,14 +39,18 @@ landingContent:
         url: actions/wipe.md
       - text: Retire a device
         url: actions/retire.md
+      - text: Sync a device
+        url: actions/sync.md
+      - text: Restart a device
+        url: actions/restart.md
       - text: Find lost devices
         url: actions/locate.md
       - text: Collect diagnostics
         url: actions/collect-diagnostics.md
       - text: Remote lock
         url: actions/remote-lock.md
-      - text: Delete a device
-        url: actions/delete.md
+      - text: Fresh start for Windows devices
+        url: actions/fresh-start.md
 
   - title: Manage device passwords and keys
     linkLists:
@@ -54,8 +60,6 @@ landingContent:
         url: actions/reset-passcode.md
       - text: Disable Activation Lock
         url: actions/disable-activation-lock.md
-      - text: Fresh start for Windows devices
-        url: actions/fresh-start.md
       - text: Rotate BitLocker recovery keys
         url: actions/rotate-bitlocker-keys.md
       - text: Rotate FileVault recovery key
@@ -75,8 +79,6 @@ landingContent:
         url: tools/run-powershell-scripts-windows.md
       - text: Use shell scripts on macOS devices
         url: tools/run-shell-scripts-macos.md
-      - text: Remotely administer devices
-        url: tools/teamviewer-legacy.md
     - linkListType: reference
       links:
       - text: PowerShell scripts for remediations
@@ -92,6 +94,10 @@ landingContent:
         url: inventory-and-status/device-details.md
       - text: View ChromeOS device information
         url: inventory-and-status/chrome-enterprise-details.md
+    - linkListType: concept
+      links:
+      - text: Surface Management Portal overview
+        url: tools/surface-management-portal.md
 
   - title: Generate and export reports
     linkLists:
@@ -110,11 +116,9 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: ServiceNow integration
+      - text: Remote Help with ServiceNow
         url: tools/setup-servicenow.md
-    - linkListType: concept
-      links:
-      - text: Manage specialty devices
-        url: specialty-devices.md
-      - text: Surface Management Portal overview
-        url: tools/surface-management-portal.md
+      - text: Set up TeamViewer integration
+        url: tools/setup-teamviewer.md
+      - text: Remotely administer devices with TeamViewer
+        url: tools/teamviewer-legacy.md

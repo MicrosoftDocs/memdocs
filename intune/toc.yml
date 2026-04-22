@@ -429,7 +429,7 @@ items:
             href: ./device-configuration/toc.yml
 
           - name: Enroll devices in Microsoft Intune
-            href: ./device-enrollment/toc.yml
+            href: /intune/device-enrollment/index.yml
 
           - name: Assign and deploy policies
             items:
@@ -510,7 +510,7 @@ items:
                 href: ./governance/integrate-azure-monitor.md
 
       - name: Manage devices
-        href: ./device-management/toc.yml
+        href: /intune/device-management/index.yml
 
       - name: Support and troubleshooting
         items:
