@@ -1,5 +1,5 @@
 items:
-- name: Device management
+- name: Device management documentation
   href: index.yml
 
 - name: Device actions

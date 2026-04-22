@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 
-title: Device enrollment
+title: Microsoft Intune device enrollment documentation
 summary: Enroll devices in Microsoft Intune so they can receive the policies and profiles you configure. Learn about enrollment methods for each platform and how to configure enrollment settings.
 
 metadata:

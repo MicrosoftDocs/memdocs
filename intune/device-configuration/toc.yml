@@ -1,4 +1,6 @@
 items:
+  - name: Device configuration documentation
+    href: ./index.yml
   - name: Device configuration overview
     displayName: android, ios, ipados, macos, windows
     href: ./overview.md

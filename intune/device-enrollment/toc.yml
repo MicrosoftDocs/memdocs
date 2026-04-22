@@ -1,9 +1,13 @@
 items:
-- name: Device enrollment in Microsoft Intune
+- name: Device enrollment documentation
   href: index.yml
 - name: Device enrollment overview
   href: guide.md
   displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
+- name: Enrollment deployment guide
+  href: enroll-devices.md
+- name: Mobile Application Management without enrollment
+  href: mam-without-enrollment.md
 - name: Configure enrollment features
   items:
   - name: Add corporate identifiers
@@ -54,6 +58,10 @@ items:
     items:
     - name: Set up automatic enrollment
       href: ./windows/enable-automatic-mdm.md
+    - name: "Quickstart: Set up automatic enrollment"
+      href: ./windows/quickstart-automatic-mdm.md
+    - name: Enroll a Windows device
+      href: ./windows/quickstart-first-device.md
     - name: Set up bulk enrollment and workplace join
       href: ./windows/create-bulk-package.md
   - name: Enrollment configurations
@@ -132,6 +140,8 @@ items:
         href: ./apple/ref-automated-authentication-methods.md
       - name: Create an enrollment profile for iOS/iPadOS
         href: ./apple/setup-automated-ios.md
+      - name: Set up just-in-time registration
+        href: ./apple/setup-just-in-time-registration.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-apple.md
       - name: Set up enrollment for shared device mode
@@ -146,6 +156,8 @@ items:
           href: ./apple/school-manager-step-2.md
         - name: Step 3 - Sync managed devices
           href: ./apple/school-manager-step-3.md
+      - name: "Tutorial: Enroll iOS/iPadOS devices with ADE"
+        href: ./apple/tutorial-automated-ios.md
     - name: Set up Apple device enrollment
       items:
       - name: Overview

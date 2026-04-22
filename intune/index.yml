@@ -39,7 +39,7 @@ productDirectory:
     - title: Device configuration
       imageSrc: ./media/icons/hub-page/devices.svg
       summary: Configure settings and features across managed devices.
-      url: ./device-configuration/overview.md
+      url: ./device-configuration/index.yml
 
     - title: Application management
       imageSrc: ./media/icons/hub-page/apps.svg

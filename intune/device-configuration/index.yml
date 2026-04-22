@@ -1,0 +1,123 @@
+### YamlMime:Landing
+
+title: Microsoft Intune device configuration documentation
+summary: Configure device settings, features, and security profiles in Microsoft Intune. Use the settings catalog, device templates, endpoint security profiles, and certificates to manage your device fleet.
+
+metadata:
+  title: Device configuration
+  description: Configure device settings and features in Microsoft Intune using settings catalog, templates, endpoint security profiles, and certificates.
+  ms.topic: landing-page
+  ms.date: 4/22/2026
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with device configuration
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Device features and settings
+        url: overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure device configuration profiles
+        url: create-device-profile.md
+      - text: Collect device hardware info with the properties catalog
+        url: collect-device-properties.md
+      - text: See device configuration policies
+        url: monitor-device-profile.md
+      - text: Import and analyze group policies
+        url: import-group-policy-analytics.md
+      - text: Migrate your imported group policy to a policy
+        url: migrate-group-policy.md
+
+  - title: Configure devices with the settings catalog
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Common tasks and features in the settings catalog
+        url: settings-catalog/common-tasks.md
+      - text: Configure Recovery Lock using the settings catalog
+        url: settings-catalog/configure-recovery-lock-macos.md
+      - text: Configure Universal Print policy using settings catalog
+        url: settings-catalog/configure-universal-print.md
+      - text: Restrict USB devices using settings catalog
+        url: settings-catalog/restrict-usb.md
+      - text: Deploy Microsoft Edge policy using settings catalog
+        url: settings-catalog/configure-edge.md
+    - linkListType: reference
+      links:
+      - text: Apple configuration list for Intune settings catalog
+        url: settings-catalog/ref-apple-settings.md
+
+  - title: Configure device templates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Use custom device settings
+        url: templates/configure-custom-settings.md
+      - text: Use OEMConfig on Android Enterprise devices
+        url: templates/configure-oemconfig-android.md
+      - text: Create a Wi-Fi profile for devices
+        url: templates/configure-wifi.md
+      - text: Set permissions to Managed Home Screen using Android Enterprise OEMConfig
+        url: templates/configure-managed-home-screen-permissions-android.md
+      - text: Create iOS/iPadOS or macOS device profile
+        url: templates/configure-device-features-apple.md
+      - text: Kiosk settings for Windows and Holographic devices
+        url: templates/configure-kiosk.md
+
+  - title: Endpoint security profiles
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Manage attack surface reduction settings
+        url: endpoint-security/attack-surface-reduction.md
+      - text: Manage account protection settings with endpoint security policies
+        url: endpoint-security/account-protection.md
+    - linkListType: how-to-guide
+      links:
+      - text: Encrypt Windows devices with BitLocker
+        url: endpoint-security/encrypt-bitlocker-windows.md
+      - text: Manage approved apps for Windows devices with App Control for Business policy
+        url: endpoint-security/manage-app-control.md
+    - linkListType: reference
+      links:
+      - text: Manage firewall settings with endpoint security policies
+        url: endpoint-security/firewall.md
+      - text: Settings you can manage with Intune Endpoint Protection profiles for Windows
+        url: endpoint-security/ref-endpoint-protection-settings-windows.md
+
+  - title: Deploy certificates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Use SCEP certificate profiles
+        url: certificates/scep-profiles.md
+      - text: Use a PKCS certificate profile to provision devices with certificates
+        url: certificates/pkcs-profiles.md
+      - text: Create trusted certificate profiles
+        url: certificates/trusted-root-profiles.md
+      - text: Use imported PFX certificates
+        url: certificates/imported-pfx-profiles.md
+      - text: Remove SCEP or PKCS certificates
+        url: certificates/remove-profiles.md
+
+  - title: Settings reference
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Apple device restriction settings
+        url: templates/ref-device-restrictions-apple.md
+      - text: Kiosk settings for Windows
+        url: templates/ref-kiosk-settings-windows.md
+      - text: Apple device feature settings
+        url: templates/ref-device-features-apple.md
+      - text: Device restriction settings for Windows devices
+        url: templates/ref-device-restrictions-windows.md
+      - text: Device restriction settings for Android
+        url: templates/ref-device-restrictions-android-enterprise.md
+      - text: Windows shared device settings
+        url: templates/ref-shared-device-settings-windows.md
