@@ -510,8 +510,8 @@ items:
               - name: View ChromeOS device information
                 href: ./device-management/inventory-and-status/chrome-enterprise-details.md
 
-          - name: Device actions
-            href: ./device-management/actions/toc.yml
+      - name: Manage devices
+        href: ./device-management/toc.yml
 
       - name: Support your users
         items:

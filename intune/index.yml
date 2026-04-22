@@ -76,10 +76,10 @@ productDirectory:
       summary: Monitor device health, compliance, and activity.
       url: ./endpoint-analytics/index.md
 
-    - title: Remote actions and support
+    - title: Device management and support
       imageSrc: ./media/icons/hub-page/remote-actions.svg
-      summary: Take actions on devices and help users remotely.
-      url: device-management/actions/index.md
+      summary: Manage devices with actions and help users remotely.
+      url: device-management/index.md
 
     - title: Administration and governance
       imageSrc: ./media/icons/hub-page/administration.svg

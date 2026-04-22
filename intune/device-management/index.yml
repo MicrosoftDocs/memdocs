@@ -1,0 +1,120 @@
+### YamlMime:Landing
+
+title: Device management
+summary: Perform operational actions on managed devices, run scripts and remediations, view device inventory, and generate reports in Microsoft Intune.
+
+metadata:
+  title: Device management in Microsoft Intune
+  description: Run remote actions, manage scripts and remediations, view device inventory, and export reports in Microsoft Intune.
+  ms.topic: landing-page
+  ms.date: 04/22/2026
+  ma.author: paoloma
+  author: paolomatarazzo
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+  - title: Get started with device management
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Manage devices with endpoint security
+        url: manage-endpoint-security-devices.md
+      - text: Centrally manage Admin Tasks
+        url: admin-tasks.md
+    - linkListType: how-to-guide
+      links:
+      - text: Categorize devices into groups
+        url: create-device-categories.md
+      - text: View encryption status report details
+        url: monitor-encryption.md
+
+  - title: Run remote device actions
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Wipe a device
+        url: actions/wipe.md
+      - text: Retire a device
+        url: actions/retire.md
+      - text: Find lost devices
+        url: actions/locate.md
+      - text: Collect diagnostics
+        url: actions/collect-diagnostics.md
+      - text: Remote lock
+        url: actions/remote-lock.md
+      - text: Delete a device
+        url: actions/delete.md
+
+  - title: Manage device passwords and keys
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Reset passcode
+        url: actions/reset-passcode.md
+      - text: Disable Activation Lock
+        url: actions/disable-activation-lock.md
+      - text: Fresh start for Windows devices
+        url: actions/fresh-start.md
+      - text: Rotate BitLocker recovery keys
+        url: actions/rotate-bitlocker-keys.md
+      - text: Rotate FileVault recovery key
+        url: actions/rotate-filevault-recovery-key.md
+
+  - title: Use scripts and remediations
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Understand the Intune Management Extension
+        url: tools/management-extension-windows.md
+    - linkListType: how-to-guide
+      links:
+      - text: Use remediations to detect and fix issues
+        url: tools/deploy-remediations.md
+      - text: Add PowerShell scripts to Windows devices
+        url: tools/run-powershell-scripts-windows.md
+      - text: Use shell scripts on macOS devices
+        url: tools/run-shell-scripts-macos.md
+      - text: Remotely administer devices
+        url: tools/teamviewer-legacy.md
+    - linkListType: reference
+      links:
+      - text: PowerShell scripts for remediations
+        url: tools/ref-remediation-scripts.md
+
+  - title: View device inventory and status
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Find the primary user of a device
+        url: inventory-and-status/find-primary-user.md
+      - text: View device details
+        url: inventory-and-status/device-details.md
+      - text: View ChromeOS device information
+        url: inventory-and-status/chrome-enterprise-details.md
+
+  - title: Generate and export reports
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Microsoft Intune reports
+        url: reports/overview.md
+      - text: Export reports using Graph APIs
+        url: reports/export-graph-apis.md
+    - linkListType: reference
+      links:
+      - text: Graph API report properties
+        url: reports/ref-graph-available-reports.md
+
+  - title: Integrate with external services
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: ServiceNow integration
+        url: tools/setup-servicenow.md
+    - linkListType: concept
+      links:
+      - text: Manage specialty devices
+        url: specialty-devices.md
+      - text: Surface Management Portal overview
+        url: tools/surface-management-portal.md

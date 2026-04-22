@@ -1,0 +1,5 @@
+items:
+- name: Device management with Microsoft Intune
+  href: index.yml
+- name: Device actions
+  href: ./actions/toc.yml
