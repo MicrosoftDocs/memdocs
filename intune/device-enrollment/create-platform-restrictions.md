@@ -65,6 +65,8 @@ Since Intune supports two Android platforms, it's important to understand how OS
     * **Android restrictions**
     * **macOS restrictions**
     * **iOS restrictions**
+    * **tvOS restrictions**
+    * **visionOS restrictions**  
 
 1. Select **Create restriction**.
 1. On the **Basics** page, give the restriction a name and optional description.

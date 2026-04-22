@@ -155,4 +155,9 @@ You can pick a default profile to be applied to all devices that enroll with a s
 ## Next steps
 
 - To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
-- To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).
+
+- To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md). 
+
+- Devices can receive custom configuration profiles uploaded as .plist files. For more information, see [Create a custom configuration policy](../../device-configuration/templates/configure-custom-settings.md).  
+ 
+- Available remote device actions are the same as those available to iOS/iPadOS ADE devices. For more information, see [Remote device actions](../../device-management/actions/index.md).  
