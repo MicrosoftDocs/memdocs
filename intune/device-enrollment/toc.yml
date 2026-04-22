@@ -14,7 +14,7 @@ items:
     href: ./setup-enrollment-manager.md
     displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
   - name: Configure Apple account service access
-    href: ./apple/account-service-access.md
+    href: ./apple/setup-account-service-access.md
     displayName: device management; apple business manager; apple school manager   
   - name: Configure Chrome Enterprise connector
     href: ./configure-chrome-enterprise-connector.md

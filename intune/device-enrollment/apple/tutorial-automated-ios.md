@@ -119,4 +119,4 @@ You've set up management and syncing between Apple and Intune, and assigned a pr
 
 ## Related configurations   
 
-In addition to assigning devices to your MDM server and creating an enrollment profile, you can optionally use Apple access management settings in Apple Business (or Apple School Manager) to configure service access for Apple accounts on organization-owned devices. Microsoft Intune enforces these settings after enrollment. For more information, see [Configure service access for Apple accounts](account-service-access.md).  
+In addition to assigning devices to your MDM server and creating an enrollment profile, you can optionally use Apple access management settings in Apple Business (or Apple School Manager) to configure service access for Apple accounts on organization-owned devices. Microsoft Intune enforces these settings after enrollment. For more information, see [Configure service access for Apple accounts](setup-account-service-access.md).  
