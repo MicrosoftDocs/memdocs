@@ -67,7 +67,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Need access to the [Apple Business portal](https://business.apple.com/) or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (.p7m) is active. For more specific information, go to [Set up an Apple mobile ADE token](token-setup-apple.md).
+- Be sure the Apple token (.p7m) is active. For more specific information, go to [Set up an Apple mobile ADE token](setup-apple-token.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll Apple mobile devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - Decide [how users will authenticate](setup-automated-ios.md#choose-an-authentication-method) their iOS/iPadOS devices: the **Setup Assistant with modern authentication** (recommended) or **Company Portal** app. Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication. User affinity isn't supported on tvOS and visionOS so you don't need to select an authentication method for those devices.  
 

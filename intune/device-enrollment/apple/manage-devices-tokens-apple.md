@@ -25,7 +25,7 @@ This article applies to:
 
 Before completing the tasks in this article:
 
-- [Set up an Apple mobile automated device enrollment (ADE) token](token-setup-apple.md)  
+- [Set up an Apple mobile automated device enrollment (ADE) token](setup-apple-token.md)  
 - Create an enrollment profile and assign it to devices:
     - [Create enrollment profile for iOS/iPadOS](setup-automated-ios.md)
     - [Create enrollment profile for tvOS](setup-automated-tvos.md)
@@ -128,12 +128,4 @@ You can resolve this error by trying to download the management profile again wi
 
 For information about the end user experience, see:
 - [ADE end user tasks](guide-ios-ipados.md#ade-end-user-tasks)
-<<<<<<< HEAD
 - [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)  
-=======
-- [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)
-
-## Next steps
-
-To renew or delete your token, see [Set up an iOS/iPadOS ADE token](setup-apple-token.md).  
->>>>>>> upstream/release-intune-2604

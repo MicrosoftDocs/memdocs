@@ -24,7 +24,7 @@ Intune supports automated device enrollment for macOS.
 |----------|---------------|
 | macOS | [Set up an enrollment profile for macOS](setup-automated-macos.md) |
 
-For iOS/iPadOS, tvOS, and visionOS, see [Overview of Apple Automated Device Enrollment for Apple mobile](automated-device-enrollment-overview-apple.md).  
+For iOS/iPadOS, tvOS, and visionOS, see [Overview of Apple Automated Device Enrollment for Apple mobile](overview-automated-enrollment-apple.md).  
 
 ## Supported scenarios
 
@@ -66,5 +66,5 @@ Before setting up ADE for macOS, ensure the following are in place:
 
 ## Next steps
 
-- [Set up a macOS ADE token](token-setup-macos.md)
+- [Set up a macOS ADE token](setup-macos-token.md)
 - [Set up an enrollment profile for macOS](setup-automated-macos.md)  
