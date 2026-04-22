@@ -1,0 +1,110 @@
+### YamlMime:Landing
+
+title: Device enrollment
+summary: Enroll devices in Microsoft Intune so they can receive the policies and profiles you configure. Learn about enrollment methods for each platform and how to configure enrollment settings.
+
+metadata:
+  title: Device enrollment
+  description: Enroll devices in Microsoft Intune to manage and secure them with policies, profiles, and compliance settings across all major platforms.
+  ms.topic: landing-page
+  ms.date: 4/22/2026
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with device enrollment
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Device enrollment guide
+        url: guide.md
+      - text: Mobile Application Management (MAM) for unenrolled devices
+        url: mam-without-enrollment.md
+      - text: Understand Intune and Microsoft Entra device limit restrictions
+        url: limits-intune-entra.md
+      - text: Overview of enrollment restrictions
+        url: restrictions.md
+    - linkListType: how-to-guide
+      links:
+      - text: Enroll devices using a device enrollment manager account
+        url: setup-enrollment-manager.md
+      - text: Linux device enrollment guide
+        url: guide-linux.md
+
+  - title: Enroll Apple devices
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Set up enrollment for macOS devices
+        url: apple/methods-macos.md
+      - text: Shared iOS and iPadOS devices
+        url: apple/shared-device-solutions-ios.md
+    - linkListType: concept
+      links:
+      - text: iOS/iPadOS device enrollment guide
+        url: apple/guide-ios-ipados.md
+    - linkListType: how-to-guide
+      links:
+      - text: Get an Apple MDM Push certificate for Intune
+        url: apple/create-mdm-push-certificate.md
+      - text: Set up automated device enrollment (ADE) for iOS/iPadOS
+        url: apple/setup-automated-ios.md
+      - text: Set up account driven Apple User Enrollment
+        url: apple/setup-account-driven-user.md
+
+  - title: Enroll Android devices
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Overview of Android work profile management
+        url: android/enterprise-work-profile.md
+    - linkListType: concept
+      links:
+      - text: Android device enrollment guide
+        url: android/guide.md
+    - linkListType: how-to-guide
+      links:
+      - text: Connect Intune account to managed Google Play account
+        url: android/connect-managed-google-play.md
+      - text: Set up enrollment for Android Enterprise dedicated devices
+        url: android/setup-dedicated.md
+      - text: Set up Android Enterprise work profile for corporate-owned devices
+        url: android/setup-corporate-work-profile.md
+      - text: Set up enrollment for Android Enterprise fully managed devices
+        url: android/setup-fully-managed.md
+
+  - title: Enroll Windows devices
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Windows device enrollment guide
+        url: windows/guide.md
+    - linkListType: how-to-guide
+      links:
+      - text: Enable MDM automatic enrollment for Windows
+        url: windows/enable-automatic-mdm.md
+      - text: Set up automatic enrollment in Intune
+        url: windows/quickstart-automatic-mdm.md
+      - text: Enroll a Windows device
+        url: windows/quickstart-first-device.md
+      - text: Bulk enrollment for Windows devices
+        url: windows/create-bulk-package.md
+      - text: Enable autodiscovery of Intune enrollment server
+        url: windows/create-cname-autodiscovery.md
+
+  - title: Configure enrollment settings
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add corporate identifiers to Intune
+        url: add-corporate-identifiers.md
+      - text: Set up enrollment time grouping
+        url: setup-time-grouping.md
+      - text: Require multifactor authentication for device enrollment
+        url: configure-multifactor-authentication.md
+      - text: Create device platform restrictions
+        url: create-platform-restrictions.md
+      - text: Set terms and conditions
+        url: create-terms-and-conditions.md
