@@ -260,6 +260,9 @@ items:
 
       - name: Device management documentation
         href: /intune/device-management/index.yml
+
+      - name: Application management documentation
+        href: /intune/application-management/index.yml
         
       - name: Create and deploy Intune policies
         items:
@@ -583,7 +586,7 @@ items:
             href: ./solutions/edge-data-security/toc.yml
 
       - name: Developer guidance
-        href: ./developer/toc.yml
+        href: ./developer/index.yml
 
       - name: Privacy and compliance
         href: /intune/privacy-compliance

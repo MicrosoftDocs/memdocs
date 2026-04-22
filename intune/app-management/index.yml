@@ -1,0 +1,147 @@
+### YamlMime:Landing
+
+title: Microsoft application management documentation
+
+summary: Deploy, configure, protect, and monitor applications across your managed devices with Microsoft Intune.
+
+metadata:
+  title: Application management
+  description: Deploy, configure, protect, and monitor applications across managed devices with Microsoft Intune app management.
+  ms.topic: landing-page
+  ms.date: 04/22/2026
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with app management
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: What Is App Management in Microsoft Intune?
+        url: overview.md
+      - text: Add Apps to Microsoft Intune
+        url: deployment/index.md
+    - linkListType: concept
+      links:
+      - text: Overview of the App Lifecycle for Microsoft Intune
+        url: lifecycle.md
+    - linkListType: how-to-guide
+      links:
+      - text: Discovered Apps
+        url: discovered-apps.md
+    - linkListType: reference
+      links:
+      - text: Supported Microsoft Intune Apps
+        url: ref-protected-apps.md
+  - title: Deploy Win32 and LOB apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add and Assign Win32 Apps to Microsoft Intune
+        url: deployment/add-win32.md
+      - text: Add a Windows Line-of-Business App to Microsoft Intune
+        url: deployment/add-lob-windows.md
+      - text: Add Win32 app supersedence
+        url: deployment/configure-win32-supersedence.md
+      - text: How to Add macOS Line-of-Business Apps to Microsoft Intune
+        url: deployment/add-lob-macos.md
+      - text: Deploy Windows Update Packages in Intune
+        url: deployment/deploy-win32-update-package.md
+      - text: Add an Android Line-of-Business App to Microsoft Intune
+        url: deployment/add-lob-android.md
+  - title: Deploy store and Microsoft 365 apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add Microsoft 365 Apps to Windows Devices Using Microsoft Intune
+        url: deployment/add-microsoft-365-windows.md
+      - text: Manage Apple Volume-Purchased Apps
+        url: deployment/manage-vpp-apple.md
+      - text: Add and Assign Managed Google Play Apps to Android Enterprise Devices
+        url: deployment/add-managed-google-play.md
+      - text: Windows App Deployment by Using Microsoft Intune
+        url: deployment/deploy-windows.md
+      - text: Add Microsoft Store Apps to Microsoft Intune
+        url: deployment/add-microsoft-store.md
+  - title: Enterprise app catalog and volume licensing
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Microsoft Intune Enterprise Application Management
+        url: deployment/enterprise-app-management.md
+      - text: Add an Enterprise App Catalog App to Microsoft Intune
+        url: deployment/add-enterprise-catalog-app.md
+      - text: Guided Update Supersedence for Enterprise App Management
+        url: deployment/update-enterprise-supersedence.md
+      - text: Manage Volume-Purchased Apps and Books with Microsoft Intune
+        url: deployment/manage-volume-purchased.md
+  - title: Deploy Company Portal and macOS apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add the Company Portal for macOS App
+        url: deployment/add-company-portal-macos.md
+      - text: Add an Unmanaged macOS PKG App to Microsoft Intune
+        url: deployment/add-unmanaged-pkg-macos.md
+      - text: Add a macOS DMG App to Microsoft Intune
+        url: deployment/add-dmg-macos.md
+      - text: Manually Add the Windows Company Portal App
+        url: deployment/add-company-portal-windows.md
+      - text: Add and assign the Windows Company Portal app for Intune managed devices
+        url: deployment/add-company-portal-autopilot.md
+  - title: Configure apps
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App Configuration Policies for Microsoft Intune
+        url: configuration/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Manage Microsoft Edge on iOS and Android With Intune
+        url: configuration/configure-edge-ios-android.md
+      - text: Configure the Microsoft Managed Home Screen App
+        url: configuration/configure-managed-home-screen.md
+      - text: Add App Configuration Policies for Managed iOS/iPadOS Devices
+        url: configuration/configure-managed-ios.md
+      - text: Manage Outlook for iOS and Android With Intune
+        url: configuration/configure-outlook.md
+  - title: Protect apps with app protection policies
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App Protection Policies Overview
+        url: protection/overview.md
+    - linkListType: concept
+      links:
+      - text: iOS/iPadOS App Protection Policy Settings
+        url: protection/ref-settings-ios.md
+      - text: Android App Protection Policy Settings
+        url: protection/ref-settings-android.md
+      - text: Data Protection Framework Using App Protection Policies
+        url: protection/data-protection-framework.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create and Deploy App Protection Policies
+        url: protection/create-policy.md
+      - text: Data Protection for Windows MAM
+        url: protection/enable-mam-windows.md
+      - text: Configure quiet time policies
+        url: protection/configure-quiet-time.md
+  - title: Assign, monitor, and troubleshoot apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Assign Apps to Groups in Microsoft Intune
+        url: deployment/assign-groups.md
+      - text: Include and exclude app assignments
+        url: deployment/configure-assignment-scope.md
+      - text: Monitor App Information and Assignments
+        url: monitor-assignments.md
+      - text: How to Monitor App Protection Policies
+        url: protection/monitor-policies.md
+      - text: Troubleshoot Win32 Apps in Microsoft Intune
+        url: deployment/troubleshoot-win32.md
+      - text: Review app protection logs
+        url: protection/troubleshoot-protection-logs.md

@@ -1,0 +1,89 @@
+### YamlMime:Landing
+
+title: Microsoft Intune developer resources documentation
+
+summary: Use APIs, SDKs, and the Data Warehouse to extend and integrate with Microsoft Intune programmatically.
+
+metadata:
+  title: Intune developer resources
+  description: Access Intune APIs, protect apps with the Intune App SDK, and report on device data with the Intune Data Warehouse.
+  ms.topic: landing-page
+  ms.date: 4/22/2026
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with Intune development
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Get started with the Microsoft Intune App SDK
+        url: app-sdk/quickstart-integration.md
+      - text: Benefits of Intune App SDK
+        url: app-sdk/index.md
+      - text: Prepare apps for mobile application management
+        url: app-sdk/integration-methods.md
+      - text: Use Microsoft Entra ID to access Intune APIs in Microsoft Graph
+        url: configure-graph-api-access.md
+
+  - title: Protect iOS apps with Intune App SDK
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Wrap iOS apps with the Intune App Wrapping Tool
+        url: app-sdk/configure-wrapping-ios.md
+      - text: Plan the integration
+        url: app-sdk/ios-phase-1.md
+      - text: Intune SDK integration into your iOS app
+        url: app-sdk/ios-phase-3.md
+      - text: MSAL prerequisite and setup
+        url: app-sdk/ios-phase-2.md
+      - text: App Protection Conditional Access support
+        url: app-sdk/ios-phase-6.md
+
+  - title: Protect Android apps with Intune App SDK
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Understand the MSAL prerequisite
+        url: app-sdk/android-phase-2.md
+      - text: Get started with MAM
+        url: app-sdk/android-phase-3.md
+      - text: Plan the integration
+        url: app-sdk/android-phase-1.md
+      - text: MAM integration essentials
+        url: app-sdk/android-phase-4.md
+      - text: Wrap Android apps with the Intune App Wrapping Tool
+        url: app-sdk/configure-wrapping-android.md
+
+  - title: Use the Intune Data Warehouse
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Use the Intune Data Warehouse
+        url: data-warehouse/create-reports.md
+      - text: Connect to the Data Warehouse with Power BI
+        url: data-warehouse/connect-power-bi.md
+      - text: Create an Intune report from the OData feed with Power BI
+        url: data-warehouse/create-report-odata.md
+      - text: Intune Data Warehouse API
+        url: data-warehouse/index.md
+      - text: Get data from the Data Warehouse API with a REST client
+        url: data-warehouse/setup-rest-client.md
+
+  - title: Data Warehouse API and data model
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Data Warehouse data model
+        url: data-warehouse/ref-data-model.md
+      - text: Data Warehouse API endpoint
+        url: data-warehouse/ref-api-endpoints.md
+      - text: Devices
+        url: data-warehouse/ref-devices.md
+      - text: Data Warehouse application-only authentication
+        url: data-warehouse/configure-app-only-auth.md
+      - text: User lifetime representation in the Intune Data Warehouse
+        url: data-warehouse/ref-user-timeline.md

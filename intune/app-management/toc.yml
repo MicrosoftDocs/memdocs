@@ -1,4 +1,6 @@
 items:
+  - name: Microsoft Intune application management documentation
+    href: ./index.yml
   - name: App management overview
     href: ./overview.md
   - name: MAM for unenrolled devices
