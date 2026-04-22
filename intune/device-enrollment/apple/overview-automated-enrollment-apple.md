@@ -23,8 +23,8 @@ Microsoft Intunee supports automated device enrollment for Apple mobile devices,
 | Platform | Setup article |What it's for|
 |----------|---------------|-------------|
 | iOS/iPadOS | [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md) | User affinity, no user affinity|
-| tvOS| [Set up an enrollment profile for tvOS](setup-automated-tvos.md)| No user affinity|
-| visionOS| [Set up an enrollment profile for visionOS](setup-automated-visionos.md)| No user affinity|
+| tvOS| [Set up an enrollment profile for tvOS](setup-automated-tv-os.md)| No user affinity|
+| visionOS| [Set up an enrollment profile for visionOS](setup-automated-vision-os.md)| No user affinity|
 
 Intune supports ADE for visionOS and tvOS devices using enrollment without user affinity. These devices are enrolled as corporate‑owned and receive device‑targeted policies. Configuration is delivered using custom configuration profiles.  
 
@@ -102,5 +102,5 @@ tvOS and visionOS enrollment happens without user affinity. Authentication selec
 ## Next steps
 
 - [Set up an enrollment profile for iOS/iPadOS](setup-automated-ios.md) 
-- [Set up an enrollment profile for tvOS](setup-automated-tvos.md)  
-- [Set up an enrollment profile for visionOS](setup-automated-visionos.md)  
+- [Set up an enrollment profile for tvOS](setup-automated-tv-os.md)  
+- [Set up an enrollment profile for visionOS](setup-automated-vision-os.md)  

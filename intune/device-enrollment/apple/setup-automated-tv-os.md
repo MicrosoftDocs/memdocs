@@ -13,13 +13,13 @@ ms.collection:
 
 *Applies to tvOS*
 
-This article describes how to create an tvOS enrollment policy for Apple automated device enrollment (ADE) in Microsoft Intune. This type of enrollment profile is for devices without user affinity. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](automated-device-enrollment-overview-apple.md).  
+This article describes how to create an tvOS enrollment policy for Apple automated device enrollment (ADE) in Microsoft Intune. This type of enrollment profile is for devices without user affinity. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).  
 
 ## Prerequisites
 Before you create the enrollment profile, you must have:
 
 * Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
-* An active Apple token (.p7m file). For steps, see [Set up an ADE token](token-setup-apple.md).
+* An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
 * New or wiped Apple TV devices purchased from Apple Business or Apple School Manager.
      > [!Tip]
@@ -163,4 +163,4 @@ Complete these steps to re-enroll a device that already went through automated d
 ## Next steps
 
 - To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
-- To renew or delete your enrollment program token, see [Set up an ADE token](token-setup-apple.md).
+- To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).

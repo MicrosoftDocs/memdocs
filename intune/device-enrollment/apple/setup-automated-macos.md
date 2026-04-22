@@ -23,7 +23,7 @@ This article describes how to create an enrollment profile for macOS automated d
 Before you create the enrollment profile, you must have:
 
 * Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
-* An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](token-setup-macos.md).
+* An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](setup-macos-token.md).
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
 * New or wiped devices purchased through Apple Business or Apple School Manager.
      > [!TIP]

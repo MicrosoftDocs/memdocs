@@ -131,9 +131,9 @@ items:
       - name: Create an enrollment profile for iOS/iPadOS
         href: ./apple/setup-automated-ios.md
       - name: Create an enrollment profile for tvOS
-        href: ./apple/setup-automated-tvos.md
+        href: ./apple/setup-automated-tv-os.md
       - name: Create an enrollment profile for visionOS
-        href: ./apple/setup-automated-visionos.md
+        href: ./apple/setup-automated-vision-os.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-apple.md
       - name: Set up enrollment for shared device mode

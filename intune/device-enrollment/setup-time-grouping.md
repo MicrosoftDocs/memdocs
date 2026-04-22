@@ -111,9 +111,9 @@ You can add one static Microsoft Entra security group per enrollment profile. As
 
    - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](android/setup-fully-managed.md)
 
-   - tvOS:[Set up enrollment profile for tvOS](apple/setup-automated-tvos.md)  
+   - tvOS:[Set up enrollment profile for tvOS](apple/setup-automated-tv-os.md)  
 
-   - visionOS:[Set up enrollment profile visionOS](apple/setup-automated-visionos.md) 
+   - visionOS:[Set up enrollment profile visionOS](apple/setup-automated-vision-os.md) 
 
     >[!TIP]
     > Enrollment time grouping isn't supported with the staging token. If you're configuring a profile for use with enrollment time grouping, use the corporate-owned, fully managed (default) token or the corporate owned work profile (default) token.

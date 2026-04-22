@@ -28,8 +28,8 @@ Before completing the tasks in this article:
 - [Set up an Apple mobile automated device enrollment (ADE) token](setup-apple-token.md)  
 - Create an enrollment profile and assign it to devices:
     - [Create enrollment profile for iOS/iPadOS](setup-automated-ios.md)
-    - [Create enrollment profile for tvOS](setup-automated-tvos.md)
-    - [Create enrollment profile for visionOS](setup-automated-visionos.md)
+    - [Create enrollment profile for tvOS](setup-automated-tv-os.md)
+    - [Create enrollment profile for visionOS](setup-automated-vision-os.md)
 
 ## Sync managed devices
 
