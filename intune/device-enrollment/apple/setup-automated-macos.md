@@ -16,11 +16,7 @@ ms.collection:
 This article describes how to create an enrollment profile for macOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment for macOS](overview-automated-enrollment-macos.md).
 
 > [!NOTE]
-> The steps in this article are the same whether you're using Apple Business Manager or Apple School Manager. For brevity, we refer to *Apple Business Manager* only throughout the steps in this article, except where clarification is necessary.
-
-## Certificates
-
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. ACME is supported on macOS 13.1 or later. Already-enrolled devices don't receive an ACME certificate unless they re-enroll. For details, see [Certificates](overview-automated-enrollment-macos.md#certificates) in the ADE overview.
+> The steps in this article are the same whether you're using Apple Business Manager or Apple School Manager. For brevity, we refer to *Apple Business Manager* only throughout the steps in this article, except where clarification is necessary.  
 
 ## Prerequisites
 
