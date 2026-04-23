@@ -3,6 +3,7 @@ title: App Configuration Policies for Microsoft Intune
 description: Learn how to use app configuration policies on an iOS/iPadOS or Android device in Microsoft Intune.
 ms.date: 04/23/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management

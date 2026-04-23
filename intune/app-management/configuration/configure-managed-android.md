@@ -3,6 +3,7 @@ title: Add App Configuration Policies for Managed Android Enterprise Devices
 description: Use app configuration policies in Microsoft Intune to supply settings when users run a Managed Google Play app.
 ms.date: 04/23/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: esalter
 ms.collection:
 - M365-identity-device-management
