@@ -1,0 +1,23 @@
+items:
+  - name: Passwordless authentication
+    href: ./passwordless.md
+  - name: Manage AI on Android
+    href: ./ai/manage-ai-android.md
+  - name: Manage operating system versions
+    href: ../device-updates/manage-os-versions.md
+  - name: Frontline worker (FLW) device management
+    displayName: android, ios, ipados, windows, kiosk
+    href: ./frontline-worker/toc.yml
+  - name: Cloud native endpoints
+    href: ./cloud-native-endpoints/toc.yml
+  - name: End-to-end macOS endpoint guide
+    href: ./end-to-end-guides/macos-endpoints-get-started.md
+  - name: Create settings catalog policy and compare with on-premises ADMX
+    href: ../device-configuration/settings-catalog/tutorial-group-policy-migration.md
+    displayName: admx, administrative template, windows, gpo
+
+  - name: "Zero Trust: Manage devices with Intune 🔗"
+    href: /microsoft-365/solutions/manage-devices-with-intune-overview
+
+  - name: Secure your corporate data using Edge for Business
+    href: ./edge-data-security/toc.yml
