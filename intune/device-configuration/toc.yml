@@ -1,7 +1,7 @@
 items:
-  - name: Device configuration documentation
+  - name: Overview
     href: ./index.yml
-  - name: Device configuration overview
+  - name: What is device configuration?
     displayName: android, ios, ipados, macos, windows
     href: ./overview.md
   - name: Create a profile
