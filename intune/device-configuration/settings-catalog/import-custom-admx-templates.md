@@ -30,7 +30,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
   To modify or update an ADMX policy with the **Not Configured** setting, RBAC administrators need the **Device configurations > Delete** permission. The built-in **Policy and Profile Manager** role has this permission.
 
-- This feature is in [public preview](../../intune-service/fundamentals/public-preview.md).
+- This feature is in [public preview](../../fundamentals/public-preview.md).
 
 - There are some limits:
 
@@ -132,7 +132,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 6. Select **Next**.
 
 7. In **Configuration settings**, select and configure the settings you want in your policy. When finished, select **Next**.
-8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

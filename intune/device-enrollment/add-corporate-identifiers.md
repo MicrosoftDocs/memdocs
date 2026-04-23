@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Identify devices as corporate-owned  
@@ -58,7 +57,7 @@ These roles can *read*, *delete*, *create*, and *update* corporate device identi
 |Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. |
 |Update | Change IMEI or serial numbers used as corporate device identifiers. |
 
-You can also create a custom Intune role for people managing corporate identifiers and assign corporate device identifier permissions. For more information about built-in roles and custom roles, see [RBAC with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+You can also create a custom Intune role for people managing corporate identifiers and assign corporate device identifier permissions. For more information about built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 ## Supported corporate identifiers
 

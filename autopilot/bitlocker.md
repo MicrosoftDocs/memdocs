@@ -77,7 +77,7 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. If a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
 1. In the **Assignments** page, use the **Search by group name...** search box to find and add the Windows Autopilot device group. Once the  Windows Autopilot device group is added and is listed under **Group**, make sure **Target type** is set to **Include**, and then select the **Next** button. For more information about assigning a policy, see [Assign policies in Microsoft Intune](/intune/device-configuration/assign-device-profile).
 

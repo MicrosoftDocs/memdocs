@@ -22,7 +22,7 @@ When you set up Security Copilot, you determine the Copilot role that your admin
 
 The Security Copilot roles or the Microsoft Entra roles that you configure control access to Copilot in Intune. There aren't any Intune-specific roles-based access controls (RBAC) for Copilot in Intune.
 
-After you enable Intune in Security Copilot, your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../intune-service/fundamentals/role-based-access-control.md) and [Intune scope tags](../intune-service/fundamentals/scope-tags.md) that are assigned to your admins.
+After you enable Intune in Security Copilot, your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control/overview.md) and [Intune scope tags](../fundamentals/role-based-access-control/scope-tags.md) that are assigned to your admins.
 
 So, if an admin tries to access Intune data that they don't have permissions to, they get the following error message:
 

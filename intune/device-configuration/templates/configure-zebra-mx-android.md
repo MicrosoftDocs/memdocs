@@ -136,7 +136,7 @@ In Intune, create a device configuration profile:
     > [!TIP]
     > For security reasons, you won't see the profile XML text after you save it. The text is encrypted, and you only see asterisks (`****`). For your reference, it's recommended to save copies of the MX profiles before you add them to Intune.
 
-8. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+8. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

@@ -51,7 +51,7 @@ For more information, see the following articles:
 
   - Enrolled to [co-management](how-to-enable.md)
 
-  - Access to [internet endpoints for Intune](../../intune-service/fundamentals/intune-endpoints.md)
+  - Access to [internet endpoints for Intune](../../fundamentals/endpoints.md)
 
 - The user accounts that sign in to these devices require the following configurations:
 

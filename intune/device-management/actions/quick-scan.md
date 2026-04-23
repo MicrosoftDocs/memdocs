@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Quick Scan"
+title: "Device Action: Quick Scan"
 description: Learn how to initiate on demand Microsoft Defender quick scan with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: quick scan
+# Device action: quick scan
 
-The *quick scan* remote action in Microsoft Intune enables IT administrators to start a targeted malware scan on managed Windows devices by using Microsoft Defender Antivirus. This action scans key system areas where threats commonly appear—such as memory, startup folders, and running processes—without performing a full system sweep.
+The *quick scan* action in Microsoft Intune enables IT administrators to start a targeted malware scan on managed Windows devices by using Microsoft Defender Antivirus. This action scans key system areas where threats commonly appear—such as memory, startup folders, and running processes—without performing a full system sweep.
 
 Quick scans are especially useful for routine health checks, validating recent policy deployments, or responding to low-risk alerts. By triggering a scan remotely from the Intune admin center, IT teams can quickly assess device health and ensure protection is up to date—without waiting for the next scheduled scan or relying on user intervention.
 
@@ -20,7 +20,7 @@ Quick scans are especially useful for routine health checks, validating recent p
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platform:
+> This action supports the following platform:
 >
 > - Windows
 
@@ -33,7 +33,7 @@ Quick scans are especially useful for routine health checks, validating recent p
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
@@ -46,12 +46,12 @@ Quick scans are especially useful for routine health checks, validating recent p
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Quick scan**.
+1. At the top of the device overview pane, find the row of action icons. Select **Quick scan**.
 
 ## Reference links
 
 - Microsoft Graph API: [windowsDefenderScan action][GRAPH-1]
-- Configuration service provider (CSP) used to initiate the remote action: [Defender CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [Defender CSP][CSP-1]
 
 <!--links-->
 
@@ -62,9 +62,9 @@ Quick scans are especially useful for routine health checks, validating recent p
 
 <!-- role links -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
 
 <!-- API links -->
 

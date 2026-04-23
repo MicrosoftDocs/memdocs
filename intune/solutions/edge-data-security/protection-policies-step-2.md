@@ -2,12 +2,12 @@
 title: Step 2. Create App Protection Policies for Microsoft Edge for Business
 description: Step 2. Create app protection policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
 ms.date: 01/23/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- highpri
-- highseo
 - FocusArea_Apps_AppManagement
 zone_pivot_groups: app-protection-platforms
 ---

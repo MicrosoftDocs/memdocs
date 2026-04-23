@@ -8,13 +8,10 @@ ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
 - macOS
-- highpri
 ---
 
 # How to Manage iOS and macOS Apps Purchased Through Apple Business Manager with Microsoft Intune
 
-
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Apple lets you purchase multiple licenses for an app that you want to use in your organization on iOS/iPadOS and macOS devices using [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. Purchasing app licenses helps you efficiently manage apps within your company and retain ownership and control of purchased apps.
 
@@ -116,7 +113,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../../privacy/data-sharing/ref-intune-to-apple.md).
 7. Select **Next** to display the **Scope tags** page.
-8. Select **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+8. Select **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 9. Select **Next** to display the **Review + create** page. Review the values and settings you entered for the VPP token.
 10. When you're done, select **Create**. The token is displayed in the list of tokens pane.
 

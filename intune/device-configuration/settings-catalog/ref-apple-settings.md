@@ -21,7 +21,7 @@ This article applies to:
 
 ## Before you begin
 
-- At a minimum, sign into the Intune admin center as a member of the **Policy and Profile Manager** role. For more information on the built-in Intune roles, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+- At a minimum, sign into the Intune admin center as a member of the **Policy and Profile Manager** role. For more information on the built-in Intune roles, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 - Create a [settings catalog policy](index.md).
 
 ### How to use this article

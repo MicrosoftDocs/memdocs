@@ -1,16 +1,18 @@
 ---
 title: Use the Intune Data Warehouse
 description: Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment.
-ms.date: 10/30/2024
+ms.date: 03/31/2026
 ms.topic: reference
 ms.reviewer: jamiesil
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 ---
 
 # Use the Microsoft Intune Data Warehouse
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
+> [!IMPORTANT]
+> The Intune Data Warehouse (beta) connector in Power BI (connector v1) is being retired. If your Power BI reports use connector v1, migrate to the Intune connector v2 or OData Feed connector. For migration steps, see [Connect to the Data Warehouse with Power BI](connect-power-bi.md#migrate-from-connector-v1).
 
 Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment. For example, some of the reports include:
 - Trend of users enrolling in Intune so you can optimize your license purchases

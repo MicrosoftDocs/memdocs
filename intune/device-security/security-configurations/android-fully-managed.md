@@ -8,7 +8,6 @@ ms.topic: reference
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Android Enterprise fully managed device security configuration examples

@@ -37,17 +37,17 @@ You can allow administrators to sign in to and manage Microsoft Intune without a
 
 1. Select **Yes** to allow access to unlicensed admins.
 
-   :::image type="content" alt-text="Screenshot of administrator licensing to allow unlicensed admins." source="./images/unlicensed-admins-01.png" :::
+   :::image type="content" alt-text="Screenshot of administrator licensing to allow unlicensed admins." source="./media/unlicensed-admins/unlicensed-admins-01.png" :::
 
 After you enable this setting, users who sign in to the Microsoft Intune admin center don't require an Intune license. Roles assigned to users define their scope of access.
 
 ## Related content
 
-- [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
+- [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
 
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
-[Intune role administrator]: ../../intune-service/fundamentals/role-based-access-control-reference.md
-[Custom role]: ../../intune-service/fundamentals/create-custom-role.md
+[Intune role administrator]: ../../fundamentals/role-based-access-control-reference.md
+[Custom role]: ../../fundamentals/create-custom-role.md

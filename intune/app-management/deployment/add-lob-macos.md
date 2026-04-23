@@ -8,13 +8,10 @@ ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
 - macOS
-- highpri
 - FocusArea_Apps_LOB
 ---
 
 # How to Add macOS Line-of-Business (LOB) Apps to Microsoft Intune
-
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune.
 
@@ -78,14 +75,14 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 
 ## Step 2 - Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Choose **Select scope tags** to optionally add scope tags for the app.
 2. Select **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
     > [!NOTE]
     > The **uninstall** intent is only displayed for LOB apps created with **Install as managed** set to **Yes**. For more information, review **App information section** earlier on this article.
@@ -118,4 +115,4 @@ For line-of-business (LOB) apps, if the app is assigned with Required intent and
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
 
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../intune-service/fundamentals/device-lifecycle.md)
+- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md)

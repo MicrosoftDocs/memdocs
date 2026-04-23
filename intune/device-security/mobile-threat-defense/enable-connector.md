@@ -23,7 +23,7 @@ Applies to:
 
 ## Required role-based access control permissions
 
-To successfully enable the Mobile Threat Defense connector, you must use an account that is assigned [Role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) permissions equivalent to the *Endpoint Security Manager* built-in admin role for Intune. If you use a custom role, ensure it includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
+To successfully enable the Mobile Threat Defense connector, you must use an account that is assigned [Role-based access control](../../fundamentals/role-based-access-control/overview.md) (RBAC) permissions equivalent to the *Endpoint Security Manager* built-in admin role for Intune. If you use a custom role, ensure it includes the *Read* and *Modify* rights for the Intune *Mobile Threat Defense* permission.
 
 ## To enable the Mobile Threat Defense connector
 
@@ -47,7 +47,7 @@ To successfully enable the Mobile Threat Defense connector, you must use an acco
 
 > [!NOTE]
 >
-> Ensure your tenant's MDM Authority is [set to Intune](../../intune-service/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) to see the full list of toggle options.
+> Ensure your tenant's MDM Authority is [set to Intune](../../fundamentals/setup-mdm-authority.md#set-mdm-authority-to-intune) to see the full list of toggle options.
 
 The available options for connectors are divided into three categories. When a partner doesn't support a category, that category isn't available:
 

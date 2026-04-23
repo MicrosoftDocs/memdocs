@@ -1,5 +1,5 @@
 items:
-- name: Remote device actions overview
+- name: Device actions overview
   href: index.md
   displayName: remote actions
 - name: Actions list

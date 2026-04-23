@@ -64,7 +64,7 @@ Here are some examples of the reports available in Intune:
 - Security reports
 - Application reports
 
-To learn more about reports in Intune, see [Reports in Intune](../../../intune-service/fundamentals/reports.md).
+To learn more about reports in Intune, see [Reports in Intune](../../../device-management/reports/overview.md).
 
 ### [Intune For Education](#tab/intune-for-education)
 

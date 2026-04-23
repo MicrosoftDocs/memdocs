@@ -7,7 +7,6 @@ ms.date: 01/27/2026
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Step 4 - Set up automatic enrollment for Windows devices
@@ -23,7 +22,7 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> - A Microsoft Intune subscription. [Sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 > - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.
 :::column-end:::
 :::row-end:::
@@ -44,8 +43,8 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 :::column-end:::
 :::column span="3":::
 > To complete this step, you must:
-> - [Create a user](../../intune-service/fundamentals/quickstart-create-user.md).
-> - [Create a group](../../intune-service/fundamentals/quickstart-create-group.md).
+> - [Create a user](../../fundamentals/tenant-administration/quickstart-create-user.md).
+> - [Create a group](../../fundamentals/tenant-administration/quickstart-create-group.md).
 :::column-end:::
 :::row-end:::
 

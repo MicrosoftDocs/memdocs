@@ -19,6 +19,9 @@ ms.collection:
 
 Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](./manage-elevation-settings.md).
 
+> [!NOTE]
+> You can add up to 100 elevation rules per elevation rules policy from Microsoft Intune admin center.
+
 In addition to the information in this article, remain aware of important [security recommendations](./deployment-planning.md#security-recommendations) when managing elevation rules.
 
 ## About elevation rules policy

@@ -32,7 +32,7 @@ When you're enabling co-management, you can use the Azure public cloud, Azure Go
    - **Automatic enrollment in Intune**: Enables automatic client enrollment in Intune for existing Configuration Manager clients. This option allows you to enable co-management on a subset of clients to initially test co-management and then roll out co-management by using a phased approach. If the user unenrolls a device, the device will be re-enrolled on the next evaluation of the policy. <!--3330596-->
 
       - **Pilot**: Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled in Intune.
-      - **All**: Enable automatic enrollment for all clients running [supported Windows versions](../../../intune-service/fundamentals/supported-devices-browsers.md).
+      - **All**: Enable automatic enrollment for all clients running [supported Windows versions](../../../fundamentals/ref-supported-platforms.md).
       - **None**: Disable automatic enrollment for all clients.
 
 
@@ -42,7 +42,7 @@ When you're enabling co-management, you can use the Azure public cloud, Azure Go
 
    Automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.<!--1358003-->
 
-   A new co-managed device is now automatically enrolled in the Microsoft Intune service based on its Microsoft Entra device token. It doesn't need to wait for a user to sign in to the device for automatic enrollment to start. This change helps to reduce the number of devices with the enrollment status **Pending user sign in**.<!-- 4454491 --> To support this behavior, the device needs to be running [supported Windows versions](../../../intune-service/fundamentals/supported-devices-browsers.md). For more information, see [Co-management enrollment status](../how-to-monitor.md#co-management-enrollment-status).
+   A new co-managed device is now automatically enrolled in the Microsoft Intune service based on its Microsoft Entra device token. It doesn't need to wait for a user to sign in to the device for automatic enrollment to start. This change helps to reduce the number of devices with the enrollment status **Pending user sign in**.<!-- 4454491 --> To support this behavior, the device needs to be running [supported Windows versions](../../../fundamentals/ref-supported-platforms.md). For more information, see [Co-management enrollment status](../how-to-monitor.md#co-management-enrollment-status).
 
    If you already have devices enrolled in co-management, new devices are now enrolled immediately after they meet the [prerequisites](../overview.md#prerequisites).<!--4321130-->
 

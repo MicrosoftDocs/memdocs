@@ -12,8 +12,6 @@ ms.collection:
 
 # Add App Configuration Policies for Managed Android Enterprise Devices
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 App configuration policies in Microsoft Intune supply settings to Managed Google Play apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
 
 Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
@@ -74,9 +72,9 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 13. To allow specific apps to act as a system credential provider, select **Credential provider**. By default, Android blocks third-party credential providers from providing credentials. For more information, see [Allow an app to be a credential provider](#allow-an-app-to-be-a-credential-provider).
 
 14. Select **Next** to display the **Scope tags** page.
-15. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+15. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 16. Select **Next** to display the **Assignments** page.
-17. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../../intune-service/fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
+17. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../../fundamentals/filters/overview.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/configure-managed-android/app-configuration-policies-use-android-02.png" :::
 
@@ -84,7 +82,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     :::image type="content" alt-text="Screenshot of policy assignments - All Users dropdown option" source="./media/configure-managed-android/app-configuration-policies-use-android-03.png" :::
 
-19. [Optional] select **Edit filter** to add a [filter](../../intune-service/fundamentals/filters.md) and refine the assignment scope.
+19. [Optional] select **Edit filter** to add a [filter](../../fundamentals/filters/overview.md) and refine the assignment scope.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/configure-managed-android/app-configuration-policies-use-android-04.png" :::
 
