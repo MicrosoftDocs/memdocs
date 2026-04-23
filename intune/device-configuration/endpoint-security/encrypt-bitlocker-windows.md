@@ -6,8 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich; aanavath
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - sub-secure-endpoints
 ---
 
@@ -30,7 +28,7 @@ Intune supports two primary BitLocker encryption approaches:
 - **Silent BitLocker encryption** - Automatic encryption without user interaction or administrative privileges required on the device. Ideal for organizations that want to ensure all managed devices are encrypted without depending on end-user action.
 
 > [!TIP]
-> Intune provides a built-in [encryption report](./monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
+> Intune provides a built-in [encryption report](../../device-management/monitor-encryption.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 
 ## Prerequisites
 
@@ -40,9 +38,9 @@ For Windows editions that support BitLocker management, see [Windows edition and
 
 ### Role-based access controls
 
-To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../../intune-service/fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
+To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../../fundamentals/role-based-access-control/overview.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
 
-You can add this permission to your own [custom RBAC roles](../../intune-service/fundamentals/create-custom-role.md) or use one of the following [built-in RBAC roles](../../intune-service/fundamentals/role-based-access-control-reference.md):
+You can add this permission to your own [custom RBAC roles](../../fundamentals/role-based-access-control/create-custom-role.md) or use one of the following [built-in RBAC roles](../../fundamentals/role-based-access-control/ref-built-in-roles.md):
 
 - Help Desk Operator
 - Endpoint Security Administrator
@@ -185,7 +183,7 @@ For **Endpoint security [Disk encryption](./disk-encryption.md) policy**, config
 > - **System instability** and boot failures
 > - **Complex recovery scenarios** with multiple encryption layers
 >
-> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../../intune-service/fundamentals/device-inventory.md) to identify devices with existing encryption software.
+> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../../device-management/inventory-and-status/device-details.md) to identify devices with existing encryption software.
 
 > [!IMPORTANT]
 > After setting **Allow Warning For Other Disk Encryption** to *Disabled*, another setting becomes available:
@@ -277,7 +275,7 @@ The 'Conversion Status' field shows either *Used Space Only Encrypted* or *Fully
 
 :::image type="content" source="./media/encrypt-bitlocker-windows/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
 
-To view information about devices that receive BitLocker policy, see [Monitor disk encryption](./monitor-encryption.md).
+To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../../device-management/monitor-encryption.md).
 
 ### Control encryption type with Settings Catalog
 
@@ -450,7 +448,7 @@ For silent BitLocker enablement, recovery keys are automatically backed up to Mi
 ## Next steps
 
 - [Manage FileVault policy for macOS devices](./encrypt-filevault-macos.md)
-- [Monitor disk encryption](./monitor-encryption.md)
+- [Monitor disk encryption](../../device-management/monitor-encryption.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for BitLocker policies](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
 - [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison)

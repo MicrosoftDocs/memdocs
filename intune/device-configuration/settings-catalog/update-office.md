@@ -25,7 +25,7 @@ This feature applies to:
 
 - Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
-- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 - Add and enable [Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
 

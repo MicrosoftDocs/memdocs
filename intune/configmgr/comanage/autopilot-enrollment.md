@@ -93,7 +93,7 @@ The following components are required to support Windows Autopilot into co-manag
 
   - User-driven scenario only
 
-- A device group in Intune to which you'll assign the co-management settings policy. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+- A device group in Intune to which you'll assign the co-management settings policy. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
   You also need to assign the following profiles to the same device group:
 

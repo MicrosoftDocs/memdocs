@@ -85,7 +85,7 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
 
 ### Device Edition and Platform
 
-Devices can have any [Windows edition that Intune supports](../../intune-service/fundamentals/supported-devices-browsers.md#microsoft), but must run of one of the following versions to support the Windows LAPS CSP:
+Devices can have any [Windows edition that Intune supports](../../fundamentals/ref-supported-platforms.md#microsoft), but must run of one of the following versions to support the Windows LAPS CSP:
 
 - Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
 - Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
@@ -106,16 +106,16 @@ Intune policy for Windows LAPS is supported for GCC High environments.
 
 To manage LAPS, an account must have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
 
-- **Create and access LAPS policy** - To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the Intune built-in role[ **Endpoint Security Manager**](../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager). To use [custom Intune RBAC roles](../../intune-service/fundamentals/create-custom-role.md), ensure the custom role includes the rights from the *Security baselines* category.
+- **Create and access LAPS policy** - To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the Intune built-in role[ **Endpoint Security Manager**](../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager). To use [custom Intune RBAC roles](../../fundamentals/role-based-access-control/create-custom-role.md), ensure the custom role includes the rights from the *Security baselines* category.
 
-- **Rotate local Administrator password** - To use the Intune admin center to view or rotate a devices local admin account password, your account must be assigned the following [Intune permissions](../../intune-service/fundamentals/create-custom-role.md):
+- **Rotate local Administrator password** - To use the Intune admin center to view or rotate a devices local admin account password, your account must be assigned the following [Intune permissions](../../fundamentals/role-based-access-control/create-custom-role.md):
 
   - Managed devices: **Read**
   - Organization: **Read**
   - Remote tasks: **Rotate Local Admin Password**
 
     > [!IMPORTANT]
-    > The *Remote tasks* action of **Rotate Local Admin Password** isn't included by any Intune built-in role or the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md) to assign this permission to users who should have this capability.
+    > The *Remote tasks* action of **Rotate Local Admin Password** isn't included by any Intune built-in role or the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../fundamentals/role-based-access-control/create-custom-role.md) to assign this permission to users who should have this capability.
 
 - **Retrieve local Administrator password** - To view password details, your account must have one of the following Microsoft Entra permissions:
 
@@ -126,7 +126,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
 
 - **View Microsoft Entra audit logs and events** - To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
-For more information about Intune's built-in roles and custom roles, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+For more information about Intune's built-in roles and custom roles, see [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## LAPS Architecture
 
@@ -179,7 +179,7 @@ You can also use following roles:
 - *Security Administrator*
 
 ### Why is the Local admin password button greyed out and inaccessible?
-Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ### What happens when the account specified by policy is changed?
 

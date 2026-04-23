@@ -5,7 +5,6 @@ ms.date: 12/04/2025
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ms.reviewer: laarrizz
 
@@ -136,7 +135,7 @@ For detailed profile-specific requirements, see [Custom role considerations](#cu
 
 > [!IMPORTANT]
 >
-> The granular permission of *Antivirus* for endpoint security policies might be temporarily visible in some Tenants. This permission isn't released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, well announce its availability in the [What's new in Microsoft Intune](../../intune-service/fundamentals/whats-new.md) article.
+> The granular permission of *Antivirus* for endpoint security policies might be temporarily visible in some Tenants. This permission isn't released and isn't supported for use. Configurations of the Antivirus permission are ignored by Intune. When Antivirus becomes available to use as a granular permission, well announce its availability in the [What's new in Microsoft Intune](../../whats-new/index.md) article.
 
 ### Built-in RBAC roles
 
@@ -152,7 +151,7 @@ The following Intune built-in roles provide access to endpoint security workload
 
 **Defender portal integration**: Security settings management through the Defender portal uses the same Intune RBAC permissions.
 
-**[Multi Admin Approval](../../intune-service/fundamentals/multi-admin-approval.md)**: Role modifications might require dual administrator approval depending on your organization's governance settings.
+**[Multi Admin Approval](../../fundamentals/role-based-access-control/multi-admin-approval.md)**: Role modifications might require dual administrator approval depending on your organization's governance settings.
 
 ## Create endpoint security policies
 
@@ -269,7 +268,7 @@ Many endpoint security policies have deep integration with Microsoft Defender fo
 
 ## Next steps
 
-- [Explore the Endpoint security overview](./overview.md)
+- [Explore the Endpoint security overview](../../device-security/endpoint-security-policies.md)
 - [Review security baselines for comprehensive security configurations](../../device-security/security-baselines/overview.md)
 - [Learn about reusable settings groups](../../device-security/reusable-settings-groups.md)
 - [Configure Microsoft Defender for Endpoint integration](../../device-security/microsoft-defender/configure-integration.md)

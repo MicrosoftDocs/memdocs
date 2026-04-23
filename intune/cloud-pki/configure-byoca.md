@@ -24,7 +24,7 @@ For more information about how to prepare your tenant for Microsoft Cloud PKI, i
 
 ## Role based access control
 
-The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) account has the appropriate built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) account has the appropriate built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 ## Step 1: Create issuing CA and certificate signing request
 
@@ -315,7 +315,7 @@ Create an SCEP certificate profile for each OS platform you're targeting, like y
       > [!div class="mx-imgBorder"]
       > ![Image of the root certificate setting, with a root CA certificate selected.](./media/shared/scep-root-certificate.png)
 
-1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../intune-service/fundamentals/intune-endpoints.md).
+1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../fundamentals/endpoints.md).
 1. Configure the remaining settings, following these best practices:
 
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.

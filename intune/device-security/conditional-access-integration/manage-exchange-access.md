@@ -13,7 +13,7 @@ ms.collection:
 
 When you use Microsoft Intune, you can still manage employee access to their work email through Microsoft 365 Exchange Online without the overhead of enrolling their devices. This limited access through Exchange Online for unenrolled devices can be accomplished using app-based Conditional Access policies.
 
-To complete the necessary steps, confirm you have licenses for Microsoft 365, or Microsoft Entra ID P1 and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../../intune-service/fundamentals/supported-devices-browsers.md).
+To complete the necessary steps, confirm you have licenses for Microsoft 365, or Microsoft Entra ID P1 and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../../fundamentals/ref-supported-platforms.md).
 
 If you decide to set up a device management system, you can as this type of app protection works independently of device management.
 

@@ -32,9 +32,9 @@ Intune supports the deployment several application types including desktop apps 
 Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](../../../app-management/deployment/create-win32-package.md) and hosted by Microsoft.
 
 > [!IMPORTANT]
-> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../../intune-service/fundamentals/intune-add-ons.md).
+> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../../fundamentals/add-ons.md).
 
-For more information, see [Enterprise Application Management](../../../app-management/deployment/enterprise-app-catalog.md).
+For more information, see [Enterprise Application Management](../../../app-management/deployment/enterprise-app-management.md).
 
 #### Win32 apps (MSI, exe)
 
@@ -265,7 +265,7 @@ With the applications configured, you can now deploy students' and teachers' dev
 
 [EDU-1]: /education/windows/tutorial-deploy-apps-winse
 
-[MEM-1]: /intune/app-management/deployment/add-win32
+[MEM-1]: ../../../app-management/deployment/add-win32.md
 
 [INT-1]: /intune-education/express-configuration-intune-edu
 [INT-2]: /intune-education/add-web-apps-edu

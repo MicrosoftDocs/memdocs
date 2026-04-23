@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Create device limit restrictions in Intune  
@@ -45,7 +44,7 @@ To create device limit restrictions in Microsoft Intune, you must be assigned as
 
 - Reprioritize device limit restrictions
 
-Other built-in Intune roles have read-only access to device limit restrictions. If you once assigned your users custom permissions that permitted them to manage device limit restrictions, those permissions are now limited to read-only access. You can apply scope tags to a device limit restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+Other built-in Intune roles have read-only access to device limit restrictions. If you once assigned your users custom permissions that permitted them to manage device limit restrictions, those permissions are now limited to read-only access. You can apply scope tags to a device limit restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 ## Create a device limit restriction
 
@@ -59,7 +58,7 @@ Other built-in Intune roles have read-only access to device limit restrictions. 
 5. For **Device limit**, select the maximum number of devices that a user can enroll.
     ![Screenshot that shows how to choose a device limit.](./media/restrictions/choose-device-limit.png)
 6. Choose **Next** to go to the **Scope tags** page.
-7. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+7. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 8. Choose **Next** to go to the **Assignments** page.
 9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**.
     ![Screenshot that shows selecting groups.](./media/restrictions/select-groups-device-limit.png)

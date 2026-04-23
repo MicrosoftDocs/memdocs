@@ -6,7 +6,6 @@ ms.topic: reference
 ms.reviewer: madakeva
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Device Firmware Configuration Interface (DFCI) profile settings in Microsoft Intune

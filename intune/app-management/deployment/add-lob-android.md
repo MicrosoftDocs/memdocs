@@ -13,8 +13,6 @@ ms.collection:
 
 # Add an Android Line-of-Business App to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 A line-of-business (LOB) app is an app that you add to Intune from an app installation file. This kind of app is typically written in-house. Intune installs the LOB app on the user's device.
 
 > [!NOTE]
@@ -62,14 +60,14 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
 
 ## Step 2 - Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 2. Click **Next** to display the **Review + create** page.
 
 ## Step 4 - Review + create
@@ -94,4 +92,4 @@ If **Check apps from external sources** is enabled on the Android device, the us
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. See [How to monitor app information and assignments](../monitor-assignments.md).
 
-- Learn more about the context of your app in Intune. See [Overview of device and app lifecycles](../../intune-service/fundamentals/device-lifecycle.md).
+- Learn more about the context of your app in Intune. See [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md).

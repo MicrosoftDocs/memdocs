@@ -98,9 +98,9 @@ You can also create a new profile if you want to target a different set of devic
 
 ::: zone-end
 
-## General settings
+## Review data collection and sharing settings
 
-To review the current configuration of endpoint analyticss:
+To review the current configuration of endpoint analytics:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Analytics** > [**Endpoint analytics**][INT-EA].
     :::image type="content" source="media/configure/settings.png" lightbox="media/configure/settings.png" alt-text="Endpoint analytics general settings page." border="false":::
@@ -179,11 +179,11 @@ Learn more about endpoint analytics:
 
 <!-- role links -->
 
-[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-R4]: ../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator
-[INT-R5]: ../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
-[INT-RC]: ../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
+[INT-R5]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
 
 [ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
 [ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator

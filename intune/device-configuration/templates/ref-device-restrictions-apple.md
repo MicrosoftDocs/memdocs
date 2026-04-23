@@ -6,8 +6,6 @@ ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 zone_pivot_groups: platforms-apple
 ---
 

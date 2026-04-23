@@ -6,7 +6,6 @@ ms.topic: reference
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Windows device settings to run as a kiosk in Intune
