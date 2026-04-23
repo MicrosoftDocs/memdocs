@@ -105,5 +105,5 @@ For license details, see:
 
 - [Zero Trust deployment approach with Microsoft Intune](../fundamentals/zero-trust-deployment.md)
 - [Deployment guide for Microsoft Intune](../fundamentals/get-started.md)
-- [Protect data and devices with Microsoft Intune](./index.md)
+- [Protect data and devices with Microsoft Intune](./overview.md)
 - [Configure Microsoft Entra for increased security (Preview)](/entra/fundamentals/configure-security)

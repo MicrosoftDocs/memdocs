@@ -31,17 +31,22 @@ productDirectory:
   summary: Explore the core capabilities of Microsoft Intune and learn how to manage, secure, and support devices across your organization.
   items:
 
-    - title: Device enrollment
+    - title: Get started
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management, including Windows Autopilot scenarios.
+      summary: Text here.
       url: ./device-enrollment/index.yml
 
-    - title: Device configuration
+    - title: Enroll devices
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for Intune management.
+      url: ./device-enrollment/index.yml
+
+    - title: Configure devices
       imageSrc: ./media/icons/hub-page/devices.svg
       summary: Configure settings and features across managed devices.
       url: ./device-configuration/index.yml
 
-    - title: Application management
+    - title: Manage apps
       imageSrc: ./media/icons/hub-page/apps.svg
       summary: Deploy and manage apps across platforms.
       url: ./app-management/overview.md
@@ -54,7 +59,7 @@ productDirectory:
     - title: Device security
       imageSrc: ./media/icons/hub-page/device-security.svg
       summary: Secure devices using endpoint security policies, security baselines, and Defender integrations in Intune.
-      url: ././device-security/index.md
+      url: ./device-security/overview.md
 
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
