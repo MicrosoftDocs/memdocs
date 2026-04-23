@@ -14,14 +14,14 @@ ms.collection:
 
 On macOS devices, you can configure [Platform Single Sign-On (PSSO)](configure-platform-sso-macos.md) during Automated Device Enrollment (ADE). With Platform SSO, users sign in with their Microsoft Entra account and can get immediate access to Microsoft Entra ID resources. Platform SSO also minimizes the number of times users need to enter their organizational credentials.
 
-When you add the Platform SSO policy and enable the Setup Assistant await final configuration in an ADE enrollment profile, the Platform SSO policy runs during device registration. When users arrive at the desktop, they have a seamless sign-in experience and can access resources protected by Conditional Access right away.
+When you add the Platform SSO policy and enable the Setup Assistant await final configuration in an ADE enrollment profile, the Platform SSO policy runs during device registration. When users arrive at the desktop, they're already signed into Microsoft Entra resources and can start using productivity apps, like Teams, immediately.
 
 This feature:
 
 - Enables Microsoft Entra device registration during macOS Setup Assistant.
 - Establishes device identity early in the provisioning process.
 - Allows Platform SSO credentials to be set up during initial device configuration.
-- Minimizes delays accessing resources protected by Conditional Access.
+- Minimizes delays accessing resources, including resources protected by Conditional Access.
 
 This article lists and describes the settings you need to configure to enable Platform SSO during ADE with Setup Assistant. It also lists the other required steps to use this feature, including adding the Company Portal as a line-of-business app, and configuring the enrollment profile.
 
@@ -161,9 +161,11 @@ It's possible the Platform SSO settings catalog policy is delivered, and the Com
 
 **Resolution**: Select the **Try again** button on the error message until the Company Portal finishes downloading and installing. When it completes, the SSO extension is available and the error message no longer appears.
 
-### Remove Platform SSO and reenroll if policies are misconfigured
+### Remove Platform SSO and reenroll if steps are misconfigured
 
-If the policies are misconfigured, remove the existing Platform SSO (PSSO) configuration and re-enroll the devices by using the following steps. Complete all of the following steps. For more information, see [Steps to Opt out of Platform SSO on macOS](/entra/identity/devices/troubleshoot-mac-sso-extension-plugin#steps-to-opt-out-of-platform-sso-on-macos).
+All the steps in this article are required - the settings catalog policy, Company Portal as a LOB app, and using Setup assistant with Modern Authentication and await final configuration enabled in the ADE profile. If any of these steps are misconfigured or missing, then the configuration fails. 
+
+In this situation, remove the existing Platform SSO (PSSO) configuration and re-enroll the devices by using the following steps. Complete all of the following steps. For more information, see [Steps to Opt out of Platform SSO on macOS](/entra/identity/devices/troubleshoot-mac-sso-extension-plugin#steps-to-opt-out-of-platform-sso-on-macos).
 
 1. Unassign the Platform SSO policy that has the **Enable Registration During Setup** setting enabled. [Sync](../../device-management/actions/sync.md) the device to ensure the policy is removed.
 2. Update the Platform SSO policy and set the **Enable Registration During Setup** setting to disabled. [Sync](../../device-management/actions/sync.md) the device to ensure the setting is removed.
