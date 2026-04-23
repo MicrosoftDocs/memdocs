@@ -1,7 +1,7 @@
 ---
 title: Add App Configuration Policies for Managed Android Enterprise Devices
 description: Use app configuration policies in Microsoft Intune to supply settings when users run a Managed Google Play app.
-ms.date: 08/13/2025
+ms.date: 04/23/2026
 ms.topic: how-to
 ms.reviewer: esalter
 ms.collection:
@@ -12,7 +12,13 @@ ms.collection:
 
 # Add App Configuration Policies for Managed Android Enterprise Devices
 
-App configuration policies in Microsoft Intune supply settings to Managed Google Play apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
+App configuration policies in Microsoft Intune supply settings to Managed Google Play apps and directly deployed line-of-business (LOB) apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
+
+> [!IMPORTANT]
+> When an Android line-of-business app deployed directly to Intune is updated to a new version, existing app configuration policies associated with the previous version are not automatically applied to the updated app. You must create and assign a new app configuration policy targeting the new app version to ensure configuration settings are applied.
+
+> [!NOTE]
+> App configuration policies for directly deployed Android LOB apps are supported on Android Enterprise fully managed (COBO) and dedicated (COSU) devices. Personally owned work profile and corporate-owned work profile (COPE) devices do not support direct LOB app deployment or app configuration for direct LOB apps.
 
 Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
 

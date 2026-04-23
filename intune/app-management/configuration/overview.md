@@ -1,7 +1,7 @@
 ---
 title: App Configuration Policies for Microsoft Intune
 description: Learn how to use app configuration policies on an iOS/iPadOS or Android device in Microsoft Intune.
-ms.date: 06/12/2025
+ms.date: 04/23/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -45,7 +45,7 @@ App configuration can be delivered either through the mobile device management (
 
 Intune represents these different app configuration policy channels as:
 
-- **Managed devices** - The device is managed by Intune as the unified endpoint management provider. The app must be pinned to the management profile on iOS/iPadOS or deployed through Managed Google Play on Android devices. In addition, the app supports the desired app configuration.
+- **Managed devices** - The device is managed by Intune as the unified endpoint management provider. The app must be pinned to the management profile on iOS/iPadOS, deployed through Managed Google Play or as a directly deployed line-of-business app on Android devices. In addition, the app supports the desired app configuration.
 - **Managed apps** - An app that has either integrated the Intune App SDK or has been wrapped using the Intune Wrapping Tool and supports app protection policies. In this configuration, neither the device's enrollment state or how the app is delivered to the device matter. The app supports the desired app configuration.
 
 ![Device enrollment type](media/overview/device-enrollment-type.png)

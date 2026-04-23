@@ -1,7 +1,7 @@
 ---
 title: Add Apps to Microsoft Intune
 description: Learn how to add apps to Microsoft Intune so you can assign apps to users and devices. Intune supports a wide range of app types.
-ms.date: 03/19/2026
+ms.date: 04/23/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -141,7 +141,7 @@ Intune-managed apps can also enable app protection without requiring enrollment,
 In addition to understanding web apps, store apps, and LOB apps, you should also be aware of the destination of volume-purchase-program apps and licensed apps, such as:
 
 - **Apple Volume Purchasing Program for Business (iOS)**: The iOS/iPadOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOS/iPadOS volume-purchased apps](./manage-vpp-apple.md).
-- **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. All apps you install for Android Enterprise fully managed work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
+- **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. Apps for Android Enterprise fully managed devices can come from the Managed Google Play store or be deployed directly as line-of-business (LOB) apps from Intune. For more information about direct LOB deployment, see [Add an Android line-of-business app](add-lob-android.md). You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
 
     > [!NOTE]
     > The file extensions for Windows apps include **.msi**, **.appx**, **.appxbundle**, **.msix** and **.msixbundle**.
