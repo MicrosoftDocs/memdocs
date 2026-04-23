@@ -253,17 +253,13 @@ items:
               href: ./device-security/ref-zero-trust-data.md
 
       - name: Device configuration documentation
-        href: /device-configuration/index.yml/index.yml
-
+        href: ./device-configuration/index.yml
       - name: Device enrollment documentation
-        href: /intune/device-enrollment/index.yml
-
+        href: ./device-enrollment/index.yml
       - name: Device management documentation
-        href: /intune/device-management/index.yml
-
+        href: ./device-management/index.yml
       - name: Application management documentation
         href: ./application-management/index.yml
-
       - name: Device security documentation
         href: ./device-security/index.yml
         
