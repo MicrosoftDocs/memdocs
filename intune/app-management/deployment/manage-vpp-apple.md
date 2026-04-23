@@ -13,8 +13,6 @@ ms.collection:
 # How to Manage iOS and macOS Apps Purchased Through Apple Business Manager with Microsoft Intune
 
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Apple lets you purchase multiple licenses for an app that you want to use in your organization on iOS/iPadOS and macOS devices using [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. Purchasing app licenses helps you efficiently manage apps within your company and retain ownership and control of purchased apps.
 
 Microsoft Intune helps you manage apps purchased through this program by:

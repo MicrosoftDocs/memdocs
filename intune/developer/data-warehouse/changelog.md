@@ -10,8 +10,6 @@ ms.collection:
 
 # Change Log for the Intune Data Warehouse API
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Keep current on updates to the Intune Data Warehouse.
 
 ## 2202

@@ -1,12 +1,12 @@
 ---
-title: "Remote Device Action: Sync"
-description: Learn how to use the device sync remote action in Intune to apply policy, app, and configuration updates to managed devices.
+title: "Device Action: Sync"
+description: Learn how to use the device sync action in Intune to apply policy, app, and configuration updates to managed devices.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Remote device action: sync
+# Device action: sync
 
 The *sync* device action forces a device to check in with Intune. When a device checks in, it receives any pending actions or policies assigned to it. This action is useful for validating and troubleshooting policy deployment without waiting for the next scheduled check-in.
 
@@ -21,7 +21,8 @@ For more information about the standard Intune policy check-in frequencies, see 
 :::column-end:::
 :::column span="3":::
 
-> This remote action is supported on the following platform:
+> This action supports the following platforms:
+>
 > - Android
 > - iOS/iPadOS
 > - macOS
@@ -36,7 +37,7 @@ For more information about the standard Intune policy check-in frequencies, see 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -50,14 +51,14 @@ For more information about the standard Intune policy check-in frequencies, see 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Sync**.
+1. At the top of the device overview pane, find the row of action icons. Select **Sync**.
 1. To confirm, select **Yes**.
 
 ::: zone pivot="ios,android"
 
 ## Retryable error codes
 
-When you execute the **Sync** remote action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
+When you execute the **Sync** action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
 
 | Error code  | Suggested description | Retryable |
 |---|---|---|
