@@ -6,6 +6,12 @@ items:
   - name: Privacy and compliance
     href: /intune/privacy-compliance
     displayName: GDPR, HIPAA, SOC, ISO
+  - name: Identity and access
+    href: /intune/identity-access
+    displayName: Conditional Access, SSO, certificates, identity protection
+  - name: Network and certificates
+    href: /intune/network-certificates
+    displayName: VPN, Wi-Fi, SCEP, PKCS, network access
   - name: Microsoft Intune service description
     href: ./fundamentals/service-description.md
   - name: Configure devices

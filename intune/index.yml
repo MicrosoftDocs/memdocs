@@ -31,11 +31,13 @@ productDirectory:
     manage, secure, and support devices across your organization.
   items:
 
+  # ── Row 1 · SET UP ──────────────────────────────────────────────
+
     - title: Get started
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Set up your Intune environment, understand architecture, licensing, and
-        deploy your first policies.
-      url: ./device-enrollment/index.yml
+      summary: Set up your Intune environment, understand architecture and licensing,
+        and deploy your first policies.
+      url: ./fundamentals/what-is-intune.md
 
     - title: Enroll devices
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
@@ -45,63 +47,67 @@ productDirectory:
 
     - title: Configure devices
       imageSrc: ./media/icons/hub-page/devices.svg
-      summary: Create and deploy device configuration profiles, settings catalog
-        policies, and platform-specific templates.
+      summary: Push settings, restrictions, and platform templates to devices with
+        configuration profiles and the settings catalog.
       url: ./device-configuration/index.yml
 
-    - title: Manage apps
+    - title: Deploy and manage apps
       imageSrc: ./media/icons/hub-page/apps.svg
       summary: Add, deploy, configure, and protect apps across managed and unmanaged
-        devices.
-      url: ./app-management/overview.md
+        devices using app policies and assignments.
+      url: ./app-management/index.yml
 
-    - title: Device updates
+  # ── Row 2 · PROTECT ─────────────────────────────────────────────
+
+    - title: Secure devices and data
+      imageSrc: ./media/icons/hub-page/device-security.svg
+      summary: Enforce compliance, deploy security baselines, integrate Defender for
+        Endpoint, and manage endpoint security policies.
+      url: ./device-security/index.yml
+
+    - title: Manage identity and access
+      imageSrc: ./media/icons/hub-page/compliance-access.svg
+      summary: Control authentication with Conditional Access, certificates,
+        single sign-on, and identity protection policies.
+      url: ./identity-access.yml
+
+    - title: Keep devices updated
       imageSrc: ./media/icons/hub-page/device-updates.svg
       summary: Manage OS and driver updates for Windows, iOS, macOS, and Android
-        devices with update rings and policies.
+        devices with update rings, expedited updates, and policies.
       url: ./device-updates/windows/index.md
 
-    - title: Device security
-      imageSrc: ./media/icons/hub-page/device-security.svg
-      summary: Protect devices with compliance policies, security baselines, Defender
-        for Endpoint, and endpoint security policies.
-      url: ./device-security/overview.md
-
-    - title: Compliance and access
-      imageSrc: ./media/icons/hub-page/compliance-access.svg
-      summary: Enforce device compliance rules and integrate with Conditional Access
-        to control access to organizational resources.
-      url: ././device-security/compliance/overview.md
-
-    - title: App protection
+    - title: Set up network and certificates
       imageSrc: ./media/icons/hub-page/app-protection.svg
-      summary: Protect organizational data at the app level with app protection
-        policies, without requiring device enrollment.
-      url: ./app-management/protection/overview.md
+      summary: Configure VPN, Wi-Fi, certificate profiles, and network access
+        to connect and secure devices across your organization.
+      url: ./network-certificates.yml
 
-    - title: Copilot and agents
-      imageSrc: ./media/icons/hub-page/agent.svg
-      summary: Use AI-powered assistance to query device data, troubleshoot issues,
-        and automate Intune management tasks.
-      url: ./intune-service/copilot/copilot-intune-overview.md
+  # ── Row 3 · OPERATE ─────────────────────────────────────────────
 
-    - title: Analytics and reporting
+    - title: Manage and support devices
+      imageSrc: ./media/icons/hub-page/remote-actions.svg
+      summary: Perform remote actions, manage device inventory and lifecycle, and
+        provide remote assistance to users.
+      url: ./device-management/index.yml
+
+    - title: Govern and administer
+      imageSrc: ./media/icons/hub-page/administration.svg
+      summary: Configure role-based access, scope tags, audit logs, and tenant-wide
+        policies to operate Intune at scale.
+      url: ./fundamentals/role-based-access-control/overview.md
+
+    - title: Monitor and analyze
       imageSrc: ./media/icons/hub-page/reports.svg
-      summary: Monitor device health, compliance trends, and app deployment status
+      summary: Track device health, compliance trends, and app deployment status
         with built-in reports and Endpoint Analytics.
       url: ./endpoint-analytics/index.md
 
-    - title: Device management and support
-      imageSrc: ./media/icons/hub-page/remote-actions.svg
-      summary: Perform remote actions, manage device inventory, and provide remote
-        assistance to users.
-      url: device-management/index.yml
-
-    - title: Administration and governance
-      imageSrc: ./media/icons/hub-page/administration.svg
-      summary: Configure role-based access control, scope tags, audit logs, and
-        tenant-wide policies to operate Intune at scale.
-      url: ./fundamentals/role-based-access-control/overview.md
+    - title: Copilot and automation
+      imageSrc: ./media/icons/hub-page/agent.svg
+      summary: Use AI-powered Copilot, Microsoft Graph, and PowerShell to query
+        device data, troubleshoot issues, and automate tasks.
+      url: ./intune-service/copilot/copilot-intune-overview.md
 
 conceptualContent:
 
