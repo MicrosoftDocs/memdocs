@@ -6,6 +6,8 @@ items:
           - name: Microsoft Intune overview
             displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
             href: ./fundamentals/what-is-intune.md
+          - name: Microsoft Intune service description
+            href: ./fundamentals/service-description.md
             items:
               - name: Overview - Manage and secure identities
                 displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
@@ -237,6 +239,9 @@ items:
 
   - name: Security & compliance
     href: ./device-security/toc.yml
+
+  - name: Keep devices updated
+    href: ./device-updates/toc.yml
 
   - name: Identity and access
     href: /intune/identity-access
@@ -558,9 +563,12 @@ items:
       - name: Advanced Analytics
         href: ./advanced-analytics/toc.yml
 
-  - name: Guides and reference
+  - name: Developer guidance
+    href: ./developer/toc.yml
+
+  - name: Industry and scenario guides
     items:
-      - name: Industry guides
+      - name: Industry and regional guides
         items:
           - name: Education
             href: ./solutions/education/toc.yml
@@ -581,11 +589,5 @@ items:
               - name: China endpoints
                 href: ./fundamentals/endpoints-china.md
 
-      - name: Developer guidance
-        href: ./developer/toc.yml
-
       - name: Scenario-based guidance
         href: ./solutions/toc.yml
-
-      - name: Microsoft Intune service description
-        href: ./fundamentals/service-description.md

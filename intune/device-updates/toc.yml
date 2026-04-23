@@ -1,7 +1,93 @@
 items:
 - name: Android Enterprise updates
-  href: android/toc.yml
+  items:
+  - name: Firmware Over-the-Air updates
+    href: android/manage-fota.md
+    displayName: fota updates firmware android
+  - name: Zebra LG OTA Integration
+    href: android/setup-zebra-lifeguard.md
+    displayName: ota updates android
+
 - name: Apple updates
-  href: apple/toc.yml
+  items:
+  - name: Configure software updates
+    href: apple/index.md
+    displayName: apple updates ios macos
+  - name: Software update reports
+    href: apple/monitor-reports.md
+    displayName: apple updates ios macos
+  - name: Update policies (deprecated)
+    items:
+    - name: iOS/iPadOS update policies (deprecated)
+      href: apple/deprecated-mdm-policies-ios.md
+    - name: macOS update policies (deprecated)
+      href: apple/deprecated-mdm-policies-macos.md
+
 - name: Windows updates
-  href: windows/toc.yml
+  items:
+  - name: Overview
+    href: windows/index.md
+    displayName: windows updates
+  - name: Update ring policies
+    items:
+    - name: Get started
+      href: windows/manage-update-rings.md
+      displayName: windows updates, rings
+    - name: Policy settings
+      href: windows/ref-update-ring-settings.md
+      displayName: windows updates, rings
+    - name: Reports
+      href: windows/monitor-update-rings.md
+      displayName: windows updates, rings
+  - name: Manage Windows feature updates
+    items:
+    - name: Get started
+      href: windows/manage-feature-updates.md
+      displayName: windows feature updates
+    - name: Configure feature update policies
+      href: windows/configure-feature-update-policy.md
+      displayName: windows quality updates
+    - name: Rollout options
+      href: windows/configure-rollout-options.md
+      displayName: windows updates
+    - name: Upgrade Windows 10 devices
+      href: windows/upgrade-to-windows-11.md
+    - name: Feature update policies reports
+      href: windows/monitor-feature-updates.md
+      displayName: windows feature updates
+    - name: Feature updates compatibility reports
+      href: windows/monitor-compatibility.md
+      displayName: windows updates, reports
+  - name: Manage Windows quality updates
+    items:
+    - name: Get started
+      href: windows/manage-quality-updates.md
+      displayName: windows quality updates
+    - name: Use hotpatch with quality updates
+      href: windows/configure-hotpatch.md
+      displayName: windows quality updates
+    - name: Expedite Windows quality updates
+      href: windows/configure-expedite-policy.md
+      displayName: windows quality updates
+    - name: Monitor and report on Windows quality updates
+      href: windows/monitor-quality-updates.md
+      displayName: windows quality updates
+  - name: Manage Windows driver updates
+    items:
+    - name: Get started
+      href: windows/manage-driver-updates.md
+      displayName: windows driver updates
+    - name: Configure driver update policies
+      href: windows/configure-driver-update-policy.md
+      displayName: windows driver updates
+    - name: Driver update policies reports
+      href: windows/monitor-driver-updates.md
+      displayName: windows updates
+    - name: Driver updates FAQs
+      href: windows/driver-updates-faq.yml
+      displayName: windows driver updates
+  - name: Delivery Optimization
+    href: ../device-configuration/templates/configure-delivery-optimization-windows.md
+    displayName: delivery optimization, windows updates
+  - name: Windows Autopatch documentation
+    href: /windows/deployment/windows-autopatch/?context=/intune/context

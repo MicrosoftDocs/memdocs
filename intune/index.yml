@@ -34,7 +34,7 @@ productDirectory:
   # ── Row 1 · SET UP ──────────────────────────────────────────────
 
     - title: Get started
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      imageSrc: ./media/icons/hub-page/get-started.svg
       summary: Set up your Intune environment, understand architecture and licensing,
         and deploy your first policies.
       url: ./fundamentals/what-is-intune.md
@@ -46,13 +46,13 @@ productDirectory:
       url: ./device-enrollment/index.yml
 
     - title: Configure devices
-      imageSrc: ./media/icons/hub-page/devices.svg
+      imageSrc: ./media/icons/hub-page/device-configuration.svg
       summary: Push settings, restrictions, and platform templates to devices with
         configuration profiles and the settings catalog.
       url: ./device-configuration/index.yml
 
     - title: Deploy and manage apps
-      imageSrc: ./media/icons/hub-page/apps.svg
+      imageSrc: ./media/icons/hub-page/app-management.svg
       summary: Add, deploy, configure, and protect apps across managed and unmanaged
         devices using app policies and assignments.
       url: ./app-management/index.yml
@@ -66,7 +66,7 @@ productDirectory:
       url: ./device-security/index.yml
 
     - title: Manage identity and access
-      imageSrc: ./media/icons/hub-page/compliance-access.svg
+      imageSrc: ./media/icons/hub-page/identity-access.svg
       summary: Control authentication with Conditional Access, certificates,
         single sign-on, and identity protection policies.
       url: ./identity-access.yml
@@ -78,7 +78,7 @@ productDirectory:
       url: ./device-updates/windows/index.md
 
     - title: Set up network and certificates
-      imageSrc: ./media/icons/hub-page/app-protection.svg
+      imageSrc: ./media/icons/hub-page/certificates.svg
       summary: Configure VPN, Wi-Fi, certificate profiles, and network access
         to connect and secure devices across your organization.
       url: ./network-certificates.yml
@@ -86,13 +86,13 @@ productDirectory:
   # ── Row 3 · OPERATE ─────────────────────────────────────────────
 
     - title: Manage and support devices
-      imageSrc: ./media/icons/hub-page/remote-actions.svg
+      imageSrc: ./media/icons/hub-page/device-management.svg
       summary: Perform remote actions, manage device inventory and lifecycle, and
         provide remote assistance to users.
       url: ./device-management/index.yml
 
     - title: Govern and administer
-      imageSrc: ./media/icons/hub-page/administration.svg
+      imageSrc: ./media/icons/hub-page/rbac.svg
       summary: Configure role-based access, scope tags, audit logs, and tenant-wide
         policies to operate Intune at scale.
       url: ./fundamentals/role-based-access-control/overview.md
@@ -104,9 +104,9 @@ productDirectory:
       url: ./endpoint-analytics/index.md
 
     - title: Copilot and automation
-      imageSrc: ./media/icons/hub-page/agent.svg
-      summary: Use AI-powered Copilot, Microsoft Graph, and PowerShell to query
-        device data, troubleshoot issues, and automate tasks.
+      imageSrc: ./media/icons/hub-page/copilot.svg
+      summary: Use AI-powered Copilot, agents, Microsoft Graph, and PowerShell to
+        query device data, troubleshoot issues, and automate tasks.
       url: ./intune-service/copilot/copilot-intune-overview.md
 
 conceptualContent:
