@@ -251,17 +251,6 @@ items:
               href: ./device-security/ref-zero-trust-devices.md
             - name: Secure data
               href: ./device-security/ref-zero-trust-data.md
-
-      - name: Device configuration documentation
-        href: ./device-configuration/index.yml
-      - name: Device enrollment documentation
-        href: ./device-enrollment/index.yml
-      - name: Device management documentation
-        href: ./device-management/index.yml
-      - name: Application management documentation
-        href: ./application-management/index.yml
-      - name: Device security documentation
-        href: ./device-security/index.yml
         
       - name: Create and deploy Intune policies
         items:
@@ -593,3 +582,14 @@ items:
 
       - name: Microsoft Intune service description
         href: ./fundamentals/service-description.md
+
+      - name: Device configuration documentation
+        href: ./device-configuration/index.yml
+      - name: Device enrollment documentation
+        href: ./device-enrollment/index.yml
+      - name: Device management documentation
+        href: ./device-management/index.yml
+      - name: Application management documentation
+        href: ./application-management/index.yml
+      - name: Device security documentation
+        href: ./device-security/index.yml
