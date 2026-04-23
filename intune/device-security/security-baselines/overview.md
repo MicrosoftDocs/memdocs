@@ -1,7 +1,13 @@
 ---
 title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
+<<<<<<< HEAD:intune/intune-service/protect/security-baselines.md
+author: brenduns
+ms.author: brenduns
+ms.date: 04/27/2026
+=======
 ms.date: 04/03/2026
+>>>>>>> c4a1a5e5f10889359a72688e58016b79ce5b536e:intune/device-security/security-baselines/overview.md
 ms.topic: overview
 ms.reviewer: aanavath
   - intune-azure
@@ -95,12 +101,13 @@ The following security baseline instances are available for use with Intune. Use
   - [May 2023 (Office baseline)](./ref-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:
-  - [Microsoft Edge version 128](./ref-v2-edge-settings.md?pivots=edge-v128) - January 2025
-  - [Microsoft Edge version 117](./ref-v2-edge-settings.md?pivots=edge-v117) - November 2023
-  - [Microsoft Edge version 112 and later](./ref-v2-edge-settings.md?pivots=edge-v112) - May 2023
-  - [Microsoft Edge version 85 and later](./ref-edge-settings.md?pivots-edge-sept-2020) - September 2020
-  - [Microsoft Edge version 80 and later](./ref-edge-settings.md?pivots-edge-april-2020) - April 2020
-  - [Preview: Microsoft Edge version 77 and later](./ref-edge-settings.md?pivots=edge-october-2019) - October 2019
+  - [Microsoft Edge version 139](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v139) - April 2026
+  - [Microsoft Edge version 128](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v128) - January 2025
+  - [Microsoft Edge version 117](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) - November 2023
+  - [Microsoft Edge version 112 and later](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v112) - May 2023
+  - [Microsoft Edge version 85 and later](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020) - September 2020
+  - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
+  - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
 - **HoloLens 2 - Advanced security baseline settings**:
   - [Version 1 - HoloLens 2 advanced security](./ref-hololens2-advanced-settings.md) - *January 2025*
