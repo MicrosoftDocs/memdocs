@@ -78,7 +78,7 @@ productDirectory:
       url: ./device-updates/windows/index.md
 
     - title: Set up network and certificates
-      imageSrc: ./media/icons/hub-page/certificates.svg
+      imageSrc: ./media/icons/hub-page/network-certificates.svg
       summary: Configure VPN, Wi-Fi, certificate profiles, and network access
         to connect and secure devices across your organization.
       url: ./network-certificates.yml
