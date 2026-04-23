@@ -557,13 +557,13 @@ items:
     displayName: GDPR, HIPAA, SOC, ISO
   - name: Microsoft Intune service description
     href: ./fundamentals/service-description.md
-  - name: Device configuration documentation
+  - name: Configure devices
     href: ./device-configuration/toc.yml
-  - name: Device enrollment documentation
+  - name: Enroll devices
     href: ./device-enrollment/toc.yml
-  - name: Device management documentation
+  - name: Manage devices
     href: ./device-management/toc.yml
-  - name: Application management documentation
+  - name: Manage apps
     href: ./application-management/toc.yml
-  - name: Device security documentation
+  - name: Security & compliance
     href: ./device-security/toc.yml
