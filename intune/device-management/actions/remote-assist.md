@@ -1,11 +1,11 @@
 ---
-title: "Remote Device Action: New Remote Assistance Session"
-description: Learn how to use the the new remote assistance session action in Intune to offer support to your users.
+title: "Device Action: New Remote Assistance Session"
+description: Learn how to use the new remote assistance session action in Intune to offer support to your users.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action:  new Remote Assistance session
+# Device action: new Remote Assistance session
 
 Microsoft Intune provides remote assistance capabilities to help IT support teams troubleshoot and resolve issues on user devices. This functionality is available through two integration paths: **Remote Help** (part of the Intune Suite) and **TeamViewer**. Each option offers different features, licensing requirements, and setup steps.
 
@@ -23,5 +23,5 @@ Every solution has its own requirements and options. For more information, see:
 - [Use Remote Help with Microsoft Intune][RA-HELP]
 - [Use TeamViewer to remotely administer Intune devices][RA-TVIEW]
 
-[RA-HELP]: ../../intune-service/fundamentals/remote-help.md
-[RA-TVIEW]: ../../intune-service/fundamentals/teamviewer-support.md
+[RA-HELP]: ../../remote-help/index.md
+[RA-TVIEW]: ../../device-management/tools/teamviewer-legacy.md

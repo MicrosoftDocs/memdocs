@@ -18,7 +18,7 @@ ms.collection:
 
 With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../intune-service/fundamentals/zero-trust-with-microsoft-intune.md).
+Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while still elevating selected tasks when necessary to remain productive. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust.md).
 
 This overview provides information about EPM including the benefits, how it works, and how to get started.
 
@@ -135,7 +135,7 @@ EPM includes reports to help you prepare for, monitor, and use the service. Repo
 Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
 
 - **License EPM and Plan**
-  - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md).
+  - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
   - **Plan for EPM** - Before you start using EPM, there are some key requirements and concepts you should consider. For more information, see [Plan for EPM](./deployment-planning.md).
 
 - **Deploy EPM** - To deploy EPM, enable auditing, create rules, and monitor the deployment. For more information, see [Deploy EPM](./deploy.md).

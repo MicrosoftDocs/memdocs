@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Enroll Windows client devices in Microsoft Intune
@@ -73,7 +71,7 @@ You can use this enrollment option to:
 
 ### Automatic enrollment administrator tasks
 
-- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../fundamentals/ref-supported-platforms.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
@@ -270,7 +268,7 @@ With User enrollment, you can "register" the devices with Microsoft Entra ID or 
 
 Other than having Intune setup, there are minimal administrator tasks with this enrollment method.
 
-- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../fundamentals/ref-supported-platforms.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
 
@@ -370,7 +368,7 @@ Configuration Manager can randomize the enrollment, so enrollment might not occu
 
 ## Related articles
 
-- [MAM without enrollment](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md)
+- [MAM without enrollment](../mam-without-enrollment.md)
 - [Android enrollment guide](../android/guide.md)
 - [iOS/iPadOS enrollment guide](../apple/guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)

@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_Win32
 ---
 
@@ -21,7 +20,7 @@ Before you can add a Win32 app to Microsoft Intune, you must prepare the app by 
 
 To use Win32 app management, be sure you meet the following criteria:
 
-- Use a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md) (Enterprise, Pro, and Education versions).
+- Use a [supported Windows version](../../fundamentals/ref-supported-platforms.md) (Enterprise, Pro, and Education versions).
 - Devices must be registered or joined to Microsoft Entra ID and autoenrolled. The Intune management extension supports devices that are:
     - Microsoft Entra registered
     - Microsoft Entra joined

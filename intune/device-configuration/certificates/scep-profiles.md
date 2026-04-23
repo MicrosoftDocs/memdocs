@@ -28,7 +28,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
  [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
 ## Update certificate connector: Strong mapping requirements for KB5014754
 

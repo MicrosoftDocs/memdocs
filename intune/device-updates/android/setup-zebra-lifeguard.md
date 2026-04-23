@@ -26,7 +26,7 @@ Intune manages the creation, management, and monitoring of these deployments thr
   - Mobile Apps (to create and deploy app configuration profiles)
   - Android FOTA (to manage firmware OTA updates)
 
-- [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../../intune-service/fundamentals/intune-add-ons.md)
+- [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../../fundamentals/add-ons.md)
 
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
@@ -39,7 +39,7 @@ Zebra LifeGuard Over-the-Air updates are supported with the following sovereign 
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
 
 ## Supported Devices
 

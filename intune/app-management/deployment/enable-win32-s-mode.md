@@ -56,7 +56,7 @@ To create a Windows S mode supplemental policy, use the following steps:
     | Description | [Optional] The description of this policy. |
 
 1. Select **Next: Scope tags**.<br>
-   On the **Scope tags** page you can optionally configure scope tags to determine who can see the app policy in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+   On the **Scope tags** page you can optionally configure scope tags to determine who can see the app policy in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Select **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the policy to users and devices. It's important to note that you can assign a policy to a device whether or not the device is managed by Intune.

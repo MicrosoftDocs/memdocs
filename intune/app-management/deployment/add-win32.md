@@ -7,7 +7,6 @@ ai-usage: ai-assisted
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_Win32
 ---
 
@@ -16,13 +15,13 @@ ms.collection:
 After you've [prepared a Win32 app to be uploaded to Intune](./create-win32-package.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](./create-win32-package.md).
 
 > [!NOTE]
-> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog.md).
+> For information about Enterprise App Catalog apps, see [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](./add-enterprise-catalog-app.md).
 
 ## Prerequisites
 
 To use Win32 app management, be sure you meet the following criteria:
 
-- Use a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md) (Enterprise, Pro, and Education versions).
+- Use a [supported Windows version](../../fundamentals/ref-supported-platforms.md) (Enterprise, Pro, and Education versions).
 - Devices must be joined or registered to Microsoft Entra ID and be auto-enrolled. The Intune management extension supports devices that are Microsoft Entra joined, Microsoft Entra registered, hybrid domain joined, or group policy enrolled. For Intune management extension prerequisites and version requirements, see [Intune Management Extension for Windows](../../device-management/tools/management-extension-windows.md#prerequisites).
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
@@ -335,14 +334,14 @@ To add apps that the current app will supersede:
 For more information, see [Add Win32 app supersedence](./configure-win32-supersedence.md).
 <!--
 ## Step 6: Select scope tags (optional)
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 Click **Select scope tags** to optionally add scope tags for the app. Then select **Next** to display the **Assignments** page.
 -->
 
 ## Step 7: Assignments
 
-You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 > [!IMPORTANT]
 > For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app will fail to install.

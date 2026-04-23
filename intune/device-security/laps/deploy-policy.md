@@ -32,7 +32,7 @@ Applies to:
 - Windows
 
 > [!TIP]
-> The Intune support for Windows LAPS is similar but distinct from Intune's implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](../../device-enrollment/apple/setup-laps-macos.md).
+> The Intune support for Windows LAPS is similar but distinct from Intune's implementation of macOS LAPS. For information about macOS LAPS in Intune, see [macOS local account configuration with LAPS](setup-macos.md).
 
 ## About Intune LAPS policy
 

@@ -8,7 +8,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune
@@ -55,13 +54,13 @@ Category: **Enrollment programs**:
 - Set **View macOS admin password** to **Yes**
 
 > [!IMPORTANT]
-> The two permissions for *Enrollment programs* aren't included with any Intune built-in role or with the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md) to assign this permission to users who should have these capabilities.
+> The two permissions for *Enrollment programs* aren't included with any Intune built-in role or with the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../../fundamentals/role-based-access-control/create-custom-role.md) to assign this permission to users who should have these capabilities.
 
 For permissions and details required to manage macOS policies for automated device enrollment, see [Set up automated device enrollment (ADE) for macOS](../../device-enrollment/apple/setup-automated-macos.md).
 
 ## Configuration account and password options
 
-This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile) procedure for macOS automatic device enrollment (ADE) profiles.
+This section provides details for configuring *macOS local account configuration with LAPS*, which is accomplished during step 12 of the [Create an enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-profile) procedure for macOS automatic device enrollment (ADE) profiles.
 
 When you [configure a macOS automated device enrollment profile](../../device-enrollment/apple/setup-automated-macos.md), the **Account Settings** tab presents options to configure both the Local administrator account and the Local user account. By default, these options are both set to *No*.
 

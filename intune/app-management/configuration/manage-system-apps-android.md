@@ -12,7 +12,7 @@ ms.collection:
 
 # Manage Android Enterprise system apps in Microsoft Intune
 
-Before you assign an Android Enterprise system app to a device, you must first enable the app in Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../../intune-service/enrollment/android-kiosk-enroll.md), [fully managed devices](../../intune-service/enrollment/android-fully-managed-enroll.md), [Android Enterprise corporate-owned with work profile](../../intune-service/enrollment/android-corporate-owned-work-profile-enroll.md), or [Android Enterprise personally owned work profiles](../protection/mam-vs-work-profiles-android.md). When you no longer need the system app, you can disable it. Android Enterprise system apps will enable or disable apps that are already part of the platform. To enable an app, assign the system app as **Required**. To disable an app, assign the system app as **Uninstall**. System apps can't be assigned as available for a user.
+Before you assign an Android Enterprise system app to a device, you must first enable the app in Microsoft Intune. System apps are supported on Android Enterprise devices. You can enable a system app for [Android Enterprise dedicated devices](../../device-enrollment/android/setup-dedicated.md), [fully managed devices](../../device-enrollment/android/setup-fully-managed.md), [Android Enterprise corporate-owned with work profile](../../device-enrollment/android/setup-corporate-work-profile.md), or [Android Enterprise personally owned work profiles](../protection/mam-vs-work-profiles-android.md). When you no longer need the system app, you can disable it. Android Enterprise system apps will enable or disable apps that are already part of the platform. To enable an app, assign the system app as **Required**. To disable an app, assign the system app as **Uninstall**. System apps can't be assigned as available for a user.
 
 ## Enable a system app in Intune
 
@@ -27,9 +27,9 @@ In the **App information** page, add the app details:
     - **Publisher**: Enter the name of the publisher of the app.
     - **Package Name**: Enter a package name. Intune will validate that the package name is valid.
 5. Click **Next** to display the **Scope tags** page.
-6. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+6. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 7. Click **Next** to display the **Assignments** page.
-8. Select the group assignments for the app. To enable the app, assign the app as **Required**. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+8. Select the group assignments for the app. To enable the app, assign the app as **Required**. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 9. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 10. When you're done, click **Create** to enable the app in Intune.
 
@@ -70,13 +70,13 @@ You can disable an Android Enterprise system app in Intune using the following s
     - **Package Name**: Enter `com.google.android.aicore`.
 
 6. Select **Next**.
-7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
 8. In **Assignments** > **Uninstall**, select the group assignments for the app. When you select **Uninstall**, the app is disabled.
 
-    For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+    For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 9. Select **Next**. In **Review + create**, review the values and settings you entered for the app. When you're done, select **Create** to disable the app in Intune.
 
 ## Next steps

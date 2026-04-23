@@ -1,14 +1,14 @@
 ---
-title: "Remote Device Action: Rename Device"
-description: Learn how to use the Rename device remote action in Microsoft Intune to update the device name shown in the admin center. Useful for standardizing naming conventions, managing shared devices, and improving inventory clarity.
+title: "Device Action: Rename Device"
+description: Learn how to use the Rename device action in Microsoft Intune to update the device name shown in the admin center. Useful for standardizing naming conventions, managing shared devices, and improving inventory clarity.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Remote device action: rename
+# Device action: rename
 
-The *rename device* remote action in Microsoft Intune allows IT administrators to change the *Device name* displayed in the Intune admin center for a managed device. This action does not affect the *Management name* in Intune or the *Device name* shown in the Company Portal.
+The *rename device* action in Microsoft Intune allows IT administrators to change the *Device name* displayed in the Intune admin center for a managed device. This action does not affect the *Management name* in Intune or the *Device name* shown in the Company Portal.
 
 Renaming a device can help improve clarity and consistency across your device inventory—especially in environments with shared devices, standardized naming conventions, or large-scale deployments. It's useful for aligning device names with asset tags, user roles, or location-based identifiers, making it easier to manage and troubleshoot devices at scale.
 
@@ -35,7 +35,7 @@ Renaming a device can help improve clarity and consistency across your device in
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
 > - Android Enterprise corporate-owned Work Profile (COPE)
@@ -52,7 +52,7 @@ Renaming a device can help improve clarity and consistency across your device in
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -65,7 +65,7 @@ Renaming a device can help improve clarity and consistency across your device in
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Rename device**.
+1. At the top of the device overview pane, find the row of action icons. Select **Rename device**.
 ::: zone pivot="windows"
 4. In the **Rename device** pane, type the new name in the text box. The new name must follow these rules:
     - Less than or equal to 63 characters, not including trailing NULL
@@ -113,7 +113,7 @@ To use the bulk rename action:
 
 - Microsoft Graph API: [setDeviceName action][GRAPH-1]
 ::: zone pivot="windows"
-- Configuration service provider (CSP) used to initiate the remote action: [Accounts CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [Accounts CSP][CSP-1]
 ::: zone-end
 
 ## Next steps
@@ -133,8 +133,8 @@ To learn how to change the Device name shown in the Company Portal, see [Rename 
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [CSP-1]: /windows/client-management/mdm/accounts-csp

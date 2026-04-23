@@ -10,8 +10,6 @@ ms.collection:
 
 # Move Your Intune Data Warehouse Account Data
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 By requesting an account move, you're requesting that your data center is changed to another location. After the move, your Data Warehouse will reset and begin recording data at the new location based on the specified day your move begins. To back up your previous Data Warehouse data, complete the following steps **prior** to your account move. Most Data Warehouse tables retain data for 30 days, so any data gap in these tables will no longer be available 30 days after your account move. To learn more about the retention periods for specific tables, see [Data Warehouse data model](ref-data-model.md).
 
 ## Back up your Data Warehouse data
@@ -65,5 +63,5 @@ Customer X requests an account move to begin on January 6, 2018. In response to 
 
 ## Next steps
 
-- Learn [what's new each week in Intune](../../intune-service/fundamentals/whats-new.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
+- Learn [what's new each week in Intune](../../whats-new/index.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
 - Read the [Microsoft Intune Blog](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog).

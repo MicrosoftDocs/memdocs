@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Enroll your Android Enterprise dedicated, fully managed, or corporate-owned with work profile devices
@@ -37,7 +36,7 @@ For corporate owned devices with a work profile running Android 15, you will nee
 
 :::column-end:::
 :::column span="3":::
-> This feature supports the following platforms on [supported Android OS versions](../../intune-service/fundamentals/supported-devices-browsers.md#android):
+> This feature supports the following platforms on [supported Android OS versions](../../fundamentals/ref-supported-platforms.md#android):
 >
 > - Android Enterprise corporate owned fully managed devices (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
@@ -137,7 +136,7 @@ For more information about how to assign a default configuration or apply a conf
 
 ## Enroll by using Knox Mobile Enrollment
 
-To use Samsung Knox Mobile Enrollment, the device must be running [supported Samsung Knox versions](../../intune-service/fundamentals/supported-devices-browsers.md#android). For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./setup-samsung-knox-mobile.md).
+To use Samsung Knox Mobile Enrollment, the device must be running [supported Samsung Knox versions](../../fundamentals/ref-supported-platforms.md#android). For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./setup-samsung-knox-mobile.md).
 
 ## Enroll by using Near Field Communication (NFC)
 

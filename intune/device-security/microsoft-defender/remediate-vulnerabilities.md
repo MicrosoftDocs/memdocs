@@ -79,7 +79,7 @@ Common security task remediations include:
 
 Before you can manage security tasks in the Intune admin center, a security admin must first create them in the Defender portal. Security admins create tasks by submitting remediation requests through Defender Vulnerability Management. For instructions, see [Remediate vulnerabilities with Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-remediation#request-remediation) in the Defender documentation.
 
-[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
+[!INCLUDE [manage-admin-tasks](../../includes/manage-admin-tasks.md)]
 
 To manage security tasks:
 

@@ -96,7 +96,7 @@ For more information, see the following resources:
 
 - [Enable remote help scenarios with Microsoft Intune (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
 
-- [Use Remote Help with Intune and Configuration Manager](/mem/intune-service/fundamentals/remote-help)
+- [Use Remote Help with Intune and Configuration Manager](../../../../../remote-help/index.md)
 
 #### <a name="bkmk_note4"></a> Note 4: Support for alternate content providers
 

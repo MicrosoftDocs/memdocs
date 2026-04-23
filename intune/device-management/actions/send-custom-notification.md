@@ -1,15 +1,14 @@
 ---
-title: "Remote Device Action: Send Custom Notification"
+title: "Device Action: Send Custom Notification"
 description: Use Intune to create and send custom notifications to users of iOS/iPadOS and Android devices.
 ms.date: 10/27/2025
 ms.topic: how-to
-ms.reviewer: petermt
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remote device action: send custom notification
+# Device action: send custom notification
 
-Use the *send custom notification* remote action in Intune to deliver short messages directly to users of managed devices. Notifications appear as standard push alerts from the Company Portal or Intune app, similar to messages from other mobile applications.
+Use the *send custom notification* action in Intune to deliver short messages directly to users of managed devices. Notifications appear as standard push alerts from the Company Portal or Intune app, similar to messages from other mobile applications.
 
 You can send notifications to individual devices or to users in groups. Custom notifications are useful for general communication, such as:
 
@@ -25,7 +24,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 :::column-end:::
 :::column span="3":::
 
-> This remote action is supported on the following platform:
+> This action supports the following platforms:
 >
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
@@ -44,7 +43,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 ::: zone pivot="android"
 
-> To use this remote action, make sure devices meet the following requirements:
+> To use this action, make sure devices meet the following requirements:
 >
 > - The Company Portal app or Microsoft Intune app is installed.
 > - Push notification permissions for the apps are granted by the user.
@@ -55,7 +54,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 ::: zone-end
 ::: zone pivot="ios"
 
-> To use this remote action, make sure devices meet the following requirements:
+> To use this action, make sure devices meet the following requirements:
 >
 > - The Company Portal app is installed.
 > - Push notification permissions for the app is granted by the user.
@@ -73,7 +72,7 @@ You can send notifications to individual devices or to users in groups. Custom n
 :::column-end:::
 :::column span="3":::
 
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
@@ -106,7 +105,7 @@ You can send custom notifications in Intune to individual devices or to users in
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Send Custom Notification**.
+1. At the top of the device overview pane, find the row of action icons. Select **Send Custom Notification**.
 1. On the **Send Custom Notification** pane, specify the following message details:
    - **Title**: Specify a title for this notification. Titles are limited to 50 characters.
    - **Body**: Specify the message. Messages are limited to 500 characters.
@@ -178,8 +177,8 @@ When a custom notification is sent, users receive it as a push alert from the Co
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-sendcustomnotificationtocompanyportal

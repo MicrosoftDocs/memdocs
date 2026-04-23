@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Get an Apple MDM push certificate
@@ -19,7 +18,7 @@ Upload and renew your Apple MDM push certificates in Microsoft Intune. An Apple 
 Certificates must be renewed annually. This article describes how to use Intune to create and renew an Apple MDM push certificate.
 
 ## Requirements
-Use an [Intune-supported web browser](../../intune-service/fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate.
+Use an [Intune-supported web browser](../../fundamentals/ref-supported-platforms.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate.
 
 ## Steps to get your certificate
 Access your Apple MDM push certificate settings in Microsoft Intune.

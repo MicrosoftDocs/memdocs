@@ -27,7 +27,7 @@ This feature applies to:
 
 ## Before you begin
 
-- This feature is in [public preview](../../intune-service/fundamentals/public-preview.md).
+- This feature is in [public preview](../../fundamentals/public-preview.md).
 - Make sure you meet the [Policy Configuration Agent](policy-configuration-agent.md#prerequisites) prerequisites, including signing in with an appropriate account.
 - You can upload one knowledge source file at a time. If you have multiple baseline documents, run them separately through the agent.
 - Well-structured, well-written input results in better mappings. If a document is poorly formatted or uses unclear language, the agent can produce low-confidence matches. We recommend you review your source documents for clarity.

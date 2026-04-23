@@ -47,7 +47,7 @@ This feature applies to:
 
    When you're done configuring settings, select **Next**.
 
-8. On the **Scope tags** page (optional), assign scope tags to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+8. On the **Scope tags** page (optional), assign scope tags to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
    Select **Next** to continue.
 
