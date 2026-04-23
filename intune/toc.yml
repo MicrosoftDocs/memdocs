@@ -1,32 +1,4 @@
 items:
-  - name: Scenario-based guidance
-    href: ./solutions/toc.yml
-  - name: Developer guidance
-    href: ./developer/toc.yml
-  - name: Privacy and compliance
-    href: /intune/privacy-compliance
-    displayName: GDPR, HIPAA, SOC, ISO
-  - name: Identity and access
-    href: /intune/identity-access
-    displayName: Conditional Access, SSO, certificates, identity protection
-  - name: Network and certificates
-    href: /intune/network-certificates
-    displayName: VPN, Wi-Fi, SCEP, PKCS, network access
-  - name: Microsoft Intune service description
-    href: ./fundamentals/service-description.md
-  - name: Configure devices
-    href: ./device-configuration/toc.yml
-  - name: Enroll devices
-    href: ./device-enrollment/toc.yml
-  - name: Manage devices
-    href: ./device-management/toc.yml
-  - name: Manage apps
-    href: ./app-management/toc.yml
-  - name: Security & compliance
-    href: ./device-security/toc.yml
-
-
-
   - name: Learn about Microsoft Intune
     items:
       - name: Microsoft Intune overview
@@ -105,33 +77,6 @@ items:
               - name: Create settings catalog policy and compare with on-premises ADMX
                 href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
                 displayName: admx, administrative template, gpo, windows
-
-  - name: Microsoft Copilot + Intune
-    href: ./copilot/toc.yml
-
-  - name: Intune Suite
-    items:
-      - name: Intune Suite overview
-        href: ./fundamentals/add-ons.md
-
-      - name: Endpoint Privilege Management (EPM)
-        href: ./epm/toc.yml
-
-      - name: Enterprise App Management
-        items:
-          - name: Enterprise App Management overview
-            href: /intune/app-management/deployment/enterprise-app-management
-          - name: Add an Enterprise App Catalog app (Win32)
-            href: /intune/app-management/deployment/add-enterprise-catalog-app
-
-      - name: Microsoft Cloud PKI
-        href: ./cloud-pki/toc.yml
-
-      - name: Remote Help
-        href: ./remote-help/toc.yml
-
-      - name: Advanced Analytics
-        href: ./advanced-analytics/toc.yml
 
   - name: Plan and prepare for Intune
     items:
@@ -278,6 +223,26 @@ items:
             href: ./device-security/ref-zero-trust-devices.md
           - name: Secure data
             href: ./device-security/ref-zero-trust-data.md
+
+  - name: Enroll devices
+    href: ./device-enrollment/toc.yml
+
+  - name: Configure devices
+    href: ./device-configuration/toc.yml
+
+  - name: Manage apps
+    href: ./app-management/toc.yml
+
+  - name: Security & compliance
+    href: ./device-security/toc.yml
+
+  - name: Identity and access
+    href: /intune/identity-access
+    displayName: Conditional Access, SSO, certificates, identity protection
+
+  - name: Network and certificates
+    href: /intune/network-certificates
+    displayName: VPN, Wi-Fi, SCEP, PKCS, network access
 
   - name: Create and deploy Intune policies
     items:
@@ -483,6 +448,9 @@ items:
             displayName: android, ios, ipados, macos, windows
             href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?context=/intune/context
 
+  - name: Manage devices
+    href: ./device-management/toc.yml
+
   - name: Manage, maintain, and monitor Microsoft Intune
     items:
       - name: Tenant status and health
@@ -531,6 +499,9 @@ items:
           - name: Review logs with Azure Monitor
             href: ./governance/integrate-azure-monitor.md
 
+  - name: Microsoft Copilot + Intune
+    href: ./copilot/toc.yml
+
   - name: Support and troubleshooting
     items:
       - name: Help Desk operator role
@@ -555,6 +526,10 @@ items:
         href: /intune/user-help
         displayName: company portal, device user
 
+  - name: Privacy and compliance
+    href: /intune/privacy-compliance
+    displayName: GDPR, HIPAA, SOC, ISO
+
   - name: Industry guides
     items:
       - name: Education
@@ -575,3 +550,36 @@ items:
             href: ./fundamentals/china.md
           - name: China endpoints
             href: ./fundamentals/endpoints-china.md
+
+  - name: Intune Suite
+    items:
+      - name: Intune Suite overview
+        href: ./fundamentals/add-ons.md
+
+      - name: Endpoint Privilege Management (EPM)
+        href: ./epm/toc.yml
+
+      - name: Enterprise App Management
+        items:
+          - name: Enterprise App Management overview
+            href: /intune/app-management/deployment/enterprise-app-management
+          - name: Add an Enterprise App Catalog app (Win32)
+            href: /intune/app-management/deployment/add-enterprise-catalog-app
+
+      - name: Microsoft Cloud PKI
+        href: ./cloud-pki/toc.yml
+
+      - name: Remote Help
+        href: ./remote-help/toc.yml
+
+      - name: Advanced Analytics
+        href: ./advanced-analytics/toc.yml
+
+  - name: Developer guidance
+    href: ./developer/toc.yml
+
+  - name: Scenario-based guidance
+    href: ./solutions/toc.yml
+
+  - name: Microsoft Intune service description
+    href: ./fundamentals/service-description.md
