@@ -9,7 +9,6 @@ ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Win32
 ---
 
@@ -22,7 +21,7 @@ The Intune Management Extension (IME) is an installer agent that enhances Window
 
 This feature applies to:
 
-- [Supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md) (excluding Windows Home and Windows devices running in S mode).
+- [Supported Windows versions](../../fundamentals/ref-supported-platforms.md) (excluding Windows Home and Windows devices running in S mode).
 
 > [!NOTE]
 > After the Intune management extension prerequisites are met, the extension installs automatically when you assign any of the following to the user or device:
@@ -39,7 +38,7 @@ This feature applies to:
 
 The Intune management extension has the following prerequisites. When the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md). The Intune management extension doesn't support Windows in S mode because S mode doesn't allow running nonstore apps.
+- Devices running a [supported Windows version](../../fundamentals/ref-supported-platforms.md). The Intune management extension doesn't support Windows in S mode because S mode doesn't allow running nonstore apps.
 
 - Devices joined to Microsoft Entra ID, including:
 
@@ -53,38 +52,38 @@ The Intune management extension has the following prerequisites. When the prereq
 
   - Devices manually enrolled in Intune, which occurs when:
 
-    - [Automatic enrollment to Intune](../../intune-service/enrollment/quickstart-setup-auto-enrollment.md) is enabled in Microsoft Entra ID. Users sign in to devices using a local user account and manually join the device to Microsoft Entra ID. Then, they sign in to the device using their Microsoft Entra account.
+    - [Automatic enrollment to Intune](../../device-enrollment/windows/quickstart-automatic-mdm.md) is enabled in Microsoft Entra ID. Users sign in to devices using a local user account and manually join the device to Microsoft Entra ID. Then, they sign in to the device using their Microsoft Entra account.
 
     OR
 
     - Users sign in to the device using their Microsoft Entra account and then enroll in Intune.
 
-  - Co-managed devices using Configuration Manager and Intune. When installing Win32 apps, set the **Apps** workload to **Pilot Intune** or **Intune**. PowerShell scripts run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension deploys to a device when you target a PowerShell script to the device. The device must be Microsoft Entra ID or Microsoft Entra hybrid joined and running a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md). See the following articles for guidance:
+  - Co-managed devices using Configuration Manager and Intune. When installing Win32 apps, set the **Apps** workload to **Pilot Intune** or **Intune**. PowerShell scripts run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension deploys to a device when you target a PowerShell script to the device. The device must be Microsoft Entra ID or Microsoft Entra hybrid joined and running a [supported Windows version](../../fundamentals/ref-supported-platforms.md). See the following articles for guidance:
 
     - [What is co-management](/configmgr/comanage/overview)
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
 
-- For devices behind firewalls and proxy servers, enable communication for Intune. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../intune-service/fundamentals/intune-endpoints.md).
+- For devices behind firewalls and proxy servers, enable communication for Intune. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../fundamentals/endpoints.md).
 
 > [!NOTE]
-> For details about using Windows virtual machines, see [Using Windows virtual machines with Microsoft Intune](../../intune-service/fundamentals/windows-10-virtual-machines.md).
+> For details about using Windows virtual machines, see [Using Windows virtual machines with Microsoft Intune](../../solutions/windows-virtual-machines.md).
 
 ## Understand Intune management extension agent installation
 
 For devices meeting the prerequisites, the Intune management extension installs automatically when certain features are assigned to a user or device. Installation occurs when the following features are assigned:
 
 - [PowerShell scripts](./run-powershell-scripts-windows.md)
-- [Remediations](../../intune-service/fundamentals/remediations.md)
-- [Discovery scripts for custom compliance](../../intune-service/protect/compliance-custom-script.md)
+- [Remediations](./deploy-remediations.md)
+- [Discovery scripts for custom compliance](../../device-security/compliance/create-custom-script.md)
 - [Win32 apps](../../app-management/deployment/add-win32.md)
 - [Endpoint analytics](../../endpoint-analytics/index.md)
-- [Remote Help](../../intune-service/fundamentals/remote-help.md)
-- [Managed Installers in Intune](../../intune-service/protect/endpoint-security-app-control-policy.md)
+- [Remote Help](../../remote-help/index.md)
+- [Managed Installers in Intune](../../device-configuration/endpoint-security/manage-app-control.md)
 - [Update Windows BIOS using configuration MDM policy](../../device-configuration/templates/configure-bios-windows.md)
 
 > [!NOTE]
-> For details about how the IME is rolled out and updated, see [Service information for Microsoft Intune release updates](../../intune-service/fundamentals/intune-service-servicing-information.md).
+> For details about how the IME is rolled out and updated, see [Service information for Microsoft Intune release updates](../../fundamentals/servicing-information.md).
 
 The agent installs at `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs` when applicable and doesn't appear in the start menu on Windows devices. The agent appears as **IntuneManagementExtension** under **Services** in **Task Manager** when running on Windows devices.
 
@@ -131,7 +130,7 @@ To check if the device is automatically enrolled:
 4. Open the `MDMDiagReport` in a web browser.
 5. Search for the **MDMDeviceWithAAD** property. If the property exists, the device is automatically enrolled. If this property doesn't exist, the device isn't automatically enrolled.
 
-[Enable Windows automatic enrollment](../../intune-service/enrollment/windows-enroll.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
+[Enable Windows automatic enrollment](../../device-enrollment/windows/enable-automatic-mdm.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
 
 ### Issue: Microsoft Intune Windows Agent app gets automatically disabled
 
@@ -182,4 +181,4 @@ Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app m
 
 - The app you create appears in the apps list. Assign it to the groups you choose. For more information, see [Assign apps to groups with Microsoft Intune](../../app-management/deployment/assign-groups.md).
 - Learn more about monitoring app properties and assignments. For more information, see [Monitor app information and assignments with Microsoft Intune](../../app-management/monitor-assignments.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of the Microsoft Intune mobile device management (MDM) lifecycle](../../intune-service/fundamentals/device-lifecycle.md).
+- Learn more about the context of your app in Intune. For more information, see [Overview of the Microsoft Intune mobile device management (MDM) lifecycle](../../fundamentals/device-lifecycle.md).

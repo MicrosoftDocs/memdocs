@@ -5,12 +5,9 @@ ms.date: 09/23/2024
 ms.topic: overview
 ms.reviewer: cdemello
 ms.collection:
-- highpri
 ---
 
 # Quiet Time Policies for iOS/iPadOS and Android Apps
-
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
 
 The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours.
 
@@ -35,7 +32,7 @@ To create a quiet time policy, use the following steps:
 5. Select **Create** to display the **Basics** page.
 6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is prepopulated with “Android; iOS/iPadOS.”<br>Select **Next** to display the **Configuration settings** page.
 7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings](#quiet-time-policy-configuration-settings).<br>Select **Next** to display the **Scope tags** page.
-8. The **Scope tags** page allows you to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).<br>Select **Next** to display the **Assignments** page.
+8. The **Scope tags** page allows you to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).<br>Select **Next** to display the **Assignments** page.
 9. The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.<br>Select **Next** to display the **Review + create** page.
 10. The **Review + create** page allows you to review the values and settings you entered for this quiet time policy.
 12. When you're ready, click **Create** to create the quiet time policy in Intune.

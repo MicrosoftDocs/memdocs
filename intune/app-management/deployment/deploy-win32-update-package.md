@@ -1,8 +1,9 @@
 ---
 title: Deploy Windows Update Packages in Intune
 description: Learn how to deploy a Windows update package (.msu file) in Intune.
-ms.date: 01/22/2026
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: bryanke
 ms.custom:
 ms.collection:
@@ -12,7 +13,7 @@ ms.collection:
 
 # Deploy Windows Update Packages in Intune
 
-[!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 You can deploy a Windows update package (*.msu* file) to Windows devices managed by Intune by using the [Intune Win32 app management](./win32.md) capabilities.
 
@@ -30,7 +31,7 @@ The following steps help you deploy a Windows update package to Intune.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. In the **Select app type** pane, under **Other** app types, select **Windows app (Win32)**.
+3. In the **Select app type** pane, select the **Windows** platform, and then select **Windows app (Win32)**.
 4. Choose **Select**, locate the **Add app** pane, and then select **Select app package file**.
 5. In the **App package file** pane, select the *.intunewin* file, and then select **OK**.
 6. On the **App information** page, add the details for your app.

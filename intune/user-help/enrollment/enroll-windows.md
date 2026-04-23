@@ -11,7 +11,7 @@ ms.reviewer: madekeva
 - Windows 
 
  > [!IMPORTANT]
- > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+ > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 Enroll your Windows device in Intune to get mobile access to work or school apps, email, and Wi-Fi.
 

@@ -22,7 +22,7 @@ The richest and broadest protection capabilities for Microsoft 365 data are avai
 Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Teams for iOS and Android. To do this, you will need a Conditional Access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 > [!NOTE]
-> To leverage app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../../intune-service/protect/app-based-conditional-access-intune.md).
+> To leverage app-based Conditional Access policies, the Microsoft Authenticator app must be installed on iOS devices. For Android devices, the Intune Company Portal app is required. For more information, see [App-based Conditional Access with Intune](../../device-security/conditional-access-integration/app-based-policies.md).
 
 Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Teams for iOS and Android, but blocks third-party OAuth capable mobile device clients from connecting to Microsoft 365 endpoints.
 
@@ -63,7 +63,7 @@ App configuration can be delivered either through the mobile device management (
 - Only allow work or school accounts
 
 > [!IMPORTANT]
-> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Teams for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../../intune-service/enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](./configure-managed-android.md).
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Teams for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../../device-enrollment/android/setup-personal-work-profile.md) and [Add app configuration policies for managed Android Enterprise devices](./configure-managed-android.md).
 
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 

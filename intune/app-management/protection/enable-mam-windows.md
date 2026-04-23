@@ -7,13 +7,12 @@ ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 ---
 
 # Data Protection for Windows MAM
 <!-- Use Mobile Application Management on unmanaged Windows  -->
 
-[!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 You can enable protected Mobile Application Management (MAM) access to org data on personal Windows devices. This capability uses the following functionality:
 - Intune Application Configuration Policies (ACP) to customize the org user experience
@@ -23,7 +22,7 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 
 ## Before you begin
 
-- Intune Mobile Application Management (MAM) for Windows is available for [supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md). This includes the supporting changes for Microsoft Edge (Stable and Extended Stable releases for Windows) and Windows Security app. App Protection Conditional Access is generally available.
+- Intune Mobile Application Management (MAM) for Windows is available for [supported Windows versions](../../fundamentals/ref-supported-platforms.md). This includes the supporting changes for Microsoft Edge (Stable and Extended Stable releases for Windows) and Windows Security app. App Protection Conditional Access is generally available.
 - Windows MAM is supported in government cloud environments. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../deployment/deploy-gcc-dod.md).
 
   For more information about MAM, see [Mobile Application Management (MAM) basics](../overview.md#mobile-application-management-mam-basics).
@@ -86,7 +85,7 @@ The health state includes the following details:
 
 The health state is only sent for MAM enrolled users.  End users may stop sending data by signing out of their org account in protected applications.  Administrators may stop sending data by removing the Windows Security Connector from Microsoft Intune.
 
-For related information, see [create an MTD app protection policy for Windows](../../intune-service/protect/mtd-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows).
+For related information, see [create an MTD app protection policy for Windows](../../device-security/mobile-threat-defense/create-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows).
 
 ## Create Intune app protection policies
 

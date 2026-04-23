@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Add device enrollment managers
@@ -45,7 +44,7 @@ To manage device enrollment manager accounts in Microsoft Intune, you must be an
 |Read | View the list of device enrollment manager accounts. |  
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../intune-service/includes/windows-10-support.md)]   
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]   
 
 ## Add a device enrollment manager
 

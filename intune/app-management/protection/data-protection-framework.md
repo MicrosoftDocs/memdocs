@@ -2,7 +2,7 @@
 title: Data Protection Framework Using App Protection Policies
 description: Learn how app protection policies ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled.
 ms.date: 06/12/2025
-ms.topic: article
+ms.topic: concept-article
 ms.reviewer: beflamm
 ms.custom:
 ms.collection:
@@ -79,11 +79,11 @@ For each app protection policy, the Core Microsoft Apps group is targeted, which
 
 The policies should include other Microsoft apps based on business need, additional third-party public apps that have integrated the Intune SDK used within the organization, as well as line-of-business apps that have integrated the [Intune SDK](../../developer/app-sdk/index.md) (or have been wrapped).
 
-[!INCLUDE [app-protection-framework-level1](../../intune-service/includes/app-protection-framework-level1.md)]
+[!INCLUDE [app-protection-framework-level1](../includes/app-protection-framework-level1.md)]
 
-[!INCLUDE [app-protection-framework-level2](../../intune-service/includes/app-protection-framework-level2.md)]
+[!INCLUDE [app-protection-framework-level2](../includes/app-protection-framework-level2.md)]
 
-[!INCLUDE [app-protection-framework-level3](../../intune-service/includes/app-protection-framework-level3.md)]
+[!INCLUDE [app-protection-framework-level3](../includes/app-protection-framework-level3.md)]
 
 ## Next steps
 

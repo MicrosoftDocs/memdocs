@@ -37,9 +37,9 @@ As an Intune administrator, you can create and assign VPN settings to Android En
   - Fully managed, dedicated, and corporate-owned work profile
   - Personally owned work profile
 
-- [!INCLUDE [partner-vpns](../../intune-service/includes/partner-vpns.md)]
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
-- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../../intune-service/protect/microsoft-tunnel-overview.md), which supports split tunneling.
+- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../../device-security/microsoft-tunnel/overview.md), which supports split tunneling.
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -69,7 +69,7 @@ The available settings depend on the VPN client you choose. Some settings are on
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
-  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../device-security/microsoft-tunnel/overview.md).
 
 ### Per-app VPN (fully managed, dedicated, and corporate-owned work profile)
 
@@ -127,7 +127,7 @@ The available settings depend on the VPN client you choose. Some settings are on
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
-  For more information, see [Microsoft Tunnel for Intune](../../intune-service/protect/microsoft-tunnel-overview.md).
+  For more information, see [Microsoft Tunnel for Intune](../../device-security/microsoft-tunnel/overview.md).
 
 ### Per-app VPN (personally owned work profile)
 

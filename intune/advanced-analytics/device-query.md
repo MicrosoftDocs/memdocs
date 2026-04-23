@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Device query
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 Device query allows you to quickly gain on-demand information about the state of your Windows devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
@@ -216,5 +216,5 @@ Device query supports the following entities. To learn more about what propertie
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: ../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator

@@ -10,7 +10,7 @@ ms.collection:
 
 # Import Wi-Fi settings for Windows devices in Intune
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 On Windows devices, you can export Wi-Fi settings to an XML file, and then import these settings in Intune. Using these imported settings, you can create a Wi-Fi profile, and then deploy it to your devices.
 
@@ -28,7 +28,7 @@ This article shows you how to export Wi-Fi settings from a Windows device, and t
 
 ## Before you begin
 
-- To configure the Intune policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+- To configure the Intune policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Export Wi-Fi settings from a Windows device
 
@@ -81,7 +81,7 @@ When the XML file is ready, you can import it into Intune to create a Wi-Fi prof
     - **File contents**: Shows the XML code for the XML file you selected.
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

@@ -10,7 +10,7 @@ ms.collection:
 
 # Use and manage Zebra devices with Zebra Mobility Extensions in Microsoft Intune
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Intune includes a rich set of features, including managing apps and configuring device settings. These built-in features and settings manage Android devices manufactured by Zebra Technologies, also known as **Zebra devices**.
 
@@ -136,7 +136,7 @@ In Intune, create a device configuration profile:
     > [!TIP]
     > For security reasons, you won't see the profile XML text after you save it. The text is encrypted, and you only see asterisks (`****`). For your reference, it's recommended to save copies of the MX profiles before you add them to Intune.
 
-8. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+8. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

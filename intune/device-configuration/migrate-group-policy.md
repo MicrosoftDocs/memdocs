@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Create a Settings Catalog policy using your imported GPOs in Microsoft Intune
@@ -31,7 +30,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   - A role that has the **Security baselines** permission and the **Device configurations/Create** permission
 
-  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../intune-service/fundamentals/role-based-access-control.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions).
+  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../fundamentals/role-based-access-control/overview.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../fundamentals/role-based-access-control/create-custom-role.md#custom-role-permissions).
 
 - Import your on-premises GPOs, and review the results.
 
@@ -88,7 +87,7 @@ After you [import your GPOs](./import-group-policy-analytics.md#import-gpos-and-
 
     Select **Next**.
 
-7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use role-based access control (RBAC) roles and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
 8. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](./assign-device-profile.md).
 
@@ -124,10 +123,10 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   For more information, go to:
 
-  - [Firewall policy in Endpoint Security](../intune-service/protect/endpoint-security-firewall-policy.md)
-  - [Application control policy in Endpoint Security](../intune-service/protect/endpoint-security-asr-policy.md).
+  - [Firewall policy in Endpoint Security](./endpoint-security/firewall.md)
+  - [Application control policy in Endpoint Security](./endpoint-security/attack-surface-reduction.md).
 
-  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../intune-service/protect/endpoint-security.md), including security baselines and mobile threat defense.
+  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../device-security/endpoint-security-policies.md), including security baselines and mobile threat defense.
 
 - **Some settings don't migrate exactly, and may use a different setting**
 

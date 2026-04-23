@@ -8,8 +8,6 @@ ms.topic: article
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Enrollment guide: Enroll Windows client devices in Microsoft Intune
@@ -30,13 +28,13 @@ There's also a visual guide of the different enrollment options for each platfor
 [![A visual representation of Intune enrollment options by platform](../media/guide/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../../intune-service/includes/tips-guidance-plan-deploy-guides.md)]
+> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 
 - For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](../guide.md).
 
-- [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+- [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Windows automatic enrollment
 
@@ -73,7 +71,7 @@ You can use this enrollment option to:
 
 ### Automatic enrollment administrator tasks
 
-- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../fundamentals/ref-supported-platforms.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
@@ -158,7 +156,7 @@ When users turn on the device, the next steps determine how they're enrolled. Cl
 
 - On personal or BYOD non-Windows client devices, users must install the Company Portal app from the Microsoft Store. Once installed, they open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). They're asked for more information, including the Intune server name. Be sure to give them all the information they need to enter.
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Windows Autopilot
 
@@ -232,7 +230,7 @@ The end user experience depends on the Windows Autopilot deployment option you c
 
 - **User driven**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. For more specific information, go to [user-driven deployment](/autopilot/user-driven).
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## BYOD: User enrollment
 
@@ -270,7 +268,7 @@ With User enrollment, you can "register" the devices with Microsoft Entra ID or 
 
 Other than having Intune setup, there are minimal administrator tasks with this enrollment method.
 
-- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](../../fundamentals/ref-supported-platforms.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](create-cname-autodiscovery.md).
 
@@ -370,7 +368,7 @@ Configuration Manager can randomize the enrollment, so enrollment might not occu
 
 ## Related articles
 
-- [MAM without enrollment](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md)
+- [MAM without enrollment](../mam-without-enrollment.md)
 - [Android enrollment guide](../android/guide.md)
 - [iOS/iPadOS enrollment guide](../apple/guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)

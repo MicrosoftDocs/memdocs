@@ -61,7 +61,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
 1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create an assigned device group](entra-join-device-group.md). Once the correct user group is selected, select **Next**.
 

@@ -12,7 +12,7 @@ ms.collection:
 
 On Windows devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more.
 
-This scenario is common for frontline workers (FLW). For more information on FLW devices in Microsoft Intune, go to [FLW device management for devices in Microsoft Intune](../../solutions/frontline-worker/frontline-worker-overview.md).
+This scenario is common for frontline workers (FLW). For more information on FLW devices in Microsoft Intune, go to [FLW device management for devices in Microsoft Intune](../../solutions/frontline-worker/index.md).
 
 This feature applies to:
 
@@ -61,7 +61,7 @@ This article shows you how to run one app or many apps as a Windows kiosk device
         > [!NOTE]
         > Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
         >
-        > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+        > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
     For a list of all settings, and what they do, go to:
 
@@ -70,7 +70,7 @@ This article shows you how to run one app or many apps as a Windows kiosk device
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

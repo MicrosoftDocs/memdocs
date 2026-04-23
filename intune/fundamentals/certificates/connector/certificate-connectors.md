@@ -59,9 +59,9 @@ The **PFX Certificate Connector** supports certificate deployment for PKCS #12 c
   - Your infrastructure supports redundancy and load balancing, as any available connector instance can process your certificate requests.
 - Supports [automatic updates](#automatic-update) to new versions. To automatically install new versions, the computer that hosts the connector must contact **autoupdate.msappproxy.net** on port **443**. If the connector fails to automatically update, you can manually update the connector.
 - Supports certificate revocation (requires the connector run version **6.2008.60.607** or later)
-- Has the same network requirements as [managed devices](../../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices)
+- Has the same network requirements as [managed devices](../../../fundamentals/endpoints.md#access-for-managed-devices)
 
-  For more information, see [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md), and [Intune network configuration requirements and bandwidth](../../../intune-service/fundamentals/intune-endpoints.md).
+  For more information, see [Network endpoints for Microsoft Intune](../../../fundamentals/endpoints.md), and [Intune network configuration requirements and bandwidth](../../../fundamentals/endpoints.md).
 
 **The Windows server where the connector installs**:
 
@@ -103,9 +103,9 @@ If  you use a [third-party Certification Authority](../third-party-ca-scep.md#se
   - Your infrastructure supports redundancy and load balancing, as any available connector instance can process your certificate requests.
 - Requires a [manual update](#manual-update) to install the new version of the connector. Manual update requires you to uninstall the current connector, and then install the new version of the connector. Additional actions shouldn't be required.
 - Supports *Federal Information Processing Standard* (FIPS) mode. FIPS isn't required. When FIPS is enabled, you can issue and revoke certificates.
-- Has the same network requirements as [managed devices](../../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Has the same network requirements as [managed devices](../../../fundamentals/endpoints.md#access-for-managed-devices).
 
-  For more information, see [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md).
+  For more information, see [Network endpoints for Microsoft Intune](../../../fundamentals/endpoints.md).
 
 **The Windows server where the connector installs**:
 
@@ -130,7 +130,7 @@ For guidance on installation of this connector, see [Configure infrastructure to
 > [!IMPORTANT]
 > Beginning on July 29, 2021, the [**Certificate Connector for Microsoft Intune**](overview.md) replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors.
 
-Periodically, updated versions of certificate connectors are released. Announcements for new connector releases appear in the [What's New](../../../intune-service/fundamentals/whats-new.md) article for Intune and in the [What's new for Connectors](#whats-new-for-connectors) section near the end of this article.
+Periodically, updated versions of certificate connectors are released. Announcements for new connector releases appear in the [What's New](../../../whats-new/index.md) article for Intune and in the [What's new for Connectors](#whats-new-for-connectors) section near the end of this article.
 
 When a new version releases, support for the previous version is deprecated with a limited grace period for its continued use. After the grace period expires, support for that deprecated version ends, and it can stop functioning at any time. The grace period is six months.
 

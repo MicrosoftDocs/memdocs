@@ -1,0 +1,418 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/password-reset.md",
+      "redirect_url": "/entra/identity/authentication/concept-sspr-howitworks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/remote-actions/password-reset.md",
+      "redirect_url": "/entra/identity/authentication/concept-sspr-howitworks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/protect/create-conditional-access-intune.md",
+      "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/create-conditional-access-intune.md",
+      "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/data-outside-protect.md",
+      "redirect_url": "/information-protection/get-started/infoprotect-quick-start-tutorial",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/index.yml",
+      "redirect_url": "/intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/fundamentals/whats-new-archive-classic.md",
+      "redirect_url": "/mem/intune/fundamentals/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/organizational-messages-reporting.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/organizational-messages-prerequisites.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/organizational-messages-overview.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/organizational-messages-create.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/organizational-messages-cancel.md",
+      "redirect_url": "/microsoft-365/admin/misc/organizational-messages-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/exchange-connector-install.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/protect/exchange-connector-install.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/protect/conditional-access-exchange-create.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/conditional-access-exchange-create.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/understand/getting-started-with-configuration-manager-and-windows-powershell.md",
+      "redirect_url": "/powershell/sccm/overview?view=sccm-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/understand/connecting-to-configuration-manager-with-windows-powershell.md",
+      "redirect_url": "/powershell/sccm/overview?view=sccm-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/security/privacy-statement-cmdlet-library.md",
+      "redirect_url": "/powershell/sccm/privacy-statement?view=sccm-ps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/develop/core/understand/windows-powershell-basics.md",
+      "redirect_url": "/powershell/scripting/learn/ps101/00-introduction?view=powershell-7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/clients/deploy/plan/best-practices-for-client-deployment.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/best-practices-for-client-deployment"
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/install-cloud-based-distribution-points-in-microsoft-azure"
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/mdm/get-started/install-site-system-roles-for-on-premises-mdm.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/install-site-system-roles-for-on-premises-mdm"
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/introduction-to-application-management.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/introduction-to-application-management"
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/manage-express-installation-files-for-windows-10-updates"
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/use-a-cloud-based-distribution-point"
+    },
+    {
+      "source_path_from_root": "/intune/intune/apps/windows-information-protection-policy-create.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/apps/app-protection-policies-configure-windows-10.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/apps/windows-information-protection-policy-create.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/apps/app-protection-policies-configure-windows-10.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/protect/windows-information-protection-configure.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/windows-information-protection-configure.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/mcafee-mobile-threat-defense-connector.md",
+      "redirect_url": "/protect/trellix-mobile-threat-defense-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/mcafee-mtd-connector-integration.md",
+      "redirect_url": "/protect/trellix-mtd-connector-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/surface/security-copilot-surface-management-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/surface/security-copilot-surface-management-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/deploy-use/troubleshoot-application-deployment.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/troubleshoot-application-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/mdt/troubleshooting-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/troubleshooting-reference/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/apps/app-install-error-codes.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-install-error-codes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/troubleshoot-android-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-android-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/apps/troubleshoot-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-app-install",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/apps/troubleshoot-app-protection-policy-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-bitlocker-policies.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-bitlocker-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-certificate-connector-events.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-certificate-connector-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/fundamentals/troubleshoot-company-resource-access-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-company-resource-access-problems",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-conditional-access.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/troubleshoot-device-actions.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-device-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/troubleshoot-device-enrollment-in-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/troubleshoot-email-profiles-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/fundamentals/troubleshoot-endpoint-protection-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-exchange-connector.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-exchange-connector-common-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-exchange-connector-common-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/troubleshoot-ios-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-jamf.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-jamf",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/apps/troubleshoot-mam.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-pkcs-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/troubleshoot-policies-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-scep-certificate-delivery.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-scep-certificate-device-to-ndes.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-scep-certificate-ndes-policy-module.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-scep-certificate-profile-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-scep-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/protect/troubleshoot-scep-certificate-reporting.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/fundamentals/troubleshoot-software-updates-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/troubleshoot-wi-fi-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/troubleshoot-windows-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/troubleshoot-windows-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/demonstrate-deployment-on-vm.md",
+      "redirect_url": "/windows/deployment/windows-autopilot/demonstrate-deployment-on-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/remote-actions/device-windows-pin-reset.md",
+      "redirect_url": "/windows/security/identity-protection/hello-for-business/pin-reset",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/enroll-your-wp81-windows.md",
+      "redirect_url": "https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/sso-dialog-faqs.yml",
+      "redirect_url": "https://support.microsoft.com/topic/a6505ceb-1a20-4b15-889c-250175481506",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/encrypt-your-device-windows.md",
+      "redirect_url": "https://support.microsoft.com/windows/device-encryption-in-windows-ad5dcf4b-dbe0-2331-228f-7925c2a3012d",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/you-need-to-enable-windows-encryption.md",
+      "redirect_url": "https://support.microsoft.com/windows/device-encryption-in-windows-ad5dcf4b-dbe0-2331-228f-7925c2a3012d",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/how-to-encrypt-your-windows-device.md",
+      "redirect_url": "https://support.microsoft.com/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/you-need-to-update-your-windows-device.md",
+      "redirect_url": "https://support.microsoft.com/windows/update-windows-3c5ae7fc-9fb6-9af1-1984-b5e0412c556a",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/custom-settings-windows-phone-8-1.md",
+      "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/device-restrictions-windows-phone-8-1.md",
+      "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/email-settings-windows-phone-8-1.md",
+      "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/vpn-settings-windows-phone-8-1.md",
+      "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/user-help/set-or-change-your-password-windows.md",
+      "redirect_url": "https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/configuration/custom-settings-android-for-work.md",
+      "redirect_url": "https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/configuration/custom-settings-android-for-work.md",
+      "redirect_url": "https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414",
+      "redirect_document_id": false
+    }
+  ]
+}

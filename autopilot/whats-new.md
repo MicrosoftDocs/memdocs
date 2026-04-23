@@ -322,5 +322,5 @@ The diagnostics page is currently supported when signing in with a Work or Schoo
 ## Related content
 
 - [What's new in Windows Autopilot device preparation](device-preparation/whats-new.md).
-- [What's new in Microsoft Intune](/intune/intune-service/fundamentals/whats-new).
+- [What's new in Microsoft Intune](/intune/whats-new/index).
 - [What's new in Windows client](/windows/whats-new/).

@@ -11,8 +11,6 @@ ms.collection:
 
 # Use iOS App Provisioning Profiles to Prevent Your Apps From Expiring
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
-
 ## Introduction
 
 Apple iOS/iPadOS line-of-business apps that are assigned to iPhones and iPads are built with an included provisioning profile and code that is signed with a certificate. When the app is run, iOS/iPadOS confirms the integrity of the iOS/iPadOS app and enforces policies that are defined by the provisioning profile. The following validations happen:
@@ -40,7 +38,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
    <img alt="Create profile - Basics" src="./media/manage-provisioning-profiles-ios/app-provisioning-profile-ios-01.png">
 
 4. Click **Next: Scope tags**.<br>
-   On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS/iPadOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+   On the **Scope tags** page you can optionally configure scope tags to determine who can see iOS/iPadOS app provisioning profile in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 5. Click **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the profile to users and devices. It is important to note that you can assign a profile to a device whether or not the device is managed by Intune.
 6. Click **Next: Review + create** to review the values you entered for the profile.

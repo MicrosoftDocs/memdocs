@@ -280,9 +280,9 @@ The passwordless methods available to users depend on both the device platform a
 >
 > :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: For implementation guidance, see:
 >
-> - [Use certificates for authentication in Microsoft Intune](../intune-service/protect/certificates-configure.md)
+> - [Use certificates for authentication in Microsoft Intune](../fundamentals/certificates/overview.md)
 > - [Microsoft Cloud PKI overview](../cloud-pki/index.md)
-> - [Certificate Connector for Microsoft Intune](../intune-service/protect/certificate-connector-overview.md)
+> - [Certificate Connector for Microsoft Intune](../fundamentals/certificates/connector/overview.md)
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::column-end:::
 :::row-end:::
@@ -332,7 +332,7 @@ The passwordless methods described in this article rely on specific platform cap
 > Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying.
 
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-- [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
+- [Intune supported operating systems](../fundamentals/ref-supported-platforms.md#supported-operating-systems-and-browsers-in-intune)
 
 ## Platform considerations
 
@@ -489,9 +489,9 @@ Planning for recovery before you enforce passwordless is essential. A rollout th
 
 Passwordless often depends on the device being in the right state before users can rely on the experience. Readiness typically includes:
 
-- [Supported device platforms and versions](../intune-service/fundamentals/supported-devices-browsers.md)
-- [Device enrollment or registration](../intune-service/fundamentals/deployment-guide-enrollment.md)
-- [Required apps and brokers](../intune-service/apps/apps-add.md)
+- [Supported device platforms and versions](../fundamentals/ref-supported-platforms.md)
+- [Device enrollment or registration](../device-enrollment/enroll-devices.md)
+- [Required apps and brokers](../app-management/deployment/index.md)
 - [Method-specific configuration profiles and identity prerequisites](../device-configuration/overview.md)
 
 ### Verification and ongoing operations
@@ -499,7 +499,7 @@ Passwordless often depends on the device being in the right state before users c
 To validate a passwordless deployment, common checkpoints include:
 
 - [Microsoft Entra sign-in logs](/entra/identity/monitoring-health/concept-sign-ins)
-- [Microsoft Intune device and policy reporting](../intune-service/fundamentals/reports.md)
+- [Microsoft Intune device and policy reporting](../device-management/reports/overview.md)
 - Platform-specific verification experiences for the passwordless method you deploy.
 
 ## User adoption and communication
@@ -526,7 +526,7 @@ Consider these practices:
 - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
-- [Use certificates for authentication in Microsoft Intune](../intune-service/protect/certificates-configure.md)
+- [Use certificates for authentication in Microsoft Intune](../fundamentals/certificates/overview.md)
 - [Microsoft Cloud PKI overview](../cloud-pki/index.md)
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)

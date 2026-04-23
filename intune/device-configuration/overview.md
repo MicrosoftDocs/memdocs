@@ -6,8 +6,6 @@ ms.topic: overview
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
@@ -20,7 +18,7 @@ You can create profiles for different devices and different platforms, including
 
 When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups.
 
-[!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 
@@ -43,7 +41,7 @@ The settings catalog lists all the settings you can configure, and all in one pl
 
 Intune has many templates that include groups of settings that focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates).
 
-You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../intune-service/fundamentals/protection-configuration-levels.md).
+You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../fundamentals/protection-configuration-levels.md).
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
@@ -148,7 +146,7 @@ This feature supports:
 
 [Education settings - Windows](./templates/configure-education-settings.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
-[Education settings - iOS/iPadOS](../intune-service/fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
+[Education settings - iOS/iPadOS](../solutions/education/ref-classroom-settings-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
 ## Email
 
@@ -168,7 +166,7 @@ This feature supports:
 >
 > Instead, use the settings catalog to create new policies that configure the FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. To learn more, go to [macOS settings catalog](./settings-catalog/index.md).
 
-[Endpoint protection](../intune-service/protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
+[Endpoint protection](./endpoint-security/configure-endpoint-protection.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
 To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
@@ -220,7 +218,7 @@ This feature supports:
 
 ## Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint](../intune-service/protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../device-security/microsoft-defender/overview.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 

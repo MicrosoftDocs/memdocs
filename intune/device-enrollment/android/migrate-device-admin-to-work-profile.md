@@ -11,7 +11,7 @@ ms.collection:
 # Move Android devices from device administrator to personally owned work profile management
 
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 You can help users move their Android devices from device administrator to personally owned work profile management by using the compliance setting to **Block devices managed with device administrator**. This setting lets you make devices noncompliant if they're managed with device administrator.
 
@@ -45,7 +45,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     ![Block devices](./media/migrate-device-admin-to-work-profile/block-devices.png)
 
-1. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../../intune-service/protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
+1. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../../device-security/compliance/configure-noncompliance-actions.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
     ![Noncompliance actions](media/migrate-device-admin-to-work-profile/noncompliance-actions.png)
 

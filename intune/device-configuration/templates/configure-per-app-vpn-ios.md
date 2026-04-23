@@ -50,7 +50,7 @@ If you have a per-app VPN profile set up for Zscaler, then opening one of the as
 
   To prove its identity, the VPN server presents the certificate to the device. The device must accept the certificate without prompting the user. To confirm the automatic approval of the certificate, you create a trusted certificate profile in Intune (in this article). The Intune trusted certificate profile must include the VPN server's root certificate (`.cer` file) issued by the Certification Authority (CA).
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Step 1 - Create a group for your VPN users
 
@@ -59,7 +59,7 @@ Create or choose an existing group in Microsoft Entra ID. This group:
 - Must include the users or devices that will use per-app VPN.
 - Will receive all the Intune policies you create in this article.
 
-For the steps to create a new group, go to [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+For the steps to create a new group, go to [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
 ## Step 2 - Create a trusted certificate profile
 

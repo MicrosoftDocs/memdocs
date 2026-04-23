@@ -386,7 +386,7 @@ sections:
       - question: |
           Why is the web sign-in option missing at the Windows sign-in screen after Windows Autopilot pre-provisioning completes?
         answer: |
-            The [Device password policies](/intune/intune-service/protect/security-baseline-settings-mdm-all#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
+            The [Device password policies](/intune/device-security/security-baselines/ref-windows-mdm-settings#device-lock) in the Security Baseline causes issues after pre-provisioning. To resolve, change the password settings in Security Baseline to **Not Configured** or assign the baseline to a user group.
 
       - question: |
           Can policies conflict with Windows Autopilot working correctly?
@@ -504,8 +504,8 @@ sections:
           - The server where the administrator is installing and configuring the Intune Connector for Active Directory doesn't have the required internet access or required Intune URLs aren't allowed. For more information, see the following articles:<br>
           <br>
             - [Windows Autopilot requirements - Windows Autopilot Deployment Service](requirements.md?tabs=networking#windows-autopilot-deployment-service).
-            - [Intune core service](/intune/intune-service/fundamentals/intune-endpoints#endpoints).
-            - [Windows Autopilot dependencies](/intune/intune-service/fundamentals/intune-endpoints#windows-autopilot-dependencies).
+            - [Intune core service](/intune/fundamentals/endpoints#endpoints).
+            - [Windows Autopilot dependencies](/intune/fundamentals/endpoints#windows-autopilot-dependencies).
 
           - Server is sending network request via TLS 1.0 or 1.1 because PKCS Cryptography is disabled. To resolve the issue, on the server hosting the Intune Connector for Active Directory, delete the registry key value specified in the following command by running the command from an elevated command prompt:
 

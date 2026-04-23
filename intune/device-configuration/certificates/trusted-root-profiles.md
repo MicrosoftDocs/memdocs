@@ -16,7 +16,7 @@ When using Intune to provision devices with certificates to access your corporat
 You deploy the trusted certificate profile to the same devices and users that receive the certificate profiles for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS), and imported PKCS.
 
 > [!TIP]
-> *Trusted certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+> *Trusted certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
 ## Export the trusted root CA certificate
 
@@ -44,7 +44,7 @@ Create a separate trusted certificate profile for each device platform you want 
 
 ### Trusted certificate profiles for Android device administrator
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 This feature applies to:
 
@@ -96,7 +96,7 @@ After you name the certificate, it can be saved.
    - **Platform**: Choose the platform of the devices that should receive this profile.
    - **Profile**: Depending on your chosen platform, select **Trusted certificate** or select **Templates** > **Trusted certificate**.
 
-   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 4. Select **Create**.
 

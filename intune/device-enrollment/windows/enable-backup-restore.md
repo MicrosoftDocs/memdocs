@@ -41,7 +41,7 @@ To use the backup functionality, devices must be:
   * Windows 11, version 24H2, build 26100.4946 or later   
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 The restore feature is available on devices that meet the following requirements:
 

@@ -6,13 +6,12 @@ ms.topic: reference
 ms.reviewer: mikedano
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Windows device settings to run as a kiosk in Intune
 
 > [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../../intune-service/includes/not-all-settings-are-documented.md)]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 On Windows devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
@@ -27,7 +26,7 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 - Create a [Windows kiosk device configuration profile](./configure-kiosk.md#create-the-profile).
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](./ref-device-restrictions-windows.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 

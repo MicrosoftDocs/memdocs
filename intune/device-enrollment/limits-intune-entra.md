@@ -6,7 +6,6 @@ ms.topic: concept-article
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Understand Intune and Microsoft Entra device limit restrictions  
@@ -76,7 +75,7 @@ Use the following table to determine the type of limitations you can apply to de
 |Windows| Co-management with Configuration Manager | No | Yes | No |
 
 ## Android and iOS devices
- [!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ### iOS or Android devices example 1
 

@@ -78,7 +78,7 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 
   For more information on the enrollment options for macOS devices, go to [Enrollment guide: Enroll macOS devices in Microsoft Intune](../../device-enrollment/apple/guide-macos.md).
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## What you need to know
 
@@ -120,7 +120,7 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
     - [macOS](./ref-kernel-extensions-settings-macos.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

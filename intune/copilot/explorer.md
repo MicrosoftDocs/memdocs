@@ -7,8 +7,6 @@ ms.topic: get-started
 ms.reviewer: ankurgoyal, rashok
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - security-copilot
 - msec-ai-copilot
 ---
@@ -66,7 +64,7 @@ You can explore several Intune resources and the relationships between them. The
 - Device Configuration
 - Device updates
 - Devices (device properties)
-- [Endpoint Privilege Management](../intune-service/protect/epm-overview.md)
+- [Endpoint Privilege Management](../epm/overview.md)
 - Role based access control (RBAC)
 - Users and groups
 - Windows Autopilot deployments

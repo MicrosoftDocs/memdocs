@@ -7,7 +7,6 @@ ms.topic: how-to
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - msec-ai-copilot
 ---
 
@@ -17,7 +16,7 @@ Device configuration profiles allow you to add and configure device settings, an
 
 - **Baselines**: On Windows devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then use security baselines.
 
-  For more information, go to [Security baselines](../intune-service/protect/security-baselines.md).
+  For more information, go to [Security baselines](../device-security/security-baselines/overview.md).
 
 - **Settings catalog**: On your Apple, Android, and Windows devices, you can use the settings catalog to configure device features and settings. The settings catalog has all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
@@ -43,7 +42,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+- At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 - Enroll your devices in Intune. To learn more about your enrollment options, see [Microsoft Intune enrollment guide](../device-enrollment/guide.md).
 
@@ -93,12 +92,12 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Device restrictions](./templates/configure-device-restrictions.md)
 - [Domain join (Windows)](./templates/configure-domain-join-windows.md)
 - [Edition upgrade and mode switch (Windows)](./templates/configure-edition-upgrade-windows.md)
-- [Education (iOS, iPadOS)](../intune-service/fundamentals/education-settings-configure-ios.md)
+- [Education (iOS, iPadOS)](../solutions/education/ref-classroom-settings-ios.md)
 - [Email](./templates/configure-email.md)
-- [Endpoint protection (macOS, Windows)](../intune-service/protect/endpoint-protection-configure.md)
+- [Endpoint protection (macOS, Windows)](./endpoint-security/configure-endpoint-protection.md)
 - [Extensions (macOS)](./templates/configure-kernel-extensions-macos.md)
 - [Kiosk](./templates/configure-kiosk.md)
-- [Microsoft Defender for Endpoint (Windows)](../intune-service/protect/microsoft-defender-with-intune.md)
+- [Microsoft Defender for Endpoint (Windows)](../device-security/microsoft-defender/overview.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](./templates/configure-zebra-mx-android.md)
 - [Network boundary (Windows)](./templates/create-network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](./templates/configure-oemconfig-android.md)
@@ -124,7 +123,7 @@ For example, if you select Windows for the platform, your options look similar t
 
 After you add the settings, you can also add a scope tag to the profile. Scope tags filter profiles to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. And, are used in distributed IT.
 
-For more information about scope tags, and what you can do, go to [Use RBAC and scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md).
+For more information about scope tags, and what you can do, go to [Use RBAC and scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md).
 
 ## Applicability rules
 
@@ -191,7 +190,7 @@ At any time, users can open the Company Portal app, and sync the device to immed
 
 When creating profiles, consider the following recommendations:
 
-- Name your policies so you know what they are, and what they do. All [compliance policies](../intune-service/protect/create-compliance-policy.md) and [configuration profiles](./create-device-profile.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
+- Name your policies so you know what they are, and what they do. All [compliance policies](../device-security/compliance/create-policy.md) and [configuration profiles](./create-device-profile.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
 
   Some configuration profile examples include:
 
@@ -205,9 +204,9 @@ When creating profiles, consider the following recommendations:
 
 - Create profiles that apply to specific groups, such as Marketing, Sales, IT Administrators, or by location or school system. Use the built-in features, including:
 
-  - [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../intune-service/fundamentals/scope-tags.md)
-  - [Distributed IT with many admins in the same Intune tenant](../intune-service/fundamentals/intune-scale-guidelines.md)
-  - [Use filters when assigning your apps, policies, and profiles in Intune](../intune-service/fundamentals/filters.md)
+  - [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../fundamentals/role-based-access-control/scope-tags.md)
+  - [Distributed IT with many admins in the same Intune tenant](../fundamentals/scale-guidelines.md)
+  - [Use filters when assigning your apps, policies, and profiles in Intune](../fundamentals/filters/overview.md)
 
 - Separate user policies from device policies.
 

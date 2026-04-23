@@ -115,7 +115,7 @@ When new cloud-based features are available in the Microsoft Intune admin center
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
-For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](/intune/intune-service/protect/windows-update-compatibility-reports).
+For more information on the monthly changes to the Desktop Analytics cloud service, see [What's new in Desktop Analytics](../../../../device-updates/windows/monitor-compatibility.md).
 
 ### Connection Health dashboard shows client connection issues
 
@@ -125,7 +125,7 @@ Use the Desktop Analytics Connection Health dashboard in Configuration Manager t
 
 - **Connectivity status**: If your clients use a proxy server to access the Desktop Analytics cloud service, Configuration Manager now displays proxy authentication issues from clients. Drill down to see clients that are unable to enroll because of proxy authentication.<!-- 4963383 -->
 
-For more information, see [Monitor connection health](/intune/intune-service/protect/windows-update-compatibility-reports).
+For more information, see [Monitor connection health](../../../../device-updates/windows/monitor-compatibility.md).
 
 ## <a name="bkmk_real"></a> Real-time management
 
@@ -321,7 +321,7 @@ Configuration Manager has expanded its support for onboarding devices to Microso
 <!--5691658-->
 You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
-This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Intune admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune-service/protect/endpoint-security-edr-policy.md).
+This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Intune admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../device-configuration/endpoint-security/deploy-edr.md).
 
 > [!Important]
 > You'll need the hotfix rollup, [KB4563473](https://support.microsoft.com/help/4563473), installed in your environment for this feature.

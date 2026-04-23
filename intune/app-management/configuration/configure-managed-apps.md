@@ -10,8 +10,6 @@ ms.collection:
 
 # App Configuration Policies for Intune App SDK Managed Apps
 
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
-
 The Intune App Software Development Kit (SDK) supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune admin center, the MAM channel is referred to as a Managed Apps app configuration policy. The MAM channel is different than the mobile device management (MDM) OS platform channels that are offered when a device is enrolled.
 
 To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../../developer/app-sdk/index.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md#feature-comparison).
@@ -20,7 +18,7 @@ By using the MAM channel, apps can receive app configuration policies regardless
 
 For more information, see [App configuration policies for Microsoft Intune](./overview.md).
 
-[!INCLUDE [android-supported-os](../../intune-service/includes/android-supported-os.md)]
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
 
 ## Add an app configuration policy for managed apps on iOS/iPadOS and Android devices
 
@@ -132,7 +130,7 @@ To add the configuration setting to your app configuration policy, on the **Sett
 - **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
 - **Value**: `Enabled`
 
-To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../../intune-service/fundamentals/filters-device-properties.md#available-properties).
+To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../../fundamentals/filters/ref-device-properties.md#available-properties).
 
 For related information about create app protection policies, see [iOS app protection policy settings](../protection/ref-settings-ios.md).
 

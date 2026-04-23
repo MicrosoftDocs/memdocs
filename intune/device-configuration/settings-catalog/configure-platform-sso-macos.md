@@ -69,11 +69,13 @@ You configure Platform SSO using the Intune [settings catalog](../../device-conf
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
-  There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+  There are some built-in roles that have these permissions, including the **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 - In [Step 2 - Create the Platform SSO policy](#step-2---create-the-platform-sso-policy-in-intune) (this article), you create a settings catalog policy that configures the required settings for Platform SSO. There are other common scenarios and settings you can configure in this policy. For more information, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).
 
   We recommend you review the [scenarios](./configure-platform-sso-scenarios-macos.md) **before** you create the settings catalog policy. This way, you can configure the settings you need/want when you initially create the policy. If you don't configure the optional scenario settings initially, you can always edit the policy later. Only one SSO policy can be assigned to your groups. So, add these scenario settings to your existing Platform SSO settings catalog policy.
+
+- Devices with an existing Platform SSO policy reregister in Microsoft Entra when the the **Platform SSO > Authentication Method** or **Platform SSO > Use Shared Device Keys** settings are changed in the policy. For the other settings you add or change, if the Platform SSO policy is unassigned and reassigned, the device reregisters.
 
 - In [Step 5 - Register the device](#step-5---register-the-device) (this article), users register their devices. These users must be allowed to join devices to Microsoft Entra ID. For more information, go to [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
@@ -196,7 +198,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     - **Type**
     - **URLs**
 
-    Close the settings picker.
+    Close the settings picker. 
 
     > [!TIP]
     > There are more Platform SSO settings you can add to the policy that configure different scenarios, like enabling Kerberos SSO, using Touch ID biometric authentication, and enabling SSO on non-Microsoft apps. To learn more about these scenarios and their required settings, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).
@@ -228,7 +230,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     :::image type="content" source="./media/configure-platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
 10. Select **Next**.
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
@@ -321,7 +323,7 @@ You can configure Platform SSO with other mobile device management services (MDM
 
   The configuration steps in your MDM service can be different. We recommend you work with your MDM service vendor to correctly configure and deploy these Platform SSO settings.
 
-- Device registration with Platform SSO is more secure and uses hardware-bound device certificates. These changes can affect some MDM flows, like integration with [device compliance partners](../../intune-service/protect/device-compliance-partners.md).
+- Device registration with Platform SSO is more secure and uses hardware-bound device certificates. These changes can affect some MDM flows, like integration with [device compliance partners](../../device-security/compliance/third-party-partners.md).
 
   You should talk to your MDM service vendor to understand if the MDM tested Platform SSO, certified that their software works properly with Platform SSO, and is ready to support customers using Platform SSO.
 

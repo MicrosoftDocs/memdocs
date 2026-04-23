@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_Protect
 ---
 # How to Create and Assign App Protection Policies
@@ -166,13 +165,13 @@ You can edit an existing policy and apply it to the targeted users. For more inf
 ## Target app protection policies based on device management state
 In many organizations, it's common to allow end users to use both Intune Mobile Device Management (MDM) managed devices, such as corporate owned devices, and unmanaged devices protected with only Intune app protection policies. Unmanaged devices are often known as Bring Your Own Devices (BYOD).
 
-Because Intune app protection policies target a user's identity, the protection settings for a user can apply to both enrolled (MDM managed) and nonenrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices using filters. For more information on creating filters see, [Use filters when assigning policies](../../intune-service/fundamentals/filters.md) . You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](./mam-vs-work-profiles-android.md).
+Because Intune app protection policies target a user's identity, the protection settings for a user can apply to both enrolled (MDM managed) and nonenrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices using filters. For more information on creating filters see, [Use filters when assigning policies](../../fundamentals/filters/overview.md) . You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](./mam-vs-work-profiles-android.md).
 
 To use these filters when assigning policies, browse to **Apps** > **Protection** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. Navigate to the **Assignments** page and select **Edit filter** to include or exclude filters for the assigned group.
 
 ### Device Management types
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 - **Unmanaged**: For iOS/iPadOS devices, unmanaged devices are any devices where either Intune MDM management or a 3rd party MDM/EMM solution doesn't pass the `IntuneMAMUPN` key. For Android devices, unmanaged devices are devices where Intune MDM management hasn't been detected. This includes devices managed by third-party MDM vendors.
 - **Intune managed devices**: Managed devices are managed by Intune MDM.

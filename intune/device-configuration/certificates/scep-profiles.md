@@ -18,17 +18,17 @@ For devices to use a SCEP certificate profile, they must trust your Trusted Root
 Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../../fundamentals/certificates/scep-infrastructure.md#pin-requirement-for-android-enterprise).
 
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
 >
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](./trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator).
 
- [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+ [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 > [!TIP]
-> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+> *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
 ## Update certificate connector: Strong mapping requirements for KB5014754
 

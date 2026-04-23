@@ -6,12 +6,11 @@ ms.topic: how-to
 ms.reviewer: abalwan
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Create VPN profiles to connect to VPN servers in Intune
 
-[!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
 
@@ -29,7 +28,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
 ## Before you begin
 
-- VPN profiles for a device tunnel are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+- VPN profiles for a device tunnel are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
 - If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, go to [How to configure certificates with Microsoft Intune](../../fundamentals/certificates/overview.md).
 
@@ -68,7 +67,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
     If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's a loss of VPN functionality.
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Step 1 - Deploy your VPN app
 
@@ -208,7 +207,7 @@ After the VPN app is assigned to the device, this next step creates the device c
     - [Windows](./ref-vpn-settings-windows.md) (including Windows Holographic for Business)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

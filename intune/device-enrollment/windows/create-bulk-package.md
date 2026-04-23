@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 # Bulk enrollment for Windows devices   
 
@@ -113,4 +112,4 @@ When not using an open network, you must use [device-level certificates](../../f
 Conditional Access is available for devices enrolled via bulk enrollment running Windows 11 or Windows 10, version 1803 and later.  
 
   > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]  
+  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]  

@@ -2,12 +2,12 @@
 title: Step 5. Create Settings Catalog policies for Microsoft Edge for Business
 description: Step 5. Create Settings Catalog policies for Microsoft Edge for Business on Windows and macOS.
 ms.date: 01/23/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- highpri
-- highseo
 - FocusArea_Apps_AppManagement
 zone_pivot_groups: platforms-windows-macos
 ---

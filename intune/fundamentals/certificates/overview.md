@@ -2,7 +2,7 @@
 title: Types of certificate that are supported by Microsoft Intune
 description: Learn about Microsoft Intune's support for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS) certificates.
 ms.date: 10/04/2024
-ms.topic: article
+ms.topic: overview
 ms.collection:
 - M365-identity-device-management
 - certificates
@@ -129,11 +129,11 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | Windows  | ![Supported](./media/overview/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/overview/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/overview/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/overview/green-check.png) |
 
 - ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](../../device-configuration/certificates/trusted-root-profiles.md#trusted-certificate-profiles-for-android-device-administrator).
-- ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+- ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../intune-service/includes/windows-phone-81-windows-10-mobile-support.md)]
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
-[!INCLUDE [android-device-administrator-support](../../intune-service/includes/android-device-administrator-support.md)]
+[!INCLUDE [android-device-administrator-support](../../includes/android-device-administrator-support.md)]
 
 ## Related content
 

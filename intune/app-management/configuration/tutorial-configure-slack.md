@@ -19,14 +19,14 @@ In this tutorial, you will:
 > - Create app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android personally-owned work profile devices.
 > - Create Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
-If you don't have an Intune subscription, [sign up for a free trial account](../../intune-service/fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
 You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
-- Intune subscription ([free trial](../../intune-service/fundamentals/free-trial-sign-up.md))
+- Intune subscription ([free trial](../../fundamentals/free-trial-sign-up.md))
 
 You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plan.
 
@@ -212,4 +212,4 @@ In this tutorial:
 - You created app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android personally-owned work profile devices.
 - You created Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
-To learn more about app configuration policies, see [App configuration policies for Microsoft Intune](./overview.md). To learn more about device compliance policies, see [Set rules on devices to allow access to resources in your organization using Intune](../../intune-service/protect/device-compliance-get-started.md).
+To learn more about app configuration policies, see [App configuration policies for Microsoft Intune](./overview.md). To learn more about device compliance policies, see [Set rules on devices to allow access to resources in your organization using Intune](../../device-security/compliance/overview.md).

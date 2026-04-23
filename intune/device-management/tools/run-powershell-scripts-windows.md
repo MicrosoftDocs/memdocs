@@ -3,13 +3,11 @@ title: Add PowerShell Scripts to Windows Devices in Microsoft Intune
 description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows devices in Microsoft Intune. Read common issues and resolutions.
 ms.date: 10/02/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 author: nicholasswhite
 ms.author: nwhite
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Win32
 ---
 
@@ -41,7 +39,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 > - Don't use scripts to collect personal data from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Remediations](../../intune-service/fundamentals/remediations.md).
+> For related information, see [Remediations](./deploy-remediations.md).
 
 ## Prerequisites
 
@@ -73,7 +71,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
       | No | 32-bit  | 32-bit PowerShell host supported | Runs only in 32-bit PowerShell host, which works on 32-bit and 64-bit architectures. |
       | Yes | 64-bit | Runs script in 64-bit PowerShell host for 64-bit architectures. When ran on 32-bit, the script runs in a 32-bit PowerShell host. | Runs script in 32-bit PowerShell host. If this setting changes to 64-bit, the script opens (it doesn't run) in a 64-bit PowerShell host, and reports the results. When ran on 32-bit, the script runs in 32-bit PowerShell host. |
 
-5. Select **Scope tags**. Scope tags are optional. [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md) has more information.
+5. Select **Scope tags**. Scope tags are optional. [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md) has more information.
 
     To add a scope tag:
 
@@ -136,7 +134,7 @@ In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and
 - **Device status**
 - **User status**
 
-[!INCLUDE [platform-scripts-export-api](../../intune-service/includes/platform-scripts-export-api.md)]
+[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
 
 ## Delete a script
 

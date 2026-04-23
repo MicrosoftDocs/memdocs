@@ -2,7 +2,7 @@
 title: Licenses available for Microsoft Intune
 description: Intune is available with these licenses
 ms.date: 05/09/2024
-ms.topic: article
+ms.topic: overview
 ms.collection:
 - M365-identity-device-management
 ---
@@ -43,13 +43,13 @@ A cloud-based unified endpoint management solution that is included in the follo
 
 An add-on to Microsoft Intune Plan 1 that offers advanced endpoint management capabilities. Intune Plan 2 is included in Microsoft Intune Suite.
 
-For information about trial and purchasing, see [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md).
+For information about trial and purchasing, see [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md).
 
 ### Microsoft Intune Suite
 
 An add-on to Microsoft Intune Plan 1 that unifies mission-critical advanced endpoint management and security solutions.
 
-For information about trial and purchasing, see [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md).
+For information about trial and purchasing, see [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md).
 
 ## Microsoft Intune for Education
 
@@ -94,7 +94,7 @@ You can purchase device licenses based on your estimated usage. Microsoft Intune
 When a device is enrolled by using a device license, the following Intune functions aren't supported:
 
 - [Intune app protection policies](../../app-management/protection/overview.md)
-- [Conditional Access](../../intune-service/protect/conditional-access.md)
+- [Conditional Access](../../device-security/conditional-access-integration/overview.md)
 - User-based management features, such as email and calendaring
 
 ## Confirm your licenses
@@ -102,7 +102,7 @@ When a device is enrolled by using a device license, the following Intune functi
 A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
 
 > [!NOTE]
-> If you are unable to access this portal using the step below, or if you don't have an Intune license, you can sign up now for the [Intune free trial](../../intune-service/fundamentals/free-trial-sign-up.md). When setting up Intune, you can give an administrators access to the Microsoft Intune admin center [without them requiring an Intune license](./unlicensed-admins.md).
+> If you are unable to access this portal using the step below, or if you don't have an Intune license, you can sign up now for the [Intune free trial](../../fundamentals/free-trial-sign-up.md). When setting up Intune, you can give an administrators access to the Microsoft Intune admin center [without them requiring an Intune license](./unlicensed-admins.md).
 
 To confirm your Microsoft Intune license or trial, use the following steps:
 

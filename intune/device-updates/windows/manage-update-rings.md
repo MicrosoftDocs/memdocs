@@ -47,7 +47,7 @@ In Microsoft Intune, update rings are configured through **update ring policies*
 >    - **Automatic update behavior**
 >    - **Microsoft product updates**
 >    - **Servicing channel**: Any update build that is generally available.
-> For more information, see [Manage Windows Holographic](../../intune-service/fundamentals/windows-holographic-for-business.md).
+> For more information, see [Manage Windows Holographic](../../solutions/windows-holographic.md).
 >
 > Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
 >   - Pause of feature updates

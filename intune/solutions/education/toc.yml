@@ -1,0 +1,93 @@
+items:
+  - name: What is Intune for Education
+    displayName: edu
+    href: ./overview.md
+  - name: Intune for Education docs 🔗
+    href: /intune-education/
+  - name: "Tutorial: How to deploy and manage devices in a school"
+    items:
+      - name: Introduction
+        href: ./tutorial-school-deployment/index.md
+      - name: 1. Plan your deployment
+        items:
+          - name: Enrollment methods
+            href: ./tutorial-school-deployment/enrollment-planning.md
+          - name: Grouping and targeting
+            href: ./tutorial-school-deployment/grouping-and-targeting.md
+      - name: 2. Prepare your tenant
+        items:
+          - name: Set up Microsoft Entra ID
+            href: ./tutorial-school-deployment/setup-entra-id.md
+          - name: Set up Microsoft Intune
+            href: ./tutorial-school-deployment/setup-intune.md
+      - name: 3. Configure settings and applications
+        items:
+          - name: Overview
+            href: ./tutorial-school-deployment/configure-overview.md
+          - name: Configure policies
+            href: ./tutorial-school-deployment/configure-settings.md
+          - name: Configure applications
+            href: ./tutorial-school-deployment/configure-apps.md
+      - name: 4. Deploy devices
+        items:
+          - name: Overview
+            href: ./tutorial-school-deployment/enroll-overview.md
+          - name: Windows
+            items:
+              - name: Enroll devices via Microsoft Entra join
+                href: ./tutorial-school-deployment/enroll-entra-join.md
+              - name: Enroll devices with provisioning packages
+                href: ./tutorial-school-deployment/enroll-package.md
+              - name: Enroll devices with Windows Autopilot
+                href: ./tutorial-school-deployment/enroll-autopilot.md
+          - name: iOS
+            items:
+              - name: Enroll with Company Portal
+                href: ./tutorial-school-deployment/enroll-ios-company-portal.md
+              - name: Enroll devices with Automated Device Enrollment
+                href: ./tutorial-school-deployment/enroll-ios-ade.md
+              - name: Bulk enrollment with Apple Configurator
+                href: ./tutorial-school-deployment/enroll-ios-apple-configurator.md
+      - name: 5. Manage devices
+        items:
+          - name: Overview
+            href: ./tutorial-school-deployment/manage-overview.md
+          - name: Management functionalities for Surface devices
+            href: ./tutorial-school-deployment/manage-surface.md
+          - name: Reset and wipe devices
+            href: ./tutorial-school-deployment/reset-devices.md
+          - name: Avoid policy conflicts
+            href: ./tutorial-school-deployment/policy-conflicts.md
+      - name: 6. Troubleshoot and get help
+        href: ./tutorial-school-deployment/troubleshoot-overview.md
+      - name: 7. Common Education configuration
+        items:
+          - name: Overview
+            href: ./tutorial-school-deployment/ref-common-settings.md
+          - name: Intune policies for Windows in Education
+            items:
+              - name: Device restrictions
+                href: ./tutorial-school-deployment/ref-device-restrictions-settings-windows.md
+              - name: Windows Update
+                href: ./tutorial-school-deployment/ref-update-settings-windows.md
+              - name: Microsoft Edge
+                href: ./tutorial-school-deployment/ref-edge-settings-windows.md
+              - name: Delivery Optimization
+                href: ./tutorial-school-deployment/ref-delivery-optimization-settings-windows.md
+              - name: Windows privacy
+                href: ./tutorial-school-deployment/ref-privacy-settings-windows.md
+              - name: Start menu customization
+                href: ./tutorial-school-deployment/ref-start-menu-settings-windows.md
+              - name: OneDrive Known Folder Move
+                href: ./tutorial-school-deployment/ref-onedrive-knownfoldermove-settings-windows.md
+          - name: Intune policies for iPads in Education
+            items:
+              - name: Device restrictions
+                href: ./tutorial-school-deployment/ref-device-restrictions-settings-ipados.md
+              - name: Apple Intelligence
+                href: ./tutorial-school-deployment/ref-ai-restrictions-settings-ipados.md
+              - name: iPads with no user affinity
+                href: ./tutorial-school-deployment/ref-shared-device-settings-ipados.md
+              - name: Optional restrictions
+                href: ./tutorial-school-deployment/ref-optional-restrictions-settings-ipados.md
+

@@ -1,13 +1,13 @@
 ---
 title: Add an Unmanaged macOS PKG App to Microsoft Intune
 description: Learn about how to add an unmanaged macOS PKG app to Microsoft Intune.
-ms.date: 07/12/2024
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: arnab
 ms.collection:
 - M365-identity-device-management
 - macOS
-- highpri
 - FocusArea_Apps_MacOS
 ---
 
@@ -44,8 +44,8 @@ The containing app files can be listed under the **Included apps** section in th
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. In the **Select app type** pane, under the **Other** app types, select **macOS app (PKG)**.
-4. Click **Select**. The **Add app** steps are displayed.
+3. In the **Select app type** pane, select the **macOS** platform, and then select **macOS app (PKG)**.
+4. Choose **Select**. The **Add app** steps are displayed.
 
 ## Step 1 – App information
 
@@ -114,19 +114,22 @@ You can use detection rules to choose how an app installation is detected on a m
 
 ## Step 5 – Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
     1. Click **Select scope tags** to optionally add scope tags for the app.
     2. Select **Next** to display the **Assignments** page.
 
 ## Step 6 - Assignments
 
-You can select either the **Required** or **Available** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+You can select either the **Required** or **Available** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 > [!NOTE]
 > A macOS app deployed using Intune agent will not automatically be removed from the device when the device is retired. The app and data it contains will remain on the device. It is recommended that the app is removed prior to retiring the device.
 
 1. For the specific app, select either the **Required** or **Available** assignment type.
 2. Select **Next** to display the **Review + create** page.
+
+> [!NOTE]
+> When you upload a new version of an available app to Intune, users must select **Install** or **Reinstall** in Company Portal to update the app on their device.
 
 ## Step 7 – Review + create
 
@@ -157,4 +160,4 @@ Note that post-install script failure isn't reported. A successful app installat
 
 - The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../intune-service/fundamentals/device-lifecycle.md)
+- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md)

@@ -24,7 +24,7 @@ Microsoft Intune includes built-in settings to use PKCS certificates for access 
 For information about using imported PKCS certificates, see [Imported PFX Certificates](./imported-pfx-profiles.md).
 
 > [!TIP]
-> *PKCS certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../intune-service/fundamentals/azure-virtual-desktop-multi-session.md).
+> *PKCS certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../../solutions/azure-virtual-desktop-multi-session.md).
 
 ## Requirements
 
@@ -244,7 +244,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 ## Create a PKCS certificate profile
 
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

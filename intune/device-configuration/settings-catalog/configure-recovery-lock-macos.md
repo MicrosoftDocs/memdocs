@@ -55,12 +55,12 @@ This article applies to:
 :::column span="3":::
 > To configure this policy in the settings catalog, use an account with at least one of the following roles:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 >
 > To run the device actions, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account with one of the following roles:
 >
 > - [Intune administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
-> - An Intune [custom role](../../intune-service/fundamentals/create-custom-role.md) with the following permissions:
+> - An Intune [custom role](../../fundamentals/role-based-access-control/create-custom-role.md) with the following permissions:
 >
 >   - Remote tasks/Rotate macOS recovery lock password
 >   - Remote tasks/View macOS recovery lock password
@@ -102,7 +102,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 9. Select **Next**. In **Scope tags**, select **Next**.
 
-    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 10. In **Assignments**, select **Next**.
 
@@ -116,7 +116,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 ## Monitor Recovery Lock status and view the password
 
-When you assign the policy to devices, you can monitor its status using the [Per setting status report](../../intune-service/fundamentals/reports.md#per-setting-status-report-operational).
+When you assign the policy to devices, you can monitor its status using the [Per setting status report](../../device-management/reports/overview.md#per-setting-status-report-operational).
 
 If Recovery Lock is enabled, you can view the password in the report at **Passwords and keys** > **Recovery Lock Password**.
 

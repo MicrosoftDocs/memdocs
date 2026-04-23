@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up Intune enrollment of Android Enterprise dedicated devices
@@ -35,7 +34,7 @@ Devices must have:
 
 To set up Android Enterprise dedicated device management, follow these steps:
 
-1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../../intune-service/fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you're first setting up Intune for mobile device management.
+1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../../fundamentals/setup-mdm-authority.md) for instructions. You set this item only once, when you're first setting up Intune for mobile device management.
 2. [Connect your Intune tenant account to your Managed Google Play account](connect-managed-google-play.md).
 3. [Create an enrollment profile.](#create-an-enrollment-profile)
 4. [Create a device group](#create-a-device-group).
@@ -96,7 +95,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
    > Be sure to select a device group, not a user group.
 
 7. Select **Next** to continue to **Scope tags**.
-8.  Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+8.  Optionally, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 9. Select **Next** to continue to **Review + create**.
 10. Review your choices, and then select **Create** to finish creating the profile.
 

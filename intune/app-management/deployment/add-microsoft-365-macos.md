@@ -55,14 +55,14 @@ In this step, you provide information about the app suite. This information help
 
 ## Step 2 - Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app suite.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
 
-1. Select the **Required** or **Available for enrolled devices** group assignments for the app suite. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+1. Select the **Required** or **Available for enrolled devices** group assignments for the app suite. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
     >[!Note]
     > You cannot uninstall the 'Microsoft 365 apps for macOS' app suite through Intune.

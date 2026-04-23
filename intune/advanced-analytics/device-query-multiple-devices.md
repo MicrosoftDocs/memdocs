@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Device query for multiple devices
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 Use Device query for multiple devices in Microsoft Intune to run Kusto Query Language (KQL) queries across device inventory data and identify trends across your managed fleet. This article explains prerequisites, how to create and run queries in the Intune admin center, how to work with results, and which operators, functions, and properties are supported.
 
@@ -391,5 +391,5 @@ Cpu
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: ../intune-service/fundamentals/create-custom-role.md
-[INT-R1]: ../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator

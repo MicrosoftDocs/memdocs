@@ -7,13 +7,10 @@ ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_Add
 ---
 
 # Add apps to Microsoft Intune
-
-[!INCLUDE [azure_portal](../../intune-service/includes/azure_portal.md)]
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
@@ -73,7 +70,7 @@ The following table lists the specific app types and how you can add them in the
 | [Cross platform web apps](./add-web.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../configuration/manage-system-apps-android.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | [Windows app (Win32)](./add-win32.md)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
-| [Enterprise App Catalog app (Win32)](./add-enterprise-catalog.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
+| [Enterprise App Catalog app (Win32)](./add-enterprise-catalog-app.md)  | LOB app  | Select **Enterprise App Catalog app (Win32)** as the **app type**, select the app from the **Enterprise App Catalog**, and then set the app information, installation commands, requirements, and detection rules.  |
 | [macOS LOB apps](./add-lob-macos.md) | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | [macOS apps (DMG)](./add-dmg-macos.md) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
 | [macOS apps (PKG)](./add-unmanaged-pkg-macos.md) | LOB app  | Select **macOS app (PKG)** as the app type, select the **App package** file, and then select an installation file with the extension *.pkg*. This app type is used to add an unmanaged macOS PKG app to Intune.  |
@@ -104,7 +101,7 @@ Using Intune to manage apps with MAM without managing the device is useful when:
 - You want to provide a one-time pop-up message to let users know that MAM protections are in place, rather than continual device-level notification.
 - You want to comply with policies that require less management capability on personal devices. For instance, you want to manage the corporate data for the apps, rather than manage the corporate data for the entire device.
 
-For more information, go to [Planning guide: Personal devices vs. Organization-owned devices](../../intune-service/fundamentals/intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
+For more information, go to [Planning guide: Personal devices vs. Organization-owned devices](../../fundamentals/planning-guide.md#personal-devices-vs-organization-owned-devices).
 
 ### Determine who will use the app
 
@@ -114,7 +111,7 @@ First, you must determine which group should have access to the app, based on th
 
 Intune also supports enabling access to client apps that require secure access to on-premises data, such as line-of-business app servers. You ordinarily provide this type of access by using [Intune-managed certificates](../../fundamentals/certificates/overview.md) for access control, combined with a standard VPN gateway or proxy in the perimeter, such as Microsoft Entra application proxy. The Intune [App Wrapping Tool and App SDK](../../developer/app-sdk/integration-methods.md) can help contain the accessed data within your line-of-business app, so that it can't pass corporate data to consumer apps or services.
 
-Use the [Intune deployment planning, design and implementation guide](../../intune-service/fundamentals/intune-planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+Use the [Intune deployment planning, design and implementation guide](../../fundamentals/planning-guide.md) to help determine how you identify the organizational groups. For information about assigning apps to groups, see [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 
 ### Determine the type of app for your solution
 
@@ -127,7 +124,7 @@ You can choose from the following app types:
 
 As you're determining which apps your organization needs, consider how the apps integrate with cloud services, what data the apps access, whether the apps are available to BYOD users, and whether the apps require internet access.
 
-For more information about the types of apps that your organization needs, [Create a design](../../intune-service/fundamentals/intune-planning-guide.md).
+For more information about the types of apps that your organization needs, [Create a design](../../fundamentals/planning-guide.md).
 
 ### Understanding app management and protection policies
 
@@ -264,4 +261,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Built-in apps](./add-built-in.md)
 - [Android Enterprise system app](../configuration/manage-system-apps-android.md)
 - [Win32 apps](./win32.md)
-- [Enterprise App Catalog app (Win32)](./add-enterprise-catalog.md)
+- [Enterprise App Catalog app (Win32)](./add-enterprise-catalog-app.md)

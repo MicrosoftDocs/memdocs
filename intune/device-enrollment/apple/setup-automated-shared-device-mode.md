@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
-- highpri
 ---
 
 # Set up enrollment for devices in shared device mode
@@ -77,7 +76,7 @@ Create an assignment filter to quickly target devices assigned to your enrollmen
 * **Operator**: Equals
 * **Value**: Enter the name of the enrollment profile you created for devices in shared device mode.
 
-For more information about how to create an assignment filter rule, see [Create a filter](../../intune-service/fundamentals/filters.md#prerequisites).
+For more information about how to create an assignment filter rule, see [Create a filter](../../fundamentals/filters/overview.md#prerequisites).
 
 ## Step 4: Create a device configuration policy
 Configure a single-sign on (SSO) app extension policy for shared device mode. Create a device configuration policy and include these configurations:
@@ -105,4 +104,4 @@ For more information about assigning a volume-purchased app, see [Assign a volum
 
 Shared devices, which are enrolled without user affinity, require minimal user interaction from the frontline worker. Upon receiving the device, the frontline worker will need to open the Microsoft Authenticator app to make sure the device is in shared device mode.
 
-[!INCLUDE [users-dont-like-enroll](../../intune-service/includes/users-dont-like-enroll.md)]
+[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]

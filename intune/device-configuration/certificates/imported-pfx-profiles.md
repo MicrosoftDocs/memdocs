@@ -47,7 +47,7 @@ Intune supports import of PFX certificates for the following platforms:
 - Windows
 
 
- [!INCLUDE [android_device_administrator_support](../../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Requirements
 
@@ -281,6 +281,6 @@ To learn more about KeyTalk's integration with Intune, see https://keytalk.com/s
 [Use SCEP for certificates](../../fundamentals/certificates/scep-infrastructure.md)
 ### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836  iddraft -->
 
-To support the [Security Management for Microsoft Defender for Endpoint](../../intune-service/protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Microsoft Entra ID as either *Windows Server* or as *Windows*.
+To support the [Security Management for Microsoft Defender for Endpoint](../../device-security/microsoft-defender/security-settings-management.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Microsoft Entra ID as either *Windows Server* or as *Windows*.
 
 With this change, you'll be able to improve policy targeting for Microsoft Defender for Endpoint security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices.

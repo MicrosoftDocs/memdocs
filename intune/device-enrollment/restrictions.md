@@ -6,14 +6,12 @@ ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
-- highpri
-- highseo
 - ContentEnagagementFY23
 ---
 
 # What are enrollment restrictions?  
 
- [!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Device enrollment restrictions let you restrict devices from enrolling in Intune based on certain device attributes. There are two types of device enrollment restrictions you can configure in Microsoft Intune:
 
@@ -62,7 +60,7 @@ Put a limit on the number of devices a person can enroll. You can set the device
 This configuration is in the admin center under **Enrollment device limit restrictions**.
 
 ### Device platform
- [!INCLUDE [android_device_administrator_support](../intune-service/includes/android-device-administrator-support.md)]
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 Block devices running on a specific device platform. You can apply this restriction to devices running:
 
    * Android device administrator
