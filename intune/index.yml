@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft Intune documentation
-summary: Manage devices, apps, and security with Microsoft Intune.
+summary: Explore guides, tutorials, and references for Microsoft Intune.
 brand: azure
 
 metadata:
@@ -26,7 +26,7 @@ highlightedContent:
       url: ./fundamentals/add-ons.md
 
 productDirectory:
-  title: Manage devices, apps, and security with Intune
+  title: Set up, secure, and operate your device fleet
   summary: Explore the core capabilities of Microsoft Intune and learn how to
     manage, secure, and support devices across your organization.
   items:
@@ -57,7 +57,19 @@ productDirectory:
         devices using app policies and assignments.
       url: ./app-management/index.yml
 
-  # ── Row 2 · PROTECT ─────────────────────────────────────────────
+  # ── Row 2 · SECURE ─────────────────────────────────────────────
+
+    - title: Keep devices updated
+      imageSrc: ./media/icons/hub-page/device-updates.svg
+      summary: Manage OS and driver updates for Windows, iOS, macOS, and Android
+        devices with update rings, expedited updates, and policies.
+      url: ./device-updates/windows/index.md
+
+    - title: Govern and administer
+      imageSrc: ./media/icons/hub-page/rbac.svg
+      summary: Configure role-based access, scope tags, audit logs, and tenant-wide
+        policies to operate Intune at scale.
+      url: ./fundamentals/role-based-access-control/overview.md
 
     - title: Secure devices and data
       imageSrc: ./media/icons/hub-page/device-security.svg
@@ -71,25 +83,13 @@ productDirectory:
         launch rules, and mobile application management for managed and unmanaged devices.
       url: ./app-management/app-protection/index.md
 
-    - title: Keep devices updated
-      imageSrc: ./media/icons/hub-page/device-updates.svg
-      summary: Manage OS and driver updates for Windows, iOS, macOS, and Android
-        devices with update rings, expedited updates, and policies.
-      url: ./device-updates/windows/index.md
+  # ── Row 3 · OPERATE ──────────────────────────────────────────────
 
     - title: Manage and support devices
       imageSrc: ./media/icons/hub-page/device-management.svg
       summary: Perform remote actions, manage device inventory and lifecycle, and
         provide remote assistance to users.
       url: ./device-management/index.yml
-
-  # ── Row 3 · EXTEND ──────────────────────────────────────────────
-
-    - title: Govern and administer
-      imageSrc: ./media/icons/hub-page/rbac.svg
-      summary: Configure role-based access, scope tags, audit logs, and tenant-wide
-        policies to operate Intune at scale.
-      url: ./fundamentals/role-based-access-control/overview.md
 
     - title: Monitor and analyze
       imageSrc: ./media/icons/hub-page/reports.svg
