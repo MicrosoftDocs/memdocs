@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Intune fundamentals
+title: Fundamentals
 summary: Learn about Microsoft Intune architecture, licensing, setup, and shared infrastructure that supports all Intune workloads.
 
 metadata:
-  title: Intune fundamentals
+  title: Fundamentals
   description: Get started with Microsoft Intune — architecture, licensing, tenant setup, RBAC, certificates, filters, and platform support.
   ms.topic: landing-page
   ms.date: 04/24/2026

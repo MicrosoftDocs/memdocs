@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Microsoft Intune developer resources documentation
+title: Developer resources
 
 summary: Use APIs, SDKs, and the Data Warehouse to extend and integrate with Microsoft Intune programmatically.
 
 metadata:
-  title: Intune developer resources
+  title: Developer resources
   description: Access Intune APIs, protect apps with the Intune App SDK, and report on device data with the Intune Data Warehouse.
   ms.topic: landing-page
   ms.date: 4/22/2026

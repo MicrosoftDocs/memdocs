@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Intune device management documentation
+title: Device management
 summary: Perform operational actions on managed devices, run scripts and remediations, view device inventory, and generate reports in Microsoft Intune.
 
 metadata:
-  title: Device management in Microsoft Intune
+  title: Device management
   description: Run remote actions, manage scripts and remediations, view device inventory, and export reports in Microsoft Intune.
   ms.topic: landing-page
   ms.date: 04/22/2026

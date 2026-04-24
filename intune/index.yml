@@ -95,7 +95,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/reports.svg
       summary: Track device health, compliance trends, and app deployment status
         with built-in reports and Endpoint Analytics.
-      url: ./endpoint-analytics/index.md
+      url: /intune/endpoint-analytics
 
     - title: Develop and integrate
       imageSrc: ./media/icons/hub-page/developer.svg
@@ -107,7 +107,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/copilot.svg
       summary: Use AI-powered Copilot and autonomous agents to query device data,
         troubleshoot issues, and streamline IT workflows.
-      url: ./copilot/index.yml
+      url: /intune/copilot/index
 
 conceptualContent:
 

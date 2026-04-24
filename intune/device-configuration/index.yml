@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 
-title: Microsoft Intune device configuration documentation
+title: Device configuration
 summary: Configure device settings, features, and security profiles in Microsoft Intune. Use the settings catalog, device templates, endpoint security profiles, and certificates to manage your device fleet.
 
 metadata:

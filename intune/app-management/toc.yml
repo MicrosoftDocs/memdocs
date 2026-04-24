@@ -1,6 +1,4 @@
 items:
-  - name: Application management documentation
-    href: ./index.yml
   - name: Overview
     href: ./overview.md
   - name: MAM for unenrolled devices
@@ -186,11 +184,11 @@ items:
               - name: iOS eBooks
                 href: ./deployment/manage-ebooks-ios.md
       - name: Protect apps
+        href: ./protection/index.yml
         items:
           - name: Selectively wipe apps
             href: ./protection/wipe-corporate-data.md
           - name: Use app protection policies
-            href: ./protection/index.yml
             items:
               - name: App protection policies overview
                 href: ./protection/overview.md
