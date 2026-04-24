@@ -264,14 +264,6 @@ items:
     href: ./device-updates/toc.yml
     topicHref: ./device-updates/index.yml
 
-  - name: Identity and access
-    href: /intune/identity-access
-    displayName: Conditional Access, SSO, certificates, identity protection
-
-  - name: Network and certificates
-    href: /intune/network-certificates
-    displayName: VPN, Wi-Fi, SCEP, PKCS, network access
-
   - name: Manage devices
     href: ./device-management/toc.yml
     topicHref: ./device-management/index.yml
