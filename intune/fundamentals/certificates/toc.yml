@@ -3,7 +3,7 @@ items:
   href: overview.md
 
 - name: Trusted certificate profiles
-  href: ../../device-configuration/certificates/trusted-root-profiles.md
+  href: /intune/device-configuration/certificates/trusted-root-profiles
 
 - name: Certificate Connector
   items:
@@ -23,7 +23,7 @@ items:
   - name: SCEP infrastructure
     href: scep-infrastructure.md
   - name: SCEP certificate profiles
-    href: ../../device-configuration/certificates/scep-profiles.md
+    href: /intune/device-configuration/certificates/scep-profiles
   - name: Use third-party certificate authority with SCEP
     href: third-party-ca-scep.md
   - name: Troubleshoot SCEP certificate profiles

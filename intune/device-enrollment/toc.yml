@@ -3,7 +3,7 @@ items:
   href: guide.md
   displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
 - name: Enrollment deployment guide
-  href: enroll-devices.md
+  href: /intune/device-enrollment/enroll-devices
 - name: Mobile Application Management without enrollment
   href: mam-without-enrollment.md
 - name: Configure enrollment features
@@ -57,9 +57,9 @@ items:
     - name: Set up automatic enrollment
       href: ./windows/enable-automatic-mdm.md
     - name: "Quickstart: Set up automatic enrollment"
-      href: ./windows/quickstart-automatic-mdm.md
+      href: /intune/device-enrollment/windows/quickstart-automatic-mdm
     - name: Enroll a Windows device
-      href: ./windows/quickstart-first-device.md
+      href: /intune/device-enrollment/windows/quickstart-first-device
     - name: Set up bulk enrollment and workplace join
       href: ./windows/create-bulk-package.md
   - name: Enrollment configurations
