@@ -2,102 +2,100 @@ items:
 - name: Device actions overview
   href: index.md
   displayName: remote actions
-- name: Actions list
-  items:
-  - name: Autopilot Reset
-    href: autopilot-reset.md
-    displayName: remote action
-  - name: BitLocker key rotation
-    href: rotate-bitlocker-keys.md
-    displayName: remote action
-  - name: Collect diagnostics
-    href: collect-diagnostics.md
-    displayName: remote action
-  - name: Disable Activation Lock
-    href: disable-activation-lock.md
-    displayName: remote action
-  - name: Delete
-    href: delete.md
-    displayName: remote action
-  - name: Deprovision
-    href: deprovision.md
-    displayName: remote action
-  - name: Fresh Start
-    href: fresh-start.md
-    displayName: remote action
-  - name: Full scan
-    href: full-scan.md
-    displayName: remote action
-  - name: Locate device
-    href: locate.md
-    displayName: remote action
-  - name: Logout current user
-    href: logout-user.md
-    displayName: remote action
-  - name: Lost Mode
-    href: lost-mode.md
-    displayName: remote action
-  - name: New remote assistance session
-    href: remote-assist.md
-    displayName: remote action
-  - name: Pause config refresh
-    href: pause-config-refresh.md
-    displayName: remote action
-  - name: Play Lost Mode sound
-    href: play-lost-mode-sound.md
-    displayName: remote action
-  - name: Quick scan
-    href: quick-scan.md
-    displayName: remote action
-  - name: Remote lock
-    href: remote-lock.md
-    displayName: remote action
-  - name: Remove apps and configuration
-    href: remove-apps-config.md
-    displayName: remote action
-  - name: Remove passcode
-    href: remove-passcode.md
-    displayName: remote action
-  - name: Remove user
-    href: remove-user.md
-    displayName: remote action
-  - name: Rename device
-    href: rename.md
-    displayName: remote action
-  - name: Reset passcode
-    href: reset-passcode.md
-    displayName: remote action
-  - name: Restart
-    href: restart.md
-    displayName: remote action
-  - name: Retire
-    href: retire.md
-    displayName: remote action
-  - name: Rotate local admin password
-    href: rotate-local-admin-password.md
-    displayName: remote action
-  - name: Rotate FileVault recovery key
-    href: rotate-filevault-recovery-key.md
-    displayName: remote action
-  - name: Rotate Recovery Lock passcode
-    href: rotate-recovery-lock-passcode.md
-    displayName: remote action
-  - name: Run remediation
-    href: run-remediation.md
-    displayName: remote action
-  - name: Send custom notification
-    href: send-custom-notification.md
-    displayName: remote action
-  - name: Shutdown
-    href: shutdown.md
-    displayName: remote action
-  - name: Sync
-    href: sync.md
-    displayName: remote action
-  - name: Update cellular data plan
-    href: update-cellular-data-plan.md
-    displayName: remote action
-  - name: Wipe
-    href: wipe.md
+- name: Autopilot Reset
+  href: autopilot-reset.md
+  displayName: remote action
+- name: BitLocker key rotation
+  href: rotate-bitlocker-keys.md
+  displayName: remote action
+- name: Collect diagnostics
+  href: collect-diagnostics.md
+  displayName: remote action
+- name: Disable Activation Lock
+  href: disable-activation-lock.md
+  displayName: remote action
+- name: Delete
+  href: delete.md
+  displayName: remote action
+- name: Deprovision
+  href: deprovision.md
+  displayName: remote action
+- name: Fresh Start
+  href: fresh-start.md
+  displayName: remote action
+- name: Full scan
+  href: full-scan.md
+  displayName: remote action
+- name: Locate device
+  href: locate.md
+  displayName: remote action
+- name: Logout current user
+  href: logout-user.md
+  displayName: remote action
+- name: Lost Mode
+  href: lost-mode.md
+  displayName: remote action
+- name: New remote assistance session
+  href: remote-assist.md
+  displayName: remote action
+- name: Pause config refresh
+  href: pause-config-refresh.md
+  displayName: remote action
+- name: Play Lost Mode sound
+  href: play-lost-mode-sound.md
+  displayName: remote action
+- name: Quick scan
+  href: quick-scan.md
+  displayName: remote action
+- name: Remote lock
+  href: remote-lock.md
+  displayName: remote action
+- name: Remove apps and configuration
+  href: remove-apps-config.md
+  displayName: remote action
+- name: Remove passcode
+  href: remove-passcode.md
+  displayName: remote action
+- name: Remove user
+  href: remove-user.md
+  displayName: remote action
+- name: Rename device
+  href: rename.md
+  displayName: remote action
+- name: Reset passcode
+  href: reset-passcode.md
+  displayName: remote action
+- name: Restart
+  href: restart.md
+  displayName: remote action
+- name: Retire
+  href: retire.md
+  displayName: remote action
+- name: Rotate local admin password
+  href: rotate-local-admin-password.md
+  displayName: remote action
+- name: Rotate FileVault recovery key
+  href: rotate-filevault-recovery-key.md
+  displayName: remote action
+- name: Rotate Recovery Lock passcode
+  href: rotate-recovery-lock-passcode.md
+  displayName: remote action
+- name: Run remediation
+  href: run-remediation.md
+  displayName: remote action
+- name: Send custom notification
+  href: send-custom-notification.md
+  displayName: remote action
+- name: Shutdown
+  href: shutdown.md
+  displayName: remote action
+- name: Sync
+  href: sync.md
+  displayName: remote action
+- name: Update cellular data plan
+  href: update-cellular-data-plan.md
+  displayName: remote action
+- name: Wipe
+  href: wipe.md
 - name: Troubleshoot device actions
   href: /troubleshoot/mem/intune/troubleshoot-device-actions?context=/intune/context
