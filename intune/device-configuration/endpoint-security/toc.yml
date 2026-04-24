@@ -35,3 +35,31 @@ items:
         href: ../../device-management/monitor-encryption.md
       - name: Troubleshoot BitLocker policies
         href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies?context=/intune/context
+
+  - name: Settings reference
+    items:
+      - name: Antivirus policy settings
+        items:
+          - name: macOS Defender Antivirus settings
+            href: ./ref-antivirus-defender-settings-macos.md
+          - name: Windows Defender Antivirus settings
+            href: ./ref-antivirus-defender-settings-windows.md
+          - name: Tenant attach Defender Antivirus settings
+            href: ./ref-antivirus-defender-settings-windows-tenant-attach.md
+          - name: Tenant attach Windows Security settings
+            href: ./ref-windows-security-settings-tenant-attach.md
+          - name: Windows Security experience settings
+            href: ./ref-security-experience-settings-windows.md
+      - name: Disk encryption profile settings
+        href: ./ref-disk-encryption-settings.md
+        displayName: AWA; Add Work Account
+      - name: Firewall policy settings
+        href: ./ref-firewall-settings.md
+      - name: Tenant attach Firewall settings
+        href: ./ref-firewall-settings-tenant-attach.md
+      - name: Endpoint detection and response profile settings
+        href: ./ref-edr-settings.md
+      - name: Attack surface reduction profile settings
+        href: ./ref-attack-surface-reduction-settings.md
+      - name: Account protection profile settings
+        href: ./ref-account-protection-settings.md

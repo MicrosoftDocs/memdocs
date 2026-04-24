@@ -2,7 +2,7 @@ items:
   - name: Overview
     href: ./overview.md
   - name: MAM for unenrolled devices
-    href: ../device-enrollment/mam-without-enrollment.md
+    href: /intune/device-enrollment/mam-without-enrollment
     displayName: mobile application management, mam-we, mamwe
 
   - name: Secure your corporate data using Edge for Business
@@ -67,7 +67,7 @@ items:
               - name: Windows LOB apps
                 href: ./deployment/add-lob-windows.md
               - name: Intune management extension for Windows
-                href: ../device-management/tools/management-extension-windows.md
+                href: /intune/device-management/tools/management-extension-windows
               - name: Enterprise App Management
                 items:
                   - name: Enterprise App Management overview
@@ -118,9 +118,9 @@ items:
               - name: Microsoft Defender for Endpoint for macOS
                 href: ./deployment/add-defender-macos.md
           - name: PowerShell scripts
-            href: ../device-management/tools/run-powershell-scripts-windows.md
+            href: /intune/device-management/tools/run-powershell-scripts-windows
           - name: macOS shell scripts
-            href: ../device-management/tools/run-shell-scripts-macos.md
+            href: /intune/device-management/tools/run-shell-scripts-macos
           - name: Get the app bundle ID
             href: ./collect-bundle-ids.md
       - name: Assign apps
@@ -221,7 +221,7 @@ items:
               - name: Manage data transfer between iOS apps
                 href: ./protection/manage-data-transfer-ios.md
           - name: Review app protection logs
-            href: ./protection/troubleshoot-protection-logs.md
+            href: /intune/app-management/protection/troubleshoot-protection-logs
       - name: Policies for Microsoft 365 apps
         href: ./configuration/microsoft-365-policies.md
       - name: Quiet time policies

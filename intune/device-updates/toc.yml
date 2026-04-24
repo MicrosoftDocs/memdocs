@@ -91,3 +91,8 @@ items:
     displayName: delivery optimization, windows updates
   - name: Windows Autopatch documentation
     href: /windows/deployment/windows-autopatch/?context=/intune/context
+
+- name: Error codes and descriptions
+  items:
+  - name: Software update agent error codes
+    href: windows/ref-agent-error-codes.md

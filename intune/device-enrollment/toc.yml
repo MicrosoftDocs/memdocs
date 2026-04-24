@@ -12,7 +12,7 @@ items:
     href: ./add-corporate-identifiers.md
     displayName: COD; corporate owned; IMEI; device ownership; serial
   - name: Add device categories
-    href: ../device-management/create-device-categories.md
+    href: /intune/device-management/create-device-categories
     displayName: group; category; categorize; security group
   - name: Add device enrollment manager
     href: ./setup-enrollment-manager.md
@@ -185,7 +185,7 @@ items:
   - name: Get started with Linux enrollment
     href: guide-linux.md
   - name: Intune user help documentation
-    href: ../user-help/enrollment/enroll-linux.md
+    href: /intune/user-help/enrollment/enroll-linux
 - name: Set up macOS enrollment
   items:
   - name: Get started with Mac enrollment
@@ -203,7 +203,7 @@ items:
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-macos.md
     - name: Set up macOS account configuration with LAPS
-      href: ../device-security/laps/setup-macos.md
+      href: /intune/device-security/laps/setup-macos
     - name: Set up Direct Enrollment for macOS
       href: ./apple/setup-direct-macos.md
   - name: Enrollment configurations

@@ -33,6 +33,9 @@ items:
             href: ./fundamentals/endpoint-management.md
           - name: What is device management?
             href: ./fundamentals/what-is-device-management.md
+          - name: Intune add-ons
+            href: ./fundamentals/add-ons.md
+            displayName: intune suite, add-ons, premium
 
           - name: What's new
             href: ./whats-new/toc.yml
@@ -220,6 +223,16 @@ items:
           - name: Manage roles and permissions
             href: ./fundamentals/role-based-access-control/toc.yml
 
+          - name: Tenant attach
+            href: ./fundamentals/tenant-attach.md
+
+          - name: Use policy sets to group policies together
+            displayName: android, ios, ipados, macos, windows
+            href: ./fundamentals/policy-sets.md
+
+          - name: Use assignment filters
+            href: ./fundamentals/filters/toc.yml
+
           - name: Configure security recommendations using Zero Trust
             items:
               - name: Configure security recommendations using Zero Trust
@@ -259,197 +272,6 @@ items:
     href: /intune/network-certificates
     displayName: VPN, Wi-Fi, SCEP, PKCS, network access
 
-  - name: Create and deploy Intune policies
-    items:
-      - name: Manage apps
-        href: app-management/toc.yml
-
-      - name: Protect and secure Data and Devices
-        items:
-          - name: Device protection overview
-            href: ./device-security/overview.md
-            displayName: compliant; noncompliant; mfa
-
-          - name: Compliance rules to protect resources
-            href: ./device-security/compliance/toc.yml
-
-          - name: Network access control
-            href: ./device-security/integrate-network-access-control.md
-            displayName: NAC
-
-          - name: Conditional Access
-            href: ./device-security/conditional-access-integration/toc.yml
-
-          - name: Software updates
-            href: ./device-updates/toc.yml
-
-          - name: Endpoint security
-            items:
-              - name: Endpoint security policies
-                href: ./device-configuration/endpoint-security/toc.yml
-
-              - name: Security baselines
-                href: ./device-security/security-baselines/toc.yml
-
-              - name: Microsoft Defender for Endpoint
-                href: ./device-security/microsoft-defender/toc.yml
-
-              - name: Security tasks
-                href: ./device-security/microsoft-defender/remediate-vulnerabilities.md
-
-              - name: Endpoint Privilege Management (EPM)
-                href: ./epm/toc.yml
-
-              - name: Tenant attach
-                href: ./fundamentals/tenant-attach.md
-
-          - name: Identity and access
-            items:
-              - name: Windows Hello for Business
-                items:
-                  - name: Windows Hello at device enrollment
-                    href: ./device-security/identity-protection/configure-tenant-wide-policy.md
-                  - name: Windows Hello after device enrollment
-                    href: ./device-security/identity-protection/deploy-group-policy.md
-              - name: Single sign-on (SSO) for Apple devices
-                items:
-                  - name: SSO overview & options
-                    displayName: single sign-on, ios, ipados, macos
-                    href: ./device-configuration/enterprise-sso-plugin.md
-                  - name: iOS/iPadOS Enterprise SSO plug-in
-                    displayName: single sign-on, ios, ipados
-                    href: ./device-configuration/settings-catalog/configure-enterprise-sso-plugin-ios.md
-                  - name: macOS SSO
-                    items:
-                      - name: Platform SSO
-                        items:
-                          - name: Platform SSO overview and configuration guide
-                            displayName: single sign-on, macos
-                            href: ./device-configuration/settings-catalog/configure-platform-sso-macos.md
-                          - name: Platform SSO scenarios
-                            displayName: single sign-on, macos
-                            href: ./device-configuration/settings-catalog/configure-platform-sso-scenarios-macos.md
-                      - name: Enterprise SSO app extension plug-in
-                        displayName: single sign-on, macos
-                        href: ./device-configuration/templates/configure-enterprise-sso-plugin-macos.md
-              - name: LAPS
-                href: ./device-security/laps/toc.yml
-
-          - name: Certificates and PKI
-            items:
-              - name: Microsoft Cloud PKI
-                href: ./cloud-pki/toc.yml
-              - name: Certificates
-                href: ./fundamentals/certificates/toc.yml
-
-          - name: Microsoft Tunnel VPN gateway
-            href: ./device-security/microsoft-tunnel/toc.yml
-
-          - name: Mobile Threat Defense partners
-            href: ./device-security/mobile-threat-defense/toc.yml
-            displayName: MTD
-
-          # Reference content
-
-          - name: Settings lists reference
-            items:
-              - name: API to add third-party certificate authority
-                href: ./fundamentals/certificates/ref-scep-api.md
-              - name: Compliance policy settings
-                items:
-                  - name: Compliance settings - Android device administrator
-                    href: ./device-security/compliance/ref-android-administrator-settings.md
-                  - name: Compliance settings - Android (AOSP)
-                    href: ./device-security/compliance/ref-android-aosp-settings.md
-                  - name: Compliance settings - Android Enterprise
-                    href: ./device-security/compliance/ref-android-enterprise-settings.md
-                  - name: Compliance settings - iOS
-                    href: ./device-security/compliance/ref-ios-ipados-settings.md
-                  - name: Compliance settings - Linux
-                    href: ./device-security/compliance/ref-linux-settings.md
-                  - name: Compliance settings - macOS
-                    href: ./device-security/compliance/ref-macos-settings.md
-                  - name: Compliance settings - Windows
-                    href: ./device-security/compliance/ref-windows-settings.md
-                  - name: Compliance settings - Windows 8.1
-                    href: ./device-security/compliance/ref-windows-8-1-settings.md
-
-              - name: Endpoint security policy settings
-                items:
-                  - name: Antivirus policy settings
-                    items:
-                      - name: macOS Defender Antivirus settings
-                        href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-macos.md
-                      - name: Windows Defender Antivirus settings
-                        href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows.md
-                      - name: Tenant attach Defender Antivirus settings
-                        href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md
-                      - name: Tenant attach Windows Security settings
-                        href: ./device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach.md
-                      - name: Windows Security experience settings
-                        href: ./device-configuration/endpoint-security/ref-security-experience-settings-windows.md
-                  - name: Disk encryption profile settings
-                    href: ./device-configuration/endpoint-security/ref-disk-encryption-settings.md
-                    displayName: AWA; Add Work Account
-                  - name: Firewall policy settings
-                    href: ./device-configuration/endpoint-security/ref-firewall-settings.md
-                  - name: Tenant attach Firewall settings
-                    href: ./device-configuration/endpoint-security/ref-firewall-settings-tenant-attach.md
-                  - name: Endpoint detection and response profile settings
-                    href: ./device-configuration/endpoint-security/ref-edr-settings.md
-                  - name: Attack surface reduction profile settings
-                    href: ./device-configuration/endpoint-security/ref-attack-surface-reduction-settings.md
-                  - name: Account protection profile settings
-                    href: ./device-configuration/endpoint-security/ref-account-protection-settings.md
-
-              - name: Security baseline settings
-                items:
-                  - name: Windows MDM baseline settings
-                    href: ./device-security/security-baselines/ref-windows-mdm-settings.md
-                  - name: Microsoft Defender for Endpoint baseline settings
-                    href: ./device-security/security-baselines/ref-defender-settings.md
-                  - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
-                    href: ./device-security/security-baselines/ref-v2-office-settings.md
-                  - name: Microsoft Edge baseline settings (version 112 and higher)
-                    href: ./device-security/security-baselines/ref-v2-edge-settings.md
-                  - name: Microsoft Edge baseline settings (version 85 and older)
-                    href: ./device-security/security-baselines/ref-edge-settings.md
-                  - name: HoloLens 2 - Standard security baseline settings
-                    href: ./device-security/security-baselines/ref-hololens2-standard-settings.md
-                  - name: HoloLens 2 - Advanced security baseline settings
-                    href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
-                  - name: Windows 365 baseline settings
-                    href: ./device-security/security-baselines/ref-windows-365-settings.md
-
-              - name: Microsoft Tunnel command-line tools
-                href: ./device-security/microsoft-tunnel/ref-file-commands.md
-
-              - name: Zero Trust security configuration examples
-                href: ./device-security/security-configurations/toc.yml
-
-              - name: Error codes and descriptions
-                items:
-                  - name: Software update errors
-                    href: ./device-updates/windows/ref-agent-error-codes.md
-
-      - name: Assign and deploy policies
-        items:
-          - name: Assign policies to users & groups
-            displayName: deploy, push, android, ios, ipados, macos, windows
-            href: ./device-configuration/assign-device-profile.md
-          - name: Use assignment filters
-            href: ./fundamentals/filters/toc.yml
-          - name: Use policy sets to group policies together
-            displayName: android, ios, ipados, macos, windows
-            href: ./fundamentals/policy-sets.md
-          - name: Common questions and answers
-            displayName: faq, frequently asked questions, android, ios, ipados, macos,
-              windows
-            href: ./device-configuration/troubleshoot-device-profiles.md
-          - name: Troubleshoot policies and profiles
-            displayName: android, ios, ipados, macos, windows
-            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?context=/intune/context
-
   - name: Manage devices
     href: ./device-management/toc.yml
     topicHref: ./device-management/index.yml
@@ -466,6 +288,9 @@ items:
 
       - name: Microsoft Copilot + Intune
         href: ./copilot/toc.yml
+
+      - name: Remote Help
+        href: ./remote-help/toc.yml
 
       - name: Support and troubleshooting
         items:
@@ -498,30 +323,6 @@ items:
         displayName: GDPR, HIPAA, SOC, ISO
       - name: Privacy and personal data
         href: ./privacy/toc.yml
-
-  - name: Intune Suite
-    items:
-      - name: Intune Suite overview
-        href: ./fundamentals/add-ons.md
-
-      - name: Endpoint Privilege Management (EPM)
-        href: ./epm/toc.yml
-
-      - name: Enterprise App Management
-        items:
-          - name: Enterprise App Management overview
-            href: /intune/app-management/deployment/enterprise-app-management
-          - name: Add an Enterprise App Catalog app (Win32)
-            href: /intune/app-management/deployment/add-enterprise-catalog-app
-
-      - name: Microsoft Cloud PKI
-        href: ./cloud-pki/toc.yml
-
-      - name: Remote Help
-        href: ./remote-help/toc.yml
-
-      - name: Advanced Analytics
-        href: ./advanced-analytics/toc.yml
 
   - name: Developer guidance
     href: ./developer/toc.yml

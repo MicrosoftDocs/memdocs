@@ -62,3 +62,6 @@ items:
 
 - name: Use S/MIME to encrypt email
   href: ../../device-security/certificates/s-mime.md
+
+- name: API to add third-party certificate authority
+  href: ./ref-scep-api.md

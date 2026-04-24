@@ -8,6 +8,12 @@ items:
   - name: View and monitor profiles
     displayName: android, ios, ipados, macos, windows
     href: ./monitor-device-profile.md
+  - name: Assign policies to users & groups
+    displayName: deploy, push, android, ios, ipados, macos, windows
+    href: ./assign-device-profile.md
+  - name: Common questions and answers
+    displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
+    href: ./troubleshoot-device-profiles.md
 
   - name: Profiles and their step-by-step guides
     items:
@@ -86,6 +92,27 @@ items:
             href: ./templates/configure-per-app-vpn-android.md
           - name: Per-App VPN for iOS/iPadOS
             href: ./templates/configure-per-app-vpn-ios.md
+      - name: Single sign-on (SSO)
+        items:
+          - name: SSO overview & options
+            displayName: single sign-on, ios, ipados, macos
+            href: ./enterprise-sso-plugin.md
+          - name: iOS/iPadOS Enterprise SSO plug-in
+            displayName: single sign-on, ios, ipados
+            href: ./settings-catalog/configure-enterprise-sso-plugin-ios.md
+          - name: macOS SSO
+            items:
+              - name: Platform SSO
+                items:
+                  - name: Platform SSO overview and configuration guide
+                    displayName: single sign-on, macos
+                    href: ./settings-catalog/configure-platform-sso-macos.md
+                  - name: Platform SSO scenarios
+                    displayName: single sign-on, macos
+                    href: ./settings-catalog/configure-platform-sso-scenarios-macos.md
+              - name: Enterprise SSO app extension plug-in
+                displayName: single sign-on, macos
+                href: ./templates/configure-enterprise-sso-plugin-macos.md
       - name: Wi-Fi
         items:
           - name: Configure Wi-Fi
@@ -183,7 +210,7 @@ items:
         items:
           - name: OEMConfig
             displayName: original equipment manufacturers, oem, android enterprise, ae
-            href: ./templates/configure-oemconfig-android.md
+            href: /intune/device-configuration/templates/configure-oemconfig-android
           - name: Device restrictions
             displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./templates/ref-device-restrictions-android-enterprise.md
@@ -203,7 +230,7 @@ items:
           - name: PKCS imported certificate
             href: ./certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
           - name: Derived credential
-            href: ../device-security/certificates/derived-credentials.md
+            href: /intune/device-security/certificates/derived-credentials
           - name: SCEP certificate
             href: ./certificates/scep-profiles.md
 
@@ -237,7 +264,7 @@ items:
             href: ./templates/configure-custom-settings-apple.md
           - name: Derived credentials
             displayName: apple, ios, ipados
-            href: ../device-security/certificates/derived-credentials.md
+            href: /intune/device-security/certificates/derived-credentials
           - name: Device features
             displayName: apple, ios, ipados, macos
             href: ./templates/ref-device-features-apple.md
@@ -255,19 +282,19 @@ items:
             href: ./templates/ref-kernel-extensions-settings-macos.md
           - name: PKCS certificate
             displayName: apple, ios, ipados, macos
-            href: ./certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
+            href: /intune/device-configuration/certificates/pkcs-profiles#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
             displayName: apple, ios, ipados, macos
-            href: ./certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
+            href: /intune/device-configuration/certificates/imported-pfx-profiles#create-a-pkcs-imported-certificate-profile
           - name: Preference file
             displayName: apple, macos
-            href: ./templates/configure-preference-file-macos.md
+            href: /intune/device-configuration/templates/configure-preference-file-macos
           - name: SCEP certificate
             displayName: apple, ios, ipados, macos
-            href: ./certificates/scep-profiles.md
+            href: /intune/device-configuration/certificates/scep-profiles
           - name: Trusted certificate
             displayName: apple, ios, ipados, macos
-            href: ./certificates/trusted-root-profiles.md
+            href: /intune/device-configuration/certificates/trusted-root-profiles
           - name: VPN
             displayName: apple, ios, ipados, macos
             href: ./templates/ref-vpn-settings-apple.md
@@ -284,7 +311,7 @@ items:
       - name: Windows
         items:
           - name: BIOS configurations and other settings
-            href: ./templates/configure-bios-windows.md
+            href: /intune/device-configuration/templates/configure-bios-windows
           - name: Custom (OMA-URI)
             displayName: oma uri, windows
             href: ./templates/configure-custom-settings-windows.md
@@ -301,7 +328,7 @@ items:
             displayName: surface
             href: ./templates/ref-device-restrictions-surface-hub.md
           - name: Domain join
-            href: ./templates/configure-domain-join-windows.md
+            href: /intune/device-configuration/templates/configure-domain-join-windows
           - name: Edition upgrade and mode switch
             displayName: windows, s mode
             href: ./templates/ref-edition-upgrade-settings-windows.md

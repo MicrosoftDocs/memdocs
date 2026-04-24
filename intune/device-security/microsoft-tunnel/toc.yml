@@ -19,3 +19,5 @@ items:
     href: ./upgrade.md
   - name: Microsoft Tunnel with Conditional Access
     href: ./conditional-access.md
+  - name: Microsoft Tunnel command-line tools
+    href: ./ref-file-commands.md

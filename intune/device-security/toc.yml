@@ -1,3 +1,12 @@
 items:
   - name: Overview
     href: ./overview.md
+  - name: Network access control
+    href: ./integrate-network-access-control.md
+    displayName: NAC
+  - name: Windows Hello for Business
+    items:
+      - name: Windows Hello at device enrollment
+        href: ./identity-protection/configure-tenant-wide-policy.md
+      - name: Windows Hello after device enrollment
+        href: ./identity-protection/deploy-group-policy.md
