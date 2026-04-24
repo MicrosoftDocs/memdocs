@@ -34,7 +34,7 @@ For general guidance on planning update deployments, see [Create a deployment pl
 Windows driver update policies let you control which driver updates are allowed to install on managed devices. You can choose between automatic approval of recommended drivers or require manual review for every update.
 
 > [!NOTE]
-> Windows driver update policies do not consider about CHID targeting drivers even if these are displayed as recommended driver. Recommended driver means the latest version for it. If the user updates to the CHID targeting driver, it must receive the driver update from Windows Update.
+> Windows driver update policies don’t enforce Computer Hardware ID (CHID) targeting defined by OEMs, even when those drivers are listed as recommended. As a result, managed devices can receive newer recommended driver versions instead of CHID-targeted drivers.
 
 ### Automatic approval of recommended drivers
 
