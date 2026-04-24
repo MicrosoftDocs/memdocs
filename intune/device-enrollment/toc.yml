@@ -2,8 +2,6 @@ items:
 - name: Device enrollment overview
   href: guide.md
   displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-- name: Enrollment deployment guide
-  href: /intune/device-enrollment/enroll-devices
 - name: Mobile Application Management without enrollment
   href: mam-without-enrollment.md
 - name: Configure enrollment features
@@ -11,9 +9,6 @@ items:
   - name: Add corporate identifiers
     href: ./add-corporate-identifiers.md
     displayName: COD; corporate owned; IMEI; device ownership; serial
-  - name: Add device categories
-    href: /intune/device-management/create-device-categories
-    displayName: group; category; categorize; security group
   - name: Add device enrollment manager
     href: ./setup-enrollment-manager.md
     displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
@@ -56,10 +51,6 @@ items:
     items:
     - name: Set up automatic enrollment
       href: ./windows/enable-automatic-mdm.md
-    - name: "Quickstart: Set up automatic enrollment"
-      href: /intune/device-enrollment/windows/quickstart-automatic-mdm
-    - name: Enroll a Windows device
-      href: /intune/device-enrollment/windows/quickstart-first-device
     - name: Set up bulk enrollment and workplace join
       href: ./windows/create-bulk-package.md
   - name: Enrollment configurations
@@ -202,8 +193,6 @@ items:
         href: ./apple/setup-automated-macos.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-macos.md
-    - name: Set up macOS account configuration with LAPS
-      href: /intune/device-security/laps/setup-macos
     - name: Set up Direct Enrollment for macOS
       href: ./apple/setup-direct-macos.md
   - name: Enrollment configurations

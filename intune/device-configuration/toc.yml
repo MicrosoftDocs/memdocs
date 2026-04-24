@@ -208,9 +208,6 @@ items:
     items:
       - name: Android
         items:
-          - name: OEMConfig
-            displayName: original equipment manufacturers, oem, android enterprise, ae
-            href: /intune/device-configuration/templates/configure-oemconfig-android
           - name: Device restrictions
             displayName: cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./templates/ref-device-restrictions-android-enterprise.md
@@ -223,16 +220,6 @@ items:
           - name: Wi-Fi
             displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./templates/ref-wifi-settings-android-enterprise.md
-          - name: Trusted certificate
-            href: ./certificates/trusted-root-profiles.md
-          - name: PKCS certificate
-            href: ./certificates/pkcs-profiles.md#create-a-pkcs-certificate-profile
-          - name: PKCS imported certificate
-            href: ./certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile
-          - name: Derived credential
-            href: /intune/device-security/certificates/derived-credentials
-          - name: SCEP certificate
-            href: ./certificates/scep-profiles.md
 
           - name: Android device administrator
             items:
@@ -262,9 +249,6 @@ items:
           - name: Custom
             displayName: apple, ios, ipados, macos
             href: ./templates/configure-custom-settings-apple.md
-          - name: Derived credentials
-            displayName: apple, ios, ipados
-            href: /intune/device-security/certificates/derived-credentials
           - name: Device features
             displayName: apple, ios, ipados, macos
             href: ./templates/ref-device-features-apple.md
@@ -280,21 +264,6 @@ items:
           - name: Extensions (deprecated)
             displayName: kernel, system, macos
             href: ./templates/ref-kernel-extensions-settings-macos.md
-          - name: PKCS certificate
-            displayName: apple, ios, ipados, macos
-            href: /intune/device-configuration/certificates/pkcs-profiles#create-a-pkcs-certificate-profile
-          - name: PKCS imported certificate
-            displayName: apple, ios, ipados, macos
-            href: /intune/device-configuration/certificates/imported-pfx-profiles#create-a-pkcs-imported-certificate-profile
-          - name: Preference file
-            displayName: apple, macos
-            href: /intune/device-configuration/templates/configure-preference-file-macos
-          - name: SCEP certificate
-            displayName: apple, ios, ipados, macos
-            href: /intune/device-configuration/certificates/scep-profiles
-          - name: Trusted certificate
-            displayName: apple, ios, ipados, macos
-            href: /intune/device-configuration/certificates/trusted-root-profiles
           - name: VPN
             displayName: apple, ios, ipados, macos
             href: ./templates/ref-vpn-settings-apple.md
@@ -310,8 +279,6 @@ items:
 
       - name: Windows
         items:
-          - name: BIOS configurations and other settings
-            href: /intune/device-configuration/templates/configure-bios-windows
           - name: Custom (OMA-URI)
             displayName: oma uri, windows
             href: ./templates/configure-custom-settings-windows.md
@@ -327,8 +294,6 @@ items:
           - name: Device restrictions (Windows 10 Teams)
             displayName: surface
             href: ./templates/ref-device-restrictions-surface-hub.md
-          - name: Domain join
-            href: /intune/device-configuration/templates/configure-domain-join-windows
           - name: Edition upgrade and mode switch
             displayName: windows, s mode
             href: ./templates/ref-edition-upgrade-settings-windows.md

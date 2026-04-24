@@ -59,8 +59,6 @@ items:
             href: ./app-sdk/android-phase-7.md
           - name: Appendix
             href: ./app-sdk/android-appendix.md
-      - name: Intune App SDK Xamarin Bindings
-        href: /intune/developer/app-sdk/quickstart-integration
       - name: Microsoft Tunnel for MAM SDK
         href: ./app-sdk/tunnel-mam-ios.md
   - name: Use the Intune Data Warehouse

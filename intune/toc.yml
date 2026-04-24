@@ -156,7 +156,7 @@ items:
                 href: ./fundamentals/deploy-configuration-step-4.md
               - name: Step 5 - Enroll devices
                 displayName: deployment, mdm, android, ios, ipados, macos, windows
-                href: /intune/device-enrollment/enroll-devices
+                href: ./device-enrollment/enroll-devices.md
               - name: Protection and configuration levels
                 displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
                 href: ./fundamentals/protection-configuration-levels.md

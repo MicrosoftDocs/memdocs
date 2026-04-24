@@ -1,9 +1,6 @@
 items:
   - name: Overview
     href: ./overview.md
-  - name: MAM for unenrolled devices
-    href: /intune/device-enrollment/mam-without-enrollment
-    displayName: mobile application management, mam-we, mamwe
 
   - name: Secure your corporate data using Edge for Business
     href: /intune/solutions/edge-data-security/overview
@@ -66,8 +63,6 @@ items:
                 href: ./deployment/add-lob-ios.md
               - name: Windows LOB apps
                 href: ./deployment/add-lob-windows.md
-              - name: Intune management extension for Windows
-                href: /intune/device-management/tools/management-extension-windows
               - name: Enterprise App Management
                 items:
                   - name: Enterprise App Management overview
@@ -117,10 +112,6 @@ items:
                 href: ./deployment/add-edge-macos.md
               - name: Microsoft Defender for Endpoint for macOS
                 href: ./deployment/add-defender-macos.md
-          - name: PowerShell scripts
-            href: /intune/device-management/tools/run-powershell-scripts-windows
-          - name: macOS shell scripts
-            href: /intune/device-management/tools/run-shell-scripts-macos
           - name: Get the app bundle ID
             href: ./collect-bundle-ids.md
       - name: Assign apps
@@ -220,16 +211,12 @@ items:
                 href: ./protection/monitor-policies.md
               - name: Manage data transfer between iOS apps
                 href: ./protection/manage-data-transfer-ios.md
-          - name: Review app protection logs
-            href: /intune/app-management/protection/troubleshoot-protection-logs
       - name: Policies for Microsoft 365 apps
         href: ./configuration/microsoft-365-policies.md
       - name: Quiet time policies
         href: ./protection/configure-quiet-time.md
       - name: Troubleshoot
         items:
-          - name: Help users troubleshoot problems
-            href: /intune/fundamentals/it-pro-support/help-desk-operators
           - name: Troubleshoot app installation problems
             href: /troubleshoot/mem/intune/troubleshoot-app-install?context=/intune/context
           - name: App installation error reference
