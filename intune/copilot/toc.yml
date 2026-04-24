@@ -1,7 +1,4 @@
 items:
-  - name: Copilot in Intune
-    displayName: ai, copilot
-    href: ./index.md
   - name: Explore your Intune data
     displayName: ai, copilot, explore, data, query
     href: ./explorer.md
