@@ -3,40 +3,33 @@ items:
 - name: Overview
   href: ./index.md
 
-- name: Data collection and data processing
+- name: Data collection and processing
   items:
   - name: Data collection
     href: ./data-handling/data-collection.md
   - name: Data storage and processing
     href: ./data-handling/data-storage-processing.md
-  - name: Optional diagnostic data in client apps
+  - name: Optional diagnostic data
     href: ./data-handling/optional-diagnostic-data.md
-
-- name: Diagnostic data requirements
-  items:
-  - name: Windows diagnostic data requirements for Intune
+  - name: Windows diagnostic data requirements
     href: ./enable-windows-diagnostic-data.md
 
-- name: Data sharing with third parties
+- name: Third-party data sharing
   items:
-  - name: Overview of third-party data sharing
+  - name: Third-party data sharing overview
     href: ./data-sharing/index.md
-  - name: Data sent to Intune
-    items:
-    - name: Data Apple sends to Intune
-      href: ./data-sharing/ref-apple-to-intune.md
-    - name: Data Google sends to Intune
-      href: ./data-sharing/ref-google-to-intune.md
-    - name: Information shared from Jamf Pro to Intune
-      href: ./data-sharing/ref-jamf-to-intune.md
-  - name: Data sent from Intune
-    items:
-    - name: Data Intune sends to Apple
-      href: ./data-sharing/ref-intune-to-apple.md
-    - name: Data Intune sends to Google
-      href: ./data-sharing/ref-intune-to-google.md
-    - name: Data Intune sends to Zebra
-      href: ./data-sharing/ref-intune-to-zebra.md
+  - name: Data Apple sends to Intune
+    href: ./data-sharing/ref-apple-to-intune.md
+  - name: Data Google sends to Intune
+    href: ./data-sharing/ref-google-to-intune.md
+  - name: Data Jamf sends to Intune
+    href: ./data-sharing/ref-jamf-to-intune.md
+  - name: Data Intune sends to Apple
+    href: ./data-sharing/ref-intune-to-apple.md
+  - name: Data Intune sends to Google
+    href: ./data-sharing/ref-intune-to-google.md
+  - name: Data Intune sends to Zebra
+    href: ./data-sharing/ref-intune-to-zebra.md
 
 - name: Manage personal data
   items:

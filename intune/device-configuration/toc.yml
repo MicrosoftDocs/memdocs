@@ -1,5 +1,5 @@
 items:
-  - name: What is device configuration?
+  - name: Overview
     displayName: android, ios, ipados, macos, windows
     href: ./overview.md
   - name: Settings insight
@@ -8,84 +8,55 @@ items:
   - name: Create a profile
     displayName: android, ios, ipados, macos, windows
     href: ./create-device-profile.md
-  - name: View and monitor profiles
+  - name: Monitor profiles
     displayName: android, ios, ipados, macos, windows
     href: ./monitor-device-profile.md
-  - name: Assign policies to users & groups
+  - name: Assign policies
     displayName: deploy, push, android, ios, ipados, macos, windows
     href: ./assign-device-profile.md
-  - name: Common questions and answers
+  - name: Troubleshoot profiles
     displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
     href: ./troubleshoot-device-profiles.md
 
-  - name: Profiles and their step-by-step guides
+  - name: Settings catalog and GPO
+    displayName: gpo, admx, ios, ipados, macos, windows
     items:
-      - name: Settings catalog, GPO, and ADMX
+      - name: Overview and get started
         displayName: gpo, admx, ios, ipados, macos, windows
-        items:
-          - name: Overview and get started
-            displayName: gpo, admx, ios, ipados, macos, windows
-            href: ./settings-catalog/index.md
-          - name: Common tasks for the settings catalog
-            items:
-              - name: Sample tasks
-                displayName: gpo, admx, ios, ipados, macos, windows
-                href: ./settings-catalog/common-tasks.md
-              - name: Create Universal Print policy
-                displayName: printers, gpo, admx, windows
-                href: ./settings-catalog/configure-universal-print.md
-              - name: Configure Microsoft Edge
-                displayName: gpo, windows, macos, admx
-                href: ./settings-catalog/configure-edge.md
-              - name: Update Microsoft 365
-                displayName: gpo, windows, admx, update channel
-                href: ./settings-catalog/update-office.md
-              - name: Restrict USB devices
-                displayName: gpo, windows
-                href: ./settings-catalog/restrict-usb.md
-              - name: Configure ADMX
-                displayName: gpo, admx, windows, settings catalog
-                href: ./settings-catalog/configure-admx-templates-windows.md
-              - name: Configure Recovery Lock on macOS
-                displayName: gpo, admx, macos
-                href: ./settings-catalog/configure-recovery-lock-macos.md
-          - name: Import custom ADMX and ADML
-            displayName: gpo, windows
-            href: ./settings-catalog/import-custom-admx-templates.md
-          - name: Group policy analytics
-            items:
-              - name: Analyze on-premises GPOs
-                displayName: gpo, admx, csp, windows
-                href: ./import-group-policy-analytics.md
-              - name: Import GPOs to create a policy
-                displayName: gpo, admx, settings catalog, windows
-                href: ./migrate-group-policy.md
+        href: ./settings-catalog/index.md
+      - name: Sample tasks
+        displayName: gpo, admx, ios, ipados, macos, windows
+        href: ./settings-catalog/common-tasks.md
+      - name: Create Universal Print policy
+        displayName: printers, gpo, admx, windows
+        href: ./settings-catalog/configure-universal-print.md
+      - name: Configure Microsoft Edge
+        displayName: gpo, windows, macos, admx
+        href: ./settings-catalog/configure-edge.md
+      - name: Update Microsoft 365
+        displayName: gpo, windows, admx, update channel
+        href: ./settings-catalog/update-office.md
+      - name: Restrict USB devices
+        displayName: gpo, windows
+        href: ./settings-catalog/restrict-usb.md
+      - name: Configure ADMX
+        displayName: gpo, admx, windows, settings catalog
+        href: ./settings-catalog/configure-admx-templates-windows.md
+      - name: Configure Recovery Lock on macOS
+        displayName: gpo, admx, macos
+        href: ./settings-catalog/configure-recovery-lock-macos.md
+      - name: Import custom ADMX and ADML
+        displayName: gpo, windows
+        href: ./settings-catalog/import-custom-admx-templates.md
+      - name: Analyze on-premises GPOs
+        displayName: gpo, admx, csp, windows
+        href: ./import-group-policy-analytics.md
+      - name: Import GPOs to create a policy
+        displayName: gpo, admx, settings catalog, windows
+        href: ./migrate-group-policy.md
 
-      - name: Properties catalog (device inventory)
-        displayName: windows, device inventory
-        href: ./collect-device-properties.md
-      - name: Custom settings & scripts
-        items:
-          - name: Create custom profiles
-            displayName: oma-uri, csp, bash, powershell, android, ios, ipados, macos, windows
-            href: ./templates/configure-custom-settings.md
-          - name: HoloLens 2 example
-            displayName: csp, powershell, windows, holographic
-            href: ./templates/configure-wdac-hololens.md
-          - name: Add Linux Bash scripts
-            displayName: linux
-            href: ./templates/configure-custom-settings-linux.md
-      - name: Restrict device settings and features
-        href: ./templates/configure-device-restrictions.md
-        displayName: device restrictions, android, aosp, ios, ipados, macos, windows
-      - name: Email
-        items:
-          - name: Configure email
-            displayName: android, ios, ipados, windows
-            href: ./templates/configure-email.md
-          - name: Issues and resolutions
-            displayName: android, ios, ipados, windows
-            href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune?context=/intune/context
+  - name: Connectivity
+    items:
       - name: VPN
         items:
           - name: Configure VPN
@@ -93,29 +64,8 @@ items:
             href: ./templates/configure-vpn.md
           - name: Per-app VPN for Android
             href: ./templates/configure-per-app-vpn-android.md
-          - name: Per-App VPN for iOS/iPadOS
+          - name: Per-app VPN for iOS/iPadOS
             href: ./templates/configure-per-app-vpn-ios.md
-      - name: Single sign-on (SSO)
-        items:
-          - name: SSO overview & options
-            displayName: single sign-on, ios, ipados, macos
-            href: ./enterprise-sso-plugin.md
-          - name: iOS/iPadOS Enterprise SSO plug-in
-            displayName: single sign-on, ios, ipados
-            href: ./settings-catalog/configure-enterprise-sso-plugin-ios.md
-          - name: macOS SSO
-            items:
-              - name: Platform SSO
-                items:
-                  - name: Platform SSO overview and configuration guide
-                    displayName: single sign-on, macos
-                    href: ./settings-catalog/configure-platform-sso-macos.md
-                  - name: Platform SSO scenarios
-                    displayName: single sign-on, macos
-                    href: ./settings-catalog/configure-platform-sso-scenarios-macos.md
-              - name: Enterprise SSO app extension plug-in
-                displayName: single sign-on, macos
-                href: ./templates/configure-enterprise-sso-plugin-macos.md
       - name: Wi-Fi
         items:
           - name: Configure Wi-Fi
@@ -130,7 +80,86 @@ items:
           - name: Troubleshoot Wi-Fi
             displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
             href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles?context=/intune/context
-      - name: BIOS & DFCI on Windows
+      - name: Wired networks
+        displayName: 802.1x, macos, windows
+        href: ./templates/configure-wired-networks.md
+      - name: Network boundary on Windows
+        href: ./templates/create-network-boundary-windows.md
+        displayName: trusted sites, ipv4, ipv6, range
+      - name: Email
+        items:
+          - name: Configure email
+            displayName: android, ios, ipados, windows
+            href: ./templates/configure-email.md
+          - name: Troubleshoot email profiles
+            displayName: android, ios, ipados, windows
+            href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune?context=/intune/context
+      - name: eSIM cellular on Windows
+        displayName: embedded sim, activation code
+        items:
+          - name: eSIM bulk activation with download server (settings catalog)
+            href: ./templates/configure-esim-download-server.md
+          - name: eSIM bulk activation with activation codes (import CSV)
+            href: ./templates/enable-esim.md
+
+  - name: Identity and SSO
+    items:
+      - name: SSO overview and options
+        displayName: single sign-on, ios, ipados, macos
+        href: ./enterprise-sso-plugin.md
+      - name: iOS/iPadOS Enterprise SSO plug-in
+        displayName: single sign-on, ios, ipados
+        href: ./settings-catalog/configure-enterprise-sso-plugin-ios.md
+      - name: Platform SSO for macOS
+        displayName: single sign-on, macos
+        href: ./settings-catalog/configure-platform-sso-macos.md
+      - name: Platform SSO scenarios for macOS
+        displayName: single sign-on, macos
+        href: ./settings-catalog/configure-platform-sso-scenarios-macos.md
+      - name: Enterprise SSO plug-in for macOS
+        displayName: single sign-on, macos
+        href: ./templates/configure-enterprise-sso-plugin-macos.md
+      - name: Domain Join on Windows
+        href: ./templates/configure-domain-join-windows.md
+        displayName: enrollment, active directory, azure ad joined, join domain
+
+  - name: Device experience
+    items:
+      - name: Device restrictions
+        href: ./templates/configure-device-restrictions.md
+        displayName: device restrictions, android, aosp, ios, ipados, macos, windows
+      - name: Device features on Apple
+        href: ./templates/configure-device-features-apple.md
+        displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
+      - name: Kiosks and dedicated devices
+        href: ./templates/configure-kiosk.md
+        displayName: single app, multi app, windows, holographic
+      - name: Shared multi-user devices
+        displayName: shared pc, education, windows, holographic
+        href: ./templates/configure-shared-device.md
+      - name: Education Take a Test app
+        displayName: windows
+        href: ./templates/configure-education-settings.md
+      - name: Upgrade Windows and S mode
+        href: ./templates/configure-edition-upgrade-windows.md
+
+  - name: Platform-specific profiles
+    items:
+      - name: Custom settings and scripts
+        items:
+          - name: Create custom profiles
+            displayName: oma-uri, csp, bash, powershell, android, ios, ipados, macos, windows
+            href: ./templates/configure-custom-settings.md
+          - name: HoloLens 2 example
+            displayName: csp, powershell, windows, holographic
+            href: ./templates/configure-wdac-hololens.md
+          - name: Add Linux Bash scripts
+            displayName: linux
+            href: ./templates/configure-custom-settings-linux.md
+      - name: Properties catalog (device inventory)
+        displayName: windows, device inventory
+        href: ./collect-device-properties.md
+      - name: BIOS and DFCI on Windows
         items:
           - name: Configure the BIOS
             displayName: bios, firmware, windows, dell
@@ -138,18 +167,9 @@ items:
           - name: DFCI settings for UEFI
             href: ./templates/configure-dfci-windows.md
             displayName: dfci, firmware, uefi, surface
-      - name: Domain Join on Windows
-        href: ./templates/configure-domain-join-windows.md
-        displayName: enrollment, active directory, azure ad joined, join domain
-
-      - name: Upgrade Windows and S mode
-        href: ./templates/configure-edition-upgrade-windows.md
-      - name: Wired networks
-        displayName: 802.1x, macos, windows
-        href: ./templates/configure-wired-networks.md
-      - name: Device features on iOS/iPadOS and macOS
-        href: ./templates/configure-device-features-apple.md
-        displayName: airprint, home screen, lock screen, sso, single sign-on, ios, ipados, macos
+      - name: Windows health monitoring
+        href: ./templates/configure-health-monitoring-windows.md
+        displayName: endpoint analytics, microsoft productivity score
       - name: Extensions on macOS
         href: ./templates/configure-kernel-extensions-macos.md
         displayName: kernel extensions, system extensions
@@ -166,49 +186,26 @@ items:
             href: ./templates/troubleshoot-zebra-mx-android.md
       - name: OEMConfig on Android Enterprise
         items:
-          - name: Overview & Get started
+          - name: Overview and get started
             displayName: original equipment manufacturers, oem, oemconfig, schema, zebra, android
             href: ./templates/configure-oemconfig-android.md
           - name: Profiles on Zebra devices
             displayName: original equipment manufacturers, oem, oemconfig, schema, android
             href: ./templates/deploy-oemconfig-zebra-android.md
-          - name: Managed Home Screen (MHS) permissions
+          - name: Managed Home Screen permissions
             displayName: original equipment manufacturers, oem, oemconfig, schema, android, auto-grant
             href: ./templates/configure-managed-home-screen-permissions-android.md
-      - name: Kiosks and dedicated devices
-        href: ./templates/configure-kiosk.md
-        displayName: single app, multi app, windows, holographic
-      - name: Shared multi-user devices
-        displayName: shared pc, education, windows, holographic
-        href: ./templates/configure-shared-device.md
-      - name: Network boundary on Windows
-        href: ./templates/create-network-boundary-windows.md
-        displayName: trusted sites, ipv4, ipv6, range
-      - name: Windows health monitoring
-        href: ./templates/configure-health-monitoring-windows.md
-        displayName: endpoint analytics, microsoft productivity score
-      - name: Education Take a Test app
-        displayName: windows
-        href: ./templates/configure-education-settings.md
-      - name: eSIM cellular on Windows
-        displayName: embedded sim, activation code
+
+  - name: Settings reference
+    items:
+      - name: Settings catalog lists
         items:
-          - name: eSIM bulk activation with download server (settings catalog)
-            href: ./templates/configure-esim-download-server.md
-          - name: eSIM bulk activation with activation codes (import CSV)
-            href: ./templates/enable-esim.md
-
-  - name: Settings catalog lists
-    items:
-      - name: Apple
-        displayName: ios, ipados, macos
-        href: ./settings-catalog/ref-apple-settings.md
-      - name: Android
-        displayName: Android
-        href: ./settings-catalog/ref-android-settings.md
-
-  - name: Device Configuration template settings lists
-    items:
+          - name: Apple
+            displayName: ios, ipados, macos
+            href: ./settings-catalog/ref-apple-settings.md
+          - name: Android
+            displayName: Android
+            href: ./settings-catalog/ref-android-settings.md
       - name: Android
         items:
           - name: Device restrictions
@@ -223,30 +220,26 @@ items:
           - name: Wi-Fi
             displayName: wifi, wireless, cope, cobo, cosu, byod, work profile, android, android enterprise, ae, aosp
             href: ./templates/ref-wifi-settings-android-enterprise.md
-
-          - name: Android device administrator
-            items:
-              - name: Custom (OMA-URI)
-                items:
-                  - name: Custom settings
-                    displayName: oma uri, android, device administrator, da
-                    href: ./templates/configure-custom-settings-android.md
-                  - name: Allow/block apps for Samsung Knox Standard
-                    displayName: oma uri, custom, android, device administrator, da
-                    href: ./templates/manage-apps-samsung-knox.md
-              - name: Device restrictions
-                displayName: android, device administrator, da
-                href: ./templates/ref-device-restrictions-android.md
-              - name: Email
-                displayName: android, device administrator, da
-                href: ./templates/ref-email-settings-android.md
-              - name: VPN
-                displayName: android, device administrator, da
-                href: ./templates/ref-vpn-settings-android.md
-              - name: Wi-Fi
-                displayName: wifi, wireless, android, device administrator, da
-                href: ./templates/ref-wifi-settings-android.md
-
+      - name: Android device administrator
+        items:
+          - name: Custom settings
+            displayName: oma uri, android, device administrator, da
+            href: ./templates/configure-custom-settings-android.md
+          - name: Allow/block apps for Samsung Knox Standard
+            displayName: oma uri, custom, android, device administrator, da
+            href: ./templates/manage-apps-samsung-knox.md
+          - name: Device restrictions
+            displayName: android, device administrator, da
+            href: ./templates/ref-device-restrictions-android.md
+          - name: Email
+            displayName: android, device administrator, da
+            href: ./templates/ref-email-settings-android.md
+          - name: VPN
+            displayName: android, device administrator, da
+            href: ./templates/ref-vpn-settings-android.md
+          - name: Wi-Fi
+            displayName: wifi, wireless, android, device administrator, da
+            href: ./templates/ref-wifi-settings-android.md
       - name: Apple
         items:
           - name: Custom
@@ -279,7 +272,6 @@ items:
           - name: Bundle IDs for built-in apps
             displayName: apple, ios, ipados, macos
             href: ./templates/ref-bundle-ids-ios.md
-
       - name: Windows
         items:
           - name: Custom (OMA-URI)

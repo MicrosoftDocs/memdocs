@@ -252,6 +252,29 @@ items:
 
   - name: Monitor and troubleshoot
     items:
+      - name: Tenant administration
+        items:
+          - name: Tenant status and health
+            href: ./governance/tenant-status.md
+          - name: Audit logs for Intune activities
+            href: ./governance/monitor-audit-logs.md
+          - name: Review logs with Azure Monitor
+            href: ./governance/integrate-azure-monitor.md
+          - name: Device cleanup rules
+            href: ./governance/configure-cleanup-rules.md
+
+      - name: Get help
+        items:
+          - name: Get support in the Intune admin center
+            href: ./fundamentals/it-pro-support/get-support-admin-center.md
+          - name: Help Desk operator role
+            href: ./fundamentals/it-pro-support/help-desk-operators.md
+          - name: Troubleshoot issues
+            href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
+          - name: User help documentation
+            href: /intune/user-help
+            displayName: company portal, device user
+
       - name: Endpoint analytics
         href: ./endpoint-analytics/toc.yml
 
@@ -260,29 +283,6 @@ items:
 
       - name: Remote Help
         href: ./remote-help/toc.yml
-
-      - name: Support and troubleshooting
-        items:
-          - name: Help Desk operator role
-            href: ./fundamentals/it-pro-support/help-desk-operators.md
-          - name: Get support in the Intune admin center
-            href: ./fundamentals/it-pro-support/get-support-admin-center.md
-          - name: Troubleshoot issues
-            href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
-          - name: User help documentation
-            href: /intune/user-help
-            displayName: company portal, device user
-
-      - name: Tenant administration
-        items:
-          - name: Tenant status and health
-            href: ./governance/tenant-status.md
-          - name: Device cleanup rules
-            href: ./governance/configure-cleanup-rules.md
-          - name: Audit logs for Intune activities
-            href: ./governance/monitor-audit-logs.md
-          - name: Review logs with Azure Monitor
-            href: ./governance/integrate-azure-monitor.md
 
   - name: Privacy and compliance
     displayName: GDPR, HIPAA, SOC, ISO

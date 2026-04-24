@@ -1,6 +1,8 @@
 items:
-- name: Software updates planning guides
+- name: Planning guides
   items:
+  - name: Manage OS versions across devices
+    href: manage-os-versions.md
   - name: BYOD and personal devices
     displayName: software updates, android, ios, ipados
     href: byod-planning-guide.md
@@ -14,12 +16,12 @@ items:
     displayName: software updates
     href: apple/planning-guide-macos.md
 
-- name: Android Enterprise updates
+- name: Android updates
   items:
   - name: Firmware Over-the-Air updates
     href: android/manage-fota.md
     displayName: fota updates firmware android
-  - name: Zebra LG OTA Integration
+  - name: Zebra LifeGuard OTA integration
     href: android/setup-zebra-lifeguard.md
     displayName: ota updates android
 
@@ -31,74 +33,72 @@ items:
   - name: Software update reports
     href: apple/monitor-reports.md
     displayName: apple updates ios macos
-  - name: Update policies (deprecated)
-    items:
-    - name: iOS/iPadOS update policies (deprecated)
-      href: apple/deprecated-mdm-policies-ios.md
-    - name: macOS update policies (deprecated)
-      href: apple/deprecated-mdm-policies-macos.md
+  - name: iOS/iPadOS update policies (deprecated)
+    href: apple/deprecated-mdm-policies-ios.md
+  - name: macOS update policies (deprecated)
+    href: apple/deprecated-mdm-policies-macos.md
 
 - name: Windows updates
   items:
   - name: Overview
     href: windows/index.md
     displayName: windows updates
-  - name: Update ring policies
+  - name: Update rings
     items:
-    - name: Get started
+    - name: Configure update rings
       href: windows/manage-update-rings.md
       displayName: windows updates, rings
-    - name: Policy settings
+    - name: Update ring settings
       href: windows/ref-update-ring-settings.md
       displayName: windows updates, rings
-    - name: Reports
+    - name: Update ring reports
       href: windows/monitor-update-rings.md
       displayName: windows updates, rings
-  - name: Manage Windows feature updates
+  - name: Feature updates
     items:
-    - name: Get started
+    - name: Configure feature updates
       href: windows/manage-feature-updates.md
       displayName: windows feature updates
-    - name: Configure feature update policies
+    - name: Feature update policy settings
       href: windows/configure-feature-update-policy.md
-      displayName: windows quality updates
+      displayName: windows feature updates
     - name: Rollout options
       href: windows/configure-rollout-options.md
       displayName: windows updates
     - name: Upgrade Windows 10 devices
       href: windows/upgrade-to-windows-11.md
-    - name: Feature update policies reports
+    - name: Feature update reports
       href: windows/monitor-feature-updates.md
       displayName: windows feature updates
-    - name: Feature updates compatibility reports
+    - name: Compatibility reports
       href: windows/monitor-compatibility.md
       displayName: windows updates, reports
-  - name: Manage Windows quality updates
+  - name: Quality updates
     items:
-    - name: Get started
+    - name: Configure quality updates
       href: windows/manage-quality-updates.md
       displayName: windows quality updates
     - name: Use hotpatch with quality updates
       href: windows/configure-hotpatch.md
       displayName: windows quality updates
-    - name: Expedite Windows quality updates
+    - name: Expedite quality updates
       href: windows/configure-expedite-policy.md
       displayName: windows quality updates
-    - name: Monitor and report on Windows quality updates
+    - name: Quality update reports
       href: windows/monitor-quality-updates.md
       displayName: windows quality updates
-  - name: Manage Windows driver updates
+  - name: Driver updates
     items:
-    - name: Get started
+    - name: Configure driver updates
       href: windows/manage-driver-updates.md
       displayName: windows driver updates
-    - name: Configure driver update policies
+    - name: Driver update policy settings
       href: windows/configure-driver-update-policy.md
       displayName: windows driver updates
-    - name: Driver update policies reports
+    - name: Driver update reports
       href: windows/monitor-driver-updates.md
-      displayName: windows updates
-    - name: Driver updates FAQs
+      displayName: windows driver updates
+    - name: Driver updates FAQ
       href: windows/driver-updates-faq.yml
       displayName: windows driver updates
   - name: Delivery Optimization
@@ -107,7 +107,5 @@ items:
   - name: Windows Autopatch documentation
     href: /windows/deployment/windows-autopatch/?context=/intune/context
 
-- name: Error codes and descriptions
-  items:
-  - name: Software update agent error codes
-    href: windows/ref-agent-error-codes.md
+- name: Software update agent error codes
+  href: windows/ref-agent-error-codes.md

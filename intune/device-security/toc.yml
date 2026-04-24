@@ -2,7 +2,7 @@ items:
   - name: Overview
     href: ./overview.md
 
-  - name: Compliance & Conditional Access
+  - name: Compliance and Conditional Access
     items:
       - name: Compliance policies
         href: ./compliance/toc.yml
@@ -24,13 +24,13 @@ items:
       - name: Zero Trust configuration examples
         href: ./security-configurations/toc.yml
 
-  - name: Identity & access control
+  - name: Identity and access control
     items:
       - name: Windows Hello for Business
         items:
-          - name: Windows Hello at device enrollment
+          - name: Configure at enrollment
             href: ./identity-protection/configure-tenant-wide-policy.md
-          - name: Windows Hello after device enrollment
+          - name: Configure after enrollment
             href: ./identity-protection/deploy-group-policy.md
       - name: Network access control
         href: ./integrate-network-access-control.md
