@@ -299,24 +299,22 @@ items:
 
   - name: Industry and scenario guides
     items:
-      - name: Industry and regional guides
+      - name: Education
+        href: ./solutions/education/toc.yml
+
+      - name: Government
         items:
-          - name: Education
-            href: ./solutions/education/toc.yml
+          - name: Intune US Government service description
+            href: ./fundamentals/government-service.md
+          - name: Intune US government endpoints
+            href: /intune/fundamentals/endpoints-us-government
 
-          - name: Government
-            items:
-              - name: Intune US Government service description
-                href: ./fundamentals/government-service.md
-              - name: Intune US government endpoints
-                href: /intune/fundamentals/endpoints-us-government
-
-          - name: China
-            items:
-              - name: Intune operated by 21Vianet in China
-                href: ./fundamentals/china.md
-              - name: China endpoints
-                href: /intune/fundamentals/endpoints-china
+      - name: China
+        items:
+          - name: Intune operated by 21Vianet in China
+            href: ./fundamentals/china.md
+          - name: China endpoints
+            href: /intune/fundamentals/endpoints-china
 
       - name: Scenario-based guidance
         href: ./solutions/toc.yml

@@ -12,9 +12,6 @@ items:
     href: ./cloud-native-endpoints/toc.yml
   - name: End-to-end macOS endpoint guide
     href: ./end-to-end-guides/macos-endpoints-get-started.md
-  - name: Create settings catalog policy and compare with on-premises ADMX
-    href: ../device-configuration/settings-catalog/tutorial-group-policy-migration.md
-    displayName: admx, administrative template, windows, gpo
 
   - name: "Zero Trust: Manage devices with Intune 🔗"
     href: /microsoft-365/solutions/manage-devices-with-intune-overview
