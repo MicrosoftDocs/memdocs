@@ -368,7 +368,7 @@ Configuration Manager can randomize the enrollment, so enrollment might not occu
 
 ## Related articles
 
-- [MAM without enrollment](../mam-without-enrollment.md)
+- [MAM without enrollment](../../app-management/protection/mam-without-enrollment.md)
 - [Android enrollment guide](../android/guide.md)
 - [iOS/iPadOS enrollment guide](../apple/guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)

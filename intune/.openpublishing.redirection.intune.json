@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path_from_root": "/intune/device-enrollment/mam-without-enrollment.md",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
+      "redirect_document_id": false
+    },
+    {
       "source_path_from_root": "/intune/agents/index.md",
       "redirect_url": "/intune/copilot/agents",
       "redirect_document_id": false

@@ -70,7 +70,7 @@ For more information about Linux device management, see:
 
 For more device enrollment guides, see:  
 
-- [MAM](./mam-without-enrollment.md)
+- [MAM](../app-management/protection/mam-without-enrollment.md)
 - [Android enrollment guide](android/guide.md)
 - [iOS/iPadOS enrollment guide](apple/guide-ios-ipados.md)
 - [macOS enrollment guide](apple/guide-macos.md)

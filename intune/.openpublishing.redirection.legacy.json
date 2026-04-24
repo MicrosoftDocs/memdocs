@@ -3497,22 +3497,22 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/deployment-guide-enrollment-mamwe.md",
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe.md",
       "redirect_document_id": true,
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment"
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment"
     },
     {
       "source_path_from_root": "/intune/intune/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
       "redirect_document_id": false
     },
     {

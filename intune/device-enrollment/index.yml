@@ -20,8 +20,8 @@ landingContent:
       links:
       - text: Device enrollment guide
         url: guide.md
-      - text: Mobile Application Management (MAM) for unenrolled devices
-        url: mam-without-enrollment.md
+      - text: App protection without enrollment
+        url: ../app-management/protection/mam-without-enrollment.md
       - text: Understand Intune and Microsoft Entra device limit restrictions
         url: limits-intune-entra.md
       - text: Overview of enrollment restrictions

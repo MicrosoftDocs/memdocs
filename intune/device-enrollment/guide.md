@@ -121,7 +121,7 @@ On the platforms that don't require a factory reset, when these devices enroll i
 
 There's an enrollment guide for every platform. Choose your scenario, and get started:
 
-- [Application management without enrollment](./mam-without-enrollment.md)
+- [Application management without enrollment](../app-management/protection/mam-without-enrollment.md)
 - [Android](android/guide.md)
 - [iOS/iPadOS](apple/guide-ios-ipados.md)
 - [Linux](guide-linux.md)
@@ -159,7 +159,7 @@ The MDM certificate renews automatically as long as enrolled devices are communi
 
 For platform-specific enrollment guidance, go to:
 
-- [Application Management without enrollment](./mam-without-enrollment.md)
+- [Application Management without enrollment](../app-management/protection/mam-without-enrollment.md)
 - [Android enrollment guide](android/guide.md)
 - [iOS/iPadOS enrollment guide](apple/guide-ios-ipados.md)
 - [Linux enrollment guide](guide-linux.md)
