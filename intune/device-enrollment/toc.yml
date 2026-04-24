@@ -1,6 +1,4 @@
 items:
-- name: Device enrollment documentation
-  href: index.yml
 - name: Device enrollment overview
   href: guide.md
   displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO

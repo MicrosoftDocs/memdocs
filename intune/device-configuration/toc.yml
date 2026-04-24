@@ -1,6 +1,4 @@
 items:
-  - name: Overview
-    href: ./index.yml
   - name: What is device configuration?
     displayName: android, ios, ipados, macos, windows
     href: ./overview.md

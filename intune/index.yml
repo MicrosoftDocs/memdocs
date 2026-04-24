@@ -136,7 +136,7 @@ conceptualContent:
             - url: ./fundamentals/ref-supported-platforms.md
               itemType: get-started
               text: Supported platforms and requirements
-            - url: ./privacy-compliance.yml
+            - url: ./governance/compliance-and-regulatory-alignment.md
               itemType: overview
               text: Privacy and compliance
 

@@ -1,7 +1,4 @@
 items:
-- name: Device management documentation
-  href: index.yml
-
 - name: Device actions
   href: ./actions/toc.yml
 

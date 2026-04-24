@@ -1,7 +1,4 @@
 items:
-  - name: Developer documentation
-    href: ./index.yml
-
   - name: Access Intune APIs in Microsoft Graph
     items:
       - name: Use Microsoft Entra ID to access Intune APIs in Microsoft Graph
