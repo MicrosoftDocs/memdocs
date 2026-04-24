@@ -2,6 +2,7 @@ items:
   - name: Microsoft Intune documentation
     href: index.yml
   - name: Get started
+    href: ./fundamentals/index.yml
     items:
       - name: Learn about Microsoft Intune
         items:

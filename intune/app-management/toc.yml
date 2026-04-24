@@ -190,6 +190,7 @@ items:
           - name: Selectively wipe apps
             href: ./protection/wipe-corporate-data.md
           - name: Use app protection policies
+            href: ./protection/index.yml
             items:
               - name: App protection policies overview
                 href: ./protection/overview.md
