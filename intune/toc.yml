@@ -234,7 +234,7 @@ items:
     href: ./app-management/toc.yml
     topicHref: ./app-management/index.yml
 
-  - name: Security & compliance
+  - name: Secure devices and data
     href: ./device-security/toc.yml
     topicHref: ./device-security/index.yml
 
@@ -246,7 +246,7 @@ items:
     href: ./device-management/toc.yml
     topicHref: ./device-management/index.yml
 
-  - name: Microsoft Copilot in Intune
+  - name: Copilot and agents
     href: ./copilot/toc.yml
     topicHref: ./copilot/index.md
 
@@ -293,7 +293,7 @@ items:
       - name: Privacy and personal data
         href: ./privacy/toc.yml
 
-  - name: Developer guidance
+  - name: Develop and automate
     href: ./developer/toc.yml
     topicHref: ./developer/index.yml
 

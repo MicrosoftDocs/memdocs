@@ -51,7 +51,7 @@ productDirectory:
         configuration profiles and the settings catalog.
       url: ./device-configuration/index.yml
 
-    - title: Deploy and manage apps
+    - title: Manage apps
       imageSrc: ./media/icons/hub-page/app-management.svg
       summary: Add, deploy, configure, and protect apps across managed and unmanaged
         devices using app policies and assignments.
@@ -85,19 +85,19 @@ productDirectory:
 
   # ── Row 3 · OPERATE ──────────────────────────────────────────────
 
-    - title: Manage and support devices
+    - title: Manage devices
       imageSrc: ./media/icons/hub-page/device-management.svg
       summary: Perform remote actions, manage device inventory and lifecycle, and
         provide remote assistance to users.
       url: ./device-management/index.yml
 
-    - title: Monitor and analyze
+    - title: Monitor and troubleshoot
       imageSrc: ./media/icons/hub-page/reports.svg
       summary: Track device health, compliance trends, and app deployment status
         with built-in reports and Endpoint Analytics.
       url: /intune/endpoint-analytics
 
-    - title: Develop and integrate
+    - title: Develop and automate
       imageSrc: ./media/icons/hub-page/developer.svg
       summary: Use Microsoft Graph APIs, PowerShell, and the Intune Data Warehouse
         to automate management tasks and build custom integrations.

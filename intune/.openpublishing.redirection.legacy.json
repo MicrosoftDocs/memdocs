@@ -7633,7 +7633,7 @@
     {
       "source_path_from_root": "/intune/intune/fundamentals/frontline-worker-overview.md",
       "redirect_url": "/intune/solutions/frontline-worker",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/protect/tutorial-protect-email-on-enrolled-devices.md",
