@@ -8,6 +8,8 @@ metadata:
   description: Manage OS, driver, and firmware updates for Windows, Apple, and Android devices with Microsoft Intune update policies and rings.
   ms.topic: landing-page
   ms.date: 04/23/2026
+  author: paolomatarazzo
+  ms.author: paoloma
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:

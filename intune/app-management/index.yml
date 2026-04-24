@@ -9,6 +9,8 @@ metadata:
   description: Deploy, configure, and monitor applications across managed devices with Microsoft Intune app management.
   ms.topic: landing-page
   ms.date: 04/22/2026
+  author: paolomatarazzo
+  ms.author: paoloma
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |

@@ -6,9 +6,10 @@ summary: Protect organizational data and devices by managing compliance, securit
 metadata:
   title: Device security
   description: Manage device compliance, security baselines, Microsoft Defender integration, VPN tunnels, identity protection, and threat defense with Microsoft Intune.
-  ms.author: brenduns
   ms.topic: landing-page
   ms.date: 04/22/2026
+  author: paolomatarazzo
+  ms.author: paoloma
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |

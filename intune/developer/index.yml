@@ -9,6 +9,8 @@ metadata:
   description: Access Intune APIs, protect apps with the Intune App SDK, and report on device data with the Intune Data Warehouse.
   ms.topic: landing-page
   ms.date: 4/22/2026
+  author: paolomatarazzo
+  ms.author: paoloma
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |

@@ -8,6 +8,8 @@ metadata:
   description: Configure device settings and features in Microsoft Intune using settings catalog, templates, endpoint security profiles, and certificates.
   ms.topic: landing-page
   ms.date: 4/22/2026
+  author: paolomatarazzo
+  ms.author: paoloma
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |

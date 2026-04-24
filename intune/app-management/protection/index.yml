@@ -8,6 +8,8 @@ metadata:
   description: Create and manage app protection policies in Microsoft Intune to safeguard corporate data, control data transfer, and enforce conditional launch rules.
   ms.topic: landing-page
   ms.date: 04/24/2026
+  author: paolomatarazzo
+  ms.author: paoloma
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |
