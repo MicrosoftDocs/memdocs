@@ -1,12 +1,12 @@
 ### YamlMime:Landing
 
-title: Microsoft application management documentation
+title: Application management documentation
 
-summary: Deploy, configure, protect, and monitor applications across your managed devices with Microsoft Intune.
+summary: Deploy, configure, and monitor applications across your managed devices with Microsoft Intune.
 
 metadata:
   title: Application management
-  description: Deploy, configure, protect, and monitor applications across managed devices with Microsoft Intune app management.
+  description: Deploy, configure, and monitor applications across managed devices with Microsoft Intune app management.
   ms.topic: landing-page
   ms.date: 04/22/2026
 
@@ -107,28 +107,6 @@ landingContent:
         url: configuration/configure-managed-ios.md
       - text: Manage Outlook for iOS and Android With Intune
         url: configuration/configure-outlook.md
-  - title: Protect apps with app protection policies
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: App Protection Policies Overview
-        url: protection/overview.md
-    - linkListType: concept
-      links:
-      - text: iOS/iPadOS App Protection Policy Settings
-        url: protection/ref-settings-ios.md
-      - text: Android App Protection Policy Settings
-        url: protection/ref-settings-android.md
-      - text: Data Protection Framework Using App Protection Policies
-        url: protection/data-protection-framework.md
-    - linkListType: how-to-guide
-      links:
-      - text: Create and Deploy App Protection Policies
-        url: protection/create-policy.md
-      - text: Data Protection for Windows MAM
-        url: protection/enable-mam-windows.md
-      - text: Configure quiet time policies
-        url: protection/configure-quiet-time.md
   - title: Assign, monitor, and troubleshoot apps
     linkLists:
     - linkListType: how-to-guide
@@ -139,9 +117,5 @@ landingContent:
         url: deployment/configure-assignment-scope.md
       - text: Monitor App Information and Assignments
         url: monitor-assignments.md
-      - text: How to Monitor App Protection Policies
-        url: protection/monitor-policies.md
       - text: Troubleshoot Win32 Apps in Microsoft Intune
         url: deployment/troubleshoot-win32.md
-      - text: Review app protection logs
-        url: protection/troubleshoot-protection-logs.md

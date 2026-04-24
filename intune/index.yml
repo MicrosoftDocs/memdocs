@@ -69,7 +69,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/device-updates.svg
       summary: Manage OS and driver updates for Windows, iOS, macOS, and Android
         devices with update rings, expedited updates, and policies.
-      url: ./device-updates/windows/index.md
+      url: ./device-updates/index.yml
 
     - title: Secure devices and data
       imageSrc: ./media/icons/hub-page/device-security.svg
@@ -81,7 +81,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Safeguard corporate data with app protection policies, conditional
         launch rules, and mobile application management for managed and unmanaged devices.
-      url: ./app-management/protection/overview.md
+      url: ./app-management/protection/index.yml
 
   # ── Row 3 · OPERATE ──────────────────────────────────────────────
 
