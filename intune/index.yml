@@ -65,11 +65,11 @@ productDirectory:
         Endpoint, and manage endpoint security policies.
       url: ./device-security/index.yml
 
-    - title: Manage identity and access
-      imageSrc: ./media/icons/hub-page/identity-access.svg
-      summary: Control authentication with Conditional Access, certificates,
-        single sign-on, and identity protection policies.
-      url: ./identity-access.yml
+    - title: Protect apps and data
+      imageSrc: ./media/icons/hub-page/app-protection.svg
+      summary: Safeguard corporate data with app protection policies, conditional
+        launch rules, and mobile application management for managed and unmanaged devices.
+      url: ./app-management/app-protection/index.md
 
     - title: Keep devices updated
       imageSrc: ./media/icons/hub-page/device-updates.svg
@@ -77,19 +77,13 @@ productDirectory:
         devices with update rings, expedited updates, and policies.
       url: ./device-updates/windows/index.md
 
-    - title: Set up network and certificates
-      imageSrc: ./media/icons/hub-page/network-certificates.svg
-      summary: Configure VPN, Wi-Fi, certificate profiles, and network access
-        to connect and secure devices across your organization.
-      url: ./network-certificates.yml
-
-  # ── Row 3 · OPERATE ─────────────────────────────────────────────
-
     - title: Manage and support devices
       imageSrc: ./media/icons/hub-page/device-management.svg
       summary: Perform remote actions, manage device inventory and lifecycle, and
         provide remote assistance to users.
       url: ./device-management/index.yml
+
+  # ── Row 3 · EXTEND ──────────────────────────────────────────────
 
     - title: Govern and administer
       imageSrc: ./media/icons/hub-page/rbac.svg
@@ -103,11 +97,17 @@ productDirectory:
         with built-in reports and Endpoint Analytics.
       url: ./endpoint-analytics/index.md
 
-    - title: Copilot and automation
+    - title: Develop and integrate
+      imageSrc: ./media/icons/hub-page/developer.svg
+      summary: Use Microsoft Graph APIs, PowerShell, and the Intune Data Warehouse
+        to automate management tasks and build custom integrations.
+      url: ./developer/index.yml
+
+    - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/copilot.svg
-      summary: Use AI-powered Copilot, agents, Microsoft Graph, and PowerShell to
-        query device data, troubleshoot issues, and automate tasks.
-      url: ./intune-service/copilot/copilot-intune-overview.md
+      summary: Use AI-powered Copilot and autonomous agents to query device data,
+        troubleshoot issues, and streamline IT workflows.
+      url: ./copilot/index.yml
 
 conceptualContent:
 
