@@ -2,6 +2,9 @@ items:
   - name: What is device configuration?
     displayName: android, ios, ipados, macos, windows
     href: ./overview.md
+  - name: Settings insight
+    displayName: configuration, settings, insight, security baselines
+    href: ./settings-insight.md
   - name: Create a profile
     displayName: android, ios, ipados, macos, windows
     href: ./create-device-profile.md

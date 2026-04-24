@@ -1,4 +1,19 @@
 items:
+- name: Software updates planning guides
+  items:
+  - name: BYOD and personal devices
+    displayName: software updates, android, ios, ipados
+    href: byod-planning-guide.md
+  - name: Android
+    displayName: software updates
+    href: android/planning-guide.md
+  - name: iOS/iPadOS
+    displayName: software updates
+    href: apple/planning-guide-ios-ipados.md
+  - name: macOS
+    displayName: software updates
+    href: apple/planning-guide-macos.md
+
 - name: Android Enterprise updates
   items:
   - name: Firmware Over-the-Air updates
