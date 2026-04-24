@@ -37,7 +37,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/get-started.svg
       summary: Set up your Intune environment, understand architecture and licensing,
         and deploy your first policies.
-      url: ./fundamentals/what-is-intune.md
+      url: ./fundamentals/index.yml
 
     - title: Enroll devices
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
@@ -59,17 +59,17 @@ productDirectory:
 
   # ── Row 2 · SECURE ─────────────────────────────────────────────
 
-    - title: Keep devices updated
-      imageSrc: ./media/icons/hub-page/device-updates.svg
-      summary: Manage OS and driver updates for Windows, iOS, macOS, and Android
-        devices with update rings, expedited updates, and policies.
-      url: ./device-updates/windows/index.md
-
     - title: Govern and administer
       imageSrc: ./media/icons/hub-page/rbac.svg
       summary: Configure role-based access, scope tags, audit logs, and tenant-wide
         policies to operate Intune at scale.
       url: ./fundamentals/role-based-access-control/overview.md
+
+    - title: Keep devices updated
+      imageSrc: ./media/icons/hub-page/device-updates.svg
+      summary: Manage OS and driver updates for Windows, iOS, macOS, and Android
+        devices with update rings, expedited updates, and policies.
+      url: ./device-updates/windows/index.md
 
     - title: Secure devices and data
       imageSrc: ./media/icons/hub-page/device-security.svg
@@ -81,7 +81,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Safeguard corporate data with app protection policies, conditional
         launch rules, and mobile application management for managed and unmanaged devices.
-      url: ./app-management/app-protection/index.md
+      url: ./app-management/protection/overview.md
 
   # ── Row 3 · OPERATE ──────────────────────────────────────────────
 
@@ -188,7 +188,7 @@ conceptualContent:
             with Microsoft Intune.
           links:
             - text: Configuration Manager and co-management
-              itemType: architecture
+              itemType: overview
               url: ./configmgr/index.yml
             - text: Microsoft Entra ID
               itemType: overview
