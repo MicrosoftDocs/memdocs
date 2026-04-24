@@ -246,18 +246,17 @@ items:
     href: ./device-management/toc.yml
     topicHref: ./device-management/index.yml
 
-  - name: Monitor, maintain, and support
+  - name: Microsoft Copilot in Intune
+    href: ./copilot/toc.yml
+    topicHref: ./copilot/index.md
+
+  - name: Monitor and troubleshoot
     items:
-      - name: Manage, maintain, and monitor Microsoft Intune
-        items:
-          - name: Endpoint analytics
-            href: ./endpoint-analytics/toc.yml
+      - name: Endpoint analytics
+        href: ./endpoint-analytics/toc.yml
 
-          - name: Advanced Analytics
-            href: ./advanced-analytics/toc.yml
-
-      - name: Microsoft Copilot + Intune
-        href: ./copilot/toc.yml
+      - name: Advanced Analytics
+        href: ./advanced-analytics/toc.yml
 
       - name: Remote Help
         href: ./remote-help/toc.yml

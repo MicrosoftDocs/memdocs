@@ -1,0 +1,39 @@
+### YamlMime:Landing
+
+title: Network and certificate management in Microsoft Intune
+summary: Connect and secure devices with VPN, Wi-Fi, and certificate profiles. Configure network access, deploy SCEP and PKCS certificates, and manage connectivity across platforms.
+
+metadata:
+  title: Network and certificate management
+  description: Configure VPN, Wi-Fi, certificate profiles, and network access policies in Microsoft Intune.
+  author: paolomatarazzo
+  ms.author: paoloma
+  ms.date: 04/23/2026
+  ms.topic: landing-page
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: VPN and Wi-Fi
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: VPN settings overview
+            url: ./device-configuration/vpn/overview.md
+
+  # Card
+  - title: Certificate infrastructure
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Certificate connectors overview
+            url: ./fundamentals/certificates/overview.md
+
+  # Card
+  - title: Network access
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Network access control integration
+            url: ./device-security/integrate-network-access-control.md
