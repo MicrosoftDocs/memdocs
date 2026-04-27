@@ -413,6 +413,86 @@
       "source_path_from_root": "/intune/intune/configuration/custom-settings-android-for-work.md",
       "redirect_url": "https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/app-deployment-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/app-deployment-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/deployment-policy-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/deployment-policy-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/device-deployment-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/device-deployment-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/user-deployment-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/user-deployment-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/client-components-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/client-components-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/deployment-evaluation-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/deployment-evaluation-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/deployment-download-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/deployment-download-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/apps/understand/deployment-install-technical-reference.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/app-management/understand/deployment-install-technical-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/overview.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/sql-replication.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/sql-configuration.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/sql-performance.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/sql-replication-reinit.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-replication-reinit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/global-data-reinit.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/global-data-reinit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/site-data-reinit.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/site-data-reinit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/core/servers/manage/replication/reinit-missing-message.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/reinit-missing-message",
+      "redirect_document_id": false
     }
   ]
 }
