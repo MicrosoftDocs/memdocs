@@ -45,7 +45,7 @@ items:
     displayName: windows updates
   - name: Update rings
     items:
-    - name: Configure update rings
+    - name: Manage update rings
       href: windows/manage-update-rings.md
       displayName: windows updates, rings
     - name: Update ring settings
@@ -56,7 +56,7 @@ items:
       displayName: windows updates, rings
   - name: Feature updates
     items:
-    - name: Configure feature updates
+    - name: Manage feature updates
       href: windows/manage-feature-updates.md
       displayName: windows feature updates
     - name: Feature update policy settings
@@ -75,7 +75,7 @@ items:
       displayName: windows updates, reports
   - name: Quality updates
     items:
-    - name: Configure quality updates
+    - name: Manage quality updates
       href: windows/manage-quality-updates.md
       displayName: windows quality updates
     - name: Use hotpatch with quality updates
@@ -89,7 +89,7 @@ items:
       displayName: windows quality updates
   - name: Driver updates
     items:
-    - name: Configure driver updates
+    - name: Manage driver updates
       href: windows/manage-driver-updates.md
       displayName: windows driver updates
     - name: Driver update policy settings
