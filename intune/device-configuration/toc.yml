@@ -51,6 +51,9 @@ items:
       - name: Import GPOs to create a policy
         displayName: gpo, admx, settings catalog, windows
         href: ./migrate-group-policy.md
+      - name: "Tutorial: Create settings catalog policy and compare with on-premises GPO"
+        displayName: gpo, admx, administrative template, windows
+        href: ./settings-catalog/tutorial-group-policy-migration.md
 
   - name: Connectivity
     items:
@@ -90,6 +93,23 @@ items:
             href: ./templates/configure-esim-download-server.md
           - name: eSIM bulk activation with activation codes (import CSV)
             href: ./templates/enable-esim.md
+
+  - name: Certificates
+    displayName: scep, pkcs, pfx, trusted root, android, ios, ipados, macos, windows
+    items:
+      - name: Create trusted certificate profiles
+        href: ./certificates/trusted-root-profiles.md
+      - name: Use SCEP certificate profiles
+        displayName: scep, android, ios, ipados, macos, windows
+        href: ./certificates/scep-profiles.md
+      - name: Use PKCS certificate profiles
+        displayName: pkcs, android, ios, ipados, macos, windows
+        href: ./certificates/pkcs-profiles.md
+      - name: Use imported PFX certificates
+        displayName: pkcs, pfx, import, android, ios, ipados, macos, windows
+        href: ./certificates/imported-pfx-profiles.md
+      - name: Remove SCEP or PKCS certificates
+        href: ./certificates/remove-profiles.md
 
   - name: Identity and SSO
     items:

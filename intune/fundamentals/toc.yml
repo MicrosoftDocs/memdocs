@@ -17,6 +17,10 @@ items:
     href: ./architecture.md
     displayName: architecture, diagram, components, design, svg, family, products,
       suite, on-premises, tunnel
+  - name: What is device management?
+    href: ./what-is-device-management.md
+  - name: Device lifecycle overview
+    href: ./device-lifecycle.md
   - name: Endpoint management at Microsoft
     href: ./endpoint-management.md
   - name: Intune Suite add-ons
@@ -182,6 +186,8 @@ items:
             href: ./tenant-administration/add-users.md
           - name: Add groups
             href: ./tenant-administration/add-groups.md
+          - name: Classic groups in the Azure portal
+            href: ./tenant-administration/classic-groups.md
           - name: Manage Intune licenses
             href: ./licensing/toc.yml
           - name: Set the MDM authority
