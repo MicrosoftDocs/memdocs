@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
 title: Monitor and troubleshoot
-summary: Monitor device health and compliance, audit tenant activity, query device data with Advanced Analytics, and get support when issues arise.
+summary: Monitor device health and compliance, query device data with Advanced Analytics, and get support when issues arise.
 
 metadata:
   title: Monitor and troubleshoot
-  description: Monitor, analyze, and troubleshoot Microsoft Intune deployments with audit logs, Endpoint Analytics, Advanced Analytics, and Remote Help.
+  description: Monitor, analyze, and troubleshoot Microsoft Intune deployments with Endpoint Analytics, Advanced Analytics, Remote Help, and reports.
   ms.topic: landing-page
   ms.date: 4/27/2026
   author: paolomatarazzo
@@ -16,6 +16,15 @@ metadata:
 #   whats-new
 
 landingContent:
+  - title: Reports and monitoring
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Microsoft Intune reports
+        url: device-management/reports/overview.md
+      - text: Export reports using Graph APIs
+        url: device-management/reports/export-graph-apis.md
+
   - title: Remote Help
     linkLists:
     - linkListType: overview
@@ -68,23 +77,6 @@ landingContent:
         url: endpoint-analytics/scores.md
       - text: Application reliability report
         url: endpoint-analytics/app-reliability.md
-
-  - title: Tenant administration
-    linkLists:
-    - linkListType: overview
-      links:
-      - text: Tenant status and health
-        url: governance/tenant-status.md
-      - text: Compliance and regulatory alignment
-        url: governance/compliance-and-regulatory-alignment.md
-    - linkListType: how-to-guide
-      links:
-      - text: Audit changes and events
-        url: governance/monitor-audit-logs.md
-      - text: Route logs to Azure Monitor
-        url: governance/integrate-azure-monitor.md
-      - text: Configure device cleanup rules
-        url: governance/configure-cleanup-rules.md
 
   - title: Get support
     linkLists:

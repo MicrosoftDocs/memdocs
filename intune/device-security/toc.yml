@@ -35,6 +35,8 @@ items:
       - name: Network access control
         href: ./integrate-network-access-control.md
         displayName: NAC
+      - name: Certificate infrastructure
+        href: ../fundamentals/certificates/toc.yml
       - name: Microsoft Cloud PKI
         href: ../cloud-pki/toc.yml
 

@@ -209,9 +209,6 @@ items:
       - name: Use assignment filters
         href: ./filters/toc.yml
 
-      - name: Certificates
-        href: ./certificates/toc.yml
-
       - name: Configure security recommendations using Zero Trust
         items:
           - name: Configure security recommendations using Zero Trust

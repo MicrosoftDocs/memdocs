@@ -37,19 +37,41 @@ items:
     href: ./copilot/toc.yml
     topicHref: ./copilot/index.md
 
-  - name: Monitor and troubleshoot
-    topicHref: ./monitor-troubleshoot.yml
+  - name: Govern and administer
+    topicHref: ./govern-administer.yml
+    displayName: RBAC, roles, scope tags, audit, privacy, GDPR, HIPAA, SOC, ISO
     items:
+      - name: Role-based access control
+        href: ./fundamentals/role-based-access-control/toc.yml
+
       - name: Tenant administration
         items:
           - name: Tenant status and health
             href: ./governance/tenant-status.md
+          - name: Compliance and regulatory alignment
+            href: ./governance/compliance-and-regulatory-alignment.md
+            displayName: GDPR, HIPAA, SOC, ISO
           - name: Audit logs for Intune activities
             href: ./governance/monitor-audit-logs.md
           - name: Review logs with Azure Monitor
             href: ./governance/integrate-azure-monitor.md
           - name: Device cleanup rules
             href: ./governance/configure-cleanup-rules.md
+
+      - name: Privacy and personal data
+        href: ./privacy/toc.yml
+
+  - name: Monitor and troubleshoot
+    topicHref: ./monitor-troubleshoot.yml
+    items:
+      - name: Endpoint analytics
+        href: ./endpoint-analytics/toc.yml
+
+      - name: Advanced Analytics
+        href: ./advanced-analytics/toc.yml
+
+      - name: Remote Help
+        href: ./remote-help/toc.yml
 
       - name: Get help
         items:
@@ -62,24 +84,6 @@ items:
           - name: User help documentation
             href: /intune/user-help
             displayName: company portal, device user
-
-      - name: Endpoint analytics
-        href: ./endpoint-analytics/toc.yml
-
-      - name: Advanced Analytics
-        href: ./advanced-analytics/toc.yml
-
-      - name: Remote Help
-        href: ./remote-help/toc.yml
-
-  - name: Privacy and compliance
-    displayName: GDPR, HIPAA, SOC, ISO
-    items:
-      - name: Compliance and regulatory alignment
-        href: ./governance/compliance-and-regulatory-alignment.md
-        displayName: GDPR, HIPAA, SOC, ISO
-      - name: Privacy and personal data
-        href: ./privacy/toc.yml
 
   - name: Develop and automate
     href: ./developer/toc.yml

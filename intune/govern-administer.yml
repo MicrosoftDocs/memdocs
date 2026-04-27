@@ -16,6 +16,23 @@ metadata:
 #   whats-new
 
 landingContent:
+  - title: Recommended learning path
+    linkLists:
+    - linkListType: get-started
+      links:
+      - text: "1. Understand RBAC in Intune"
+        url: fundamentals/role-based-access-control/overview.md
+      - text: "2. Learn the built-in roles"
+        url: fundamentals/role-based-access-control/ref-built-in-roles.md
+      - text: "3. Assign roles to administrators"
+        url: fundamentals/role-based-access-control/assign-role.md
+      - text: "4. Scope access with tags"
+        url: fundamentals/role-based-access-control/scope-tags.md
+      - text: "5. Audit tenant activity"
+        url: governance/monitor-audit-logs.md
+      - text: "6. Review privacy and data handling"
+        url: privacy/index.md
+
   - title: Role-based access control
     linkLists:
     - linkListType: overview

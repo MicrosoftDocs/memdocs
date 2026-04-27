@@ -124,6 +124,23 @@ landingContent:
       - text: Manually configure Jamf Pro integration with Microsoft Intune
         url: conditional-access-integration/setup-jamf-manually.md
 
+  - title: Certificate infrastructure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Certificates overview
+        url: ../fundamentals/certificates/overview.md
+      - text: Certificate connector overview
+        url: ../fundamentals/certificates/connector/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Certificate connector prerequisites
+        url: ../fundamentals/certificates/connector/prerequisites.md
+      - text: Install the certificate connector
+        url: ../fundamentals/certificates/connector/setup-connector.md
+      - text: Configure SCEP infrastructure
+        url: ../fundamentals/certificates/scep-infrastructure.md
+
   - title: Manage identity and access
     linkLists:
     - linkListType: how-to-guide
