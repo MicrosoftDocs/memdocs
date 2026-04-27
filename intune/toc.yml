@@ -38,6 +38,7 @@ items:
     topicHref: ./copilot/index.md
 
   - name: Monitor and troubleshoot
+    topicHref: ./monitor-troubleshoot.yml
     items:
       - name: Tenant administration
         items:

@@ -95,7 +95,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/reports.svg
       summary: Track device health, compliance trends, and app deployment status
         with built-in reports and Endpoint Analytics.
-      url: /intune/endpoint-analytics
+      url: ./monitor-troubleshoot.yml
 
     - title: Develop and automate
       imageSrc: ./media/icons/hub-page/developer.svg
