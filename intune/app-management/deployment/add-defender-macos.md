@@ -67,6 +67,6 @@ The app you've created is displayed in the apps list, where you can assign it to
 ## Next steps
 
 - To learn about Intune-based deployment for Microsoft Defender for Endpoint on macOS, see [Intune-based deployment for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-install-with-intune)
-- To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-antivirus-policy.md)
+- To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../../device-configuration/endpoint-security/antivirus.md)
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-scope.md).
 - To learn how to assign apps to groups in Intune, see [Assign apps to groups](./assign-groups.md).

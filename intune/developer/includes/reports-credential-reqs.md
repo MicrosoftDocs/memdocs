@@ -1,6 +1,4 @@
 ---
-author: nicholasswhite
-ms.author: nwhite
 ms.topic: include
 ms.date: 09/08/2025
 ---
@@ -17,4 +15,4 @@ Requirements for accessing the Intune Data Warehouse (including the API) are:
   - User-less authentication using [application-only authentication](../../developer/data-warehouse/configure-app-only-auth.md)
 
 > [!IMPORTANT]
-> To be assigned an Intune role and access the Intune Data Warehouse, the user must have an Intune license. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md) and [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+> To be assigned an Intune role and access the Intune Data Warehouse, the user must have an Intune license. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md) and [Microsoft Intune licensing](../../fundamentals/licensing/index.md).

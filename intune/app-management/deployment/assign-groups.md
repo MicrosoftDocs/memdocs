@@ -6,13 +6,10 @@ ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
-- highpri
 - FocusArea_Apps_Deploy
 ---
 
 # Assign Apps to Groups With Microsoft Intune
-
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 After you [add an app](./index.md) to Microsoft Intune, you can assign the app to users and devices. You can deploy an app to a device whether or not the device is managed by Intune.
 

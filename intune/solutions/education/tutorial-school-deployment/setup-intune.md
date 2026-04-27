@@ -44,7 +44,7 @@ Before configuring settings with Intune, consider the following prerequisites:
   - As part of a [Microsoft 365 Education subscription][MSFT-2]
 - **Intune for Education device platforms.** Intune for Education can manage devices running a supported version of Windows, Windows 11 SE, and iPadOS
 - **Intune device platforms.** Intune can manage devices running a supported version of Windows, Windows 11 SE, iOS, iPadOS, macOS, Android, and Linux
-- **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](../../../intune-service/fundamentals/intune-endpoints.md) for a list of endpoints.
+- **Network requirements.** Confirm all the required network endpoints can access without SSL inspection or any type of filtering. See [Network endpoints for Microsoft Intune](../../../fundamentals/endpoints.md) for a list of endpoints.
 
 For more information, see [Intune licensing][MEM-1] and [this comparison sheet][MSFT-3], which includes a table detailing the *Microsoft Modern Work Plan for Education*.
 
@@ -77,8 +77,8 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ✅ Configure optional tenant configuration
 
-- Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../../../intune-service/apps/company-portal-app.md).
-- Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](../../../intune-service/enrollment/terms-and-conditions-create.md).
+- Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../../../app-management/configuration/configure-company-portal.md).
+- Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](../../../device-enrollment/create-terms-and-conditions.md).
 
 ::: zone pivot="windows"
 
@@ -95,7 +95,7 @@ For more information, see [Create a device platform restriction][MEM-2].
     :::image type="content" source="./media/setup-intune/intune-windows-enrollment.png" alt-text="A screenshot showing the MDM user scope and MAM user scope." lightbox="./media/setup-intune/intune-windows-enrollment.png":::
 1. Select **Save**.
 
-For more information, see [Enable Windows automatic enrollment](../../../intune-service/enrollment/windows-enroll.md#enable-windows-automatic-enrollment).
+For more information, see [Enable Windows automatic enrollment](../../../device-enrollment/windows/enable-automatic-mdm.md#enable-windows-automatic-enrollment).
 
 ### Disable Windows Hello for Business
 
@@ -185,7 +185,7 @@ The enrollment status page (ESP) displays the provisioning status to people enro
 Additional information:
 
 - [Windows Autopilot Enrollment Status Page](/autopilot/enrollment-status)
-- [Set up the Enrollment Status Page](../../../intune-service/enrollment/windows-enrollment-status.md)
+- [Set up the Enrollment Status Page](../../../device-enrollment/windows/setup-status-page.md)
 
 This table provides the settings most commonly set by customers, but can be customized to suit your schools needs.
 
@@ -206,7 +206,7 @@ This table provides the settings most commonly set by customers, but can be cust
 
 #### [Intune](#tab/intune)
 
-To set up an Apple MDM certificate, see [Get an Apple MDM push certificate](../../../intune-service/enrollment/apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
+To set up an Apple MDM certificate, see [Get an Apple MDM push certificate](../../../device-enrollment/apple/create-mdm-push-certificate.md#steps-to-get-your-certificate).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -221,7 +221,7 @@ To set up an Apple MDM certificate in Intune for Education, see [Add an MDM push
 
 #### [Intune](#tab/intune)
 
-To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../../intune-service/apps/vpp-apps-ios.md).
+To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../../app-management/deployment/manage-vpp-apple.md).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -238,7 +238,7 @@ If you plan to integrate Apple School Manager and use Automated Device Enrollmen
 
 #### [Intune](#tab/intune)
 
-To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](../../../intune-service/enrollment/device-enrollment-program-enroll-ios.md).
+To set up an Apple MDM certificate, see [Set up automated device enrollment in Intune](../../../device-enrollment/apple/setup-automated-ios.md).
 
 #### [Intune for Education](#tab/intune-for-education)
 
@@ -262,9 +262,9 @@ When the Intune service configured, you can configure policies and applications 
 
 <!-- Reference links in article -->
 
-[MEM-1]: /intune/intune-service/fundamentals/licenses
-[MEM-2]: ../../../intune-service/enrollment/enrollment-restrictions-set.md
-[MEM-4]: ../../../intune-service/protect/windows-hello.md
+[MEM-1]: ../../../fundamentals/licensing/index.md
+[MEM-2]: ../../../device-enrollment/restrictions.md
+[MEM-4]: ../../../device-security/identity-protection/configure-tenant-wide-policy.md
 [INT-1]: /intune-education/what-is-intune-for-education
 
 [MSFT-1]: https://www.microsoft.com/microsoft-365/microsoft-365-enterprise

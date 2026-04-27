@@ -60,7 +60,7 @@ The following list describes the settings your IT support person can control wit
 ## Approve line-of-business app
  By default, your device doesn't trust line-of-business (LOB) apps acquired outside of the App Store, which may prevent your organization's own company apps from being installed. You'll know this is happening if you open an installed LOB app and receive an *untrusted enterprise developer* message.
 
-![Screenshot of iOS app message about an untrusted enterprise developer.](../../intune-service/fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+![Screenshot of iOS app message about an untrusted enterprise developer.](./media/managed-apps-ios/end-user-company-portal-messages-01.png)
 
 For information about how to manually install and trust an enterprise app on your device, see [Install custom enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.
 

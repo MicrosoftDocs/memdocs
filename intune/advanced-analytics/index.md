@@ -105,7 +105,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 >   > [!NOTE]
 >   >
 >   > Support for Advanced Analytics in DoD environments doesn't include the [*Device query*](device-query.md) functionality or the [*Resource performance*](resource-performance.md) report.
->   For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
+>   For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service.md).
 
 :::column-end:::
 :::row-end:::
@@ -133,7 +133,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 :::column-end:::
 :::column span="3":::
 
-> Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
+> Advanced Analytics features are included in [Microsoft Intune Suite](../fundamentals/add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
 >
 > **Mixed licensing scenarios**: A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the *base* endpoint analytics product. In these cases, the subscription with the highest level of functionality determines the overall endpoint analytics experience for your tenant. For example, if any users have Advanced Analytics, all enrolled devices will benefit from the advanced features.
 :::column-end:::

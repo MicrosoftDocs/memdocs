@@ -26,13 +26,13 @@ This article describes how to set up Android (AOSP) device management and enroll
 To enroll and manage AOSP devices, you must have:
 
 * An active Microsoft Intune tenant.
-* [A supported device.](../../intune-service/fundamentals/supported-devices-browsers.md#android)
+* [A supported device.](../../fundamentals/ref-supported-platforms.md#android)
 
 You must also:
 
-* [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../../intune-service/fundamentals/mdm-authority-set.md). You only need to do this once, when you first set up Intune for mobile device management.
+* [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../../fundamentals/setup-mdm-authority.md). You only need to do this once, when you first set up Intune for mobile device management.
 
-* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../intune-service/fundamentals/specialty-devices-with-intune.md).
+* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../device-management/specialty-devices.md).
 
 ## Create an enrollment profile
 Create an enrollment profile to enable enrollment on devices.
@@ -117,7 +117,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 5.    Select **Token** > **Revoke token** > **Yes**.
 
 ## Create a device group
-You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about groups, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about groups, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name.
 
@@ -211,7 +211,7 @@ The following are known limitations when working with AOSP devices in Intune:
 
 * [Create an Android (AOSP) device configuration policy](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md) to restrict settings on devices.
 
-* [Create an Android (AOSP) device compliance policy](../../intune-service/protect/compliance-policy-create-android-aosp.md).
+* [Create an Android (AOSP) device compliance policy](../../device-security/compliance/ref-android-aosp-settings.md).
 
 * Create a policy that requires users to accept your [terms and conditions](../create-terms-and-conditions.md) before enrollment.
 

@@ -1,13 +1,12 @@
 ---
 title: Add Microsoft 365 Apps to Windows Devices Using Microsoft Intune
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows devices.
-ms.date: 04/07/2026
+ms.date: 04/23/2026
 ms.topic: how-to
 ms.reviewer: craigma
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Add
 ---
 
@@ -26,15 +25,12 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 > [!IMPORTANT]
 > If there are .msi Microsoft 365 apps on the end-user device, you must use the **Remove MSI** feature to safely uninstall these apps. Otherwise, the Intune delivered Microsoft 365 apps fail to install.
->
-> Multiple required or available app assignments aren't additive. A later app assignment overwrites preexisting installed app assignments.
 
 - Devices to which you deploy these apps must be running the Windows Creators Update or later.
 - Intune supports adding Microsoft 365 apps from the Microsoft 365 Apps suite only.
 - If any Microsoft 365 apps are open when Intune installs the app suite, the installation might fail, and users might lose data from unsaved files.
 - This installation method isn't supported on Windows Home, Windows Team, Windows Holographic, or Windows Holographic for Business devices.
 - Intune doesn't support installing Microsoft 365 desktop apps from the Microsoft Store (known as Office Centennial apps) on a device to which you have already deployed Microsoft 365 apps with Intune. If you install this configuration, it might cause data loss or corruption.
-- Multiple required or available app assignments aren't additive. A later app assignment overwrites preexisting installed app assignments. For example, if the first set of Microsoft 365 apps contains Word, and the later one doesn't, Word is uninstalled. This condition doesn't apply to any Visio or Project applications.
 - Multiple Microsoft 365 deployments aren't currently supported. Only one deployment is delivered to the device.
 - **Office version** - Choose whether you want to assign the 32-bit or 64-bit version of Office. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
 - **Remove MSI from end-user devices** - Choose whether you want to remove preexisting Office .MSI apps from end-user devices. The installation won't succeed if there are preexisting .MSI apps on end-user devices. The apps to be uninstalled aren't limited to the apps selected for installation in **Configure App Suite**, as it removes all Office (MSI) apps from the end user device. For more information, see [Remove existing MSI versions of Office when upgrading to Microsoft 365 Apps](/deployoffice/upgrade-from-msi-version). When Intune reinstalls Office on your end user's machines, end users automatically get the same language packs that they had with previous .MSI Office installations.
@@ -119,14 +115,14 @@ For more information about entering XML data, see [Configuration options for the
 
 ## Step 3 - Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Select **Select scope tags** to optionally add scope tags for the app suite.
 2. Select **Next** to display the **Assignments** page.
 
 ## Step 4 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app suite. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app suite. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 2. Select **Next** to display the **Review + create** page.
 
 ## Step 5 - Review + create
@@ -169,7 +165,7 @@ When you can't install the Microsoft 365 apps to a device, you must identify whe
 - There's an active network connection on the device. If the device is in airplane mode, is turned off, or is in a location with no service, the policy won't apply until network connectivity is established.
 - Both Intune and Microsoft 365 network requirements are met and the related IP ranges are accessible based on the following articles:
 
-  - [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)
+  - [Network endpoints for Microsoft Intune](../../fundamentals/endpoints.md)
   - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges)
 
 - The correct groups are assigned the Microsoft 365 app suite.

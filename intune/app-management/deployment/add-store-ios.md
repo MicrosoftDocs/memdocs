@@ -12,8 +12,6 @@ ms.collection:
 
 # Add iOS Store Apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Use the information in this article to help you add iOS store apps to Microsoft Intune. iOS store apps are apps that Intune installs on your users' devices. A user is part of your company's workforce. iOS store apps are automatically updated.
 
 >[!NOTE]
@@ -55,9 +53,9 @@ You can assign apps by using this method only if they are free of charge in the 
     - **Notes**: Optionally, enter any notes that you want to associate with this app. This field is only visible an administrator and will not be visible to end users.
     - **Logo**: Optionally, upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 10. Click **Next** to display the **Scope tags** page.
-11. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+11. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 12. Click **Next** to display the **Assignments** page.
-13. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md).
+13. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 14. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 15. When you are done, click **Create** to add the app to Intune.
 

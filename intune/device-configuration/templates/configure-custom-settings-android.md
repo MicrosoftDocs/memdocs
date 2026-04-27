@@ -22,10 +22,10 @@ Android custom profiles use Open Mobile Alliance Uniform Resource Identifier (OM
 
 Using a custom profile, you can configure and assign the following Android settings. The following settings aren't built in to Intune:
 
-- [Create a Wi-Fi profile with a pre-shared key](/intune/device-configuration/templates/create-wifi-preshared-key)
-- [Create a per-app VPN profile](/intune/device-configuration/templates/configure-per-app-vpn-android)
-- [Allow and block apps for Samsung Knox Standard devices](/intune/device-configuration/templates/manage-apps-samsung-knox)
-- [Configure web protection in Microsoft Defender for Endpoint for Android](../../intune-service/protect/microsoft-defender-configure-android.md)
+- [Create a Wi-Fi profile with a pre-shared key](create-wifi-preshared-key.md)
+- [Create a per-app VPN profile](configure-per-app-vpn-android.md)
+- [Allow and block apps for Samsung Knox Standard devices](manage-apps-samsung-knox.md)
+- [Configure web protection in Microsoft Defender for Endpoint for Android](../../device-security/microsoft-defender/configure-web-protection-android.md)
 
 > [!IMPORTANT]
 > Only the settings listed can be configured in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->
@@ -73,7 +73,7 @@ This article shows you how to create a custom profile for Android DA devices.
 
     Select **Next**.
 
-9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+9. In **Scope tags** (optional) > **Select scope tags**, choose your scope tags to assign to the profile. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 

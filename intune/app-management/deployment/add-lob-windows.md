@@ -1,20 +1,18 @@
 ---
 title: Add a Windows Line-of-Business App to Microsoft Intune
 description: Learn how to add a Windows line-of-business (LOB) app using Microsoft Intune.
-ms.date: 04/25/2024
+ms.date: 04/14/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows
-- highpri
 - FocusArea_Apps_Win32
 - FocusArea_Apps_LOB
 ---
 
 # Add a Windows Line-of-Business App to Microsoft Intune
-
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 A line-of-business (LOB) app is one that you add from an app installation file. This kind of app is typically written in-house. The following steps provide guidance to help you add a Windows LOB app to Microsoft Intune.
 
@@ -27,8 +25,8 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
-3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
-4. Select **Select**. The **Add app** steps are displayed.
+3. In the **Select app type** pane, select the **Windows** platform, and then select **Line-of-business app**.
+4. Choose **Select**. The **Add app** steps are displayed.
 
 ## Step 1 - App information
 
@@ -64,14 +62,14 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 ## Step 2 - Select scope tags (optional)
 
-You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
 1. Select **Select scope tags** to optionally add scope tags for the app.
 2. Select **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
 
-1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
+1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md) and [Assign apps to groups with Microsoft Intune](./assign-groups.md).
 2. Select **Next** to display the **Review + create** page.
 
 ## Step 4 - Review + create

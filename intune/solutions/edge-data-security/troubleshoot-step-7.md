@@ -2,12 +2,12 @@
 title: Step 7. Troubleshoot Microsoft Edge for Business Data Security
 description: Step 7. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
 ms.date: 01/23/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: troubleshooting
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- highpri
-- highseo
 - FocusArea_Apps_AppManagement
 ---
 
