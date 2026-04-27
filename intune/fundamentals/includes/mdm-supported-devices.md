@@ -2,7 +2,7 @@
 author: MandiOhlinger
 ms.author: mandia
 ms.topic: include
-ms.date: 10/14/2025
+ms.date: 04/27/2026
 ---
 
 ### Apple
@@ -50,10 +50,10 @@ ms.date: 10/14/2025
 
 ### Linux
 
-- Ubuntu Desktop 24.04 LTS with a GNOME graphical desktop environment
-- Ubuntu LTS, version 24.04
-- RedHat Enterprise Linux 8
+- Ubuntu Desktop 24.04 and 26.04 LTS with a GNOME graphical desktop environment
+- Ubuntu LTS, version 24.04 and 26.04
 - RedHat Enterprise Linux 9
+- RedHat Enterprise Linux 10
 
 > [!NOTE]
 > Ubuntu Desktop already has a GNOME graphical desktop environment installed.
