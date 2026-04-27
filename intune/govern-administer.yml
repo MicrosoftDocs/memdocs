@@ -1,0 +1,76 @@
+### YamlMime:Landing
+
+title: Govern and administer
+summary: Control access with role-based permissions, audit tenant activity, and manage data privacy and compliance for your Intune environment.
+
+metadata:
+  title: Govern and administer
+  description: Configure role-based access control, scope tags, audit logs, and privacy settings to govern and administer Microsoft Intune at scale.
+  ms.topic: landing-page
+  ms.date: 4/27/2026
+  author: paolomatarazzo
+  ms.author: paoloma
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Role-based access control
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Role-based access control (RBAC)
+        url: fundamentals/role-based-access-control/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Use Multi Admin Approval
+        url: fundamentals/role-based-access-control/multi-admin-approval.md
+      - text: Create a custom role
+        url: fundamentals/role-based-access-control/create-custom-role.md
+      - text: Assign a role to an administrator
+        url: fundamentals/role-based-access-control/assign-role.md
+      - text: Use RBAC and scope tags for distributed IT
+        url: fundamentals/role-based-access-control/scope-tags.md
+    - linkListType: reference
+      links:
+      - text: Built-in roles reference
+        url: fundamentals/role-based-access-control/ref-built-in-roles.md
+
+  - title: Audit and tenant administration
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Tenant status and health
+        url: governance/tenant-status.md
+      - text: Compliance and regulatory alignment
+        url: governance/compliance-and-regulatory-alignment.md
+    - linkListType: how-to-guide
+      links:
+      - text: Audit changes and events
+        url: governance/monitor-audit-logs.md
+      - text: Route logs to Azure Monitor
+        url: governance/integrate-azure-monitor.md
+      - text: Configure device cleanup rules
+        url: governance/configure-cleanup-rules.md
+
+  - title: Privacy and data handling
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Privacy and personal data in Intune
+        url: privacy/index.md
+    - linkListType: concept
+      links:
+      - text: Data collection in Intune
+        url: privacy/data-handling/data-collection.md
+      - text: Data storage and processing
+        url: privacy/data-handling/data-storage-processing.md
+      - text: Data security and sharing
+        url: privacy/data-sharing/index.md
+    - linkListType: how-to-guide
+      links:
+      - text: Enable Windows diagnostic data
+        url: privacy/enable-windows-diagnostic-data.md
+      - text: Audit, export, or delete personal data
+        url: privacy/personal-data/manage-data-requests.md

@@ -63,7 +63,7 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/rbac.svg
       summary: Configure role-based access, scope tags, audit logs, and tenant-wide
         policies to operate Intune at scale.
-      url: ./fundamentals/role-based-access-control/overview.md
+      url: ./govern-administer.yml
 
     - title: Keep devices updated
       imageSrc: ./media/icons/hub-page/device-updates.svg
