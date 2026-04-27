@@ -205,6 +205,10 @@ items:
             displayName: original equipment manufacturers, oem, oemconfig, schema, android, auto-grant
             href: ./templates/configure-managed-home-screen-permissions-android.md
 
+  - name: Endpoint security policies
+    displayName: bitlocker, firewall, antivirus, defender, encryption, edr, attack surface reduction
+    href: ./endpoint-security/toc.yml
+
   - name: Settings reference
     items:
       - name: Settings catalog lists

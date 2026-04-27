@@ -1,31 +1,34 @@
 items:
-  - name: What is Microsoft Intune
-    displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-    href: ./what-is-intune.md
-  - name: Service description
-    href: ./service-description.md
-  - name: Manage and secure identities
-    displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-    href: ./tenant-administration/identities.md
-  - name: Manage and secure devices
-    displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-    href: ./manage-devices.md
-  - name: Manage apps and protect data
-    displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-    href: ./manage-apps.md
-  - name: Architecture
-    href: ./architecture.md
-    displayName: architecture, diagram, components, design, svg, family, products,
-      suite, on-premises, tunnel
-  - name: What is device management?
-    href: ./what-is-device-management.md
-  - name: Device lifecycle overview
-    href: ./device-lifecycle.md
-  - name: Endpoint management at Microsoft
-    href: ./endpoint-management.md
-  - name: Intune Suite add-ons
-    href: ./add-ons.md
-    displayName: intune suite, add-ons, premium
+  - name: Overview
+    expanded: true
+    items:
+      - name: What is Microsoft Intune
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./what-is-intune.md
+      - name: What is device management?
+        href: ./what-is-device-management.md
+      - name: Service description
+        href: ./service-description.md
+      - name: Architecture
+        href: ./architecture.md
+        displayName: architecture, diagram, components, design, svg, family, products,
+          suite, on-premises, tunnel
+      - name: Manage and secure identities
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./tenant-administration/identities.md
+      - name: Manage and secure devices
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./manage-devices.md
+      - name: Manage apps and protect data
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./manage-apps.md
+      - name: Device lifecycle overview
+        href: ./device-lifecycle.md
+      - name: Endpoint management at Microsoft
+        href: ./endpoint-management.md
+      - name: Intune Suite add-ons
+        href: ./add-ons.md
+        displayName: intune suite, add-ons, premium
 
   - name: Evaluate and try
     items:
