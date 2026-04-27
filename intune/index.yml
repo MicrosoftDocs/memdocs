@@ -97,17 +97,17 @@ productDirectory:
         with built-in reports and Endpoint Analytics.
       url: ./monitor-troubleshoot.yml
 
-    - title: Develop and automate
-      imageSrc: ./media/icons/hub-page/developer.svg
-      summary: Use Microsoft Graph APIs, PowerShell, and the Intune Data Warehouse
-        to automate management tasks and build custom integrations.
-      url: ./developer/index.yml
-
     - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/copilot.svg
       summary: Use AI-powered Copilot and autonomous agents to query device data,
         troubleshoot issues, and streamline IT workflows.
       url: /intune/copilot/index
+
+    - title: Develop and automate
+      imageSrc: ./media/icons/hub-page/developer.svg
+      summary: Use Microsoft Graph APIs, PowerShell, and the Intune Data Warehouse
+        to automate management tasks and build custom integrations.
+      url: ./developer/index.yml
 
 conceptualContent:
 
