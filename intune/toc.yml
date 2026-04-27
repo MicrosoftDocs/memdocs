@@ -8,7 +8,6 @@ items:
 
   - name: What's new
     href: ./whats-new/toc.yml
-    topicHref: ./whats-new/index.md
 
   - name: Enroll devices
     href: ./device-enrollment/toc.yml
