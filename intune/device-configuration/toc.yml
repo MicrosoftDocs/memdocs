@@ -14,9 +14,6 @@ items:
   - name: Assign policies
     displayName: deploy, push, android, ios, ipados, macos, windows
     href: ./assign-device-profile.md
-  - name: Troubleshoot profiles
-    displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
-    href: ./troubleshoot-device-profiles.md
 
   - name: Settings catalog and GPO
     displayName: gpo, admx, ios, ipados, macos, windows
@@ -77,9 +74,6 @@ items:
           - name: Wi-Fi with a pre-shared key
             href: ./templates/create-wifi-preshared-key.md
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
-          - name: Troubleshoot Wi-Fi
-            displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
-            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles?context=/intune/context
       - name: Wired networks
         displayName: 802.1x, macos, windows
         href: ./templates/configure-wired-networks.md
@@ -87,13 +81,8 @@ items:
         href: ./templates/create-network-boundary-windows.md
         displayName: trusted sites, ipv4, ipv6, range
       - name: Email
-        items:
-          - name: Configure email
-            displayName: android, ios, ipados, windows
-            href: ./templates/configure-email.md
-          - name: Troubleshoot email profiles
-            displayName: android, ios, ipados, windows
-            href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune?context=/intune/context
+        displayName: android, ios, ipados, windows
+        href: ./templates/configure-email.md
       - name: eSIM cellular on Windows
         displayName: embedded sim, activation code
         items:
@@ -344,3 +333,15 @@ items:
           - name: VPN
             displayName: windows
             href: ./templates/ref-vpn-settings-windows-8-1.md
+
+  - name: Troubleshooting
+    items:
+      - name: Troubleshoot profiles
+        displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
+        href: ./troubleshoot-device-profiles.md
+      - name: Troubleshoot Wi-Fi
+        displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
+        href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles?context=/intune/context
+      - name: Troubleshoot email profiles
+        displayName: android, ios, ipados, windows
+        href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune?context=/intune/context

@@ -72,8 +72,6 @@ items:
             href: ./deployment/deploy-win32-update-package.md
           - name: Win32 app S mode devices
             href: ./deployment/enable-win32-s-mode.md
-          - name: Troubleshoot Win32 apps
-            href: ./deployment/troubleshoot-win32.md
       - name: macOS app management
         items:
           - name: Intune management agent for macOS
@@ -215,6 +213,8 @@ items:
 
   - name: Troubleshoot
     items:
+      - name: Troubleshoot Win32 apps
+        href: ./deployment/troubleshoot-win32.md
       - name: Troubleshoot app installation problems
         href: /troubleshoot/mem/intune/troubleshoot-app-install?context=/intune/context
       - name: App installation error reference
