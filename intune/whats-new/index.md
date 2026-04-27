@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 04/07/2026
+ms.date: 04/27/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -53,6 +53,23 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of April 27, 2026  
+
+### Device security  
+
+#### Autopatch update risk visibility report<!--37672980-->
+
+The *Autopatch update risk visibility* report extends the *security update status* dashboard with granular insight into patch compliance and risk across your managed devices. It classifies devices as *Current*, *Exposed*, or *Critical* and highlights policies contributing to risk, so you can identify and remediate issues faster.
+ 
+For more information, see [Protect your estate: Reassess your Windows update policies](https://techcommunity.microsoft.com/category/windows/blog/windows-itpro-blog).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+
 ## Week of April 20, 2026  
 
 ### Device security  
