@@ -83,9 +83,6 @@ items:
       - name: Network boundary on Windows
         href: ./templates/create-network-boundary-windows.md
         displayName: trusted sites, ipv4, ipv6, range
-      - name: Email
-        displayName: android, ios, ipados, windows
-        href: ./templates/configure-email.md
       - name: eSIM cellular on Windows
         displayName: embedded sim, activation code
         items:
@@ -149,10 +146,14 @@ items:
       - name: Education Take a Test app
         displayName: windows
         href: ./templates/configure-education-settings.md
+      - name: Email
+        displayName: android, ios, ipados, windows
+        href: ./templates/configure-email.md
       - name: Upgrade Windows and S mode
         href: ./templates/configure-edition-upgrade-windows.md
 
-  - name: Platform-specific profiles
+  - name: Custom profiles, scripts, and OEM
+    displayName: oma-uri, csp, bash, powershell, oemconfig, zebra, dfci, bios
     items:
       - name: Custom settings and scripts
         items:
