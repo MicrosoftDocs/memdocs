@@ -62,7 +62,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 The *Autopatch update risk visibility* report extends the *security update status* dashboard with granular insight into patch compliance and risk across your managed devices. It classifies devices as *Current*, *Exposed*, or *Critical* and highlights policies contributing to risk, so you can identify and remediate issues faster.
  
-For more information, see [Protect your estate: Reassess your Windows update policies](https://techcommunity.microsoft.com/category/windows/blog/windows-itpro-blog).
+For more information, see [Protect your estate: Reassess your Windows update policies](https://aka.ms/ReassessProtect).
 
 > [!div class="checklist"]
 > Applies to:
