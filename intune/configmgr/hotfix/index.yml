@@ -11,6 +11,12 @@ metadata:
   ms.date: 12/09/2021
 
 landingContent:
+  - title: Configuration Manager 2603
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 37426535 Summary of changes in 2603
+            url: 2603/37426535.md
   - title: Configuration Manager 2509
     linkLists:
       - linkListType: overview
