@@ -78,10 +78,10 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
       >
       > The following types of applications are supported for use with Windows Autopilot device preparation:
       >
-      > - [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
-      > - [Win32](/mem/intune-service/apps/apps-win32-prepare).
-      > - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-      > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
+      > - [Line-of-business (LOB)](/intune/app-management/deployment/add-lob-windows).
+      > - [Win32](/intune/app-management/deployment/win32-packaging).
+      > - [Microsoft Store](/intune/app-management/deployment/add-microsoft-store) - only Microsoft Store apps that support WinGet are supported.
+      > - [Microsoft 365](/intune/app-management/deployment/add-microsoft-365-windows).
       >
       > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 
@@ -109,7 +109,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/intune/fundamentals/role-based-access-control/scope-tags).
 
 1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
 

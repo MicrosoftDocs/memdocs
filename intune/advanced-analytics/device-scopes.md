@@ -1,13 +1,13 @@
 ---
-title: Device Scopes in endpoint analytics
-description: Learn how to use device scopes in Microsoft Intune endpoint analytics with scope tags for custom device reporting and targeted insights.
-ms.date: 12/01/2025
+title: Device Scopes
+description: Learn how to use device scopes in Microsoft Intune with scope tags for custom device reporting and targeted insights.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
 # Device scopes
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 Device scopes use scope tags to filter endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of devices.
 
@@ -96,8 +96,8 @@ To return to viewing all devices, navigate to the **Device scope** menu, select 
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-R3]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#intune-role-administrator
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-R3]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
+[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#intune-role-administrator

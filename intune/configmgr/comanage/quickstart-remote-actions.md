@@ -29,7 +29,7 @@ Remote device actions give you management controls on the device without interfe
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.
 
-For more information on these actions, see [Available remote actions](../../intune-service/remote-actions/index.md#available-remote-actions).
+For more information on these actions, see [Available device actions](../../device-management/actions/index.md#available-device-actions).
 
 ## Case studies
 
@@ -38,7 +38,7 @@ The global consulting firm Avanade regularly uses remote actions to manage the d
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
 
-For more information on how to use these remote actions, see [Available device actions](../../intune-service/remote-actions/index.md#available-remote-actions).
+For more information on how to use these device actions, see [Available device actions](../../device-management/actions/index.md#available-device-actions).
 
 ## Value proposition
 
@@ -60,14 +60,14 @@ Use these remote actions from Intune once you [enable co-management](how-to-enab
 
 - **Delete**: If you want to remove devices from the Microsoft Intune admin center, delete them from the specific device pane. The next time the device checks in, it removes any organizational data stored on it.
 
-For more information, see [Remove devices by using wipe, retire, or manually unenrolling the device](../../intune-service/remote-actions/devices-wipe.md).
+For more information, see [Remove devices by using wipe, retire, or manually unenrolling the device](../../device-management/actions/wipe.md).
 
 #### Selective wipe
 <!--SCCMDocs issue 973-->
 
 When you choose an **App selective wipe**, it removes company app data without removing personal data. Use this action when a device is reported as lost or stolen.
 
-For more information, see [How to wipe only corporate data from Intune-managed apps](../../intune-service/apps/apps-selective-wipe.md).
+For more information, see [How to wipe only corporate data from Intune-managed apps](../../app-management/protection/wipe-corporate-data.md).
 
 #### Sync
 
@@ -75,13 +75,13 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 This feature can help you immediately validate and troubleshoot policies you've assigned, without waiting for the next scheduled check-in.
 
-For more information, see [Sync devices to get the latest policies and actions with Intune](../../intune-service/remote-actions/device-sync.md).
+For more information, see [Sync devices to get the latest policies and actions with Intune](../../device-management/actions/sync.md).
 
 #### Restart
 
 The **Restart** device action causes the device you choose to restart. This action is useful when there's a pending reboot, but the user isn't available to do it.
 
-For more information, see [Remotely restart devices with Intune](../../intune-service/remote-actions/device-restart.md).
+For more information, see [Remotely restart devices with Intune](../../device-management/actions/restart.md).
 
 #### Fresh Start
 
@@ -91,16 +91,16 @@ If you choose not to retain user data, the device restores to its out-of-box sta
 
 If you have predetermined standards regarding what apps should be on the device, then this action eliminates the ones that don't meet your criteria.
 
-For more information, see [Use Fresh Start to reset Windows devices with Intune](../../intune-service/remote-actions/device-fresh-start.md).
+For more information, see [Use Fresh Start to reset Windows devices with Intune](../../device-management/actions/fresh-start.md).
 
 #### Remote control
 
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you acquire separately.
 
-For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).
+For more information, see [Use TeamViewer to remotely administer Intune devices](../../device-management/tools/teamviewer-legacy.md).
 
 ## Configure
 
 Other than remote control via TeamViewer, to start using these remote device actions in Intune, no additional setup is required after you [enable co-management](how-to-enable.md).
 
-For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).
+For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../device-management/tools/teamviewer-legacy.md).

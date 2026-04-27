@@ -1,13 +1,13 @@
 ---
-title: Anomalies Report in Advanced Analytics
-description: Discover how anomalies report in Microsoft Intune Advanced Analytics helps IT admins monitor device health, detect issues, and get actionable insights to improve endpoint reliability.
-ms.date: 12/01/2025
+title: Anomalies Report for Proactive Device Issue Detection
+description: Use the anomalies report in Advanced Analytics to monitor device health, identify issues early, and prioritize fixes to improve endpoint reliability.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
 # Anomalies report
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 The anomalies report in Advanced Analytics helps IT admins proactively identify device health issues before they affect users. It monitors for application hangs, crashes, and Stop Error Restarts, providing visibility into problems before they reach support channels.
 
@@ -24,15 +24,15 @@ The feature correlates deployment objects and configuration changes to speed tro
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Overview**.
 1. Select the **Anomalies** tab, which provides an overview of the anomalies detected in your organization.
 
-:::image type="content" source="images/anomaly-detection/anomalies-tab.png" lightbox="images/anomaly-detection/anomalies-tab.png" alt-text="Screenshot of the Anomaly tab in Overview section of endpoint analytics.":::
+:::image type="content" source="media/anomalies/severity-summary-and-anomaly-list.png" lightbox="media/anomalies/severity-summary-and-anomaly-list.png" alt-text="Screenshot of the anomalies report with severity counts and a list of detected anomalies, including status, affected devices, and occurrence dates.":::
 
 - Use sorting and filtering capabilities to refine the list of anomalies.
 - To view more information about a specific anomaly, select it from the list. Review details such as the app name, affected devices, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
-    :::image type="content" source="images/anomaly-detection/details-of-anomaly.png" lightbox="images/anomaly-detection/details-of-anomaly.png" alt-text="Screenshot of details displayed when you select an anomaly displayed in the Anomaly tab.":::
+    :::image type="content" source="media/anomalies/anomaly-detail-and-correlation-groups.png" lightbox="media/anomalies/anomaly-detail-and-correlation-groups.png" alt-text="Screenshot of the anomaly details pane with severity, state, affected devices, detection dates, analytics model, and device correlation groups.":::
 - Select a device correlation group from the list to see common factors among devices. Devices are correlated by shared attributes such as app version, driver update, OS version, or device model. You can view the number of devices currently affected and those at risk. The **prevalence rate** shows the percentage of affected devices in a correlation group.
-    :::image type="content" source="images/anomaly-detection/select-corelation-group.png" lightbox="images/anomaly-detection/select-corelation-group.png" alt-text="Screenshot showing Device correlation groups.":::
+    :::image type="content" source="media/anomalies/correlation-group-common-factors.png" lightbox="media/anomalies/correlation-group-common-factors.png" alt-text="Screenshot of an expanded device correlation group with common factors such as app version and publisher, plus prevalence and an affected devices link.":::
 - Select **View Affected Devices** to display a list of devices with key attributes. Filter to view devices in specific correlation groups or show all devices affected by the anomaly. The device timeline also shows additional anomalous events.
-    :::image type="content" source="images/anomaly-detection/affected-devices.png" lightbox="images/anomaly-detection/affected-devices.png" alt-text="Screenshot showing a list of affected devices.":::
+    :::image type="content" source="media/anomalies/affected-devices.png" lightbox="media/anomalies/affected-devices.png" alt-text="Screenshot of the affected devices list filtered by correlation group, showing device name, status, manufacturer, model, OS version, and occurrence dates.":::
 
 ## Review anomaly detection data
 

@@ -14,7 +14,7 @@ items:
     - name: Product feedback
       href: understand/product-feedback.md
     - name: How to use the docs
-      href: ../../use-docs.md
+      href: ../../fundamentals/use-docs.md
     - name: Accessibility features
       href: understand/accessibility-features.md
     - name: Software Center user guide
@@ -609,21 +609,21 @@ items:
       - name: Troubleshoot SQL Server replication
         items:
         - name: Troubleshoot SQL Server replication
-          href: servers/manage/replication/overview.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/overview?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: SQL Server replication
-          href: servers/manage/replication/sql-replication.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-replication?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: SQL Server configuration
-          href: servers/manage/replication/sql-configuration.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-configuration?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: SQL Server performance
-          href: servers/manage/replication/sql-performance.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-performance?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: SQL Server replication reinitialization (reinit)
-          href: servers/manage/replication/sql-replication-reinit.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/sql-replication-reinit?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: Global data reinit
-          href: servers/manage/replication/global-data-reinit.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/global-data-reinit?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: Site data reinit
-          href: servers/manage/replication/site-data-reinit.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/site-data-reinit?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
         - name: Reinit missing message
-          href: servers/manage/replication/reinit-missing-message.md
+          href: /troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot/reinit-missing-message?toc=/intune/configmgr/core/toc.json&bc=/intune/configmgr/core/breadcrumb/toc.json
     - name: Queries
       items:
       - name: Introduction to queries

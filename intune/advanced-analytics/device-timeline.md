@@ -1,13 +1,13 @@
 ---
-title: Device Timeline Report in Advanced Analytics
-description: Discover the device timeline in Microsoft Intune endpoint analytics for detailed device event history and advanced troubleshooting.
-ms.date: 12/01/2025
+title: Device Timeline Report
+description: Use the device timeline report in Intune to review device event history, identify issues faster, and correlate incidents to start troubleshooting now.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
 # Device timeline report
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 The device timeline allows you to see a history of events that have occurred on a specific device.
 
@@ -21,7 +21,7 @@ The device timeline allows you to see a history of events that have occurred on 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
 1. Select a device, then select **User Experience** > **Device Timeline**.
-   :::image type="content" source="images/device-timeline.png" alt-text="Screenshot of the device timeline in endpoint analytics." lightbox="images/device-timeline.png":::
+   :::image type="content" source="media/device-timeline/event-history-chart-and-table.png" alt-text="Screenshot of the device timeline report with an event histogram and event table showing boot, sign-in, app crash, and error details over time." lightbox="media/device-timeline/event-history-chart-and-table.png":::
 1. Filter events by date, device, or user to focus on relevant incidents.
 
 > [!NOTE]

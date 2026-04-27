@@ -52,7 +52,7 @@ Headings are driven by article context. -->
       - **Failed** - The application failed to install. Check logs for further details.
       
       > [!Note]
-      > A [known issue](/autopilot/device-preparation/known-issues#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
+      > A [known issue](../known-issues.md#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
 
    1. **Scripts** - Contains information regarding the PowerShell scripts being run during the Windows Autopilot device preparation including the list of scripts being run. Statuses include:
 
@@ -62,4 +62,4 @@ Headings are driven by article context. -->
       - **Failed** - The PowerShell script failed to run. Check logs for further details.
 
 > [!Important]
-> Windows 365 devices that are reprovisioned after a failed deployment will not be deleted from Intune and will remain in the Autopilot device preparation report to allow for you to download the diagnostic logs when an error occurs. To clean up the stale records, use [Intune cleanup rules](/intune/intune-service/fundamentals/device-cleanup-rules) or delete manually.
+> Windows 365 devices that are reprovisioned after a failed deployment will not be deleted from Intune and will remain in the Autopilot device preparation report to allow for you to download the diagnostic logs when an error occurs. To clean up the stale records, use [Intune cleanup rules](/intune/governance/configure-cleanup-rules) or delete manually.

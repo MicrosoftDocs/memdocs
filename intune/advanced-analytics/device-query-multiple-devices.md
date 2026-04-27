@@ -1,15 +1,15 @@
 ---
-title: Device Query for Multiple Devices in Advanced Analytics
-description: Use device query for multiple devices in Microsoft Intune to run Kusto Query Language (KQL) queries, analyze device inventory, and gain cross-platform insights.
-ms.date: 01/23/2026
+title: Device Query for Multiple Devices
+description: Use device query for multiple devices in Microsoft Intune to run KQL queries, analyze inventory trends, and start querying your managed fleet now.
+ms.date: 03/24/2026
 ms.topic: how-to
 ---
 
 # Device query for multiple devices
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
-Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
+Use Device query for multiple devices in Microsoft Intune to run Kusto Query Language (KQL) queries across device inventory data and identify trends across your managed fleet. This article explains prerequisites, how to create and run queries in the Intune admin center, how to work with results, and which operators, functions, and properties are supported.
 
 ## Before you begin
 
@@ -43,8 +43,8 @@ Additional prerequisites for device query for multiple devices:
 :::column span="3":::
 > Device query for multiple devices supports devices that are:
 >
-> - Managed by Intune and marked as corporate owned
-> - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
+> - Managed by Intune and marked as corporate owned.
+> - Windows devices must have a [properties catalog policy](../device-configuration/collect-device-properties.md) deployed to them to collect inventory data.\
 >   For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 :::column-end:::
 :::row-end:::
@@ -67,25 +67,32 @@ Additional prerequisites for device query for multiple devices:
 ## Use device query for multiple devices
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
-1. Input a query in the query box using the supported properties and supported operators.
+1. Enter a query in the query box by using the supported properties and operators.
 1. Select **Run** to execute the query.
-1. Results are displayed in the **Results** tab area.
-   - To run part of a query or a single query when multiple queries are in the window, highlight the query you want to run and select **Run**. Only the highlighted query runs.
+1. View the results in the **Results** tab.
+   - To run part of a query or a single query when multiple queries are present, highlight the query you want to run and select **Run**. Only the highlighted query runs.
 
-You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.
+You can expand the view on the left side to see all available properties that you can query. Select a property to insert it into your query. You can also resize the left pane and the query window to adjust the layout.
 
-After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file.
-
-For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
+For more information about Kusto Query Language (KQL), see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> Use Copilot in Intune to generate KQL queries for device query by using natural language requests. To learn more, see [Query with Copilot in device query](../copilot/index.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+
+### Query results and actions
+
+After you run a query, results appear in the **Results** tab. You can interact with the results in several ways:
+
+- When a query returns **50 items or fewer**, you can search across all rows in the results and apply filters by using column headers.
+- Create Microsoft Entra security groups directly from a query's results by selecting **Add all items to a group**. This action helps you target specific devices with Microsoft Entra Conditional Access policies or Microsoft Intune policies.
+- Select **Export** to save results to a .csv file. You can export all columns or only selected columns. You can export up to **50,000** results to a file.
+
 
 ## Sample queries
 
-To help you get started, some sample queries are provided in this section. To access the sample queries, expand the **example queries** section under the Getting started page, and select the one you want to add to the query window. The following section shows the list of sample queries.
+To help you get started, this section provides some sample queries. To access the sample queries, expand the **example queries** section under the **Getting started** page, and select the query you want to add to the query window. The following section shows the list of sample queries.
 
-### Top processors by Core Count
+### Top processors by core count
 
 This query shows the top five CPUs by core count.
 
@@ -106,7 +113,7 @@ EncryptableVolume
 | join LogicalDrive on Device
 ```
 
-### Arm64 devices
+### ARM64 devices
 
 This query lists all devices with an ARM64 processor.
 
@@ -157,7 +164,7 @@ This query provides a summary of devices by OS version.
 OsVersion| summarize DevicesCount = count() by OsVersion
 ```
 
-### Devices Bios Information
+### Device BIOS information
 
 This query lists devices based on BIOS manufacturer.
 
@@ -264,7 +271,7 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 ## Supported properties
 
-Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
+Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](ref-data-platform-schema.md).
 
 - `Apple Auto Setup Admin Accounts`
 - `Apple Device States`
@@ -384,5 +391,5 @@ Cpu
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator

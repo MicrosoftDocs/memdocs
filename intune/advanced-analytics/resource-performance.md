@@ -1,13 +1,13 @@
 ---
-title: Resource Performance Report in Microsoft Intune Advanced Analytics
-description: Explore the resource performance report in Microsoft Intune Advanced Analytics for CPU and RAM insights, device performance analysis, and proactive endpoint analytics.
-ms.date: 12/01/2025
+title: Resource Performance Report
+description: Use the resource performance report in Intune to analyze CPU and RAM trends, identify at-risk devices, and act on recommendations to improve user experience.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
 # Resource performance report
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
 
 The resource performance report gives you a clear view of processor and memory performance on Windows devices and how these factors affect user experience. By tracking the performance score, you can spot emerging hardware issues that may reduce productivity and take proactive steps before support tickets occur.
 
@@ -46,7 +46,7 @@ The report also provides actionable insights—showing how much your score could
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
 
-:::image type="content" source="images/resource-performance.png" lightbox="images/resource-performance.png" alt-text="This is a screenshot of the Resource performance report page":::
+:::image type="content" source="media/resource-performance/score-breakdown-and-trends.png" lightbox="media/resource-performance/score-breakdown-and-trends.png" alt-text="Screenshot of the resource performance report with overall score, CPU and RAM spike time breakdown, 28-day trend, and prioritized recommendations.":::
 
 ### Resource performance score
 

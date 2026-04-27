@@ -1,7 +1,7 @@
 ---
-title: Advanced Analytics overview
+title: Advanced Analytics Overview
 description: Discover what Microsoft Intune Advanced Analytics is, how it extends endpoint analytics with advanced device insights, proactive troubleshooting, and enhanced reporting.
-ms.date: 12/01/2025
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 Microsoft Intune Advanced Analytics delivers deep, actionable insights into the health and performance of your organization's endpoints. Built on the foundation of [endpoint analytics](../endpoint-analytics/index.md), it helps IT teams proactively manage user experience and optimize productivity through data-driven intelligence. By turning raw telemetry into meaningful insights, Advanced Analytics reduces support costs, accelerates problem resolution, and ensures a more reliable technology experience for every user.
 
-## Availble reports and capabilities
+## Available reports and capabilities
 
 Advanced Analytics enhances endpoint analytics with the following reports and capabilities:
 
@@ -105,7 +105,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 >   > [!NOTE]
 >   >
 >   > Support for Advanced Analytics in DoD environments doesn't include the [*Device query*](device-query.md) functionality or the [*Resource performance*](resource-performance.md) report.
->   For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
+>   For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service.md).
 
 :::column-end:::
 :::row-end:::
@@ -133,7 +133,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 :::column-end:::
 :::column span="3":::
 
-> Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
+> Advanced Analytics features are included in [Microsoft Intune Suite](../fundamentals/add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
 >
 > **Mixed licensing scenarios**: A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the *base* endpoint analytics product. In these cases, the subscription with the highest level of functionality determines the overall endpoint analytics experience for your tenant. For example, if any users have Advanced Analytics, all enrolled devices will benefit from the advanced features.
 :::column-end:::
@@ -143,7 +143,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 
 Before deploying Advanced Analytics, complete these foundational tasks:
 
-- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand which data is captured.
+- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](ref-data-platform-schema.md) to understand which data is captured.
 - Define escalation and support procedures for handling analytics findings.
 - Train staff on IT processes you plan to optimize, such as help desk triage, hardware refresh cycles, and app updates. Treat this as a continuous improvement cycle for faster and more proactive issue resolution.
 
@@ -155,7 +155,7 @@ When license requirements are met, then Advanced Analytics capabilities are auto
 > It might take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
 
 For the extra reports and capabilities on Windows devices:
-- Devices must to be enrolled into Intune and onboarded to endpoint analytics.
+- Devices must be enrolled in Intune and onboarded to endpoint analytics.
 - [Device query for multiple devices](device-query-multiple-devices.md) requires a properties catalog policy to be configured and deployed.
 
 ### Advanced Analytics in the Intune admin center
