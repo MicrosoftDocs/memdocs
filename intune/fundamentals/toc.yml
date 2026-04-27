@@ -23,9 +23,6 @@ items:
     href: ./add-ons.md
     displayName: intune suite, add-ons, premium
 
-  - name: What's new
-    href: ../whats-new/toc.yml
-
   - name: Evaluate and try
     items:
       - name: Walkthrough the admin center
