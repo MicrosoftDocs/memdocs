@@ -13,7 +13,7 @@ metadata:
 highlightedContent:
   items:
     - title: What is Microsoft Intune?
-      itemType: overview
+      itemType: get-started
       url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: whats-new
