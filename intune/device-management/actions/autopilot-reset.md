@@ -1,14 +1,14 @@
 ---
-title: "Remote Device Action: Autopilot Reset"
+title: "Device Action: Autopilot Reset"
 description: Learn how to use Autopilot reset with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: Autopilot Reset
+# Device action: Autopilot Reset
 
 
-Use the *Autopilot Reset* remote action in Intune to prepare a Windows device for reuse while maintaining its Microsoft Entra ID and Intune enrollment. Autopilot Reset removes user data, settings, and apps, and reapplies the original device configuration.
+Use the *Autopilot Reset* action in Intune to prepare a Windows device for reuse while maintaining its Microsoft Entra ID and Intune enrollment. Autopilot Reset removes user data, settings, and apps, and reapplies the original device configuration.
 
 The reset preserves key settings, including Wi-Fi profiles and credentials, allowing the device to reconnect automatically after the reset. Region, language, and keyboard settings are also retained.
 
@@ -25,7 +25,7 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - Windows
 
@@ -40,7 +40,7 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 :::column-end:::
 :::column span="3":::
 
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -51,16 +51,16 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 :::column-end:::
 :::row-end:::
 
-### How to use Autopilot reset from the Intune admin center
+## How to use Autopilot reset from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Autopilot reset**.
+1. At the top of the device overview pane, find the row of action icons. Select **Autopilot reset**.
 1. To confirm, select **Yes**.
 
 ## Reference links
 
-- Configuration service provider (CSP) used to initiate the remote action: [RemoteWipe CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [RemoteWipe CSP][CSP-1]
 - Microsoft Graph API: [wipe action][GRAPH-1]
 
 <!--links-->
@@ -72,10 +72,10 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 
 <!-- role links -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
 <!-- API links -->
 

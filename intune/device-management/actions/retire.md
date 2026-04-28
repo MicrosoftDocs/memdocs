@@ -1,14 +1,14 @@
 ---
-title: "Remote Device Action: Retire"
+title: "Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Remote device action: retire
+# Device action: retire
 
-The *retire* remote action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
+The *retire* action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
 
 Unlike the **Wipe** action, which resets the device to factory settings, **Retire** keeps user content intact. The action is triggered the next time the device checks in with Intune. Until then, the device might still appear in the admin center. If you need to remove a device immediately, consider using the [Delete action](delete.md) instead.
 
@@ -34,7 +34,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - Android device administrator
 > - Android Enterprise personally-owned work profile (BYOD)
@@ -51,7 +51,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -64,7 +64,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Retire**. To confirm, select **Yes**.
+1. At the top of the device overview pane, find the row of action icons. Select **Retire**. To confirm, select **Yes**.
 
 [!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
 
@@ -163,7 +163,7 @@ For Microsoft Entra ID joined devices, after the **Retire** command is executed,
 ## Reference links
 
 - Microsoft Graph API: [retire action][GRAPH-1]
-- Configuration service provider (CSP) used to initiate the remote action: [Defender CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [RemoteWipe CSP][CSP-1]
 
 <!--links-->
 
@@ -174,11 +174,11 @@ For Microsoft Entra ID joined devices, after the **Retire** command is executed,
 
 <!-- role links -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
 <!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-retire
-[CSP-1]: /windows/client-management/mdm/defender-csp
+[CSP-1]: /windows/client-management/mdm/remotewipe-csp

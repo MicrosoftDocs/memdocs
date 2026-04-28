@@ -1,13 +1,13 @@
 ---
 title: Step 2. Create App Protection Policies for Microsoft Edge for Business
 description: Step 2. Create app protection policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
-ms.date: 01/23/2026
+ms.date: 04/23/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
 ms.collection:
-- highpri
-- highseo
 - FocusArea_Apps_AppManagement
 zone_pivot_groups: app-protection-platforms
 ---
@@ -122,7 +122,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 9. On the **Health checks** tab, configure:
    - Disabled account: **Block access**
    - Min OS version: **10.0.22621.2506 / Block access**
-   - Max allowed device threat level: **Medium / Block access**
+   - Max allowed device threat level: **Secured / Block access**
    - Offline grace period: **1440 minutes / Block access**
    - Offline grace period: **30 days / Wipe data**
 10. Select **Next**.

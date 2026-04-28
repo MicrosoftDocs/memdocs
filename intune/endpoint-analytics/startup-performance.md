@@ -76,7 +76,7 @@ In the model performance tab, two default columns allow you to review both the a
 Review boot and sign-in metrics for all your devices. You can sort by a particular metric to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name.
 
 > [!Note]
-> In the device performance tab, admins only see devices they have access to according to their assigned scope tags. To learn more about scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
+> In the device performance tab, admins only see devices they have access to according to their assigned scope tags. To learn more about scope tags, see [Scope tags for distributed IT](../fundamentals/role-based-access-control/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
 #### Device level drill-in view
 

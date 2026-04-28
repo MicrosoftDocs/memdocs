@@ -1,14 +1,14 @@
 ---
-title: "Remote Device Action: Restart"
+title: "Device Action: Restart"
 description: Learn how to restart managed devices with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
 
-# Remote device action: restart
+# Device action: restart
 
-The *restart* remote action triggers a restart (usually begins within 5 minutes) and might not show a warning to the signed-in user.
+The *restart* action triggers a restart (usually begins within 5 minutes) and might not show a warning to the signed-in user.
 
 > [!IMPORTANT]
 > The restart depends on the device receiving a push notification. If the device is offline or push notifications are blocked, the restart is delayed until connectivity resumes.
@@ -22,7 +22,7 @@ The *restart* remote action triggers a restart (usually begins within 5 minutes)
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
 > - Android Open Source Project (AOSP)
@@ -46,7 +46,7 @@ The *restart* remote action triggers a restart (usually begins within 5 minutes)
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -60,7 +60,7 @@ The *restart* remote action triggers a restart (usually begins within 5 minutes)
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Restart** > **Yes**.
+1. At the top of the device overview pane, find the row of action icons. Select **Restart** > **Yes**.
 
 ::: zone pivot="windows,ios"
 ## User experience
@@ -73,13 +73,13 @@ A passcode-locked device can't reconnect to Wi-Fi until the user unlocks it. App
 ::: zone pivot="windows"
 When the 5‑minute restart timer starts, Windows attempts to show the notification: *Your device administrator has scheduled a reboot.* Delivering the restart command requires Windows Notification Services (WNS).
 
-For more information about WNS, see [Network endpoint requirements](../../intune-service/fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
+For more information about WNS, see [Network endpoint requirements](../../fundamentals/endpoints.md#windows-push-notification-services-wns-dependencies).
 ::: zone-end
 
 ## Reference links
 
 ::: zone pivot="windows"
-- Configuration service provider (CSP) used to initiate the remote action: [Reboot CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [Reboot CSP][CSP-1]
 ::: zone-end
 - Microsoft Graph API: [rebootNow action][GRAPH-1]
 
@@ -96,10 +96,10 @@ For more information about WNS, see [Network endpoint requirements](../../intune
 
 <!-- roles -->
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 

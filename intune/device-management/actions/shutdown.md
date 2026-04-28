@@ -1,11 +1,11 @@
 ---
-title: "Remote Device Action: Shutdown"
+title: "Device Action: Shutdown"
 description: Learn how to shutdown Apple devices with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: shut down
+# Device action: shut down
 
 With the *shut down* action, IT administrators can remotely power off managed devices. This action doesn't prompt or warn the user before the device powers down.
 
@@ -18,7 +18,7 @@ With the *shut down* action, IT administrators can remotely power off managed de
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS
@@ -32,7 +32,7 @@ With the *shut down* action, IT administrators can remotely power off managed de
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -46,7 +46,7 @@ With the *shut down* action, IT administrators can remotely power off managed de
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Shut down** > **Yes**.
+1. At the top of the device overview pane, find the row of action icons. Select **Shut down** > **Yes**.
 
 > [!NOTE]
 > iOS/iPadOS devices that are Passcode-locked will not rejoin a Wi-Fi network after restarting. After restarting, the device might not be able to communicate with the server.
@@ -59,10 +59,10 @@ With the *shut down* action, IT administrators can remotely power off managed de
 
 [ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
 
-[INT-R1]: ../../intune-service/fundamentals/role-based-access-control-reference.md#help-desk-operator
-[INT-R2]: ../../intune-service/fundamentals/role-based-access-control-reference.md#school-administrator
-[INT-RC]: ../../intune-service/fundamentals/create-custom-role.md
-[INT-R4]: ../../intune-service/fundamentals/role-based-access-control-reference.md#endpoint-security-manager
+[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 

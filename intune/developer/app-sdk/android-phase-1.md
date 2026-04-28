@@ -254,10 +254,10 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 <!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
-[Set up Intune]:../../intune-service/fundamentals/deployment-plan-setup.md
-[Create users]:../../intune-service/fundamentals/users-add.md
-[Create groups]:../../intune-service/fundamentals/groups-add.md
-[Assign licenses]:../../intune-service/fundamentals/licenses-assign.md
+[Set up Intune]:../../fundamentals/deploy-setup-step-1.md
+[Create users]:../../fundamentals/tenant-administration/add-users.md
+[Create groups]:../../fundamentals/tenant-administration/add-groups.md
+[Assign licenses]:../../fundamentals/licensing/assign-licenses.md
 [Create and assign app protection policies]:../../app-management/protection/create-policy.md
 [app configuration policy]:../../app-management/configuration/overview.md
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration

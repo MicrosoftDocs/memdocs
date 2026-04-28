@@ -30,7 +30,7 @@ This feature applies to:
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
-  There are some built-in roles that have these permissions, including the built-in **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+  There are some built-in roles that have these permissions, including the built-in **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Enable Kerberos SSO to on-premises Active Directory and Microsoft Entra ID
 

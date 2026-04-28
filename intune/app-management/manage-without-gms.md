@@ -25,7 +25,7 @@ If Google Play isn't available, Android devices can download the [Microsoft In
 
 ### For users in People's Republic of China
 
-Because the Google Play Store is currently not available in People's Republic of China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in People's Republic of China](../user-help/company-portal/install-company-portal-android-china.md).
+Because the Google Play Store is currently not available in People's Republic of China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in People's Republic of China](../user-help/company-portal/install-android-china.md).
 
 ## Limitations of Intune management when GMS is unavailable
 

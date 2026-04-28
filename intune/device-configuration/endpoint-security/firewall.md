@@ -5,7 +5,6 @@ ms.date: 09/18/2024
 ms.topic: reference
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ms.reviewer: laarrizz
 
@@ -99,7 +98,7 @@ For prerequisites and guidance on configuring reusable groups, and then adding t
 
 ### Devices managed by Configuration Manager
 
-[!INCLUDE [Firewall policy prerequisites](../../intune-service/includes/tenant-attach-firewall-prerequisites.md)]
+[!INCLUDE [Firewall policy prerequisites](../../includes/tenant-attach-firewall-prerequisites.md)]
 
 ## Firewall rule mergers and policy conflicts
 
@@ -153,7 +152,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 ### MDM Firewall status for Windows
 
-*This organizational report is also described in [Intune Reports](../../intune-service/fundamentals/reports.md#mdm-firewall-status-for-windows-organizational)*.
+*This organizational report is also described in [Intune Reports](../../device-management/reports/overview.md#mdm-firewall-status-for-windows-organizational)*.
 
 As an organizational report, this report is available from the **Reports** node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** > **MDM Firewall status for Windows**.
 

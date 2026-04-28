@@ -5,7 +5,6 @@ ms.date: 05/19/2025
 ms.topic: reference
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ms.reviewer: mattcall
 
@@ -185,7 +184,7 @@ The following profiles are supported for devices you manage with Intune:
 
 ### Devices managed by Configuration Manager
 
-[!INCLUDE [antivirus policy prerequisites](../../intune-service/includes/tenant-attach-antivirus-prerequisites.md)]
+[!INCLUDE [antivirus policy prerequisites](../../includes/tenant-attach-antivirus-prerequisites.md)]
 
 ## Policy merge for settings
 
@@ -217,8 +216,8 @@ To view the reports, in the [Microsoft Intune admin center](https://go.microsoft
 
 In addition to reports detailed in the following sections, additional reports for Microsoft Defender Antivirus are found in the Reports node of the Microsoft Intune admin center, as documented in the Intune Reports article:
 
-- [Antivirus agent status report (Organizational)](../../intune-service/fundamentals/reports.md#antivirus-agent-status-report-organizational)
-- [Detected malware report (Organizational)](../../intune-service/fundamentals/reports.md#detected-malware-report-organizational)
+- [Antivirus agent status report (Organizational)](../../device-management/reports/overview.md#antivirus-agent-status-report-organizational)
+- [Detected malware report (Organizational)](../../device-management/reports/overview.md#detected-malware-report-organizational)
 
 ### Summary
 
