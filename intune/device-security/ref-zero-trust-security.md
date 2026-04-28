@@ -2,7 +2,7 @@
 title:  Configure Microsoft Intune for increased security
 description:  Learn how to improve your security posture with Microsoft Intune.
 ms.topic: reference
-ms.date: 10/20/2025
+ms.date: 04/28/2026
 ms.author: brenduns
 author: brenduns
 ms.reviewer: ramical
@@ -26,6 +26,10 @@ The security recommendations in this document are designed to help you improve y
 > Some organizations might take these recommendations exactly as written, while others might choose to make modifications based on their own business needs.
 
 We recommend that all of the following controls be implemented where licenses are available. These patterns and practices help to provide a secure foundation for other resources built on top of this solution. More controls will be added to this document over time.
+
+## Automated assessment
+
+Manually checking this guidance against a tenant's configuration can be time-consuming and error-prone. The Zero Trust Assessment transforms this process with automation to test for these security configuration items and more. Learn more in [What is the Zero Trust Assessment](https://learn.microsoft.com/security/zero-trust/assessment/overview)?
 
 ## Secure Tenant
 
