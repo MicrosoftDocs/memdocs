@@ -62,13 +62,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 On macOS devices enrolled with Automated Device Enrollment (ADE), you can run Platform SSO during device registration. Before you enroll, you:
 
-1. Create an Intune [settings catalog policy](../../device-configuration/settings-catalog.md) and configure the **Enable Registration During Setup** setting.
-2. Deploy the Company Portal (5.2604.0 and newer) as a line-of-business app.
-3. Configure the Automated Device Enrollment policy to use Setup Assistant with modern authentication and enable await final configuration.
+1. Create an Intune [settings catalog policy](../device-configuration/settings-catalog/index.md) and configure the **Enable Registration During Setup** setting.
+1. Deploy the Company Portal (5.2604.0 and newer) as a line-of-business app.
+1. Configure the Automated Device Enrollment policy to use Setup Assistant with modern authentication and enable await final configuration.
 
 When this feature is enabled, users have access to Microsoft Entra ID resources immediately when they arrive at desktop.
 
-To learn more, see [Configure Platform Single Sign-On (PSSO) during Automated Device Enrollment for macOS devices](../../device-configuration/settings-catalog/configure-platform-sso-during-enrollment.md).
+To learn more, see [Configure Platform Single Sign-On (PSSO) during Automated Device Enrollment for macOS devices](../device-configuration/settings-catalog/configure-platform-sso-during-enrollment.md).
 
 > [!div class="checklist"]
 > Applies to:
