@@ -107,7 +107,7 @@ Connected Cache with Configuration Manager requires an *on-premises* distributio
 
 - The distribution point requires internet access to the Microsoft cloud. The specific URLs can vary depending upon the specific cloud-enabled content. Make sure to also allow the endpoints for delivery optimization. For more information, see [Internet access requirements](../network/internet-endpoints.md).
 
-- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../intune-service/fundamentals/intune-endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
+- For co-managed clients and Intune Win32 apps, allow the distribution point to access the endpoints for that scenario. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../../../../fundamentals/endpoints.md#network-requirements-for-powershell-scripts-and-win32-apps).
 
 - Clients technically only need access to the distribution point with the Connected Cache. Although it's best to also give clients access to the internet endpoints for the content, in case they need to fall back to the original source.
 

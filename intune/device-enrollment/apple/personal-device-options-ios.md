@@ -55,7 +55,7 @@ Employees and students can access management options for their personal devices 
 >[!NOTE]
 > The *rename* action that's available to device users changes the display name in Company Portal. It doesn't rename the device in the Microsoft Intune admin center.
 
-For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../../user-help/company-portal/company-portal-website.md).
+For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../../user-help/company-portal/website.md).
 
 ## Certificates
 
@@ -67,7 +67,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 - iPadOS 16.1 or later
 
-This capability is also supported in [GCC High tenants](../../intune-service/fundamentals/intune-govt-service-description.md).
+This capability is also supported in [GCC High tenants](../../fundamentals/government-service.md).
 
 ## Known issues and limitations
 

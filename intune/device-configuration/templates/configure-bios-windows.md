@@ -32,8 +32,8 @@ This article includes more information on the configuration file and Win32 app, 
 
 - To configure the Intune policies, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to:
 
-  - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
-  - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
+  - [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
+  - [Built-in role permissions for Microsoft Intune](../../fundamentals/role-based-access-control/ref-built-in-roles.md)
 
 - This feature supports organization-owned devices that are MDM enrolled in Intune. Personal devices and devices not enrolled in Intune aren't supported.
 
@@ -70,8 +70,8 @@ It's recommended to focus this policy on a specific set of devices. Your options
 
 For information on these features, go to:
 
-- [Add groups to organize users and devices](../../intune-service/fundamentals/groups-add.md)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../intune-service/fundamentals/filters.md)
+- [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../../fundamentals/filters/overview.md)
 
 ## Step 3 - Create the BIOS configuration policy in Intune
 
@@ -125,7 +125,7 @@ In the Intune admin center, after you create a policy, you can monitor its statu
 For more information, go to:
 
 - [Monitor device configuration policies in Microsoft Intune](../monitor-device-profile.md)
-- [Intune reports](../../intune-service/fundamentals/reports.md)
+- [Intune reports](../../device-management/reports/overview.md)
 
 ## Retrieve the BIOS passwords
 
@@ -147,8 +147,8 @@ This option gets the BIOS passwords, one device at a time.
 
         For information on the Intune built-in roles, go to:
 
-        - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
-        - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
+        - [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
+        - [Built-in role permissions for Microsoft Intune](../../fundamentals/role-based-access-control/ref-built-in-roles.md)
 
     1. Select **Tenant administration** > **Roles** > **Create a new role**.
     1. **Name** your role and select **Next**.

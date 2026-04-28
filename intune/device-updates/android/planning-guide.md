@@ -98,7 +98,7 @@ Android devices running older versions that are currently enrolled in Intune don
 
 If you currently have devices running older Android versions in your organization, then upgrade or replace them. Use the information in this article to help you define an update strategy. Using newer OS versions provide better productivity and security to your users and your organization.
 
-For more version information, go to [Supported operating systems and browsers in Intune](../../intune-service/fundamentals/supported-devices-browsers.md).
+For more version information, go to [Supported operating systems and browsers in Intune](../../fundamentals/ref-supported-platforms.md).
 
 ## Related articles
 

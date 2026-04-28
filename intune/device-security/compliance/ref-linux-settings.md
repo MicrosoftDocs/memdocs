@@ -87,5 +87,5 @@ If you must modify a device's configuration, use one of the following methods to
 
 ## Next steps
 
-- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../intune-service/fundamentals/scope-tags.md).
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
 - [Monitor your compliance policies](./monitor-policy.md).

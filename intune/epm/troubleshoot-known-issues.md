@@ -1,7 +1,9 @@
 ---
 title: Known Issues for Endpoint Privilege Management with Microsoft Intune
 description: Configure policies that define how Endpoint Privilege Management functions in your tenant, and behaviors when elevating files to run in administrative context.
-ms.date: 09/10/2025
+author: brenduns
+ms.author: brenduns
+ms.date: 04/27/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.subservice: suite
@@ -42,10 +44,6 @@ Application Control for Business policies that don't account for the EPM client 
 
 Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive sign-in session. Organizations who limit the ability for users to create interactive sessions need to make changes for EPM to function properly.
 
-## Users requesting support approval for elevation must be the primary user on the device
-
-Endpoint Privilege Management currently requires the user requesting an elevation to be the primary user of the device. We're working to remove this limitation in a future release.
-
 ## Authoring files with a file name as one of the sole attributes for identification
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
@@ -81,7 +79,7 @@ Endpoint Privilege Management supports running files that are locally stored on 
 
 ## Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
-Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../intune-service/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
+Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ### Certain Windows functions, such as control panel items or configurations in the settings app can't be elevated with EPM
 

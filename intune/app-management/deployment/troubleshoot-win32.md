@@ -103,7 +103,7 @@ In the preceding PowerShell command, replace `<path to binary file>` with your f
 
 ## Additional troubleshooting areas to consider
 - Check targeting to make sure the agent is installed on the device. A Win32 app targeted to a group or a PowerShell Script targeted to a group will create an agent installation policy for a security group.
-- Check the OS version: Use a [supported Windows version](../../intune-service/fundamentals/supported-devices-browsers.md).
+- Check the OS version: Use a [supported Windows version](../../fundamentals/ref-supported-platforms.md).
 - Check the Windows SKU. Windows S, or Windows versions running with S-mode enabled, doesn't support MSI installation.
 
 For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting). For information about app types on ARM64 devices, see [App types supported on ARM64 devices](/troubleshoot/mem/intune/troubleshoot-app-install#app-types-supported-on-arm64-devices).

@@ -22,7 +22,7 @@ If you still decide to have users enroll their Android devices with device admin
 
 ## Set up device administrator enrollment
 
-1. To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../../intune-service/fundamentals/mdm-authority-set.md) for instructions. You only need to configure this setting in your tenant once.
+1. To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../../fundamentals/setup-mdm-authority.md) for instructions. You only need to configure this setting in your tenant once.
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Go to **Devices** > **Enrollment.
 4. Select the **Android** tab.
@@ -34,9 +34,9 @@ After a user enrolls, you can begin managing their devices in Intune, including 
 
 For information about other user tasks, see these articles:
 
-- [Microsoft Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md)
+- [Microsoft Intune planning guide](../../fundamentals/planning-guide.md)
 
-- [Android device enrollment overview ](../../user-help/enrollment/enrollment-benefits-android.md)
+- [Android device enrollment overview ](../../user-help/enrollment/benefits-android.md)
 
 ## Block device administrator enrollment
 To block Android device administrator devices, or to block only personally owned Android device administrator devices from enrollment, see [Set device type restrictions](../restrictions.md).

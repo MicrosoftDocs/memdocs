@@ -31,7 +31,7 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
     reagentc.exe /enable
     ```
 
-1. Make sure the Intune admin initiating the remote Windows Autopilot Reset is a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](/intune/intune-service/fundamentals/users-add).
+1. Make sure the Intune admin initiating the remote Windows Autopilot Reset is a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](/intune/fundamentals/tenant-administration/add-users).
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -125,5 +125,5 @@ For more information on local Windows Autopilot Reset, see the following article
 - [Reset devices with remote Windows Autopilot Reset](../../windows-autopilot-reset.md#reset-devices-with-remote-windows-autopilot-reset).
 - [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 - [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options).
-- [Add users and grant administrative permission to Intune](/intune/intune-service/fundamentals/users-add).
+- [Add users and grant administrative permission to Intune](/intune/fundamentals/tenant-administration/add-users).
 - [Policy refresh intervals](/intune/device-configuration/troubleshoot-device-profiles#policy-refresh-intervals).

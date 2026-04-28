@@ -38,8 +38,8 @@ Use the steps in this article as a template to allow or deny specific apps from 
 
   For information on the Intune built-in roles, and what they can do, go to:
 
-  - [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
-  - [Built-in role permissions for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control-reference.md)
+  - [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
+  - [Built-in role permissions for Microsoft Intune](../../fundamentals/role-based-access-control/ref-built-in-roles.md)
 
 - Create a user group or devices group with your HoloLens 2 devices. For information on groups, go to [User groups vs. device groups](../assign-device-profile.md#user-groups-vs-device-groups).
 

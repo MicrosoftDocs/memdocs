@@ -38,8 +38,8 @@ If you're moving to the cloud or are adopting more cloud-based services, then us
 
 For more information, go to:
 
-- [What is Microsoft Intune?](../intune-service/fundamentals/what-is-intune.md)
-- [Get started with Microsoft Intune](../intune-service/fundamentals/get-started-with-intune.md)
+- [What is Microsoft Intune?](./what-is-intune.md)
+- [Get started with Microsoft Intune](./get-started.md)
 
 ## Configuration Manager and co-management
 
@@ -70,7 +70,7 @@ There's also a free trial to help you determine if these features can help your 
 
 For more information, go to:
 
-- [Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
+- [Intune Suite add-on capabilities](./add-ons.md)
 
 ## Intune admin center
 
@@ -81,8 +81,8 @@ The admin center also plugs-in other key device management services, including:
 - [**Microsoft Entra Privileged Identity Management** to monitor access to important resources](/azure/active-directory/privileged-identity-management/pim-configure)
 - [**Microsoft Tunnel** VPN gateway solution that runs on Linux](../device-security/microsoft-tunnel/overview.md)
 - [**Mobile threat defense** partners](../device-security/mobile-threat-defense/overview.md)
-- [**Remote Help** for remote assistance](/intune/intune-service/fundamentals/remote-help)
-- [**TeamViewer** for remote administration](../intune-service/fundamentals/teamviewer-support.md)
+- [**Remote Help** for remote assistance](../remote-help/index.md)
+- [**TeamViewer** for remote administration](../device-management/tools/teamviewer-legacy.md)
 - [**Windows 365** for your Windows virtual machines](/windows-365/overview)
 - [**Windows Autopatch** to automate updates](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
@@ -94,7 +94,7 @@ Microsoft Entra ID, previously known as Azure Active Directory (Azure AD), is a 
 
 For more information, go to:
 
-- [Add users](../intune-service/fundamentals/users-add.md)
+- [Add users](./tenant-administration/add-users.md)
 - [Set up auto enrollment](../device-enrollment/windows/enable-automatic-mdm.md)
 - [Learn about Conditional Access and Intune](../device-security/conditional-access-integration/overview.md)
 
@@ -166,12 +166,12 @@ For more information, go to:
 
 - [Endpoint analytics overview](../endpoint-analytics/index.md)
 - [Endpoint analytics scores, baselines, and insights](../endpoint-analytics/scores.md)
-- [Tutorial: Walkthrough the Microsoft Intune admin center](../intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Tutorial: Walkthrough the Microsoft Intune admin center](./tutorial-admin-center-walkthrough.md)
 - [Quickstart - Enroll Configuration Manager devices](../endpoint-analytics/configure.md)
 
 ## Learn more
 
-- [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
+- [Learn more about cloud-native endpoints](../solutions/cloud-native-endpoints/overview.md)
 - [Compare Microsoft 365 features and licensing](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise)
 - [Learn more about Microsoft Intune licensing](../fundamentals/licensing/index.md)
-- [Get started with Microsoft Intune](../intune-service/fundamentals/get-started-with-intune.md)
+- [Get started with Microsoft Intune](./get-started.md)

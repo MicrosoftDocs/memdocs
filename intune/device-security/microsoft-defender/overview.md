@@ -8,7 +8,6 @@ ai-usage: ai-assisted
 
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-secure-endpoints
 ---
 
@@ -49,7 +48,7 @@ To configure this integration end-to-end, you need permissions to manage the Int
 - **Endpoint Detection and Response**: *Assign*, *Create*, *Read*, and *Update* – Required to onboard devices using Intune EDR policy.
 - **Device compliance policies**: *Assign*, *Create*, *Read*, and *Update* – Required to configure risk-level compliance policies.
 
-You can add these permissions to a [custom Intune role](../../intune-service/fundamentals/create-custom-role.md), or use the built-in **Endpoint Security Manager** role, which is the least-privileged built-in Intune role that includes all required permissions. For details, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+You can add these permissions to a [custom Intune role](../../fundamentals/role-based-access-control/create-custom-role.md), or use the built-in **Endpoint Security Manager** role, which is the least-privileged built-in Intune role that includes all required permissions. For details, see [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 > [!NOTE]
 > Conditional Access policies are configured in Microsoft Entra ID and require a separate Entra ID role, such as [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).

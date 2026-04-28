@@ -104,7 +104,7 @@ To use OEMConfig on your devices, you need the following requirements:
 > - **Device Configurations**
 > - **Android Enterprise** > **Read**
 >
-> These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../../intune-service/fundamentals/create-custom-role.md) that only includes these permissions.
+> These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../../fundamentals/role-based-access-control/create-custom-role.md) that only includes these permissions.
 :::column-end:::
 :::row-end:::
 
@@ -178,7 +178,7 @@ After the app is added to Intune, you create an OEMConfig profile to configure t
     Any changes made in the configuration designer are also made automatically in the JSON editor. Likewise, any changes made in the JSON editor are automatically made in the configuration designer. If your input contains invalid values, you can't switch between the configuration designer and JSON editor until you fix the issues.
 
 9. Select **Next**.
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
