@@ -67,7 +67,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (.p7m) is active. For more specific information, go to [Get an Apple ADE token](setup-automated-ios.md#get-an-apple-automated-device-enrollment-token).
+- Be sure the Apple token (.p7m) is active. For more specific information, go to [Set up an iOS/iPadOS ADE token](setup-apple-token.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
 - Decide [how users will authenticate](setup-automated-ios.md#choose-an-authentication-method) their devices: the **Setup Assistant with modern authentication** (recommended), **Company Portal** app, or **Setup Assistant (legacy)** (no longer recommended). Make this decision before you create the enrollment profile. Using the **Company Portal** app or **Setup Assistant with modern authentication** is considered modern authentication.
 
@@ -127,7 +127,7 @@ This task list provides an overview. For more specific information, go to [Apple
 
     - Includes the correct Company Portal app version.
     - Is a one-time install of the Company Portal app.
-    - Uses the **Automatic app updates** feature so Intune can push app updates. For more information, go to [Deploying the Company Portal app - ADE](setup-automated-ios.md#deploying-the-company-portal-app).
+    - Uses the **Automatic app updates** feature so Intune can push app updates. For more information, go to [Deploy the Company Portal app - ADE](setup-automated-ios.md#deploy-the-company-portal-app).
 
   - **No VPP token + Enrolling new devices**: No administrator tasks. Make sure users enter their Apple ID in Setup Assistant.
 
@@ -403,14 +403,14 @@ This list provides an overview of the tasks required of administrators.
 
 Your users must do the following steps.
 
-1. Go to the Apple App Store, and [install the Intune Company Portal app](../../user-help/company-portal/company-portal.md).
+1. Go to the Apple App Store, and [install the Intune Company Portal app](../../user-help/company-portal/index.md).
 2. Open the Company Portal app, and sign in with their work or school account (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
 
     Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-ios.md).
 
 Users with enabled app notifications receive a prompt to return to the Company Portal app to complete the required device registration. Users with disabled app notifications aren't alerted to this requirement. If you're utilizing dynamic groups, which rely on device registration to work, it's important that users complete device registration. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration.
 
-When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check-in with Intune and receive policy updates.
+When enrollment completes, Intune automatically installs a profile signing certificate on the device. This certificate is valid for one year. At the year end when the certificate is expiring, Intune renews the certificate. If renewal fails, then a **Not verified** status appears within the **VPN & Device management** > **Management Profile** settings on the device. With this status, end users aren't impacted, and devices continue to check in with Intune and receive policy updates.
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 

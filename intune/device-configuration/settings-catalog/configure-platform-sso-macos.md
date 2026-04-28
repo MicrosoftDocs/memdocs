@@ -75,6 +75,8 @@ You configure Platform SSO using the Intune [settings catalog](../../device-conf
 
   We recommend you review the [scenarios](./configure-platform-sso-scenarios-macos.md) **before** you create the settings catalog policy. This way, you can configure the settings you need/want when you initially create the policy. If you don't configure the optional scenario settings initially, you can always edit the policy later. Only one SSO policy can be assigned to your groups. So, add these scenario settings to your existing Platform SSO settings catalog policy.
 
+- Devices with an existing Platform SSO policy reregister in Microsoft Entra when the the **Platform SSO > Authentication Method** or **Platform SSO > Use Shared Device Keys** settings are changed in the policy. For the other settings you add or change, if the Platform SSO policy is unassigned and reassigned, the device reregisters.
+
 - In [Step 5 - Register the device](#step-5---register-the-device) (this article), users register their devices. These users must be allowed to join devices to Microsoft Entra ID. For more information, go to [Configure your device settings](/entra/identity/devices/device-join-plan#configure-your-device-settings).
 
 ## Step 1 - Decide the authentication method
@@ -197,7 +199,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     - **Type**
     - **URLs**
 
-    Close the settings picker.
+    Close the settings picker. 
 
     > [!TIP]
     > There are more Platform SSO settings you can add to the policy that configure different scenarios, like enabling Kerberos SSO, using Touch ID biometric authentication, and enabling SSO on non-Microsoft apps. To learn more about these scenarios and their required settings, go to [Common Platform SSO scenarios for macOS devices](./configure-platform-sso-scenarios-macos.md).

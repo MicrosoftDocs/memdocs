@@ -2,6 +2,8 @@
 title: Step 6. Understand Microsoft Edge for Business End User Experience for Windows
 description: Step 6. Understand Microsoft Edge for Business end user experience Windows.
 ms.date: 01/23/2026
+author: nicholasswhite
+ms.author: nwhite
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -46,7 +48,7 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
     > The sign-in experience varies by organization. Completing the sign-in process is required to add your work profile to Microsoft Edge.
 
     > [!NOTE]
-    > A user experience update and admin property for controlling automatic MDM enrollment is rolling out in late 2025. This setting determines whether users on Entra ID–registered devices are prompted to MDM-enroll during the [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506) flow. To control this behavior, configure the **Disable MDM enrollment when adding a work or school account** setting. For more information, see [Enable MDM automatic enrollment for Windows](../../intune-service/enrollment/windows-enroll.md).
+    > A user experience update and admin property for controlling automatic MDM enrollment is rolling out in late 2025. This setting determines whether users on Entra ID-registered devices are prompted to MDM-enroll during the [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506) flow. To control this behavior, configure the **Disable MDM enrollment when adding a work or school account** setting. For more information, see [Enable MDM automatic enrollment for Windows](../../device-enrollment/windows/enable-automatic-mdm.md).
 
 7. Select **Yes** to sign in and register the device. Don't select **No, sign in to the app only**, as it prevents enrollment and MAM from being applied to the browser.
 
@@ -63,7 +65,7 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 ## App protection notifications
 
-Intune displays notifications when a policy requirement isn’t met. The following messages can appear:
+Intune displays notifications when a policy requirement isn't met. The following messages can appear:
 
 - **App access blocked message:** Appears when the app protection policy fails the device threat level check.
 

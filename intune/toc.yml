@@ -245,6 +245,17 @@ items:
           - name: Manage roles and permissions
             href: ./fundamentals/role-based-access-control/toc.yml
 
+          - name: Configure security recommendations using Zero Trust
+            items:
+            - name: Configure security recommendations using Zero Trust
+              href: ./device-security/ref-zero-trust-security.md
+            - name: Secure tenants
+              href: ./device-security/ref-zero-trust-tenant.md
+            - name: Secure devices
+              href: ./device-security/ref-zero-trust-devices.md
+            - name: Secure data
+              href: ./device-security/ref-zero-trust-data.md
+
       - name: Create and deploy Intune policies
         items:
           - name: Manage apps
