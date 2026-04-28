@@ -70,7 +70,7 @@ items:
     href: ./android/connect-managed-google-play.md
   - name: Work profile enrollment
     items:
-    - name: Overview
+    - name: Work profile enrollment overview
       href: ./android/enterprise-work-profile.md
     - name: Personal devices
       href: ./android/setup-personal-work-profile.md
@@ -107,7 +107,7 @@ items:
     href: apple/guide-ios-ipados.md
   - name: Apple Automated Device Enrollment
     items:
-    - name: Overview
+    - name: Automated Device Enrollment overview
       href: ./apple/overview-automated-enrollment-apple.md
     - name: Set up an enrollment token
       href: ./apple/setup-apple-token.md
@@ -141,7 +141,7 @@ items:
       href: ./apple/shared-ipad.md
   - name: Apple user enrollment
     items:
-    - name: Overview
+    - name: Apple user enrollment overview
       href: ./apple/user-enrollment-methods-ios.md
     - name: User enrollment with Company Portal
       href: ./apple/setup-user-company-portal.md
@@ -171,7 +171,7 @@ items:
     href: ./apple/setup-direct-macos.md
   - name: Apple Automated Device Enrollment
     items:
-    - name: Overview
+    - name: Automated Device Enrollment overview
       href: ./apple/overview-automated-enrollment-macos.md
     - name: Set up an enrollment token
       href: ./apple/setup-macos-token.md

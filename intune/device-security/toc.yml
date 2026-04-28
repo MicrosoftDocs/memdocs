@@ -1,5 +1,5 @@
 items:
-  - name: Overview
+  - name: Device security overview
     href: ./overview.md
 
   - name: Compliance and Conditional Access

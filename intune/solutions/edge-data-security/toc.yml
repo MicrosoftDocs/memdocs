@@ -1,5 +1,5 @@
 items:
-  - name: Overview
+  - name: Edge data security overview
     href: ./overview.md
   - name: Step 1. Create Microsoft Entra Conditional Access
     href: ./conditional-access-step-1.md

@@ -1,5 +1,5 @@
 items:
-  - name: Overview
+  - name: Device configuration overview
     displayName: android, ios, ipados, macos, windows
     href: ./overview.md
   - name: Settings insight
@@ -18,7 +18,7 @@ items:
   - name: Settings catalog and GPO
     displayName: gpo, admx, ios, ipados, macos, windows
     items:
-      - name: Overview and get started
+      - name: Settings catalog overview
         displayName: gpo, admx, ios, ipados, macos, windows
         href: ./settings-catalog/index.md
       - name: Sample tasks
@@ -196,7 +196,7 @@ items:
             href: ./templates/troubleshoot-zebra-mx-android.md
       - name: OEMConfig on Android Enterprise
         items:
-          - name: Overview and get started
+          - name: OEMConfig overview
             displayName: original equipment manufacturers, oem, oemconfig, schema, zebra, android
             href: ./templates/configure-oemconfig-android.md
           - name: Profiles on Zebra devices

@@ -1,5 +1,5 @@
 items:
-  - name: Overview
+  - name: App management overview
     href: ./overview.md
 
   - name: Concepts

@@ -40,7 +40,7 @@ items:
 
 - name: Windows updates
   items:
-  - name: Overview
+  - name: Windows updates overview
     href: windows/index.md
     displayName: windows updates
   - name: Update rings

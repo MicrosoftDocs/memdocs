@@ -1,6 +1,6 @@
 items:
 
-- name: Overview
+- name: Privacy overview
   href: ./index.md
 
 - name: Data collection and processing

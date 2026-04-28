@@ -7,7 +7,7 @@ items:
 
 - name: Certificate Connector
   items:
-  - name: Overview
+  - name: Certificate Connector overview
     href: ./connector/overview.md
   - name: Connector prerequisites
     href: ./connector/prerequisites.md

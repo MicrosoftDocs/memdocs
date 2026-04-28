@@ -1,5 +1,5 @@
 items:
-  - name: Overview
+  - name: Microsoft Intune overview
     expanded: true
     items:
       - name: What is Microsoft Intune
@@ -37,7 +37,7 @@ items:
         displayName: trial, free
       - name: Try Intune tasks
         items:
-          - name: Overview
+          - name: Try Intune tasks overview
             href: ./try-overview.md
           - name: Step 1 - Sign up for a free Intune trial
             href: ./free-trial-sign-up.md
