@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 04/08/2026
+ms.date: 05/04/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -137,33 +137,6 @@ You will be able to use Apple access management settings in Apple Business Manag
 > - iOS/iPadOS
 > - macOS
 
-### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
-
-On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:
-
-- In a settings catalog policy, add and configure the `Enable Registration During Setup` setting, save your policy, and assign it to a static group.
-- Configure the Automated Device Enrollment policy to use Setup Assistant with modern authentication and enable await final configuration. 
-- During enrollment, users sign in twice:
-  - The first sign-in starts the regular enrollment process.
-  - The second sign-in authenticates the user identity in Company Portal and gets the SSO extension.
-
-  We're working on updates to reduce the number of sign-ins for Platform SSO during Setup Assistant.
-
-When this feature is enabled, users have access to resources immediately when they arrive at desktop.
-
-Prerequisites:
-
-- Before you enroll:
-  - Create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **Enable Registration During Setup** setting and assign to the device via static group. 
-  - Deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
-- Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
-- The ADE enrollment profile must be configured to use Setup Assistant with modern authentication and have the **Await final configuration** setting turned on.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS Automated Device Enrollment (ADE)
-
 ### Microsoft Intune will support userless ADE for visionOS and tvOS devices<!-- 29219451 -->
 
 Microsoft Intune will be adding support for userless automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability will support ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and remote device actions. The feature will be available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite. Enrolled visionOS and tvOS devices will appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support will require tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
@@ -177,7 +150,7 @@ Microsoft Intune will be adding support for userless automated device enrollment
 The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
 
 For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
- 
+
 ### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
 
 Windows devices managed by Intune will need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions will no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
