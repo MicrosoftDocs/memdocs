@@ -40,7 +40,7 @@ To collect app inventory data, create a device configuration policy that specifi
    - **Profile type**: Properties catalog
 4. Select **Create**.
 5. In **Basics**, enter a name and description for the policy. For example, *App inventory - all properties*.
-6. In **Configuration settings**, select **Add settings**, then expand **Application Inventory**.
+6. In **Configuration settings**, select **+ Add Properties**, then select the checkbox for **ApplicationProperties**.
 7. Select the application properties you want to collect. The following properties are required and selected by default:
    - App Name
    - App Version
@@ -112,8 +112,10 @@ Some properties in the Properties catalog appear under different column names in
 | Install Scope Platform User Id | SID |
 | Install Scope User Id | User Entra ID |
 | Install Scope User Name | User Name |
-| Platform Specific App Id | Package Name |
-| Platform Specific App Id | MSI Product Code |
+| Platform Specific App Id | Package Name or Uninstall Registry Key Name |
+
+> [!NOTE]
+> The **Platform Specific App Id** maps to **Package Name** for Store apps (package full name) and MSI apps (product code). If neither applies, it maps to **Uninstall Registry Key Name** instead.
 
 ## Data collection details
 
@@ -137,13 +139,13 @@ Each application record includes an install scope that indicates whether the app
 
 For user-scoped apps, the inventory record includes the Microsoft Entra user ID associated with the installation. The agent also makes a best-effort attempt to resolve the user name for non-Entra users on the device.
 
-### Delta sync
+### Sync behavior
 
-After the initial full sync, the device inventory agent sends only the changes (new, updated, or deleted apps) since the last collection. Delta sync reduces the amount of data transferred and minimizes processing overhead.
+The first sync performs a **full upload** of app data from the device. Subsequent syncs are **delta-based**, sending only changes (new, updated, or deleted apps) since the last collection. Delta sync reduces the amount of data transferred and minimizes processing overhead.
 
 ### Policy deletion behavior
 
-If the app inventory policy is removed from a device, the device inventory agent stops collecting application data. Existing app inventory data is retained in the service until it ages out after 28 days.
+If the app inventory policy is removed from a device, the device inventory agent continues collecting application data for approximately three days as a buffer for devices that might be offline (for example, weekend scenarios). After the buffer period, collection stops and the data is removed from the service.
 
 ## Differences between Discovered apps and app inventory
 
