@@ -29,7 +29,7 @@ We recommend that all of the following controls be implemented where licenses ar
 
 ## Automated assessment
 
-Manually checking this guidance against a tenant's configuration can be time-consuming and error-prone. The Zero Trust Assessment transforms this process with automation to test for these security configuration items and more. Learn more in [What is the Zero Trust Assessment](https://learn.microsoft.com/security/zero-trust/assessment/overview)?
+Manually checking this guidance against a tenant's configuration can be time-consuming and error-prone. The Zero Trust Assessment transforms this process with automation to test for these security configuration items and more. Learn more in [What is the Zero Trust Assessment](/security/zero-trust/assessment/overview)?
 
 ## Secure Tenant
 
