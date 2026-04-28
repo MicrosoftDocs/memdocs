@@ -49,6 +49,12 @@ The *update cellular data plan* action lets you remotely activate an eSIM cellul
     ![Screenshot of updating cellular data plan](media/update-cellular-data-plan/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
+| Carrier Name | eSIM Activation Server URL                       |
+|--------------|---------------------------------------------------|
+| T-Mobile     | https://t-mobile.gdsb.net                         |
+| Verizon      | https://2.vzw.otgeuicc.com                        |
+| AT&T         | https://cust-001-v4-prod-atl2.gdsb.net            |
+
 ## User experience
 
 When you select the **Update cellular data plan** action, the device receives a command to activate the eSIM cellular data plan. The user experience on the device is as follows:
