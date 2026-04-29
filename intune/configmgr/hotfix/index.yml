@@ -21,6 +21,8 @@ landingContent:
             url: 2509/33247081.md
           - text: KB 36495448 Software update management client fix
             url: 2509/36495448.md
+          - text: KB 36949461 Update rollup for Microsoft Configuration Manager version 2509
+            url: 2509/36949461.md
   - title: Configuration Manager 2503
     linkLists:
       - linkListType: overview
