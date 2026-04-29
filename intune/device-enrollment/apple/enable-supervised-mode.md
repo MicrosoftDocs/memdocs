@@ -1,7 +1,7 @@
 ---
 title: Turn on iOS/iPadOS supervised mode with Microsoft Intune
 description: Learn how to turn on iOS/iPadOS supervised mode with Intune.
-ms.date: 04/07/2025
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
@@ -14,18 +14,13 @@ Apple iOS/iPadOS supervised mode gives administrators more options when managing
 
 Intune supports supervised mode as part of the Apple [Device Enrollment Program (DEP)](setup-automated-ios.md).
 
-For a list of Apple controls that require supervision, see Apple's [Payload settings reference](https://support.apple.com/guide/deployment/dep2c1b2a43a/web).
-
-## Turn on supervised mode during enrollment
-
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](setup-automated-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
+For a list of Apple controls that require supervision, see Apple's [Payload settings reference](https://support.apple.com/guide/deployment/dep2c1b2a43a/web).  
 
 ## Turn on supervised mode after enrollment
 
-After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](setup-configurator-ios.md) (which will reset the device). You can't configure a device for Supervised mode in Intune after enrollment.
+After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](setup-configurator-ios.md) (which will reset the device). You can't configure a device for supervised mode in Intune after enrollment.
 
-Apple Configurator for iPhone can also be used to supervise devices.
-For more information, see the [Apple support doc](https://support.apple.com/apple-configurator).
+Apple Configurator for iPhone can also be used to supervise devices. For more information, see the [Apple support doc](https://support.apple.com/apple-configurator).
 
 ## Identify a supervised device
 

@@ -16,8 +16,8 @@ In this tutorial, you'll learn how to:
 > [!div class="checklist"]
 > * Get an Apple device enrollment token
 > * Sync managed devices to Intune
-> * Create an enrollment profile
-> * Assign the enrollment profile to devices
+> * Create an enrollment policy
+> * Assign the enrollment policy to devices
 
 At the end of this tutorial, devices will be ready to distribute for enrollment.
 
@@ -33,13 +33,15 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 Create an MDM server profile for Microsoft Intune in Apple Business. The token you download in this step will enable the connection between Microsoft Intune and Apple Business in a later step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** and expand **By platform**. Select **iOS/iPadOS**.
-3. Expand **Device onboarding**, and then select **Enrollment**.
-4. Select **Enrollment program tokens**.
-5. Select **Create**.
-6. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
-7. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
-8. Select **Create a token via Apple Business** and sign in to Apple Business with your company Apple ID.
+1. Go to **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**.
+1. Select **Apple mobile**.  
+1. Select **Enrollment program tokens**.
+1. Select **Create**.
+1. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
+1. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
+1. Select **Create a token via Apple Business** and sign in to Apple Business with your company Apple ID.
+
 
     >[!IMPORTANT]
     > While you're in Apple Business, don't close the browser tab with Microsoft Intune. You'll return to it later.
@@ -62,8 +64,8 @@ Return to the Microsoft Intune admin center to upload the MDM server token to In
 
 Microsoft Intune automatically syncs with Apple Business. Devices can take up to 12 hours to appear in the admin center. You can wait for these devices to sync, or manually start the sync. To start the sync yourself, select your token from the list in the admin center, and then choose **Devices** > **Sync**.
 
-## Step 4: Create an Apple enrollment profile
-Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
+## Step 4: Create an Apple enrollment policy
+Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enrollment policy defines the settings applied to a group of devices during enrollment.
 
 1. Select your token in the admin center, and then choose **Profiles**.
 
@@ -101,7 +103,7 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 1. Review the profile settings. To save the profile, select **Create**
 
-## Step 5: Assign an enrollment profile to iOS/iPadOS devices
+## Step 5: Assign an enrollment policy to iOS/iPadOS devices
 
 You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or ADE portal.
 

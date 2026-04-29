@@ -63,6 +63,6 @@ Create an enrollment profile for enrolling devices. The enrollment profile trigg
 
 * [Account driven user enrollment](setup-account-driven-user.md)
 * [User enrollment with Company Portal](setup-user-company-portal.md)
-* [Apple automated device enrollment for Setup Assistant with modern authentication](setup-automated-ios.md#create-an-apple-enrollment-profile)
+* [Apple automated device enrollment for Setup Assistant with modern authentication](setup-automated-ios.md#create-an-apple-enrollment-policy)
 * [Web based device enrollment](setup-web-based-ios.md)
 * [Device enrollment with Company Portal](personal-device-options-ios.md#app-or-web-based-enrollment)

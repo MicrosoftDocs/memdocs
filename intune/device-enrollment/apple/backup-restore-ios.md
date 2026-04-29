@@ -60,7 +60,7 @@ Consider the amount of time elapsed since the last backup, and how the device wo
 ### Locked management profile
 If the prior EMM vendor locked the management profile on the device, the device user can't remove the management profile. To facilitate a migration in this scenario, you can:
 * Retire the device from the prior EMM vendor before the user backs up the device.
-* Alternatively, if you can't ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment profile. For more information, see step 21 in [Create an Apple enrollment profile](setup-automated-ios.md#create-an-apple-enrollment-profile).
+* Alternatively, if you can't ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment profile. For more information, see step 21 in [Create an Apple enrollment policy](setup-automated-ios.md#create-an-apple-enrollment-policy).
 
 ## Migrating to Intune from another EMM vendor
 Typically the MDM enrollment state at the time of backup isn't of any special significance. However, in a migration scenario where you're moving from one MDM vendor to another, it's important to be aware of the device's MDM enrollment state so as not to restore an old management profile. The following steps outline the sequence of events that lead to this scenario and the failed outcome:
