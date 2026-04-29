@@ -18,7 +18,7 @@ This article describes how to create an enrollment policy for iOS/iPadOS automat
 
 
 ## Prerequisites
-Before you create the enrollment profile, you must have:
+Before you create the enrollment policy, you must have:
 
 * Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
 * An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).  
@@ -307,6 +307,6 @@ Hide both screens on devices running iOS/iPadOS 14.5 and later. If you want to r
 
 ## Next steps  
 
-- To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
+- To sync devices, assign enrollment policies, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
 - To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).
 - For troubleshooting, see [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).

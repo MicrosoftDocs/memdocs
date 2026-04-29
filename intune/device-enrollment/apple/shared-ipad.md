@@ -24,7 +24,7 @@ Follow these steps to set up Shared iPad in your environment.
 >[!IMPORTANT]
 > Shared iPad is supported on supervised iPads running iPadOS 13.3 and later. A device wipe will be required if an enrollment profile enabled with Shared iPad is sent to a device that doesn't support Shared iPad. Shared iPad isn't supported on iPhones, or iPads running iOS/iPadOS version 13.3 and earlier.
 
-1. Federate your Microsoft Entra instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
+1. Federate your Microsoft Entra instance with Apple Business or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
 2. Create an enrollment profile.
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     1. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**.
@@ -37,7 +37,7 @@ Follow these steps to set up Shared iPad in your environment.
      1. Set **Supervised** to **Yes**.
      1. Set **Shared iPad** to **Yes**.
 4. Select **Save** when you're done configuring the rest of your profile.
-5. Assign devices synced from Apple Business Manager.
+5. Assign devices synced from Apple Business.
     1. Select the new enrollment profile.
     1. Select **Assign devices** > **Add devices**.
 6. Create a dynamic device group to automatically assign this profile to devices that fall within your rule parameters.
@@ -82,9 +82,9 @@ The following table describes the applicability rules for Shared iPad settings.
 ### You should know
 When creating the device configuration profile for Shared iPads, keep in mind that:
 
-- Your Microsoft Entra instance must be federated in Apple Business Manager for a user group policy assignment to succeed.
+- Your Microsoft Entra instance must be federated in Apple Business for a user group policy assignment to succeed.
 - All device configuration profile settings are device applicable for Shared iPad temporary sessions.
-- User-assigned policies apply to a shared iPad when the user signs in using their federated Microsoft Entra credentials. For more information about federating a Microsoft Entra instance with Apple Business Manager, see the [Apple Business Manager guide](https://support.apple.com/guide/apple-business-manager-m/apdb19317543/web) (opens Apple support website).
+- User-assigned policies apply to a shared iPad when the user signs in using their federated Microsoft Entra credentials. For more information about federating a Microsoft Entra instance with Apple Business, see the [Apple Business guide](https://support.apple.com/guide/apple-business-manager-m/apdb19317543/web) (opens Apple support website).
 - Device-assigned policies apply to a shared iPad when you initiate a device-sync from the admin center, or when Intune notifies the device to check in with the Intune service. For more information about frequency of device check-ins, see [Policy refresh intervals](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals).
 
 
@@ -98,7 +98,7 @@ When creating the device configuration profile for Shared iPads, keep in mind th
 
 You can deploy volume-purchased (VPP), apps, custom apps, line-of-business apps, or web apps to a Shared iPad device.
 
-* To add a VPP or custom app in the admin center, add the apps in Apple Business Manager or Apple School Manager and sync the VPP token with Intune. Assign a VPP or custom app as device-licensed to Microsoft Entra device groups in Intune. For more information, see [Sync a VPP token](../../app-management/deployment/manage-vpp-apple.md#synchronize-a-vpp-token).
+* To add a VPP or custom app in the admin center, add the apps in Apple Business or Apple School Manager and sync the VPP token with Intune. Assign a VPP or custom app as device-licensed to Microsoft Entra device groups in Intune. For more information, see [Sync a VPP token](../../app-management/deployment/manage-vpp-apple.md#synchronize-a-vpp-token).
 * Add a line-of-business app in the admin center and assign it to Microsoft Entra device groups. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-ios.md).
 * Add a web app, also referred to as a *web clip*, in the admin center and assign it to Microsoft Entra user groups. For more information, see [Add a web app to Intune](../../app-management/deployment/add-web.md#add-a-web-app-to-intune).
 
@@ -135,7 +135,7 @@ The following limitations exist in Intune for Shared iPad:
 - App Store installations disabled: The App Store is available by default with Shared iPad, but app installation is disabled so users can't install apps from the App Store. We recommended disabling the App Store in an Intune configuration profile to avoid confusion with users.
 - Company Portal and available apps not supported: Intune Company Portal app and the Intune Company Portal website are not supported with Shared iPad.
 - App assignment requirements: You must assign apps as _required_ to device groups. *Available* apps are not supported with Shared iPad.
-- Passcode complexity can't be managed with Shared iPad: Shared iPad passcodes must have eight alphanumeric characters, and can't be changed in Apple Business Manager. The passcode complexity and length settings available in Intune device configuration profiles don't apply to Shared iPad. An MDM administrator can set the grace period, which specifies the number of minutes a user has to unlock the iPad without a passcode.
+- Passcode complexity can't be managed with Shared iPad: Shared iPad passcodes must have eight alphanumeric characters, and can't be changed in Apple Business. The passcode complexity and length settings available in Intune device configuration profiles don't apply to Shared iPad. An MDM administrator can set the grace period, which specifies the number of minutes a user has to unlock the iPad without a passcode.
 - Some policies not supported: These Intune policies are not supported with Shared iPad: app-based and device-based Conditional Access policies, app protection policies, and compliance policies.
 - Email profile not supported: Email profiles aren't supported with Shared iPad. An error occurs when you assign an email profile to a Shared iPad device.
 - User-assigned policies don't appear in reports: Intune doesn't report device status or user status in reports for Shared iPad apps and profiles assigned to Microsoft Entra user groups.

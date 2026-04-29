@@ -35,5 +35,5 @@ This series of articles describes how to set up Microsoft Intune for devices pur
 
 1. 🡺 Prerequisites (*You are here*)
 1. [Get an Apple token for school devices](school-manager-step-1.md)
-1. [Create an Apple enrollment profile](school-manager-step-2.md)
+1. [Create an Apple enrollment policy](school-manager-step-2.md)
 1. [Sync and distribute devices](school-manager-step-3.md)

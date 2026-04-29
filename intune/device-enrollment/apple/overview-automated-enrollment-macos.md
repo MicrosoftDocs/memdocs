@@ -11,10 +11,10 @@ ms.collection:
 
 # Overview of Apple Automated Device Enrollment for macOS  
 
-Automated device enrollment (ADE) is an Apple enrollment method for corporate-owned Mac computers purchased through Apple Business Manager or Apple School Manager. With ADE, you configure and deploy enrollment profiles to devices over the air — without touching the devices. When someone turns on a device for the first time, Apple Setup Assistant guides them through setup and enrollment automatically.
+Automated device enrollment (ADE) is an Apple enrollment method for corporate-owned Mac computers purchased through Apple Business or Apple School Manager. With ADE, you configure and deploy enrollment policies to devices over the air — without touching the devices. When someone turns on a device for the first time, Apple Setup Assistant guides them through setup and enrollment automatically.
 
 > [!NOTE]
-> The steps in ADE articles are the same whether you're using Apple Business Manager or Apple School Manager. For brevity, those articles refer to *Apple Business Manager* only, except where clarification is necessary.  
+> The steps in ADE articles are the same whether you're using Apple Business or Apple School Manager. For brevity, those articles refer to *Apple Business* only, except where clarification is necessary.  
 
 ## Supported platforms
 
@@ -22,7 +22,7 @@ Intune supports automated device enrollment for macOS.
 
 | Platform | Setup article |
 |----------|---------------|
-| macOS | [Set up an enrollment profile for macOS](setup-automated-macos.md) |
+| macOS | [Set up an enrollment policy for macOS](setup-automated-macos.md) |
 
 For iOS/iPadOS, tvOS, and visionOS, see [Overview of Apple Automated Device Enrollment for Apple mobile](overview-automated-enrollment-apple.md).  
 
@@ -31,9 +31,9 @@ For iOS/iPadOS, tvOS, and visionOS, see [Overview of Apple Automated Device Enro
 | Scenario | Supported |
 |----------|-----------|
 | Supervised mode | ✅ ADE devices are supervised by default, giving you more management control. |
-| Corporate-owned devices | ✅ Designed for devices purchased through Apple Business Manager or Apple School Manager. |
+| Corporate-owned devices | ✅ Designed for devices purchased through Apple Business or Apple School Manager. |
 | Zero-touch deployment | ✅ Devices can ship directly to users. Enrollment starts when they turn on the device. |
-| Bulk enrollment | ✅ Enroll a few devices or thousands using a single enrollment profile. |
+| Bulk enrollment | ✅ Enroll a few devices or thousands using a single enrollment policy. |
 | Devices with a single assigned user | ✅ Supported on macOS. |
 | Userless devices (kiosk, shared-use) | ✅ Supported on macOS. |
 | BYOD or personal devices | ❌ Not supported. |
@@ -44,11 +44,11 @@ For iOS/iPadOS, tvOS, and visionOS, see [Overview of Apple Automated Device Enro
 
 Setting up ADE in Intune involves three main tasks:
 
-1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business Manager. This is typically a one-time setup task per token. For steps, see [Set up a macOS ADE token](setup-macos-token.md).
+1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business. This is typically a one-time setup task per token. For steps, see [Set up a macOS ADE token](setup-macos-token.md).
 
-2. **Create and assign an enrollment profile**: Configure the enrollment experience for your Mac devices, including user affinity and Setup Assistant screens. Then assign the profile to device groups. For steps, see [Set up an enrollment profile for macOS](setup-automated-macos.md).
+2. **Create and assign an enrollment policy**: Configure the enrollment experience for your Mac devices, including user affinity and Setup Assistant screens. Then assign the profile to device groups. For steps, see [Set up an enrollment policy for macOS](setup-automated-macos.md).
 
-3. **Sync and distribute devices**: Sync device records from Apple Business Manager to Intune, then distribute devices to users. Enrollment starts automatically through Apple Setup Assistant when a device is turned on. For steps, see [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md).  
+3. **Sync and distribute devices**: Sync device records from Apple Business to Intune, then distribute devices to users. Enrollment starts automatically through Apple Setup Assistant when a device is turned on. For steps, see [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md).  
 
 ## Certificates
 
@@ -67,4 +67,4 @@ Before setting up ADE for macOS, ensure the following are in place:
 ## Next steps
 
 - [Set up a macOS ADE token](setup-macos-token.md)
-- [Set up an enrollment profile for macOS](setup-automated-macos.md)  
+- [Set up an enrollment policy for macOS](setup-automated-macos.md)  

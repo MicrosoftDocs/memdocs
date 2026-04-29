@@ -105,7 +105,7 @@ Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enr
 
 ## Step 5: Assign an enrollment policy to iOS/iPadOS devices
 
-You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or ADE portal.
+You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in Apple Business or Apple School Manager.  
 
 1. In the admin center, return to **Enrollment program tokens**. Choose your token from the list.
 2. Select **Devices**, and then choose the devices you want to assign.

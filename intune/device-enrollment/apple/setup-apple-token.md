@@ -14,8 +14,8 @@ ms.collection:
 An *enrollment program token* (sometimes called an automated device enrollment token) is a required component of Apple automated device enrollment (ADE). It creates the trust relationship between Microsoft Intune and Apple Business or Apple School Manager, and allows Intune to:
 
 - Sync device information from your Apple enrollment program account.
-- Upload enrollment profiles to Apple.
-- Assign devices to enrollment profiles.
+- Upload enrollment policies to Apple.
+- Assign devices to enrollment policies.
 
 This article describes how to create, renew, and delete enrollment program tokens.
 

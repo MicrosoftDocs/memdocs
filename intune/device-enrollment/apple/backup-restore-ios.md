@@ -24,7 +24,7 @@ The backup and restore scenarios are specific to enrollments via Apple Automated
 - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)
 
 > [!NOTE]
-> Device-to-device migration, an option that appears on the [Quick Start screen](https://support.apple.com/HT210216) after resetting an iOS device, isn't supported with Apple Business Manager. Quick Start occurs before a Wi-Fi connection is established on the device and before the Apple Business Manager profile downloads. As a result, the Quick Start screen can't be hidden via Apple Business Manager.
+> Device-to-device migration, an option that appears on the [Quick Start screen](https://support.apple.com/HT210216) after resetting an iOS device, isn't supported with Apple Business. Quick Start occurs before a Wi-Fi connection is established on the device and before the Apple Business profile downloads. As a result, the Quick Start screen can't be hidden via Apple Business.
 
 ## Back up Microsoft Authenticator
 If you're using the Microsoft Authenticator app, it's also important to back up your credentials and accounts. For more information, see [Back up and recover account credentials in the Authenticator app](https://support.microsoft.com/account-billing/back-up-and-recover-account-credentials-in-the-authenticator-app-bb939936-7a8d-4e88-bc43-49bc1a700a40#:~:text=The%20Microsoft%20Entra%20Authenticator%20app,or%20having%20to%20recreate%20accounts.).
@@ -60,7 +60,7 @@ Consider the amount of time elapsed since the last backup, and how the device wo
 ### Locked management profile
 If the prior EMM vendor locked the management profile on the device, the device user can't remove the management profile. To facilitate a migration in this scenario, you can:
 * Retire the device from the prior EMM vendor before the user backs up the device.
-* Alternatively, if you can't ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment profile. For more information, see step 21 in [Create an Apple enrollment policy](setup-automated-ios.md#create-an-apple-enrollment-policy).
+* Alternatively, if you can't ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment policy. For more information, see step 21 in [Create an Apple enrollment policy](setup-automated-ios.md#create-an-apple-enrollment-policy).
 
 ## Migrating to Intune from another EMM vendor
 Typically the MDM enrollment state at the time of backup isn't of any special significance. However, in a migration scenario where you're moving from one MDM vendor to another, it's important to be aware of the device's MDM enrollment state so as not to restore an old management profile. The following steps outline the sequence of events that lead to this scenario and the failed outcome:

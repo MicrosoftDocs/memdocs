@@ -37,7 +37,7 @@ Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll the
 ### Company-owned macOS devices
 Intune supports the following enrollment methods for company-owned macOS devices. Select a hyperlinked method to open its setup steps.
 
-- [Apple Automated Device Enrollment](setup-automated-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.
+- [Apple Automated Device Enrollment](setup-automated-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business or Apple School Manager. Automated device enrollment deploys the enrollment policy over-the-air, so you don't need to have physical access to devices.
 - [Device enrollment manager (DEM)](../setup-enrollment-manager.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.
 - [Direct enrollment](setup-direct-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.
 
@@ -120,7 +120,7 @@ No changes are required for VMs running on Apple Silicon hardware. Parallels Des
 
 ## User-approved enrollment
 
-All Mac enrollments in Intune are considered user-approved. User-approved enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator.
+All Mac enrollments in Intune are considered user-approved. User-approved enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator.
 
 Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.
 
