@@ -237,7 +237,7 @@ This task list provides an overview. For more specific information, go to [Apple
 - Requires access to a Mac computer with a USB port.
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
-- Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment profile. Using the Company Portal app is considered modern authentication. We recommend using the Company Portal app.
+- Decide how users will authenticate on their devices: the **Company Portal** app, or **Setup Assistant**. Make this decision before you create the enrollment policy. Using the Company Portal app is considered modern authentication. We recommend using the Company Portal app.
 
   - Select the **Company Portal** app when:
 
@@ -383,22 +383,22 @@ This list provides an overview of the tasks required of administrators.
 
     - When devices are enrolled using account driven user enrollment, you can't switch to device enrollment. With account driven user enrollment, you can't move an app from unmanaged to managed. Users must unenroll from user enrollment, and then re-enroll to device enrollment.
 
-    - If you install apps before the user enrollment profile is applied, then these apps aren't protected or managed by the user enrollment profile.
+    - If you install apps before the user enrollment policy is applied, then these apps aren't protected or managed by the user enrollment policy.
 
-      For example, a user downloads the Outlook app from the Apple App Store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When users configure their organization email, they're blocked by Conditional Access, and asked to enroll. They enroll, and a user enrollment profile deploys.
+      For example, a user downloads the Outlook app from the Apple App Store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When users configure their organization email, they're blocked by Conditional Access, and asked to enroll. They enroll, and a user enrollment policy deploys.
 
-      Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
+      Since the Outlook app was installed before the user enrollment policy, the user enrollment policy fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 
-      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you might have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.
+      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment policy. Or, you might have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.
 
-- Assign the enrollment profile to user groups. Don't assign to device groups.
+- Assign the enrollment policy to user groups. Don't assign to device groups.
 
 ### Device enrollment end user tasks
 
 Your users must do the following steps.
 
 1. Go to the Apple App Store, and [install the Intune Company Portal app](../../user-help/company-portal/index.md).
-2. Open the Company Portal app, and sign in with their work or school account (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
+2. Open the Company Portal app, and sign in with their work or school account (`user@contoso.com`). After they sign in, your enrollment policy applies to the device.
 
     Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-ios.md).
 

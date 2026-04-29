@@ -18,7 +18,7 @@ This article describes how to create an enrollment policy for iOS/iPadOS automat
 
 
 ## Prerequisites
-Before you create the enrollment profile, you must have:
+Before you create the enrollment policy, you must have:
 
 * Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
 * An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).  
@@ -56,7 +56,7 @@ To enable automatic app updates for Company Portal, go to your app token setting
 
 ## Create an Apple enrollment policy
 
-Create an enrollment policy for automated device enrollment. A device enrollment policy defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment policys per enrollment token.  
+Create an enrollment policy for automated device enrollment. A device enrollment policy defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment policies per enrollment token.  
 
 > [!NOTE]
 > Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.
@@ -181,7 +181,7 @@ Create an enrollment policy for automated device enrollment. A device enrollment
          * iOS/iPadOS 13 and later devices enrolling without user affinity
          * iOS/iPadOS 13 and later devices enrolling with Microsoft Entra ID shared mode
 
-         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment policys.
+         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment policies.
 
       * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment policies
 
@@ -307,6 +307,6 @@ Hide both screens on devices running iOS/iPadOS 14.5 and later. If you want to r
 
 ## Next steps  
 
-- To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
+- To sync devices, assign enrollment policies, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
 - To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).
 - For troubleshooting, see [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).

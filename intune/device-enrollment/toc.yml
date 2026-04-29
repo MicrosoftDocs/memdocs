@@ -147,7 +147,7 @@ items:
           href: ./apple/school-manager.md
         - name: Step 1 - Get an Apple token and assign devices
           href: ./apple/school-manager-step-1.md
-        - name: Step 2 - Create an Apple enrollment profile
+        - name: Step 2 - Create an Apple enrollment policy
           href: ./apple/school-manager-step-2.md
         - name: Step 3 - Sync managed devices
           href: ./apple/school-manager-step-3.md
