@@ -27,7 +27,7 @@ To follow Apple's terms for acceptable enrollment program traffic, Intune impose
 - Intune syncs new and removed devices with Apple every 24 hours.
 
 ## Assign a profile to devices
-Apple School Manager devices managed by Intune must be assigned an enrollment profile before they're enrolled.
+Apple School Manager devices managed by Intune must be assigned an enrollment policy before they're enrolled.
 
 1. Return to **Enrollment program tokens**.
 1. Select a token in the list.
@@ -37,7 +37,7 @@ Apple School Manager devices managed by Intune must be assigned an enrollment pr
 
 ## Distribute devices to users
 
-You enabled management and syncing between Apple and Intune, and assigned a profile that lets Apple School devices enroll. You can now distribute devices to users. When an iOS/iPadOS Apple School Manager device is turned on, it enrolls in Microsoft Intune. Profiles can't be applied to activated devices currently in use until the device is wiped.
+You enabled management and syncing between Apple and Intune, and assigned a profile that lets Apple School devices enroll. You can now distribute devices to users. When an Apple School Manager device is turned on, it enrolls in Microsoft Intune. Profiles can't be applied to activated devices currently in use until the device is wiped.
 
 ## Connect School Data Sync
 Microsoft Education is transitioning to a new School Data Sync (SDS) experience with enhanced features, starting August 2024 for the Northern Hemisphere and January 2025 for the Southern Hemisphere. The current Apple School Manager support will be retired by December 31, 2024. This new experience offers various enhancements over SDS (Classic) including:
@@ -54,5 +54,5 @@ This series of articles describes how to set up Microsoft Intune for devices pur
 
 1. [Prerequisites](school-manager.md)
 1. [Get an Apple token for school devices](school-manager-step-1.md)
-1. [Create an Apple enrollment profile](school-manager-step-2.md)
+1. [Create an Apple enrollment policy](school-manager-step-2.md)
 1. 🡺 Sync and distribute devices (*You are here*)

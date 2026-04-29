@@ -76,30 +76,32 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     >
     > Changing the **Connected apps** setting to **Not Configured** won't remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
-13. Select **Next** to display the **Scope tags** page.
-14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
-15. Select **Next** to display the **Assignments** page.
-16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../../fundamentals/filters/overview.md) to refine the assignment scope when deploying app configuration policies for managed devices.
+13. To allow specific apps to act as a system credential provider, select **Credential provider**. By default, Android blocks third-party credential providers from providing credentials. For more information, see [Allow an app to be a credential provider](#allow-an-app-to-be-a-credential-provider).
+
+14. Select **Next** to display the **Scope tags** page.
+15. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
+16. Select **Next** to display the **Assignments** page.
+17. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../../fundamentals/filters/overview.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/configure-managed-android/app-configuration-policies-use-android-02.png" :::
 
-17. Select **All users** in the dropdown box.
+18. Select **All users** in the dropdown box.
 
     :::image type="content" alt-text="Screenshot of policy assignments - All Users dropdown option" source="./media/configure-managed-android/app-configuration-policies-use-android-03.png" :::
 
-18. [Optional] select **Edit filter** to add a [filter](../../fundamentals/filters/overview.md) and refine the assignment scope.
+19. [Optional] select **Edit filter** to add a [filter](../../fundamentals/filters/overview.md) and refine the assignment scope.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/configure-managed-android/app-configuration-policies-use-android-04.png" :::
 
-16. Select **Select groups to exclude** to display the related pane.
+17. Select **Select groups to exclude** to display the related pane.
 
-17. Choose the groups you want to exclude and then choose **Select**.
+18. Choose the groups you want to exclude and then choose **Select**.
 
     >[!NOTE]
     >When you add a group, if any other group is already included for a given assignment type, it's preselected and unchangeable for other include assignment types. Therefore, a group already used can't be selected as an excluded group.
 
-18. Select **Next** to display the **Review + create** page.
-19. Select **Create** to add the app configuration policy to Intune.
+19. Select **Next** to display the **Review + create** page.
+20. Select **Create** to add the app configuration policy to Intune.
 
 ## Use the configuration designer
 
@@ -190,6 +192,55 @@ There are two ways users could be able to connect work and personal apps after y
 
 > [!IMPORTANT]
 > If multiple app configuration policies target the same app and device, and one policy sets **Connected Apps** to `Enabled` while another doesn't, the app configuration reports a conflict. The device then disallows connected apps.
+
+## Allow an app to be a credential provider
+
+Applies to:
+
+- Android Enterprise fully managed devices (COBO)
+- Android Enterprise dedicated devices (COSU)
+- Android Enterprise corporate-owned devices with a work profile (COPE)
+- Android Enterprise personally owned work profile devices (BYOD), after migration to Android Management API (AM API)
+
+Android's Credential Provider capability allows you to control which applications can act as system-level credential providers, responsible for password autofill and passkey storage on managed Android Enterprise devices, both corporate-owned and personally owned work profile (BYOD) devices.
+
+By default, Android blocks third-party credential provider apps from providing credentials. Use the **Credential provider** setting to allow specific apps (such as a third-party password manager) to act as the system credential provider. Microsoft Authenticator is allowed automatically.
+
+To configure credential provider permissions, go to **Apps** > **Configuration** > **Create** > **Managed devices**, and choose **Android Enterprise** as the platform. Select **Credential provider** in the settings to allow specific apps to act as credential providers.
+
+This setting lets you:
+
+- Allow specific apps to act as credential providers
+- Enable passkey-based sign-in across managed Android Enterprise devices
+- Maintain control over which credential sources are trusted on corporate and personally owned devices
+
+> [!NOTE]
+> For personally owned work profile (BYOD) devices, Credential Provider is supported only after your personally owned devices with a work profile move to Android Management API (AM API).
+
+> [!IMPORTANT]
+> Google Password Manager is not allowed to act as a credential provider on corporate-owned work profile devices and personally owned devices with a work profile. It is blocked on the end user's device. Use a different credential app as a workaround.
+
+### Before migrating personally owned devices to AM API
+
+When you migrate personally owned work profile (BYOD) devices to Android Management API (AM API), you must create app configuration policies for any credential provider apps your users rely on before initiating the migration or choosing web-based enrollment. Common credential provider apps include:
+
+- **Microsoft Authenticator** (allowed automatically, no app configuration policy required)
+- **LastPass**
+- **1Password**
+- **Okta**
+- **Bitwarden**
+- **Dashlane**
+- **Proton**
+- **Callpod**
+- **Nordpass**
+- **Roboform**
+
+If app configuration policies are not in place before migration for third-party credential providers:
+
+- Autofill may not work as expected for users on Android 14 and later devices.
+- Passkey-based sign-in may be unavailable on Android 14 and later devices.
+
+Migration from personally owned work profile to AM API can't be reversed. If you proceed without the required app configuration policies, you can still create them after migration is complete to restore credential provider functionality for your users.
 
 ## Preconfigure the permissions grant state for apps
 
