@@ -111,9 +111,9 @@ items:
     items:
     - name: Use Samsung Knox Mobile Enrollment
       href: ./android/setup-samsung-knox-mobile.md
-- name: Set up iOS/iPadOS enrollment
+- name: Set up Apple mobile enrollment
   items:
-  - name: Get started with iOS/iPadOS enrollment
+  - name: Get started with Apple mobile enrollment
     href: apple/guide-ios-ipados.md
   - name: Enrollment solutions
     items:
