@@ -45,13 +45,11 @@ Strong mapping is required for all certificates deployed by Microsoft Intune and
 
 To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP profile.
 
-  > [!div class="mx-imgBorder"]
-   > ![SCEP certificate profile Configuration settings section](./media/scep-profiles/scep-configuration-settings.png)
+  :::image type="content" source="./media/scep-profiles/scep-configuration-settings.png" alt-text="SCEP certificate profile Configuration settings section" border="false":::
 
 This variable must be part of the URI attribute. You can create a new SCEP profile or edit an existing one to add the URI attribute.
 
-   > [!div class="mx-imgBorder"]
-   > ![SCEP certificate profile Subject alternative name section with URI and Value fields configured](./media/scep-profiles/scep-san-add.png)
+   :::image type="content" source="./media/scep-profiles/scep-san-add.png" alt-text="SCEP certificate profile Subject alternative name section with URI and Value fields configured" border="false":::
 
 After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and the resolved SID. Example formatting: `tag:microsoft.com,2022-09-14:sid:<value>` At this point, the certificate profile meets the strong mapping requirements.
 
@@ -83,8 +81,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
      You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.
 
-      > [!div class="mx-imgBorder"]
-        > ![SCEP certificate profile configuration settings with subject name format highlighted](./media/scep-profiles/subject-name-2506.png)
+      :::image type="content" source="./media/scep-profiles/subject-name-2506.png" alt-text="SCEP certificate profile configuration settings with subject name format highlighted" border="false":::
 
 
   3. Test changes. Before broad deployment, create a new profile and assign a small user group.

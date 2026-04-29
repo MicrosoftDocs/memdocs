@@ -22,15 +22,13 @@ This article describes how to monitor certificates, revoke certificates, and vie
 
 To view issued certificates, go to **Devices** > **Monitor**, and then select **Certificates**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Admin center Monitor page with Certificates option highlighted.](./media/monitor-certificates/monitor-certificates-cloud-pki.png)
+   :::image type="content" source="./media/monitor-certificates/monitor-certificates-cloud-pki.png" alt-text="Admin center Monitor page with Certificates option highlighted." border="false":::
 
 ## Monitor Cloud PKI issuing CA
 
 Each Cloud PKI issuing CA has a monitoring dashboard. Select **View all certificates** to view all issued certificates. Certificate report details should be available within 24 hours of the certificate being successfully issued to the device.
 
-   > [!div class="mx-imgBorder"]
-   > ![Certificate count dashboard for Microsoft Cloud PKI in admin center.](./media/monitor-certificates/intune-certificate-count-cloud-pki.png)
+   :::image type="content" source="./media/monitor-certificates/intune-certificate-count-cloud-pki.png" alt-text="Certificate count dashboard for Microsoft Cloud PKI in admin center." border="false":::
 
 From here, you can also manually revoke an issued leaf certificate.
 
@@ -45,5 +43,4 @@ From here, you can also manually revoke an issued leaf certificate.
 
 Go to **Devices** > **Manage devices** > **Configuration**. Select the SCEP profile, and then select **Certificates**.
 
-   > [!div class="mx-imgBorder"]
-   > ![SCEP certificate profile report in the admin center.](./media/monitor-certificates/scep-certificate-profile.png)
+   :::image type="content" source="./media/monitor-certificates/scep-certificate-profile.png" alt-text="SCEP certificate profile report in the admin center." border="false":::

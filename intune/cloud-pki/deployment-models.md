@@ -85,13 +85,11 @@ Relying parties require the following CA certificate trust chain.
 
 The following diagram shows certificates in action for both client and relying parties.
 
-> [!div class="mx-imgBorder"]
-> ![Flow diagram showing certificate issuance from Cloud PKI to client devices and certificate validation by relying parties.](./media/deployment-models/certs-in-play-for-cba.png)
+:::image type="content" source="./media/deployment-models/certs-in-play-for-cba.png" alt-text="Flow diagram showing certificate issuance from Cloud PKI to client devices and certificate validation by relying parties." border="false":::
 
 The following diagram shows the respective CA certificate trust chains that must be deployed to both managed devices and relying parties. The CA trust chains ensure Cloud PKI certificates issued to Intune-managed devices are trusted and can be used to authenticate to relying parties.
 
-> [!div class="mx-imgBorder"]
-> ![Flow diagram showing CA certificate trust chain deployment from Cloud PKI through Intune to managed devices.](./media/deployment-models/root-ca-deployment.png)
+:::image type="content" source="./media/deployment-models/root-ca-deployment.png" alt-text="Flow diagram showing CA certificate trust chain deployment from Cloud PKI through Intune to managed devices." border="false":::
 
 
 ### Option 2: Bring your own CA (BYOCA)
@@ -119,8 +117,7 @@ Relying parties trust the Cloud PKI BYOCA issued SCEP certificate to the managed
 
 The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.
 
-> [!div class="mx-imgBorder"]
-> ![Diagram of the CA certificate trust chains that must be deployed to Intune managed devices.](./media/deployment-models/byoca-ca-deployment.png)
+:::image type="content" source="./media/deployment-models/byoca-ca-deployment.png" alt-text="Diagram of the CA certificate trust chains that must be deployed to Intune managed devices." border="false":::
 `*` In this diagram, *private* refers to the Active Directory Certificate Service or a non-Microsoft service.
 
 ## Summary

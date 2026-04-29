@@ -50,7 +50,7 @@ LG OTA is supported on the following devices:
 
 For more specific information on supported devices, see [Zebra LifeGuard device requirements](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 
-The followingaren't supported in public preview:
+The following aren't supported in public preview:
 
 - Graph assignment with inclusions/exclusions
 

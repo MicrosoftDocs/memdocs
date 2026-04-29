@@ -180,7 +180,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - Select **Supply in the request**. The Intune policy module for NDES enforces security.
 
-       ![Certificate template Subject Name tab with Supply in the request option selected](./media/scep-infrastructure/scep-ndes-subject-name.jpg)
+       :::image type="content" source="./media/scep-infrastructure/scep-ndes-subject-name.jpg" alt-text="Certificate template Subject Name tab with Supply in the request option selected" border="false":::
 
    - **Extensions**:
 
@@ -191,7 +191,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - For iOS/iPadOS and macOS certificate templates, also edit **Key Usage** and make sure **Signature is proof of origin** isn't selected.
 
-     ![Certificate template Extensions tab showing application policies and key usage settings](./media/scep-infrastructure/scep-ndes-extensions.jpg)
+     :::image type="content" source="./media/scep-infrastructure/scep-ndes-extensions.jpg" alt-text="Certificate template Extensions tab showing application policies and key usage settings" border="false":::
 
    - **Security**:
 
@@ -199,19 +199,19 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - Add additional Accounts for Intune administrators who will create SCEP profiles. These accounts require **Read** permissions to the template to enable these admins to browse to this template while creating SCEP profiles.
 
-     ![Certificate template Security tab with NDES service account permissions configured](./media/scep-infrastructure/scep-ndes-security.jpg)
+     :::image type="content" source="./media/scep-infrastructure/scep-ndes-security.jpg" alt-text="Certificate template Security tab with NDES service account permissions configured" border="false":::
 
    - **Request Handling**:
 
      The following image is an example. Your configuration might vary.
 
-     ![Certificate template Request Handling tab showing purpose and key export settings](./media/scep-infrastructure/scep-ndes-request-handling.png)
+     :::image type="content" source="./media/scep-infrastructure/scep-ndes-request-handling.png" alt-text="Certificate template Request Handling tab showing purpose and key export settings" border="false":::
 
    - **Issuance Requirements**:
 
      The following image is an example. Your configuration might vary.
 
-     ![Certificate template Issuance Requirements tab with approval and signature settings](./media/scep-infrastructure/scep-ndes-issuance-reqs.jpg)
+     :::image type="content" source="./media/scep-infrastructure/scep-ndes-issuance-reqs.jpg" alt-text="Certificate template Issuance Requirements tab with approval and signature settings" border="false":::
 
 3. Save the certificate template.
 
@@ -349,7 +349,7 @@ To configure the NDES service, use an account that is an *Enterprise Administrat
 
 4. Browse to *http://*Server_FQDN*/certsrv/mscep/mscep.dll*. You should see an NDES page similar to the following image:
 
-   ![NDES service page confirming mscep.dll is running and responding successfully](./media/scep-infrastructure/scep-ndes-url.png)
+   :::image type="content" source="./media/scep-infrastructure/scep-ndes-url.png" alt-text="NDES service page confirming mscep.dll is running and responding successfully" border="false":::
 
    If the web address returns a **503 Service unavailable**, check the computers event viewer. This error commonly occurs when the application pool is stopped due to a missing [permission for the NDES service account](#accounts).
 
@@ -409,84 +409,6 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 - The certificate connector installs on the server that runs your NDES service.
 - The connector isn't supported on the same server as your issuing Certification Authority (CA).
 
-<!-- Deprecated for the new connector and its dedicated install article >
-
-### To install the Certificate Connector
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
-
-3. Download and save the connector for SCEP file. Save it to a location accessible from the server where you're going to install the connector.
-
-   ![Download button for Certificate Connector for Microsoft Intune in admin center](./media/scep-infrastructure/download-certificates-connector.png)
-
-4. After the download completes, go to the server hosting the Network Device Enrollment Service (NDES) role. Then:
-
-   1. Confirm that .NET 4.5 Framework is installed, as it's required by the Microsoft Intune Connector. The .NET 4.5 Framework is automatically included with Windows Server 2012 R2 and newer versions.
-
-   2. Use an account with admin permissions to the server to run the installer (**NDESConnectorSetup.exe**). The installer also installs the policy module for NDES and the IIS Certificate Registration Point (CRP) Web Service. The CRP Web Service, *CertificateRegistrationSvc*, runs as an application in IIS.
-
-      When you install NDES for standalone Intune, the CRP service automatically installs with the Certificate Connector.
-
-5. When prompted for the client certificate for the Certificate Connector, choose **Select**, and select the **client authentication** certificate you installed on your NDES Server during step #3 of the procedure [Install and bind certificates on the server that hosts NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) from earlier in this article.
-
-   After you select the client authentication certificate, you're returned to the **Client Certificate for Microsoft Intune Connector ** surface. Although the certificate you selected isn't shown, select **Next** to view the properties of that certificate. Select **Next**, and then **Install**.
-
-> [!NOTE]
-> The following changes must be made for GCC High tenants prior to launching the Microsoft Intune Connector.
->
-> Make edits to the two config files listed below which will update the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of three URI updates, two updates within the NDESConnectorUI.exe.config configuration file, and one update in the NDESConnector.exe.config file.
->
-> - File Name: <install_Path>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
->
->   Example: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
->   ```
->    <appSettings>
->        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon"/>
->        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses"/>
->        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
->    </appSettings>
->   ```
->
-> - File Name: <install_Path>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
->
->   Example: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
->    ```
->    <appSettings>
->        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
->    ```
->
-> If these edits are not completed, GCC High tenants will get the error: "Access Denied" "You are not authorized to view this page"
-
-6. After the wizard completes, but before closing the wizard, **Launch the Certificate Connector UI**.
-
-   If you close the wizard before you launch the Certificate Connector UI, you can reopen it by running the following command:
-
-   *<install_Path>\NDESConnectorUI\NDESConnectorUI.exe*
-
-7. In the **Certificate Connector** UI:
-
-   1. Select **Sign In**, and enter your Intune Administrator credentials.
-
-   2. The account you use must be assigned a valid Intune license.
-
-   3. After you sign in, the Microsoft Intune Connector downloads a certificate from Intune. This certificate is used for authentication between the connector and Intune. If the account you used doesn't have an Intune license, the connector (NDESConnectorUI.exe) fails to get the certificate from Intune.
-
-      If your organization uses a proxy server and the proxy is needed for the NDES server to access the Internet, select **Use proxy server**. Then enter the proxy server name, port, and account credentials to connect.
-
-   4. Select the **Advanced** tab, and then enter credentials for an account that has the **Issue and Manage Certificates** permission on your issuing Certificate Authority. **Apply** your changes.
-
-    5. You can now close the Certificate Connector UI.
-
-8. Open a command prompt, enter **services.msc**, and then **Enter**. Right-click the **Intune Connector Service** > **Restart**.
-
-To validate that the service is running, open a browser, and enter the following URL. It should return a **403** error: `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`
-
-> [!NOTE]
-> The Microsoft Intune Connector supports TLS 1.2. If the server that hosts the connector supports TLS 1.2, then TLS 1.2 is used. If the server doesn't support TLS 1.2, then TLS 1.1 is used.
-
--->
 
 ## Next steps
 
