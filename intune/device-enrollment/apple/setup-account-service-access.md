@@ -1,7 +1,7 @@
 ---
 title: Configure Apple account service access
 description: Use Apple access management settings to control how Apple accounts are used on organization‑owned devices managed by Microsoft Intune.  
-ms.date: 03/16/2026  
+ms.date: 04/29/2026  
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
@@ -82,7 +82,9 @@ In Apple Business or Apple School Manager, you can configure settings that contr
 > [!NOTE]
 > For devices enrolled through automated device enrollment (ADE), the **Managed devices only** and **Supervised devices only** options behave the same. ADE devices are both managed and supervised by default.  
 
-These controls apply to organization-owned devices and are defined by Apple as part of their access management model. For detailed instructions and descriptions of available settings, see [Service access with Managed Apple Accounts](https://support.apple.com/guide/apple-business-manager/service-access-with-managed-apple-accounts-axm171b3ee95/web) (opens Apple support site).    
+These controls apply to organization-owned devices and are defined by Apple as part of their access management model. They aren't supported with bring-your-own-device scenarios. For detailed instructions and descriptions of available settings, see [Service access with Managed Apple Accounts](https://support.apple.com/guide/apple-business-manager/service-access-with-managed-apple-accounts-axm171b3ee95/web) (opens Apple support site).    
+
+
 
 ### How service access enforcement works   
 
@@ -95,6 +97,8 @@ Service access for Apple accounts is defined and enforced across Apple and Micro
 1. If a device no longer meets the configured requirements, Apple automatically signs the user out of affected Apple services.  
 
 These controls help ensure that managed Apple accounts are used only on devices that meet your organization’s access requirements.  
+
+If a user is having trouble signing in to a device with their personal Apple account, see [Apple support](https://support.apple.com/en-us/122725) (opens Apple Support site).  
 
 ### What it doesn’t do  
 
