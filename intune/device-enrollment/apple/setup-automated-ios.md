@@ -27,7 +27,11 @@ Before you create the enrollment profile, you must have:
      > [!Tip]
      > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
 
-## Deploy the Company Portal app
+### Related configurations  
+
+If your organization uses Apple access management, you can optionally configure Apple access management settings in Apple Business or Apple School Manager to control which organization-owned iOS/iPadOS devices users can sign in to with Apple accounts and which apps and services are available. These settings are configured in Apple and enforced by Microsoft Intune after enrollment. They aren’t required to complete ADE setup. For more information, see [Configure service access for Apple accounts](setup-account-service-access.md).  
+
+### Deploy the Company Portal app
 
 When using automated device enrollment (ADE), deploy the Intune Company Portal app through Intune — not through the App Store. Deploying through Intune is the only way to:
 
@@ -37,13 +41,13 @@ When using automated device enrollment (ADE), deploy the Intune Company Portal a
 > [!IMPORTANT]
 > Don't use the App Store version of the Company Portal app. It isn't compatible with automated device enrollment and doesn't provide the automatic updates and availability that deployment does.
 
-### Deploy Company Portal as a VPP app
+#### Deploy Company Portal as a VPP app
 
 Deploy the app as a required VPP app [with device licensing](../../intune-service/apps/vpp-apps-ios.md#how-are-purchased-apps-licensed). For information about how to sync, assign, and manage a VPP app, see [Assign a volume-purchased app](../../intune-service/apps/vpp-apps-ios.md#assign-a-volume-purchased-app).
 
 To enable automatic app updates for Company Portal, go to your app token settings in the admin center and change **Automatic app updates** to **Yes**. See [Upload an Apple VPP or Apple Business location token](../../intune-service/apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token) for the steps to access your token settings. If you don't enable automatic updates, the device user must manually check for them.
 
-### Stage a device (transition from userless to user affinity)
+#### Stage a device (transition from userless to user affinity)
 
 *Device staging* is used to transition a device without user affinity to a device with user affinity. To stage a device, set up VPP deployment as described earlier. Then configure and deploy an [app configuration policy](../../intune-service/apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). Make sure the policy only targets those ADE devices without user affinity.
 
