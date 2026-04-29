@@ -116,7 +116,7 @@ Renew your enrollment program token yearly. The Intune admin center shows the to
 You can delete an enrollment program token from Intune as long as:
 
 - No devices are assigned to the token.
-- No devices are assigned to the default profile.
+- No devices are assigned to the default policy.
 - There are no enrollment policies under that token.
 
 To delete an enrollment program token:
@@ -126,8 +126,8 @@ To delete an enrollment program token:
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select the token, and then select **Devices**.
 1. Delete all devices assigned to the token.
-1. Return to **Enrollment program tokens**. Select the token, and then select **Profiles**.
-1. Delete all enrollment policies listed, including any default profile.
+1. Return to **Enrollment program tokens**. Select the token, and then select **Enrollment policies**.
+1. Delete all enrollment policies listed, including any default policy.
 1. Return to **Enrollment program tokens**. Select the token, and then select **Delete**.
 
 ## Next steps

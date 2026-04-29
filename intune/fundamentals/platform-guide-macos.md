@@ -140,7 +140,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
     * [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
-* When you use macOS ADE enrollment policiess, we recommend configuring [macOS account configuration with LAPS](../device-security/laps/setup-macos.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
+* When you use macOS ADE enrollment policies, we recommend configuring [macOS account configuration with LAPS](../device-security/laps/setup-macos.md) to enable newly enrolled devices to have a local admin and standard account and encrypted admin password that you can manage with Intune.
 
 * For other versions of this guide, see:
 

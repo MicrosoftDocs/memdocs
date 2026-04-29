@@ -10,7 +10,7 @@ ms.collection:
 
 # Get an Apple token for school devices
 
-Before you can enroll corporate-owned devices with Apple School Manager, you need a token (.p7m) file from Apple. This token lets Intune sync information about Apple School Manager-participating devices. It also permits Intune to perform enrollment policy uploads to Apple and to assign devices to those profiles. While you are in the Apple portal, you can also assign device serial numbers to manage.
+Before you can enroll corporate-owned devices with Apple School Manager, you need a token (.p7m) file from Apple. This token lets Intune sync information about Apple School Manager-participating devices. It also permits Intune to perform enrollment policy uploads to Apple and to assign devices to those policies. While you are in the Apple portal, you can also assign device serial numbers to manage.
 
 ## Get Apple token
 In the first set of steps, you download the Intune public key certificate required to create an Apple token.

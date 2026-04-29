@@ -50,7 +50,7 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 1. Choose **Enrollment program tokens**.
 1. Choose a token, and then select **Enrollment policies**.
 1. Select **Create policies** > **visionOS**.
-1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
+1. For **Basics**, give the policy a **Name** and **Description** for administrative purposes. Users don't see these details.
 1. Select **Next**.
 
    > [!IMPORTANT]
@@ -60,8 +60,6 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
     > If you make changes to an existing enrollment policy, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. 
 
 1. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables visionOS settings that allow the management profile to be removed. If you enable locked enrollment, users won't be able to unenroll their device.  
-
-1. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate (.cer extension) to import. The limit is 10 certificates.
 
 1. For **Await final configuration**, your options are:
       * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations.
@@ -77,7 +75,7 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 
 1. Select **Next**.
 
-1. On the **Setup Assistant** tab, configure the following profile settings:
+1. On the **Setup Assistant** tab, configure the following policy settings:
 
     | Department setting | Description |
     |---|---|
@@ -87,7 +85,7 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 
 1. Select **Next**.
 
-1. To save the profile, select **Create**.
+1. To save the policy, select **Create**.
 
 <a name='dynamic-groups-in-azure-active-directory'></a>
 
@@ -95,7 +93,7 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 
 You can use the enrollment **Name** field to create a dynamic group in Microsoft Entra ID. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
-You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment policy.
+You can use the policy name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment policy.
 
 Before device setup, make sure the enrolling user is a member of a Microsoft Entra user group.  
 
@@ -106,7 +104,7 @@ If you assign dynamic groups to enrollment policies, there might be a delay in d
 Before devices can be enrolled, you need to assign an enrollment policy to them.
 
 >[!NOTE]
->You can also assign serial numbers to profiles in the **Apple Serial Numbers** pane.
+>You can also assign serial numbers to policies in the **Apple Serial Numbers** pane.
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
@@ -124,7 +122,7 @@ You can pick a default policy to be applied to all devices that enroll with a sp
 1. In the admin center, return to **Enrollment program tokens**.
 2. Select an enrollment token.
 2. Select **Set Default Policy**.
-4. Select a profile in the list, and then select **Save**. From here, Intune applies the profile to all devices that enroll with the selected enrollment token.  
+4. Select a policy in the list, and then select **Save**. From here, Intune applies the policy to all devices that enroll with the selected enrollment token.  
 
 You can also set a policy as default from your list of enrollment policies. 
 1. Go to **Enrollment program tokens**.

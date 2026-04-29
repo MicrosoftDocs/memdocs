@@ -63,10 +63,10 @@ Create an enrollment policy for automated device enrollment. A device enrollment
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
-1. Select the **Apple** tab.
+1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
-1. Choose a token, and then select **Profiles**.
-1. Select **Create profile** > **iOS/iPadOS**.
+1. Choose a token, and then select **Enrollment policies**.
+1. Select **Create policy** > **iOS/iPadOS**.
 1. For **Basics**, give the policy a **Name** and **Description** for administrative purposes. Users don't see these details.
 1. Select **Next**.
 
@@ -281,8 +281,8 @@ Before devices can be enrolled, you need to assign an enrollment policy to them.
 1. Choose **Enrollment program tokens**.
 2. Select an enrollment token.
 3. Select **Devices**.
-5. Select all devices you want to assign, and then select **Assign profile**.
-4. Under **Assign profile**, choose the automated device enrollment policy you created for the devices, and then select **Assign**.
+5. Select all devices you want to assign, and then select **Assign policy**.
+4. Under **Assign policy**, choose the automated device enrollment policy you created for the devices, and then select **Assign**.
 
 ### Assign a default policy
 
@@ -290,7 +290,7 @@ You can pick a default policy to be applied to all devices that enroll with a sp
 
 1. In the admin center, return to **Enrollment program tokens**.
 2. Select an enrollment token.
-2. Select **Set Default Profile**.
+2. Select **Set Default Policy**.
 4. Select a policy in the list, and then select **Save**. From here, Intune applies the policy to all devices that enroll with the selected enrollment token.
 
 > [!NOTE]

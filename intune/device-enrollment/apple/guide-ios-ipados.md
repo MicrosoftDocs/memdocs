@@ -12,7 +12,7 @@ ms.collection:
 
 # Enrollment guide: Enroll Apple mobile devices in Microsoft Intune
 
-Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create. You have the following options when enrolling iOS/iPadOS devices:
+Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies you create. You have the following options when enrolling iOS/iPadOS devices:
 
 - [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
 - [Apple Configurator](#apple-configurator-enrollment)

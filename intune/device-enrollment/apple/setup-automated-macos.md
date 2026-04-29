@@ -43,9 +43,9 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select an enrollment program token.
-1. Select **Profiles** > **Create profile** > **macOS**.
+1. Select **Enrollment policies** > **Create policy** > **macOS**.
 
-    ![Create a profile screenshot.](./media/setup-automated-macos/image04.png)
+    ![Create a policy screenshot.](./media/setup-automated-macos/image04.png)
 
    > [!IMPORTANT]
    > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
@@ -191,13 +191,13 @@ Assign an enrollment policy to Apple devices.
 
 1. Return to **Enrollment program tokens** and select a token.
 1. Select **Devices**.
-1. Choose your devices from the list, and then select **Assign profile**.
+1. Choose your devices from the list, and then select **Assign policy**.
 1. Choose a policy to assign, and then select **Assign**.
 
 Optionally, you can select a default enrollment policy. The default policy is deployed to all enrolling devices associated with the token.
 
 1. Return to **Enrollment program tokens** and select a token.
-1. Select **Set Default Profile**.
+1. Select **Set Default Policy**.
 1. Choose a policy, and then select **Save**.
 
 ## Next steps

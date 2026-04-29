@@ -67,11 +67,11 @@ Microsoft Intune automatically syncs with Apple Business. Devices can take up to
 ## Step 4: Create an Apple enrollment policy
 Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enrollment policy defines the settings applied to a group of devices during enrollment.
 
-1. Select your token in the admin center, and then choose **Profiles**.
+1. Select your token in the admin center, and then choose **Enrollment policies**.
 
-1. Select **Create profile** > **iOS/iPadOS**.
+1. Select **Create policy** > **iOS/iPadOS**.
 
-1. On the **Basics** page, enter *TestProfile* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users don't see these details.
+1. On the **Basics** page, enter *TestPolicy* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users don't see these details.
 
 1. Select **Next**.
 
@@ -87,7 +87,7 @@ Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enr
 
 1. Choose **Yes** under **Locked enrollment** to ensure your users can't remove device management from their corporate device.
 
-1. Choose an option under **Sync with Computers** to determine if the iOS/iPadOS devices can sync with computers. **Deny All** means that devices using this profile can't sync with any data on any computer.
+1. Choose an option under **Sync with Computers** to determine if the iOS/iPadOS devices can sync with computers. **Deny All** means that devices using this policy can't sync with any data on any computer.
 
 1. By default, Apple names the device with the device type, such as *iPad*. If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
 
@@ -101,15 +101,15 @@ Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enr
 
 1. Choose **Next**.
 
-1. Review the profile settings. To save the profile, select **Create**
+1. Review the policy settings. To save the policy, select **Create**
 
 ## Step 5: Assign an enrollment policy to iOS/iPadOS devices
 
-You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in Apple Business or Apple School Manager.  
+You must assign an automated device enrollment policy to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in Apple Business or Apple School Manager.  
 
 1. In the admin center, return to **Enrollment program tokens**. Choose your token from the list.
 2. Select **Devices**, and then choose the devices you want to assign.
-3. Select **Assign profile**. Then select a profile for the devices.
+3. Select **Assign policy**. Then select a policy for the devices.
 4. Select **Assign**.
 
 > [!NOTE]
@@ -117,7 +117,7 @@ You must assign an enrollment program profile to devices before they can enroll.
 
 ## Step 6: Distribute devices to users
 
-You've set up management and syncing between Apple and Intune, and assigned a profile to let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license.
+You've set up management and syncing between Apple and Intune, and assigned a policy to let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license.
 
 ## Related configurations   
 
