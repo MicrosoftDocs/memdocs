@@ -65,6 +65,8 @@ Since Intune supports two Android platforms, it's important to understand how OS
     * **Android restrictions**
     * **macOS restrictions**
     * **iOS restrictions**
+    * **tvOS restrictions**
+    * **visionOS restrictions**  
 
 1. Select **Create restriction**.
 1. On the **Basics** page, give the restriction a name and optional description.
@@ -120,7 +122,7 @@ Enrollment restrictions support fewer filter properties than other group-targete
 
 * Configure a device platform restriction policy for Apple and Windows devices.
 * Configure an enrollment status page (ESP) policy for Windows.
-* Edit a filter that's in-use in an enrollment restriction or ESP profile.
+* Edit a filter that's in-use in an enrollment restriction or ESP policy.
 
 The following filter properties are always available to use with enrollment policies:
 
@@ -131,7 +133,7 @@ The following filter properties are always available to use with enrollment poli
 * OS version
 * Operating system SKU
 * Ownership
-* Enrollment profile name
+* Enrollment policy name
 
 **iOS/iPadOS and macOS**
 
@@ -139,7 +141,7 @@ The following filter properties are always available to use with enrollment poli
 * Model
 * OS version
 * Ownership
-* Enrollment profile name
+* Enrollment policy name
 
 For more information about these properties, see [device properties](../fundamentals/filters/ref-device-properties.md#available-properties). Filters can't be used with Android enrollment restrictions.
 

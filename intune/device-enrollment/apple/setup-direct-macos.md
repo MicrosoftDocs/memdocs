@@ -10,14 +10,14 @@ ms.collection:
 
 # Use direct enrollment for macOS devices
 
-Manually enroll new or existing corporate-owned Macs via *direct enrollment* with Apple Configurator. Direct enrollment is ideal for bulk enrollments and when you don't have access to Apple School Manager, Apple Business Manager, or when you require a wired network connection. You must have physical access to the Macs to configure and deploy the enrollment profile.
+Manually enroll new or existing corporate-owned Macs via *direct enrollment* with Apple Configurator. Direct enrollment is ideal for bulk enrollments and when you don't have access to Apple School Manager, Apple Business, or when you require a wired network connection. You must have physical access to the Macs to configure and deploy the enrollment profile.
 
 Direct enrollment lets you enroll the device prior to distribution, and doesn't wipe the device upon enrollment. Devices enrolled this way aren't associated with a user so we recommend this option for shared or kiosk-style devices. These types of devices are purpose driven and commonly used in businesses by frontline workers to scan items, print tickets, get digital signatures, or manage inventory.
 
 We recommend direct enrollment if you:
 
-- Are in a region/country that doesn't support Apple Business Manager or Apple School Manager.
-- Don't want to use Apple Business Manager or Apple School Manager because you want to limit admin control over devices, or because you don't want to set up all of the requirements.
+- Are in a region/country that doesn't support Apple Business or Apple School Manager.
+- Don't want to use Apple Business or Apple School Manager because you want to limit admin control over devices, or because you don't want to set up all of the requirements.
 - Need a wired internet connection to enroll devices, or have an unreliable internet connection.
 
 You can use this method to enroll one or more Macs. If you have many devices, it will take some time to enroll them because you must transfer and open the enrollment profile on each Mac you're enrolling.

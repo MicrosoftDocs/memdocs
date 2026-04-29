@@ -1,54 +1,56 @@
 ---
-title: Tutorial - Use Apple Business Manager to enroll iOS/iPadOS devices in Intune
-description: In this tutorial, you'll set up Apple corporate device enrollment features with Intune to enroll iOS/iPadOS devices purchased through Apple Business Manager.
+title: Tutorial - Use Apple Business to enroll iOS/iPadOS devices in Intune
+description: In this tutorial, you'll set up Apple corporate device enrollment features with Intune to enroll iOS/iPadOS devices purchased through Apple Business.
 ms.date: 03/05/2025
 ms.topic: tutorial
-Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager.
+Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business.
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business Manager
-Use Apple Business Manager with Microsoft Intune to simplify and automate device enrollment for iOS/iPadOS devices procured through Apple Business Manager. *Automated device enrollment*, which we'll set up in this tutorial, enables secure automatic enrollment the first time the user turns on the device by deploying the enrollment profile to the device over-the-air.
+# Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business
+Use Apple Business with Microsoft Intune to simplify and automate device enrollment for iOS/iPadOS devices procured through Apple Business. *Automated device enrollment*, which we'll set up in this tutorial, enables secure automatic enrollment the first time the user turns on the device by deploying the enrollment profile to the device over-the-air.
 
 In this tutorial, you'll learn how to:
 > [!div class="checklist"]
 > * Get an Apple device enrollment token
 > * Sync managed devices to Intune
-> * Create an enrollment profile
-> * Assign the enrollment profile to devices
+> * Create an enrollment policy
+> * Assign the enrollment policy to devices
 
 At the end of this tutorial, devices will be ready to distribute for enrollment.
 
 ## Prerequisites
 - Set [mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md).
 - Get [Apple MDM Push certificate](create-mdm-push-certificate.md).
-- Have new or wiped devices purchased from Apple Business Manager.
-- Add purchase information under device management settings in [Apple Business Manager](https://business.apple.com).
+- Have new or wiped devices purchased from Apple Business.
+- Add purchase information under device management settings in [Apple Business](https://business.apple.com).
 
 If you don't have an Intune subscription, [sign up for a free trial account](../../fundamentals/free-trial-sign-up.md).
 
 ## Step 1: Add MDM server
-Create an MDM server profile for Microsoft Intune in Apple Business Manager. The token you download in this step will enable the connection between Microsoft Intune and Apple Business Manager in a later step.
+Create an MDM server profile for Microsoft Intune in Apple Business. The token you download in this step will enable the connection between Microsoft Intune and Apple Business in a later step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** and expand **By platform**. Select **iOS/iPadOS**.
-3. Expand **Device onboarding**, and then select **Enrollment**.
-4. Select **Enrollment program tokens**.
-5. Select **Create**.
-6. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
-7. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
-8. Select **Create a token via Apple Business Manager** and sign in to Apple Business Manager with your company Apple ID.
+1. Go to **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**.
+1. Select **Apple mobile**.  
+1. Select **Enrollment program tokens**.
+1. Select **Create**.
+1. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
+1. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
+1. Select **Create a token via Apple Business** and sign in to Apple Business with your company Apple ID.
+
 
     >[!IMPORTANT]
-    > While you're in Apple Business Manager, don't close the browser tab with Microsoft Intune. You'll return to it later.
+    > While you're in Apple Business, don't close the browser tab with Microsoft Intune. You'll return to it later.
 
-6. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-automated-ios.md#step-2-assign-devices).
+6. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-automated-ios.md#step-2-assign-devices).
 
 ## Step 2: Assign devices
 
-While you're in Apple Business Manager, assign devices to your new MDM server (*TestMDMServer* or whatever you named it). For details and instructions, see [Assign, reassign, or unassign devices in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business Manager User Guide). When you're done assigning devices, continue to [Step 3: Upload MDM server token](tutorial-automated-ios.md#step-3-upload-mdm-server-token).
+While you're in Apple Business, assign devices to your new MDM server (*TestMDMServer* or whatever you named it). For details and instructions, see [Assign, reassign, or unassign devices in Apple Business](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business User Guide). When you're done assigning devices, continue to [Step 3: Upload MDM server token](tutorial-automated-ios.md#step-3-upload-mdm-server-token).
 
 ## Step 3: Upload MDM server token
 Return to the Microsoft Intune admin center to upload the MDM server token to Intune. After you upload the token, Microsoft Intune can sync and enroll iOS/iPadOS devices assigned to *TestMDMServer*.
@@ -58,12 +60,12 @@ Return to the Microsoft Intune admin center to upload the MDM server token to In
 3. Select **Next**.
 4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 5. Select **Next**.
-6. On **Review + create**, select **Create** to finish linking Microsoft Intune and Apple Business Manager.
+6. On **Review + create**, select **Create** to finish linking Microsoft Intune and Apple Business.
 
-Microsoft Intune automatically syncs with Apple Business Manager. Devices can take up to 12 hours to appear in the admin center. You can wait for these devices to sync, or manually start the sync. To start the sync yourself, select your token from the list in the admin center, and then choose **Devices** > **Sync**.
+Microsoft Intune automatically syncs with Apple Business. Devices can take up to 12 hours to appear in the admin center. You can wait for these devices to sync, or manually start the sync. To start the sync yourself, select your token from the list in the admin center, and then choose **Devices** > **Sync**.
 
-## Step 4: Create an Apple enrollment profile
-Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device enrollment profile defines the settings applied to a group of devices during enrollment.
+## Step 4: Create an Apple enrollment policy
+Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enrollment policy defines the settings applied to a group of devices during enrollment.
 
 1. Select your token in the admin center, and then choose **Profiles**.
 
@@ -101,9 +103,9 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 1. Review the profile settings. To save the profile, select **Create**
 
-## Step 5: Assign an enrollment profile to iOS/iPadOS devices
+## Step 5: Assign an enrollment policy to iOS/iPadOS devices
 
-You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or ADE portal.
+You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in Apple Business or Apple School Manager.  
 
 1. In the admin center, return to **Enrollment program tokens**. Choose your token from the list.
 2. Select **Devices**, and then choose the devices you want to assign.
@@ -117,9 +119,6 @@ You must assign an enrollment program profile to devices before they can enroll.
 
 You've set up management and syncing between Apple and Intune, and assigned a profile to let your ADE devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license.
 
-## Next steps
+## Related configurations   
 
-You can find more information about other options available for enrolling iOS/iPadOS devices.
-
-> [!div class="nextstepaction"]
-> [Technical docs for iOS/iPadOS automated device enrollment](setup-automated-ios.md)
+In addition to assigning devices to your MDM server and creating an enrollment profile, you can optionally use Apple access management settings in Apple Business (or Apple School Manager) to configure service access for Apple accounts on organization-owned devices. Microsoft Intune enforces these settings after enrollment. For more information, see [Configure service access for Apple accounts](setup-account-service-access.md).  

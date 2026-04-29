@@ -13,6 +13,9 @@ items:
   - name: Add device enrollment manager
     href: ./setup-enrollment-manager.md
     displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
+  - name: Configure Apple account service access
+    href: ./apple/setup-account-service-access.md
+    displayName: device management; apple business manager; apple school manager   
   - name: Configure Chrome Enterprise connector
     href: ./configure-chrome-enterprise-connector.md
     displayName: chrome os; connector; device management; google admin
@@ -128,8 +131,12 @@ items:
         href: ./apple/setup-apple-token.md
       - name: Choose enrollment authentication method
         href: ./apple/ref-automated-authentication-methods.md
-      - name: Create an enrollment profile for iOS/iPadOS
+      - name: Create an enrollment policy for iOS/iPadOS
         href: ./apple/setup-automated-ios.md
+      - name: Create an enrollment policy for tvOS
+        href: ./apple/setup-automated-tv-os.md
+      - name: Create an enrollment policy for visionOS
+        href: ./apple/setup-automated-vision-os.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-apple.md
       - name: Set up enrollment for shared device mode
@@ -140,7 +147,7 @@ items:
           href: ./apple/school-manager.md
         - name: Step 1 - Get an Apple token and assign devices
           href: ./apple/school-manager-step-1.md
-        - name: Step 2 - Create an Apple enrollment profile
+        - name: Step 2 - Create an Apple enrollment policy
           href: ./apple/school-manager-step-2.md
         - name: Step 3 - Sync managed devices
           href: ./apple/school-manager-step-3.md
@@ -186,7 +193,7 @@ items:
         href: ./apple/overview-automated-enrollment-macos.md
       - name: Set up a macOS enrollment token
         href: ./apple/setup-macos-token.md
-      - name: Set up an enrollment profile for macOS
+      - name: Set up an enrollment policy for macOS
         href: ./apple/setup-automated-macos.md
       - name: Manage ADE devices and tokens
         href: ./apple/manage-devices-tokens-macos.md

@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ai-usage: ai-assisted
@@ -9,64 +9,29 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Set up automated device enrollment (ADE) for iOS/iPadOS
+# Set up automated device enrollment for iOS/iPadOS   
 
 *Applies to iOS/iPadOS*
 
 
 This article describes how to create an enrollment policy for iOS/iPadOS automated device enrollment (ADE) in Microsoft Intune. For an overview of ADE and prerequisite setup, see [Overview of Apple Automated Device Enrollment](overview-automated-enrollment-apple.md).  
 
-## Certificates
-
-This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. ACME is supported on iOS 16.0 and iPadOS 16.1 or later. Already-enrolled devices don't receive an ACME certificate unless they re-enroll. For details, see [Certificates](overview-automated-enrollment-apple.md#certificates) in the ADE overview. 
 
 ## Prerequisites
-Before you create the enrollment profile, you must have:
+Before you create the enrollment policy, you must have:
 
-* Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
+* Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
 * An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).  
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
-* New or wiped devices purchased from Apple Business Manager or Apple School Manager.
+* New or wiped devices purchased from Apple Business or Apple School Manager.
      > [!Tip]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
+     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
 
-## Before you begin
-Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.
+### Related configurations  
 
-### Choose an authentication method
+If your organization uses Apple access management, you can optionally configure Apple access management settings in Apple Business or Apple School Manager to control which organization-owned iOS/iPadOS devices users can sign in to with Apple accounts and which apps and services are available. These settings are configured in Apple and enforced by Microsoft Intune after enrollment. They aren’t required to complete ADE setup. For more information, see [Configure service access for Apple accounts](setup-account-service-access.md).  
 
-Before creating an enrollment profile, decide how you want users to authenticate:
-
-- **Setup Assistant with modern authentication** (recommended):
-  - Supported on iOS/iPadOS 13.0 and later.  
-  - Supports multifactor authentication and just-in-time (JIT) registration, eliminating the need for the Company Portal app if configured with a device configuration policy.  
-
-- **Intune Company Portal app**:
-  - Also supports modern authentication and multifactor authentication.  
-  - Still requires users to complete Microsoft Entra registration through the app.  
-
-- **Setup Assistant (Legacy)**:
-  - Supports devices running iOS/iPadOS earlier than 13.0.  
-  - Not recommended or supported.  
-
-> [!IMPORTANT]
-> We recommend using **Setup Assistant with modern authentication** for all Automated Device Enrollment (ADE) scenarios with user device affinity. Avoid using legacy authentication.
-
-For more information about your authentication options, see [Authentication methods for automated device enrollment](ref-automated-authentication-methods.md).
-
-### What is supervised mode?
-
-Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop.
-
-Corporate-owned devices running iOS/iPadOS 11 and later and enrolled through automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](enable-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment.
-
-<a name='enrolling-devices-in-azure-ad-shared-device-mode'></a>
-
-### Enrolling devices in shared device mode
-
-You can set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra ID that enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in Microsoft Entra shared device mode, see [Automated device enrollment for shared device mode](setup-automated-shared-device-mode.md).  
-
-## Deploy the Company Portal app
+### Deploy the Company Portal app
 
 When using automated device enrollment (ADE), deploy the Intune Company Portal app through Intune — not through the App Store. Deploying through Intune is the only way to:
 
@@ -76,22 +41,22 @@ When using automated device enrollment (ADE), deploy the Intune Company Portal a
 > [!IMPORTANT]
 > Don't use the App Store version of the Company Portal app. It isn't compatible with automated device enrollment and doesn't provide the automatic updates and availability that deployment does.
 
-### Deploy Company Portal as a VPP app
+#### Deploy Company Portal as a VPP app
 
 Deploy the app as a required VPP app [with device licensing](../../intune-service/apps/vpp-apps-ios.md#how-are-purchased-apps-licensed). For information about how to sync, assign, and manage a VPP app, see [Assign a volume-purchased app](../../intune-service/apps/vpp-apps-ios.md#assign-a-volume-purchased-app).
 
-To enable automatic app updates for Company Portal, go to your app token settings in the admin center and change **Automatic app updates** to **Yes**. See [Upload an Apple VPP or Apple Business Manager location token](../../intune-service/apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token) for the steps to access your token settings. If you don't enable automatic updates, the device user must manually check for them.
+To enable automatic app updates for Company Portal, go to your app token settings in the admin center and change **Automatic app updates** to **Yes**. See [Upload an Apple VPP or Apple Business location token](../../intune-service/apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token) for the steps to access your token settings. If you don't enable automatic updates, the device user must manually check for them.
 
-### Stage a device (transition from userless to user affinity)
+#### Stage a device (transition from userless to user affinity)
 
 *Device staging* is used to transition a device without user affinity to a device with user affinity. To stage a device, set up VPP deployment as described earlier. Then configure and deploy an [app configuration policy](../../intune-service/apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). Make sure the policy only targets those ADE devices without user affinity.
 
 > [!IMPORTANT]
-> During initial enrollment, Intune automatically pushes app configuration policy settings for devices enrolled with Setup Assistant with modern authentication. This happens when the enrollment profile setting **Install Company Portal** is set to **Yes**. Don't deploy this configuration manually to users — it causes a conflict with the configuration sent during initial enrollment. If both are deployed, Intune incorrectly prompts device users to sign in to the Company Portal and download a management profile they've already installed.
+> During initial enrollment, Intune automatically pushes app configuration policy settings for devices enrolled with Setup Assistant with modern authentication. This happens when the enrollment policy setting **Install Company Portal** is set to **Yes**. Don't deploy this configuration manually to users — it causes a conflict with the configuration sent during initial enrollment. If both are deployed, Intune incorrectly prompts device users to sign in to the Company Portal and download a management policy they've already installed.
 
-## Create an Apple enrollment profile
+## Create an Apple enrollment policy
 
-Create an enrollment profile for automated device enrollment. A device enrollment profile defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment profiles per enrollment token.  
+Create an enrollment policy for automated device enrollment. A device enrollment policy defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment policies per enrollment token.  
 
 > [!NOTE]
 > Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.
@@ -102,16 +67,16 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 1. Choose **Enrollment program tokens**.
 1. Choose a token, and then select **Profiles**.
 1. Select **Create profile** > **iOS/iPadOS**.
-1. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
+1. For **Basics**, give the policy a **Name** and **Description** for administrative purposes. Users don't see these details.
 1. Select **Next**.
 
    > [!IMPORTANT]
-   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business Manager or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
+   > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
 
     > [!IMPORTANT]
-    > If you make changes to an existing enrollment profile, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.
+    > If you make changes to an existing enrollment policy, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.
 
-1. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
+1. In the **User Affinity** list, select an option that determines whether devices with this policy must enroll with or without an assigned user.
 
     - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps. Enrolling with user affinity is also referred to as enrolling with a *user*.
     - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices. Enrolling without user affinity is also referred to as enrolling *userless*.
@@ -142,7 +107,7 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 
    :::image type="content" source="./media/setup-automated-ios/single-app-mode.png" alt-text="Screenshot that shows the Run Company Portal in Single App Mode option.":::
 
-1. If you want devices using this profile to be supervised, select **Yes** in the **Supervised** list.
+1. If you want devices using this policy to be supervised, select **Yes** in the **Supervised** list.
 
     :::image type="content" source="./media/setup-automated-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
 
@@ -155,7 +120,7 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 
 1. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device. If you're setting up devices in Microsoft Entra ID shared mode, select **Yes**.
 
-    Locked enrollment works a little differently, at first, on devices not originally purchased through Apple Business Manager but later added to be a part of automated device enrollment: users on these devices can see the remove management button in the Settings app for the first 30 days after activating their device. After that provisional period, this option is hidden. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859) (opens Apple Configurator Help docs).
+    Locked enrollment works a little differently, at first, on devices not originally purchased through Apple Business but later added to be a part of automated device enrollment: users on these devices can see the remove management button in the Settings app for the first 30 days after activating their device. After that provisional period, this option is hidden. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859) (opens Apple Configurator Help docs).
 
     > [!IMPORTANT]
     > This setting is different from the remove and reset options in the Company Portal app. Regardless of how you configure locked enrollment, the **Remove Device** or **Factory Reset** options in the Company Portal app remain unavailable on devices enrolled through automated device enrollment. Users won't be able to remove the device on the Company Portal website either. For more information about the self-service actions available on enrolled devices, see [Self-service actions](../../app-management/configuration/configure-company-portal.md#self-service-actions).
@@ -164,7 +129,7 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 
     > [!NOTE]
     >
-    >- A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.
+    >- A device wipe will be required if an iOS/iPadOS enrollment policy with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.
     >- To set up Apple Shared iPad for Business, configure these settings:
     >   - In the **User Affinity** list, select **Enroll without User Affinity**.
     >   - In the **Supervised** list, select **Yes**.
@@ -193,9 +158,9 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
     > [!NOTE]
     >
     >- If temporary sessions are enabled, all of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.
-    >-  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad.
+    >-  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment policy with the updated configurations will need to be sent down to the iPad.
 
-1. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate (.cer extension) under **Apple Configurator Certificates**.
+1. In the **Sync with computers** list, select an option for the devices that use this policy. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate (.cer extension) under **Apple Configurator Certificates**.
 
     > [!NOTE]
     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
@@ -211,20 +176,20 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
            >[!NOTE]
            > Only device configuration policies start installing during the awaiting final  configuration screen, and applications aren't included in this.
 
-         The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:
+         The locked experience works on devices targeted with new and existing enrollment policies. Supported devices include:
          * iOS/iPadOS 13 and later devices enrolling with Setup Assistant with modern authentication
          * iOS/iPadOS 13 and later devices enrolling without user affinity
          * iOS/iPadOS 13 and later devices enrolling with Microsoft Entra ID shared mode
 
-         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles.
+         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment policies.
 
-      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment profiles.
+      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment policies
 
-      The await configuration setting is unavailable in profiles with this combination of configurations:
+      The await configuration setting is unavailable in policies with this combination of configurations:
       * User affinity: **Enroll without user affinity** (Step 6 in this section)
       * Shared iPad: **Yes**  (Step 12 in this section)
 
-1. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template:
+1. Optionally, create a device name template to quickly identify devices assigned this policy in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template:
  1. Under **Apply device name template**, select **Yes** .
  2. In the **Device Name Template** box, enter the template you want to use to construct device names. The template can include the device type and serial number. It can't contain more than 63 characters, including the variables. Example: `{{DEVICETYPE}}-{{SERIAL}}`
 
@@ -232,7 +197,7 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 
 1. Select **Next**.
 
-1. On the **Setup Assistant** tab, configure the following profile settings:
+1. On the **Setup Assistant** tab, configure the following policy settings:
 
     | Department setting | Description |
     |---|---|
@@ -246,7 +211,7 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 
 1. Select **Next**.
 
-1. To save the profile, select **Create**.
+1. To save the policy, select **Create**.
 
 <a name='dynamic-groups-in-azure-active-directory'></a>
 
@@ -254,11 +219,11 @@ Create an enrollment profile for automated device enrollment. A device enrollmen
 
 You can use the enrollment **Name** field to create a dynamic group in Microsoft Entra ID. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
-You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
+You can use the policy name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment policy.
 
 Before device setup, and to ensure quick delivery to devices with user affinity, make sure the enrolling user is a member of a Microsoft Entra user group.
 
-If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
+If you assign dynamic groups to enrollment policies, there might be a delay in delivering applications and policies to devices after the enrollment.
 
 ### Setup Assistant screen reference
 The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see these Apple resources:
@@ -303,41 +268,33 @@ The following table describes the Setup Assistant screens shown during automated
 | **Multitasking**| Shows the multitasking pane. For iOS/iPadOS 26.0 and later.  
 | **OS Showcase**| Shows the OS showcase pane. For iOS/iPadOS 26.0 and later.  
 
-## Assign an enrollment profile to devices
+## Assign an enrollment policy to devices
 
-Before devices can be enrolled, you need to assign an enrollment profile to them.
+Before devices can be enrolled, you need to assign an enrollment policy to them.
 
 >[!NOTE]
->You can also assign serial numbers to profiles in the **Apple Serial Numbers** pane.
+>You can also assign serial numbers to policies in the **Apple Serial Numbers** pane.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple** tab.
 1. Choose **Enrollment program tokens**.
 2. Select an enrollment token.
 3. Select **Devices**.
 5. Select all devices you want to assign, and then select **Assign profile**.
-4. Under **Assign profile**, choose the automated device enrollment profile you created for the devices, and then select **Assign**.
+4. Under **Assign profile**, choose the automated device enrollment policy you created for the devices, and then select **Assign**.
 
-### Assign a default profile
+### Assign a default policy
 
-You can pick a default profile to be applied to all devices that enroll with a specific token.
+You can pick a default policy to be applied to all devices that enroll with a specific token.
 
 1. In the admin center, return to **Enrollment program tokens**.
 2. Select an enrollment token.
 2. Select **Set Default Profile**.
-4. Select a profile in the list, and then select **Save**. From here, Intune applies the profile to all devices that enroll with the selected enrollment token.
+4. Select a policy in the list, and then select **Save**. From here, Intune applies the policy to all devices that enroll with the selected enrollment token.
 
 > [!NOTE]
 > Ensure that **Device Type Restrictions** under **Enrollment Restrictions** doesn't have the default **All Users** policy set to block the iOS/iPadOS platform. This setting causes automated enrollment to fail and your device shows as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which permits corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled through a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.  
-
-
-## Re-enroll a device
-Complete these steps to re-enroll a device that already went through automated device enrollment.
-
-1. There are two options for resetting the device:
-    * Wipe the device in the Microsoft Intune admin center.
-    * Retire the device in the admin center, and then reset the device to factory settings using the Settings app, Apple Configurator 2, or iTunes.
-2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.  
 
 ## Limitations
 
@@ -350,6 +307,6 @@ Hide both screens on devices running iOS/iPadOS 14.5 and later. If you want to r
 
 ## Next steps  
 
-- To sync devices, assign enrollment profiles, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
+- To sync devices, assign enrollment policies, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
 - To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).
 - For troubleshooting, see [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).
