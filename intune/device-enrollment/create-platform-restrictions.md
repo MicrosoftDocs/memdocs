@@ -64,7 +64,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
     * **Windows restrictions**
     * **Android restrictions**
     * **macOS restrictions**
-    * **iOS restrictions**
+    * **iOS/iPadOS restrictions**
     * **tvOS restrictions**
     * **visionOS restrictions**  
 
@@ -74,7 +74,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 1. On the **Platform settings** page, configure the restrictions for your selected platform. Your options:
 
    - **Platform** (Android): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
-   - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
+   - **MDM** (Windows, macOS, iOS/iPadOS, tvOS, and visionOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
    - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.
    - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block.
    - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:
