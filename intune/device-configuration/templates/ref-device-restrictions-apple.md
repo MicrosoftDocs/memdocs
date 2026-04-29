@@ -1,7 +1,7 @@
 ---
 title: Apple device restriction settings in Microsoft Intune
 description: Add, configure, or create settings on iOS, iPadOS, and macOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
-ms.date: 02/10/2026
+ms.date: 04/29/2026
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
@@ -84,6 +84,10 @@ These settings use Apple's restriction settings. For more information, see [Appl
 
 - **Require iTunes Store password for all purchases**: **Yes** requires users to enter the Apple ID password for each in-app or iTunes purchase. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow purchases without prompting for a password every time.
 - **Block in-app purchases**: **Yes** blocks in-app purchases from the store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow store purchases within a running app.
+
+  > [!NOTE]
+  > When end users try to make in-app purchases with volume purchasing program (VPP), Managed Apps, or Managed Apple Accounts, they see an **In-App Purchase Disabled**. This message is normal and expected. For more information, see [Intro to getting licences for apps and books in Apple Business](https://support.apple.com/guide/business/axme19b23f7f/web).
+  
 - **Block download of explicit sexual content in Apple Books**: **Yes** blocks users from downloading media from the iBook store that's tagged as erotica. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to download books with the "Erotica" category.
 - **Allow managed apps to write contacts to unmanaged contacts accounts**: **Yes** lets managed apps, such as the Outlook mobile app, save or sync contact information, including business and corporate contacts, to the built-in iOS/iPadOS Contacts app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent managed apps from saving or syncing contact information to the built-in iOS/iPadOS Contacts app on devices.
 
