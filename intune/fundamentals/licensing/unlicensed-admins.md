@@ -9,7 +9,9 @@ ms.collection:
 
 # Unlicensed administrator access to Microsoft Intune
 
-Microsoft Intune supports unlicensed administrator access, which allows administrators to sign in to and manage Intune without an assigned Intune license. When unlicensed admin access is active, it applies to all administrator roles, including Intune administrators and Microsoft Entra administrators. Some related features and services, such as Microsoft Entra ID P1 or P2, might still require the appropriate license.
+Administrators can sign in to and manage Microsoft Intune without an assigned Intune license. This access is enabled by default for tenants created after July 2021 and applies to all administrator roles, including Intune administrators and Microsoft Entra administrators. Tenants created before July 2021 can enable this access manually.
+
+Unlicensed admin access grants sign-in and management access to the Microsoft Intune admin center. It doesn't replace license requirements for other features and services. For example, features that depend on Microsoft Entra ID P1 or P2 still require the appropriate license.
 
 Whether you need to enable this setting depends on when your tenant was created:
 
