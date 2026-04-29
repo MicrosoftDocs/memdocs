@@ -18,14 +18,14 @@ Configure endpoint analytics in Intune by creating a data collection policy and 
 
 Configure endpoint analytics in Configuration Manager by enabling data upload, turning on data collection for devices. Then, adjust settings in the Intune admin center that define your analytics experience.
 
-**Co-managed devices:** We recommend [using Intune for configuration](?pivots=intune). You don't need to shift co-management workloads to Intune. When co-management is enabled, enrolled devices automatically send the required functional data to the Microsoft cloud.
+**Co-managed devices:** We recommend using Intune for configuration. For details, see [Configure endpoint analytics with Intune](?pivots=intune). You don't need to shift co-management workloads to Intune. When co-management is enabled, enrolled devices automatically send the required functional data to the Microsoft cloud.
 
 ::: zone-end
 
 ## Before you begin
 
 > [!div class="checklist"]
-> - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
+> - Confirm that your environment meets all prerequisites. For details, see [Prerequisites overview](index.md#prerequisites).
 
 ::: zone pivot="cm"
 
@@ -46,7 +46,7 @@ To enable data upload for endpoint analytics in Configuration Manager:
 
 The **Enable Endpoint analytics data collection** client setting lets managed devices send data required for endpoint analytics to your site server. This setting only controls local data collection—it doesn't determine whether data is uploaded to the cloud.
 
-By default, this setting is enabled for devices targeted by the default [client settings](../configmgr/core/clients/deploy/about-client-settings.md). To change this behavior:
+By default, this setting is enabled for devices targeted by the default client settings. For more information, see [About client settings in Configuration Manager](../configmgr/core/clients/deploy/about-client-settings.md). To change this behavior:
 
 1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
 1. Right-click and select **Properties** then select the **Computer Agent** settings.
@@ -55,7 +55,7 @@ By default, this setting is enabled for devices targeted by the default [client 
 You can also modify the **Enable Endpoint analytics data collection** policy in custom client settings to configure a specific set of devices for local data collection. Don't forget to deploy or re-deploy your custom client setting after making changes.
 
    > [!IMPORTANT]
-   > If you have an existing custom client agent setting that is deployed to your devices, you need to update the [**Enable Endpoint analytics data collection**](ref-data-collection.md#data-collection) option in that custom setting and select **Ok** for it to take effect.
+   > If you have an existing custom client agent setting that is deployed to your devices, you need to update the **Enable Endpoint analytics data collection** option in that custom setting and select **Ok** for it to take effect. For more information about this setting, see [Data collection settings](ref-data-collection.md#data-collection).
 
 ::: zone-end
 
@@ -93,7 +93,7 @@ If you want to change which devices contribute data to endpoint analytics, you c
 
 You can also create a new profile if you want to target a different set of devices:
 
-1. [Create a Windows health monitoring policy](../device-configuration/templates/configure-health-monitoring-windows.md).
+1. Create a Windows health monitoring policy. For instructions, see [Configure Windows health monitoring](../device-configuration/templates/configure-health-monitoring-windows.md).
 1. Assign the policy to a group that contains as members the devices that you want to target.
 
 ::: zone-end
@@ -120,7 +120,7 @@ To revoke consent:
 
 1. Clear the checkbox that states **I consent to share anonymized and aggregate metrics to see updated Endpoint analytics scores and insights**.
 1. Select **Yes** to confirm the action.
-1. Optionally, [stop gathering data](ref-data-collection.md#stop-gathering-data).
+1. Optionally, stop gathering data. For instructions, see [How to stop data collection](ref-data-collection.md#stop-gathering-data).
 
 ## Configure baselines
 
@@ -148,7 +148,7 @@ To learn more about how data flows and is collected from devices to the Microsof
 
 When processing is complete, the **Overview** page updates with your organization's data:
 
-- The **Endpoint analytics score** is a weighted average of the [Startup performance](startup-performance.md), [Application reliability](app-reliability.md), and [Work from anywhere](work-from-anywhere.md) scores.
+- The **Endpoint analytics score** is a weighted average of the Startup performance, Application reliability, and Work from anywhere scores. For details, see [Startup performance](startup-performance.md), [Application reliability](app-reliability.md), and [Work from anywhere](work-from-anywhere.md).
 - You can compare your current score to other scores by selecting a baseline.
   - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.

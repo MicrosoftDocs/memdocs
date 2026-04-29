@@ -29,11 +29,11 @@ The user account now has the permissions needed to use the service and enroll de
 
 If you're an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.
 
-:::image type="content" source="./media/assign-licenses/i4e-sds-profile-setup-setting.png" alt-text="Screenshot of SDS profile setting.":::
+:::image type="content" source="./media/assign-licenses/i4e-sds-profile-setup-setting.png" alt-text="Screenshot of the School Data Sync profile setup with the Intune for Education license checkbox.":::
 
 When you assign an Intune for Education license, make sure that Intune A Direct license is also assigned.
 
-:::image type="content" source="./media/assign-licenses/i4e-set-licenses.png" alt-text="Screenshot of product license setup.":::
+:::image type="content" source="./media/assign-licenses/i4e-set-licenses.png" alt-text="Screenshot of the product license assignment page showing the Intune A Direct license selected.":::
 
 See this [overview of School Data Sync](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91) to learn more about SDS.
 
@@ -152,7 +152,7 @@ Verify with:
 (Get-MgUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 ```
 
-:::image type="content" source="./media/assign-licenses/posh-addlic-verify.png" alt-text="Command line sample of PowerShell license verification.":::
+:::image type="content" source="./media/assign-licenses/posh-addlic-verify.png" alt-text="PowerShell output showing user license and service status verification.":::
 
 ## Related content
 

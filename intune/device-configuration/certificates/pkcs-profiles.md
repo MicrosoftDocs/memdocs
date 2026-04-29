@@ -219,7 +219,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    > [!NOTE]
    > Depending on the platform you chose in **Step 3**, you may or may not have an option to choose the **Destination store** for the certificate.
 
-   ![Create a profile and upload a trusted certificate](./media/pkcs-profiles/certificates-pfx-configure-profile-fill.png)
+   :::image type="content" source="./media/pkcs-profiles/certificates-pfx-configure-profile-fill.png" alt-text="Configuration profile form with certificate upload field and destination store options" border="false":::
 
 8. Select **Next**.
 

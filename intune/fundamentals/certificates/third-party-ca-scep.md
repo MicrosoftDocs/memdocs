@@ -43,8 +43,7 @@ The following steps provide an overview of using SCEP for certificates in Intune
 
 The following diagram shows a detailed flow of third-party SCEP integration with Intune:
 
-> [!div class="mx-imgBorder"]
-> ![How third-party certification authority SCEP integrates with Microsoft Intune](./media/third-party-ca-scep/scep-certificate-vendor-integration.png)
+:::image type="content" source="./media/third-party-ca-scep/scep-certificate-vendor-integration.png" alt-text="Data flow diagram showing how third-party certification authority SCEP integrates with Microsoft Intune" border="false":::
 
 ## Set up third-party CA integration
 
