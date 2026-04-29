@@ -96,7 +96,7 @@ The following subjects link to dedicated articles for different aspects of devic
 - [**Custom compliance settings**](./custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
-  - Linux – Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
+  - Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
   - Windows  
 
 ## Monitor compliance status
