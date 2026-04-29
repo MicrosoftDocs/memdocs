@@ -126,7 +126,7 @@ Intune automatically turns on supervision for user-approved devices running macO
 
 
 > [!NOTE]
-> Intune announced support for user approved enrollment in June 2020. BYOD enrollments that occured before that time may not be user-approved. For more information about Apple devices becoming user approved, see [User approved MDM enrollment](https://support.apple.com/HT208019) on the Apple Support website.
+> Intune announced support for user approved enrollment in June 2020. BYOD enrollments that occurred before that time may not be user-approved. For more information about Apple devices becoming user approved, see [User approved MDM enrollment](https://support.apple.com/HT208019) on the Apple Support website.
 
 ### User experience
 The device user signs in to the Company Portal app to initiate enrollment. Company Portal then opens the device's system preferences and prompts the user to install the management profile. Company Portal provides in-app instructions to help users find the profile. Users go to **System Preferences** > **Profiles** to  approve the management profile installation. Device users that don't provide approval during enrollment can return to system preferences later to give approval.
