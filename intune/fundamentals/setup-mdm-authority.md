@@ -16,9 +16,9 @@ The mobile device management (MDM) authority setting determines how you manage y
 
 Possible configurations are:
 
-- **Intune Standalone** - Cloud-only management, which you configure by using the Azure portal. Includes the full set of capabilities that Intune offers. [Set the MDM authority in the Microsoft Intune admin center](#set-mdm-authority-to-intune).
+- **Intune Standalone** - Cloud-only management, which you configure by using the Azure portal. Includes the full set of capabilities that Intune offers. To get started, see [Set the MDM authority in the Microsoft Intune admin center](#set-mdm-authority-to-intune).
 
-- **Intune co-management** - Integration of the Intune cloud solution with Configuration Manager for Windows devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune).
+- **Intune co-management** - Integration of the Intune cloud solution with Configuration Manager for Windows devices. You configure Intune by using the Configuration Manager console. To get started, see [Configure auto-enrollment of devices to Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune).
 
 - **Basic Mobility and Security for Microsoft 365** - After this configuration is activated, the MDM authority is set to "Office 365". If you want to start using Intune, you're required to purchase Intune licenses.
 

@@ -1,17 +1,18 @@
 ---
 title: Monitor Microsoft Defender for Endpoint with Microsoft Intune
-description: Monitor Microsoft Defender for Endpoint with Intune, including device compliance and onboarding status.
-ms.date: 10/10/2024
+description: Learn how to monitor device compliance and onboarding status for Microsoft Defender for Endpoint with Microsoft Intune in the admin center.
+ms.date: 04/28/2026
 ms.topic: how-to
 ms.reviewer: aanavath
+ms.custom: msecd-doc-authoring-1012
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
 
-# Monitor device status when you integrate Microsoft Defender for Endpoint with Intune
+# Monitor device status for Microsoft Defender for Endpoint with Microsoft Intune
 
-When you integrate Microsoft Intune and Microsoft Defender for Endpoint, you can view information about device compliance and onboarding in the Microsoft Intune admin center.
+When you integrate Microsoft Intune and Microsoft Defender for Endpoint, you can monitor device compliance and onboarding status in the Microsoft Intune admin center to verify that devices are protected.
 
 ## Monitor device compliance
 
@@ -30,8 +31,10 @@ For more information about reports, see [Intune reports](../../device-management
 To view the onboarding status of your Intune-managed devices:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Overview**. As part of the default *Summary* is a visualization report for **Windows devices onboarded onto Microsoft Defender for Endpoint**, which displays the count of devices that report status from the Defender for Endpoint sensor.
+2. Select **Endpoint security** > **Overview**.
 
-## Related content
+   The default *Summary* tab includes a **Windows devices onboarded onto Microsoft Defender for Endpoint** visualization report that displays the count of devices reporting status from the Defender for Endpoint sensor.
 
-[Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](./overview.md)
+## Next step
+
+- [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](./overview.md)

@@ -24,7 +24,7 @@ You can view synced devices in the **Devices** > **All devices** list and throug
 
 To view ChromeOS devices and device details, you must be assigned a role with *read* permission for *Chrome Enterprise*.
 
-Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
+Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices in Google Admin console](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
 ## View ChromeOS devices
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running ChromeOS. The following information is shown for ChromeOS devices:
