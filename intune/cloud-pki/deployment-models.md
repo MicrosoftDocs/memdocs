@@ -67,7 +67,7 @@ Also consider the relying party software configuration needed to support other c
 During a Cloud PKI root CA deployment, the Cloud PKI root certificate needs to be deployed to all relying parties. If an issuing CA certificate isn't present on a relying party, the relying party can automatically retrieve and install it by initiating certificate discovery. This process, known as the certificate chaining engine (CCE), is platform-specific and used to retrieve missing parent certificate. The URL of the issuing CA certificate is in the AIA property of a leaf certificate (the certificate issued to the device using a Cloud PKI issuing CA). A relying party can use the AIA property to retrieve parent CA certificates. The process is similar to CRL downloading.
 
 >[!NOTE]
-> Android OS requires servers to return an entire certificate chain and doesn't do certificate discovery following AIA paths. For more information, see [Android developer docs](https://developer.android.com/training/articles/security-ssl#MissingCa). Be sure to deploy the full certificate chain to Android managed devices and relying parties.
+> Android OS requires servers to return an entire certificate chain and doesn't do certificate discovery following AIA paths. For more information about certificate chain requirements on Android, see the [Android SSL security documentation](https://developer.android.com/training/articles/security-ssl#MissingCa). Be sure to deploy the full certificate chain to Android managed devices and relying parties.
 
 Intune managed devices, regardless of OS platform, require the following CA certificate trust chain.
 
@@ -86,12 +86,12 @@ Relying parties require the following CA certificate trust chain.
 The following diagram shows certificates in action for both client and relying parties.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the certificate flow for client and relying parties.](./media/deployment-models/certs-in-play-for-cba.png)
+> ![Flow diagram showing certificate issuance from Cloud PKI to client devices and certificate validation by relying parties.](./media/deployment-models/certs-in-play-for-cba.png)
 
 The following diagram shows the respective CA certificate trust chains that must be deployed to both managed devices and relying parties. The CA trust chains ensure Cloud PKI certificates issued to Intune-managed devices are trusted and can be used to authenticate to relying parties.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the Microsoft Cloud PKI root CA deployment flow.](./media/deployment-models/root-ca-deployment.png)
+> ![Flow diagram showing CA certificate trust chain deployment from Cloud PKI through Intune to managed devices.](./media/deployment-models/root-ca-deployment.png)
 
 
 ### Option 2: Bring your own CA (BYOCA)

@@ -19,18 +19,18 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 ## Prerequisites
 
-- [Set up Managed Google Play for your tenant](../../device-enrollment/android/connect-managed-google-play.md)
+- Managed Google Play must be configured for your tenant. For setup instructions, see [Set up Managed Google Play](../../device-enrollment/android/connect-managed-google-play.md).
 
 - Administrators must have all the required RBAC (role-based access control) permissions:
 
   - Mobile Apps (to create and deploy app configuration profiles)
   - Android FOTA (to manage firmware OTA updates)
 
-- [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../../fundamentals/add-ons.md)
+- A Microsoft Intune Plan 2 or Microsoft Intune Suite license is required. For details, see [Intune add-ons and licensing](../../fundamentals/add-ons.md).
 
-- Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
+- Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see the [Zebra LifeGuard FAQ](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
-- For more information about which Zebra devices work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+- For more information about which Zebra devices work with the service based on the platform, see [Zebra LifeGuard device requirements](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 
 ## Government cloud support
 
@@ -48,9 +48,9 @@ LG OTA is supported on the following devices:
 - [Android Enterprise dedicated devices](../../device-enrollment/android/guide.md#android-enterprise-dedicated-devices)
 - [Android Enterprise fully managed devices](../../device-enrollment/android/guide.md#android-enterprise-fully-managed)
 
-For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+For more specific information on supported devices, see [Zebra LifeGuard device requirements](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 
-The following aren't supported in public preview:
+The followingaren't supported in public preview:
 
 - Graph assignment with inclusions/exclusions
 

@@ -15,7 +15,7 @@ Microsoft Intune supports the use of imported public key pair (PKCS) certificate
 
 > [!IMPORTANT]
 >
-> As announced in [this Microsoft Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363), support for Azure Active Directory Authentication Library (ADAL) ends in December 2022. For your PowerShell scripts or custom code to continue to work to import user PFX certificates to Intune, they must be updated to leverage [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) (MSAL). Additionally, the global Intune application ID should be updated with the unique Application (client) ID assigned to your app after registering it in [Microsoft Entra ID to prevent future authentication issues](/azure/active-directory/develop/quickstart-register-app).
+> As announced in the [Microsoft Tech Community blog post announcing ADAL deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363), support for Azure Active Directory Authentication Library (ADAL) ends in December 2022. For your PowerShell scripts or custom code to continue to work to import user PFX certificates to Intune, they must be updated to leverage [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) (MSAL). Additionally, the global Intune application ID should be updated with the unique Application (client) ID assigned to your app after registering it in [Microsoft Entra ID](/azure/active-directory/develop/quickstart-register-app) to prevent future authentication issues.
 >
 > On GitHub, the sample PowerShell script to help simplify importing PFX certificates has been updated to reference MSAL and the Microsoft Entra Application (client) ID. Script samples in this article are also updated where applicable.
 >
@@ -90,7 +90,7 @@ To make use of the PowerShell cmdlets, you build the project yourself using Visu
 
 1. Go to the root of the [Intune-Resource-Access](https://github.com/microsoft/Intune-Resource-Access) repository on GitHub, and then either download or clone the repository with Git to your machine.
 
-   ![GitHub download button](./media/imported-pfx-profiles/github-download.png)
+   ![GitHub Code button showing download and clone options for PFX Import PowerShell project](./media/imported-pfx-profiles/github-download.png)
 
 2. Go to `.\Intune-Resource-Access-develop\src\PFXImportPowershell\` and open the project with Visual Studio using the file **PFXImportPS.sln**.
 
@@ -98,7 +98,7 @@ To make use of the PowerShell cmdlets, you build the project yourself using Visu
 
 4. Go to **Build** and select **Build PFXImportPS**. In a few moments, you'll see the **Build succeeded** confirmation at the bottom left of Visual Studio.
 
-   ![Visual Studio Build option](./media/imported-pfx-profiles/vs-build-release.png)
+   ![Visual Studio Build menu with Build PFXImportPS command highlighted](./media/imported-pfx-profiles/vs-build-release.png)
 
 5. The build process creates a new folder with the PowerShell Module at `.\Intune-Resource-Access-develop\src\PFXImportPowershell\PFXImportPS\bin\Release`.
 
@@ -152,7 +152,7 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 #### To import the PFX certificate
 
-1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](http://web.archive.org/web/20200319074455/https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
+1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use the [Export-CMPfxCertificates sample script](http://web.archive.org/web/20200319074455/https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
 
 2. On the server, open *PowerShell* as an Administrator and then navigate to the *Release* folder that contains the PowerShell module *IntunePfxImport.psd1*.
 

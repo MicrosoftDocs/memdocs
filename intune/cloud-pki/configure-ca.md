@@ -31,7 +31,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Go to **Tenant administration** > **Cloud PKI**, and then select **Create**.
 
    > [!div class="mx-imgBorder"]
-   > ![Image of the Microsoft Intune admin center Cloud PKI page, highlighting the path to create a Cloud PKI root CA.](./media/shared/cloud-pki-create.png)
+   > ![Microsoft Intune admin center Cloud PKI page with Create button highlighted.](./media/shared/cloud-pki-create.png)
 
 1. For **Basics**, enter the following properties:
 
@@ -43,16 +43,16 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Configure the following settings for the root CA:
    - **CA type**: Select **Root CA**.
 
-   - **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a root CA with a custom validity period, use [Microsoft Graph API](/graph/api/resources/intune-graph-overview) to create the CAs.
+   - **Validity period**: Select 5, 10, 15, 20, or 25 years. To create a root CA with a custom validity period, use the Microsoft Graph API. For more information, see [Intune Graph API overview](/graph/api/resources/intune-graph-overview).
 
 1. For **Extended Key Usages**, select how you intend to use the CA.
 
    > [!div class="mx-imgBorder"]
-   > ![Image of the Configuration settings tab, showing the Extended Key Usages section for Cloud PKI.](./media/shared/cloud-pki-extended-key-usage.png)
+   > ![Configuration settings tab with Extended Key Usages section for Cloud PKI.](./media/shared/cloud-pki-extended-key-usage.png)
 
    To prevent potential security risks, CAs are limited to select use. Your options:
 
-   - **Type**: Select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk. For more information, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku).
+   - **Type**: Select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk. For more information about overly permissive certificate templates, see [Edit overly permissive certificates template with privileged EKU](/defender-for-identity/security-assessment-edit-overly-permissive-template#what-is-an-overly-permissive-certificate-template-with-privileged-eku).
 
    - Alternatively, to create a custom extended key usage, enter the **Name** and **Object Identifier**.
 
@@ -74,7 +74,7 @@ Before you can start to issue certificates to managed devices, you need to creat
      - **RSA-4096 and SHA-512**
 
       > [!div class="mx-imgBorder"]
-      > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/configure-ca/key-size-algorithm.png)
+      > ![Key size and algorithm setting in Cloud PKI configuration settings.](./media/configure-ca/key-size-algorithm.png)
 
    This setting enforces the upper bound key size and hash algorithm that can be used when configuring a device configuration SCEP certificate profile in Intune. It enables you to select any key size and hash up to what is set on the Cloud PKI issuing CA. Keep in mind a 1024 key size and SHA-1 hash isn't supported with Cloud PKI.
 1. Select **Next** to continue to **Scope tags**.
@@ -86,7 +86,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Return to the Cloud PKI CA list in the admin center. Select **Refresh** to see your new CA.
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the Microsoft Cloud PKI list showing the new root CA.](./media/configure-ca/cloud-pki-refresh.png)
+      > ![Microsoft Cloud PKI list with new root CA displayed.](./media/configure-ca/cloud-pki-refresh.png)
 
 ## Step 2: Create issuing CA in admin center
 
@@ -105,7 +105,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Select the CA type and root CA source.
 
      > [!div class="mx-imgBorder"]
-     > ![Admin center showing the CA type selected and the root CA source expanded, highlighting the Intune option.](./media/configure-ca/create-ca-configuration-settings.png)
+     > ![CA type and root CA source configuration with Intune option.](./media/configure-ca/create-ca-configuration-settings.png)
 
    Your options:
    - **CA type**: Select **Issuing CA**. Then configure these additional settings:
@@ -114,7 +114,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 
      - **Root CA**: Select one of the root CAs you created in Intune to anchor against.
 
-1. For **Validity period**, select 2, 4, 6, 8, or 10 years. The validity period of the issuing CA can't be longer than the root CA. To create an issuing CA with a custom validity period, use [Microsoft Graph API](/graph/use-the-api) to create the CAs.
+1. For **Validity period**, select 2, 4, 6, 8, or 10 years. The validity period of the issuing CA can't be longer than the root CA. To create an issuing CA with a custom validity period, use the Microsoft Graph API. For more information, see [Intune Graph API overview](/graph/use-the-api).
 1. For **Extended Key Usages**, select how you intend to use the CA. To prevent potential security risks, CAs are limited to specific types of use. Your options:
    - **Type**:  select the purpose of the CA. The **Any Purpose (2.5.29.37.0)** EKU isn't for use, because it's overly permissive and a potential security risk.
    - Alternatively, to create a custom EKU, enter the **Name** and **Object Identifier**.
@@ -125,7 +125,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Under **Subject attributes** enter a **Common name (CN)** for the issuing CA.
 
       > [!div class="mx-imgBorder"]
-      > ![Intune admin center showing Cloud PKI subject attributes settings.](./media/configure-ca/subject-attributes-issuing.png)
+      > ![Intune admin center Cloud PKI subject attributes settings.](./media/configure-ca/subject-attributes-issuing.png)
 
    Optional attributes include:
      - Organization (O)
@@ -147,7 +147,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Return to the Microsoft Cloud PKI CA list in the admin center. Select **Refresh** to see your new issuing CA.
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the Microsoft Cloud PKI list showing the new issuing CA.](./media/configure-ca/cloud-pki-refresh-issuing.png)
+      > ![Microsoft Cloud PKI list with new issuing CA displayed.](./media/configure-ca/cloud-pki-refresh-issuing.png)
 
 To view the properties of root CAs and issuing CAs in your tenant, select the CA and then go to **Properties**.  Available properties include:
 
@@ -174,7 +174,7 @@ This step requires you to:
 
 ### Create trusted certificate profile
 
- In the admin center, [create a trusted certificate profile](../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. Create one trusted certificate profile for the root CA certificate and one for the issuing CA.
+ In the admin center, create a trusted certificate profile for each OS platform you're targeting. Create one trusted certificate profile for the root CA certificate and one for the issuing CA. For instructions, see [Create a trusted certificate profile](../device-configuration/certificates/trusted-root-profiles.md#to-create-a-trusted-certificate-profile).
 
 When prompted to, enter the public keys for the root CA and issuing CA. Complete the following steps to download the public keys for your CAs.
 
@@ -198,7 +198,7 @@ The Cloud PKI root CA and issuing CA you download must be installed on all relyi
 The file name given to the downloaded public keys is based on the Common Names specified in the CA. Some browsers, like Microsoft Edge, show a warning if you download a file with a .cer or other well-known certificate extension. If you receive this warning, select **Keep**.
 
  > [!div class="mx-imgBorder"]
- > ![Image of Downloads prompt highlighting the keep option. ](./media/shared/download-warning.png)
+ > ![Downloads prompt with Keep option.](./media/shared/download-warning.png)
 
 ### Create SCEP certificate profile
 
@@ -211,13 +211,13 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 1. Select a CA that has an **Issuing** type.
 1. Go to **Properties**.
 1. Next to the SCEP URI property, select **Copy to clipboard**.
-1. In the admin center, [create a SCEP certificate profile](../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
+1. In the admin center, create a SCEP certificate profile for each OS platform you're targeting. For instructions, see [Create a SCEP certificate profile](../device-configuration/certificates/scep-profiles.md#create-a-scep-certificate-profile).
 1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the root CA certificate that the issuing CA is anchored to in the CA hierarchy.
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the root certificate setting, with a root CA certificate selected.](./media/shared/scep-root-certificate.png)
+      > ![Root certificate setting with root CA certificate selected.](./media/shared/scep-root-certificate.png)
 
-1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../fundamentals/endpoints.md).
+1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For a complete list of Intune endpoints, see [Network Endpoints for Microsoft Intune](../fundamentals/endpoints.md).
 1. Configure the remaining settings, following these best practices:
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.
 

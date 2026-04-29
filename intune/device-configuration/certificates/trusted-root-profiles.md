@@ -90,7 +90,7 @@ After you name the certificate, it can be saved.
 
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
-   ![Navigate to Intune and create a new profile for a trusted certificate](./media/trusted-root-profiles/certificates-configure-profile-new.png)
+   ![Intune admin center showing Devices menu expanded with Configuration option and Create button visible](./media/trusted-root-profiles/certificates-configure-profile-new.png)
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that should receive this profile.
@@ -114,7 +114,7 @@ After you name the certificate, it can be saved.
    - **Computer certificate store - Intermediate**
    - **User certificate store - Intermediate**
 
-   ![Create a profile and upload a trusted certificate](./media/trusted-root-profiles/certificates-configure-profile-fill.png)
+   ![Configuration profile form with certificate upload field and destination store options](./media/trusted-root-profiles/certificates-configure-profile-fill.png)
 
 8. Select **Next**.
 

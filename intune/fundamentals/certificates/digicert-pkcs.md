@@ -14,7 +14,7 @@ ms.collection:
 You can use the *Certificate Connector for Microsoft Intune* to issue Public Key Cryptography Standards (PKCS) certificates from DigiCert PKI Platform to Intune-managed devices. The certificate connector works with either a DigiCert certification authority (CA) only, or with both a DigiCert CA and a Microsoft CA.
 
 > [!TIP]
-> DigiCert acquired Symantec's Website Security and related PKI Solutions business. For more information about this change, see the [Symantec technical support article](https://support.symantec.com/en_US/article.INFO4722.html).
+> DigiCert acquired Symantec's Website Security and related PKI Solutions business. For more information about this change, see the [Symantec technical support article about the DigiCert acquisition](https://support.symantec.com/en_US/article.INFO4722.html).
 
 If you already use the Certificate Connector for Microsoft Intune to issue certificates from a Microsoft CA by using PKCS or Simple Certificate Enrollment Protocol (SCEP), you can use that same connector to configure and issue PKCS certificates from a DigiCert CA. After you complete the configuration to support the DigiCert CA, the connector can issue the following certificates:
 
@@ -135,7 +135,7 @@ The following are requirements to support use of a DigiCert CA:
       Later, you'll use this value to update three .config files for the Certificate Connector for Microsoft Intune, after installing the connector.
 
     > [!NOTE]
-    > For assistance in getting the RA certificate from the DigiCert CA, contact [DigiCert customer support](mailto:enterprise-pkisupport@digicert.com).
+    > For assistance in getting the RA certificate from the DigiCert CA, contact [DigiCert customer support for enterprise PKI](mailto:enterprise-pkisupport@digicert.com).
 
 ## Configure the certificate connector to support DigiCert
 
@@ -192,7 +192,7 @@ The certificate profile OID is associated with a certificate profile template in
    `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
-> If you need help to get the certificate profile OID, contact [DigiCert customer support](mailto:enterprise-pkisupport@digicert.com).
+> If you need help to get the certificate profile OID, contact [DigiCert customer support for enterprise PKI](mailto:enterprise-pkisupport@digicert.com).
 
 ## Create a PKCS certificate profile
 
@@ -220,7 +220,7 @@ The certificate profile OID is associated with a certificate profile template in
    | Certificate authority name | Symantec | This value must be the string **Symantec**. <br><br> If there's any change to this value, the certificate connector doesn't issue PKCS certificates from the DigiCert CA.|
    | Certificate template name | Certificate profile OID from the DigiCert CA. For example: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| This value must be a certificate profile OID [obtained in the previous section](#get-the-certificate-profile-oid) from the DigiCert CA certificate profile template. <br><br> If the certificate connector can't find a certificate template associated with this certificate profile OID in the DigiCert CA, it doesn't issue PKCS certificates from the DigiCert CA.|
 
-   ![Selections for CA and certificate template](./media/digicert-pkcs/certificates-digicert-pkcs-example.png)
+   ![PKCS certificate profile with CA and certificate template selections configured for DigiCert](./media/digicert-pkcs/certificates-digicert-pkcs-example.png)
 
    > [!NOTE]
    > The PKCS certificate profile for Windows platforms doesn't need to associate with a trusted certificate profile. But it is required for non-Windows platform profiles such as Android.

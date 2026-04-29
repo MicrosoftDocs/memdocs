@@ -118,7 +118,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 1. On the Windows Server that hosts the connector, run the connector installation program to uninstall the connector.
 
-2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisites](prerequisites.md) when installing a newer version of a connector.
+2. To install the new version, use the procedure to install a new version of the connector. Be sure to check for any new or updated [prerequisite requirements](prerequisites.md) when installing a newer version of a connector.
 
 ## Connector status
 
@@ -375,7 +375,7 @@ All events are tagged with a Task Category to aid in filtering. Task categories 
 
 ## What's new for the Certificate Connector
 
-Updates for the Certificate Connector for Microsoft Intune are released periodically and then [supported for six months](#lifecycle). When we update the connector, you can read about the changes here.
+Updates for the Certificate Connector for Microsoft Intune are released periodically with a six-month [support lifecycle](#lifecycle). When we update the connector, you can read about the changes here.
 
 New updates for the connector can take a week or more to become available for each tenant.
 
@@ -386,7 +386,7 @@ New updates for the connector can take a week or more to become available for ea
 
 Version **6.2510.3.2002** - Changes in this release:  
 
-- Improved SCEP validation by blocking unknown OID extensions. See [Allowed list of SCEP OIDs](#allowed-list-of-scep-oids).
+- Improved SCEP validation by blocking unknown OID extensions. For a complete reference, see the [Allowed list of SCEP OIDs](#allowed-list-of-scep-oids).
 - To ensure uninterrupted certificate issuance and management, the Intune Certificate Connector must be updated, either automatically or manually.
 
 ### July 22, 2025

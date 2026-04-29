@@ -180,7 +180,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - Select **Supply in the request**. The Intune policy module for NDES enforces security.
 
-       ![Template, subject name tab](./media/scep-infrastructure/scep-ndes-subject-name.jpg)
+       ![Certificate template Subject Name tab with Supply in the request option selected](./media/scep-infrastructure/scep-ndes-subject-name.jpg)
 
    - **Extensions**:
 
@@ -191,7 +191,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - For iOS/iPadOS and macOS certificate templates, also edit **Key Usage** and make sure **Signature is proof of origin** isn't selected.
 
-     ![Template, extensions tab](./media/scep-infrastructure/scep-ndes-extensions.jpg)
+     ![Certificate template Extensions tab showing application policies and key usage settings](./media/scep-infrastructure/scep-ndes-extensions.jpg)
 
    - **Security**:
 
@@ -199,19 +199,19 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
      - Add additional Accounts for Intune administrators who will create SCEP profiles. These accounts require **Read** permissions to the template to enable these admins to browse to this template while creating SCEP profiles.
 
-     ![Template, security tab](./media/scep-infrastructure/scep-ndes-security.jpg)
+     ![Certificate template Security tab with NDES service account permissions configured](./media/scep-infrastructure/scep-ndes-security.jpg)
 
    - **Request Handling**:
 
      The following image is an example. Your configuration might vary.
 
-     ![Template, request handling tab](./media/scep-infrastructure/scep-ndes-request-handling.png)
+     ![Certificate template Request Handling tab showing purpose and key export settings](./media/scep-infrastructure/scep-ndes-request-handling.png)
 
    - **Issuance Requirements**:
 
      The following image is an example. Your configuration might vary.
 
-     ![Template, issuance requirements tab](./media/scep-infrastructure/scep-ndes-issuance-reqs.jpg)
+     ![Certificate template Issuance Requirements tab with approval and signature settings](./media/scep-infrastructure/scep-ndes-issuance-reqs.jpg)
 
 3. Save the certificate template.
 
@@ -349,7 +349,7 @@ To configure the NDES service, use an account that is an *Enterprise Administrat
 
 4. Browse to *http://*Server_FQDN*/certsrv/mscep/mscep.dll*. You should see an NDES page similar to the following image:
 
-   ![Test NDES](./media/scep-infrastructure/scep-ndes-url.png)
+   ![NDES service page confirming mscep.dll is running and responding successfully](./media/scep-infrastructure/scep-ndes-url.png)
 
    If the web address returns a **503 Service unavailable**, check the computers event viewer. This error commonly occurs when the application pool is stopped due to a missing [permission for the NDES service account](#accounts).
 
@@ -419,7 +419,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 3. Download and save the connector for SCEP file. Save it to a location accessible from the server where you're going to install the connector.
 
-   ![ConnectorDownload](./media/scep-infrastructure/download-certificates-connector.png)
+   ![Download button for Certificate Connector for Microsoft Intune in admin center](./media/scep-infrastructure/download-certificates-connector.png)
 
 4. After the download completes, go to the server hosting the Network Device Enrollment Service (NDES) role. Then:
 
