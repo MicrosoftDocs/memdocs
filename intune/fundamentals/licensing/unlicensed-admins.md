@@ -1,15 +1,20 @@
 ---
-title: Enable Unlicensed Administrator Access to Microsoft Intune
-description: Learn how to allow administrators to access Microsoft Intune without an Intune license by enabling unlicensed admin access in the admin center.
-ms.date: 04/10/2026
+title: Unlicensed administrator access to Microsoft Intune
+description: Learn about unlicensed administrator access in Microsoft Intune, including default behavior for newer tenants and how to enable it for older tenants.
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Enable unlicensed administrator access to Microsoft Intune
+# Unlicensed administrator access to Microsoft Intune
 
-You can allow administrators to sign in to and manage Microsoft Intune without assigning them an Intune license. When this setting is enabled, it applies to all administrator roles, including Intune administrators and Microsoft Entra administrators. Some related features and services—such as Microsoft Entra ID P1 or P2—may still require the appropriate license.
+Microsoft Intune supports unlicensed administrator access, which allows administrators to sign in to and manage Intune without an assigned Intune license. When unlicensed admin access is active, it applies to all administrator roles, including Intune administrators and Microsoft Entra administrators. Some related features and services, such as Microsoft Entra ID P1 or P2, might still require the appropriate license.
+
+Whether you need to enable this setting depends on when your tenant was created:
+
+- **Tenants created after July 2021**: Unlicensed administrator access is supported by default. No action is required.
+- **Tenants created before July 2021**: Administrators require an Intune license unless the **Allow access to unlicensed admins** setting is enabled. This setting can't be undone after it's turned on.
 
 ## Prerequisites
 
@@ -24,10 +29,13 @@ You can allow administrators to sign in to and manage Microsoft Intune without a
 :::row-end:::
 
 > [!IMPORTANT]
-> - Intune supports up to 350 unlicensed admins per security group and only applies to direct members.
+> - Intune supports up to 350 unlicensed admins per security group. If more than 350 administrators are needed for a role assignment, you can use multiple security groups.
+> - Unlicensed admin access only applies to direct members of a security group. Members of nested security groups aren't included and still require an Intune license.
 > - It can take up to 48 hours for access changes to take effect.
 
-## Enable the setting
+## Enable the setting for pre-July 2021 tenants
+
+Tenants created after July 2021 already have unlicensed admin access enabled by default. The following steps apply only to tenants created before July 2021.
 
 1. In the [Microsoft Intune admin center], select **Tenant administration** > **Roles** > **Administrator Licensing**.
 1. Select **Allow access to unlicensed admins**.
