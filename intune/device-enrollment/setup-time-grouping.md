@@ -1,7 +1,7 @@
 ---
 title: Set up enrollment time grouping
 description: Overview and setup of the enrollment time grouping feature in Microsoft Intune.
-ms.date: 10/14/2025
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.reviewer:
 ms.collection:
@@ -34,7 +34,7 @@ Enrollment time grouping is supported on devices provisioned via:
 
 For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.
 
-For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment policiess. To configure Microsoft Entra groups in an Android enrollment policy, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. Enrollment time grouping is supported with the following enrollment policiess:
+For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment policies. To configure Microsoft Entra groups in an Android enrollment policy, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. Enrollment time grouping is supported with the following enrollment policies:
 
 * Android Enterprise fully managed
 
@@ -53,7 +53,7 @@ Lastly, the designated group should be configured as a scope group for the admin
 
 ## Step 1: Create Microsoft Entra security group
 
-Create a static Microsoft Entra security group for use in enrollment policiess. To configure enrollment time grouping, you must add the Intune Provisioning Client as an owner of the security group. You don't need to add devices or users to this group right now.
+Create a static Microsoft Entra security group for use in enrollment policies. To configure enrollment time grouping, you must add the Intune Provisioning Client as an owner of the security group. You don't need to add devices or users to this group right now.
 
 The following procedure describes how to create a security group in the Microsoft Intune admin center. For more information and steps specific to Windows 11, see [Windows Autopilot - Create a device group](/autopilot/device-preparation/tutorial/user-driven/entra-join-device-group#create-a-device-group).
 
@@ -139,7 +139,7 @@ To access reporting for enrollment time grouping, go to **Devices** > **Monitor*
 Recently updated information can take up to 20 minutes to appear in the report. You must have the *Microsoft.Intune/ManagedDevices/Read* RBAC permission to view the report.
 
 > [!IMPORTANT]
-> This report provides awareness about devices that fail to be added to the security groups configured in the enrollment policiess. Failure to join the group during enrollment might cause configuration to change or be removed from the device after enrollment, so we recommend monitoring the report continuously so that you can take the necessary mitigating actions right away. You could, for example, use a custom app that scans the report data on a regular schedule. The app then generates a notification when it finds new devices in the report.  
+> This report provides awareness about devices that fail to be added to the security groups configured in the enrollment policies. Failure to join the group during enrollment might cause configuration to change or be removed from the device after enrollment, so we recommend monitoring the report continuously so that you can take the necessary mitigating actions right away. You could, for example, use a custom app that scans the report data on a regular schedule. The app then generates a notification when it finds new devices in the report.  
 
 ## Known issues and limitations
 

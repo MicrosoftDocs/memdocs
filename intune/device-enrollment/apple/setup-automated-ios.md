@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ai-usage: ai-assisted
@@ -219,7 +219,7 @@ You can use the policy name to define the [enrollmentProfileName parameter](/azu
 
 Before device setup, and to ensure quick delivery to devices with user affinity, make sure the enrolling user is a member of a Microsoft Entra user group.
 
-If you assign dynamic groups to enrollment policiess, there might be a delay in delivering applications and policies to devices after the enrollment.
+If you assign dynamic groups to enrollment policies, there might be a delay in delivering applications and policies to devices after the enrollment.
 
 ### Setup Assistant screen reference
 The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see these Apple resources:
@@ -269,7 +269,7 @@ The following table describes the Setup Assistant screens shown during automated
 Before devices can be enrolled, you need to assign an enrollment policy to them.
 
 >[!NOTE]
->You can also assign serial numbers to policiess in the **Apple Serial Numbers** pane.
+>You can also assign serial numbers to policies in the **Apple Serial Numbers** pane.
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.

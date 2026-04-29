@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ai-usage: ai-assisted
@@ -50,7 +50,7 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
    > [!IMPORTANT]
    > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
 
-1. For **Basics**, enter a name and description for the policy so that you can distinguish it from other enrollment policiess. These details aren't visible to device users.
+1. For **Basics**, enter a name and description for the policy so that you can distinguish it from other enrollment policies. These details aren't visible to device users.
 
      >[!TIP]
      > You can use the name field to create a dynamic group in Microsoft Entra ID, and assign devices to the enrollment policy automatically. Use the policy name to define the *enrollmentProfileName* parameter. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
@@ -83,13 +83,13 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
  1. **Await final configuration** enables a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. This setting is applied once during the out-of-box Apple automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their Mac.
 
     Your options:
-       * **Yes**:  Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. This option is the default configuration for new enrollment policiess.
+       * **Yes**:  Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. This option is the default configuration for new enrollment policies.
 
-       * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. This option is the default configuration for existing enrollment policiess.
+       * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. This option is the default configuration for existing enrollment policies.
 
-    The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you assign to the device. Users can see the device configuration policiess downloading in Setup Assistant as they wait. The more policies and apps assigned, the longer the waiting time. Setup Assistant and Intune don't enforce a minimum or maximum time limit during this portion of setup. During product validation, most devices we tested were released and able to access the home screen within 15 minutes. If you enable this feature and are working with a Microsoft partner or non-Microsoft service to help you provision devices, tell them about the potential for increased provisioning time.
+    The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you assign to the device. Users can see the device configuration policies downloading in Setup Assistant as they wait. The more policies and apps assigned, the longer the waiting time. Setup Assistant and Intune don't enforce a minimum or maximum time limit during this portion of setup. During product validation, most devices we tested were released and able to access the home screen within 15 minutes. If you enable this feature and are working with a Microsoft partner or non-Microsoft service to help you provision devices, tell them about the potential for increased provisioning time.
 
-    The locked experience is supported on Macs running macOS 10.11 or later. It works on Macs targeted with new or existing enrollment policiess set up for these scenarios:
+    The locked experience is supported on Macs running macOS 10.11 or later. It works on Macs targeted with new or existing enrollment policies set up for these scenarios:
        * Enrollment via Setup Assistant with modern authentication
        * Enrollment with Setup Assistant (legacy)
        * Enrollment without user device affinity

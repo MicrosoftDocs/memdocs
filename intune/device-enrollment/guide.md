@@ -17,7 +17,7 @@ During enrollment, Intune installs a Mobile Device Management (MDM) certificate 
 
 - Enrollment policies that limit the number or type of devices someone can enroll.
 - Compliance policies that help users and devices meet your rules.
-- Configuration policiess that configure work-appropriate features and settings on devices.
+- Configuration policies that configure work-appropriate features and settings on devices.
 
 :::image type="content" source="media/guide/mdm-certificate.png" alt-text="Diagram that shows the device enrolls, the object is created in Microsoft Entra ID, and the MDM certificate is pushed to these devices in Microsoft Intune.":::
 

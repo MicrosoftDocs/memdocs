@@ -9,7 +9,7 @@ ms.collection:
 ---
 
 # Create an Apple enrollment policy for school devices
-After you get your Apple token, you can create an enrollment policy for school devices. An essential part of setup is creating enrollment policys. The policiess contain the settings that apply to devices during device enrollment.
+After you get your Apple token, you can create an enrollment policy for school devices. An essential part of setup is creating enrollment policies. The policies contain the settings that apply to devices during device enrollment.
 
 ## Create a policy
 
