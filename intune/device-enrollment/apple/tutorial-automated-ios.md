@@ -85,9 +85,7 @@ Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enr
 
 1. Under **Device Management Settings**, choose **Yes** for **Supervised**. Supervision gives you more management options and disables Apple Activation Lock by default. Microsoft recommends using automated device enrollment as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
 
-1. Choose **Yes** under **Locked enrollment** to ensure your users can't remove device management from their corporate device.
-
-1. Choose an option under **Sync with Computers** to determine if the iOS/iPadOS devices can sync with computers. **Deny All** means that devices using this policy can't sync with any data on any computer.
+1. Choose **Yes** under **Locked enrollment** to ensure your users can't remove device management from their corporate device.  
 
 1. By default, Apple names the device with the device type, such as *iPad*. If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
 

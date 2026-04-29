@@ -32,7 +32,9 @@ Enrollment time grouping is supported on devices provisioned via:
 
 * [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
 
-For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.
+For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.  
+
+For tvOS and visionOS, you must have permissions to create and modify tvOS and visionOS enrollment policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs category** in the Microsoft Intune admin center.
 
 For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment policies. To configure Microsoft Entra groups in an Android enrollment policy, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. Enrollment time grouping is supported with the following enrollment policies:
 
