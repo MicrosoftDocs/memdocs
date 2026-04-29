@@ -1,7 +1,7 @@
 ---
 title: Manage Apple mobile devices and tokens in Intune
 description: Sync devices, distribute devices, and re-enroll devices for Apple automated device enrollment on iOS/iPadOS in Microsoft Intune.
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ai-usage: ai-assisted
@@ -86,7 +86,7 @@ Complete these steps to re-enroll a device that already went through automated d
 You can delete an enrollment program token from Intune as long as:
 
 - No devices are assigned to the token.
-- No devices are assigned to the default profile.
+- No devices are assigned to the default policy.
 - There are no enrollment policies under that token.
 
 To delete an enrollment program token:
@@ -96,8 +96,8 @@ To delete an enrollment program token:
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select the token, and then select **Devices**.
 1. Delete all devices assigned to the token.
-1. Return to **Enrollment program tokens**. Select the token, and then select **Profiles**.
-1. Delete all enrollment policies listed, including any default profile.
+1. Return to **Enrollment program tokens**. Select the token, and then select **Enrollment policies**.
+1. Delete all enrollment policies listed, including any default policy.
 1. Return to **Enrollment program tokens**. Select the token, and then select **Delete**.
 
 ## Limits  
@@ -105,8 +105,8 @@ If you exceed 200,000 devices per token, you might experience sync problems. Spl
 
 | Resource | Maximum |
 |----------|---------|
-| enrollment policies per token | 1,000 |
-| ADE devices per profile | 200,000 |
+| Enrollment policies per token | 1,000 |
+| ADE devices per policy | 200,000 |
 | ADE tokens per Intune account | 2,000 |
 | ADE devices per token | 200,000 |  
 

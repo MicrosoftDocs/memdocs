@@ -1,7 +1,7 @@
 ---
 title: Overview of Apple Automated Device Enrollment for iOS/iPadOS in Intune
 description: Learn about automated device enrollment (ADE) for Apple mobile devices in Microsoft Intune, including supported scenarios, key features, and how to get started.
-ms.date: 04/15/2026
+ms.date: 04/29/2026
 ms.topic: concept-article
 ms.reviewer: annovich
 ai-usage: ai-assisted
@@ -19,7 +19,7 @@ Automated device enrollment (ADE) is an Apple enrollment method for corporate-ow
 
 ## Supported platforms
 
-Microsoft Intunee supports automated device enrollment for Apple mobile devices, which include iOS/iPadOS, tvOS, and visionOS. As an administrator, you can create, edit, delete, and assign a platform-specific automated device enrollment policy to devices.  
+Microsoft Intune supports automated device enrollment for Apple mobile devices, which include iOS/iPadOS, tvOS, and visionOS. As an administrator, you can create, edit, delete, and assign a platform-specific automated device enrollment policy to devices.  
 
 | Platform | Setup article |What it's for|
 |----------|---------------|-------------|
@@ -72,8 +72,8 @@ This enrollment type supports the Automated Certificate Management Environment (
 ACME is supported on:
 - iOS 16.0 or later
 - iPadOS 16.1 or later  
-- tvOS
-- visionOS  
+- tvOS 26.0 or later
+- visionOS 26.0 or later
   
 
 ## Enrolling devices in shared device mode
@@ -87,11 +87,11 @@ Before setting up ADE in Intune, make sure you have the following in place acros
 
 * [Microsoft Intune Suite licensing](../../fundamentals/licensing/index.md).   
     - Microsoft Intune Plan 2 is required for tvOS and visionOS device management.  
-    - Microsoft Intune Plan 1 is the minimum requirement for iOS/iPados device management.  
+    - Microsoft Intune Plan 1 is the minimum requirement for iOS/iPadOS device management.  
 * Access to [Apple Business](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
 * An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
 * An active ADE token (.p7m file) linking your Apple Business or Apple School Manager account to Intune. For steps, see [Set up an ADE token](setup-apple-token.md).
-* New or wiped corporate-owned devices purchased through Apple Business or Apple School Manager.  
+* New or wiped corporate-owned devices added to Apple Business or Apple School Manager.  
 
 Additionally, decide how you want users to authenticate:
 
