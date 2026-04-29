@@ -1,7 +1,7 @@
 ---
 title: Create Quiet Time Policies in Microsoft Intune
 description: Learn how to create quiet time policies for iOS/iPadOS and Android apps.
-ms.date: 04/25/2026
+ms.date: 04/29/2026
 ms.topic: overview
 ms.reviewer: cdemello
 ms.collection:
@@ -12,7 +12,7 @@ ms.collection:
 The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours.
 
 > [!IMPORTANT]
-> Quiet time policies are not supported in sovereign cloud environments, including US Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Microsoft Azure operated by 21Vianet. Quiet time relies on a service (Substrate) that is not available in these environments.
+> Quiet time policies are not supported in sovereign cloud environments, including US Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Microsoft Azure operated by 21Vianet.
 
 ## Quiet time policy types
 
