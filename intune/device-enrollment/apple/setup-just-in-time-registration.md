@@ -59,7 +59,7 @@ Create a single sign-on app extension policy that uses the Apple SSO extension t
 11. Go to **Apps** > **All Apps** and assign Microsoft Authenticator to groups as a required app. For more information, see [Add apps to Microsoft Intune](../../app-management/deployment/index.md) and [Assign apps to groups](../../app-management/deployment/assign-groups.md).
 
 ## Next steps
-Create an enrollment profile for enrolling devices. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment. For information about how to create a profile for supported enrollment types, see the following resources:
+Create an enrollment policy for enrolling devices. The enrollment policy triggers the device user's enrollment experience, and enables them to initiate enrollment. For information about how to create a profile for supported enrollment types, see the following resources:
 
 * [Account driven user enrollment](setup-account-driven-user.md)
 * [User enrollment with Company Portal](setup-user-company-portal.md)
