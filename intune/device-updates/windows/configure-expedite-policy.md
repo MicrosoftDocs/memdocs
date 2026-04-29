@@ -120,7 +120,7 @@ Expedite policies don't affect how future quality updates are deployed. To manag
 
 ## Identify the latest applicable update
 
-There are some scenarios when your policy to expedite an update might result in the installation of a more recent update than the version specified in the policy. This result occurs when the newer update includes and surpasses the specified update, and that newer update is available before a device checks in to install the update that's specified in the expedite update policy. A detailed [example](#example-of-installing-an-expedited-update) of this scenario is provided later in this article.
+There are some scenarios when your policy to expedite an update might result in the installation of a more recent update than the version specified in the policy. This result occurs when the newer update includes and surpasses the specified update, and that newer update is available before a device checks in to install the update that's specified in the expedite update policy. A detailed example of this scenario is [provided later in this article](#example-of-installing-an-expedited-update).
 
 Installing the most recent quality update reduces disruptions to the device and user while also applying the benefits of the intended update. This avoids having to install multiple updates, which each might require separate restarts.
 

@@ -27,6 +27,10 @@ items:
     href: 2503/35958849.md
   - name: KB 36419072 Offline feedback update for Configuration Manager 2403, 2409, 2503
     href: 2509/36419072.md
+  - name: KB 37172183 Software Center client fix for Configuration Manager 2409, 2503
+    href: 2503/37172183.md
+  - name: KB 37447175 Security update for Microsoft Configuration Manager
+    href: 2503/37447175.md
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
@@ -47,6 +51,10 @@ items:
     href: 2503/35958849.md
   - name: KB 36419072 Offline feedback update for Configuration Manager 2403, 2409, 2503
     href: 2509/36419072.md
+  - name: KB 37172183 Software Center client fix for Configuration Manager 2409, 2503
+    href: 2503/37172183.md
+  - name: KB 37447175 Security update for Microsoft Configuration Manager
+    href: 2503/37447175.md
 - name: Version 2403
   items:
   - name: KB 26186448 Summary of changes in 2403

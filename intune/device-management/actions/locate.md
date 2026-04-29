@@ -10,7 +10,7 @@ zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 
 The *locate device* device action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
-Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](play-lost-mode-sound.md), or [display custom messages](lost-mode.md).
+Depending on the platform, Intune can also report the last known location if the device is offline, [play a sound to locate lost devices](play-lost-mode-sound.md), or [enable lost mode to display custom messages on devices](lost-mode.md).
 
 ## Prerequisites
 
@@ -125,7 +125,7 @@ For more information about device restrictions, see [Android template device set
 
 ::: zone-end
 
-   ![Screenshot of Locate device using Intune in Azure](media/locate/locate-device.png)
+   ![Map view showing the located device position with address and coordinates in the Intune admin center](media/locate/locate-device.png)
 
 ::: zone pivot="android"
 

@@ -404,6 +404,26 @@
       "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-android.md",
+      "redirect_url": "/intune/solutions/frontline-worker/android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-ios-ipados.md",
+      "redirect_url": "/intune/solutions/frontline-worker/ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-windows.md",
+      "redirect_url": "/intune/solutions/frontline-worker/windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview.md",
+      "redirect_url": "/intune/solutions/frontline-worker/",
+      "redirect_document_id": false
     }
   ]
 }

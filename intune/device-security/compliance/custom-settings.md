@@ -18,7 +18,7 @@ This feature applies to:
 
 - Windows (excluding Windows Home)
 - Linux
-  - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS
+  - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
   - RedHat Enterprise Linux 8
   - RedHat Enterprise Linux 9
 
