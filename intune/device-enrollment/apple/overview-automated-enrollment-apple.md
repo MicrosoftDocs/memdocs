@@ -55,7 +55,7 @@ Setting up ADE in Intune involves three main tasks:
 
 1. **Get an enrollment program token**: Create a trust relationship between Intune and Apple Business. This is typically a one-time setup task per token. For more information, see [Set up enrollment token](setup-apple-token.md).  
 
-2. **Create and assign an enrollment policy**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the profile to device groups. 
+2. **Create and assign an enrollment policy**: Configure the enrollment experience for your devices, including user affinity, authentication method, and Setup Assistant screens. Then assign the policy to device groups. 
 
 3. **Sync and distribute devices**: Sync device records from Apple Business to Intune, then distribute devices to users. Enrollment starts automatically through Apple Setup Assistant when a device is turned on. For more information, see [Managed Apple mobile devices and tokens](manage-devices-tokens-apple.md).  
 

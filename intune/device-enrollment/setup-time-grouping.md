@@ -13,7 +13,7 @@ ms.collection:
 **Applies to:**
 * Windows 11  
 * Android
-* visonOS
+* visionOS  
 * tvOS  
 
 Set up enrollment time grouping to speed up app and policy provisioning during device enrollment. With enrollment time grouping, you can add a Microsoft Entra security group in the enrollment policy so that devices are added to the group during enrollment, rather than after. You can then assign required apps and policy configuration to the group. This preknowledge of the security group that the device will become member of after enrollment enables Intune to deliver the configurations to the device quickly on enrollment, reducing post-enrollment latency and improving time to productivity.
@@ -32,7 +32,9 @@ Enrollment time grouping is supported on devices provisioned via:
 
 * [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
 
-For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.
+For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.  
+
+For tvOS and visionOS, you must have permissions to create and modify tvOS and visionOS enrollment policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs category** in the Microsoft Intune admin center.
 
 For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment policies. To configure Microsoft Entra groups in an Android enrollment policy, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. Enrollment time grouping is supported with the following enrollment policies:
 
@@ -111,9 +113,9 @@ You can add one static Microsoft Entra security group per enrollment policy. As 
 
    - Android Enterprise fully managed: [Set up enrollment for Android Enterprise fully managed devices](android/setup-fully-managed.md)
 
-   - tvOS:[Set up enrollment policy for tvOS](apple/setup-automated-tv-os.md)  
+   - tvOS: [Set up enrollment policy for tvOS](apple/setup-automated-tv-os.md)  
 
-   - visionOS:[Set up enrollment policy visionOS](apple/setup-automated-vision-os.md) 
+   - visionOS: [Set up enrollment policy visionOS](apple/setup-automated-vision-os.md) 
 
     >[!TIP]
     > Enrollment time grouping isn't supported with the staging token. If you're configuring a policy for use with enrollment time grouping, use the corporate-owned, fully managed (default) token or the corporate owned work profile (default) token.

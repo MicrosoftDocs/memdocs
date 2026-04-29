@@ -22,30 +22,30 @@ When you federate your organization's Microsoft Entra instance in Apple Business
 Follow these steps to set up Shared iPad in your environment.
 
 >[!IMPORTANT]
-> Shared iPad is supported on supervised iPads running iPadOS 13.3 and later. A device wipe will be required if an enrollment profile enabled with Shared iPad is sent to a device that doesn't support Shared iPad. Shared iPad isn't supported on iPhones, or iPads running iOS/iPadOS version 13.3 and earlier.
+> Shared iPad is supported on supervised iPads running iPadOS 13.3 and later. A device wipe will be required if an enrollment policy enabled with Shared iPad is sent to a device that doesn't support Shared iPad. Shared iPad isn't supported on iPhones, or iPads running iOS/iPadOS version 13.3 and earlier.
 
 1. Federate your Microsoft Entra instance with Apple Business or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
-2. Create an enrollment profile.
+2. Create an enrollment policy.
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     1. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**.
     1. Under **Bulk Enrollment Methods**, choose **Enrollment program tokens**.
     1. Choose a token, and then select **Profiles**.
     1. Select **Create profile** > **iOS/iPadOS**.
-3. Configure these settings in the enrollment profile:
+3. Configure these settings in the enrollment policy:
      1. Go to **Management settings** and enable **Shared iPad**.
      1. Set **User affinity** to **Enroll without user affinity**.
      1. Set **Supervised** to **Yes**.
      1. Set **Shared iPad** to **Yes**.
 4. Select **Save** when you're done configuring the rest of your profile.
 5. Assign devices synced from Apple Business.
-    1. Select the new enrollment profile.
+    1. Select the new enrollment policy.
     1. Select **Assign devices** > **Add devices**.
 6. Create a dynamic device group to automatically assign this profile to devices that fall within your rule parameters.
     1. Go to **Groups** > **New group**.
     1. For **Membership type**, select **Dynamic Device**.
     1. Select **Add dynamic query**.
     1. In the **Property** column, select  **enrollmentProfileName**.
-    1. In the **Value** column, enter the name of your enrollment profile.
+    1. In the **Value** column, enter the name of your enrollment policy.
 7. Assign all required apps and configuration profiles to the dynamic device group.
 8. Prepare new and existing devices for deployment:
    * Turn on new devices and follow the onscreen prompts to set up Shared iPad.

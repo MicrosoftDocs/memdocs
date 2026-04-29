@@ -221,7 +221,7 @@ To set up an Apple MDM certificate in Intune for Education, see [Add an MDM push
 
 #### [Intune](#tab/intune)
 
-To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../../../app-management/deployment/manage-vpp-apple.md).
+To set up an Apple VPP, see [How to manage iOS and macOS apps purchased through Apple Business with Microsoft Intune](../../../app-management/deployment/manage-vpp-apple.md).
 
 #### [Intune for Education](#tab/intune-for-education)
 
