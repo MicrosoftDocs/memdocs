@@ -70,7 +70,7 @@ You can monitor the run status of all assigned scripts for users and devices by 
 - **Scripts** > **select the script to monitor** > **User status**
 
 >[!IMPORTANT]
-> Irrespective of the selected **Script frequency**, the script run status is reported only the first time a script is run. Script run status is not updated on subsequent runs. However, updated scripts are treated as new scripts and will report the run status again.
+> Irrespective of the selected **Script frequency**, the script run status is reported only when the status changes from the last report. For example, if a script reports *Sucess* in one run and *Failure* in the next, Intune updates both the status and last updated timestamp with the current run information. If the script status does not change across syncs, Intune updates the last updated timestamp every 7 days from the initial run. 
 
 Once a script runs, it returns one of the following statuses:
 
