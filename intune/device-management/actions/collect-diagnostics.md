@@ -66,6 +66,7 @@ The *collect diagnostics* action lets you collect and download managed device di
 > - East Asia: `lgmsapesea.blob.core.windows.net`
 > - Australia: `lgmsapeaus.blob.core.windows.net`
 > - India: `lgmsapeind.blob.core.windows.net`
+> - Switzerland: `lgmsapeswiss.blob.core.windows.net`
 > 
 > Devices must be online and able to communicate with the service during diagnostics.
 
