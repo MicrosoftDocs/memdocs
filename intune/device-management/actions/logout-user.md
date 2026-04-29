@@ -1,14 +1,14 @@
 ---
-title: "Remote Device Action: Logout current user"
+title: "Device Action: Logout Current User"
 description: Learn how to use the logout the current user from a Shared iPad with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: logout current user
+# Device action: logout current user
 
-The *logout current user* remote device action in Microsoft Intune allows IT administrators to remotely sign out the active user from a Shared iPad.
-This remote action is useful in environments where multiple users access the same device throughout the day. Logging out the current user helps maintain privacy, ensures session cleanup, and prepares the device for the next user—supporting secure and efficient device turnover in shared-use scenarios.
+The *logout current user* device action in Microsoft Intune allows IT administrators to remotely sign out the active user from a Shared iPad.
+this action is useful in environments where multiple users access the same device throughout the day. Logging out the current user helps maintain privacy, ensures session cleanup, and prepares the device for the next user—supporting secure and efficient device turnover in shared-use scenarios.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ This remote action is useful in environments where multiple users access the sam
 :::column-end:::
 :::column span="3":::
 
-> This remote action is supported on the following platform:
+> This action supports the following platforms:
 >
 > - iPadOS (Shared iPad mode only)
 
@@ -32,7 +32,7 @@ This remote action is useful in environments where multiple users access the sam
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:
@@ -44,7 +44,7 @@ This remote action is useful in environments where multiple users access the sam
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Logout current user**.
+1. At the top of the device overview pane, find the row of action icons. Select **Logout current user**.
 
 ## Reference links
 

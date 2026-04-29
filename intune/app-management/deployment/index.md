@@ -12,8 +12,6 @@ ms.collection:
 
 # Add apps to Microsoft Intune
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
 Intune apps refer to the applications that are managed by Microsoft Intune. These apps can be deployed, configured, protected, and updated to access your organization's resources. Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. Intune also supports several platforms, such as iOS/iPadOS and Android.

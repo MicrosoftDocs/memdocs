@@ -319,7 +319,6 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `Manufacturer` | String | Name of the network adapter's manufacturer. |Windows|
 | `Type` | String | Network medium in use. |Android, iOS, iPadOS, macOS, Windows|
 | `IpAddressV4` | String | Internet Protocol version 4 address is a unique identifier for a device on a network that uses the IPv4 protocol. |Android|
-| `SubnetAddressV4` | String | Network identifier derived by applying a subnet mask to an IPv4 address, which helps in organizing and managing devices within the network. |Android|
 
 > [!NOTE]
 > Inventory only reports up to 20 network adapters per device.
@@ -402,14 +401,12 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | --- | --- | --- |--- |
 | `SlotId` | String | Identifies the slot of the SIM card. |iOS, iPadOS|
 | `WindowsESimId` | String | The ID of an eSIM found on the device. |Windows|
-| `ConfiguredBy` | String | Whether an eSIM is user or admin configured. Possible values: UNSPECIFIED, ADMIN_CONFIGURED, USER_CONFIGURED. |Android|
 | `CurrentCarrierNetwork` | String | Name of the current carrier network. |iOS, iPadOS|
 | `CarrierSettingsVersion` | String | The version of the carrier settings. |iOS, iPadOS|
 | `CurrentMcc` | String | Current Mobile Country Code. |iOS, iPadOS|
 | `CurrentMnc` | String | Current Mobile Network Code. |iOS, iPadOS|
 | `Iccid` | String | Integrated Circuit Card Identifier - Unique identifier used by organization to audit and track phones. |Android, iOS, iPadOS|
 | `Imei` | String | International Mobile Equipment Identity - Unique identifier for the device. |Android, iOS, iPadOS|
-| `Imsi` | String | International Mobile Subscriber Identity - Unique identifier for a specific cellular user. |Android|
 | `Eid` | String | Embedded SIM Identifier - Unique identifier for embedded SIM. |Android, iOS, iPadOS, Windows|
 | `Meid` | String | Mobile Equipment Identifier - Unique identifier for the device. |Android, iOS, iPadOS|
 | `DataPreferred` | Boolean | The preferred subscription for data. |iOS, iPadOS|
@@ -449,7 +446,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 > **Description**: System information of the device.\
 > **Supported platforms**: Windows\
-> **Supported for**: single device query on-demand.
+> **Supported for**: single device query on-demand, Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |

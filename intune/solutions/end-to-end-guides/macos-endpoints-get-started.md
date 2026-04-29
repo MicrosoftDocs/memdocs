@@ -194,7 +194,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   # [Platform SSO](#tab/psso)
 
-  Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+  Platform SSO builds on top of the existing capabilities in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
 
   Platform SSO is the most secure approach for device attestation and registration. Microsoft recommends you enforce using Platform SSO during device registration, as it's considered a best practice for a Zero Trust security strategy. It ensures strong device identity and replaces traditional registration typically done through the Company Portal.
 
@@ -689,7 +689,7 @@ For your Mac devices to maintain their connection to Intune and continue enrolli
 
   When you set up a connection between Apple Business Manager (or Apple School Manager) and Intune, a certificate is used. This certificate must be renewed yearly. If this certificate isn't renewed, changes from Apple Business Manager (or Apple School Manager) can't sync to Intune.
 
-  For more information, go to [Enroll macOS devices - Apple Business Manager or Apple School Manager](../../device-enrollment/apple/setup-automated-macos.md#renew-enrollment-program-token).
+  For more information, go to [Renew a macOS enrollment token](../../device-enrollment/apple/setup-macos-token.md#renew-an-enrollment-program-token).
 
 - **Apple Automated Device Enrollment sync status**
 
@@ -697,7 +697,7 @@ For your Mac devices to maintain their connection to Intune and continue enrolli
 
   You should monitor the sync status for any problems that require attention.
 
-  For more information, go to [sync managed devices](../../device-enrollment/apple/setup-automated-macos.md#sync-managed-devices).
+  For more information, go to [sync managed devices](../../device-enrollment/apple/manage-devices-tokens-macos.md#sync-managed-devices).
 
 ### Remote Help
 
