@@ -39,11 +39,11 @@ To learn more about Microsoft Entra groups and group access, see [Learn about gr
 
 Intune admins should be aware of the following aspects of Microsoft Entra groups when creating new groups or assigning them for policy deployment or administrative roles.
 
-**Security** - The groups you use with Intune must be groups that are enabled for security. This typically requires the groups [group type](/entra/fundamentals/concept-learn-about-groups#group-types) be set to *Security* when the group is created. A security group supports both users and devices as members.
+**Security** - The groups you use with Intune must be groups that are enabled for security. This typically requires setting the group type to *Security* when the group is created. For details, see [group types in Microsoft Entra](/entra/fundamentals/concept-learn-about-groups#group-types). A security group supports both users and devices as members.
 
-By default, *Microsoft 365* groups in Microsoft Entra aren't security-enabled, support only users as members, and aren't supported by Intune. While you can [use Microsoft Graph PowerShell](/microsoft-365/enterprise/manage-security-groups-with-microsoft-365-powershell) to create security-enabled Microsoft 365 groups that Intune supports, like the default Microsoft 365 groups they can only include users and not devices.
+By default, *Microsoft 365* groups in Microsoft Entra aren't security-enabled, support only users as members, and aren't supported by Intune. While you can use Microsoft Graph PowerShell to create security-enabled Microsoft 365 groups that Intune supports (for details, see [Manage security groups with Microsoft 365 PowerShell](/microsoft-365/enterprise/manage-security-groups-with-microsoft-365-powershell)), like the default Microsoft 365 groups they can only include users and not devices.
 
-**Membership** - Intune supports both *Assigned* and *Dynamic group* memberships. Choose the [membership type](/entra/fundamentals/concept-learn-about-groups#membership-types) based on how you plan to manage group membership - manually or automatically based on rules. For example, to assign a built-in Intune RBAC role like the Endpoint Security Manager to administrative users, use a group with manually assigned members to limit who receives that privileged role. Conversely, to deploy a default set of device configuration policies to all Windows 11 devices, you might use a group that dynamically adds members based on a devices operating system version. Use of a dynamic group can help you ensure devices that enroll with Intune automatically receive the intended default policy without the device having to be manually added to a group.
+**Membership** - Intune supports both *Assigned* and *Dynamic group* memberships. Choose the membership type based on how you plan to manage group membership - manually or automatically based on rules. For details, see [membership types in Microsoft Entra](/entra/fundamentals/concept-learn-about-groups#membership-types). For example, to assign a built-in Intune RBAC role like the Endpoint Security Manager to administrative users, use a group with manually assigned members to limit who receives that privileged role. Conversely, to deploy a default set of device configuration policies to all Windows 11 devices, you might use a group that dynamically adds members based on a devices operating system version. Use of a dynamic group can help you ensure devices that enroll with Intune automatically receive the intended default policy without the device having to be manually added to a group.
 
 ## The Intune All users and All devices groups
 
@@ -71,7 +71,7 @@ When you create a group within the Microsoft Intune admin center, you're actuall
 
 To create groups in the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**:
+1. Sign in to the Microsoft Intune admin center at <https://go.microsoft.com/fwlink/?linkid=2109431>, and then select **Groups** > **New group**:
 
    :::image type="content" source="./media/add-groups/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." lightbox="./media/add-groups/groups-add-new.png":::
 
@@ -97,7 +97,7 @@ To create groups in the Microsoft Intune admin center:
         > Avoid creating groups that include both users and devices, as this can lead to policy conflicts and unpredictable behavior during Intune deployments.
 
         > [!TIP]
-        > To create groups of devices, you can use [device categories](../../device-management/create-device-categories.md) to automatically join devices to a group at the time they enroll with Intune.
+        > To create groups of devices, you can use device categories to automatically join devices to a group at the time they enroll with Intune. For details, see [Device categories](../../device-management/create-device-categories.md).
 
       - **Dynamic User** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, see [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
 

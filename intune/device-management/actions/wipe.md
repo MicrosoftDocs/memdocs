@@ -56,7 +56,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 
 ::: zone pivot="macos"
 
-Review the requirements for erasing macOS devices available on the [Apple Support site](https://support.apple.com/guide/deployment/dep0a819891e).
+Review the requirements for erasing macOS devices available on [Apple's deployment guide for erasing devices](https://support.apple.com/guide/deployment/dep0a819891e).
 
 ::: zone-end
 

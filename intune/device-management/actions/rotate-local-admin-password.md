@@ -78,7 +78,7 @@ The *rotate local admin password* action in Microsoft Intune lets IT admins manu
 ::: zone pivot="windows"
 - Configuration service provider (CSP) used to initiate the action: [LAPS CSP][CSP-1]
 ::: zone-end
-- [Manually rotate passwords](../../device-security/laps/deploy-policy.md#manually-rotate-passwords)
+- [Manually rotate passwords with Windows LAPS](../../device-security/laps/deploy-policy.md#manually-rotate-passwords)
 
 <!--links-->
 
