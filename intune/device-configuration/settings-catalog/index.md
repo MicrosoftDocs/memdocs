@@ -39,28 +39,32 @@ This feature applies to:
 
    You can use the settings catalog to configure settings for Apple devices running the following platforms:
 
-  - **iOS/iPadOS**
+  # [iOS/iPadOS](#tab/ios)
+
+    With the settings catalog, you can [use declarative device management (DDM) to install updates](../../device-updates/apple/index.md) (**Declarative Device Management** > **Software Update**), configure the passcode settings (**Security** > **Passcode**), block cloud features like backup and document sync (**Restrictions**), and manage features in Safari (**Declarative Device Management** > **Safari**).
 
     When you configure settings on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../device-enrollment/apple/setup-user-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 
-  - **macOS**
+  # [macOS](#tab/macos)
 
     Some common scenarios include:
 
     - [Configure Recovery Lock](configure-recovery-lock-macos.md) to help protect your devices against unauthorized reinstallation and wiping.
-    - [Use DDM to manage software updates](../../device-updates/apple/index.md), password restrictions, and more.
+    - [Use Declarative Device Management to manage software updates](../../device-updates/apple/index.md), password restrictions, and more.
     - Configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
 
       - [Built-in macOS features replacing plist files](common-tasks.md#built-in-macos-features-replacing-plist-files)
       - [Add a property list file to macOS devices using Microsoft Intune](../../device-configuration/templates/configure-preference-file-macos.md)
 
-  - **tvOS**
+  # [tvOS](#tab/tvos)
 
     You can import a file you created with the [Apple Configurator](https://apps.apple.com/app/apple-configurator/id1037126344) or [Apple Profile Manager](https://support.apple.com/guide/server/apd0e2214c6). Variables aren't supported, so any placeholders or variables in the profile won't apply.
 
-  - **visionOS**
+  # [visionOS](#tab/visionos)
 
     You can import a file you created with the [Apple Configurator](https://apps.apple.com/app/apple-configurator/id1037126344) or [Apple Profile Manager](https://support.apple.com/guide/server/apd0e2214c6). Variables aren't supported, so any placeholders or variables in the profile won't apply.
+
+---
 
 - **Windows**
 
