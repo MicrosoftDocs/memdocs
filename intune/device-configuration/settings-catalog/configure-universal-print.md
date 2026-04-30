@@ -29,7 +29,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [licensing](../includes/requirements/licensing.md)]
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
 > To use this feature, you need the following subscriptions:
@@ -40,7 +40,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
 > - Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. For more information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration).

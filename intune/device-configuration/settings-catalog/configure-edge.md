@@ -42,7 +42,7 @@ This article applies to:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > To configure the settings catalog policy, at a minimum, sign in to the Intune admin center with the **Policy and Profile Manager** role. For more information on the built-in roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
