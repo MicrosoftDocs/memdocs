@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Restore Managed Home Screen"
+title: "Device Action: Restore Managed Home Screen"
 description: Learn how to restore the Managed Home Screen with Microsoft Intune.
 ms.date: 04/21/2026
 ms.topic: how-to
 ---
 
-# Remote device action: restore Managed Home Screen
+# Device action: restore Managed Home Screen
 
-The *restore Managed Home Screen* remote action in Intune re-enables the Managed Home Screen on a device that was previously suspended. When the Managed Home Screen is restored, the device will enforce the Managed Home Screen policies again, restricting access to only the apps and settings defined by those policies.
+The *restore Managed Home Screen* device action in Intune re-enables the Managed Home Screen on a device that was previously suspended. When the Managed Home Screen is restored, the device will enforce the Managed Home Screen policies again, restricting access to only the apps and settings defined by those policies.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ The *restore Managed Home Screen* remote action in Intune re-enables the Managed
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
 
@@ -31,7 +31,7 @@ The *restore Managed Home Screen* remote action in Intune re-enables the Managed
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -46,7 +46,7 @@ The *restore Managed Home Screen* remote action in Intune re-enables the Managed
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, the **Alarms & Reminders** permission must be granted to the Managed Home Screen.
+> To run this action, the **Alarms & Reminders** permission must be granted to the Managed Home Screen.
 >
 > For more information, see [Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune](../../device-configuration/templates/configure-managed-home-screen-permissions-android.md).
 
@@ -57,7 +57,7 @@ The *restore Managed Home Screen* remote action in Intune re-enables the Managed
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Restore Managed Home Screen**.
+1. At the top of the device overview pane, find the row of action icons. Select **Restore Managed Home Screen**.
 
 ## User experience
 

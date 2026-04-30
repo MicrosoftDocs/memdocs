@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Suspend Managed Home Screen"
+title: "Device Action: Suspend Managed Home Screen"
 description: Learn how to suspend the Managed Home Screen with Microsoft Intune.
 ms.date: 04/21/2026
 ms.topic: how-to
 ---
 
-# Remote device action: suspend Managed Home Screen
+# Device action: suspend Managed Home Screen
 
-The *suspend Managed Home Screen* remote action in Intune temporarily disables the Managed Home Screen on a device. When the Managed Home Screen is suspended, the device will no longer enforce the Managed Home Screen policies, and the user will have access to the standard home screen and apps.
+The *suspend Managed Home Screen* device action in Intune temporarily disables the Managed Home Screen on a device. When the Managed Home Screen is suspended, the device will no longer enforce the Managed Home Screen policies, and the user will have access to the standard home screen and apps.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
 
@@ -31,7 +31,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -46,7 +46,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, the **Alarms & Reminders** permission must be granted to the Managed Home Screen.
+> To run this action, the **Alarms & Reminders** permission must be granted to the Managed Home Screen.
 >
 > For more information, see [Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune](../../device-configuration/templates/configure-managed-home-screen-permissions-android.md).
 
@@ -57,7 +57,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Suspend Managed Home Screen**.
+1. At the top of the device overview pane, find the row of action icons. Select **Suspend Managed Home Screen**.
 
 ## User experience
 
