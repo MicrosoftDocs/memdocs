@@ -1,7 +1,7 @@
 ---
 title: Add an Android Line-of-Business App to Microsoft Intune
 description: Learn about how to add a Android line-of-business (LOB) app to Microsoft Intune.
-ms.date: 04/14/2026
+ms.date: 04/23/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: bryanke
@@ -18,8 +18,13 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
 > [!NOTE]
 > For more information about LOB apps and the Google Play Developer Console, see [Managed Google Play private (LOB) app publishing using the Google Developer Console](./add-managed-google-play.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console).
 
+Apps for Android Enterprise devices can be deployed by using either Managed Google Play synchronization or direct deployment of an Android installation file (.apk). For information about deploying apps through Managed Google Play, see [Add Managed Google Play apps to Android Enterprise devices with Intune](./add-managed-google-play.md). Direct deployment is only supported for Android Enterprise fully managed and dedicated devices.
+
 > [!NOTE]
-> For Android Enterprise devices, see [Add Managed Google Play apps to Android Enterprise devices with Intune](./add-managed-google-play.md).
+> If the same app is deployed through both Managed Google Play and as an Android direct LOB app, the version uploaded directly to Intune is installed on the device, regardless of the app version deployed through Managed Google Play.
+
+> [!NOTE]
+> If multiple versions of the same Android line-of-business app uploaded directly to Intune are assigned to a device, the higher version is installed.
 
 ## Select the app type
 
@@ -82,6 +87,9 @@ If **Check apps from external sources** is enabled on the Android device, the us
 
 > [!NOTE]
 > For the Intune service to successfully deploy a new APK file to the device, you must increment the `android:versionCode` string in the AndroidManifest.xml file in your APK package.
+
+> [!IMPORTANT]
+> When you upload a new version of an Android line-of-business app, existing app configuration policies associated with the previous version don't automatically apply to the updated app. To apply app configuration settings to the updated app, create and assign a new app configuration policy that targets the new app version.
 
 ## Next steps
 

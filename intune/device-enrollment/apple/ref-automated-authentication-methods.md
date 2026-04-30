@@ -19,7 +19,7 @@ This article describes the authentication methods available for iOS/iPadOS devic
 * Just in Time (JIT) Registration for Setup Assistant with modern authentication
 * Setup Assistant (legacy)
 
-All methods are available for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.
+All methods are available for corporate-owned devices with user affinity and purchased through Apple Business or Apple School Manager.
 
 ## Option 1: Intune Company Portal app
 
@@ -32,7 +32,7 @@ Use the Intune Company Portal app as the authentication method if you want to:
  - You want to lock the device until the Company Portal app installs.
 
 > [!CAUTION]
-> Intune will block an enrollment that uses this authentication method if the device user is targeted with an [account driven Apple user enrollment profile type](setup-account-driven-user.md). This behavior is expected. The user receives an error message that says their account doesn't support enrollment through the Company Portal app, and that they need to enroll through the Company Portal website. To ensure successful enrollments via automated device enrollment, use [Option 2: Setup Assistant with modern authentication](ref-automated-authentication-methods.md#option-2-setup-assistant-with-modern-authentication) as the authentication method when working with account driven Apple User Enrollment profile types.
+> Intune will block an enrollment that uses this authentication method if the device user is targeted with an [account driven Apple user enrollment policy type](setup-account-driven-user.md). This behavior is expected. The user receives an error message that says their account doesn't support enrollment through the Company Portal app, and that they need to enroll through the Company Portal website. To ensure successful enrollments via automated device enrollment, use [Option 2: Setup Assistant with modern authentication](ref-automated-authentication-methods.md#option-2-setup-assistant-with-modern-authentication) as the authentication method when working with account driven Apple User Enrollment policy types.
 
 ## Option 2: Setup Assistant with modern authentication
 
@@ -46,11 +46,11 @@ This option provides the same security as Intune Company Portal authentication b
 * Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs.
 * Allow users to use the device even when the Company Portal app isn't installed.
 
-Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of profile will fall back on **Setup Assistant (legacy)** authentication.
+Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of policy will fall back on **Setup Assistant (legacy)** authentication.
 
 ### Automatically install Company Portal app
 
-If your company uses the Volume Purchase Program (VPP), you can automatically install the Company Portal app during enrollment without user Apple IDs. To enable automatic installation in your enrollment profile, select **Yes** for **Install Company Portal with VPP**. We recommend using this option.
+If your company uses the Volume Purchase Program (VPP), you can automatically install the Company Portal app during enrollment without user Apple IDs. To enable automatic installation in your enrollment policy, select **Yes** for **Install Company Portal with VPP**. We recommend using this option.
 
 If you don't use the VPP option, the device user must enter their Apple ID during Setup Assistant or when Intune tries to install Company Portal.
 
@@ -68,7 +68,7 @@ In both scenarios, the Company Portal installation option is hidden from the dev
 
 Multifactor authentication (MFA) will be required if a [Conditional Access policy that requires it](../configure-multifactor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional, based on the Microsoft Entra settings in the targeted Conditional Access policy.
 
-External authentication methods are supported in Microsoft Entra ID, which means you can use your preferred MFA solution to facilitate MFA during device enrollment. If you choose to use a third-party MFA provider, before you deploy enrollment profiles to all devices, do a test run to ensure that both the Microsoft Entra MFA screen and MFA work during enrollment. For more information and support details about external authentication methods, see [Public preview: External authentication methods in Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/public-preview-external-authentication-methods-in-microsoft/ba-p/4078808).
+External authentication methods are supported in Microsoft Entra ID, which means you can use your preferred MFA solution to facilitate MFA during device enrollment. If you choose to use a third-party MFA provider, before you deploy enrollment policies to all devices, do a test run to ensure that both the Microsoft Entra MFA screen and MFA work during enrollment. For more information and support details about external authentication methods, see [Public preview: External authentication methods in Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/public-preview-external-authentication-methods-in-microsoft/ba-p/4078808).
 
 ### Company Portal action required
 
@@ -95,8 +95,8 @@ Once the device user reaches the home screen, they can sign in to any work or sc
 To set up JIT Registration with automated device enrollment:
 
 1. Create a device configuration policy and configure the settings under the **Single sign-on app extension** category. For steps, see [Set up just in time registration](setup-just-in-time-registration.md).
-2. [Create an Apple enrollment profile](setup-automated-ios.md#create-an-apple-enrollment-profile) and select **Setup Assistant with modern authentication** as the authentication method. An active automated device enrollment token from Apple Business Manager or Apple School Manager must be present in Intune to complete this step.
-3. When you get to the **Assignments** page in the enrollment profile, assign the profile to the devices synced from Apple Business Manager and Apple School Manager. After you assign the profile, employees and students can complete setup and authentication on their devices.
+2. [Create an Apple enrollment policy](setup-automated-ios.md#create-an-apple-enrollment-policy) and select **Setup Assistant with modern authentication** as the authentication method. An active automated device enrollment token from Apple Business or Apple School Manager must be present in Intune to complete this step.
+3. When you get to the **Assignments** page in the enrollment policy, assign the policy to the devices synced from Apple Business and Apple School Manager. After you assign the policy, employees and students can complete setup and authentication on their devices.
 
    > [!NOTE]
    > The Company Portal is still sent to devices as a required app, even though it isn't required for Microsoft Entra registration or compliance. Device users can use the Company Portal app to [gather and upload logs](../../user-help/diagnostics/collect-logs-ios.md) if they experience issues in the app.
@@ -133,4 +133,4 @@ Use the legacy Setup Assistant if you want users to experience the typical, out-
 
 ## Next steps
 
-Now that you know which authentication method you're using, [create an Apple enrollment profile](setup-automated-ios.md#create-an-apple-enrollment-profile) and select the authentication method when prompted. An active automated device enrollment token from Apple Business Manager or Apple School Manager must be present in Intune to complete this step.
+Now that you know which authentication method you're using, [create an Apple enrollment policy](setup-automated-ios.md#create-an-apple-enrollment-policy) and select the authentication method when prompted. An active automated device enrollment token from Apple Business or Apple School Manager must be present in Intune to complete this step.
