@@ -166,11 +166,15 @@ In addition to configuring the network requirements listed in the following tabl
 | 165 | Windows Autopilot - NTP Sync | Default<BR>Required | False | `time.windows.com` | **UDP:** 123 |
 | 169 | Windows Autopilot - WNS Dependencies| Default<BR>Required | False | `clientconfig.passport.net`<BR>`windowsphone.com`<BR>`*.s-microsoft.com`<BR>`c.s-microsoft.com` | **TCP:** 443 |
 | 173 | Windows Autopilot - Third-party deployment dependencies| Default<BR>Required | False | `ekop.intel.com`<BR>`ekcert.spserv.microsoft.com`<BR>`ftpm.amd.com`<BR> | **TCP:** 443 |
-| 182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR> | **TCP:** 443 |
+| 182 | Windows Autopilot - Diagnostics upload | Default<BR>Required | False | `lgmsapeweu.blob.core.windows.net`<BR>`lgmsapewus2.blob.core.windows.net`<BR>`lgmsapesea.blob.core.windows.net`<BR>`lgmsapeaus.blob.core.windows.net`<BR>`lgmsapeind.blob.core.windows.net`<BR>`lgmsapeswiss.blob.core.windows.net`<BR> | **TCP:** 443 |
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../endpoint-analytics/index.md#prerequisites).
+For more information on the required endpoints for endpoint analytics, see [Device action: collect diagnostics](../endpoint-analytics/index.md#prerequisites).
+
+## Diagnostics collection
+
+For more information on the required endpoints for diagnostic collection, see [Network and connectivity requirements](../device-management/actions/collect-diagnostics.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 
@@ -507,6 +511,7 @@ lgmsapewus2.blob.core.windows.net
 lgmsapesea.blob.core.windows.net
 lgmsapeaus.blob.core.windows.net
 lgmsapeind.blob.core.windows.net
+lgmsapeswiss.blob.core.windows.net
 
 ```
 

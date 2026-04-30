@@ -185,7 +185,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For these on-premises services, resources, and applications, consider the following tasks:
 
-  - **Authentication and authorization**: To access on-premises resources from cloud-native endpoints, users need to authenticate and verify who they are. For more specific information, go to [Authentication and access to on-premises resources with cloud-native endpoint](cloud-native-endpoints-on-premises.md#authentication-and-access-to-on-premises-resources).
+  - **Authentication and authorization**: To access on-premises resources from cloud-native endpoints, users need to authenticate and verify who they are. For more specific information, go to [Authentication and access to on-premises resources with cloud-native endpoint](on-premises-resources.md#authentication-and-access-to-on-premises-resources).
 
   - **Connectivity**: Review and evaluate apps & resources that only live on-premises. Connectivity and access to these resources should be available off-premises, and without any direct connectivity, like a VPN. This task might include moving to SaaS versions of your apps, using [Microsoft Entra Application Proxy](/entra/identity/app-proxy/overview-what-is-app-proxy), [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 365](/windows-365/overview), [SharePoint](/sharepoint/introduction), [OneDrive](/onedrive/plan-onedrive-enterprise), or [Microsoft Teams](/microsoftteams/teams-overview).
 
