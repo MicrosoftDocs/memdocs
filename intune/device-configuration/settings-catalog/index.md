@@ -41,7 +41,7 @@ This feature applies to:
 
   # [iOS/iPadOS](#tab/ios)
 
-    With the settings catalog, you can [use declarative device management (DDM) to install updates](../../device-updates/apple/index.md) (**Declarative Device Management** > **Software Update**), configure the passcode settings (**Security** > **Passcode**), block cloud features like backup and document sync (**Restrictions**), and manage features in Safari (**Declarative Device Management** > **Safari**).
+    With the settings catalog, you can [use declarative device management (DDM) to install updates](../../device-updates/apple/index.md) (**Declarative Device Management** > **Software Update**), configure the passcode settings (**Security** > **Passcode**), block cloud features like backup and document sync (**Restrictions**), and manage features in Safari (**Declarative Device Management** > **Safari**), and more.
 
     When you configure settings on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../device-enrollment/apple/setup-user-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 

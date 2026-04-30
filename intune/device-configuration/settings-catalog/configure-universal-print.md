@@ -14,13 +14,13 @@ Many organizations are moving their printer infrastructure to the cloud. [Univer
 
 When you deploy Universal Print with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. For a guided simulation, see [Universal Print guided simulation](https://regale.cloud/Microsoft/viewer/1265/index.html#/0/0).
 
-By using the settings catalog in Intune, you can create a printer policy and deploy the policy to your managed users and devices. Then, on their devices, end users select the printer from a list of registered Universal Print printers to print.
+By using the settings catalog in Intune, you can create a printer policy and deploy the policy to your managed users and devices. Then, on their devices, end users select the printer from a list of registered Universal Print printers to print. These settings use the [UniversalPrint CSP](/windows/client-management/mdm/universalprint-csp).
 
 This feature applies to:
 
 - Windows
 
-This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, see [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started). The Intune settings use the [UniversalPrint CSP](/windows/client-management/mdm/universalprint-csp).
+This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, see [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started).
 
 > [!TIP]
 > The __PrintProvisioning__ tool and the __printers.csv__ file process are deprecated. Be sure to use the steps in this article to install universal printers.
@@ -57,19 +57,17 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Admins need the following roles/licenses:
+> **Admins** need the following roles/licenses:
 > - **Policy and Profile Manager** role: Needed to create and assign Intune policies. For information on this role, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
 > - An assigned Universal Print license.
 >
-> End user accounts need the following permissions/licenses:
+> **End users** need the following permissions/licenses:
 > - An assigned Universal Print license
 > - Access rights to the printer service and the Universal Print service
 >
 > If you assign the profile to a Microsoft Entra user or user group that can't access the printers because of permissions, Intune grants the assigned user or user group the permissions.
 :::column-end:::
 :::row-end:::
-
-- These settings use the [UniversalPrint CSP](/windows/client-management/mdm/universalprint-csp).
 
 ## Create the policy
 
