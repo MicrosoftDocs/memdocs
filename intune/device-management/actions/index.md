@@ -1,6 +1,6 @@
 ---
 title: Device Actions - Wipe, Lock, Locate, and More
-description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, macOS, Windows, and ChromeOS devices. Learn about available device actions, prerequisites, and bulk actions for IT admins.
+description: Discover how to use Microsoft Intune to remotely manage, wipe, lock, restart, and secure Android, iOS/iPadOS, tvOS, visionOS, macOS, Windows, and ChromeOS devices. Learn about available device actions, prerequisites, and bulk actions for IT admins.
 ms.date: 03/09/2026
 ms.topic: overview
 ---
@@ -60,7 +60,7 @@ Select one of the following tabs to learn more about the available device action
 > [!TIP]
 > For Intel vPro devices, Intune also integrates with Intel vPro Fleet Services to provide hardware-level remote management capabilities, including out-of-band management that works even when the operating system is unresponsive or the device is powered off.
 
-# [:::image type="icon" source="../../media/icons/16/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+# [:::image type="icon" source="../../media/icons/16/apple-mobile.svg"::: **Apple mobile**](#tab/apple-mobile)
 
 | Icon | Action | Description |
 |--|--|--|
@@ -169,7 +169,7 @@ Select one of the following tabs to learn more about the available bulk device a
 | [Sync][RA-SYNC]                | Syncs a device with Intune to apply the latest policies and configurations.                |
 | [Wipe][RA-WIPE]                | Restores a device to the factory settings and removes all data and settings.               |
 
-# [:::image type="icon" source="../../media/icons/16/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+# [:::image type="icon" source="../../media/icons/16/apple-mobile.svg"::: **Apple mobile**](#tab/apple-mobile)
 
 | Bulk action                              | Description                                                                                   |
 |------------------------------------------|-----------------------------------------------------------------------------------------------|
