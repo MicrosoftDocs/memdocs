@@ -72,7 +72,7 @@ Select one of the following tabs to learn more about the available device action
 | ![new-remote-assistance-session-icon]  | [New remote assistance session] | Allows you to remotely control a device by using [Remote Help] or [TeamViewer].                           | ![Supported] | ![Supported] |              |              |
 | ![play-lost-mode-sound-icon]           | [Play Lost Mode sound]          | Plays Lost Mode sound on a lost device to help locate it.                                                 | ![Supported] | ![Supported] |              |              |
 | ![remote-lock-icon]                    | [Remote lock]                   | Locks a device and resets its password.                                                                   | ![Supported] | ![Supported] |              | ![Supported] |
-| ![remove-apps-and-configurations-icon] | [Remove apps and configuration] | Temporarily removes applications and configuration from a device.                                         | ![Supported] | ![Supported] |              |              |
+| ![remove-apps-and-configurations-icon] | [Remove apps and configurations] | Temporarily removes applications and configuration from a device.                                         | ![Supported] | ![Supported] |              |              |
 | ![remove-user-icon]                    | [Remove user]                   | Deletes a user from the cache of a Shared iPad.                                                           |              | ![Supported] |              |              |
 | ![rename-device-icon]                  | [Rename device]                 | Changes the device name in Intune.                                                                        | ![Supported] | ![Supported] | ![Supported] |              |
 | ![remove-passcode-icon]                | [Remove passcode]               | Removes the device passcode.                                                                              | ![Supported] | ![Supported] |              | ![Supported] |
@@ -253,7 +253,7 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [Quick Scan]: quick-scan.md
 [Remote Help]: ../../remote-help/index.md
 [Remote lock]: remote-lock.md
-[Remove apps and configuration]: remove-apps-config.md
+[Remove apps and configurations]: remove-apps-config.md
 [Remove passcode]: remove-passcode.md
 [Remove user]: remove-user.md
 [Rename device]: rename.md
