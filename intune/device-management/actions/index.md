@@ -38,10 +38,10 @@ Select one of the following tabs to learn more about the available device action
 
 | Icon | Action | Description |
 |--|--|--|
-| :::image type="icon" source="icons/autopilot-reset.svg" border="false"::: | [Autopilot reset][RA-APRESET] | Restores a device to its original settings and removes personal files, apps, and settings. |
+| :::image type="icon" source="icons/autopilot-reset.svg" border="false"::: | [Autopilot reset] | Restores a device to its original settings and removes personal files, apps, and settings. |
 | :::image type="icon" source="icons/bitlocker-key-rotation.svg" border="false"::: | [BitLocker key rotation][RA-BL] | Rotates the BitLocker recovery key for a device. |
 | :::image type="icon" source="icons/collect-diagnostics.svg" border="false"::: | [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune. |
-| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, removes any company data, and retires the device. |
+| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete]| Removes a device from Intune management, removes any company data, and retires the device. |
 | :::image type="icon" source="icons/fresh-start.svg" border="false"::: | [Fresh Start][RA-FRESHSTART] | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed. |
 | :::image type="icon" source="icons/full-scan.svg" border="false"::: | [Full Scan][RA-SCANF] | Initiates a full scan of the device by Microsoft Defender Antivirus. |
 | :::image type="icon" source="icons/locate-device.svg" border="false"::: | [Locate device]| Shows the approximate location of a device on a map. |
@@ -89,7 +89,7 @@ Select one of the following tabs to learn more about the available device action
 
 | Icon | Action | Description |
 |--|--|--|
-| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, removes any company data, and retires the device. |
+| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete]| Removes a device from Intune management, removes any company data, and retires the device. |
 | :::image type="icon" source="icons/disable-activation-lock.svg" border="false"::: | [Disable Activation Lock][RA-ACTLOCK] | Removes the Activation Lock from a device that's enrolled with a device enrollment manager (DEM) account. |
 | :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device by using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="icons/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
@@ -105,7 +105,7 @@ Select one of the following tabs to learn more about the available device action
 
 | Icon | Action | Description |
 |--|--|--|
-| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete][RA-DELETE] | Removes a device from Intune management, removes any company data, and retires the device. |
+| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete]| Removes a device from Intune management, removes any company data, and retires the device. |
 | :::image type="icon" source="icons/locate-device.svg" border="false"::: | [Locate device]| Shows the approximate location of a device on a map. |
 | :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device by using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
 | :::image type="icon" source="icons/play-lost-mode-sound.svg" border="false"::: | [Play lost device sound][RA-PLAY] | Plays a sound on a lost device to help locate it. |
@@ -162,9 +162,9 @@ Select one of the following tabs to learn more about the available bulk device a
 
 | Bulk action                    | Description                                                                                |
 |--------------------------------|--------------------------------------------------------------------------------------------|
-| [Autopilot reset][RA-APRESET]  | Restores a device to its original settings and removes personal files, apps, and settings. |
+| [Autopilot reset] | Restores a device to its original settings and removes personal files, apps, and settings. |
 | [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune.                     |
-| [Delete][RA-DELETE]            | Removes a device from Intune management, removes any company data, and retires the device. |
+| [Delete]           | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename][RA-REN]               | Changes the device name in Intune.                                                         |
 | [Restart][RA-RESTART]          | Restarts a device.                                                                         |
 | [Retire][RA-RETIRE]            | Removes company data and settings from a device, and leaves personal data intact.          |
@@ -175,7 +175,7 @@ Select one of the following tabs to learn more about the available bulk device a
 
 | Bulk action                              | Description                                                                                   |
 |------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [Delete][RA-DELETE]                      | Removes a device from Intune management, removes any company data, and retires the device.    |
+| [Delete]                     | Removes a device from Intune management, removes any company data, and retires the device.    |
 | [Rename][RA-REN]                         | Changes the device name in Intune.                                                            |
 | [Restart][RA-RESTART]                    | Restarts a device.                                                                            |
 | [Retire][RA-RETIRE]                      | Removes company data and settings from a device, and leaves personal data intact.             |
@@ -188,7 +188,7 @@ Select one of the following tabs to learn more about the available bulk device a
 
 | Bulk action             | Description                                                                                |
 |-------------------------|--------------------------------------------------------------------------------------------|
-| [Delete][RA-DELETE]     | Removes a device from Intune management, removes any company data, and retires the device. |
+| [Delete]    | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename device][RA-REN] | Changes the device name in Intune.                                                         |
 | [Restart][RA-RESTART]   | Restarts a device.                                                                         |
 | [Retire][RA-RETIRE]     | Removes company data and settings from a device, and leaves personal data intact.          |
@@ -199,7 +199,7 @@ Select one of the following tabs to learn more about the available bulk device a
 
 | Bulk action           | Description                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------|
-| [Delete][RA-DELETE]   | Removes a device from Intune management, removes any company data, and retires the device. |
+| [Delete]  | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename][RA-REN]      | Changes the device name in Intune.                                                         |
 | [Restart][RA-RESTART] | Restarts a device.                                                                         |
 | [Wipe][RA-WIPE]       | Restores a device to its factory settings and removes all data and settings.               |
@@ -237,12 +237,12 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 
 [RA-ACTLOCK]: disable-activation-lock.md
 [RA-APPCON]: remove-apps-config.md
-[RA-APRESET]: autopilot-reset.md
+[Autopilot reset]: autopilot-reset.md
 [RA-ASSIST]: remote-assist.md
 [RA-BL]: rotate-bitlocker-keys.md
 [RA-CELLULAR]: update-cellular-data-plan.md
 [RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
-[RA-DELETE]: delete.md
+[Delete]: delete.md
 [RA-DEPR]: deprovision.md
 [RA-DIAG]: collect-diagnostics.md
 [RA-FRESHSTART]: fresh-start.md
