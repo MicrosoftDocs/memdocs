@@ -40,6 +40,8 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
 > - macOS
+> - tvOS
+> - visionOS
 > - Windows
 
 :::column-end:::

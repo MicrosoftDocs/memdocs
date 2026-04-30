@@ -251,7 +251,7 @@ To keep the policy as simple as possible, you want the updates to install outsid
 
 To accomplish this task, this scenario involves two policies:
 
-- In the first policy, you want all users signed out or want to reboot the device after a set amount of time. You can create an Apple Business Manager enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds):
+- In the first policy, you want all users signed out or want to reboot the device after a set amount of time. You can create an Apple Business enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds):
 
   :::image type="content" source="media/planning-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png" alt-text="Screenshot that shows how to enroll iOS/iPadOS devices without user affinity and setting the inactivity value in the Microsoft Intune admin center." lightbox="media/planning-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png":::
 
