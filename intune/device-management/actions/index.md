@@ -113,10 +113,14 @@ Select one of the following tabs to learn more about the available device action
 | ![rename-device-icon]                  | [Rename device]                  | Changes the device name in Intune.                                                            |
 | ![reset-passcode-icon]                 | [Reset passcode]                 | Resets the device passcode.                                                                   |
 | ![restart-icon]                        | [Restart]                        | Restarts a device.                                                                            |
+| ![restore-managed-home-screen-icon]    | [Restore managed home screen]    | Restores the managed home screen on a device.                                                 |
 | ![retire-icon]                         | [Retire]                         | Removes company data and settings from a device, and leaves personal data intact.             |
 | ![send-custom-notification-icon]       | [Send custom notification]       | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
+| ![suspend-managed-home-screen-icon]    | [Suspend managed home screen]    | Suspends the managed home screen on a device.                                                 |
 | ![sync-icon]                           | [Sync]                           | Syncs a device with Intune to apply the latest policies and configurations.                   |
 | ![wipe-icon]                           | [Wipe]                           | Restores a device to its factory settings and removes all data and settings.                  |
+
+
 
 ### [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
@@ -256,6 +260,7 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [Rename]: rename.md
 [Reset passcode]: reset-passcode.md
 [Restart]: restart.md
+[Restore managed home screen]: restore-managed-home-screen.md
 [Retire]: retire.md
 [Rotate FileVault recovery key]: rotate-filevault-recovery-key.md
 [Rotate Local admin password]: ../../device-security/laps/deploy-policy.md#manually-rotate-passwords
@@ -263,6 +268,7 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [Run remediation]: run-remediation.md
 [Send custom notification]: send-custom-notification.md
 [Shut down]: shutdown.md
+[Suspend managed home screen]: suspend-managed-home-screen.md
 [Sync]: sync.md
 [TeamViewer]: ../../device-management/tools/teamviewer-legacy.md
 [Update cellular data plan]: update-cellular-data-plan.md
@@ -300,6 +306,7 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [rename-device-icon]: icons/rename-device.svg
 [reset-passcode-icon]: icons/reset-passcode.svg
 [restart-icon]: icons/restart.svg
+[restore-managed-home-screen-icon]: icons/restore-managed-home-screen.svg
 [retire-icon]: icons/retire.svg
 [rotate-filevault-recovery-icon]: icons/rotate-filevault-recovery.svg
 [rotate-local-admin-password-icon]: icons/rotate-local-admin-password.svg
@@ -307,6 +314,7 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [run-remediation-icon]: icons/run-remediation.svg
 [send-custom-notification-icon]: icons/send-custom-notification.svg
 [shut-down-icon]: icons/shut-down.svg
+[suspend-managed-home-screen-icon]: icons/suspend-managed-home-screen.svg
 [sync-icon]: icons/sync.svg
 [update-cellular-data-plan-icon]: icons/update-cellular-data-plan.svg
 [update-defender-security-intelligence-icon]: icons/update-defender-intelligence.svg
