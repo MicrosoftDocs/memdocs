@@ -54,7 +54,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > Admins need the following roles/licenses:
