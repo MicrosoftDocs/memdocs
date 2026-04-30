@@ -12,8 +12,6 @@ ms.collection:
 
 # What's new in the Microsoft Intune - previous months
 
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
-
 <!-- Maintenance plan:
 
      Maintain ~2 years of archived content -->
@@ -1901,7 +1899,7 @@ These changes apply to the following policies:
 ##### What you need to know
 
 - This change is only in the user experience (UX) that admins see when they create a new policy. There is no effect on devices.
-- The functionally is the same as the previous platform names.
+- The functionality is the same as the previous platform names.
 - There are no additional tasks or actions for existing policies.
 
 For more information on endpoint security features in Intune, see [Manage endpoint security in Microsoft Intune](../../device-security/endpoint-security-policies.md).
@@ -2471,7 +2469,7 @@ For more information about current RBAC permissions and built-in roles, see:
 
 > [!IMPORTANT]
 >
-> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, it's availability will be announced in this [What's new in Microsoft Intune](../index.md) article.
+> With this release, the granular permission of **Antivirus** for endpoint security policies might be temporarily visible in some Tenants. This permission is not released and isn't supported for use. Configurations of the *Antivirus* permission are ignored by Intune. When *Antivirus* becomes available to use as a granular permission, its availability will be announced in this [What's new in Microsoft Intune](../index.md) article.
 
 ## Week of June 3, 2024
 
@@ -3400,7 +3398,7 @@ Applies to:
 
 - macOS 10.11 and later
 
-For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile).
+For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-policy).
 
 #### Await final configuration for macOS automated device enrollment now generally available<!-- 24973562 -->
 
@@ -3414,7 +3412,7 @@ Applies to:
 
 - macOS 10.11 and later
 
-For information about how to enable await final configuration, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-apple-enrollment-profile).
+For information about how to enable await final configuration, see [Create an Apple enrollment policy](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-policy).
 
 ### Device management
 
@@ -3730,7 +3728,7 @@ We added a new health metric for Microsoft Tunnel named **TLS certificate revoca
 
 This metric runs as part of the existing Tunnel Health checks, and supports the following status:
 
-- *Healthy*: The TLs certificate isn't revoked
+- *Healthy*: The TLS certificate isn't revoked
 - *Warning*: Unable to check if the TLS certificate is revoked
 - *Unhealthy*: The TLS certificate is revoked, and should be updated
 
@@ -4771,7 +4769,7 @@ Now generally available, *awaiting final configuration* enables a locked experie
 - iOS/iPadOS 13+ devices enrolling without user affinity
 - iOS/iPadOS 13+ devices enrolling with Microsoft Entra ID shared mode
 
-This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device.  Awaiting final configuration is enabled by default for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-ios.md#create-an-apple-enrollment-profile).
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device.  Awaiting final configuration is enabled by default for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment policy](../../device-enrollment/apple/setup-automated-ios.md#create-an-apple-enrollment-policy).
 
 ### Device management
 

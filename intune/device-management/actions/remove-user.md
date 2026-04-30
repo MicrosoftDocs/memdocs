@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Remove User"
+title: "Device Action: Remove User"
 description: Learn how to remove a user from a Shared iPad with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
-# Remote device action: remove user
+# Device action: remove user
 
-The *remove user* remote device action in Microsoft Intune deletes a selected user's cached session from a Shared iPad. This helps free up storage, support privacy, and prepare the iPad for other users. The removed user can sign in again if needed.
+The *remove user* device action in Microsoft Intune deletes a selected user's cached session from a Shared iPad. This helps free up storage, support privacy, and prepare the iPad for other users. The removed user can sign in again if needed.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ The *remove user* remote device action in Microsoft Intune deletes a selected us
 :::column-end:::
 :::column span="3":::
 
-> This remote action is supported on the following platform:
+> This action supports the following platforms:
 >
 > - iPadOS (Shared iPad mode only)
 
@@ -31,7 +31,7 @@ The *remove user* remote device action in Microsoft Intune deletes a selected us
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Custom role][INT-RC] that includes:

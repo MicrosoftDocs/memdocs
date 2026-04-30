@@ -15,7 +15,7 @@ The Microsoft Intune app package is available at [https://packages.microsoft.com
 
 The Microsoft Intune app is supported with the following operating systems:
 
- - Ubuntu Desktop, version 22.04 LTS or 24.04 LTS (physical or Hyper-V machine with x86/64 CPUs)
+ - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS (physical or Hyper-V machine with x86/64 CPUs)
  - RedHat Enterprise Linux 9
  - RedHat Enterprise Linux 10
 

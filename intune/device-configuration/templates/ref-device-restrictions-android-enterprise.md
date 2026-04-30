@@ -1,7 +1,7 @@
 ---
 title: Device restriction settings for Android in Microsoft Intune
 description: On Android Enterprise or Android for Work devices owned by your organization, you can restrict settings on the device using Microsoft Intune. Allow copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
-ms.date: 09/17/2025
+ms.date: 04/21/2026
 ms.topic: reference
 params:
   siblings_only: true
@@ -193,8 +193,11 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the device home and overview buttons.
   - **Home button only**: Users can see and select the home button. They can't see or select the overview buttons.
   - **Home and overview buttons**: Users can see and select the home and overview buttons.
-
-    When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.
+ 
+    > [!IMPORTANT]
+    > When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens.
+    >
+    > If the **Overview** button is enabled and the **End-user access to device settings** setting isn't set to **Block**, users can access the Android system settings without device authentication. This behavior can allow network changes, security configuration changes, or a full device reset. So if you enable the **Overview** button, set the **End-user access to device settings** setting to **Block** to prevent accessing the Settings app.
 
   This setting applies to:
 

@@ -1,12 +1,12 @@
 ---
-title: "Remote Device Action: Remote Lock"
+title: "Device Action: Remote Lock"
 description: Use the remote lock action in Microsoft Intune to lock a managed device that has a passcode or PIN.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: bf632d5b-6209-46d2-8c9c-8d76b1f704cc
 ---
 
-# Remote device action: remote lock
+# Device action: remote lock
 
 The *remote lock* device action locks a managed device so the user must enter the existing passcode or PIN to continue. Use this action when a device is misplaced, left unattended, or suspected of unauthorized use without wiping data or removing enrollment.
 
@@ -24,13 +24,15 @@ The *remote lock* device action locks a managed device so the user must enter th
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
+>
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - Android Open Source Project (AOSP)
 > - iOS/iPadOS
 > - macOS
+> - visionOS 2.0+
 
 :::column-end:::
 :::row-end:::
@@ -41,7 +43,7 @@ The *remote lock* device action locks a managed device so the user must enter th
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To execute this remote action, at a minimum, use an account that has one of the following roles:
+> To run this action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -55,7 +57,7 @@ The *remote lock* device action locks a managed device so the user must enter th
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Remote lock**.
+1. At the top of the device overview pane, find the row of action icons. Select **Remote lock**.
 ::: zone pivot="macos"
 3. Set a six-digit recovery PIN.
 

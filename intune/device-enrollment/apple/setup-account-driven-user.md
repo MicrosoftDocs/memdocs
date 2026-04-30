@@ -10,12 +10,12 @@ ms.collection:
 
 # Set up account driven Apple User Enrollment
 
-Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](setup-user-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile silently installs and Intune policies are applied. Intune uses just-in-time (JIT) registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.
+Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](setup-user-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment policy silently installs and Intune policies are applied. Intune uses just-in-time (JIT) registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.
 
 This article describes how to set up account driven Apple User Enrollment in Microsoft Intune. You will:
 
 * Set up JIT registration.
-* Create an enrollment profile.
+* Create an enrollment policy.
 * Prepare employees and students for enrollment.
 
 ## Prerequisites
@@ -85,7 +85,7 @@ We recommend extra configurations to help improve the enrollment experience for 
 Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md).
 
 ### Enable federated authentication
-Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.
+Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business User Guide.
 
 ## Step 1: Set up just in time registration and assign Microsoft Authenticator
 

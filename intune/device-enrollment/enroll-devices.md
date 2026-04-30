@@ -1,7 +1,7 @@
 ---
 title: Step 5 – Enroll devices in Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and Windows devices in Intune.
-ms.date: 4/3/2024
+ms.date: 4/29/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
@@ -13,7 +13,7 @@ In the final phase of deployment, devices are registered or joined in Microsoft 
 
 :::image type="content" source="./media/enroll-devices/deployment-plan-enroll.png" alt-text="Diagram that shows getting started with Microsoft Intune with step 5, which is enrolling devices to be managed by Intune.":::
 
-During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce enrollment profiles, enrollment restrictions, and the policies and profiles you created earlier in this guide.
+During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce enrollment policies, enrollment restrictions, and the policies you created earlier in this guide.
 
 This article describes:
 
@@ -22,14 +22,14 @@ This article describes:
 * Post-enrollment monitoring, troubleshooting, and resources.
 
 ## Getting started
-If this is your first time deploying enrollment profiles with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment profile to more pilot groups. For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](../fundamentals/planning-guide.md#step-5---create-a-rollout-plan).
+If this is your first time deploying enrollment policies with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment policy to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment policy to more pilot groups. For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](../fundamentals/planning-guide.md#step-5---create-a-rollout-plan).
 
 Registration in Microsoft Entra ID is a required step for Intune management. Before a device can enroll in Intune, the user of the device must authenticate and establish a device identity in your org's Microsoft Entra ID. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Identity options include:
    * *Microsoft Entra registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Microsoft Entra ID work account.
    * *Microsoft Entra joined* is the device identity option available for corporate-owned Windows devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Microsoft Entra ID work account.
 
 ## Pre-enrollment configurations
-Prepare devices for enrollment by configuring enrollment features, such as enrollment restrictions, device categorization, and device enrollment managers. These configurations help improve and simplify the enrollment experience for you and device users, and help you stay organized in the admin center.  Configure them before you create the enrollment profile.
+Prepare devices for enrollment by configuring enrollment features, such as enrollment restrictions, device categorization, and device enrollment managers. These configurations help improve and simplify the enrollment experience for you and device users, and help you stay organized in the admin center.  Configure them before you create the enrollment policy.
 
 Setting availability varies by OS platform.
 
@@ -46,6 +46,8 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 | Android device administrator (DA) | No |
 | iOS/iPadOS (BYOD) | No |
 | iOS/iPadOS (ADE) | Yes |
+|tvOS (ADE)|Yes|
+|visionOS (ADE)| Yes|
 | Linux | No |
 | macOS (BYOD) | No |
 | macOS (ADE) | Yes |
@@ -53,7 +55,7 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 
 -----
 
-Devices that don't require a reset begin installing Intune profiles as soon as they enroll. Previously configured settings may remain on devices if you don't change them in Intune prior to enrollment.
+Devices that don't require a reset begin installing Intune policies as soon as they enroll. Previously configured settings may remain on devices if you don't change them in Intune prior to enrollment.
 
 ### Add device enrollment managers
 We recommend utilizing device enrollment managers when you need to enroll and prepare a large number of devices for distribution. A device enrollment manager account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15 devices. A device enrollment manager is a non-administrator Microsoft Entra user who can:
@@ -82,7 +84,7 @@ If you're looking for more control, including where the terms appear, consider c
 For more information, see [Terms and conditions for user access](../device-enrollment/create-terms-and-conditions.md).
 
 ### Require multifactor authentication
-Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a Conditional Access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.
+Require users to authenticate via multifactor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a Conditional Access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../device-enrollment/configure-multifactor-authentication.md).
 
@@ -133,21 +135,22 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 This section describes the enrollment options available for iOS/iPadOS and Mac devices in Intune.
 
 ### Prerequisites
-Complete the following prerequisites before you create the enrollment profile for Apple devices:
+Complete the following prerequisites before you create the enrollment policy for Apple devices:
 
 * Upload an Apple MDM push certificate to Intune. For more information, see [Get MDM push certificate](../device-enrollment/apple/create-mdm-push-certificate.md).
 * Get an Apple enrollment program token  if you plan to enroll devices via Apple automated device enrollment.    For more information, see:
-  * [Get Apple enrollment program token for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#get-an-apple-automated-device-enrollment-token)
-  * [Get Apple enrollment program token for macOS](../device-enrollment/apple/setup-automated-macos.md#create-enrollment-program-token)
+  * [Get Apple enrollment program token for iOS/iPadOS](../device-enrollment/apple/setup-apple-token.md)  
+
+  * [Get Apple enrollment program token for macOS](../device-enrollment/apple/setup-macos-token.md#create-an-enrollment-program-token)  
 
 ### Apple enrollment solutions
 The following table describes the enrollment solutions for devices running iOS/iPadOS and macOS.
 
 # [Corporate owned](#tab/corporate-owned-apple)
 * Automated device enrollment [for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md) and [for Mac devices](../device-enrollment/apple/setup-automated-macos.md):
-Enroll new or wiped devices purchased from Apple Business Manager or Apple School Manager with automated device enrollment. This automated enrollment method for corporate-owned devices applies your organization's settings from Apple Business Manager and Apple School Manager, supports supervision mode, and enrolls devices without you needing to touch them.  When people turn on their devices, Apple Setup Assistant guides them through setup and enrollment.
+Enroll new or wiped devices purchased from Apple Business or Apple School Manager with automated device enrollment. This automated enrollment method for corporate-owned devices applies your organization's settings from Apple Business and Apple School Manager, supports supervision mode, and enrolls devices without you needing to touch them.  When people turn on their devices, Apple Setup Assistant guides them through setup and enrollment.
 
-* Apple Configurator [for iOS/iPadOS](../device-enrollment/apple/setup-configurator-ios.md) and [for Mac devices](../device-enrollment/apple/setup-direct-macos.md): Manually enroll new or existing corporate-owned devices via Apple Configurator. This option is ideal for bulk enrollments and when you don't have access to Apple School Manager, Apple Business Manager, or when you require a wired network connection. You must have physical access to the devices because you have to connect to and configure devices on a Mac. There are two different paths you can take:
+* Apple Configurator [for iOS/iPadOS](../device-enrollment/apple/setup-configurator-ios.md) and [for Mac devices](../device-enrollment/apple/setup-direct-macos.md): Manually enroll new or existing corporate-owned devices via Apple Configurator. This option is ideal for bulk enrollments and when you don't have access to Apple School Manager, Apple Business, or when you require a wired network connection. You must have physical access to the devices because you have to connect to and configure devices on a Mac. There are two different paths you can take:
   * Setup Assistant enrollment: This method wipes the device and prepares it for enrollment in Apple Configurator. When users turn on their devices, Setup Assistant begins, and then devices enroll in Intune. You must have access to the device serial numbers, because you need to input them into the admin center.
   * Direct enrollment: This method lets you enroll the device prior to distribution, and doesn't wipe the device. Devices enrolled this way aren't associated with a user so we recommend this option for shared or kiosk devices. The instructions are different for macOS and iOS devices, so be sure to use the correct how-to documentation for devices.
 
@@ -179,7 +182,7 @@ Make enrollment in Intune easier for employees and students by enabling automati
 
 * [Microsoft Entra join with automatic enrollment](/azure/active-directory/devices/concept-azure-ad-join): This option is supported on devices that are procured by you or the device user for work use. Enrollment occurs during the out-of-box-experience, after the user signs in with their work account and joins Microsoft Entra ID or by choosing to join the device in Microsoft Entra ID when connecting a work or school account from the Settings app ([as described in Windows device enrollment guide - End user tasks](../device-enrollment/windows/guide.md#automatic-enrollment-end-user-tasks)). This solution is for when you don't have access to the device, such as in remote work environments. When these devices enroll, their device ownership changes to corporate-owned and you get access to management features that aren't available on devices marked as personal-owned.
 
-* [Windows Autopilot user-driven or self-deploying mode](/autopilot/tutorial/autopilot-scenarios): Automatic enrollment is supported with the Windows Autopilot user-driven (for both the Microsoft Entra hybrid join and Microsoft Entra join scenarios) or self-deploying (Microsoft Entra join only) profiles and can be used for corporate-owned desktops, laptops, and kiosks. Device users get desktop access after required software and policies are installed. A Microsoft Entra ID P1 or P2 license is required. We recommend using only Microsoft Entra join, which provides the best user experience and is easier to configure. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used but you have to [install the Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid), and your devices must be able to connect to a domain controller via either an on-premises network or VPN connection.
+* [Windows Autopilot user-driven or self-deploying mode](/autopilot/tutorial/autopilot-scenarios): Automatic enrollment is supported with the Windows Autopilot user-driven (for both the Microsoft Entra hybrid join and Microsoft Entra join scenarios) or self-deploying (Microsoft Entra join only) policies and can be used for corporate-owned desktops, laptops, and kiosks. Device users get desktop access after required software and policies are installed. A Microsoft Entra ID P1 or P2 license is required. We recommend using only Microsoft Entra join, which provides the best user experience and is easier to configure. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used but you have to [install the Intune Connector for Active Directory](/autopilot/windows-autopilot-hybrid), and your devices must be able to connect to a domain controller via either an on-premises network or VPN connection.
 
 * [Co-management with Configuration Manager](../configmgr/comanage/quickstart-paths.md): Co-management is best for environments that already manage devices with Configuration Manager, and want to integrate Microsoft Intune workloads. Co-management is the act of moving workloads from Configuration Manager to Intune and telling the Windows client who the management authority is for that particular workload. For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.
 
@@ -226,5 +229,5 @@ This article is part of a five-step series that describes how to deploy Microsof
 1. [Set up Microsoft Intune](../fundamentals/deploy-setup-step-1.md)
 2. [Add, configure, and protect apps](../fundamentals/deploy-protect-apps-step-2.md)
 3. [Plan for compliance policies](../fundamentals/deploy-compliance-step-3.md)
-4. [Create device configuration profiles](../fundamentals/deploy-configuration-step-4.md)
+4. [Create device configuration policies](../fundamentals/deploy-configuration-step-4.md)
 5. 🡺 **Enroll devices** (this article)

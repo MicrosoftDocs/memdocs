@@ -45,13 +45,11 @@ Strong mapping is required for all certificates deployed by Microsoft Intune and
 
 To implement the strong mapping solution for SCEP certificates delivered via Intune, you must add the `OnpremisesSecurityIdentifier` variable to the SAN in the SCEP profile.
 
-  > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile create flow highlighting the Configuration settings label.](./media/scep-profiles/scep-configuration-settings.png)
+  :::image type="content" source="./media/scep-profiles/scep-configuration-settings.png" alt-text="SCEP certificate profile Configuration settings section" border="false":::
 
 This variable must be part of the URI attribute. You can create a new SCEP profile or edit an existing one to add the URI attribute.
 
-   > [!div class="mx-imgBorder"]
-   > ![Screenshot of the SCEP certificate profile highlighting the Subject alternative name section and completed URI and Value fields.](./media/scep-profiles/scep-san-add.png)
+   :::image type="content" source="./media/scep-profiles/scep-san-add.png" alt-text="SCEP certificate profile Subject alternative name section with URI and Value fields configured" border="false":::
 
 After you add the URI attribute and value to the certificate profile, Microsoft Intune appends the SAN attribute with the tag and the resolved SID. Example formatting: `tag:microsoft.com,2022-09-14:sid:<value>` At this point, the certificate profile meets the strong mapping requirements.
 
@@ -61,7 +59,7 @@ For more information about the KDC's requirements and enforcement date for stron
 
 ## S/MIME certificate requirements for third party public CA
 > [!IMPORTANT]
-> Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see [CA/Browser Forum](https://cabforum.org/working-groups/smime/).
+> Beginning July 16, 2025, the Certification Authority Browser Forum (CA/Browser Forum) is enforcing new S/MIME baseline requirements for public certificate authorities (CAs). These requirements apply to all sponsor-validated S/MIME certificates that the public CAs issue. For more information about S/MIME certificate requirements, see the [S/MIME baseline requirements from the CA/Browser Forum](https://cabforum.org/working-groups/smime/).
 
 The certificate subject name (SN) in all S/MIME certificates must include the following information:
 
@@ -83,8 +81,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
      You can enter variables in the SCEP profile under **Configuration settings** > **Subject name format**.
 
-      > [!div class="mx-imgBorder"]
-        > ![Image of a SCEP certificate profile and its configuration settings, highlighting the subject name format setting.](./media/scep-profiles/subject-name-2506.png)
+      :::image type="content" source="./media/scep-profiles/subject-name-2506.png" alt-text="SCEP certificate profile configuration settings with subject name format highlighted" border="false":::
 
 
   3. Test changes. Before broad deployment, create a new profile and assign a small user group.
@@ -173,7 +170,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
      > If your subject name length exceeds 64 characters, you might need to disable name length enforcement on your internal Certification Authority. For more information, see [*Disable DN Length Enforcement*](/previous-versions/windows/it-pro/windows-server-2003/cc784789(v=ws.10)#disable-dn-length-enforcement)
 
      > [!NOTE]
-     > There is a [known issue](#avoid-certificate-signing-requests-with-escaped-special-characters) for using SCEP to get certificates when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
+     > There is a [known issue with escaped special characters in CSRs](#avoid-certificate-signing-requests-with-escaped-special-characters) for using SCEP to get certificates when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
      >
      > - \+
      > - ;
@@ -307,7 +304,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
    - **Certificate validity period**:
 
-     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune admin center](../../fundamentals/certificates/scep-infrastructure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
+     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [configure custom certificate validity periods](../../fundamentals/certificates/scep-infrastructure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
 
      Intune supports a validity period of up to 24 months.
 

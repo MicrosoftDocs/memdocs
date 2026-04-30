@@ -1,11 +1,11 @@
 ---
-title: "Remote Device Action: Rotate Recovery Lock Passcode"
+title: "Device Action: Rotate Recovery Lock Passcode"
 description: Learn how to rotate the macOS Recovery Lock passcode with Microsoft Intune.
 ms.date: 03/09/2026
 ms.topic: how-to
 ---
 
-# Remote device action: rotate Recovery Lock passcode
+# Device action: rotate Recovery Lock passcode
 
 <!-- Remove this note after rollout completes (target: late April 2026) -->
 > [!NOTE]
@@ -24,7 +24,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - macOS in supervised mode, running macOS 11.5 or later on Apple silicon (Intel-based Macs aren't supported).
 
 :::column-end:::
@@ -36,7 +36,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - Intune administrator
 > - [Custom role][INT-RC] that includes:
@@ -50,7 +50,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, the device must be configured with a policy setting that enables the Recovery Lock feature.
+> To run this action, the device must be configured with a policy setting that enables the Recovery Lock feature.
 >
 > For more information, see [Create the Recovery Lock policy](../../device-configuration/settings-catalog/configure-recovery-lock-macos.md#create-the-recovery-lock-policy).
 
@@ -61,7 +61,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Rotate Recovery Lock Passcode**. 
+1. At the top of the device overview pane, find the row of action icons. Select **Rotate Recovery Lock Passcode**. 
 1. Select **Yes** to confirm the action. Intune generates a new Recovery Lock passcode.
 
 > [!NOTE]

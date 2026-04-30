@@ -1,7 +1,7 @@
 ---
 title: Add Apps to Microsoft Intune
 description: Learn how to add apps to Microsoft Intune so you can assign apps to users and devices. Intune supports a wide range of app types.
-ms.date: 10/02/2025
+ms.date: 04/23/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -11,8 +11,6 @@ ms.collection:
 ---
 
 # Add apps to Microsoft Intune
-
-[!INCLUDE [azure_portal](../../includes/azure_portal.md)]
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
@@ -60,7 +58,7 @@ The following table lists the specific app types and how you can add them in the
 | [Microsoft 365 apps for macOS](./add-microsoft-365-macos.md) | Store app (Microsoft 365) | Select **macOS** under **Microsoft 365 Apps** as the **app type**, and then select the Microsoft 365 app suite. |
 | [Microsoft Edge, version 77 and later for Windows](./add-edge-windows.md) | Store app | Select **Windows 10 and later** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | [Microsoft Edge, version 77 and later for macOS](./add-edge-macos.md) | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
-| [Android line-of-business (LOB) apps](./add-lob-android.md) | LOB app | Select **Line-of-business app** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
+| [Android line-of-business (LOB) apps](./add-lob-android.md) | LOB app | Select **Line-of-business app** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**. For Android Enterprise fully managed and dedicated devices, you can deploy required LOB apps directly without Managed Google Play. |
 | [iOS/iPadOS LOB apps](./add-lob-ios.md) | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an iOS/iPadOS installation file with the extension **.ipa**.  |
 | [Windows LOB apps](./add-lob-windows.md) | LOB app | Select **Line-of-business app** app as the app type, select the **App package file**, and then enter a Windows installation file with the extension **.msi**, **.appx**, **.appxbundle**, **.msix**, and **.msixbundle**. |
 | [Built-in iOS/iPadOS app](./add-built-in.md)  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
@@ -143,7 +141,7 @@ Intune-managed apps can also enable app protection without requiring enrollment,
 In addition to understanding web apps, store apps, and LOB apps, you should also be aware of the destination of volume-purchase-program apps and licensed apps, such as:
 
 - **Apple Volume Purchasing Program for Business (iOS)**: The iOS/iPadOS App Store lets you purchase multiple licenses for an app that you want to run in your company. Purchasing multiple copies helps you to efficiently manage apps in your company. For more information, see [Manage iOS/iPadOS volume-purchased apps](./manage-vpp-apple.md).
-- **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. All apps you install for Android Enterprise fully managed work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
+- **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. Apps for Android Enterprise fully managed devices can come from the Managed Google Play store or be deployed directly as line-of-business (LOB) apps from Intune. For more information about direct LOB deployment, see [Add an Android line-of-business app](add-lob-android.md). You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
 
     > [!NOTE]
     > The file extensions for Windows apps include **.msi**, **.appx**, **.appxbundle**, **.msix** and **.msixbundle**.

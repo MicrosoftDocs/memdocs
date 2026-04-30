@@ -1,16 +1,16 @@
 ---
-title: "Remote Device Action: Retire"
+title: "Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
 
-# Remote device action: retire
+# Device action: retire
 
-The *retire* remote action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
+The *retire* action in Intune removes company data from a device without performing a full wipe or factory reset. This action is ideal for personally owned devices or when transitioning a device out of organizational control. It unenrolls the device from Intune and removes managed apps, settings, and profiles deployed through mobile device management (MDM), while preserving personal data.
 
-Unlike the **Wipe** action, which resets the device to factory settings, **Retire** keeps user content intact. The action is triggered the next time the device checks in with Intune. Until then, the device might still appear in the admin center. If you need to remove a device immediately, consider using the [Delete action](delete.md) instead.
+Unlike the **Wipe** action, which resets the device to factory settings, **Retire** keeps user content intact. The action is triggered the next time the device checks in with Intune. Until then, the device might still appear in the admin center. If you need to remove a device immediately, consider using the [delete device action](delete.md) instead.
 
 ::: zone pivot="windows"
 
@@ -34,12 +34,14 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - Android device administrator
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
 > - macOS
+> - tvOS
+> - visionOS
 > - Windows
 
 :::column-end:::
@@ -51,7 +53,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, use an account with at least one of the following roles:
+> To run this action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -64,7 +66,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Retire**. To confirm, select **Yes**.
+1. At the top of the device overview pane, find the row of action icons. Select **Retire**. To confirm, select **Yes**.
 
 [!INCLUDE [multiple-administrative-approval](includes/multiple-administrative-approval.md)]
 
@@ -78,7 +80,7 @@ The following table shows what data is removed and what remains on the device af
 
 | Data type | iOS |
 |-------------|-------|
-|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use App Protection Policies and were installed from App Store:** Intune triggers a [selective wipe](../../app-management/protection/wipe-corporate-data.md) for apps protected by an [App Protection Policy](../../app-management/protection/overview.md) when a Retire action is initiated against an enrolled device. This wipe includes apps installed from the App Store that have work or school account data. The next time the app is launched, the selective wipe removes the protected work or school account data. In order for the selective wipe to occur, an App Protection Policy check-in must occur between the MDM enrollment and retire events. Personal app data and the apps aren't removed after a selective wipe.|
+|Company apps and associated data installed by Intune|**Apps installed using Company Portal:** For apps that are pinned to the management profile, all app data and the apps are removed. These apps include apps originally installed from App Store and later managed as company apps unless the app is configured to not be uninstalled on device removal. <br /><br /> **Microsoft apps that use App Protection Policies and were installed from App Store:** Intune triggers a selective wipe (see [Wipe only corporate data from apps](../../app-management/protection/wipe-corporate-data.md)) for apps protected by an App Protection Policy (see [App protection policies overview](../../app-management/protection/overview.md)) when a Retire action is initiated against an enrolled device. This wipe includes apps installed from the App Store that have work or school account data. The next time the app is launched, the selective wipe removes the protected work or school account data. In order for the selective wipe to occur, an App Protection Policy check-in must occur between the MDM enrollment and retire events. Personal app data and the apps aren't removed after a selective wipe.|
 |Settings|Configurations set by Intune policy are no longer enforced. Users can change the settings.|
 |Wi-Fi and VPN profile settings|Removed.|
 |Certificate profile settings|Certificates are removed and revoked.|
@@ -148,7 +150,7 @@ The following table shows what data is removed and what remains on the device af
 | Microsoft Entra join status | - If the device is Microsoft Entra joined, the device is unjoined from Microsoft Entra.<br>- If the device is Microsoft Entra registered, the work or school account is disconnected and the device is unregistered from Microsoft Entra ID.|
 | Microsoft Entra device record | - If the device is registered in Autopilot, the Microsoft Entra ID record is not removed.<br>- If the device is Microsoft Entra joined, the record is removed.<br>- If the device is Microsoft Entra registered, the record is removed.|
 
-For Microsoft Entra ID joined devices, after the **Retire** command is executed, you can't sign in wih a Microsoft Entra account. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
+For Microsoft Entra ID joined devices, after the **Retire** command is executed, you can't sign in wih a Microsoft Entra account. Follow the steps to [start your PC in Safe mode on the Microsoft Support site](https://support.microsoft.com/topic/1af6ec8c-4d4a-4b23-adb7-e76eef0b847f) to sign in with a local admin account and regain access to the user's local data.
 
 ::: zone-end
 
@@ -163,7 +165,7 @@ For Microsoft Entra ID joined devices, after the **Retire** command is executed,
 ## Reference links
 
 - Microsoft Graph API: [retire action][GRAPH-1]
-- Configuration service provider (CSP) used to initiate the remote action: [Defender CSP][CSP-1]
+- Configuration service provider (CSP) used to initiate the action: [RemoteWipe CSP][CSP-1]
 
 <!--links-->
 
@@ -181,4 +183,4 @@ For Microsoft Entra ID joined devices, after the **Retire** command is executed,
 <!-- API links -->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-retire
-[CSP-1]: /windows/client-management/mdm/defender-csp
+[CSP-1]: /windows/client-management/mdm/remotewipe-csp

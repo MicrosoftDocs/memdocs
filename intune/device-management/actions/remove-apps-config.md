@@ -1,15 +1,14 @@
 ---
-title: "Remote Device Action: Remove Apps and Configuration"
+title: "Device Action: Remove Apps and Configuration"
 description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action with Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
-ms.reviewer: Jack Poehlman
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 ---
 
-# Remote device action: remove apps and configuration
+# Device action: remove apps and configuration
 
-Use the *remove apps and configuration* remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
+Use the *remove apps and configuration* action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
 
 ## Prerequisites
 
@@ -20,7 +19,7 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
@@ -35,7 +34,7 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To execute this remote action, at a minimum, use an account that has one of the following roles:
+> To run this action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -46,7 +45,7 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 :::row-end:::
 #### Admin permissions and scope tags for Remove apps and configuration
 
-Admins can use the **Remove apps and configuration** remote action to:
+Admins can use the **Remove apps and configuration** action to:
 
 - Select and remove assigned apps and configuration profiles from a device.
 - Restore previously removed apps and configuration profiles.
@@ -57,7 +56,7 @@ Scope tags limit which apps and configurations an admin can view and manage. The
 
 ## Supported apps and configuration profiles
 
-This remote action supports the following items:
+this action supports the following items:
 
 - **Applications**: Any Intune-delivered app on supported device platforms.
 ::: zone pivot="ios"
@@ -93,7 +92,7 @@ This remote action supports the following items:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Remove apps and configuration**.
+1. At the top of the device overview pane, find the row of action icons. Select **Remove apps and configuration**.
 
   :::image type="content" alt-text="Remove apps and configuration" source="media/remove-apps-config/remove-apps-config.png" lightbox="media/remove-apps-config/remove-apps-config.png":::
 

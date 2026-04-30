@@ -659,7 +659,7 @@ In the example, replace `R.style.AppTheme` with the style theme that the SDK sho
 If the application requires SSL/TLS certificates issued by an on-premises or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK has added support for certificate trust management with the API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient].
 
 > [!NOTE]
-> [MAMCertTrustWebViewClient] supports Android 11 or later.
+> [MAMCertTrustWebViewClient] supports Android 10 or later.
 
 Trusted Root Certificates Management provides support for:
 

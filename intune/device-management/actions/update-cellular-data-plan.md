@@ -1,14 +1,13 @@
 ---
-title: "Remote Device Action: Update Cellular Data Plan"
+title: "Device Action: Update Cellular Data Plan"
 description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM with Microsoft Intune.
 ms.date: 10/27/2025
 ms.topic: how-to
-ms.reviewer: rashok
 ---
 
-# Remote device action: update cellular data plan
+# Device action: update cellular data plan
 
-The *update cellular data plan* remote action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
+The *update cellular data plan* action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
 
 ## Prerequisites
 
@@ -19,7 +18,7 @@ The *update cellular data plan* remote action lets you remotely activate an eSIM
 :::column-end:::
 :::column span="3":::
 
-> This remote action supports the following platforms:
+> This action supports the following platforms:
 >
 > - iOS/iPadOS
 
@@ -32,7 +31,7 @@ The *update cellular data plan* remote action lets you remotely activate an eSIM
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> To execute this remote action, at a minimum, use an account that has one of the following roles:
+> To run this action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
@@ -41,12 +40,13 @@ The *update cellular data plan* remote action lets you remotely activate an eSIM
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
-## Remotely update the cellular data plan from the Intune admin center
+
+## How to run update the cellular data plan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Update cellular data plan (preview)**.
-    ![Screenshot of updating cellular data plan](media/update-cellular-data-plan/update-cellular-data-plan.png)
+1. At the top of the device overview pane, find the row of action icons. Select **Update cellular data plan (preview)**.
+    ![Intune admin center showing the Update cellular data plan action with an activation server URL field](media/update-cellular-data-plan/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
 ## User experience
