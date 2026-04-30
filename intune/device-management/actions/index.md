@@ -36,26 +36,26 @@ Select one of the following tabs to learn more about the available device action
 
 ### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
-| Icon                                                  | Action                                          | Description                                                                                                |
-|:-----------------------------------------------------:|-------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| ![autopilot-reset-icon]                               | [Autopilot reset]                               | Restores a device to its original settings and removes personal files, apps, and settings.                 |
-| ![bitlocker-key-rotation-icon]                        | [BitLocker key rotation]                        | Rotates the BitLocker recovery key for a device.                                                           |
-| ![collect-diagnostics-icon]                           | [Collect diagnostics]                           | Collects diagnostic logs from a device and uploads the logs to Intune.                                     |
-| ![delete-icon]                                        | [Delete]                                        | Removes a device from Intune management, removes any company data, and retires the device.                 |
-| ![fresh-start-icon]                                   | [Fresh Start]                                   | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed.     |
-| ![full-scan-icon]                                     | [Full Scan]                                     | Initiates a full scan of the device by Microsoft Defender Antivirus.                                       |
-| ![locate-device-icon]                                 | [Locate device]                                 | Shows the approximate location of a device on a map.                                                       |
-| ![pause-config-refresh-icon]                          | [Pause Config Refresh]                          | Pauses ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes. |
-| ![quick-scan-icon]                                    | [Quick Scan]                                    | Initiates a quick scan of the device by Microsoft Defender Antivirus.                                      |
-| ![new-remote-assistance-session-icon]                 | [New remote assistance session]                 | Allows you to remotely control a device by using [Remote Help] or [TeamViewer].                            |
-| ![rename-device-icon]                                 | [Rename device]                                 | Changes the device name in Intune.                                                                         |
-| ![restart-icon]                                       | [Restart]                                       | Restarts a device.                                                                                         |
-| ![retire-icon]                                        | [Retire]                                        | Removes company data and settings from a device, and leaves personal data intact.                          |
-| ![rotate-local-admin-password-icon]                   | [Rotate Local admin password]                   | Changes the local administrator password for a device and stores the password in Intune.                   |
-| ![run-remediation-icon]                               | [Run remediation]                               | Initiates on demand Proactive Remediation                                                                  |
-| ![sync-icon]                                          | [Sync]                                          | Syncs a device with Intune to apply the latest policies and configurations.                                |
-| ![update-windows-defender-security-intelligence-icon] | [Update Windows Defender security intelligence] | Updates the security intelligence files for Microsoft Defender Antivirus.                                  |
-| ![wipe-icon]                                          | [Wipe]                                          | Restores a device to its factory settings and removes all data and settings.                               |
+| Icon                                          | Action                                          | Description                                                                                                |
+|:---------------------------------------------:|-------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| ![autopilot-reset-icon]                       | [Autopilot reset]                               | Restores a device to its original settings and removes personal files, apps, and settings.                 |
+| ![bitlocker-key-rotation-icon]                | [BitLocker key rotation]                        | Rotates the BitLocker recovery key for a device.                                                           |
+| ![collect-diagnostics-icon]                   | [Collect diagnostics]                           | Collects diagnostic logs from a device and uploads the logs to Intune.                                     |
+| ![delete-icon]                                | [Delete]                                        | Removes a device from Intune management, removes any company data, and retires the device.                 |
+| ![fresh-start-icon]                           | [Fresh Start]                                   | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed.     |
+| ![full-scan-icon]                             | [Full Scan]                                     | Initiates a full scan of the device by Microsoft Defender Antivirus.                                       |
+| ![locate-device-icon]                         | [Locate device]                                 | Shows the approximate location of a device on a map.                                                       |
+| ![pause-config-refresh-icon]                  | [Pause Config Refresh]                          | Pauses ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes. |
+| ![quick-scan-icon]                            | [Quick Scan]                                    | Initiates a quick scan of the device by Microsoft Defender Antivirus.                                      |
+| ![new-remote-assistance-session-icon]         | [New remote assistance session]                 | Allows you to remotely control a device by using [Remote Help] or [TeamViewer].                            |
+| ![rename-device-icon]                         | [Rename device]                                 | Changes the device name in Intune.                                                                         |
+| ![restart-icon]                               | [Restart]                                       | Restarts a device.                                                                                         |
+| ![retire-icon]                                | [Retire]                                        | Removes company data and settings from a device, and leaves personal data intact.                          |
+| ![rotate-local-admin-password-icon]           | [Rotate Local admin password]                   | Changes the local administrator password for a device and stores the password in Intune.                   |
+| ![run-remediation-icon]                       | [Run remediation]                               | Initiates on demand Proactive Remediation                                                                  |
+| ![sync-icon]                                  | [Sync]                                          | Syncs a device with Intune to apply the latest policies and configurations.                                |
+| ![update-defender-security-intelligence-icon] | [Update Windows Defender security intelligence] | Updates the security intelligence files for Microsoft Defender Antivirus.                                  |
+| ![wipe-icon]                                  | [Wipe]                                          | Restores a device to its factory settings and removes all data and settings.                               |
 
 > [!TIP]
 > For Intel vPro devices, Intune also integrates with Intel vPro Fleet Services to provide hardware-level remote management capabilities, including out-of-band management that works even when the operating system is unresponsive or the device is powered off.
@@ -160,7 +160,7 @@ Select one of the following tabs to learn more about the available bulk device a
 ### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 | Bulk action           | Description                                                                                |
-|:---------------------:|--------------------------------------------------------------------------------------------|
+|-----------------------|--------------------------------------------------------------------------------------------|
 | [Autopilot reset]     | Restores a device to its original settings and removes personal files, apps, and settings. |
 | [Collect diagnostics] | Collects diagnostic logs from a device and uploads the logs to Intune.                     |
 | [Delete]              | Removes a device from Intune management, removes any company data, and retires the device. |
@@ -173,7 +173,7 @@ Select one of the following tabs to learn more about the available bulk device a
 ### [:::image type="icon" source="../../media/icons/16/apple-mobile.svg"::: **Apple mobile**](#tab/apple-mobile)
 
 | Bulk action                 | Description                                                                                   |
-|:---------------------------:|-----------------------------------------------------------------------------------------------|
+|-----------------------------|-----------------------------------------------------------------------------------------------|
 | [Delete]                    | Removes a device from Intune management, removes any company data, and retires the device.    |
 | [Rename]                    | Changes the device name in Intune.                                                            |
 | [Restart]                   | Restarts a device.                                                                            |
@@ -186,7 +186,7 @@ Select one of the following tabs to learn more about the available bulk device a
 ### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 | Bulk action     | Description                                                                                |
-|:---------------:|--------------------------------------------------------------------------------------------|
+|-----------------|--------------------------------------------------------------------------------------------|
 | [Delete]        | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename device] | Changes the device name in Intune.                                                         |
 | [Restart]       | Restarts a device.                                                                         |
@@ -197,7 +197,7 @@ Select one of the following tabs to learn more about the available bulk device a
 ### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 | Bulk action | Description                                                                                |
-|:-----------:|--------------------------------------------------------------------------------------------|
+|-------------|--------------------------------------------------------------------------------------------|
 | [Delete]    | Removes a device from Intune management, removes any company data, and retires the device. |
 | [Rename]    | Changes the device name in Intune.                                                         |
 | [Restart]   | Restarts a device.                                                                         |
@@ -206,7 +206,7 @@ Select one of the following tabs to learn more about the available bulk device a
 ### [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 | Bulk action   | Description                                                                                                                                                                                     |
-|:-------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Deprovision] | Removes Google Admin policies from a ChromeOS device that you no longer use.                                                                                                                    |
 | [Lost mode]   | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
 | [Restart]     | Restarts a device.                                                                                                                                                                              |
@@ -309,5 +309,5 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [shut-down-icon]: icons/shut-down.svg
 [sync-icon]: icons/sync.svg
 [update-cellular-data-plan-icon]: icons/update-cellular-data-plan.svg
-[update-windows-defender-security-intelligence-icon]: icons/update-windows-defender-security-intelligence.svg
+[update-defender-security-intelligence-icon]: icons/update-defender-intelligence.svg
 [wipe-icon]: icons/wipe.svg
