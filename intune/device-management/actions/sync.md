@@ -26,6 +26,8 @@ For more information about the standard Intune policy check-in frequencies, see 
 > - Android
 > - iOS/iPadOS
 > - macOS
+> - tvOS
+> - visionOS
 > - Windows
 
 :::column-end:::

@@ -25,12 +25,14 @@ The *remote lock* device action locks a managed device so the user must enter th
 :::column span="3":::
 
 > This action supports the following platforms:
+>
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - Android Open Source Project (AOSP)
 > - iOS/iPadOS
 > - macOS
+> - visionOS 2.0+
 
 :::column-end:::
 :::row-end:::
