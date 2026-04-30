@@ -36,26 +36,26 @@ Select one of the following tabs to learn more about the available device action
 
 # [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
-| Icon | Action | Description |
-|--|--|--|
-| :::image type="icon" source="icons/autopilot-reset.svg" border="false"::: | [Autopilot reset] | Restores a device to its original settings and removes personal files, apps, and settings. |
-| :::image type="icon" source="icons/bitlocker-key-rotation.svg" border="false"::: | [BitLocker key rotation][RA-BL] | Rotates the BitLocker recovery key for a device. |
-| :::image type="icon" source="icons/collect-diagnostics.svg" border="false"::: | [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune. |
-| :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete]| Removes a device from Intune management, removes any company data, and retires the device. |
-| :::image type="icon" source="icons/fresh-start.svg" border="false"::: | [Fresh Start][RA-FRESHSTART] | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed. |
-| :::image type="icon" source="icons/full-scan.svg" border="false"::: | [Full Scan][RA-SCANF] | Initiates a full scan of the device by Microsoft Defender Antivirus. |
-| :::image type="icon" source="icons/locate-device.svg" border="false"::: | [Locate device]| Shows the approximate location of a device on a map. |
-| :::image type="icon" source="icons/pause-config-refresh.svg" border="false"::: | [Pause Config Refresh][RA-PAUSECR] | Pauses ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes. |
-| :::image type="icon" source="icons/quick-scan.svg" border="false"::: | [Quick Scan][RA-SCANQ] | Initiates a quick scan of the device by Microsoft Defender Antivirus. |
-| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device by using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
-| :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
-| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
-| :::image type="icon" source="icons/rotate-local-admin-password.svg" border="false"::: | [Rotate Local admin password][RA-ROTLAP] | Changes the local administrator password for a device and stores the password in Intune. |
-| :::image type="icon" source="icons/run-remediation.svg" border="false"::: | [Run remediation][RA-REMED] | Initiates on demand Proactive Remediation |
-| :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
-| :::image type="icon" source="icons/update-windows-defender-security-intelligence.svg" border="false"::: | [Update Windows Defender security intelligence][RA-DEFAV] | Updates the security intelligence files for Microsoft Defender Antivirus. |
-| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
+| Icon                                                                                                    | Action                                          | Description                                                                                                |
+|---------------------------------------------------------------------------------------------------------|-------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| :::image type="icon" source="icons/autopilot-reset.svg" border="false":::                               | [Autopilot reset]                               | Restores a device to its original settings and removes personal files, apps, and settings.                 |
+| :::image type="icon" source="icons/bitlocker-key-rotation.svg" border="false":::                        | [BitLocker key rotation]                        | Rotates the BitLocker recovery key for a device.                                                           |
+| :::image type="icon" source="icons/collect-diagnostics.svg" border="false":::                           | [Collect diagnostics]                           | Collects diagnostic logs from a device and uploads the logs to Intune.                                     |
+| :::image type="icon" source="icons/delete.svg" border="false":::                                        | [Delete]                                        | Removes a device from Intune management, removes any company data, and retires the device.                 |
+| :::image type="icon" source="icons/fresh-start.svg" border="false":::                                   | [Fresh Start]                                   | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed.     |
+| :::image type="icon" source="icons/full-scan.svg" border="false":::                                     | [Full Scan]                                     | Initiates a full scan of the device by Microsoft Defender Antivirus.                                       |
+| :::image type="icon" source="icons/locate-device.svg" border="false":::                                 | [Locate device]                                 | Shows the approximate location of a device on a map.                                                       |
+| :::image type="icon" source="icons/pause-config-refresh.svg" border="false":::                          | [Pause Config Refresh]                          | Pauses ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes. |
+| :::image type="icon" source="icons/quick-scan.svg" border="false":::                                    | [Quick Scan]                                    | Initiates a quick scan of the device by Microsoft Defender Antivirus.                                      |
+| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false":::                 | [New remote assistance session]                 | Allows you to remotely control a device by using [Remote Help] or [TeamViewer].                            |
+| :::image type="icon" source="icons/rename-device.svg" border="false":::                                 | [Rename device]                                 | Changes the device name in Intune.                                                                         |
+| :::image type="icon" source="icons/restart.svg" border="false":::                                       | [Restart]                                       | Restarts a device.                                                                                         |
+| :::image type="icon" source="icons/retire.svg" border="false":::                                        | [Retire]                                        | Removes company data and settings from a device, and leaves personal data intact.                          |
+| :::image type="icon" source="icons/rotate-local-admin-password.svg" border="false":::                   | [Rotate Local admin password]                   | Changes the local administrator password for a device and stores the password in Intune.                   |
+| :::image type="icon" source="icons/run-remediation.svg" border="false":::                               | [Run remediation]                               | Initiates on demand Proactive Remediation                                                                  |
+| :::image type="icon" source="icons/sync.svg" border="false":::                                          | [Sync]                                          | Syncs a device with Intune to apply the latest policies and configurations.                                |
+| :::image type="icon" source="icons/update-windows-defender-security-intelligence.svg" border="false"::: | [Update Windows Defender security intelligence] | Updates the security intelligence files for Microsoft Defender Antivirus.                                  |
+| :::image type="icon" source="icons/wipe.svg" border="false":::                                          | [Wipe]                                          | Restores a device to its factory settings and removes all data and settings.                               |
 
 > [!TIP]
 > For Intel vPro devices, Intune also integrates with Intel vPro Fleet Services to provide hardware-level remote management capabilities, including out-of-band management that works even when the operating system is unresponsive or the device is powered off.
@@ -63,43 +63,43 @@ Select one of the following tabs to learn more about the available device action
 # [:::image type="icon" source="../../media/icons/16/apple-mobile.svg"::: **Apple mobile**](#tab/apple-mobile)
 
 
-| Icon                                                                                     | Action                                     | Description                                                                                               | iOS                                                                            | iPadOS                                                                         | tvOS                                                                           | visionOS                                                                       |
-|:----------------------------------------------------------------------------------------:|--------------------------------------------|-----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|
-| :::image type="icon" source="icons/delete.svg" border="false":::                         | [Delete]                       | Removes a device from Intune management, removes any company data, and retires the device.                | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| :::image type="icon" source="icons/disable-activation-lock.svg" border="false":::        | [Disable Activation Lock]   | Removes the Activation Lock from a device that's enrolled with a device enrollment manager (DEM) account. | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/locate-device.svg" border="false":::                  | [Locate device]              | Shows the approximate location of a device on a map.                                                      | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/logout-current-user.svg" border="false":::            | [Logout current user][RA-LOGOUT]           | Signs out the current user from a Shared iPad.                                                            |                                                                                | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/lost-mode.svg" border="false":::                      | [Lost mode][RA-LOSTMODE]                   | Locks a device with a custom message and disables sound and vibration.                                    | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false":::  | [New remote assistance session][RA-ASSIST] | Allows you to remotely control a device by using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW].        | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/play-lost-mode-sound.svg" border="false":::           | [Play Lost Mode sound][RA-PLAY]            | Plays Lost Mode sound on a lost device to help locate it.                                                 | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/remote-lock.svg" border="false":::                    | [Remote lock][RA-LOCK]                     | Locks a device and resets its password.                                                                   | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/remove-apps-and-configurations.svg" border="false"::: | [Remove apps and configuration][RA-APPCON] | Temporarily removes applications and configuration from a device.                                         | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/remove-user.svg" border="false":::                    | [Remove user][RA-REMOVEUSER]               | Deletes a user from the cache of a Shared iPad.                                                           |                                                                                | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/rename-device.svg" border="false":::                  | [Rename device][RA-REN]                    | Changes the device name in Intune.                                                                        | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| :::image type="icon" source="icons/remove-passcode.svg" border="false":::                | [Remove passcode][RA-PREM]                 | Removes the device passcode.                                                                              | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/restart.svg" border="false":::                        | [Restart][RA-RESTART]                      | Restarts a device.                                                                                        | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| :::image type="icon" source="icons/retire.svg" border="false":::                         | [Retire][RA-RETIRE]                        | Removes company data and settings from a device, and leaves personal data intact.                         | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| :::image type="icon" source="icons/send-custom-notification.svg" border="false":::       | [Send custom notification][RA-NOTIFY]      | Sends a custom notification message to a device that can be viewed in the Company Portal app.             | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/shut-down.svg" border="false":::                      | [Shut down][RA-SHUT]                       | Shuts down a device.                                                                                      | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/sync.svg" border="false":::                           | [Sync][RA-SYNC]                            | Syncs a device with Intune to apply the latest policies and configurations.                               | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| :::image type="icon" source="icons/update-cellular-data-plan.svg" border="false":::      | [Update cellular data plan][RA-CELLULAR]   | Updates the cellular data plan settings for a device that uses an eSIM profile.                           | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
-| :::image type="icon" source="icons/wipe.svg" border="false":::                           | [Wipe][RA-WIPE]                            | Restores a device to its factory settings and removes all data and settings.                              | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Icon                                                                                     | Action                          | Description                                                                                               | iOS                                                                            | iPadOS                                                                         | tvOS                                                                           | visionOS                                                                       |
+|:----------------------------------------------------------------------------------------:|---------------------------------|-----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|:------------------------------------------------------------------------------:|
+| :::image type="icon" source="icons/delete.svg" border="false":::                         | [Delete]                        | Removes a device from Intune management, removes any company data, and retires the device.                | [CHECK]| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| :::image type="icon" source="icons/disable-activation-lock.svg" border="false":::        | [Disable Activation Lock]       | Removes the Activation Lock from a device that's enrolled with a device enrollment manager (DEM) account. | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/locate-device.svg" border="false":::                  | [Locate device]                 | Shows the approximate location of a device on a map.                                                      | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/logout-current-user.svg" border="false":::            | [Logout current user]           | Signs out the current user from a Shared iPad.                                                            |                                                                                | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/lost-mode.svg" border="false":::                      | [Lost mode]                     | Locks a device with a custom message and disables sound and vibration.                                    | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false":::  | [New remote assistance session] | Allows you to remotely control a device by using [Remote Help] or [TeamViewer].                           | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/play-lost-mode-sound.svg" border="false":::           | [Play Lost Mode sound]          | Plays Lost Mode sound on a lost device to help locate it.                                                 | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/remote-lock.svg" border="false":::                    | [Remote lock]                   | Locks a device and resets its password.                                                                   | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/remove-apps-and-configurations.svg" border="false"::: | [Remove apps and configuration] | Temporarily removes applications and configuration from a device.                                         | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/remove-user.svg" border="false":::                    | [Remove user]                   | Deletes a user from the cache of a Shared iPad.                                                           |                                                                                | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/rename-device.svg" border="false":::                  | [Rename device]                 | Changes the device name in Intune.                                                                        | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| :::image type="icon" source="icons/remove-passcode.svg" border="false":::                | [Remove passcode]               | Removes the device passcode.                                                                              | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/restart.svg" border="false":::                        | [Restart]                       | Restarts a device.                                                                                        | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| :::image type="icon" source="icons/retire.svg" border="false":::                         | [Retire]                        | Removes company data and settings from a device, and leaves personal data intact.                         | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| :::image type="icon" source="icons/send-custom-notification.svg" border="false":::       | [Send custom notification]      | Sends a custom notification message to a device that can be viewed in the Company Portal app.             | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/shut-down.svg" border="false":::                      | [Shut down]                     | Shuts down a device.                                                                                      | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/sync.svg" border="false":::                           | [Sync]                          | Syncs a device with Intune to apply the latest policies and configurations.                               | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| :::image type="icon" source="icons/update-cellular-data-plan.svg" border="false":::      | [Update cellular data plan]     | Updates the cellular data plan settings for a device that uses an eSIM profile.                           | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |                                                                                |                                                                                |
+| :::image type="icon" source="icons/wipe.svg" border="false":::                           | [Wipe]                          | Restores a device to its factory settings and removes all data and settings.                              | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 # [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 | Icon | Action | Description |
 |--|--|--|
 | :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete]| Removes a device from Intune management, removes any company data, and retires the device. |
-| :::image type="icon" source="icons/disable-activation-lock.svg" border="false"::: | [Disable Activation Lock][RA-ACTLOCK] | Removes the Activation Lock from a device that's enrolled with a device enrollment manager (DEM) account. |
-| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device by using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
-| :::image type="icon" source="icons/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
-| :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
-| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
-| :::image type="icon" source="icons/rotate-filevault-recovery.svg" border="false"::: | [Rotate FileVault recovery key][RA-FV] | Rotates the FileVault recovery key. |
-| :::image type="icon" source="icons/rotate-recovery-lock.svg" border="false"::: | [Rotate Recovery Lock passcode][RA-RL] | Rotates the Recovery Lock passcode.|
-| :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
-| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
+| :::image type="icon" source="icons/disable-activation-lock.svg" border="false"::: | [Disable Activation Lock] | Removes the Activation Lock from a device that's enrolled with a device enrollment manager (DEM) account. |
+| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session]| Allows you to remotely control a device by using [Remote Help] or [TeamViewer]. |
+| :::image type="icon" source="icons/remote-lock.svg" border="false"::: | [Remote lock] | Locks a device and resets its password. |
+| :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device] | Changes the device name in Intune. |
+| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart] | Restarts a device. |
+| :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire] | Removes company data and settings from a device, and leaves personal data intact. |
+| :::image type="icon" source="icons/rotate-filevault-recovery.svg" border="false"::: | [Rotate FileVault recovery key] | Rotates the FileVault recovery key. |
+| :::image type="icon" source="icons/rotate-recovery-lock.svg" border="false"::: | [Rotate Recovery Lock passcode] | Rotates the Recovery Lock passcode.|
+| :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync] | Syncs a device with Intune to apply the latest policies and configurations. |
+| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe] | Restores a device to its factory settings and removes all data and settings. |
 
 # [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
@@ -107,17 +107,17 @@ Select one of the following tabs to learn more about the available device action
 |--|--|--|
 | :::image type="icon" source="icons/delete.svg" border="false"::: | [Delete]| Removes a device from Intune management, removes any company data, and retires the device. |
 | :::image type="icon" source="icons/locate-device.svg" border="false"::: | [Locate device]| Shows the approximate location of a device on a map. |
-| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session][RA-ASSIST]| Allows you to remotely control a device by using [Remote Help][RA-HELP] or [TeamViewer][RA-TVIEW]. |
-| :::image type="icon" source="icons/play-lost-mode-sound.svg" border="false"::: | [Play lost device sound][RA-PLAY] | Plays a sound on a lost device to help locate it. |
-| :::image type="icon" source="icons/remote-lock.svg" border="false"::: | [Remote lock][RA-LOCK] | Locks a device and resets its password. |
-| :::image type="icon" source="icons/remove-apps-and-configuration.svg" border="false"::: | [Remove apps and configuration][RA-APPCON] | Temporarily removes applications and configuration from a device.|
-| :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
-| :::image type="icon" source="icons/reset-passcode.svg" border="false"::: | [Reset passcode][RA-PREST] | Resets the device passcode. |
-| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
-| :::image type="icon" source="icons/send-custom-notification.svg" border="false"::: | [Send custom notification][RA-NOTIFY] | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
-| :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
-| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
+| :::image type="icon" source="icons/new-remote-assistance-session.svg" border="false"::: | [New remote assistance session]| Allows you to remotely control a device by using [Remote Help] or [TeamViewer]. |
+| :::image type="icon" source="icons/play-lost-mode-sound.svg" border="false"::: | [Play lost device sound] | Plays a sound on a lost device to help locate it. |
+| :::image type="icon" source="icons/remote-lock.svg" border="false"::: | [Remote lock] | Locks a device and resets its password. |
+| :::image type="icon" source="icons/remove-apps-and-configuration.svg" border="false"::: | [Remove apps and configuration] | Temporarily removes applications and configuration from a device.|
+| :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device] | Changes the device name in Intune. |
+| :::image type="icon" source="icons/reset-passcode.svg" border="false"::: | [Reset passcode] | Resets the device passcode. |
+| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart] | Restarts a device. |
+| :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire] | Removes company data and settings from a device, and leaves personal data intact. |
+| :::image type="icon" source="icons/send-custom-notification.svg" border="false"::: | [Send custom notification] | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
+| :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync] | Syncs a device with Intune to apply the latest policies and configurations. |
+| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe] | Restores a device to its factory settings and removes all data and settings. |
 
 # [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
@@ -126,10 +126,10 @@ Select one of the following tabs to learn more about the available device action
 
 | Icon | Action | Description |
 |--|--|--|
-| :::image type="icon" source="icons/retire.svg" border="false"::: | [Deprovision][RA-DEPR] | Removes Google Admin policies from a ChromeOS device that you no longer use. |
-| :::image type="icon" source="icons/lost-mode.svg" border="false"::: | [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
-| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment. |
+| :::image type="icon" source="icons/retire.svg" border="false"::: | [Deprovision] | Removes Google Admin policies from a ChromeOS device that you no longer use. |
+| :::image type="icon" source="icons/lost-mode.svg" border="false"::: | [Lost mode] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
+| :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart] | Restarts a device. |
+| :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe] | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment. |
 
 ---
 
@@ -163,55 +163,55 @@ Select one of the following tabs to learn more about the available bulk device a
 | Bulk action                    | Description                                                                                |
 |--------------------------------|--------------------------------------------------------------------------------------------|
 | [Autopilot reset] | Restores a device to its original settings and removes personal files, apps, and settings. |
-| [Collect diagnostics][RA-DIAG] | Collects diagnostic logs from a device and uploads the logs to Intune.                     |
+| [Collect diagnostics] | Collects diagnostic logs from a device and uploads the logs to Intune.                     |
 | [Delete]           | Removes a device from Intune management, removes any company data, and retires the device. |
-| [Rename][RA-REN]               | Changes the device name in Intune.                                                         |
-| [Restart][RA-RESTART]          | Restarts a device.                                                                         |
-| [Retire][RA-RETIRE]            | Removes company data and settings from a device, and leaves personal data intact.          |
-| [Sync][RA-SYNC]                | Syncs a device with Intune to apply the latest policies and configurations.                |
-| [Wipe][RA-WIPE]                | Restores a device to the factory settings and removes all data and settings.               |
+| [Rename]               | Changes the device name in Intune.                                                         |
+| [Restart]              | Restarts a device.                                                                         |
+| [Retire]               | Removes company data and settings from a device, and leaves personal data intact.          |
+| [Sync]                 | Syncs a device with Intune to apply the latest policies and configurations.                |
+| [Wipe]                 | Restores a device to the factory settings and removes all data and settings.               |
 
 # [:::image type="icon" source="../../media/icons/16/apple-mobile.svg"::: **Apple mobile**](#tab/apple-mobile)
 
 | Bulk action                              | Description                                                                                   |
 |------------------------------------------|-----------------------------------------------------------------------------------------------|
 | [Delete]                     | Removes a device from Intune management, removes any company data, and retires the device.    |
-| [Rename][RA-REN]                         | Changes the device name in Intune.                                                            |
-| [Restart][RA-RESTART]                    | Restarts a device.                                                                            |
-| [Retire][RA-RETIRE]                      | Removes company data and settings from a device, and leaves personal data intact.             |
-| [Send custom notification][RA-NOTIFY]    | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
-| [Sync][RA-SYNC]                          | Syncs a device with Intune to apply the latest policies and configurations.                   |
-| [Update cellular data plan][RA-CELLULAR] | Updates the cellular data plan settings for a device that uses an eSIM profile.               |
-| [Wipe][RA-WIPE]                          | Restores a device to its factory settings and removes all data and settings.                  |
+| [Rename]                         | Changes the device name in Intune.                                                            |
+| [Restart]                        | Restarts a device.                                                                            |
+| [Retire]                         | Removes company data and settings from a device, and leaves personal data intact.             |
+| [Send custom notification]       | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
+| [Sync]                           | Syncs a device with Intune to apply the latest policies and configurations.                   |
+| [Update cellular data plan]      | Updates the cellular data plan settings for a device that uses an eSIM profile.               |
+| [Wipe]                           | Restores a device to its factory settings and removes all data and settings.                  |
 
 # [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 | Bulk action             | Description                                                                                |
 |-------------------------|--------------------------------------------------------------------------------------------|
 | [Delete]    | Removes a device from Intune management, removes any company data, and retires the device. |
-| [Rename device][RA-REN] | Changes the device name in Intune.                                                         |
-| [Restart][RA-RESTART]   | Restarts a device.                                                                         |
-| [Retire][RA-RETIRE]     | Removes company data and settings from a device, and leaves personal data intact.          |
-| [Sync][RA-SYNC]         | Syncs a device with Intune to apply the latest policies and configurations.                |
-| [Wipe][RA-WIPE]         | Restores a device to its factory settings and removes all data and settings.               |
+| [Rename device] | Changes the device name in Intune.                                                         |
+| [Restart]       | Restarts a device.                                                                         |
+| [Retire]        | Removes company data and settings from a device, and leaves personal data intact.          |
+| [Sync]          | Syncs a device with Intune to apply the latest policies and configurations.                |
+| [Wipe]          | Restores a device to its factory settings and removes all data and settings.               |
 
 # [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 | Bulk action           | Description                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------|
 | [Delete]  | Removes a device from Intune management, removes any company data, and retires the device. |
-| [Rename][RA-REN]      | Changes the device name in Intune.                                                         |
-| [Restart][RA-RESTART] | Restarts a device.                                                                         |
-| [Wipe][RA-WIPE]       | Restores a device to its factory settings and removes all data and settings.               |
+| [Rename]      | Changes the device name in Intune.                                                         |
+| [Restart]     | Restarts a device.                                                                         |
+| [Wipe]        | Restores a device to its factory settings and removes all data and settings.               |
 
 # [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 | Bulk action              | Description                                                                                                                                                                                     |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Deprovision][RA-DEPR]   | Removes Google Admin policies from a ChromeOS device that you no longer use.                                                                                                                    |
-| [Lost mode][RA-LOSTMODE] | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
-| [Restart][RA-RESTART]    | Restarts a device.                                                                                                                                                                              |
-| [Wipe][RA-WIPE]        | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment.                         |
+| [Deprovision] | Removes Google Admin policies from a ChromeOS device that you no longer use.                                                                                                                    |
+| [Lost mode]   | Locks a lost or stolen ChromeOS device and displays a custom message and contact info configured in the Google Admin Console. In Chrome Enterprise, this action is referred to as **Disabled**. |
+| [Restart]     | Restarts a device.                                                                                                                                                                              |
+| [Wipe]        | Erases data from the device. You can choose to remove only user profiles or perform a full factory reset (Powerwash). A factory reset is required before re-enrollment.                         |
 
 ---
 
@@ -233,50 +233,52 @@ Each bulk action has its own steps. The documentation for each action provides d
 
 Device actions in Intune empower IT pros to manage devices efficiently and securely—whether individually or at scale. Explore the documentation linked in this article to learn more about each action and how to integrate them into your device management workflows.
 
-<!--links-->
+<!--actions links-->
 
-[RA-ACTLOCK]: disable-activation-lock.md
-[RA-APPCON]: remove-apps-config.md
 [Autopilot reset]: autopilot-reset.md
-[RA-ASSIST]: remote-assist.md
-[RA-BL]: rotate-bitlocker-keys.md
-[RA-CELLULAR]: update-cellular-data-plan.md
-[RA-DEFAV]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
+[BitLocker key rotation]: rotate-bitlocker-keys.md
+[Collect diagnostics]: collect-diagnostics.md
+[Delete]: /entra/identity/authentication/concept-authentication-passwordless
 [Delete]: delete.md
-[RA-DEPR]: deprovision.md
-[RA-DIAG]: collect-diagnostics.md
-[RA-FRESHSTART]: fresh-start.md
-[RA-FV]: rotate-filevault-recovery-key.md
-[RA-HELP]: ../../remote-help/index.md
-[RA-LOCATE]: locate.md
-[RA-LOCK]: remote-lock.md
-[RA-LOGOUT]: logout-user.md
-[RA-LOSTMODE]: lost-mode.md
-[RA-NOTIFY]: send-custom-notification.md
-[RA-PAUSECR]: pause-config-refresh.md
-[RA-PLAY]: play-lost-mode-sound.md
-[RA-PREM]: remove-passcode.md
-[RA-PREST]: reset-passcode.md
-[RA-REMED]: run-remediation.md
-[RA-REMOVEUSER]: remove-user.md
-[RA-REN]: rename.md
-[RA-RESTART]: restart.md
-[RA-RETIRE]: retire.md
-[RA-RL]: rotate-recovery-lock-passcode.md 
-[RA-RMHS]: device-restore-managed-home-screen.md
-[RA-ROTLAP]: ../../device-security/laps/deploy-policy.md#manually-rotate-passwords
-[RA-SCAN]: device-scan-defender.md
-[RA-SCANF]: full-scan.md
-[RA-SCANQ]: quick-scan.md
-[RA-SMHS]: device-suspend-managed-home-screen.md 
-[RA-SYNC]: sync.md
-[RA-TVIEW]: ../../device-management/tools/teamviewer-legacy.md
-[RA-WIPE]: wipe.md
+[Deprovision]: deprovision.md
+[Disable Activation Lock]: disable-activation-lock.md
+[Disable Activation Lock]: disable-activation-lock.md
+[Fresh Start]: fresh-start.md
+[Full Scan]: full-scan.md
+[Locate device]: locate.md
+[Logout current user]: logout-user.md
+[Lost mode]: lost-mode.md
+[New remote assistance session]: remote-assist.md
+[Pause Config Refresh]: pause-config-refresh.md
+[Play lost device sound]: play-lost-mode-sound.md
+[Play Lost Mode sound]: play-lost-mode-sound.md
+[Quick Scan]: quick-scan.md
+[Remote Help]: ../../remote-help/index.md
+[Remote lock]: remote-lock.md
+[Remove apps and configuration]: remove-apps-config.md
+[Remove passcode]: remove-passcode.md
+[Remove user]: remove-user.md
+[Rename device]: rename.md
+[Rename]: rename.md
+[Reset passcode]: reset-passcode.md
+[Restart]: restart.md
+[Retire]: retire.md
+[Rotate FileVault recovery key]: rotate-filevault-recovery-key.md
+[Rotate Local admin password]: ../../device-security/laps/deploy-policy.md#manually-rotate-passwords
+[Rotate Recovery Lock passcode]: rotate-recovery-lock-passcode.md 
+[Run remediation]: run-remediation.md
+[Send custom notification]: send-custom-notification.md
+[Shut down]: shutdown.md
+[Sync]: sync.md
+[TeamViewer]: ../../device-management/tools/teamviewer-legacy.md
+[Update cellular data plan]: update-cellular-data-plan.md
+[Update Windows Defender security intelligence]: /windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus
+[Wipe]: wipe.md
+
+<!-- portal links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 
-[Delete]: /entra/identity/authentication/concept-authentication-passwordless
-[Disable Activation Lock]: disable-activation-lock.md
-[Locate device]: locate.md
+[CHECK]: :::image type="icon" source="../../media/icons/16/check.svg" border="false":::
