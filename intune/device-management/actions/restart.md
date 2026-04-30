@@ -23,13 +23,15 @@ The *restart* action triggers a restart (usually begins within 5 minutes) and mi
 :::column span="3":::
 
 > This action supports the following platforms:
-> - Android Enterprise corporate-owned Fully Managed (COBO)
+>
 > - Android Enterprise corporate-owned Dedicated (COSU)
+> - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Open Source Project (AOSP)
+> - ChromeOS (kiosk mode or managed guest session)
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP]
 > - macOS
+> - tvOS 10.2+ in [Supervised Mode][IOS-SUP]
 > - Windows
-> - ChromeOS (kiosk mode or managed guest session)
 
 ::: zone pivot="chromeos"
 

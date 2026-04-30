@@ -97,8 +97,8 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add line-of-business apps ](../app-management/deployment/add-lob-ios.md)|Add iOS/iPadOS line-of-business (LOB) apps to Intune, and assign to groups.|
 |[Assign apps to groups ](../app-management/deployment/assign-groups.md)|Assign apps to users and devices.|
 |[Include and exclude app assignments ](../app-management/deployment/configure-assignment-scope.md)|Control access and availability to an app by including and excluding selected groups from assignment.|
-|[Manage iOS/iPadOS apps purchased through Apple Business Manager](../app-management/deployment/manage-vpp-apple.md)|Synchronize, manage, and assign apps purchased through Apple Business Manager.|
-|[Manage iOS/iPadOS eBooks purchased through Apple Business Manager ](../app-management/deployment/manage-ebooks-ios.md)| Synchronize, manage, and assign books purchased through Apple Business Manager. |
+|[Manage iOS/iPadOS apps purchased through Apple Business](../app-management/deployment/manage-vpp-apple.md)|Synchronize, manage, and assign apps purchased through Apple Business.|
+|[Manage iOS/iPadOS eBooks purchased through Apple Business ](../app-management/deployment/manage-ebooks-ios.md)| Synchronize, manage, and assign books purchased through Apple Business. |
 | [Create an iOS/iPadOS app protection policy](../app-management/protection/create-policy.md) | Keep your organization's data contained within managed apps like Outlook and Word. See [iOS/iPadOS app protection policy settings](../app-management/protection/ref-settings-ios.md) for details about each setting.|
 | [Create an app provisioning profile](../app-management/deployment/manage-provisioning-profiles-ios.md) |Prevent app certificates from expiring by proactively assigning new provisioning profiles to devices that have apps nearing expiry.|
 |[Create an app configuration policy](../app-management/configuration/configure-managed-ios.md)  | Apply custom configuration settings to iOS/iPadOS apps on enrolled devices. You can also apply these types of policies [to managed apps without device enrollment](../app-management/configuration/configure-managed-apps.md). |
@@ -115,10 +115,10 @@ For information about each enrollment method and how to choose one that's right 
 
 | Task | Detail |
 | ---- | ------ |
-|[Set up Apple Automated Device Enrollment (ADE) in Intune](../device-enrollment/apple/setup-automated-ios.md)|Set up an out-of-the-box enrollment experience for corporate-owned devices purchased through Apple School Manager or Apple Business Manager. For a detailed walkthrough of this process, see [Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices](../device-enrollment/apple/tutorial-automated-ios.md)|
+|[Set up Apple Automated Device Enrollment (ADE) in Intune](../device-enrollment/apple/setup-automated-ios.md)|Set up an out-of-the-box enrollment experience for corporate-owned devices purchased through Apple School Manager or Apple Business. For a detailed walkthrough of this process, see [Tutorial: Use Apple's Corporate Device Enrollment features in Apple Business to enroll iOS/iPadOS devices](../device-enrollment/apple/tutorial-automated-ios.md)|
 |[Set up Apple School Manager in Intune](../device-enrollment/apple/school-manager.md)|Set up Intune to enroll devices you purchased through the Apple School Manager program.|
 |[Set up device enrollment with Apple Configurator ](../device-enrollment/apple/setup-configurator-ios.md)| Create an Apple Configurator profile to enroll corporate-owned devices (with no user affinity) via direct enrollment; or to enroll wiped or new devices (with user affinity) via Setup Assistant. You'll need to export the Apple Configurator profile from Intune, which requires a USB connection to a Mac computer running Apple Configurator.|
-| [Identify devices as corporate-owned](../device-enrollment/add-corporate-identifiers.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. |
+| [Identify devices as corporate-owned](../device-enrollment/add-corporate-identifiers.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business. |
 |[Set up Apple User Enrollment](../device-enrollment/apple/user-enrollment-methods-ios.md)|Create a user enrollment profile to deploy the Apple User Enrollment experience to devices using a managed Apple ID. |
 |[Set up shared iPad devices](../device-enrollment/apple/shared-ipad.md)|Configure devices so that they can be used by more than one person (the type of setup you'd see in a library or educational environment).|
 |[Backup and restore devices](../device-enrollment/apple/backup-restore-ios.md)|Back up and restore a device to prepare it for enrollment or migration in Intune, such as during Automated Device Enrollment setup.   |
@@ -140,7 +140,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.
 
 * [Walk through Intune admin center](tutorial-admin-center-walkthrough.md)
-* [Use Apple corporate device enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune](../device-enrollment/apple/tutorial-automated-ios.md)
+* [Use Apple corporate device enrollment features in Apple Business to enroll iOS/iPadOS devices in Intune](../device-enrollment/apple/tutorial-automated-ios.md)
 * [Protect Exchange Online email on managed devices](../solutions/tutorials/protect-email-enrolled-devices.md)
 * [Protect Exchange Online email on unmanaged devices](../solutions/tutorials/protect-email-unmanaged-devices.md)
 * [Configure Slack to use Intune for EMM and app configuration](../app-management/configuration/tutorial-configure-slack.md)

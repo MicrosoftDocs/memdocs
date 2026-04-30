@@ -61,7 +61,7 @@ items:
   - name: Remove user
     href: remove-user.md
     displayName: remote action
-  - name: Rename device
+  - name: Rename
     href: rename.md
     displayName: remote action
   - name: Reset passcode
@@ -69,6 +69,9 @@ items:
     displayName: remote action
   - name: Restart
     href: restart.md
+    displayName: remote action
+  - name: Restore managed home screen
+    href: restore-managed-home-screen.md
     displayName: remote action
   - name: Retire
     href: retire.md
@@ -90,6 +93,9 @@ items:
     displayName: remote action
   - name: Shutdown
     href: shutdown.md
+    displayName: remote action
+  - name: Suspend managed home screen
+    href: suspend-managed-home-screen.md
     displayName: remote action
   - name: Sync
     href: sync.md

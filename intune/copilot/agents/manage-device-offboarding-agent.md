@@ -20,7 +20,7 @@ This article provides sample responses to show how the agent helps with device o
 
 > [!div class="checklist"]
 > - This feature is in [public preview](../../fundamentals/public-preview.md).
-> - Confirm that your environment meets the requirements in [Get Started with the Device Offboarding Agent](device-offboarding-agent.md).
+> - Confirm that your environment meets the prerequisites described in [Get started with the Device Offboarding Agent](device-offboarding-agent.md).
 > - The agent won't run if no retire, wipe, or deletion actions occurred in the past 30 days.
 
 ## Explore the agent options
