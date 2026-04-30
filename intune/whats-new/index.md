@@ -2,7 +2,6 @@
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 ms.date: 04/27/2026
-ms.date: 04/27/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -61,26 +60,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Support for Ubuntu 26.04 LTS<!--36899679-->
 Microsoft Intune now supports Ubuntu 26.04 LTS. Support for Ubuntu 22.04 LTS ends in August 2026. Devices already enrolled on Ubuntu 22.04 remain enrolled, but you should notify users to upgrade to a supported Ubuntu version. You can identify devices running Ubuntu 22.04 in the Intune admin center by going to **Devices** > **All devices**, filtering by **Linux**, and adding the **OS version** column. For more information, see [Enroll Linux desktop devices in Microsoft Intune](../device-enrollment/guide-linux.md).  
 
-
-### Device security  
-
-#### Autopatch update risk visibility report<!--37672980-->
-
-The *Autopatch update risk visibility* report extends the *security update status* dashboard with granular insight into patch compliance and risk across your managed devices. It classifies devices as *Current*, *Exposed*, or *Critical* and highlights policies contributing to risk, so you can identify and remediate issues faster.
- 
-For more information, see [Protect your estate: Reassess your Windows update policies](https://aka.ms/ReassessProtect).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-
-
-## Week of April 27, 2026  
-
-### Device management
-
 #### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483-->
 
 Intune has two new remote actions that allow admins to temporarily suspend and restore Managed Home Screen (MHS) on Android devices. These actions let users exit MHS and access the device's default launcher for a defined period—without removing policies or requiring a PIN.
@@ -97,6 +76,19 @@ To learn more, see:
 >
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
+
+### Device security  
+
+#### Autopatch update risk visibility report<!--37672980-->
+
+The *Autopatch update risk visibility* report extends the *security update status* dashboard with granular insight into patch compliance and risk across your managed devices. It classifies devices as *Current*, *Exposed*, or *Critical* and highlights policies contributing to risk, so you can identify and remediate issues faster.
+ 
+For more information, see [Protect your estate: Reassess your Windows update policies](https://aka.ms/ReassessProtect).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 ## Week of April 20, 2026  
 
