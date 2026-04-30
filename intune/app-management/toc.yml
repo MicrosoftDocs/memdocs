@@ -8,6 +8,7 @@ items:
         href: ./lifecycle.md
       - name: App protection without enrollment
         href: ./protection/mam-without-enrollment.md
+        displayName: mobile application management, mam-we, mamwe
       - name: App protection vs work profiles (Android)
         href: ./protection/mam-vs-work-profiles-android.md
         displayName: app-we; without; without enrollment

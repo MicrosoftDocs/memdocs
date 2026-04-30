@@ -7,9 +7,9 @@ metadata:
   title: App protection
   description: Create and manage app protection policies in Microsoft Intune to safeguard corporate data, control data transfer, and enforce conditional launch rules.
   ms.topic: landing-page
-  ms.date: 04/24/2026
-  author: paolomatarazzo
-  ms.author: paoloma
+  ms.date: 04/30/2026
+  author: nicholasswhite
+  ms.author: nwhite
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |
@@ -23,6 +23,8 @@ landingContent:
       links:
       - text: App protection policies overview
         url: overview.md
+      - text: App protection without enrollment (MAM-WE)
+        url: mam-without-enrollment.md
     - linkListType: concept
       links:
       - text: Data protection framework
