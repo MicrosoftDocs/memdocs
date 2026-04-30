@@ -60,6 +60,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Support for Ubuntu 26.04 LTS<!--36899679-->
 Microsoft Intune now supports Ubuntu 26.04 LTS. Support for Ubuntu 22.04 LTS ends in August 2026. Devices already enrolled on Ubuntu 22.04 remain enrolled, but you should notify users to upgrade to a supported Ubuntu version. You can identify devices running Ubuntu 22.04 in the Intune admin center by going to **Devices** > **All devices**, filtering by **Linux**, and adding the **OS version** column. For more information, see [Enroll Linux desktop devices in Microsoft Intune](../device-enrollment/guide-linux.md).  
 
+#### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483-->
+
+Intune has two new remote actions that allow admins to temporarily suspend and restore Managed Home Screen (MHS) on Android devices. These actions let users exit MHS and access the device's default launcher for a defined period—without removing policies or requiring a PIN.
+
+When the specified duration expires, or when the *restore managed home screen action* is triggered, MHS automatically re‑locks the device into the kiosk experience. This helps maintain security while reducing disruption during troubleshooting or short‑term use outside of MHS.
+
+To learn more, see:
+
+- [Suspend Managed Home Screen](../device-management/actions/suspend-managed-home-screen.md)
+- [Restore Managed Home Screen](../device-management/actions/restore-managed-home-screen.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
 
 ### Device security  
 
@@ -73,7 +89,6 @@ For more information, see [Protect your estate: Reassess your Windows update pol
 > Applies to:
 >
 > - Windows
-
 
 ## Week of April 20, 2026  
 
