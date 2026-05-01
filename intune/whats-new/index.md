@@ -150,6 +150,23 @@ Other features:
 
 All existing device management capabilities remain available. This update focuses on making them easier to find and use.
 
+#### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
+
+Intune has two new remote actions that allow admins to temporarily suspend and restore Managed Home Screen (MHS) on Android devices. These actions let users exit MHS and access the device's default launcher for a defined period, without removing policies or requiring a PIN.
+
+When the specified duration expires, or when the *restore managed home screen action* is triggered, MHS automatically re-locks the device into the kiosk experience. This helps maintain security while reducing disruption during troubleshooting or short-term use outside of MHS.
+
+To learn more, see:
+
+- [Suspend Managed Home Screen](../device-management/actions/suspend-managed-home-screen.md)
+- [Restore Managed Home Screen](../device-management/actions/restore-managed-home-screen.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
+
 ### Device security
 
 #### Autopatch update risk visibility report<!-- 37672980 -->

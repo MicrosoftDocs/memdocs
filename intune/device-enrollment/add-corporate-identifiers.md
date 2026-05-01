@@ -15,7 +15,7 @@ Ensure that corporate devices are marked as *corporate-owned* as soon as they en
 It isn't necessary to add corporate identifiers for all deployments. During enrollment, Intune automatically assigns corporate-owned status to devices that join to Microsoft Entra via:
 
 - [Device enrollment manager](setup-enrollment-manager.md) account (all platforms)
-- An Apple device enrollment program such as [Apple School Manager](apple/school-manager.md), Apple Business Manager, or [Apple Configurator](apple/setup-configurator-ios.md) (iOS/iPadOS only)
+- An Apple device enrollment program such as [Apple School Manager](apple/school-manager.md), Apple Business, or [Apple Configurator](apple/setup-configurator-ios.md) (iOS/iPadOS only)
 - [Windows Autopilot](/autopilot/windows-autopilot)
 - Co-management with Microsoft Intune and group policy (GPO)
 - Azure Virtual Desktop

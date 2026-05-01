@@ -23,13 +23,15 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 
 > This action supports the following platforms:
 >
-> - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - Android Open Source Project (AOSP)
 > - ChromeOS
 > - iOS/iPadOS
 > - macOS
+> - tvOS 10.2+
+> - visionOS 1.1+
 > - Windows
 
 :::column-end:::

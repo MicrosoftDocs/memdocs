@@ -4031,7 +4031,7 @@ Applies to:
 
 - macOS 10.11 and later
 
-For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-profile).
+For more information about macOS account settings, see [Create an Apple enrollment profile in Intune](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-policy).
 
 #### Await final configuration for macOS automated device enrollment now generally available<!-- 24973562 -->
 
@@ -4045,7 +4045,7 @@ Applies to:
 
 - macOS 10.11 and later
 
-For information about how to enable await final configuration, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-profile).
+For information about how to enable await final configuration, see [Create an Apple enrollment policy](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-policy).
 
 ### Device management
 
@@ -5402,7 +5402,7 @@ Now generally available, *awaiting final configuration* enables a locked experie
 - iOS/iPadOS 13+ devices enrolling without user affinity
 - iOS/iPadOS 13+ devices enrolling with Microsoft Entra ID shared mode
 
-This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device.  Awaiting final configuration is enabled by default for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](../../device-enrollment/apple/setup-automated-ios.md#create-an-apple-enrollment-profile).
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device.  Awaiting final configuration is enabled by default for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment policy](../../device-enrollment/apple/setup-automated-ios.md#create-an-apple-enrollment-policy).
 
 ### Device management
 

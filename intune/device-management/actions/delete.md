@@ -56,6 +56,8 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 > - Android
 > - iOS/iPadOS
 > - macOS
+> - tvOS
+> - visionOS
 > - Windows
 
 :::column-end:::
