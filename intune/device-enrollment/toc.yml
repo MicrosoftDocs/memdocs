@@ -116,8 +116,12 @@ items:
       href: ./apple/setup-apple-token.md
     - name: Choose authentication method
       href: ./apple/ref-automated-authentication-methods.md
-    - name: Create an enrollment profile
+    - name: Create an enrollment policy for iOS/iPadOS
       href: ./apple/setup-automated-ios.md
+    - name: Create an enrollment policy for tvOS
+      href: ./apple/setup-automated-tv-os.md
+    - name: Create an enrollment policy for visionOS
+      href: ./apple/setup-automated-vision-os.md
     - name: Set up just-in-time registration
       href: ./apple/setup-just-in-time-registration.md
     - name: Set up shared device mode
@@ -132,7 +136,7 @@ items:
         href: ./apple/school-manager.md
       - name: Step 1 - Get a token and assign devices
         href: ./apple/school-manager-step-1.md
-      - name: Step 2 - Create an enrollment profile
+      - name: Step 2 - Create an enrollment policy
         href: ./apple/school-manager-step-2.md
       - name: Step 3 - Sync managed devices
         href: ./apple/school-manager-step-3.md

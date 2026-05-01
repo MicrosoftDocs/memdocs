@@ -121,7 +121,8 @@ items:
         href: ./deployment/deploy-windows.md
       - name: Deploy apps to Government environments
         href: ./deployment/deploy-gcc-dod.md
-
+  - name: App inventory
+    href: ./deployment/enhanced-app-inventory.md
   - name: Configure apps
     items:
       - name: App configuration policies overview
