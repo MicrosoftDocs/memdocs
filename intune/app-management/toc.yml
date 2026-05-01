@@ -139,6 +139,8 @@ items:
         href: ./monitor-assignments.md
       - name: Discovered apps
         href: ./discovered-apps.md
+      - name: App inventory
+        href: ./deployment/enhanced-app-inventory.md
       - name: Configure apps
         items:
           - name: App configuration policies
