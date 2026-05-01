@@ -28,6 +28,9 @@ items:
     - name: Create Apple MDM push certificate
       href: ./apple/create-mdm-push-certificate.md
       displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment
+    - name: Configure Apple account service access
+      href: ./apple/setup-account-service-access.md
+      displayName: device management; apple business manager; apple school manager   
   - name: Android and ChromeOS prerequisites
     items:
     - name: Configure Chrome Enterprise connector
@@ -101,9 +104,9 @@ items:
       href: ./android/migrate-device-admin-to-work-profile.md
     - name: Migrate to app management without enrollment
       href: ./android/migrate-to-application-management.md
-- name: Set up iOS/iPadOS enrollment
+- name: Set up Apple mobile enrollment
   items:
-  - name: iOS/iPadOS enrollment guide
+  - name: Get started with Apple mobile enrollment
     href: apple/guide-ios-ipados.md
   - name: Apple Automated Device Enrollment
     items:

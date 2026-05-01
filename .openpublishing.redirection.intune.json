@@ -381,33 +381,53 @@
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/azure-ad-joined-hybrid-azure-ad-joined.md",
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/entra-join-types",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/cloud-native-endpoints-known-issues.md",
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/troubleshoot",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/cloud-native-endpoints-on-premises.md",
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/on-premises-resources",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/cloud-native-endpoints-overview.md",
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/cloud-native-endpoints-planning-guide.md",
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/planning-guide",
       "redirect_document_id": false
     },
     {
-      "source_path_from_root": "/intune/cloud-native-windows-endpoints.md",
+      "source_path_from_root": "/intune/solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-android.md",
+      "redirect_url": "/intune/solutions/frontline-worker/android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-ios-ipados.md",
+      "redirect_url": "/intune/solutions/frontline-worker/ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview-windows.md",
+      "redirect_url": "/intune/solutions/frontline-worker/windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview.md",
+      "redirect_url": "/intune/solutions/frontline-worker/",
       "redirect_document_id": false
     }
   ]

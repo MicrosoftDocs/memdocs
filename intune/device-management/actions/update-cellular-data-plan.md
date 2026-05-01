@@ -46,7 +46,7 @@ The *update cellular data plan* action lets you remotely activate an eSIM cellul
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Update cellular data plan (preview)**.
-    ![Screenshot of updating cellular data plan](media/update-cellular-data-plan/update-cellular-data-plan.png)
+    ![Intune admin center showing the Update cellular data plan action with an activation server URL field](media/update-cellular-data-plan/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
 ## User experience

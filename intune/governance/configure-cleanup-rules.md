@@ -83,7 +83,9 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
 ## Device cleanup rules logging
 
-The [Intune audit logs](./monitor-audit-logs.md) show the devices hidden by the device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*Your Rule Name*]**.
+Intune audit logs show the devices hidden by the device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*Your Rule Name*]**.
+
+For more information, see [Monitor audit logs in Intune](./monitor-audit-logs.md). 
 
 <!--links-->
 

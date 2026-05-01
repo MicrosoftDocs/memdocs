@@ -19,15 +19,15 @@ When you use the **Delete** action in Intune, the command that triggers depends 
 
 | Platform   | Enrollment Type                      | Action Triggered           |
 |------------|--------------------------------------|----------------------------|
-| Windows    | Any                                  | [Retire](retire.md) |
-| iOS/iPadOS | Any                                  | [Retire](retire.md) |
-| macOS      | Any                                  | [Retire](retire.md) |
-| Android    | Device administrator                 | [Retire](retire.md) |
-| Android    | Personally-owned work profile (BYOD) | [Retire](retire.md) |
-| Android    | Corporate-owned Fully managed (COBO) | [Wipe](wipe.md)     |
-| Android    | Corporate-owned Dedicated (COSU)     | [Wipe](wipe.md)     |
-| Android    | Corporate-owned Work profile (COPE)  | [Wipe](wipe.md)     |
-| Android    | Open Source Project (AOSP)           | [Wipe](wipe.md)     |
+| Windows    | Any                                  | [Retire devices](retire.md) |
+| iOS/iPadOS | Any                                  | [Retire devices](retire.md) |
+| macOS      | Any                                  | [Retire devices](retire.md) |
+| Android    | Device administrator                 | [Retire devices](retire.md) |
+| Android    | Personally-owned work profile (BYOD) | [Retire devices](retire.md) |
+| Android    | Corporate-owned Fully managed (COBO) | [Wipe devices](wipe.md)     |
+| Android    | Corporate-owned Dedicated (COSU)     | [Wipe devices](wipe.md)     |
+| Android    | Corporate-owned Work profile (COPE)  | [Wipe devices](wipe.md)     |
+| Android    | Open Source Project (AOSP)           | [Wipe devices](wipe.md)     |
 
 ::: zone pivot="windows"
 
@@ -56,6 +56,8 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 > - Android
 > - iOS/iPadOS
 > - macOS
+> - tvOS
+> - visionOS
 > - Windows
 
 :::column-end:::
