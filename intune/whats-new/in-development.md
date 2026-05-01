@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 04/08/2026
+ms.date: 04/20/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -46,29 +46,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
-### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
-
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../epm/manage-support-approvals.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
-
 <!-- ***********************************************-->
 
 ## App management
-
-### Direct Android line-of-business app management<!-- 25065436, 29267431 -->
-
-You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned fully managed and dedicated devices.
-
-Direct LOB app management enables you to:
-
-- Deploy in-house LOB APKs directly to Android Enterprise fully managed and dedicated devices
-- Manage app updates without a Managed Google Play account
-- Simplify deployment for organizations that don't use Managed Google Play
-- Create app configuration policies for directly deployed LOB apps, giving you the same configuration flexibility you have for Managed Google Play apps
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise
 
 ### Multiple managed accounts for app protection policies <!-- 3182632 -->
 
@@ -79,49 +59,6 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 >
 > - iOS/iPadOS
 > - Android
-
-<!-- *********************************************** -->
-
-## Device configuration
-
-### Configure credential manager permissions for Android Enterprise devices<!-- 31358911 -->
-
-Android's Credential Provider capability will allow you to control which applications can act as system-level credential providers, responsible for password autofill and passkey storage on corporate-owned work profile, fully managed, dedicated, or personally owned work profile Android devices.
-
-To configure credential manager permissions, you'll go to **Apps** > **Android** > **Configuration** > **Managed Devices**. Choose **Android Enterprise** as the platform type.
-
-By default, Android blocks third-party credential providers on managed devices. This new configuration setting will let you:
-
-- Allow specific apps (such as Microsoft Authenticator or a third-party password manager) to act as credential providers
-- Enable passkey-based sign-in across managed Android Enterprise devices
-- Maintain control over which credential sources are trusted on corporate devices
-
-A known limitation from the Intune side is that Google Password Manager will not be allowed to act as Credential Provider on corporate owned work profile devices or personally owned work profile devices. It will be blocked on the end user's device. Use a different credential app as a workaround.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android fully managed devices (COBO)
-> - Android dedicated devices (COSU)
-> - Android corporate-owned devices with a work profile (COPE)
-> - Android personally owned devices with a work profile (BYOD) using Android Management API (AM API)
-
-### Block location setting for Android Enterprise can keep Location services enabled<!-- 36703827 -->
-
-On Android Enterprise devices, you can use the **General > Block location** in the [settings catalog](../device-configuration/settings-catalog/ref-android-settings.md) to disable the location services on the device and prevent users from turning it on.
-
-This setting is changing. It will be called **Location** and will have three options you can configure:
-
-- Device default - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
-- Location enabled - Requires location services to be on and prevents end users from turning them off.
-- Location disabled - Requires location services to be off and prevents end users from turning them on.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
-> - Android Enterprise corporate owned fully managed (COBO)
-> - Android Enterprise corporate owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
@@ -222,31 +159,6 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
-### Device page in the Intune admin center is updated (public preview) <!-- 36646300 16532161 -->
-
-In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
-
-- Track device activity
-- Access tools and reports
-- Manage device information
-
-The single device page has the following tabs:
-
-- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You'll be able to quickly understand what actions are running or have completed without leaving the device view.
-- **Tools + reports**: This tab was previously called **Overview**. It shows monitoring reports, lists, and tools, like remediations, that were previously accessed in another part of the admin center.
-- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
-- **Device details**: This was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
-
-Other features:
-
-- Device actions are grouped, ordered, and labeled consistently across platforms and device types, with improved logic to show only relevant and permitted actions. Destructive actions are clearly separated and require confirmation, reducing unintentional actions.
-
-- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
-
-- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. **Essentials** elevates important device information and is accessible from any tab.
-
-All existing device management capabilities remain available. This update focuses on making them easier to find and use.  
-
 ### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
 
 Intune will soon include two new remote actions that let admins temporarily suspend and later restore managed home screen (MHS) on Android devices. These actions allow users to exit MHS and access the device's default launcher for a specified duration, without removing policies or requiring a PIN.
@@ -298,17 +210,6 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Monitor and troubleshoot
 
-### Enhanced app inventory with faster data updates<!-- 27117584 -->
-
-Intune enhanced app inventory will bring faster, more detailed visibility into the apps in your environment to support identification of outdated or risky software. Improved data freshness and richer app metadata will provide clearer insight into installed applications, while new controls will let you specify which devices are included in inventory collection.
-
-This feature will be initially available for Windows, with additional platforms to follow.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 10/11
-
 ### Intune Data Warehouse (beta) connector deprecation in Power BI<!-- 37106409 -->
 
 The Intune Data Warehouse (beta) connector in Power BI will be retired. If you use Power BI reports that rely on this connector, you'll need to transition to Intune connector v2 or the OData Feed connector before the retirement completes.
@@ -345,13 +246,9 @@ Intune will add new guidance to the compliance policy reporting documentation to
 
 <!-- *********************************************** -->
 
-## Tenant administration
+<!-- ## Tenant administration -->
 
-### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
-
-We're updating the [Multi Admin Approval](../fundamentals/role-based-access-control/multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
-
-<!-- *********************************************** -->
+<!-- ***********************************************-->
 
 ## Notices
 
