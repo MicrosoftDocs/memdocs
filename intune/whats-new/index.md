@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 04/27/2026
+ms.date: 05/01/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -166,6 +166,17 @@ To learn more, see:
 >
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
+
+#### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
+
+Windows devices managed by Intune need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
+
+The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
 
 ### Device security
 
