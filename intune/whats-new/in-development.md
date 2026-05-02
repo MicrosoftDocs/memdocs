@@ -64,16 +64,6 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 ## Device enrollment
 
-### Access management for Apple services<!-- 31209876  -->
-
-You will be able to use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls will let you choose what devices users can sign in to and which apps and services are available to them. For more information about how Apple defines service access and Apple account permissions, see the [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
-
 ### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
 
 On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:

@@ -110,6 +110,18 @@ For a list of all the settings you can configure, see [Android Intune settings c
 > - Android Enterprise corporate owned fully managed (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
 
+### Device enrollment
+
+#### Access management for Apple services<!-- 31209876 -->
+
+You can now use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls let you choose what devices users can sign in to and which apps and services are available to them. For more information, see [Configure service access for Apple accounts](../device-enrollment/apple/setup-account-service-access.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
 ### Device management
 
 #### Support for Ubuntu 26.04 LTS<!-- 36899679 -->
