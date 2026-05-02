@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 04/20/2026
+ms.date: 05/01/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -63,16 +63,6 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 <!-- *********************************************** -->
 
 ## Device enrollment
-
-### Access management for Apple services<!-- 31209876  -->
-
-You will be able to use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls will let you choose what devices users can sign in to and which apps and services are available to them. For more information about how Apple defines service access and Apple account permissions, see the [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
 
 ### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
 

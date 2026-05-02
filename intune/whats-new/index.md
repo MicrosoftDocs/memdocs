@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 04/27/2026
+ms.date: 05/01/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -109,6 +109,18 @@ For a list of all the settings you can configure, see [Android Intune settings c
 > - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
 > - Android Enterprise corporate owned fully managed (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
+
+### Device enrollment
+
+#### Access management for Apple services<!-- 31209876 -->
+
+You can now use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls let you choose what devices users can sign in to and which apps and services are available to them. For more information, see [Configure service access for Apple accounts](../device-enrollment/apple/setup-account-service-access.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
 
 ### Device management
 
