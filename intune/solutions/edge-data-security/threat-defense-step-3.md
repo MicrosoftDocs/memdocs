@@ -1,7 +1,7 @@
 ---
 title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
 description: Step 3. Integrate Mobile Threat Defense signals with Microsoft Edge for Business app protection policies in Microsoft Intune.
-ms.date: 01/26/2026
+ms.date: 04/30/2026
 author: nicholasswhite
 ms.author: nwhite
 ms.topic: how-to
@@ -113,8 +113,10 @@ Use the following steps to configure the MTD Connector.
 
 5. Select **Create** to create the connector.
 
-> [!IMPORTANT]
-> The connector is now created. It's important to note that the **Connection status** remains **Unavailable** until the first App Protection Policy arrives to the user or the first MAM user is enrolled to your Intune tenant. For more information, see [Connector status](../../device-security/mobile-threat-defense/overview.md#connector-status).
+6. From the connector list, select the **Windows Security Center** connector to open its edit view, turn on the **Connect Windows devices for MAM** toggle, and save your changes.
+
+> [!NOTE]
+> The connector's **Connection status** is **Available** after creation, and changes to **Enabled** when you turn on the **Connect Windows devices for MAM** toggle. For more information about each state, see [Connector status](../../device-security/mobile-threat-defense/overview.md#connector-status).
 
 ## Next step
 
