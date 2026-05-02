@@ -64,16 +64,6 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 ## Device enrollment
 
-### Access management for Apple services<!-- 31209876  -->
-
-You will be able to use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls will let you choose what devices users can sign in to and which apps and services are available to them. For more information about how Apple defines service access and Apple account permissions, see the [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
-
 ### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
 
 On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:
@@ -111,17 +101,6 @@ The Intune Policy Configuration Agent will update to use a Microsoft Entra agent
 
 For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
  
-### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
-
-Windows devices managed by Intune will need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions will no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
-
-The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 10/11
-
 ### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
 
 For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.

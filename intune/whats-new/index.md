@@ -112,6 +112,16 @@ For a list of all the settings you can configure, see [Android Intune settings c
 
 ### Device enrollment
 
+#### Access management for Apple services<!-- 31209876 -->
+
+You can now use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls let you choose what devices users can sign in to and which apps and services are available to them. For more information, see [Configure service access for Apple accounts](../device-enrollment/apple/setup-account-service-access.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
 #### Microsoft Intune supports userless ADE for visionOS and tvOS devices<!-- 29219451 -->
 
 Microsoft Intune has added support for userless Apple automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability supports ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and device actions. The feature is available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite.
@@ -186,6 +196,17 @@ To learn more, see:
 >
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
+
+#### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
+
+Windows devices managed by Intune need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
+
+The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
 
 ### Device security
 
