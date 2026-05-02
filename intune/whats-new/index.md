@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 04/27/2026
+ms.date: 05/01/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -110,6 +110,36 @@ For a list of all the settings you can configure, see [Android Intune settings c
 > - Android Enterprise corporate owned fully managed (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
 
+### Device enrollment
+
+#### Access management for Apple services<!-- 31209876 -->
+
+You can now use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls let you choose what devices users can sign in to and which apps and services are available to them. For more information, see [Configure service access for Apple accounts](../device-enrollment/apple/setup-account-service-access.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+#### Microsoft Intune supports userless ADE for visionOS and tvOS devices<!-- 29219451 -->
+
+Microsoft Intune has added support for userless Apple automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability supports ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and device actions. The feature is available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite.
+
+Enrolled visionOS and tvOS devices appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support requires tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
+
+For more information, see:
+
+- [Overview of Apple ADE for Apple mobile](../device-enrollment/apple/overview-automated-enrollment-apple.md)
+- [Use the Intune settings catalog to configure settings](../device-configuration/settings-catalog/index.md)
+- [Device actions](../device-management/actions/index.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - tvOS 26 and later
+> - visionOS 26 and later
+
 ### Device management
 
 #### Support for Ubuntu 26.04 LTS<!-- 36899679 -->
@@ -166,6 +196,17 @@ To learn more, see:
 >
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
+
+#### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
+
+Windows devices managed by Intune need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
+
+The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
 
 ### Device security
 
