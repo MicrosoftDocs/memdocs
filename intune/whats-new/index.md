@@ -122,6 +122,24 @@ You can now use Apple access management settings in Apple Business Manager and A
 > - iOS/iPadOS
 > - macOS
 
+#### Microsoft Intune supports userless ADE for visionOS and tvOS devices<!-- 29219451 -->
+
+Microsoft Intune has added support for userless Apple automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability supports ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and device actions. The feature is available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite.
+
+Enrolled visionOS and tvOS devices appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support requires tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
+
+For more information, see:
+
+- [Overview of Apple ADE for Apple mobile](../device-enrollment/apple/overview-automated-enrollment-apple.md)
+- [Use the Intune settings catalog to configure settings](../device-configuration/settings-catalog/index.md)
+- [Device actions](../device-management/actions/index.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - tvOS 26 and later
+> - visionOS 26 and later
+
 ### Device management
 
 #### Support for Ubuntu 26.04 LTS<!-- 36899679 -->

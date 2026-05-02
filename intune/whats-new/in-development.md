@@ -91,10 +91,6 @@ Prerequisites:
 >
 > - macOS Automated Device Enrollment (ADE)
 
-### Microsoft Intune will support userless ADE for visionOS and tvOS devices<!-- 29219451 -->
-
-Microsoft Intune will be adding support for userless automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability will support ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and remote device actions. The feature will be available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite. Enrolled visionOS and tvOS devices will appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support will require tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
-
 <!-- *********************************************** -->
 
 ## Device management
