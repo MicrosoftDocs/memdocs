@@ -268,6 +268,15 @@ Soon, you'll be able to renew eligible Cloud PKI issuing CAs in place. This upda
 >
 > - Cloud PKI
 
+### Custom compliance settings for macOS<!-- 35392462 -->
+
+Microsoft Intune will support custom compliance settings for macOS. You'll be able to define compliance checks using scripts and JSON rules, similar to existing support for Windows and Linux. This capability will allow you to evaluate device configuration, security posture, and other custom attributes not covered by built-in settings. Results will appear alongside standard compliance reporting in the Intune admin center.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
