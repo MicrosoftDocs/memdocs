@@ -47,7 +47,7 @@ Added support and testing for PKI certificates used in site system-to-SQL Server
 ### ARM64 support improvements
 
 - The `Import-CMDriver` PowerShell cmdlet now correctly includes ARM64 platform support when importing drivers from INF files. Previously, ARM64 was filtered out from the Supported Platforms list.
-- Client push installation (CcmSetup) no longer fails with error code `0x80070643` on Windows 11 ARM64 devices when upgrading from ConfigMgr 2403 or 2503.
+- Client push installation (CcmSetup) no longer fails with error code `0x80070643` on Windows 11 ARM64 devices when upgrading from ConfigMgr 2409 or 2503.
 
 ### Cloud Management Gateway improvements
 
