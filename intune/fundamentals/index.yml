@@ -7,7 +7,7 @@ metadata:
   title: Fundamentals
   description: Get started with Microsoft Intune — architecture, licensing, tenant setup, RBAC, certificates, filters, and platform support.
   ms.topic: landing-page
-  ms.date: 04/24/2026
+  ms.date: 05/04/2026
   author: paolomatarazzo
   ms.author: paoloma
 
@@ -46,16 +46,18 @@ landingContent:
         url: setup-mdm-authority.md
       - text: Configure a custom domain name
         url: configure-custom-domain.md
-      - text: Add users
-        url: tenant-administration/add-users.md
-      - text: Add groups
-        url: tenant-administration/add-groups.md
+    - linkListType: quickstart
+      links:
+      - text: Create a user
+        url: tenant-administration/quickstart-create-user.md
+      - text: Create a group
+        url: tenant-administration/quickstart-create-group.md
     - linkListType: concept
       links:
       - text: Identity management
         url: tenant-administration/identities.md
 
-  - title: Plan your deployment
+  - title: Plan and deploy
     linkLists:
     - linkListType: concept
       links:
@@ -63,12 +65,14 @@ landingContent:
         url: planning-guide.md
       - text: Architecture overview
         url: architecture.md
-      - text: Protection configuration levels
-        url: protection-configuration-levels.md
+      - text: Zero Trust with Intune
+        url: zero-trust.md
     - linkListType: deploy
       links:
-      - text: Set up Intune
+      - text: Set up Intune (step 1)
         url: deploy-setup-step-1.md
+      - text: Protect apps and data (step 2)
+        url: deploy-protect-apps-step-2.md
       - text: Set up migration
         url: setup-migration.md
 
@@ -107,8 +111,6 @@ landingContent:
       links:
       - text: Built-in role permissions
         url: role-based-access-control/ref-built-in-roles.md
-      - text: Govern and administer Intune
-        url: ../govern-administer.yml
 
   - title: Assignment filters
     linkLists:
@@ -127,12 +129,35 @@ landingContent:
       - text: Troubleshoot filters
         url: filters/troubleshoot.md
 
+  - title: Certificate infrastructure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Certificate connectors overview
+        url: certificates/connector/overview.md
+    - linkListType: concept
+      links:
+      - text: Certificate connectors
+        url: certificates/connector/certificate-connectors.md
+      - text: SCEP infrastructure
+        url: certificates/scep-infrastructure.md
+    - linkListType: how-to-guide
+      links:
+      - text: Connector prerequisites
+        url: certificates/connector/prerequisites.md
+      - text: Set up the certificate connector
+        url: certificates/connector/setup-connector.md
+      - text: Use third-party CAs with SCEP
+        url: certificates/third-party-ca-scep.md
+
   - title: Platform support and endpoints
     linkLists:
     - linkListType: reference
       links:
       - text: Supported operating systems
         url: ref-supported-platforms.md
+      - text: AOSP supported devices
+        url: aosp-supported-devices.md
       - text: Network endpoints
         url: endpoints.md
       - text: U.S. government endpoints

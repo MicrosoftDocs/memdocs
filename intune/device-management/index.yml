@@ -7,7 +7,7 @@ metadata:
   title: Device management
   description: Run remote actions, manage scripts and remediations, view device inventory, and export reports in Microsoft Intune.
   ms.topic: landing-page
-  ms.date: 04/22/2026
+  ms.date: 05/04/2026
   ms.author: paoloma
   author: paolomatarazzo
 
@@ -58,12 +58,16 @@ landingContent:
       links:
       - text: Reset passcode
         url: actions/reset-passcode.md
+      - text: Remove passcode
+        url: actions/remove-passcode.md
       - text: Disable Activation Lock
         url: actions/disable-activation-lock.md
       - text: Rotate BitLocker recovery keys
         url: actions/rotate-bitlocker-keys.md
       - text: Rotate FileVault recovery key
         url: actions/rotate-filevault-recovery-key.md
+      - text: Rotate recovery lock passcode
+        url: actions/rotate-recovery-lock-passcode.md
 
   - title: Use scripts and remediations
     linkLists:

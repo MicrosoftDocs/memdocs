@@ -8,7 +8,7 @@ metadata:
   title: Application management
   description: Deploy, configure, and monitor applications across managed devices with Microsoft Intune app management.
   ms.topic: landing-page
-  ms.date: 04/30/2026
+  ms.date: 05/04/2026
   author: nicholasswhite
   ms.author: nwhite
 
@@ -37,10 +37,17 @@ landingContent:
       links:
       - text: Intune protected apps
         url: ref-protected-apps.md
+
   - title: Deploy Win32 and LOB apps
     linkLists:
+    - linkListType: concept
+      links:
+      - text: Win32 app management overview
+        url: deployment/win32.md
     - linkListType: how-to-guide
       links:
+      - text: Prepare a Win32 app for upload (create the .intunewin package)
+        url: deployment/create-win32-package.md
       - text: Add and assign Win32 apps
         url: deployment/add-win32.md
       - text: Add a Windows LOB app
@@ -53,6 +60,7 @@ landingContent:
         url: deployment/deploy-win32-update-package.md
       - text: Add an Android LOB app
         url: deployment/add-lob-android.md
+
   - title: Deploy store and Microsoft 365 apps
     linkLists:
     - linkListType: how-to-guide
@@ -67,6 +75,7 @@ landingContent:
         url: deployment/deploy-windows.md
       - text: Add Microsoft Store apps
         url: deployment/add-microsoft-store.md
+
   - title: Enterprise app catalog and volume licensing
     linkLists:
     - linkListType: how-to-guide
@@ -79,6 +88,7 @@ landingContent:
         url: deployment/update-enterprise-supersedence.md
       - text: Manage volume-purchased apps and books
         url: deployment/manage-volume-purchased.md
+
   - title: Deploy Company Portal and macOS apps
     linkLists:
     - linkListType: how-to-guide
@@ -93,6 +103,7 @@ landingContent:
         url: deployment/add-company-portal-windows.md
       - text: Add the Company Portal app for Autopilot
         url: deployment/add-company-portal-autopilot.md
+
   - title: Configure apps
     linkLists:
     - linkListType: overview
@@ -103,12 +114,17 @@ landingContent:
       links:
       - text: Configure Microsoft Edge for iOS/Android
         url: configuration/configure-edge-ios-android.md
-      - text: Configure the Managed Home Screen
-        url: configuration/configure-managed-home-screen.md
+      - text: Configure managed Android devices
+        url: configuration/configure-managed-android.md
       - text: Configure managed iOS/iPadOS devices
         url: configuration/configure-managed-ios.md
+      - text: Configure the Managed Home Screen
+        url: configuration/configure-managed-home-screen.md
+      - text: Configure the Company Portal app
+        url: configuration/configure-company-portal.md
       - text: Configure Outlook for iOS/Android
         url: configuration/configure-outlook.md
+
   - title: Protect app data
     linkLists:
     - linkListType: overview
@@ -125,8 +141,15 @@ landingContent:
         url: protection/wipe-corporate-data.md
     - linkListType: reference
       links:
+      - text: iOS/iPadOS app protection settings
+        url: protection/ref-settings-ios.md
+      - text: Android app protection settings
+        url: protection/ref-settings-android.md
+      - text: Windows app protection settings
+        url: protection/ref-settings-windows.md
       - text: App protection FAQ
         url: protection/mam-faq.yml
+
   - title: Assign, monitor, and troubleshoot apps
     linkLists:
     - linkListType: how-to-guide

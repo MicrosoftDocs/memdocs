@@ -8,7 +8,7 @@ metadata:
   title: Developer resources
   description: Access Intune APIs, protect apps with the Intune App SDK, and report on device data with the Intune Data Warehouse.
   ms.topic: landing-page
-  ms.date: 4/22/2026
+  ms.date: 05/04/2026
   author: paolomatarazzo
   ms.author: paoloma
 
@@ -38,10 +38,10 @@ landingContent:
         url: app-sdk/configure-wrapping-ios.md
       - text: Plan the integration
         url: app-sdk/ios-phase-1.md
-      - text: Intune SDK integration into your iOS app
-        url: app-sdk/ios-phase-3.md
       - text: MSAL prerequisite and setup
         url: app-sdk/ios-phase-2.md
+      - text: Intune SDK integration into your iOS app
+        url: app-sdk/ios-phase-3.md
       - text: App Protection Conditional Access support
         url: app-sdk/ios-phase-6.md
 
@@ -49,16 +49,20 @@ landingContent:
     linkLists:
     - linkListType: reference
       links:
-      - text: Understand the MSAL prerequisite
+      - text: Wrap Android apps with the Intune App Wrapping Tool
+        url: app-sdk/configure-wrapping-android.md
+      - text: Plan the integration
+        url: app-sdk/android-phase-1.md
+      - text: MSAL prerequisite
         url: app-sdk/android-phase-2.md
       - text: Get started with MAM
         url: app-sdk/android-phase-3.md
-      - text: Plan the integration
-        url: app-sdk/android-phase-1.md
       - text: MAM integration essentials
         url: app-sdk/android-phase-4.md
-      - text: Wrap Android apps with the Intune App Wrapping Tool
-        url: app-sdk/configure-wrapping-android.md
+      - text: Implement advanced features
+        url: app-sdk/android-phase-6.md
+      - text: Test and validate the integration
+        url: app-sdk/android-phase-7.md
 
   - title: Use the Intune Data Warehouse
     linkLists:
@@ -83,9 +87,11 @@ landingContent:
         url: data-warehouse/ref-data-model.md
       - text: Data Warehouse API endpoint
         url: data-warehouse/ref-api-endpoints.md
-      - text: Devices
+      - text: Application entity
+        url: data-warehouse/ref-application.md
+      - text: Devices entity
         url: data-warehouse/ref-devices.md
-      - text: Data Warehouse application-only authentication
-        url: data-warehouse/configure-app-only-auth.md
       - text: User lifetime representation in the Intune Data Warehouse
         url: data-warehouse/ref-user-timeline.md
+      - text: Data Warehouse application-only authentication
+        url: data-warehouse/configure-app-only-auth.md

@@ -7,7 +7,7 @@ metadata:
   title: Device updates
   description: Manage OS, driver, and firmware updates for Windows, Apple, and Android devices with Microsoft Intune update policies and rings.
   ms.topic: landing-page
-  ms.date: 04/23/2026
+  ms.date: 05/04/2026
   author: paolomatarazzo
   ms.author: paoloma
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -35,6 +35,8 @@ landingContent:
         url: windows/manage-update-rings.md
       - text: Update ring policy settings
         url: windows/ref-update-ring-settings.md
+      - text: Update agent error codes
+        url: windows/ref-agent-error-codes.md
       - text: Update ring reports
         url: windows/monitor-update-rings.md
 
