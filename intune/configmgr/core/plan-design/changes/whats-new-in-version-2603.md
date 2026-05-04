@@ -38,7 +38,7 @@ All Configuration Manager components and site roles are updated to remove the de
 
 ### SQL Server Management Objects updated
 
-The Microsoft SQL Server Management Objects and Microsoft System CLR Types for SQL Server are updated from the deprecated SQL Server 2014 versions to the SQL Server 2016 versions (SMO 17).
+The Microsoft SQL Server Management Objects and Microsoft System CLR Types for SQL Server are updated from the deprecated SQL Server 2014 versions to the SQL Server 2025 versions (SMO 17).
 
 ### PKI certificate support for site system-to-SQL Server communication
 

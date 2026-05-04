@@ -20,6 +20,7 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2603](../../../plan-design/changes/whats-new-in-version-2603.md)
 - [What's new in version 2509](../../../plan-design/changes/whats-new-in-version-2509.md)
 - [What's new in version 2503](../../../plan-design/changes/whats-new-in-version-2503.md)
 - [What's new in version 2409](../../../plan-design/changes/whats-new-in-version-2409.md)

@@ -110,10 +110,6 @@ The version of the Windows Assessment and Deployment Kit (ADK) should be support
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
-### Review SQL Server Native Client version
-
-Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](../deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
-
 ### Review SQL ODBC driver for CM
 
 Starting with version 2309 and later, Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. This prerequisite is required when you create a new site or update an existing one.
