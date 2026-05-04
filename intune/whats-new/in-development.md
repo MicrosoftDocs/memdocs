@@ -100,11 +100,11 @@ To learn more about wired networks, see [Add and use wired networks settings on 
 
 ### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
 
-The [Settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
 
 There will be a new **Block Bluetooth sharing** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the device can't share content over Bluetooth. When set to **False**, fully managed and dedicated devices allow Bluetooth sharing, while corporate-owned work profile devices block Bluetooth sharing.
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
 
 > [!div class="checklist"]
 > Applies to:
