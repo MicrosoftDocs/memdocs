@@ -6,7 +6,7 @@ items:
     href: ./scenarios.md
   - name: App-based Conditional Access
     href: ./app-based-policies.md
-  - name: Set up app-based Conditional Access
+  - name: Create app-based Conditional Access
     href: ./create-app-based-policy.md
   - name: Block apps that don't use modern authentication (MSAL)
     href: ./block-no-modern-auth.md

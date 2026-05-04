@@ -1,5 +1,5 @@
 items:
-- name: Overview
+- name: Advanced Analytics overview
   href: index.md
   displayName: Advanced Analytics
 - name: Advanced Analytics reports and capabilities

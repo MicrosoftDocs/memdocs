@@ -51,7 +51,7 @@ Select **Support** to access and monitor all Surface support requests. This area
 * Closed requests
 * Last updated support requests
 
-If a Surface device isn’t working properly, the Microsoft Surface Diagnostic Toolkit (SDT) for Business can help you find and solve problems. Select **Troubleshoot with SDT** to learn how to install and use SDT to target problems on Surface devices. More support channels are listed under **Resources**.
+If a Surface device isn't working properly, the Microsoft Surface Diagnostic Toolkit (SDT) for Business can help you find and solve problems. Select **Troubleshoot with SDT** to learn how to install and use SDT to target problems on Surface devices. More support channels are listed under **Resources**.
 
 ## Next steps
 

@@ -1,0 +1,221 @@
+items:
+  - name: Microsoft Intune overview
+    expanded: true
+    items:
+      - name: What is Microsoft Intune
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./what-is-intune.md
+      - name: What is device management?
+        href: ./what-is-device-management.md
+      - name: Service description
+        href: ./service-description.md
+      - name: Architecture
+        href: ./architecture.md
+        displayName: architecture, diagram, components, design, svg, family, products,
+          suite, on-premises, tunnel
+      - name: Manage and secure identities
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./tenant-administration/identities.md
+      - name: Manage and secure devices
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./manage-devices.md
+      - name: Manage apps and protect data
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
+        href: ./manage-apps.md
+      - name: Device lifecycle overview
+        href: ./device-lifecycle.md
+      - name: Endpoint management at Microsoft
+        href: ./endpoint-management.md
+      - name: Intune Suite add-ons
+        href: ./add-ons.md
+        displayName: intune suite, add-ons, premium
+
+  - name: Evaluate and try
+    items:
+      - name: Walkthrough the admin center
+        href: ./tutorial-admin-center-walkthrough.md
+        displayName: trial, free
+      - name: Try Intune tasks
+        items:
+          - name: Try Intune tasks overview
+            href: ./try-overview.md
+          - name: Step 1 - Sign up for a free Intune trial
+            href: ./free-trial-sign-up.md
+            displayName: tenant; trial; get started, start; help; MDM
+          - name: Step 2 - Create a user and assign a license
+            href: ./tenant-administration/quickstart-create-user.md
+          - name: Step 3 - Create a group
+            href: ./tenant-administration/quickstart-create-group.md
+          - name: Step 4 - Set up automatic enrollment
+            href: ../device-enrollment/windows/quickstart-automatic-mdm.md
+          - name: Step 5 - Enroll your Windows device
+            href: ../device-enrollment/windows/quickstart-first-device.md
+          - name: Step 6 - Create a device compliance policy
+            href: ../device-security/compliance/quickstart-password-compliance-android.md
+          - name: Step 7 - Send notifications to noncompliant devices
+            href: ../device-security/compliance/quickstart-noncompliance-notification.md
+          - name: Step 8 - Add and assign an app
+            href: ../app-management/deployment/quickstart-add-assign.md
+          - name: Step 9 - Create and assign an app protection policy
+            href: ../app-management/protection/quickstart-create-assign-policy.md
+          - name: Step 10 - Create and assign a custom role
+            href: ./role-based-access-control/quickstart-custom-role.md
+          - name: Step 11 - Create a device profile
+            href: ../device-configuration/templates/quickstart-email-profile.md
+      - name: Tutorials
+        items:
+          - name: Protect email on managed devices
+            href: ../solutions/tutorials/protect-email-enrolled-devices.md
+          - name: Protect email on unmanaged devices
+            href: ../solutions/tutorials/protect-email-unmanaged-devices.md
+          - name: Configure Slack for Intune
+            href: ../app-management/configuration/tutorial-configure-slack.md
+          - name: Set up just in time registration
+            href: /intune/device-enrollment/apple/setup-just-in-time-registration
+          - name: Automated device enrollment for iOS/iPadOS
+            href: /intune/device-enrollment/apple/tutorial-automated-ios
+          - name: Migrate Group Policy to settings catalog
+            href: /intune/device-configuration/settings-catalog/tutorial-group-policy-migration
+            displayName: admx, administrative template, gpo, windows
+
+  - name: Plan your deployment
+    items:
+      - name: Planning guide
+        displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
+        href: ./planning-guide.md
+      - name: Supported platforms and browsers
+        displayName: software updates, android, ios, ipados
+        href: ./ref-supported-platforms.md
+        items:
+          - name: AOSP supported devices
+            displayName: software updates, android open source project, supported devices
+            href: ./aosp-supported-devices.md
+      - name: Protection and configuration levels
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./protection-configuration-levels.md
+      - name: Zero Trust with Microsoft Intune
+        href: ./zero-trust.md
+      - name: Zero Trust deployment approach
+        displayName: deployment, zero trust, security, compliance, conditional access
+        href: ./zero-trust-deployment.md
+      - name: Service release information
+        href: ./servicing-information.md
+      - name: Virtual machines
+        items:
+          - name: Windows VMs with Intune
+            href: ../solutions/windows-virtual-machines.md
+          - name: Azure Virtual Desktop with Intune
+            href: ../solutions/azure-virtual-desktop.md
+          - name: Azure Virtual Desktop multi-session
+            href: ../solutions/azure-virtual-desktop-multi-session.md
+
+  - name: Migrate to Intune
+    items:
+      - name: Migration guide
+        displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos,
+          windows
+        href: ./setup-migration.md
+      - name: Move from Basic Mobility and Security
+        items:
+          - name: Move from Microsoft 365 device management
+            displayName: migrate, mdm, office, windows
+            href: ./migrate-from-other-mdm.md
+          - name: Policy mapping
+            items:
+              - name: Access requirements policy mapping
+                displayName: migrate, mdm, office, windows
+                href: ./ref-policy-map-access-requirements.md
+              - name: Configurations policy mapping
+                displayName: migrate, mdm, office, windows
+                href: ./ref-policy-map-configurations.md
+              - name: Miscellaneous policy mapping
+                displayName: migrate, mdm, office, windows
+                href: ./ref-policy-map-miscellaneous.md
+
+  - name: Deploy Intune
+    items:
+      - name: Get started with your deployment
+        displayName: mdm, mam, android, ios, ipados, macos, windows
+        href: ./get-started.md
+      - name: Step 1 - Set up Intune subscription
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./deploy-setup-step-1.md
+      - name: Step 2 - Add, configure, and protect apps
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./deploy-protect-apps-step-2.md
+      - name: Step 3 - Create compliance policies
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./deploy-compliance-step-3.md
+      - name: Step 4 - Configure device features and settings
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./deploy-configuration-step-4.md
+      - name: Step 5 - Enroll devices
+        displayName: deployment, mdm, android, ios, ipados, macos, windows
+        href: ../device-enrollment/enroll-devices.md
+
+  - name: Platform deployment guides
+    items:
+      - name: Windows
+        href: ./platform-guide-windows.md
+      - name: Android
+        href: ./platform-guide-android.md
+      - name: iOS/iPadOS
+        href: ./platform-guide-ios-ipados.md
+      - name: macOS
+        href: ./platform-guide-macos.md
+      - name: Linux
+        href: ./platform-guide-linux.md
+      - name: Windows Holographic
+        href: ../solutions/windows-holographic.md
+
+  - name: Set up Microsoft Intune
+    items:
+      - name: URLs and IP address endpoints
+        items:
+          - name: Intune endpoints
+            href: ./endpoints.md
+          - name: China endpoints
+            href: ./endpoints-china.md
+          - name: Intune US government endpoints
+            href: ./endpoints-us-government.md
+
+      - name: Set up Intune subscription
+        items:
+          - name: Sign in to Intune
+            href: ./account-sign-up.md
+          - name: Configure domains
+            href: ./configure-custom-domain.md
+          - name: Add users
+            href: ./tenant-administration/add-users.md
+          - name: Add groups
+            href: ./tenant-administration/add-groups.md
+          - name: Classic groups in the Azure portal
+            href: ./tenant-administration/classic-groups.md
+          - name: Manage Intune licenses
+            href: ./licensing/toc.yml
+          - name: Set the MDM authority
+            href: ./setup-mdm-authority.md
+
+      - name: Manage roles and permissions
+        href: ./role-based-access-control/toc.yml
+
+      - name: Tenant attach
+        href: ./tenant-attach.md
+
+      - name: Use policy sets to group policies together
+        displayName: android, ios, ipados, macos, windows
+        href: ./policy-sets.md
+
+      - name: Use assignment filters
+        href: ./filters/toc.yml
+
+      - name: Configure security recommendations using Zero Trust
+        items:
+          - name: Configure security recommendations using Zero Trust
+            href: ../device-security/ref-zero-trust-security.md
+          - name: Secure tenants
+            href: ../device-security/ref-zero-trust-tenant.md
+          - name: Secure devices
+            href: ../device-security/ref-zero-trust-devices.md
+          - name: Secure data
+            href: ../device-security/ref-zero-trust-data.md
