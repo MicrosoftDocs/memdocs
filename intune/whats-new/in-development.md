@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 05/01/2026
+ms.date: 05/04/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -62,7 +62,88 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 <!-- *********************************************** -->
 
+## Device configuration
+
+### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
+
+On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. You'll be able to use this setting to disable MAC address randomization on managed macOS devices.
+
+When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. But, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+To learn more, see:
+
+- [Wi-Fi profiles settings list](../configuration/wi-fi-settings-apple.md)
+- [Learn more about Wi-Fi profiles in Intune](../configuration/wi-fi-settings-configure.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS 15 and later
+
+### New Wired Networks device configuration profile for iOS/iPadOS<!-- 31880672 -->
+
+There will be a new **802.1x Wired Networks** device configuration profile for iOS/iPadOS devices. The feature will support 802.1x Ethernet access controls, which is ideal for M-series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
+
+This profile will:
+
+- Support EAP protocols, like TLS, PEAP, and TTLS
+- Be similar to the macOS wired network profile experience
+
+This feature will help with secure enterprise deployments for iPads in education, finance, and other regulated industries.
+
+To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../configuration/wired-networks-configure.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS 17 and newer
+
+### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
+
+The [Settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There will be a new **Block Bluetooth sharing** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the device can't share content over Bluetooth. When set to **False**, fully managed and dedicated devices allow Bluetooth sharing, while corporate-owned work profile devices block Bluetooth sharing.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../configuration/settings-catalog-android.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned dedicated devices (COSU)
+
+<!-- *********************************************** -->
+
 ## Device enrollment
+
+### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
+
+Enrollment time grouping (ETG) will improve the Apple automated device enrollment (ADE) setup experience by providing an efficient way to group devices at enrollment time. The pre-knowledge of the security group that the device will be a member of helps in computing the applicable policies, apps, and settings for the enrolled device, so the configurations are delivered quickly at the time of enrollment.
+
+You'll be able to configure enrollment time grouping in new iOS/iPadOS and macOS enrollment policies that use these authentication methods:
+
+- iOS/iPadOS:
+  - Enroll with user affinity
+    - Setup Assistant with modern authentication
+    - Company Portal authentication method
+  - Enroll without user affinity
+    - Microsoft Entra shared mode
+    - Shared iPad
+- macOS:
+  - Enroll with user affinity
+    - Setup Assistant with modern authentication
+  - Enroll without user affinity
+
+There will be a new **Device group** tab within new iOS/iPadOS and macOS enrollment policies where you can add a Microsoft Entra security group. The group you add will map directly to the enrollment profile, and you'll be able to edit the group at any time. The new device grouping tab won't be available in existing enrollment profiles.
+
+Other requirements include adding the Intune first-party app as a security group owner, and ensuring that you have the **enrollment time device membership assignment** permission within a custom RBAC role.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS Automated Device Enrollment (ADE)
+> - macOS Automated Device Enrollment (ADE)
 
 ### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
 
@@ -176,6 +257,17 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 > - Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
+
+### In-place renewal of Cloud PKI issuing certification authorities (CAs)<!-- 25850620 -->
+
+Currently, Microsoft Intune requires you to create a new Cloud PKI issuing CA and manually update dependent SCEP certificate profiles when an issuing CA nears expiration. This process can increase operational overhead and introduce configuration risk.
+
+Soon, you'll be able to renew eligible Cloud PKI issuing CAs in place. This update will help maintain uninterrupted certificate issuance and support continued certificate-based access for scenarios such as Wi-Fi, VPN, and email, without requiring changes to existing SCEP profiles or device assignments.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Cloud PKI
 
 <!-- *********************************************** -->
 
