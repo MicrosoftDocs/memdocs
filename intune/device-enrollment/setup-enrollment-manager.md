@@ -36,15 +36,28 @@ A device enrollment manager can use the following methods to enroll devices in I
 
 ## Requirements  
 
-To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
-|Permission| Description |
-|---------------|------------|
-|Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. |
-|Read | View the list of device enrollment manager accounts. |  
+:::column-end:::
+:::column span="3":::
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]   
+> To manage device enrollment manager accounts, you must be assigned the [**Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) role.
+
+:::column-end:::
+:::row-end:::
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+### Permissions
+
+The Intune Administrator role can *update* and *read* device enrollment manager accounts.
+
+| Permission | Description |
+|---|---|
+| Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. |
+| Read | View the list of device enrollment manager accounts. |
 
 ## Add a device enrollment manager
 

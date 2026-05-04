@@ -20,14 +20,34 @@ This article describes how to create an enrollment policy for macOS automated de
 
 ## Prerequisites
 
-Before you create the enrollment policy, you must have:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-* Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
-* An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](setup-macos-token.md).
-* An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
-* New or wiped devices purchased through Apple Business or Apple School Manager.
-     > [!TIP]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
+:::column-end:::
+:::column span="3":::
+
+> New or wiped macOS devices purchased through Apple Business or Apple School Manager.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
+> - An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](setup-macos-token.md).
+> - An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
+
+:::column-end:::
+:::row-end:::
+
+> [!TIP]
+> Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
 
 ## Deploy the Company Portal app  
 

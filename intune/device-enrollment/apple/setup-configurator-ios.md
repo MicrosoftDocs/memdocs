@@ -31,12 +31,37 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 ## Prerequisites
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> iOS/iPadOS devices
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
+> - [An Apple MDM push certificate](create-mdm-push-certificate.md)
+
+:::column-end:::
+:::row-end:::
+
+You also need the following to complete enrollment:
+
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
-- [An Apple MDM push certificate](create-mdm-push-certificate.md)
-- Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
 - macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
+- Device serial numbers (Setup Assistant enrollment only)
 
 ## Create an Apple Configurator profile for devices
 

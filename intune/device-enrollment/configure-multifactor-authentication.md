@@ -22,17 +22,36 @@ If a device isn't compliant, the device user is prompted to make the device comp
 
 ## Requirements  
 
-Multifactor authentication is available for the following platforms:  
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
- * Android
- * iOS/iPadOS
- * macOS
- * Windows  
- 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+:::column-end:::
+:::column span="3":::
 
-To implement this policy, you must assign Microsoft Entra ID P1 or later to users. 
+> Multifactor authentication is available for the following platforms:
+>
+> - Android
+> - iOS/iPadOS
+> - macOS
+> - Windows
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To implement this policy, users must be assigned [Microsoft Entra ID P1 or later](/entra/fundamentals/licensing).
+
+:::column-end:::
+:::row-end:::
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 
 ## Configure Intune to require multifactor authentication at device enrollment
