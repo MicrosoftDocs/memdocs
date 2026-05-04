@@ -3,15 +3,15 @@ items:
   href: overview.md
 
 - name: Trusted certificate profiles
-  href: ../../device-configuration/certificates/trusted-root-profiles.md
+  href: /intune/device-configuration/certificates/trusted-root-profiles
 
 - name: Certificate Connector
   items:
-  - name: Overview
+  - name: Certificate Connector overview
     href: ./connector/overview.md
   - name: Connector prerequisites
     href: ./connector/prerequisites.md
-  - name: Install the connector
+  - name: Set up the connector
     href: ./connector/setup-connector.md
   - name: Troubleshoot certificate connector
     href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
@@ -23,7 +23,7 @@ items:
   - name: SCEP infrastructure
     href: scep-infrastructure.md
   - name: SCEP certificate profiles
-    href: ../../device-configuration/certificates/scep-profiles.md
+    href: /intune/device-configuration/certificates/scep-profiles
   - name: Use third-party certificate authority with SCEP
     href: third-party-ca-scep.md
   - name: Troubleshoot SCEP certificate profiles
@@ -62,3 +62,6 @@ items:
 
 - name: Use S/MIME to encrypt email
   href: ../../device-security/certificates/s-mime.md
+
+- name: API to add third-party certificate authority
+  href: ./ref-scep-api.md

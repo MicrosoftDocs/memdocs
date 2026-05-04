@@ -131,4 +131,4 @@ This section describes how to fix issues encountered when switching from Android
 * [Intune app protection policies overview](../../app-management/protection/overview.md)
 * [App management capabilities by platform](../../app-management/overview.md#app-management-capabilities-by-platform)
 * [Troubleshooting app protection policy user issues](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam)
-* [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](../mam-without-enrollment.md#mam)
+* [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](../../app-management/protection/mam-without-enrollment.md#mam)

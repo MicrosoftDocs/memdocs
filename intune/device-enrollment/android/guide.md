@@ -287,7 +287,7 @@ Microsoft recommends:
 
 ## Related articles
 
-- [MAM](../mam-without-enrollment.md)
+- [MAM](../../app-management/protection/mam-without-enrollment.md)
 - [iOS/iPadOS enrollment guide](../apple/guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)
 - [macOS enrollment guide](../apple/guide-macos.md)
