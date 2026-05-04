@@ -256,6 +256,9 @@ For more information, see [Add an Android line-of-business app to Microsoft Intu
 >
 > - Android Enterprise
 
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
+
 #### Newly available protected apps for Intune<!-- 36921208, 36933292 -->
 
 The following protected apps are now available for Microsoft Intune:
