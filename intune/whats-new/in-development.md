@@ -72,8 +72,8 @@ When connecting to a network, devices can present a randomized MAC address inste
 
 To learn more, see:
 
-- [Wi-Fi profiles settings list](../configuration/wi-fi-settings-apple.md)
-- [Learn more about Wi-Fi profiles in Intune](../configuration/wi-fi-settings-configure.md)
+- [Wi-Fi profiles settings list](../device-configuration/templates/ref-wifi-settings-apple.md)
+- [Learn more about Wi-Fi profiles in Intune](../device-configuration/templates/configure-wifi.md)
 
 > [!div class="checklist"]
 > Applies to:
@@ -91,7 +91,7 @@ This profile will:
 
 This feature will help with secure enterprise deployments for iPads in education, finance, and other regulated industries.
 
-To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../configuration/wired-networks-configure.md).
+To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../device-configuration/templates/configure-wired-networks.md).
 
 > [!div class="checklist"]
 > Applies to:
