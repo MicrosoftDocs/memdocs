@@ -215,6 +215,17 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
+### Improved on-demand sync for Windows devices<!-- 37533252 -->
+
+The Sync device action for Windows devices will be enhanced to trigger a more comprehensive, on-demand synchronization from the Microsoft Intune admin center. Instead of waiting for scheduled check-ins, the sync action will initiate a full synchronization across key workloads, including compliance, configuration policies, apps, and scripts, so devices reflect the latest changes faster.
+
+This improvement will be especially useful during troubleshooting, incident response, or high-priority rollouts where you need faster confirmation that device state matches your intent.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 <!-- *********************************************** -->
 
 ## Device security
