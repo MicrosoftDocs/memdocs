@@ -13,7 +13,7 @@ ms.collection: tier3
 
 Update 2603 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2409 or later.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2603](../../servers/manage/checklist-for-installing-update-2509.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2509.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2603](../../servers/manage/checklist-for-installing-update-2603.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2603.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager changes, after you update the site, also update clients to the latest version. New functionality appears in the Configuration Manager console when you update the site and console, but the complete scenario isn't functional until the client version is also the latest.
 
@@ -69,7 +69,7 @@ The Configuration Manager console In-App Feedback feature is updated to support 
 
 <!-- As of MM DD, YYYY, version 2603 is globally available for all customers to install. -->
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2603](../../servers/manage/checklist-for-installing-update-2509.md).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2603](../../servers/manage/checklist-for-installing-update-2603.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
@@ -81,4 +81,4 @@ When you're ready to install this version, see [Installing updates for Configura
 
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2509.md#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2603.md#post-update-checklist).
