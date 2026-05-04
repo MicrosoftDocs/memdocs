@@ -246,7 +246,7 @@ On devices using application management, you can:
 
 For more information, go to:
 
-- [Protect data and devices with Microsoft Intune](../device-security/index.md)
+- [Protect data and devices with Microsoft Intune](../device-security/overview.md)
 - [Mobile Threat Defense integration with Intune](../device-security/mobile-threat-defense/overview.md)
 
 ## Simplify access
