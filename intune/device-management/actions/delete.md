@@ -14,20 +14,20 @@ Use the *delete* action in Intune to permanently remove devices that are no long
 
 When you use the **Delete** action in Intune, the command that triggers depends on the device platform and, for Android, the enrollment type.
 
-- For **iOS/iPadOS**, **macOS**, and **Windows** devices, the Delete action always triggers a **Retire** command.
+- For **Apple mobile**, **macOS**, and **Windows** devices, the Delete action always triggers a **Retire** command.
 - For **Android** devices, the Delete action triggers either a **Retire** or **Wipe** command depending on the enrollment type.
 
-| Platform   | Enrollment Type                      | Action Triggered           |
-|------------|--------------------------------------|----------------------------|
-| Windows    | Any                                  | [Retire devices](retire.md) |
-| iOS/iPadOS | Any                                  | [Retire devices](retire.md) |
-| macOS      | Any                                  | [Retire devices](retire.md) |
-| Android    | Device administrator                 | [Retire devices](retire.md) |
-| Android    | Personally-owned work profile (BYOD) | [Retire devices](retire.md) |
-| Android    | Corporate-owned Fully managed (COBO) | [Wipe devices](wipe.md)     |
-| Android    | Corporate-owned Dedicated (COSU)     | [Wipe devices](wipe.md)     |
-| Android    | Corporate-owned Work profile (COPE)  | [Wipe devices](wipe.md)     |
-| Android    | Open Source Project (AOSP)           | [Wipe devices](wipe.md)     |
+| Platform     | Enrollment Type                      | Action Triggered            |
+|--------------|--------------------------------------|-----------------------------|
+| Windows      | Any                                  | [Retire devices](retire.md) |
+| Apple mobile | Any                                  | [Retire devices](retire.md) |
+| macOS        | Any                                  | [Retire devices](retire.md) |
+| Android      | Device administrator                 | [Retire devices](retire.md) |
+| Android      | Personally-owned work profile (BYOD) | [Retire devices](retire.md) |
+| Android      | Corporate-owned Fully managed (COBO) | [Wipe devices](wipe.md)     |
+| Android      | Corporate-owned Dedicated (COSU)     | [Wipe devices](wipe.md)     |
+| Android      | Corporate-owned Work profile (COPE)  | [Wipe devices](wipe.md)     |
+| Android      | Open Source Project (AOSP)           | [Wipe devices](wipe.md)     |
 
 ::: zone pivot="windows"
 

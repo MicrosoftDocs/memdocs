@@ -1,7 +1,0 @@
-items:
-- name: Firmware Over-the-Air updates
-  href: manage-fota.md
-  displayName: fota updates firmware android
-- name: Zebra LG OTA Integration
-  href: setup-zebra-lifeguard.md
-  displayName: ota updates android

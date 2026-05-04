@@ -22,7 +22,7 @@ items:
             href: ./tutorial-school-deployment/setup-intune.md
       - name: 3. Configure settings and applications
         items:
-          - name: Overview
+          - name: Configure settings overview
             href: ./tutorial-school-deployment/configure-overview.md
           - name: Configure policies
             href: ./tutorial-school-deployment/configure-settings.md
@@ -30,7 +30,7 @@ items:
             href: ./tutorial-school-deployment/configure-apps.md
       - name: 4. Deploy devices
         items:
-          - name: Overview
+          - name: Deploy devices overview
             href: ./tutorial-school-deployment/enroll-overview.md
           - name: Windows
             items:
@@ -50,7 +50,7 @@ items:
                 href: ./tutorial-school-deployment/enroll-ios-apple-configurator.md
       - name: 5. Manage devices
         items:
-          - name: Overview
+          - name: Manage devices overview
             href: ./tutorial-school-deployment/manage-overview.md
           - name: Management functionalities for Surface devices
             href: ./tutorial-school-deployment/manage-surface.md
@@ -62,7 +62,7 @@ items:
         href: ./tutorial-school-deployment/troubleshoot-overview.md
       - name: 7. Common Education configuration
         items:
-          - name: Overview
+          - name: Common Education configuration overview
             href: ./tutorial-school-deployment/ref-common-settings.md
           - name: Intune policies for Windows in Education
             items:
