@@ -570,14 +570,14 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2603
+      href: servers/manage/checklist-for-installing-update-2603.md
     - name: Checklist for installing update 2509
       href: servers/manage/checklist-for-installing-update-2509.md      
     - name: Checklist for installing update 2503
       href: servers/manage/checklist-for-installing-update-2503.md
     - name: Checklist for installing update 2409
       href: servers/manage/checklist-for-installing-update-2409.md
-    - name: Checklist for installing update 2403
-      href: servers/manage/checklist-for-installing-update-2403.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
