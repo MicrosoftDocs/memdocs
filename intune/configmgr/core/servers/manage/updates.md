@@ -58,7 +58,7 @@ The following supported versions<sup>`*`</sup>, of Configuration Manager are cur
 
 
 > [!NOTE]
-> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2603.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
+> The **Availability date** in this table is when the early update ring was released. Baseline media will be available on the VLSC soon after the update is globally available.
 
 ##### <a name="bkmk_note1"></a> Note 1: How to get baseline media
 
