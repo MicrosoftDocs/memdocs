@@ -24,37 +24,38 @@ The main goal is to establish a more secure and trusted environment for devices 
 
 We recommend using the latest updates for a more successful attestation rate.
 
-- Windows 10
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-  - 10.0.19045.3996+
+:::column-end:::
+:::column span="3":::
 
-    > [!IMPORTANT]
-    > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+> - Windows 10 (10.0.19045.3996 or later)
+> - Windows 11 (10.0.22000.2713 or later; 10.0.22621.2792 or later; 10.0.22631.2792 or later)
+>
+> TPM 2.0 or later is required. Physical devices only.
 
-- Windows 11
+:::column-end:::
+:::row-end:::
 
-  - 10.0.22000.2713+
-  - 10.0.22621.2792+
-  - 10.0.22631.2792+
+> [!NOTE]
+> Virtual machines can't attest, including the following, even if they use vTPMs:
+>  - Hyper-V and Azure virtual machines
+>  - Azure Virtual Desktop session hosts
+>  - Windows 365 Cloud PCs
+>  - Microsoft Dev Box
 
-- Minimum TPM 2.0 on devices
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
-- Physical devices are supported.
+Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Windows Autopilot pre-provision and Shared device mode (SDM).
 
-    > [!NOTE]
-    > Virtual machines can't attest, including the following, even if they use vTPMs:
-    >  - Hyper-V and Azure virtual machines
-    >  - Azure Virtual Desktop session hosts
-    >  - Windows 365 Cloud PCs
-    >  - Microsoft Dev Box
+Applicable Configuration Service Providers (CSPs) for Windows attestation:
 
-- Attestation with TPM in this feature is during Intune device management enrollment, after the TPM attestation that occurs in Windows Autopilot pre-provision and Shared device mode (SDM).
-
-- List of applicable Configuration Service Providers (CSPs) for Windows attestation:
-
-  - [Windows InitiateRecovery CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryinitiaterecovery)
-  - [Windows RecoveryStatus CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryrecoverystatus)
-  - [Windows MDMClientCertAttestation CSP](/windows/client-management/mdm/devicestatus-csp#certattestationmdmclientcertattestation)
+- [Windows InitiateRecovery CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryinitiaterecovery)
+- [Windows RecoveryStatus CSP](/windows/client-management/mdm/dmclient-csp#deviceproviderprovideridrecoveryrecoverystatus)
+- [Windows MDMClientCertAttestation CSP](/windows/client-management/mdm/devicestatus-csp#certattestationmdmclientcertattestation)
 
 ## How Windows enrollment attestation works
 
