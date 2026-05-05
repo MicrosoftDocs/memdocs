@@ -70,7 +70,9 @@ Microsoft Intune marks devices that register with Microsoft Entra as personal.
 
 ### Permissions
 
-These roles can *read*, *delete*, *create*, and *update* corporate device identifiers.
+These roles can *read*, *delete*, *create*, and *update* corporate device identifiers.  
+- Policy and Profile Manager  
+- Intune Administrator  
 
 | Permission | Description |
 |---|---|

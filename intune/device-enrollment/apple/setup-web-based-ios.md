@@ -33,6 +33,7 @@ This article describes how to set up web based device enrollment in Microsoft In
 > This enrollment method supports the following platforms:
 >
 > - iOS/iPadOS 15 or later  
+>
 > If you assign a web-based enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via app-based device enrollment. App-based device enrollment requires the Company Portal app for iOS/iPadOS.
 
 :::column-end:::
