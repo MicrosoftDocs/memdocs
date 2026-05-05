@@ -216,7 +216,7 @@ Learn more about endpoint analytics:
 
 <!--Intune roles-->
 
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
 [Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#application-manager
 [Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-manager
