@@ -80,24 +80,23 @@ The *rotate local admin password* action in Microsoft Intune lets IT admins manu
 ::: zone-end
 - [Manually rotate passwords with Windows LAPS](../../device-security/laps/deploy-policy.md#manually-rotate-passwords)
 
-<!--links-->
-
-<!-- admin center links -->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-<!-- role links -->
+<!--Role links-->
 
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-rotatelocaladminpassword
-[CSP-1]: /windows/client-management/mdm/laps-csp
 
+<!--Other links-->
+
+[CSP-1]: /windows/client-management/mdm/laps-csp
 [LEARN-1]: /windows-server/identity/laps/laps-overview
 [LEARN-2]: ../../device-security/laps/setup-macos.md
 [MAC-ADE]: ../../device-enrollment/apple/setup-automated-macos.md

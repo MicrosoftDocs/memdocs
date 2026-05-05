@@ -55,19 +55,24 @@ With the *shut down* action, IT administrators can remotely power off managed de
 
 - Microsoft Graph API: [shutDown action][GRAPH-1]
 
-<!-- links -->
-
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-
-[IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
-
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-shutdown
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!--Role links-->
+
+[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+
+<!--Graph API links-->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-shutdown
+
+<!--Other links-->
+
+[IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode

@@ -84,14 +84,22 @@ For work profile passcode reset, users get notified to activate their reset pass
 
 - Microsoft Graph API: [resetPasscode action][GRAPH-1]
 
+<!--Intune admin center links-->
+
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-1]: ../../device-configuration/settings-catalog/ref-android-settings.md
+<!--Role links-->
 
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-resetpasscode
+
+<!--Other links-->
+
+[INT-1]: ../../device-configuration/settings-catalog/ref-android-settings.md

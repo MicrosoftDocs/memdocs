@@ -163,18 +163,22 @@ Intune is designed to respect user privacy while providing powerful device manag
 ## Reference links
 
 - Microsoft Graph API:
-  - [locateDevice action][GRAPH-1]
-  - [playLostModeSound action][GRAPH-2]
+  - [locateDevice action]
+  - [playLostModeSound action]
 
-<!--links-->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+<!--Role links-->
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-locatedevice
-[GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+
+<!--Graph API links-->
+
+[locateDevice action]: /graph/api/intune-devices-manageddevice-locatedevice
+[playLostModeSound action]: /graph/api/intune-devices-manageddevice-playlostmodesound

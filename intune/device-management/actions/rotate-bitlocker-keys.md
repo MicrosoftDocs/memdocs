@@ -55,26 +55,23 @@ Key rotation is especially useful in environments where devices are frequently s
 - Microsoft Graph API: [rotateBitLockerKeys action][GRAPH-1]
 - [BitLocker overview][WIN-1]
 
-<!--links-->
-
-<!-- admin center links -->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-<!-- role links -->
+<!--Role links-->
 
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-rotateBitLockerKeys
 
-
-<!-- MSLearn links -->
+<!--Other links-->
 
 [WIN-1]: /windows/security/operating-system-security/data-protection/bitlocker/
 [CSP-1]: /windows/client-management/mdm/bitlocker-csp#rotaterecoverypasswords

@@ -71,15 +71,24 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 - Microsoft Graph API: [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
 - Configuration service provider (CSP) used to initiate the action: [DMClient CSP][CSP-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!--Role links-->
+
 [Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+<!--Graph API links-->
+
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-pauseconfigurationrefresh
+
+<!--Other links-->
 
 [CSP-1]: /windows/client-management/mdm/dmclient-csp#deviceproviderprovideridconfigrefresh
 [LEARN-1]: /windows/security/book/operating-system-security-system-security#-config-refresh
+
 

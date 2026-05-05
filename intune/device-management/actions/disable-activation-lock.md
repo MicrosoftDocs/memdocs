@@ -144,23 +144,26 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 - Microsoft Graph API: [bypassActivationLock action][GRAPH-1]
 
-<!-- admin center links -->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-<!-- role links -->
+<!--Role links-->
 
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
+<!--Graph API links-->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-bypassactivationlock
+
+<!--Other links-->
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 [MAC-ADE]: ../../device-enrollment/apple/setup-automated-macos.md
 [APL-1]: https://support.apple.com/guide/apple-business-manager/axm812df1dd8
 [APL-2]: https://support.apple.com/HT201365
-
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-bypassactivationlock

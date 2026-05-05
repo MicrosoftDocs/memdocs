@@ -120,22 +120,23 @@ To use the bulk rename action:
 
 To learn how to change the Device name shown in the Company Portal, see [Rename device from the Company Portal](../../user-help/device-actions/update-device-name-company-portal-app.md).
 
-<!--links-->
-
-<!-- graph -->
-
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-setdevicename
-
-<!-- admin center -->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
+<!--Role links-->
+
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+
+<!--Graph API links-->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-setdevicename
+
+<!--Other links-->
+
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
-
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-
 [CSP-1]: /windows/client-management/mdm/accounts-csp

@@ -53,22 +53,22 @@ This action is ideal when a device is suspected of compromise or when validating
 - Microsoft Graph API: [windowsDefenderScan action][GRAPH-1]
 - Configuration service provider (CSP) used to initiate the action: [Defender CSP][CSP-1]
 
-<!--links-->
-
-<!-- admin center links -->
+<!--Intune admin center links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-<!-- role links -->
+<!--Role links-->
 
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
 
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-windowsdefenderscan
+
+<!--Other links-->
 
 [CSP-1]: /windows/client-management/mdm/defender-csp
