@@ -53,6 +53,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of May 4, 2026
+
+### Monitor and troubleshoot
+
+#### Enhanced app inventory with faster data updates<!-- 27117584 -->
+
+Intune enhanced app inventory brings faster, more detailed visibility into the apps in your environment to support identification of outdated or risky software. Improved data freshness and richer app metadata provide clearer insight into installed applications, while new controls let you specify which devices are included in inventory collection.
+
+This feature is initially available for Windows, with additional platforms to follow.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10/11
+
 ## Week of April 27, 2026 (Service release 2604)
 
 ### Microsoft Intune Suite

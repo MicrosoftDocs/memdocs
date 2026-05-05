@@ -27,14 +27,39 @@ For an overview of ADE and its features, see [Overview of Apple Automated Device
 - In the admin center, hardware inventory for visionOS devices enrolled through ADE currently shows the storage capacity value as 0. This value doesn't reflect the actual available device storage.   
 
 ## Prerequisites
-Before you create the enrollment policy, you must have:
 
-* Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
-* An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).
-* An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
-* New or wiped Apple Vision Pro devices added to Apple Business or Apple School Manager.
-     > [!Tip]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - visionOS
+>
+> New or wiped Apple Vision Pro devices must be added to [Apple Business](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Access to [Apple Business portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
+> - An active Apple token (.p7m file). For steps, see [Set up an ADE token](setup-apple-token.md).
+> - An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
+
+:::column-end:::
+:::row-end:::
+
+> [!TIP]
+> Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
 
 
 ## Create an enrollment policy

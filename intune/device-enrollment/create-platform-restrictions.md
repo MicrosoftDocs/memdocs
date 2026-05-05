@@ -22,24 +22,37 @@ You can create a new device platform restriction policy in the Microsoft Intune 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.
 
 ## Requirements    
-You can use corporate identifiers with these platforms:
 
-- Android
-- iOS/iPadOS
-- macOS  
-- Windows 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-To create device platform restrictions in Microsoft Intune, you must be signed in as [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). This role is built-in to Microsoft Entra ID and can:
+:::column-end:::
+:::column span="3":::
 
-- Create device platform restrictions
+> Device platform restrictions are available for the following platforms:
+>
+> - Android
+> - iOS/iPadOS
+> - macOS
+> - Windows
 
-- Edit device platform restrictions
+:::column-end:::
+:::row-end:::
 
-- Delete device platform restrictions
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
-- Reprioritize device platform restrictions
+:::column-end:::
+:::column span="3":::
 
-All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
+> To create device platform restrictions, you must be signed in as [**Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), a role built-in to Microsoft Entra ID. This role can create, edit, delete, and reprioritize device platform restrictions.
+>
+> All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
+
+:::column-end:::
+:::row-end:::
 
 ## Default policy
 

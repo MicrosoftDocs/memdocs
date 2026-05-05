@@ -1,4 +1,4 @@
----
+﻿---
 title: Set up enrollment time grouping
 description: Overview and setup of the enrollment time grouping feature in Microsoft Intune.
 ms.date: 04/29/2026
@@ -10,48 +10,76 @@ ms.collection:
 
 # Enrollment time grouping in Microsoft Intune
 
-**Applies to:**
-* Windows 11  
-* Android
-* visionOS  
-* tvOS  
-
 Set up enrollment time grouping to speed up app and policy provisioning during device enrollment. With enrollment time grouping, you can add a Microsoft Entra security group in the enrollment policy so that devices are added to the group during enrollment, rather than after. You can then assign required apps and policy configuration to the group. This preknowledge of the security group that the device will become member of after enrollment enables Intune to deliver the configurations to the device quickly on enrollment, reducing post-enrollment latency and improving time to productivity.
 
 If you don't configure enrollment time grouping, enrolled devices are grouped based on inventory properties and group tag IDs. Then Microsoft Intune delivers apps and policies based on the group membership. Microsoft Intune can only determine the apps and policies a device needs after the device is grouped, so devices grouped this way often aren't ready for immediate use. It can take up to 8 hours post enrollment for devices to receive all apps and policies.
 
 This article provides an overview of enrollment time grouping, how to configure it, and feature limitations.
 
-## Requirements  
+## Requirements
 
-Enrollment time grouping is supported on devices provisioned via:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-* [Windows Autopilot device preparation](/autopilot/device-preparation/overview)
+:::column-end:::
+:::column span="3":::
 
-* [Android Enterprise](android/guide.md)
+> Enrollment time grouping is supported on the following platforms:
+>
+> - Windows 11
+> - Android Enterprise
+> - tvOS
+> - visionOS
 
-* [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
+:::column-end:::
+:::row-end:::
 
-For Windows Autopilot, you must have permissions to create and modify Windows Autopilot device preparation policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs** category in the Microsoft Intune admin center.  
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../includes/requirements/enrollment-methods.md)]
 
-For tvOS and visionOS, you must have permissions to create and modify tvOS and visionOS enrollment policies. To configure Microsoft Entra groups in an enrollment policy, you must have the *enrollment time device membership assignment* permission. This permission is available for custom roles, under the **Enrollment programs category** in the Microsoft Intune admin center.
+:::column-end:::
+:::column span="3":::
 
-For Android Enterprise, you must have permissions to create and modify Android Enterprise enrollment policies. To configure Microsoft Entra groups in an Android enrollment policy, you must have the *enrollment time device membership assignment for Android Enterprise* permission. This permission is available for custom roles, under the __Android Enterprise__ category in the Microsoft Intune admin center. Enrollment time grouping is supported with the following enrollment policies:
+> Enrollment time grouping is supported on devices provisioned via:
+>
+> - [Windows Autopilot device preparation](/autopilot/device-preparation/overview)
+> - [Android Enterprise](android/guide.md)
+> - [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
+>
+> For Android Enterprise, enrollment time grouping is supported with the following enrollment policies:
+>
+> - Android Enterprise fully managed
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise dedicated
 
-* Android Enterprise fully managed
+:::column-end:::
+:::row-end:::
 
-* Android Enterprise corporate-owned work profile
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
-* Android Enterprise dedicated
+:::column-end:::
+:::column span="3":::
 
->[!TIP]
+> The permissions you need depend on the platform you're configuring:
+>
+> - **Windows Autopilot**: Permissions to create and modify Windows Autopilot device preparation policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
+> - **tvOS and visionOS**: Permissions to create and modify tvOS and visionOS enrollment policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
+> - **Android Enterprise**: Permissions to create and modify Android Enterprise enrollment policies, and the *enrollment time device membership assignment for Android Enterprise* permission (available in custom roles under **Android Enterprise**).
+>
+> To add the Intune first-party app as a security group owner, you must be a Microsoft Entra Group Administrator (or hold the *microsoft.directory/groups/owners/update* permission), or be an existing owner of the security group.
+>
+> The designated group must be configured as a scope group for the admin to use it in enrollment time grouping configuration.
+
+
+:::column-end:::
+:::row-end:::  
+
+> [!TIP]
 > For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control/overview.md#custom-roles).
-
-To add Intune first party app as a security group owner, which is a required step for enrollment time grouping, you must meet one of the following prerequisites:
-  * Must be a Microsoft Entra Group Administrator, or another role with the *microsoft.directory/groups/owners/update* permission.
-  * Must be an existing owner of the Microsoft Entra security group.
-
-Lastly, the designated group should be configured as a scope group for the admin to use it in enrollment time grouping configuration.
 
 ## Step 1: Create Microsoft Entra security group
 
