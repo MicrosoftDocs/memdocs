@@ -178,7 +178,7 @@ The Intune admin center makes it easy to connect to different partner services, 
 
   - [Get an Apple MDM push certificate](../device-enrollment/apple/create-mdm-push-certificate.md)
   - [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../device-enrollment/apple/setup-automated-ios.md)
-  - [Manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../app-management/deployment/manage-vpp-apple.md)
+  - [Manage iOS and macOS apps purchased through Apple Business with Microsoft Intune](../app-management/deployment/manage-vpp-apple.md)
 
 - **TeamViewer for remote assist**: When you connect to your TeamViewer account, you can use TeamViewer to remotely assist devices.
 
@@ -246,7 +246,7 @@ On devices using application management, you can:
 
 For more information, go to:
 
-- [Protect data and devices with Microsoft Intune](../device-security/index.md)
+- [Protect data and devices with Microsoft Intune](../device-security/overview.md)
 - [Mobile Threat Defense integration with Intune](../device-security/mobile-threat-defense/overview.md)
 
 ## Simplify access

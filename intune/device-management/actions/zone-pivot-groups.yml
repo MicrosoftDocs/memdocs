@@ -8,7 +8,7 @@ groups:
   - id: windows
     title: Windows
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: macos
     title: macOS
   - id: android
@@ -23,7 +23,7 @@ groups:
   - id: windows
     title: Windows
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: macos
     title: macOS
   - id: android
@@ -36,7 +36,7 @@ groups:
   - id: windows
     title: Windows
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: android
     title: Android
 
@@ -45,7 +45,7 @@ groups:
   prompt: "Choose the platform to run the device action on:"
   pivots:
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: macos
     title: macOS
   - id: android
@@ -56,7 +56,7 @@ groups:
   prompt: "Choose the platform to run the device action on:"
   pivots:
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: android
     title: Android
 
@@ -65,7 +65,7 @@ groups:
   prompt: "Choose the platform to run the device action on:"
   pivots:
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: macos
     title: macOS
 
@@ -83,6 +83,6 @@ groups:
   prompt: "Choose the platform to run the device action on:"
   pivots:
   - id: ios
-    title: iOS/iPadOS
+    title: Apple mobile
   - id: chromeos
     title: ChromeOS

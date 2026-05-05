@@ -20,7 +20,9 @@ By using the *remove passcode* action in Microsoft Intune, you can remotely remo
 :::column span="3":::
 
 > This action supports the following platforms:
-> > - iOS/iPadOS
+>
+> - iOS/iPadOS
+> - visionOS 1.1+
 
 :::column-end:::
 :::row-end:::

@@ -82,7 +82,7 @@ For end users to have the full sign in/sign out experience, apps must support En
 
 ## Step 1 - Enroll, enable Shared iPad, and choose a temporary session type
 
-For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile**. ADE is the required enrollment option for Shared iPads. ADE syncs the devices from Apple Business Manager or Apple School Manager.
+For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile**. ADE is the required enrollment option for Shared iPads. ADE syncs the devices from Apple Business or Apple School Manager.
 
 From an Intune perspective, you configure the enrollment profile and assign the profile to the device. When you create the enrollment profile for Shared iPads, you select the following features:
 

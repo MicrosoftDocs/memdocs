@@ -64,7 +64,9 @@ Since Intune supports two Android platforms, it's important to understand how OS
     * **Windows restrictions**
     * **Android restrictions**
     * **macOS restrictions**
-    * **iOS restrictions**
+    * **iOS/iPadOS restrictions**
+    * **tvOS restrictions**
+    * **visionOS restrictions**  
 
 1. Select **Create restriction**.
 1. On the **Basics** page, give the restriction a name and optional description.
@@ -72,7 +74,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 1. On the **Platform settings** page, configure the restrictions for your selected platform. Your options:
 
    - **Platform** (Android): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
-   - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
+   - **MDM** (Windows, macOS, iOS/iPadOS, tvOS, and visionOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
    - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.
    - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block.
    - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:
@@ -120,7 +122,7 @@ Enrollment restrictions support fewer filter properties than other group-targete
 
 * Configure a device platform restriction policy for Apple and Windows devices.
 * Configure an enrollment status page (ESP) policy for Windows.
-* Edit a filter that's in-use in an enrollment restriction or ESP profile.
+* Edit a filter that's in-use in an enrollment restriction or ESP policy.
 
 The following filter properties are always available to use with enrollment policies:
 
@@ -131,7 +133,7 @@ The following filter properties are always available to use with enrollment poli
 * OS version
 * Operating system SKU
 * Ownership
-* Enrollment profile name
+* Enrollment policy name
 
 **iOS/iPadOS and macOS**
 
@@ -139,7 +141,7 @@ The following filter properties are always available to use with enrollment poli
 * Model
 * OS version
 * Ownership
-* Enrollment profile name
+* Enrollment policy name
 
 For more information about these properties, see [device properties](../fundamentals/filters/ref-device-properties.md#available-properties). Filters can't be used with Android enrollment restrictions.
 
