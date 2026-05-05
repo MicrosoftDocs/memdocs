@@ -102,11 +102,11 @@ To assign the script package:
 
 When you configure the assignment of a script package, you can define how often the remediation runs using one of the following **Schedule** options:
 
-- **Once** - Execute the remediation one time only, at a specified date and time.
+- **Once** – Execute the remediation one time only, at a specified date and time.
 
-- **Hourly** - Run the remediation on an hourly basis, with a configurable interval, like every *n* hours. The value must be less than 24 hours.
+- **Hourly** – Run the remediation on an hourly basis, with a configurable interval, like every *n* hours. The value must be less than 24 hours.
 
-- **Daily** - Execute the remediation daily at a specified time.
+- **Daily** – Execute the remediation daily at a specified time.
 
 Execution behavior:
 
@@ -181,7 +181,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
-3. On the device's  **Overview**  page, select  **…** > **Run remediation (preview).**
+3. On the device's  **Overview**  page, select  **...** > **Run remediation (preview).**
 4. In the **Run remediation (preview)** pane, select the **Script package** you want to run from the list. Select **View details** to see properties of the script package like detection and remediation script contents, description, and configured settings.
 5. To run the remediation on-demand, select **Run remediation**.
 
