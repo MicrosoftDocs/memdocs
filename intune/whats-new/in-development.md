@@ -230,6 +230,22 @@ This improvement will be especially useful during troubleshooting, incident resp
 
 ## Device security
 
+### Strict Tunnel Mode for Microsoft Tunnel on Android<!-- 17373449 -->
+
+Microsoft Tunnel will add support for Strict Tunnel Mode on Android Enterprise devices enrolled through Android Management API (AM API). When Strict Tunnel Mode is enabled, all network traffic is forced through the VPN tunnel. If the VPN connection is unavailable or drops, all network traffic on the device is blocked, preventing apps from accessing the public internet outside of the tunnel. Devices enrolled through the legacy EMM API work profile don't support Strict Tunnel Mode until migrated to AM API.
+
+Admins will be able to configure an app exclusion list. Apps on the exclusion list always bypass the VPN and connect directly to the network, regardless of VPN connection status.
+
+Strict Tunnel Mode will be available as a configuration option when a [Microsoft Tunnel VPN profile](../device-security/microsoft-tunnel/install.md) is configured with **Always On** VPN. For unenrolled devices using [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam-android.md), Strict Tunnel Mode will also be supported, blocking network traffic when the MAM Tunnel connection is unavailable.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise personally owned work profile
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise corporate-owned fully managed
+> - Android (MAM, unenrolled devices)
+
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
