@@ -61,14 +61,14 @@ The *rotate local admin password* action in Microsoft Intune lets IT admins manu
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Custom role][INT-RC] that includes:
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Rotate Local Admin Password**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to rotate the local admin password from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Rotate Local admin password**.
 
@@ -84,13 +84,14 @@ The *rotate local admin password* action in Microsoft Intune lets IT admins manu
 
 <!-- admin center links -->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
 <!-- role links -->
 
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
 
 <!-- API links -->
 

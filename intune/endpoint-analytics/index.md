@@ -225,11 +225,11 @@ Learn more about endpoint analytics:
 
 <!-- role links -->
 
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
-[INT-R5]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
+[INT-R5]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: /intune/fundamentals/role-based-access-control/create-custom-role.md
 
 [ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
 [ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator

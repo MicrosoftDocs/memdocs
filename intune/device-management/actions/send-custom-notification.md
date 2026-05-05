@@ -74,8 +74,8 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Send custom notifications**—to send notifications to devices
 >   - The permission **Organization/Update**—to send notifications to groups
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
@@ -103,7 +103,7 @@ You can send custom notifications in Intune to individual devices or to users in
 
 ### Send a custom notification to a single device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Send Custom Notification**.
 1. On the **Send Custom Notification** pane, specify the following message details:
@@ -117,7 +117,7 @@ Intune processes the message immediately. The only confirmation is a notificatio
 
 Group notifications target users, not devices. Each supported device enrolled by the user receives the message. Devices that are member of the group are ignored.
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Tenant administration** > **Custom notifications**.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Custom notifications**.
 1. On the **Basics** tab, specify the following, and then select **Next** to continue.
    - **Title**: Specify a title for this notification. Titles are limited to 50 characters.
    - **Body**: Specify the message. Messages are limited to 500 characters.
@@ -174,11 +174,12 @@ When a custom notification is sent, users receive it as a push alert from the Co
 
 <!--links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-sendcustomnotificationtocompanyportal

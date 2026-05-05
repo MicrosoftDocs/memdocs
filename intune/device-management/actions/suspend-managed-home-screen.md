@@ -33,9 +33,9 @@ The *suspend Managed Home Screen* device action in Intune temporarily disables t
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Temporarily Suspend Managed Home Screen**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
@@ -55,7 +55,7 @@ The *suspend Managed Home Screen* device action in Intune temporarily disables t
 
 ## How to suspend the managed home screen from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Suspend Managed Home Screen**.
 
@@ -68,12 +68,12 @@ Once the Managed Home Screen is suspended, the device will no longer enforce the
 - Microsoft Graph API: [managedDevice resource type][GRAPH-1]
 - Microsoft Graph API: [suspendManagedHomeScreen action][GRAPH-2]
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 [GRAPH-1]: /graph/api/resources/intune-devices-manageddevice
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-suspendmanagedhomescreen

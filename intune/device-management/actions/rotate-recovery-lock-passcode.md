@@ -39,7 +39,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 > To run this action, use an account with at least one of the following roles:
 >
 > - Intune administrator
-> - [Custom role][INT-RC] that includes:
+> - [Custom role] that includes:
 >   - The permission **Remote tasks / Rotate macOS Recovery Lock password**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
@@ -59,7 +59,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 
 ## How to rotate the macOS Recovery Lock passcode from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Rotate Recovery Lock Passcode**. 
 1. Select **Yes** to confirm the action. Intune generates a new Recovery Lock passcode.
@@ -78,12 +78,13 @@ To view the new passcode, select **Passwords and keys** > **View Recovery Lock P
 - Microsoft Graph API: [restoreManagedHomeScreen action][GRAPH-2]
 -->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [GRAPH-1]: /graph/api/resources/intune-devices-manageddevice
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-RestoreManagedHomeScreen

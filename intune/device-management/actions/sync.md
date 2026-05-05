@@ -41,17 +41,17 @@ For more information about the standard Intune policy check-in frequencies, see 
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Endpoint Security Manager]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Sync devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to sync a device from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Sync**.
 1. To confirm, select **Yes**.
@@ -83,12 +83,13 @@ When you execute the **Sync** action, iOS/iPadOS and Android apps that failed an
 - Microsoft Graph API: [syncDevice action][GRAPH-1]
 
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-syncdevice
 

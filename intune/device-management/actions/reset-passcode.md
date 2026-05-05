@@ -37,9 +37,9 @@ With the *reset passcode* action in Microsoft Intune, you can remotely reset a d
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permission **Remote Tasks/Reset Passcode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
@@ -66,7 +66,7 @@ The following table summarizes the passcode reset types based on platform:
 
 ## How to reset a passcode from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Reset passcode**.
 1. A new passcode is presented to the admin.
@@ -84,13 +84,14 @@ For work profile passcode reset, users get notified to activate their reset pass
 
 - Microsoft Graph API: [resetPasscode action][GRAPH-1]
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-[INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
-[INT-1]:/intune/device-configuration/settings-catalog/ref-android-settings
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-1]: ../../device-configuration/settings-catalog/ref-android-settings.md
+
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-resetpasscode

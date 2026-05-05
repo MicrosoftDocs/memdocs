@@ -96,7 +96,7 @@ For more information, see [Monitor audit logs in Intune](./monitor-audit-logs.md
 
 <!-- role links -->
 
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-R2]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[INT-R4]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[INT-RC]: /intune/fundamentals/role-based-access-control/create-custom-role.md

@@ -43,16 +43,16 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 :::column span="3":::
 > To run this action, at a minimum, use an account that has one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permissions **Remote tasks/Enable lost mode**, **Remote tasks/Disable lost mode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to enable Lost Mode from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Lost mode (supervised only)**.
 1. Under **Lost mode**, select **Enable**.
@@ -75,7 +75,7 @@ To locate the device during this time, use the [Locate device](locate.md) action
 
 ## How to disable Lost Mode from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device, and then **Lost mode (supervised only)**.
 1. Under **Lost mode**, select **Disable**.
 1. Select **OK** to save your changes.
@@ -90,12 +90,13 @@ To locate the device during this time, use the [Locate device](locate.md) action
 
 <!--links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-enablelostmode
 [GRAPH-2]: /graph/api/intune-devices-manageddevice-disablelostmode

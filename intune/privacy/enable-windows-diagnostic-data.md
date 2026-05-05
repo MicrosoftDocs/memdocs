@@ -83,5 +83,5 @@ To understand how Windows diagnostic data is collected and managed, see [Configu
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[INT-RC]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[INT-R1]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
