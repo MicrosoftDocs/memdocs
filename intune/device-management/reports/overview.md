@@ -18,15 +18,15 @@ Microsoft Intune reports allow you to more effectively and proactively monitor t
 > The Intune reporting changes roll out gradually over a period of time to help you prepare and adapt to the new structure.
 
 The report types are organized into the following focus areas:
-- **Operational** - Provides timely, targeted data that helps you focus and take action. Admins, subject matter experts, and helpdesk find these reports most helpful.
-- **Organizational** - Provides a broader summary of an overall view, such as device management state. Managers and admins find these reports most helpful.
-- **Historical** - Provides patterns and trends over a period of time. Managers and admins find these reports most helpful.
-- **Specialist** - Allows you to use raw data to create your own custom reports. Admins find these reports most helpful.
+- **Operational** – Provides timely, targeted data that helps you focus and take action. Admins, subject matter experts, and helpdesk find these reports most helpful.
+- **Organizational** – Provides a broader summary of an overall view, such as device management state. Managers and admins find these reports most helpful.
+- **Historical** – Provides patterns and trends over a period of time. Managers and admins find these reports most helpful.
+- **Specialist** – Allows you to use raw data to create your own custom reports. Admins find these reports most helpful.
 
 The reporting framework provides a consistent and more comprehensive reporting experience. The available reports provide the following functionality:
 - **Search and sort** – You can search and sort across every column, no matter how large the dataset.
 - **Data paging** – You can scan your data based on paging, either page-by-page or by jumping to a specific page.
-- **Performance** - You can quickly generate and view reports created from large tenants.
+- **Performance** – You can quickly generate and view reports created from large tenants.
 - **Export** – You can quickly export reporting data generated from large tenants.
 
 > [!NOTE]
@@ -104,12 +104,12 @@ To generate the report, use the following steps:
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Noncompliant devices and settings**.
 3. Select **Generate report**. In the report, look at the following information:
 
-    - **Noncompliant setting** - Shows the name of the noncompliant policy setting.
-    - **Noncompliant policy** - Shows the name of the compliance policy that includes the noncompliant setting.
-    - **Calculated policy version** - Shows the compliance policy version that was used the last time compliance was calculated.
-    - **Latest policy version** - Shows the most recent version of the noncompliant compliance policy. If this version number is greater than the **Calculated policy version**, then an admin updated or changed the compliance policy since the last time compliance was calculated. The compliance state might be out-of-date.
-    - **Setting compliance state** - Shows if the device is noncompliant with the setting. Or, shows if the setting reported an error to Intune instead.
-    - **Setting error code** - If the setting compliance state is `Error`, then it shows the error code. Otherwise, this column is left blank.
+    - **Noncompliant setting** – Shows the name of the noncompliant policy setting.
+    - **Noncompliant policy** – Shows the name of the compliance policy that includes the noncompliant setting.
+    - **Calculated policy version** – Shows the compliance policy version that was used the last time compliance was calculated.
+    - **Latest policy version** – Shows the most recent version of the noncompliant compliance policy. If this version number is greater than the **Calculated policy version**, then an admin updated or changed the compliance policy since the last time compliance was calculated. The compliance state might be out-of-date.
+    - **Setting compliance state** – Shows if the device is noncompliant with the setting. Or, shows if the setting reported an error to Intune instead.
+    - **Setting error code** – If the setting compliance state is `Error`, then it shows the error code. Otherwise, this column is left blank.
 
 The report generates one row per device per noncompliant setting within the assigned compliance policy. So, a device that's noncompliant with four different settings are in the list four times, once for each setting.
 
@@ -141,11 +141,11 @@ To generate the report, use the following steps:
 
 The report generates one row per device that hasn't been assigned a compliance policy. In the report, you find the following columns of information that can be used to sort the results. The report also supports search on:
 
-- **Device name** - The name of the device as it appears when viewing Devices and creating groups.
-- **User Principal Name** - The primary user of the device.
-- **OS** - The operating system of the device, like *Windows*, or *Android*.
-- **OS version** - The OS version, like *22000.675* for Windows, or *12.0* for Android.
-- **Device model** - Model information such as *Surface Book 2*, or *Galaxy Note 10*.
+- **Device name** – The name of the device as it appears when viewing Devices and creating groups.
+- **User Principal Name** – The primary user of the device.
+- **OS** – The operating system of the device, like *Windows*, or *Android*.
+- **OS version** – The OS version, like *22000.675* for Windows, or *12.0* for Android.
+- **Device model** – Model information such as *Surface Book 2*, or *Galaxy Note 10*.
 - **Device ID**
 
 ### Settings compliance  (Organizational)
@@ -450,9 +450,9 @@ For information about the actions you can take with this report, see [Bulk actio
 
 The **Unhealthy endpoints** and **Active malware** reports provide bulk actions that are applicable to the Windows devices selected within each report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The following actions available:
 
-- **Restart** - This action performs a restart of the selected devices.
-- **Quick scan** - This action performs a Windows Defender quick scan of the selected devices.
-- **Full scan** - This action performs a Windows Defender full scan of the selected devices.
+- **Restart** – This action performs a restart of the selected devices.
+- **Quick scan** – This action performs a Windows Defender quick scan of the selected devices.
+- **Full scan** – This action performs a Windows Defender full scan of the selected devices.
 
 For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
 
@@ -553,7 +553,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 Status details include:
 
 - **Enabled** – The firewall on, and successfully reporting.
-- **Disabled** - The firewall is turned off.
+- **Disabled** – The firewall is turned off.
 - **Limited** – The firewall isn't monitoring all networks, or some rules are turned off.
 - **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
 - **Not applicable** – The device doesn't support firewall reporting.
@@ -773,7 +773,7 @@ For more information, about diagnostic settings, see [Create diagnostic setting 
 Log Analytics is the primary tool in the Azure portal for writing log queries and interactively analyzing the results of the queries. Even if a log query is used elsewhere in Azure Monitor, you'll typically write and test the query first using Log Analytics. For details about using Log Analytics and creating log queries, see [Overview of log queries in Azure Monitor](/azure/azure-monitor/log-query/log-query-overview).
 
 ### Workbooks
-Workbooks combine text, Analytics queries, Azure Metrics, and parameters into rich interactive reports. Workbooks are editable by any other team members who have access to the same Azure resources. For more information about workbooks, see [Azure Monitor workbooks](/azure/azure-monitor/app/usage-workbooks). Also, you can work with and contribute to workbook templates. For more information, see [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045).
+Workbooks combine text, Analytics queries, Azure Metrics, and parameters into rich interactive reports. Workbooks are editable by any other team members who have access to the same Azure resources. For more information about workbooks, see [Azure Monitor workbooks](/azure/azure-monitor/app/usage-workbooks). Also, you can work with and contribute to workbook templates. For more information, see [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## Other reports
 

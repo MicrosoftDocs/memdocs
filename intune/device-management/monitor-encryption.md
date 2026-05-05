@@ -37,9 +37,9 @@ The encryption report supports reporting on devices that run the following opera
 
 ### Report details
 
-The Encryption report pane displays a list of the devices you manage with high-level details about those devices. You can select a device from the list to drill-in and view more details from the devices [Device encryption status](#device-encryption-status) pane.
+The Encryption report pane displays a list of the devices you manage with high-level details about those devices. You can select a device from the list to drill-in and view more details from the devices [Device encryption status](#device-encryption-status) pane.
 
-- **Device name** - The name of the device.
+- **Device name** – The name of the device.
 - **OS** – The device platform, such as Windows or macOS.
 - **OS version** – The version of Windows or macOS on the device.
 - **TPM version** *(applies to Windows only)* – The version of the Trusted Platform Module (TPM) chip detected on the Windows device.
@@ -66,7 +66,7 @@ The Encryption report pane displays a list of the devices you manage with high
 
 - **Encryption status** – Whether the OS drive is encrypted.
 
-- **User Principal Name** - The primary user of the device.
+- **User Principal Name** – The primary user of the device.
 
 ### Device encryption status
 
@@ -74,11 +74,11 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 - **Device name** – The name of the device you're viewing.
 
-- **Encryption readiness** - An evaluation of the device's readiness to support encryption through the MDM policy based on an activated TPM.
+- **Encryption readiness** – An evaluation of the device's readiness to support encryption through the MDM policy based on an activated TPM.
 
   When a Windows device has a readiness of *Not ready*, it might still support encryption. To have the *Ready* designation, the Windows device must have a TPM chip activated. However, TPM chips aren't required to support encryption, as the device can still be manually encrypted. or through a MDM/Group Policy setting that can be set to allow encrypting without a TPM.
 
-- **Encryption status** - Whether the OS drive is encrypted. It can take up to 24 hours for Intune to report on a device's encryption status or a change to that status. This time includes time for the OS to encrypt, plus time for the device to report back to Intune.
+- **Encryption status** – Whether the OS drive is encrypted. It can take up to 24 hours for Intune to report on a device's encryption status or a change to that status. This time includes time for the OS to encrypt, plus time for the device to report back to Intune.
 
   To speed up the reporting of FileVault encryption status before device check-in normally occurs, have users sync their devices after encryption completes.
 
