@@ -18,13 +18,48 @@ JIT compliance remediation, the feature that initiates compliance checks, is ena
 This article describes how to enable JIT registration by creating an SSO app extension policy in the Microsoft Intune admin center.
 
 ## Prerequisites
-Microsoft Intune supports JIT registration and compliance remediation for all iOS and iPadOS enrollments, including:
 
-* Apple User Enrollment: Account-driven user enrollment and user enrollment with Company Portal
-* Apple Device Enrollment: Web-based device enrollment and device enrollment with Company Portal
-* Apple automated device enrollment: For enrollments that use Setup Assistant with modern authentication as the [authentication method](ref-automated-authentication-methods.md)
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-To take advantage of JIT compliance remediation, you must assign compliance policies to devices.
+:::column-end:::
+:::column span="3":::
+
+> This feature supports the following platforms:
+>
+> - iOS/iPadOS
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Microsoft Intune supports JIT registration and compliance remediation for all iOS and iPadOS enrollments, including:
+>
+> - Apple User Enrollment: Account-driven user enrollment and user enrollment with Company Portal
+> - Apple Device Enrollment: Web-based device enrollment and device enrollment with Company Portal
+> - Apple automated device enrollment: For enrollments that use Setup Assistant with modern authentication as the [authentication method](ref-automated-authentication-methods.md)
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To take advantage of JIT compliance remediation, you must assign compliance policies to devices.
+
+:::column-end:::
+:::row-end:::
 
 ## Best practices for SSO configuration
 * The user's first sign-in after they reach the home screen has to happen in a work or school app that's configured with the SSO extension. Otherwise, Microsoft Entra registration and compliance checks can't be completed. We recommend that you point employees to the Microsoft Teams app. The app is integrated with the latest identity libraries and provides the most streamlined experience from the user's home screen.

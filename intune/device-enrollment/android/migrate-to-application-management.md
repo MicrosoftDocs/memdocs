@@ -21,19 +21,29 @@ There are two ways to utilize mobile application management in Intune: with devi
 
 ## Prerequisites
 
-You need the following Intune permissions to set up and enforce mobile application management:
- * Managed apps/Assign
- * Managed apps/Create
- * Managed apps/Delete
- * Managed apps/Read
- * Managed apps/Update
- * Managed apps/Wipe
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
-Additionally, the Intune Company Portal app is required on devices, because it enables device users to receive app protection policies.
+:::column-end:::
+:::column span="3":::
 
->[!TIP]
-> * The built-in [Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager) role has sufficient permissions for mobile application management.
-> * You can add [scope tags](../../fundamentals/role-based-access-control/scope-tags.md) to policies to control object visibility among Intune admin users.
+> You need the following Intune permissions to set up and enforce mobile application management:
+>
+> - Managed apps/Assign
+> - Managed apps/Create
+> - Managed apps/Delete
+> - Managed apps/Read
+> - Managed apps/Update
+> - Managed apps/Wipe
+>
+> The built-in [Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager) role has sufficient permissions for mobile application management. You can also add [scope tags](../../fundamentals/role-based-access-control/scope-tags.md) to policies to control object visibility among Intune admin users.
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> The Intune Company Portal app must be installed on devices. It enables device users to receive app protection policies.
 
 ## Step 1: Configure policies for mobile application management
 Create mobile application management policies in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Within these policies you can, for example, allow or block app features such as *copy and paste*. For more app protection settings and capabilities in Intune, see:

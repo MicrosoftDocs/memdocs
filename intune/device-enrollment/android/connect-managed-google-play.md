@@ -30,9 +30,41 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 >[!IMPORTANT]
 > As of August 2024, you can link your Microsoft Entra account to a Google account, instead of using an enterprise Gmail account. We recommend using your Microsoft Entra account to connect to Google Play. For more information about this change, see [Google blog: How we're making Android Enterprise signup and access to Google services better](https://blog.google/products/android-enterprise/android-enterprise-signup-google-services/). Current Microsoft Intune tenants who have already associated a Gmail account with Intune will continue to be supported.
 
-- Confirm Android Enterprise availability in your country/region. For more information, see [Is Android Enterprise available in my country/region?](https://support.google.com/work/android/answer/6270910).
-- Confirm the Microsoft Entra account you want to use. This account is used to manage the Google Admin account and associated subscriptions, and will be associated with all Android Enterprise management tasks in your Microsoft Intune tenant.
-- Confirm that the Microsoft Entra account has a mailbox set up so that you can complete the validation process required by Google.
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Confirm Android Enterprise availability in your country/region. For more information, see [Is Android Enterprise available in my country/region?](https://support.google.com/work/android/answer/6270910).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Confirm the Microsoft Entra account you want to use. This account is used to manage the Google Admin account and associated subscriptions, and will be associated with all Android Enterprise management tasks in your Microsoft Intune tenant. The account must also have a mailbox set up to complete the validation process required by Google.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To connect your Intune tenant to managed Google Play, sign in with an account that has the **Intune Administrator** role, or a custom Intune role with organization *read* and *update* permissions.
+
+:::column-end:::
+:::row-end:::
 
 ## Connect accounts
 > [!TIP]

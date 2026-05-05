@@ -22,12 +22,35 @@ This article describes how to set up web based device enrollment in Microsoft In
 * Prepare employees and students for enrollment.
 
 ## Prerequisites
-Microsoft Intune supports web-based device enrollment on devices running iOS/iPadOS version 15 or later. If you assign a web-based enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via app-based device enrollment. App-based device enrollment requires the Company Portal app for iOS/iPadOS.
 
-Before you begin, complete the following tasks:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-- [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
-- [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - iOS/iPadOS 15 or later  
+>
+> If you assign a web-based enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via app-based device enrollment. App-based device enrollment requires the Company Portal app for iOS/iPadOS.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
+> - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
+
+:::column-end:::
+:::row-end:::
 
 ## Best practices
 Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md). Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.

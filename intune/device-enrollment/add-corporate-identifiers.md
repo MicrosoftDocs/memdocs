@@ -34,28 +34,52 @@ Microsoft Intune marks devices that register with Microsoft Entra as personal.
 
 ## Requirements  
 
-You can use corporate identifiers with these platforms:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-- Android
-- iOS/iPadOS
-- Windows 
+:::column-end:::
+:::column span="3":::
 
-  > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
+> You can use corporate identifiers with the following platforms:
+>
+> - Android
+> - iOS/iPadOS
+> - Windows
 
-To add corporate identifiers in Microsoft Intune, you must be assigned one of these roles:
+:::column-end:::
+:::row-end:::
 
-- Policy and Profile Manager, a Microsoft Intune built-in role
-- [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), a Microsoft Entra built-in role
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
-These roles can *read*, *delete*, *create*, and *update* corporate device identifiers.
+:::column-end:::
+:::column span="3":::
 
-|Permission| Description |
-|---------------|------------|
-|Read | View the IMEI or serial numbers used as corporate device identifiers. |
-|Delete | Delete IMEI or serial numbers used as corporate device identifiers. |
-|Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. |
-|Update | Change IMEI or serial numbers used as corporate device identifiers. |
+> To add corporate identifiers, you must be assigned one of these roles:
+>
+> - **Policy and Profile Manager**, a Microsoft Intune built-in role
+> - [**Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), a Microsoft Entra built-in role
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+### Permissions
+
+These roles can *read*, *delete*, *create*, and *update* corporate device identifiers.  
+- Policy and Profile Manager  
+- Intune Administrator  
+
+| Permission | Description |
+|---|---|
+| Read | View the IMEI or serial numbers used as corporate device identifiers. |
+| Delete | Delete IMEI or serial numbers used as corporate device identifiers. |
+| Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. |
+| Update | Change IMEI or serial numbers used as corporate device identifiers. |
 
 You can also create a custom Intune role for people managing corporate identifiers and assign corporate device identifier permissions. For more information about built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
