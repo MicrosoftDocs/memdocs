@@ -24,33 +24,13 @@ This article describes how to create an enrollment policy for macOS automated de
 
 ## Prerequisites
 
-<<<<<<< HEAD
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../../includes/requirements/platform.md)]
-=======
-Before you create the enrollment profile, you must have:
-
-* Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/).
-* An active Apple token (.p7m file). For steps, see [Set up a macOS ADE token](setup-macos-token.md).
-* An [Apple MDM push certificate in Intune](create-mdm-push-certificate.md).
-* New or wiped devices purchased through Apple Business Manager or Apple School Manager.
-     > [!TIP]
-     > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state. 
-
-### Configure platform SSO during automated device enrollment  
-
-If you want Microsoft Entra ID single sign-on (SSO) to be available to users during Setup Assistant, you must create a platform SSO policy before devices enroll.
-
-Platform SSO policies are deployed to enrolling macOS devices during automated device enrollment (ADE) and allow users to sign in with their organization credentials during device setup. This configuration enables users to automatically access Microsoft Entra–protected apps and resources after enrollment.
-
-For more information, see [Configure Platform SSO during automated device enrollment for macOS](../../device-configuration/settings-catalog/configure-platform-sso-during-enrollment.md).   
->>>>>>> 345027126117b48a5577e63bb80a9b72c8a8a887
 
 
 :::column-end:::
 :::column span="3":::
->>>>>>> upstream/main
 
 > New or wiped macOS devices purchased through Apple Business or Apple School Manager.
 
