@@ -29,7 +29,7 @@ Before you create the enrollment profile, you must have:
      > [!TIP]
      > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state. 
 
-### Configure platform SSO
+### Configure platform SSO during automated device enrollment  
 
 If you want Microsoft Entra ID single sign-on (SSO) to be available to users during Setup Assistant, you must create a platform SSO policy before devices enroll.
 
