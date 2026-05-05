@@ -1,7 +1,7 @@
 ---
 title: Add Platform SSO policy to ADE Profile on macOS devices
 description: Add a settings catalog platform single sign-on (PSSO) policy to an Automated Device Enrollment (ADE) profile and configure it to run during Setup Assistant with modern authentication on macOS devices.
-ms.date: 04/27/2026
+ms.date: 05/11/2026
 ms.topic: how-to
 appliesto:
 - ✅ macOS

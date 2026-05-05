@@ -272,4 +272,4 @@ Many endpoint security policies have deep integration with Microsoft Defender fo
 - [Review security baselines for comprehensive security configurations](../../device-security/security-baselines/overview.md)
 - [Learn about reusable settings groups](../../device-security/reusable-settings-groups.md)
 - [Configure Microsoft Defender for Endpoint integration](../../device-security/microsoft-defender/configure-integration.md)
-- [Understand device protection strategies](../../device-security/index.md)
+- [Understand device protection strategies](../../device-security/overview.md)

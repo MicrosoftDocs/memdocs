@@ -32,8 +32,7 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
 1. Select an active issuing CA from the list of available CAs. Selecting a CA opens its available actions.
 1. Select **Pause**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Example screenshot highlighting the Pause action for Cloud PKI.](./media/delete-ca/delete.png)
+   :::image type="content" source="./media/delete-ca/delete.png" alt-text="Cloud PKI CA properties page with Pause action highlighted." border="false":::
 
 1. Select **Pause** again when prompted to confirm.
 
@@ -44,8 +43,7 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
 
 1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is paused.
 
-    > [!div class="mx-imgBorder"]
-    > ![Example screenshot highlighting the Status column in the table of CAs.](./media/delete-ca/delete-2.png)
+    :::image type="content" source="./media/delete-ca/delete-2.png" alt-text="Cloud PKI CA list with Status column showing paused state." border="false":::
 
 1. Select the paused CA to open all available options again. Two new options appear:
    - **Resume**: This option unpauses the CA and makes it active again.
@@ -55,8 +53,7 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
    >[!TIP]
    > For this action to work, all active leaf certificates belonging to the CA must already be revoked. For more information and steps, see [Revoke active leaf certificates](#revoke-active-leaf-certificates) in this article.
 
-    > [!div class="mx-imgBorder"]
-    > ![Example screenshot highlighting the Revoke action for the CA.](./media/delete-ca/delete-3.png)
+    :::image type="content" source="./media/delete-ca/delete-3.png" alt-text="Cloud PKI CA properties page with Revoke action highlighted." border="false":::
 
 1. Select **Revoke** again when prompted to confirm.
 
@@ -72,14 +69,12 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
 
 1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is revoked.
 
-   > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the CA list, highlighting the revoked status.](./media/delete-ca/delete-4.png)
+   :::image type="content" source="./media/delete-ca/delete-4.png" alt-text="Cloud PKI CA list with Status column showing revoked state." border="false":::
 
 1. Select the revoked CA to open all available options again.
 1. The option to delete the CA should be available now. Select **Delete** to remove the CA from Microsoft Intune.
 
-   > [!div class="mx-imgBorder"]
-   > ![Example screenshot highlighting the delete action for an issuing CA.](./media/delete-ca/delete-5.png)
+   :::image type="content" source="./media/delete-ca/delete-5.png" alt-text="Cloud PKI CA properties page with Delete action highlighted for an issuing CA." border="false":::
 
 1. Select **Delete** again when prompted to confirm.
 
@@ -97,13 +92,11 @@ Permanently remove a root CA from Microsoft Intune.
 1. Go to **Tenant administration** > **Cloud PKI**.
 1. Select a root CA from the list of available CAs. Selecting a CA opens its available actions.
 
-   > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the CA list, highlighting a root CA.](./media/delete-ca/delete-6.png)
+   :::image type="content" source="./media/delete-ca/delete-6.png" alt-text="Cloud PKI CA list with a root CA selected." border="false":::
 
 1. Select **Delete** to remove the CA from Microsoft Intune.
 
-   > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the admin center highlighting the delete action for the root CA.](./media/delete-ca/delete-8.png)
+   :::image type="content" source="./media/delete-ca/delete-8.png" alt-text="Cloud PKI CA properties page with Delete action highlighted for the root CA." border="false":::
 
 1. Select **Delete** again when prompted to confirm.
 

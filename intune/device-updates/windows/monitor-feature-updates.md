@@ -13,7 +13,7 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 ## Before you begin
 
 > [!div class="checklist"]
-> - Ensure your environment meets the requirements in [Feature updates overview](manage-feature-updates.md#prerequisites).
+> - Ensure your environment meets the [Feature updates prerequisites](feature-updates.md#prerequisites).
 
 ### About reporting data latency
 
@@ -40,12 +40,12 @@ To access the report:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Windows Updates**. The default view displays the **Summary** tab:
      > [!div class="mx-imgBorder"]
-     > ![Enable data collection for Intune](./media/monitor-feature-updates/updates-summary.png)
+     > ![Windows Updates Summary tab in Intune admin center showing update status overview.](./media/monitor-feature-updates/updates-summary.png)
 1. Select **Windows Feature Update Report**.
    - Select on **Select a feature update profile**, select a profile, and then **Generate report**.
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
-     > ![Review ownership](./media/monitor-feature-updates/feature-updates-by-policy.png)
+     > ![Windows Feature Update Report filtered by update status and device ownership.](./media/monitor-feature-updates/feature-updates-by-policy.png)
 
    The following list identifies the columns that are available in the view:
    - **Devices**: The name of the device.
@@ -121,7 +121,7 @@ To access the report:
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
 
      > [!div class="mx-imgBorder"]
-     > ![Per-profile view](./media/monitor-feature-updates/update-failures-summary.png)
+     > ![Update failures summary showing device alert counts by profile and target Windows version.](./media/monitor-feature-updates/update-failures-summary.png)
 
    - Selecting a profile opens a dedicated view that contains all active Alerts for that profile.
 
@@ -129,11 +129,11 @@ To access the report:
 
      - Select an *Alert Message* to open a pane that displays more details for that alert:
        > [!div class="mx-imgBorder"]
-       > ![Alert message details](./media/monitor-feature-updates/alert-message-details.png)
+       > ![Alert details pane showing error message, affected device count, and remediation information.](./media/monitor-feature-updates/alert-message-details.png)
 
      - Select the device name to open the Device page:
        > [!div class="mx-imgBorder"]
-       > ![View the device page](./media/monitor-feature-updates/device-details.png)
+       > ![Device details page showing update status, configuration, and alert information.](./media/monitor-feature-updates/device-details.png)
 
 The following list identifies Alert Messages, and suggested remediation actions:
 
@@ -174,8 +174,8 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **PolicyConflictDeferral** | The Deferral Policy configured on the device is preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PolicyConflictPause** | Updates are paused on the device, preventing the update from installing. | Check that the client policies configured on the device don't conflict with deployment settings. |
 | **PostRestartIssue** | Windows Update couldn't determine the results of installing the update. The error is usually false and the update probably succeeded. | If the update you're trying to install isn't available, no action is required. If the update is still available, retry the installation. |
-| **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the [Setup Diagnostics Tool](/windows/deployment/upgrade/setupdiag) on the Device. Don't retry the installation until the impact is understood. |
-| **SafeguardHold**  | Update can't install because of a known [Safeguard Hold](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds).  | View the *Deployment Error Code* column of the report to see the ID of the safeguard hold. Open the Windows release health dashboard at [https://aka.ms/WindowsReleaseHealth](/windows/release-health/) to view information about the active holds, including known issues with the update. |
+| **RollbackInitiated** | A rollback was started on this device, indicating a catastrophic issue occurred during the Windows Setup install process. | Run the Setup Diagnostics Tool on the device. For more information, see [SetupDiag documentation](/windows/deployment/upgrade/setupdiag). Don't retry the installation until the impact is understood. |
+| **SafeguardHold**  | Update can't install because of a known safeguard hold issue. See [Safeguard Holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) for details.  | View the *Deployment Error Code* column of the report to see the ID of the safeguard hold. To view information about active holds and known issues, see the [Windows release health dashboard](/windows/release-health/). |
 | **UnexpectedShutdown** | The installation was stopped because a Windows shutdown or restart was in progress. | Ensure the device remains on during Windows installation. |
 | **VersionMismatch** | Device is on a version of Windows that wasn't intended by Windows Update. | Confirm whether the device is on the intended version. |
 | **WindowsRepairRequired** | The current version of Windows needs to be repaired before it can be updated. | Run the Startup Repair Tool on this device. |

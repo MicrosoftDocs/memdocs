@@ -1,19 +1,24 @@
 ---
 title: Platform SSO scenarios for macOS devices
 description: Use Microsoft Intune to configure common Platform SSO scenarios for macOS devices. You can enable Kerberos SSO to on-premises Active Directory and cloud-based Microsoft Entra ID, use Touch ID biometric policy with Secure Enclave authentication, and enable SSO on non-Microsoft apps. You can also configure end user experience settings.
+<<<<<<< HEAD
 ms.date: 04/27/2026
 author: MandiOhlinger
 ms.author: mandia
+=======
+ms.date: 08/26/2025
+>>>>>>> 9f850f698c41a0ffaca2214348f661d944a00598
 ms.topic: how-to
 appliesto:
 - ✅ macOS
 ms.reviewer: arnab, veenasoman
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
 ---
 
-# Common Platform SSO scenarios for macOS devices in Microsoft Intune
+# Common Platform SSO scenarios for macOS devices
 
-On macOS devices, you can configure [Platform SSO](./configure-platform-sso-macos.md) in Microsoft Intune to enable single sign-on (SSO) with your Microsoft Entra accounts. Platform SSO lets users access resources on their macOS devices without entering their credentials repeatedly.
+On macOS devices, you can configure [Platform SSO](./configure-platform-sso-macos.md) to enable single sign-on (SSO) with your Microsoft Entra accounts. Platform SSO allows users to access resources on their macOS devices without needing to enter their credentials repeatedly.
 
 When Platform SSO is configured, you can use the scenarios described in this article to use Kerberos SSO authentication to on-premises resources, enhance security with biometrics, enable SSO on non-Microsoft apps, and improve the user experience.
 
@@ -23,15 +28,19 @@ This feature applies to:
 
 ## Before you begin
 
-- You must [configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md) before you configure the scenarios in this article. When you configure it, you create a Platform SSO settings catalog policy that you use to add the scenarios described in this article.
+- You must [configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md) before you configure the scenarios in this article. When it's configured, you have an existing Platform SSO settings catalog policy that you use to add the scenarios described in this article.
 
-- You can assign only one SSO policy to your groups. So if you already configured Platform SSO, add these scenario settings to your existing Platform SSO settings catalog policy.
+- Only one SSO policy can be assigned to your groups. So if you already configured Platform SSO, then add these scenario settings to your existing Platform SSO settings catalog policy.
 
-- To update your existing settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
+- To update you existing settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
+<<<<<<< HEAD
   Some built-in roles have these permissions, including the built-in **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+=======
+  There are some built-in roles that have these permissions, including the built-in **Policy and Profile Manager** Intune role. For more information on RBAC roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+>>>>>>> 9f850f698c41a0ffaca2214348f661d944a00598
 
 ## Enable Kerberos SSO to on-premises Active Directory and Microsoft Entra ID
 
@@ -51,11 +60,11 @@ In your existing Platform SSO settings catalog policy, add the **Extension Data*
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
-        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot of the Settings Catalog settings picker with the authentication and extensible SSO category selected in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and extensible SSO category in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso.png":::
 
     4. In the list, select **Extension Data** and close the settings picker:
 
-        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot of the Settings Catalog settings picker with authentication and Extension Data selected in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png":::
+        :::image type="content" source="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png" alt-text="Screenshot that shows the Settings Catalog settings picker, and selecting authentication and Extension Data in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/settings-picker-authentication-extensible-sso-extension-data.png":::
 
 2. In **Extension Data**, **Add** the following key and your preferred value. Only enter one value for the key.
 
@@ -68,9 +77,9 @@ In your existing Platform SSO settings catalog policy, add the **Extension Data*
 
 3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
-## Configure Touch ID biometric policy with Secure Enclave authentication
+## Touch ID biometric policy with Secure Enclave authentication
 
-On devices that support Touch ID biometric authentication, use the Secure Enclave authentication option, as described in [Configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md).
+On devices that support Touch ID biometric authentication, you can use the Secure Enclave authentication option, as described in [Configure Platform SSO for macOS devices in Microsoft Intune](./configure-platform-sso-macos.md).
 
 This policy requires users to authenticate with Touch ID whenever the User Secure Enclave Key needs to be accessed. To learn more about `UserSecureEnclaveKeyBiometricPolicy`, see [UserSecureEnclaveKeyBiometricPolicy](/entra/identity/devices/macos-psso#microsoft-platform-sso-usersecureenclavekeybiometricpolicy).
 
@@ -96,7 +105,7 @@ Add the **Extension Data** setting to your existing Platform SSO settings catalo
 
 3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
-## Enable SSO for non-Microsoft apps with Microsoft Enterprise SSO Extension
+## Non-Microsoft apps and Microsoft Enterprise SSO Extension settings
 
 If you previously used the Microsoft Enterprise SSO Extension, and/or want to enable SSO on non-Microsoft apps, then add the **Extension Data** setting to your existing Platform SSO settings catalog policy.
 
@@ -131,17 +140,11 @@ The following settings are commonly recommended for configuring SSO settings, in
 
     The following example shows the recommended configuration:
 
-    :::image type="content" source="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png" alt-text="Screenshot of the Extension Data configuration showing AppPrefixAllowList and other Platform SSO settings in Microsoft Intune." lightbox="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png":::
+    :::image type="content" source="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png" alt-text="Screenshot that shows how to configure Extension Data settings, such as AppPrefixAllowList." lightbox="./media/configure-platform-sso-scenarios-macos/extension-data-appprefixallowlist.png":::
 
 3. Select **Next** to save your changes, and complete the policy. If the policy is already assigned to users or groups, then these groups receive the policy changes the next time they [sync with the Intune service](../troubleshoot-device-profiles.md#policy-refresh-intervals).
 
-## Apply Platform SSO policy during Automated Device Enrollment with Setup Assistant
-
-When you enroll macOS devices using Automated Device Enrollment (ADE), you can apply the Platform SSO policy during the Setup Assistant experience. When users arrive at the desktop, they have a more integrated sign-in experience on the device and can access Microsoft Entra ID resources immediately.
-
-For more information, see [Configure Platform Single Sign-On (PSSO) during Automated Device Enrollment for macOS devices](configure-platform-sso-during-enrollment.md).
-
-## End user experience settings for Platform SSO
+## End user experience settings
 
 There are some settings that customize the end-user experience and give more granular control on user privileges. Any undocumented Platform SSO settings aren't supported.
 

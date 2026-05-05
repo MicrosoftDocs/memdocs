@@ -12,7 +12,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/).
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/welcome-configuration-manager).
 
 Feature-specific documentation includes information about known issues that affect core scenarios.
 
@@ -20,6 +20,7 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2603](../../../plan-design/changes/whats-new-in-version-2603.md)
 - [What's new in version 2509](../../../plan-design/changes/whats-new-in-version-2509.md)
 - [What's new in version 2503](../../../plan-design/changes/whats-new-in-version-2503.md)
 - [What's new in version 2409](../../../plan-design/changes/whats-new-in-version-2409.md)

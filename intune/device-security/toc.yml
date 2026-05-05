@@ -1,0 +1,48 @@
+items:
+  - name: Device security overview
+    href: ./overview.md
+
+  - name: Compliance and Conditional Access
+    items:
+      - name: Compliance policies
+        href: ./compliance/toc.yml
+      - name: Conditional Access
+        href: ./conditional-access-integration/toc.yml
+
+  - name: Endpoint protection
+    items:
+      - name: Endpoint security policies
+        href: ../device-configuration/endpoint-security/toc.yml
+      - name: Microsoft Defender for Endpoint
+        href: ./microsoft-defender/toc.yml
+      - name: Mobile Threat Defense partners
+        href: ./mobile-threat-defense/toc.yml
+      - name: Microsoft Tunnel VPN gateway
+        href: ./microsoft-tunnel/toc.yml
+      - name: Security baselines
+        href: ./security-baselines/toc.yml
+      - name: Zero Trust configuration examples
+        href: ./security-configurations/toc.yml
+
+  - name: Identity and access control
+    items:
+      - name: Windows Hello for Business
+        items:
+          - name: Configure at enrollment
+            href: ./identity-protection/configure-tenant-wide-policy.md
+          - name: Configure after enrollment
+            href: ./identity-protection/deploy-group-policy.md
+      - name: Network access control
+        href: ./integrate-network-access-control.md
+        displayName: NAC
+      - name: Certificate infrastructure
+        href: ../fundamentals/certificates/toc.yml
+      - name: Microsoft Cloud PKI
+        href: ../cloud-pki/toc.yml
+
+  - name: Account protection
+    items:
+      - name: LAPS
+        href: ./laps/toc.yml
+      - name: Endpoint Privilege Management
+        href: ../epm/toc.yml
