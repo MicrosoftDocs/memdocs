@@ -35,7 +35,9 @@ This feature applies to:
 
 - During enrollment, users are prompted to enter their Microsoft Entra organizational credentials at least twice. The first sign-in starts the regular enrollment process. The second sign-in authenticates the identity in Company Portal, which gets the SSO extension.
 - This feature requires three different policies - settings catalog policy, line-of-business app policy, and enrollment profile. All the policies and settings listed in this article are required and work together. If any of the steps are misconfigured or skipped, the enrollment fails. In this situation, [wipe](../../device-management/actions/wipe.md) the device, follow the steps, and re-enroll the device.
-- Assign all the policies to the same **Assigned (static)** user groups that will use this feature. You can create new groups for this feature and add the users to those groups. If you assign these policies to different groups, Platform SSO during enrollment fails.
+- Assign all the policies to the same **Assigned (static)** user groups that will use this feature. You can use [assignment filters](../../fundamentals/filters/overview.md) on the static user groups.
+
+  You can create new groups for this feature and add the users to those groups. If you assign these policies to different groups, Platform SSO during enrollment fails.  
 
   Remember, the groups must be:
 
@@ -100,7 +102,7 @@ This policy enables the Platform SSO registration process during Setup Assistant
     |---|---|---|
     | **Authentication > Extensible single sign-on > Platform SSO > Enable Create First User During Setup** | Enabled | When enabled, the system enables the password synchronization experience during Setup Assistant. <br/><br/> Remember, only configure this setting if you're using the **Password** authentication method. If you're not using the **Password** authentication method, don't add or configure this setting. |
 
-3. Assign the policy to the static groups you created.
+3. Assign the policy to the static groups you created. 
 
 When you create the Platform SSO settings catalog policy, you add and configure more settings than what's listed in this article. This article only lists the settings that are required to enable Platform SSO during ADE with Setup Assistant. So, add this setting to your existing Platform SSO policy. Or, if you're creating a new Platform SSO policy, add this setting along with the other Platform SSO settings that are required to configure Platform SSO.
 
