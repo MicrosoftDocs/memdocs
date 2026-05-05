@@ -1,0 +1,125 @@
+### YamlMime:Landing
+
+title: Device updates
+summary: Manage operating system and driver updates for Windows, Apple, and Android devices using update policies, rings, and expedited deployments.
+
+metadata:
+  title: Device updates
+  description: Manage OS, driver, and firmware updates for Windows, Apple, and Android devices with Microsoft Intune update policies and rings.
+  ms.topic: landing-page
+  ms.date: 05/04/2026
+  author: paolomatarazzo
+  ms.author: paoloma
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 1
+  - title: Get started
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Windows update management overview
+        url: windows/index.md
+      - text: Configure update policies for Apple devices
+        url: apple/index.md
+      - text: Manage device operating system versions
+        url: manage-os-versions.md
+
+  # Card 2
+  - title: Windows update rings
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Manage update ring policies
+        url: windows/manage-update-rings.md
+      - text: Update ring policy settings
+        url: windows/ref-update-ring-settings.md
+      - text: Update agent error codes
+        url: windows/ref-agent-error-codes.md
+      - text: Update ring reports
+        url: windows/monitor-update-rings.md
+
+  # Card 3
+  - title: Windows feature updates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Manage feature updates
+        url: windows/manage-feature-updates.md
+      - text: Configure feature update policies
+        url: windows/configure-feature-update-policy.md
+      - text: Configure rollout options
+        url: windows/configure-rollout-options.md
+      - text: Upgrade devices to Windows 11
+        url: windows/upgrade-to-windows-11.md
+    - linkListType: reference
+      links:
+      - text: Feature update reports
+        url: windows/monitor-feature-updates.md
+      - text: Compatibility reports
+        url: windows/monitor-compatibility.md
+
+  # Card 4
+  - title: Windows quality updates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Manage quality updates
+        url: windows/manage-quality-updates.md
+      - text: Use hotpatch with quality updates
+        url: windows/configure-hotpatch.md
+      - text: Expedite quality updates
+        url: windows/configure-expedite-policy.md
+      - text: Quality update reports
+        url: windows/monitor-quality-updates.md
+
+  # Card 5
+  - title: Windows driver updates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Manage driver updates
+        url: windows/manage-driver-updates.md
+      - text: Configure driver update policies
+        url: windows/configure-driver-update-policy.md
+      - text: Driver update reports
+        url: windows/monitor-driver-updates.md
+    - linkListType: reference
+      links:
+      - text: Driver updates FAQ
+        url: windows/driver-updates-faq.yml
+
+  # Card 6
+  - title: Apple updates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: iOS/iPadOS update policies
+        url: apple/deprecated-mdm-policies-ios.md
+      - text: macOS update policies
+        url: apple/deprecated-mdm-policies-macos.md
+      - text: Apple software update reports
+        url: apple/monitor-reports.md
+    - linkListType: concept
+      links:
+      - text: iOS/iPadOS update planning guide
+        url: apple/planning-guide-ios-ipados.md
+      - text: macOS update planning guide
+        url: apple/planning-guide-macos.md
+
+  # Card 7
+  - title: Android and firmware updates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Android FOTA updates
+        url: android/manage-fota.md
+      - text: Zebra LifeGuard OTA integration
+        url: android/setup-zebra-lifeguard.md
+    - linkListType: concept
+      links:
+      - text: Android update planning guide
+        url: android/planning-guide.md
+      - text: BYOD update planning guide
+        url: byod-planning-guide.md
