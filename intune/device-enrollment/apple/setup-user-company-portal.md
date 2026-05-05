@@ -20,11 +20,35 @@ When the device owner attempts to sign into an app with their work or school acc
 This article describes how to set up an enrollment profile in the Microsoft Intune admin center for Apple User Enrollment with Company Portal.
 
 ## Prerequisites
-User enrollment with Company Portal is supported on devices running iOS version 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:
 
-- [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
-- [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
-- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - iOS 13 or later
+> - iPadOS 13.1 or later
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
+> - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
+> - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
+
+:::column-end:::
+:::row-end:::
 
 Additionally, review the following information:
 

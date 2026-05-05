@@ -22,6 +22,22 @@ Microsoft Intune doesn't use any personal data collected as part of providing th
 
 [!INCLUDE [GDPR-related guidance](includes/gdpr-dsr-and-stp-note.md)]
 
+## Compliance certifications
+
+Intune is covered under several compliance certifications, and regulatory standards. The following table provides a sample of the key certifications that are covered:
+
+| Certification or Standard | Description | Applicability |
+|---------------------------|-------------|---------------|
+| [GDPR](/compliance/regulatory/gdpr) | EU General Data Protection Regulation for data privacy  | European Union |
+| [ISO 27001](/compliance/regulatory/offering-iso-27001) | International standard for information security management | Global |
+| [HIPAA](/compliance/regulatory/offering-hipaa-hitech)   | U.S. Health Insurance Portability and Accountability Act | United States |
+| [SOC 2 Type 2](/compliance/regulatory/offering-soc-2)  | Service Organization Controls for data security | Global |
+
+> [!NOTE]
+> Microsoft Intune helps your organization meet regulatory compliance standards. Intune supports additional certifications, such as [ISO 22301](/compliance/regulatory/offering-iso-22301), [ISO/IEC 27017](/compliance/regulatory/offering-iso-27017), [ISO/IEC 27018](/compliance/regulatory/offering-iso-27018), [ISO/IEC 27701](/compliance/regulatory/offering-iso-27701), [SOC 1 Type 2](/compliance/regulatory/offering-soc-1), [SOC 3](/compliance/regulatory/offering-soc-3), and [WCAG](/compliance/regulatory/offering-wcag-2-1).
+
+For a complete list, see [Microsoft compliance offerings](/compliance/regulatory/offering-home).
+
 ## Your company terms and conditions
 
 In addition to the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement), you can [include privacy statements in your company's terms and conditions for end users](../app-management/configuration/configure-company-portal.md). Such privacy statements can include information about the usage and privacy of the end user's personal data.

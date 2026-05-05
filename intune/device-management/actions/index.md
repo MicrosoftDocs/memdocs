@@ -140,7 +140,7 @@ Select one of the following tabs to learn more about the available device action
 
 Every device action has its own steps, which the respective documentation details. In general:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**].
+1. In the [Microsoft Intune admin center], select **Devices** > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, a row displays available device actions. Each icon represents a specific action (such as **Restart**, **Wipe**, or **Locate device**). Depending on your screen resolution or window size, the overflow menu (**...**) might hide some actions.
 1. Select the desired action.
@@ -151,7 +151,7 @@ Every device action has its own steps, which the respective documentation detail
 
 ## Check the status of the action
 
-To check the status of the action, select **Devices** > [**Device actions**][INT-AC].
+To check the status of the action, select **Devices** > [**Device actions**].
 
 ## Bulk device actions
 
@@ -222,7 +222,7 @@ Select one of the following tabs to learn more about the available bulk device a
 
 Each bulk action has its own steps. The documentation for each action provides detailed instructions. In general, follow these steps:
 
-1. In the [Microsoft Intune admin center], select **Devices** > **All devices** > [**Bulk device actions**].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**] > [**Bulk device actions**].
 1. On the **Basics** page, select an **OS** and **Device action** from the dropdowns. Some device actions have more options or fields to fill in. Select **Next**.
 1. On the **Devices** page, select up to the maximum number of devices that the action supports. Select **Next**.
 1. On the **Review + create** page, select **Create**.
@@ -278,8 +278,10 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 <!-- portal links -->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 [**Bulk device actions**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade
-[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2333814
+[**Device actions**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 
 <!-- icons -->
 
