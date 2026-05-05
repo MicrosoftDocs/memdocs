@@ -1,18 +1,20 @@
 ---
-title: Data storage and processing
-description: Learn how personal data is stored and processed in Intune.
-ms.date: 06/25/2025
-ms.topic: conceptual
+title: Intune Data Storage and Processing Overview
+description: Learn how Microsoft Intune stores and processes personal data, including storage locations, data residency, and retention policies.
+ms.date: 5/5/2026
+author: paolomatarazzo
+ms.author: paoloma
+ms.topic: overview
 ms.reviewer: bradyw
 ms.collection:
-- M365-identity-device-management
-- privacy
-- sub-data-privacy
+ - M365-identity-device-management
+ - privacy
+ - sub-data-privacy
 ---
 
-# Data storage and processing
+# Data storage and processing overview
 
-Microsoft Intune is a cloud-based service that helps organizations manage and secure their devices, applications, and data. As part of providing this service, Intune collects and processes personal data in accordance with Microsoft's privacy policies and commitments. This article describes how personal data is stored and processed in Intune, including information about storage locations, data residency options, retention policies, and processing practices.
+This article describes how Microsoft Intune stores and processes personal data. It includes information about storage locations, data residency options, retention policies, and processing practices.
 
 ## Storage locations
 
