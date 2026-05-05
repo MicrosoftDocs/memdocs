@@ -21,13 +21,23 @@ One connection is allowed per tenant.
 Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
 ## Prerequisites
-To establish a connection, you must have:
 
-* Access to the Google Admin console
-* [Permission to manage ChromeOS Devices](https://support.google.com/a/answer/9807615)(opens Google Workspace Admin Help)
-* One of these roles:
-   * Intune Service Administrator
-   * Custom Intune role, with *Chrome Enterprise update connection settings* permission.
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To establish a connection, you must have:
+>
+> - Access to the Google Admin console and [permission to manage ChromeOS devices](https://support.google.com/a/answer/9807615)
+> - One of these roles:
+>   - **Intune Service Administrator**
+>   - Custom Intune role with *Chrome Enterprise update connection settings* permission
+
+:::column-end:::
+:::row-end:::
 
 ## Create Chrome Enterprise connection
 

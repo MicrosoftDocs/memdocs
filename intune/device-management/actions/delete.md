@@ -72,9 +72,9 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 > To run this action, use an account with at least one of the following roles:
 >
-> - [School Administrator][INT-R2]
-> - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] that includes:
+> - [School Administrator]
+> - [Endpoint Security Manager]
+> - [Custom role] that includes:
 >   - The permission **Managed devices/Delete**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
@@ -83,7 +83,7 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ## How to delete a device from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Delete**. To confirm, select **Yes**.
 
@@ -104,22 +104,23 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 - Microsoft Graph API: [delete action][GRAPH-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
-<!-- admin center links -->
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+<!--Role links-->
 
-<!-- role links -->
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-cleanwindowsdevice
+
+<!--Other links-->
 
 [CSP-1]: /windows/client-management/mdm/cleanpc-csp

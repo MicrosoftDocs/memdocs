@@ -105,7 +105,7 @@ The business benefits of using Intune to manage Activation Lock are:
 > To run this action, use an account with at least one of the following roles:
 >
 > - Intune Service Administrator
-> - [Custom role][INT-RC] that includes:
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Bypass activation lock**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
@@ -117,7 +117,7 @@ The business benefits of using Intune to manage Activation Lock are:
 The Disable Activation Lock device action in Intune removes Activation Lock without requiring the user's Apple ID and password. However, if the Find My app is launched after this action, Activation Lock will be automatically re-enabled.
 To avoid re-locking the device, make sure you have physical possession of the device before disabling Activation Lock.
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Disable Activation Lock**.
 1. Select **Hardware**, then find and copy the **Activation Lock bypass code** value under **Conditional Access**.
@@ -130,7 +130,7 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 ## How to use the Activation Lock bypass code from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Wipe**.
 ::: zone pivot="ios"
@@ -144,22 +144,26 @@ If you send an unfiltered request for the device object, Graph returns a default
 
 - Microsoft Graph API: [bypassActivationLock action][GRAPH-1]
 
-<!-- admin center links -->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-<!-- role links -->
+<!--Role links-->
 
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
+<!--Graph API links-->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-bypassactivationlock
+
+<!--Other links-->
 
 [IOS-SUP]: /intune/intune-service/remote-actions/device-supervised-mode
 [MAC-ADE]: ../../device-enrollment/apple/setup-automated-macos.md
 [APL-1]: https://support.apple.com/guide/apple-business-manager/axm812df1dd8
 [APL-2]: https://support.apple.com/HT201365
-
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-bypassactivationlock
