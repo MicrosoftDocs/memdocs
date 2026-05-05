@@ -429,6 +429,11 @@
       "source_path_from_root": "/intune/solutions/frontline-worker/frontline-worker-overview.md",
       "redirect_url": "/intune/solutions/frontline-worker/",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/governance/compliance-and-regulatory-alignment.md",
+      "redirect_url": "/intune/privacy/",
+      "redirect_document_id": false
     }
   ]
 }
