@@ -95,5 +95,5 @@ For more information, see [Monitor audit logs in Intune](./monitor-audit-logs.md
 
 <!-- Role links-->
 
-[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 [Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator

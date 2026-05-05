@@ -218,15 +218,15 @@ Learn more about endpoint analytics:
 
 [Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
 
-[Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager
-[Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-privilege-manager
-[Endpoint Privilege Reader]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-privilege-reader
-[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[Intune Role Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#intune-role-administrator
-[Policy and Profile manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager
-[Read Only Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
-[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+[Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#application-manager
+[Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-manager
+[Endpoint Privilege Reader]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-reader
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Intune Role Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#intune-role-administrator
+[Policy and Profile manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#policy-and-profile-manager
+[Read Only Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#read-only-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
 
 <!-- Entra roles -->
 
