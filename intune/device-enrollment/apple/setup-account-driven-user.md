@@ -19,13 +19,36 @@ This article describes how to set up account driven Apple User Enrollment in Mic
 * Prepare employees and students for enrollment.
 
 ## Prerequisites
-Microsoft Intune supports account driven Apple User Enrollment on devices running iOS/iPadOS version 15 or later. If you assign an account driven user enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune automatically enrolls them via user enrollment with Company Portal.
 
-Before beginning setup, complete the following tasks:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-- [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
-- [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
-- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - iOS/iPadOS 15 or later
+>
+> If you assign an account driven user enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune automatically enrolls them via user enrollment with Company Portal.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
+> - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
+> - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
+
+:::column-end:::
+:::row-end:::
 
 You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To complete this prerequisite, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `"https://contoso.com/.well-known/com.apple.remotemanagement"`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.
 

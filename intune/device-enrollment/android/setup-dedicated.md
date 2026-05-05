@@ -22,13 +22,48 @@ This article describes how to set up and configure Microsoft Intune to enroll de
 
 ## Device requirements
 
-Devices must have:
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
-- Android OS version 8.0 or later.
-- A distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
-- Support for Android Enterprise. For more information about requirements and support, see:
-    * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)
-    * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)
+:::column-end:::
+:::column span="3":::
+
+> Confirm Android Enterprise availability in your country/region. For more information, see [Is Android Enterprise available in my country/region?](https://support.google.com/work/android/answer/6270910).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Devices must have:
+>
+> - Android OS version 8.0 or later.
+> - A distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
+> - Support for Android Enterprise. For more information about requirements and support, see:
+>   - [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)
+>   - [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set the mobile device management (MDM) authority to Microsoft Intune](../../fundamentals/setup-mdm-authority.md). You only need to do this once, when you're first setting up Intune for mobile device management.
+> - [Connect your Intune tenant account to your Managed Google Play account](connect-managed-google-play.md).
+
+:::column-end:::
+:::row-end:::
 
 ## Set up Android Enterprise dedicated device management
 

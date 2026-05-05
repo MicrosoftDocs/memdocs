@@ -31,36 +31,63 @@ Windows Backup for Organizations ensures that users have a consistent and person
 
 ## Requirements
 
-To use the backup functionality, devices must be:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-* Microsoft Entra hybrid joined or Microsoft Entra joined.
-* Running a currently supported version of Windows. Supported versions include:
-  * Windows 10, version 22H2, build 19044.6216 or later
-  * Windows 11, version 22H2, build 22621.5768 or later
-  * Windows 11, version 23H2, build 22631.5768 or later
-  * Windows 11, version 24H2, build 26100.4946 or later   
+:::column-end:::
+:::column span="3":::
 
-  > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+> **Backup** - Devices must be Microsoft Entra hybrid joined or Microsoft Entra joined and running one of the following versions:
+>
+> - Windows 10, version 22H2 (build 19044.6216 or later)
+> - Windows 11, version 22H2 (build 22621.5768 or later)
+> - Windows 11, version 23H2 (build 22631.5768 or later)
+> - Windows 11, version 24H2 (build 26100.4946 or later)
+>
+> **Restore** - Devices must be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join). Restore is available on devices that are either on the August 2025 cumulative update, or running one of the following versions:
+>
+> - Windows 11, version 22H2 (build 22621.3958 or later)
+> - Windows 11, version 23H2 (build 22631.3958 or later)
+> - Windows 11, version 24H2 (build 26100.1301 or later)
 
-The restore feature is available on devices that meet the following requirements:
+:::column-end:::
+:::row-end:::
 
-- Must be [Microsoft Entra joined](/entra/identity/devices/concept-directory-join).
-- The restore feature is available on devices that are either on August 2025 cumulative update or meet the following requirements:
-  * Windows 11, version 22H2, build 22621.3958 or later
-  * Windows 11, version 23H2, build 22631.3958 or later
-  * Windows 11, version 24H2, build 26100.1301 or later
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To configure the restore setting, you must have Intune Service Administrator permissions.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Configure the **Install Windows quality updates** setting in the [enrollment status page profile](setup-status-page.md). If you're on a build older than July 2025, verify this setting is enabled on your devices.
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+
+The restore feature also requires:
+
 - The device user must have at least one backup profile.
-- Enable the Install Windows quality updates policy. If you're on a build older than July 2025, verify that the setting **Install Windows quality updates** is enabled for your devices in order to leverage the feature.
 - If Autopilot is used, the Autopilot profile must be configured to use [user-driven mode](/autopilot/user-driven), not self-deploying mode.
-
-Additionally, you're required to configure these settings:
-- Configure the Windows quality updates setting, an [enrollment status page feature](setup-status-page.md).
 
 ## RBAC and tenant wide targeting
 The restore setting for Windows Backup for Organizations is a tenant-wide setting. This means the restore setting is either turned on or off for all Windows devices in a tenant. The default configuration is **Not configured**, which turns off the restore setting for all devices.
-
-To configure the restore setting, you must have Intune Service Administrator permissions.
 
 ## Enrollment
 

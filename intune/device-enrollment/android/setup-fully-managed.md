@@ -21,28 +21,57 @@ You and your device users can initiate enrollment by entering or scanning an enr
 ## Step 1: Prerequisites
 Complete these prerequisites to ensure a successful enrollment.
 
-* You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../../fundamentals/setup-mdm-authority.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
-* Devices must:
-  - Run Android OS version 10.0 and later.
-  - Run an Android build that has Google Mobile Services connectivity.
-  - Have Google Mobile Services available and be able to connect to it.
+:::column-end:::
+:::column span="3":::
 
-  There's no restriction on device manufacturer/OEM if all three requirements are met.
+> Make sure Android Enterprise is supported in your region. For Android Enterprise requirements, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
- * Make sure Android Enterprise is supported in your region. For Android Enterprise requirements, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+:::column-end:::
+:::row-end:::
 
- * Make sure Android Enterprise is supported on devices. For more information, see:
-    * [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)
-    * [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
- * [Connect your Intune tenant account to your Android Enterprise account](connect-managed-google-play.md).
+:::column-end:::
+:::column span="3":::
 
- * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have a Microsoft Entra Conditional Access policy with the following configurations, you must exclude the Microsoft Intune cloud app from the policy:
+> Devices must:
+>
+> - Run Android OS version 10.0 and later.
+> - Run an Android build that has Google Mobile Services connectivity.
+> - Have Google Mobile Services available and be able to connect to it.
+>
+> There's no restriction on device manufacturer/OEM if all three requirements are met. Make sure Android Enterprise is supported on devices. For more information, see:
+>
+> - [Android Enterprise help - General FAQs](https://support.google.com/work/android/answer/14772109?hl=en#zippy=%2cif-my-device-is-not-android-enterprise-recommended-aer-can-i-still-use-android-enterprise)
+> - [Check & fix Play Protect certification status](https://support.google.com/googleplay/answer/7165974?hl=en#zippy=%2Cdevice-isnt-certified)
 
-     * *Require a device to be marked as compliant* setting is used to grant or block access.
+:::column-end:::
+:::row-end:::
 
-     * The policy applies to **All Cloud apps**, **Android**, and **Browsers**.
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - An Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../../fundamentals/setup-mdm-authority.md).
+> - [Connect your Intune tenant account to your Android Enterprise account](connect-managed-google-play.md).
+
+:::column-end:::
+:::row-end:::
+
+> [!NOTE]
+> The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have a Microsoft Entra Conditional Access policy with the following configurations, you must exclude the Microsoft Intune cloud app from the policy:
+>
+> - *Require a device to be marked as compliant* setting is used to grant or block access.
+> - The policy applies to **All Cloud apps**, **Android**, and **Browsers**.
 
 ## Step 2: Create new enrollment profile
 Intune automatically generates a default enrollment profile and enrollment token for fully managed devices. The default enrollment profile is named **Default Fully Managed Profile**.
