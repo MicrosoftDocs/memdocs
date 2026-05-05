@@ -63,7 +63,7 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment**.
-3. Select the **Windows**, **macOS, **Apple mobile**, or **Android** tab.  
+3. Select the **Windows**, **macOS**, **Apple mobile**, or **Android** tab.  
 3. Select **Device limit restriction**.
 4. Choose **Create restriction**.
 3. On the **Basics** page, give the restriction a **Name** and optional **Description**.
