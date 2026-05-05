@@ -53,7 +53,7 @@ Added support and testing for PKI certificates used in site system-to-SQL Server
 
 - The `New-CMCloudManagementGateway` PowerShell cmdlet now allows combining the `-IsUsingExistingGroup $true` parameter with `-ServerAppClientId`, enabling automated CMG deployment into existing Azure resource groups without requiring interactive credentials.
 - CMG deployment error handling is improved to capture and display detailed Azure error response information when Attribute-Based Access Control (ABAC) conditions block role assignments.
-- The CMG outbound traffic alert and "Total Outbound data" metric now work correctly for CMGv2 (VMSS-based) deployments.
+- The CMG outbound traffic alert and "Total Outbound data" metric now work correctly for CMGv2 (Azure Virtual Machine Scale Sets-based) deployments.
 
 ### Updated Feedback experience
 
