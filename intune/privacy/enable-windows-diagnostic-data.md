@@ -25,7 +25,7 @@ Some Microsoft Intune features require access to Windows diagnostic data or veri
 :::column-end:::
 :::column span="3":::
 > To enable Windows diagnostic data and license verification, use an account with at least one of the following roles:
-> - [Intune Administrator][INT-R1]
+> - [Intune Administrator]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **/**
 
@@ -37,7 +37,7 @@ Some Microsoft Intune features require access to Windows diagnostic data or veri
 
 To allow Intune to access Windows diagnostic data collected from enrolled devices:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Tenant administration** > **Connectors and tokens** > **Windows data**.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Connectors and tokens** > **Windows data**.
 1. Toggle **Enable features that require Windows diagnostic data in processor configuration** to **On**. The default is *Off*.
 
 > [!NOTE]
@@ -61,7 +61,7 @@ Some Intune features require an attestation that your tenant owns eligible Windo
 
 To attest ownership of the required Windows licenses:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Tenant administration** > **Connectors and tokens** > **Windows data**.
+1. In the [Microsoft Intune admin center], select [**Tenant administration**] > [**Connectors and tokens**] > [**Windows data**].
 1. Toggle **I confirm that my tenant owns one of these licenses** to **On**. By default, it's *Off*.
 
 Supported licenses:
@@ -79,9 +79,13 @@ Features that require license verification include:
 
 To understand how Windows diagnostic data is collected and managed, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) in the Windows privacy documentation.
 
-<!-- admin center -->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Connectors and tokens**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/connectorsAndTokens
+[**Tenant administration**]: https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/TenantAdminMenu
 
-[INT-RC]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+<!-- Role links-->
+
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator

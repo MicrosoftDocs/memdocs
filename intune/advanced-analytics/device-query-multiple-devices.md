@@ -56,8 +56,8 @@ Additional prerequisites for device query for multiple devices:
 :::column-end:::
 :::column span="3":::
 > To use device query for multiple devices, use an account with at least one of the following roles:
-> - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Custom role] that includes:
 >   - The permission **Managed Devices/Query**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
@@ -388,8 +388,8 @@ Cpu
   - The query `Device | summarize dcount(DeviceId) | order by dcount_DeviceId` fails.
   - The query `Device | summarize DCountDeviceIdRename = dcount(DeviceId) | order by DCountDeviceIdRename` succeeds.
 
-<!--links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: /intune/fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+<!--Role links-->
+
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role

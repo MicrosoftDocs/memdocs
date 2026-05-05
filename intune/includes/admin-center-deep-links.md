@@ -13,7 +13,13 @@ ms.author: paoloma
 [**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 [**Bulk device actions**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/BulkActionWizardBlade
 [**Cloud PKI**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/caManagement
+[**Connectors and tokens**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/connectorsAndTokens
 [**Device actions**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
+[**Device cleanup rules**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/deviceCleanUp
 [**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**Endpoint analytics**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Enrollment/ReportingMenu/~/uxAnalytics
 [**Endpoint security**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Workflows/SecurityManagementMenu/~/overview
+[**Reports**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_ReportsMenu/~/overview
 [**Tenant administration**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/tenantStatus
+[**Tenant administration**]: https://intune.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/TenantAdminMenu
+[**Windows data**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/TenantAdminMenu/~/windowsData
