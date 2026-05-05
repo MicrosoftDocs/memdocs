@@ -1,7 +1,7 @@
 ---
 title: Understand Microsoft Intune Management Extension
 description: Understand Microsoft Intune management extension for Windows.
-ms.date: 03/24/2026
+ms.date: 04/07/2026
 ms.topic: how-to
 author: nicholasswhite
 ms.author: nwhite
@@ -35,6 +35,9 @@ This feature applies to:
 > For more information, see Intune Management Extension [prerequisites](./management-extension-windows.md#prerequisites).
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> Devices must run Intune Management Extension version **1.58.103.0** or later. Devices on earlier versions don't receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts. The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
 
 The Intune management extension has the following prerequisites. When the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 

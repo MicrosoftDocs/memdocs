@@ -1,5 +1,5 @@
 items:
-- name: FLW Overview
+- name: Frontline worker overview
   href: index.md
 - name: Android FLW
   displayName: Android Enterprise, ae, aosp, kiosk

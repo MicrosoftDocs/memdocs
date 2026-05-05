@@ -13,7 +13,7 @@ ms.reviewer: annovich, beflamm
 
 You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPadOS devices that are enrolled as *supervised devices*.
 
-A [supervised device](../../device-enrollment/apple/setup-automated-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
+A [supervised device](../../device-enrollment/apple/overview-automated-enrollment-apple.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
 This feature applies to:
 

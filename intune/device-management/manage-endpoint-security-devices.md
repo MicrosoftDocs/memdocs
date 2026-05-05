@@ -44,7 +44,7 @@ Consider the following fields:
 
 - **Managed by** – This column identifies how the device is managed. Managed by options include:
 
-  - **MDM** - Intune manages these devices. Intune collects and reports the device's compliance data to the admin center.
+  - **MDM** – Intune manages these devices. Intune collects and reports the device's compliance data to the admin center.
 
   - **ConfigMgr** – These devices appear in the Microsoft Intune admin center when you use *tenant attach* to add the devices you manage with Configuration Manager. To be managed, the device must run the Configuration Manager client and be:
 
@@ -62,9 +62,9 @@ Consider the following fields:
 
     For example, you can use Intune to configure policies for Antivirus, Firewall, and Encryption. These policies are all considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
 
-  - **MDE** - These devices aren't enrolled with Intune. Instead, they onboard to Defender for Endpoint and can process many of the [Intune endpoint security policies](../device-security/microsoft-defender/security-settings-management.md#which-solution-should-i-use). Devices enrolled with security settings management appear both in the Intune admin center and in the Defender portal. In the admin center, the *Managed by* field displays MDE for these devices.
+  - **MDE** – These devices aren't enrolled with Intune. Instead, they onboard to Defender for Endpoint and can process many of the [Intune endpoint security policies](../device-security/microsoft-defender/security-settings-management.md#which-solution-should-i-use). Devices enrolled with security settings management appear both in the Intune admin center and in the Defender portal. In the admin center, the *Managed by* field displays MDE for these devices.
 
-- **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to *Intune* or to *Pilot Intune*.
+- **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to *Intune* or to *Pilot Intune*.
 
   After compliance is reported to the admin center for a device, you can drill into the details to view more details. When a device isn't compliant, drill into its details to information about which policies aren't compliant. That information can help you investigate and help you bring the device into compliance.
 
@@ -109,7 +109,7 @@ The remote actions that are available depend on how the device is managed:
 
 - **Co-management**: You can access both Intune remote actions and Configuration Manager actions.
 
-- **Defender for Endpoint security settings management** - These devices aren't managed by Intune and don't support remote actions.
+- **Defender for Endpoint security settings management** – These devices aren't managed by Intune and don't support remote actions.
 
 Some of the Intune remote actions can help secure devices or safeguard data that might be on the device. With remote actions you can:
 

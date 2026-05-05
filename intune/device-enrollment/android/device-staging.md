@@ -14,13 +14,38 @@ ms.collection:
 
 Enable device staging during enrollment to reduce end user steps for frontline workers and optimize productivity. During device staging, you or a third-party vendor can complete both the admin and end user stages of pre-provisioning. Minimal interaction is required of the user when they receive their device.
 
-Device staging uses a *staging* token during the enrollment process rather than the *default* token type. Microsoft Intune supports device staging for Android Enterprise devices running Android 8 or later. You can enable device staging in these enrollment profiles:
-
-* Android Enterprise corporate-owned fully managed
-
-* Android Enterprise corporate-owned work profile
+Device staging uses a *staging* token during the enrollment process rather than the *default* token type.
 
 This article provides an overview of device staging, token types, and token management in the Microsoft Intune admin center.
+
+## Requirements
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Android Enterprise devices running Android 8 or later.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Device staging is supported for the following enrollment profiles:
+>
+> - Android Enterprise corporate-owned fully managed
+> - Android Enterprise corporate-owned work profile
+
+:::column-end:::
+:::row-end:::
 
 ## Token types
 

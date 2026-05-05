@@ -20,17 +20,39 @@ When the device owner attempts to sign into an app with their work or school acc
 This article describes how to set up an enrollment profile in the Microsoft Intune admin center for Apple User Enrollment with Company Portal.
 
 ## Prerequisites
-User enrollment with Company Portal is supported on devices running iOS version 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:
 
-- [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
-- [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
-- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - iOS 13 or later
+> - iPadOS 13.1 or later
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set mobile device management (MDM) authority](../../fundamentals/setup-mdm-authority.md)
+> - [Get Apple MDM Push certificate](create-mdm-push-certificate.md)
+> - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
+
+:::column-end:::
+:::row-end:::
 
 Additionally, review the following information:
 
-* Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.
-
-* Apple released iPadOS in September 2019, which introduced a change that can affect Microsoft Entra ID and Intune customers who use Conditional Access policies in their organization. For more information about how this affects your policies and what actions to take, see [Evaluate and update Conditional Access policies after new iPadOS release](https://support.microsoft.com/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488).
+* Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business User Guide.  
 
 ## Create enrollment profile
 

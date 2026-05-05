@@ -33,9 +33,42 @@ The following example image shows what an enrollment notification looks like to 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/setup-notifications/enrollment-notification-message.png)
 
 ## Requirements  
-Prior to creating enrollment notifications, you must [configure Microsoft Intune branding and customization settings](../app-management/configuration/configure-company-portal.md) under **Tenant administration** > **Customization**.
 
-Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios, or when provisioning Windows 365 Cloud PCs.
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To create enrollment notifications, sign in as [**Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> [Configure Microsoft Intune branding and customization settings](../app-management/configuration/configure-company-portal.md) under **Tenant administration** > **Customization**.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../includes/requirements/enrollment-methods.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios, or when provisioning Windows 365 Cloud PCs.
+
+:::column-end:::
+:::row-end:::
 
 ## You should know
 Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.

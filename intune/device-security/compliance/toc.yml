@@ -18,3 +18,22 @@ items:
     href: ./monitor-policy.md
   - name: Device compliance partners
     href: ./third-party-partners.md
+
+  - name: Settings reference
+    items:
+      - name: Android device administrator
+        href: ./ref-android-administrator-settings.md
+      - name: Android (AOSP)
+        href: ./ref-android-aosp-settings.md
+      - name: Android Enterprise
+        href: ./ref-android-enterprise-settings.md
+      - name: iOS/iPadOS
+        href: ./ref-ios-ipados-settings.md
+      - name: Linux
+        href: ./ref-linux-settings.md
+      - name: macOS
+        href: ./ref-macos-settings.md
+      - name: Windows
+        href: ./ref-windows-settings.md
+      - name: Windows 8.1
+        href: ./ref-windows-8-1-settings.md
