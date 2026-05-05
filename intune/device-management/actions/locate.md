@@ -93,9 +93,9 @@ For more information about device restrictions, see [Android template device set
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 >
@@ -113,7 +113,7 @@ For more information about device restrictions, see [Android template device set
 :::row-end:::
 ## Locate a device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Locate device**.
 1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
@@ -163,18 +163,22 @@ Intune is designed to respect user privacy while providing powerful device manag
 ## Reference links
 
 - Microsoft Graph API:
-  - [locateDevice action][GRAPH-1]
-  - [playLostModeSound action][GRAPH-2]
+  - [locateDevice action]
+  - [playLostModeSound action]
 
-<!--links-->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-[INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+<!--Role links-->
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-locatedevice
-[GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+
+<!--Graph API links-->
+
+[locateDevice action]: /graph/api/intune-devices-manageddevice-locatedevice
+[playLostModeSound action]: /graph/api/intune-devices-manageddevice-playlostmodesound

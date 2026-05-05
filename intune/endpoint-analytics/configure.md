@@ -63,7 +63,8 @@ You can also modify the **Enable Endpoint analytics data collection** policy in 
 
 When you open Endpoint analytics for the first time, a guided setup helps you configure data collection. As part of this process, Intune creates a *Windows health monitoring policy* to enable data collection.
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Analytics** > [**Endpoint analytics**][INT-EA].
+1. In the [Microsoft Intune admin center], select [**Reports**].
+1. Under **Analytics**, select [**Endpoint analytics**].
     :::image type="content" source="media/configure/introduction.png" lightbox="media/configure/introduction.png" alt-text="Endpoint analytics introduction page." border="false":::
 1. For **Collect device data from**, choose from the following options:
    - **All cloud-managed devices**: Assigns the policy to all Windows devices that are Intune-managed or co-managed.
@@ -86,7 +87,7 @@ A configuration profile called *Intune data collection policy* is assigned to th
 
 If you want to change which devices contribute data to endpoint analytics, you can change the assignment of the Intune data collection policy.
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Configuration profiles**.
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**Configuration**].
 1. Select the profile named **Intune data collection policy**.
 1. Select **Properties** > **Assignments** > **Edit**.
 1. Change the assignment to include or exclude groups of devices.
@@ -102,7 +103,8 @@ You can also create a new profile if you want to target a different set of devic
 
 To review the current configuration of endpoint analytics:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Analytics** > [**Endpoint analytics**][INT-EA].
+1. In the [Microsoft Intune admin center], select [**Reports**].
+1. Under **Analytics**, select [**Endpoint analytics**].
     :::image type="content" source="media/configure/settings.png" lightbox="media/configure/settings.png" alt-text="Endpoint analytics general settings page." border="false":::
 1. From the **General** pane you can review if the Intune data collection policy is configured and if the Configuration Manager data collection is enabled.
 
@@ -128,7 +130,8 @@ Baselines help you compare your performance to industry norms or track progress 
 
 To create a custom baseline and adjust the regression threshold:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Analytics** > [**Endpoint analytics**][INT-EA].
+1. In the [Microsoft Intune admin center], select [**Reports**].
+1. Under **Analytics**, select [**Endpoint analytics**].
 1. Select **Settings** > **Baseline**.
     :::image type="content" source="media/configure/settings-baseline.png" lightbox="media/configure/settings-baseline.png" alt-text="Endpoint analytics baseline settings page." border="false":::
 1. Select **Create new** and enter a name.
@@ -168,23 +171,30 @@ Learn more about endpoint analytics:
 - [Understand data collection](ref-data-collection.md)
 - [Advanced Analytics](../advanced-analytics/index.md)
 
-<!-- admin center -->
+<!-- Microsoft Intune admin center links -->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-EA]: https://aka.ms/endpointanalytics
-[PORTAL-0]: https://aka.ms/uea
-[PORTAL]: https://aka.ms/uea_prereq
-[PORTAL_1]: https://aka.ms/uea_baselines
-[PORTAL_2]: https://aka.ms/uea_prereq_configmgr
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+[**Configuration**]:https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/configuration
+[**Reports**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_ReportsMenu/~/overview
+[**Endpoint analytics**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Enrollment/ReportingMenu/~/uxAnalytics
 
-<!-- role links -->
+<!--Intune roles-->
 
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
-[INT-R5]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role.md
 
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
-[ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[ENT-R3]: /entra/identity/role-based-access-control/permissions-reference#reports-reader
+[Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager
+[Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-privilege-manager
+[Endpoint Privilege Reader]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-privilege-reader
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[Intune Role Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#intune-role-administrator
+[Policy and Profile manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager
+[Read Only Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+
+<!-- Entra roles -->
+
+[Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[Global Administrator]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
+[Reports Reader]: /entra/identity/role-based-access-control/permissions-reference#reports-reader
