@@ -1,7 +1,4 @@
 items:
-  - name: Copilot in Intune
-    displayName: ai, copilot
-    href: ./index.md
   - name: Explore your Intune data
     displayName: ai, copilot, explore, data, query
     href: ./explorer.md
@@ -18,7 +15,7 @@ items:
     href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
   - name: Security Copilot agents in Microsoft Intune
     items:
-      - name: Overview
+      - name: Security Copilot agents overview
         href: ./agents/index.md
         displayName: security copilot agent
       - name: Change Review Agent
