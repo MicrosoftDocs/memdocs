@@ -48,7 +48,8 @@ A device enrollment manager can use the following methods to enroll devices in I
 :::column-end:::
 :::row-end:::
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ### Permissions
 

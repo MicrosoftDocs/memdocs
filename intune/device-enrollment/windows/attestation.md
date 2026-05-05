@@ -12,13 +12,13 @@ ms.collection:
 
 The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that devices running Windows meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
 
-Here’s how it benefits organizations:
+Organizational benefits include:  
 
-**Improved security**: TPM attestation helps detect and address security weaknesses or compromised devices and lowers the chance of unauthorized access or security incidents.
+- **Improved security**: TPM attestation helps detect and address security weaknesses or compromised devices and lowers the chance of unauthorized access or security incidents.
 
-**Meeting regulatory standards**: Windows attestation helps organizations prove they follow strict security measures during device enrollment, which is important for meeting industry regulations and compliance requirements.
+- **Meeting regulatory standards**: Windows attestation helps organizations prove they follow strict security measures during device enrollment, which is important for meeting industry regulations and compliance requirements.
 
-The main goal is to establish a more secure and trusted environment for devices within the organizational infrastructure by using Windows attestation during the enrollment process.
+The main goal is to establish a more secure and trusted environment for devices within the organizational infrastructure by using Windows attestation during the enrollment process.  
 
 ## Requirements for Windows enrollment attestation
 

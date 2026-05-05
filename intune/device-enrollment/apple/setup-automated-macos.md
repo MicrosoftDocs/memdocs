@@ -47,9 +47,7 @@ This article describes how to create an enrollment policy for macOS automated de
 :::row-end:::
 
 > [!TIP]
-> Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.
-
-## Deploy the Company Portal app  
+> Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
 
 When enrolling macOS devices using ADE with user affinity and Setup Assistant with modern authentication, users must sign in to the Company Portal app with their Microsoft Entra credentials to complete device registration in Microsoft Entra ID. To add the Company Portal app to macOS devices, see [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).  
 
@@ -60,7 +58,7 @@ Create an automated device enrollment policy in the admin center. The policy def
 At the end of this procedure, you can assign this policy to Microsoft Entra device groups.
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
-1. Select the **Apple** tab.
+1. Select the **macOS** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select an enrollment program token.
 1. Select **Enrollment policies** > **Create policy** > **macOS**.

@@ -62,7 +62,8 @@ Microsoft Entra users are standard users on these devices and receive assigned I
 :::column-end:::
 :::row-end:::
 
-[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Create a provisioning package
 

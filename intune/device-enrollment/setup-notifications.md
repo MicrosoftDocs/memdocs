@@ -58,7 +58,17 @@ The following example image shows what an enrollment notification looks like to 
 :::column-end:::
 :::row-end:::
 
-Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios, or when provisioning Windows 365 Cloud PCs.
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../includes/requirements/enrollment-methods.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios, or when provisioning Windows 365 Cloud PCs.
+
+:::column-end:::
+:::row-end:::
 
 ## You should know
 Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.

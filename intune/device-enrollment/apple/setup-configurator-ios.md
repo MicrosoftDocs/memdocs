@@ -38,7 +38,9 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 :::column-end:::
 :::column span="3":::
 
-> iOS/iPadOS devices
+> This enrollment method supports the following platforms:
+>
+> - iOS/iPadOS  
 
 :::column-end:::
 :::row-end:::

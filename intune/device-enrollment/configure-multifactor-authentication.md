@@ -51,7 +51,8 @@ If a device isn't compliant, the device user is prompted to make the device comp
 :::column-end:::
 :::row-end:::
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 
 ## Configure Intune to require multifactor authentication at device enrollment
