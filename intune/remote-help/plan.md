@@ -34,7 +34,7 @@ Follow this checklist to streamline your planning process.
 - Prerequisites  
 - Limitations  
 - Known issues  
-- Enrolled and or unenrolled devices  
+- Enrolled or unenrolled devices  
 
 ## Planning considerations  
 
