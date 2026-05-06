@@ -8,6 +8,10 @@ items:
     topicHref: /intune/configmgr/
 
 - name: Microsoft Intune
+  tocHref: /copilot/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
   tocHref: /defender-endpoint/
   topicHref: /intune/index
 
