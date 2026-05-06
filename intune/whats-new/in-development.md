@@ -303,6 +303,25 @@ Microsoft Intune will introduce client-driven compliance evaluation for Windows 
 >
 > - Windows
 
+### Controlled Configuration for Microsoft Defender antivirus settings<!-- 35378858 -->
+
+Microsoft Intune is bringing Controlled Configuration (CC) to public preview for Microsoft Defender antivirus settings. CC introduces a unified approach to endpoint security by making Intune and Microsoft 365 Defender the single source of truth for antivirus and related security settings.
+
+When you enable CC, all of the Defender antivirus settings that are delivered by Intune or Microsoft Defender for Endpoint security settings management will override configurations from all other channels, including Group Policy, Configuration Manager, and local changes or scripts. This single source of truth will help ensure consistent, predictable device states.
+
+CC extends Tamper Protection by letting you lock settings to admin-defined values, not just defaults. Your Defender antivirus policies set by Intune are reliably enforced across your endpoints, without being overridden by legacy on-premises policies or local per-device changes.
+
+Benefits of CC include:
+
+- **Authoritative policy enforcement**: Cloud-delivered antivirus settings always take precedence, eliminating conflicts from legacy tools.
+- **Improved security posture**: Prevents configuration drift and reduces risk from local changes.
+- **Simplified troubleshooting**: Clear, predictable configurations make auditing and support easier.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
