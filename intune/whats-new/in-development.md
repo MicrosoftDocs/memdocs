@@ -294,6 +294,15 @@ Microsoft Intune will support custom compliance settings for macOS. You'll be ab
 >
 > - macOS
 
+### Client-driven compliance evaluation for Windows devices<!-- 37554578 -->
+
+Microsoft Intune will introduce client-driven compliance evaluation for Windows devices to reduce delays in compliance reporting. Supported devices will detect important state changes locally and proactively request a compliance re-evaluation when it matters, instead of waiting for the next scheduled check-in. As an admin, you'll see faster updates for remediation, reporting, and access decisions. This capability will roll out in preview for Windows devices.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
