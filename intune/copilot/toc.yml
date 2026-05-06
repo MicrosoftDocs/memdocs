@@ -1,7 +1,7 @@
 items:
   - name: Explore your Intune data
-    displayName: ai, copilot, explore, data, query
     href: ./explorer.md
+    displayName: ai, copilot, explore, data, query
   - name: Troubleshoot a device using Copilot
     href: ./troubleshoot-devices.md
   - name: Copilot in Intune FAQ
@@ -9,8 +9,8 @@ items:
   - name: Intune plugin in Security Copilot
     href: ./security-copilot.md
   - name: Copilot in Surface Management Portal
-    displayName: ai, copilot, surface, models, fleet, warranty
     href: /surface/security-copilot-surface-management-portal?context=/intune/context
+    displayName: ai, copilot, surface, models, fleet, warranty
   - name: Copilot in Windows 365 Cloud PCs
     href: /windows-365/enterprise/copilot-in-intune-for-windows365?context=/intune/context
   - name: Security Copilot agents in Microsoft Intune
@@ -50,3 +50,5 @@ items:
           - name: Use the agent
             href: ./agents/manage-vulnerability-remediation-agent.md
             displayName: Vulnerability Remediation Agent
+  - name: Responsible AI FAQ
+    href: /copilot/security/rai-faqs-security-copilot-agents?context=/intune/context
