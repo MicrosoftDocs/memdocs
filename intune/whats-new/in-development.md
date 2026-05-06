@@ -215,6 +215,18 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
+### Grant enhanced security permissions to a Mobile Threat Defense app on Android Enterprise devices<!-- 33745497 -->
+
+Google is introducing a new Mobile Threat Defense (MTD) capability for Android that allows MTD apps to operate with enhanced security permissions on managed devices. With this update, you'll be able to use the [MTD connector](../device-security/mobile-threat-defense/enable-connector.md) in the Microsoft Intune admin center to grant these permissions to one MTD app of your choice, such as Microsoft Defender for Endpoint or a supported third-party partner.
+
+On devices where these permissions are configured, the MTD app gains additional capabilities, including exemptions from app suspension, hibernation, and user-initiated restrictions.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise fully managed (COBO)
+
 <!-- *********************************************** -->
 
 ## Device security
