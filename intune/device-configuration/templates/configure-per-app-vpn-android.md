@@ -87,7 +87,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 
 ### Set your blocked and allowed app list (optional)
 
-Use the following steps to enter the list apps in the customn profile that are allowed or blocked from using the VPN connection:
+Use the following steps to enter the list apps that are allowed or blocked from using the VPN connection:
 
 1. On the **Custom OMA-URI Settings** pane, choose **Add**.
 2. Enter a setting name.
