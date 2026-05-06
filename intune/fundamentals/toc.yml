@@ -22,8 +22,6 @@ items:
       - name: Manage apps and protect data
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./manage-apps.md
-      - name: Device lifecycle overview
-        href: ./device-lifecycle.md
       - name: Endpoint management at Microsoft
         href: ./endpoint-management.md
       - name: Intune Suite add-ons
@@ -189,8 +187,6 @@ items:
             href: ./tenant-administration/add-users.md
           - name: Add groups
             href: ./tenant-administration/add-groups.md
-          - name: Classic groups in the Azure portal
-            href: ./tenant-administration/classic-groups.md
           - name: Manage Intune licenses
             href: ./licensing/toc.yml
           - name: Set the MDM authority
