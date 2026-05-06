@@ -51,4 +51,4 @@ items:
             href: ./agents/manage-vulnerability-remediation-agent.md
             displayName: Vulnerability Remediation Agent
   - name: Responsible AI FAQ
-    href: /copilot/security/rai-faqs-security-copilot-agents?context=/intune/copilot/context/context
+    href: /copilot/security/rai-faqs-security-copilot-agents?context=/intune/copilot/context
