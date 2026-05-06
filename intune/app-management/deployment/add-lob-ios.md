@@ -115,6 +115,3 @@ For an iOS LOB app targeted with available intent, auto update of the applicatio
 - The app that you created appears in the list of apps. You can now assign it to groups that you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. See [How to monitor app information and assignments](../monitor-assignments.md).
-
-- Learn more about the context of your app in Intune. See [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md).
-
