@@ -8,7 +8,7 @@ items:
     topicHref: /intune/configmgr/
 
 - name: Microsoft Intune
-  tocHref: /copilot/
+  tocHref: /copilot/security/
   topicHref: /intune/index
 
 - name: Microsoft Intune
