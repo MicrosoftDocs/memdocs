@@ -153,6 +153,14 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network. If you have multiple Radius servers with the same DNS suffix in their fully qualified domain name, enter a wildcard suffix. For example, you can enter `*.contoso.com`.
     - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, you don't need to include a root certificate. This certificate allows the client to trust the wireless network access server's certificate.
 
+    ::: zone pivot="macos"
+
+      - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection. Choose the certificates that align with your deployment channel selection. If you select the user channel, your certificate options are limited to user certificate profiles. If you select the device channel, you have both user and device certificate profiles to choose from. However, always select the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
+
+      - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
+
+    ::: zone-end
+
     ::: zone pivot="ios-ipados"
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
@@ -160,14 +168,6 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
       - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
 
         - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection.
-
-      - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
-
-    ::: zone-end
-
-    ::: zone pivot="macos"
-
-      - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection. Choose the certificates that align with your deployment channel selection. If you select the user channel, your certificate options are limited to user certificate profiles. If you select the device channel, you have both user and device certificate profiles to choose from. However, always select the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
