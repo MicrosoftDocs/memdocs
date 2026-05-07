@@ -66,7 +66,7 @@ Additional prerequisites for device query for multiple devices:
 
 ## Use device query for multiple devices
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**Device query**].
 1. Enter a query in the query box by using the supported properties and operators.
 1. Select **Run** to execute the query.
 1. View the results in the **Results** tab.
@@ -393,3 +393,7 @@ Cpu
 
 [Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
 [Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Device query**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/DeviceQuery
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
