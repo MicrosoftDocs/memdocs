@@ -167,9 +167,9 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     ::: zone pivot="macos"
 
-      - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection. Choose the certificates that align with your deployment channel selection. If you select the user channel, your certificate options are limited to user certificate profiles. If you select the device channel, you have both user and device certificate profiles to choose from. However, always select the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
+        - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection. Choose the certificates that align with your deployment channel selection. If you select the user channel, your certificate options are limited to user certificate profiles. If you select the device channel, you have both user and device certificate profiles to choose from. However, always select the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
 
-      - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
+        - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
     ::: zone-end
 
@@ -212,7 +212,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection.
 
-            - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection.
+        - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity that the device presents to the server to authenticate the connection.
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
