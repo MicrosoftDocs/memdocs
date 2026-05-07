@@ -64,6 +64,69 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 ## Device configuration
 
+### Use DDM to manage Apple Intelligence settings for devices running 26.4 and later<!-- 37011037 -->
+
+With the release of 26.4, Apple deprecated the following intelligence related settings in the MDM restrictions payload. To manage these settings, use the [DDM configurations that were released in March 2026](#new-updates-to-the-apple-settings-catalog-).
+
+In the [settings catalog](../configuration/settings-catalog.md), the following restrictions are now deprecated:
+
+**Restrictions**:
+
+- Allow Apple Intelligence Report
+- Allow Assistant
+- Allow Assistant User Generated Content
+- Allow Assistant While Locked
+- Allow Auto Correction
+- Allow Continuous Path Keyboard
+- Allow Definition Lookup
+- Allow Dictation
+- Allowed External Intelligence Workspace IDs
+- Allow External Intelligence Integrations
+- Allow External Intelligence Integrations Sign In
+- Allow Genmoji
+- Allow Image Playground
+- Allow Image Wand
+- Allow Keyboard Shortcuts
+- Allow Mail Smart Replies
+- Allow Mail Summary
+- Allow Notes Transcription
+- Allow Notes Transcription Summary
+- Allow Personalized Handwriting Results
+- Allow Predictive Keyboard
+- Allow Safari Summary
+- Allow Spell Check
+- Allow Visual Intelligence Summary
+- Allow Writing Tools
+- Force Assistant Profanity Filter
+- Force On Device Only Dictation
+- Force On Device Only Translation
+
+In the device restrictions template, the following settings are deprecated:
+
+**Built-in apps**:
+
+- Block Siri
+- Block Siri while device is locked
+- Block Siri for dictation
+- Block Siri for translation
+- Require Siri profanity filters
+- Block user-generated content in Siri
+
+**Keyboard and dictionary**:
+
+- Block word definition lookup
+- Block predictive keyboards
+- Block auto-correction
+- Block spell check
+- Block keyboard shortcuts
+- Block dictation
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
 ### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
 
 On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. You'll be able to use this setting to disable MAC address randomization on managed macOS devices.
