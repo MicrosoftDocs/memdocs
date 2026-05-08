@@ -3,6 +3,7 @@ title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway on a Linux server to support Intune managed cloud-based devices in connecting to your on-premises infrastructure.
 ms.date: 04/10/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: ochukwunyere
 ms.collection:
 - M365-identity-device-management
@@ -344,6 +345,17 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
    - **Always-on VPN**:
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If *Per-app VPN* is set to *Enable*, only the traffic from apps you select go through the tunnel.
+
+   - **Strict Tunnel Mode** *(Android only)*:
+     - This setting is available when the connection type is Microsoft Tunnel and *Always-on VPN* is set to *Enable*. When enabled, all network traffic is forced through the VPN tunnel. If the VPN connection is unavailable or drops, all network traffic on the device is blocked until the VPN reconnects, preventing apps from accessing the public internet outside of the tunnel.
+     - **App exclusion list** — When Strict Tunnel Mode is enabled, you can specify apps that bypass the VPN tunnel. Apps on the exclusion list connect directly to the network regardless of VPN connection status. Apps not on the list are blocked when the VPN is unavailable.
+     - Strict Tunnel Mode requires devices enrolled through [Android Management API](https://developers.google.com/android/management) (AM API). Devices enrolled through the legacy EMM API work profile don't support Strict Tunnel Mode until migrated to AM API.
+     <!-- links and reference for AM API pending #36840128 -->
+
+     The following platforms support Strict Tunnel Mode:
+     - Android Enterprise corporate-owned fully managed
+     - Android Enterprise corporate-owned work profile
+     - Android Enterprise personally-owned work profile
 
    - **Proxy**:
      - Configure proxy server details for your environment.

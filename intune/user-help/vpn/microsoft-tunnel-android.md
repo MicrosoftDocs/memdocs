@@ -2,6 +2,8 @@
 title: Use the Microsoft Tunnel client app for Android
 description: Learn how to connect over VPN using Microsoft Tunnel for Android.
 ms.date: 11/14/2023
+ms.topic: end-user-help
+ai-usage: ai-assisted
 ms.reviewer: shthilla
 ---
 
@@ -24,6 +26,8 @@ If you can’t find the app in the Play store, contact your IT support person fo
 3. On the **Tunnel** screen, turn the **Status** toggle on or off to connect or disconnect from the VPN.
 
 Your organization might require you to stay connected to Microsoft Tunnel. This is known as an *always-on* connection. If this is the case, the Status toggle will appear inactive, and you won't be able to disconnect from the VPN as long as you're connected to the internet.
+
+Your organization might also enable *Strict Tunnel Mode*. When Strict Tunnel Mode is active, all internet access is blocked if the VPN connection drops. You must wait for the VPN to reconnect before you can use the internet or apps that require network access. This behavior is expected and helps protect your organization's data.
 
 If the toggle is stuck in the off position, select **Help** > **Send logs** and report the problem to your IT support person. For more details, see the [Send logs](microsoft-tunnel-android.md#send-logs) section in this article.
 

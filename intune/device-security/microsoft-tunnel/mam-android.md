@@ -3,6 +3,7 @@ title: Use Microsoft Tunnel VPN with Android devices that don't enroll with Micr
 description: Add support for Mobile Application Management (MAM) for Android to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune
 ms.date: 03/27/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: ochukwunyere
 ms.subservice: suite
 ms.collection:
@@ -122,6 +123,8 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
      > [!IMPORTANT]
      >
      > MAM Tunnel for Android doesn't support the use of *Always-on VPN*. When *Always-on VPN* is set to *Enable*, Tunnel does not connect successfully and sends connection failure notifications to the device user.
+     >
+     > To block network traffic when the MAM Tunnel connection is unavailable, configure [Strict Tunnel Mode](#app-configuration-policy-for-microsoft-edge) through the Microsoft Edge app configuration policy instead of Always-on VPN.
 
    - *Proxy* is an optional setting. Configure proxy settings to meet your on-premises network requirements.
 
@@ -159,6 +162,9 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
     | --- | --- |
     | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`<br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign into Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. <br/><br/> When the VPN reconnects, internet browsing is available again. |
     | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly` <br/><br/> **Value**: `True` | When set to `True`, it provides **Identity switch** support to Edge. <br/><br/> When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
+
+    > [!NOTE]
+    > The `StrictTunnelMode` app config key applies to MAM scenarios for unenrolled devices, where it blocks Edge internet traffic when the MAM Tunnel connection is unavailable. For enrolled devices, Strict Tunnel Mode is configured as a device-level setting in the [Microsoft Tunnel VPN profile](./install.md#create-a-vpn-profile) and applies to all network traffic on the device, not just Edge.
 
     The following image shows the `Identity switch` setting in an app configuration policy for Microsoft Edge:
 
