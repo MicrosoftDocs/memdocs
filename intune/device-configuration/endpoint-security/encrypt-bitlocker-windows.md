@@ -100,6 +100,9 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
 
 7. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
+> [!TIP]
+> Bitlocker pre-boot PIN modification events are recorded in Event Viewer under **Microsoft-Windows-Bitlocker-API/Management** and **Bitlocker PIN Modification Task** category with *Event ID 789*.
+
 ### Create device configuration policy
 
 > [!TIP]
