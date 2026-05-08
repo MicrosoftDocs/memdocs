@@ -1,7 +1,7 @@
 ---
 title: Configure Microsoft Defender for Endpoint with Intune and onboard devices
 description: Connect Microsoft Defender for Endpoint to Intune, onboard devices by platform, and configure compliance and Conditional Access policies that use device risk levels to control access to corporate resources.
-ms.date: 03/25/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ms.reviewer: aanavath
 ai.usage: ai-assisted 
@@ -107,7 +107,9 @@ After the service connection is established, configure which platforms connect t
    > [!TIP]
    > App protection policies work with both enrolled and unenrolled devices. For details, see [Mobile Threat Defense toggle options](../mobile-threat-defense/enable-connector.md#mobile-threat-defense-toggle-options).
 
-4. **Save your configuration:** Select **Save** to apply all settings.
+4. **Configure Mobile Threat Defense role (Android):** Under **Mobile Threat Defense role**, you can optionally grant Microsoft Defender for Endpoint enhanced security permissions on enrolled Android Enterprise corporate-owned fully managed and corporate-owned work profile devices. For details about this toggle and the permissions it grants, see [Mobile Threat Defense role](../mobile-threat-defense/enable-connector.md#mobile-threat-defense-role).
+
+5. **Save your configuration:** Select **Save** to apply all settings.
 
 The platforms you enabled will connect devices to Microsoft Defender for Endpoint for threat assessment and compliance evaluation.
 

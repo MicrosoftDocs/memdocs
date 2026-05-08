@@ -3,7 +3,8 @@ title: Mobile Threat Defense with Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
 author: brenduns
 ms.author: brenduns
-ms.date: 01/26/2026
+ms.date: 05/26/2026
+ai-usage: ai-assisted
 ms.topic: overview
 ms.reviewer: ilwu
 ms.collection:
@@ -45,6 +46,10 @@ Typically, companies are proactive in protecting PCs from vulnerabilities and at
 Intune uses a Mobile Threat Defense connector to create a channel of communication between Intune and your chosen MTD vendor. Intune MTD partners offer intuitive, easy to deploy applications for mobile devices. These applications actively scan and analyze threat information to share with Intune. Intune can use the data for either reporting or enforcement purposes.
 
 For example: A connected MTD app reports to the MTD vendor that a phone on your network is currently connected to a network that is vulnerable to Man-in-the-Middle attacks. This information is categorized to an appropriate risk level of low, medium, or high. This risk level is then compared with the risk level allowances you set in Intune. Based on this comparison, access to certain resources of your choice can be revoked while the device is compromised.
+
+### Mobile Threat Defense role for Android
+
+On Android Enterprise corporate-owned devices, you can grant your MTD partner enhanced security permissions through the MTD connector. When enabled, the MTD app receives exemptions from app suspension, hibernation, power restrictions, and user controls, helping the app maintain continuous threat protection on managed devices. You can grant these permissions to one MTD partner at a time. For details about configuring the MTD role toggle, see [Mobile Threat Defense toggle options](./enable-connector.md#mobile-threat-defense-role).
 
 ### Connector status
 

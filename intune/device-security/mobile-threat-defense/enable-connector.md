@@ -3,7 +3,8 @@ title: Enable Mobile Threat Defense connector in Microsoft Intune
 description: Enable the connector between your Mobile Threat Defense (MTD) partner and Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 01/26/2026
+ms.date: 05/26/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
@@ -40,7 +41,7 @@ To successfully enable the Mobile Threat Defense connector, you must use an acco
    > As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. As of April 2024 Intune service release (2404), classic CA policies are no longer needed for 3rd party **Mobile Threat Defense** connectors either. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint or 3rd party Mobile Threat Defense connectors, it can be deleted.
 
 5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options that are available for Symantec Endpoint Protection:
-
+   <!-- IMAGE UPDATE NEEDED -->
    :::image type="content" source="./media/enable-connector/enable-mtd-connector-1.png" alt-text="Screen shot example that shows the MDM Compliance Policy Settings for the MDT connector.":::
 
 ## Mobile Threat Defense toggle options
@@ -49,10 +50,11 @@ To successfully enable the Mobile Threat Defense connector, you must use an acco
 >
 > Ensure your tenant's MDM Authority is [set to Intune](../../fundamentals/setup-mdm-authority.md#set-mdm-authority-to-intune) to see the full list of toggle options.
 
-The available options for connectors are divided into three categories. When a partner doesn't support a category, that category isn't available:
+The available options for connectors are divided into four categories. When a partner doesn't support a category, that category isn't available:
 
 - Compliance policy evaluation
 - App protection policy evaluation
+- Mobile Threat Defense role
 - Shared settings
 
 Enable the toggles for those options your organization requires.
@@ -102,6 +104,29 @@ Enable the toggles for those options your organization requires.
 - **Connect iOS devices version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the "Max allowed threat level" rule evaluate devices including data from this connector.
 
 To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](./enable-unenrolled-devices.md).
+
+### Mobile Threat Defense role
+<!-- Actual UI Needed in the following line -->
+- **Grant MTD role permissions to *\<MTD partner name>* on enrolled Android devices**: When you turn on this option, the selected Mobile Threat Defense partner receives enhanced permissions to help protect enrolled Android Enterprise corporate-owned fully managed and corporate-owned work profile devices from mobile threats.
+
+  On devices where these permissions are configured, the MTD app is granted the following exemptions:
+
+  - **Suspension** — The app is prevented from being suspended.
+  - **Hibernation** — The app is prevented from entering hibernation.
+  - **Power restrictions** — The app is exempt from power-related restrictions such as app standby. The app can start foreground services from the background, and the user can't stop foreground services run by the app.
+  - **User controls** — User control over the app is disabled. Users can't clear app data or force-stop the app.
+
+  > [!IMPORTANT]
+  > Only one MTD partner can hold MTD role permissions per tenant. To use this toggle, you must first configure the MTD connector for this partner, and the MTD app must be targeted to devices through a user or device group.
+
+  > [!NOTE]
+  > This toggle is available for every [MTD partner](./overview.md#mobile-threat-defense-partners) that supports Android. The same toggle is available on the Microsoft Defender for Endpoint connector page at **Endpoint security** > **Microsoft Defender for Endpoint**.
+
+  Applies to:
+  - Android Enterprise corporate-owned fully managed
+  - Android Enterprise corporate-owned work profile
+
+  The Mobile Threat Defense role requires devices enrolled through the [Android Management API](https://developers.google.com/android/management). Personally-owned work profiles aren't supported.
 
 ### Shared settings
 
