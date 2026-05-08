@@ -13,24 +13,57 @@ Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll device
 
 Microsoft Entra users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps.
 
-## Roles and permissions
+## Requirements
 
-To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The Microsoft Entra built-in roles with permission to create bulk enrollment tokens are:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-- Cloud Device Administrator
-- Intune Administrator
-- Password Administrator
+:::column-end:::
+:::column span="3":::
 
-For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+> This enrollment method supports the following platforms:
+>
+> - Windows (supported versions)
 
+:::column-end:::
+:::row-end:::
 
-## Requirements  
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
 
-- Devices must be running a supported version of Windows.
-- Enable [Windows automatic enrollment](enable-automatic-mdm.md#enable-windows-automatic-enrollment).
-- Make sure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-MgServicePrincipal -Filter "AppId eq '00000014-0000-0000-c000-000000000000'"` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error.
+:::column-end:::
+:::column span="3":::
 
-  To register the service principal, use the `New-MgServicePrincipal -AppId "00000014-0000-0000-c000-000000000000"` command. To learn more about this command, see [New-MgServicePrincipal](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal).
+> - Enable [Windows automatic enrollment](enable-automatic-mdm.md#enable-windows-automatic-enrollment).
+> - Make sure that the service principal for Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) is present in your Microsoft Entra tenant. In a command line, use the `Get-MgServicePrincipal -Filter "AppId eq '00000014-0000-0000-c000-000000000000'"` command to check for the [service principal](/entra/identity-platform/developer-glossary#service-principal-object). Without the service principal, Windows Configuration Designer can't retrieve the bulk enrollment token, which results in an error.
+>
+>   To register the service principal, use the `New-MgServicePrincipal -AppId "00000014-0000-0000-c000-000000000000"` command. To learn more about this command, see [New-MgServicePrincipal](/powershell/module/microsoft.graph.applications/new-mgserviceprincipal).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> To create a bulk enrollment token, use an account with one of the following Microsoft Entra roles. The account must not be scoped to an administrative unit in Microsoft Entra ID:
+>
+> - Cloud Device Administrator
+> - Intune Administrator
+> - Password Administrator
+>
+> For more information about these roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+:::column-end:::
+:::row-end:::
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
 
 ## Create a provisioning package
 

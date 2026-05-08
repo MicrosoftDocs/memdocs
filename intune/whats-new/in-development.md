@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 05/01/2026
+ms.date: 05/04/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -62,7 +62,88 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 <!-- *********************************************** -->
 
+## Device configuration
+
+### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
+
+On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. You'll be able to use this setting to disable MAC address randomization on managed macOS devices.
+
+When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. But, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+To learn more, see:
+
+- [Wi-Fi profiles settings list](../device-configuration/templates/ref-wifi-settings-apple.md)
+- [Learn more about Wi-Fi profiles in Intune](../device-configuration/templates/configure-wifi.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS 15 and later
+
+### New Wired Networks device configuration profile for iOS/iPadOS<!-- 31880672 -->
+
+There will be a new **802.1x Wired Networks** device configuration profile for iOS/iPadOS devices. The feature will support 802.1x Ethernet access controls, which is ideal for M-series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
+
+This profile will:
+
+- Support EAP protocols, like TLS, PEAP, and TTLS
+- Be similar to the macOS wired network profile experience
+
+This feature will help with secure enterprise deployments for iPads in education, finance, and other regulated industries.
+
+To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../device-configuration/templates/configure-wired-networks.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS 17 and newer
+
+### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
+
+The [Settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
+
+There will be a new **Block Bluetooth sharing** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the device can't share content over Bluetooth. When set to **False**, fully managed and dedicated devices allow Bluetooth sharing, while corporate-owned work profile devices block Bluetooth sharing.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned dedicated devices (COSU)
+
+<!-- *********************************************** -->
+
 ## Device enrollment
+
+### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
+
+Enrollment time grouping (ETG) will improve the Apple automated device enrollment (ADE) setup experience by providing an efficient way to group devices at enrollment time. The pre-knowledge of the security group that the device will be a member of helps in computing the applicable policies, apps, and settings for the enrolled device, so the configurations are delivered quickly at the time of enrollment.
+
+You'll be able to configure enrollment time grouping in new iOS/iPadOS and macOS enrollment policies that use these authentication methods:
+
+- iOS/iPadOS:
+  - Enroll with user affinity
+    - Setup Assistant with modern authentication
+    - Company Portal authentication method
+  - Enroll without user affinity
+    - Microsoft Entra shared mode
+    - Shared iPad
+- macOS:
+  - Enroll with user affinity
+    - Setup Assistant with modern authentication
+  - Enroll without user affinity
+
+There will be a new **Device group** tab within new iOS/iPadOS and macOS enrollment policies where you can add a Microsoft Entra security group. The group you add will map directly to the enrollment profile, and you'll be able to edit the group at any time. The new device grouping tab won't be available in existing enrollment profiles.
+
+Other requirements include adding the Intune first-party app as a security group owner, and ensuring that you have the **enrollment time device membership assignment** permission within a custom RBAC role.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS Automated Device Enrollment (ADE)
+> - macOS Automated Device Enrollment (ADE)
 
 ### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
 
@@ -134,21 +215,37 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
-### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
+### Grant enhanced security permissions to a Mobile Threat Defense app on Android Enterprise devices<!-- 33745497 -->
 
-Intune will soon include two new remote actions that let admins temporarily suspend and later restore managed home screen (MHS) on Android devices. These actions allow users to exit MHS and access the device's default launcher for a specified duration, without removing policies or requiring a PIN.
+Google is introducing a new Mobile Threat Defense (MTD) capability for Android that allows MTD apps to operate with enhanced security permissions on managed devices. With this update, you'll be able to use the [MTD connector](../device-security/mobile-threat-defense/enable-connector.md) in the Microsoft Intune admin center to grant these permissions to one MTD app of your choice, such as Microsoft Defender for Endpoint or a supported third-party partner.
 
-After the defined time elapses, or when the *restore managed home screen* action is triggered, MHS is automatically restored, helping maintain device security while minimizing disruption.
+On devices where these permissions are configured, the MTD app gains additional capabilities, including exemptions from app suspension, hibernation, and user-initiated restrictions.
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise corporate-owned Fully Managed (COBO)
-> - Android Enterprise corporate-owned Dedicated (COSU)
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise fully managed (COBO)
 
 <!-- *********************************************** -->
 
 ## Device security
+
+### Strict Tunnel Mode for Microsoft Tunnel on Android<!-- 17373449 -->
+
+Microsoft Tunnel will add support for Strict Tunnel Mode on Android Enterprise devices enrolled through Android Management API (AM API). When Strict Tunnel Mode is enabled, all network traffic is forced through the VPN tunnel. If the VPN connection is unavailable or drops, all network traffic on the device is blocked, preventing apps from accessing the public internet outside of the tunnel. Devices enrolled through the legacy EMM API work profile don't support Strict Tunnel Mode until migrated to AM API.
+
+Admins will be able to configure an app exclusion list. Apps on the exclusion list always bypass the VPN and connect directly to the network, regardless of VPN connection status.
+
+Strict Tunnel Mode will be available as a configuration option when a [Microsoft Tunnel VPN profile](../device-security/microsoft-tunnel/install.md) is configured with **Always On** VPN. For unenrolled devices using [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam-android.md), Strict Tunnel Mode will also be supported, blocking network traffic when the MAM Tunnel connection is unavailable.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise personally owned work profile
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise corporate-owned fully managed
+> - Android (MAM, unenrolled devices)
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
@@ -176,6 +273,54 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 > - Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
+
+### In-place renewal of Cloud PKI issuing certification authorities (CAs)<!-- 25850620 -->
+
+Currently, Microsoft Intune requires you to create a new Cloud PKI issuing CA and manually update dependent SCEP certificate profiles when an issuing CA nears expiration. This process can increase operational overhead and introduce configuration risk.
+
+Soon, you'll be able to renew eligible Cloud PKI issuing CAs in place. This update will help maintain uninterrupted certificate issuance and support continued certificate-based access for scenarios such as Wi-Fi, VPN, and email, without requiring changes to existing SCEP profiles or device assignments.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Cloud PKI
+
+### Custom compliance settings for macOS<!-- 35392462 -->
+
+Microsoft Intune will support custom compliance settings for macOS. You'll be able to define compliance checks using scripts and JSON rules, similar to existing support for Windows and Linux. This capability will allow you to evaluate device configuration, security posture, and other custom attributes not covered by built-in settings. Results will appear alongside standard compliance reporting in the Intune admin center.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+### Client-driven compliance evaluation for Windows devices<!-- 37554578 -->
+
+Microsoft Intune will introduce client-driven compliance evaluation for Windows devices to reduce delays in compliance reporting. Supported devices will detect important state changes locally and proactively request a compliance re-evaluation when it matters, instead of waiting for the next scheduled check-in. As an admin, you'll see faster updates for remediation, reporting, and access decisions. This capability will roll out in preview for Windows devices.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Controlled Configuration for Microsoft Defender antivirus settings<!-- 35378858 -->
+
+Microsoft Intune is bringing Controlled Configuration (CC) to public preview for Microsoft Defender antivirus settings. CC introduces a unified approach to endpoint security by making Intune and Microsoft 365 Defender the single source of truth for antivirus and related security settings.
+
+When you enable CC, all of the Defender antivirus settings that are delivered by Intune or Microsoft Defender for Endpoint security settings management will override configurations from all other channels, including Group Policy, Configuration Manager, and local changes or scripts. This single source of truth will help ensure consistent, predictable device states.
+
+CC extends Tamper Protection by letting you lock settings to admin-defined values, not just defaults. Your Defender antivirus policies set by Intune are reliably enforced across your endpoints, without being overridden by legacy on-premises policies or local per-device changes.
+
+Benefits of CC include:
+
+- **Authoritative policy enforcement**: Cloud-delivered antivirus settings always take precedence, eliminating conflicts from legacy tools.
+- **Improved security posture**: Prevents configuration drift and reduces risk from local changes.
+- **Simplified troubleshooting**: Clear, predictable configurations make auditing and support easier.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 <!-- *********************************************** -->
 

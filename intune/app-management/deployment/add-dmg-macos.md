@@ -140,7 +140,6 @@ The app you have created appears in the apps list where you can assign it to the
 
 - The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md)
 
 ## Known issues
 

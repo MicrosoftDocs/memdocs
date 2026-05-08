@@ -169,8 +169,8 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
 > 
-> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> - A [custom role][INT-RC] that includes:
+> - [School Administrator]: Grants read/write permissions to endpoint analytics.
+> - A [custom role] that includes:
 >   - **Endpoint Analytics/Read** — View scores and performance reports.
 >   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
 >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
@@ -180,16 +180,16 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
 > 
-> - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
-> - [Read Only Operator][INT-R4]: Grants read permissions to endpoint analytics.
-> - [Endpoint Security Manager][INT-R5]: Grants read permissions to endpoint analytics.
-> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]: Grants read permissions to endpoint analytics.
+> - [Read Only Operator]: Grants read permissions to endpoint analytics.
+> - [Endpoint Security Manager]: Grants read permissions to endpoint analytics.
+> - [School Administrator]: Grants read/write permissions to endpoint analytics.
+> - [Custom role] that includes:
 >   - **Endpoint Analytics/Read** — View scores and performance reports.
 >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
 >
 > You can also use an account that has the following Microsoft Entra built-in  roles:
-> - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
+> - [Reports Reader]: Grants read permissions to endpoint analytics.
 
 :::column-end:::
 :::row-end:::
@@ -214,23 +214,22 @@ Learn more about endpoint analytics:
 - [Understand data collection](ref-data-collection.md)
 - [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)
 
-<!-- admin center -->
+<!--Intune roles-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-EA]: https://aka.ms/endpointanalytics
-[PORTAL-0]: https://aka.ms/uea
-[PORTAL]: https://aka.ms/uea_prereq
-[PORTAL_1]: https://aka.ms/uea_baselines
-[PORTAL_2]: https://aka.ms/uea_prereq_configmgr
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-<!-- role links -->
+[Application Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#application-manager
+[Endpoint Privilege Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-manager
+[Endpoint Privilege Reader]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-privilege-reader
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Intune Role Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#intune-role-administrator
+[Policy and Profile manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#policy-and-profile-manager
+[Read Only Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#read-only-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
 
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#read-only-operator
-[INT-R5]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+<!-- Entra roles -->
 
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
-[ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[ENT-R3]: /entra/identity/role-based-access-control/permissions-reference#reports-reader
+[Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[Global Administrator]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
+[Reports Reader]: /entra/identity/role-based-access-control/permissions-reference#reports-reader

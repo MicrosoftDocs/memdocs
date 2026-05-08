@@ -1,20 +1,20 @@
 ---
-title: Update Microsoft 365 apps with the settings catalog in Microsoft Intune
+title: "Update Microsoft 365 Apps With the Settings Catalog in Intune"
 description: Use settings catalog in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
-ms.date: 08/28/2025
+ms.date: 04/30/2026
 ms.topic: how-to
 ms.reviewer: mayurjadhav
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Set the Microsoft 365 apps update channel using the Microsoft Intune settings catalog
+# Set the Microsoft 365 apps update channel using the settings catalog in Microsoft Intune
 
-Admins must keep Microsoft 365 Apps up-to-date so users have access to the latest security updates and performance improvements. In Intune, you can use the [settings catalog](index.md) to update Microsoft 365 apps on your Windows devices, including setting the update channel.
+Admins must keep Microsoft 365 Apps up-to-date so users have access to the latest security updates and performance improvements. In Intune, use the [settings catalog](index.md) to update Microsoft 365 apps on your Windows devices, including setting the update channel.
 
 This article shows you how to use the settings catalog to manage Microsoft 365 app updates. It also provides guidance on confirming your policies apply successfully, which can help when troubleshooting.
 
-In this scenario, you create a settings catalog policy in Intune that updates Microsoft 365 on your devices. For more information on settings catalog, go to [Use the Intune settings catalog to configure settings](index.md).
+In this scenario, you create a settings catalog policy in Intune that updates Microsoft 365 on your devices. For more information on settings catalog, see [Use the Intune settings catalog to configure settings](index.md).
 
 This feature applies to:
 
@@ -23,31 +23,52 @@ This feature applies to:
 
 ## Prerequisites
 
-- Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+:::column-end:::
+:::column span="3":::
+> Requires Microsoft Intune and a Microsoft 365 subscription. For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+:::column-end:::
+:::row-end:::
 
-- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To configure the settings catalog policy, at a minimum, sign in to the Intune admin center with the **Policy and Profile Manager** role. For more information about the built-in roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+:::column-end:::
+:::row-end:::
 
-- Add and enable [Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
+> Add and enable [Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
+>
+> :::image type="content" source="./media/update-office/settings-catalog-search-enable-automatic-updates.png" alt-text="Screenshot of searching for the Enable Office updates setting in the settings catalog in Microsoft Intune." lightbox="./media/update-office/settings-catalog-search-enable-automatic-updates.png":::
+>
+> :::image type="content" source="./media/update-office/settings-catalog-enable-automatic-updates.png" alt-text="Screenshot of the Enable Office updates setting configured in the settings catalog in Microsoft Intune." lightbox="./media/update-office/settings-catalog-enable-automatic-updates.png":::
+:::column-end:::
+:::row-end:::
 
-  :::image type="content" source="./media/update-office/settings-catalog-search-enable-automatic-updates.png" alt-text="Screenshot that shows searching for the Enable Office updates using the settings catalog in Microsoft Intune." lightbox="./media/update-office/settings-catalog-search-enable-automatic-updates.png":::
-
-  :::image type="content" source="./media/update-office/settings-catalog-enable-automatic-updates.png" alt-text="Screenshot that shows the Enable Office updates setting configured in the settings catalog in Microsoft Intune." lightbox="./media/update-office/settings-catalog-enable-automatic-updates.png":::
-
-## Set the Update Channel in the Intune settings catalog
+## Set the Microsoft 365 update channel in the Intune settings catalog
 
 Use an Intune policy to set the update channel for Microsoft 365 apps. The update channel determines how frequently Office checks for updates.
 
 1. In your [settings catalog](index.md#create-the-policy) policy, search for **Update Channel**, and select it. Close the settings picker.
 
-    :::image type="content" source="./media/update-office/settings-catalog-update-channel.png" alt-text="In Microsoft Intune and Intune admin center, add the Office Update Channel setting in the settings catalog." lightbox="./media/update-office/settings-catalog-update-channel.png":::
+    :::image type="content" source="./media/update-office/settings-catalog-update-channel.png" alt-text="Screenshot of adding the Office Update Channel setting in the Microsoft Intune settings catalog." lightbox="./media/update-office/settings-catalog-update-channel.png":::
 
 2. Set the **Update Channel** to **Enabled** and select the channel name. For example, select `Semi-Annual Enterprise Channel`:
 
-    :::image type="content" source="./media/update-office/settings-catalog-update-channel-semi-annual.png" alt-text="In Microsoft Intune and Intune admin center, enable the Office Update Channel setting and select the channel in the settings catalog." lightbox="./media/update-office/settings-catalog-update-channel-semi-annual.png":::
+    :::image type="content" source="./media/update-office/settings-catalog-update-channel-semi-annual.png" alt-text="Screenshot of enabling the Office Update Channel setting and selecting a channel in the Microsoft Intune settings catalog." lightbox="./media/update-office/settings-catalog-update-channel-semi-annual.png":::
 
     > [!TIP]
     > - It's recommended to update more frequently. Semi-annually is only used as an example.
-    > - For information on the different update channels, go to [Overview of update channels for Microsoft 365 Apps](/microsoft-365-apps/updates/overview-update-channels).
+    > - For information on the different update channels, see [Overview of update channels for Microsoft 365 Apps](/microsoft-365-apps/updates/overview-update-channels).
 
 3. When the policy is ready, [assign the policy](../../device-configuration/assign-device-profile.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
 
@@ -69,7 +90,7 @@ After you assign the policy and the device syncs, you can confirm the Intune pol
 
     Looking at the following example, you see `L_UpdatePath` has a value similar to `<enabled/><data id="L_UpdatePathID" value="http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114" />`. This value means the update channel is set similar to the following image:
 
-    :::image type="content" source="./media/update-office/settings-catalog-update-path-registry-key.png" alt-text="Microsoft Intune settings catalog L_UpdatePath registry key example for Microsoft Office" lightbox="./media/update-office/settings-catalog-update-path-registry-key.png":::
+    :::image type="content" source="./media/update-office/settings-catalog-update-path-registry-key.png" alt-text="Screenshot of the L_UpdatePath registry key value in the Registry Editor for Microsoft Office." lightbox="./media/update-office/settings-catalog-update-path-registry-key.png":::
 
     > [!TIP]
     > [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
@@ -97,15 +118,15 @@ At this point, the Intune policy is successfully applied to the device.
 
     Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is the **Current Channel** (monthly):
 
-    :::image type="content" source="./media/update-office/update-channel-office-registry-key.png" alt-text="Office UpdateChannel registry key example" lightbox="./media/update-office/update-channel-office-registry-key.png":::
+    :::image type="content" source="./media/update-office/update-channel-office-registry-key.png" alt-text="Screenshot of the Office UpdateChannel registry key value in the Registry Editor." lightbox="./media/update-office/update-channel-office-registry-key.png":::
 
     This example means the policy isn't applied yet, as the registry setting is still set to **monthly**, instead of **semi-annual**.
 
-This registry key is updated when the **Task Scheduler** > **Office Automatic Updates 2.0** runs, or when a user signs into the device. To confirm, open the **Task Scheduler app** > **Microsoft** > **Office** > **Office Automatic Updates 2.0** task > **Triggers**. Depending on your triggers, it can take at least a day and more before the `UpdateChannel` registry key is updated.
+This registry key updates when the **Task Scheduler** > **Office Automatic Updates 2.0** runs, or when a user signs into the device. To confirm, open the **Task Scheduler app** > **Microsoft** > **Office** > **Office Automatic Updates 2.0** task > **Triggers**. Depending on your triggers, it can take at least a day and more before the `UpdateChannel` registry key updates.
 
-## Force Office automatic updates to run
+## Force Office automatic updates to run on the device
 
-To test your policy, you can force the policy settings on the device. The following steps update the registry. As always, be careful when updating the registry.
+To test your policy, force the policy settings on the device. The following steps update the registry. As always, be careful when updating the registry.
 
 1. Clear the registry key:
 
@@ -118,7 +139,7 @@ To test your policy, you can force the policy settings on the device. The follow
     2. Expand **Task Scheduler Library** > **Microsoft** > **Office**.
     3. Select **Office Automatic Updates 2.0** > **Run**:
 
-        :::image type="content" source="./media/update-office/task-scheduler-office-automatic-updates.png" alt-text="Open Task Schedule, and run Office Automatic Updates using the task scheduler." lightbox="./media/update-office/task-scheduler-office-automatic-updates.png":::
+        :::image type="content" source="./media/update-office/task-scheduler-office-automatic-updates.png" alt-text="Screenshot of running the Office Automatic Updates 2.0 task in Task Scheduler." lightbox="./media/update-office/task-scheduler-office-automatic-updates.png":::
 
         Wait for the task to finish, which can take several minutes.
 
@@ -134,42 +155,42 @@ If you want to do more, you can force Office to get the latest version update. T
 
 ### Step 1: Force the Office version to update
 
-1. Confirm the Office version supports the update channel you're choosing. [Update history for Microsoft 365 Apps](/officeupdates/update-history-office365-proplus-by-date) lists the build numbers that support the different update channels.
+1. Confirm the Office version supports the update channel you choose. [Update history for Microsoft 365 Apps](/officeupdates/update-history-office365-proplus-by-date) lists the build numbers that support the different update channels.
 
 2. In your settings catalog policy, search for the **Target Version** setting, and close the settings picker:
 
-    :::image type="content" source="./media/update-office/settings-catalog-search-target-version.png" alt-text="In a Microsoft Intune settings catalog policy, search for the Target Version setting for Office." lightbox="./media/update-office/settings-catalog-search-target-version.png":::
+    :::image type="content" source="./media/update-office/settings-catalog-search-target-version.png" alt-text="Screenshot of searching for the Target Version setting in a Microsoft Intune settings catalog policy." lightbox="./media/update-office/settings-catalog-search-target-version.png":::
 
 3. Enter the version you want. Your **Target version** setting looks similar to the following setting:
 
-    :::image type="content" source="./media/update-office/settings-catalog-enable-target-version-setting.png" alt-text="In the Microsoft Intune settings catalog, set the Target Version setting for Office." lightbox="./media/update-office/settings-catalog-enable-target-version-setting.png":::
+    :::image type="content" source="./media/update-office/settings-catalog-enable-target-version-setting.png" alt-text="Screenshot of the Target Version setting configured in the Microsoft Intune settings catalog." lightbox="./media/update-office/settings-catalog-enable-target-version-setting.png":::
 
 > [!IMPORTANT]
 >
 > - Be sure to assign the policy.
 > - If you change an existing policy, your changes affect all assigned users.
-> - If you're testing this feature, it's recommended to create a test policy, and assign the policy to a test group of users.
+> - If you're testing this feature, create a test policy, and assign the policy to a test group of users.
 
 ### Step 2: Check the Office version
 
-Consider using the following steps to test your policy before deploying the policy to all users:
+To test your policy before deploying it to all users, use the following steps:
 
 1. In the **Registry Editor** app, go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\Providers\<Provider ID>\default\Device\office16~Policy~L_MicrosoftOfficemachine~L_Updates`.
 
-2. Look at the `L_UpdateTargetVersion` value. Once the policy applies, the value is set to the version you entered, such as `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.19127.20082" />`.
+1. Look at the `L_UpdateTargetVersion` value. When the policy applies, the value is set to the version you entered, such as `<enabled /><data id="L_UpdateTargetVersionID" value="16.0.19127.20082" />`.
 
     At this point, the Intune policy is successfully applied to the device.
 
-3. Next, you can force Office to update. Open an Office app, such as Excel. Select to update now (possibly in the **Account** menu).
+1. Next, force Office to update. Open an Office app, such as Excel. Select to update now (possibly in the **Account** menu).
 
     The update takes several minutes. You can confirm Office is trying to get the version you enter:
 
       1. On the device, go to `C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version`.
       2. Open the `VersionDescriptor.xml` file, and go to the `<Version>` section. The available version should be the same version you entered in the Intune policy, such as:
 
-          :::image type="content" source="./media/update-office/office-version-descriptor-xml-example.png" alt-text="Check the version section in the version descriptor Office XML file." lightbox="./media/update-office/office-version-descriptor-xml-example.png":::
+          :::image type="content" source="./media/update-office/office-version-descriptor-xml-example.png" alt-text="Screenshot of the version section in the VersionDescriptor XML file for Office." lightbox="./media/update-office/office-version-descriptor-xml-example.png":::
 
-4. After the update is installed, the Office app should show the new version (for example, on the **Account** menu)
+1. After the update is installed, the Office app shows the new version (for example, on the **Account** menu).
 
 ## Related articles
 
