@@ -1,7 +1,7 @@
 ---
 title: Use the Microsoft Tunnel client app for Android
 description: Learn how to connect over VPN using Microsoft Tunnel for Android.
-ms.date: 11/14/2023
+ms.date: 05/26/2026
 ms.topic: end-user-help
 ai-usage: ai-assisted
 ms.reviewer: shthilla

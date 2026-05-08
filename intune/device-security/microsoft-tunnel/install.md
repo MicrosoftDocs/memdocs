@@ -1,7 +1,7 @@
 ---
 title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway on a Linux server to support Intune managed cloud-based devices in connecting to your on-premises infrastructure.
-ms.date: 04/10/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: ochukwunyere
