@@ -23,35 +23,58 @@ This article:
 - Describes other features, including scope tags to "filter" your policies, and steps you can take on devices that aren't compliant.
 - Lists the check-in refresh cycle times when devices receive policy updates.
 
-## Before you begin
+## Requirements
 
-To use device compliance policies, be sure you:
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 
-- Use the following subscriptions:
+:::column-end:::
+:::column span="3":::
 
-  - Intune
-  - If you use Conditional Access, then you need Microsoft Entra ID P1 or P2 edition. [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Microsoft Entra ID.
+> - Intune
+> - If you use Conditional Access, then you need Microsoft Entra ID P1 or P2 edition. [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Microsoft Entra ID.
 
-- Use a supported platform:
+:::column-end:::
+:::row-end:::
 
-  - Android device administrator
-  - Android AOSP
-  - Android Enterprise
-  - iOS
-  - Linux - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
-  - macOS
-  - Windows  
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
- [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
+:::column-end:::
+:::column span="3":::
 
-- Enroll devices in Intune (required to see the compliance status)
+> - Android device administrator
+> - Android AOSP
+> - Android Enterprise
+> - iOS
+> - Linux - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+> - macOS
+> - Windows
 
-- Enroll devices to one user, or enroll without a primary user. Single devices can't be enrolled to multiple users.
+:::column-end:::
+:::row-end:::
+
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Enroll devices in Intune (required to see the compliance status)
+> - Enroll devices to one user, or enroll without a primary user. Single devices can't be enrolled to multiple users.
+
+:::column-end:::
+:::row-end:::
 
 In addition to compliance settings that are built in to Intune, the following platforms support adding custom compliance settings to compliance policies:
 
-- Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
-- Windows 
+- Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
+- Windows
 
 Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
 
@@ -69,7 +92,7 @@ For more information about using custom compliance settings, including supported
    - **Android (AOSP)**
    - **Android Enterprise**
    - **iOS/iPadOS**
-   - **Linux** - (Ubuntu Desktop, version 24.04 LTS or 26.04 LTS, RedHat Enterprise Linux 8, or RedHat Enterprise Linux 9)
+   - **Linux** - (Ubuntu Desktop, version 24.04 LTS or 26.04 LTS, RedHat Enterprise Linux 9, or RedHat Enterprise Linux 10)
    - **macOS**
    - **Windows 10 and later**
    - **Windows 8.1 and later**

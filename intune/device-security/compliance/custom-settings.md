@@ -19,8 +19,8 @@ This feature applies to:
 - Windows (excluding Windows Home)
 - Linux
   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
-  - RedHat Enterprise Linux 8
   - RedHat Enterprise Linux 9
+  - RedHat Enterprise Linux 10
 
 Before you can add custom settings to a policy, you must prepare a JSON file, and a discovery script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can discover multiple settings:
 
@@ -32,17 +32,43 @@ Before you can add custom settings to a policy, you must prepare a JSON file, an
 
 After you deploy custom compliance settings and devices report back, you can view the results alongside the built-in compliance setting details in the Microsoft Intune admin center. Custom compliance settings can be used for Conditional Access decisions in the same way built-in compliance settings are. Together they form a compound rule set, equally affecting the device compliance state.
 
-## Prerequisites
+## Requirements
 
-- **Microsoft Entra joined** devices, *including* Microsoft Entra hybrid joined devices.
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-  Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+:::column-end:::
+:::column span="3":::
 
-- **Microsoft Entra registered/Workplace joined (WPJ)**
+> - Windows (excluding Windows Home)
+> - Linux
+>   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+>   - RedHat Enterprise Linux 9
+>   - RedHat Enterprise Linux 10
 
-  For information about devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
+:::column-end:::
+:::row-end:::
 
-  On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored.
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - **Microsoft Entra joined** devices, *including* Microsoft Entra hybrid joined devices.
+>
+>   Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/entra/identity/devices/hybrid-join-plan).  
+>
+> - **Microsoft Entra registered/Workplace joined (WPJ)**
+>
+>   For information about devices registered in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
+>
+>   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored.
+
+:::column-end:::
+:::row-end:::
 
 - **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Intune admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
@@ -52,7 +78,7 @@ After you deploy custom compliance settings and devices report back, you can vie
 
 ## Create a policy with custom compliance settings
 
-Before you begin to create a policy that includes custom settings, review the [prerequisites](#prerequisites).
+Before you begin to create a policy that includes custom settings, review the [requirements](#requirements).
 
 You must first upload an applicable discovery script to Intune, and have a ready JSON to add while creating the policy.
 
@@ -60,13 +86,13 @@ When ready, use the normal procedure to [create a compliance policy](./create-po
 
 > [!NOTE]
 >
-> When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../../device-management/tools/management-extension-windows.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
+> When a Windows device receives a compliance policy with custom settings, it checks for the [Intune Management Extension](../../device-management/tools/management-extension-windows.md). If the extension isn't found, the device runs an MSI to install it. Once installed, the extension downloads and runs PowerShell scripts and uploads compliance results to Intune. Actions the extension performs with Intune include:
 >
-> - Checking for new or updated PowerShell scripts every eight hours.
-> - Running the discovery scripts every eight hours.
-> - Running scripts that download when a user selects Check Compliance on the device. However, there is no check for new or updated scripts when Check Compliance is run.
+> - Checks for new or updated PowerShell scripts every eight hours.
+> - Runs discovery scripts every eight hours.
+> - Runs scripts when a user selects **Check Compliance** on the device, but doesn't check for new or updated scripts at that time.
 >
-> It is not possible to push notifications to a device to enable custom compliance to run on demand.
+> Push notifications can't trigger custom compliance to run on demand.
 
 ## Monitor custom compliance policy
 
@@ -150,27 +176,11 @@ To be compliant with *Password Policy* settings, configure the Linux system to u
 
 ### Device encryption
 
-Users of a device that doesn't meet the compliance requirements for disk and partition encryption might receive a message that they must encrypt the device drives.
-
-To be compliant with the *Require Device Encryption* setting, device-level encryption is required for writable fixed disks on the Linux device.
-
-There are several options for disk and partition encryption on Linux operating systems. Intune recognizes any encryption system that uses the underlying dm-crypt subsystem. This subsystem is a long-time standard on Linux systems. The preferred method of setting up dm-crypt is to use the LUKS format with the *cryptsetup* tool.
-
-The following list provides general guidance when encrypting disk and partitions:
-
-- Encrypting Linux system volumes after installation is possible, but potentially time consuming. We recommend setting up disk encryption while installing the operating system.
-- Not all filesystem partitions need to be encrypted for a device to meet organizational standards. The following aren't evaluated by the built-in device encryption settings:
-  - Read-only partitions
-  - Pseudo-filesystems, like `/proc` or `tmpfs`
-  - The `/boot` or `/boot/efi` partitions
+For guidance on configuring device encryption for Linux compliance, see [Linux compliance settings](./ref-linux-settings.md#device-encryption).
 
 ### Refresh your compliance status on Linux devices
 
-After making changes to a device to bring it into compliance, refresh the device status with Intune:
-
-- If the Microsoft Intune app is still running, select **Refresh** on the device details page, or on the compliance issues page to start a new check-in with Intune.
-- If the Microsoft Intune app isn't running, sign into the app to start a new check-in.
-- After installation, the Microsoft Intune app periodically checks in with Intune on its own, so long as the device is on, and a user is signed in to it.
+To refresh compliance status after making changes on a Linux device, see [Refresh compliance status](./ref-linux-settings.md#refresh-compliance-status).
 
 ## Next steps
 

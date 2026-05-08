@@ -18,33 +18,31 @@ This article lists and describes the different compliance settings you can confi
 
 For Linux, compliance settings are available from the [settings catalog](../../device-configuration/settings-catalog/index.md) instead of from a predetermined template as seen for other platforms. Therefore, when configuring a compliance policy for Linux you choose the settings you want to include in your policy by browsing the catalog and selecting them.
 
-In addition to the platform-specific compliance policy, devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
-
-To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
+Devices are also governed by tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings).
 
 This feature applies to:
 
 * Ubuntu Desktop 24.04 LTS or 26.04 LTS (physical or Hyper-V machine with x86/64 CPUs)
-* RedHat Enterprise Linux 8
 * RedHat Enterprise Linux 9
+* RedHat Enterprise Linux 10
 
 ## Linux settings categories
 
 Compliance policies for Linux can include settings from the following categories. Where applicable, guidance on configuring the setting is provided.
 
-### Allowed Distributions
+### Allowed distributions
 
 Add entries that define a maximum and minimum OS version for a Linux distribution type.
 
 Users of devices that fail to meet the defined criteria need to install a different version or distribution of Linux to bring the device into compliance.
 
-### Custom Compliance
+### Custom compliance
 
 Add the settings in this category when you use custom compliance settings for Linux.
 
 For information about the available settings for custom compliance and how to use them, see [Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune](./custom-settings.md).
 
-### Device Encryption
+### Device encryption
 
 Add settings to manage disk encryption.
 
@@ -64,7 +62,7 @@ Add settings to manage disk encryption.
     - Pseudo-filesystems like */proc* or *tmpfs*
     - The */boot* or */boot/efi* partitions
 
-### Password Policy
+### Password policy
 
 Enforce common password requirements for Linux devices:
 

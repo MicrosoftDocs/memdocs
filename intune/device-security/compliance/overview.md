@@ -14,7 +14,7 @@ ms.collection:
 
 Microsoft Intune compliance policies are sets of rules and conditions that you use to evaluate the configuration of your managed devices. These policies can help you secure organizational data and resources from devices that don't meet those configuration requirements. Managed devices must satisfy the conditions you set in your policies to be considered compliant by Intune.
 
-If you also integrate the compliance results from your policies with Microsoft Entra Conditional Access, you can benefit from an extra layer of security. Conditional Access can enforce Microsoft Entra access controls based on a devices current compliance status to help ensure that only devices that are compliant are permitted to access corporate resources.
+If you also integrate the compliance results from your policies with Microsoft Entra Conditional Access, you can benefit from an extra layer of security. Conditional Access enforces Microsoft Entra access controls based on a device's current compliance status, helping ensure only compliant devices can access corporate resources.
 
 Intune compliance policies are divided into two areas:
 
@@ -96,8 +96,8 @@ The following subjects link to dedicated articles for different aspects of devic
 - [**Custom compliance settings**](./custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
-  - Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
-  - Windows  
+  - Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
+  - Windows
 
 ## Monitor compliance status
 
@@ -115,8 +115,8 @@ For more information about using Conditional Access with your device compliance 
 
 Learn more about Conditional Access in the Microsoft Entra documentation:
 
-- [What is Conditional Access](/azure/active-directory/conditional-access/overview)
-- [What is a device identity](/azure/active-directory/device-management-introduction)
+- [What is Conditional Access](/entra/identity/conditional-access/overview)
+- [What is a device identity](/entra/identity/devices/overview)
 
 ### Reference for noncompliance and Conditional Access on the different platforms
 
@@ -152,5 +152,6 @@ The following table describes how noncompliant settings are managed when a compl
 
 - [Create and deploy policy](./create-policy.md) and review prerequisites
 - [Monitor device compliance](./monitor-policy.md)
+- [Third-party device compliance partners](./third-party-partners.md)
 - [Common questions, issues, and resolutions with device policies and profiles in Microsoft Intune](../../device-configuration/troubleshoot-device-profiles.md)
 - [Reference for policy entities](../../developer/data-warehouse/ref-policy.md) has information about the Intune Data Warehouse policy entities

@@ -18,27 +18,27 @@ This article lists the compliance settings you can configure for Android (AOSP) 
 * Device properties
 * System security
 
- Devices are also governed by tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings). To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
-
-To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
+Devices are also governed by tenant-wide [compliance policy settings](./overview.md#compliance-policy-settings).
 
 This feature applies to:
 
 * Android (AOSP)
 
+Settings in this article are organized by the sections that appear in the admin center when you create a compliance policy.
+
 ## Before you begin
 
 To access these settings, [create an Android (AOSP) compliance policy](./create-policy.md#create-the-policy). When prompted to select a **Platform**, choose **Android (AOSP)**.
 
-## Device Health
+## Device health
 
 * **Rooted devices**  
   Prevent rooted devices from having corporate access.
 
   * **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  * **Block** - Mark rooted devices as not compliant.
+  * **Block** - Mark rooted devices as noncompliant.
 
-## Device Properties
+## Device properties
 
 * **Minimum OS version**  
   When a device doesn't meet the minimum OS version requirement, it's reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
@@ -105,5 +105,6 @@ Compliance reports are currently not available for Android (AOSP) devices. This 
 
 ## Next steps
 
-* [Add actions for noncompliant devices](./configure-noncompliance-actions.md)
-* [Set device restrictions for AOSP devices](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md)
+- [Add actions for noncompliant devices](./configure-noncompliance-actions.md) and [use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
+- [Monitor your compliance policies](./monitor-policy.md).
+- [Set device restrictions for AOSP devices](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).

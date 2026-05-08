@@ -18,15 +18,35 @@ This article applies to Windows and describes how to set up compliance checks fo
 
 ## Requirements
 
-To create your compliance policy with WSL settings, you must meet these requirements:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-- The [Intune WSL plugin](https://go.microsoft.com/fwlink/?linkid=2296896) must be installed for compliance evaluation.
+:::column-end:::
+:::column span="3":::
 
-- The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:
+> Windows
 
-   - Assign a PowerShell script or a proactive remediation to the user or device.
-   - Deploy a Win32 app or Microsoft Store app to the user or device.
-   - Assign a custom compliance policy to the user or device.
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [plugins](../../includes/requirements/plugins.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> The [Intune WSL plugin](https://go.microsoft.com/fwlink/?linkid=2296896) must be installed for compliance evaluation.
+
+:::column-end:::
+:::row-end:::
+
+The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:
+
+- Assign a PowerShell script or a proactive remediation to the user or device.
+- Deploy a Win32 app or Microsoft Store app to the user or device.
+- Assign a custom compliance policy to the user or device.
 
 ## Before you begin
 

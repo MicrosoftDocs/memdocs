@@ -18,12 +18,12 @@ This feature applies to:
 
 - Android Enterprise
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
+Settings in this article are organized by the sections that appear in the admin center when you create a compliance policy.
 
 > [!IMPORTANT]
 > It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../../device-enrollment/android/setup-dedicated.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.
 >
-> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/azure/active-directory/develop/msal-shared-devices) in the Microsoft Entra documentation.
+> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn  more about shared device mode, see [*Overview of shared device mode*](/entra/identity-platform/msal-shared-devices) in the Microsoft Entra documentation.
 
 <!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
@@ -87,8 +87,8 @@ This section describes the compliance profile settings available for fully manag
 - **Check strong integrity using hardware-backed security features**  
   Optionally, you can require devices to pass a *strong integrity check*. This setting is only available if you require basic integrity checks or device integrity checks. Your options:
 
-  - **Not configured** (*default*)  – This setting isn't evaluated for compliance or noncompliance. Intune assesses the verdict from the basic integrity check by default.
-  - **Check strong integrity** –  Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance. Intune assesses the verdict from the basic integrity check by default.
+  - **Check strong integrity** - Require devices to pass Play's strong integrity check.  Not all devices support this type of check. Intune marks such devices as noncompliant.
 
   For more information about Google Play's integrity services, see these Android developer docs:
 

@@ -106,12 +106,12 @@ Your configuration now appears on the Partner compliance management page.
 
 5. Select **Review + save** and then **Save** to save your edits.
 
-6. *This step only applies when you use VMware Workspace ONE*:
+6. *This step only applies when you use Omnissa Workspace ONE*:
 
    From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Intune admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in newly assigned groups do not successfully report compliance. 
 
    To manually sync from Azure Services:
-   1. Sign in to your VMware Workspace ONE UEM console.
+   1. Sign in to your Omnissa Workspace ONE UEM console.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
    3. For *Sync Azure Services*, select **SYNC**.
 
@@ -137,9 +137,9 @@ Refer to the documentation from your device compliance partner for how to enroll
 
 ## Monitor devices managed by third-party device compliance partners
 
-After you configure third-party device compliance partners and enroll devices with them, the partner will forward compliance details to Intune. After Intune receives that data,  you can view details about the devices in the Azure portal.
+After you configure third-party device compliance partners and enroll devices with them, the partner will forward compliance details to Intune. After Intune receives that data, you can view details about the devices in the Microsoft Entra admin center.
 
-Sign in to the Azure portal and go to **Microsoft Entra ID** > **Devices** > [**All devices**](https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/).
+Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) and go to **Devices** > [**All devices**](https://entra.microsoft.com/#view/Microsoft_AAD_Devices/DevicesMenuBlade/~/Devices).
 
 ## Best practices for migrating devices from 3rd party MDM to Intune MDM
 
@@ -167,4 +167,3 @@ Use the documentation from your third-party partner to create compliance policie
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_10/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Microsoft Entra Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 - [Ivanti Neurons for MDM](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
-- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)

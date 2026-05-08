@@ -18,8 +18,8 @@ You include the JSON file in a compliance policy when you configure a policy to 
 
 This feature applies to:
 
-- Linux – Ubuntu Desktop, version 24.04 LTS and 26.04 LTS
-- Windows 
+- Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
+- Windows
 
 A correctly formatted JSON file must include the following information:
 

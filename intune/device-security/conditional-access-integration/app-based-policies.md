@@ -25,18 +25,28 @@ App-based Conditional Access with client app management adds a security layer th
 > [!TIP]
 > In addition to app-based Conditional Access policies, you can use [device-based Conditional Access with Intune](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
-## Prerequisites
+## Requirements
 
-Before you create an app-based Conditional Access policy, you must have:
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 
-- **Enterprise Mobility + Security (EMS)** or an **Microsoft Entra ID P1 or P2 subscription**
-- Users must be licensed for EMS or Microsoft Entra ID
+:::column-end:::
+:::column span="3":::
 
-For more information, see [Enterprise Mobility pricing](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) or [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/).
+> Before you create an app-based Conditional Access policy, you must have:
+>
+> - **Enterprise Mobility + Security (EMS)** or an **Microsoft Entra ID P1 or P2 subscription**
+> - Users must be licensed for EMS or Microsoft Entra ID
+>
+> For more information, see [Enterprise Mobility pricing](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) or [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/).
+
+:::column-end:::
+:::row-end:::
 
 ## Supported apps
 
-A list of apps that support app-based Conditional Access can be found in [Conditional Access: Conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions#client-apps) in the Microsoft Entra documentation.
+A list of apps that support app-based Conditional Access can be found in [Conditional Access: Conditions](/entra/identity/conditional-access/concept-conditional-access-conditions#client-apps) in the Microsoft Entra documentation.
 
 App-based Conditional Access [also supports line-of-business (LOB) apps](./block-no-modern-auth.md), but these apps need to use [Microsoft 365 modern authentication](/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016?view=o365-worldwide&preserve-view=true).
 
@@ -45,7 +55,7 @@ App-based Conditional Access [also supports line-of-business (LOB) apps](./block
 In this example, the admin has applied app protection policies to the Outlook app followed by a Conditional Access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate email.
 
 > [!NOTE]
-> The following flowchart  can be used for other managed apps.
+> The following flowchart can be used for other managed apps.
 
 ![App-based Conditional Access process illustrated in a flow-chart](./media/app-based-policies/ca-intune-common-ways-3.png)
 
@@ -75,5 +85,5 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 ## Next steps
 
-- [Create an app-based Conditional Access policy](./create-app-based-policy.md)
-- [Block apps that don't have modern authentication](./block-no-modern-auth.md)
+- [Require approved client apps or app protection policy](/entra/identity/conditional-access/policy-all-users-approved-app-or-app-protection)
+- [Block legacy authentication with Conditional Access](/entra/identity/conditional-access/policy-block-legacy-authentication)

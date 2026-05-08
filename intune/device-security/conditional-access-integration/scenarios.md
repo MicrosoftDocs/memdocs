@@ -84,7 +84,7 @@ Conditional Access for PCs provides capabilities similar to those available for 
 
 - **Workplace join and Intune management:** Here the user can join their personal devices to access corporate resources and services. You can use Workplace join and enroll devices into Intune MDM to receive device-level policies, which are another option to evaluate Conditional Access criteria.
 
-Learn more about [Device Management in Microsoft Entra ID](/azure/active-directory/devices/overview).
+Learn more about [Device Management in Microsoft Entra ID](/entra/identity/devices/overview).
 
 ## App-based Conditional Access
 

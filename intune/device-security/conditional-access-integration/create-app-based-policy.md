@@ -17,7 +17,7 @@ Set up app-based Conditional Access policies for apps that are part of the list 
 Before you can use app-based Conditional Access policies, you need to have [Intune app protection policies](../../app-management/protection/create-policy.md) applied to your apps.
 
 > [!IMPORTANT]
-> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](/azure/active-directory/conditional-access/plan-conditional-access)
+> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access)
 
 ## Create app-based Conditional Access policies
 
@@ -45,4 +45,4 @@ Before you can create Conditional Access policies from the Microsoft Intune admi
 
 - [Block apps that don't have modern authentication](./block-no-modern-auth.md)
 - [Protect app data with app protection policies](../../app-management/protection/create-policy.md)
-- Learn about [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access)
+- Learn about [Conditional Access in Microsoft Entra ID](/entra/identity/conditional-access/overview)

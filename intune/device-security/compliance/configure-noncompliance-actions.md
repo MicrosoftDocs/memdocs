@@ -19,7 +19,7 @@ As part of a [compliance policy](./overview.md) that protects your organizations
 
 ## Overview
 
-By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliant, Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.
+By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliant, Microsoft Entra [Conditional Access](/entra/identity/conditional-access/overview) can block the device.
 
 By configuring  **Actions for noncompliance** you gain flexibility to decide what to do about noncompliant devices, and when to do it. For example, you might choose to not block the device immediately, and give the user a grace period to become compliant.
 
@@ -27,8 +27,8 @@ For each action you set, you can configure a schedule that determines when that 
 
 Not all actions are available for all platforms.
 
-   > [!NOTE]
-   > The Microsoft Intune admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
+> [!NOTE]
+> The **Schedule (days after noncompliance)** field in the admin center accepts whole numbers and decimal values in 0.25 increments. For example, `0.25` equals 6 hours and `0.5` equals 12 hours. To use other decimal values, such as `0.33` (8 hours), configure the schedule using [Microsoft Graph](/graph/overview) instead.
 
 ## Available actions for noncompliance
 
@@ -52,7 +52,7 @@ Following are the available actions for noncompliance:
   > [!NOTE]
   > Notification emails are sent from microsoft-noreply@microsoft.com.
   >
-  > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification. Compliance notification emails are expected to be sent within 6 hours after a device is marked as non-compliant.
+  > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification. Compliance notification emails are expected to be sent within 6 hours after a device is marked as noncompliant.
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../../device-management/actions/remote-lock.md) feature.
 
@@ -64,7 +64,6 @@ Following are the available actions for noncompliance:
     - Dedicated
     - Corporate-Owned Work Profile
     - Personally Owned Work Profile
-    - Android Enterprise dedicated devices
   - iOS/iPadOS
   - macOS
 
@@ -113,12 +112,10 @@ Following are the available actions for noncompliance:
 
   For example, you might schedule the first action for zero days and then add a second instance of the action set to three days. This delay before the second notification gives the user a few days to resolve the issue, and avoid the second notification.
 
-  To avoid spamming users with too many duplicate messages, review and streamline which compliance policies include a push notification for noncompliance, and review the schedules to avoid repeat notifications for the same too often.
+  To avoid sending users too many duplicate notifications, keep the following in mind:
 
-  Consider:
-  - For a single policy that includes multiple instances of a push notification set for the same day, only a single notification is sent for that day.
-
-  - When multiple compliance policies include the same compliance conditions, and include the push notification action with the same schedule, Intune sends multiple notifications to the same device on the same day.
+  - A single policy with multiple push notifications scheduled for the same day sends only one notification that day.
+  - Multiple policies with the same compliance conditions and the same schedule each send a separate notification, resulting in multiple notifications to the same device on the same day.
 
 > [!NOTE]
 > The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](./third-party-partners.md):
@@ -131,7 +128,7 @@ Following are the available actions for noncompliance:
 
 You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add extra actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
 
-To use device compliance policies to block devices from corporate resources, Microsoft Entra Conditional Access must be set up. See [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](../conditional-access-integration/scenarios.md) for guidance.
+To use device compliance policies to block devices from corporate resources, Microsoft Entra Conditional Access must be set up. See [Conditional Access in Microsoft Entra ID](/entra/identity/conditional-access/overview) or [common ways to use Conditional Access with Intune](../conditional-access-integration/scenarios.md) for guidance.
 
 To create a device compliance policy, see the following platform-specific guidance:
 
@@ -241,15 +238,15 @@ You can add optional actions when you create a compliance policy, or update an e
 
    - **Remotely lock the noncompliant device**: When the device is noncompliant, lock the device. This action forces the user to enter a PIN or passcode to unlock the device.
 
-   - **Add device to retire list**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management.
+   - **Add device to retire list**: When the device is noncompliant, it's added to a retire list in the admin center. An admin must explicitly retire the device from that list before company data is removed and the device is removed from Intune management.
 
    - **Send push notification to end user**: Configure this action to send a push notification about noncompliance to a device through the Company Portal app or Intune App on the device.
 
 5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [Conditional Access](../conditional-access-integration/scenarios.md) policy. If you enter **0** (zero) number of days, then Conditional Access takes effect **immediately**. For example, if a device is noncompliant, use Conditional Access to block access to email, SharePoint, and other organization resources immediately.
 
-   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks in with Intune and evaluates the policy, if it isn't compliant to that policy Intune immediately marks that device as noncompliant. If the client checks in at a later time after remediating the issues that lead to noncompliance, its status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
+   For details about the default **Mark device noncompliant** action and how the schedule affects grace periods, see [Available actions for noncompliance](#available-actions-for-noncompliance).
 
-   In your compliance policy, for example, you also want to notify the user. You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as noncompliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
+   In your compliance policy, for example, you also want to notify the user.You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as noncompliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
 
    For more information on compliance, and the built-in actions, see the [compliance overview](./overview.md).
 
