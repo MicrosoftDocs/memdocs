@@ -12,9 +12,9 @@ ms.collection:
 
 # Custom compliance JSON files for Microsoft Intune
 
-To support [custom settings for compliance](./custom-settings.md) for Microsoft Intune, you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a discovery script evaluates for compliance on the device.
+To support [custom settings for compliance](./custom-settings.md) for Microsoft Intune, create a JSON file that identifies the settings and value pairs you want to use for custom compliance. The JSON defines what a discovery script evaluates for compliance on the device.
 
-You include the JSON file in a compliance policy when you configure a policy to assess custom compliance settings.
+Include the JSON file in a compliance policy when you configure a policy to assess custom compliance settings.
 
 This feature applies to:
 
@@ -24,11 +24,11 @@ This feature applies to:
 A correctly formatted JSON file must include the following information:
 
 - **SettingName** - The name of the custom setting to use for base compliance. This name is case-sensitive.
-- **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list of *supported operators*.
+- **Operator** - Represents a specific action that's used to build a compliance rule. For options, see the following list of *supported operators*.
 - **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of *supported DataTypes*.
-- **Operand** - Represent the values that the operator works on.
-- **MoreInfoURL** - A URL that device users can view and use to learn more about the compliance requirement should their device be noncompliant for a setting. You can also use this URL to link to instructions to help users bring their device into compliance for this setting.
-- **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state. There must be at least one string for the language `en_US`. Other remediation string languages can then be added as needed, as demonstrated in the [example](#example-json-file) provided later in this article.
+- **Operand** - Represents the values that the operator works on.
+- **MoreInfoURL** - A URL that device users can view and use to learn more about the compliance requirement if their device is noncompliant for a setting. You can also use this URL to link to instructions to help users bring their device into compliance for this setting.
+- **RemediationStrings** - Information that shows in the Company Portal when a device is noncompliant to a setting. This information helps users understand the remediation options to bring a device to a compliant state. There must be at least one string for the language `en_US`. You can add other remediation string languages as needed, as demonstrated in the [example](#example-json-file) provided later in this article.
 
 Your policy can be up to 100 KB and include 100 rules.
 

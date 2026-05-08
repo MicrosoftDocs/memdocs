@@ -10,7 +10,7 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for Android device administrator in Intune
+# Device compliance settings for Android device administrator in Intune
 
 This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as noncompliant, set an allowed threat level, enable Google Play Protect, and more.
 
@@ -30,7 +30,7 @@ Settings in this article are organized by the sections that appear in the admin 
 
 - **Require the device to be at or under the machine risk score**
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score are marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
@@ -46,7 +46,7 @@ Settings in this article are organized by the sections that appear in the admin 
   - **Block** - Blocking device administrator guides users to move to Android Enterprise Personally Owned and Corporate Owned Work Profile management to regain access.
 
 - **Rooted devices**  
-  Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and above.)
+  Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and later.)
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Mark rooted devices as noncompliant.
@@ -63,10 +63,10 @@ Settings in this article are organized by the sections that appear in the admin 
 ### Google Play Protect
 
 > [!IMPORTANT]
-> Devices operating in countries/regions where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
+> Devices operating in countries or regions where Google Mobile Services aren't available fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
 - **Google Play Services is configured**  
-  Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
+    Google Play services enables security updates and is a base-level dependency for many security features on certified-Google devices.
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require that the Google Play services app is installed and enabled.
@@ -74,7 +74,7 @@ Settings in this article are organized by the sections that appear in the admin 
 - **Up-to-date security provider**
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
+  - **Require** - Require that an up-to-date security provider protects a device from known vulnerabilities.
 
 - **Threat scan on apps**
 
@@ -92,19 +92,19 @@ Settings in this article are organized by the sections that appear in the admin 
   - **Check basic integrity & device integrity**
 
 > [!NOTE]
-> To configure Google Play Protect settings using app protection policies, see [Intune app protection policy settings](../../app-management/protection/ref-settings-android.md#conditional-launch) on Android.
+> To configure Google Play Protect settings by using app protection policies, see [Intune app protection policy settings](../../app-management/protection/ref-settings-android.md#conditional-launch) on Android.
 
 ## Device properties
 
 ### Operating system version
 
 - **Minimum OS version**  
-  When a device doesn't meet the minimum OS version requirement, the devices is reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
+  When a device doesn't meet the minimum OS version requirement, the device is reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
 
   *By default, no version is configured*.
 
 - **Maximum OS version**  
-  When a device is using an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
+  When a device uses an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
 
   *By default, no version is configured*.
 
@@ -121,15 +121,15 @@ Settings in this article are organized by the sections that appear in the admin 
 ### Device security
 
 - **Block apps from unknown sources**  
-  *Supported on Android 4.0 to Android 7.x. Not supported by Android 8.0 and later*
+  *Supported on Android 4.0 to Android 7.x. Not supported by Android 8.0 and later.*
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Block devices with **Security > Unknown Sources** enabled sources (*supported on Android 4.0 through Android 7.x. Not supported on Android 8.0 and later.*).
 
-  To side-load apps, unknown sources must be allowed. If you're not side-loading Android apps, then set this feature to **Block** to enable this compliance policy.
+  To sideload apps, unknown sources must be allowed. If you're not sideloading Android apps, set this feature to **Block** to enable this compliance policy.
 
   > [!IMPORTANT]
-  > Side-loading applications require that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not side-loading Android apps on devices.
+  > Sideloading applications requires that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not sideloading Android apps on devices.
 
 - **Company portal app runtime integrity**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -148,7 +148,7 @@ Settings in this article are organized by the sections that appear in the admin 
 - **Minimum security patch level**  
   *(Supported on Android 8.0 or later)*
 
-  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
+  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. Enter the date in the `YYYY-MM-DD` format.
 
   *By default, no date is configured*.
 
