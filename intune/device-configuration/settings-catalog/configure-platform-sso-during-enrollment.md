@@ -64,7 +64,7 @@ This feature applies to:
 [!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
 :::column-end:::
 :::column span="3":::
-> - Devices enrolled using Apple Business Manager or Apple School Manager
+> - Devices enrolled using Apple Business 
 :::column-end:::
 :::row-end:::
 
