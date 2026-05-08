@@ -32,9 +32,10 @@ Whether you need to enable this setting depends on when your tenant was created:
 :::row-end:::
 
 > [!IMPORTANT]
-> - Intune supports up to 350 unlicensed admins per security group. If more than 350 administrators are needed for a role assignment, you can use multiple security groups.
-> - Members of nested security groups aren't included in the unlicensed admins feature. If you prefer to retain nested security groups, admins in those nested groups still require an Intune license even when unlicensed admins setting is enabled.
-> - It can take up to 48 hours for access changes to take effect.
+> - Intune supports up to 1000 unlicensed admins per security group. If more than 1000 administrators are needed for a role assignment, you can use multiple security groups.
+- Members of nested security groups aren't included in the unlicensed admins feature. If you prefer to retain nested security groups, admins in those nested groups still require an Intune license even when unlicensed admins setting is enabled.
+- It can take up to 48 hours for access changes to take effect.
+
 
 ## Enable the setting for pre-July 2021 tenants
 
