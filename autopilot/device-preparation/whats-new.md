@@ -23,7 +23,7 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
 
-## Windows Autopilot device preparation in automatic mode for Windows 365 general availability  
+## Windows Autopilot device preparation in automatic mode for Windows 365 general availability<!-- 30057449 -->  
 
 **Date added:** May 11, 2026  
 
