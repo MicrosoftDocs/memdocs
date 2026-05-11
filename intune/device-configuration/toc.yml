@@ -122,6 +122,9 @@ items:
       - name: Platform SSO scenarios for macOS
         displayName: single sign-on, macos
         href: ./settings-catalog/configure-platform-sso-scenarios-macos.md
+      - name: Platform SSO in Automated Device Enrollment for macOS
+        displayName: single sign-on, macos
+        href: ./settings-catalog/configure-platform-sso-automated-device-enrollment-macos.md
       - name: Enterprise SSO plug-in for macOS
         displayName: single sign-on, macos
         href: ./templates/configure-enterprise-sso-plugin-macos.md
