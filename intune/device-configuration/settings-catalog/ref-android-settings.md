@@ -3,7 +3,7 @@ title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 04/27/2026
+ms.date: 05/26/2026
 ms.topic: reference
 params:
   siblings_only: true
@@ -302,6 +302,16 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned dedicated devices (COSU)
 
 - **Block Bluetooth configuration**: If **True**, prevents users from configuring Bluetooth on the device. If **False**, Intune doesn't change or update this setting. By default, the OS might allow configuring Bluetooth on the device.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block Bluetooth sharing**: If **True**, the device can't share content over Bluetooth. If **False**, Intune doesn't change or update this setting. By default, the OS has the following behavior:
+  - Fully managed and dedicated devices allow Bluetooth sharing.
+  - Corporate-owned devices with work profile devices block Bluetooth sharing.
 
   Applies to:
 
