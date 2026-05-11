@@ -395,7 +395,7 @@ The Recovery Lock password can be viewed in the per-setting status report > **Pa
 > - macOS
 
 > [!NOTE]
-> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by late April 2026.
+> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
 
 #### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
 

@@ -11,6 +11,9 @@ ms.collection:
 
 # Configure service access for Apple accounts
 
+> [!NOTE]
+> This feature is gradually rolling out and might not yet be available in your tenant. Full availability is expected by mid-May 2026.
+
 You can use Apple access management settings in Apple Business or Apple School Manager to control how Apple accounts are used on organization-owned devices. These settings define which devices users can sign in to with Apple accounts and which Apple apps and services are available.   
 
 ## Prerequisites  

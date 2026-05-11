@@ -56,8 +56,8 @@ Additional prerequisites for device query for multiple devices:
 :::column-end:::
 :::column span="3":::
 > To use device query for multiple devices, use an account with at least one of the following roles:
-> - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Custom role] that includes:
 >   - The permission **Managed Devices/Query**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
@@ -66,7 +66,7 @@ Additional prerequisites for device query for multiple devices:
 
 ## Use device query for multiple devices
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**Device query**].
 1. Enter a query in the query box by using the supported properties and operators.
 1. Select **Run** to execute the query.
 1. View the results in the **Results** tab.
@@ -388,8 +388,12 @@ Cpu
   - The query `Device | summarize dcount(DeviceId) | order by dcount_DeviceId` fails.
   - The query `Device | summarize DCountDeviceIdRename = dcount(DeviceId) | order by DCountDeviceIdRename` succeeds.
 
-<!--links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+<!--Role links-->
+
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Device query**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/DeviceQuery
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview

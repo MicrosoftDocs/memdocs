@@ -1,14 +1,14 @@
 ---
 title: Custom per-app VPN profile for Android DA in Microsoft Intune
 description: Use a custom profile for per-app VPN profiles on Android device administrator with the Pulse Secure or Citrix VPN connection types in Microsoft Intune.
-ms.date: 02/19/2025
+ms.date: 05/06/2026
 ms.topic: how-to
 ms.reviewer: abalwan
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Use a Microsoft Intune custom profile to create a per-app VPN profile for Android devices
+# Create a per-app VPN profile for Android DA devices in Microsoft Intune
 
 [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
@@ -23,7 +23,6 @@ To use per-app VPN on Android Enterprise devices, use an [app configuration poli
 After you assign the policy to your Android DA device or user groups, users should start the Pulse Secure or Citrix VPN client. Then, the VPN client allows only traffic from the specified apps to use the open VPN connection.
 
 > [!NOTE]
->
 > Only the Pulse Secure and Citrix connection types are supported for Android device administrator. On Android Enterprise devices, use an [app configuration policy](../../app-management/configuration/configure-vpn-android.md).
 
 ## Prerequisites
@@ -88,13 +87,16 @@ After you assign the policy to your Android DA device or user groups, users shou
 
 ### Set your blocked and allowed app list (optional)
 
-Use the **BLACKLIST** value to enter a list of apps that can't use the VPN connection. All other apps connect through the VPN. Or, use the **WHITELIST** value to enter a list of apps that can use the VPN connection. Apps that aren't on the list don't connect through the VPN.
+Use the following steps to enter the list apps that are allowed or blocked from using the VPN connection:
 
 1. On the **Custom OMA-URI Settings** pane, choose **Add**.
 2. Enter a setting name.
 3. In **OMA-URI**, enter `./Vendor/MSFT/VPN/Profile/*Name*/Mode`, where *Name* is the VPN profile name you noted in Step 1. In our example, the string is `./Vendor/MSFT/VPN/Profile/MyAppVpnProfile/Mode`.
 4. In **Data type**, enter **String**.
-5. In **Value**, enter **BLACKLIST** or **WHITELIST**.
+5. In **Value**, enter one of the following Android values:
+
+    - `BLACKLIST`: Enter a list of apps that can't use the VPN connection. All other apps connect through the VPN.
+    - `WHITELIST`: Enter a list of apps that can use the VPN connection. Apps that aren't on the list don't connect through the VPN.
 
 ## Step 3 - Assign both policies
 
