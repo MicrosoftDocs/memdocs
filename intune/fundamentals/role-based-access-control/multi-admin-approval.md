@@ -27,7 +27,6 @@ Intune supports access policies for the following resources:
 - Device actions - Applies to [wipe](../../device-management/actions/wipe.md), [retire](../../device-management/actions/retire.md), and [delete](../../device-management/actions/delete.md) device actions.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../../device-management/tools/run-powershell-scripts-windows.md).
-- Access Policies - Applies to creating or managing multiple administrative approval policies.
 - Tenant Configuration - Applies to managing [device categories](../../device-management/create-device-categories.md), including creating, editing, or deleting them.
 
 ## Prerequisites for access policies and approvers
