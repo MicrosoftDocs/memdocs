@@ -33,7 +33,7 @@ Use Windows Autopilot device preparation policies in the automatic flow to provi
 - Windows 365 Frontline (dedicated)
 - Windows 365 Frontline (shared)
 - Windows 365 Cloud Apps  
-- 
+
 This feature is in public preview for Windows 365 Reserve.  
 
 You can include Windows Autopilot device preparation policies in your Cloud PC provisioning policy. Policies apply immediately after you create a Cloud PC, and deliver apps, scripts, and configurations automatically before users sign in. This ensures each device is ready to use with all required apps and settings from the start. 
