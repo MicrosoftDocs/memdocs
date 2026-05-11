@@ -35,16 +35,16 @@ Key rotation is especially useful in environments where devices are frequently s
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Endpoint Security Manager]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Rotate BitLockerKeys**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to rotate the BitLocker key from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **BitLocker key rotation**.
 1. Select **Yes** to confirm the action.
@@ -55,25 +55,23 @@ Key rotation is especially useful in environments where devices are frequently s
 - Microsoft Graph API: [rotateBitLockerKeys action][GRAPH-1]
 - [BitLocker overview][WIN-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
-<!-- admin center links -->
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+<!--Role links-->
 
-<!-- role links -->
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-rotateBitLockerKeys
 
-
-<!-- MSLearn links -->
+<!--Other links-->
 
 [WIN-1]: /windows/security/operating-system-security/data-protection/bitlocker/
 [CSP-1]: /windows/client-management/mdm/bitlocker-csp#rotaterecoverypasswords

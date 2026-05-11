@@ -56,7 +56,7 @@ The first time you use a Configuration Manager console after finishing the insta
 
 ### Early update ring
 
-At this time, version 2603 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2603:
+At this time, version 2603 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2603:
 
 [Version 2603 opt-in script](https://aka.ms/KB37426535_EnableEarlyRing)
 
@@ -65,7 +65,7 @@ Microsoft digitally signs the script, and bundles it inside a signed self-extrac
 > [!NOTE]
 > The version 2603 update is only applicable to sites running version 2409 or later.
 
-To opt-in to the early update ring:
+To opt in to the early update ring:
 
 1. Open a Windows PowerShell session **as administrator**.
 

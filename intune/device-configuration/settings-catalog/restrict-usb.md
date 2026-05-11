@@ -1,7 +1,7 @@
 ---
-title: Restrict USB devices using settings catalog in Microsoft Intune
+title: "Restrict USB Devices Using Settings Catalog in Microsoft Intune"
 description: Use the settings catalog in Microsoft Intune to restrict USB devices, including thumb drives, flash drives, USB cameras, and more. Use other settings to allow specific USB devices on Windows 10/11 devices.
-ms.date: 08/28/2025
+ms.date: 04/30/2026
 ms.topic: how-to
 ms.reviewer: mayurjadhav, kufang
 ms.collection:
@@ -12,7 +12,7 @@ ms.collection:
 
 Many organizations want to block specific types of USB devices, such as USB flash drives or cameras. You might also want to allow specific USB devices, such as a keyboard or mouse.
 
-You can use the settings catalog in Microsoft Intune to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on the settings catalog, see [Use the settings catalog to configure device settings in Microsoft Intune](index.md).
+Use the settings catalog in Microsoft Intune to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on the settings catalog, see [Use the settings catalog to configure device settings in Microsoft Intune](index.md).
 
 This article shows you:
 
@@ -25,11 +25,18 @@ This article applies to:
 
 ## Prerequisites
 
-- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To configure the settings catalog policy, at a minimum, sign in to the Intune admin center with the **Policy and Profile Manager** role. For more information about the built-in roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+:::column-end:::
+:::row-end:::
 
 ## Create the profile
 
-This policy gives an example of how to block (or allow) features that affect USB devices. You can use this policy as a starting point, and then add or remove settings as needed for your organization.
+This policy provides an example of how to block (or allow) features that affect USB devices. Use this policy as a starting point, and then add or remove settings as needed for your organization.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
@@ -51,13 +58,13 @@ This policy gives an example of how to block (or allow) features that affect USB
     - **Allow installation of devices using drivers that match these device setup classes**
     - **Prevent installation of devices not described by other policy settings**
 
-    :::image type="content" source="./media/restrict-usb/settings-catalog-select-device-installation-restrictions.png" alt-text="Screenshot that shows the Device Installation Restrictions settings in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-select-device-installation-restrictions.png":::
+    :::image type="content" source="./media/restrict-usb/settings-catalog-select-device-installation-restrictions.png" alt-text="Screenshot of the Device Installation Restrictions settings in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-select-device-installation-restrictions.png":::
 
 8. Close the settings picker. Configure the settings you selected:
 
-    - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Add the device/hardware IDs for devices you want to allow.
+    - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Add the device or hardware IDs for devices you want to allow.
 
-      To get the device/hardware ID, you can use Device Manager, find the device, and look at the properties. For the specific steps, see [find the hardware ID on a Windows device](/windows-hardware/drivers/install/hardware-ids).
+      To get the device or hardware ID, use Device Manager, find the device, and look at the properties. For the specific steps, see [find the hardware ID on a Windows device](/windows-hardware/drivers/install/hardware-ids).
 
       There's also some helpful device ID information at [Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune](/defender-endpoint/device-control-deploy-manage-intune).
 
@@ -67,24 +74,24 @@ This policy gives an example of how to block (or allow) features that affect USB
 
     - **Prevent installation of devices not described by other policy settings**: Select **Enabled**.
 
-    When the settings are enabled and configured, your policy looks similar to the following policy settings:
+    When you enable and configure these settings, your policy looks similar to the following policy settings:
 
-    :::image type="content" source="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png" alt-text="Screenshot that shows the restrict USB settings in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png":::
+    :::image type="content" source="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png" alt-text="Screenshot of the restrict USB settings configured in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png":::
 
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
 
     Select **Next**.
 
-11. In **Assignments**, select the device groups that will receive the profile. Select **Next**.
+1. In **Assignments**, select the device groups that receive the profile. Select **Next**.
 
 12. In **Review + create**, review your settings. When you select **Create**, your changes are saved and the profile is assigned.
 
-## Verify on Windows devices
+## Verify USB device restrictions on Windows devices
 
-After the device configuration profile is deployed to your targeted devices, you can confirm that it works correctly.
+After you deploy the device configuration profile to your targeted devices, confirm that it works correctly.
 
-If a USB device is blocked from installing, then you see a message similar to the following message:
+If a USB device is blocked from installing, you see a message similar to the following message:
 
 `The installation of this device is forbidden by system policy. Contact your system administrator.`
 
@@ -94,7 +101,7 @@ In the following example, the iPad is blocked because its device ID isn't in the
 
 ## A device is blocked but should be allowed
 
-Some USB devices have multiple GUIDs, and it's common to miss some GUIDs in your policy settings. As a result, a USB device that's allowed in your settings, might be blocked on the device.
+Some USB devices have multiple GUIDs, and it's common to miss some GUIDs in your policy settings. As a result, a USB device that you allow in your settings might be blocked on the device.
 
 In the following example, in the **Allow installation of devices using drivers that match these device setup classes** setting, the Multimedia class GUID is entered, and the camera is blocked:
 

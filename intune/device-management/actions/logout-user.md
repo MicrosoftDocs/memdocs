@@ -34,15 +34,15 @@ this action is useful in environments where multiple users access the same devic
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Manage shared device users**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to logout the current user from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Logout current user**.
 
@@ -50,12 +50,18 @@ this action is useful in environments where multiple users access the same devic
 
 - Microsoft Graph API: [logoutSharedAppleDeviceActiveUser action][GRAPH-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+<!--Role links-->
+
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+
+<!--Graph API links-->
+
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-logoutsharedappledeviceactiveuser

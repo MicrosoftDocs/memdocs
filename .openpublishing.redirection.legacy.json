@@ -3497,22 +3497,22 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/deployment-guide-enrollment-mamwe.md",
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe.md",
       "redirect_document_id": true,
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment"
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment"
     },
     {
       "source_path_from_root": "/intune/intune/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/device-enrollment/mam-without-enrollment",
+      "redirect_url": "/intune/app-management/protection/mam-without-enrollment",
       "redirect_document_id": false
     },
     {
@@ -5922,12 +5922,12 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/fundamentals/device-lifecycle",
+      "redirect_url": "/intune/fundamentals/what-is-device-management",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/fundamentals/device-lifecycle",
+      "redirect_url": "/intune/fundamentals/what-is-device-management",
       "redirect_document_id": false
     },
     {
@@ -6592,12 +6592,12 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/groups-get-started.md",
-      "redirect_url": "/intune/fundamentals/tenant-administration/classic-groups",
+      "redirect_url": "/intune/fundamentals/tenant-administration/add-groups",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/groups-get-started.md",
-      "redirect_url": "/intune/fundamentals/tenant-administration/classic-groups",
+      "redirect_url": "/intune/fundamentals/tenant-administration/add-groups",
       "redirect_document_id": false
     },
     {
@@ -6717,7 +6717,7 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/compliance-in-intune.md",
-      "redirect_url": "/intune/governance/compliance-and-regulatory-alignment",
+      "redirect_url": "/intune/privacy/",
       "redirect_document_id": false
     },
     {
@@ -7633,7 +7633,7 @@
     {
       "source_path_from_root": "/intune/intune/fundamentals/frontline-worker-overview.md",
       "redirect_url": "/intune/solutions/frontline-worker",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/protect/tutorial-protect-email-on-enrolled-devices.md",
