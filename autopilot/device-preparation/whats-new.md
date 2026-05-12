@@ -23,6 +23,28 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
 
+## Windows Autopilot device preparation in automatic mode for Windows 365 general availability<!-- 30057449 -->  
+
+**Date added:** May 11, 2026  
+
+Use Windows Autopilot device preparation policies in the automatic flow to provision Cloud PCs at creation. This feature is generally available for:  
+
+- Windows 365 Enterprise
+- Windows 365 Frontline (dedicated)
+- Windows 365 Frontline (shared)
+- Windows 365 Cloud Apps  
+
+This feature is in public preview for Windows 365 Reserve.  
+
+You can include Windows Autopilot device preparation policies in your Cloud PC provisioning policy. Policies apply immediately after you create a Cloud PC, and deliver apps, scripts, and configurations automatically before users sign in. This ensures each device is ready to use with all required apps and settings from the start. 
+
+You can monitor deployment status in the [Windows Autopilot device preparation deployment report](reporting-monitoring.md). For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md). 
+
+For related information, see the following articles:  
+- [Create provisioning policies for Windows 365](/windows-365/enterprise/create-provisioning-policy)  
+- [Windows 365 Cloud Apps](/windows-365/enterprise/cloud-apps)  
+- [Use Autopilot device preparation with Cloud PCs](/windows-365/enterprise/autopilot-device-preparation) 
+
 ## Managed installer policy support during Windows Autopilot device preparation<!-- 31776436 -->  
 
 Date added: *April 10, 2026*
