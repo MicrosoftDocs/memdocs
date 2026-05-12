@@ -128,14 +128,14 @@ After an update releases, it rolls out to tenants over the following days. This 
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
 
-### May 1, 2026 
+### May 7, 2026 
 
-Version Number: 20260407.1
+Version Number: 20260507.2
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:adc8259f8946e23612f9156223be6462690da82d113f919b9503fe227ca811e3
-- **serverImageDigest**: sha256:a8f1d5c7d734516e40ee3c2ead88d785ad25c5886ded095ce6dc74cf62b9916f
+- **agentImageDigest**:  sha256:fc8a3c599c36073affe234feaf57b619441317faaa5c1090df3c3e40d6f70a57
+- **serverImageDigest**: sha256:f53affd23ba2fa9fc5fbcc0d1446c7a1437541b6bacfe246d62aa8ce34c1e3a6
 
 Changes in this release:
 - Package updates
