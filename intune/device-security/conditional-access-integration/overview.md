@@ -1,6 +1,6 @@
 ---
 title: Use Conditional Access with Microsoft Intune compliance policies
-description: Combine Conditional Access with Intune compliance policies to define the requirements that users and devices must meet before gaining access your organizations resources.
+description: Combine Conditional Access with Intune compliance policies to define the requirements that users and devices must meet before gaining access to your organization's resources.
 ms.date: 04/25/2024
 ms.topic: overview
 ms.reviewer: ilwu
@@ -14,13 +14,9 @@ ms.collection:
 
 Use Conditional Access with Microsoft Intune compliance policies to control the devices and apps that can connect to your email and company resources. When integrated, you can gate access to keep your corporate data secure, while giving users an experience that allows them to do their best work from any device, and from any location.
 
-[Conditional Access](/entra/identity/conditional-access/overview) is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Through Microsoft Entra ID, Conditional Access brings signals together to make decisions, and enforce organizational policies. Intune enhances this capability by adding mobile device compliance and mobile app management data to the solution. Common signals include:
+[Conditional Access](/entra/identity/conditional-access/overview) is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. Through Microsoft Entra ID, Conditional Access brings signals together to make decisions, and enforce organizational policies. Intune enhances this capability by adding mobile device compliance and mobile app management data as signals for Conditional Access decisions. For a full list of supported signals, see [What is Conditional Access?](/entra/identity/conditional-access/overview) in the Microsoft Entra documentation.
 
-- User or group membership.
-- IP location information.
-- Device details, including device compliance or configuration status.
-- Application details, including requiring use of managed apps to access corporate data.
-- Real-time and calculated risk detection, when you also use a mobile threat defense partner.
+You configure Conditional Access policies from the Microsoft Intune admin center. The Conditional Access node in the Microsoft Intune admin center is the same node as in Microsoft Entra ID, so you don't need to switch between them.
 
 :::image type="content" source="./media/scenarios/ca-diagram-1.png" alt-text="Conceptual Conditional Access process flow.":::
 
@@ -29,25 +25,17 @@ Use Conditional Access with Microsoft Intune compliance policies to control the 
 
 ## Ways to use Conditional Access with Intune
 
-Conditional Access works with Intune device configuration and compliance policies, and with Intune Application protection policies.
+Conditional Access works with Intune device configuration and compliance policies, and with Intune app protection policies.
 
 - **Device-based Conditional Access**
 
-  Intune and Microsoft Entra ID work together to make sure only managed and compliant devices can access email, Microsoft 365 services, Software as a service (SaaS) apps, and on-premises apps. Additionally, you can set a policy in Microsoft Entra ID to enable only domain-joined computers or mobile devices that have enrolled in Intune to access Microsoft 365 services.  Including:
+  Intune and Microsoft Entra ID work together to make sure only managed and compliant devices can access email, Microsoft 365 services, software as a service (SaaS) apps, and on-premises apps.
 
-  - Conditional Access based on network access control
-
-  - Conditional Access based on device risk
-
-  - Conditional Access for Windows PCs. Both corporate-owned and bring your own device (BYOD).
-
-  - Conditional Access for Exchange on-premises
-
-  Learn more about [device-based Conditional Access with Intune](/entra/identity/conditional-access/policy-all-users-device-compliance)
+  Learn more about [device-based Conditional Access with Intune](./device-based-policies.md).
 
 - **App-based Conditional Access**
 
-  Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
+  Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate email or other Microsoft 365 services.
 
   Learn more about [app-based Conditional Access with Intune](./app-based-policies.md).
 

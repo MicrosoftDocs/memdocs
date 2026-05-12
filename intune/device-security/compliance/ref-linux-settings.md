@@ -81,7 +81,7 @@ If you must modify a device's configuration, use one of the following methods to
 - If the Microsoft Intune app is still running, on the apps *device details* page or the *compliance issues* page, select the **Refresh** link. The device starts a new check-in.
 
 - If the Microsoft Intune app isn't running, start the app and sign in. Signing in starts a new check-in.
-- By default, the Microsoft Intune app periodically uses a background task to checks in while the computer is on and logged in.
+- By default, the Microsoft Intune app periodically uses a background task to check in while the computer is on and logged in.
 
 ## Next steps
 

@@ -29,8 +29,12 @@ All discovery scripts:
 
 In addition, the PowerShell script for Windows:
 
-- Must be compressed to output results in a single line.
-- For example: `$hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}` must include the following line at the end of the script: `return $hash | ConvertTo-Json -Compress`
+- Must be compressed to output results in a single line. For example, the following script must include `return $hash | ConvertTo-Json -Compress` as the last line:
+
+  ```powershell
+  $hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}
+  return $hash | ConvertTo-Json -Compress
+  ```
 
 ## Limits
 
@@ -75,7 +79,8 @@ For example, if your script should use the Bash shell as the interpreter, add th
 
 If you want to use Python for your script, indicate where the interpreter is installed. For example, add the following line to the top of your script: `#!/usr/bin/python3` or `#!/usr/bin/env python3`
 
-**Recommended best practice**: To enable your scripts to handle scenarios like interrupts or cancellation signals, implement graceful termination mechanisms. When a script properly caches and handles these signals, the script can perform cleanup tasks and exit gracefully, ensuring resources are released correctly. For example, you can catch specific signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when these signals are received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources. Proper handling of signals helps maintain script integrity and improves the overall user experience.
+> [!TIP]
+> To handle interrupts or cancellation signals, implement graceful termination mechanisms in your scripts. When a script handles these signals, it can perform cleanup tasks and exit gracefully, ensuring resources are released correctly. For example, catch signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when they're received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources.
 
 For more information, see the [Intune Linux Custom Compliance Samples](https://github.com/microsoft/shell-intune-samples/tree/master/Linux) guide.
 
@@ -83,8 +88,11 @@ For more information, see the [Intune Linux Custom Compliance Samples](https://g
 
 Before deploying your script in production, test it in an isolated environment to ensure the syntax you use behaves as expected.
 
+> [!NOTE]
+> The script upload workflow doesn't support scope tags. You must be assigned the default scope tag to create, edit, or view custom compliance discovery scripts.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add** > *(choose your platform)*.
-1. On **Basics**, provide a **Name**.
+1. On **Basics**, enter a descriptive **Name** for the script.
 1. On **Settings**, add your script to **Detection script**. Review your script carefully. Intune doesn't validate the script for syntax or programmatic errors.
 1. ***For Windows only*** - On **Settings**, configure the following behavior for the PowerShell script:
 
@@ -93,8 +101,6 @@ Before deploying your script in production, test it in an isolated environment t
    - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to **Yes** to force the script to run using the 64-bit host instead.
 
 1. Complete the script creation process. The script is now visible in the **Scripts** pane of the Microsoft Intune admin center and is available to select when configuring compliance policies.
-
-Because the workflow for uploading these scripts to the Microsoft Intune admin center doesn't support scope tags, you must be assigned the default scope tag to create, edit, or see custom compliance discovery scripts.
 
 ## Next steps
 

@@ -24,7 +24,7 @@ This feature applies to:
 A correctly formatted JSON file must include the following information:
 
 - **SettingName** - The name of the custom setting to use for base compliance. This name is case-sensitive.
-- **Operator** - Represents a specific action that's used to build a compliance rule. For options, see the following list of *supported operators*.
+- **Operator** - Represents a specific action that's used to build a compliance rule. For options, see the list of supported operators in this article.  
 - **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of *supported DataTypes*.
 - **Operand** - Represents the values that the operator works on.
 - **MoreInfoURL** - A URL that device users can view and use to learn more about the compliance requirement if their device is noncompliant for a setting. You can also use this URL to link to instructions to help users bring their device into compliance for this setting.

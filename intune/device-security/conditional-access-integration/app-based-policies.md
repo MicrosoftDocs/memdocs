@@ -12,18 +12,12 @@ ms.collection:
 
 # Use app-based Conditional Access policies with Intune
 
-Microsoft Intune app protection policies work with Microsoft Entra Conditional Access to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll. Combined, they're referred to app-based Conditional Access.
+Microsoft Intune app protection policies work with Microsoft Entra Conditional Access to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll. Combined, they're referred to as app-based Conditional Access.
 
-[App protection policies](../../app-management/protection/overview.md) are rules that ensure an organization's data remains safe or contained in a managed app:
-
-- An app protection policy can be a rule that's enforced when a user attempts to access or move your organizations data, or a set of actions that are prohibited or monitored when a user is working inside a managed app.
-- A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
-- You can also block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don't have Intune app protection policies applied from accessing SharePoint Online.
-
-App-based Conditional Access with client app management adds a security layer that makes sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
+App-based Conditional Access with client app management adds a security layer that makes sure only client apps that support Intune app protection policies can access Exchange Online and other Microsoft 365 services.
 
 > [!TIP]
-> In addition to app-based Conditional Access policies, you can use [device-based Conditional Access with Intune](/entra/identity/conditional-access/policy-all-users-device-compliance).
+> In addition to app-based Conditional Access policies, you can use [device-based Conditional Access with Intune](./device-based-policies.md).
 
 ## Requirements
 
@@ -34,12 +28,34 @@ App-based Conditional Access with client app management adds a security layer th
 :::column-end:::
 :::column span="3":::
 
-> Before you create an app-based Conditional Access policy, you must have:
->
-> - **Enterprise Mobility + Security (EMS)** or a **Microsoft Entra ID P1 or P2 subscription**
-> - Users must be licensed for EMS or Microsoft Entra ID
->
-> For more information, see [Enterprise Mobility pricing](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) or [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/).
+> Before you create an app-based Conditional Access policy, you must have a **Microsoft Entra ID P1 or P2** license. Users must also be licensed for Microsoft Entra ID. For more information, see [Microsoft Entra pricing](https://www.microsoft.com/security/business/microsoft-entra-pricing).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Your account must have one of the following roles in Microsoft Entra:
+> - Security administrator
+> - Conditional Access administrator
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Android
+> - iOS/iPadOS
 
 :::column-end:::
 :::row-end:::
@@ -52,38 +68,38 @@ App-based Conditional Access [also supports line-of-business (LOB) apps](./block
 
 ## How app-based Conditional Access works
 
-In this example, the admin has applied app protection policies to the Outlook app followed by a Conditional Access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate email.
-
-> [!NOTE]
-> The following flowchart can be used for other managed apps.
+App-based Conditional Access works by requiring a broker app to register the device with Microsoft Entra ID. The broker app can be Microsoft Authenticator on iOS, or Company Portal on Android. During authentication, Microsoft Entra ID checks whether the app is on the policy-approved list before granting access. The following diagram illustrates this process:
 
 ![App-based Conditional Access process illustrated in a flow-chart](./media/app-based-policies/ca-intune-common-ways-3.png)
 
-1. The user tries to authenticate to Microsoft Entra ID from the Outlook app.
+For a detailed technical overview, see [Client apps](/entra/identity/conditional-access/concept-conditional-access-conditions#client-apps) in the Microsoft Entra documentation.
 
-2. The user gets redirected to the app store to install a broker app when trying to authenticate for the first time. The broker app can be the Microsoft Authenticator for iOS, or Microsoft Company portal for Android devices.
+## Create app-based Conditional Access policies
 
-   If users try to use a native email app, they are redirected to the app store to then install the Outlook app.
+Conditional Access is a Microsoft Entra technology. The Conditional Access node you access from the Microsoft Intune admin center is the same node you access from Microsoft Entra ID, so you don't need to switch between them to configure policies.
 
-3. The broker app gets installed on the device.
+Before you create Conditional Access policies, you need to have [Intune app protection policies](../../app-management/protection/create-policy.md) applied to your apps.
 
-4. The broker app starts the Microsoft Entra registration process, which creates a device record in Microsoft Entra ID. This process isn't the same as the mobile device management (MDM) enrollment process, but this record is necessary so the Conditional Access policies can be enforced on the device.
+> [!IMPORTANT]
+> This section walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access).
 
-5. The broker app confirms the Microsoft Entra device ID, the user, and the application. This information is passed to the Microsoft Entra sign-in servers to validate access to the requested service.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-6. The broker app sends the App Client ID to Microsoft Entra ID as part of the user authentication process to check if it's in the policy approved list.
+2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
-7. Microsoft Entra ID allows the user to authenticate and use the app based on the policy approved list. If the app isn't on the list, Microsoft Entra ID denies access to the app.
+3. Enter a policy **Name**, and then under **Assignments**, configure **Users and groups** to apply the policy to users and groups. Use the **Include** or **Exclude** options to add your groups.
 
-8. The Outlook app communicates with Outlook Cloud Service to initiate communication with Exchange Online.
+4. Under **Assignments**, configure **Target resources**. Apply the policy to **Cloud apps**. Use the **Include** or **Exclude** options to select the apps to protect. For example, choose **Select apps**, and select **Office 365**.
 
-9. Outlook Cloud Service communicates with Microsoft Entra ID to retrieve Exchange Online service access token for the user.
+5. Select **Conditions** > **Client apps** to apply the policy to apps and browsers. For example, select **Yes**, and then enable **Browser** and **Mobile apps and desktop clients**.
 
-10. The Outlook app communicates with Exchange Online to retrieve the user's corporate email.
+6. Under **Access controls**, configure **Grant**. For example, select **Grant access** > **Require approved client app** and **Require app protection policy**, then select **Require one of the selected controls**.
 
-11. Corporate email is delivered to the user's mailbox.
+7. Under **Enable policy**, select **On**, and then select **Create**.
 
 ## Next steps
 
-- [Require approved client apps or app protection policy](/entra/identity/conditional-access/policy-all-users-approved-app-or-app-protection)
-- [Block legacy authentication with Conditional Access](/entra/identity/conditional-access/policy-block-legacy-authentication)
+- [Device-based Conditional Access with Intune](./device-based-policies.md)
+- [Block apps that don't use modern authentication](./block-no-modern-auth.md)
+- [Protect app data with app protection policies](../../app-management/protection/create-policy.md)
+- [Plan Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access)

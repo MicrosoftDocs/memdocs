@@ -10,7 +10,7 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for macOS settings in Intune
+# Device compliance settings for macOS in Intune
 
 This article lists and describes the different compliance settings you can configure on macOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to set a minimum or maximum OS version, set passwords to expire, and more.
 
@@ -58,7 +58,7 @@ Settings in this article are organized by the sections that appear in the admin 
   - **Require** Users must enter a password before they can access their device.
 
 - **Simple passwords**
-  - **Not configured** (*default*) - Users can create passwords simple like **1234** or **1111**.
+  - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
 - **Minimum password length**  
@@ -97,7 +97,7 @@ Firewall protects devices from unauthorized network access. You can use Firewall
 
 - **Firewall**
   - **Not configured** (*default*) - This setting leaves the firewall turned off, and network traffic is allowed (not blocked).
-  - **Enable** -  Use *Enable* to help protect devices from unauthorized access. Enabling this feature allows you to handle incoming internet connections, and use stealth mode.
+  - **Enable** - Use *Enable* to help protect devices from unauthorized access. Enabling this feature allows you to handle incoming internet connections, and use stealth mode.
 
 - **Incoming connections**
   - **Not configured** (*default*) - Allows incoming connections and sharing services.
@@ -105,7 +105,7 @@ Firewall protects devices from unauthorized network access. You can use Firewall
 
 - **Stealth Mode**
   - **Not configured** (*default*) - This setting leaves stealth mode turned off.
-  - **Enable** - Turn on stealth mode to prevent devices from responding to probing requests, which can be made my malicious users. When enabled, the device continues to answer incoming requests for authorized apps.
+  - **Enable** - Turn on stealth mode to prevent devices from responding to probing requests, which can be made by malicious users. When enabled, the device continues to answer incoming requests for authorized apps.
 
 ### Gatekeeper
 

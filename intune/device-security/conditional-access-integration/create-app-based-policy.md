@@ -12,12 +12,12 @@ ms.collection:
 
 # Set up app-based Conditional Access policies with Intune
 
-Set up app-based Conditional Access policies for apps that are part of the list of approved apps. The list of approved apps consists of apps that were tested by Microsoft.
+Set up app-based Conditional Access policies for apps on the list of apps approved by Microsoft.
 
 Before you can use app-based Conditional Access policies, you need to have [Intune app protection policies](../../app-management/protection/create-policy.md) applied to your apps.
 
 > [!IMPORTANT]
-> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access)
+> This article walks through the steps to add a simple app-based Conditional Access policy. You can use the same steps for other cloud apps. For more information, see [Plan Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access).
 
 ## Create app-based Conditional Access policies
 
@@ -27,7 +27,7 @@ Before you can create Conditional Access policies from the Microsoft Intune admi
 
 ### To create an app-based Conditional Access policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 

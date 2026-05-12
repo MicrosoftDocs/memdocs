@@ -63,7 +63,7 @@ After you deploy custom compliance settings and devices report back, you can vie
 >
 > - Microsoft Entra registered/Workplace joined (WPJ)
 >
->   For information about devices registered in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
+>   For information about devices registered in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are bring-your-own-devices (BYOD) that have a work or school account added via **Settings** > **Accounts** > **Access work or school**.  
 >
 >   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored.
 
@@ -84,7 +84,7 @@ Before you begin to create a policy that includes custom settings, review the [r
 
 First, upload an applicable discovery script to Intune, and have a ready JSON to add while creating the policy.
 
-When ready, use the normal procedure to [create a compliance policy](./create-policy.md), which includes platform specific instructions for adding custom settings to the policy. Add custom settings while on the Configuration settings page by configuring the option for *Custom Compliance*.
+When ready, use the normal procedure to [create a compliance policy](./create-policy.md), which includes platform specific instructions for adding custom settings to the policy. Add custom settings while on the Configuration settings page by configuring the option for *custom compliance*.
 
 > [!NOTE]
 >
@@ -104,17 +104,19 @@ Use the following methods to view details about a device’s compliance status.
 
   In the admin center, go to **Reports** > **Device compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
 
-  For more information, see [Monitor Intune Device compliance policies](./monitor-policy.md).
+  For more information, see [Monitor Intune device compliance policies](./monitor-policy.md).
 
-- On a Linux device, you can open the Intune app to view the device’s status:
+- On a Linux device, open the Intune app to check the device's compliance status. The app displays one of the following states:
 
   - **Compliant** – Your device is compliant with your organization’s policies and should be able to access organizational resources.
   - **Checking status** – Intune is currently evaluating the device's compliance to your organization’s policies.
   - **Not compliant** – The device doesn't meet your organization’s device and security requirements and might not have access to your organization’s resources.
 
-  When the device status is *Not compliant*, select **View issues** to see details about problems that must be addressed to bring that device into compliance. For information on resolving common problems, see [Additional troubleshooting for Linux devices](#additional-troubleshooting-for-linux-devices) in this article.
+  If the device status is *Not compliant*, select **View issues** to see what needs to be fixed.For information on resolving common problems, see [Additional troubleshooting for Linux devices](#additional-troubleshooting-for-linux-devices) in this article.
 
-## Troubleshoot custom compliance for devices
+## Troubleshoot custom compliance for devices  
+
+Use the following troubleshooting tips to resolve common problems with custom compliance settings on Windows and Linux devices.  
 
 ### Custom settings aren't evaluated
 
@@ -125,7 +127,11 @@ Check the device compliance reports for the following error codes and insight in
 - 65009: Invalid json for the discovered setting
 - 65010: Invalid datatype for the discovered setting
 
-On Windows, add the following line at the end of the PowerShell script to return errors related to the PowerShell script. Ensure the following line is at the end of the PowerShell script file: `return $hash | ConvertTo-Json -Compress`
+On Windows, add the following line at the end of the PowerShell script to return errors related to the PowerShell script. 
+
+ `return $hash | ConvertTo-Json -Compress`  
+
+Ensure the line is at the end of the PowerShell script file.  
 
 ### PowerShell or POSIX-compliant shell scripts aren't visible to select, or remain visible after being deleted
 
@@ -157,19 +163,19 @@ To identify settings that aren't compliant for a device:
 
 The admin center displays a separate line for each setting that isn't compliant on a device.
 
-- **On the Linux device**, open the Microsoft Intune app and view the *Update device settings* page.
+- On the Linux device, open the Microsoft Intune app and view the **Update device settings** page.
 
 The following sections discuss common issues and resolutions for problems that users of Linux devices might encounter.
 
 ### Operating system distro and version
 
-Users of a device that doesn't meet the compliance requirements for the Linux distribution or operating system version might receive a message that indicates a need to upgrade or downgrade that device's operating system.
+If a device doesn't meet the compliance requirements for the Linux distribution or OS version, the user might see a message to upgrade or downgrade the operating system.
 
-To be compliant with the *Allowed Distros* setting, devices Linux distribution and version must meet minimum, maximum, and type requirements. If necessary, install a different version or distribution of Linux to bring the device into compliance.
+To comply with the *Allowed Distros* setting, the device's Linux distribution and version must meet the minimum, maximum, and type requirements. If necessary, install a supported version or distribution of Linux to bring the device into compliance.
 
 ### Password complexity
 
-Users of a device that doesn't meet the compliance requirements for password complexity might receive a message that indicates they must use a strong password.
+If a device doesn't meet the password complexity requirements, the user might see a message asking them to use a stronger password.
 
 To be compliant with *Password Policy* settings, configure the Linux system to use passwords that meet those requirements. Common organization requirements include:
 

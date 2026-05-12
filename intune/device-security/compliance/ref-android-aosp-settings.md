@@ -97,7 +97,7 @@ If you don't configure password requirements, the use of a device password is op
   Your options are:
 
   * **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  * **Yes** - Encrypt data storage on your devices. Devices are encrypted when you set the **Require a password to unlock mobile devices** setting equal to **Yes**
+  * **Yes** - Encrypt data storage on your devices. Devices are encrypted when you set the **Require a password to unlock mobile devices** setting equal to **Yes**.
 
 ## Device compliance reporting
 

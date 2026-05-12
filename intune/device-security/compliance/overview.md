@@ -28,7 +28,7 @@ Intune compliance policies are divided into two areas:
 
 To manage the compliance policy settings, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
-Compliance policy settings include the following settings:
+Compliance policy settings include:
 
 - **Mark devices with no compliance policy assigned as**
 
@@ -70,7 +70,7 @@ When using device compliance policies:
 
 The available settings you can specify in a device compliance policy depend on the platform type you select when you create a policy. Different device platforms support different settings, and each platform type requires a separate policy.
 
-The following subjects link to dedicated articles for different aspects of device configuration policy.
+The following topics link to dedicated articles for different aspects of device compliance policy.
 
 - [**Actions for noncompliance**](./configure-noncompliance-actions.md) - By default, each device compliance policy includes the action to mark a device as noncompliant if it fails to meet a policy rule. Each policy can support more actions based on the device platform. Examples of extra action include:
 
@@ -78,7 +78,7 @@ The following subjects link to dedicated articles for different aspects of devic
   - **Remotely lock devices** that are noncompliant for some time.
   - **Retire devices** after they're noncompliant for some time. This action marks a qualifying device as ready to be retired. An admin can then view a list of devices marked for retirement and must take an explicit action to retire one or more devices. Retiring a device removes the device from Intune management and removes all company data from the device. For more information about this action, see [Available actions for noncompliance](./configure-noncompliance-actions.md#available-actions-for-noncompliance).
 
-- [**Create a compliance policy**](./create-policy.md) – With the information in the linked article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
+- [**Create a compliance policy**](./create-policy.md) - With the information in the linked article, you can review prerequisites, work through the options to configure rules, specify actions for noncompliance, and assign the policy to groups. This article also includes information about policy refresh times.
 
   View the device compliance settings for the different device platforms:
 
@@ -93,7 +93,7 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Windows 8.1 and later](./ref-windows-8-1-settings.md)
     [!INCLUDE [windows-phone-81-windows-10-mobile-support](../../includes/windows-phone-81-windows-10-mobile-support.md)]
 
-- [**Custom compliance settings**](./custom-settings.md) – By using custom compliance settings, you can expand on Intune's built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
+- [**Custom compliance settings**](./custom-settings.md) - By using custom compliance settings, you can expand on Intune's built-in device compliance options. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 
   You can use custom compliance settings with the following platforms:
   - Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
@@ -101,13 +101,13 @@ The following subjects link to dedicated articles for different aspects of devic
 
 ## Monitor compliance status
 
-Intune includes a device compliance dashboard that you use to monitor the compliance status of devices, and to drill in to policies and devices for more information. To learn more about this dashboard, see [Monitor device compliance](./monitor-policy.md).
+Intune includes a device compliance dashboard that you use to monitor the compliance status of devices, and to drill into policies and devices for more information. To learn more about this dashboard, see [Monitor device compliance](./monitor-policy.md).
 
 ## Integrate with Conditional Access
 
 When you use Conditional Access, you can configure your Conditional Access policies to use the results of your device compliance policies to determine which devices can access your organizational resources. This access control is in addition to and separate from the actions for noncompliance that you include in your device compliance policies.
 
-When a device enrolls in Intune it registers in Microsoft Entra ID. The compliance status for devices is reported to Microsoft Entra ID. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional Access uses that compliance status to determine whether to grant or block access to email and other organization resources.
+When a device enrolls in Intune, it registers in Microsoft Entra ID. The compliance status for devices is reported to Microsoft Entra ID. If your Conditional Access policies have Access controls set to *Require device to be marked as compliant*, Conditional Access uses that compliance status to determine whether to grant or block access to email and other organization resources.
 
 If you use device compliance status with Conditional Access policies, review how your tenant configures the *Mark devices with no compliance policy assigned as* option, which you manage under [Compliance policy settings](#compliance-policy-settings).
 
@@ -144,7 +144,7 @@ The following table describes how noncompliant settings are managed when you use
 
 
 > [!NOTE]
-> The Company Portal app enters the enrollment remediation flow when the user signs into the app and the device doesn't successfully check in with Intune for 30 days or more (or the device is non-compliant due to a _Lost contact_ compliance reason). In this flow, we attempt to initiate a check-in one more time. If that check-in still does not succeed, we issue a retire command to allow the user to re-enroll the device manually. 
+> The Company Portal app enters the enrollment remediation flow when the user signs into the app and the device doesn't successfully check in with Intune for 30 days or more (or the device is noncompliant due to a _Lost contact_ compliance reason). In this flow, Intune attempts to initiate a check-in one more time. If that check-in doesn't succeed, Intune issues a retire command to allow the user to re-enroll the device manually.
 
 ---------------------------
 

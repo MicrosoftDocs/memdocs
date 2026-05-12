@@ -10,7 +10,7 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for iOS/iPadOS in Intune
+# Device compliance settings for iOS/iPadOS in Intune
 
 This article lists and describes the different compliance settings you can configure on iOS/iPadOS devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require an email, mark rooted (jailbroken) devices as not compliant, set an allowed threat level, set passwords to expire, and more.
 
@@ -19,8 +19,6 @@ This feature applies to:
 - iOS/iPadOS
 
 Settings in this article are organized by the sections that appear in the admin center when you create a compliance policy.
-
-As an Intune administrator, use these compliance settings to help protect your organizational resources.
 
 ## Before you begin
 
@@ -66,7 +64,7 @@ For details about email profiles, see [configure access to organization email us
    Select the maximum allowed device threat level evaluated by your mobile threat defense service.
    Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Secured** - This option is the most secure, and means that the device can't have any threats. a device with any level of threats is evaluated as noncompliant.
+  - **Secured** - This option is the most secure, and means that the device can't have any threats. A device with any level of threats is evaluated as noncompliant.
   - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
   - **Medium** - The device is evaluated as compliant if the threats that are present on the device are low or medium level. A device that has a high-level threat is considered to be noncompliant.
   - **High** - This option is the least secure, as it allows all threat levels. It can be useful when using this solution only for reporting purposes.

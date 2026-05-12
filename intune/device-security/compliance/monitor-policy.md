@@ -1,6 +1,6 @@
 ---
 title: Monitor results of your device compliance policies in Microsoft Intune
-description: Use the device compliance dashboard to understand overall device compliance the per policy and per setting device compliance results.
+description: Use the device compliance dashboard to monitor overall compliance status and view per-policy and per-setting compliance details.
 ms.date: 04/16/2026
 ms.topic: how-to
 ms.reviewer: ilwu
@@ -97,8 +97,6 @@ The tile displays the number of devices for each of the following categories:
 
 - **In-grace period**: The device is targeted with one or more device compliance policy settings but isn't yet compliant to all of them. Often, this status is due to users not applying compliant configurations, such as meeting password complexity requirements. Devices with this status are noncompliant, but in the grace period defined by the admin.
 
- [Learn more about Actions for noncompliant devices](./configure-noncompliance-actions.md).
-
 - **Not evaluated**: An initial state for newly enrolled devices. Other possible reasons for this state include:
   - Devices that aren't assigned a compliance policy and don't have a trigger to check for compliance.
   - Devices that haven't checked in since the compliance policy was last updated.
@@ -109,9 +107,12 @@ The tile displays the number of devices for each of the following categories:
 
 - **Not compliant**: The device failed to apply one or more device compliance policy settings, or the user didn't comply with the policies.
 
+> [!TIP]
+> To configure what happens when a device is noncompliant, see [Actions for noncompliant devices](./configure-noncompliance-actions.md).
+
 ### Devices without compliance
 
-The **Devices without compliance policy** tile shows the number of devices that don't have any compliance policies assigned. The admin center view often truncates the tile name because this tile displays only the device count.  
+The **Devices without compliance policy** tile shows the number of devices that don't have any compliance policies assigned. The tile name may be truncated in the admin center due to its length.
 
 :::image type="content" source="./media/monitor-policy/devices-without-compliance-policy-tile.png" alt-text="Image of the Devices without compliance policy tile.":::
 
@@ -145,7 +146,7 @@ Details in the Device status chart include:
 
 - **Compliant** - The device successfully applied one or more device compliance policy settings.
 - **Noncompliant** - The device configuration failed to meet one or more device compliance policy settings.
-- **Others** - The device is in a state that is neither compliant or noncompliant with the settings in this policy, such as *Error* or *Not evaluated*.
+- **Others** - The device is in a state that is neither compliant nor noncompliant with the settings in this policy, such as *Error* or *Not evaluated*.
 - **Total** - The total number of devices that received this policy and reported in.
 
 To view more details, select the **View report** button.
@@ -170,7 +171,7 @@ In this report view:
 - You can sort each column alphabetically.
 - You can configure *Filters* and specify a *Search* string to refine the report results. Search looks through all displayed columns.
 
- For example, in the previous policy report view, when you enter a search string of **st1** which appears in both the *Device name* and *Logged in user* columns. The resulting view displays both devices that contain *st1* as well as each device associated with the user with *st1* in their user name:
+ For example, entering a search string of **st1** returns all devices with *st1* in the *Device name* column, and all devices associated with a user with *st1* in the *Logged in user* column:
 
  :::image type="content" source="./media/monitor-policy/filtered-search-results.png" alt-text="A screen capture that shows filtered search results for the device status report view.":::
 
@@ -186,7 +187,7 @@ From the per-setting view, select the device count from any status column to ope
 
 :::image type="content" source="./media/monitor-policy/per-status-drill-in.png" alt-text="Screen shot that displays the results of drilling into a per-setting status result to view details for devices that have reported that status.":::
 
-In the screenshot, there are four entries for the selected setting, with each entry representing a distinct device. This count of devices matches the initial count on the initial per-status view.
+In the screenshot, there are four entries for the selected setting, with each entry representing a distinct device. This count matches the number shown in the per-setting status view.
 
 You can also see that one device, which has a name that starts with **st1**, is flagged in the *Device compliance* column as being **Not compliant**. This result is worth examining more closely:
 
@@ -244,7 +245,7 @@ To learn more about conflict resolution for policies, see [Compliance and device
 In Intune, the default compliance policy is evaluated when a calculation is triggered. While not every [device sync](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals) results in a compliance calculation, the following cases trigger compliance calculations:
 
 - New enrollments: Evaluation happens frequently to ensure users are aware of blocking reasons. The actual frequency depends on the platform and the type of enrollment.
-- Periodic evaluation: Evaluation happens periodically to enforce device contact requirements, like the initial user sign-in after following the device being offline for a few days.
+- Periodic evaluation: Evaluation happens periodically to enforce device contact requirements, such as requiring a user sign-in after the device has been offline for a few days.
 - New compliance information: Evaluation happens when new compliance information, such as a change in device properties, is found during a device sync.    
 - Compliance policy assignment changes: Evaluation happens when a compliance policy assignment is added, after the next device sync. If a compliance policy assignment is removed, such as with exclusion targeting, the compliance calculation triggers with the existing service data. 
 - User compliance status checks: Evaluation happens when a user [checks compliance status](../../user-help/compliance/validate-status-company-portal-website.md) on the Company Portal website or app.

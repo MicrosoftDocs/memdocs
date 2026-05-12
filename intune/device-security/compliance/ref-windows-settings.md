@@ -10,7 +10,7 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for Windows in Intune
+# Device compliance settings for Windows in Intune
 
 This article lists and describes the different compliance settings you can configure on Windows devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
 
@@ -27,7 +27,7 @@ Settings in this article are organized by the sections that appear in the admin 
 [Create a compliance policy](./create-policy.md#create-the-policy). For **Platform**, select **Windows 10 and later**.
 
 ## Device health
-To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestation services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service.
+To ensure devices boot to a trusted state, Intune uses Microsoft device attestation services. Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service.
 
 For more information, see:
 
@@ -86,7 +86,7 @@ To discover build versions for all Windows Feature Updates and Cumulative Update
 - **Minimum OS required for mobile devices**:  
   Enter the minimum allowed version, in the major.minor.build number format.
 
-  When a device has an earlier version that the OS version you enter, it's reported as noncompliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After they upgrade, they can access company resources.
+  When a device has an earlier version than the OS version you enter, it's reported as noncompliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After they upgrade, they can access company resources.
 
 - **Maximum OS required for mobile devices**:  
   Enter the maximum allowed version, in the major.minor.build number.
@@ -249,9 +249,9 @@ For additional information on Microsoft Defender for Endpoint integration in Con
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
   - **Not configured** (*default*)
-  - **Clear** -This option is the most secure, as the device can't have any threats. If the device is detected as having any level of threats, it's evaluated as non-compliant.
-  - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a non-compliant status.
-  - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be non-compliant.
+  - **Clear** - This option is the most secure, as the device can't have any threats. If the device is detected as having any level of threats, it's evaluated as noncompliant.
+  - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
+  - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
   To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](../microsoft-defender/overview.md).

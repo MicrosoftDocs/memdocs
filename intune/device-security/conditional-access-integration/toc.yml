@@ -6,8 +6,8 @@ items:
     href: ./scenarios.md
   - name: App-based Conditional Access
     href: ./app-based-policies.md
-  - name: Create app-based Conditional Access
-    href: ./create-app-based-policy.md
+  - name: Device-based Conditional Access
+    href: ./device-based-policies.md
   - name: Block apps that don't use modern authentication (MSAL)
     href: ./block-no-modern-auth.md
   - name: Manage access to Exchange Online
