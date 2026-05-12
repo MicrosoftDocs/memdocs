@@ -112,7 +112,7 @@ Use the following methods to view details about a device’s compliance status.
   - **Checking status** – Intune is currently evaluating the device's compliance to your organization’s policies.
   - **Not compliant** – The device doesn't meet your organization’s device and security requirements and might not have access to your organization’s resources.
 
-  If the device status is *Not compliant*, select **View issues** to see what needs to be fixed.For information on resolving common problems, see [Additional troubleshooting for Linux devices](#additional-troubleshooting-for-linux-devices) in this article.
+  If the device status is *Not compliant*, select **View issues** to see what needs to be fixed. For information on resolving common problems, see [Additional troubleshooting for Linux devices](#additional-troubleshooting-for-linux-devices) in this article.
 
 ## Troubleshoot custom compliance for devices  
 

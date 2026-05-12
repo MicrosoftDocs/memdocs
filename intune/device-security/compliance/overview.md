@@ -47,7 +47,7 @@ Compliance policy settings include:
 
   By default, the period is set to 30 days. You can configure a period from 1 to 120 days.
 
-  You can view details about a device's compliance to the validity period setting. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column. For more information about this setting and related compliance status views, see [Monitor device compliance](./monitor-policy.md).
+  You can view details about a device's compliance with the validity period setting. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column. For more information about this setting and related compliance status views, see [Monitor device compliance](./monitor-policy.md).
 
 ## Device compliance policies
 

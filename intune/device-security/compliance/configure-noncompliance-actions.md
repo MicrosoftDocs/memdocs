@@ -190,7 +190,7 @@ Add variables to the message to create a personalized email with dynamic content
    >[!NOTE]
    > Intune converts Windows-style new line characters to `<br>` HTML tags but ignores all other types of new line characters, including those for macOS and Linux. To ensure line breaks render properly in templates, we recommend using the `<br>` tag to indicate the end of a line.
 
-1. Select the checkboxfor **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn't include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.
+1. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn't include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.
 
    Select **Next** to continue.
 
