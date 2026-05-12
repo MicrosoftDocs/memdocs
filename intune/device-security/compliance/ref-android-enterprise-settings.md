@@ -70,7 +70,7 @@ This section describes the compliance profile settings available for fully manag
   - **High** - This option is the least secure, as it allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
 > [!NOTE]
-> All the Mobile Threat Defense (MTD) providers are supported on Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile deployments using app configuration. Check with your MTD provider for the exact configuration needed to support Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile platforms on Intune.
+> All the mobile threat defense (MTD) providers are supported on Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile deployments using app configuration. Check with your MTD provider for the exact configuration needed to support Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile platforms on Intune.
 
 #### Google Play Protect
 

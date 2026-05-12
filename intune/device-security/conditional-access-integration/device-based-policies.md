@@ -65,7 +65,6 @@ Device-based Conditional Access uses compliance status signals from Intune to en
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
-:::image type="content" source="./media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
 
    The **New** pane opens, which is the configuration pane from Microsoft Entra. The policy you’re creating is a Microsoft Entra policy for Conditional Access. To learn more about this pane and Conditional Access policies, see [Conditional Access policy components](/entra/identity/conditional-access/concept-conditional-access-policies) in the Microsoft Entra content.
 
@@ -112,8 +111,6 @@ Device-based Conditional Access uses compliance status signals from Intune to en
 
    - **Block access**: Denies access to the specified apps or services.
    - **Grant access**: Grants access, but you can require one or more conditions. To use device compliance status from Intune, select **Require device to be marked as compliant**.
-
-     :::image type="content" source="./media/create-conditional-access-intune/create-ca-grant-access-settings.png" alt-text="Screenshot of the configuration surface and options for Grant":::
 
 7. Under **Enable policy**, select **On**. By default, the policy is set to *Report-only*.
 

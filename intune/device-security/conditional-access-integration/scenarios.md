@@ -12,9 +12,9 @@ ms.collection:
 
 # Common ways to use Conditional Access with Intune
 
-There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you need to configure the related Intune policies. When the Intune policies are in place and deployed, you can then use Conditional Access to allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
+There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you need to configure the related Intune policies. When the Intune policies are in place and deployed, you can then use Conditional Access to allow or block access to Exchange, control access to your network, or integrate with a mobile threat defense solution.
 
-The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities.
+The information in this article can help you understand how to use both the Intune mobile device compliance capabilities and the Intune mobile application management (MAM) capabilities.  
 
 > [!NOTE]
 > Conditional Access is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. The Conditional Access node accessed from the Microsoft Intune admin center is the same node as accessed from Microsoft Entra ID.
@@ -50,11 +50,11 @@ Users can be allowed or denied access to corporate Wi-Fi or VPN resources based 
 
 ## Conditional Access based on device risk
 
-Intune partners with Mobile Threat Defense vendors that provide a security solution to detect malware, Trojans, and other threats on mobile devices.
+Intune partners with mobile threat defense vendors that provide a security solution to detect malware, Trojans, and other threats on mobile devices.
 
-### How the Intune and Mobile Threat Defense integration works
+### How the Intune and mobile threat defense integration works
 
-When mobile devices have the Mobile Threat Defense agent installed, the agent sends compliance state messages back to Intune reporting when a threat is found on the mobile device itself.
+When mobile devices have the mobile threat defense agent installed, the agent sends compliance state messages back to Intune reporting when a threat is found on the mobile device itself.
 
 The Intune and mobile threat defense integration plays a factor in the Conditional Access decisions based on device risk.
 

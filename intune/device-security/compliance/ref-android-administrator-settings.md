@@ -52,7 +52,7 @@ Settings in this article are organized by the sections that appear in the admin 
   - **Block** - Mark rooted devices as noncompliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  Use this setting to take the risk assessment from a connected Mobile Threat Defense service as a condition for compliance.
+  Use this setting to take the risk assessment from a connected mobile threat defense service as a condition for compliance.
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, as the device can't have any threats. If the device is detected with any level of threats, the device is evaluated as noncompliant.

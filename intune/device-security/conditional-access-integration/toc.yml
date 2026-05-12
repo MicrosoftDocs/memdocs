@@ -20,7 +20,7 @@ items:
         href: ./configure-jamf-cloud-connector.md
       - name: Integrate Jamf Pro with Intune for compliance
         href: ./setup-jamf-manually.md
-      - name: Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID
+      - name: Integrate Jamf Pro with Intune 
         href: ../compliance/jamf-entra-id.md
       - name: Enforce compliance on Macs managed with Jamf Pro
         href: ./assign-jamf-policies.md
