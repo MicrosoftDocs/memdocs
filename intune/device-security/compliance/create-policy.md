@@ -213,6 +213,9 @@ When a device has multiple compliance policies, Intune assigns the highest sever
 
 For example, a device has three compliance policies assigned to it: one Unknown status (severity = 1), one Compliant status (severity = 3), and one InGracePeriod status (severity = 4). The InGracePeriod status has the highest severity level, so the device is given the InGracePeriod compliance status.  
 
+> [!IMPORTANT]
+> Discovery script output is limited to 2048 characters. If the output exceeds this limit, it may be truncated, resulting in invalid JSON and error 65009 during compliance evaluation. To avoid this, keep outputs concise or split large rule sets across multiple policies.
+
 ## Next steps
 
 [Monitor your policies](./monitor-policy.md).
