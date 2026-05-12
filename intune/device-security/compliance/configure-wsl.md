@@ -42,7 +42,7 @@ This article applies to Windows and describes how to set up compliance checks fo
 :::column-end:::
 :::row-end:::
 
-You must install the Microsoft Intune management extension on the target device. Make sure devices meet one of the following conditions so that the management extension can install:
+The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:  
 
 - Assign a PowerShell script or a proactive remediation to the user or device.
 - Deploy a Win32 app or Microsoft Store app to the user or device.

@@ -36,7 +36,7 @@ App-based Conditional Access with client app management adds a security layer th
 
 > Before you create an app-based Conditional Access policy, you must have:
 >
-> - **Enterprise Mobility + Security (EMS)** or an **Microsoft Entra ID P1 or P2 subscription**
+> - **Enterprise Mobility + Security (EMS)** or a **Microsoft Entra ID P1 or P2 subscription**
 > - Users must be licensed for EMS or Microsoft Entra ID
 >
 > For more information, see [Enterprise Mobility pricing](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) or [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/).

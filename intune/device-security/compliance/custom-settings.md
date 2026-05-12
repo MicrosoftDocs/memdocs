@@ -57,11 +57,11 @@ After you deploy custom compliance settings and devices report back, you can vie
 :::column-end:::
 :::column span="3":::
 
-> - **Microsoft Entra joined** devices, *including* Microsoft Entra hybrid joined devices.
+> - Microsoft Entra joined devices, including Microsoft Entra hybrid joined devices.
 >
 >   Microsoft Entra hybrid joined devices are devices that are joined to Microsoft Entra ID and also joined to on-premises Active Directory. For more information, see [Plan your Microsoft Entra hybrid join implementation](/entra/identity/devices/hybrid-join-plan).  
 >
-> - **Microsoft Entra registered/Workplace joined (WPJ)**
+> - Microsoft Entra registered/Workplace joined (WPJ)
 >
 >   For information about devices registered in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#workplace-join-as-a-seamless-second-factor-authentication). Typically these devices are Bring Your Own Device (BYOD) devices that have a work or school account added via Settings>Accounts>Access work or school.
 >
@@ -69,6 +69,8 @@ After you deploy custom compliance settings and devices report back, you can vie
 
 :::column-end:::
 :::row-end:::
+
+You also need to create a:  
 
 - **Discovery script** - A PowerShell script for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Intune admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 

@@ -162,7 +162,9 @@ Settings in this article are organized by the sections that appear in the admin 
 
   - **Not configured** (*default*)
 
-  This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: *Require* (This compliance check is supported for devices with OS versions Android 4.0 and above, or KNOX 4.0 and above.)
+- **Require a password to unlock mobile devices**
+
+  This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices.Recommended value: *Require* (This compliance check is supported for devices with OS versions Android 4.0 and above, or KNOX 4.0 and above.)
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device. When set to **require**, also configure:

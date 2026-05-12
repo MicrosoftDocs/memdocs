@@ -89,9 +89,9 @@ You can access the device compliance dashboard in the [Microsoft Intune admin ce
 ### Device compliance status
 
 The **Device compliance status** tile shows the compliance states for all Intune enrolled devices.
-If you select this tile, Intune displays the **Noncompliant devices** report. You can also find this report under the **Devices** > **Monitor** node of the admin center.
+If you select this tile, Intune shows the **Noncompliant devices** report. You can also find this report under the **Devices** > **Monitor** node of the admin center.
 
-The tile displays a count of devices for each of the following categories:
+The tile displays the number of devices for each of the following categories:
 
 - **Compliant**: The device successfully applied one or more device compliance policy settings.
 
@@ -111,11 +111,11 @@ The tile displays a count of devices for each of the following categories:
 
 ### Devices without compliance
 
-The **Devices without compliance policy** tile shows a count of devices that don't have any compliance policies assigned. The admin center view often truncates the tile name because this tile displays only a count of devices:
+The **Devices without compliance policy** tile shows the number of devices that don't have any compliance policies assigned. The admin center view often truncates the tile name because this tile displays only the device count.  
 
 :::image type="content" source="./media/monitor-policy/devices-without-compliance-policy-tile.png" alt-text="Image of the Devices without compliance policy tile.":::
 
-If you select this tile, Intune displays a *Device status* view that lists each device that doesn't have a compliance policy. This view includes the *Device* name, the *User Principal Name* associated with the device, the device's compliance *Status*, and the *Device model*.
+If you select this tile, Intune shows a *Device status* view that lists each device that doesn't have a compliance policy. This view includes the *Device* name, the *User Principal Name* associated with the device, the device's compliance *Status*, and the *Device model*.
 
 > [!TIP]
 > Intune includes an organizational report that identifies all devices in your tenant that aren't assigned a compliance policy. See [Devices without compliance policy (Organizational)](../../device-management/reports/overview.md#devices-without-compliance-policy-organizational).
@@ -124,7 +124,7 @@ If you select this tile, Intune displays a *Device status* view that lists each 
 
 Each compliance policy you create directly supports compliance reporting. To view the reports for an individual policy, in the admin center go to **Devices** > **Compliance**. Then select the policy for which you want to view its report details.
 
-By default, when you select a policy, Intune opens the Monitor tab for that policy. Intune displays:
+By default, when you select a policy, Intune opens the Monitor tab for that policy. Intune shows:
 
 - **Device status** - A simple bar chart that shows the basic compliance status for devices that receive this policy.
 - **View report** - A button you can select that opens the device status report where you can view deeper details about device compliance to this policy.
@@ -152,7 +152,7 @@ To view more details, select the **View report** button.
 
 ### View report
 
-When you select the *View report* button on the device status view of a policy, Intune displays a more detailed view of the device status for that policy.
+When you select the *View report* button on the device status view of a policy, Intune shows a more detailed view of the device status for that policy.
 
 :::image type="content" source="./media/monitor-policy/view-report-for-compliance-policy.png" alt-text="View of the detailed device status report, after selecting the View report button in the Intune admin center.":::
 
@@ -176,7 +176,7 @@ In this report view:
 
 ### Per-setting status
 
-After selecting a compliance policy, select the *Per-setting status* tile to review the device compliance status for policy settings. This view shows the settings that the policy configures with columns for the various status conditions that can be reported. For each setting, each status column displays a count of devices that report that status.
+After selecting a compliance policy, select the *Per-setting status* tile to review the device compliance status for policy settings. This view shows the settings that the policy configures with columns for the various status conditions that can be reported. For each setting, each status column displays the number of devices that report that status.
 
 The following image displays a per-setting view of a policy for Android devices. This policy includes one setting and was deployed to four devices, all of which are compliant to that setting. In this view, you can sort by selecting a column, or use search:
 

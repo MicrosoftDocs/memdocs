@@ -23,7 +23,9 @@ This article:
 - Describes other features, including scope tags to "filter" your policies, and steps you can take on devices that aren't compliant.
 - Lists the check-in refresh cycle times when devices receive policy updates.
 
-## Requirements
+## Requirements  
+
+[!INCLUDE [platform](../../includes/requirements/platform.md)]  
 
 :::row:::
 :::column span="1":::
@@ -32,7 +34,7 @@ This article:
 :::column-end:::
 :::column span="3":::
 
-> - Intune
+> - Microsoft Intune subscription 
 > - If you use Conditional Access, then you need Microsoft Entra ID P1 or P2 edition. [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Microsoft Entra ID.
 
 :::column-end:::
@@ -40,7 +42,6 @@ This article:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -73,7 +74,9 @@ This article:
 
 In addition to compliance settings that are built in to Intune, the following platforms support adding custom compliance settings to compliance policies:
 
-- Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
+- Linux
+    - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+    - RedHat Enterprise Linux 9 or 10  
 - Windows
 
 Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
@@ -123,7 +126,9 @@ For more information about using custom compliance settings, including supported
    > [!TIP]
    > This step is optional and supported for the following platforms:
    >
-   > - Linux - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+   > - Linux
+   >   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+   >   - RedHat Enterprise Linux 9 or 10
    > - Windows 
    > Before you can add custom settings to a policy, upload a detection script to Intune, and have a JSON file that defines the settings you want to use for compliance. For more information, see [Custom compliance settings](./custom-settings.md).
 
@@ -206,7 +211,7 @@ If a device has multiple compliance policies, and the device has different compl
 
 When a device has multiple compliance policies, Intune assigns the highest severity level of all the policies to that device.
 
-For example, a device has three compliance policies assigned to it: one Unknown status (severity = 1), one Compliant status (severity = 3), and one InGracePeriod status (severity = 4). The InGracePeriod status has the highest severity level. So, all three policies have the InGracePeriod compliance status.
+For example, a device has three compliance policies assigned to it: one Unknown status (severity = 1), one Compliant status (severity = 3), and one InGracePeriod status (severity = 4). The InGracePeriod status has the highest severity level, so the device is given the InGracePeriod compliance status.  
 
 ## Next steps
 
