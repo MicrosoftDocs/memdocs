@@ -11,6 +11,12 @@ metadata:
   ms.date: 12/09/2021
 
 landingContent:
+  - title: Configuration Manager 2603
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 37426535 Summary of changes in 2603
+            url: 2603/37426535.md
   - title: Configuration Manager 2509
     linkLists:
       - linkListType: overview
@@ -21,6 +27,8 @@ landingContent:
             url: 2509/33247081.md
           - text: KB 36495448 Software update management client fix
             url: 2509/36495448.md
+          - text: KB 36949461 Update rollup for Microsoft Configuration Manager version 2509
+            url: 2509/36949461.md
   - title: Configuration Manager 2503
     linkLists:
       - linkListType: overview
@@ -153,13 +161,3 @@ landingContent:
             url: 2107/10503003.md
           - text: KB 11121541 Update rollup for 2107
             url: 2107/11121541.md
-  - title: Configuration Manager 2103
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: KB 9210721 Summary of changes in 2103
-            url: 2103/9210721.md
-          - text: KB 9603111 Early update ring
-            url: 2103/9603111.md
-          - text: KB 10036164 Update rollup for 2103
-            url: 2103/10036164.md

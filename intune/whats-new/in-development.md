@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 04/08/2026
+ms.date: 05/04/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -46,29 +46,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
-### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
-
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](../epm/manage-support-approvals.md) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
-
 <!-- ***********************************************-->
 
 ## App management
-
-### Direct Android line-of-business app management<!-- 25065436, 29267431 -->
-
-You'll be able to manage Android line-of-business (LOB) apps in Microsoft Intune without using Managed Google Play for Android Enterprise fully managed (COBO) and dedicated (COSU) devices. You can upload APK files directly to Intune and deploy required apps to corporate-owned fully managed and dedicated devices.
-
-Direct LOB app management enables you to:
-
-- Deploy in-house LOB APKs directly to Android Enterprise fully managed and dedicated devices
-- Manage app updates without a Managed Google Play account
-- Simplify deployment for organizations that don't use Managed Google Play
-- Create app configuration policies for directly deployed LOB apps, giving you the same configuration flexibility you have for Managed Google Play apps
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise
 
 ### Multiple managed accounts for app protection policies <!-- 3182632 -->
 
@@ -84,58 +64,86 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 ## Device configuration
 
-### Configure credential manager permissions for Android Enterprise devices<!-- 31358911 -->
+### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
 
-Android's Credential Provider capability will allow you to control which applications can act as system-level credential providers, responsible for password autofill and passkey storage on corporate-owned work profile, fully managed, dedicated, or personally owned work profile Android devices.
+On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. You'll be able to use this setting to disable MAC address randomization on managed macOS devices.
 
-To configure credential manager permissions, you'll go to **Apps** > **Android** > **Configuration** > **Managed Devices**. Choose **Android Enterprise** as the platform type.
+When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. But, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
 
-By default, Android blocks third-party credential providers on managed devices. This new configuration setting will let you:
+To learn more, see:
 
-- Allow specific apps (such as Microsoft Authenticator or a third-party password manager) to act as credential providers
-- Enable passkey-based sign-in across managed Android Enterprise devices
-- Maintain control over which credential sources are trusted on corporate devices
-
-A known limitation from the Intune side is that Google Password Manager will not be allowed to act as Credential Provider on corporate owned work profile devices or personally owned work profile devices. It will be blocked on the end user's device. Use a different credential app as a workaround.
+- [Wi-Fi profiles settings list](../device-configuration/templates/ref-wifi-settings-apple.md)
+- [Learn more about Wi-Fi profiles in Intune](../device-configuration/templates/configure-wifi.md)
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android fully managed devices (COBO)
-> - Android dedicated devices (COSU)
-> - Android corporate-owned devices with a work profile (COPE)
-> - Android personally owned devices with a work profile (BYOD) using Android Management API (AM API)
+> - macOS 15 and later
 
-### Block location setting for Android Enterprise can keep Location services enabled<!-- 36703827 -->
+### New Wired Networks device configuration profile for iOS/iPadOS<!-- 31880672 -->
 
-On Android Enterprise devices, you can use the **General > Block location** in the [settings catalog](../device-configuration/settings-catalog/ref-android-settings.md) to disable the location services on the device and prevent users from turning it on.
+There will be a new **802.1x Wired Networks** device configuration profile for iOS/iPadOS devices. The feature will support 802.1x Ethernet access controls, which is ideal for M-series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
 
-This setting is changing. It will be called **Location** and will have three options you can configure:
+This profile will:
 
-- Device default - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
-- Location enabled - Requires location services to be on and prevents end users from turning them off.
-- Location disabled - Requires location services to be off and prevents end users from turning them on.
+- Support EAP protocols, like TLS, PEAP, and TTLS
+- Be similar to the macOS wired network profile experience
+
+This feature will help with secure enterprise deployments for iPads in education, finance, and other regulated industries.
+
+To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../device-configuration/templates/configure-wired-networks.md).
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise corporate-owned devices with a work profile (COPE) running Android 10 and earlier
-> - Android Enterprise corporate owned fully managed (COBO)
-> - Android Enterprise corporate owned dedicated devices (COSU)
+> - iOS/iPadOS 17 and newer
+
+### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
+
+The [Settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
+
+There will be a new **Block Bluetooth sharing** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the device can't share content over Bluetooth. When set to **False**, fully managed and dedicated devices allow Bluetooth sharing, while corporate-owned work profile devices block Bluetooth sharing.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### Access management for Apple services<!-- 31209876  -->
+### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
 
-You will be able to use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls will let you choose what devices users can sign in to and which apps and services are available to them. For more information about how Apple defines service access and Apple account permissions, see the [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).
+Enrollment time grouping (ETG) will improve the Apple automated device enrollment (ADE) setup experience by providing an efficient way to group devices at enrollment time. The pre-knowledge of the security group that the device will be a member of helps in computing the applicable policies, apps, and settings for the enrolled device, so the configurations are delivered quickly at the time of enrollment.
+
+You'll be able to configure enrollment time grouping in new iOS/iPadOS and macOS enrollment policies that use these authentication methods:
+
+- iOS/iPadOS:
+  - Enroll with user affinity
+    - Setup Assistant with modern authentication
+    - Company Portal authentication method
+  - Enroll without user affinity
+    - Microsoft Entra shared mode
+    - Shared iPad
+- macOS:
+  - Enroll with user affinity
+    - Setup Assistant with modern authentication
+  - Enroll without user affinity
+
+There will be a new **Device group** tab within new iOS/iPadOS and macOS enrollment policies where you can add a Microsoft Entra security group. The group you add will map directly to the enrollment profile, and you'll be able to edit the group at any time. The new device grouping tab won't be available in existing enrollment profiles.
+
+Other requirements include adding the Intune first-party app as a security group owner, and ensuring that you have the **enrollment time device membership assignment** permission within a custom RBAC role.
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - iOS/iPadOS
-> - macOS
+> - iOS/iPadOS Automated Device Enrollment (ADE)
+> - macOS Automated Device Enrollment (ADE)
 
 ### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
 
@@ -164,10 +172,6 @@ Prerequisites:
 >
 > - macOS Automated Device Enrollment (ADE)
 
-### Microsoft Intune will support userless ADE for visionOS and tvOS devices<!-- 29219451 -->
-
-Microsoft Intune will be adding support for userless automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability will support ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and remote device actions. The feature will be available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite. Enrolled visionOS and tvOS devices will appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support will require tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
-
 <!-- *********************************************** -->
 
 ## Device management
@@ -178,17 +182,6 @@ The Intune Policy Configuration Agent will update to use a Microsoft Entra agent
 
 For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
  
-### Updated minimum version for Intune Management Extension on Windows<!-- 35502983 -->
-
-Windows devices managed by Intune will need to run Intune Management Extension version 1.58.103.0 or later. Devices on earlier versions will no longer receive configurations or updates that depend on the Intune Management Extension, including Win32 app deployments, PowerShell scripts, remediations, and platform scripts.
-
-The Intune Management Extension updates automatically, so most managed devices should already have a compatible version. Verify that your devices can sync with Intune to receive updates.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 10/11
-
 ### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
 
 For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.
@@ -222,46 +215,37 @@ To learn more, see:
 >
 > - Android Enterprise personally owned devices with a work profile
 
-### Device page in the Intune admin center is updated (public preview) <!-- 36646300 16532161 -->
+### Grant enhanced security permissions to a Mobile Threat Defense app on Android Enterprise devices<!-- 33745497 -->
 
-In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
+Google is introducing a new Mobile Threat Defense (MTD) capability for Android that allows MTD apps to operate with enhanced security permissions on managed devices. With this update, you'll be able to use the [MTD connector](../device-security/mobile-threat-defense/enable-connector.md) in the Microsoft Intune admin center to grant these permissions to one MTD app of your choice, such as Microsoft Defender for Endpoint or a supported third-party partner.
 
-- Track device activity
-- Access tools and reports
-- Manage device information
-
-The single device page has the following tabs:
-
-- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You'll be able to quickly understand what actions are running or have completed without leaving the device view.
-- **Tools + reports**: This tab was previously called **Overview**. It shows monitoring reports, lists, and tools, like remediations, that were previously accessed in another part of the admin center.
-- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
-- **Device details**: This was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
-
-Other features:
-
-- Device actions are grouped, ordered, and labeled consistently across platforms and device types, with improved logic to show only relevant and permitted actions. Destructive actions are clearly separated and require confirmation, reducing unintentional actions.
-
-- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
-
-- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. **Essentials** elevates important device information and is accessible from any tab.
-
-All existing device management capabilities remain available. This update focuses on making them easier to find and use.  
-
-### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
-
-Intune will soon include two new remote actions that let admins temporarily suspend and later restore managed home screen (MHS) on Android devices. These actions allow users to exit MHS and access the device's default launcher for a specified duration, without removing policies or requiring a PIN.
-
-After the defined time elapses, or when the *restore managed home screen* action is triggered, MHS is automatically restored, helping maintain device security while minimizing disruption.
+On devices where these permissions are configured, the MTD app gains additional capabilities, including exemptions from app suspension, hibernation, and user-initiated restrictions.
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise corporate-owned Fully Managed (COBO)
-> - Android Enterprise corporate-owned Dedicated (COSU)
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise fully managed (COBO)
 
 <!-- *********************************************** -->
 
 ## Device security
+
+### Strict Tunnel Mode for Microsoft Tunnel on Android<!-- 17373449 -->
+
+Microsoft Tunnel will add support for Strict Tunnel Mode on Android Enterprise devices enrolled through Android Management API (AM API). When Strict Tunnel Mode is enabled, all network traffic is forced through the VPN tunnel. If the VPN connection is unavailable or drops, all network traffic on the device is blocked, preventing apps from accessing the public internet outside of the tunnel. Devices enrolled through the legacy EMM API work profile don't support Strict Tunnel Mode until migrated to AM API.
+
+Admins will be able to configure an app exclusion list. Apps on the exclusion list always bypass the VPN and connect directly to the network, regardless of VPN connection status.
+
+Strict Tunnel Mode will be available as a configuration option when a [Microsoft Tunnel VPN profile](../device-security/microsoft-tunnel/install.md) is configured with **Always On** VPN. For unenrolled devices using [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam-android.md), Strict Tunnel Mode will also be supported, blocking network traffic when the MAM Tunnel connection is unavailable.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise personally owned work profile
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise corporate-owned fully managed
+> - Android (MAM, unenrolled devices)
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
@@ -290,6 +274,54 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
+### In-place renewal of Cloud PKI issuing certification authorities (CAs)<!-- 25850620 -->
+
+Currently, Microsoft Intune requires you to create a new Cloud PKI issuing CA and manually update dependent SCEP certificate profiles when an issuing CA nears expiration. This process can increase operational overhead and introduce configuration risk.
+
+Soon, you'll be able to renew eligible Cloud PKI issuing CAs in place. This update will help maintain uninterrupted certificate issuance and support continued certificate-based access for scenarios such as Wi-Fi, VPN, and email, without requiring changes to existing SCEP profiles or device assignments.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Cloud PKI
+
+### Custom compliance settings for macOS<!-- 35392462 -->
+
+Microsoft Intune will support custom compliance settings for macOS. You'll be able to define compliance checks using scripts and JSON rules, similar to existing support for Windows and Linux. This capability will allow you to evaluate device configuration, security posture, and other custom attributes not covered by built-in settings. Results will appear alongside standard compliance reporting in the Intune admin center.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+### Client-driven compliance evaluation for Windows devices<!-- 37554578 -->
+
+Microsoft Intune will introduce client-driven compliance evaluation for Windows devices to reduce delays in compliance reporting. Supported devices will detect important state changes locally and proactively request a compliance re-evaluation when it matters, instead of waiting for the next scheduled check-in. As an admin, you'll see faster updates for remediation, reporting, and access decisions. This capability will roll out in preview for Windows devices.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Controlled Configuration for Microsoft Defender antivirus settings<!-- 35378858 -->
+
+Microsoft Intune is bringing Controlled Configuration (CC) to public preview for Microsoft Defender antivirus settings. CC introduces a unified approach to endpoint security by making Intune and Microsoft 365 Defender the single source of truth for antivirus and related security settings.
+
+When you enable CC, all of the Defender antivirus settings that are delivered by Intune or Microsoft Defender for Endpoint security settings management will override configurations from all other channels, including Group Policy, Configuration Manager, and local changes or scripts. This single source of truth will help ensure consistent, predictable device states.
+
+CC extends Tamper Protection by letting you lock settings to admin-defined values, not just defaults. Your Defender antivirus policies set by Intune are reliably enforced across your endpoints, without being overridden by legacy on-premises policies or local per-device changes.
+
+Benefits of CC include:
+
+- **Authoritative policy enforcement**: Cloud-delivered antivirus settings always take precedence, eliminating conflicts from legacy tools.
+- **Improved security posture**: Prevents configuration drift and reduces risk from local changes.
+- **Simplified troubleshooting**: Clear, predictable configurations make auditing and support easier.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
@@ -297,17 +329,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
-
-### Enhanced app inventory with faster data updates<!-- 27117584 -->
-
-Intune enhanced app inventory will bring faster, more detailed visibility into the apps in your environment to support identification of outdated or risky software. Improved data freshness and richer app metadata will provide clearer insight into installed applications, while new controls will let you specify which devices are included in inventory collection.
-
-This feature will be initially available for Windows, with additional platforms to follow.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 10/11
 
 ### Intune Data Warehouse (beta) connector deprecation in Power BI<!-- 37106409 -->
 
@@ -345,13 +366,9 @@ Intune will add new guidance to the compliance policy reporting documentation to
 
 <!-- *********************************************** -->
 
-## Tenant administration
+<!-- ## Tenant administration -->
 
-### Change Review Agent suggestions available inline in Multi Admin Approval (public preview)<!-- 36876605 -->
-
-We're updating the [Multi Admin Approval](../fundamentals/role-based-access-control/multi-admin-approval.md) page in the Intune admin center to include a new **Agent Response** column for Windows PowerShell scripts. Approvers will be able to view the [Change Review Agent](../copilot/agents/change-review-agent.md) risk-based recommendations inline, without navigating to the agent's own experience. Change Review Agent suggestions will continue to be available in the agent's primary experience as well.
-
-<!-- *********************************************** -->
+<!-- ***********************************************-->
 
 ## Notices
 

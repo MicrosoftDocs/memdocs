@@ -1,599 +1,109 @@
 items:
   - name: Microsoft Intune documentation
     href: index.yml
+
+  - name: Get started
+    href: ./fundamentals/toc.yml
+    topicHref: ./fundamentals/index.yml
+
+  - name: What's new
+    href: ./whats-new/toc.yml
+
+  - name: Enroll devices
+    href: ./device-enrollment/toc.yml
+    topicHref: ./device-enrollment/index.yml
+
+  - name: Configure devices
+    href: ./device-configuration/toc.yml
+    topicHref: ./device-configuration/index.yml
+
+  - name: Manage apps
+    href: ./app-management/toc.yml
+    topicHref: ./app-management/index.yml
+
+  - name: Secure devices and data
+    href: ./device-security/toc.yml
+    topicHref: ./device-security/index.yml
+
+  - name: Keep devices updated
+    href: ./device-updates/toc.yml
+    topicHref: ./device-updates/index.yml
+
+  - name: Manage devices
+    href: ./device-management/toc.yml
+    topicHref: ./device-management/index.yml
+
+  - name: Copilot and agents
+    href: ./copilot/toc.yml
+    topicHref: ./copilot/index.md
+
+  - name: Govern and administer
+    topicHref: ./govern-administer.yml
+    displayName: RBAC, roles, scope tags, audit, privacy, GDPR, HIPAA, SOC, ISO
     items:
-      - name: Learn about Microsoft Intune
-        items:
-          - name: Microsoft Intune overview
-            displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-            href: ./fundamentals/what-is-intune.md
-            items:
-              - name: Overview - Manage and secure identities
-                displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/tenant-administration/identities.md
-              - name: Overview - Manage and secure devices
-                displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/manage-devices.md
-              - name: Overview - Manage apps and protect their data
-                displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/manage-apps.md
-              - name: Zero Trust with Microsoft Intune
-                href: ./fundamentals/zero-trust.md
-              - name: Intune architecture diagram
-                href: ./fundamentals/architecture.md
-                displayName: architecture, diagram, components, design, svg, family, products, suite, on-premises, tunnel
-          - name: Intune service release information
-            href: ./fundamentals/servicing-information.md
-          - name: Endpoint management at Microsoft
-            href: ./fundamentals/endpoint-management.md
-          - name: What is device management?
-            href: ./fundamentals/what-is-device-management.md
+      - name: Role-based access control
+        href: ./fundamentals/role-based-access-control/toc.yml
 
-          - name: What's new
-            href: ./whats-new/toc.yml
-
-          - name: Evaluate and try
-            items:
-              - name: Walkthrough Intune admin center
-                href: ./fundamentals/tutorial-admin-center-walkthrough.md
-                displayName: trial, free
-              - name: Try Intune tasks
-                items:
-                  - name: Overview
-                    href: ./fundamentals/try-overview.md
-                  - name: Step 1 - Sign up for a free Intune trial
-                    href: ./fundamentals/free-trial-sign-up.md
-                    displayName: tenant; trial; get started, start; help; MDM
-                  - name: Step 2 - Create a user and assign a license
-                    href: ./fundamentals/tenant-administration/quickstart-create-user.md
-                  - name: Step 3 - Create a group
-                    href: ./fundamentals/tenant-administration/quickstart-create-group.md
-                  - name: Step 4 - Set up automatic enrollment
-                    href: ./device-enrollment/windows/quickstart-automatic-mdm.md
-                  - name: Step 5 - Enroll your Windows device
-                    href: /intune/device-enrollment/windows/quickstart-first-device
-                  - name: Step 6 - Create a device compliance policy
-                    href: ./device-security/compliance/quickstart-password-compliance-android.md
-                  - name: Step 7 - Send notifications to noncompliant devices
-                    href: ./device-security/compliance/quickstart-noncompliance-notification.md
-                  - name: Step 8 - Add and assign an app
-                    href: ./app-management/deployment/quickstart-add-assign.md
-                  - name: Step 9 - Create and assign an app protection policy
-                    href: ./app-management/protection/quickstart-create-assign-policy.md
-                  - name: Step 10 - Create and assign a custom role
-                    href: ./fundamentals/role-based-access-control/quickstart-custom-role.md
-                  - name: Step 11 - Create a device profile
-                    href: ./device-configuration/templates/quickstart-email-profile.md
-              - name: Try Intune scenarios
-                items:
-                  - name: Protect email on managed devices
-                    href: ./solutions/tutorials/protect-email-enrolled-devices.md
-                  - name: Protect email on unmanaged devices
-                    href: ./solutions/tutorials/protect-email-unmanaged-devices.md
-                  - name: Configure Slack to use Intune
-                    href: ./app-management/configuration/tutorial-configure-slack.md
-                  - name: Set up just in time (JIT) registration
-                    href: /intune/device-enrollment/apple/setup-just-in-time-registration
-                  - name: Use automated device enrollment to enroll iOS/iPadOS devices
-                    href: /intune/device-enrollment/apple/tutorial-automated-ios
-                  - name: Create settings catalog policy and compare with on-premises ADMX
-                    href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
-                    displayName: admx, administrative template, gpo, windows
-
-      - name: Microsoft Copilot + Intune
-        href: ./copilot/toc.yml
-
-      - name: Intune Suite
-        items:
-          - name: Intune Suite overview
-            href: ./fundamentals/add-ons.md
-
-          - name: Endpoint Privilege Management (EPM)
-            href: ./epm/toc.yml
-
-          - name: Enterprise App Management
-            items:
-              - name: Enterprise App Management overview
-                href: /intune/app-management/deployment/enterprise-app-management
-              - name: Add an Enterprise App Catalog app (Win32)
-                href: /intune/app-management/deployment/add-enterprise-catalog-app
-
-          - name: Microsoft Cloud PKI
-            href: ./cloud-pki/toc.yml
-
-          - name: Remote Help
-            href: ./remote-help/toc.yml
-
-          - name: Advanced Analytics
-            href: ./advanced-analytics/toc.yml
-
-      - name: Plan and prepare for Intune
-        items:
-          - name: Supported operating systems and browsers
-            items:
-              - name: Supported OS versions and browsers
-                displayName: software updates, android, ios, ipados
-                href: ./fundamentals/ref-supported-platforms.md
-              - name: Android Open Source Project Supported Devices
-                displayName: software updates, android open source project, supported devices
-                href: ./fundamentals/aosp-supported-devices.md
-
-          - name: Planning guide
-            displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
-            href: ./fundamentals/planning-guide.md
-            items:
-              - name: Using Windows VMs with Intune
-                href: ./solutions/windows-virtual-machines.md
-              - name: Using Azure Virtual Desktop with Intune
-                href: ./solutions/azure-virtual-desktop.md
-              - name: Using Azure Virtual Desktop multi-session
-                href: ./solutions/azure-virtual-desktop-multi-session.md
-
-          - name: Settings insight
-            displayName: configuration, settings, insight, security baselines
-            href: ./device-configuration/settings-insight.md
-
-          - name: Migrate to Intune
-            items:
-              - name: Move to Intune
-                displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/setup-migration.md
-              - name: Move from Basic Mobility and Security
-                items:
-                  - name: Move from Microsoft 365 device management
-                    displayName: migrate, mdm, office, windows
-                    href: ./fundamentals/migrate-from-other-mdm.md
-                  - name: Policy mapping
-                    items:
-                      - name: Access requirements policy mapping
-                        displayName: migrate, mdm, office, windows
-                        href: ./fundamentals/ref-policy-map-access-requirements.md
-                      - name: Configurations policy mapping
-                        displayName: migrate, mdm, office, windows
-                        href: ./fundamentals/ref-policy-map-configurations.md
-                      - name: Miscellaneous policy mapping
-                        displayName: migrate, mdm, office, windows
-                        href: ./fundamentals/ref-policy-map-miscellaneous.md
-
-          - name: Deployment guide for Intune
-            items:
-              - name: Get started with your deployment
-                displayName: mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/get-started.md
-              - name: Step 1 - Set up Intune subscription
-                displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/deploy-setup-step-1.md
-              - name: Step 2 - Add, configure, and protect apps
-                displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/deploy-protect-apps-step-2.md
-              - name: Step 3 - Create compliance policies
-                displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/deploy-compliance-step-3.md
-              - name: Step 4 - Configure device features and security settings
-                displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/deploy-configuration-step-4.md
-              - name: Step 5 - Enroll devices
-                displayName: deployment, mdm, android, ios, ipados, macos, windows
-                href: ./device-enrollment/enroll-devices.md
-              - name: Protection and configuration levels
-                displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-                href: ./fundamentals/protection-configuration-levels.md
-              - name: Zero Trust deployment approach
-                displayName: deployment, zero trust, security, compliance, conditional access
-                href: ./fundamentals/zero-trust-deployment.md
-
-          - name: Platform guides
-            items:
-              - name: Windows platform guide
-                href: ./fundamentals/platform-guide-windows.md
-              - name: Android, Android Enterprise platform guide
-                href: ./fundamentals/platform-guide-android.md
-              - name: iOS/iPadOS platform guide
-                href: ./fundamentals/platform-guide-ios-ipados.md
-              - name: macOS platform guide
-                href: ./fundamentals/platform-guide-macos.md
-              - name: Linux platform guide
-                href: ./fundamentals/platform-guide-linux.md
-              - name: Windows Holographic platform guide
-                href: ./solutions/windows-holographic.md
-              - name: Manage specialty devices with Intune
-                href: ./device-management/specialty-devices.md
-              - name: Microsoft Surface Management Portal
-                href: ./device-management/tools/surface-management-portal.md
-
-          - name: Software updates planning guides
-            items:
-              - name: BYOD and personal devices
-                displayName: software updates, android, ios, ipados
-                href: ./device-updates/byod-planning-guide.md
-              - name: Android
-                displayName: software updates
-                href: ./device-updates/android/planning-guide.md
-              - name: iOS/iPadOS
-                displayName: software updates
-                href: ./device-updates/apple/planning-guide-ios-ipados.md
-              - name: macOS
-                displayName: software updates
-                href: ./device-updates/apple/planning-guide-macos.md
-
-      - name: Set up Microsoft Intune
-        items:
-          - name: URLs and IP address endpoints
-            items:
-              - name: Intune endpoints
-                href: ./fundamentals/endpoints.md
-              - name: China endpoints
-                href: ./fundamentals/endpoints-china.md
-              - name: Intune US government endpoints
-                href: ./fundamentals/endpoints-us-government.md
-
-          - name: Set up Intune subscription
-            items:
-              - name: Sign in to Intune
-                href: ./fundamentals/account-sign-up.md
-              - name: Configure domains
-                href: ./fundamentals/configure-custom-domain.md
-              - name: Add users
-                href: ./fundamentals/tenant-administration/add-users.md
-              - name: Add groups
-                href: ./fundamentals/tenant-administration/add-groups.md
-              - name: Manage Intune licenses
-                href: ./fundamentals/licensing/toc.yml
-              - name: Set the MDM authority
-                href: ./fundamentals/setup-mdm-authority.md
-
-          - name: Manage roles and permissions
-            href: ./fundamentals/role-based-access-control/toc.yml
-
-          - name: Configure security recommendations using Zero Trust
-            items:
-            - name: Configure security recommendations using Zero Trust
-              href: ./device-security/ref-zero-trust-security.md
-            - name: Secure tenants
-              href: ./device-security/ref-zero-trust-tenant.md
-            - name: Secure devices
-              href: ./device-security/ref-zero-trust-devices.md
-            - name: Secure data
-              href: ./device-security/ref-zero-trust-data.md
-
-      - name: Create and deploy Intune policies
-        items:
-          - name: Manage apps
-            href: app-management/toc.yml
-
-          - name: Protect and secure Data and Devices
-            items:
-              - name: Device protection overview
-                href: ./device-security/index.md
-                displayName: compliant; noncompliant; mfa
-
-              - name: Compliance rules to protect resources
-                href: ./device-security/compliance/toc.yml
-
-              - name: Network access control
-                href: ./device-security/integrate-network-access-control.md
-                displayName: NAC
-
-              - name: Conditional Access
-                href: ./device-security/conditional-access-integration/toc.yml
-
-              - name: Software updates
-                href: ./device-updates/toc.yml
-
-              - name: Endpoint security
-                items:
-                  - name: Endpoint security policies
-                    href: ./device-configuration/endpoint-security/toc.yml
-
-                  - name: Security baselines
-                    href: ./device-security/security-baselines/toc.yml
-
-                  - name: Microsoft Defender for Endpoint
-                    href: ./device-security/microsoft-defender/toc.yml
-
-                  - name: Security tasks
-                    href: ./device-security/microsoft-defender/remediate-vulnerabilities.md
-
-                  - name: Endpoint Privilege Management (EPM)
-                    href: ./epm/toc.yml
-
-                  - name: Tenant attach
-                    href: ./fundamentals/tenant-attach.md
-
-              - name: Identity and access
-                items:
-                  - name: Windows Hello for Business
-                    items:
-                      - name: Windows Hello at device enrollment
-                        href: ./device-security/identity-protection/configure-tenant-wide-policy.md
-                      - name: Windows Hello after device enrollment
-                        href: ./device-security/identity-protection/deploy-group-policy.md
-                  - name: Single sign-on (SSO) for Apple devices
-                    items:
-                      - name: SSO overview & options
-                        displayName: single sign-on, ios, ipados, macos
-                        href: ./device-configuration/enterprise-sso-plugin.md
-                      - name: iOS/iPadOS Enterprise SSO plug-in
-                        displayName: single sign-on, ios, ipados
-                        href: ./device-configuration/settings-catalog/configure-enterprise-sso-plugin-ios.md
-                      - name: macOS SSO
-                        items:
-                          - name: Platform SSO
-                            items:
-                              - name: Platform SSO overview and configuration guide
-                                displayName: single sign-on, macos
-                                href: ./device-configuration/settings-catalog/configure-platform-sso-macos.md
-                              - name: Platform SSO scenarios
-                                displayName: single sign-on, macos
-                                href: ./device-configuration/settings-catalog/configure-platform-sso-scenarios-macos.md
-                          - name: Enterprise SSO app extension plug-in
-                            displayName: single sign-on, macos
-                            href: ./device-configuration/templates/configure-enterprise-sso-plugin-macos.md
-                  - name: LAPS
-                    href: ./device-security/laps/toc.yml
-
-              - name: Certificates and PKI
-                items:
-                  - name: Microsoft Cloud PKI
-                    href: ./cloud-pki/toc.yml
-                  - name: Certificates
-                    href: ./fundamentals/certificates/toc.yml
-
-              - name: Microsoft Tunnel VPN gateway
-                href: ./device-security/microsoft-tunnel/toc.yml
-
-              - name: Mobile Threat Defense partners
-                href: ./device-security/mobile-threat-defense/toc.yml
-                displayName: MTD
-
-              # Reference content
-
-              - name: Settings lists reference
-                items:
-                  - name: API to add third-party certificate authority
-                    href: ./fundamentals/certificates/ref-scep-api.md
-                  - name: Compliance policy settings
-                    items:
-                      - name: Compliance settings - Android device administrator
-                        href: ./device-security/compliance/ref-android-administrator-settings.md
-                      - name: Compliance settings - Android (AOSP)
-                        href: ./device-security/compliance/ref-android-aosp-settings.md
-                      - name: Compliance settings - Android Enterprise
-                        href: ./device-security/compliance/ref-android-enterprise-settings.md
-                      - name: Compliance settings - iOS
-                        href: ./device-security/compliance/ref-ios-ipados-settings.md
-                      - name: Compliance settings - Linux
-                        href: ./device-security/compliance/ref-linux-settings.md
-                      - name: Compliance settings - macOS
-                        href: ./device-security/compliance/ref-macos-settings.md
-                      - name: Compliance settings - Windows
-                        href: ./device-security/compliance/ref-windows-settings.md
-                      - name: Compliance settings - Windows 8.1
-                        href: ./device-security/compliance/ref-windows-8-1-settings.md
-
-                  - name: Endpoint security policy settings
-                    items:
-                      - name: Antivirus policy settings
-                        items:
-                          - name: macOS Defender Antivirus settings
-                            href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-macos.md
-                          - name: Windows Defender Antivirus settings
-                            href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows.md
-                          - name: Tenant attach Defender Antivirus settings
-                            href: ./device-configuration/endpoint-security/ref-antivirus-defender-settings-windows-tenant-attach.md
-                          - name: Tenant attach Windows Security settings
-                            href: ./device-configuration/endpoint-security/ref-windows-security-settings-tenant-attach.md
-                          - name: Windows Security experience settings
-                            href: ./device-configuration/endpoint-security/ref-security-experience-settings-windows.md
-                      - name: Disk encryption profile settings
-                        href: ./device-configuration/endpoint-security/ref-disk-encryption-settings.md
-                        displayName: AWA; Add Work Account
-                      - name: Firewall policy settings
-                        href: ./device-configuration/endpoint-security/ref-firewall-settings.md
-                      - name: Tenant attach Firewall settings
-                        href: ./device-configuration/endpoint-security/ref-firewall-settings-tenant-attach.md
-                      - name: Endpoint detection and response profile settings
-                        href: ./device-configuration/endpoint-security/ref-edr-settings.md
-                      - name: Attack surface reduction profile settings
-                        href: ./device-configuration/endpoint-security/ref-attack-surface-reduction-settings.md
-                      - name: Account protection profile settings
-                        href: ./device-configuration/endpoint-security/ref-account-protection-settings.md
-
-                  - name: Security baseline settings
-                    items:
-                      - name: Windows MDM baseline settings
-                        href: ./device-security/security-baselines/ref-windows-mdm-settings.md
-                      - name: Microsoft Defender for Endpoint baseline settings
-                        href: ./device-security/security-baselines/ref-defender-settings.md
-                      - name: Microsoft 365 Apps for Enterprise baseline settings (Office)
-                        href: ./device-security/security-baselines/ref-v2-office-settings.md
-                      - name: Microsoft Edge baseline settings (version 112 and higher)
-                        href: ./device-security/security-baselines/ref-v2-edge-settings.md
-                      - name: Microsoft Edge baseline settings (version 85 and older)
-                        href: ./device-security/security-baselines/ref-edge-settings.md
-                      - name: HoloLens 2 - Standard security baseline settings
-                        href: ./device-security/security-baselines/ref-hololens2-standard-settings.md
-                      - name: HoloLens 2 - Advanced security baseline settings
-                        href: ./device-security/security-baselines/ref-hololens2-advanced-settings.md
-                      - name: Windows 365 baseline settings
-                        href: ./device-security/security-baselines/ref-windows-365-settings.md
-
-                  - name: Microsoft Tunnel command-line tools
-                    href: ./device-security/microsoft-tunnel/ref-file-commands.md
-
-                  - name: Zero Trust security configuration examples
-                    href: ./device-security/security-configurations/toc.yml
-
-                  - name: Error codes and descriptions
-                    items:
-                      - name: Software update errors
-                        href: ./device-updates/windows/ref-agent-error-codes.md
-
-          - name: Configure devices
-            href: ./device-configuration/toc.yml
-
-          - name: Enroll devices in Microsoft Intune
-            href: ./device-enrollment/toc.yml
-
-          - name: Assign and deploy policies
-            items:
-              - name: Assign policies to users & groups
-                displayName: deploy, push, android, ios, ipados, macos, windows
-                href: ./device-configuration/assign-device-profile.md
-                items:
-                  - name: Assign apps to groups
-                    href: ./app-management/deployment/assign-groups.md
-                    displayName: app assignment, android, ios, ipados
-                  - name: Include and exclude apps
-                    href: ./app-management/deployment/configure-assignment-scope.md
-                    displayName: assign apps, app assignment, android, ios, ipados
-                  - name: Deploy Windows apps
-                    displayName: assign apps, app assignment, windows
-                    href: ./app-management/deployment/deploy-windows.md
-                  - name: Deploy apps to Government environments
-                    displayName: assign apps, app assignment, gcc, dod, windows
-                    href: ./app-management/deployment/deploy-gcc-dod.md
-              - name: Use assignment filters
-                href: ./fundamentals/filters/toc.yml
-              - name: Use policy sets to group policies together
-                displayName: android, ios, ipados, macos, windows
-                href: ./fundamentals/policy-sets.md
-              - name: Common questions and answers
-                displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
-                href: ./device-configuration/troubleshoot-device-profiles.md
-              - name: Troubleshoot policies and profiles
-                displayName: android, ios, ipados, macos, windows
-                href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?context=/intune/context
-
-      - name: Manage, maintain, and monitor Microsoft Intune
+      - name: Tenant administration
         items:
           - name: Tenant status and health
             href: ./governance/tenant-status.md
-          - name: Manage admin tasks
-            href: ./device-management/admin-tasks.md
+          - name: Audit logs for Intune activities
+            href: ./governance/monitor-audit-logs.md
+          - name: Review logs with Azure Monitor
+            href: ./governance/integrate-azure-monitor.md
           - name: Device cleanup rules
             href: ./governance/configure-cleanup-rules.md
 
-          - name: Endpoint analytics
-            href: ./endpoint-analytics/toc.yml
+      - name: Privacy and personal data
+        href: ./privacy/toc.yml
 
-          - name: Advanced Analytics
-            href: ./advanced-analytics/toc.yml
+  - name: Monitor and troubleshoot
+    topicHref: ./monitor-troubleshoot.yml
+    items:
+      - name: Endpoint analytics
+        href: ./endpoint-analytics/toc.yml
 
-          - name: View reports and monitor status
-            items:
-              - name: Reports
-                items:
-                  - name: Intune reports
-                    href: ./device-management/reports/overview.md
-                  - name: Export reports using Graph
-                    href: ./device-management/reports/export-graph-apis.md
-                  - name: Intune reports and properties using Graph
-                    href: ./device-management/reports/ref-graph-available-reports.md
-                  - name: Use the Intune Data Warehouse
-                    href: ./developer/data-warehouse/create-reports.md
-              - name: Monitor
-                items:
-                  - name: Audit logs for Intune activities
-                    href: ./governance/monitor-audit-logs.md
-                  - name: Review logs with Azure Monitor
-                    href: ./governance/integrate-azure-monitor.md
-                  - name: Device configuration profile status
-                    href: ./device-configuration/monitor-device-profile.md
+      - name: Advanced Analytics
+        href: ./advanced-analytics/toc.yml
 
-          - name: Get device details
-            items:
-              - name: Find the primary user
-                href: ./device-management/inventory-and-status/find-primary-user.md
-              - name: View device details
-                href: ./device-management/inventory-and-status/device-details.md
-              - name: View ChromeOS device information
-                href: ./device-management/inventory-and-status/chrome-enterprise-details.md
+      - name: Remote Help
+        href: ./remote-help/toc.yml
 
-          - name: Device actions
-            href: ./device-management/actions/toc.yml
-
-      - name: Support your users
+      - name: Get help
         items:
-          - name: Use the Help Desk users operator role
-            href: ./fundamentals/it-pro-support/help-desk-operators.md
-          - name: Remote Help with ServiceNow integration
-            href: ./device-management/tools/setup-servicenow.md
-          - name: Remote Help with the Intune Suite
-            href: ./remote-help/index.md
-          - name: Use the TeamViewer integration
-            href: ./device-management/tools/setup-teamviewer.md
-          - name: TeamViewer for remote administration (old)
-            href: ./device-management/tools/teamviewer-legacy.md
-          - name: Remediations that fix common support issues
-            items:
-              - name: Use Remediations
-                href: ./device-management/tools/deploy-remediations.md
-              - name: Powershell scripts for Remediations
-                href: ./device-management/tools/ref-remediation-scripts.md
-          - name: Using the Intune docs
-            href: ./fundamentals/use-docs.md
           - name: Get support in the Intune admin center
             href: ./fundamentals/it-pro-support/get-support-admin-center.md
+          - name: Help Desk operator role
+            href: ./fundamentals/it-pro-support/help-desk-operators.md
           - name: Troubleshoot issues
             href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
+          - name: User help documentation
+            href: /intune/user-help
+            displayName: company portal, device user
 
-      - name: Industry guides
+  - name: Develop and automate
+    href: ./developer/toc.yml
+    topicHref: ./developer/index.yml
+
+  - name: Industry and scenario guides
+    items:
+      - name: Education
+        href: ./solutions/education/toc.yml
+
+      - name: Government
         items:
-          - name: Education
-            href: ./solutions/education/toc.yml
+          - name: Intune US Government service description
+            href: ./fundamentals/government-service.md
+          - name: Intune US government endpoints
+            href: /intune/fundamentals/endpoints-us-government
 
-          - name: Government
-            items:
-              - name: Intune US Government service description
-                href: ./fundamentals/government-service.md
-              - name: Intune US government endpoints
-                href: ./fundamentals/endpoints-us-government.md
-              - name: Deploy apps to Government environments
-                href: ./app-management/deployment/deploy-gcc-dod.md
-
-          - name: China
-            items:
-              - name: Intune operated by 21Vianet in China
-                href: ./fundamentals/china.md
-              - name: China endpoints
-                href: ./fundamentals/endpoints-china.md
+      - name: China
+        items:
+          - name: Intune operated by 21Vianet in China
+            href: ./fundamentals/china.md
+          - name: China endpoints
+            href: /intune/fundamentals/endpoints-china
 
       - name: Scenario-based guidance
-        items:
-          - name: Passwordless authentication
-            href: ./solutions/passwordless.md
-          - name: Manage AI on Android
-            href: ./solutions/ai/manage-ai-android.md
-          - name: Manage operating system versions
-            href: ./device-updates/manage-os-versions.md
-          - name: Frontline worker (FLW) device management
-            displayName: android, ios, ipados, windows, kiosk
-            href: ./solutions/frontline-worker/toc.yml
-          - name: Cloud native endpoints
-            href: ./solutions/cloud-native-endpoints/toc.yml
-          - name: End-to-end macOS endpoint guide
-            href: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
-          - name: Create settings catalog policy and compare with on-premises ADMX
-            href: ./device-configuration/settings-catalog/tutorial-group-policy-migration.md
-            displayName: admx, administrative template, windows, gpo
-
-          - name: "Zero Trust: Manage devices with Intune 🔗"
-            href: /microsoft-365/solutions/manage-devices-with-intune-overview
-
-          - name: Secure your corporate data using Edge for Business
-            href: ./solutions/edge-data-security/toc.yml
-
-      - name: Developer guidance
-        href: ./developer/toc.yml
-
-      - name: User help documentation
-        href: /intune/user-help
-        displayName: end user
-
-      - name: Privacy and compliance
-        href: /intune/privacy-compliance
-        displayName: GDPR, HIPAA, SOC, ISO
-
-      - name: Microsoft Intune service description
-        href: ./fundamentals/service-description.md
+        href: ./solutions/toc.yml

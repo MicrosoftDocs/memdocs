@@ -31,8 +31,8 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 :::column span="3":::
 > To configure device cleanup rules, use an account with at least one of the following roles:
 >
-> - Intune Service Administrator
-> - [Custom role][INT-RC] that includes:
+> - [Intune Administrator]
+> - [Custom role] that includes:
 >   - The permission **Managed Device Cleanup Rules/Update**
 >   - The permission **Managed Device Cleanup Settings/Update**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
@@ -42,7 +42,8 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
 ## How to create a device cleanup rule
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Organize devices** > **Device cleanup rules**.
+1. In the [Microsoft Intune admin center], select [**Devices**].
+1. Under **Organize devices**, select [**Device cleanup rules**].
 1. Select **Create**.
 1. In **Basics**, enter the following properties:
 
@@ -83,18 +84,16 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
 ## Device cleanup rules logging
 
-The [Intune audit logs](./monitor-audit-logs.md) show the devices hidden by the device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*Your Rule Name*]**.
+Intune audit logs show the devices hidden by the device cleanup rules. In the logs, filter by **Activity name** > **Device set to be hidden from admin by Device Cleanup Rule [*Your Rule Name*]**.
 
-<!--links-->
+For more information, see [Monitor audit logs in Intune](./monitor-audit-logs.md). 
 
-<!-- admin center links -->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+[**Device cleanup rules**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/deviceCleanUp
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
 
-<!-- role links -->
+<!-- Role links-->
 
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator

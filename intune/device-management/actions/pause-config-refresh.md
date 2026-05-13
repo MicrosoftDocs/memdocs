@@ -49,15 +49,15 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Intune Administrator][ENT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Intune Administrator]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Run Pause Configuration Refresh**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to pause Config Refresh from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Pause Config Refresh**.
 1. Specify the number of minutes to pause Config Refresh in the **Time period to Pause Config Refresh**. The maximum is 1,440 minutes (24 hours).
@@ -71,14 +71,24 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 - Microsoft Graph API: [pauseConfigurationRefresh action][GRAPH-1] in the Microsoft Graph API documentation.
 - Configuration service provider (CSP) used to initiate the action: [DMClient CSP][CSP-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!--Role links-->
+
+[Intune Administrator]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+<!--Graph API links-->
+
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-pauseconfigurationrefresh
+
+<!--Other links-->
 
 [CSP-1]: /windows/client-management/mdm/dmclient-csp#deviceproviderprovideridconfigrefresh
 [LEARN-1]: /windows/security/book/operating-system-security-system-security#-config-refresh
+
 

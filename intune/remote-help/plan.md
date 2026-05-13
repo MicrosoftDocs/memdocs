@@ -34,7 +34,7 @@ Follow this checklist to streamline your planning process.
 - Prerequisites  
 - Limitations  
 - Known issues  
-- Enrolled and or unenrolled devices  
+- Enrolled or unenrolled devices  
 
 ## Planning considerations  
 
@@ -104,7 +104,7 @@ To use Remote Help, helpers must have the appropriate role based access control 
 |Remote Help - View screen|Allows the helper to view the sharer's screen without taking control.|
 |Remote Help - Take full control|Allows the helper to take full control of the sharer's device.|
 |Remote Help - Elevation|Allows the helper to interact with the user account control prompts on Windows.|
-|Remote Help - Unattended| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.|
+|Remote Help - Unattended| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a dedicated device.|
 |Remote Tasks - Offer remote assistance| Allows the helper to offer remote assistance to users.|
 |Remote Assistance Connector - Read|Required to allow the user to see if Remote Help is configured for the tenant when starting a session.|
 

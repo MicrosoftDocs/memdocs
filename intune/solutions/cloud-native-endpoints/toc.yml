@@ -1,7 +1,7 @@
 items:
 - name: Windows in cloud configuration
   items:
-  - name: Overview
+  - name: Cloud configuration overview
     displayName: cloud config, flw, windows
     href: cloud-configuration.md
   - name: Step-by-step guide
@@ -9,7 +9,7 @@ items:
     href: setup-cloud-configuration.md
 - name: Move to cloud native endpoints
   items:
-  - name: Overview and benefits
+  - name: Cloud native endpoints overview
     displayName: cloud native endpoints, windows
     href: overview.md
   - name: Tutorial-Get started with cloud native Windows endpoints
