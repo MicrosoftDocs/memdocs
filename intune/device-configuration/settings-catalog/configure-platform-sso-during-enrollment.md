@@ -122,6 +122,8 @@ The Company Portal for macOS deploys and installs the Microsoft Enterprise SSO p
 3. Make it a required app and assign it to the same groups as the Platform SSO policy you created or updated in [Step 1](#step-1---create-or-update-the-platform-sso-settings-catalog-policy).
 
 When Intune detects the Company Portal as a deployed policy, it sends the Company Portal with priority in the enrollment process.
+Clean up the App bundle ID that are not related to Company Portal, make sure only com.microsoft.CompanyPortalMac as the relevant App bundle ID is kept. 
+<img width="668" height="617" alt="image" src="https://github.com/user-attachments/assets/2d0be29b-3eb9-4c94-b7f9-411d2e22b960" />
 
 ## Step 3 - Set up enrollment profile and configure await final configuration
 
