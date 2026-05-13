@@ -62,7 +62,7 @@ The Service Connection Tool (SCT) is improved to provide better logging and erro
 
 ### Microsoft ODBC redistributable
 - The Microsoft ODBC redistributable component is updated to version **18.4.1.1** on all Site servers and Management Points.
- - ConfigMgrPreReq throws an error stalling the upgrade if it detects a version lower than 18.4.4.1.
+ - ConfigMgrPreReq throws an error stalling the upgrade if it detects a version lower than 18.4.1.1.
     
     > INFO: Microsoft ODBC Driver 18 for SQL Server is installed but it is older than the required version.  
     > SQL client prerequisite missing for Configuration Manager setup.;    Error;    Install the Microsoft ODBC driver 18 for SQL setup from https://go.microsoft.com/fwlink/?linkid=2299909. More information https://go.microsoft.com/fwlink/?linkid=2226618
