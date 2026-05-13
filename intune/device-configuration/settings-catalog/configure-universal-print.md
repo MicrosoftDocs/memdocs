@@ -1,7 +1,7 @@
 ---
 title: "Configure Universal Print Policy Using Settings Catalog"
 description: Learn how to configure a Universal Print policy using the settings catalog in Microsoft Intune to automatically install printers on managed Windows devices.
-ms.date: 04/30/2026
+ms.date: 05/13/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav
 ms.collection:
@@ -151,9 +151,9 @@ For information on the reporting data you can view, see [Intune reports](../../d
 
 ### Enable tracing for Universal Print issues
 
-If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use TSS (Troubleshooting Script for Support) together with `UPPrinterInstaller.exe` to capture client-side traces for the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.
 
-For more information and specific steps, see [Universal Print troubleshooting guide - Use PrintCollect, Fiddler, and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-printcollect-fiddler-and-upprinterinstaller).
+For more information and specific steps, see [Universal Print troubleshooting guide - Use TSS and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-tss-and-upprinterinstaller).
 
 ## Related articles
 
