@@ -25,7 +25,7 @@ All discovery scripts:
   - Each discovery script can only be used with one compliance policy, and each compliance policy can only include one discovery script.
   - You can't delete discovery scripts that are assigned to a compliance policy until you unassign the script from the policy.
 - Run on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload when creating a custom compliance policy.
-- Identify one or more settings, as defined in the JSON, and return a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
+- Identify one or more settings, as defined in the JSON, and return a list of discovered values for those settings.
 
 In addition, the PowerShell script for Windows:
 

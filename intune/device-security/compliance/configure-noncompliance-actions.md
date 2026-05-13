@@ -13,7 +13,7 @@ ms.collection:
 
 # Configure actions for noncompliant devices in Intune
 
-As part of a [compliance policy](./overview.md) that protects your organization's resources from devices that don't meet your security requirements, compliance policies include *actions for noncompliance*. These actions are one or more time-ordered steps that a policy takes to help protect devices and your organization. For example, an action for noncompliance can remotely lock a device to ensure it's protected, or send a notification to devices or users to help them understand and resolve the noncompliant status.
+Compliance policies can include *actions for noncompliance*, which are steps the policy takes on a schedule when it detects a device isn't meeting your security requirements. For example, a policy can remotely lock a noncompliant device to help protect it, or send a notification to users so they can understand and resolve the issue.
 
 [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
