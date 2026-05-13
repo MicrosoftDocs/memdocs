@@ -42,7 +42,7 @@ With integration complete and the partner policy in place, you can then create I
 
 5. On **Compliance settings**, expand and configure **Device Health**. Choose a threat-level from the drop-down list for **Require the device to be at or under the Device Threat Level**.
 
-   - **Secured**: This level is the most secure. The device can't have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
+   - **Clear**: This level is the most secure. The device can't have any threats present and still access company resources. If any threats are found, the device is evaluated as noncompliant.
 
    - **Low**: The device is compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
 

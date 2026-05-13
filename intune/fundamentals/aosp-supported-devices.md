@@ -3,7 +3,7 @@ title: Android Open Source Project Supported Devices
 description: Lists Android open source project devices (AOSP) supported devices
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 05/12/2025
+ms.date: 05/13/2026
 ms.topic: reference
 ms.reviewer: Priyar
 ms.collection:
@@ -25,6 +25,7 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
 | DigiLens Inc.| DigiLens ARGO    | DigiOS 2068 (B1.0001.2068)            | AR/VR Headset  |                    |
+| HMD     | Cupra              | 1.220                | Phone          |                    |
 | HTC     | HTC Vive Focus 3   | 5.2 - 5.0.999.624    | AR/VR Headset  |                    |
 | HTC     | HTC Vive XR Elite  | 4.0 - 1.0.999.350    | AR/VR Headset  |                    |
 | HTC     | Vive Focus Vision   | 7.0.999.159    | AR/VR Headset  |                    |
