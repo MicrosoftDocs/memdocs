@@ -108,7 +108,7 @@ Intune is available with different subscriptions, including as a stand-alone ser
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Determine your license needs**
 
-Microsoft Intune is available for different organization sizes and needs. It offers a simple-to-use management experience for schools and small businesses, and more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune (unless you select to allow unlicensed admins).
+Microsoft Intune is available for different organization sizes and needs. It offers a simple-to-use management experience for schools and small businesses, and more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune unless [unlicensed admin access](./licensing/unlicensed-admins.md) is available. Tenants created after July 2021 support unlicensed admins by default.
 
 For guidance, see [Microsoft Intune licensing](./licensing/index.md).
 
@@ -121,7 +121,7 @@ For guidance, see [Assign licenses](./licensing/assign-licenses.md).
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Unlicensed admins**
 
-You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, Microsoft Entra administrators, and so on.
+Intune supports unlicensed administrator access, which lets administrators manage Intune without an assigned Intune license. Tenants created after July 2021 have this enabled by default. Tenants created before July 2021 can enable it manually. This feature applies to any administrator, including Intune administrators, Microsoft Entra administrators, and so on.
 
 For guidance, see [Unlicensed admins](./licensing/unlicensed-admins.md).
 

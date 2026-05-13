@@ -33,9 +33,9 @@ The *update cellular data plan* action lets you remotely activate an eSIM cellul
 :::column span="3":::
 > To run this action, at a minimum, use an account that has one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Update cellular data plan**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
@@ -43,10 +43,10 @@ The *update cellular data plan* action lets you remotely activate an eSIM cellul
 
 ## How to run update the cellular data plan from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Update cellular data plan (preview)**.
-    ![Screenshot of updating cellular data plan](media/update-cellular-data-plan/update-cellular-data-plan.png)
+    ![Intune admin center showing the Update cellular data plan action with an activation server URL field](media/update-cellular-data-plan/update-cellular-data-plan.png)
 1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
 
 ## User experience
@@ -62,20 +62,19 @@ For more information about devices that support eSIM, see the Apple support arti
 
 - Microsoft Graph API: [activateDeviceEsim action][GRAPH-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
-<!-- admin center links -->
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+<!--Role links-->
 
-<!-- role links -->
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
 
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-activateDeviceEsim

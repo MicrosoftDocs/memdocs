@@ -1,5 +1,5 @@
 items:
-  - name: Overview
+  - name: Mobile Threat Defense overview
     href: ./overview.md
   - name: MTD on unenrolled devices
     items:

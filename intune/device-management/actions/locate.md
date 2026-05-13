@@ -10,7 +10,7 @@ zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
 
 The *locate device* device action in Microsoft Intune enables IT administrators to pinpoint the physical location of managed devices when they are lost, stolen, or simply misplaced. This feature is especially valuable in organizations where devices are distributed across multiple sites or used by mobile users. By triggering the Locate device action from the Intune admin center, admins can view the device's location on a map, helping accelerate recovery, reduce downtime, and improve compliance.
 
-Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](play-lost-mode-sound.md), or [display custom messages](lost-mode.md).
+Depending on the platform, Intune can also report the last known location if the device is offline, [play a sound to locate lost devices](play-lost-mode-sound.md), or [enable lost mode to display custom messages on devices](lost-mode.md).
 
 ## Prerequisites
 
@@ -93,9 +93,9 @@ For more information about device restrictions, see [Android template device set
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 >
@@ -113,7 +113,7 @@ For more information about device restrictions, see [Android template device set
 :::row-end:::
 ## Locate a device
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Locate device**.
 1. After the device is located, its location is shown in **Locate device**. You can select the location pin on the map to view a location address and coordinates.
@@ -125,7 +125,7 @@ For more information about device restrictions, see [Android template device set
 
 ::: zone-end
 
-   ![Screenshot of Locate device using Intune in Azure](media/locate/locate-device.png)
+   ![Map view showing the located device position with address and coordinates in the Intune admin center](media/locate/locate-device.png)
 
 ::: zone pivot="android"
 
@@ -163,18 +163,22 @@ Intune is designed to respect user privacy while providing powerful device manag
 ## Reference links
 
 - Microsoft Graph API:
-  - [locateDevice action][GRAPH-1]
-  - [playLostModeSound action][GRAPH-2]
+  - [locateDevice action]
+  - [playLostModeSound action]
 
-<!--links-->
+<!--Intune admin center links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-[INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
+<!--Role links-->
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-locatedevice
-[GRAPH-2]: /graph/api/intune-devices-manageddevice-playlostmodesound
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+
+<!--Graph API links-->
+
+[locateDevice action]: /graph/api/intune-devices-manageddevice-locatedevice
+[playLostModeSound action]: /graph/api/intune-devices-manageddevice-playlostmodesound

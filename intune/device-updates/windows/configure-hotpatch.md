@@ -24,7 +24,7 @@ You can configure if hotpatch is enabled for you devices using either a tenant l
 
 ## Prerequisites
 
-Hotpatch has the same [prerequisites](manage-quality-updates.md#prerequisites) as Windows quality update policies. This section highlights additional prerequisites specific to hotpatch.
+Hotpatch has the same prerequisites as Windows quality update policies. See [Quality update prerequisites](manage-quality-updates.md#prerequisites). This section highlights additional prerequisites specific to hotpatch.
 
 :::row:::
 :::column span="1":::
@@ -52,7 +52,7 @@ Hotpatch has the same [prerequisites](manage-quality-updates.md#prerequisites) a
 >
 > Path: `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management DWORD key value: HotPatchRestrictions=1`
 >
-> To learn more about CHPE, see [here](/windows/win32/winprog64/wow64-implementation-details)
+> To learn more about CHPE, see [WOW64 implementation details](/windows/win32/winprog64/wow64-implementation-details)
 >
 > > [!NOTE]
 > > There are no plans to support hotpatch updates on Arm64 devices with CHPE enabled. Disabling CHPE is required only for Arm64 devices. AMD and Intel CPUs don't have CHPE.
@@ -98,7 +98,7 @@ Hotpatch updates are similar between Windows 11 and Windows Server 2025.
 - Windows Autopatch manages Windows 11 updates
 - Azure Update Manager and optional Azure Arc subscription for Windows 2025 Datacenter/Standard Editions (on-premises) manages Windows Server 2025 Datacenter Azure Edition.
 
-The calendar dates, eight hotpatch months, and four baseline months, planned each year are the same for all the hotpatch-supported operating systems. It's possible for additional baseline months for one OS (for example, Windows Server 2022), while there are hotpatch months for another OS, such as Server 2025 or Windows 11, version 24H2. Review the release notes from [Windows release health](/windows/release-health/) to keep up to date.
+The calendar dates, eight hotpatch months, and four baseline months, planned each year are the same for all the hotpatch-supported operating systems. It's possible for additional baseline months for one OS (for example, Windows Server 2022), while there are hotpatch months for another OS, such as Server 2025 or Windows 11, version 24H2. Review the release notes at [Windows release health](/windows/release-health/).
 
 ## Enroll devices to receive hotpatch updates
 
@@ -131,7 +131,7 @@ To enroll devices to receive hotpatch updates:
 1. Assign the devices to the policy and select **Next**.
 1. Review the policy and select **Create**.
 
-These steps ensure that targeted devices, which are [eligible](#prerequisites) to receive hotpatch updates, are configured properly. [Ineligible devices](#ineligible-devices) are offered the latest cumulative updates (LCU).
+These steps ensure that targeted devices that meet the eligibility criteria are configured properly. See [Prerequisites](#prerequisites). Ineligible devices are offered the latest cumulative updates (LCU). See [What makes a device ineligible](#ineligible-devices).
 
 > [!NOTE]
 > Turning on hotpatch updates doesn't change the existing deadline-driven or scheduled install configurations on your managed devices. Deferral and active hour settings still apply.

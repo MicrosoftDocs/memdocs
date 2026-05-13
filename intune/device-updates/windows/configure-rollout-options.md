@@ -76,7 +76,7 @@ After the profile deploys, devices that use gradual rollouts for feature update 
 
 ## Likely issue safeguard holds
 
-The **Allow Windows Update for Business Cloud Processing** setting also enables Autopatch to apply *likely issue* safeguard holds. For background information, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook).
+The **Allow Windows Update for Business Cloud Processing** setting also enables Autopatch to apply *likely issue* safeguard holds. For background information about safeguard holds, see [Safeguard holds in Windows Update for Business reports](/windows/deployment/update/wufb-reports-workbook).
 
 As a rollout progresses, Autopatch monitors for unexpected issues using signals from the broader Windows ecosystem. When a device is likely to encounter an issue with the update, Autopatch can apply a likely issue safeguard hold to pause the update for that device.
 

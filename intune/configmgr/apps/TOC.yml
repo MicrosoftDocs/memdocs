@@ -41,7 +41,7 @@ items:
     - name: Deploy applications
       href: deploy-use/deploy-applications.md
     - name: Create a phased deployment
-      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
+      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Approve applications
       href: deploy-use/app-approval.md
     - name: Install applications for a device
@@ -59,13 +59,13 @@ items:
     - name: Disable and delete app deployments
       href: deploy-use/disable-delete-deployments.md
     - name: Troubleshooting tips for app deployment
-      href: /troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
+      href: /troubleshoot/mem/configmgr/troubleshoot-application-deployment?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
   - name: Monitor applications
     items:
     - name: Monitor applications from the console
       href: deploy-use/monitor-applications-from-the-console.md
     - name: Manage and monitor phased deployments
-      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
+      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Monitor app usage with software metering
       href: deploy-use/monitor-app-usage-with-software-metering.md
   - name: Manage applications
@@ -104,25 +104,25 @@ items:
   - name: Troubleshoot application deployments
     items:
     - name: Before you begin
-      href: understand/app-deployment-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/app-deployment-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application deployment policy
-      href: understand/deployment-policy-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/deployment-policy-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application deployment for devices
-      href: understand/device-deployment-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/device-deployment-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application deployment for users
-      href: understand/user-deployment-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/user-deployment-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application deployment client components
-      href: understand/client-components-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/client-components-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application evaluation
-      href: understand/deployment-evaluation-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/deployment-evaluation-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application download
-      href: understand/deployment-download-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/deployment-download-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Application installation
-      href: understand/deployment-install-technical-reference.md
+      href: /troubleshoot/mem/configmgr/app-management/understand/deployment-install-technical-reference?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
     - name: Common error codes for application installation
-      href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
+      href: ../tenant-attach/app-install-error-reference.md?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Microsoft Store for Business and Education integration
-    href: /troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json
+    href: /troubleshoot/mem/configmgr/troubleshoot-microsoft-store-for-business-integration?toc=/intune/configmgr/apps/toc.json&bc=/intune/configmgr/apps/breadcrumb/toc.json
   - name: Troubleshoot Package Conversion Manager
     items:
     - name: Troubleshoot Package Conversion Manager

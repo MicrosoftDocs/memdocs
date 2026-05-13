@@ -31,9 +31,36 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 ## Prerequisites
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - iOS/iPadOS
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
+> - [An Apple MDM push certificate](create-mdm-push-certificate.md)
+
+:::column-end:::
+:::row-end:::
+
+You also need:
+
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
-- [An Apple MDM push certificate](create-mdm-push-certificate.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
 - macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
@@ -41,7 +68,7 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 ## Create an Apple Configurator profile for devices
 
-A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.
+A device enrollment policy defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment policy to enroll iOS/iPadOS devices with Apple Configurator.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Devices**.
@@ -49,9 +76,9 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Go to **Profiles** > **Create**.
-1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).
+1. Under **Create Enrollment Policy**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment policy. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).
 
-    :::image type="content" source="./media/setup-configurator-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
+    :::image type="content" source="./media/setup-configurator-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment policy pane with the Basics tab selected.":::
 
 1. Select **Next** to go to the **Settings** page.
 
@@ -64,9 +91,9 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 ## Create a device group
 You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../../fundamentals/tenant-administration/add-groups.md).
 
-Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name.
+Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment policy name.
 
-Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Apple corporate-owned, userless enrollment profile.
+Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Apple corporate-owned, userless enrollment policy.
 
 1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **All groups** > **New group**.
 2. Enter the required fields as follows:
@@ -78,7 +105,7 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
     - **Add dynamic membership rule**: Simple rule
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
-    - In the last field, enter the enrollment profile name that you created in [Create an Apple Configurator profile for devices](#create-an-apple-configurator-profile-for-devices).
+    - In the last field, enter the enrollment policy name that you created in [Create an Apple Configurator profile for devices](#create-an-apple-configurator-profile-for-devices).
 
     For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 5. Choose **Add query** > **Create**.
@@ -93,7 +120,7 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
     - Choose either the SCEP or the ACME profile based on your operating system.
 1. Select **Export Profile**.
 1. Copy the **Profile URL**. You can then add it in Apple Configurator to define the Intune profile used by iOS/iPadOS devices.
-1. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment profile file is only valid for two weeks at which time you must re-create it.
+1. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment policy file is only valid for two weeks at which time you must re-create it.
 1. Transfer the file to a Mac computer running [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to push directly as a management profile to iOS/iPadOS devices.
 1. Prepare the device with Apple Configurator by using the following steps:
     1. On a Mac computer, open Apple Configurator 2.0.

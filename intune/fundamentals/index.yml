@@ -1,0 +1,172 @@
+### YamlMime:Landing
+
+title: Fundamentals
+summary: Learn about Microsoft Intune architecture, licensing, setup, and shared infrastructure that supports all Intune workloads.
+
+metadata:
+  title: Fundamentals
+  description: Get started with Microsoft Intune — architecture, licensing, tenant setup, RBAC, certificates, filters, and platform support.
+  ms.topic: landing-page
+  ms.date: 05/04/2026
+  author: paolomatarazzo
+  ms.author: paoloma
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+
+  - title: Get started
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: What is Microsoft Intune?
+        url: what-is-intune.md
+      - text: Get started with Intune
+        url: get-started.md
+      - text: Try and evaluate Intune
+        url: try-overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Sign up for a free trial
+        url: free-trial-sign-up.md
+      - text: Sign up or sign in to Intune
+        url: account-sign-up.md
+    - linkListType: tutorial
+      links:
+      - text: Walk through the admin center
+        url: tutorial-admin-center-walkthrough.md
+
+  - title: Set up your tenant
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Set the MDM authority
+        url: setup-mdm-authority.md
+      - text: Configure a custom domain name
+        url: configure-custom-domain.md
+    - linkListType: quickstart
+      links:
+      - text: Create a user
+        url: tenant-administration/quickstart-create-user.md
+      - text: Create a group
+        url: tenant-administration/quickstart-create-group.md
+    - linkListType: concept
+      links:
+      - text: Identity management
+        url: tenant-administration/identities.md
+
+  - title: Plan and deploy
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Planning guide
+        url: planning-guide.md
+      - text: Architecture overview
+        url: architecture.md
+      - text: Zero Trust with Intune
+        url: zero-trust.md
+    - linkListType: deploy
+      links:
+      - text: Set up Intune (step 1)
+        url: deploy-setup-step-1.md
+      - text: Protect apps and data (step 2)
+        url: deploy-protect-apps-step-2.md
+      - text: Set up migration
+        url: setup-migration.md
+
+  - title: Licensing and add-ons
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Microsoft Intune licensing
+        url: licensing/index.md
+      - text: Intune Suite add-on capabilities
+        url: add-ons.md
+    - linkListType: how-to-guide
+      links:
+      - text: Assign licenses to users
+        url: licensing/assign-licenses.md
+      - text: Allow unlicensed admins
+        url: licensing/unlicensed-admins.md
+
+  - title: Role-based access control
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: RBAC overview
+        url: role-based-access-control/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure multi admin approval
+        url: role-based-access-control/multi-admin-approval.md
+      - text: Create a custom role
+        url: role-based-access-control/create-custom-role.md
+      - text: Assign roles
+        url: role-based-access-control/assign-role.md
+      - text: Use scope tags
+        url: role-based-access-control/scope-tags.md
+    - linkListType: reference
+      links:
+      - text: Built-in role permissions
+        url: role-based-access-control/ref-built-in-roles.md
+
+  - title: Assignment filters
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Filters overview
+        url: filters/overview.md
+    - linkListType: reference
+      links:
+      - text: Supported workloads
+        url: filters/ref-supported-workloads.md
+      - text: Device properties reference
+        url: filters/ref-device-properties.md
+    - linkListType: how-to-guide
+      links:
+      - text: Troubleshoot filters
+        url: filters/troubleshoot.md
+
+  - title: Certificate infrastructure
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Certificate connectors overview
+        url: certificates/connector/overview.md
+    - linkListType: concept
+      links:
+      - text: Certificate connectors
+        url: certificates/connector/certificate-connectors.md
+      - text: SCEP infrastructure
+        url: certificates/scep-infrastructure.md
+    - linkListType: how-to-guide
+      links:
+      - text: Connector prerequisites
+        url: certificates/connector/prerequisites.md
+      - text: Set up the certificate connector
+        url: certificates/connector/setup-connector.md
+      - text: Use third-party CAs with SCEP
+        url: certificates/third-party-ca-scep.md
+
+  - title: Platform support and endpoints
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Supported operating systems
+        url: ref-supported-platforms.md
+      - text: AOSP supported devices
+        url: aosp-supported-devices.md
+      - text: Network endpoints
+        url: endpoints.md
+      - text: U.S. government endpoints
+        url: endpoints-us-government.md
+    - linkListType: deploy
+      links:
+      - text: iOS/iPadOS platform guide
+        url: platform-guide-ios-ipados.md
+      - text: Android platform guide
+        url: platform-guide-android.md
+      - text: macOS platform guide
+        url: platform-guide-macos.md
