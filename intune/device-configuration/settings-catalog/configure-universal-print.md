@@ -1,7 +1,7 @@
 ---
 title: "Configure Universal Print Policy Using Settings Catalog"
 description: Learn how to configure a Universal Print policy using the settings catalog in Microsoft Intune to automatically install printers on managed Windows devices.
-ms.date: 04/30/2026
+ms.date: 05/13/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav
 ms.collection:
