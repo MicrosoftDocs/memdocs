@@ -1,13 +1,14 @@
 ---
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Intune admin center
 description: Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center.
-ms.date: 03/21/2022
+ms.date: 05/13/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.subservice: core-infra
 ms.collection: tier3
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center
+# Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
@@ -17,9 +18,9 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 [!INCLUDE [Prerequisites for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-prerequisties.md)]
 - [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../device-security/microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune)
-- Client which meets the minimum requirements for, and is onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement & MAX 6198973-->
+- Client which meets the [minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements#licensing-requirements) and is onboarded.<!--Adding MDE License Requirement & MAX 6198973-->
 
-## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies
+## Create Microsoft Defender for Endpoint policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -36,7 +37,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. The onboarding package is automatically included and isn’t something you can configure.
 
-   When your done configuring settings, select **Next**.
+   When you're done configuring settings, select **Next**.
 
 1. On the **Assignments** page, select the collections that will receive this policy. Select collections from Configuration Manager that you’ve synced to Microsoft Intune admin center and enabled for Microsoft Defender for Endpoint policy.
 
