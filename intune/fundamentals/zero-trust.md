@@ -4,7 +4,7 @@ description: Microsoft Intune contributes to a strong Zero Trust strategy and ar
 author: brenduns
 ms.author: brenduns
 ms.date: 02/24/2026
-ms.topic: conceptual
+ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.collection:
