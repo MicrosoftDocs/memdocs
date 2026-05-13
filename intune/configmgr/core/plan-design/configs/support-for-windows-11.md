@@ -40,11 +40,11 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2409 | ConfigMgr 2503|ConfigMgr 2509 | 
-|--------------------------------------------|----------------|----------------|----------------|
-| **25H2**<br>(10.0.26200) <!--2027-10-12--> |❌ | ❌ | ✅ |
-| **24H2**<br>(10.0.26100) <!--2027-10-12--> |✅ |✅ | ✅ |
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ✅ | ✅ | ✅ |
+| Windows 11 version                         | ConfigMgr 2409 | ConfigMgr 2503 | ConfigMgr 2509 | ConfigMgr 2603 |
+|--------------------------------------------|----------------|----------------|----------------|----------------|
+| **25H2**<br>(10.0.26200) <!--2027-10-12--> | ❌ | ❌ | ✅ | ✅ |
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ✅ | ✅ | ✅ | ✅ |
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ✅ | ✅ | ✅ | ✅ |
 
 
 <!--
