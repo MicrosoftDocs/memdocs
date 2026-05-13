@@ -23,7 +23,7 @@ This feature applies to:
 This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, see [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started).
 
 > [!TIP]
-> The __PrintProvisioning__ tool and the __printers.csv__ file process are deprecated. Be sure to use the steps in this article to install universal printers.
+> The __PrintProvisioning__ tool and the __printers.csv__ file process are deprecated. Be sure to use the steps in this article to install Universal Print printers.
 
 ## Prerequisites
 
@@ -90,7 +90,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select **Printer Provisioning**, and select the settings you want to configure.
 
-    :::image type="content" source="./media/configure-universal-print/settings-picker-printer-provisioning.png" alt-text="Screenshot that shows how to select printer provisioning in the settings catalog to create a universal print policy in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/configure-universal-print/settings-picker-printer-provisioning.png" alt-text="Screenshot that shows how to select printer provisioning in the settings catalog to create a Universal Print policy in Microsoft Intune and Intune admin center.":::
 
     Close the settings picker.
 
@@ -103,7 +103,7 @@ This policy includes your printer information. When you assign the policy, the p
 
     You can add more printers using the **Add** button:
 
-    :::image type="content" source="./media/configure-universal-print/add-printer.png" alt-text="Screenshot that shows how to add more printers to the universal print policy in the settings catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/configure-universal-print/add-printer.png" alt-text="Screenshot that shows how to add more printers to the Universal Print policy in the settings catalog in Microsoft Intune and Intune admin center.":::
 
 9. Select **Next**.
 
@@ -151,7 +151,7 @@ For information on the reporting data you can view, see [Intune reports](../../d
 
 ### Enable tracing for Universal Print issues
 
-If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use TSS (Troubleshooting Script for Support) together with `UPPrinterInstaller.exe` to capture client-side traces for the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use TSS (Troubleshooting Script for Support) together with `UPPrinterInstaller.exe` to capture client-side traces for the Intune installation of the Universal Print printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.
 
 For more information and specific steps, see [Universal Print troubleshooting guide - Use TSS and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-tss-and-upprinterinstaller).
 

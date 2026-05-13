@@ -1,7 +1,7 @@
 ---
 title: Add Platform SSO policy to ADE Profile on macOS devices
 description: Add a settings catalog platform single sign-on (PSSO) policy to an Automated Device Enrollment (ADE) profile and configure it to run during Setup Assistant with modern authentication on macOS devices.
-ms.date: 05/11/2026
+ms.date: 05/13/2026
 ms.topic: how-to
 appliesto:
 - ✅ macOS
@@ -115,7 +115,7 @@ The Company Portal for macOS deploys and installs the Microsoft Enterprise SSO p
     > [!IMPORTANT]
     > Company Portal 5.2604.0 and newer is required.
 
-2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal as a line-of-business (LOB) app (**Apps > All Apps > Create**):
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal as a line-of-business (LOB) app (**Apps > All Apps > Create**). In the **App bundle ID** list, only add the `com.microsoft.CompanyPortalMac` app bundle ID. Remove any app bundle IDs that aren't related to the Company Portal.
 
     - [Add macOS Line-of-Business (LOB) Apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md)
 
