@@ -3,6 +3,7 @@ title: Settings list for the Microsoft Intune security baseline for Microsoft De
 description: View the settings in the Microsoft Intune security baseline for Microsoft Defender for Endpoint and each settings default value.
 ms.date: 05/13/2026
 ms.topic: reference
+ai-usage: ai-assisted
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
