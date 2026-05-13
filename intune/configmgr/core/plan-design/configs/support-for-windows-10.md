@@ -39,7 +39,7 @@ The following table lists the versions of Windows 10 that you can use as a clien
 
 | Windows 10 version                         | ConfigMgr 2409 | ConfigMgr 2503 | ConfigMgr 2509 | ConfigMgr 2603 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.19045) <sup>[Extended Security Updates](supported-operating-systems-for-clients-and-devices#bkmk_ESU)</sup> <!--2025-05-13--> | ✅ | ✅ | ✅ | ✅ |
+| **22H2**<br>(10.0.19045) <sup>[Extended Security Updates](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)</sup> <!--2025-05-13--> | ✅ | ✅ | ✅ | ✅ |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
