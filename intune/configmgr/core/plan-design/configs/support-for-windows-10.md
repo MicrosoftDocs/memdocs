@@ -39,7 +39,7 @@ The following table lists the versions of Windows 10 that you can use as a clien
 
 | Windows 10 version                         | ConfigMgr 2409 | ConfigMgr 2503 | ConfigMgr 2509 | ConfigMgr 2603 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.19045) <sup>[Extended Security Updates](./supported-operating-systems-for-clients-and-devices#bkmk_ESU)</sup> <!--2025-05-13--> | ✅ | ✅ | ✅ | ✅ |
+| **22H2**<br>(10.0.19045) <sup>[Extended Security Updates](supported-operating-systems-for-clients-and-devices#bkmk_ESU)</sup> <!--2025-05-13--> | ✅ | ✅ | ✅ | ✅ |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
@@ -58,7 +58,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 - Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
-- OS deployment media shows the build number from the base version. For example, `10.0.19041`. When Windows is installed, it applies an enablement package, which updates the build number to what's in the above table. You can use the revision ID to distinguish the media:
+- OS deployment media shows the build number from the base version. For example, `10.0.19041`. When Windows is installed, it applies an enablement package, which updates the build number to what's in the preceding table. You can use the revision ID to distinguish the media:
 
   | Media version     | Windows version          |
   |-------------------|--------------------------|
