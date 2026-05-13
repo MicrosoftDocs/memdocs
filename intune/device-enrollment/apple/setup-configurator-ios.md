@@ -21,7 +21,7 @@ Apple Configurator enrollment methods can't be used with the [device enrollment 
 
 Apple Configurator enrollment supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile on the device receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
-Before you export the ACME certificate for Apple Configurator enrollment, first preload the device serial numbers into Intune, and then assign them to the enrollment profile. Otherwise, the direct enrollment profile will fail.
+Before you export the ACME certificate for Apple Configurator enrollment, first preload the device serial numbers into Intune, and then assign them to the enrollment policy. Otherwise, the direct enrollment policy will fail.
 
 Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running:
 
@@ -31,24 +31,51 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 
 ## Prerequisites
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - iOS/iPadOS  
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
+> - [An Apple MDM push certificate](create-mdm-push-certificate.md)
+
+:::column-end:::
+:::row-end:::
+
+You also need the following to complete enrollment:
+
 - Physical access to iOS/iPadOS devices
-- [Set MDM authority](../../fundamentals/setup-mdm-authority.md)
-- [An Apple MDM push certificate](create-mdm-push-certificate.md)
-- Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
 - macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
+- Device serial numbers (Setup Assistant enrollment only)
 
 ## Create an Apple Configurator profile for devices
 
-A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.
+A device enrollment policy defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment policy to enroll iOS/iPadOS devices with Apple Configurator.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Go to **Profiles** > **Create**.
-1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).
-    :::image type="content" source="./media/setup-configurator-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
+1. Under **Create Enrollment Policy**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment policy. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).
+    :::image type="content" source="./media/setup-configurator-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment policy pane with the Basics tab selected.":::
 
 1. Select **Next** to go to the **Settings** page.
 
@@ -96,12 +123,12 @@ Enrollment with Apple Configuration has the following limitations:
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
 1. Select **Devices** > **Add**.
-1. Select an **Enrollment profile** to apply to the serial numbers you're importing. If you want the new serial number details to overwrite any existing details, choose **Overwrite details for existing identifiers**.
+1. Select an **Enrollment policy** to apply to the serial numbers you're importing. If you want the new serial number details to overwrite any existing details, choose **Overwrite details for existing identifiers**.
 1. Under **Import Devices**, browse to the csv file of serial numbers, and select **Add**.
 
 ### Reassign a profile to device serial numbers
 
-You can assign an enrollment profile when you import iOS/iPadOS serial numbers for Apple Configurator enrollment. You can also assign profiles from two places in the Azure portal:
+You can assign an enrollment policy when you import iOS/iPadOS serial numbers for Apple Configurator enrollment. You can also assign profiles from two places in the Azure portal:
 - **Apple Configurator devices**
 - **AC profiles**
 
@@ -143,7 +170,7 @@ After you create the profile and assign serial numbers, you must export the prof
     > If the device was already registered with the Apple ID account, the device must be deleted from the Apple iCloud before starting the enrollment process. The prompt error appears as "Unable to activate [Device name]".
 
 2. In the **preferences** pane, select **Servers** and choose the plus symbol (+) to launch the MDM Server wizard. Choose **Next**.
-3. Enter the **Host name or URL** and **enrollment URL** for the MDM server under Setup Assistant enrollment for iOS/iPadOS devices with Microsoft Intune. For the Enrollment URL, enter the enrollment profile URL exported from Intune. Choose **Next**.
+3. Enter the **Host name or URL** and **enrollment URL** for the MDM server under Setup Assistant enrollment for iOS/iPadOS devices with Microsoft Intune. For the Enrollment URL, enter the enrollment policy URL exported from Intune. Choose **Next**.
     You can safely disregard a warning stating "server URL is not verified." To continue, choose **Next** until the wizard is finished.
 4. Connect the iOS/iPadOS mobile devices to the Mac computer with a USB adapter.
 5. Select the iOS/iPadOS devices you want to manage, and then choose **Prepare**. On the **Prepare iOS/iPadOS Device** pane, select **Manual**, and then choose **Next**.
@@ -171,7 +198,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 1. Go to **Profiles**. Choose a profile to export.
 1. Select **Export Profile**.
 1. Copy the **Profile URL**. You can then add it in Apple Configurator to define the Intune profile used by iOS/iPadOS devices.
-1. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment profile file is only valid for two weeks at which time you must re-create it.
+1. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment policy file is only valid for two weeks at which time you must re-create it.
 1. Transfer the file to a Mac computer running [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to push directly as a management profile to iOS/iPadOS devices.
 1. Prepare the device with Apple Configurator by using the following steps:
     1. On a Mac computer, open Apple Configurator 2.0.

@@ -91,8 +91,7 @@ A certificate chain with an ordered list of certificates enables the relying par
 
 The following diagram illustrates the *name matching* chain validation flow.
 
-> [!div class="mx-imgBorder"]
-> ![Diagram of the chain validation process using the name match method.](./media/fundamentals/chain-validation.png)
+:::image type="content" source="./media/fundamentals/chain-validation.png" alt-text="Diagram of the chain validation process using the name match method." border="false":::
 
 ### Ensure a chain of trust
 
@@ -100,8 +99,7 @@ When you use certificates to perform certificate-based authentication, you must 
 
 The root CA must be present. If the issuing CA certificate isn't present, then it can be requested by the relying party using the native certificate chain engine for the intended OS platform. The relying party can request the issuing CA certificate using the leaf certificate's *authority information access* property.
 
-> [!div class="mx-imgBorder"]
-> ![Diagram of the chain of validation process.](./media/fundamentals/chain-of-trust.png)
+:::image type="content" source="./media/fundamentals/chain-of-trust.png" alt-text="Diagram of the chain of validation process." border="false":::
 
 ## Certificate-based authentication
 This section provides a basic understanding of the various certificates being used when a client or device performs certificate-based authentication.
@@ -113,7 +111,6 @@ The following steps describe the handshake that takes place between a client and
 3. The relying party requests a certificate to be used for client authentication.
 4. The client presents its client authentication certificate to the relying party to authenticate.
 
-> [!div class="mx-imgBorder"]
-> ![Diagram of a handshake between a client and relying party service.](./media/fundamentals/certificate-handshake.png)
+:::image type="content" source="./media/fundamentals/certificate-handshake.png" alt-text="Diagram of a handshake between a client and relying party service." border="false":::
 
 In an environment without Microsoft Cloud PKI, a private CA is responsible for issuing both the TLS/SSL certificate used by the relying party, and the device client authentication certificate. Microsoft Cloud PKI can be used to issue the device client authentication certificate, effectively replacing the private CA for this specific task.

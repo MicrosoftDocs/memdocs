@@ -28,7 +28,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You use Ubuntu Desktop (24.04 LTS or 22.04 LTS on x86/64). | ✅ |
+| You use Ubuntu Desktop (Ubuntu 26.04 LTS and 24.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
 | You use RedHat Enterprise Linux 9 or 10. |✅ |
 | Devices are owned by the organization or school. | ✅ |
@@ -70,7 +70,7 @@ For more information about Linux device management, see:
 
 For more device enrollment guides, see:  
 
-- [MAM](./mam-without-enrollment.md)
+- [MAM](../app-management/protection/mam-without-enrollment.md)
 - [Android enrollment guide](android/guide.md)
 - [iOS/iPadOS enrollment guide](apple/guide-ios-ipados.md)
 - [macOS enrollment guide](apple/guide-macos.md)

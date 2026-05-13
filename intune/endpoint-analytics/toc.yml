@@ -1,5 +1,5 @@
 items:
-- name: Overview
+- name: Endpoint analytics overview
   href: index.md
   displayName: endpoint analytics
 - name: Configure the service

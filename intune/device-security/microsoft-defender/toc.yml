@@ -15,3 +15,5 @@ items:
         href: ./security-settings-management.md
       - name: Manage endpoint security policies in Microsoft Defender
         href: /defender-endpoint/manage-security-policies?context=/intune/context
+  - name: Security tasks
+    href: ./remediate-vulnerabilities.md

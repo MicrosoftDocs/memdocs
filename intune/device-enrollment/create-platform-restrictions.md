@@ -22,24 +22,37 @@ You can create a new device platform restriction policy in the Microsoft Intune 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.
 
 ## Requirements    
-You can use corporate identifiers with these platforms:
 
-- Android
-- iOS/iPadOS
-- macOS  
-- Windows 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-To create device platform restrictions in Microsoft Intune, you must be signed in as [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). This role is built-in to Microsoft Entra ID and can:
+:::column-end:::
+:::column span="3":::
 
-- Create device platform restrictions
+> Device platform restrictions are available for the following platforms:
+>
+> - Android
+> - iOS/iPadOS
+> - macOS
+> - Windows
 
-- Edit device platform restrictions
+:::column-end:::
+:::row-end:::
 
-- Delete device platform restrictions
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
-- Reprioritize device platform restrictions
+:::column-end:::
+:::column span="3":::
 
-All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
+> To create device platform restrictions, you must be signed in as [**Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), a role built-in to Microsoft Entra ID. This role can create, edit, delete, and reprioritize device platform restrictions.
+>
+> All other built-in Intune roles have read-only access to device platform restrictions. You can apply scope tags to a device platform restriction to further limit access. For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
+
+:::column-end:::
+:::row-end:::
 
 ## Default policy
 
@@ -64,7 +77,9 @@ Since Intune supports two Android platforms, it's important to understand how OS
     * **Windows restrictions**
     * **Android restrictions**
     * **macOS restrictions**
-    * **iOS restrictions**
+    * **iOS/iPadOS restrictions**
+    * **tvOS restrictions**
+    * **visionOS restrictions**  
 
 1. Select **Create restriction**.
 1. On the **Basics** page, give the restriction a name and optional description.
@@ -72,7 +87,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 1. On the **Platform settings** page, configure the restrictions for your selected platform. Your options:
 
    - **Platform** (Android): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
-   - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
+   - **MDM** (Windows, macOS, iOS/iPadOS, tvOS, and visionOS): Select **Allow** to permit a platform to enroll, and **Block** to restrict it.
    - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.
    - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block.
    - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:
@@ -120,7 +135,7 @@ Enrollment restrictions support fewer filter properties than other group-targete
 
 * Configure a device platform restriction policy for Apple and Windows devices.
 * Configure an enrollment status page (ESP) policy for Windows.
-* Edit a filter that's in-use in an enrollment restriction or ESP profile.
+* Edit a filter that's in-use in an enrollment restriction or ESP policy.
 
 The following filter properties are always available to use with enrollment policies:
 
@@ -131,7 +146,7 @@ The following filter properties are always available to use with enrollment poli
 * OS version
 * Operating system SKU
 * Ownership
-* Enrollment profile name
+* Enrollment policy name
 
 **iOS/iPadOS and macOS**
 
@@ -139,7 +154,7 @@ The following filter properties are always available to use with enrollment poli
 * Model
 * OS version
 * Ownership
-* Enrollment profile name
+* Enrollment policy name
 
 For more information about these properties, see [device properties](../fundamentals/filters/ref-device-properties.md#available-properties). Filters can't be used with Android enrollment restrictions.
 

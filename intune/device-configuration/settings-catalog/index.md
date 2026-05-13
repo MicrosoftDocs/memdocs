@@ -1,7 +1,7 @@
 ---
 title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
-ms.date: 03/24/2026
+ms.date: 04/30/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
@@ -12,14 +12,14 @@ ms.collection:
 
 # Use the Intune settings catalog to configure settings
 
-The settings catalog lists all the settings you can configure and all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
+The settings catalog lists all the settings you can configure and puts them all in one place. This feature simplifies how you create a policy and how you see all the available settings. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings.
 
 You can also use [Microsoft Copilot in Intune](../../copilot/index.md). When you use the Copilot features with the settings catalog, you can use Copilot to:
 
 - Learn more about each setting and find potential conflicts.
 - Summarize existing policies and get impact analysis on users and security.
 
-If you prefer to configure settings at a granular level, similar to on-premises Group Policy Objects (GPOs), then the settings catalog is a natural transition to cloud-based policy.
+If you prefer to configure settings at a granular level, similar to on-premises Group Policy Objects (GPOs), the settings catalog is a natural transition to cloud-based policy.
 
 When you create the policy, you start from scratch. You add only the settings you want to control and manage.
 
@@ -29,36 +29,46 @@ This feature applies to:
 
 - **Android**
 
-  Settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices are continually added to the settings catalog.
+  The settings catalog for Android lists settings available for Android (AOSP) and corporate-owned Android Enterprise devices. More settings for Android devices are continually added to the settings catalog.
 
   For a list of Android settings you can configure, see [Android Intune settings catalog settings list](ref-android-settings.md).
 
-- **iOS/iPadOS**
+- **Apple**
 
-  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
+  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually added. Apple's declarative device management (DDM) is also built into the settings catalog. To learn more about profile-specific payload keys, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
 
-  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../device-enrollment/apple/setup-user-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
+   You can use the settings catalog to configure settings for Apple devices running the following platforms:
 
-- **macOS**
+  # [iOS/iPadOS](#tab/ios)
 
-  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
+    With the settings catalog, you can [use declarative device management (DDM) to install updates](../../device-updates/apple/index.md) (**Declarative Device Management** > **Software Update**), configure the passcode settings (**Security** > **Passcode**), block cloud features like backup and document sync (**Restrictions**), and manage features in Safari (**Declarative Device Management** > **Safari**), and more.
 
-  With the settings catalog, you can:
+    When you configure settings on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../../device-enrollment/apple/setup-user-company-portal.md), you're automatically using DDM. If DDM doesn't work, these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 
-  - Configure Recovery Lock to help protect your devices against unauthorized reinstallation and wiping. For more information, see [Protect macOS devices using Recovery Lock](configure-recovery-lock-macos.md).
+  # [macOS](#tab/macos)
 
-  - [Use DDM to manage software updates](../../device-updates/apple/index.md), passcode restrictions, and more. Apple's declarative device management (DDM) is available in the settings catalog.
+    Some common scenarios include:
 
-  - Configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
+    - [Configure Recovery Lock](configure-recovery-lock-macos.md) to help protect your devices against unauthorized reinstallation and wiping.
+    - [Use Declarative Device Management to manage software updates](../../device-updates/apple/index.md), password restrictions, and more.
+    - Configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
 
+      - [Built-in macOS features replacing plist files](common-tasks.md#built-in-macos-features-replacing-plist-files)
+      - [Add a property list file to macOS devices using Microsoft Intune](../../device-configuration/templates/configure-preference-file-macos.md)
 
-  - [Built-in macOS features replacing plist files](common-tasks.md#built-in-macos-features-replacing-plist-files)
-  - [Add a property list file to macOS devices using Microsoft Intune](../../device-configuration/templates/configure-preference-file-macos.md).
+  # [tvOS](#tab/tvos)
 
+    You can import a file you created with the [Apple Configurator](https://apps.apple.com/app/apple-configurator/id1037126344) or [Apple Profile Manager](https://support.apple.com/guide/server/apd0e2214c6). Variables aren't supported, so any placeholders or variables in the profile won't apply.
+
+  # [visionOS](#tab/visionos)
+
+    You can import a file you created with the [Apple Configurator](https://apps.apple.com/app/apple-configurator/id1037126344) or [Apple Profile Manager](https://support.apple.com/guide/server/apd0e2214c6). Variables aren't supported, so any placeholders or variables in the profile won't apply.
+
+---
 
 - **Windows**
 
-  There are thousands of settings, including administrative templates (ADMX), and more settings are continually being added. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
+  There are thousands of settings, including administrative templates (ADMX), and more settings are continually added. These settings are directly generated from the Windows configuration service providers (CSPs). As Windows adds or exposes more settings to MDM providers, these settings are added to Microsoft Intune for you to configure.
 
 This article describes the steps to create a policy, shows how to search and filter the settings in Intune, and shows how to use Copilot.
 
@@ -76,9 +86,9 @@ For information about popular features you can configure using the settings cata
 
 You create the policy by using the settings catalog profile type.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in role, at a minimum.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has at least the **Policy and Profile Manager** built-in role.
 
-    For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+    For more information about the built-in roles, see [Role-based access control for Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -88,6 +98,8 @@ You create the policy by using the settings catalog profile type.
       - **Android (AOSP)**
       - **iOS/iPadOS**
       - **macOS**
+      - **tvOS**
+      - **visionOS**
       - **Windows 10 and later**
     - **Profile type**: Select **Settings catalog**.
 
@@ -109,7 +121,7 @@ You create the policy by using the settings catalog profile type.
 
     :::image type="content" source="./media/index/settings-picker-select-all-settings.png" alt-text="Screenshot that shows the settings when you select all these settings in Microsoft Intune and Intune admin center." lightbox="./media/index/settings-picker-select-all-settings.png":::
 
-    After you add your settings, close the settings picker. All the settings are shown and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, select the minus sign (`-`):
+    After you add your settings, close the settings picker. All the settings are shown and configured with a default value, such as **Block** or **Allow**. These default values are the same default values in the OS. If you don't want to configure a setting, select the minus sign (`-`):
 
     :::image type="content" source="./media/index/default-setting-value-minus-not-configured.png" alt-text="Screenshot that shows the Settings Catalog and that the default values in Microsoft Intune and Intune admin center are the same as the OS default values." lightbox="./media/index/default-setting-value-minus-not-configured.png":::
 
@@ -121,7 +133,7 @@ You create the policy by using the settings catalog profile type.
 
    > [!TIP]
    > - In the Windows setting tooltips, **Learn more** links to the CSP.
-   > - When a setting allows multiple values, we recommend that you add each value separately. For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
+   > - When a setting allows multiple values, add each value separately. For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
    >   :::image type="content" source="./media/index/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center." lightbox="./media/index/setting-with-multiple-values.png":::
    >
    >    You can add multiple values in a single field, but you might experience a character limit.
@@ -131,25 +143,25 @@ You create the policy by using the settings catalog profile type.
 
     Select **Next**.
 
-11. In **Assignments**, select the users or groups that will receive your profile. For more information, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
+11. In **Assignments**, select the users or groups that receive your profile. For more information, see [Assign user and device profiles](../../device-configuration/assign-device-profile.md).
 
     Select **Next**.
 
 12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-The next time the device checks for configuration updates, the settings you configured are applied.
+The next time the device checks for configuration updates, it applies the settings you configured.
 
 ## Find some settings and learn more about each setting
 
-There are thousands of settings available in the settings catalog. To find the settings you want, use the search and filter features.
+The settings catalog offers thousands of settings. To find the settings you want, use the search and filter features.
 
 If you use Copilot, you can get AI-generated information about each setting.
 
 # [Search and filter](#tab/sc-search-filter)
 
-When you create a new policy or update an existing policy, there are built-in search and filter features to help you find settings.
+When you create a new policy or update an existing policy, use the built-in search and filter features to find settings.
 
-- To find specific settings in your policy, you can use **Add settings** > **Search**. You can search by category, such as `browser`; search for a keyword, such as `office` or `google`; and search for specific settings.
+- To find specific settings in your policy, use **Add settings** > **Search**. You can search by category, such as `browser`; search for a keyword, such as `office` or `google`; and search for specific settings.
 
   For example, search for `internet explorer`. All the settings with `internet explorer` are shown. Select a category to see the available settings:
 
@@ -176,7 +188,7 @@ When you create a new policy or update an existing policy, there are built-in se
 
 # [Copilot](#tab/copilot-tooltips)
 
-When you use settings catalog policies, you can use Copilot to get more information about a specific setting.
+When you use settings catalog policies, use Copilot to get more information about a specific setting.
 
 1. In your policy, select **Add settings**. In the settings picker, select some settings. For example, in a macOS policy, expand **Declarative Device Management** > **Software Update** > **Select all these settings**. Close the settings picker.
 
@@ -224,7 +236,7 @@ When you create a settings catalog policy, you can export the policy to a `.json
 
 ## Conflicts and reporting
 
-Conflicts happen when the same setting is updated to different values, including policies configured using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data is refreshed automatically, nearly in real time.
+Conflicts happen when you update the same setting to different values. This conflict includes policies that you configure by using the settings catalog. In the Intune admin center, you can check the status of your existing policies. The data refreshes automatically, nearly in real time.
 
 There are built-in features that can help you troubleshoot conflicts, including per-setting status reporting.
 
@@ -232,7 +244,7 @@ If you use Copilot, you can use built-in prompts to get more information about e
 
 # [Reporting and troubleshooting](#tab/sc-reporting)
 
-In the Intune admin center, you can use the built-in reporting features to help find and resolve conflicts.
+In the Intune admin center, use the built-in reporting features to help find and resolve conflicts.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. In the list, select the policy you created using the settings catalog. The **Profile type** column shows **Settings Catalog**:
 
@@ -263,8 +275,8 @@ In the Intune admin center, you can use the built-in reporting features to help 
 
 For more information about conflict resolution, see:
 
-- [Monitor device profiles](../../device-configuration/monitor-device-profile.md#view-conflicts)
-- [Common questions and answers with device policies](../../device-configuration/troubleshoot-device-profiles.md)
+- [Monitor device profiles](../../device-configuration/monitor-device-profile.md#view-conflicts).
+- [Common questions and answers with device policies](../../device-configuration/troubleshoot-device-profiles.md).
 
 # [Copilot](#tab/copilot-conflicts)
 
@@ -276,7 +288,7 @@ Copilot can help you find the status of your existing policies, find the status 
 
     :::image type="content" source="./media/index/copilot-summarize-policy.png" alt-text="Screenshot that shows how to select the Summarize with Copilot feature in a settings catalog policy in Microsoft Intune and Intune admin center.":::
 
-    A summary is automatically shown that includes the settings in the policy & their values.
+    A summary is automatically shown that includes the settings in the policy and their values.
 
 3. In Copilot Chat, you can enter `conflicts` and select a prompt.
 
@@ -294,7 +306,7 @@ The **Settings catalog** lists all the available settings. If you want to see al
 
 ## Device scope vs. user scope settings
 
-When you select a setting, some settings have a `(User)` or `(Device)` tag in the setting name, such as `Allow EAP Cert SSO (User)` or `Grouping (Device)`. When you see these tags, the policy only affects the user scope or the device scope.
+When you select a setting, some settings include a `(User)` or `(Device)` tag in the setting name, such as `Allow EAP Cert SSO (User)` or `Grouping (Device)`. These tags indicate that the policy affects only the user scope or the device scope.
 
 For more information about user scope and device scope, see the [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider).
 
@@ -302,7 +314,7 @@ Device and user groups are used when you assign your policies. Device and user s
 
 ### Scope assignment behavior
 
-When you deploy policy from Intune, you can assign user scope or device scope to any type of target group. Behavior of the policy per user depends on the scope of the setting:
+When you deploy policy from Intune, you can assign user scope or device scope to any type of target group. The behavior of the policy per user depends on the scope of the setting:
 
 - User scoped policy writes to `HKEY_CURRENT_USER (HKCU)`.
 - Device scoped policy writes to `HKEY_LOCAL_MACHINE (HKLM)`.
@@ -311,11 +323,11 @@ When a device checks in to Intune, the device always presents a `deviceID`. The 
 
 The following list includes some possible combinations of scope, assignment, and the expected behavior:
 
-- If a device scope policy is assigned to a device, all users on that device have that setting applied.
-- If a device scope policy is assigned to a user, once that user signs in and an Intune sync occurs, the device scope settings apply to all users on the device.
-- If a user scope policy is assigned to a device, all users on that device have that setting applied. This behavior is like a [loopback set to merge](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy).
-- If a user scope policy is assigned to a user, only that user has that setting applied.
-- There are some settings that are available in the user scope and the device scope. If one of these settings is assigned to both user and device scope, user scope takes precedence over device scope.
+- If you assign a device scope policy to a device, all users on that device have that setting applied.
+- If you assign a device scope policy to a user, once that user signs in and an Intune sync occurs, the device scope settings apply to all users on the device.
+- If you assign a user scope policy to a device, all users on that device have that setting applied. This behavior is like a [loopback set to merge](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy).
+- If you assign a user scope policy to a user, only that user has that setting applied.
+- Some settings are available in both the user scope and the device scope. If you assign one of these settings to both user and device scope, user scope takes precedence over device scope.
 
 If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, you can see some user scope settings marked as *not applicable*. This behavior happens in the early moments of device activity before a user is present.
 

@@ -42,9 +42,9 @@ The *collect diagnostics* action lets you collect and download managed device di
 
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [School Administrator][INT-R2]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Collect diagnostics**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
@@ -66,6 +66,7 @@ The *collect diagnostics* action lets you collect and download managed device di
 > - East Asia: `lgmsapesea.blob.core.windows.net`
 > - Australia: `lgmsapeaus.blob.core.windows.net`
 > - India: `lgmsapeind.blob.core.windows.net`
+> - Switzerland: `lgmsapeswiss.blob.core.windows.net`
 > 
 > Devices must be online and able to communicate with the service during diagnostics.
 
@@ -123,7 +124,7 @@ Requirements to collect diagnostics from an M365 application:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the third setting is enabled.
-3. Create and deploy an Intune App Protection policy to a user, more information [here](../../app-management/protection/create-policy.md).
+3. Create and deploy an Intune App Protection policy to a user. For more information, see [Create and assign app protection policies](../../app-management/protection/create-policy.md).
 4. Confirm the application has been managed by Intune App Protection policy. You can check locally on the device and/or by loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:
@@ -166,7 +167,7 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 To use the *Collect diagnostics* action:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Collect diagnostics**.
 1. To confirm, select **Yes**. A pending notification appears on the device's **Overview** page.
@@ -181,7 +182,7 @@ Windows Autopilot diagnostics are automatically captured when devices experience
 
 To view the diagnostics collected after a Windows Autopilot failure:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Diagnostics** > **Download**.
 1. The data zip file is added to your download tray and you can save it to your computer.
@@ -332,27 +333,25 @@ Currently there are the two main issues that could cause device diagnostics to f
   - [downloadAppDiagnostics action][GRAPH-3]
   - [appDiagnostics function][GRAPH-4]
 
-<!--links-->
+<!--Intune admin center links-->
 
-<!-- graph -->
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!--Role links-->
+
+[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-createdevicelogcollectionrequest
 [GRAPH-2]: /graph/api/intune-devices-applogcollectionrequest-createdownloadurl
 [GRAPH-3]: /graph/api/intune-devices-manageddevice-downloadappdiagnostics
 [GRAPH-4]: /graph/api/intune-devices-manageddevice-appdiagnostics
 
-<!-- admin center -->
-
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
-
-
-<!-- roles -->
-
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-R2]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#school-administrator
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
 
