@@ -35,16 +35,16 @@ This action is ideal when a device is suspected of compromise or when validating
 :::column span="3":::
 > To run this action, use an account with at least one of the following roles:
 >
-> - [Help Desk Operator][INT-R1]
-> - [Endpoint Security Manager][INT-R4]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Endpoint Security Manager]
+> - [Custom role] that includes:
 >   - The permission **Remote tasks/Windows defender**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
 ## How to initiate a full scan from the Intune admin center
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of action icons. Select **Full scan**.
 
@@ -53,21 +53,22 @@ This action is ideal when a device is suspected of compromise or when validating
 - Microsoft Graph API: [windowsDefenderScan action][GRAPH-1]
 - Configuration service provider (CSP) used to initiate the action: [Defender CSP][CSP-1]
 
-<!--links-->
+<!--Intune admin center links-->
 
-<!-- admin center links -->
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+<!--Role links-->
 
-<!-- role links -->
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
 
-[INT-R1]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
-[INT-RC]: ../../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R4]: ../../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager
-
-<!-- API links -->
+<!--Graph API links-->
 
 [GRAPH-1]: /graph/api/intune-devices-manageddevice-windowsdefenderscan
+
+<!--Other links-->
 
 [CSP-1]: /windows/client-management/mdm/defender-csp

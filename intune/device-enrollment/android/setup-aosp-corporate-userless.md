@@ -26,19 +26,47 @@ Devices are configured in [Microsoft Entra shared device mode](/azure/active-dir
 
 ## Prerequisites
 
->[!NOTE]
+> [!NOTE]
 > Beginning October 1st, AOSP devices must have the Microsoft Intune app, version 24.7.0 or later to sync with the Microsoft Intune service.
 
-To enroll and manage AOSP devices, you must have:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-* An active Microsoft Intune tenant.
-* [A supported device.](../../fundamentals/ref-supported-platforms.md#android)
+:::column-end:::
+:::column span="3":::
 
-You must also:
+> This enrollment method supports the following platforms:
+>
+> - [Android (AOSP)](../../fundamentals/ref-supported-platforms.md#android)
 
-* [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../../fundamentals/setup-mdm-authority.md). You only need to do this once, when you first set up Intune for mobile device management.
+:::column-end:::
+:::row-end:::
 
-* Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../device-management/specialty-devices.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../device-management/specialty-devices.md).
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - An active Microsoft Intune tenant.
+> - [Set Microsoft Intune as the mobile device management (MDM) authority in your tenant](../../fundamentals/setup-mdm-authority.md). You only need to do this once, when you first set up Intune for mobile device management.
+
+:::column-end:::
+:::row-end:::
 
 
 ## Create an enrollment profile

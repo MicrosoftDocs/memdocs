@@ -60,8 +60,6 @@ landingContent:
       links:
       - text: Tenant status and health
         url: governance/tenant-status.md
-      - text: Compliance and regulatory alignment
-        url: governance/compliance-and-regulatory-alignment.md
     - linkListType: how-to-guide
       links:
       - text: Audit changes and events

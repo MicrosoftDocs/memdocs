@@ -5922,12 +5922,12 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/fundamentals/device-lifecycle",
+      "redirect_url": "/intune/fundamentals/what-is-device-management",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/fundamentals/device-lifecycle",
+      "redirect_url": "/intune/fundamentals/what-is-device-management",
       "redirect_document_id": false
     },
     {
@@ -6592,12 +6592,12 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/groups-get-started.md",
-      "redirect_url": "/intune/fundamentals/tenant-administration/classic-groups",
+      "redirect_url": "/intune/fundamentals/tenant-administration/add-groups",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/groups-get-started.md",
-      "redirect_url": "/intune/fundamentals/tenant-administration/classic-groups",
+      "redirect_url": "/intune/fundamentals/tenant-administration/add-groups",
       "redirect_document_id": false
     },
     {
@@ -6717,7 +6717,7 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/compliance-in-intune.md",
-      "redirect_url": "/intune/governance/compliance-and-regulatory-alignment",
+      "redirect_url": "/intune/privacy/",
       "redirect_document_id": false
     },
     {

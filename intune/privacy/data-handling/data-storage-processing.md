@@ -1,19 +1,22 @@
 ---
-title: Data storage and processing in Intune
-description: Learn how personal data is stored and processed in Intune.
-ms.date: 06/25/2025
-ms.topic: conceptual
+title: Intune Data Storage and Processing Overview
+description: Learn how Microsoft Intune stores and processes personal data, including storage locations, data residency, and retention policies.
+ms.date: 5/5/2026
+author: paolomatarazzo
+ms.author: paoloma
+ms.topic: overview
 ms.reviewer: bradyw
 ms.collection:
-- M365-identity-device-management
-- privacy
-- sub-data-privacy
+ - M365-identity-device-management
+ - privacy
+ - sub-data-privacy
 ---
 
-# Data storage and processing in Intune
+# Data storage and processing overview
 
+This article describes how Microsoft Intune stores and processes personal data. It includes information about storage locations, data residency options, retention policies, and processing practices.
 
-### Storage locations
+## Storage locations
 
 Microsoft Intune isn't deployed to all Microsoft data centers globally. We make decisions on where to deploy Intune services based on the number of customers, regional affiliations, and to help customers comply with laws, regulations or industry standards that explicitly govern the location of data storage.
 
@@ -46,7 +49,7 @@ Microsoft Intune won't store Customer Data at rest outside the stated geo, excep
 
 Microsoft doesn't control or limit the Geo from which customers or their end users might access customer data. Similarly, where customer data in other services is subsequently integrated into Intune, the originating customer data will continue to be stored subject to the other service's own Geo commitments (if any); only the copy of the customer data integrated into Intune will be stored in the stated Geo for Intune.
 
-### Data residency option
+## Data residency option
 
 Data residency is important for government, public sector, education and regulated commercial entities to help ensure protection of personal and/or sensitive information. In many countries/regions, customers are expected to comply with laws, regulations or industry standards that explicitly govern the location of data storage.
 
@@ -59,7 +62,7 @@ During migration, certain features might not be accessible. The actual down time
 Data moves to the new datacenter geographies are completed at no extra cost to the customer.
 
 
-### Personal data retention
+## Personal data retention
 
 Microsoft 365 Data Handling Standard policy specifies how long customer data is retained after deletion. There are two scenarios in which customer data is deleted:
 

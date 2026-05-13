@@ -41,13 +41,40 @@ Devices that are already enrolled in Intune do not get an ACME certificate unles
 
 ## Prerequisites
 
-- Physical access to [supported devices](../../fundamentals/ref-supported-platforms.md#apple).
-- Access to Microsoft Intune admin center and Apple Configurator.
-- Set [MDM authority](../../fundamentals/setup-mdm-authority.md).
-- [An Apple MDM push certificate](create-mdm-push-certificate.md).
-- Administrator rights on the Macs you're enrolling.
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-If the Mac you're setting up is enrolled in another MDM provider, you must unenroll it before you can enroll it in Intune. 
+:::column-end:::
+:::column span="3":::
+
+> This enrollment method supports the following platforms:
+>
+> - macOS
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Set [MDM authority](../../fundamentals/setup-mdm-authority.md).
+> - [An Apple MDM push certificate](create-mdm-push-certificate.md).
+> - Access to Microsoft Intune admin center and Apple Configurator.
+
+:::column-end:::
+:::row-end:::
+
+You also need:
+
+- Physical access to [supported devices](../../fundamentals/ref-supported-platforms.md#apple)
+- Administrator rights on the Macs you're enrolling
+
+If the Mac you're setting up is enrolled in another MDM provider, you must unenroll it before you can enroll it in Intune.
 
   > [!NOTE]
   > This enrollment method doesn't support device enrollment restrictions. Make sure you don't have device platform restrictions targeted at any Apple devices, because it will cause the enrollment profile download to fail. In this scenario, admins might see the following error during enrollment:  

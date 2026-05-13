@@ -184,4 +184,3 @@ Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app m
 
 - The app you create appears in the apps list. Assign it to the groups you choose. For more information, see [Assign apps to groups with Microsoft Intune](../../app-management/deployment/assign-groups.md).
 - Learn more about monitoring app properties and assignments. For more information, see [Monitor app information and assignments with Microsoft Intune](../../app-management/monitor-assignments.md).
-- Learn more about the context of your app in Intune. For more information, see [Overview of the Microsoft Intune mobile device management (MDM) lifecycle](../../fundamentals/device-lifecycle.md).

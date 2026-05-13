@@ -136,9 +136,6 @@ conceptualContent:
             - url: ./fundamentals/ref-supported-platforms.md
               itemType: get-started
               text: Supported platforms and requirements
-            - url: ./governance/compliance-and-regulatory-alignment.md
-              itemType: overview
-              text: Privacy and compliance
 
         - title: Industry and platform guides
           summary: Microsoft offers comprehensive guidance on planning a migration to

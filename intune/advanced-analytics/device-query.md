@@ -44,8 +44,8 @@ Additional prerequisites for device query:
 :::column-end:::
 :::column span="3":::
 > To use device query, use an account with at least one of the following roles:
-> - [Help Desk Operator][INT-R1]
-> - [Custom role][INT-RC] that includes:
+> - [Help Desk Operator]
+> - [Custom role] that includes:
 >   - The permission **Managed Devices/Query**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
@@ -53,7 +53,7 @@ Additional prerequisites for device query:
 
 ## Use device query
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**Windows**].
 1. Select a device, then select **Device Query** under the **Monitor** section.
 
 The supported properties you can query are listed in the [Supported properties](#supported-properties) section. To run a query, enter a Kusto Query Language (KQL) query, and select **Run**. Results are displayed in the **Results** tab area.
@@ -213,8 +213,12 @@ Device query supports the following entities. To learn more about what propertie
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
 - If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
 
-<!--links-->
+<!--Role links-->
 
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-RC]: ../fundamentals/role-based-access-control/create-custom-role.md
-[INT-R1]: ../fundamentals/role-based-access-control/ref-built-in-roles.md#help-desk-operator
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Device query**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/DeviceQuery
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**Windows**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesWindowsMenu/~/windowsDevices

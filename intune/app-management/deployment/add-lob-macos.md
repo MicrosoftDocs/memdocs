@@ -114,5 +114,3 @@ For line-of-business (LOB) apps, if the app is assigned with Required intent and
 - Assign the app you created to the groups you choose. It now appears in the apps list. For help, see [How to assign apps to groups](./assign-groups.md).
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
-
-- Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../../fundamentals/device-lifecycle.md)
