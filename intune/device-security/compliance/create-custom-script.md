@@ -1,4 +1,4 @@
----
+﻿---
 title: Create discovery scripts for custom compliance policy in Microsoft Intune
 description: Create scripts for Linux or Windows devices to discover the settings you define as custom compliance settings for Microsoft Intune.
 ms.date: 09/04/2025
@@ -12,16 +12,16 @@ ms.collection:
 
 # Custom compliance discovery scripts for Microsoft Intune
 
-Before you can use [custom settings for compliance](./custom-settings.md) with Microsoft Intune, you must define a script that can discover the custom compliance settings that are available on devices. The script you use depends on the platform:
+Before you can use [custom settings for compliance](./custom-settings.md) with Microsoft Intune, you must create a script that discovers custom compliance settings on devices. The script you use depends on the platform:
 
 - Windows devices use a PowerShell script.
 - Linux devices can run scripts in any language as long as the corresponding interpreter is installed and configured on the device.
 
-The discovery script deploys to devices as part of your custom compliance policies. When compliance runs on a device, the script discovers the settings that are defined by the JSON file that you also provide through custom compliance policy.
+The discovery script deploys to devices as part of your custom compliance policies. When compliance runs on a device, the script discovers the settings defined in the JSON file you provide when creating the compliance policy.
 
 All discovery scripts:
 
-- Are added to Intune before you create a compliance policy. After being added, scripts are available to select when you create a compliance policy with custom settings.
+- Are added to Intune before you create a compliance policy. After you add a script, it's available to select when you create a compliance policy with custom settings.
   - Each discovery script can only be used with one compliance policy, and each compliance policy can only include one discovery script.
   - You can't delete discovery scripts that are assigned to a compliance policy until you unassign the script from the policy.
 - Run on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload when creating a custom compliance policy.
@@ -71,13 +71,13 @@ The following example shows the output of the sample script for Windows:
 >
 > On Linux, discovery scripts run in the user's context. They can't check for system-level settings that require elevation. An example of this limitation is the `state/hash` of the `/etc/sudoers` file.
 
-Discovery scripts for Linux can call any interpreter that meets your requirements. Ensure that the chosen interpreter is properly installed and configured on the targeted device before deploying the script. To specify the interpreter for a script, include a shebang line at the top of the script, indicating the path to the interpreter binary.
+Discovery scripts for Linux can call any interpreter that meets your requirements. Ensure that the chosen interpreter is properly installed and configured on the target device before deploying the script. To specify the interpreter for a script, include a shebang line at the top of the script, indicating the path to the interpreter binary.
 
 For example, if your script should use the Bash shell as the interpreter, add the following line at the top of your script:
 
 `#!/bin/bash`
 
-If you want to use Python for your script, indicate where the interpreter is installed. For example, add the following line to the top of your script: `#!/usr/bin/python3` or `#!/usr/bin/env python3`
+To use Python, specify the interpreter path. For example, add the following line to the top of your script: `#!/usr/bin/python3` or `#!/usr/bin/env python3`
 
 > [!TIP]
 > To handle interrupts or cancellation signals, implement graceful termination mechanisms in your scripts. When a script handles these signals, it can perform cleanup tasks and exit gracefully, ensuring resources are released correctly. For example, catch signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when they're received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources.
@@ -91,16 +91,16 @@ Before deploying your script in production, test it in an isolated environment t
 > [!NOTE]
 > The script upload workflow doesn't support scope tags. You must be assigned the default scope tag to create, edit, or view custom compliance discovery scripts.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add** > *(choose your platform)*.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add**. Then choose your platform.  
 1. On **Basics**, enter a descriptive **Name** for the script.
-1. On **Settings**, add your script to **Detection script**. Review your script carefully. Intune doesn't validate the script for syntax or programmatic errors.
-1. ***For Windows only*** - On **Settings**, configure the following behavior for the PowerShell script:
+1. On **Settings**, add your script to **Detection script**. Review your script carefully. Intune doesn't validate the script for syntax or programming errors.
+1. *For Windows only* - On **Settings**, configure the following behavior for the PowerShell script:
 
    - **Run this script using the logged on credentials** – By default, the script runs in the System context on the device. Set this value to **Yes** to have it run in the context of the logged-on user. If the user isn't logged in, the script defaults back to the System context.
    - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&preserve-view=true) in the PowerShell documentation.
    - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to **Yes** to force the script to run using the 64-bit host instead.
 
-1. Complete the script creation process. The script is now visible in the **Scripts** pane of the Microsoft Intune admin center and is available to select when configuring compliance policies.
+1. Complete the script creation process. The script appears in the **Scripts** pane and is available to select when configuring compliance policies.
 
 ## Next steps
 

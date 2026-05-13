@@ -42,6 +42,19 @@ This article applies to Windows and describes how to set up compliance checks fo
 :::column-end:::
 :::row-end:::
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Sign in to the Microsoft Intune admin center with the following role:
+> - Built-in [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
+
+:::column-end:::
+:::row-end:::
+
 The Microsoft Intune management extension must be installed on the target device. Make sure devices meet one of the following conditions so that the management extension can install:  
 
 - Assign a PowerShell script or a proactive remediation to the user or device.
@@ -58,7 +71,7 @@ Create a Win32 app policy for the [Intune WSL plugin](https://github.com/microso
 
 1. Use the [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool) to convert the Intune WSL plugin to the *.intunewin* format. For more information, see [Convert the Win32 app content](../../app-management/deployment/create-win32-package.md#convert-the-win32-app-content).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least an Intune administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. Go to **Apps** > **All Apps** > **Add**.
 

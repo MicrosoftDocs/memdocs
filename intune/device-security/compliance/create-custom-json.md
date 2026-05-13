@@ -1,4 +1,4 @@
----
+﻿---
 title: Create a JSON file for custom compliance settings in Microsoft Intune
 description: Create the JSON file that defines custom settings and values for use with device compliance policies in Intune.
 ms.date: 08/15/2025
@@ -16,10 +16,22 @@ To support [custom settings for compliance](./custom-settings.md) for Microsoft 
 
 Include the JSON file in a compliance policy when you configure a policy to assess custom compliance settings.
 
-This feature applies to:
+## Requirements
 
-- Linux – Ubuntu Desktop, version 24.04 LTS or 26.04 LTS; RedHat Enterprise Linux 9 or 10
-- Windows
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Linux:
+>   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+>   - RedHat Enterprise Linux 9 or 10
+> - Windows
+
+:::column-end:::
+:::row-end:::
 
 A correctly formatted JSON file must include the following information:
 
