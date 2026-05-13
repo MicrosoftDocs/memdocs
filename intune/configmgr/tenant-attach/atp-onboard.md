@@ -8,11 +8,11 @@ ms.subservice: core-infra
 ms.collection: tier3
 ---
 
-# Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center
+# Tenant attach: Onboard Microsoft Configuration Manager clients to Microsoft Defender for Endpoint from the admin center
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
-The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Microsoft Entra ID or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Microsoft Entra groups.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Intune admin center**. You can deploy Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Microsoft Entra ID or MDM enrollment, and the policy is targeted at Configuration Manager collections rather than Microsoft Entra groups.
 
 <!--Adding Include for Prerequisites-->
 
@@ -20,7 +20,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 - [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../device-security/microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune)
 - Client which meets the [minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements#licensing-requirements) and is onboarded.<!--Adding MDE License Requirement & MAX 6198973-->
 
-## Create Microsoft Defender for Endpoint policies
+## Create Defender for Endpoint policies
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -33,13 +33,13 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 1. Select **Create**.
 
-1. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
+1. On the **Basics** page, enter a name and description for the profile, and then choose **Next**.
 
-1. On the **Configuration settings** page, configure the settings you want to manage with this profile. The onboarding package is automatically included and isn’t something you can configure.
+1. On the **Configuration settings** page, configure the settings you want to manage with this profile. The onboarding package is automatically included and isn't something you can configure.
 
    When you're done configuring settings, select **Next**.
 
-1. On the **Assignments** page, select the collections that will receive this policy. Select collections from Configuration Manager that you’ve synced to Microsoft Intune admin center and enabled for Microsoft Defender for Endpoint policy.
+1. On the **Assignments** page, select the collections that receive this policy. Select collections from Configuration Manager that you synced to Intune admin center and enabled for Defender for Endpoint policy.
 
    You can choose not to assign collections at this time, and later edit the policy to add an assignment.
 
