@@ -29,6 +29,8 @@ Intune supports access policies for the following resources:
 - Scripts – Applies to deploying scripts to devices that run [Windows](../../device-management/tools/run-powershell-scripts-windows.md).
 - Tenant Configuration - Applies to managing [device categories](../../device-management/create-device-categories.md), including creating, editing, or deleting them.
 
+Changes to access policies require a second administrator's approval. Because this resource type is automatically protected, it isn't available as a selectable profile type when you create an access policy.
+
 ## Prerequisites for access policies and approvers
 
 To use Multi Admin Approval, your tenant must have at least two administrator accounts. The MAA workflow has three distinct roles, each with different permission requirements:
@@ -178,4 +180,4 @@ You can cancel a request before it's approved by selecting it from the **My requ
 
 ## Related content
 
-Manage [role-based access control](../role-based-access-control/overview.md)
+- Manage [role-based access control](../role-based-access-control/overview.md)
