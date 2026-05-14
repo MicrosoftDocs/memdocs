@@ -12,12 +12,19 @@ ms.collection:
 
 # Common ways to use Conditional Access with Intune
 
-There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you need to configure the related Intune policies. When the Intune policies are in place and deployed, you can then use Conditional Access to allow or block access to Exchange, control access to your network, or integrate with a mobile threat defense solution.
+There are two types of Conditional Access policies you can use with Intune: device-based and app-based. This article covers common scenarios for both types.
 
 The information in this article can help you understand how to use both the Intune mobile device compliance capabilities and the Intune mobile application management (MAM) capabilities.  
 
 > [!NOTE]
 > Conditional Access is a Microsoft Entra capability that is included with a Microsoft Entra ID P1 or P2 license. The Conditional Access node accessed from the Microsoft Intune admin center is the same node as accessed from Microsoft Entra ID.
+
+## Applications available in Conditional Access for controlling Microsoft Intune
+
+When you configure Conditional Access in the Microsoft Entra admin center, you have two applications to choose from:
+
+1. **Microsoft Intune** - This application controls access to the Microsoft Intune admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Intune admin center and data sources.
+2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multifactor authentication for Intune device enrollments](../../device-enrollment/configure-multifactor-authentication.md).
 
 ## Device-based Conditional Access
 
@@ -33,14 +40,9 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 
 - Learn more about [Supported browsers with Conditional Access in Microsoft Entra ID](/entra/identity/conditional-access/concept-conditional-access-conditions#supported-browsers).
 
-## Applications available in Conditional Access for controlling Microsoft Intune
+The following scenarios build on device-based Conditional Access to show how it applies in specific contexts.
 
-When you configure Conditional Access in the Microsoft Entra admin center, you have two applications to choose from:
-
-1. **Microsoft Intune** - This application controls access to the Microsoft Intune admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Intune admin center and data sources.
-2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multifactor authentication for Intune device enrollments](../../device-enrollment/configure-multifactor-authentication.md).
-
-## Conditional Access based on network access control
+### Conditional Access based on network access control
 
 Intune integrates with partners like Cisco ISE, Aruba Clear Pass, and Citrix NetScaler to provide access controls based on the Intune enrollment and the device compliance state.
 
@@ -48,29 +50,23 @@ Users can be allowed or denied access to corporate Wi-Fi or VPN resources based 
 
 - Learn more about the [NAC integration with Intune](../integrate-network-access-control.md).
 
-## Conditional Access based on device risk
+### Conditional Access based on device risk
 
-Intune partners with mobile threat defense vendors that provide a security solution to detect malware, Trojans, and other threats on mobile devices.
-
-### How the Intune and mobile threat defense integration works
-
-When mobile devices have the mobile threat defense agent installed, the agent sends compliance state messages back to Intune reporting when a threat is found on the mobile device itself.
-
-The Intune and mobile threat defense integration plays a factor in the Conditional Access decisions based on device risk.
+Intune partners with mobile threat defense vendors that provide a security solution to detect malware, Trojans, and other threats on mobile devices. When mobile devices have the mobile threat defense agent installed, the agent sends compliance state messages back to Intune reporting when a threat is found. This integration plays a factor in Conditional Access decisions based on device risk.
 
 - Learn more about [Intune mobile threat defense](../mobile-threat-defense/overview.md).
 
-## Conditional Access for Windows PCs
+### Conditional Access for Windows PCs
 
 Conditional Access for PCs provides capabilities similar to those available for mobile devices. The following options are available when managing PCs with Intune.
 
-### Corporate-owned
+#### Corporate-owned
 
 - **Microsoft Entra hybrid joined:** This option is commonly used by organizations that are reasonably comfortable with how they're already managing their PCs through AD group policies or Configuration Manager.
 
 - **Microsoft Entra domain joined and Intune management:** This scenario is for organizations that want to be cloud-first (that is, primarily use cloud services, with a goal to reduce use of an on-premises infrastructure) or cloud-only (no on-premises infrastructure). Microsoft Entra join works well in a hybrid environment, enabling access to both cloud and on-premises apps and resources. The device joins to the Microsoft Entra ID and gets enrolled to Intune, which can be used as a Conditional Access criteria when accessing corporate resources.
 
-### Bring your own device (BYOD)
+#### Bring your own device (BYOD)
 
 - **Workplace join and Intune management:** Here the user can join their personal devices to access corporate resources and services. You can use Workplace join and enroll devices into Intune MDM to receive device-level policies, which are another option to evaluate Conditional Access criteria.
 
@@ -78,7 +74,10 @@ Learn more about [Device Management in Microsoft Entra ID](/entra/identity/devic
 
 ## App-based Conditional Access
 
-Intune and Microsoft Entra ID work together to make sure only managed apps can access corporate email or other Microsoft 365 services. Learn more about [app-based Conditional Access with Intune](./app-based-policies.md).
+App-based Conditional Access protects access at the app level rather than the device level, making it well-suited for unenrolled devices. The following articles cover app-based Conditional Access scenarios for Intune:
+
+- [Use app-based Conditional Access policies with Intune](./app-based-policies.md)
+- [Require approved app or app protection policy (Microsoft Entra)](/entra/identity/conditional-access/policy-all-users-approved-app-or-app-protection)
 
 ## Next steps
 
