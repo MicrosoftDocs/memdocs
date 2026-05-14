@@ -1,7 +1,7 @@
 ---
 title: Apple device restriction settings in Microsoft Intune
 description: Add, configure, or create settings on iOS, iPadOS, and macOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
-ms.date: 04/29/2026
+ms.date: 05/14/2026
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
