@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 05/04/2026
+ms.date: 05/11/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -145,33 +145,6 @@ Other requirements include adding the Intune first-party app as a security group
 > - iOS/iPadOS Automated Device Enrollment (ADE)
 > - macOS Automated Device Enrollment (ADE)
 
-### Complete Platform SSO registration during macOS Automated Device Enrollment<!-- 36767290 -->
-
-On macOS devices enrolled with Automated Device Enrollment (ADE), you can enable and complete Platform SSO device registration:
-
-- In a settings catalog policy, add and configure the `Enable Registration During Setup` setting, save your policy, and assign it to a static group.
-- Configure the Automated Device Enrollment policy to use Setup Assistant with modern authentication and enable await final configuration. 
-- During enrollment, users sign in twice:
-  - The first sign-in starts the regular enrollment process.
-  - The second sign-in authenticates the user identity in Company Portal and gets the SSO extension.
-
-  We're working on updates to reduce the number of sign-ins for Platform SSO during Setup Assistant.
-
-When this feature is enabled, users have access to resources immediately when they arrive at desktop.
-
-Prerequisites:
-
-- Before you enroll:
-  - Create a [settings catalog policy](../device-configuration/settings-catalog/index.md), and configure the **Enable Registration During Setup** setting and assign to the device via static group. 
-  - Deploy the Company Portal (5.2604.0 and newer is required) as a line-of-business app.
-- Devices must be enrolled through Apple Business Manager or Apple School Manager using ADE.
-- The ADE enrollment profile must be configured to use Setup Assistant with modern authentication and have the **Await final configuration** setting turned on.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS Automated Device Enrollment (ADE)
-
 <!-- *********************************************** -->
 
 ## Device management
@@ -181,7 +154,7 @@ Prerequisites:
 The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
 
 For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
- 
+
 ### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
 
 For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.
@@ -355,10 +328,6 @@ Intune will add new guidance to the compliance policy reporting documentation to
 - Pending status: A device might appear in a **Pending** state if it has not yet checked in to receive or report compliance policy status. This status can persist in reports until the next reporting cycle completes.
 - Multiple records: Policy reports can show multiple records for a single device, such as separate entries associated with user and system contexts. This behavior can occur when different users sign in to the same device or when automatic device check-ins occur.
 - Summary vs. detail differences: Summary report views and detailed device lists can update on different cadences. As a result, aggregated summary values might temporarily differ from detailed report entries.
-
-<!-- *********************************************** -->
-
-<!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 
