@@ -1,27 +1,22 @@
 ---
 title: Configure 802.1x wired network settings for macOS and Windows devices in Microsoft Intune
 description: Create or add a wired network device configuration profile or policy using the IEEE 802.1X standard for macOS, Windows 10, and Windows 11 devices and computers. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
-ms.date: 02/18/2025
+ms.date: 05/26/2026
 ms.topic: how-to
-ms.reviewer: abalwan
+ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Add and use wired networks settings on your macOS and Windows devices in Microsoft Intune
+# Add and use wired networks settings on your devices in Microsoft Intune
 
 Organization use wired networks to give network access to desktop computers and devices that must use a network cable.
 
-Microsoft Intune includes built-in settings to configure wired networks for your macOS and Windows devices. You can configure the network interface, accepted EAP types, enter server trust settings, and more.
+Microsoft Intune includes built-in settings to configure wired networks for your iOS/iPadOS, macOS, and Windows devices. You can configure the network interface, accepted EAP types, enter server trust settings, and more.
 
 These built-in settings can be deployed to devices in your organization using policy. When the policy is ready, it can be assigned to different users and groups. Once assigned, your users get access to your organization's wired network without configuring it themselves.
 
 As part of your mobile device management (MDM) solution, use this feature to create 802.1x profiles to manage wired networks. Then, deploy these wired networks to your devices.
-
-This feature applies to:
-
-- macOS
-- Windows
 
 ## Example scenario
 
@@ -35,7 +30,27 @@ This article lists the steps to create a wired network profile in Intune. It als
 
 ## Prerequisites
 
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platforms:
+>
+> - iOS/iPadOS
+> - macOS
+> - Windows
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::column-end:::
+:::row-end:::
 
 ## Create the profile
 
@@ -43,7 +58,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
-    - **Platform**: Select **macOS** or **Windows 10 and later**.
+    - **Platform**: Select **iOS/iPadOS**, **macOS**, or **Windows 10 and later**.
     - **Profile type**: Select **Templates** > **Wired network**.
 
 4. Select **Create**.
@@ -55,7 +70,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 6. Select **Next**.
 7. In **Configuration settings**, configure the settings, including the Extensible Authentication Protocol (EAP) type. For a list of all settings, and what they do, go to:
 
-    - [macOS](./ref-wired-network-settings-macos.md)
+    - [Apple](./ref-wired-network-settings-macos.md)
     - [Windows](./ref-wired-network-settings-windows.md)
 
 8. Select **Next**.

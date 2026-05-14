@@ -1,9 +1,9 @@
 ---
 title: Configure wired network settings for macOS devices in Microsoft Intune
 description: Create or add a wired network device configuration profile for macOS devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
-ms.date: 11/19/2024
+ms.date: 05/26/2026
 ms.topic: reference
-ms.reviewer: abalwan
+ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 ---
@@ -43,12 +43,13 @@ This article describes the settings you can configure.
 
 - **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To do so, you must create a new profile.
 
-  >[!NOTE]
+  > [!NOTE]
   > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.
 
-   You have two options:
-   - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.
-   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.
+  You have two options:
+
+  - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.
+  - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.
 
 - **EAP type**: To authenticate secured wired connections, select the Extensible Authentication Protocol (EAP) type. Your options:
 
