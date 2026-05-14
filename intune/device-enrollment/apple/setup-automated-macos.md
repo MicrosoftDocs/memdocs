@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/29/2026
+ms.date: 05/13/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ai-usage: ai-assisted
@@ -23,6 +23,7 @@ This article describes how to create an enrollment policy for macOS automated de
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../../includes/requirements/platform.md)]
+
 
 :::column-end:::
 :::column span="3":::
@@ -50,6 +51,8 @@ This article describes how to create an enrollment policy for macOS automated de
 > Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
 
 When enrolling macOS devices using ADE with user affinity and Setup Assistant with modern authentication, users must sign in to the Company Portal app with their Microsoft Entra credentials to complete device registration in Microsoft Entra ID. To add the Company Portal app to macOS devices, see [Add the Company Portal for macOS app](../../app-management/deployment/add-company-portal-macos.md).  
+
+To make Microsoft Entra ID single sign-on (SSO) available during Setup Assistant, create a platform SSO policy before devices enroll. Platform SSO policies are deployed to enrolling macOS devices during automated device enrollment (ADE) and allow users to sign in with their organization credentials during device setup. This configuration enables users to automatically access Microsoft Entra–protected apps and resources after enrollment. For more information, see [Configure platform SSO during automated device enrollment for macOS](../../device-configuration/settings-catalog/configure-platform-sso-during-enrollment.md).  
 
 ## Create an enrollment policy
 
