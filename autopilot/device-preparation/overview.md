@@ -1,4 +1,4 @@
----
+﻿---
 title: Overview of Windows Autopilot device preparation
 description: Windows Autopilot device preparation is used to set up and configure new devices, getting them ready for productive use.
 ms.date: 04/02/2025
@@ -66,11 +66,11 @@ New features in Windows Autopilot device preparation include:
   - PowerShell scripts status
   - Deployment time. For more information, see [Windows Autopilot device preparation reporting and monitoring](reporting-monitoring.md).
 
-- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/intune/fundamentals/government-service-description) environments.
+- **Support for Government Community Cloud High (GCCH) and Department of Defense (DoD) environments** - Windows Autopilot device preparation supports [GCCH and DoD](/intune/fundamentals/government-service) environments.
 
 > [!IMPORTANT]
 >
-> [Windows 365 Frontline in shared mode](/windows-365/enterprise/introduction-windows-365-frontline) isn't supported for GCCH and DoD at this time.
+> [Windows 365 Flex in shared mode](/windows-365/enterprise/introduction-windows-365-frontline) isn't supported for GCCH and DoD at this time.
 
 ## Capabilities
 
