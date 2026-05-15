@@ -84,7 +84,7 @@ Whenever any part of the local account configuration, the **Await final configur
 The following are examples of the available configuration options. Additional details are accessible through the *Information* icons that follow the name of some settings.
 
 > [!NOTE]
-> For macOS ADE enrollment policies without user device affinity, we recommend configuring the 'Admin account username' to {{serialNumber}}-admin or {{serialNumber}}-user because the that serves as the unique identifier of userless ADE devices.'
+> For macOS ADE enrollment policies without user device affinity, we recommend setting **Admin account username** to `{{serialNumber}}-admin` or `{{serialNumber}}-user`. Using the device serial number helps ensure each userless ADE device has a unique identifier.  
 
 - **Admin account username** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
