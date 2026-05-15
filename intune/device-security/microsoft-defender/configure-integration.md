@@ -27,7 +27,7 @@ After completing this guide, you'll have completed the following integration wor
 
 ## Quick navigation
 
-- [Connect services](#connect-microsoft-defender-for-endpoint-to-intune)
+- [Connect services](#connect-defender-for-endpoint-to-intune)
 - [Configure integration settings](#configure-integration-settings)
 - [Onboard devices](#onboard-devices)
 - [Configure compliance policies](#create-and-assign-compliance-policy-to-set-device-risk-level)
