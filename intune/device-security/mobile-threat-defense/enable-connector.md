@@ -6,8 +6,7 @@ ms.author: brenduns
 ms.date: 05/26/2026
 ai-usage: ai-assisted
 ms.topic: how-to
-ms.reviewer: ms.reviewer: ilwu
-
+ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
 - sub-mtd-apps
