@@ -107,7 +107,7 @@ After the service connection is established, configure which platforms connect t
    > [!TIP]
    > App protection policies work with both enrolled and unenrolled devices. For details, see [Mobile Threat Defense toggle options](../mobile-threat-defense/enable-connector.md#mobile-threat-defense-toggle-options).
 
-4. **Configure Mobile Threat Defense role (Android):** Under **Mobile Threat Defense role**, you can optionally grant Microsoft Defender for Endpoint enhanced security permissions on enrolled Android Enterprise corporate-owned fully managed and corporate-owned work profile devices. For details about this toggle and the permissions it grants, see [Mobile Threat Defense role](../mobile-threat-defense/enable-connector.md#mobile-threat-defense-role).
+4. **Configure Mobile Threat Defense role (Android):** Under **Mobile Threat Defense role**, you can optionally grant Microsoft Defender for Endpoint enhanced security permissions on enrolled Android Enterprise corporate-owned fully managed and corporate-owned work profile devices. You can also enable automatic launch of Microsoft Defender for Endpoint during device setup on these devices. For details about these toggles and the permissions they grant, see [Mobile Threat Defense role](../mobile-threat-defense/enable-connector.md#mobile-threat-defense-role).
 
 5. **Save your configuration:** Select **Save** to apply all settings.
 
