@@ -101,7 +101,8 @@ This policy enables the Platform SSO registration process during Setup Assistant
     | Name | Configuration value | Description |
     |---|---|---|
     | **Authentication > Extensible single sign-on > Platform SSO > Enable Create First User During Setup** | Enabled | When enabled, the system enables the password synchronization experience during Setup Assistant. <br/><br/> Remember, only configure this setting if you're using the **Password** authentication method. If you're not using the **Password** authentication method, don't add or configure this setting. |
-
+> [!NOTE]
+> Enable Create First User During Setup setting will be available soon in settings catalog.
 3. Assign the policy to the static groups you created. 
 
 When you create the Platform SSO settings catalog policy, you add and configure more settings than what's listed in this article. This article only lists the settings that are required to enable Platform SSO during ADE with Setup Assistant. So, add this setting to your existing Platform SSO policy. Or, if you're creating a new Platform SSO policy, add this setting along with the other Platform SSO settings that are required to configure Platform SSO.
