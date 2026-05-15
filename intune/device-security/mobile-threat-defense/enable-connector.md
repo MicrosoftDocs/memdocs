@@ -40,9 +40,9 @@ To successfully enable the Mobile Threat Defense connector, you must use an acco
    >
    > As of the August 2023 Intune service release (2308), classic Conditional Access (CA) policies are no longer created for the **Microsoft Defender for Endpoint** connector. As of April 2024 Intune service release (2404), classic CA policies are no longer needed for 3rd party **Mobile Threat Defense** connectors either. If your tenant has a classic CA policy that was previously created for integration with Microsoft Defender for Endpoint or 3rd party Mobile Threat Defense connectors, it can be deleted.
 
-5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options that are available for Symantec Endpoint Protection:
-   <!-- IMAGE UPDATE NEEDED -->
-   :::image type="content" source="./media/enable-connector/enable-mtd-connector-1.png" alt-text="Screen shot example that shows the MDM Compliance Policy Settings for the MDT connector.":::
+5. Enable the toggle options according to your organization's requirements. The toggle options that are visible can vary depending on the MTD partner. For example, the following image shows the available options for Symantec Endpoint Protection:
+
+   :::image type="content" source="./media/enable-connector/enable-mtd-connector-1.png" alt-text="Screenshot of the Add Connector pane for Symantec Endpoint Protection, showing toggle options for compliance policy evaluation, app protection policy evaluation, Mobile Threat Defense role, and shared settings.":::
 
 ## Mobile Threat Defense toggle options
 
@@ -106,8 +106,8 @@ Enable the toggles for those options your organization requires.
 To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](./enable-unenrolled-devices.md).
 
 ### Mobile Threat Defense role
-<!-- Actual UI Needed in the following line -->
-- **Grant MTD role permissions to *\<MTD partner name>* on enrolled Android devices**: When you turn on this option, the selected Mobile Threat Defense partner receives enhanced permissions to help protect enrolled Android Enterprise corporate-owned fully managed and corporate-owned work profile devices from mobile threats.
+
+- **Grant MTD role permissions to *\<MTD partner name>* on enrolled Android COBO and COPE devices**: When you turn on this option, the selected Mobile Threat Defense partner receives enhanced permissions to help protect enrolled Android Enterprise corporate-owned fully managed (COBO) and Android Enterprise corporate-owned work profile (COPE) devices from mobile threats.
 
   On devices where these permissions are configured, the MTD app is granted the following exemptions:
 
