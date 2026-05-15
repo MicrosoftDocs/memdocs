@@ -37,30 +37,28 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 10 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 10 version                         | ConfigMgr 2309 | ConfigMgr 2403 | Configmgr 2409
-|--------------------------------------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.19045) <!--2025-05-13--> |  ![Supported](media/green-check.png)  |   ![Supported](media/green-check.png) |![Supported](media/green-check.png) |
-| **21H2**<br>(10.0.19044) <!--06/11/2024--> |  ![Supported](media/green-check.png) |  ![Supported](media/green-check.png) |![Supported](media/green-check.png) |
-| **Enterprise LTSC 2021**<br>(10.0.19044) <!--01/12/2027-->| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| Windows 10 version                         | ConfigMgr 2409 | ConfigMgr 2503 | ConfigMgr 2509 | ConfigMgr 2603 |
+|--------------------------------------------|----------------|----------------|----------------|----------------|
+| **22H2**<br>(10.0.19045) <sup>[Extended Security Updates](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)</sup> <!--2025-05-13--> | ✅ | ✅ | ✅ | ✅ |
 
 All currently supported versions of Configuration Manager current branch support the following Windows 10 LTSB/LTSC editions:
 
-- **Enterprise 2015 LTSB** <!--10/14/2025-->
 - **Enterprise 2016 LTSB** <!--10/13/2026-->
 - **Enterprise LTSC 2019** <!--01/09/2029-->
+- **Enterprise LTSC 2021** <!--01/12/2027-->
 
 For more information on Windows lifecycle, see the [Windows lifecycle fact sheet](/lifecycle/faq/windows) and [Windows 10 release information](/windows/release-health/release-information).
 
 | Key |
 |--|
-| ![Supported](media/green-check.png) = **Supported** |
-| ![Not supported](media/red-x.png) = **Not supported** |
+|✅  = **Supported** |
+|❌  = **Not supported** |
 
 ## Support notes
 
 - Support for Windows 10 semi-annual channel versions includes the following editions: Enterprise, Pro, Education, Pro Education, and Pro for Workstation.
 
-- OS deployment media shows the build number from the base version. For example, `10.0.19041`. When Windows is installed, it applies an enablement package, which updates the build number to what's in the above table. You can use the revision ID to distinguish the media:
+- OS deployment media shows the build number from the base version. For example, `10.0.19041`. When Windows is installed, it applies an enablement package, which updates the build number to what's in the preceding table. You can use the revision ID to distinguish the media:
 
   | Media version     | Windows version          |
   |-------------------|--------------------------|

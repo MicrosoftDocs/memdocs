@@ -1,8 +1,9 @@
 ---
 title: Settings you can manage with Intune Endpoint Protection profiles for Windows devices
 description: View the available settings in Intune endpoint protection profiles for managed Windows devices.
-ms.date: 11/14/2023
+ms.date: 05/13/2026
 ms.topic: reference
+ai-usage: ai-assisted
 ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
@@ -763,7 +764,7 @@ These settings apply specifically to removable data drives.
 
 ## Microsoft Defender Exploit Guard
 
-Use [exploit protection](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) to manage and reduce the attack surface of apps used by your employees.
+Use [exploit protection](/defender-endpoint/exploit-protection) to manage and reduce the attack surface of apps used by your employees.
 
 ### Attack Surface Reduction
 
@@ -771,7 +772,7 @@ Attack surface reduction rules help prevent behaviors malware often uses to infe
 
 #### Attack Surface Reduction rules
 
-To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
+To learn more, see [Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-reference) in the Microsoft Defender for Endpoint documentation.
 
 **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -791,7 +792,7 @@ Attack surface reduction rule merge behavior is as follows:
 
 - **Flag credential stealing from the Windows local security authority subsystem**  
   **Default**: Not configured  
-  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Rule: [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Help prevent actions and apps that are typically used by exploit-seeking malware to infect machines.
 
@@ -801,7 +802,7 @@ Attack surface reduction rule merge behavior is as follows:
 
 - **Process creation from Adobe Reader (beta)**  
   **Default**: Not configured  
-  Rule: [Block Adobe Reader from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)
+  Rule: [Block Adobe Reader from creating child processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-adobe-reader-from-creating-child-processes)
 
   - **Not configured**
   - **Enable** - Block child processes that are created from Adobe Reader.
@@ -813,7 +814,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps injecting into other processes (no exceptions)**  
   **Default**: Not configured  
-  Rule: [Block Office applications from injecting code into other processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)
+  Rule: [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
 
   - **Not configured**
   - **Block** - Block Office apps from injecting into other processes.
@@ -821,7 +822,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps/macros creating executable content**  
   **Default**: Not configured  
-  Rule: [Block Office applications from creating executable content](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)
+  Rule: [Block Office applications from creating executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-creating-executable-content)
 
   - **Not configured**
   - **Block** - Block Office apps and macros from creating executable content.
@@ -829,7 +830,7 @@ Block Office apps from taking the following actions:
 
 - **Office apps launching child processes**  
   **Default**: Not configured  
-  Rule: [Block all Office applications from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)
+  Rule: [Block all Office applications from creating child processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-all-office-applications-from-creating-child-processes)
 
   - **Not configured**
   - **Block** - Block Office apps from launching child processes.
@@ -837,7 +838,7 @@ Block Office apps from taking the following actions:
 
 - **Win32 imports from Office macro code**  
   **Default**: Not configured  
-  Rule: [Block Win32 API calls from Office macros](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)
+  Rule: [Block Win32 API calls from Office macros](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
 
   - **Not configured**
   - **Block** - Block Win32 imports from macro code in Office.
@@ -845,7 +846,7 @@ Block Office apps from taking the following actions:
 
 - **Process creation from Office communication products**  
   **Default**: Not configured  
-  Rule: [Block Office communication application from creating child processes](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)
+  Rule: [Block Office communication application from creating child processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-communication-application-from-creating-child-processes)
 
   - **Not configured**
   - **Enable** - Block child process creation from Office communications apps.
@@ -857,7 +858,7 @@ Block the following to help prevent against script threats:
 
 - **Obfuscated js/vbs/ps/macro code**  
   **Default**: Not configured  
-  Rule: [Block execution of potentially obfuscated scripts](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)
+  Rule: [Block execution of potentially obfuscated scripts](/defender-endpoint/attack-surface-reduction-rules-reference#block-execution-of-potentially-obfuscated-scripts)
 
   - **Not configured**
   - **Block** - Block any obfuscated js/vbs/ps/macro code.
@@ -865,7 +866,7 @@ Block the following to help prevent against script threats:
 
 - **js/vbs executing payload downloaded from Internet (no exceptions)**  
   **Default**: Not configured  
-  Rule: [Block JavaScript or VBScript from launching downloaded executable content](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
+  Rule: [Block JavaScript or VBScript from launching downloaded executable content](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
   - **Not configured**
   - **Block** - Block js/vbs from executing payload downloaded from Internet.
@@ -873,7 +874,7 @@ Block the following to help prevent against script threats:
 
 - **Process creation from PSExec and WMI commands**  
   **Default**: Not configured  
-  Rule: [Block process creations originating from PSExec and WMI commands](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)
+  Rule: [Block process creations originating from PSExec and WMI commands](/defender-endpoint/attack-surface-reduction-rules-reference#block-process-creations-originating-from-psexec-and-wmi-commands)
 
   - **Not configured**
   - **Block** - Block process creations originating from PSExec and WMI commands.
@@ -881,7 +882,7 @@ Block the following to help prevent against script threats:
 
 - **Untrusted and unsigned processes that run from USB**  
   **Default**: Not configured  
-  Rule: [Block untrusted and unsigned processes that run from USB](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)
+  Rule: [Block untrusted and unsigned processes that run from USB](/defender-endpoint/attack-surface-reduction-rules-reference#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
   - **Not configured**
   - **Block** - Block untrusted and unsigned processes that run from USB.
@@ -889,7 +890,7 @@ Block the following to help prevent against script threats:
 
 - **Executables that don't meet a prevalence, age, or trusted list criteria**  
   **Default**: Not configured  
-  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
+  Rule: [Block executable files from running unless they meet a prevalence, age, or trusted list criterion](/defender-endpoint/attack-surface-reduction-rules-reference#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   - **Not configured**
   - **Block** - Block executable files from running unless they meet a prevalence, age, or trusted list criteria.
@@ -901,7 +902,7 @@ Block the following to help prevent email threats:
 
 - **Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)**  
   **Default**: Not configured  
-  Rule: [Block executable content from email client and webmail](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)
+  Rule: [Block executable content from email client and webmail](/defender-endpoint/attack-surface-reduction-rules-reference#block-executable-content-from-email-client-and-webmail)
 
   - **Not configured**
   - **Block** - Block execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail-client).
@@ -911,7 +912,7 @@ Block the following to help prevent email threats:
 
 - **Advanced ransomware protection**  
   Default:  Not configured  
-  Rule: [Use advanced protection against ransomware](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)
+  Rule: [Use advanced protection against ransomware](/defender-endpoint/attack-surface-reduction-rules-reference#use-advanced-protection-against-ransomware)
 
   - **Not configured**
   - **Enable** - Use aggressive ransomware protection.
@@ -939,7 +940,7 @@ Block the following to help prevent email threats:
 
 ### Controlled folder access
 
-Help [protect valuable data](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) from malicious apps and threats, such as ransomware.
+Help [protect valuable data](/defender-endpoint/controlled-folders) from malicious apps and threats, such as ransomware.
 
 - **Folder protection**  
   **Default**: Not configured  
@@ -985,7 +986,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 - **Upload XML**  
   **Default**: *Not configured*
 
-  To use *Exploit protection* to [protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:
+  To use *Exploit protection* to [protect devices from exploits](/defender-endpoint/microsoft-defender-endpoint), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:
 
   - *PowerShell* - Use one or more of the *Get-ProcessMitigation*, *Set-ProcessMitigation*, and *ConvertTo-ProcessMitigationPolicy* PowerShell cmdlets. The cmdlets configure mitigation settings, and export an XML representation of them.
 
@@ -1046,7 +1047,7 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
 
 ## Microsoft Defender Security Center
 
-Microsoft Defender Security Center operates as a separate app or process from each of the individual features. It displays notifications through the Action Center. It acts as a collector or single place to see the status and run some configuration for each of the features. Find out more in the [Microsoft Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) docs.
+Microsoft Defender Security Center operates as a separate app or process from each of the individual features. It displays notifications through the Action Center. It acts as a collector or single place to see the status and run some configuration for each of the features. Find out more in the [Microsoft Defender](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) docs.
 
 ### Microsoft Defender Security Center app and notifications
 

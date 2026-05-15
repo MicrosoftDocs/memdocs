@@ -63,7 +63,7 @@ You can configure Recovery Lock on your macOS devices. When you enable Recovery 
 
 For more information, go to [Protect macOS devices using Recovery Lock with Microsoft Intune](configure-recovery-lock-macos.md).
 
-## Add universal printers
+## Add Universal Print printers
 
 <!-- ms.reviewer: laarrizz -->
 
@@ -71,11 +71,9 @@ This feature applies to:
 
 - Windows
 
-You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
+You can create a Universal Print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 
 For more information, go to [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md).
-
-Previously, to configure Universal Print settings, you used the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
 
 ## Use Apple's DDM to manage software updates
 
