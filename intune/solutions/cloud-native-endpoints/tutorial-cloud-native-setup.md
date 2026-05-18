@@ -98,7 +98,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
 To test the cloud-native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps get the device details and upload them into the Windows Autopilot service, which are used later in this article.
 
 > [!NOTE]
-> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There's more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
+> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There's more information about Windows Autopilot in [Phase 5](#phase-5--scale-your-deployment-with-windows-autopilot).
 
 1. Install Windows 11 (recommended), or Windows 10 22H2 or later, in a virtual machine or reset physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
@@ -857,7 +857,7 @@ After your cloud-native Windows endpoints are provisioned and configured, use th
 | **Disk encryption (BitLocker)** | **Endpoint security** > **Disk encryption** | Select the BitLocker policy > **Device install status**. Recovery keys: **Devices** > **Windows** > select a device > **Recovery keys** | — |
 | **Windows Update rings** | **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** | Select a ring > **Device status** | [Reports for update rings](../../device-updates/windows/monitor-update-rings.md) |
 | **Compliance** | **Devices** > **Compliance** | Select the policy to see assignment results, noncompliant devices, and per-setting failures | [Monitor compliance policies](../../device-security/compliance/monitor-policy.md) |
-| **Endpoint analytics** | **Reports** > **Endpoint analytics** | Startup performance, app reliability, and proactive remediations across your fleet | [Endpoint analytics overview](../../analytics/overview.md) · [Intune reports](../../fundamentals/reports.md) |
+| **Endpoint analytics** | **Reports** > **Endpoint analytics** | Startup performance, app reliability, and proactive remediations across your fleet | [Endpoint analytics overview](/mem/analytics/overview) · [Intune reports](/mem/intune/fundamentals/reports) |
 
 ## Follow the cloud-native endpoints guidance
 
