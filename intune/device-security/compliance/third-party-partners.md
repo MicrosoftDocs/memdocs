@@ -102,7 +102,7 @@ Enable support for a device compliance partner to use compliance state data from
 
 1. On **Basics**, expand the **Compliance partner** dropdown and select the partner you want to add.
 
-   - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
+   - To use Omnissa Workspace ONE UEM as the compliance partner for iOS or Android platforms, select **Omnissa Workspace ONE UEM**.
 
    Next, select the dropdown for **Platform**, and select the platform.
 
