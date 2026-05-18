@@ -520,7 +520,7 @@ To create a Windows compliance policy:
     | &nbsp; | Password type | Alphanumeric |
     | &nbsp; | Minimum password length | 14 |
     | &nbsp; | Maximum minutes of inactivity before password is required | 1 Minute |
-    | &nbsp; | Password expiration (days) | Not configured |
+    | &nbsp; | Password expiration (days) | 365 |
     | &nbsp; | Number of previous passwords to prevent reuse | 5 |
     | **Defender** | Microsoft Defender Antimalware | Require |
     | &nbsp; | Microsoft Defender Antimalware security intelligence up-to-date | Require |
