@@ -1,35 +1,32 @@
----
-title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
-description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune.
+﻿---
+title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune
+description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune.
 ms.date: 11/21/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune  
-
-> [!NOTE]
-> This feature is in public preview.  
+# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune    
 
 This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365. You can use Windows Autopilot device preparation policies in automatic mode to provision these supported SKUs:  
 
-- Windows 365 Frontline in shared mode  
+- Windows 365 Flex in shared mode  
 - Windows 365 Enterprise  
-- Windows 365 Frontline in dedicated mode  
+- Windows 365 Flex in dedicated mode  
 - Windows 365 Cloud Apps  
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation in automatic mode for Windows 365 deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all requirements are met for joining devices to Microsoft Entra ID.
 
-## Windows Autopilot device preparation in automatic mode for Windows 365 (preview) overview
+## Windows Autopilot device preparation in automatic mode for Windows 365 overview
 
-Windows Autopilot device preparation in automatic mode for Windows 365 (preview), also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation policy that can be included in Windows 365 provisioning policies. By including the Windows Autopilot device preparation policy in the Windows 365 provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
+Windows Autopilot device preparation in automatic mode for Windows 365, also known as Windows Autopilot device preparation automatic mode, is a solution that adds an additional Windows Autopilot device preparation policy that can be included in Windows 365 provisioning policies. By including the Windows Autopilot device preparation policy in the Windows 365 provisioning policies, it ensures that essential required device-targeted apps and scripts in Intune are installed on Cloud PCs during the provisioning process before the user signs in. This feature helps increase standardization of Cloud PCs while reducing the management overhead that comes with IT admins creating and managing their own custom images with pre-installed applications.
 
 Windows Autopilot device preparation tracks the installation progress of specified Intune applications and scripts during Cloud PC provisioning. Instead of marking Cloud PCs as **Provisioned** after Intune enrollment, Windows Autopilot device preparation and Windows 365 wait until those workloads are fully installed. IT admins see a new status of **Preparing** reflected in the console while Windows Autopilot device preparation is underway.
 
-## Windows Autopilot device preparation in automatic mode for Windows 365 (preview) process
+## Windows Autopilot device preparation in automatic mode for Windows 365 process
 
 1. The Windows 365 Cloud PC agent creates the Cloud PC.
 
@@ -78,6 +75,6 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 ## Related articles
 
-- [Windows 365 Frontline Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
-- [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
-- [What is Windows 365 Frontline?](/windows-365/enterprise/introduction-windows-365-frontline)
+- [Windows 365 Flex Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
+- [Use automated Autopilot device preparation with Windows 365 Flex Cloud PCs in shared mode](/windows-365/enterprise/autopilot-device-preparation).
+- [What is Windows 365 Flex?](/windows-365/enterprise/introduction-windows-365-frontline)
