@@ -1,8 +1,9 @@
 ---
 title: Deploy endpoint detection and response policy with Intune
 description: Use Microsoft Intune endpoint security policies to configure and deploy Microsoft Defender for Endpoint EDR capabilities to Windows, macOS, and Linux devices.
-ms.date: 12/09/2025
+ms.date: 05/18/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -67,7 +68,7 @@ You need licenses for Microsoft Defender:
 
 For detailed licensing information, see:
 - [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Microsoft Defender for Endpoint licensing](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
+- [Microsoft Defender for Endpoint licensing](/defender-endpoint/minimum-requirements#licensing-requirements)
 
 ### Role-based access control
 
@@ -153,11 +154,7 @@ In the Intune admin center, the Endpoint detection and response node includes th
 - **Summary** - Lists all EDR policies, the connector status, and includes the "Windows devices onboarded to Defender for Endpoint" chart and **Create Policy** option.
 - **EDR Onboarding Status** - Shows the onboarding summary chart, device list with detailed status, and includes the **Deploy preconfigured policy** option. For detailed guidance on using this tab, see [EDR Onboarding Status report](#edr-onboarding-status-report).
 
-Every device that reports security telemetry to Microsoft Defender for Endpoint must be onboarded using a configuration package (called an onboarding "blob"). This package contains:
-
-- Tenant-specific configuration - Tells the device which Defender for Endpoint organization to report to.
-- Authentication certificates - Enables secure communication with Defender services.
-- Reporting settings - Configures what data to send and how frequently.
+Every device that reports security telemetry to Microsoft Defender for Endpoint must be onboarded using a configuration package (called an onboarding "blob"). For details about the contents of an onboarding package, see [Understanding EDR onboarding](#understanding-edr-onboarding).
 
 Whether you use automatic or manual deployment, Intune applies the same onboarding configuration to devices. The difference is how Intune obtains that configuration:
 
@@ -422,7 +419,7 @@ Review the following to ensure continued onboarding success:
 - Allow up to 15 minutes after enabling the connection for the option to appear.
 - Ensure your account has appropriate administrative permissions.
 
-For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
+For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/defender-endpoint/troubleshoot-onboarding).
 
 ## Offboarding devices
 
@@ -444,12 +441,12 @@ When deploying an offboarding EDR policy in Intune:
 - The Intune EDR policy compliance status should show successful deployment.
 - Historical data remains in Defender until retention policies remove it.
 
-After offboarding, the device stops sending telemetry and its status changes to *inactive* after seven days. Historical data remains in the Defender portal until the configured retention period expires. For details about what happens after offboarding, see [Offboard devices](/microsoft-365/security/defender-endpoint/offboard-machines).
+After offboarding, the device stops sending telemetry and its status changes to *inactive* after seven days. Historical data remains in the Defender portal until the configured retention period expires. For details about what happens after offboarding, see [Offboard devices](/defender-endpoint/offboard-machines).
 
 For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
 
-- [Offboard devices using Mobile Device Management tools](/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
-- [Offboard devices](/microsoft-365/security/defender-endpoint/offboard-machines)
+- [Offboard devices using Mobile Device Management tools](/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices](/defender-endpoint/offboard-machines)
 
 ## Related content
 
