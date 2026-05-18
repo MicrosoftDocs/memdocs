@@ -1,10 +1,11 @@
 ---
 title: Microsoft Intune Reports
 description: Intune provides specific report types with focused views that contain consistent and timely data.
-ms.date: 06/23/2025
+ms.date: 05/18/2026
 author: nicholasswhite
 ms.author: nwhite
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: jlynn
 ms.collection:
 - M365-identity-device-management
@@ -451,10 +452,10 @@ For information about the actions you can take with this report, see [Bulk actio
 The **Unhealthy endpoints** and **Active malware** reports provide bulk actions that are applicable to the Windows devices selected within each report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The following actions available:
 
 - **Restart** – This action performs a restart of the selected devices.
-- **Quick scan** – This action performs a Windows Defender quick scan of the selected devices.
-- **Full scan** – This action performs a Windows Defender full scan of the selected devices.
+- **Quick scan** – This action performs a Microsoft Defender Antivirus quick scan of the selected devices.
+- **Full scan** – This action performs a Microsoft Defender Antivirus full scan of the selected devices.
 
-For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
+For more information about the difference between a *quick scan* and a *full scan*, see [About scheduled quick or full Microsoft Defender Antivirus scans](/defender-endpoint/schedule-antivirus-scans).
 
 ### Assignment failures report (Operational)
 
@@ -496,7 +497,7 @@ The **Antivirus agent status** report provides the agent status of your organiza
 The report is available from the primary **Microsoft Defender Antivirus** workload, and provides filtering, searching, paging, and sorting. The data found in this report is timely and shows the following details:
 
 - If a device has real-time or network protection, and the state
-- The status of Windows Defender
+- The status of Microsoft Defender Antivirus
 - If Tamper protection is enabled
 - If the device is a virtual machine, or a physical device
 - Calls out the unhealthy device, the user name, and severity
