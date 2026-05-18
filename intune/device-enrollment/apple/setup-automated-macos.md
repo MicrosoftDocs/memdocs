@@ -60,7 +60,8 @@ Create an automated device enrollment policy in the admin center. The policy def
 
 At the end of this procedure, you can assign this policy to Microsoft Entra device groups.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **macOS** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select an enrollment program token.
