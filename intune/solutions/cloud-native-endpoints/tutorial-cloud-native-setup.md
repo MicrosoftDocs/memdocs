@@ -1,11 +1,11 @@
 ---
-
-title: Tutorial-Get started with cloud-native Windows endpoints
-description: Set up secure cloud-native Windows endpoints that are Microsoft Entra joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
+title: Tutorial - Set up a cloud-native Windows endpoint with Microsoft Intune
+description: Step-by-step tutorial to set up a cloud-native Windows endpoint - Microsoft Entra joined, Intune enrolled, secured, and deployed with Windows Autopilot.
+ms.keywords: cloud native Windows, cloud-native Windows endpoint, Intune cloud native, Windows Autopilot cloud native, cloud native endpoint setup
 author: scottbreenmsft
 ms.author: scbree
-ms.date: 07/24/2025
-ms.topic: get-started
+ms.date: 05/18/2026
+ms.topic: tutorial
 ms.reviewer: scbree;rogerso
 ms.collection:
   - M365-identity-device-management
@@ -15,32 +15,38 @@ ms.collection:
   - graph-interactive
 ---
 
-# Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune
+# Tutorial: Set up a cloud-native Windows endpoint with Microsoft Intune
+
+This step-by-step tutorial shows you how to set up a **cloud-native Windows endpoint** using Microsoft Intune and Windows Autopilot. A cloud-native Windows endpoint (sometimes written as cloud native Windows) is Microsoft Entra joined, enrolled in Microsoft Intune, and managed entirely from the cloud — no Active Directory domain join, no on-premises infrastructure required.
+
+By the end of this tutorial, you have a fully configured Windows device that's:
+
+> [!div class="checklist"]
+> * **Microsoft Entra joined** and enrolled in **Microsoft Intune**
+> * **Secured** with Microsoft Defender Antivirus, BitLocker encryption, Windows LAPS, and security baselines
+> * **Provisioned** through **Windows Autopilot** with Microsoft 365 apps, OneDrive Known Folder Move, and the Company Portal
+> * **Ready to scale** to the rest of your Windows fleet
+
+For background, see [What are cloud-native endpoints?](overview.md) and [How to plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
 
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
-This guide walks you through the steps to create a cloud-native Windows endpoint configuration for your organization. For an overview of cloud-native endpoints, and their benefits, see [What are cloud-native endpoints](overview.md).
-
-This feature applies to:
-
-- Windows cloud-native endpoints
-
 ## How to get started
 
-Use the five ordered phases in this guide, which build on each other to help you prepare your cloud-native Windows endpoint configuration. By completing these phases in order, you see tangible progress and are ready to provision new devices.
-
-**Phases**:
+Complete the five phases in order — each builds on the previous one.
 
 :::image type="content" source="media/tutorial-cloud-native-setup/phases.png" alt-text="Five phases for setting up cloud-native Windows endpoints using Microsoft Intune and Windows Autopilot.":::
 
-- [Phase 1](#phase-1--set-up-your-environment) – Set up your environment
-- [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint) – Build your first cloud-native Windows endpoint
-- [Phase 3](#phase-3--secure-your-cloud-native-windows-endpoint) – Secure your cloud-native Windows endpoint
-- [Phase 4](#phase-4--apply-customizations-and-review-your-on-premises-configuration) – Apply your custom settings and applications
-- [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot) – Deploy at scale with Windows Autopilot
+| Phase | Goal |
+| --- | --- |
+| [Phase 1](#phase-1--set-up-your-environment) – Set up your environment | Prepare your tenant, test device, and baseline Autopilot policies |
+| [Phase 2](#phase-2--build-a-cloud-native-windows-endpoint) – Build a cloud-native Windows endpoint | Provision your first endpoint through Autopilot |
+| [Phase 3](#phase-3--secure-your-cloud-native-windows-endpoint) – Secure your cloud-native Windows endpoint | Apply endpoint security: Defender, BitLocker, LAPS, baselines, updates |
+| [Phase 4](#phase-4--apply-customizations-and-review-your-on-premises-configuration) – Apply customizations and review your on-premises configuration | Add organization-specific apps, settings, and migrate from Group Policy |
+| [Phase 5](#phase-5--scale-your-deployment-with-windows-autopilot) – Scale your deployment with Windows Autopilot | Scale provisioning to your fleet using OEM registration, personas, and rollout rings |
 
-At the end of this guide, you have a cloud-native Windows endpoint ready to start testing in your environment. Before you get started, you might want to check out the Microsoft Entra join planning guide at [How to plan your Microsoft Entra join implementation](/entra/identity/devices/device-join-plan).
+After your endpoints are deployed, use the [Monitor your cloud-native Windows endpoints](#monitor-your-cloud-native-windows-endpoints) section to validate policy, app, and compliance status from the Intune admin center as part of ongoing operations.
 
 ## Phase 1 – Set up your environment
 
@@ -94,7 +100,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
 > [!NOTE]
 > While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There's more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
 
-1. Install Windows (preferably 20H2 or later) in a virtual machine or reset physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
+1. Install Windows 11 (recommended), or Windows 10 22H2 or later, in a virtual machine or reset physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
 2. Complete the necessary steps to connect to the Internet.
 
@@ -120,7 +126,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
 
 9. When prompted for credentials, sign in with your Intune Administrator account.
 
-10. Leave the computer at the out of box experience until [Phase 2](#phase-2---build-a-cloud-native-windows-endpoint).
+10. Leave the computer at the out of box experience until [Phase 2](#phase-2--build-a-cloud-native-windows-endpoint).
 
 ### Step 4 - Create Microsoft Entra dynamic group for the device
 
@@ -167,13 +173,23 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 3. Select **Create profile** > **Windows PC**.
 
-1. Enter the name **Autopilot Cloud Native Windows Endpoint**, and then select **Next**.
+4. Enter the name **Autopilot Cloud-Native Windows Endpoints**, and then select **Next**.
 
-5. Review and leave the default settings and select **Next**.
+5. In the **Out-of-box experience (OOBE)** settings, confirm the following key values and select **Next**:
+
+   | Setting | Value |
+   | --- | --- |
+   | Deployment mode | User-driven |
+   | Join to Microsoft Entra ID as | Microsoft Entra joined |
+   | User account type | **Standard** |
+   | Apply device name template | Optional. A naming template like `CloudPC-%SERIAL%` makes devices easy to identify in the admin center. |
+
+   > [!IMPORTANT]
+   > Setting **User account type** to **Standard** is a security best practice. It prevents users from installing unapproved software and reduces the attack surface on cloud-native endpoints.
 
 6. Leave the scope tags and select **Next**.
 
-7. Assign the profile to the Microsoft Entra group you created called **Autopilot Cloud-Native Windows Endpoint**, select **Next**, and then select **Create**.
+7. Assign the profile to the Microsoft Entra group you created called **Autopilot Cloud-Native Windows Endpoints**, select **Next**, and then select **Create**.
 
 ### Step 7 - Sync Windows Autopilot devices
 
@@ -241,33 +257,43 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
 - **Microsoft Store App** (Whiteboard)
   While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md) to install **Microsoft Whiteboard**.
 
-## Phase 2 - Build a cloud-native Windows endpoint
+> [!div class="nextstepaction"]
+> [Next: Phase 2 – Build a cloud-native Windows endpoint](#phase-2--build-a-cloud-native-windows-endpoint)
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-2.png" alt-text="Phase 2.":::
+## Phase 2 – Build a cloud-native Windows endpoint
 
-To build your first cloud-native Windows endpoint, use the same virtual machine or physical device that you gathered and then uploaded the hardware hash to the Windows Autopilot service in [Phase 1 > Step 3](#phase-1--set-up-your-environment). With this device, go through the Windows Autopilot process.
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-2.png" alt-text="Phase 2: Build a cloud-native Windows endpoint by provisioning your first device through Windows Autopilot.":::
+
+To build your first cloud-native Windows endpoint, use the same virtual machine or physical device that you gathered and then uploaded the hardware hash to the Windows Autopilot service in [Phase 1, Step 3 - Import your test device](#step-3---import-your-test-device). With this device, go through the Windows Autopilot process.
 
 1. Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
    > [!NOTE]
-   > If you're prompted to choose setup for personal or an organization, then the Windows Autopilot process hasn't triggered. In that situation, restart the device and ensure it has internet access. If it still doesn't work, try resetting the PC or reinstalling Windows.
+   > If you're prompted to choose setup for personal or an organization, then the Windows Autopilot process didn't start. In that situation, restart the device and ensure it has internet access. If it still doesn't work, try resetting the PC or reinstalling Windows.
 
 2. Sign in with Microsoft Entra credentials (*UPN* or *AzureAD\username*).
 3. The enrollment status page shows the status of the device configuration.
 
-**Congratulations!** You've provisioned your first cloud-native Windows endpoint!
+**Congratulations!** You provisioned your first cloud-native Windows endpoint!
 
-Some things to check out on your new cloud-native Windows endpoint:
+### Validate your endpoint
 
-- The OneDrive folders are redirected. When Outlook opens, it's configured automatically to connect to Office 365.
-- Open the **Company Portal** app from the **Start Menu** and notice that **Microsoft Whiteboard** is available for installation.
-- Consider testing access from the device to on-premises resources like file shares, printers, and intranet sites.
+Verify the following on your new device before moving to Phase 3:
 
-  > [!NOTE]
-  > If you haven't set up [Windows Hello for Business Hybrid](/windows/security/identity-protection/hello-for-business/hello-identity-verification#hybrid-deployments), you might be prompted on Windows Hello logons to enter passwords to access on-premises resources. To continue testing single sign on access, you can configure Windows Hello for Business Hybrid or logon to the device with username and password rather than Windows Hello. To do so, select the key shaped icon on the logon screen.
+> [!div class="checklist"]
+> * OneDrive folders (Desktop, Documents, Pictures) are redirected and syncing.
+> * Outlook opens and auto-configures your Microsoft 365 profile.
+> * **Company Portal** is installed and **Microsoft Whiteboard** is available.
+> * You can sign in with your Microsoft Entra credentials and access cloud resources.
+> * On-premises resources (file shares, intranet sites, printers) are accessible if required.
+
+If you're prompted to enter a password when using Windows Hello to access on-premises resources, Windows Hello for Business Hybrid isn't configured yet. You can continue testing by selecting the key icon on the sign-in screen and using your username and password instead. For more information, see [Windows Hello for Business Hybrid](/windows/security/identity-protection/hello-for-business/hello-identity-verification#hybrid-deployments).
+
+> [!div class="nextstepaction"]
+> [Next: Phase 3 – Secure your cloud-native Windows endpoint](#phase-3--secure-your-cloud-native-windows-endpoint)
 
 ## Phase 3 – Secure your cloud-native Windows endpoint
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-3.png" alt-text="Phase 3.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-3.png" alt-text="Phase 3: Secure your cloud-native Windows endpoint with Defender, BitLocker, LAPS, security baselines, and compliance policies.":::
 
 This phase is designed to help you build out security settings for your organization. This section draws your attention to the various Endpoint Security components in Microsoft Intune including:
 
@@ -277,6 +303,8 @@ This phase is designed to help you build out security settings for your organiza
 - [Windows Local Administrator Password Solution (LAPS)](#windows-local-administrator-password-solution-laps)
 - [Security baselines](#security-baselines)
 - [Windows Update client policies](#windows-update-for-business)
+- [Compliance policy](#compliance-policy)
+- [Conditional Access](#conditional-access)
 
 ### Microsoft Defender Antivirus (MDAV)
 
@@ -464,24 +492,94 @@ For more information, go to:
 - [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/index.md)
 - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
-If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).
+> [!TIP]
+> For cloud-native environments, consider [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Autopatch automates update ring management and reporting, removing the need to manually tune deferral periods and deadlines. It's included with Microsoft Intune and is the recommended approach for organizations that want fully automated, policy-driven Windows updates with minimal admin overhead.
+
+### Compliance policy
+
+A compliance policy reports on the health of your cloud-native Windows endpoints — for example, whether BitLocker is enabled, Secure Boot is on, and Microsoft Defender Antivirus is running. The policy is also the foundation for Conditional Access, so you can block noncompliant devices from accessing organization resources.
+
+To create a Windows compliance policy:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Compliance** > **Create policy**.
+3. For **Platform**, select **Windows 10 and later** > **Create**.
+4. In **Basics**, enter a name for the policy and select **Next**.
+5. In **Compliance settings**, configure the following recommended values and select **Next**:
+
+    | Setting category | Setting | Value |
+    | --- | --- | --- |
+    | **Device Health** | Require BitLocker | Require |
+    | &nbsp; | Require Secure Boot to be enabled on the device | Require |
+    | &nbsp; | Require code integrity | Require |
+    | **System Security** | Firewall | Require |
+    | &nbsp; | Antivirus | Require |
+    | &nbsp; | Antispyware | Require |
+    | &nbsp; | Require a password to unlock mobile devices | Require |
+    | &nbsp; | Simple passwords | Block |
+    | &nbsp; | Password type | Alphanumeric |
+    | &nbsp; | Minimum password length | 14 |
+    | &nbsp; | Maximum minutes of inactivity before password is required | 1 Minute |
+    | &nbsp; | Password expiration (days) | Not configured |
+    | &nbsp; | Number of previous passwords to prevent reuse | 5 |
+    | **Defender** | Microsoft Defender Antimalware | Require |
+    | &nbsp; | Microsoft Defender Antimalware security intelligence up-to-date | Require |
+    | &nbsp; | Real-time protection | Require |
+
+    > [!TIP]
+    > Microsoft and current [NIST guidance](https://pages.nist.gov/800-63-3/sp800-63b.html) no longer recommend periodic password expiration. The Windows security baseline removed password expiration in 2019. For cloud-native endpoints, the strongest posture is to move users to passwordless sign-in with [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/) and [passkeys / FIDO2 security keys](/entra/identity/authentication/concept-authentication-passwordless), and to block weak passwords with [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad). Adjust the values above to match your organization's policy.
+
+6. In **Actions for noncompliance**, set the **Mark device noncompliant** schedule to `1` day (or another grace period that suits your organization).
+
+    > [!TIP]
+    > If you use Conditional Access, configure a grace period so noncompliant devices don't immediately lose access to organization resources. You can also add an action to email users with steps to get compliant.
+
+7. Assign the policy to the **Autopilot Cloud-Native Windows Endpoints** group from [Step 4 - Create Microsoft Entra dynamic group for the device](#step-4---create-microsoft-entra-dynamic-group-for-the-device).
+
+For more information on Windows compliance settings, see [Windows device compliance settings in Microsoft Intune](../../device-security/compliance/ref-windows-settings.md).
+
+### Conditional Access
+
+Conditional Access in Microsoft Entra uses compliance signal from Intune to allow or block access to organization resources. The most common cloud-native pattern is **require a compliant device** for Microsoft 365 apps and other cloud services. This pattern ensures only Intune-managed, healthy devices can access your data.
+
+A typical cloud-native Conditional Access baseline includes:
+
+- **Require multifactor authentication** for all users.
+- **Require a compliant device** (or hybrid Microsoft Entra joined device) for cloud apps.
+- **Block legacy authentication** protocols.
+
+> [!IMPORTANT]
+> Test Conditional Access policies on a pilot group first. A misconfigured policy can lock administrators out of the Microsoft Entra admin center.
+
+For step-by-step guidance, see:
+
+- [Conditional Access: Require compliant or hybrid Microsoft Entra joined device](/entra/identity/conditional-access/howto-conditional-access-policy-compliant-device)
+- [Plan a Conditional Access deployment](/entra/identity/conditional-access/plan-conditional-access)
+- [Conditional Access common policies](/entra/identity/conditional-access/concept-conditional-access-policy-common)
+
+> [!div class="nextstepaction"]
+> [Next: Phase 4 – Apply customizations and review your on-premises configuration](#phase-4--apply-customizations-and-review-your-on-premises-configuration)
 
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-4.png" alt-text="Phase 4.":::
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-4.png" alt-text="Phase 4: Apply organization-specific customizations including Microsoft Edge, OneDrive, settings catalog, and Group Policy migration.":::
 
 In this phase, you apply organization-specific settings, apps, and review your on-premises configuration. The phase helps you build any customizations specific to your organization. Notice the various components of Windows, how you can review existing configurations from an on-premises AD Group Policy environment, and apply them to cloud-native endpoints. There are sections for each of the following areas:
 
-- [Microsoft Edge](#microsoft-edge)
-- [Start and Taskbar layout](#start-and-taskbar-layout)
-- [Settings catalog](#settings-catalog)
-- [Device Restrictions](#device-restrictions)
-- [Delivery Optimization](#delivery-optimization)
-- [Local Administrators](#local-administrators)
-- [Group Policy to MDM Setting Migration](#group-policy-to-mdm-setting-migration)
-- [Scripts](#scripts)
-- [Mapping Network Drives and Printers](#mapping-network-drives-and-printers)
-- [Applications](#applications)
+- **User experience**
+  - [Microsoft Edge](#microsoft-edge)
+  - [Start and Taskbar layout](#start-and-taskbar-layout)
+- **Device configuration**
+  - [Settings catalog](#settings-catalog)
+  - [Device Restrictions](#device-restrictions)
+  - [Delivery Optimization](#delivery-optimization)
+  - [Local Administrators](#local-administrators)
+- **Migrate from on-premises**
+  - [Group Policy to MDM Setting Migration](#group-policy-to-mdm-setting-migration)
+  - [Scripts](#scripts)
+  - [Mapping Network Drives and Printers](#mapping-network-drives-and-printers)
+- **Applications**
+  - [Applications](#applications)
 
 ### Microsoft Edge
 
@@ -540,12 +638,16 @@ The settings catalog is a single location where all configurable Windows setting
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
+<!-- EDITOR/REVIEWER NOTE: "Azure Active Directory preferred tenant domain" and "Preferred AAD Tenant Domain Name" below are exact setting labels as they appear in the Intune Settings Catalog UI. Do not rename or modernize these to "Microsoft Entra" — they must match the product UI verbatim. -->
 - **Azure Active Directory preferred tenant domain**
   This setting configures the preferred tenant domain name to be appended to a user's username. A preferred tenant domain allows users to sign in to Microsoft Entra endpoints with only their username rather than their whole UPN so long as the user's domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
 
   The setting can be found in:
   - Authentication
     - Preferred AAD Tenant Domain Name - Specify domain name, like `contoso.onmicrosoft.com`.
+
+  > [!NOTE]
+  > The setting label uses legacy terminology. "AAD" refers to Microsoft Entra ID.
 
 - **Windows Spotlight**
   By default, several consumer features of Windows are enabled which results in selected Store apps installing and third-party suggestions on the lock screen. You can control this using the Experience section of the settings catalog.
@@ -573,7 +675,7 @@ Following are some settings available in the settings catalog that might be rele
 
 - **Control which tenants the Teams desktop client can sign in to**
 
-  When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
+  When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that's included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
 
   - Microsoft Teams
     - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
@@ -662,7 +764,7 @@ Intune supports the deployment of many different Windows application types.
 - Windows Installer (MSI) – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
 - MSIX – [Add a Windows line-of-business app to Microsoft Intune](../../app-management/deployment/add-lob-windows.md)
 - Win32 apps (MSI, EXE, script installers) – [Win32 app management in Microsoft Intune](../../app-management/deployment/win32.md)
-- Store apps – [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store-legacy.md)
+- Store apps – [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md)
 - Web links – [Add web apps to Microsoft Intune](../../app-management/deployment/add-web.md)
 
 If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits, including notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Windows Autopilot.
@@ -670,25 +772,123 @@ If you have applications that use MSI, EXE, or script installers, you can deploy
 > [!NOTE]
 > To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as `.msi` or `.exe`, then they can be converted to Win32 apps (`.intunewin`) using the *[Microsoft Win32 Content Prep Tool](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool)* available on GitHub.
 
-## Phase 5 – Deploy at scale with Windows Autopilot
+> [!div class="nextstepaction"]
+> [Next: Phase 5 – Scale your deployment with Windows Autopilot](#phase-5--scale-your-deployment-with-windows-autopilot)
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-5.png" alt-text="Phase 5.":::
+## Phase 5 – Scale your deployment with Windows Autopilot
 
-Now that you configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
+:::image type="content" source="media/tutorial-cloud-native-setup/phase-5.png" alt-text="Phase 5: Scale your deployment with Windows Autopilot using OEM registration, device personas, and staged rollout rings.":::
+
+You proved cloud-native works on one device. This phase covers how to move from a test device to your production fleet — how devices get registered, how you group them by persona, how you stage rollout, and how you handle the existing PCs you already manage.
+
+### Register devices at scale
+
+In Phase 1 you uploaded a hardware hash manually. That's fine for a lab, but doesn't scale. The production-ready options are:
+
+| Registration source | How it works | Best for |
+| --- | --- | --- |
+| **OEM or hardware partner** | Devices ship from the vendor already registered to your tenant (Dell, HP, Lenovo, Microsoft, Surface, and others). | New hardware procurement — the recommended target state. |
+| **Reseller or CSP** | A Microsoft partner registers devices on your behalf. | Indirect or mixed supply chains. |
+| **Manual hash upload (CSV)** | Same `Get-WindowsAutopilotInfo` flow from [Phase 1, Step 3](#step-3---import-your-test-device), bulk-uploaded as a CSV. | Pilots, lab devices, small batches, existing devices being onboarded. |
+| **Intune Connector / direct enrollment** | Newer registration paths surfaced in the admin center. | Specific enrollment scenarios — see the Autopilot registration overview. |
+
+For full details, see [Register Autopilot devices](/autopilot/registration-overview).
+
+> [!TIP]
+> Whenever you buy new Windows hardware, ask your reseller or OEM to register devices to your Microsoft Entra tenant ID at the time of purchase. This is the lowest-friction long-term pattern and removes the need to ever collect a hash manually.
+
+### Use Group Tags for personas
+
+You already used the `CloudNative` group tag in Phase 1 to drive a dynamic group. The same pattern scales to multiple device personas. Define one group tag per persona, one dynamic Microsoft Entra group per tag, and one Autopilot deployment profile plus Enrollment Status Page per group.
+
+| Persona | Suggested group tag | Autopilot profile | User account type |
+| --- | --- | --- | --- |
+| Knowledge worker | `KnowledgeWorker` | User-driven | Standard user |
+| Developer / power user | `Developer` | User-driven | Administrator |
+| Kiosk or shared device | `Kiosk` | Self-deploying | N/A |
+| Pre-provisioned (white glove) | `PreProvisioned` | Pre-provisioned | Standard user |
+
+This pattern keeps configuration, apps, and security policies isolated per persona and avoids one-off exceptions sprawling across your tenant.
+
+### Roll out in rings
+
+Don't deploy to the whole fleet at once. Use the same ring concept that you use for Windows Updates:
+
+| Ring | Audience | Purpose |
+| --- | --- | --- |
+| **Pilot** | IT team and a small group of volunteers | Validate end-to-end provisioning and policy. |
+| **Early adopters** | ~5% of users, spread across departments | Catch persona- and app-specific issues. |
+| **Broad** | The remaining fleet, staged by region or department | Production rollout. |
+
+Use **assignment filters** to target rings instead of creating duplicate groups for every policy. Monitor each ring using the [Monitor your cloud-native Windows endpoints](#monitor-your-cloud-native-windows-endpoints) section before promoting to the next.
+
+### Handle existing devices
+
+For Windows PCs you already manage, Microsoft recommends moving to Autopilot at the **next hardware refresh** rather than re-provisioning your entire fleet today. Cloud-native Windows gets its full benefits from a clean OOBE start, and refresh cycles let you transition naturally with minimal user disruption.
+
+If you can't wait for refresh, two paths are available:
+
+- **Register and reset in place.** Collect the hash for an existing device, register it to Autopilot, then reset the PC. The device comes back through OOBE as a cloud-native endpoint. See [Add existing devices to Windows Autopilot](/autopilot/add-devices).
+- **Reimage on refresh.** Only new or refreshed hardware enrolls as cloud-native. Existing devices stay on their current management until they reach end of life.
+
+> [!CAUTION]
+> Don't register devices that are actively managed by Microsoft Configuration Manager without a co-management plan. Decide whether the device will be cloud-managed, co-managed, or stay on Configuration Manager **before** you register it to Autopilot. For more information, see [Co-management for Windows devices](../../configmgr/comanage/overview.md).
+
+### Learn more
 
 - [Overview of Windows Autopilot](/autopilot/overview)
+- [Windows Autopilot deployment profiles](/autopilot/profiles)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
-If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](../../device-enrollment/enroll-devices.md).
+If Windows Autopilot isn't the right fit for your scenario, see [Intune enrollment methods for Windows devices](../../device-enrollment/enroll-devices.md) for alternatives.
+
+> [!div class="nextstepaction"]
+> [Next: Monitor your cloud-native Windows endpoints](#monitor-your-cloud-native-windows-endpoints)
+
+## Monitor your cloud-native Windows endpoints
+
+After your cloud-native Windows endpoints are provisioned and configured, use the monitoring views in the Microsoft Intune admin center to confirm policies, scripts, and apps deploy successfully — and to spot issues early. Monitoring is an ongoing operational task, not a one-time setup step.
+
+| What to monitor | In the admin center | What to review | More information |
+| --- | --- | --- | --- |
+| **Script status** | **Devices** > **By platform** > **Windows** > **Manage devices** > **Scripts and remediations** > **Platform scripts** | Select a script > **Device status** | — |
+| **App installation status** | **Apps** > **Windows** > **Windows apps** | Select an app > **Device install status** or **User install status** | [Troubleshoot app installs](/troubleshoot/mem/intune/app-management/troubleshoot-app-install) |
+| **Security baselines** | — | — | [Monitor security baselines in Intune](../../device-security/security-baselines/monitor-baselines.md) |
+| **Disk encryption (BitLocker)** | **Endpoint security** > **Disk encryption** | Select the BitLocker policy > **Device install status**. Recovery keys: **Devices** > **Windows** > select a device > **Recovery keys** | — |
+| **Windows Update rings** | **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** | Select a ring > **Device status** | [Reports for update rings](../../device-updates/windows/monitor-update-rings.md) |
+| **Compliance** | **Devices** > **Compliance** | Select the policy to see assignment results, noncompliant devices, and per-setting failures | [Monitor compliance policies](../../device-security/compliance/monitor-policy.md) |
+| **Endpoint analytics** | **Reports** > **Endpoint analytics** | Startup performance, app reliability, and proactive remediations across your fleet | [Endpoint analytics overview](../../analytics/overview.md) · [Intune reports](../../fundamentals/reports.md) |
 
 ## Follow the cloud-native endpoints guidance
 
 1. [Overview: What are cloud-native endpoints?](overview.md)
-2. 🡺 **Tutorial: Get started with cloud-native Windows endpoints** (*You are here*)
+2. 🡺 **Tutorial: Get started with cloud-native Windows endpoints** (*You're here*)
 3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. [High level planning guide](planning-guide.md)
 6. [Known issues and important information](troubleshoot.md)
+
+## Frequently asked questions
+
+### What is a cloud-native Windows endpoint?
+
+A cloud-native Windows endpoint is a Windows device that's Microsoft Entra joined and enrolled in Microsoft Intune — with no dependency on on-premises Active Directory, Group Policy, or domain controllers. All configuration, security, and app deployment is managed from the cloud using Microsoft Intune and Windows Autopilot.
+
+### What's the difference between cloud-native and hybrid Microsoft Entra joined?
+
+A hybrid Microsoft Entra joined device is joined to both on-premises Active Directory and Microsoft Entra. It still depends on domain controllers for authentication and Group Policy for configuration. A cloud-native (Microsoft Entra joined only) device has no on-premises dependency — identity, policy, and apps all come from the cloud. For a detailed comparison, see [Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md).
+
+### Do I need Windows 11 for cloud-native endpoints?
+
+No. Cloud-native Windows works with Windows 10 22H2 or later. Microsoft recommends Windows 11 for the best experience with Windows Autopilot, Windows Hello for Business, and modern security features.
+
+### Can I move existing domain-joined devices to cloud-native?
+
+Yes, but Microsoft recommends doing it at the **next hardware refresh** rather than re-provisioning your entire fleet. Cloud-native Windows gets its full benefits from a clean OOBE start. For devices you can't wait to refresh, see [Handle existing devices](#handle-existing-devices) in Phase 5.
+
+### Does cloud-native Windows work with on-premises resources like file shares and printers?
+
+Yes, with some planning. Cloud-native devices can access on-premises resources over VPN or through Microsoft Entra application proxy. For file storage, Microsoft recommends migrating to OneDrive and SharePoint. For printing, consider [Universal Print](/universal-print/fundamentals/universal-print-whatis). See [Cloud-native endpoints and on-premises resources](on-premises-resources.md) for detailed guidance.
 
 ## Helpful online resources
 
