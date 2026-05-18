@@ -857,7 +857,7 @@ After your cloud-native Windows endpoints are provisioned and configured, use th
 | **Disk encryption (BitLocker)** | **Endpoint security** > **Disk encryption** | Select the BitLocker policy > **Device install status**. Recovery keys: **Devices** > **Windows** > select a device > **Recovery keys** | — |
 | **Windows Update rings** | **Devices** > **Manage updates** > **Windows 10 and later updates** > **Update rings** | Select a ring > **Device status** | [Reports for update rings](../../device-updates/windows/monitor-update-rings.md) |
 | **Compliance** | **Devices** > **Compliance** | Select the policy to see assignment results, noncompliant devices, and per-setting failures | [Monitor compliance policies](../../device-security/compliance/monitor-policy.md) |
-| **Endpoint analytics** | **Reports** > **Endpoint analytics** | Startup performance, app reliability, and proactive remediations across your fleet | [Endpoint analytics overview](/endpoint-analytics) · [Intune reports](/mem/intune/fundamentals/reports) |
+| **Endpoint analytics** | **Reports** > **Endpoint analytics** | Startup performance, app reliability, and proactive remediations across your fleet | [Endpoint analytics overview](/mem/intune/endpoint-analytics) · [Intune reports](/mem/intune/fundamentals/reports) |
 
 ## Follow the cloud-native endpoints guidance
 
