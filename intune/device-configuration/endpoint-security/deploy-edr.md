@@ -37,7 +37,7 @@ EDR onboarding configures devices so they can send security telemetry to your De
 - Onboarding enables telemetry flow, but doesn't configure advanced settings such as attack surface reduction, firewall, or antivirus policies.
 - EDR policies don't manage threat hunting rules, custom detection logic, response automation, or investigation workflows.
 
-For technical details, see [Onboard devices to Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboard-configure).
+For technical details, see [Onboard devices to Microsoft Defender for Endpoint](/defender-endpoint/onboarding).
 
 Applies to:
 
@@ -444,13 +444,7 @@ When deploying an offboarding EDR policy in Intune:
 - The Intune EDR policy compliance status should show successful deployment.
 - Historical data remains in Defender until retention policies remove it.
 
-When you offboard a device from Defender for Endpoint:
-
-- **Telemetry stops**: No new detections, vulnerability, or security data are sent to the Microsoft Defender portal.
-- **Device status changes**: Seven days after offboarding, the device's status changes to "inactive".
-- **Data retention**: Past data (alerts, vulnerabilities, device timeline) remains in the Defender portal until the configured retention period expires.
-- **Device visibility**: The device profile (without data) remains visible in the device inventory for up to 180 days.
-- **Exposure score**: Devices inactive for 30+ days don't factor into your organization's exposure score.
+After offboarding, the device stops sending telemetry and its status changes to *inactive* after seven days. Historical data remains in the Defender portal until the configured retention period expires. For details about what happens after offboarding, see [Offboard devices](/microsoft-365/security/defender-endpoint/offboard-machines).
 
 For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
 
