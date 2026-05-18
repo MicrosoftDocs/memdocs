@@ -5,6 +5,7 @@ ms.date: 03/10/2022
 ms.subservice: compliance
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 # Create configuration baselines in Configuration Manager
 

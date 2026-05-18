@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: osd
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # User experiences for OS deployment

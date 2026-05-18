@@ -5,6 +5,7 @@ ms.date: 11/29/2019
 ms.subservice: protect
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sfi-ropc-nochange
 ---
 
 # Server event logs
