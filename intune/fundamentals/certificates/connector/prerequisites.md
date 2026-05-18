@@ -19,6 +19,9 @@ Requirements for the computer where you install the connector software:
 
 - Windows Server 2012 R2 or later.
 
+ > [!CAUTION]
+  > Microsoft Intune strongly recommend enabling BitLocker encrytpion or equivalent disk encryption on the installation drive where the Certificate connector installation is applied. To learn more, see [BitLocker Overview:](https://support.microsoft.com/en-us/windows/bitlocker-overview-44c0c61c-989d-4a69-8822-b95cd49b1bbf).
+
   > [!NOTE]
   > The Windows Server must be configured with the Desktop Experience, and for versions 2019 or earlier, the Microsoft Edge browser must be installed manually prior to initiating the connector setup. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
