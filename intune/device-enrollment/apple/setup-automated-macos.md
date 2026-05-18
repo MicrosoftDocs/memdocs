@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 05/13/2026
+ms.date: 05/18/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ai-usage: ai-assisted
@@ -167,6 +167,15 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
         * **Hide**: The screen doesn't appear to users during device setup. After device setup, the user can go to their device settings to set up the feature.
         * **Show**: The screen appears to users during device setup. The user can still skip screens that don't require immediate action. After device setup, the user can go to their device settings to set up the feature.
 1. Select **Next**.
+
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   This tab is only available in new enrollment policies and doesn't appear in existing enrollment profiles. Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+   For more information, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md).
+
+1. Select **Next**.
+
 1. Review the summary of changes, and then select **Create** to finish creating the policy.
 
 ### Setup Assistant screen reference

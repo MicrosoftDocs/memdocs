@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/29/2026
+ms.date: 05/18/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ai-usage: ai-assisted
@@ -221,6 +221,14 @@ Create an enrollment policy for automated device enrollment. A device enrollment
     - If you select **Hide**, the screen isn't shown during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
     - If you select **Show**, the screen is shown during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
     - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration.
+
+1. Select **Next**.
+
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   This tab is only available in new enrollment policies and doesn't appear in existing enrollment profiles. Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+   For more information, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md).
 
 1. Select **Next**.
 
