@@ -19,6 +19,9 @@ Requirements for the computer where you install the connector software:
 
 - Windows Server 2012 R2 or later.
 
+  > [!CAUTION]
+  > Microsoft recommends enabling BitLocker (or an equivalent disk encryption solution) on the drive where the Certificate connector is installed. To learn more, see [BitLocker Overview:](/windows/security/operating-system-security/data-protection/bitlocker/).
+
   > [!NOTE]
   > The Windows Server must be configured with the Desktop Experience, and for versions 2019 or earlier, the Microsoft Edge browser must be installed manually prior to initiating the connector setup. For more information, see [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) in the Windows Server 2016 documentation.
 
