@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Set up a cloud-native Windows endpoint with Microsoft Intune
+title: Tutorial - Set up cloud-native Windows endpoints with Microsoft Intune
 description: Step-by-step tutorial to set up a cloud-native Windows endpoint - Microsoft Entra joined, Intune enrolled, secured, and deployed with Windows Autopilot.
 ms.keywords: cloud native Windows, cloud-native Windows endpoint, Intune cloud native, Windows Autopilot cloud native, cloud native endpoint setup
 author: scottbreenmsft
@@ -15,7 +15,7 @@ ms.collection:
   - graph-interactive
 ---
 
-# Tutorial: Set up a cloud-native Windows endpoint with Microsoft Intune
+# Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune
 
 This step-by-step tutorial shows you how to set up a **cloud-native Windows endpoint** using Microsoft Intune and Windows Autopilot. A cloud-native Windows endpoint (sometimes written as cloud native Windows) is Microsoft Entra joined, enrolled in Microsoft Intune, and managed entirely from the cloud — no Active Directory domain join, no on-premises infrastructure required.
 
@@ -862,7 +862,7 @@ After your cloud-native Windows endpoints are provisioned and configured, use th
 ## Follow the cloud-native endpoints guidance
 
 1. [Overview: What are cloud-native endpoints?](overview.md)
-2. 🡺 **Tutorial: Get started with cloud-native Windows endpoints** (*You're here*)
+2. 🡺 **Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune** (*You're here*)
 3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. [High level planning guide](planning-guide.md)

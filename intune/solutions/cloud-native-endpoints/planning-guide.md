@@ -476,7 +476,7 @@ For more information on Windows Autopilot, go to:
 ## Follow the cloud-native endpoints guidance
 
 1. [Overview: What are cloud-native endpoints?](overview.md)
-2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
+2. [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
 3. [Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined](entra-join-types.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. 🡺 **High level planning guide** (*You are here*)
