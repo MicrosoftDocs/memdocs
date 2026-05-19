@@ -57,8 +57,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device security    
 
-#### Clarified guidance for the Setting Value field in compliance reporting<!-- 37725884 -->
-We updated our documentation to clarify how the **Setting Value** field is reported and how it should be interpreted in compliance reports. Setting Value is device‑reported information that provides additional context for noncompliance in scenarios such as custom compliance and Android app configuration reporting. This update adds guidance only and does not change existing behavior or enforcement. For more information, see [Interpret Setting Value in compliance reporting]().  
+#### Guidance for device-reported values in compliance reports<!-- 37725884 -->
+We updated documentation to clarify how to interpret device-reported values in compliance reports. Some compliance reports include a **Setting** column with values reported directly by the device, providing additional context for noncompliance in scenarios such as custom compliance and Android app configuration reporting. This update adds guidance on treating these values as informational only and highlights security considerations for reviewing device-reported data. For more information, see [Device-reported values in compliance reports](../device-security/compliance/monitor-policy.md#device-reported-values-in-compliance-reports).
 
 ## Week of May 11, 2026
 
