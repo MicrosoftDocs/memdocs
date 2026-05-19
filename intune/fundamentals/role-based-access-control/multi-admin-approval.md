@@ -19,6 +19,11 @@ By using Multi Admin Approval, you can configure access policies that protect sp
 
 When you use any account in the tenant to make a change to a resource that's protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that an access protection policy assigns a protected resource to can approve changes. Approvers can also reject change requests.
 
+MAA enforcement applies to both interactive (delegated) admin actions and application-authenticated (app-auth) API calls made through the Microsoft Graph API. If your organization uses service principals, automation scripts, or third-party applications to manage Intune resources via the Graph API, those calls are also intercepted by MAA when the target resource is protected by an access policy. For details on how to update your automation to work with MAA, or to exclude specific apps from enforcement, see [Use Multi Admin Approval with the Microsoft Graph API](multi-admin-approval-graph-api.md).
+
+> [!TIP]
+> MAA enforcement on app-auth calls applies only to tenants that already have MAA access policies configured. It doesn't enable MAA or change any tenant's enrollment.
+
 Intune supports access policies for the following resources:
 
 - Apps – Applies to [app deployments](../../app-management/deployment/index.md), but doesn't apply to app protection policies.  
