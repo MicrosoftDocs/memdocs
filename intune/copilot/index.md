@@ -1,7 +1,7 @@
 ---
 title: Security Copilot in Intune features overview
 description: Microsoft Security Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues and query devices.
-ms.date: 11/17/2025
+ms.date: 05/19/2026
 ms.update-cycle: 180-days
 ms.topic: get-started
 ms.reviewer: ankurgoyal, rashok, zadvor
@@ -46,9 +46,16 @@ To use Copilot in Intune, you should know the following information:
 
   :::image type="content" source="./media/index/tenant-administration-copilot-enabled.png" alt-text="Screenshot that shows Copilot is enabled in the Microsoft Intune tenant and Intune admin center." lightbox="./media/index/tenant-administration-copilot-enabled.png":::
 
-- **Copilot roles**: Access to Copilot in Intune is managed through Security Copilot or Microsoft Entra ID. To use Copilot in Intune, you or your admin team must be assigned the appropriate role in Security Copilot or Microsoft Entra ID. There isn't a built-in Intune role that has access to Copilot.
+- **Copilot roles**: Access to Copilot in Intune is managed through Security Copilot or Microsoft Entra ID. To use Copilot in Intune, you or your admin team must be assigned the appropriate role in Security Copilot or Microsoft Entra ID.
 
-  The **Intune Administrator** role in Microsoft Entra ID has access to Copilot in Intune by default. Other roles can be assigned access to Copilot in Intune through Security Copilot.
+  When Microsoft Intune is enabled as a data source in Security Copilot, by default:
+
+  - The Microsoft Entra ID **Intune Administrator** role automatically inherits **Security Copilot owner** access to Copilot in Intune.
+  - All the other built-in and custom Intune role-based access (RBAC) roles automatically inherit **Security Copilot contributor** access to Copilot in Intune. Intune admins can use Security Copilot capabilities in Intune without requiring additional role assignments.
+
+    If you want to remove the default access of these groups, you can remove the Intune roles from the **Security Copilot contributor** role in Security Copilot.
+
+  Copilot honors existing Intune RBAC permissions and scope tags. Administrators can only access the Intune data and perform actions that are permitted by their assigned Intune roles. Other roles can be assigned access to Copilot in Intune through Security Copilot.
 
   For more information, see [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication).
 

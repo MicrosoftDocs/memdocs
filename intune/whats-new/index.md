@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 05/11/2026
+ms.date: 05/19/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -53,6 +53,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of May 18, 2026
+
+### Role-based access control
+
+#### Intune RBAC roles have access to Copilot in Intune<!-- 37153212 -->
+
+When Microsoft Intune is enabled as a data source in Security Copilot, the Microsoft Entra ID **Intune Administrator** role automatically inherits **Security Copilot owner** access to Copilot in Intune by default.
+
+All the other built-in and custom Intune role-based access (RBAC) roles inherit **Security Copilot contributor** access by default. This change enables Intune users to use Security Copilot capabilities in Intune without requiring additional role assignments.
+
+Previously, access to Copilot in Intune required a separate role assignment in Security Copilot or a Microsoft Entra ID role, like the Intune Administrator role.
+
+This update reduces access friction and simplifies Copilot onboarding for organizations.
+
+To learn more, see:
+
+- [Microsoft Copilot in Intune](../copilot/index.md)
+- [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication)
+
 ## Week of May 11, 2026
 
 ### Device enrollment

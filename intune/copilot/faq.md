@@ -1,7 +1,7 @@
 ---
 title: FAQ for Microsoft Copilot in Intune
 description: Get answers to common questions when using Copilot in Microsoft Intune, including accessing Copilot, licensing, and more.
-ms.date: 09/17/2025
+ms.date: 05/19/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: ankurgoyal, rashok
@@ -18,9 +18,14 @@ This article answers common questions about using Microsoft Copilot in Intune. T
 
 ### How can I control access to Copilot in Intune?
 
-When you set up Security Copilot, you determine the Copilot role that your admins can have (**owner** or **contributor**), as described in [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication). There are also Microsoft Entra roles that can control access to Security Copilot.
+When Microsoft Intune is enabled as a data source in Security Copilot, by default:
 
-The Security Copilot roles or the Microsoft Entra roles that you configure control access to Copilot in Intune. There aren't any Intune-specific roles-based access controls (RBAC) for Copilot in Intune.
+- The Microsoft Entra ID **Intune Administrator** role automatically inherits **Security Copilot owner** access to Copilot in Intune.
+- All the other built-in and custom Intune role-based access (RBAC) roles automatically inherit **Security Copilot contributor** access to Copilot in Intune.
+
+The Security Copilot owner and contributor roles are described in [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication). [Microsoft Copilot in Intune overview](index.md) also has more information.
+
+There are also Microsoft Entra roles that can control access to Security Copilot.
 
 After you enable Intune in Security Copilot, your Intune admins can see the Copilot features in the Intune admin center. But they can only access the data that they have permission to. Copilot honors existing [Intune RBAC roles](../fundamentals/role-based-access-control/overview.md) and [Intune scope tags](../fundamentals/role-based-access-control/scope-tags.md) that are assigned to your admins.
 
@@ -28,17 +33,9 @@ So, if an admin tries to access Intune data that they don't have permissions to,
 
 `You don't have permission to access this feature. Reach out to your IT administrator for help.`
 
-**Key info**:
-
-- If you want access to Copilot in Intune, contact the Security Copilot workspace owner in your organization. Other roles can be assigned access to Copilot in Intune through Security Copilot.
-
-- If you want access to all your Intune data, contact your Intune administrator. By default, the **Intune Administrator** role in Microsoft Entra ID has access to Copilot in Intune.
-
 ### Can I use Security Copilot if I'm not an Intune admin, and vice versa?
 
 Yes. Access to Security Copilot is managed by using Security Copilot or Microsoft Entra roles. For more information, see [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication).
-
-If you're an admin for Intune and have the correct Security Copilot or Microsoft Entra role assigned to you, you can use Security Copilot to get insights about your Intune data.
 
 Security Copilot is scoped to all your embedded services.
 
