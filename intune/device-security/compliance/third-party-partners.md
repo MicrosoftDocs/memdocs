@@ -166,8 +166,8 @@ Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) and g
 When you migrate devices from third-party MDM providers to a full Intune stack, follow these cleanup steps:
 
 1. Initiate a retirement action from the third-party MDM service before enrolling the device with Intune MDM. This retirement action notifies Intune to perform the necessary cleanup tasks in its third-party integration services.
-> [!NOTE]
-> Removing the third-party MDM profile locally on a device doesn't sufficiently trigger the Intune cleanup tasks.
+   > [!NOTE]
+   > Removing the third-party MDM profile locally on a device doesn't sufficiently trigger the Intune cleanup tasks.
 
 1. Confirm that devices retired from the third-party MDM appear in Microsoft Entra ID with **None** listed in the **MDM** column. At this point, your devices can now be enrolled with Intune MDM.
 

@@ -23,8 +23,8 @@ The information in this article can help you understand how to use both the Intu
 
 When you configure Conditional Access in the Microsoft Entra admin center, you have two applications to choose from:
 
-1. **Microsoft Intune** - This application controls access to the Microsoft Intune admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Intune admin center and data sources.
-2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multifactor authentication for Intune device enrollments](../../device-enrollment/configure-multifactor-authentication.md).
+- **Microsoft Intune** - This application controls access to the Microsoft Intune admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Intune admin center and data sources.
+- **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multifactor authentication for Intune device enrollments](../../device-enrollment/configure-multifactor-authentication.md).
 
 ## Device-based Conditional Access
 
