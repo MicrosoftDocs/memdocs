@@ -144,7 +144,7 @@ When the connection is enabled:
 > [!TIP]
 > Connection verification can take up to 15 minutes. If the connection fails, confirm that your account has Security Administrator permissions in both Intune and Defender for Endpoint.
 
-For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](../../device-security/microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune).
+For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](../../device-security/microsoft-defender/configure-integration.md#connect-defender-for-endpoint-to-intune).
 
 ## Deploy EDR policy
 
