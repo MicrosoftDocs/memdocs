@@ -131,7 +131,7 @@ Instead of mixed exclusions, we recommend assigning to a user group. Then, use a
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Use assignment filters when targeting Intune policies based on device properties like OS type, manufacturer, model, ownership, or device category. | ❌ Don't create dynamic device groups for simple property-based targeting when the group is only used by Intune. |
+| ✅ Use filters for simple device properties (OS type, manufacturer, model, ownership, device category). | ❌ Don't use dynamic groups for simple device properties when the group is only used by Intune. |
 
 Dynamic device groups that use simple property rules (like `device.deviceOSType -eq "Windows"` or `device.deviceOwnership -eq "Company"`) introduce additional processing steps without benefit when the group is only consumed by Intune. Assignment filters evaluate the same properties at device check-in — directly, without requiring group membership evaluation.
 
