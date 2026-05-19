@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 05/11/2026
+ms.date: 05/19/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -53,6 +53,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of May 18, 2026
+
+### Device security    
+
+#### Clarified guidance for the Setting Value field in compliance reporting<!-- 37725884 -->
+We updated our documentation to clarify how the **Setting Value** field is reported and how it should be interpreted in compliance reports. Setting Value is device‑reported information that provides additional context for noncompliance in scenarios such as custom compliance and Android app configuration reporting. This update adds guidance only and does not change existing behavior or enforcement. For more information, see [Interpret Setting Value in compliance reporting]().  
+
 ## Week of May 11, 2026
 
 ### Device enrollment
