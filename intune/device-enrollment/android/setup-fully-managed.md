@@ -1,7 +1,7 @@
 ---
 title: Set up enrollment for Android Enterprise fully managed devices
 description: Set up enrollment in Intune for devices using the Android Enterprise fully managed device management solution.
-ms.date: 05/08/2025
+ms.date: 05/19/2026
 ms.topic: how-to
 ms.reviewer: grwilso
 ms.collection:
@@ -150,6 +150,9 @@ To review, make changes, or delete the profile:
 
 ## Step 3: Create dynamic Microsoft Entra group
 Optionally, create a dynamic Microsoft Entra group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile.
+
+> [!NOTE]
+> Dynamic groups based on `enrollmentProfileName` are useful when you need group membership for cross-workload scenarios (like Conditional Access or group-based licensing). If your goal is only to target Intune policies and apps to devices with specific properties, consider using [assignment filters](../../fundamentals/filters/overview.md) instead. Filters evaluate at check-in without depending on group membership processing.
 
 Add these configurations to your group:
 

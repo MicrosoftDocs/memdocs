@@ -1,11 +1,11 @@
 ---
 title: Categorize devices into groups in Intune
 description: Categorize Intune-managed devices into groups for easier management in the admin center.
-ms.date: 09/16/2025
+ms.date: 05/19/2026
 ms.topic: how-to
 author: paolomatarazzo
 ms.author: paoloma
-ms.reviewer: scotduff
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 ---
@@ -53,6 +53,9 @@ You'll use the device category name when you create Microsoft Entra security gro
 To enable automatic grouping, you must create a dynamic group using attribute-based rules in Microsoft Entra ID. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Microsoft Entra documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in Step 1 of this article.
 
 For example, to create a rule that automatically groups devices belonging in the HR category, use the following rule syntax: `device.deviceCategory -eq "HR"`
+
+> [!TIP]
+> If you only use device category groups for Intune policy and app targeting, you can use [assignment filters](../fundamentals/filters/overview.md) with the `deviceCategory` property instead of creating dynamic groups. Filters evaluate at check-in without depending on group membership processing. Dynamic groups remain necessary if the category groups are also used for Conditional Access, licensing, or other cross-workload scenarios.
 
 ## View categories of all devices
 To view the device category assigned to each device, go to **Devices** > **All devices**.

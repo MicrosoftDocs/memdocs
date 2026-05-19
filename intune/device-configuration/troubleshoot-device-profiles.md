@@ -1,7 +1,7 @@
 ---
 title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
-ms.date: 03/26/2026
+ms.date: 05/19/2026
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
 ms.reviewer:
@@ -160,13 +160,17 @@ To learn more about the version and edition requirements for the different setti
 
 ## When devices enroll, there's a delay in applying apps and policies assigned to dynamic device groups
 
-During enrollment, you can use Microsoft Entra dynamic device groups. For example, you can create a dynamic device group based on a device's name or enrollment profile.
+During enrollment, you can use Microsoft Entra dynamic device groups to target apps and policies. For example, you can create a dynamic device group based on a device's name or enrollment profile.
 
-The enrollment profile is applied to the device record during initial device setup. Microsoft Entra dynamic grouping isn't instant. The device might not be in the dynamic group for some time, possibly minutes to hours depending on other changes being made in your tenant.
+Dynamic group membership requires additional processing after a device enrolls. Until the device is added to the group, apps and policies assigned to that group aren't delivered. The policies might not apply until the next scheduled check-in.
 
-If the device isn't added to the group, then your apps and policies aren't assigned to the device during the initial Intune check-in. The policies might not apply until the next scheduled check-in.
+If fast delivery of apps and policies is important to your enrollment scenario, consider these alternatives:
 
-If fast delivery of apps and policies is important to your setup/enrollment scenario, then assign your apps and policies to user groups, not dynamic device groups. User groups are pre-populated with members before device setup and don't have this delay.
+- **User groups** — Assign apps and policies to user groups instead of dynamic device groups. User groups are pre-populated with members before device setup and don't depend on post-enrollment group membership processing.
+
+- **Assignment filters** — Use [assignment filters](../fundamentals/filters/overview.md) to target devices based on properties like OS type, manufacturer, or enrollment profile. Filters evaluate directly at device check-in without depending on group membership processing. Apply filters to broad groups like *All devices* for fast, predictable policy delivery during enrollment.
+
+- **Enrollment time grouping** — If you need to keep using dynamic device groups for enrollment targeting, [enrollment time grouping](../device-enrollment/setup-time-grouping.md) adds devices to a security group during enrollment rather than after, so apps and policies assigned to that group are delivered on the first check-in.
 
 For more information on dynamic groups, go to:
 

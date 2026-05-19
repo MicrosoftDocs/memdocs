@@ -1,7 +1,7 @@
 ---
 title: Assign device profiles in Microsoft Intune
 description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
-ms.date: 02/10/2026
+ms.date: 05/19/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: gokarthi
@@ -173,7 +173,10 @@ When you assign your policies and policies, apply the following general principl
 
 - Excluded groups can be groups with users or groups with devices.
 
-- Dynamic Microsoft Entra device groups can be added to Included groups. But, there can be latency when populating the dynamic group membership. In latency-sensitive scenarios, use [assignment filters](../fundamentals/filters/overview.md) to target specific devices, and assign your policies to user groups.
+- Dynamic Microsoft Entra device groups can be added to Included groups. But, dynamic group membership requires processing time before devices appear in the group. In time-sensitive scenarios, use [assignment filters](../fundamentals/filters/overview.md) to target specific devices directly at check-in, and assign your policies to user groups or the *All devices* virtual group.
+
+  > [!TIP]
+  > If your dynamic device group rule targets properties like OS type, manufacturer, model, ownership, or device category, consider using an [assignment filter](../fundamentals/filters/overview.md) instead. Filters evaluate device properties directly at check-in without depending on group membership processing. For guidance, go to [Performance recommendations for grouping, targeting, and filtering](../fundamentals/filters/performance-recommendations.md).
 
   For example, you want policies assigned to devices as soon as they enroll. In this latency-sensitive situation, create an [assignment filter](../fundamentals/filters/overview.md) to target the devices you want, and assign the policy with this assignment filter to user groups. Don't assign to device groups.
 
