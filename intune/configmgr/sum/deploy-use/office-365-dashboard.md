@@ -5,6 +5,7 @@ ms.date: 04/05/2024
 ms.topic: article
 ms.subservice: software-updates
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Office 365 Client Management dashboard

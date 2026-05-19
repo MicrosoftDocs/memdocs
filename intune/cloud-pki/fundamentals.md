@@ -2,7 +2,7 @@
 title: Microsoft Intune cloud PKI fundamentals
 description: Describes fundamentals for Microsoft Intune cloud PKI.
 ms.date: 12/06/2024
-ms.topic: how-to
+ms.topic: concept-article
 ---
 
 # Microsoft Cloud PKI fundamentals

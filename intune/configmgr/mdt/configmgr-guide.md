@@ -5,6 +5,7 @@ ms.date: 09/09/2016
 ms.subservice: mdt
 ms.topic: quickstart
 ms.collection: tier3
+ms.custom: sfi-ropc-nochange
 ---
 
 # Quick Start Guide for Microsoft System Center 2012 R2 Configuration Manager

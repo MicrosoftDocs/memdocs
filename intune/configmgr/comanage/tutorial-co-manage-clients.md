@@ -5,6 +5,7 @@ ms.date: 10/18/2024
 ms.subservice: co-management
 ms.topic: tutorial
 ms.collection: tier3
+ms.custom: sfi-ga-nochange
 ---
 
 # Tutorial: Enable co-management for existing Configuration Manager clients
