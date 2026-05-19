@@ -49,7 +49,7 @@ For example, a connected MTD app reports to the MTD vendor that a phone on your 
 
 ### Mobile Threat Defense role for Android
 
-On Android Enterprise corporate-owned devices, you can grant your MTD partner enhanced security permissions through the MTD connector. When enabled, the MTD app receives exemptions from app suspension, hibernation, power restrictions, and user controls, helping the app maintain continuous threat protection on managed devices. You can grant these permissions to one MTD partner at a time. For Microsoft Defender for Endpoint, you can also enable automatic launch of the app during device setup. For details about configuring the MTD role toggles, see [Mobile Threat Defense toggle options](./enable-connector.md#mobile-threat-defense-role).
+On Android Enterprise fully managed and corporate-owned with work profile devices, you can grant your MTD partner enhanced security permissions through the MTD connector. When enabled, the MTD app receives exemptions from app suspension, hibernation, power restrictions, and user controls, helping the app maintain continuous threat protection on managed devices. You can grant these permissions to one MTD partner at a time. For Microsoft Defender for Endpoint, you can also enable automatic launch of the app during device setup. For details about configuring the MTD role toggles, see [Mobile Threat Defense toggle options](./enable-connector.md#mobile-threat-defense-role).
 
 ### Connector status
 

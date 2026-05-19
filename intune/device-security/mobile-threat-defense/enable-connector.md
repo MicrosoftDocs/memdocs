@@ -126,7 +126,7 @@ For more information about using Mobile Threat Defense connectors for Intune App
   - Android Enterprise corporate-owned fully managed
   - Android Enterprise corporate-owned work profile
 
-  The Mobile Threat Defense role requires devices enrolled through the [Android Management API](https://developers.google.com/android/management). Personally-owned work profiles aren't supported.
+  The Mobile Threat Defense role requires devices enrolled through the [Android Management API](https://developers.google.com/android/management). Personally-owned work profiles aren't currently supported.
 
 - **Automatically launch Defender for Endpoint during setup on Android COBO and COPE devices**: This toggle is available only for the Defender for Endpoint connector. When you turn on this option, the Defender for Endpoint app automatically launches during the device setup process on Android Enterprise COBO and COPE devices, allowing Defender for Endpoint to complete its initial configuration without requiring the user to manually open it.
 
