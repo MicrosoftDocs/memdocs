@@ -5,6 +5,7 @@ ms.date: 02/16/2022
 ms.subservice: sdk
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sfi-ropc-nochange
 ---
 
 # OS deployment CreateMedia.exe

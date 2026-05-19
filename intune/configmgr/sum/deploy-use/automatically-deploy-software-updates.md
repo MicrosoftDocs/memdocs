@@ -5,6 +5,7 @@ ms.date: 08/12/2022
 ms.topic: install-set-up-deploy
 ms.subservice: software-updates
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 #  Automatically deploy software updates
