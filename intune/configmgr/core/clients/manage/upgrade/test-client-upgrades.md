@@ -5,6 +5,7 @@ ms.date: 04/12/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # How to test client upgrades in a pre-production collection

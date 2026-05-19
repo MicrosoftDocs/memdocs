@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 # What&#39;s new in version 1610 of Configuration Manager
 
