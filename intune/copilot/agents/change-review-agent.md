@@ -118,7 +118,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 > ---
 >
-> To **use** the agent and perform offboarding actions, use an account with the following roles:
+> To **use** the agent, sign in with an account that has the following roles:
 >
 > :::image type="icon" source="../../media/icons/16/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](../../fundamentals/role-based-access-control/overview.md#built-in-roles) or [custom role](../../fundamentals/role-based-access-control/overview.md#custom-roles) with equivalent permissions.
