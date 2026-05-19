@@ -51,9 +51,9 @@ To use Copilot in Intune, you should know the following information:
   When Microsoft Intune is enabled as a data source in Security Copilot, by default:
 
   - The Microsoft Entra ID **Intune Administrator** role automatically inherits **Security Copilot owner** access to Copilot in Intune.
-  - All the other built-in and custom Intune role-based access (RBAC) roles automatically inherit **Security Copilot contributor** access to Copilot in Intune. Intune admins can use Security Copilot capabilities in Intune without requiring additional role assignments.
+  - All the other built-in and custom Intune role-based access (RBAC) roles automatically inherit **Security Copilot contributor** access to Copilot in Intune. Intune admins can use Security Copilot capabilities in Intune without requiring more role assignments.
 
-    If you want to remove the default access of these groups, you can remove the Intune roles from the **Security Copilot contributor** role in Security Copilot.
+    If you want to remove the default access of these groups, remove all the Intune role groups from the **Security Copilot contributor** role in Security Copilot.
 
   Copilot honors existing Intune RBAC permissions and scope tags. Administrators can only access the Intune data and perform actions that are permitted by their assigned Intune roles. Other roles can be assigned access to Copilot in Intune through Security Copilot.
 
