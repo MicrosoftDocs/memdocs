@@ -3,9 +3,9 @@ title: Add groups to organize users and devices for Microsoft Intune
 description: Create Microsoft Entra groups to organize users and devices for use with Microsoft Intune.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 06/23/2025
+ms.date: 05/19/2026
 ms.topic: how-to
-ms.reviewer: scottduf
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 ---
@@ -57,7 +57,13 @@ These virtual groups provide an easy way to target all applicable users or devic
 For example, you might deploy an Intune compliance policy to the *all devices* group to establish a minimum level of compliance requirements that all devices in your organization must meet. Later, you can deploy more requirements to specific Entra groups to apply extra requirements you might have for specific groups of devices or users.
 
 > [!TIP]
-> Consider the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:
+> Consider the use of **assignment filters** instead of dynamic device groups when your targeting is based on device properties like OS type, manufacturer, model, device ownership, or device category. Assignment filters evaluate directly at device check-in without depending on group membership processing, and can be combined with broad groups like *All devices* to narrow scope precisely.
+>
+> For example, instead of creating a dynamic group with the rule `device.deviceOSType -eq "Windows"`, you can assign a policy to *All devices* and apply a filter for Windows devices. The result is the same — but the filter is evaluated at check-in without requiring group membership evaluation.
+>
+> Dynamic groups remain the right choice when you need cross-workload targeting (Conditional Access, licensing), Autopilot profile assignment, or user-based grouping.
+>
+> For more information, see:
 > - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../filters/overview.md)
 > - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](../filters/performance-recommendations.md)
 
@@ -108,6 +114,9 @@ To create groups in the Microsoft Intune admin center:
 
         > [!TIP]
         > No specific Entra ID license is required for members of dynamic device groups.
+
+        > [!NOTE]
+        > Before creating a dynamic device group for Intune policy targeting, consider whether an [assignment filter](../filters/overview.md) can achieve the same result. If your rule targets device properties like OS type, manufacturer, model, ownership, or device category, an assignment filter evaluates at check-in without depending on group membership processing. For more information, go to [Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments](../filters/performance-recommendations.md).
 
    5. The *Owners* configuration is optional. By default, the user that creates a group is an owner. To add other owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group.
 

@@ -1,7 +1,7 @@
 ---
 title: Assignment Filter Performance Tips for Intune
 description: Optimize Microsoft Intune performance with assignment filters. Learn to use virtual groups, reuse groups, and apply filters effectively. Improve policy deployment speed with incremental group changes, and use assignment filters to include and exclude.
-ms.date: 11/19/2025
+ms.date: 05/19/2026
 ms.topic: article
 ms.reviewer: mattcall
 ms.collection:
@@ -126,6 +126,25 @@ This recommendation is also a support statement. We don't recommend or support c
 This recommendation exists due to the timing/latency characteristic of dynamic groups. **Excluded groups** membership isn't instant, which can result in cases where devices incorrectly receive app or policy assignments. To understand more, go to [Assign policies and profiles - support matrix](../../device-configuration/assign-device-profile.md#support-matrix).
 
 Instead of mixed exclusions, we recommend assigning to a user group. Then, use assignment filters to dynamically include or exclude the appropriate devices.
+
+### Use assignment filters instead of dynamic groups for device property targeting
+
+| DO | DON'T |
+| --- | --- |
+| ✅ Use assignment filters when targeting Intune policies based on device properties like OS type, manufacturer, model, ownership, or device category. | ❌ Don't create dynamic device groups for simple property-based targeting when the group is only used by Intune. |
+
+Dynamic device groups that use simple property rules (like `device.deviceOSType -eq "Windows"` or `device.deviceOwnership -eq "Company"`) introduce additional processing steps without benefit when the group is only consumed by Intune. Assignment filters evaluate the same properties at device check-in — directly, without requiring group membership evaluation.
+
+For example, instead of creating a dynamic group with the rule `device.deviceOSType -eq "Windows"` and assigning a policy to that group, you can assign the policy to *All devices* and apply a filter with the rule `operatingSystemSKU -eq "Windows"`. The result is the same — but the filter is evaluated at check-in without depending on group membership processing.
+
+Consider migrating dynamic device groups to assignment filters when:
+
+- The group is **only used for Intune policy or app assignments** (not Conditional Access, licensing, or other services).
+- The group rule uses device properties that assignment filters [support](ref-device-properties.md), like OS version, manufacturer, model, ownership, or category.
+- You want to **simplify your targeting architecture** and reduce dependencies on group membership evaluation.
+
+> [!NOTE]
+> Dynamic groups remain necessary for Autopilot profile targeting, cross-workload scenarios (Conditional Access, licensing), and user-based grouping. For guidance on dynamic groups, go to [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-rule-more-efficient).
 
 ## Summary
 

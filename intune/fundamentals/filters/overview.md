@@ -1,7 +1,7 @@
 ---
 title: Create assignment filters in Microsoft Intune
 description: Create assignment filters in Microsoft Intune to target policies based on device properties like OS version or manufacturer. Learn to create, update, and delete filters for managed devices and apps.
-ms.date: 02/10/2026
+ms.date: 05/19/2026
 ms.topic: how-to
 ms.reviewer: mattcall
 ms.collection:
@@ -68,6 +68,18 @@ Before you apply a policy to an app or device, assignment filters dynamically ev
 3. The assignment filter is evaluated when the device enrolls, checks in with the Intune service, or at any other time a policy evaluates.
 
 4. You see the assignment filter results based on the evaluation. For example, the app or policy applies, or it doesn't apply.
+
+### Assignment filters vs. dynamic groups
+
+If you're deciding between assignment filters and dynamic groups for device targeting, consider the following:
+
+- **Use assignment filters** when you're targeting Intune policies or apps based on device properties (OS, model, manufacturer, ownership, category). Filters evaluate at check-in with no further evaluation delay.
+- **Use dynamic groups** when you need cross-workload targeting (Conditional Access, licensing), Autopilot profile assignment, or user-based grouping.
+
+Many organizations use both: dynamic groups for cross-workload scenarios and assignment filters for Intune-specific device targeting.
+
+> [!NOTE]
+> Because assignment filters don't require group membership processing, policy targeting isn't affected by group size, rule complexity, or membership evaluation timing. For performance recommendations when working with groups and filters, go to [Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments](./performance-recommendations.md).
 
 ### Restrictions
 
