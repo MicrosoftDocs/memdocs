@@ -5,6 +5,7 @@ ms.date: 09/09/2016
 ms.subservice: mdt
 ms.topic: quickstart
 ms.collection: tier3
+ms.custom: sfi-ropc-nochange
 ---
 
 # Quick Start Guide for User-Driven Installation

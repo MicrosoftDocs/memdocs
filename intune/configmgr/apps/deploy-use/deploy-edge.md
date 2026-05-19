@@ -5,6 +5,7 @@ ms.date: 05/31/2022
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Microsoft Edge Management

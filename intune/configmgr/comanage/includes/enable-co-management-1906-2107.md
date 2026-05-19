@@ -2,6 +2,7 @@
 ms.subservice: co-management
 ms.topic: include
 ms.date: 10/05/2021
+ms.custom: sfi-ga-nochange
 ---
 <!--3555750 FKA 1357954 -- This file is shared by comanage/how-to-enable.md, tutorial-co-manage-clients.md, and tutorial-co-manage-new-devices.md. Don't apply H2/H3 in this include file since they are context driven by article-->
 
