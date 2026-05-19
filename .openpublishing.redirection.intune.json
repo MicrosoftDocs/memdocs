@@ -444,6 +444,11 @@
       "source_path_from_root": "/intune/governance/compliance-and-regulatory-alignment.md",
       "redirect_url": "/intune/privacy/",
       "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/cloud-pki/manage-ca-expiration.md",
+      "redirect_url": "/intune/cloud-pki/renew-ca",
+      "redirect_document_id": false
     }
   ]
 }

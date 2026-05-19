@@ -5,6 +5,7 @@ ms.date: 12/16/2024
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console
