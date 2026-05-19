@@ -5,6 +5,7 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-ga-nochange
 ---
 
 # Plan for the CMG in Configuration Manager

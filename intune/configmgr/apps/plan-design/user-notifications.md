@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # User notifications

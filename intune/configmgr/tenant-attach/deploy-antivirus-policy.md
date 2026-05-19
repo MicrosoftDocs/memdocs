@@ -5,6 +5,7 @@ ms.date: 03/28/2023
 ms.topic: install-set-up-deploy
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Antivirus policies from the admin center

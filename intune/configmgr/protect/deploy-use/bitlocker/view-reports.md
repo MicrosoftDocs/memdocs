@@ -5,6 +5,7 @@ ms.date: 11/23/2021
 ms.subservice: protect
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # View BitLocker reports
