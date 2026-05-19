@@ -134,7 +134,7 @@ Intune stores the BIOS passwords for each device. You can get the BIOS passwords
 > [!IMPORTANT]
 > Make sure you back up all passwords outside of Intune. If you don't backup the passwords outside of Intune, then be aware of the following scenarios:
 >
-> - If a device is removed from Intune management, then admins can still read BIOS passwords using the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get).
+> - If a device is removed from Intune management, then admins can still read BIOS passwords using the [Microsoft Graph hardwarePasswordDetails API](/graph/api/intune-deviceconfig-hardwarepassworddetail-get).
 > - If the Intune subscription for your tenant ends, then there's no way to read or retrieve BIOS passwords. In this situation, your only option is to contact your OEM.
 
 ### Option 1 - Read the BIOS password one device at a time
@@ -155,9 +155,9 @@ This option gets the BIOS passwords, one device at a time.
     1. In **Permissions**, expand **Managed devices** > Set **Read Bios Password** to **Yes**.
     1. Select **Next** > **Next** > **Create**.
 
-2. Sign in to your Graph tool with this custom RBAC role, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
+2. Sign in to your Graph tool with this custom RBAC role, and use the [Microsoft Graph hardwarePasswordDetails API](/graph/api/intune-deviceconfig-hardwarepassworddetail-get):
 
-    - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo('<deviceID>')`
+    - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordDetails('<deviceID>')`
 
 ### Option 2 - Read the BIOS password of all devices
 
@@ -165,9 +165,9 @@ This option gets a list of all the BIOS passwords of all devices.
 
 1. At a minimum, you need the **Intune Administrator** role in Microsoft Entra ID.
 
-2. Sign in to your Graph tool with this role, and use the [Microsoft Graph hardwarePasswordInfo API](/graph/api/intune-deviceconfig-hardwarepasswordinfo-get):
+2. Sign in to your Graph tool with this role, and use the [Microsoft Graph hardwarePasswordDetails API](/graph/api/intune-deviceconfig-hardwarepassworddetail-get):
 
-    - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordInfo`
+    - `https://graph.microsoft.com/beta/deviceManagement/hardwarePasswordDetails`
 
 For information on the built-in roles, go to [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
