@@ -50,7 +50,7 @@ After your endpoints are deployed, use the [Monitor your cloud-native Windows en
 
 ## Phase 1 – Set up your environment
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-1.png" alt-text="Image that shows phase 1, set up your environment for cloud native endpoints with Microsoft Intune":::
+:::image type="icon" source="media/tutorial-cloud-native-setup/phase-1.png":::
 
 Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](/autopilot/overview), and creating some settings and applications.
 
@@ -261,7 +261,7 @@ Your cloud-native endpoint needs some applications. To get started, we recommend
 
 ## Phase 2 – Build a cloud-native Windows endpoint
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-2.png" alt-text="Phase 2: Build a cloud-native Windows endpoint by provisioning your first device through Windows Autopilot.":::
+:::image type="icon" source="media/tutorial-cloud-native-setup/phase-2.png":::
 
 To build your first cloud-native Windows endpoint, use the same virtual machine or physical device that you gathered and then uploaded the hardware hash to the Windows Autopilot service in [Phase 1, Step 3 - Import your test device](#step-3---import-your-test-device). With this device, go through the Windows Autopilot process.
 
@@ -292,7 +292,7 @@ If you're prompted to enter a password when using Windows Hello to access on-pre
 
 ## Phase 3 – Secure your cloud-native Windows endpoint
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-3.png" alt-text="Phase 3: Secure your cloud-native Windows endpoint with Defender, BitLocker, LAPS, security baselines, and compliance policies.":::
+:::image type="icon" source="media/tutorial-cloud-native-setup/phase-3.png":::
 
 This phase is designed to help you build out security settings for your organization. This section draws your attention to the various Endpoint Security components in Microsoft Intune including:
 
@@ -548,7 +548,7 @@ For step-by-step guidance, see:
 
 ## Phase 4 – Apply customizations and review your on-premises configuration
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-4.png" alt-text="Phase 4: Apply organization-specific customizations including Microsoft Edge, OneDrive, settings catalog, and Group Policy migration.":::
+:::image type="icon" source="media/tutorial-cloud-native-setup/phase-4.png":::
 
 In this phase, you apply organization-specific settings, apps, and review your on-premises configuration. The phase helps you build any customizations specific to your organization. Notice the various components of Windows, how you can review existing configurations from an on-premises AD Group Policy environment, and apply them to cloud-native endpoints. There are sections for each of the following areas:
 
@@ -761,7 +761,7 @@ If you have applications that use MSI, EXE, or script installers, you can deploy
 
 ## Phase 5 – Scale your deployment with Windows Autopilot
 
-:::image type="content" source="media/tutorial-cloud-native-setup/phase-5.png" alt-text="Phase 5: Scale your deployment with Windows Autopilot using OEM registration, device personas, and staged rollout rings.":::
+:::image type="icon" source="media/tutorial-cloud-native-setup/phase-5.png":::
 
 You proved cloud-native works on one device. This phase covers how to move from a test device to your production fleet — how devices get registered, how you group them by persona, how you stage rollout, and how you handle the existing PCs you already manage.
 
