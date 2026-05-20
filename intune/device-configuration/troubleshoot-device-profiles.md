@@ -170,7 +170,7 @@ If fast delivery of apps and policies is important to your enrollment scenario, 
 
 - **Assignment filters** — Use [assignment filters](../fundamentals/filters/overview.md) to target devices based on properties like OS type, manufacturer, or enrollment profile. Filters evaluate directly at device check-in without depending on group membership processing. Apply filters to broad groups like *All devices* for fast, predictable policy delivery during enrollment.
 
-- **Enrollment time grouping** — If you need to keep using dynamic device groups for enrollment targeting, [enrollment time grouping](../device-enrollment/setup-time-grouping.md) adds devices to a security group during enrollment rather than after, so apps and policies assigned to that group are delivered on the first check-in.
+- **Enrollment time grouping** — If you need to keep using device groups for enrollment targeting, [enrollment time grouping](../device-enrollment/setup-time-grouping.md) adds devices to a security group during enrollment rather than after, so apps and policies assigned to that group are delivered on the first check-in.
 
 For more information on dynamic groups, go to:
 
