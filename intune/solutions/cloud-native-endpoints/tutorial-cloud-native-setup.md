@@ -4,7 +4,7 @@ description: Step-by-step tutorial to set up a cloud-native Windows endpoint - M
 ms.keywords: cloud native Windows, cloud-native Windows endpoint, Intune cloud native, Windows Autopilot cloud native, cloud native endpoint setup
 author: scottbreenmsft
 ms.author: scbree
-ms.date: 05/18/2026
+ms.date: 05/19/2026
 ms.topic: tutorial
 ms.reviewer: scbree;rogerso
 ms.collection:
@@ -100,7 +100,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
 > [!NOTE]
 > While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There's more information about Windows Autopilot in [Phase 5](#phase-5--scale-your-deployment-with-windows-autopilot).
 
-1. Install Windows 11 (recommended), or Windows 10 22H2 or later, in a virtual machine or reset physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
+1. Install Windows in a virtual machine or reset a physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
 2. Complete the necessary steps to connect to the Internet.
 
@@ -160,8 +160,11 @@ To limit the configurations from this guide to the test devices that you import 
 The enrollment status page (ESP) is the mechanism an IT pro uses to control the end-user experience during endpoint provisioning. See [Set up the Enrollment Status Page](../../device-enrollment/windows/setup-status-page.md). To limit the scope of the enrollment status page, you can create a new profile and target the **Autopilot Cloud-Native Windows Endpoints** group created in the previous step, *Create Microsoft Entra dynamic group for the device*.
 
 - For the purposes of testing, we recommend the following settings, but feel free to adjust them as required:
-  - **Show app and profile configuration progress** - Yes
-  - **Only show page to devices provisioned by out-of-box experience (OOBE)** – Yes (*default*)
+
+  | Setting | Value |
+  | --- | --- |
+  | **Show app and profile configuration progress** | Yes |
+  | **Only show page to devices provisioned by out-of-box experience (OOBE)** | Yes (*default*) |
 
 ### Step 6 - Create and assign the Windows Autopilot profile
 
@@ -209,29 +212,28 @@ We've selected a few settings to configure. These settings demonstrate an optima
 
 After you created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
-- **Microsoft Outlook**
-  To improve the first run experience for Microsoft Outlook, the following setting automatically configures a profile when Outlook is opened for the first time.
+- **Microsoft Outlook** - To improve the first run experience for Microsoft Outlook, the following setting automatically configures a profile when Outlook is opened for the first time.
 
-  - Microsoft Outlook 2016\Account Settings\Exchange (User setting)
-    - Automatically configure only the first profile based on Active Directory primary SMTP address - **Enabled**
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Microsoft Outlook 2016\Account Settings\Exchange (User setting)** | Automatically configure only the first profile based on Active Directory primary SMTP address | **Enabled** |
 
-- **Microsoft Edge**
-  To improve the first run experience for Microsoft Edge, the following settings configure Microsoft Edge to sync the user's settings and skip the first run experience.
+- **Microsoft Edge** - To improve the first run experience for Microsoft Edge, the following settings configure Microsoft Edge to sync the user's settings and skip the first run experience.
 
-  - Microsoft Edge
-    - Hide the first-run experience and splash screen - **Enabled**
-    - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Microsoft Edge** | Hide the first-run experience and splash screen | **Enabled** |
+  | &nbsp; | Force synchronization of browser data and do not show the sync consent prompt | **Enabled** |
 
-- **Microsoft OneDrive**
+- **Microsoft OneDrive** - To improve the first sign-in experience, the following settings configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended. It's enabled by default and isn't included in the following list. For more information on the recommended configuration for the OneDrive sync app, go to [Recommended sync app configuration for Microsoft OneDrive](/onedrive/ideal-state-configuration).
 
-  To improve the first sign-in experience, the following settings configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended. It's enabled by default and isn't included in the following list. For more information on the recommended configuration for the OneDrive sync app, go to [Recommended sync app configuration for Microsoft OneDrive](/onedrive/ideal-state-configuration).
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **OneDrive | Silently sign in users to the OneDrive sync app with their Windows credentials | **Enabled** |
+  | &nbsp; | Silently move Windows known folders to OneDrive | **Enabled** |
 
-  - OneDrive
-    - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
-    - Silently move Windows known folders to OneDrive – **Enabled**
-
-    > [!NOTE]
-    > For more information, go to [Redirect Known Folders](/onedrive/redirect-known-folders).
+  > [!NOTE]
+  > For more information, go to [Redirect Known Folders](/onedrive/redirect-known-folders).
 
 The following screenshot shows an example of a settings catalog profile with each of the suggested settings configured:
 
@@ -241,21 +243,18 @@ The following screenshot shows an example of a settings catalog profile with eac
 
 Your cloud-native endpoint needs some applications. To get started, we recommend configuring the following applications and targeting them at the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
-- **Microsoft 365 Apps** (formerly Office 365 ProPlus)
-  Microsoft 365 Apps such as Word, Excel, and Outlook can easily be deployed to devices using the built-in *Microsoft 365 apps for Windows* app profile in Intune.
+- **Microsoft 365 Apps** (formerly Office 365 ProPlus) - Microsoft 365 Apps such as Word, Excel, and Outlook can easily be deployed to devices using the built-in *Microsoft 365 apps for Windows* app profile in Intune.
 
   - Select **configuration designer** for the settings format, as opposed to XML.
   - Select **Current Channel** for the update channel.
 
   To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../app-management/deployment/add-microsoft-365-windows.md)
 
-- **Company Portal app**
-  Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal app is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the Company Portal app to sync their device with Intune, check compliance status, and so on.
+- **Company Portal app** - Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal app is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the Company Portal app to sync their device with Intune, check compliance status, and so on.
 
   To deploy **Company Portal** as required, see [Add and assign the Windows Company Portal app for Intune managed devices](../../app-management/deployment/add-company-portal-autopilot.md).
 
-- **Microsoft Store App** (Whiteboard)
-  While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md) to install **Microsoft Whiteboard**.
+- **Microsoft Store App** (Whiteboard) - While Intune can deploy a wide variety of apps, we deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../app-management/deployment/add-microsoft-store.md) to install **Microsoft Whiteboard**.
 
 > [!div class="nextstepaction"]
 > [Next: Phase 2 – Build a cloud-native Windows endpoint](#phase-2--build-a-cloud-native-windows-endpoint)
@@ -277,7 +276,7 @@ To build your first cloud-native Windows endpoint, use the same virtual machine 
 
 ### Validate your endpoint
 
-Verify the following on your new device before moving to Phase 3:
+Verify the following tasks on your new device before moving to Phase 3:
 
 > [!div class="checklist"]
 > * OneDrive folders (Desktop, Documents, Pictures) are redirected and syncing.
@@ -310,7 +309,7 @@ This phase is designed to help you build out security settings for your organiza
 
 The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-#### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
+#### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Intune admin center**](#tab/intuneadmincenter)
 
 In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 
@@ -339,7 +338,7 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 
 [!INCLUDE [graph-explorer-introduction](../includes/graph-explorer-intro.md)]
 
-This creates a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
+This task creates a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -378,62 +377,49 @@ These settings can be enabled in the [Microsoft Intune admin center](https://go.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) for more settings.
 
-**BitLocker**:
-
-- Require Device Encryption: **Enabled**
-- Allow Warning For Other Disk Encryption: **Disabled**
-  - Allow Standard User Encryption: **Enabled**
-- Configure Recovery Password Rotation: **Refresh on for Azure AD-joined devices**
-
-**BitLocker Drive Encryption**:
-
-- Choose drive encryption method and cipher strength: **Not Configured**
-- Provide the unique identifiers for your organization: **Not Configured**
-
-**Operating System Drives**:
-
-- Enforce drive encryption type on operating system drives: **Enabled**
-  - Select the encryption type (Device): **Used Space Only encryption**
-- Require additional authentication at startup: **Enabled**
-  - Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive): **False**
-  - Configure TPM startup key and PIN: **Allow startup key and PIN with TPM**
-  - Configure TPM startup key: **Allow startup key with TPM**
-  - Configure TPM startup PIN: **Allow startup PIN with TPM**
-  - Configure TPM startup: **Require TPM**
-  - Configure minimum PIN length for startup: **Not configured**
-  - Allow enhanced PINs for startup: **Not configured**
-- Disallow standard users from changing the PIN or password: **Not configured**
-- Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN: **Not configured**
-- Enable use of BitLocker authentication requiring preboot keyboard input on slates: **Not configured**
-- Choose how BitLocker-protected operating system drives can be recovered: **Enabled**
-  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
-  - Allow data recovery agent: **False**
-  - Configure storage of BitLocker recovery information to AD DS: **Store recovery passwords and key packages**
-  - Do not enable BitLocker until recovery information is stored to AD DS for operating system drives: **True**
-  - Omit recovery options from the BitLocker setup wizard: **True**
-  - Save BitLocker recovery information to AD DS for operating system drives: **True**
-- Configure pre-boot recovery message and URL: **Not configured**
-
-**Fixed Data Drives**:
-
-- Enforce drive encryption type on fixed data drives: **Enabled**
-  - Select the encryption type: (Device):  **Allow user to choose (default)**
-- Choose how BitLocker-protected fixed drives can be recovered: **Enabled**
-  - Configure user storage of BitLocker recovery information: **Require 48-digit recovery password**
-  - Allow data recovery agent: **False**
-  - Configure storage of BitLocker recovery information to AD DS: **Backup recovery passwords and key packages**
-  - Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives: **True**
-  - Omit recovery options from the BitLocker setup wizard: **True**
-  - Save BitLocker recovery information to AD DS for fixed data drives: **True**
-- Deny write access to fixed drives not protected by BitLocker: **Not configured**
-
-**Removable Data Drives**:
-
-- Control use of BitLocker on removable drives: **Enabled**
-  - Allow users to apply BitLocker protection on removable data drives (Device): **False**
-  - Allow users to suspend and decrypt BitLocker protection on removable data drives (Device): **False**
-- Deny write access to removable drives not protected by BitLocker: **Not configured**
-
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **BitLocker** | Require Device Encryption | **Enabled** |
+  | &nbsp; | Allow Warning For Other Disk Encryption | **Disabled** |
+  | &nbsp; | Allow Standard User Encryption | **Enabled** |
+  | &nbsp; | Configure Recovery Password Rotation | **Refresh on for Azure AD-joined devices** |
+  | **BitLocker Drive Encryption** | Choose drive encryption method and cipher strength | **Not Configured** |
+  | &nbsp; | Provide the unique identifiers for your organization | **Not Configured** |
+  | **Operating System Drives** | Enforce drive encryption type on operating system drives | **Enabled** |
+  | &nbsp; | Select the encryption type (Device) | **Used Space Only encryption** |
+  | &nbsp; | Require additional authentication at startup | **Enabled** |
+  | &nbsp; | Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive) | **False** |
+  | &nbsp; | Configure TPM startup key and PIN | **Allow startup key and PIN with TPM** |
+  | &nbsp; | Configure TPM startup key | **Allow startup key with TPM** |
+  | &nbsp; | Configure TPM startup PIN | **Allow startup PIN with TPM** |
+  | &nbsp; | Configure TPM startup | **Require TPM** |
+  | &nbsp; | Configure minimum PIN length for startup | **Not configured** |
+  | &nbsp; | Allow enhanced PINs for startup | **Not configured** |
+  | &nbsp; | Disallow standard users from changing the PIN or password | **Not configured** |
+  | &nbsp; | Allow devices compliant with InstantGo or HSTI to opt out of pre-boot PIN | **Not configured** |
+  | &nbsp; | Enable use of BitLocker authentication requiring preboot keyboard input on slates | **Not configured** |
+  | &nbsp; | Choose how BitLocker-protected operating system drives can be recovered | **Enabled** |
+  | &nbsp; | Configure user storage of BitLocker recovery information | **Require 48-digit recovery password** |
+  | &nbsp; | Allow data recovery agent | **False** |
+  | &nbsp; | Configure storage of BitLocker recovery information to AD DS | **Store recovery passwords and key packages** |
+  | &nbsp; | Do not enable BitLocker until recovery information is stored to AD DS for operating system drives | **True** |
+  | &nbsp; | Omit recovery options from the BitLocker setup wizard | **True** |
+  | &nbsp; | Save BitLocker recovery information to AD DS for operating system drives | **True** |
+  | &nbsp; | Configure pre-boot recovery message and URL | **Not configured** |
+  | **Fixed Data Drives** | Enforce drive encryption type on fixed data drives | **Enabled** |
+  | &nbsp; | Select the encryption type: (Device) | **Allow user to choose (default)** |
+  | &nbsp; | Choose how BitLocker-protected fixed drives can be recovered | **Enabled** |
+  | &nbsp; | Configure user storage of BitLocker recovery information | **Require 48-digit recovery password** |
+  | &nbsp; | Allow data recovery agent | **False** |
+  | &nbsp; | Configure storage of BitLocker recovery information to AD DS | **Backup recovery passwords and key packages** |
+  | &nbsp; | Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives | **True** |
+  | &nbsp; | Omit recovery options from the BitLocker setup wizard | **True** |
+  | &nbsp; | Save BitLocker recovery information to AD DS for fixed data drives | **True** |
+  | &nbsp; | Deny write access to fixed drives not protected by BitLocker | **Not configured** |
+  | **Removable Data Drives** | Control use of BitLocker on removable drives | **Enabled** |
+  | &nbsp; | Allow users to apply BitLocker protection on removable data drives (Device) | **False** |
+  | &nbsp; | Allow users to suspend and decrypt BitLocker protection on removable data drives (Device) | **False** |
+  | &nbsp; | Deny write access to removable drives not protected by BitLocker | **Not configured** |
 
 ### Windows Local Administrator Password Solution (LAPS)
 
@@ -527,7 +513,7 @@ To create a Windows compliance policy:
     | &nbsp; | Real-time protection | Require |
 
     > [!TIP]
-    > Microsoft and current [NIST guidance](https://pages.nist.gov/800-63-3/sp800-63b.html) no longer recommend periodic password expiration. The Windows security baseline removed password expiration in 2019. For cloud-native endpoints, the strongest posture is to move users to passwordless sign-in with [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/) and [passkeys / FIDO2 security keys](/entra/identity/authentication/concept-authentication-passwordless), and to block weak passwords with [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad). Adjust the values above to match your organization's policy.
+    > Microsoft and current [NIST guidance](https://pages.nist.gov/800-63-3/sp800-63b.html) no longer recommend periodic password expiration. The Windows security baseline removed password expiration in 2019. For cloud-native endpoints, the strongest posture is to move users to passwordless sign-in with [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/) and [passkeys / FIDO2 security keys](/entra/identity/authentication/concept-authentication-passwordless), and to block weak passwords with [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad). Adjust the values above to match your organization's policy. To  learn more, see [Passwordless authentication with Microsoft Intune](../passwordless.md).
 
 6. In **Actions for noncompliance**, set the **Mark device noncompliant** schedule to `1` day (or another grace period that suits your organization).
 
@@ -639,46 +625,46 @@ The settings catalog is a single location where all configurable Windows setting
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
 <!-- EDITOR/REVIEWER NOTE: "Azure Active Directory preferred tenant domain" and "Preferred AAD Tenant Domain Name" below are exact setting labels as they appear in the Intune Settings Catalog UI. Do not rename or modernize these to "Microsoft Entra" — they must match the product UI verbatim. -->
-- **Azure Active Directory preferred tenant domain**
-  This setting configures the preferred tenant domain name to be appended to a user's username. A preferred tenant domain allows users to sign in to Microsoft Entra endpoints with only their username rather than their whole UPN so long as the user's domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
+- **Azure Active Directory preferred tenant domain** - This setting configures the preferred tenant domain name to be appended to a user's username. A preferred tenant domain allows users to sign in to Microsoft Entra endpoints with only their username rather than their whole UPN so long as the user's domain name matches the preferred tenant domain. For users that have different domain names, they can type their whole UPN.
 
-  The setting can be found in:
-  - Authentication
-    - Preferred AAD Tenant Domain Name - Specify domain name, like `contoso.onmicrosoft.com`.
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Authentication** | Preferred AAD Tenant Domain Name | Enter domain name, like `contoso.onmicrosoft.com`. |
 
   > [!NOTE]
   > The setting label uses legacy terminology. "AAD" refers to Microsoft Entra ID.
 
-- **Windows Spotlight**
-  By default, several consumer features of Windows are enabled which results in selected Store apps installing and third-party suggestions on the lock screen. You can control this using the Experience section of the settings catalog.
+- **Windows Spotlight** - By default, several consumer features of Windows are enabled which results in selected Store apps installing and third-party suggestions on the lock screen. You can control this using the Experience section of the settings catalog.
 
-  - Experience > Allow Windows Spotlight
-    - Allow Windows Consumer Features - **Block**
-    - Allow Third-Party Suggestions in Windows Spotlight (user) - **Block**
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Experience > Allow Windows Spotlight** | Allow Windows Consumer Features | **Block** |
+  | &nbsp; | Allow Third-Party Suggestions in Windows Spotlight (user) | **Block** |
 
-- **Microsoft Store**
-  Organizations typically want to restrict the applications that can install on endpoints. Use this setting if your organization wants to control which applications can install from the Microsoft Store. This setting prevents users from installing applications unless they're approved.
-  - Microsoft App Store
-    - Require Private Store Only - **Only Private store is enabled**
+- **Microsoft Store** - Organizations typically want to restrict the applications that can install on endpoints. Use this setting if your organization wants to control which applications can install from the Microsoft Store. This setting prevents users from installing applications unless they're approved.
 
-      > [!NOTE]
-      > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. For more information, go to:
-      >
-      > - [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
-      > - [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286)
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Microsoft App Store** | Require Private Store Only | **Only Private store is enabled** |
 
-- **Block Gaming**
-  Organizations might prefer that corporate endpoints can't be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
+  > [!NOTE]
+  > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. For more information, go to:
+  >
+  > - [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
+  > - [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286)
+
+- **Block Gaming** - Organizations might prefer that corporate endpoints can't be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
   For additional information on the settings page visibility, go to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
-  - Settings
-    - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
 
-- **Control which tenants the Teams desktop client can sign in to**
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Settings** | Page Visibility List | **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame** |
 
-  When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that's included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
+- **Control which tenants the Teams desktop client can sign in to** - When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that's included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
 
-  - Microsoft Teams
-    - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
+  | Setting category | Setting | Value |
+  | --- | --- | --- |
+  | **Microsoft Teams** | Restrict sign in to Teams to accounts in specific tenants (User) | **Enabled** |
 
 ### Device Restrictions
 
@@ -686,11 +672,9 @@ Windows Device restrictions templates contain many of the settings required to s
 
 To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
-- **Desktop background picture URL (Desktop only)**
-  Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that's copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization*, and configure **Desktop background picture URL (Desktop only)**.
+- **Desktop background picture URL (Desktop only)** - Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that's copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization*, and configure **Desktop background picture URL (Desktop only)**.
 
-- **Require users to connect to a network during device setup**
-  This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General*, and configure **Require users to connect to network during device setup**.
+- **Require users to connect to a network during device setup** - This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General*, and configure **Require users to connect to network during device setup**.
 
   > [!NOTE]
   > The setting becomes effective the next time the device is wiped or reset.
@@ -703,8 +687,8 @@ To apply Delivery Optimization settings, create an Intune [Delivery Optimization
 
 Some settings that are commonly used by organizations are:
 
-- **Restrict peer selection – Subnet**. This setting restricts peer caching to computers on the same subnet.
-- **Group ID**. Delivery Optimization clients can be configured to only share content with devices in the same group. Group IDs can be configured directly by sending a GUID through policy or using DHCP options in DHCP scopes.
+- **Restrict peer selection – Subnet** - This setting restricts peer caching to computers on the same subnet.
+- **Group ID** - Delivery Optimization clients can be configured to only share content with devices in the same group. Group IDs can be configured directly by sending a GUID through policy or using DHCP options in DHCP scopes.
 
 Customers using Microsoft Configuration Manager can deploy connected cache servers that can be used to host Delivery Optimization content. For more information, go to [Microsoft Connected Cache in Configuration Manager](../../configmgr/core/plan-design/hierarchy/microsoft-connected-cache.md).
 
@@ -783,7 +767,7 @@ You proved cloud-native works on one device. This phase covers how to move from 
 
 ### Register devices at scale
 
-In Phase 1 you uploaded a hardware hash manually. That's fine for a lab, but doesn't scale. The production-ready options are:
+In [Phase 1](#phase-1--set-up-your-environment), you uploaded a hardware hash manually. That's fine for a lab, but doesn't scale. The production-ready options are:
 
 | Registration source | How it works | Best for |
 | --- | --- | --- |
@@ -795,7 +779,7 @@ In Phase 1 you uploaded a hardware hash manually. That's fine for a lab, but doe
 For full details, see [Register Autopilot devices](/autopilot/registration-overview).
 
 > [!TIP]
-> Whenever you buy new Windows hardware, ask your reseller or OEM to register devices to your Microsoft Entra tenant ID at the time of purchase. This is the lowest-friction long-term pattern and removes the need to ever collect a hash manually.
+> Whenever you buy new Windows hardware, ask your reseller or OEM to register devices to your Microsoft Entra tenant ID at the time of purchase. This approach is the lowest-friction long-term pattern and removes the need to ever collect a hash manually.
 
 ### Use Group Tags for personas
 
@@ -820,7 +804,7 @@ Don't deploy to the whole fleet at once. Use the same ring concept that you use 
 | **Early adopters** | ~5% of users, spread across departments | Catch persona- and app-specific issues. |
 | **Broad** | The remaining fleet, staged by region or department | Production rollout. |
 
-Use **assignment filters** to target rings instead of creating duplicate groups for every policy. Monitor each ring using the [Monitor your cloud-native Windows endpoints](#monitor-your-cloud-native-windows-endpoints) section before promoting to the next.
+Use **[assignment filters](../../fundamentals/filters/overview.md)** to target rings instead of creating duplicate groups for every policy. Monitor each ring using the [Monitor your cloud-native Windows endpoints](#monitor-your-cloud-native-windows-endpoints) section before promoting to the next.
 
 ### Handle existing devices
 
