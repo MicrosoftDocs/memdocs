@@ -110,7 +110,6 @@ Windows Autopilot relies on several different type of services to function prope
 After a network connection is in place, each Windows device will contact the Windows Autopilot Deployment Service. The following URLs are used:
 
 - `https://ztd.dds.microsoft.com`
-- `https://cs.dds.microsoft.com`
 - `https://login.live.com`
 
 ##### Windows Activation
