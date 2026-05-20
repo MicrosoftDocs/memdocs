@@ -229,7 +229,7 @@ After you created the profile and added your settings, assign the profile to the
 
   | Setting category | Setting | Value |
   | --- | --- | --- |
-  | **OneDrive | Silently sign in users to the OneDrive sync app with their Windows credentials | **Enabled** |
+  | **OneDrive** | Silently sign in users to the OneDrive sync app with their Windows credentials | **Enabled** |
   | &nbsp; | Silently move Windows known folders to OneDrive | **Enabled** |
 
   > [!NOTE]
