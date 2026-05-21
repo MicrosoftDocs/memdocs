@@ -6,6 +6,7 @@ ms.topic: tutorial
 ms.subservice: co-management
 #Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
 ms.collection: tier3
+ms.custom: sfi-ga-nochange
 ---
 
 # Tutorial: Enable co-management for new internet-based devices

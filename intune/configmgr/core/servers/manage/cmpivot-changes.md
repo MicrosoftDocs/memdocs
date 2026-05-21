@@ -5,6 +5,7 @@ ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Changes to CMPivot

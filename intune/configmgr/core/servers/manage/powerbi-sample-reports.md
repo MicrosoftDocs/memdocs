@@ -5,6 +5,7 @@ ms.date: 11/03/2021
 ms.subservice: core-infra
 ms.topic: install-set-up-deploy
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Install Power BI sample reports

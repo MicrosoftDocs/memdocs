@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: install-set-up-deploy
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # <a name="bkmk_apps"></a> Tenant attach: Install an application from the admin center

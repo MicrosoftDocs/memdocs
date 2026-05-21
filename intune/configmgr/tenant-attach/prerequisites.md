@@ -5,6 +5,7 @@ ms.date: 07/11/2022
 ms.topic: article
 ms.subservice: core-infra
 ms.collection: tier3
+ms.custom: sfi-ga-nochange
 ---
 
 # Microsoft Intune tenant attach: Prerequisites

@@ -3,6 +3,7 @@ title: How to view authorization failure message in administration service
 description: Learn how to audit authorization failure message in administration service.
 ms.date: 03/30/2023
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # How to view authorization failure message in administration service.
