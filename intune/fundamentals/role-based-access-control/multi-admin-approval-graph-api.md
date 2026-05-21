@@ -73,7 +73,7 @@ Without the justification header, the request fails with an error indicating tha
 
 ## Step 2: Handle the approval response
 
-The request returns an HTTP 403 error indicating that approval is required. The response includes an `x-msft-approval-code` header that you need for the remaining steps.
+The request returns an HTTP 403 error with an `ApprovalRequired` error code. This 403 response is expected and doesn't indicate a permissions problem — it's how MAA signals that the request was received and is now waiting for approval. The response includes an `x-msft-approval-code` header that you need for the remaining steps.
 
 Example response:
 
