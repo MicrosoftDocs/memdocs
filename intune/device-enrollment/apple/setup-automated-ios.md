@@ -228,7 +228,7 @@ Create an enrollment policy for automated device enrollment. A device enrollment
 
    This tab is only available in new enrollment policies and doesn't appear in existing enrollment profiles. Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
 
-   For more information, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md).
+   For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md). 
 
 1. Select **Next**.
 
