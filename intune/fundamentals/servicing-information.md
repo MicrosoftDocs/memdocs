@@ -39,7 +39,7 @@ In the following example, the tenant has the 2311 (November 2023) service releas
 
 ## Keep current with release features
 
-Keeping up to date about releases and changes is an important part of your Intune deployment. Intune provides several ways to stay current about latest updates:
+Microsoft updates Intune frequently to keep up with operating system updates and mobile app releases. Keeping up to date about releases and changes is an important part of your Intune deployment. Intune provides several ways to stay current about latest updates:
 
 - **[What's new in Intune](../whats-new/index.md)**: Learn what's new in a Microsoft Intune release. When a feature is released, some information about that feature is added to this article. It also includes an overview of the current release, any notices, information about earlier releases, and other information.
 
@@ -55,12 +55,29 @@ Keeping up to date about releases and changes is an important part of your Intun
   2. Go to **Tenant administration** > **Tenant status** > **Service health and message center**.
   3. Under **Message center**, select any message to read it.
 
+- **[Microsoft 365 Admin mobile app](/microsoft-365/admin/admin-overview/admin-mobile-app)**: Receive service notifications on your mobile device.
 - **Social media**: Get the latest announcements on X at `@IntuneSuppTeam`.
 
-For more information from the Intune support team, go to the following blog posts:
+For more information from the Intune support team and the broader Intune community, see the following blogs:
 
+- [Microsoft Intune Blog](https://aka.ms/IntuneBlog)
+- [Intune Customer Success Blog](https://aka.ms/IntuneCustomerSuccess)
 - [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/MEMServiceChangeBlog)
 - [Tips and tricks for managing Intune](https://aka.ms/mem-tipsandtricks-blog)
+
+> [!NOTE]
+> Monitor Intune service health in the [Microsoft 365 admin center](https://admin.microsoft.com) under **Service Health**.
+
+## Advance notice for service changes
+
+| Type of change | Notice |
+|---|---|
+| End-user experience changes | 7–30 days |
+| **Plan for Change** notices that require admin action | About 30 days, with an **Act By** date when applicable |
+| Deprecations | Up to 90 days where possible (less when a third party announces the change) |
+| Service retirement | 12 months |
+
+For post-incident actions, Microsoft emails service administrators using the email address in your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more).
 
 ## Privacy and personal data in Intune
 
@@ -79,3 +96,4 @@ The following resources can help you understand privacy and personal data in Int
 - [Get started with Microsoft Intune](get-started.md)
 - [Planning guide to move to Microsoft Intune](planning-guide.md)
 - [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/Intune/ServiceChangeBlog) *- Blog*
+- [Service information for Microsoft Intune release updates](servicing-information.md)

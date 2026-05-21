@@ -12,8 +12,6 @@ ms.collection:
 
 # Microsoft Tunnel for MAM iOS SDK Developer Guide
 
-[!INCLUDE [intune-add-on-note](../../includes/intune-plan2-suite-note.md)]
-
 The Microsoft Tunnel for MAM iOS SDK developer guide is a resource for developers. It helps developers integrate and configure the SDK into an iOS/iPadOS app. For an overview of the Microsoft Tunnel for MAM, see [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../../device-security/microsoft-tunnel/mam-ios.md).
 
 This guide covers different parts of the integration process in your Xcode app project, including installing the frameworks, configuring the `info.plist` file, build settings, key sharing, and implementing the SDK's delegate methods.

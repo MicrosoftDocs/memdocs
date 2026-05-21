@@ -885,7 +885,7 @@ Device query for multiple devices now includes expanded operator support, cleare
 
 Endpoint Privilege Management (EPM) elevation policies now support deployment to users on Azure Virtual Desktop (AVD) single-session virtual machines.
 
-For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../epm/deployment-planning.md).
+For information about using EPM, see [Plan and Prepare for Endpoint Privilege Management Deployment](../epm/deployment-planning.md).
 
 ### App management
 
