@@ -16,10 +16,11 @@ Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, re
 At a high level, the Microsoft Tunnel requires:
 
 - An Azure subscription.
-
 - A *Microsoft Intune Plan 1* subscription.
+
   > [!NOTE]
-  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](./mam.md), which is an [Intune add-on](../../fundamentals/add-ons.md) that requires a *Microsoft Intune Plan 2* subscription.
+  > This prerequisite is for *Microsoft Tunnel*, and does not include [Microsoft Tunnel for Mobile Application Management](./mam.md), which is a [Microsoft Intune advanced capability](../../fundamentals/advanced-capabilities.md) that requires that requires additional licensing beyond Microsoft Intune.
+
 
 - To complete setup of Microsoft Tunnel, the account you'll use to register Tunnel Gateway with Microsoft Intune and your Intune tenant must be assigned the Microsoft Entra ID role of *Intune Administrator* and be assigned an Intune license.
 

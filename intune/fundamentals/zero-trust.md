@@ -52,8 +52,6 @@ For detailed deployment guidance including prerequisites, licensing requirements
 
 ## Related articles
 
-- [Learn about managing identities in Intune](tenant-administration/identities.md)
-- [Learn about managing devices in Intune](manage-devices.md)
-- [Learn about managing apps in Intune](manage-apps.md)
+- [Learn about Intune core concepts](core-concepts.md)
 - [Zero Trust deployment approach with Microsoft Intune](zero-trust-deployment.md)
 - [Zero Trust Guidance Center](/security/zero-trust)

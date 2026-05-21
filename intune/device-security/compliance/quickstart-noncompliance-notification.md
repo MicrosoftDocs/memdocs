@@ -123,7 +123,7 @@ You can assign the compliance policy to a specific group of users or to all user
 4. In the **Assign to** drop-down box, select **All Users**. Any user that has a **Windows 10 and later** device that doesn't meet this compliance policy is notified.
 
     > [!NOTE]
-    > You can include and exclude groups when assigning compliancy policies.
+    > You can include and exclude groups when assigning compliance policies.
 
 5. Select **Review + save** > **Save**.
 

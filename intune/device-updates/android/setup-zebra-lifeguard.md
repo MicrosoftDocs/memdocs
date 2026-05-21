@@ -6,10 +6,8 @@ ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
 ---
-# Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 
-> [!IMPORTANT]
-> This feature is now generally available.
+# Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 
 Microsoft Intune supports/provides integration with Zebra LifeGuard Over-the-Air (LG OTA), so that you can have a single area for managing firmware updates for supported Zebra devices. Zebra LifeGuard Over-the-Air (LG OTA) is a service offered by Zebra Technologies that allows deployment of updates to their Android devices in a hands-free and automated manner.
 
@@ -19,52 +17,89 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 ## Prerequisites
 
-- Managed Google Play must be configured for your tenant. For setup instructions, see [Set up Managed Google Play](../../device-enrollment/android/connect-managed-google-play.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-- Administrators must have all the required RBAC (role-based access control) permissions:
+:::column-end:::
+:::column span="3":::
+> FOTA updates are supported on Android Enterprise devices enrolled in Intune. This includes the following enrollment types:
+> - Android Enterprise corporate-owned dedicated (COSU)
+> - Android Enterprise corporate-owned fully managed (COBO)
+>
+> For information about which Zebra devices work with the service based on the platform, see [Zebra LifeGuard device requirements](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+:::column-end:::
+:::row-end:::
 
-  - Mobile Apps (to create and deploy app configuration profiles)
-  - Android FOTA (to manage firmware OTA updates)
+:::row:::
+:::column span="1":::
+[!INCLUDE [network-connectivity](../../includes/requirements/network-connectivity.md)]
 
-- A Microsoft Intune Plan 2 or Microsoft Intune Suite license is required. For details, see [Intune add-ons and licensing](../../fundamentals/add-ons.md).
+:::column-end:::
+:::column span="3":::
+> For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419).
+:::column-end:::
+:::row-end:::
 
-- Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see the [Zebra LifeGuard FAQ](https://techdocs.zebra.com/lifeguard/faq/).
-- For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
-- For more information about which Zebra devices work with the service based on the platform, see [Zebra LifeGuard device requirements](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 
-## Government cloud support
+:::column-end:::
+:::column span="3":::
 
-Zebra LifeGuard Over-the-Air updates are supported with the following sovereign cloud environments:
+>You must have access to all appropriate Zebra licenses and entitlements to use the LG OTA service. For more information, contact Zebra support or see the [Zebra LifeGuard FAQ](https://techdocs.zebra.com/lifeguard/faq/).
+>
+>[!INCLUDE [additional-licensing-plan2](../../includes/licensing/additional-licensing-plan2.md)]
+:::column-end:::
+:::row-end:::
 
-- U.S. Government Community Cloud (GCC) High
-- U.S. Department of Defense (DoD)
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
-For more information, see [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md).
+:::column-end:::
+:::column span="3":::
+>Administrators must have all the required RBAC (role-based access control) permissions:
+>  - Mobile Apps (to create and deploy app configuration profiles)
+>  - Android FOTA (to manage firmware OTA updates)
+:::column-end:::
+:::row-end:::
 
-## Supported Devices
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
 
-LG OTA is supported on the following devices:
+:::column-end:::
+:::column span="3":::
+> Managed Google Play must be configured for your tenant. For setup instructions, see [Set up Managed Google Play](../../device-enrollment/android/connect-managed-google-play.md).
+:::column-end:::
+:::row-end:::
 
-- [Android Enterprise dedicated devices](../../device-enrollment/android/guide.md#android-enterprise-dedicated-devices)
-- [Android Enterprise fully managed devices](../../device-enrollment/android/guide.md#android-enterprise-fully-managed)
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
-For more specific information on supported devices, see [Zebra LifeGuard device requirements](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
-
-The following aren't supported in public preview:
-
-- Graph assignment with inclusions/exclusions
-
+:::column-end:::
+:::column span="3":::
+> Zebra LifeGuard Over-the-Air updates are supported in the following cloud environments:
+> - Public cloud
+> - Sovereign cloud environments:
+>   - U.S. Government Community Cloud (GCC) High
+>   - U.S. Department of Defense (DoD)
+:::column-end:::
+:::row-end:::
 
 ## Process overview
 
 The process for using LG OTA via Intune is as follows:
 
 1. [Set up Zebra connector](#step-1-set-up-zebra-connector).
-2. [Enroll devices with Zebra LG OTA service](#step-2-enroll-devices-with-zebra-lg-ota-service).
-    3. [Approve and deploy required apps for your tenant](#2a-approve-and-deploy-required-apps-for-your-tenant).
-    4. [Create app configuration policy](#2b-create-app-configuration-policy).
-5. [Create and assign deployments in Intune](#step-3-create-and-assign-deployments).
-6. [View and manage deployments](#step-4-view-and-manage-deployments).
+1. [Enroll devices with Zebra LG OTA service](#step-2-enroll-devices-with-zebra-lg-ota-service).
+    - [Approve and deploy required apps for your tenant](#2a-approve-and-deploy-required-apps-for-your-tenant).
+    - [Create app configuration policy](#2b-create-app-configuration-policy).
+1. [Create and assign deployments in Intune](#step-3-create-and-assign-deployments).
+1. [View and manage deployments](#step-4-view-and-manage-deployments).
 
 ## Before you start
 

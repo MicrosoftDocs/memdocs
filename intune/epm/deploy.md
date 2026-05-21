@@ -13,10 +13,6 @@ ms.collection:
 
 # Deploy Endpoint Privilege Management with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 To deploy Endpoint Privilege Management (EPM), start by enabling reporting, then use reports to create rules for elevation. This article describes some common deployment scenarios and outlines the recommended deployment phases for your organization.
 
 - [Windows elevation settings policy](./manage-elevation-settings.md).
