@@ -305,12 +305,12 @@ Depending on the passwordless methods you choose, your organization might need M
 | Certificate-based authentication (CBA)       | Microsoft Entra ID P1 (P2 for risk-based Conditional Access) |
 | Authentication strength policies             | Microsoft Entra ID P1                                        |
 | Risk-based Conditional Access                | Microsoft Entra ID P2                                        |
-| Microsoft Cloud PKI                          | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
+| Microsoft Cloud PKI                          | Microsoft Intune Suite or standalone Cloud PKI license       |
 | Device compliance and configuration profiles | Microsoft Intune Plan 1                                      |
 
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
-- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing.md)
 
 ### Platform requirements
 

@@ -108,22 +108,22 @@ Intune is available with different subscriptions, including as a stand-alone ser
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Determine your license needs**
 
-Microsoft Intune is available for different organization sizes and needs. It offers a simple-to-use management experience for schools and small businesses, and more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune unless [unlicensed admin access](./licensing/unlicensed-admins.md) is available. Tenants created after July 2021 support unlicensed admins by default.
+Microsoft Intune is available for different organization sizes and needs. It offers a simple-to-use management experience for schools and small businesses, and more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune unless [unlicensed admin access](./licensing.md#unlicensed-admin-access) is available. Tenants created after July 2021 support unlicensed admins by default.
 
-For guidance, see [Microsoft Intune licensing](./licensing/index.md).
+For guidance, see [Microsoft Intune licensing](./licensing.md).
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Get started with assigning licenses to users**
 
 Whether you add users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The [Microsoft Intune's free trial](try-overview.md) provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
 Give users permission to use Intune. Each user or userless device requires an Intune license to access the service.
 
-For guidance, see [Assign licenses](./licensing/assign-licenses.md).
+For guidance, see [Assign licenses](./assign-licenses.md).
 
 :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Unlicensed admins**
 
 Intune supports unlicensed administrator access, which lets administrators manage Intune without an assigned Intune license. Tenants created after July 2021 have this enabled by default. Tenants created before July 2021 can enable it manually. This feature applies to any administrator, including Intune administrators, Microsoft Entra administrators, and so on.
 
-For guidance, see [Unlicensed admins](./licensing/unlicensed-admins.md).
+For guidance, see [Unlicensed admins](./licensing.md#unlicensed-admin-access).
 
 ## 7 - Manage roles and grant admin permissions for Intune
 
