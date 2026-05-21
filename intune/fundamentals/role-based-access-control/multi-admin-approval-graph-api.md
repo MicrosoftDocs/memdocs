@@ -1,7 +1,7 @@
 ---
 title: Use Multi Admin Approval with the Microsoft Graph API
 description: Learn how to update your automation scripts and applications to work with Multi Admin Approval enforcement on app-authenticated API calls in Microsoft Intune.
-ms.date: 05/19/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
@@ -92,7 +92,7 @@ Extract the `x-msft-approval-code` value from the response. You need it in Step 
 
 At this point, the approval request must be reviewed and approved by another administrator in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Applications can't approve or reject MAA requests — only interactive admin accounts can approve them.
 
-You can query the approval request status at any time using the approval code:
+You can query the approval request status at any time by using the approval code:
 
 ```http
 GET https://graph.microsoft.com/beta/deviceManagement/operationApprovalRequests?$filter=requestId eq 'aabb1234-5678-9012-abcd-ef0123456789'
@@ -123,21 +123,9 @@ The request completes successfully and the resource is created.
 
 ## Exclude an application from MAA enforcement
 
-If an application needs to continue operating without going through the MAA approval workflow, you can exclude it using the app exclusion list in the MAA access policy. Use exclusions when a code change isn't immediately feasible. Microsoft recommends updating your application code to include the MAA approval workflow as the long-term solution.
+If you can't immediately update your application to include the approval workflow, you can exclude it from Azure Attestation enforcement in the access policy. To configure an exclusion, edit the access policy for the workload your app calls and add the application on the **Exclusions** tab. A second administrator must approve the change before the exclusion takes effect.
 
-To configure an app exclusion:
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Multi Admin Approval** > **Access policies**.
-1. Open the access policy for the workload your app calls (for example, Apps, Scripts, or Endpoint security).
-1. Add the named application (service principal) to the policy's app exclusion list.
-1. A second administrator must approve the exclusion before it takes effect.
-
-Keep the following details in mind:
-
-- Exclusions are per app, per workload. An exclusion in one access policy doesn't affect other workloads.
-- App exclusions are capped at 50 applications per access policy.
-- Each exclusion stays in effect until an admin removes it. Removing an exclusion also requires dual approval.
-- All add, remove, and modify actions on the exclusion list are captured in the Intune audit log.
+For more information about exclusions, including scope, limits, and security considerations, see [Exclude enterprise applications from an access policy](multi-admin-approval.md#exclude-enterprise-applications-from-an-access-policy).
 
 ## Monitor MAA activity for app-auth calls
 

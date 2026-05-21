@@ -1,7 +1,7 @@
 ---
 title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
-ms.date: 04/27/2026
+ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
@@ -19,7 +19,7 @@ By using Multi Admin Approval, you can configure access policies that protect sp
 
 When you use any account in the tenant to make a change to a resource that's protected by an access policy, Intune doesn't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that an access protection policy assigns a protected resource to can approve changes. Approvers can also reject change requests.
 
-MAA enforcement applies to both interactive (delegated) admin actions and application-authenticated (app-auth) API calls made through the Microsoft Graph API. If your organization uses service principals, automation scripts, or third-party applications to manage Intune resources via the Graph API, those calls are also intercepted by MAA when the target resource is protected by an access policy. For details on how to update your automation to work with MAA, or to exclude specific apps from enforcement, see [Use Multi Admin Approval with the Microsoft Graph API](multi-admin-approval-graph-api.md).
+MAA enforcement applies to both interactive (delegated) admin actions and application-authenticated (app-auth) API calls made through the Microsoft Graph API. If your organization uses service principals, automation scripts, or third-party applications to manage Intune resources via the Microsoft Graph API, those calls are also intercepted by MAA when the target resource is protected by an access policy. For details on how to update your automation to work with MAA, see [Use Multi Admin Approval with the Microsoft Graph API](multi-admin-approval-graph-api.md). To exclude specific apps from enforcement, see [Exclude enterprise applications from an access policy](#exclude-enterprise-applications-from-an-access-policy).
 
 > [!TIP]
 > MAA enforcement on app-auth calls applies only to tenants that already have MAA access policies configured. It doesn't enable MAA or change any tenant's enrollment.
@@ -62,15 +62,15 @@ To create and manage access policies, use an account with one of the following o
   | *Update access policy* | Modify existing MAA access policies |
   | *Delete access policy* | Remove MAA access policies |
 
-- **Intune Administrator** [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (also known as **Intune Service Administrator**): This Microsoft Entra role provides full read/write access to Intune. Because it's a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), Microsoft recommends using a least-privileged custom Intune role for routine access policy management instead of this role. To learn more, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+- Intune Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (also known as **Intune Service Administrator**): This Microsoft Entra role provides full read/write access to Intune. Because it's a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), Microsoft recommends using a least-privileged custom Intune role for routine access policy management instead of this role. To learn more, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 ### Role 2: Approver
 
 To approve or reject MAA requests submitted by other admins, an account must meet all of the following requirements:
 
 1. **Approver group membership**: The account must be a member of the approver group that's assigned to the access policy for the specific resource type.
-2. **Intune role permission**: The account must have the resource-specific Read permissions for the policy type they are approving. 
-3. **RBAC role assignment for the group**: The approver security group itself must be added as a member group to at least one Intune role assignment. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
+1. **Intune role permission**: The account must have the resource-specific Read permissions for the policy type they're approving.
+1. **RBAC role assignment for the group**: The approver security group itself must be added as a member group to at least one Intune role assignment. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
    > [!IMPORTANT]
    > The approver group has two requirements:
@@ -79,7 +79,7 @@ To approve or reject MAA requests submitted by other admins, an account must mee
 
 ### Role 3: Change requestor
 
-To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps — submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device.
+To submit change requests and complete approved changes for protected resources, an administrator needs the standard Intune RBAC permissions for the specific action they're performing. The same account performs both steps - submitting the initial request and selecting **Complete** after approval by another admin. For example, *MobileApps/Create* to create an app, or *RemoteTasks/Wipe* to wipe a device.
 
 > [!NOTE]  
 > - An administrator can't approve their own requests, even if they're a member of the approver group. A different administrator must approve the request.
@@ -100,7 +100,7 @@ After a change is submitted, an *approver* can navigate to the **All requests** 
 
 ### Change Review Agent suggestions in Multi Admin Approval
 
-When the [Change Review Agent](../../copilot/agents/change-review-agent.md) is set up and has completed a run, the **My requests** and **All requests** tabs display an **Agent Response** column for Windows PowerShell script requests. When a suggestion is available, you can select it to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
+When the [Change Review Agent](../../copilot/agents/change-review-agent.md) is set up and has completed a run, the **My requests** and **All requests** tabs display an **Agent Response** column for PowerShell script requests. When a suggestion is available, you can select it to open and complete the Change Review Agent's approval workflow for that request without leaving the Multi Admin Approval node.
 
 Change Review Agent suggestions continue to be available in the [agent's primary experience](../../copilot/agents/manage-change-review-agent.md) as well. For more information about the agent, see [Change Review Agent overview](../../copilot/agents/change-review-agent.md).
 
@@ -116,11 +116,27 @@ If a request isn't processed further within 3 days, it becomes **Expired**, and 
 
 1. On *Approvers*, select **Add groups** and then select a group as the group of approvers for this policy. More complex configurations that exclude groups aren't supported.
 
-1. On *Review + Create*, review, and then save your changes.
+1. On *Exclusions*, optionally select **Add enterprise applications** to exclude specific enterprise applications from MAA enforcement for this policy. Excluded applications can modify protected resources without going through the approval workflow. For more information, see [Exclude enterprise applications from an access policy](#exclude-enterprise-applications-from-an-access-policy).
+
+1. On *Review + submit for approval*, review the policy summary including the basics, approvers, and any exclusions. Enter a *Business justification*, and then select **Submit for approval**.
 
 1. Next, use a separate administrative account with **Approval for Multi Admin Approval** permission to sign in to the admin center to review and approve the new access policy.
 
 1. Sign back in to the admin center with the first admin account that created the access policy, view the policy, and finalize it by selecting **Complete**. After Intune applies this policy, configurations for the protected profile type require multiple admin approvals.
+
+### Exclude enterprise applications from an access policy
+
+When you create or edit an access policy, you can exclude specific enterprise applications from MAA enforcement for that policy. Excluded applications can modify the protected resource type without going through the approval workflow.
+
+> [!WARNING]
+> Excluding an application bypasses MAA protection for the affected resource type. Each exclusion creates a gap in your approval workflow that could be exploited if the excluded application is compromised. Only exclude applications when necessary, and review your exclusion list regularly to remove entries that are no longer needed.
+
+Keep the following details in mind:
+
+- **Per-policy scope** — Each exclusion applies only to the access policy where it's configured. An exclusion in one access policy doesn't affect other policies or workloads.
+- **Limit** — App exclusions are capped at 50 applications per access policy.
+- **Approval required** — Adding, removing, or modifying exclusions requires approval by a second administrator, just like other access policy changes.
+- **Audit logging** — All add, remove, and modify actions on the exclusion list are captured in the Intune audit log.
 
 ## Submit a request
 
@@ -185,4 +201,5 @@ You can cancel a request before it's approved by selecting it from the **My requ
 
 ## Related content
 
+- [Use Multi Admin Approval with the Microsoft Graph API](multi-admin-approval-graph-api.md)
 - Manage [role-based access control](../role-based-access-control/overview.md)
