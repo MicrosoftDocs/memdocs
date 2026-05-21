@@ -12,7 +12,7 @@ ms.collection: tier3
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
+> Starting in version 2023, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 
 Use certificate profiles in Configuration Manager to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure](certificate-infrastructure.md).
 
