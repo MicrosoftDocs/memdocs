@@ -5,6 +5,7 @@ ms.date: 09/18/2023
 ms.subservice: core-infra
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Device restart notifications in Configuration Manager

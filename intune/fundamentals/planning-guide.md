@@ -3,7 +3,7 @@ title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/21/2025
+ms.date: 05/19/2026
 ms.topic: upgrade-and-migration-article
 ms.reviewer: davguy
 ms.collection:
@@ -124,6 +124,9 @@ In Intune, distributed IT benefits from the following features:
 - **[Scope tags](role-based-access-control/scope-tags.md)** use role-based access control (RBAC). So, only users in a specific group have permission to manage policies and profiles for users and devices in their scope.
 
 - When you use **[device enrollment categories](../device-management/create-device-categories.md)**, devices are automatically added to groups based on categories you create. This feature used Microsoft Entra dynamic groups, and helps make managing devices easier.
+
+  > [!TIP]
+  > If your goal is to target Intune policies based on device category, you can also use [assignment filters](filters/overview.md) with the `deviceCategory` property. Filters evaluate at check-in without depending on group membership processing.
 
   When users enroll their device, they choose a category, like Sales, IT admin, point-of-sale device, and so on. When the devices are added to a category, these device groups are ready to receive your policies.
 

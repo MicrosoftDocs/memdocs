@@ -1,7 +1,7 @@
 ---
 title: Plan Education device grouping and targeting
 description: Plan how you'll group devices and users and target policies and applications.
-ms.date: 5/2/2024
+ms.date: 05/19/2026
 ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
@@ -69,6 +69,8 @@ The following table provides guidance about which iOS device grouping options to
 
 > [!TIP]
 > For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](../../../fundamentals/filters/performance-recommendations.md).
+>
+> For Intune-only device targeting based on properties like OS type, manufacturer, model, or device category, assignment filters are preferred over dynamic device groups. Filters evaluate at check-in without depending on group membership processing. Use dynamic groups when you need group membership for cross-workload scenarios (Conditional Access, licensing) or Autopilot profile assignment.
 
 ## Create groups and filters
 

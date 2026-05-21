@@ -5,6 +5,7 @@ ms.date: 10/05/2021
 ms.subservice: co-management
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Use the Company Portal app on co-managed devices

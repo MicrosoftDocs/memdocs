@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 2 of 6 - Create an assigned device group
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 2 of 6 - Create an assigned device group.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 2 of 6 - Create an assigned device group
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 2 of 6 - Create an assigned device group.
 ms.date: 06/11/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Create an assigned device group
+# Windows Autopilot device preparation in automatic mode for Windows 365: Create an assigned device group
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 

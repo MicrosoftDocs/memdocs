@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 05/11/2026
+ms.date: 05/19/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -53,6 +53,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of May 18, 2026
+
+### Device security    
+
+#### Guidance for device-reported values in compliance reports<!-- 37725884 -->
+We updated documentation to clarify how to interpret device-reported values in compliance reports. Some compliance reports include a **Setting** column with values reported directly by the device, providing additional context for noncompliance in scenarios such as custom compliance and Android app configuration reporting. This update adds guidance on treating these values as informational only and highlights security considerations for reviewing device-reported data. For more information, see [Device-reported values in compliance reports](../device-security/compliance/monitor-policy.md#device-reported-values-in-compliance-reports).
+
 ## Week of May 11, 2026
 
 ### Device enrollment

@@ -5,6 +5,7 @@ ms.date: 08/02/2021
 ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Application approval process

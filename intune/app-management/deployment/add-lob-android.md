@@ -1,7 +1,7 @@
 ---
 title: Add an Android Line-of-Business App to Microsoft Intune
 description: Learn about how to add a Android line-of-business (LOB) app to Microsoft Intune.
-ms.date: 04/23/2026
+ms.date: 05/11/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: bryanke
@@ -90,6 +90,14 @@ If **Check apps from external sources** is enabled on the Android device, the us
 
 > [!IMPORTANT]
 > When you upload a new version of an Android line-of-business app, existing app configuration policies associated with the previous version don't automatically apply to the updated app. To apply app configuration settings to the updated app, create and assign a new app configuration policy that targets the new app version.
+
+## Known issues
+
+The following known issues affect app install status reporting for Android Enterprise line-of-business (LOB) apps that are deployed directly to devices. In all cases, the app installs correctly on the device. Only the status displayed in the Microsoft Intune admin center is affected. These issues are being actively addressed.
+
+- **Lower version shows as Installed instead of In-Conflict.** When two versions of the same LOB app are assigned to a device, the lower version may continue to show as **Installed** in the admin center instead of **In-Conflict**.
+- **Play Store app shows Waiting for install or doesn't appear in the report.** When the same app is assigned as both a Managed Google Play app and a direct LOB app, the Play Store app policy may show **Waiting for install** or may not appear in the policy report, instead of showing **In-Conflict**.
+- **Conflict resolution and reporting are inconsistent for mixed install intents.** When two versions of the same LOB app are assigned with different install intents (for example, **Install** for one version and **Uninstall** for another), conflict resolution and reporting may not behave as expected.
 
 ## Next steps
 

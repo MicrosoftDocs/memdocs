@@ -5,6 +5,7 @@ ms.date: 11/15/2023
 ms.subservice: core-infra
 ms.topic: whats-new
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # What's new in version 2309 of Configuration Manager current branch

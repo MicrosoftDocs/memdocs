@@ -5,6 +5,7 @@ ms.date: 04/15/2021
 ms.topic: how-to
 ms.subservice: software-updates
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Manage Surface drivers with Configuration Manager
