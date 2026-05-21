@@ -25,7 +25,7 @@ In Microsoft Intune, update rings are configured through **update ring policies*
 
 :::column-end:::
 :::column span="3":::
-> - [Microsoft Intune Plan 1](../../fundamentals/licensing/index.md)
+> - [Microsoft Intune Plan 1](../../fundamentals/licensing.md)
 :::column-end:::
 :::row-end:::
 

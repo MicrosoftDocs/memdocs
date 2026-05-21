@@ -35,9 +35,6 @@ Enrollment is enabled for all platforms by default, but you can restrict specifi
 
 This article describes the supported device scenarios and enrollment prerequisites, has information about using other MDM providers, and includes links to platform-specific enrollment guidance.
 
-> [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](includes/tips-guidance-plan-deploy-guides.md)]
-
 ## Supported device scenarios
 
 Microsoft Intune enables mobile device management for:
@@ -67,7 +64,7 @@ Microsoft Intune automatically marks devices that meet certain criteria as corpo
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
   - The [MDM Authority](../fundamentals/setup-mdm-authority.md) is set to Intune, even when using [co-management](../configmgr/comanage/overview.md) with Intune + Configuration Manager.
-  - [Intune licenses are assigned](../fundamentals/licensing/assign-licenses.md).
+  - [Intune licenses are assigned](../fundamentals/assign-licenses.md).
 
   For more information, go to the [Intune setup deployment guide](../fundamentals/setup-migration.md).
 

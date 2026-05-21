@@ -34,7 +34,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 :::column span="3":::
 > To use this feature, you need the following subscriptions:
 > - **Universal Print**: For more specific information, go to [License Universal Print](/universal-print/fundamentals/universal-print-license).
-> - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+> - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../../fundamentals/licensing.md).
 :::column-end:::
 :::row-end:::
 

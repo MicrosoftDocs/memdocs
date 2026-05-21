@@ -20,7 +20,7 @@ Secure access to work email, data, and apps on macOS devices. This article guide
 Complete the following prerequisites to enable macOS device management in Intune:
 
 * [Add users](tenant-administration/add-users.md) and [groups](tenant-administration/add-groups.md)
-* [Assign licenses to users](./licensing/assign-licenses.md)
+* [Assign licenses to users](./assign-licenses.md)
 * [Set mobile device management authority](setup-mdm-authority.md)
 * [Set up Apple MDM push (APNs) certificate](../device-enrollment/apple/create-mdm-push-certificate.md)
 

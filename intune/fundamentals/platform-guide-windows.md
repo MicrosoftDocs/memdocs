@@ -21,7 +21,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
  Complete the following prerequisites to enable your tenant's endpoint management capabilities:
 
 * [Add users](tenant-administration/add-users.md) and [groups](tenant-administration/add-groups.md)
-* [Assign licenses to users](./licensing/assign-licenses.md)
+* [Assign licenses to users](./assign-licenses.md)
 * [Set mobile device management authority](setup-mdm-authority.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
