@@ -55,7 +55,7 @@ landingContent:
     - linkListType: concept
       links:
       - text: Identity management
-        url: tenant-administration/identities.md
+        url: core-concepts.md#identities
 
   - title: Plan and deploy
     linkLists:
@@ -76,20 +76,20 @@ landingContent:
       - text: Set up migration
         url: setup-migration.md
 
-  - title: Licensing and add-ons
+  - title: Plans and licensing
     linkLists:
     - linkListType: overview
       links:
       - text: Microsoft Intune licensing
-        url: licensing/index.md
-      - text: Intune Suite add-on capabilities
-        url: add-ons.md
+        url: licensing.md
+      - text: Microsoft Intune advanced capabilities
+        url: advanced-capabilities.md
     - linkListType: how-to-guide
       links:
       - text: Assign licenses to users
-        url: licensing/assign-licenses.md
-      - text: Allow unlicensed admins
-        url: licensing/unlicensed-admins.md
+        url: assign-licenses.md
+      - text: Unlicensed admins access
+        url: licensing.md#unlicensed-admin-access
 
   - title: Role-based access control
     linkLists:

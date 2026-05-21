@@ -9,11 +9,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
- # Planning for Remote Help with Microsoft Intune
-
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
+# Planning for Remote Help with Microsoft Intune
 
 In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers*, as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Microsoft Entra ID that the proper trusts are established for the Remote Help sessions.
 
@@ -125,10 +121,11 @@ The following Intune built-in roles include Remote Help permissions:
 
 Remote Help has the following requirements: 
 
-- [Intune subscription](../fundamentals/licensing/index.md).  
-- [Remote Help add on license or an Intune Suite license](../fundamentals/add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
-- [Supported platforms and devices](#supported-platforms).  
+- A Remote Help license for everyone targeted to use the service — both helpers (IT support workers) and sharers (users).
+- A [supported platform or device](#supported-platforms).  
 - Intune-enrolled devices must be registered with Microsoft Entra.  
+
+[!INCLUDE [additional-licensing](../includes/licensing/additional-licensing.md)]
 
 ## Limitations
 Remote Help has the following limitations:  

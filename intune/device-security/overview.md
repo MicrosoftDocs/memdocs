@@ -179,8 +179,8 @@ Conditional Access works across managed and unmanaged devices, helping create an
 - Applications are validated using file hashes, certificates, or other criteria.
 - Common elevated scenarios: application installations, driver updates, Windows diagnostics.
 
-> [!TIP]
-> EPM is available as an [Intune add-on](../fundamentals/add-ons.md) for Windows devices and requires an additional license.
+> [!NOTE]
+> EPM is a [Microsoft Intune advanced capability](../fundamentals/advanced-capabilities.md) for Windows devices and requires additional licensing beyond Microsoft Intune.
 
 ## Next steps
 

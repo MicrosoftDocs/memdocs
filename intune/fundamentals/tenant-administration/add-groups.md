@@ -148,5 +148,5 @@ Use the following steps to delete an existing group:
 
 ## Related content
 
-- [Assign users licenses to Intune](../licensing/assign-licenses.md)
+- [Assign users licenses to Intune](../assign-licenses.md)
 - [Assign Microsoft Intune roles to groups of users for role-based access control](../role-based-access-control/assign-role.md)

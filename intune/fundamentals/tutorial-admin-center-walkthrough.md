@@ -31,13 +31,6 @@ Before setting up Microsoft Intune, review the following requirements:
 - [Supported operating systems and browsers](ref-supported-platforms.md)
 - [Network endpoints for Microsoft Intune](endpoints.md)
 
-## Sign up for a Microsoft Intune free trial
-
-Trying out Intune is free for 30 days. If you already have a work or school account, **sign in** with that account and add Intune to your subscription. Otherwise, you can [sign up for a free trial account](free-trial-sign-up.md) to use Intune for your organization.
-
-> [!IMPORTANT]
-> You can't combine an existing work or school account after you sign up for a new account.
-
 ## Tour Microsoft Intune in the Microsoft Intune admin center
 
 Follow the steps below to better understand Intune in the Microsoft Intune admin center. Once you complete the tour, you'll have a better understanding of some of the major areas of Intune.
@@ -56,7 +49,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
-    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](setup-mdm-authority.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deploy-setup-step-1.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/intune/device-enrollment/guide)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), platform (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](setup-mdm-authority.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deploy-setup-step-1.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [Enroll devices in Microsoft Intune](../device-enrollment/enroll-devices.md).
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant.
 
@@ -230,9 +223,13 @@ The Microsoft Intune portal settings can be modified. On the **Microsoft Intune 
 
 :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Portal settings." source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-17.png" lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-17.png":::
 
+### Available languages
+
+The Microsoft Intune admin center and the user-facing mobile experiences are available in: Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Spanish, Swedish, and Turkish.
+
 ## Next steps
 
-To get running quickly on Microsoft Intune, step through the Intune Quickstarts by first setting up a free Intune account.
+After exploring the admin center, try the step-by-step Intune tasks to enroll a device, deploy a configuration profile, and assign an app.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Try Microsoft Intune for free](free-trial-sign-up.md)
+> [Try Intune tasks](try-overview.md)

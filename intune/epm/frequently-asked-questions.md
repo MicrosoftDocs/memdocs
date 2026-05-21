@@ -13,10 +13,6 @@ ms.collection:
 
 # Frequently asked questions for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 The following sections of this article discuss frequently asked questions for Endpoint Privilege Management (EPM).
 
 ## Frequently asked questions
@@ -30,7 +26,7 @@ Endpoint Privilege Management is supported with the following virtual devices:
 
 ### Why is my elevation settings policy showing error/not applicable?
 
-The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](./deployment-planning.md#requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management).
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](./deployment-planning.md#prerequisites) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 
@@ -54,7 +50,7 @@ EPM allows standard users to perform tasks that require elevated privileges with
 
 ### Do I need additional licensing for EPM?
 
-Yes, Endpoint Privilege Management requires specific licensing. For more information, see [Intune add-ons](../fundamentals/add-ons.md).
+Yes, Endpoint Privilege Management requires specific licensing. For more information, see [Microsoft Intune advanced capabilities](../fundamentals/advanced-capabilities.md).
 
 ### How does EPM and Windows Defender Application Control (WDAC) differ?
 
