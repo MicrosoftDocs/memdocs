@@ -100,6 +100,12 @@ This article provides an overview of enrollment time grouping, how to configure 
 > [!TIP]
 > For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control/overview.md#custom-roles).
 
+## Device group assignment during enrollment  
+
+When you create a new Apple automated device enrollment (ADE) policy that supports enrollment time grouping, a **Device group** tab appears in the enrollment policy. The security group you select on this tab is applied to the device during enrollment so Intune can deliver the correct policies, apps, and settings.  
+
+The Device group tab is only available in new enrollment policies. It isn’t available in existing enrollment policies.  
+
 ## Step 1: Create Microsoft Entra security group
 
 Create a static Microsoft Entra security group for use in enrollment policies. To configure enrollment time grouping, you must add the Intune Provisioning Client as an owner of the security group. You don't need to add devices or users to this group right now.
