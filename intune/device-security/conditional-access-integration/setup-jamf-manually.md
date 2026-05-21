@@ -158,7 +158,7 @@ The app registration process in Microsoft Entra ID is complete.
    *Exclude* overrides *Include*, which means any device that is in both groups is excluded from Jamf and directed to enroll with Intune.
 
    >[!NOTE]
-   > This method of including and excluding user groups affects the enrollment experience of the user. Any user with a macOS device thats already enrolled in either Jamf or Intune who is then targeted to enroll with the other MDM must unenroll their device and then re-enroll it with the new MDM before management of the device works properly.
+   > This method of including and excluding user groups affects the enrollment experience of the user. Any user with a macOS device that's already enrolled in either Jamf or Intune who is then targeted to enroll with the other MDM must unenroll their device and then re-enroll it with the new MDM before management of the device works properly.
 
 3. Select **Evaluate** to determine how many devices will be enrolled with Jamf, based on your group configurations.
 
