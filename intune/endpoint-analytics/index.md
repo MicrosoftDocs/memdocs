@@ -27,40 +27,32 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. These reports help IT teams identify trends, diagnose problems, and implement improvements to enhance the overall user experience. Endpoint analytics includes the following reports:
 
 :::row:::
-    :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Startup performance
+:::column:::
+> [!div class="nextstepaction"]
+> [Startup performance report](startup-performance.md)
 
 > Identifies devices with slow boot times and factors that delay startup.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](startup-performance.md)
     :::column-end:::
     :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Application reliability
+> [!div class="nextstepaction"]
+> [Application reliability report](app-reliability.md)
 
 > Monitors app crashes and stability trends to improve user experience.
->         
-> > [!div class="nextstepaction"]
-> > [Learn more](app-reliability.md)
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Work from anywhere
+> [!div class="nextstepaction"]
+> [Work from anywhere report](work-from-anywhere.md)
 
 > Evaluates device readiness for secure and efficient remote work.
->
-> > [!div class="nextstepaction"]
-> > [Learn more](work-from-anywhere.md)
     :::column-end:::
     :::column:::
-#### :::image type="icon" source="../media/icons/24/query.svg" border="false"::: Advanced Analytics
+> [!div class="nextstepaction"]
+> [Advanced Analytics](../advanced-analytics/index.md)
 
 > Provides deeper insights and extended reporting capabilities (**requires additional licensing**).
->
-> > [!div class="nextstepaction"]
-> > [Learn more](../advanced-analytics/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -145,7 +137,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 :::column span="3":::
 ::: zone pivot="intune"
 
-> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../fundamentals/licensing/index.md).
+> Devices enrolled in endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../fundamentals/licensing.md).
 
 ::: zone-end
 

@@ -1,7 +1,7 @@
 ---
 title: Supported SQL Server versions
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 12/04/2024
+ms.date: 05/21/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
@@ -74,7 +74,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 | SQL Version | Minimum Required Update | Supported Site Types | Notes |
 |------------|-------------------------|--------------------------|-------|
-| **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. SQL 2022 Compatibility Level (160) is not currently supported. CU must be supported by SQL lifecycle. |
+| **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. Support for SQL 2022 Compatibility Level (160) added in **version 2603** <!--17536046-->. CU must be supported by SQL lifecycle. |
 | **SQL Server 2019** | Cumulative Update 5 (CU5) or later | CAS, Primary, Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
 | **SQL Server 2017** | Cumulative Update 2 (CU2) or later | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
 | **SQL Server 2016** | Minimum Service Pack supported by  [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | CAS, Primary, Secondary |  |
@@ -97,12 +97,13 @@ You can use this version with the minimum service pack and cumulative update sup
 - A secondary site
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> 
+> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
 ### Express Editions (Secondary Sites Only)
 
 | SQL Version | Minimum Required Update | Supported Site Types | Notes |
 |------------|-------------------------|--------------------------|-------|
-| **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. SQL 2022 Compatibility Level (160) is not currently supported. |
+| **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. Support for SQL 2022 Compatibility Level (160) added in **version 2603**. |
 | **SQL Server 2019 Express** | Cumulative Update 5 (CU5) or later | Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
 | **SQL Server 2017 Express** | Cumulative Update 2 (CU2) or later | Secondary | CU must be supported by SQL lifecycle. |
 | **SQL Server 2016 Express** | Minimum Service Pack supported by [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | Secondary |  |
@@ -121,7 +122,8 @@ You can use this version with the minimum service pack and cumulative update sup
 - A secondary site
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> 
+> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
@@ -187,7 +189,7 @@ The following table identifies the recommended compatibility levels for Configur
 
 |SQL Server version | Supported compatibility levels | Recommended level |
 |----------------|--------------------|--------|
-| SQL Server 2022 | **150**, 140, 130, 120, 110 | 150 |
+| SQL Server 2022 | 160 (since version 2603), 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2017 | 140, 130, 120, 110 | 140 |
 | SQL Server 2016 | 130, 120, 110 | 130 |

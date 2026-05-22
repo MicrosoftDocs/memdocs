@@ -1,33 +1,33 @@
 items:
-- name: Advanced Analytics overview
+- name: Overview
   href: index.md
   displayName: Advanced Analytics
-- name: Advanced Analytics reports and capabilities
+- name: Reports
   items:
-  - name: Resource performance report
+  - name: Resource performance
     href: resource-performance.md
-    displayName: Advanced Analytics
-  - name: Battery health report
+    displayName: Advanced Analytics, CPU, memory, slow devices, performance issues
+  - name: Battery health
     href: battery-health.md
-    displayName: Advanced Analytics
-  - name: Anomalies report
+    displayName: Advanced Analytics, battery, power, charge
+  - name: Anomalies
     href: anomalies.md
-    displayName: Advanced Analytics
-  - name: Device timeline report
+    displayName: Advanced Analytics, anomaly detection, outliers, unusual
+  - name: Device timeline
     href: device-timeline.md
-    displayName: Advanced Analytics
-  - name: Device query
-    href: device-query.md
-    displayName: Advanced Analytics
-  - name: Device query for multiple devices
-    href: device-query-multiple-devices.md
-    displayName: Advanced Analytics
-  - name: Device scopes
-    href: device-scopes.md
-    displayName: Advanced Analytics
+  displayName: Advanced Analytics, history, events, audit, timeline
+- name: Device query
+  href: device-query.md
+  displayName: Advanced Analytics, KQL, Kusto, real-time
+- name: Multi-device query
+  href: device-query-multiple-devices.md
+  displayName: Advanced Analytics, KQL, fleet, bulk
+- name: Device scopes
+  href: device-scopes.md
+  displayName: Advanced Analytics, scope, RBAC, filter
 - name: Data platform schema
   href: ref-data-platform-schema.md
-  displayName: Advanced Analytics schema
+  displayName: Advanced Analytics, schema, reference, tables, fields
 - name: Frequently asked questions
   href: faq.yml
-  displayName: Advanced Analytics FAQs
+  displayName: Advanced Analytics, FAQs

@@ -5,28 +5,21 @@ items:
       - name: What is Microsoft Intune
         displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./what-is-intune.md
-      - name: What is device management?
-        href: ./what-is-device-management.md
-      - name: Service description
-        href: ./service-description.md
+      - name: Core concepts
+        href: ./core-concepts.md
+        displayName: identities, devices, apps, pillars, user affinity, RBAC, scope tags, MDM, MAM, MAM-WE, BYOD, app lifecycle, device groups, conditional access, zero trust
       - name: Architecture
         href: ./architecture.md
-        displayName: architecture, diagram, components, design, svg, family, products,
-          suite, on-premises, tunnel
-      - name: Manage and secure identities
-        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-        href: ./tenant-administration/identities.md
-      - name: Manage and secure devices
-        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-        href: ./manage-devices.md
-      - name: Manage apps and protect data
-        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
-        href: ./manage-apps.md
-      - name: Endpoint management at Microsoft
-        href: ./endpoint-management.md
-      - name: Intune Suite add-ons
-        href: ./add-ons.md
-        displayName: intune suite, add-ons, premium
+        displayName: architecture, diagram, components, design, family, products,
+          suite, on-premises
+      - name: Intune advanced capabilities
+        href: ./advanced-capabilities.md
+        displayName: plans, intune suite, add-ons, premium, trial,
+          service description, advanced capabilities
+      - name: Microsoft Intune licensing
+        href: ./licensing.md
+        displayName: licensing, plans, pricing, EMS, education, configuration manager,
+          device-only, unlicensed admins, confirm license, language support
 
   - name: Evaluate and try
     items:
@@ -187,8 +180,8 @@ items:
             href: ./tenant-administration/add-users.md
           - name: Add groups
             href: ./tenant-administration/add-groups.md
-          - name: Manage Intune licenses
-            href: ./licensing/toc.yml
+          - name: Assign licenses
+            href: ./assign-licenses.md
           - name: Set the MDM authority
             href: ./setup-mdm-authority.md
 

@@ -216,7 +216,7 @@ For more information about using Copilot with your devices, go to [Use Copilot i
 You can use Copilot to help you create Kusto Query Language (KQL) queries to run when using device query in Intune.
 
 > [!NOTE]
-> To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. For more information, see [Intune add-ons](../fundamentals/add-ons.md#microsoft-intune-advanced-analytics).
+> To use Device query in your tenant, you must have a license that includes Advanced Analytics. For more information, see [Microsoft Intune advanced capabilities](../fundamentals/advanced-capabilities.md).
 
 You can use this feature for an individual device or for many devices.
 

@@ -129,5 +129,5 @@ Start managing enrolled devices in the Microsoft Intune admin center.
 
 - [Tutorial - Walkthrough the Microsoft Intune admin center](../../fundamentals/tutorial-admin-center-walkthrough.md)
 - [Remote Device Actions In Microsoft Intune](../../device-management/actions/index.md)
-- [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
+- [Microsoft Intune advanced capabilities](../../fundamentals/advanced-capabilities.md)
 
