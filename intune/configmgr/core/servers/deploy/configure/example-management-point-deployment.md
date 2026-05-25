@@ -163,10 +163,20 @@ Before you add the management point role, install the required Windows features 
 
 For this example, prepare `DMZ-MP` with these components:
 
-- **.NET Framework 3.5** Windows feature
+- **.NET Framework 3.5** Windows feature.
 - **.NET Framework 4.8**. Windows Server 2022 and later include this version by default.
 - **Internet Information Services (IIS)** with the management point requirements, including **Windows Authentication**, **ISAPI Extensions**, **IIS 6 Metabase Compatibility**, and **IIS 6 WMI Compatibility**
 - **BITS** and **BITS Server Extensions**. Select the role and all automatically selected options.
+
+> [!NOTE]
+> .NET Framework 3.5 isn't installed by default, and on modern Windows Server versions the feature payload is removed from the base OS image.
+>
+> For offline environments, you can install .NET Framework 3.5 by using either method:
+>
+> - **PowerShell**: Mount Windows Server installation media and run `Install-WindowsFeature Net-Framework-Core -Source D:\sources\sxs` (replace `D:` with your media drive).
+> - **Add Roles and Features Wizard**: In **Server Manager** > **Add Roles and Features**, select **.NET Framework 3.5 Features**. On **Confirm installation selections**, choose **Specify an alternate source path** and enter `D:\sources\sxs`.
+>
+> Use installation media that matches the same Windows Server version as `DMZ-MP`. For more information, see [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](https://learn.microsoft.com/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard?view=windows-11) and [Enable .NET Framework 3.5 by using PowerShell](https://learn.microsoft.com/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-windows-powershell?view=windows-11).
 
 ### To install the required Windows features on DMZ-MP
 
@@ -180,9 +190,7 @@ For this example, prepare `DMZ-MP` with these components:
    Install-WindowsFeature NET-Framework-Core, BITS, BITS-IIS-Ext, Web-Server, Web-Windows-Auth, Web-ISAPI-Ext, Web-Metabase, Web-WMI -IncludeManagementTools
    ```
 
-4. If the server can't access the Windows installation source for `.NET Framework 3.5`, rerun the command with the `-Source` parameter and specify a valid `SxS` path from the Windows Server installation media.
-
-5. Restart `DMZ-MP` if Windows prompts for a restart.
+4. Restart `DMZ-MP` if Windows prompts for a restart.
 
 ## <a name="BKMK_mp_step5"></a> Step 5: Install the management point role on DMZ-MP
 
@@ -288,7 +296,7 @@ After the wizard finishes, verify that the management point installed successful
 
 4. Verify that the client appears in the Configuration Manager console and shows an **Online** icon. Add the **Management Point** column to the console view to confirm that the client is assigned to `DMZ-MP.branch.fabrikam.com`.
 
-## Next steps
+## More information
 
 - [Add site system roles](add-site-system-roles.md)
 - [Install site system roles](install-site-system-roles.md)
