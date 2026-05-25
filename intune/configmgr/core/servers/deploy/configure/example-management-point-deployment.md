@@ -11,9 +11,9 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-This step-by-step example shows you how to install a Configuration Manager management point (MP) on a server that resides in an Active Directory domain that has no two-way trust with the domain that contains the site server. This scenario is common when you want to extend management to a perimeter network (DMZ), a partner domain, or any other network segment that you can't fully trust.
+This example shows how to install a Configuration Manager management point (MP) on a server in an Active Directory domain that doesn't have a two-way trust with the domain that contains the site server. This scenario is common when you need to extend management to a perimeter network (DMZ), a partner domain, or another network segment that you don't fully trust.
 
-Review your organization's network and Active Directory documentation for the procedures and best practices that apply to your environment. The steps in this article are appropriate as a proof-of-concept reference. For production guidance, see [Communications across Active Directory forests](../../../plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest).
+Review your organization's network and Active Directory documentation for procedures and best practices that apply to your environment. Use the steps in this article as a proof-of-concept reference. For production guidance, see [Communications across Active Directory forests](../../../plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest).
 
 > [!NOTE]
 > This scenario applies to a site system connected to a primary site only. Secondary sites require a two-way domain trust between the secondary site's domain and the parent primary site's domain. Installing a secondary site in a domain without the required trust is not supported.
@@ -24,15 +24,15 @@ The step-by-step instructions in this article use the following test environment
 
 - **Trusted domain** (`corp.contoso.com`): Contains the Configuration Manager primary site server (`SiteServer`) and the SQL Server site database (`SQLServer`). The site code is **P01**.
 
-- **Untrusted domain** (`branch.fabrikam.com`): Contains the server that will host the management point (`DMZ-MP`). There's no Active Directory trust of any kind between the two domains.
+- **Untrusted domain** (`branch.fabrikam.com`): Contains the server that hosts the management point (`DMZ-MP`). No Active Directory trust exists between the two domains.
 
-- Both domains have Windows Server DNS, and DNS conditional forwarders are configured in both directions so that FQDNs from each domain can be resolved from the other domain.
+- Both domains use Windows Server DNS, and DNS conditional forwarders are configured in both directions so that each domain can resolve FQDNs in the other domain.
 
 - You can sign in as a domain administrator in both domains to perform all procedures.
 
 ## <a name="BKMK_mp_overview"></a> Overview of the deployment steps
 
-The following table summarizes what this example deployment covers and how each piece fits together.
+The following table summarizes this deployment and explains why each step is required.
 
 | Step | What you do | Why it's required |
 |------|-------------|-------------------|
@@ -40,12 +40,12 @@ The following table summarizes what this example deployment covers and how each 
 | [Step 2](#BKMK_mp_step2) | Grant SQL Server database permissions | The MP database connection account must have the permissions to read data in the site database so the management point can query client policy and inventory data. |
 | [Step 3](#BKMK_mp_step3) | Configure firewall rules | Normally, all network traffic between the MP and the site server and site database must be explicitly permitted through firewalls. |
 | [Step 4](#BKMK_mp_step4) | Install management point prerequisites on the site system server | Ensures that `DMZ-MP` has the Windows features and SQL connectivity components required before Configuration Manager installs the role. |
-| [Step 5](#BKMK_mp_step5) | Install the management point role on DMZ-MP | Creates the site system server object and installs the management point role, using the accounts and settings prepared in earlier steps. |
+| [Step 5](#BKMK_mp_step5) | Install the management point role on `DMZ-MP` | Creates the site system server object and installs the management point role by using the accounts and settings prepared in earlier steps. |
 | [Step 6](#BKMK_mp_step6) | Verify the management point installation | Confirms that the management point is healthy and that clients in the untrusted forest can communicate with it. |
 
 ## <a name="BKMK_mp_step1"></a> Step 1: Create domain accounts
 
-Two dedicated user accounts are recommended. Configure both accounts with non-expiring passwords. Don't grant them any unnecessary privileges.
+Use two dedicated user accounts. Configure both accounts with non-expiring passwords, and don't grant unnecessary privileges.
 
 | Account | Domain | Purpose | Required permissions |
 |---------|--------|---------|----------------------|
@@ -89,7 +89,7 @@ Two dedicated user accounts are recommended. Configure both accounts with non-ex
 
 5. Close **Active Directory Users and Computers**.
 
-### To add the installation account to the local Administrators group on DMZ-MP
+### To add the installation account to the local Administrators group on `DMZ-MP`
 
 1. Sign in to `DMZ-MP` using a local or domain administrator account.
 
@@ -105,7 +105,7 @@ Two dedicated user accounts are recommended. Configure both accounts with non-ex
 
 ## <a name="BKMK_mp_step2"></a> Step 2: Grant SQL Server database permissions for the MP connection account
 
-The management point must be able to read and write data in the site database. You grant this access by adding the `svc-cm-dmzmpdbconnect` account as a SQL Server login and assigning it to the correct database roles.
+The management point must be able to read and write data in the site database. Grant this access by adding the `svc-cm-dmzmpdbconnect` account as a SQL Server login and assigning the required database roles.
 
 > [!IMPORTANT]
 > The MP database connection account must reside in the **trusted domain** (`corp.contoso.com`) because it connects to SQL Server (`SQLServer`) in that domain. Specify the account as a Windows login using the NetBIOS domain name `CORP\svc-cm-dmzmpdbconnect`. If name resolution fails, use the FQDN format `corp.contoso.com\svc-cm-dmzmpdbconnect`. For more information, see [Management point connection account](../../../plan-design/hierarchy/accounts.md#management-point-connection-account).
@@ -136,7 +136,7 @@ The management point must be able to read and write data in the site database. Y
 
 ## <a name="BKMK_mp_step3"></a> Step 3: Configure firewall rules
 
-The following table lists the minimum firewall rules required for this deployment. Configure these rules on all firewalls and host-based Windows Firewall profiles that sit between `corp.contoso.com` and `branch.fabrikam.com`.
+The following table lists the minimum firewall rules required for this deployment. Configure these rules on all network firewalls and host-based Windows Firewall profiles between `corp.contoso.com` and `branch.fabrikam.com`.
 
 | Source | Direction | Destination | Protocol | Port | Purpose |
 |--------|-----------|-------------|----------|------|---------|
@@ -145,7 +145,7 @@ The following table lists the minimum firewall rules required for this deploymen
 | `SiteServer` (site server) | ↔ | `DMZ-MP` (management point) | TCP | 445 | SMB (file transfer) |
 | `DMZ-MP` (management point) | → | `SQLServer` (site database) | TCP | 1433 | SQL Server (MP database connection) |
 
-The below connections are required for the management point to authenticate to domain controllers in CORP forest and vice versa. The ports required for DNS resolution are not included.
+The following connections are required so the management point can authenticate to domain controllers in the CORP forest, and vice versa. DNS ports aren't included.
 
 | Source | Direction | Destination | Protocol | Port | Purpose |
 |--------|-----------|-------------|----------|------|---------|
@@ -161,13 +161,12 @@ The below connections are required for the management point to authenticate to d
 
 Before you add the management point role, install the required Windows features and supporting components on `DMZ-MP`. For the complete and current list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#management-point).
 
-For this example, prepare `DMZ-MP` with the following components:
+For this example, prepare `DMZ-MP` with these components:
 
-- **BITS** and **BITS Server Extensions**
-- **Internet Information Services (IIS)** with the management point requirements, including **Windows Authentication**, **ISAPI Extensions**, **IIS 6 Metabase Compatibility**, and **IIS 6 WMI Compatibility**
 - **.NET Framework 3.5** Windows feature
-- A supported version of **.NET Framework**. Configuration Manager 2403 and later requires .NET Framework 4.8 or later for the management point to function properly. Windows Server 2022 and later have this version already installed.
-- **Microsoft ODBC Driver for SQL Server**. Starting in version 2309, Configuration Manager requires this driver as a prerequisite. Use a currently supported version.
+- **.NET Framework 4.8**. Windows Server 2022 and later include this version by default.
+- **Internet Information Services (IIS)** with the management point requirements, including **Windows Authentication**, **ISAPI Extensions**, **IIS 6 Metabase Compatibility**, and **IIS 6 WMI Compatibility**
+- **BITS** and **BITS Server Extensions**. Select the role and all automatically selected options.
 
 ### To install the required Windows features on DMZ-MP
 
@@ -187,7 +186,7 @@ For this example, prepare `DMZ-MP` with the following components:
 
 ## <a name="BKMK_mp_step5"></a> Step 5: Install the management point role on DMZ-MP
 
-This procedure installs the management point role on `DMZ-MP` by using the **Create Site System Server** wizard. The wizard lets you specify all the cross-forest accounts and settings that the role requires.
+This procedure installs the management point role on `DMZ-MP` by using the **Create Site System Server** wizard. The wizard lets you specify the cross-forest accounts and settings required by the role.
 
 1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration**, and then choose **Servers and Site System Roles**.
 
@@ -213,16 +212,16 @@ This procedure installs the management point role on `DMZ-MP` by using the **Cre
 
 7. On the **Management Point** page, complete the following settings, and then choose **Next**:
 
-   - **Client connections**: Choose **HTTPS** to require encrypted client communication (this requires a PKI web server certificate bound to the IIS Default Web Site on DMZ-MP) or EHTTP.
+   - **Client connections**: Choose **HTTPS** to require encrypted client communication (requires a PKI web server certificate bound to the IIS Default Web Site on `DMZ-MP`) or **EHTTP**.
    - **Generate alert when the management point is not healthy**: Optionally select this to receive in-console alerts when the management point is unhealthy.
    - Leave other options at their default settings.
 
 8. On the **Management Point Database Connection** page, complete the following settings, and then choose **Next**:
 
-   - **Use the site database**: this is the default configuration. There is no need to specify the SQL Server instance since the site already has this information.
+   - **Use the site database**: This is the default configuration. You don't need to specify the SQL Server instance because the site already has this information.
    - **Management point database connection**: Choose **Specify an account**, and then enter `corp.contoso.com\svc-cm-dmzmpdbconnect`. Use the FQDN format to ensure that the management point can resolve the account in the trusted domain and authenticate to SQL Server successfully.
      > [!IMPORTANT]
-     > You must specify the **Management point connection account** when the management point is in an untrusted domain or forest because it authenticates directly to SQL Server in trusted domain. Specifying the account in the format `DomainFQDN\UserName` — for example, `corp.contoso.com\svc-cm-dmzmpdbconnect` — facilitates the name resolution for Kerberos authentication flow. For more information, see [Management point connection account](../../../plan-design/hierarchy/accounts.md#management-point-connection-account).
+     > You must specify the **Management point connection account** when the management point is in an untrusted domain or forest because it authenticates directly to SQL Server in the trusted domain. Specifying the account in the format `DomainFQDN\UserName` (for example, `corp.contoso.com\svc-cm-dmzmpdbconnect`) helps with name resolution during Kerberos authentication. For more information, see [Management point connection account](../../../plan-design/hierarchy/accounts.md#management-point-connection-account).
 
 9. Review the summary on the **Summary** page, and then choose **Next** to complete the wizard.
 
@@ -250,44 +249,44 @@ After the wizard finishes, verify that the management point installed successful
 
 ### To verify the management point installation by reviewing log files
 
-1. Sign in to `DMZ-MP` and locate the `SMS` folder at the root of one of the drives.
+1. Sign in to `DMZ-MP`, and locate the `SMS` folder at the root of one of the drives.
 
-2. If the folder doesn't exist, investigate `SiteComp.log` on the site server to confirm that the site server managed to connect to `DMZ-MP` and start the installation under the [Site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account). The absence of the `SMS` folder indicates that the site server can't communicate with `DMZ-MP` or doesn't have permissions to create the folder and install the role.
+2. If the folder doesn't exist, review `SiteComp.log` on the site server to confirm that the site server connected to `DMZ-MP` and started the installation by using the [Site system installation account](../../../plan-design/hierarchy/accounts.md#site-system-installation-account). If the `SMS` folder is missing, the site server likely can't communicate with `DMZ-MP` or doesn't have permissions to create the folder and install the role.
 
-3. Investigate the following log files on `DMZ-MP` for messages related to the management point installation and configuration:
+3. Review the following log files on `DMZ-MP` for messages related to management point installation and configuration:
 
    | Log file | Location on DMZ-MP | What to look for |
    |----------|------------------|-----------------|
    | `MPSetup.log` | `\SMS\Logs` | High-level prerequisite and MP installation messages: in particular, `CcmSetup`, `msoledbsql.msi` and `mp.msi`. |
-   | `MPMSI.log` | `\SMS\Logs` | Details on MP installation and absence of MSI rollback. If installation fails with error 1603, look up this error code in the middle of file to find the detailed error message. |
-   | `CCMSetup.log` | `%Windir%\CCMSetup\Logs` | Client binaries installation messages and their own prerequisites (like vcredist and Microsoft Policy Platform). The installation must complete with the return code 0. |
+   | `MPMSI.log` | `\SMS\Logs` | Details about MP installation and MSI rollback state. If installation fails with error `1603`, search this file for the detailed error message. |
+   | `CCMSetup.log` | `%Windir%\CCMSetup\Logs` | Client binary installation messages and related prerequisites (for example, vcredist and Microsoft Policy Platform). Installation should complete with return code `0`. |
    | `BGBSetup.log` | `\SMS\Logs` | Client Notification Server installation messages: look for successful completion. |
 
-4. Once MP is installed, the `SMS_CCM` folder should appear at the same drive as `SMS`. This may not happen if the client was installed before the management point: in this case, look into `CCM\Logs` folder of the installed client. Investigate the following log files on `DMZ-MP` for messages related to the management point's communication with the site server and site database:
+4. After the MP is installed, the `SMS_CCM` folder should appear on the same drive as `SMS`. This folder might not appear if the client was installed before the management point. In that case, review the `CCM\Logs` folder for the installed client. Then review the following log files on `DMZ-MP` for messages related to management point communication with the site server and site database:
 
    | Log file | Location on DMZ-MP | What to look for |
    |----------|------------------|-----------------|
    | `MpControl.log` | `\SMS\Logs` | Regular Management Point and User Service availability checks. The successful check resembles `Call to HttpSendRequestSync succeeded for port 443 with status code 200, text: OK`. |
-   | `BGBServer.log` | `\SMS\Logs` | Client Notification (fast channel) server reporting. The usual logging lists the number of connected clients, such as `Total online clients: 100 (TCP: 99 HTTP: 1)~~` |
-   | `MPFDM.log` | `\SMS\Logs` | This log on MP should have no activity on `DMZ-MP` and display `Remote site is in pull-mode.` message. Contrary, same log on the Site Server should display file moving activity resembling the entries like `~Moved file...`. |
-    | `MP_Framework.log` | `\SMS_CCM\Logs` | Database connection messages using the [Management point connection account](../../../plan-design/hierarchy/accounts.md#management-point-connection-account) resembling `Loaded MP settings cache from reg key HKLM\Software\Microsoft\SMS\MP: Database Settings:`. If there are errors, look for messages about failed authentication or connectivity issues with SQL Server. |
+   | `BGBServer.log` | `\SMS\Logs` | Client Notification (fast channel) server reporting. Typical entries include the number of connected clients, such as `Total online clients: 100 (TCP: 99 HTTP: 1)~~`. |
+   | `MPFDM.log` | `\SMS\Logs` | On `DMZ-MP`, this log should show minimal activity and include `Remote site is in pull-mode.`. On the site server, the same log should show file-move activity, with entries similar to `~Moved file...`. |
+   | `MP_Framework.log` | `\SMS_CCM\Logs` | Database connection messages that use the [Management point connection account](../../../plan-design/hierarchy/accounts.md#management-point-connection-account), such as `Loaded MP settings cache from reg key HKLM\Software\Microsoft\SMS\MP: Database Settings:`. If errors occur, look for failed authentication or SQL Server connectivity issues. |
 
 ### To test client communication with the new management point
 
-1. On a client computer in `branch.fabrikam.com`, copy the client distro to any convenient location. Open an administrative command prompt in it, and run the following command to manually assign the client to the new management point:
+1. On a client computer in `branch.fabrikam.com`, copy the client installation files to a local folder. Open an elevated Command Prompt in that folder, and run the following command to manually assign the client to the new management point:
 
    ```cmd
    ccmsetup.exe SMSSITECODE=P01 SMSMP=DMZ-MP.branch.fabrikam.com
    ```
 
    > [!NOTE]
-   > In the case MP is configured to HTTPS, make sure the client has PKI client certificate enrolled and use `/UsePKICert` switch with `ccmsetup.exe`. For more information, see [About client installation properties](../../../clients/deploy/about-client-installation-properties.md).
+   > If the MP is configured for HTTPS, make sure the client has an enrolled PKI client certificate and include the `/UsePKICert` switch with `ccmsetup.exe`. For more information, see [About client installation properties](../../../clients/deploy/about-client-installation-properties.md).
 
 2. Review `%Windir%\CCMSetup\Logs\CCMSetup.log` to confirm the successful installation.
 
-3. Review `\SMS_CCM\Logs\ClientIDManagerStartup.log` to confirm successful registration of the client. Look for the messages resembling `[RegTask] - Client is registered. Server assigned ClientID is GUID:0B1F5036-9CE1-41A1-B417-063582728464. Approval status 1`.
+3. Review `\SMS_CCM\Logs\ClientIDManagerStartup.log` to confirm successful client registration. Look for messages similar to `[RegTask] - Client is registered. Server assigned ClientID is GUID:0B1F5036-9CE1-41A1-B417-063582728464. Approval status 1`.
 
-4. Verify that the client appears in the Configuration Manager console and is displayed with "Online" icon. Add "Management Point" column to the console view to confirm that the client is assigned to `DMZ-MP.branch.fabrikam.com`.
+4. Verify that the client appears in the Configuration Manager console and shows an **Online** icon. Add the **Management Point** column to the console view to confirm that the client is assigned to `DMZ-MP.branch.fabrikam.com`.
 
 ## Next steps
 
