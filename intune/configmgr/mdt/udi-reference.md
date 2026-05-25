@@ -167,9 +167,9 @@ You use a wizard page editor to configure a wizard page in the UDI Wizard Design
 
 - [Windows Presentation Foundation](/dotnet/desktop-wpf/) version 4.0
 
-- [Microsoft Prism](https://prismlibrary.com/) version 4.0
+- [Microsoft Prism](https://github.com/MicrosoftDocs/patterns-practices/blob/master/patterns-practices/index.md) version 4.0
 
-- [Microsoft Unity Application Block](/dotnet/core/extensions/dependency-injection/overview) (Unity) version 2.1
+- [Microsoft Unity Application Block](https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff647202(v=pandp.10)?redirectedfrom=MSDN) (Unity) version 2.1
 
   For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.
 
