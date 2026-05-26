@@ -26,14 +26,14 @@ Intune capabilities are organized into three plans. The Intune documentation and
 
 Most organizations get Intune as part of a Microsoft 365 bundle (such as Microsoft 365 E3, E5, or E7) rather than buying these plans directly. For what each bundle includes, current pricing, and how to buy, see:
 
-- [Microsoft Intune plans and pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing)
+- [Microsoft Intune plans and pricing](https://aka.ms/MicrosoftIntunePricing)
 - [Licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
 
 Administrators don't always need an Intune license. For more information, see [Unlicensed admin access](#unlicensed-admin-access).
 
 ## License requirements
 
-An Intune license is required for any user or device that benefits directly or indirectly from the Microsoft Intune service, including access through a [Microsoft API](/legal/microsoft-apis/terms-of-use). Intune is included only with the licenses listed on the [Microsoft Intune plans and pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing) page.
+An Intune license is required for any user or device that benefits directly or indirectly from the Microsoft Intune service, including access through a [Microsoft API](/legal/microsoft-apis/terms-of-use). Intune is included only with the licenses listed on the [Microsoft Intune plans and pricing](https://aka.ms/MicrosoftIntunePricing) page.
 
 ## Microsoft Intune for Education
 

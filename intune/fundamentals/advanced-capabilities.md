@@ -83,7 +83,7 @@ Intune offers the following advanced capabilities:
 
 ## Intune plans and advanced capabilities
 
-Advanced capabilities are available through Microsoft Intune Plan 2, the Microsoft Intune Suite, and select Microsoft 365 bundles. For what's included in each plan, current pricing, and how to buy, see [Microsoft Intune plans and pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing).
+Advanced capabilities are available through Microsoft Intune Plan 2, the Microsoft Intune Suite, and select Microsoft 365 bundles. For what's included in each plan, current pricing, and how to buy, see [Microsoft Intune plans and pricing](https://aka.ms/MicrosoftIntunePricing).
 
 For licensing concepts and admin-access requirements, see [Microsoft Intune licensing](licensing.md).
 

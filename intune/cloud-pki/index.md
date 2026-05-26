@@ -150,7 +150,7 @@ A5. The signed certificate is delivered to the Intune MDM-enrolled device.
 
 You can try out the Microsoft Cloud PKI feature in the Intune admin center during a trial period. Available trials include:
 
-- [Microsoft Intune Suite trial](https://www.microsoft.com/security/business/microsoft-intune-pricing)
+- [Microsoft Intune Suite trial](https://aka.ms/MicrosoftIntunePricing)
 - [Standalone Cloud PKI trial](../fundamentals/advanced-capabilities.md)
 
 During the trial period, you can create up to six CAs in your tenant. Cloud PKI CAs created during the trial use software-backed keys, and use `System.Security.Cryptography.RSA` to generate and sign the keys. You can continue to use the CAs after purchasing a Cloud PKI license. However, the keys remain software-backed, and can't be converted to HSM backed keys. The Microsoft Intune service managed CA keys. No Azure subscription is required for Azure HSM capabilities.
