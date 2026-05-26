@@ -7,8 +7,6 @@ ms.topic: concept-article
 
 # Device timeline report
 
-[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
-
 The device timeline allows you to see a history of events that have occurred on a specific device.
 
 ## Before you begin

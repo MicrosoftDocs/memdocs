@@ -12,7 +12,7 @@ ms.collection:
 ---
 # ServiceNow Integration with Microsoft Intune
 
-Remote Help, an add-on to Microsoft Intune, provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
+Remote Help provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
 
 Support organizations need all the tools at their disposal to resolve workers' technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -28,7 +28,7 @@ The Intune ServiceNow Connector Integration focuses on creating a basic ticketin
 
 To get started, review the following steps:
 
-- ServiceNow integration is now Generally Available. An active Intune Suite or Remote Help trial or add-on license is required. Go to [Remote Help trial or add-on license.](../../fundamentals/add-ons.md)
+- ServiceNow integration is now Generally Available. An active Remote Help license or trial is required. For more information, see [Microsoft Intune advanced capabilities](../../fundamentals/advanced-capabilities.md).
 
 - You must have the Microsoft Entra Intune Admin role to make updates to the connector. To view the incidents, you must have the Microsoft Entra Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Microsoft Entra role, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](../../fundamentals/role-based-access-control/overview.md)
 

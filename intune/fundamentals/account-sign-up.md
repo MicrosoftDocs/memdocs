@@ -53,6 +53,10 @@ After you sign up for a new subscription, you receive an email message that cont
 
 After completing the sign-up process, you're directed to the Microsoft 365 admin center to add users and assign them licenses. If you only have cloud-based accounts using your default *onmicrosoft.com* domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](configure-custom-domain.md) or [synchronize user account information](tenant-administration/add-users.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
 
+### Microsoft Intune Onboarding benefit
+
+Microsoft offers an Intune Onboarding benefit for eligible services. The benefit lets you work remotely with Microsoft specialists to prepare your Intune environment for use. For more information, see [Microsoft Intune Onboarding Benefit Description](/microsoft-365/fasttrack/introduction).
+
 ## Sign in to Microsoft Intune
 
 After signing up for Intune, use any device with a [supported browser](./ref-supported-platforms.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service. Administration of Intune requires your account to have sufficient RBAC permissions within Intune for the tasks you want to manage. Initially, you might use an account that is assigned the Microsoft Entra ID built-in role of [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
@@ -72,6 +76,18 @@ Intune for Education: `https://intuneeducation.portal.azure.com`
 Microsoft 365 Business: `https://portal.microsoft.com/adminportal`
 
 Microsoft 365 Mobile Device Management: `https://admin.microsoft.com/adminportal/home#/MifoDevices`
+
+## Buy Microsoft Intune
+
+You can purchase Microsoft Intune Plan 1, Plan 2, Suite, and standalone capability licenses through any of the following:
+
+- A Microsoft partner or reseller
+- Microsoft Volume License Servicing Center (VLSC)
+- Web direct purchase in the [Microsoft 365 admin center](https://admin.microsoft.com)
+
+After purchase, the licenses appear in your tenant and the corresponding capability status updates to **Active**. Each capability has its own license-count requirements based on the users you target.
+
+For information on assigning licenses, see [Assign Microsoft Intune licenses](assign-licenses.md).
 
 ## Related content
 

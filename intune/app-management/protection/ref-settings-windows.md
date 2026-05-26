@@ -42,7 +42,7 @@ The **Data protection** settings affect the org data and context. As the admin, 
 
 ## Health Checks
 
-Set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users don't meet your conditionals. In some cases, multiple actions can be configured for a single setting. For more information, see [Health Check Actions]().
+Set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users don't meet your conditionals. In some cases, multiple actions can be configured for a single setting.
 
 ### App conditions
 

@@ -13,10 +13,6 @@ ms.collection:
 
 # Creating elevation rules with Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 Elevation rules policies allow Endpoint Privilege Management (EPM) to identify specific files and scripts and perform the associated elevation action. For elevation rules to take effect, devices must have an *elevation settings policy* targeted that enables EPM. For more information, see [EPM elevation settings](./manage-elevation-settings.md).
 
 > [!NOTE]
