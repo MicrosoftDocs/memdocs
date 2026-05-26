@@ -1,7 +1,7 @@
 ---
 title: Configure Defender for Endpoint Web protection on Android devices in Microsoft Intune
 description: Use Intune policy to manage Microsoft Defender for Endpoint web protection settings on Android devices managed by Microsoft Intune.
-ms.date: 08/22/2024
+ms.date: 05/22/2026
 ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
@@ -32,7 +32,6 @@ With Intune device configuration policy, you can turn off all or part of the web
 - Samsung Internet
 - Firefox
 - Brave
-- Tor
 - Browser Leopard
 - DuckDuckGo
 - Dolphin
