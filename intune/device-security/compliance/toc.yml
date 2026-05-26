@@ -1,0 +1,39 @@
+items:
+  - name: Compliance overview
+    href: ./overview.md
+  - name: Create a policy
+    href: ./create-policy.md
+  - name: Custom compliance settings
+    href: ./custom-settings.md
+    items:
+      - name: JSON for custom settings
+        href: ./create-custom-json.md
+      - name: PowerShell script for custom settings
+        href: ./create-custom-script.md
+      - name: Windows Subsystem for Linux
+        href: ./configure-wsl.md
+  - name: Actions for noncompliance
+    href: ./configure-noncompliance-actions.md
+  - name: Monitor device compliance
+    href: ./monitor-policy.md
+  - name: Device compliance partners
+    href: ./third-party-partners.md
+
+  - name: Settings reference
+    items:
+      - name: Android device administrator
+        href: ./ref-android-administrator-settings.md
+      - name: Android (AOSP)
+        href: ./ref-android-aosp-settings.md
+      - name: Android Enterprise
+        href: ./ref-android-enterprise-settings.md
+      - name: iOS/iPadOS
+        href: ./ref-ios-ipados-settings.md
+      - name: Linux
+        href: ./ref-linux-settings.md
+      - name: macOS
+        href: ./ref-macos-settings.md
+      - name: Windows
+        href: ./ref-windows-settings.md
+      - name: Windows 8.1
+        href: ./ref-windows-8-1-settings.md

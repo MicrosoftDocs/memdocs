@@ -1,0 +1,80 @@
+---
+title: "Device Action: Update Cellular Data Plan"
+description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM with Microsoft Intune.
+ms.date: 10/27/2025
+ms.topic: how-to
+---
+
+# Device action: update cellular data plan
+
+The *update cellular data plan* action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
+
+## Prerequisites
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> This action supports the following platforms:
+>
+> - iOS/iPadOS
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To run this action, at a minimum, use an account that has one of the following roles:
+>
+> - [Help Desk Operator]
+> - [School Administrator]
+> - [Custom role] that includes:
+>   - The permission **Remote tasks/Update cellular data plan**
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
+
+## How to run update the cellular data plan from the Intune admin center
+
+1. In the [Microsoft Intune admin center], select [**Devices**] > [**All devices**].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, find the row of action icons. Select **Update cellular data plan (preview)**.
+    ![Intune admin center showing the Update cellular data plan action with an activation server URL field](media/update-cellular-data-plan/update-cellular-data-plan.png)
+1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
+
+## User experience
+
+When you select the **Update cellular data plan** action, the device receives a command to activate the eSIM cellular data plan. The user experience on the device is as follows:
+
+- Cellular data starts working.
+- The active cellular data plan is listed in the cellular section of the **Settings** app on the device.
+
+For more information about devices that support eSIM, see the Apple support article [Using Dual SIM with an eSIM](https://support.apple.com/HT209044).
+
+## Reference links
+
+- Microsoft Graph API: [activateDeviceEsim action][GRAPH-1]
+
+<!--Intune admin center links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[**Devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/overview
+[**All devices**]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_DeviceSettings/DevicesMenu/~/allDevices
+
+<!--Role links-->
+
+[Help Desk Operator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#help-desk-operator
+[School Administrator]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#school-administrator
+[Endpoint Security Manager]: /intune/fundamentals/role-based-access-control/ref-built-in-roles#endpoint-security-manager
+[Custom role]: /intune/fundamentals/role-based-access-control/create-custom-role
+
+<!--Graph API links-->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-activateDeviceEsim

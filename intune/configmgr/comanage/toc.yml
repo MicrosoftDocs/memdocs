@@ -1,0 +1,61 @@
+items:
+- name: Co-management documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: What is co-management?
+    href: overview.md
+  - name: Frequently asked questions
+    href: faq.yml
+- name: Quickstarts
+  items:
+  - name: Quickstart overview
+    href: quickstarts.md
+  - name: Immediate value
+    items:
+    - name: Conditional Access
+      href: quickstart-conditional-access.md
+    - name: Remote actions from Intune
+      href: quickstart-remote-actions.md
+    - name: Client health
+      href: quickstart-client-health.md
+    - name: Hybrid Microsoft Entra ID
+      href: quickstart-hybrid-aad.md
+    - name: Windows Autopilot
+      href: quickstart-autopilot.md
+  - name: Getting started
+    items:
+    - name: Paths to co-management
+      href: quickstart-paths.md
+    - name: Set up hybrid Microsoft Entra ID
+      href: quickstart-setup-hybrid-aad.md
+    - name: Upgrade Windows 10
+      href: quickstart-upgrade-win10.md
+    - name: Get help from FastTrack
+      href: quickstart-fasttrack.md
+- name: Tutorials
+  items:
+  - name: Enable co-management for Configuration Manager clients
+    href: tutorial-co-manage-clients.md
+  - name: Enable co-management for internet-based devices
+    href: tutorial-co-manage-new-devices.md
+- name: Concepts
+  items:
+  - name: Workloads
+    href: workloads.md
+  - name: Third-party MDM coexistence
+    href: coexistence.md
+- name: How-to guides
+  items:
+  - name: Enable co-management
+    href: how-to-enable.md
+  - name: Prepare internet-based devices
+    href: how-to-prepare-Win10.md
+  - name: Enroll with Windows Autopilot
+    href: autopilot-enrollment.md
+  - name: Switch workloads to Intune
+    href: how-to-switch-workloads.md
+  - name: Apps in Company Portal
+    href: company-portal.md
+  - name: Monitor co-management
+    href: how-to-monitor.md

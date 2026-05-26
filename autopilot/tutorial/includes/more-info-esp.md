@@ -1,0 +1,19 @@
+---
+ms.topic: include
+ms.date: 06/13/2025
+---
+
+<!-- This file is shared by the following articles:
+
+pre-provisioning/azure-ad-join-esp.md
+pre-provisioning/hybrid-azure-ad-join-esp.md
+self-deploying/self-deploying-esp.md
+user-driven/azure-ad-join-esp.md
+user-driven/hybrid-azure-ad-join-esp.md
+
+Headings are driven by article context. -->
+
+For more information on the Enrollment Status Page (ESP), see the following articles:
+
+- [Windows Autopilot Enrollment Status Page](../../enrollment-status.md).
+- [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).

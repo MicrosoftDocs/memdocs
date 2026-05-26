@@ -1,0 +1,154 @@
+### YamlMime:Landing
+
+title: Device configuration
+summary: Configure device settings and features in Microsoft Intune. Use the settings catalog, templates, single sign-on, endpoint security profiles, and certificates to manage your device fleet.
+
+metadata:
+  title: Device configuration
+  description: Configure device settings, SSO, endpoint security, and certificates in Microsoft Intune using the settings catalog and templates.
+  ms.topic: landing-page
+  ms.date: 05/04/2026
+  author: paolomatarazzo
+  ms.author: paoloma
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with device configuration
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Device features and settings
+        url: overview.md
+    - linkListType: concept
+      links:
+      - text: Settings insights for configuration policies
+        url: settings-insight.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create a device configuration profile
+        url: create-device-profile.md
+      - text: Assign a device configuration profile
+        url: assign-device-profile.md
+      - text: Collect device hardware info with the properties catalog
+        url: collect-device-properties.md
+      - text: Monitor device configuration policies
+        url: monitor-device-profile.md
+      - text: Troubleshoot device configuration profiles
+        url: troubleshoot-device-profiles.md
+
+  - title: Use the settings catalog
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: Settings catalog overview
+        url: settings-catalog/index.md
+    - linkListType: how-to-guide
+      links:
+      - text: Common tasks and features in the settings catalog
+        url: settings-catalog/common-tasks.md
+      - text: Deploy Microsoft Edge policy with the settings catalog
+        url: settings-catalog/configure-edge.md
+      - text: Import custom ADMX and ADML templates
+        url: settings-catalog/import-custom-admx-templates.md
+      - text: Configure Recovery Lock for macOS
+        url: settings-catalog/configure-recovery-lock-macos.md
+      - text: Configure Universal Print policy
+        url: settings-catalog/configure-universal-print.md
+      - text: Restrict USB devices
+        url: settings-catalog/restrict-usb.md
+
+  - title: Configure devices with templates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Use custom device settings
+        url: templates/configure-custom-settings.md
+      - text: Use custom OMA-URI settings on Windows devices
+        url: templates/configure-custom-settings-windows.md
+      - text: Use custom settings on Apple devices
+        url: templates/configure-custom-settings-apple.md
+      - text: Create a Wi-Fi profile for devices
+        url: templates/configure-wifi.md
+      - text: Use OEMConfig on Android Enterprise devices
+        url: templates/configure-oemconfig-android.md
+      - text: Configure delivery optimization for Windows
+        url: templates/configure-delivery-optimization-windows.md
+      - text: Create iOS/iPadOS or macOS device profile
+        url: templates/configure-device-features-apple.md
+      - text: Kiosk settings for Windows and Holographic devices
+        url: templates/configure-kiosk.md
+
+  - title: Configure single sign-on (SSO)
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Use the Enterprise SSO plug-in on Apple devices
+        url: enterprise-sso-plugin.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure Platform SSO for macOS
+        url: settings-catalog/configure-platform-sso-macos.md
+      - text: Platform SSO scenarios for macOS
+        url: settings-catalog/configure-platform-sso-scenarios-macos.md
+      - text: Configure the Enterprise SSO plug-in for iOS/iPadOS
+        url: settings-catalog/configure-enterprise-sso-plugin-ios.md
+      - text: Configure the Enterprise SSO plug-in for macOS using a template
+        url: templates/configure-enterprise-sso-plugin-macos.md
+
+  - title: Endpoint security profiles
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Manage attack surface reduction settings
+        url: endpoint-security/attack-surface-reduction.md
+      - text: Manage account protection settings
+        url: endpoint-security/account-protection.md
+    - linkListType: how-to-guide
+      links:
+      - text: Encrypt Windows devices with BitLocker
+        url: endpoint-security/encrypt-bitlocker-windows.md
+      - text: Manage approved apps with App Control for Business
+        url: endpoint-security/manage-app-control.md
+    - linkListType: reference
+      links:
+      - text: Manage firewall settings with endpoint security policies
+        url: endpoint-security/firewall.md
+
+  - title: Deploy device certificates
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Use SCEP certificate profiles
+        url: certificates/scep-profiles.md
+      - text: Use PKCS certificate profiles
+        url: certificates/pkcs-profiles.md
+      - text: Create trusted certificate profiles
+        url: certificates/trusted-root-profiles.md
+      - text: Use imported PFX certificates
+        url: certificates/imported-pfx-profiles.md
+      - text: Remove SCEP or PKCS certificates
+        url: certificates/remove-profiles.md
+
+  - title: Settings reference
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: Apple device restriction settings
+        url: templates/ref-device-restrictions-apple.md
+      - text: Android device restriction settings
+        url: templates/ref-device-restrictions-android-enterprise.md
+      - text: Windows device restriction settings
+        url: templates/ref-device-restrictions-windows.md
+      - text: Apple device feature settings
+        url: templates/ref-device-features-apple.md
+      - text: Apple Wi-Fi settings
+        url: templates/ref-wifi-settings-apple.md
+      - text: Kiosk settings for Windows
+        url: templates/ref-kiosk-settings-windows.md
+      - text: Edition upgrade and mode change settings for Windows
+        url: templates/ref-edition-upgrade-settings-windows.md
+      - text: Apple settings catalog reference
+        url: settings-catalog/ref-apple-settings.md

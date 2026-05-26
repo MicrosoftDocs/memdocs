@@ -6,7 +6,7 @@ Anyone who is interested can contribute to the topics. When you contribute, your
 
 ### Quickly update an article using GitHub.com
 
-Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://www.microsoft.com/videoplayer/embed/RE1XQTG) also covers how to contribute.
+Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://learn-video.azurefd.net/vod/player?id=b5167c5a-9c69-499b-99ac-e5467882bc92) also covers how to contribute.
 
 1. Make sure you're signed in to GitHub.com with your GitHub account.
 2. Browse to the page you want to edit on Microsoft Learn.
@@ -20,7 +20,7 @@ Contributors who only make infrequent or small updates can edit the file directl
 
 5. The topic opens in a line-numbered editing page where you can make changes to the file. Files in GitHub are written and edited using Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/). Select the **Preview changes** tab to view your changes as you go.
 
-6. When you're finished making changes, go to the **Propose file change** section at the bottom of the page:
+6. When you're finished making changes, go to the **Commit changes...** button at the upper right part of the page:
 
    - A brief title is required. By default, the title is the name of the file, but you can change it.
    - Optionally, you can enter more details in the **Add an optional extended description** box.

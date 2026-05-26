@@ -1,0 +1,644 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/intune/autopilot/index.yml",
+      "redirect_url": "/autopilot/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/autopilot-update.md",
+      "redirect_url": "/autopilot/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/add-devices.md",
+      "redirect_url": "/autopilot/add-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/enrollment-autopilot.md#add-devices",
+      "redirect_url": "/autopilot/add-devices#add-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/automatic-registration.md",
+      "redirect_url": "/autopilot/automatic-registration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/autopilot-device-guidelines.md",
+      "redirect_url": "/autopilot/autopilot-device-guidelines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/autopilot-hybrid-connector-proxy.md",
+      "redirect_url": "/autopilot/autopilot-hybrid-connector-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune-service/enrollment/autopilot-hybrid-connector-proxy.md",
+      "redirect_url": "/autopilot/autopilot-hybrid-connector-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/autopilot-motherboard-replacement.md",
+      "redirect_url": "/autopilot/autopilot-motherboard-replacement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/autopilot-mbr.md",
+      "redirect_url": "/autopilot/autopilot-motherboard-replacement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/autopilot-support.md",
+      "redirect_url": "/autopilot/autopilot-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/bitlocker.md",
+      "redirect_url": "/autopilot/bitlocker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/deployment-process.md",
+      "redirect_url": "/autopilot/deployment-process",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/dfci-management.md",
+      "redirect_url": "/autopilot/dfci-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/enrollment-autopilot.md",
+      "redirect_url": "/autopilot/enrollment-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/enrollment-autopilot.md",
+      "redirect_url": "/autopilot/enrollment-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/enrollment-status.md",
+      "redirect_url": "/autopilot/enrollment-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices.md",
+      "redirect_url": "/autopilot/existing-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/existing-devices.md",
+      "redirect_url": "/autopilot/existing-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/autopilot-faq.yml",
+      "redirect_url": "/autopilot/faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/autopilot-faq.yml",
+      "redirect_url": "/autopilot/faq.yml",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/known-issues.md",
+      "redirect_url": "/autopilot/known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/resolved-issues.md",
+      "redirect_url": "/autopilot/known-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/manual-registration.md",
+      "redirect_url": "/autopilot/manual-registration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/oem-registration.md",
+      "redirect_url": "/autopilot/oem-registration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/windows-autopilot.md",
+      "redirect_url": "/autopilot/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/partner-registration.md",
+      "redirect_url": "/autopilot/partner-registration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/pre-provision.md",
+      "redirect_url": "/autopilot/pre-provision",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/white-glove.md",
+      "redirect_url": "/autopilot/pre-provision",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/profiles.md",
+      "redirect_url": "/autopilot/profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/registration-auth.md",
+      "redirect_url": "/autopilot/registration-auth",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/registration-overview.md",
+      "redirect_url": "/autopilot/registration-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/windows-autopilot-requirements.md",
+      "redirect_url": "/autopilot/requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/configuration-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=configuration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/configuration-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=configuration#configuration-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/licensing-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/licensing-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=licensing#licensing-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/networking-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/networking-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=networking#networking-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/software-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/software-requirements-old.md",
+      "redirect_url": "/autopilot/requirements?tabs=software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/software-requirements.md",
+      "redirect_url": "/autopilot/requirements?tabs=software#software-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/resolved-issues.md",
+      "redirect_url": "/autopilot/resolved-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/self-deploying.md",
+      "redirect_url": "/autopilot/self-deploying",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/troubleshoot-aad-join.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-microsoft-entra-join-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/troubleshoot-aad-join.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-microsoft-entra-join-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/policy-conflicts.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/policy-conflicts.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-policy-conflicts-with-windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/troubleshoot-device-enrollment.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-device-import-and-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/troubleshoot-device-enrollment.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-device-import-and-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/troubleshooting.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/troubleshooting.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/troubleshoot-oobe.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-oobe-issues-during-windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/troubleshoot-oobe.md",
+      "redirect_url": "/autopilot/troubleshooting-faq#troubleshooting-windows-out-of-box-experience--oobe--issues-during-windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/autopilot-scenarios.md",
+      "redirect_url": "/autopilot/tutorial/autopilot-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/tutorial-use-autopilot-enroll-devices.md",
+      "redirect_url": "/autopilot/tutorial/autopilot-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/create-autopilot-task-sequence.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/create-autopilot-task-sequence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/create-collection.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/create-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/create-json-file.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/create-json-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/create-json-package.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/create-json-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/deploy-autopilot-task-sequence.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/deploy-autopilot-task-sequence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/existing-devices-workflow.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/existing-devices-workflow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/install-modules.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/install-modules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/register-device.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/register-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/run-autopilot-task-sequence.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/run-autopilot-task-sequence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/setup-autopilot-profile.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/setup-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/setup-autopilot-deployment.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/setup-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/existing-devices/speed-up-deployment.md",
+      "redirect_url": "/autopilot/tutorial/existing-devices/speed-up-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-allow-users-to-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-assign-device-to-user.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-assign-device-to-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-automatic-enrollment.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-automatic-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-device-group.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-device-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-esp.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-esp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-register-device.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-register-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-technician-flow.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-technician-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-user-flow.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-user-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-assign-device-to-user.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-assign-device-to-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-automatic-enrollment.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-automatic-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-computer-account-limit.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-computer-account-limit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-device-group.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-device-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-esp.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-esp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-intune-connector.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-intune-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-register-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md",
+      "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-workflow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/reset/autopilot-reset-overview.md",
+      "redirect_url": "/autopilot/tutorial/reset/autopilot-reset-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/reset/local-autopilot-reset.md",
+      "redirect_url": "/autopilot/tutorial/reset/local-autopilot-reset",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/reset/remote-autopilot-reset.md",
+      "redirect_url": "/autopilot/tutorial/reset/remote-autopilot-reset",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-automatic-enrollment.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-automatic-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-autopilot-profile.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-deploy-device.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-deploy-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-device-group.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-device-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-esp.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-esp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-register-device.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-register-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/self-deploying/self-deploying-workflow.md",
+      "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-workflow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-allow-users-to-join.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-allow-users-to-join",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-assign-device-to-user.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-assign-device-to-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-automatic-enrollment.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-automatic-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-autopilot-profile.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-deploy-device.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-deploy-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-device-group.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-device-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-esp.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-esp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-register-device.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-register-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/azure-ad-join-workflow.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-workflow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-deploy-device.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-deploy-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-device-group.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-device-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-esp.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-esp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-intune-connector.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-intune-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-register-device.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-register-device",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/tutorial/user-driven/hybrid-azure-ad-join-workflow.md",
+      "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-workflow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/user-driven.md",
+      "redirect_url": "/autopilot/user-driven",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/autopilot/windows-autopilot-whats-new.md",
+      "redirect_url": "/autopilot/whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/windows-autopilot.md",
+      "redirect_url": "/autopilot/windows-autopilot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/windows-autopilot-hybrid.md",
+      "redirect_url": "/autopilot/windows-autopilot-hybrid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/intune/enrollment/windows-autopilot-hybrid.md",
+      "redirect_url": "/autopilot/windows-autopilot-hybrid",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/windows-autopilot-reset.md",
+      "redirect_url": "/autopilot/windows-autopilot-reset",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/windows-autopilot-scenarios.md",
+      "redirect_url": "/autopilot/windows-autopilot-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path_from_root": "/intune/autopilot/windows-autopilot-whats-new.md",
+      "redirect_url": "/autopilot/windows-autopilot-whats-new",
+      "redirect_document_id": false
+    }
+  ]
+}

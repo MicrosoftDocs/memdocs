@@ -1,0 +1,88 @@
+### YamlMime:Landing
+
+title: App protection
+summary: Protect corporate data on managed and unmanaged devices with app protection policies, conditional launch rules, and data transfer controls.
+
+metadata:
+  title: App protection
+  description: Create and manage app protection policies in Microsoft Intune to safeguard corporate data, control data transfer, and enforce conditional launch rules.
+  ms.topic: landing-page
+  ms.date: 04/30/2026
+  author: nicholasswhite
+  ms.author: nwhite
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+
+  - title: Understand app protection
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App protection policies overview
+        url: overview.md
+      - text: App protection without enrollment (MAM-WE)
+        url: mam-without-enrollment.md
+    - linkListType: concept
+      links:
+      - text: Data protection framework
+        url: data-protection-framework.md
+      - text: MAM vs work profiles on Android
+        url: mam-vs-work-profiles-android.md
+      - text: Policy delivery timing
+        url: policy-delivery-timing.md
+    - linkListType: reference
+      links:
+      - text: App protection FAQ
+        url: mam-faq.yml
+
+  - title: Create and configure policies
+    linkLists:
+    - linkListType: quickstart
+      links:
+      - text: Create and assign an app protection policy
+        url: quickstart-create-assign-policy.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create an app protection policy
+        url: create-policy.md
+      - text: Configure conditional launch actions
+        url: configure-conditional-launch.md
+      - text: Configure quiet time settings
+        url: configure-quiet-time.md
+      - text: Enable app protection for Windows
+        url: enable-mam-windows.md
+    - linkListType: concept
+      links:
+      - text: Policy extensions
+        url: policy-extensions.md
+
+  - title: Manage and monitor policies
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Manage data transfer on iOS
+        url: manage-data-transfer-ios.md
+      - text: Create data transfer exceptions
+        url: create-data-transfer-exceptions.md
+      - text: Wipe corporate data
+        url: wipe-corporate-data.md
+      - text: Monitor app protection policies
+        url: monitor-policies.md
+      - text: Validate policy setup
+        url: validate-policy-setup.md
+      - text: Troubleshoot app protection logs
+        url: troubleshoot-protection-logs.md
+
+  - title: Settings reference
+    linkLists:
+    - linkListType: reference
+      links:
+      - text: iOS app protection policy settings
+        url: ref-settings-ios.md
+      - text: Android app protection policy settings
+        url: ref-settings-android.md
+      - text: Windows app protection policy settings
+        url: ref-settings-windows.md
