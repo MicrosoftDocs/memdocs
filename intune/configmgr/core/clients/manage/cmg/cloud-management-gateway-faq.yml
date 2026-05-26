@@ -50,7 +50,7 @@ sections:
       - question: |
           Do I need to update the Virtual machine if the image is deprecated?
         answer: |
-          No. The CMG VM's are deployed using template and IIS are configured, this will be broken if you manually update the VM's. Product group will fix the issue through update or the current branch releases. 
+          No. The CMG VMs are deployed using template and IIS are configured, this will be broken if you manually update the VMs. Product group will fix the issue through update or the current branch releases. 
           
       - question: |
           How can I ensure service continuity during service updates?
@@ -150,4 +150,4 @@ sections:
 
           Some people confuse the information in this blog post with the application registrations in Microsoft Entra ID that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If a Microsoft Entra Global Administrator manually created the Configuration Manager app registrations in Microsoft Entra ID, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Microsoft Entra apps](manually-register-azure-ad-apps.md).<!--10488538-->
 
-          For more information : [Migrate your apps from Azure AD Graph to Microsoft Graph](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).
+          For more information: [Migrate your apps from Azure AD Graph to Microsoft Graph](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).
