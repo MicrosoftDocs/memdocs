@@ -35,7 +35,7 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Requirements
 
-- [Intune subscription](/intune/fundamentals/licensing/index).
+- [Intune subscription](/intune/fundamentals/licensing).
 - [Windows automatic enrollment enabled](/intune/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 

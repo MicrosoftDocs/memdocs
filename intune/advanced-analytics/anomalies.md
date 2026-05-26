@@ -7,8 +7,6 @@ ms.topic: concept-article
 
 # Anomalies report
 
-[!INCLUDE [intune-add-on-note](includes/intune-add-on-note.md)]
-
 The anomalies report in Advanced Analytics helps IT admins proactively identify device health issues before they affect users. It monitors for application hangs, crashes, and Stop Error Restarts, providing visibility into problems before they reach support channels.
 
 The feature correlates deployment objects and configuration changes to speed troubleshooting and suggest root causes. Device correlation groups reveal patterns among affected devices and flag others that are at risk.

@@ -11,10 +11,6 @@ ms.collection:
 
 # Using Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
-
 The use of Remote Help depends on whether you're requesting help or providing help. In this article, we cover both scenarios.  
 
 ## Get help
