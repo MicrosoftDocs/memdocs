@@ -3,7 +3,7 @@ title: macOS device enrollment guide for  Microsoft Intune
 description: Enroll macOS devices using device enrollment, automated device enrollment (DEP), and Apple Configurator enrollment options in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 06/09/2025
+ms.date: 05/19/2026
 ms.topic: article
 ms.reviewer: auherrin, dregan, annovich
 ms.collection:
@@ -78,6 +78,9 @@ Your users must do the following steps. For more specific information on the end
 2. Open the Company Portal app, and sign in with their organization account (`user@contoso.com`). Once they sign in, they must approve the enrollment policy (System preferences). When users approve, the device is enrolled, and considered managed. If they don't approve, then they're not enrolled, and won't receive your policies.
 
 The Company Portal app detects the installation of the management profile and automatically registers the device, unless it is manually closed by the user. The user must reopen the app to complete device registration. If you're using dynamic groups, which rely on device registration, it's important for users to return to the app and register. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration.
+
+> [!TIP]
+> If you're using dynamic device groups only for Intune policy and app targeting (not Conditional Access or licensing), consider using [assignment filters](../../fundamentals/filters/overview.md) instead. Filters evaluate at check-in without depending on device registration or group membership processing, which can simplify enrollment workflows.
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
