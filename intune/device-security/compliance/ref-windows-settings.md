@@ -10,7 +10,7 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for Windows in Intune
+# Device compliance settings for Windows in Intune
 
 This article lists and describes the different compliance settings you can configure on Windows devices in Intune. As part of your mobile device management (MDM) solution, use these settings to require BitLocker, set a minimum and maximum operating system, set a risk level using Microsoft Defender for Endpoint, and more.
 
@@ -20,14 +20,14 @@ This feature applies to:
 - Windows Holographic for Business
 - Surface Hub
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
+Settings in this article are organized by the sections that appear in the admin center when you create a compliance policy.
 
 ## Before you begin
 
 [Create a compliance policy](./create-policy.md#create-the-policy). For **Platform**, select **Windows 10 and later**.
 
 ## Device health
-To ensure devices boot to a trusted state, Intune utilizes Microsoft device attestation services.  Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service.
+To ensure devices boot to a trusted state, Intune uses Microsoft device attestation services. Devices across Intune commercial, US Government GCC High, and DoD services running Windows 10 use the Device Health Attestation (DHA) service.
 
 For more information, see:
 
@@ -63,9 +63,9 @@ For more information, see:
 - For details about how the Health Attestation service works, see [Health Attestation CSP](/windows/client-management/mdm/healthattestation-csp).
 - [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
-## Device Properties
+## Device properties
 
-### Operating System Version
+### Operating system version
 
 To discover build versions for all Windows Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 11.0 for Windows 11.
 
@@ -86,7 +86,7 @@ To discover build versions for all Windows Feature Updates and Cumulative Update
 - **Minimum OS required for mobile devices**:  
   Enter the minimum allowed version, in the major.minor.build number format.
 
-  When a device has an earlier version that the OS version you enter, it's reported as noncompliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After they upgrade, they can access company resources.
+  When a device has an earlier version than the OS version you enter, it's reported as noncompliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After they upgrade, they can access company resources.
 
 - **Maximum OS required for mobile devices**:  
   Enter the maximum allowed version, in the major.minor.build number.
@@ -94,18 +94,17 @@ To discover build versions for all Windows Feature Updates and Cumulative Update
   When a device is using an OS version later than the version entered, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until the rule is changed to allow the OS version.
 
 - **Valid operating system builds**:  
-  Specify a list of minimum and maximum operating system builds. Valid operating system builds provides additional flexibility when compared against minimum and maximum OS versions. Consider a scenario where minimum OS version is set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version is set to 10.0.18363.xxx (Windows 10 1909). This configuration can allow a Windows 10 1903 device that doesn't have recent cumulative updates installed to be identified as compliant. Minimum and maximum OS versions might be suitable if you have standardized on a single Windows 10 release, but might not address your requirements if you need to use multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, which allows multiple builds to be specified as per the following example.
+  Specify a list of minimum and maximum OS build ranges. This setting offers more flexibility than **Minimum OS version** and **Maximum OS version**. Use it when you need to enforce specific patch levels across multiple Windows releases.
 
-  The largest supported value for each of the version, major, minor, and build fields is 65535. For example, the largest value you can enter is 65535.65535.65535.65535.
+  Each entry requires a description and a minimum and maximum OS version in **major.minor.build.revision** format. The largest supported value for each field is 65535 (for example, 65535.65535.65535.65535). After you define one or more entries, you can **Export** the list as a CSV file.
 
-  **Example**:  
-  The following table is an example of a range for the acceptable operating systems versions for different Windows 10 releases. In this example, three different Feature Updates have been allowed (1809, 1909 and 2004). Specifically, only those versions of Windows and which have applied cumulative updates from June to September 2020 will be considered to be compliant. This is sample data only. The table includes a first column that includes any text you want to describe the entry, followed by the minimum and maximum OS version for that entry. The second and third columns must adhere to valid OS build versions in the **major.minor.build.revision number** format. After you define one or more entries, you can **Export** the list as a comma-separated values (CSV) file.
+  **Example**:
 
-  | Description                 | Minimum OS version | Maximum OS version |
-  |-----------------------------|--------------------|--------------------|
-  | Win 10 2004 (Jun-Sept 2020) | 10.0.19041.329     | 10.0.19041.508     |
-  | Win 10 1909 (Jun-Sept 2020) | 10.0.18363.900     | 10.0.18363.1110    |
-  | Win 10 1809 (Jun-Sept 2020) | 10.0.17763.1282    | 10.0.17763.1490    |
+  | Description                    | Minimum OS version | Maximum OS version |
+  |--------------------------------|--------------------|--------------------|
+  | Windows 11 24H2 (Oct–Dec 2024) | 10.0.26100.1742    | 10.0.26100.2605    |
+  | Windows 11 23H2 (Jul–Oct 2024) | 10.0.22631.3880    | 10.0.22631.4317    |
+  | Windows 10 22H2 (Jul–Oct 2024) | 10.0.19045.4651    | 10.0.19045.5011    |
 
   > [!NOTE]
   > If you specify multiple ranges of OS version builds in your policy, and a device has a build outside of the compliant ranges, Company Portal will notify the device user that the device is noncompliant with this setting. However, be aware that due to technical limitations, the compliance remediation message only shows the first OS version range specified in the policy. We recommend that you document the acceptable OS version ranges for managed devices in your organization.
@@ -118,7 +117,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*) - Intune doesn't check for any of the Configuration Manager settings for compliance.
   - **Require** - Require all settings (configuration items) in Configuration Manager to be compliant.
 
-## System Security
+## System security
 
 ### Password
 
@@ -180,7 +179,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   > [!NOTE]
   > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate BitLocker status at the TPM level. However, when leveraging this setting, be aware that a reboot may be required before the device will reflect as compliant.
 
-### Device Security
+### Device security
 
 - **Firewall**:
   - **Not configured** (*default*) - Intune doesn't control the Windows Firewall, nor change existing settings.
@@ -250,9 +249,9 @@ For additional information on Microsoft Defender for Endpoint integration in Con
 - **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
   - **Not configured** (*default*)
-  - **Clear** -This option is the most secure, as the device can't have any threats. If the device is detected as having any level of threats, it's evaluated as non-compliant.
-  - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a non-compliant status.
-  - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be non-compliant.
+  - **Clear** - This option is the most secure, as the device can't have any threats. If the device is detected as having any level of threats, it's evaluated as noncompliant.
+  - **Low** - The device is evaluated as compliant if only low-level threats are present. Anything higher puts the device in a noncompliant status.
+  - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be noncompliant.
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
   To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](../microsoft-defender/overview.md).

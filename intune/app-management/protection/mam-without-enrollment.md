@@ -26,8 +26,6 @@ This article provides recommendations on when to use MAM. It also includes an ov
 - [Microsoft Intune app management](../overview.md)
 - [Data protection for Windows MAM](./enable-mam-windows.md)
 
-> [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Before you begin
 

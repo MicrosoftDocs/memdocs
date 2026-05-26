@@ -13,10 +13,6 @@ ms.collection:
 
 # Data collection and privacy for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 This article provides information about the data that EPM can collect from devices.
 
 ## Overview of data collection

@@ -21,9 +21,9 @@ highlightedContent:
     - title: Features in development
       itemType: whats-new
       url: ./whats-new/in-development.md
-    - title: Microsoft Intune Suite add-ons
+    - title: Microsoft Intune advanced capabilities
       itemType: overview
-      url: ./fundamentals/add-ons.md
+      url: ./fundamentals/advanced-capabilities.md
 
 productDirectory:
   title: Set up, secure, and operate your device fleet
@@ -127,7 +127,7 @@ conceptualContent:
             - url: https://aka.ms/Intune_GuidedDemo
               itemType: get-started
               text: Interactive demos for Intune
-            - url: ./fundamentals/licensing/index.md
+            - url: ./fundamentals/licensing.md
               itemType: get-started
               text: Microsoft Intune licensing
             - url: ./fundamentals/planning-guide.md
