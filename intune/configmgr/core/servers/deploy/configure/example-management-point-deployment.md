@@ -161,12 +161,13 @@ The following connections are required so the management point can authenticate 
 
 Before you add the management point role, install the required Windows features and supporting components on `DMZ-MP`. For the complete and current list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#management-point).
 
-For this example, prepare `DMZ-MP` with these components:
+For this example, prepare `DMZ-MP` with these Windows Roles and Features:
 
-- **.NET Framework 3.5** Windows feature.
-- **.NET Framework 4.8**. Windows Server 2022 and later include this version by default.
-- **Internet Information Services (IIS)** with the management point requirements, including **Windows Authentication**, **ISAPI Extensions**, **IIS 6 Metabase Compatibility**, and **IIS 6 WMI Compatibility**
-- **BITS** and **BITS Server Extensions**. Select the role and all automatically selected options.
+- **Web Server (IIS)** role and auto-selected features.
+- **.NET Framework 3.5** feature.
+- **.NET Framework 4.8** feature. Windows Server 2022 and later include this version by default.
+- **IIS Server Extension** (in **Background Intelligent Transfer Service (BITS)**). Select the feature and all automatically selected options.
+- **Web Server (IIS)** role services: **Windows Authentication**, **ISAPI Extensions**, **IIS 6 Metabase Compatibility**, and **IIS 6 WMI Compatibility**
 
 > [!NOTE]
 > .NET Framework 3.5 isn't installed by default, and on modern Windows Server versions the feature payload is removed from the base OS image.
@@ -176,7 +177,7 @@ For this example, prepare `DMZ-MP` with these components:
 > - **PowerShell**: Mount Windows Server installation media and run `Install-WindowsFeature Net-Framework-Core -Source D:\sources\sxs` (replace `D:` with your media drive).
 > - **Add Roles and Features Wizard**: In **Server Manager** > **Add Roles and Features**, select **.NET Framework 3.5 Features**. On **Confirm installation selections**, choose **Specify an alternate source path** and enter `D:\sources\sxs`.
 >
-> Use installation media that matches the same Windows Server version as `DMZ-MP`. For more information, see [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](https://learn.microsoft.com/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard?view=windows-11) and [Enable .NET Framework 3.5 by using PowerShell](https://learn.microsoft.com/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-windows-powershell?view=windows-11).
+> Use installation media that matches the same Windows Server version as `DMZ-MP`. For more information, see [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard) and [Enable .NET Framework 3.5 by using PowerShell](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-windows-powershell).
 
 ### To install the required Windows features on DMZ-MP
 
@@ -187,7 +188,7 @@ For this example, prepare `DMZ-MP` with these components:
 3. Run the following command:
 
    ```powershell
-   Install-WindowsFeature NET-Framework-Core, BITS, BITS-IIS-Ext, Web-Server, Web-Windows-Auth, Web-ISAPI-Ext, Web-Metabase, Web-WMI -IncludeManagementTools
+   Install-WindowsFeature NET-Framework-Features, NET-Framework-Core, BITS, BITS-IIS-Ext, Web-Server, Web-WebServer, Web-Common-Http, Web-Default-Doc, Web-Dir-Browsing, Web-Http-Errors, Web-Static-Content, Web-Health, Web-Http-Logging, Web-Log-Libraries, Web-Request-Monitor, Web-Http-Tracing, Web-Performance, Web-Stat-Compression, Web-Security, Web-Filtering, Web-Windows-Auth, Web-App-Dev, Web-ISAPI-Ext, Web-Http-Redirect, Web-Mgmt-Tools, Web-Mgmt-Console, Web-Mgmt-Compat, Web-Metabase, Web-WMI -IncludeManagementTools
    ```
 
 4. Restart `DMZ-MP` if Windows prompts for a restart.
@@ -265,7 +266,7 @@ After the wizard finishes, verify that the management point installed successful
 
    | Log file | Location on DMZ-MP | What to look for |
    |----------|------------------|-----------------|
-   | `MPSetup.log` | `\SMS\Logs` | High-level prerequisite and MP installation messages: in particular, `CcmSetup`, `msoledbsql.msi` and `mp.msi`. |
+   | `MPSetup.log` | `\SMS\Logs` | High-level prerequisite and MP installation messages: in particular, `CcmSetup`, `msoledbsql.msi`, IIS-ASPNET45 feature and `mp.msi`. |
    | `MPMSI.log` | `\SMS\Logs` | Details about MP installation and MSI rollback state. If installation fails with error `1603`, search this file for the detailed error message. |
    | `CCMSetup.log` | `%Windir%\CCMSetup\Logs` | Client binary installation messages and related prerequisites (for example, vcredist and Microsoft Policy Platform). Installation should complete with return code `0`. |
    | `BGBSetup.log` | `\SMS\Logs` | Client Notification Server installation messages: look for successful completion. |
