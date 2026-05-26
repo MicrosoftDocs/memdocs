@@ -15,7 +15,7 @@ When you use Microsoft Intune, you can still manage employee access to their wor
 
 To complete the necessary steps, confirm you have licenses for Microsoft 365, or Microsoft Entra ID P1 and Intune. Employees need to have a [supported iOS/iPadOS or Android device](../../fundamentals/ref-supported-platforms.md).
 
-If you decide to set up a device management system, you can as this type of app protection works independently of device management.
+If you decide to set up a device management system, you can, as this type of app protection works independently of device management.
 
 ## Action plan
 
@@ -34,7 +34,7 @@ If you decide to set up a device management system, you can as this type of app 
 
 You have used app-based Conditional Access to increase the security of company data. As part of next steps, you can learn more about the other ways you can increase the protection of your company's data, including:
 
-- Setting up app protection policies to help you protect your company data against intentional or unintentional data leaks.
+- Setting up app protection policies to help you protect your company data against intentional or accidental data leaks.
 - Use of Azure Information Protection to protect company data outside your network.
 
 Want help with enabling this or other EMS or Microsoft 365 scenarios? If you have at least 150 licenses for Microsoft 365, Enterprise Mobility + Security, or Microsoft Entra ID P1, use your [FastTrack benefits](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

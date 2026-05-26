@@ -257,7 +257,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Set up Intune]:../../fundamentals/deploy-setup-step-1.md
 [Create users]:../../fundamentals/tenant-administration/add-users.md
 [Create groups]:../../fundamentals/tenant-administration/add-groups.md
-[Assign licenses]:../../fundamentals/licensing/assign-licenses.md
+[Assign licenses]:../../fundamentals/assign-licenses.md
 [Create and assign app protection policies]:../../app-management/protection/create-policy.md
 [app configuration policy]:../../app-management/configuration/overview.md
 [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform]:/azure/active-directory/active-directory-app-registration

@@ -44,7 +44,7 @@ For macOS information, see [Overview of Apple Automated Device Enrollment for ma
 | Userless devices (kiosk, shared-use) | ✅ Supported on all Apple mobile platforms. |
 | Microsoft Entra shared device mode | ✅ Supported on iOS/iPadOS for frontline worker scenarios. |
 | Apple Shared iPad | ✅ Supported on iPadOS. |
-| BYOD or personal devices | ❌ Not supported. Use [MAM](../../intune-service/fundamentals/deployment-guide-enrollment-mamwe.md) or [user and device enrollment](setup-user-company-portal.md) instead. |
+| BYOD or personal devices | ❌ Not supported. Use [MAM](../../app-management/protection/mam-without-enrollment.md) or [user and device enrollment](setup-user-company-portal.md) instead. |
 | Device enrollment manager (DEM) accounts | ❌ Not supported. |
 | Devices managed by another MDM provider | ❌ Users must unenroll from their current MDM provider before enrolling in Intune. For help migrating devices, see [Apple making device migration to Microsoft Intune easy with upcoming OS 26 release](https://techcommunity.microsoft.com/blog/IntuneCustomerSuccess/apple-making-device-migration-to-microsoft-intune-easy-with-upcoming-os-26-relea/4439895) on the Microsoft Community Hub. |
 
@@ -85,7 +85,7 @@ You can set up automated device enrollment for devices in [shared device mode](/
 Before setting up ADE in Intune, make sure you have the following in place across all platforms:
 
 
-* [Microsoft Intune Suite licensing](../../fundamentals/licensing/index.md).   
+* [Microsoft Intune Suite licensing](../../fundamentals/licensing.md).   
     - Microsoft Intune Plan 2 is required for tvOS and visionOS device management.  
     - Microsoft Intune Plan 1 is the minimum requirement for iOS/iPadOS device management.  
 * Access to [Apple Business](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).

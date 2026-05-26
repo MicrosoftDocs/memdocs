@@ -67,8 +67,8 @@ You need licenses for Microsoft Defender:
 - Microsoft Defender XDR (standalone)
 
 For detailed licensing information, see:
-- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
-- [Microsoft Defender for Endpoint licensing](/defender-endpoint/minimum-requirements#licensing-requirements)
+- [Microsoft Intune licensing](../../fundamentals/licensing.md)
+- [Microsoft Defender for Endpoint licensing](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements)
 
 ### Role-based access control
 
@@ -144,7 +144,7 @@ When the connection is enabled:
 > [!TIP]
 > Connection verification can take up to 15 minutes. If the connection fails, confirm that your account has Security Administrator permissions in both Intune and Defender for Endpoint.
 
-For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](../../device-security/microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune).
+For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to Intune](../../device-security/microsoft-defender/configure-integration.md#connect-defender-for-endpoint-to-intune).
 
 ## Deploy EDR policy
 

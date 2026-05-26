@@ -16,7 +16,6 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
 
-
 [!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
 
 ## Prerequisites

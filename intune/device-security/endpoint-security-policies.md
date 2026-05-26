@@ -40,7 +40,7 @@ To access the dashboard, sign in to the [Microsoft Intune admin center](https://
 
 The dashboard helps you quickly assess device security status and identify areas requiring attention. It displays information from multiple endpoint security areas including *Antivirus*, *Endpoint detection and response*, and *Defender for Endpoint*:
 
-- **Defender for Endpoint Connector status** - View the connection status between Intune and Defender for Endpoint. If not connected, see [Connect Microsoft Defender for Endpoint to Intune](./microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune) to set up the integration. The status label also links to the Microsoft Defender portal.
+- **Defender for Endpoint Connector status** - View the connection status between Intune and Defender for Endpoint. If not connected, see [Connect Microsoft Defender for Endpoint to Intune](./microsoft-defender/configure-integration.md#connect-defender-for-endpoint-to-intune) to set up the integration. The status label also links to the Microsoft Defender portal.
 
 - **Windows devices onboarded to Defender for Endpoint** - View counts of devices onboarded and not onboarded for endpoint detection and response (EDR). Select **Deploy preconfigured policy** to onboard devices through Intune, or **Onboard devices to Defender for Endpoint** to use the Defender portal workflow.
 
@@ -105,8 +105,8 @@ Endpoint Privilege Management enforces least privilege access by allowing users 
 
 You deploy Endpoint Privilege Management by creating elevation rules that define which applications can run with administrative privileges and under what conditions. Elevation rules support multiple validation methods including file hashes, publisher certificates, and file paths. You can configure automatic elevation for trusted applications, user-confirmed elevation with optional authentication requirements, support-approved elevation where administrators review requests, or deny rules to block specific files. EPM includes detailed reporting for both managed elevations and unmanaged elevations, helping you identify elevation patterns, refine rules, and plan the transition of users from administrator to standard user accounts.
 
-> [!IMPORTANT]
-> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/add-ons.md) that requires an additional license beyond Microsoft Intune. You can license EPM as a standalone add-on or as part of the Microsoft Intune Suite. EPM policies are only available for Windows devices.
+> [!NOTE]
+> Endpoint Privilege Management is a [Microsoft Intune advanced capability](../fundamentals/advanced-capabilities.md) that requires additional licensing beyond Microsoft Intune.
 
 For more information, see [Endpoint Privilege Management](../epm/overview.md).
 
