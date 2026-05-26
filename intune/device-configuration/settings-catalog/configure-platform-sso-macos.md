@@ -34,7 +34,7 @@ Some benefits of Platform SSO include:
 - It helps minimize the number of times users need to enter their Microsoft Entra ID credentials.
 - It helps reduce the number of passwords users need to remember.
 - You get the benefits of Microsoft Entra join, which allows any organization user to sign into the device.
-- It's included with all [Microsoft Intune licensing plans](../../fundamentals/licensing/index.md).
+- It's included with all [Microsoft Intune licensing plans](../../fundamentals/licensing.md).
 
 ## How Platform SSO works
 

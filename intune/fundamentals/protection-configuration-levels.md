@@ -218,10 +218,7 @@ This level focuses on enterprise-level services and features, and it can require
 
 - Expand password-less authentication to other services in your organization, including certificate-based authentication, single sign-on for apps, multifactor authentication (MFA), and the Microsoft Tunnel VPN gateway.
 - Use multifactor authentication (MFA) for an extra layer of security. MFA can help protect your organization from phishing attacks.
-- Expand Microsoft Tunnel by deploying Microsoft Tunnel for Mobile Application Management (Tunnel for MAM), which extends Tunnel support to iOS/iPadOS and Android devices that aren't enrolled with Intune. Tunnel for MAM is available as an Intune add-on.
-
-  For information, see [Use Intune Suite add-on capabilities](./add-ons.md).
-
+- Expand Microsoft Tunnel by deploying Microsoft Tunnel for Mobile Application Management (Tunnel for MAM), which extends Tunnel support to iOS/iPadOS and Android devices that aren't enrolled with Intune. Tunnel for MAM is an advanced capability of Intune. For more information, see [Microsoft Intune advanced capabilities](./advanced-capabilities.md).
 - Use Intune policy for Local Administrator Password Solution (LAPS) on macOS and Windows devices. LAPS policies help secure the local administrator account on your managed devices.
 
   For information, see:
@@ -231,7 +228,7 @@ This level focuses on enterprise-level services and features, and it can require
 
 - Protect Windows devices using Endpoint Privilege Management (EPM). EPM helps you run your organization's users as standard users (without administrator rights) and enables those same users to complete tasks that require elevated privileges.
 
-  EPM is available as an Intune add-on. For information, see [Use Intune Suite add-on capabilities](./add-ons.md).
+  EPM is an advanced capability of Intune. For information, see [Microsoft Intune advanced capabilities](./advanced-capabilities.md).
 
 - Configure device features that apply to the Windows firmware layer. Use Android common criteria mode.
 - Configure specialized devices like kiosks and shared devices.

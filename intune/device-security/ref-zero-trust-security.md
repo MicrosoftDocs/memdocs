@@ -54,7 +54,7 @@ Ensure tenant-level governance, identity, and configuration consistency.
 
 For license details, see:
 
-- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
 - [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
@@ -83,7 +83,7 @@ Secure endpoints through device configuration and security policies.
 
 For license details, see:
 
-- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing.md)
 - [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
 
 ## Secure Data
@@ -102,7 +102,7 @@ Protect data on devices and in transit, and enforce secure access to organizatio
 
 For license details, see:
 
-- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
+- [Microsoft Intune licensing](../fundamentals/licensing.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
 
 ## Related content

@@ -15,10 +15,6 @@ ms.collection:
 
 # Known Issues for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 This article lists known issues with Endpoint Privilege Management.
 
 ## Windows 10 devices might not immediately receive confirmation of support approvals

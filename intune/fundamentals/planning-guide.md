@@ -1,9 +1,9 @@
 ---
 title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
-author: MandiOhlinger
-ms.author: mandia
-ms.date: 05/19/2026
+author: paolomatarazzo
+ms.author: paoloma
+ms.date: 05/13/2026
 ms.topic: upgrade-and-migration-article
 ms.reviewer: davguy
 ms.collection:
@@ -28,11 +28,6 @@ This guide:
 - And more
 
 Use this guide to plan your move or migration to Intune.
-
-> [!TIP]
->
-> - Want to print or save this guide as a PDF? In your web browser, use the **Print** option, **Save as PDF**.
-> - [!INCLUDE [tips-guidance-plan-deploy-guides](../device-enrollment/includes/tips-guidance-plan-deploy-guides.md)]
 
 ## Step 1 - Determine your objectives
 
@@ -132,7 +127,7 @@ In Intune, distributed IT benefits from the following features:
 
 - When admins create policies, you can require **[multiple admin approval](role-based-access-control/multi-admin-approval.md)** for specific policies, including policies that run scripts or deploy apps.
 
-- **[Endpoint Privilege Management](../epm/overview.md)** allows standard non-admin user complete tasks that require elevated privileges, like  installing apps and updating device drivers. Endpoint Privilege Management is part of the [Intune Suite](add-ons.md).
+- **[Endpoint Privilege Management](../epm/overview.md)** allows standard non-admin user complete tasks that require elevated privileges, like  installing apps and updating device drivers. Endpoint Privilege Management is part of the [Intune Suite](advanced-capabilities.md).
 
 ✅ **Task: Determine how you want to distribute your rules and settings**
 
@@ -317,14 +312,20 @@ Managing devices is a relationship with different services. Intune includes the 
 
   Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
-- **[Intune Suite](add-ons.md)** provides advanced endpoint management and security features, like remote help, Microsoft Cloud PKI, Endpoint Privilege Management, and more. The Intune Suite is available as a separate license.
+- **[Intune Suite](advanced-capabilities.md)** provides advanced endpoint management and security features, like remote help, Microsoft Cloud PKI, Endpoint Privilege Management, and more.
+
+**Starting July 2026, Suite capabilities are distributed across Microsoft 365 license tiers:**
+
+- **Microsoft 365 E3** includes Plan 2, Remote Help, and Advanced Analytics.
+- **Microsoft 365 E5 and E7** include everything in E3, plus Endpoint Privilege Management, Microsoft Cloud PKI, and Enterprise Application Management.
+- For customers on other plans, Suite is available as a separate subscription.
 
 For more information, go to:
 
-- [Microsoft Intune licensing](./licensing/index.md)
+- [Microsoft Intune licensing](./licensing.md)
 - [Microsoft 365 for business](https://www.microsoft.com/licensing/product-licensing/microsoft-365-business)
 - [Microsoft 365 enterprise licensing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
-- [Microsoft Intune Suite](add-ons.md)
+- [Microsoft Intune advanced capabilities](advanced-capabilities.md)
 
 ✅ **Task: Determine the licensed services your organization needs**
 
@@ -334,7 +335,7 @@ Some considerations:
 
   - Intune
 
-  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](./licensing/index.md).
+  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](./licensing.md).
 
   You currently use Configuration Manager, and want to set up co-management for your devices. Intune is already included in your Configuration Manager license. If you want Intune to fully manage new devices or existing co-managed devices, then you need a separate Intune license.
 

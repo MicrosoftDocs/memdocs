@@ -14,71 +14,60 @@ Microsoft Intune Advanced Analytics delivers deep, actionable insights into the 
 Advanced Analytics enhances endpoint analytics with the following reports and capabilities:
 
 :::row:::
-:::column:::  
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Resource performance report
+:::column:::
+
+> [!div class="nextstepaction"]
+> [Resource performance report](resource-performance.md)
 
 > Identifies CPU and RAM performance issues by device, model, and manufacturer to guide purchasing decisions.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](resource-performance.md)
 :::column-end:::
 :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Battery health report
+> [!div class="nextstepaction"]
+> [Battery health report](battery-health.md)
 
 > Monitors battery health for Windows devices to ensure long battery life and a better user experience.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](battery-health.md)
+
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Anomalies report
+> [!div class="nextstepaction"]
+> [Anomalies report](anomalies.md)
 
 > Tracks device health for regressions in user experience and productivity after configuration changes.
->
-> > [!div class="nextstepaction"]
-> > [Learn more](anomalies.md)
 :::column-end:::
 :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Device timeline report
+> [!div class="nextstepaction"]
+> [Device timeline report](device-timeline.md)
 
 > Shows detailed events with low latency to help troubleshoot device issues quickly.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](device-timeline.md)
 :::column-end:::
 
 
 :::row-end:::
 
 :::row:::
-:::column:::  
-#### :::image type="icon" source="../media/icons/24/query.svg"::: Device query
+:::column:::
+> [!div class="nextstepaction"]
+> [Device query](device-query.md)
 
 > Provides near real-time data about the state and configuration of Windows devices.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](device-query.md)
+
 :::column-end:::
 :::column:::
-#### :::image type="icon" source="../media/icons/24/query.svg"::: Device query for multiple devices
+> [!div class="nextstepaction"]
+> [Device query for multiple devices](device-query-multiple-devices.md)
 
 > Allows you to run queries directly in Intune to retrieve inventory data across multiple devices and platforms.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](device-query-multiple-devices.md)
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column:::  
-#### :::image type="icon" source="../media/icons/24/devices.svg"::: Device scopes
+> [!div class="nextstepaction"]
+> [Device scopes](device-scopes.md)
 
 > Allows you to use scope tags to filter reports for a subset of devices. See scores, insights, and recommendations specific to those devices.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](device-scopes.md)
 :::column-end:::
 :::column:::
 
@@ -128,16 +117,13 @@ This section details **additional prerequisites** specific to Advanced Analytics
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/licensing.md)]
-
+[!INCLUDE [licensing](../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-
-> Advanced Analytics features are included in [Microsoft Intune Suite](../fundamentals/add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
->
-> **Mixed licensing scenarios**: A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the *base* endpoint analytics product. In these cases, the subscription with the highest level of functionality determines the overall endpoint analytics experience for your tenant. For example, if any users have Advanced Analytics, all enrolled devices will benefit from the advanced features.
+> [!INCLUDE [additional-licensing](../includes/licensing/additional-licensing.md)]
 :::column-end:::
 :::row-end:::
+
 
 ## Get started with Advanced Analytics
 

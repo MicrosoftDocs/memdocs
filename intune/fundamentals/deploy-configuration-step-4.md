@@ -442,9 +442,9 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
     Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, see [Microsoft Tunnel for Microsoft Intune](../device-security/microsoft-tunnel/overview.md).
 
-  - **Use Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../device-security/microsoft-tunnel/mam.md) is available as an Intune add-on that requires an extra license.
+  - **Use Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../device-security/microsoft-tunnel/mam.md) is an advanced capability that requires additional licensing beyond Microsoft Intune.
 
-    For more information, see [Use Intune Suite add-on capabilities](./add-ons.md).
+    For more information, see [Microsoft Intune advanced capabilities](./advanced-capabilities.md).
 
 - **Use Local Administrator Password Solution (LAPS) policy** to manage and back up the local administrator account on your devices.
 
@@ -470,7 +470,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
   - Support requests by users to elevate a managed process.
   - Allow for automatic elevations of files that just need to run without any user interruption.
 
-  [Endpoint Privilege Management](../epm/overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](./add-ons.md).
+  [Endpoint Privilege Management](../epm/overview.md) is an advanced capability that requires additional licensing. For more information, see [Microsoft Intune advanced capabilities](./advanced-capabilities.md).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
