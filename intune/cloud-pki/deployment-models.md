@@ -2,7 +2,7 @@
 title: Deployment models for Microsoft Intune cloud PKI
 description: Describes the deployment options for Microsoft Intune cloud PKI.
 ms.date: 12/06/2024
-ms.topic: how-to
+ms.topic: concept-article
 ---
 
 # Microsoft Cloud PKI deployment for Microsoft Intune
