@@ -43,7 +43,7 @@ sections:
           No. The CMG is a software as a service (SaaS) solution that extends your Configuration Manager environment into the cloud. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure PaaS secures and updates the VMs. For more security specific information on the underlying PaaS solution that the CMG is built on, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
           
           > [!IMPORTANT]
-          > It's not supported to scan the VMs for vulnerabilities or to monitor them directly. The Azure VMs for CMG aren't a part of your on-premises environment.
+          > The CMG runs on Microsoft-managed Azure platform services. Some security or vulnerability scans that target CMG virtual machine instances can return findings that aren’t applicable or actionable, as they reflect generic checks for customer-managed infrastructure rather than Azure-managed platform services.
           
           Since the CMG acts as a proxy for client communication, it doesn't process, keep, or store any client data. The communication path over the internet always uses HTTPS. For greater security, configure the management point for HTTPS. Also configure the site option for clients to encrypt inventory and status messages. For more information, see [Plan for security: Signing and encryption](../../../plan-design/security/plan-for-security.md#signing-and-encryption).
           
