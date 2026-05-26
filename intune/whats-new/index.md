@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 05/21/2026
+ms.date: 05/26/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -54,7 +54,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of May 18, 2026
+## Week of May 26, 2026
 
 ### Role-based access control
 
@@ -75,6 +75,8 @@ To learn more, see:
 
 - [Microsoft Copilot in Intune](../copilot/index.md)
 - [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication)
+
+## Week of May 18, 2026
 
 ### Device security
 

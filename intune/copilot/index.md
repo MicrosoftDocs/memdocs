@@ -1,7 +1,7 @@
 ---
 title: Security Copilot in Intune features overview
 description: Microsoft Security Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues and query devices.
-ms.date: 05/19/2026
+ms.date: 05/26/2026
 ms.update-cycle: 180-days
 ms.topic: get-started
 ms.reviewer: ankurgoyal, rashok, zadvor
