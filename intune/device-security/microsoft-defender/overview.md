@@ -57,7 +57,7 @@ You can add these permissions to a [custom Intune role](../../fundamentals/role-
 
 **Subscription**: Microsoft Intune Plan 1 subscription provides access to Intune and the Microsoft Intune admin center.
 
-For licensing options, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+For licensing options, see [Microsoft Intune licensing](../../fundamentals/licensing.md).
 
 **Supported platforms**:
 

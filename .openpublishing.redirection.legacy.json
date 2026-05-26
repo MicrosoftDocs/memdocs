@@ -5727,17 +5727,17 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/intune-add-ons.md",
-      "redirect_url": "/intune/fundamentals/add-ons",
+      "redirect_url": "/intune/fundamentals/advanced-capabilities",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/premium-add-ons.md",
-      "redirect_url": "/intune/fundamentals/add-ons",
+      "redirect_url": "/intune/fundamentals/advanced-capabilities",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/intune-add-ons.md",
-      "redirect_url": "/intune/fundamentals/add-ons",
+      "redirect_url": "/intune/fundamentals/advanced-capabilities",
       "redirect_document_id": false
     },
     {
@@ -5922,12 +5922,12 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/fundamentals/what-is-device-management",
+      "redirect_url": "/intune/fundamentals/manage-devices",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/device-lifecycle.md",
-      "redirect_url": "/intune/fundamentals/what-is-device-management",
+      "redirect_url": "/intune/fundamentals/manage-devices",
       "redirect_document_id": false
     },
     {
@@ -6162,47 +6162,47 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/licenses-assign.md",
-      "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
+      "redirect_url": "/intune/fundamentals/assign-licenses",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/licenses-assign.md",
-      "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
+      "redirect_url": "/intune/fundamentals/assign-licenses",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/licenses.md",
-      "redirect_url": "/intune/fundamentals/licensing/index",
+      "redirect_url": "/intune/fundamentals/licensing",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/unlicensed-admins.md",
-      "redirect_url": "/intune/fundamentals/licensing/unlicensed-admins",
+      "redirect_url": "/intune/fundamentals/licensing#unlicensed-admin-access",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/unlicensed-admins.md",
-      "redirect_url": "/intune/fundamentals/licensing/unlicensed-admins",
+      "redirect_url": "/intune/fundamentals/licensing#unlicensed-admin-access",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/manage-apps.md",
-      "redirect_url": "/intune/fundamentals/manage-apps",
+      "redirect_url": "/intune/fundamentals/core-concepts#apps",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/manage-apps.md",
-      "redirect_url": "/intune/fundamentals/manage-apps",
+      "redirect_url": "/intune/fundamentals/core-concepts#apps",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/manage-devices.md",
-      "redirect_url": "/intune/fundamentals/manage-devices",
+      "redirect_url": "/intune/fundamentals/core-concepts#devices",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/manage-devices.md",
-      "redirect_url": "/intune/fundamentals/manage-devices",
+      "redirect_url": "/intune/fundamentals/core-concepts#devices",
       "redirect_document_id": false
     },
     {
@@ -6517,12 +6517,12 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/microsoft-intune-service-description.md",
-      "redirect_url": "/intune/fundamentals/service-description",
+      "redirect_url": "/intune/fundamentals/advanced-capabilities",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/microsoft-intune-service-description.md",
-      "redirect_url": "/intune/fundamentals/service-description",
+      "redirect_url": "/intune/fundamentals/advanced-capabilities",
       "redirect_document_id": false
     },
     {
@@ -6602,12 +6602,12 @@
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/manage-identities.md",
-      "redirect_url": "/intune/fundamentals/tenant-administration/identities",
+      "redirect_url": "/intune/fundamentals/core-concepts#identity",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/manage-identities.md",
-      "redirect_url": "/intune/fundamentals/tenant-administration/identities",
+      "redirect_url": "/intune/fundamentals/core-concepts#identity",
       "redirect_document_id": false
     },
     {
@@ -6682,12 +6682,12 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/what-is-device-management.md",
-      "redirect_url": "/intune/fundamentals/what-is-device-management",
+      "redirect_url": "/intune/fundamentals/what-is-intune",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/what-is-device-management.md",
-      "redirect_url": "/intune/fundamentals/what-is-device-management",
+      "redirect_url": "/intune/fundamentals/what-is-intune",
       "redirect_document_id": false
     },
     {

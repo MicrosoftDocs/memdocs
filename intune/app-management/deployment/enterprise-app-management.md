@@ -14,11 +14,6 @@ ms.collection:
 
 Microsoft Intune Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](./create-win32-package.md) and hosted by Microsoft.
 
-> [!IMPORTANT]
-> Enterprise App Management is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md).
-
-[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
-
 ## Benefits of Enterprise App Management
 
 The Enterprise App Management provides the following benefits:
@@ -58,6 +53,32 @@ The Enterprise App Catalog includes apps that self update. Intune ensures the ap
 
 > [!IMPORTANT]
 > Self-updating apps might require that your tenant has network rules configured to allow an update from the app vendor.
+
+## Prerequisites
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+
+>[!INCLUDE [additional-licensing](../../includes/licensing/additional-licensing.md)]
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+>The Enterprise App Catalog is available for Windows apps.
+>
+>[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+:::column-end:::
+:::row-end:::
 
 ## Frequently asked questions (FAQ)
 

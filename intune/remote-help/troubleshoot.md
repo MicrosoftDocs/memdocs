@@ -11,10 +11,6 @@ ms.collection:
 
 # Troubleshoot and Monitor Remote Help
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
-
 ## Monitoring and reports
 
 You can monitor the use of Remote Help from within the Microsoft Intune admin center. For unenrolled devices, reporting on Remote Help sessions is limited.
