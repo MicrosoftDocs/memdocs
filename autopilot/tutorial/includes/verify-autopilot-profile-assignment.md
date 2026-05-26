@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
-ms.date: 06/28/2024
-ms.localizationpriority: medium
+ms.date: 06/13/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -19,7 +13,7 @@ user-driven\hybrid-azure-ad-join-autopilot-profile.md
 
 Headings are driven by article context. -->
 
-Before deploying a device, ensure that an Autopilot profile is assigned to a device group that the device is a member of. Autopilot profile assignment to a device can take some time after the Autopilot profile is assigned to the device group or after the device is added to the device group. To verify that the profile is assigned to a device, follow these steps:
+Before deploying a device, ensure that a Windows Autopilot profile is assigned to a device group that the device is a member of. Windows Autopilot profile assignment to a device can take some time after the Windows Autopilot profile is assigned to the device group or after the device is added to the device group. To verify that the profile is assigned to a device, follow these steps:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -33,15 +27,15 @@ Before deploying a device, ensure that an Autopilot profile is assigned to a dev
 
 1. In the **Windows Autopilot devices** screen that opens:
 
-   1. Find the desired device that Autopilot deployment profile assignment status needs to be checked.
+   1. Find the desired device that Windows Autopilot deployment profile assignment status needs to be checked.
 
    1. Once the device is located, its current status is listed under the **Profile status** column. The status has one of the following values:
 
-       - **Not assigned**: An Autopilot deployment profile isn't assigned to the device.
+       - **Not assigned**: A Windows Autopilot deployment profile isn't assigned to the device.
 
-       - **Assigning**: An Autopilot deployment profile is being assigned to the device.
+       - **Assigning**: A Windows Autopilot deployment profile is being assigned to the device.
 
-       - **Assigned**: An Autopilot deployment profile is assigned to the device.
+       - **Assigned**: A Windows Autopilot deployment profile is assigned to the device.
 
        - **Fix pending**:  When a hardware change occurs on a device, this status displays while Intune tries to register the new hardware. When the link for the **Fix pending** status is selected, the following message appears:
 
@@ -53,19 +47,19 @@ Before deploying a device, ensure that an Autopilot profile is assigned to a dev
            - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
            - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-motherboard-replacement.md)
 
-       - **Attention required**: If Intune is unable to register the new hardware after a hardware change occurs on a device, the device can't receive the Autopilot profile until the device is reset and the device re-registers. For more information on this status and how to deregister/re-register a device, see the following articles:
+       - **Attention required**: If Intune is unable to register the new hardware after a hardware change occurs on a device, the device can't receive the Windows Autopilot profile until the device is reset and the device re-registers. For more information on this status and how to deregister/re-register a device, see the following articles:
 
          - [Why is the Windows Autopilot profile not applied after a hardware change occurred on a device?](../../troubleshooting-faq.yml#why-is-the-windows-autopilot-profile-not-applied-after-a-hardware-change-occurred-on-a-device-).
          - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
          - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-motherboard-replacement.md)
          - [Deregister a device](../../registration-overview.md#deregister-a-device)
 
-        Before starting the Autopilot deployment process on a device, make sure that in the **Windows Autopilot devices** page:
+        Before starting the Windows Autopilot deployment process on a device, make sure that in the **Windows Autopilot devices** page:
 
         - The device's **Profile status** status is **Assigned**.
         - In the properties of the device, **Date assigned** has a value.
-        - In the properties of the device, **Assigned profile** displays the expected Autopilot profile.
+        - In the properties of the device, **Assigned profile** displays the expected Windows Autopilot profile.
 
 > [!NOTE]
 >
-> Intune periodically checks for new devices in the assigned device groups, and then begins the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot services, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned device groups, and then begins the process of assigning profiles to those devices. Due to several different factors involved in the process of Windows Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Windows Autopilot services, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.

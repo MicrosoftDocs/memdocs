@@ -1,23 +1,16 @@
 ---
 title: Reseller, distributor, or partner registration of Windows Autopilot devices
 description: How partners add devices to Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 06/13/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
-  - tier2
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
   - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a>
+ms.custom: sfi-ga-nochange
 ---
 
 # Reseller, distributor, or partner registration
@@ -36,16 +29,13 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 <!-- MAXADO-9048730 -->
 
 > [!IMPORTANT]
->
-> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
+> [!INCLUDE [global-administrator](../autopilot/includes/global-administrator.md)]
 
 > [!TIP]
->
 > While resellers, distributors, or partners could boot each new Windows device to obtain the hardware hash for purposes of providing them to customers or direct registration by the partner, this method isn't recommended. Instead, these partners should register devices using the PKID information obtained from the device packaging, such as the barcode, or obtained electronically from the OEM or upstream partner/distributor.
 
 > [!NOTE]
->
-> Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Autopilot profiles created through Partner Center.
+> Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Windows Autopilot profiles created through Partner Center.
 
 ## Related content
 

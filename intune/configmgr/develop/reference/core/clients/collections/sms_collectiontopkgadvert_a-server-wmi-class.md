@@ -1,0 +1,61 @@
+---
+title: SMS_CollectionToPkgAdvert_a Class
+description: In Configuration Manager, the SMS_CollectionToPkgAdvert_a association WMI class is an SMS Provider server class that uses the CollectionID property to relate an SMS_Advertisement Server WMI Class object with its target SMS_Collection Server WMI Class object.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.topic: reference
+ms.collection: tier3
+---
+# SMS_CollectionToPkgAdvert_a Server WMI Class
+The `SMS_CollectionToPkgAdvert_a` association Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `CollectionID` property to relate an [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) object with its target [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.
+
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
+
+## Syntax
+
+```
+Class SMS_CollectionToPkgAdvert_a : SMS_BaseAssociation
+{
+      ref:SMS_Advertisement advert;
+      ref:SMS_Collection collection;
+};
+```
+
+## Methods
+ The `SMS_CollectionToPkgAdvert_a` class does not define any methods.
+
+## Properties
+ `advert`
+ Data type: `ref:SMS_Advertisement`
+
+ Access type: Read/Write
+
+ Qualifiers: [key]
+
+ Reference to an [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) object path.
+
+ `collection`
+ Data type: `ref:SMS_Collection`
+
+ Access type: Read/Write
+
+ Qualifiers: [key]
+
+ Reference to an [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object path.
+
+## Remarks
+ Class qualifiers for this class include:
+
+- Association: ToInstance
+
+- Read (read-only)
+
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
+
+## Requirements
+
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
+
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

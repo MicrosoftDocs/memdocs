@@ -1,0 +1,164 @@
+### YamlMime:Landing
+
+title: Application management
+
+summary: Deploy, configure, and monitor applications across your managed devices with Microsoft Intune.
+
+metadata:
+  title: Application management
+  description: Deploy, configure, and monitor applications across managed devices with Microsoft Intune app management.
+  ms.topic: landing-page
+  ms.date: 05/04/2026
+  author: nicholasswhite
+  ms.author: nwhite
+
+# linkListType: architecture | concept | deploy | download | get-started |
+#   how-to-guide | learn | overview | quickstart | reference | tutorial |
+#   whats-new
+
+landingContent:
+  - title: Get started with app management
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: What is app management in Microsoft Intune?
+        url: overview.md
+      - text: Add apps to Microsoft Intune
+        url: deployment/index.md
+    - linkListType: concept
+      links:
+      - text: App lifecycle overview
+        url: lifecycle.md
+    - linkListType: how-to-guide
+      links:
+      - text: Discovered apps
+        url: discovered-apps.md
+    - linkListType: reference
+      links:
+      - text: Intune protected apps
+        url: ref-protected-apps.md
+
+  - title: Deploy Win32 and LOB apps
+    linkLists:
+    - linkListType: concept
+      links:
+      - text: Win32 app management overview
+        url: deployment/win32.md
+    - linkListType: how-to-guide
+      links:
+      - text: Prepare a Win32 app for upload (create the .intunewin package)
+        url: deployment/create-win32-package.md
+      - text: Add and assign Win32 apps
+        url: deployment/add-win32.md
+      - text: Add a Windows LOB app
+        url: deployment/add-lob-windows.md
+      - text: Configure Win32 app supersedence
+        url: deployment/configure-win32-supersedence.md
+      - text: Add a macOS LOB app
+        url: deployment/add-lob-macos.md
+      - text: Deploy Windows update packages
+        url: deployment/deploy-win32-update-package.md
+      - text: Add an Android LOB app
+        url: deployment/add-lob-android.md
+
+  - title: Deploy store and Microsoft 365 apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add Microsoft 365 apps for Windows
+        url: deployment/add-microsoft-365-windows.md
+      - text: Manage Apple volume-purchased apps
+        url: deployment/manage-vpp-apple.md
+      - text: Add managed Google Play apps
+        url: deployment/add-managed-google-play.md
+      - text: Deploy Windows apps
+        url: deployment/deploy-windows.md
+      - text: Add Microsoft Store apps
+        url: deployment/add-microsoft-store.md
+
+  - title: Enterprise app catalog and volume licensing
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Enterprise App Management overview
+        url: deployment/enterprise-app-management.md
+      - text: Add an Enterprise App Catalog app
+        url: deployment/add-enterprise-catalog-app.md
+      - text: Guided update supersedence
+        url: deployment/update-enterprise-supersedence.md
+      - text: Manage volume-purchased apps and books
+        url: deployment/manage-volume-purchased.md
+
+  - title: Deploy Company Portal and macOS apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Add the Company Portal app for macOS
+        url: deployment/add-company-portal-macos.md
+      - text: Add an unmanaged macOS PKG app
+        url: deployment/add-unmanaged-pkg-macos.md
+      - text: Add a macOS DMG app
+        url: deployment/add-dmg-macos.md
+      - text: Add the Windows Company Portal app
+        url: deployment/add-company-portal-windows.md
+      - text: Add the Company Portal app for Autopilot
+        url: deployment/add-company-portal-autopilot.md
+
+  - title: Configure apps
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App configuration policies overview
+        url: configuration/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure Microsoft Edge for iOS/Android
+        url: configuration/configure-edge-ios-android.md
+      - text: Configure managed Android devices
+        url: configuration/configure-managed-android.md
+      - text: Configure managed iOS/iPadOS devices
+        url: configuration/configure-managed-ios.md
+      - text: Configure the Managed Home Screen
+        url: configuration/configure-managed-home-screen.md
+      - text: Configure the Company Portal app
+        url: configuration/configure-company-portal.md
+      - text: Configure Outlook for iOS/Android
+        url: configuration/configure-outlook.md
+
+  - title: Protect app data
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: App protection policies overview
+        url: protection/overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Create an app protection policy
+        url: protection/create-policy.md
+      - text: App protection without enrollment (MAM-WE)
+        url: protection/mam-without-enrollment.md
+      - text: Selectively wipe app data
+        url: protection/wipe-corporate-data.md
+    - linkListType: reference
+      links:
+      - text: iOS/iPadOS app protection settings
+        url: protection/ref-settings-ios.md
+      - text: Android app protection settings
+        url: protection/ref-settings-android.md
+      - text: Windows app protection settings
+        url: protection/ref-settings-windows.md
+      - text: App protection FAQ
+        url: protection/mam-faq.yml
+
+  - title: Assign, monitor, and troubleshoot apps
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+      - text: Assign apps to groups
+        url: deployment/assign-groups.md
+      - text: Include and exclude app assignments
+        url: deployment/configure-assignment-scope.md
+      - text: Monitor app information and assignments
+        url: monitor-assignments.md
+      - text: Troubleshoot Win32 apps
+        url: deployment/troubleshoot-win32.md

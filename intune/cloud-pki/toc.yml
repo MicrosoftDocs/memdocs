@@ -1,0 +1,23 @@
+items:
+- name: Microsoft Cloud PKI overview
+  href: index.md
+  displayName: RBAC, requirements
+- name: PKI fundamentals
+  href: fundamentals.md
+- name: Configure and deploy
+  items:
+  - name: Deployment overview
+    href: deployment-models.md
+  - name: Configure root and issuing CA for Cloud PKI
+    href: configure-ca.md
+    displayName: root, certification, authority, ca, issuing, BYO
+  - name: Configure bring your own CA for Cloud PKI
+    href: configure-byoca.md
+  - name: Manage expiring Cloud PKI CAs
+    href: manage-ca-expiration.md
+- name: Monitor issued certificates
+  href: monitor-certificates.md
+- name: Get audit logs
+  href: audit-logs.md
+- name: Pause, revoke, and delete CA
+  href: delete-ca.md

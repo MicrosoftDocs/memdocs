@@ -1,0 +1,221 @@
+---
+title: Create device compliance policies in Microsoft Intune
+description: Create device compliance policies for Microsoft Intune.
+ms.date: 12/13/2024
+ms.topic: how-to
+ms.reviewer: ilwu
+ms.collection:
+- M365-identity-device-management
+- compliance
+- sub-device-compliance
+---
+
+# Create a compliance policy in Microsoft Intune
+
+Device compliance policies are a key feature when using Intune to protect your organization's resources. In Intune, you can create rules and settings that devices must meet to be considered compliant, such as a minimum OS version. If the device isn't compliant, you can block access to data and resources by using [Conditional Access](../conditional-access-integration/overview.md).
+
+You can also take actions for noncompliance, such as sending a notification email to the user. For an overview of what compliance policies do, and how they're used, see [get started with device compliance](./overview.md).
+
+This article:
+
+- Lists the prerequisites and steps to create a compliance policy.
+- Shows you how to assign the policy to your user and device groups.
+- Describes other features, including scope tags to "filter" your policies, and steps you can take on devices that aren't compliant.
+- Lists the check-in refresh cycle times when devices receive policy updates.
+
+## Requirements  
+
+[!INCLUDE [platform](../../includes/requirements/platform.md)]  
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Microsoft Intune subscription 
+> - If you use Conditional Access, then you need Microsoft Entra ID P1 or P2 edition. [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Microsoft Entra ID.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+
+:::column-end:::
+:::column span="3":::
+
+> - Android device administrator
+> - Android AOSP
+> - Android Enterprise
+> - iOS
+> - Linux - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+> - macOS
+> - Windows
+
+:::column-end:::
+:::row-end:::
+
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Enroll devices in Intune (required to see the compliance status)
+> - Enroll devices to one user, or enroll without a primary user. Single devices can't be enrolled to multiple users.
+
+:::column-end:::
+:::row-end:::
+
+In addition to compliance settings that are built in to Intune, the following platforms support adding custom compliance settings to compliance policies:
+
+- Linux
+    - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+    - RedHat Enterprise Linux 9 or 10  
+- Windows
+
+Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
+
+For more information about using custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](./custom-settings.md).
+
+## Create the policy
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. Go to **Devices**.
+1. Under **Manage devices**, select **Compliance**. Then choose **Create policy**.
+
+1. Select a **Platform** for this policy from the following options:
+   - **Android device administrator**
+   - **Android (AOSP)**
+   - **Android Enterprise**
+   - **iOS/iPadOS**
+   - **Linux** - (Ubuntu Desktop, version 24.04 LTS or 26.04 LTS, RedHat Enterprise Linux 9, or RedHat Enterprise Linux 10)
+   - **macOS**
+   - **Windows 10 and later**
+   - **Windows 8.1 and later**
+
+
+    For *Android Enterprise*, also select a **Profile type**. Your options:
+     - **Fully managed, dedicated, and corporate-owned work profile**
+     - **Personally-owned work profile**
+
+    Then select **Create** to open the configuration page.
+
+1. On the **Basics** tab, enter a **Name** that helps you identify this policy later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
+
+   Optionally, enter a **Description** for the policy.
+
+1. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
+   - [Android device administrator](./ref-android-administrator-settings.md)
+   - [Android (AOSP)](./ref-android-aosp-settings.md)
+   - [Android Enterprise](./ref-android-enterprise-settings.md)
+   - [iOS/iPadOS](./ref-ios-ipados-settings.md)
+   - [Linux](./ref-linux-settings.md)
+   - [macOS](./ref-macos-settings.md)
+   - [Windows 8.1 and later](./ref-windows-8-1-settings.md)
+   - [Windows](./ref-windows-settings.md)
+
+1. Optionally, add custom settings for supported platforms.
+
+   > [!TIP]
+   > This step is optional and supported for the following platforms:
+   >
+   > - Linux
+   >   - Ubuntu Desktop, version 24.04 LTS or 26.04 LTS
+   >   - RedHat Enterprise Linux 9 or 10
+   > - Windows 
+   > Before you can add custom settings to a policy, upload a detection script to Intune, and have a JSON file that defines the settings you want to use for compliance. For more information, see [Custom compliance settings](./custom-settings.md).
+
+   On the **Compliance settings** page, expand the **Custom Compliance** category:
+
+   **For Windows**:
+   1. On the *Compliance settings* page, expand **Custom Compliance** and set *Custom compliance* to **Require**.
+   1. For *Select your discovery script*, select **Click to select**, and then enter the name of a script that you previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy. Choose **Select** to continue to the next step.
+   1. For *Upload and validate the JSON file with your custom compliance settings*, select the folder icon, and then find and add the JSON file for Windows that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](./create-custom-json.md).
+
+   **For Linux**:
+   1. On the *Compliance settings* page, select **Add settings** to open the **Settings picker**.
+   1. Select **Custom Compliance**. Then close the settings picker.
+   1. Switch **Require Custom Compliance** to **True**.
+   1. For **Select your discovery script**, select **Select a script**. Then select a script that you previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy.
+   1. For **Select your rules file**, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](./create-custom-json.md).
+
+   Wait while Intune validates the JSON. Problems that need to be fixed appear onscreen. After validation of the JSON contents, the rules from the JSON appear in table format.
+
+1. On the **Actions for noncompliance** tab, select a sequence of actions to apply automatically to devices that don't meet this compliance policy.
+
+   You can add multiple actions, and configure schedules and details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
+
+   For information about the actions you can configure, see [Add actions for noncompliant devices](./configure-noncompliance-actions.md), including how to create notification emails to send to your users.
+
+   Another example includes the use of Locations where you add at least one location to a compliance policy. In this case, the default action for noncompliance applies when you select at least one location. If the device isn't connected to any of the selected locations, it's considered not compliant. You can configure the schedule to give your users a grace period, such as one day.
+
+1. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies.
+
+   For information on using scope tags, see [Use scope tags to filter policies](../../fundamentals/role-based-access-control/scope-tags.md).
+
+1. On the **Assignments** tab, assign the policy to your groups.
+
+   Select **Add groups**, and then assign the policy to one or more groups. The policy applies to these groups when you save the policy after the next step.
+
+   Policies for Linux don't support user-based assignments and can only be assigned to device groups.
+
+1. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.
+
+    Intune evaluates the users or devices targeted by your policy for compliance when they check in with Intune.
+
+## Refresh cycle times
+
+Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals) lists the estimated refresh times.
+
+At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
+
+### Assign an InGracePeriod status
+
+The InGracePeriod status for a compliance policy is a value. This value is determined by the combination of a device's grace period, and a device's actual status for that compliance policy.
+
+Specifically, if a device has a NonCompliant status for an assigned compliance policy, and:
+
+- The device has no grace period assigned to it, then the assigned value for the compliance policy is NonCompliant
+- The device has a grace period that's expired, then the assigned value for the compliance policy is NonCompliant
+- The device has a grace period that's in the future, then the assigned value for the compliance policy is InGracePeriod
+
+The following table summarizes these points:
+
+|Actual compliance status|Value of assigned grace period|Effective compliance status|
+|---------|---------|---------|
+|NonCompliant |No grace period assigned |NonCompliant |
+|NonCompliant |Yesterday's date|NonCompliant|
+|NonCompliant |Tomorrow's date|InGracePeriod|
+
+For more information about monitoring device compliance policies, see [Monitor Intune Device compliance policies](./monitor-policy.md).
+
+### Assign a resulting compliance policy status
+
+If a device has multiple compliance policies, and the device has different compliance statuses for two or more of the assigned compliance policies, then a single resulting compliance status is assigned. This assignment is based on a conceptual severity level assigned to each compliance status. Each compliance status has the following severity level:
+
+|Status  |Severity  |
+|---------|---------|
+|Unknown     |1|
+|NotApplicable     |2|
+|Compliant|3|
+|InGracePeriod|4|
+|NonCompliant|5|
+|Error|6|
+
+When a device has multiple compliance policies, Intune assigns the highest severity level of all the policies to that device.
+
+For example, a device has three compliance policies assigned to it: one Unknown status (severity = 1), one Compliant status (severity = 3), and one InGracePeriod status (severity = 4). The InGracePeriod status has the highest severity level, so the device is given the InGracePeriod compliance status.  
+
+> [!IMPORTANT]
+> Discovery script output is limited to 2048 characters. If the output exceeds this limit, it may be truncated, resulting in invalid JSON and error 65009 during compliance evaluation. To avoid this, keep outputs concise or split large rule sets across multiple policies.
+
+## Next steps
+
+[Monitor your policies](./monitor-policy.md).

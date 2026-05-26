@@ -1,16 +1,8 @@
 ---
 title: Windows deployment process posters
 description: View and download Windows deployment process flows for Microsoft Configuration Manager and Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
-ms.topic: conceptual
-ms.collection: tier2
+ms.date: 06/13/2025
+ms.topic: install-set-up-deploy
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

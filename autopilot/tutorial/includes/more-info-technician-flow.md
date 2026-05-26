@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
-ms.date: 06/19/2024
-ms.localizationpriority: medium
+ms.date: 06/13/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -18,4 +12,4 @@ Headings are driven by article context. -->
 
 For more information on the technician flow of a Windows Autopilot for pre-provisioned deployment, see the following articles:
 
-- [Technician flow](/autopilot/pre-provision#technician-flow).
+- [Technician flow](../../pre-provision.md#technician-flow).

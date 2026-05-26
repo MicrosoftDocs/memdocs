@@ -1,0 +1,36 @@
+items:
+- name: Microsoft Intune
+  tocHref: /intune/
+  topicHref: /intune/index
+  items:
+  - name: Configuration Manager
+    tocHref: /intune/configmgr/
+    topicHref: /intune/configmgr/
+
+- name: Microsoft Intune
+  tocHref: /copilot/security/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /defender-endpoint/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /microsoft-365/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /surface/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /windows-365/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /windows/deployment/windows-autopatch/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /troubleshoot/mem/
+  topicHref: /intune/index
