@@ -10,19 +10,17 @@ ms.collection:
 - sub-device-compliance
 ---
 
-# Device Compliance settings for Android device administrator in Intune
+# Device compliance settings for Android device administrator in Intune
 
-This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
-
-For assistance in configuring compliance policy, see [Use compliance policies to set rules for devices you manage with Intune](./overview.md).
+This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as noncompliant, set an allowed threat level, enable Google Play Protect, and more.
 
 This feature applies to:
 
 - Android device administrator
 
-As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](./overview.md).
-
  [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
+
+Settings in this article are organized by the sections that appear in the admin center when you create a compliance policy.
 
 ## Before you begin
 
@@ -32,14 +30,14 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 - **Require the device to be at or under the machine risk score**
 
-  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score are marked as noncompliant.
   - **Not configured** (*default*)
   - **Clear**
   - **Low**
   - **Medium**
   - **High**
 
-## Device Health
+## Device health
 
 - **Devices managed with device administrator**  
   *Device administrator* capabilities are superseded by Android Enterprise.
@@ -48,13 +46,13 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Block** - Blocking device administrator guides users to move to Android Enterprise Personally Owned and Corporate Owned Work Profile management to regain access.
 
 - **Rooted devices**  
-  Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and above.)
+  Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and later.)
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Block** - Mark rooted devices as not compliant.
+  - **Block** - Mark rooted devices as noncompliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  Use this setting to take the risk assessment from a connected Mobile Threat Defense service as a condition for compliance.
+  Use this setting to take the risk assessment from a connected mobile threat defense service as a condition for compliance.
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, as the device can't have any threats. If the device is detected with any level of threats, the device is evaluated as noncompliant.
@@ -65,10 +63,10 @@ As an Intune administrator, use these compliance settings to help protect your o
 ### Google Play Protect
 
 > [!IMPORTANT]
-> Devices operating in countries/regions where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
+> Devices operating in countries or regions where Google Mobile Services aren't available fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
 - **Google Play Services is configured**  
-  Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
+    Google Play services enables security updates and is a base-level dependency for many security features on certified-Google devices.
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require that the Google Play services app is installed and enabled.
@@ -76,7 +74,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 - **Up-to-date security provider**
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
-  - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
+  - **Require** - Require that an up-to-date security provider protects a device from known vulnerabilities.
 
 - **Threat scan on apps**
 
@@ -94,23 +92,23 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Check basic integrity & device integrity**
 
 > [!NOTE]
-> To configure Google Play Protect settings using app protection policies, see [Intune app protection policy settings](../../app-management/protection/ref-settings-android.md#conditional-launch) on Android.
+> To configure Google Play Protect settings by using app protection policies, see [Intune app protection policy settings](../../app-management/protection/ref-settings-android.md#conditional-launch) on Android.
 
-## Device Properties
+## Device properties
 
-### Operating System Version
+### Operating system version
 
 - **Minimum OS version**  
-  When a device doesn't meet the minimum OS version requirement, the devices is reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
+  When a device doesn't meet the minimum OS version requirement, the device is reported as noncompliant. A link with information about how to upgrade is shown. The end user can choose to upgrade their device, and then get access to company resources.
 
   *By default, no version is configured*.
 
 - **Maximum OS version**  
-  When a device is using an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
+  When a device uses an OS version later than the version specified in the rule, access to company resources is blocked. The user is asked to contact their IT admin. Until a rule is changed to allow the OS version, this device can't access company resources.
 
   *By default, no version is configured*.
 
-## System Security
+## System security
 
 ### Encryption
 
@@ -120,18 +118,18 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Encrypt data storage on your devices. Devices are encrypted when you choose the **Require a password to unlock mobile devices** setting.
 
-### Device Security
+### Device security
 
 - **Block apps from unknown sources**  
-  *Supported on Android 4.0 to Android 7.x. Not supported by Android 8.0 and later*
+  *Supported on Android 4.0 to Android 7.x. Not supported by Android 8.0 and later.*
 
-  - **Not configured** (*default*) - this setting isn't evaluated for compliance or noncompliance.
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Block devices with **Security > Unknown Sources** enabled sources (*supported on Android 4.0 through Android 7.x. Not supported on Android 8.0 and later.*).
 
-  To side-load apps, unknown sources must be allowed. If you're not side-loading Android apps, then set this feature to **Block** to enable this compliance policy.
+  To sideload apps, unknown sources must be allowed. If you're not sideloading Android apps, set this feature to **Block** to enable this compliance policy.
 
   > [!IMPORTANT]
-  > Side-loading applications require that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not side-loading Android apps on devices.
+  > Sideloading applications requires that the **Block apps from unknown sources** setting is enabled. Enforce this compliance policy only if you're not sideloading Android apps on devices.
 
 - **Company portal app runtime integrity**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
@@ -150,7 +148,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 - **Minimum security patch level**  
   *(Supported on Android 8.0 or later)*
 
-  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
+  Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. Enter the date in the `YYYY-MM-DD` format.
 
   *By default, no date is configured*.
 
@@ -162,13 +160,13 @@ As an Intune administrator, use these compliance settings to help protect your o
 - **Maximum minutes of inactivity before password is required (Samsung KNOX Android 12 and earlier)​**  
   This setting specifies the length of time without user input after which the mobile device screen is locked. Options range from *1 Minute* to *8 Hours*. The recommended value is *15 Minutes*.
 
-  - **Not configured** *(default)*
+  - **Not configured** (*default*)
 
 - **Require a password to unlock mobile devices**
 
   This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: *Require* (This compliance check is supported for devices with OS versions Android 4.0 and above, or KNOX 4.0 and above.)
 
-  - **Not configured** *(default)* - This setting isn't evaluated for compliance or noncompliance.
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device. When set to **require**, also configure:
 
     - **Password complexity**
