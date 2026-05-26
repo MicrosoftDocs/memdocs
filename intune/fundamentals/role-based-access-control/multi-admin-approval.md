@@ -22,7 +22,7 @@ When you use any account in the tenant to make a change to a resource that's pro
 MAA enforcement applies to both interactive (delegated) admin actions and application-authenticated (app-auth) API calls made through the Microsoft Graph API. If your organization uses service principals, automation scripts, or third-party applications to manage Intune resources via the Microsoft Graph API, those calls are also intercepted by MAA when the target resource is protected by an access policy. For details on how to update your automation to work with MAA, see [Use Multi Admin Approval with the Microsoft Graph API](multi-admin-approval-graph-api.md). To exclude specific apps from enforcement, see [Exclude enterprise applications from an access policy](#exclude-enterprise-applications-from-an-access-policy).
 
 > [!TIP]
-> MAA enforcement on app-auth calls applies only to tenants that already have MAA access policies configured. It doesn't enable MAA or change any tenant's enrollment.
+> MAA enforcement on API calls made by automation applies only to tenants that already have MAA access policies configured. It doesn't enable MAA or change any tenant's enrollment.
 
 Intune supports access policies for the following resources:
 
@@ -69,13 +69,13 @@ To create and manage access policies, use an account with one of the following o
 To approve or reject MAA requests submitted by other admins, an account must meet all of the following requirements:
 
 1. **Approver group membership**: The account must be a member of the approver group that's assigned to the access policy for the specific resource type.
-1. **Intune role permission**: The account must have the resource-specific Read permissions for the policy type they're approving.
+1. **Intune role permission**: The approver account must have the resource-specific *Read* permission for the policy type they're approving. For example, to approve a request for a device delete action, the approver must have *ManagedDevices/Read*. For a full list of available permissions, see [Custom role permissions](create-custom-role.md#custom-role-permissions).
 1. **RBAC role assignment for the group**: The approver security group itself must be added as a member group to at least one Intune role assignment. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
    > [!IMPORTANT]
    > The approver group has two requirements:
    > - It must be a **security group**. Distribution lists, Microsoft 365 groups, and mail-enabled security groups aren't supported and silently fail to resolve approver membership.
-   > - It must be directly assigned to an Intune role as a member group. Intune role permissions held by individual members, whether through other groups or direct user assignments, don't satisfy this requirement.
+   > - It must be directly assigned to an RBAC role in Intune as a member group. Intune role permissions held by individual members, whether through other groups or direct user assignments, don't satisfy this requirement.
 
 ### Role 3: Change requestor
 
@@ -116,7 +116,7 @@ If a request isn't processed further within 3 days, it becomes **Expired**, and 
 
 1. On *Approvers*, select **Add groups** and then select a group as the group of approvers for this policy. More complex configurations that exclude groups aren't supported.
 
-1. On *Exclusions*, optionally select **Add enterprise applications** to exclude specific enterprise applications from MAA enforcement for this policy. Excluded applications can modify protected resources without going through the approval workflow. For more information, see [Exclude enterprise applications from an access policy](#exclude-enterprise-applications-from-an-access-policy).
+1. On *Exclusions*, optionally select **Add enterprise applications** to exclude specific enterprise applications that use app-auth tokens from MAA enforcement for this policy. Excluded applications can modify protected resources without going through the approval workflow. For more information, see [Exclude enterprise applications from an access policy](#exclude-enterprise-applications-from-an-access-policy).
 
 1. On *Review + submit for approval*, review the policy summary including the basics, approvers, and any exclusions. Enter a *Business justification*, and then select **Submit for approval**.
 
@@ -127,6 +127,9 @@ If a request isn't processed further within 3 days, it becomes **Expired**, and 
 ### Exclude enterprise applications from an access policy
 
 When you create or edit an access policy, you can exclude specific enterprise applications from MAA enforcement for that policy. Excluded applications can modify the protected resource type without going through the approval workflow.
+
+> [!IMPORTANT]
+> Exclusions apply only to app-auth (application-authenticated) calls. Calls made with delegated authentication are always subject to MAA enforcement, even if the application is excluded.
 
 > [!WARNING]
 > Excluding an application bypasses MAA protection for the affected resource type. Each exclusion creates a gap in your approval workflow that could be exploited if the excluded application is compromised. Only exclude applications when necessary, and review your exclusion list regularly to remove entries that are no longer needed.

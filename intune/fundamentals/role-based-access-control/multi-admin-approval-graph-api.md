@@ -123,7 +123,9 @@ The request completes successfully and the resource is created.
 
 ## Exclude an application from MAA enforcement
 
-If you can't immediately update your application to include the approval workflow, you can exclude it from Azure Attestation enforcement in the access policy. To configure an exclusion, edit the access policy for the workload your app calls and add the application on the **Exclusions** tab. A second administrator must approve the change before the exclusion takes effect.
+If you can't immediately update your application to include the approval workflow, you can exclude it from MAA enforcement in the access policy. To configure an exclusion, edit the access policy for the workload your app calls and add the application on the **Exclusions** tab. A second administrator must approve the change before the exclusion takes effect.
+
+Exclusions apply only to app-auth (application-authenticated) calls made by the excluded service principal. Interactive (delegated) admin actions on the same protected resources still require MAA approval.
 
 For more information about exclusions, including scope, limits, and security considerations, see [Exclude enterprise applications from an access policy](multi-admin-approval.md#exclude-enterprise-applications-from-an-access-policy).
 
@@ -135,7 +137,7 @@ MAA-related events — including approve, block, pass, exclusion add, and exclus
 
 ### Why are my automation scripts failing?
 
-If your automation uses app-only tokens (client-credentials flow) to call Microsoft Graph and targets resources protected by an MAA access policy, those calls are now intercepted by the MAA approval workflow. Update your scripts to include the justification and approval headers described in this article, or [exclude the application](#exclude-an-application-from-maa-enforcement) from the access policy.
+If your automation calls Microsoft Graph and targets resources protected by an MAA access policy, those calls are intercepted by the MAA approval workflow regardless of whether the script uses delegated or app-only authentication. Update your scripts to include the justification and approval headers described in this article. If your script uses app-only tokens (client-credentials flow), you can also [exclude the application](#exclude-an-application-from-maa-enforcement) from the access policy.
 
 ### Does MAA affect read-only API calls?
 
