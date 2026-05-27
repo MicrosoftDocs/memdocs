@@ -145,6 +145,9 @@ The following table lists the minimum firewall rules required for this deploymen
 | `SiteServer` (site server) | ↔ | `DMZ-MP` (management point) | TCP | 445 | SMB (file transfer) |
 | `DMZ-MP` (management point) | → | `SQLServer` (site database) | TCP | 1433 | SQL Server (MP database connection) |
 
+> [!TIP]
+> If your SQL Server uses a named instance or a non-default port, update the SQL Server row in the table accordingly. For more information about all ports that Configuration Manager uses, see [Ports used in Configuration Manager](../../../plan-design/network/configure-firewalls-ports-domains.md).
+
 The following connections are required so the management point can authenticate to domain controllers in the CORP forest, and vice versa. DNS ports aren't included.
 
 | Source | Direction | Destination | Protocol | Port | Purpose |
@@ -155,13 +158,13 @@ The following connections are required so the management point can authenticate 
 | `DMZ-MP` (management point) | → | `DC.corp.contoso.com` (CORP Domain Controller) | TCP | 88 | Kerberos authentication |
 
 > [!TIP]
-> If your SQL Server uses a named instance or a non-default port, update the SQL Server row in the table accordingly. For more information about all ports that Configuration Manager uses, see [Ports used in Configuration Manager](../../../plan-design/network/configure-firewalls-ports-domains.md).
+> Both the site server and the management point must be able to locate a Kerberos Key Distribution Center (KDC) in the other domain. To do this, each server must be able to resolve DNS SRV records such as `_kerberos._tcp.dc._msdcs.corp.contoso.com` and `_kerberos._tcp.dc._msdcs.branch.fabrikam.com`.
 
 ## <a name="BKMK_mp_step4"></a> Step 4: Install management point prerequisites on DMZ-MP
 
 Before you add the management point role, install the required Windows features and supporting components on `DMZ-MP`. For the complete and current list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#management-point).
 
-For this example, prepare `DMZ-MP` with these Windows Roles and Features:
+For this example, prepare `DMZ-MP` with these Windows roles and features:
 
 - **Web Server (IIS)** role and auto-selected features.
 - **.NET Framework 3.5** feature.
