@@ -23,7 +23,7 @@ This article explains how the integration works, what capabilities it enables fo
 
 At a high level, the integration for devices enrolled with Intune works as follows. For detailed instructions, see [Configure Microsoft Defender for Endpoint in Intune](./configure-integration.md):
 
-1. [Establish a service-to-service connection](./configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint.
+1. [Establish a service-to-service connection](./configure-integration.md#connect-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint.
 2. [Onboard devices](./configure-integration.md#onboard-devices) with Microsoft Defender for Endpoint using Intune policy.
 3. [Create a device compliance policy](./configure-integration.md#create-and-assign-compliance-policy-to-set-device-risk-level) to set acceptable risk levels.
 4. [Configure Conditional Access policy](./configure-integration.md#create-a-conditional-access-policy) to block noncompliant devices.

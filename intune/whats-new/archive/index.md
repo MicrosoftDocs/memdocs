@@ -71,7 +71,7 @@ We've updated the Vulnerability Remediation Agent for Security Copilot, adding t
 
   When using granular RBAC configurations, ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../copilot/agents/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../copilot/agents/vulnerability-remediation-agent.md). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent's identity won't affect the agent's run history, which remains available.
 
