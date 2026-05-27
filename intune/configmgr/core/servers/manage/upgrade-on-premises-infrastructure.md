@@ -46,7 +46,10 @@ To upgrade a server, use the upgrade procedures provided by the OS you're upgrad
 Use the steps in this section for any of the upgrade scenarios listed above.
 
 > [!IMPORTANT]
-> All site systems that run the Software Update Point (SUP) role must use the same version of Windows Server to communicate correctly during synchronization. This requirement also applies to Central Administration sites and primary site servers that don’t host the SUP role but have the WSUS Administration Tools installed to communicate with a remote SUP.
+> Upgrade software update points (SUPs) from the top-level site downward. Older WSUS versions can synchronize from newer WSUS versions, but newer WSUS versions can't synchronize from older WSUS versions.
+> If you have multiple SUPs in the same site, use this order:
+> 1. If the site server doesn't host a SUP, upgrade the site server only after you upgrade all other SUPs in the hierarchy.
+> 1. If the site server hosts a SUP, upgrade all SUPs as quickly as possible. Synchronization fails for any SUP in the site that isn't running the same version as the SUP on the site server.
 
 #### Before upgrade
 
