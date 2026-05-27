@@ -302,6 +302,7 @@ After the wizard finishes, verify that the management point installed successful
 
 - [Add site system roles](add-site-system-roles.md)
 - [Install site system roles](install-site-system-roles.md)
+- [Site and site system prerequisites for Configuration Manager](../../../plan-design/configs/site-and-site-system-prerequisites.md)
 - [Communications across Active Directory forests](../../../plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)
 - [Accounts used in Configuration Manager](../../../plan-design/hierarchy/accounts.md)
 - [PKI certificate requirements for Configuration Manager](../../../plan-design/network/pki-certificate-requirements.md)
