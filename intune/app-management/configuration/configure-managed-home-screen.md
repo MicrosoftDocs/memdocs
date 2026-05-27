@@ -193,6 +193,8 @@ The following table lists the Managed Home Screen available configuration keys, 
 |     Configure offline app access    |     bundleArray    |     See **Enter JSON Data** section of this document    |     Select which apps are available when users can't sign in due to network issues. Users must sign in once network access returns. This setting can only be used if **Enable sign in** is set to true.    |     ✔️          |
 |     Offline work time before required sign-in    |     Integer    |     60    |     Set the time (in seconds) users can stay offline after the network is detected before they must sign in. This setting only applies when **Configure offline app access** is set to true for at least one application.    |     ❌          |
 |     Configure app access without sign in    |     bundleArray    |     See **Enter JSON Data** section of this document    |     Select which apps are available to users from the sign-in screen before signing in to Managed Home Screen. These apps are available via entry point on the top bar regardless of network status. This setting can only be used if **Enable sign in** is set to true.    |     ✔️          |
+| Silence apps while Managed Home Screen requires authentication | bool | FALSE | Silence apps whenever MHS is prompting the user for authentication, such as during the sign-in or session PIN screens. Silenced apps can't start activities, show notifications, appear in recent apps, or trigger alerts like toasts, dialogs, or ringing. Apps are automatically unsilenced when the device is unlocked. | ❌ |
+| Exclude these apps from the silence setting | bundleArray | See **Enter JSON Data** section of this document | Specify apps to exclude from silencing while MHS is requiring authentication. These apps can start activities, show notifications, appear in recent apps, or trigger alerts like toasts, dialogs, or ringing while the device is locked. You can specify the apps by entering the app package name of the apps that you want to be excluded. | ❌ |
 
 > [!NOTE]
 > Managed Home Screen uses the exact alarm permission to do the following actions:
@@ -752,6 +754,23 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "show_ringtone_selector",
             "valueBool": true
+        },
+        {
+            "key": "silence_apps_while_auth_required",
+            "valueBool": true
+        },
+        {
+            "key": "exclude_list_from_silence_setting",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.emmx"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
