@@ -89,7 +89,7 @@ Use two dedicated user accounts. Configure both accounts with non-expiring passw
 
 5. Close **Active Directory Users and Computers**.
 
-### To add the installation account to the local Administrators group on `DMZ-MP`
+### To add the installation account to the local Administrators group on management point server
 
 1. Sign in to `DMZ-MP` using a local or domain administrator account.
 
@@ -160,7 +160,7 @@ The following connections are required so the management point can authenticate 
 > [!TIP]
 > Both the site server and the management point must be able to locate a Kerberos Key Distribution Center (KDC) in the other domain. To do this, each server must be able to resolve DNS SRV records such as `_kerberos._tcp.dc._msdcs.corp.contoso.com` and `_kerberos._tcp.dc._msdcs.branch.fabrikam.com`.
 
-## <a name="BKMK_mp_step4"></a> Step 4: Install management point prerequisites on DMZ-MP
+## <a name="BKMK_mp_step4"></a> Step 4: Install prerequisites on management point server
 
 Before you add the management point role, install the required Windows features and supporting components on `DMZ-MP`. For the complete and current list, see [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#management-point).
 
@@ -172,17 +172,7 @@ For this example, prepare `DMZ-MP` with these Windows roles and features:
 - **IIS Server Extension** (in **Background Intelligent Transfer Service (BITS)**). Select the feature and all automatically selected options.
 - **Web Server (IIS)** role services: **Windows Authentication**, **ISAPI Extensions**, **IIS 6 Metabase Compatibility**, and **IIS 6 WMI Compatibility**
 
-> [!NOTE]
-> .NET Framework 3.5 isn't installed by default, and on modern Windows Server versions the feature payload is removed from the base OS image.
->
-> For offline environments, you can install .NET Framework 3.5 by using either method:
->
-> - **PowerShell**: Mount Windows Server installation media and run `Install-WindowsFeature Net-Framework-Core -Source D:\sources\sxs` (replace `D:` with your media drive).
-> - **Add Roles and Features Wizard**: In **Server Manager** > **Add Roles and Features**, select **.NET Framework 3.5 Features**. On **Confirm installation selections**, choose **Specify an alternate source path** and enter `D:\sources\sxs`.
->
-> Use installation media that matches the same Windows Server version as `DMZ-MP`. For more information, see [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard) and [Enable .NET Framework 3.5 by using PowerShell](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-windows-powershell).
-
-### To install the required Windows features on DMZ-MP
+### To install the required Windows features
 
 1. Sign in to `DMZ-MP` using a local or domain administrator account.
 
@@ -194,9 +184,19 @@ For this example, prepare `DMZ-MP` with these Windows roles and features:
    Install-WindowsFeature NET-Framework-Features, NET-Framework-Core, BITS, BITS-IIS-Ext, Web-Server, Web-WebServer, Web-Common-Http, Web-Default-Doc, Web-Dir-Browsing, Web-Http-Errors, Web-Static-Content, Web-Health, Web-Http-Logging, Web-Log-Libraries, Web-Request-Monitor, Web-Http-Tracing, Web-Performance, Web-Stat-Compression, Web-Security, Web-Filtering, Web-Windows-Auth, Web-App-Dev, Web-ISAPI-Ext, Web-Http-Redirect, Web-Mgmt-Tools, Web-Mgmt-Console, Web-Mgmt-Compat, Web-Metabase, Web-WMI -IncludeManagementTools
    ```
 
+> [!NOTE]
+> The .NET Framework 3.5 feature payload is removed from the base OS image on modern Windows Server versions.
+>
+> For offline environments, you can install .NET Framework 3.5 by using either method:
+>
+> - **PowerShell**: Mount Windows Server installation media and run `Install-WindowsFeature Net-Framework-Core -Source D:\sources\sxs` (replace `D:` with your media drive).
+> - **Add Roles and Features Wizard**: In **Server Manager** > **Add Roles and Features**, select **.NET Framework 3.5 Features**. On **Confirm installation selections**, choose **Specify an alternate source path** and enter `D:\sources\sxs`.
+>
+> Use installation media that matches the same Windows Server version as `DMZ-MP`. For more information, see [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard) and [Enable .NET Framework 3.5 by using PowerShell](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-windows-powershell).
+
 4. Restart `DMZ-MP` if Windows prompts for a restart.
 
-## <a name="BKMK_mp_step5"></a> Step 5: Install the management point role on DMZ-MP
+## <a name="BKMK_mp_step5"></a> Step 5: Install the management point role
 
 This procedure installs the management point role on `DMZ-MP` by using the **Create Site System Server** wizard. The wizard lets you specify the cross-forest accounts and settings required by the role.
 
@@ -250,14 +250,12 @@ After the wizard finishes, verify that the management point installed successful
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace. Expand **System Status**, and then choose **Component Status**.
 
-2. Look for the **SMS_MP_CONTROL_MANAGER** component on `DMZ-MP.branch.fabrikam.com`. In the **Status** column, confirm that the status is **OK**.
+2. Locate the **SMS_MP_CONTROL_MANAGER** component on `DMZ-MP.branch.fabrikam.com`. In the **Status** column, confirm that the status is **OK**.
 
    > [!NOTE]
-   > It can take up to 30 minutes after the wizard closes for the management point to appear as healthy. If the status shows **Warning** or **Critical**, check the log files as described below.
+   > It can take up to 30 minutes after the wizard closes for the management point to appear healthy. If the status is **Warning** or **Critical**, right-click the component, choose **Show Messages** > **All**, and review the failure details. Then review the log files described below.
 
-3. In the **Administration** workspace, expand **Site Configuration** > **Servers and Site System Roles**, and then choose **DMZ-MP.branch.fabrikam.com**.
-
-4. In the lower pane, confirm that the **Management point** role is listed and that the **Status** is **OK**.
+3. Repeat the check for the **SMS_MP_FILE_DISPATCH_MANAGER** component.
 
 ### To verify the management point installation by reviewing log files
 
@@ -267,7 +265,7 @@ After the wizard finishes, verify that the management point installed successful
 
 3. Review the following log files on `DMZ-MP` for messages related to management point installation and configuration:
 
-   | Log file | Location on DMZ-MP | What to look for |
+   | Log file | Location on `DMZ-MP` | What to look for |
    |----------|------------------|-----------------|
    | `MPSetup.log` | `\SMS\Logs` | High-level prerequisite and MP installation messages: in particular, `CcmSetup`, `msoledbsql.msi`, IIS-ASPNET45 feature and `mp.msi`. |
    | `MPMSI.log` | `\SMS\Logs` | Details about MP installation and MSI rollback state. If installation fails with error `1603`, search this file for the detailed error message. |
@@ -276,7 +274,7 @@ After the wizard finishes, verify that the management point installed successful
 
 4. After the MP is installed, the `SMS_CCM` folder should appear on the same drive as `SMS`. This folder might not appear if the client was installed before the management point. In that case, review the `CCM\Logs` folder for the installed client. Then review the following log files on `DMZ-MP` for messages related to management point communication with the site server and site database:
 
-   | Log file | Location on DMZ-MP | What to look for |
+   | Log file | Location on `DMZ-MP` | What to look for |
    |----------|------------------|-----------------|
    | `MpControl.log` | `\SMS\Logs` | Regular Management Point and User Service availability checks. The successful check resembles `Call to HttpSendRequestSync succeeded for port 443 with status code 200, text: OK`. |
    | `BGBServer.log` | `\SMS\Logs` | Client Notification (fast channel) server reporting. Typical entries include the number of connected clients, such as `Total online clients: 100 (TCP: 99 HTTP: 1)~~`. |
