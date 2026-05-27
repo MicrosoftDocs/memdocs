@@ -294,7 +294,7 @@ After the wizard finishes, verify that the management point installed successful
 
 2. Review `%Windir%\CCMSetup\Logs\CCMSetup.log` to confirm the successful installation.
 
-3. Review `\SMS_CCM\Logs\ClientIDManagerStartup.log` to confirm successful client registration. Look for messages similar to `[RegTask] - Client is registered. Server assigned ClientID is GUID:0B1F5036-9CE1-41A1-B417-063582728464. Approval status 1`.
+3. Review `\SMS_CCM\Logs\ClientIDManagerStartup.log` to confirm successful client registration. Look for messages similar to `[RegTask] - Client is registered. Server assigned ClientID is GUID:00000000-0000-0000-0000-000000000000. Approval status 1`.
 
 4. Verify that the client appears in the Configuration Manager console and shows an **Online** icon. Add the **Management Point** column to the console view to confirm that the client is assigned to `DMZ-MP.branch.fabrikam.com`.
 
