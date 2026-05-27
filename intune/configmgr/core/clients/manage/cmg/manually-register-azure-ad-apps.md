@@ -180,7 +180,7 @@ When you select **Import** from the _Server app_ window, it opens the _Import ap
 - **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
 - **Secret Key**: Copy the secret key when you register the app in Microsoft Entra ID and create the secret key.
 - **Secret Key Expiry**: Specify the same date as from the Azure portal.
-- **App ID URI**: The value is the **Application ID URI** of the app registration entry in the Microsoft Entra admin center. The format is similar to `https://ConfigMgrService`.
+- **App ID URI**: The value is the **Application ID URI** of the app registration entry in the Microsoft Entra admin center. The format is similar to `https://contoso.onmicrosoft.com/ConfigMgrService`.
 
 After entering the information, select **Verify**. Then select **OK** to close the _Import apps_ window.
 
