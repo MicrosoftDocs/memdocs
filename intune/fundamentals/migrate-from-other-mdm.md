@@ -58,7 +58,7 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
 Before you move from Basic Mobility and Security device management to Intune device management:
 
-1. Make sure you have enough [Intune licenses](./licensing/index.md) to cover all your users managed by Basic Mobility and Security. If you don't have enough licenses, group your users by priority and assign licenses in stages.
+1. Make sure you have enough [Intune licenses](./licensing.md) to cover all your users managed by Basic Mobility and Security. If you don't have enough licenses, group your users by priority and assign licenses in stages.
 1. Review the existing Basic Mobility and Security policies and [remove any policies](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-turn-off) that you no longer need. Deleting unneeded policies reduces the number of new Intune policies you create.
 
     The following articles list and describe the Basic Mobility and Security policies:
@@ -120,7 +120,7 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
     - Assign licenses to **Users**. For more information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
     - Assign licenses to **Groups**. For more information, see [Assign licenses to a group](/microsoft-365/admin/manage/manage-group-licenses).
 
-    For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](./licensing/assign-licenses.md).
+    For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](./assign-licenses.md).
 
 At the next [Intune device refresh cycle](../device-configuration/troubleshoot-device-profiles.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
 

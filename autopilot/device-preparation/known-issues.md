@@ -59,7 +59,7 @@ As a workaround, select the table header **Allowed Applications** or **Allowed S
 Date added: *October 10, 2024*<br>
 Date updated: *April 10, 2026*
 
-When the [Managed installer policy](/intune/device-configuration/endpoint-security/app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+When the [Managed installer policy](/intune/device-configuration/endpoint-security/manage-app-control) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
 
 > [!NOTE]
 >

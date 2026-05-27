@@ -15,10 +15,6 @@ ms.collection:
 
 # Support approved file elevations for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 This article explains how to use the **support approved** workflow with Endpoint Privilege Management.
 
 Support approved elevations allow you to require approval before an elevation being allowed. You can use the support approved functionality as part of an elevation rule, or as default client behavior. Requests that are submitted require Intune administrators to approve the request on a case-by-case basis.

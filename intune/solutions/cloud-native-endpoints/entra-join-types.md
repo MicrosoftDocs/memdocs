@@ -176,7 +176,7 @@ The cloud solution is to Microsoft Entra Join your endpoints. The endpoints and 
 ## Follow the cloud-native endpoints guidance
 
 1. [Overview: What are cloud-native endpoints?](overview.md)
-2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
+2. [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
 3. 🡺 **Concept: Microsoft Entra joined vs. Hybrid Microsoft Entra joined** (*You are here*)
 4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. [High level planning guide](planning-guide.md)

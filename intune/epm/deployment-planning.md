@@ -13,10 +13,6 @@ ms.collection:
 
 # Plan and Prepare for Endpoint Privilege Management Deployment
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 This article covers the information required to plan for Endpoint Privilege Management (EPM) deployment including requirements, important concepts, security recommendations, and role based access control.
 
 ## Planning Checklist
@@ -35,51 +31,78 @@ This article covers the information required to plan for Endpoint Privilege Mana
 
 ## Prerequisites
 
-✅ Find out what you need for EPM
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../includes/requirements/licensing.md)]
 
-### Licensing
+:::column-end:::
+:::column span="3":::
 
-Endpoint Privilege Management requires an add-on license beyond the *Microsoft Intune Plan 1* license. You can choose between a stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
+>[!INCLUDE [additional-licensing](../includes/licensing/additional-licensing.md)]
+:::column-end:::
+:::row-end:::
 
-### Requirements
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-Endpoint Privilege Management has the following requirements:
+:::column-end:::
+:::column span="3":::
 
-- Microsoft Entra joined *or* Microsoft Entra hybrid joined
-- Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../configmgr/comanage/overview.md) devices (no workload requirements)
-- Supported Operating System
-- Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management)
-
-
-Endpoint Privilege Management supports the following operating systems:
-
-- Windows 11, version 24H2
-- Windows 11, version 23H2 (22631.2506 or later) with [KB5031455](https://support.microsoft.com/topic/october-31-2023-kb5031455-os-builds-22621-2506-and-22631-2506-preview-6513c5ec-c5a2-4aaf-97f5-44c13d29e0d4)
-- Windows 11, version 22H2 (22621.2215 or later) with [KB5029351](https://support.microsoft.com/topic/august-22-2023-kb5029351-os-build-22621-2215-preview-9af25662-083a-43f5-b3a7-975fe25cc692)
-- Windows 11, version 21H2 (22000.2713 or later) with [KB5034121](https://support.microsoft.com/topic/january-9-2024-kb5034121-os-build-22000-2713-f5847e32-0b71-4151-8190-54d3e36386f0)
-- Windows 10, version 22H2 (19045.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
-- Windows 10, version 21H2 (19044.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
-
-Endpoint Privilege Management supports the following virtual platforms:
-
-- Azure Virtual Desktop (AVD) single-session virtual machines (VMs)
-- Windows 365
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
-
-> [!IMPORTANT]
+>Endpoint Privilege Management supports the following operating systems:
 >
-> - Elevation settings policies report as 'not applicable' for devices that don't run a supported operating system version.
-> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures, including Arm64.
+>- Windows 11, version 24H2
+>- Windows 11, version 23H2 (22631.2506 or later) with [KB5031455](https://support.microsoft.com/topic/october-31-2023-kb5031455-os-builds-22621-2506-and-22631-2506-preview-6513c5ec-c5a2-4aaf-97f5-44c13d29e0d4)
+>- Windows 11, version 22H2 (22621.2215 or later) with [KB5029351](https://support.microsoft.com/topic/august-22-2023-kb5029351-os-build-22621-2215-preview-9af25662-083a-43f5-b3a7-975fe25cc692)
+>- Windows 11, version 21H2 (22000.2713 or later) with [KB5034121](https://support.microsoft.com/topic/january-9-2024-kb5034121-os-build-22000-2713-f5847e32-0b71-4151-8190-54d3e36386f0)
+>- Windows 10, version 22H2 (19045.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
+>- Windows 10, version 21H2 (19044.3393 or later) with [KB5030211](https://support.microsoft.com/topic/september-12-2023-kb5030211-os-builds-19044-3448-and-19045-3448-c0dee353-f025-4f03-bcc1-336f74fb992c)
+>
+>Endpoint Privilege Management supports the following virtual platforms:
+>
+>- Azure Virtual Desktop (AVD) single-session virtual machines (VMs)
+>- Windows 365
+>
+>> [!IMPORTANT]
+>> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+>
+>> [!IMPORTANT]
+>>
+>> - Elevation settings policies report as 'not applicable' for devices that don't run a supported operating system version.
+>> - Endpoint Privilege Management is only compatible with 64-bit Operating System Architectures, including Arm64.
 
-### Government cloud support
+:::column-end:::
+:::row-end:::
 
-Endpoint Privilege Management is supported with the following sovereign cloud environments:
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
-- U.S. Government Community Cloud (GCC) High
-- U.S. Department of Defense (DoD)
+:::column-end:::
+:::column span="3":::
+
+>To use Endpoint Privilege Management, devices must be:
+>
+>- Microsoft Entra joined *or* Microsoft Entra hybrid joined
+>- Enrolled in Intune *or* Microsoft Configuration Manager [co-managed](../configmgr/comanage/overview.md) (no workload requirements)
+>
+>Devices must also have clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/endpoints.md#microsoft-intune-endpoint-privilege-management) for Endpoint Privilege Management.
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+> Specialty device management is supported in the following cloud environments:
+> - Public cloud
+> - Sovereign cloud environments:
+>   - U.S. Government Community Cloud (GCC) High
+>   - U.S. Department of Defense (DoD)
+:::column-end:::
+:::row-end:::
 
 For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/government-service.md).
 

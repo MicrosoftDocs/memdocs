@@ -1,8 +1,9 @@
 ---
 title: Monitor your Endpoint Privilege Management policies for Microsoft Intune
 description: View reports for managed and unmanaged file elevations when you use Endpoint Privilege Management for Microsoft Intune.
-ms.date: 10/20/2025
+ms.date: 05/26/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: mikedano
 ms.subservice: suite
 ms.collection:
@@ -13,14 +14,29 @@ ms.collection:
 
 # Reports for Endpoint Privilege Management
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
+[!INCLUDE [additional-licensing](../includes/licensing/additional-licensing.md)]
 
+With Microsoft Intune Endpoint Privilege Management (EPM), your organization's users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. EPM reports help you monitor both managed and unmanaged file elevations across your environment. For more information about EPM, see [Endpoint Privilege Management overview](./overview.md).
 
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
+## Prerequisites
+
+To view EPM reports in the Microsoft Intune admin center or through the Microsoft Graph API, users must be assigned a role that includes the **Endpoint Privilege Management Policy Authoring > View Reports** permission (also known as `EpmPolicy.ViewReports` in the Graph API).
+
+The following built-in roles include this permission:
+
+- Endpoint Privilege Manager
+- Endpoint Privilege Reader
+- Endpoint Security Manager
+- Read Only Operator
+
+For custom roles, ensure the **View Reports** action is enabled under **Endpoint Privilege Management Policy Authoring**. Users without this permission receive an HTTP 403 response when they attempt to access EPM report data through the `privilegeManagementElevations` endpoint.
+
+> [!NOTE]
+> Previously, users with **Device configurations > Read** permission could access EPM report data. This access now requires the explicit **View Reports** permission described here.
 
 The information available in Endpoint Privilege Management (EPM) reports depends on the *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](./manage-elevation-settings.md), and different devices can have different reporting scope configurations.
 
-EPM reports are found within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**, and available through the Overview tab and the Reports tab. The [**Overview** tab](#overview-dashboard) is a readiness dashboard for moving admin users to standard users. The [**Reports**](#available-reports) tab presents several report tiles for different aspects of EPM, which also help power the readiness dashboard. EPM report data is retained for 30 days. 
+EPM reports are found within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**, and available through the Overview tab and the Reports tab. The [**Overview** tab](#overview-dashboard) is a readiness dashboard for moving admin users to standard users. The [**Reports**](#available-reports) tab presents several report tiles for different aspects of EPM, which also help power the readiness dashboard. EPM report data is retained for 30 days.
 
 The following reports are available from the Report tab:
 
