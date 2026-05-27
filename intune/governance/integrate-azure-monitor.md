@@ -193,6 +193,11 @@ After the action:
 - The Intune **Audit Logs** and **Operational Logs** are sent immediately from Intune to Azure Monitor services.
 - The Intune **Device Compliance Organizational Logs** and **Intune Devices report** data can take up to 48 hours to be sent to Azure Monitor services. Intune sends this data to Azure Monitor services once every 24 hours and this export can happen anytime within each 24-hour period.
 
+> [!NOTE]
+> Intune doesn't guarantee that Device Compliance Organizational Logs or Intune Devices report data will be exported or available at a specific time of day. These exports can occur anytime within each 24-hour export period and remain subject to the documented delivery window. As Microsoft improves the export pipeline, the observed completion time might change.
+>
+>If you depend on exported Intune data for reports, dashboards, or automation, use a consumption schedule that accounts for variable export timing rather than relying on a previously observed completion time.
+
 When Azure Monitor services receive the data, it typically shows in the Azure Monitor service within 30 minutes.
 
 ### What happens if an administrator changes the retention period of a diagnostic setting?
