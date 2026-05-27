@@ -69,7 +69,16 @@ Class SMS_SUPSyncStatus : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Last synchronization state.  
+ Last synchronization state. 
+
+**Possible Values**
+| Value | Status |  
+| ----- | ------ |  
+|6702|Success|
+|6703|Failed|
+|6704|WSUS Synchronization in Progress|
+|6704|ConfigMgr DB Synchronization in Progress|
+
 
  `LastSyncStateTime`  
  Data type: `DateTime`  
