@@ -28,8 +28,6 @@ This article provides an overview of enrollment time grouping, how to configure 
 > Enrollment time grouping is supported on the following platforms:
 >
 > - Android Enterprise
-> - iOS/iPadOS
-> - macOS
 > - tvOS
 > - visionOS
 > - Windows 11
@@ -46,25 +44,9 @@ This article provides an overview of enrollment time grouping, how to configure 
 
 > Enrollment time grouping is supported on devices provisioned via:
 >
-> - [Automated device enrollment for iOS/iPadOS, tvOS, and visionOS](./apple/overview-automated-enrollment-apple.md)
-> - [Automated device enrollment for macOS](./apple/overview-automated-enrollment-macos.md)
+> - [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
 > - [Windows Autopilot device preparation](/autopilot/device-preparation/overview)
 > - [Android Enterprise](android/guide.md)
->
-> For iOS/iPadOS automated device enrollment, enrollment time grouping is supported with the following authentication methods:
->
-> - Enrollment with user affinity:
->   - Setup Assistant with modern authentication
->   - Company Portal
-> - Enrollment without user affinity:
->   - Enroll with Microsoft Entra shared mode
->   - Enroll with shared iPad
->
-> For macOS automated device enrollment, enrollment time grouping is supported with the following authentication methods:
->
-> - Enrollment with user affinity:
->   - Setup Assistant with modern authentication
-> - Enrollment without user affinity
 >
 > For Android Enterprise, enrollment time grouping is supported with the following enrollment policies:
 >
@@ -84,8 +66,7 @@ This article provides an overview of enrollment time grouping, how to configure 
 
 > The permissions you need depend on the platform you're configuring:
 >
-> - iOS/iPadOS, tvOS, and visionOS automated device enrollment: Permissions to create and modify iOS/iPadOS, tvOS, and visionOS enrollment policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
-> - macOS automated device enrollment: Permissions to create and modify macOS enrollment policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
+> - tvOS and visionOS automated device enrollment: Permissions to create and modify tvOS and visionOS enrollment policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**). 
 > - Windows Autopilot: Permissions to create and modify Windows Autopilot device preparation policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
 > - Android Enterprise: Permissions to create and modify Android Enterprise enrollment policies, and the *enrollment time device membership assignment for Android Enterprise* permission (available in custom roles under **Android Enterprise**).
 >
@@ -98,13 +79,7 @@ This article provides an overview of enrollment time grouping, how to configure 
 :::row-end:::  
 
 > [!TIP]
-> For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control/overview.md#custom-roles).
-
-## Device group assignment during enrollment  
-
-When you create a new Apple automated device enrollment (ADE) policy that supports enrollment time grouping, a **Device group** tab appears in the enrollment policy. The security group you select on this tab is applied to the device during enrollment so Intune can deliver the correct policies, apps, and settings.  
-
-The Device group tab is only available in new enrollment policies. It isn’t available in existing enrollment policies.  
+> For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control/overview.md#custom-roles).  
 
 ## Step 1: Create Microsoft Entra security group
 
@@ -157,10 +132,6 @@ You can add one static Microsoft Entra security group per enrollment policy. As 
 1. In the Microsoft Intune admin center, go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the type of enrollment you're configuring and create a policy.
-
-   - iOS/iPadOS: [Set up automated device enrollment for iOS/iPadOS](apple/setup-automated-ios.md)
-
-   - macOS: [Set up automated device enrollment for macOS](apple/setup-automated-macos.md)
 
    - Windows: [Create Windows Autopilot device preparation policy](/autopilot/device-preparation/tutorial/user-driven/entra-join-autopilot-policy)
 

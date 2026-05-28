@@ -89,19 +89,36 @@ For licensing concepts and admin-access requirements, see [Microsoft Intune lice
 
 ## Trial subscriptions for advanced capabilities
 
-A free trial of an advanced capability lasts 90 days, with up to 250 users per tenant. Each tenant can start a trial of any given capability once. After the trial ends, you have a 30-day grace period before the capability becomes unavailable in the admin center.
 
-> [!NOTE]
-> If your organization has Microsoft 365 E3, E5, E7, or Microsoft Intune Suite, you already have access to the included capabilities and don't need a trial. Start a trial only for capabilities not included in your current licenses.
+You can start a free trial to explore advanced capabilities before purchasing.
 
-To start a capability trial:
+### Trial summary
+- **Duration:** 90 days  
+- **Maximum users:** 250 per tenant  
+- **Trial limit:** One trial per capability per tenant  
+- **Post-trial:** 30-day grace period
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global or Billing administrator.
-1. Select **Tenant administration** > **Intune add-ons**.
-1. Select the **All add-ons** tab and find the capability you want.
-1. Select **View details** in the **Try or Buy** column, then select **To try or buy, go to Microsoft 365 admin center**.
-1. In the Microsoft 365 admin center, complete the **Start free trial** flow.
-1. Return to **Tenant administration** > **Intune add-ons**. The capability now shows **Active**.
+After the trial ends, a 30-day grace period begins. Once this period expires, the capability is no longer available in the admin center.
+
+### Before you start
+
+Availability of advanced capabilities depends on your existing licenses, which may vary across your organization. Review your licensing to understand what is already included and avoid overlapping functionality.
+
+For more information, see:
+
+- [Microsoft Intune plans and pricing](https://aka.ms/MicrosoftIntunePricing)
+- [Licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
+
+If a capability isn't included in your current licenses, you can start a trial to evaluate it.
+
+### Start a trial
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global or Billing administrator.  
+1. Go to **Tenant administration** > **Intune add-ons**.  
+1. Select the **All add-ons** tab and find the capability you want to try.  
+1. In the **Try or Buy** column, select **View details**, then choose **Go to Microsoft 365 admin center**.  
+1. In the Microsoft 365 admin center, complete the **Start free trial** process.  
+1. Return to **Tenant administration** > **Intune add-ons**. The capability now shows as **Active**.
 
 > [!NOTE]
 > If you're not a Global or Billing admin, the **Your add-ons** tab isn't visible. The **Capabilities** tab still shows what your tenant is eligible for.
