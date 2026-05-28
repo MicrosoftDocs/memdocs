@@ -51,7 +51,6 @@ The following supported versions<sup>`*`</sup>, of Configuration Manager are cur
 | [**2603**](../../plan-design/changes/whats-new-in-version-2603.md)<br /> (5.00.9146.1000) | May 5, 2026 | November 5, 2027 | No | Yes |
 | [**2509**](../../plan-design/changes/whats-new-in-version-2509.md)<br /> (5.00.9141) | November 12, 2025 | May 12, 2027 | Yes | Yes |
 | [**2503**](../../plan-design/changes/whats-new-in-version-2503.md)<br /> (5.00.9135) | March 31, 2025 | September 30, 2026 | No | Yes |
-| [**2409**](../../plan-design/changes/whats-new-in-version-2409.md)<br /> (5.00.9132) | December 4, 2024 | June 4, 2026 | No | Yes |
 
 
 <!-- | [**2403**](../../plan-design/changes/whats-new-in-version-2403.md)<br /> (5.00.9128) | April 22, 2024 | October 22, 2025 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes | --> 
