@@ -1,8 +1,9 @@
 ---
 title: Learn about the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
-ms.date: 03/27/2026
+ms.date: 05/26/2026
 ms.topic: article
+ai-usage: ai-assisted
 ms.reviewer: ochukwunyere
 ms.collection:
 - M365-identity-device-management
@@ -42,6 +43,7 @@ Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. 
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. *(iOS/iPadOS)*
 - Proxy support. *(iOS/iPadOS, Android 11+)*
+- Strict Tunnel Mode, which blocks all network traffic when the VPN connection drops, ensuring no data bypasses the tunnel. For enrolled Android devices, Strict Tunnel Mode is available when Always-on VPN is enabled. For more information, see [Configure Microsoft Tunnel](./install.md#create-a-vpn-profile). For unenrolled devices using MAM Tunnel, Strict Tunnel Mode is configured through the Microsoft Edge app configuration policy. For more information, see [Microsoft Tunnel for MAM](./mam-android.md#app-configuration-policy-for-microsoft-edge). *(Android)*
 - Android root detection. The Microsoft Defender client automatically blocks a device's access to Microsoft Tunnel if it identifies that the device is rooted.
 
   When a device is identified as rooted, the client immediately marks the device's risk category as *High*, drops active Tunnel connections, and continues to block access until the device is determined to be compliant. The device user receives a notification about this status from the Defender client.
