@@ -386,6 +386,8 @@ items:
         href: servers/deploy/configure/add-site-system-roles.md
       - name: Install site system roles
         href: servers/deploy/configure/install-site-system-roles.md
+      - name: Example management point deployment in an untrusted domain
+        href: servers/deploy/configure/example-management-point-deployment.md
       - name: About the service connection point
         href: servers/deploy/configure/about-the-service-connection-point.md
       - name: Configuration options for site system roles

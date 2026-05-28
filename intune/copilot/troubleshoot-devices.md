@@ -1,7 +1,7 @@
 ---
 title: Copilot in Intune shows device information and helps troubleshoot
 description: Microsoft Security Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
-ms.date: 09/17/2025
+ms.date: 05/26/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: ankurgoyal, zadvor, rashok
@@ -26,17 +26,10 @@ This article describes how to use Copilot to manage and troubleshoot device issu
 
 ## Before you begin
 
-- To use Copilot in Intune, make sure Copilot is enabled. For more information, see:
+To use Copilot in Intune, make sure Copilot is enabled. For more information, see:
 
-  - [Copilot in Intune](index.md#before-you-begin)
-  - [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
-
-- Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Intune Administrator** Microsoft Entra ID role.
-
-  For more information, see:
-
-  - [Copilot in Intune FAQ - Access to Copilot](faq.md#access-to-copilot)
-  - [Microsoft Security Copilot authentication and roles](/copilot/security/authentication)
+- [Copilot in Intune](index.md#before-you-begin)
+- [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot)
 
 ## Use a suggested prompt
 
