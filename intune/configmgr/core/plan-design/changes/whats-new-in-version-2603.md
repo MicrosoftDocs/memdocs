@@ -67,7 +67,7 @@ The Configuration Manager console In-App Feedback feature is updated to support 
 
 ## Next steps
 
-<!-- As of MM DD, YYYY, version 2603 is globally available for all customers to install. -->
+As of May 27, 2026, version 2603 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2603](../../servers/manage/checklist-for-installing-update-2603.md).
 
