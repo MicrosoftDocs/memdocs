@@ -65,9 +65,7 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
 1. Select the **macOS** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select an enrollment program token.
-1. Select **Enrollment policies** > **Create policy** > **macOS**.
-
-    ![Create a policy screenshot.](./media/setup-automated-macos/image04.png)
+1. Select **Enrollment policies** > **Create policy** > **macOS**.  
 
    > [!IMPORTANT]
    > You must assign an enrollment policy to your devices before the devices become active. We recommend that you set a default enrollment policy as soon as possible so that as devices sync from Apple Business or Apple School Manager, and then turn on, they can enroll correctly through automated device enrollment. If a device you synced from Apple isn't assigned an enrollment policy and someone turns it on to set it up, enrollment fails.
@@ -167,15 +165,7 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
     2. Select the Setup Assistant screens you want to show or hide during device setup. For a description of all screens, [see Setup Assistant screen reference](#setup-assistant-screen-reference) (in this article). Your options:
         * **Hide**: The screen doesn't appear to users during device setup. After device setup, the user can go to their device settings to set up the feature.
         * **Show**: The screen appears to users during device setup. The user can still skip screens that don't require immediate action. After device setup, the user can go to their device settings to set up the feature.
-1. Select **Next**.
-
-1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
-
-   This tab is only available in new enrollment policies and doesn't appear in existing enrollment profiles. Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
-
-    For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md). 
-
-1. Select **Next**.
+1. Select **Next**.  
 
 1. Review the summary of changes, and then select **Create** to finish creating the policy.
 
