@@ -184,7 +184,7 @@
       },
       "ms.reviewer": {
         "cloud-pki/**/*": "wicale",
-        "configmgr/**/*": ["umaikhan", "brianhun", "payur"],
+        "configmgr/**/*": ["umaikhan", "brianhun", "payur", "hugowu", "qiani"],
         "device-configuration/certificates/**/*": "wicale",
         "device-management/actions/**/*": "mattcall",
         "device-security/certificates/**/*": "wicale",
