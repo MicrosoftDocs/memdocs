@@ -114,7 +114,7 @@ When you create the policy, select any of the following property categories to c
 | CPU | Processor ID |
 | Disk Drive | Drive ID |
 | Encryptable Volume | Volume ID |
-| Local AI Agents | Agent Name<br/>Install Location<br/>Install Scope |
+| Local AI Agent | Agent Name<br/>Install Location<br/>Install Scope |
 | Logical Drive | Drive Identifier |
 | Memory Info | |
 | Network Adapter | Identifier |
