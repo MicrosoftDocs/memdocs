@@ -69,16 +69,17 @@ Class SMS_SUPSyncStatus : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Last synchronization state. 
-
-**Possible Values**
+ Last synchronization state. Possible values are:
+ 
 | Value | Status |  
 | ----- | ------ |  
-|6702|Success|
-|6703|Failed|
-|6704|WSUS Synchronization in Progress|
-|6704|ConfigMgr DB Synchronization in Progress|
-
+| 6702 |	WSUS Synchronization done (Success) |
+| 6703	| WSUS Synchronization failed |
+| 6704	| WSUS Synchronization in progress. Current phase: Synchronizing WSUS Server |
+| 6705	| WSUS Synchronization in progress. Current phase: Synchronizing site database |
+| 6706	| WSUS Synchronization in progress. Current phase: Synchronizing Internet facing WSUS Server |
+| 6707	| Content of WSUS server is out of sync with upstream server |
+| 6708	| WSUS synchronization complete, with pending license terms downloads |
 
  `LastSyncStateTime`  
  Data type: `DateTime`  
