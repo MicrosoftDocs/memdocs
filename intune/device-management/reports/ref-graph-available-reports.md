@@ -1,10 +1,11 @@
 ---
 title: Intune Graph API - Reports and Properties
 description: Learn about Intune reports and properties provided via Graph API.
-ms.date: 09/08/2025
+ms.date: 05/26/2026
 author: nicholasswhite
 ms.author: nwhite
 ms.topic: article
+ai-usage: ai-assisted
 ms.reviewer: davidra
 #ms.custom:
 ms.collection:
@@ -3271,6 +3272,9 @@ The following table contains the possible output when calling the `EnrollmentCon
 You can choose to filter the `EnrollmentConfigurationPoliciesByDevice` report's output based on the following columns:
 - `DeviceId`
 - `State`
+
+> [!NOTE]
+> The EPM report endpoints in this section (including `EpmAggregationReportByApplication`, `EpmAggregationReportByPublisher`, `EpmAggregationReportByUser`, and related variants) require the **Endpoint Privilege Management Policy Authoring > View Reports** (`EpmPolicy.ViewReports`) permission. Users without this permission receive an HTTP 403 response. For more information, see [Reports for Endpoint Privilege Management](../../epm/monitor-reports.md#prerequisites).
 
 ## EpmAggregationReportByApplication
 
