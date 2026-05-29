@@ -64,7 +64,7 @@ Intune has built-in features that can be used for frontline worker devices, incl
   For more information, go to:
 
   - [Learn more about cloud-native endpoints](../cloud-native-endpoints/overview.md)
-  - [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](../solutions/cloud-native-endpoints/tutorial-cloud-native-setup.md)
+  - [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](../cloud-native-endpoints/tutorial-cloud-native-setup.md)
 
 - **[Remote Help](../../remote-help/index.md)**
 
