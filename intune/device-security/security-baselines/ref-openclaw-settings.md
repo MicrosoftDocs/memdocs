@@ -59,7 +59,7 @@ To learn more about using security baselines, see:
 
 - **Firewall Rule Name**\
   Baseline default: *Configured*\
-  [Learn more](/windows/client-management/mdm/firewall-csp)
+  [Learn more](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulename)
 
   This baseline includes two preconfigured firewall rules. Both rules block outbound TCP connections from Node.js executables to disrupt common execution paths used by OpenClaw.
 
@@ -67,26 +67,26 @@ To learn more about using security baselines, see:
 
   | Property | Default value |
   |---|---|
-  | Enabled | *Enabled* |
-  | Name | block nodejs in LOCALAPPDATA folder |
-  | Interface Types | *All* |
-  | File Path | `%LOCALAPPDATA%\Programs\node\node.exe` |
-  | Network Types | *FW_PROFILE_TYPE_ALL* |
-  | Direction | *The rule applies to outbound traffic* |
-  | Action | *Block* |
-  | Protocol | *Configured* - 6 (TCP) |
+  | [Enabled](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameenabled) | *Enabled* |
+  | [Name](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenamename) | block nodejs in LOCALAPPDATA folder |
+  | [Interface Types](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameinterfacetypes) | *All* |
+  | [File Path](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameappfilepath) | `%LOCALAPPDATA%\Programs\node\node.exe` |
+  | [Network Types](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameprofiles) | *FW_PROFILE_TYPE_ALL* |
+  | [Direction](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenamedirection) | *The rule applies to outbound traffic* |
+  | [Action](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameactiontype) | *Block* |
+  | [Protocol](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameprotocol) | *Configured* - 6 (TCP) |
 
   #### Rule: block nodejs in ProgramFiles folder
 
   | Property | Default value |
   |---|---|
-  | Enabled | *Enabled* |
-  | Name | block nodejs in ProgramFiles folder |
-  | Interface Types | *All* |
-  | File Path | `%ProgramFiles%\nodejs\node.exe` |
-  | Network Types | *FW_PROFILE_TYPE_ALL* |
-  | Direction | *The rule applies to outbound traffic* |
-  | Action | *Block* |
-  | Protocol | *Configured* - 6 (TCP) |
+  | [Enabled](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameenabled) | *Enabled* |
+  | [Name](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenamename) | block nodejs in ProgramFiles folder |
+  | [Interface Types](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameinterfacetypes) | *All* |
+  | [File Path](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameappfilepath) | `%ProgramFiles%\nodejs\node.exe` |
+  | [Network Types](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameprofiles) | *FW_PROFILE_TYPE_ALL* |
+  | [Direction](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenamedirection) | *The rule applies to outbound traffic* |
+  | [Action](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameactiontype) | *Block* |
+  | [Protocol](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrulesfirewallrulenameprotocol) | *Configured* - 6 (TCP) |
 
   For details about firewall rule properties, see [Firewall CSP - FirewallRules](/windows/client-management/mdm/firewall-csp#mdmstorefirewallrules).
