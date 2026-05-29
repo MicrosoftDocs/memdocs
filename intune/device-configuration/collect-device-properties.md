@@ -22,6 +22,9 @@ For example, you can:
 - Collect battery health information to help monitor device performance and lifespan.
 - Retrieve network adapter configurations to troubleshoot connectivity issues.
 
+> [!TIP]
+> After you identify devices with local AI agents installed, you can deploy the [Local AI Agent Baseline - OpenClaw (Preview)](../device-security/security-baselines/ref-openclaw-settings.md) security baseline to block common execution paths used by those agents.
+
 Use this information to get deeper visibility into your device inventory, including detailed hardware and system information.
 
 This article shows you how to configure a properties catalog policy, view the data collected by the policy, and lists the available properties. After you create a profile, assign or deploy that profile to your Windows devices.
