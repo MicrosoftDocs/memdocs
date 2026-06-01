@@ -1,7 +1,7 @@
 ---
 title: Add Platform SSO policy to ADE Profile on macOS devices
 description: Add a settings catalog platform single sign-on (PSSO) policy to an Automated Device Enrollment (ADE) profile and configure it to run during Setup Assistant with modern authentication on macOS devices.
-ms.date: 05/18/2026
+ms.date: 06/01/2026
 ms.topic: how-to
 appliesto:
 - ✅ macOS
@@ -100,10 +100,7 @@ This policy enables the Platform SSO registration process during Setup Assistant
 
     | Name | Configuration value | Description |
     |---|---|---|
-    | **Authentication > Extensible single sign-on > Platform SSO > Enable Create First User During Setup** | Enabled | When enabled, the system enables the password synchronization experience during Setup Assistant. <br/><br/> Remember, only configure this setting if you're using the **Password** authentication method. If you're not using the **Password** authentication method, don't add or configure this setting. |
-
-    > [!NOTE]
-    > The **Enable Create First User During Setup** setting is rolling out slowly, and should be available by end of May 2026.
+    | **Authentication > Extensible single sign-on > Platform SSO > Enable Create First User During Setup** | Enabled | When enabled, the system enables the password synchronization experience during Setup Assistant. <br/><br/> Configure this setting if you're using the **Password** authentication method. If you're not using the **Password** authentication method, it's not required to configure this setting. |
 
 3. Assign the policy to the static groups you created. 
 
