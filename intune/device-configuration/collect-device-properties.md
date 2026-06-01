@@ -1,7 +1,7 @@
 ---
 title: "Collect Device Hardware Info With the Properties Catalog"
 description: "Use the properties catalog in Microsoft Intune to collect device hardware info like BIOS version, TPM status, and disk details on managed Windows devices. Get deeper visibility into your device inventory and troubleshoot issues."
-ms.date: 05/28/2026
+ms.date: 06/01/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
@@ -136,6 +136,11 @@ Use the following steps to view the collected device inventory information:
 3. In **Monitor**, select **Device Inventory**. Select a category to view the hardware information.
 
 ## What you need to know
+
+- **Local AI Agent** is a new category that helps you discover local AI agents, like OpenClaw, running on your Windows devices. After deploy this policy and start collecting data, you can:
+
+  - Use [Device Query](../advanced-analytics/device-query-multiple-devices.md) to view devices with a Local AI Agent.
+  - Use the [Local AI Agent Baseline - OpenClaw (Preview)](../device-security/security-baselines/ref-openclaw-settings.md) to block users from using OpenClaw.
 
 - You can stop (delete) the collection of properties only at the category level. To stop collecting properties, go to the **properties catalog** profile, and remove the collection for every property in the category.
 
