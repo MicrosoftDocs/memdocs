@@ -1,7 +1,7 @@
 ---
 title: Configure Apple account service access
 description: Use Apple access management settings to control how Apple accounts are used on organization‑owned devices managed by Microsoft Intune.  
-ms.date: 04/29/2026  
+ms.date: 06/01/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
@@ -10,9 +10,6 @@ ms.collection:
 ---
 
 # Configure service access for Apple accounts
-
-> [!NOTE]
-> This feature is gradually rolling out and might not yet be available in your tenant. Full availability is expected by mid-May 2026.
 
 You can use Apple access management settings in Apple Business or Apple School Manager to control how Apple accounts are used on organization-owned devices. These settings define which devices users can sign in to with Apple accounts and which Apple apps and services are available.   
 
@@ -65,7 +62,7 @@ To configure service access for Apple accounts, ensure your environment meets th
 
 ## Configure service access  
 
-Service access settings are configured in Apple Business or Apple School Manager. Microsoft Intune doesn’t configure these settings directly. Instead, Intune issues a management token that Apple uses during device activation to confirm the device’s Intune assignment.  
+Service access settings are configured in Apple Business or Apple School Manager. Microsoft Intune doesn't configure these settings directly. Instead, Intune issues a management token that Apple uses during device activation to confirm the device's Intune assignment.  
 
 ### Available settings  
 
@@ -99,18 +96,18 @@ Service access for Apple accounts is defined and enforced across Apple and Micro
 1. Microsoft Intune enforces the service access requirements on enrolled devices during device check-in and Apple account sign-in.
 1. If a device no longer meets the configured requirements, Apple automatically signs the user out of affected Apple services.  
 
-These controls help ensure that managed Apple accounts are used only on devices that meet your organization’s access requirements.  
+These controls help ensure that managed Apple accounts are used only on devices that meet your organization's access requirements.  
 
 If a user is having trouble signing in to a device with their personal Apple account, see [Apple support](https://support.apple.com/en-us/122725) (opens Apple Support site).  
 
-### What it doesn’t do  
+### What it doesn't do  
 
-Configuring service access for Apple accounts doesn’t change how devices enroll in Microsoft Intune. Specifically, this configuration- 
+Configuring service access for Apple accounts doesn't change how devices enroll in Microsoft Intune. Specifically, this configuration- 
 
-- Doesn’t configure enrollment settings in the Intune admin center. Service access is configured in Apple Business or Apple School Manager, not in Intune.
+- Doesn't configure enrollment settings in the Intune admin center. Service access is configured in Apple Business or Apple School Manager, not in Intune.
 
-- Doesn’t replace device enrollment. Devices must still be enrolled in Intune using an Apple-supported enrollment method that results in a managed (or supervised) device.  
+- Doesn't replace device enrollment. Devices must still be enrolled in Intune using an Apple-supported enrollment method that results in a managed (or supervised) device.  
 
 - Doesn't determine whether a device is marked as corporate or personal in Intune. Device ownership is determined by the enrollment method and corporate identifiers.  
 
-- Doesn’t provide per-service configuration controls in Intune. Apple defines which apps and services (such as iCloud features, FaceTime, or Messages) are available to managed Apple accounts.  
+- Doesn't provide per-service configuration controls in Intune. Apple defines which apps and services (such as iCloud features, FaceTime, or Messages) are available to managed Apple accounts.  
