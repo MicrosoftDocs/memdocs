@@ -13,7 +13,7 @@ This article describes the app protection policy settings for Android devices. T
 There are three categories of policy settings: data protection settings, access requirements, and conditional launch. In this article, the term *policy-managed apps* refer to apps that are configured with app protection policies.
 
 > [!IMPORTANT]
-> The Intune Company Portal is required on the device to receive App Protection Policies for Android devices.
+> The Intune Company Portal is required on the device to receive App Protection Policies for Android devices. This will not enroll the devices, though it may frighten users. Note that some policy controls will ask the user to make Outlook their Device Admin. This behaviour is very different than what is experienced on iOS. 
 
 ## Data protection
 ### Data Transfer
