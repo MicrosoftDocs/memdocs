@@ -3,7 +3,7 @@ title: Planning guide to move to Microsoft Intune
 description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 05/13/2026
+ms.date: 05/28/2026
 ms.topic: upgrade-and-migration-article
 ms.reviewer: davguy
 ms.collection:
@@ -250,7 +250,7 @@ As a best practice, always assume data will leave the device. Be sure your track
 
 Intune can manage desktop computers running Windows. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
 
-For more information, go to [Windows client cloud config setup guide](../solutions/cloud-native-endpoints/setup-cloud-configuration.md).
+For more information, go to [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](../solutions/cloud-native-endpoints/tutorial-cloud-native-setup.md).
 
 If your Windows devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called **co-management**. Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), Conditional Access with device compliance, and more. You can also cloud-attach your devices to Intune.
 

@@ -7107,52 +7107,52 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/cloud-configuration.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/cloud-configuration.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/guided-scenarios-cloud-managed-pc.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/guided-scenarios-overview.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": true
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/guided-scenarios-overview.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/guided-scenarios-office-mobile.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/guided-scenarios-edge.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/cloud-configuration-setup-guide.md",
-      "redirect_url": "/intune/solutions/cloud-native-endpoints/setup-cloud-configuration",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
       "redirect_document_id": false
     },
     {

@@ -11,7 +11,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-If you installed Configuration Manager as an evaluation version, after 180 days the Configuration Manager console becomes read-only. You then need to activate the product from the **Site Maintenance** page in Setup. At any time before or after the 180-day period, you can upgrade to a full installation.
+If you installed Configuration Manager as an evaluation version, after 360 days the Configuration Manager console becomes read-only. You then need to activate the product from the **Site Maintenance** page in Setup. At any time before or after the 360-day period, you can upgrade to a full installation.
 
 > [!NOTE]
 > When you connect a Configuration Manager console to an evaluation installation of Configuration Manager, the window title bar displays the number of days that remain until it expires. The number of days in the window title doesn't automatically refresh. It only updates when you make a new connection to a site.

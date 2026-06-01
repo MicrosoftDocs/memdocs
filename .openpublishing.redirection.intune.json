@@ -499,6 +499,16 @@
       "source_path_from_root": "/intune/device-security/conditional-access-integration/create-app-based-policy.md",
       "redirect_url": "/intune/device-security/conditional-access-integration/app-based-policies",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/solutions/cloud-native-endpoints/setup-cloud-configuration.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/tutorial-cloud-native-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/solutions/cloud-native-endpoints/cloud-configuration.md",
+      "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
+      "redirect_document_id": false
     }
   ]
 }
