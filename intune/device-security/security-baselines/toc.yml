@@ -22,5 +22,7 @@ items:
         href: ./ref-hololens2-standard-settings.md
       - name: HoloLens 2 - Advanced security baseline settings
         href: ./ref-hololens2-advanced-settings.md
+      - name: Local AI Agent Baseline - OpenClaw settings
+        href: ./ref-openclaw-settings.md
       - name: Windows 365 baseline settings
         href: ./ref-windows-365-settings.md
