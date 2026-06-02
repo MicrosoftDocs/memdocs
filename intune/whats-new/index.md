@@ -324,9 +324,6 @@ For more information, see [Add an Android line-of-business app to Microsoft Intu
 >
 > - Android Enterprise
 
-> [!NOTE]
-> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
-
 #### Newly available protected apps for Intune<!-- 36921208, 36933292 -->
 
 The following protected apps are now available for Microsoft Intune:
@@ -424,9 +421,6 @@ The Recovery Lock password can be viewed in the per-setting status report > **Pa
 > Applies to:
 >
 > - macOS
-
-> [!NOTE]
-> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
 
 #### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
 
