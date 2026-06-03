@@ -6,7 +6,7 @@ ms.topic: reference
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
-ms.reviewer: mattcall
+ms.reviewer: aanavath
 
 ---
 # Attack surface reduction policy settings for endpoint security in Intune
@@ -217,7 +217,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 
 - **Block persistence through WMI event subscription**  
-  [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Reduce attack surfaces with attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 
   This attack surface reduction (ASR) rule is controlled via the following GUID: e6db77e5-3df2-4cf1-b95a-636979351e5b
 
@@ -228,10 +228,10 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Audit** – Evaluate how this rule affects your organization if it's enabled (set to Block).
   - **Disable** - Turn this rule off. Persistence is not blocked.
 
-  To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
+  To learn more about this setting, see [Block persistence through WMI event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription).
 
 - **Block credential stealing from the Windows local security authority subsystem (lsass.exe)**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -241,7 +241,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Adobe Reader from creating child processes**  
-  [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Reduce attack surfaces with attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-reference#block-adobe-reader-from-creating-child-processes)
 
   This ASR rule is controlled via the following GUID: 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c
   - **Not configured** (*default*) - The Windows default is restored, is to not block creation of child processes.
@@ -251,7 +251,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block Office applications from injecting code into other processes**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes)
 
   This ASR rule is controlled via the following GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -261,7 +261,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block Office applications from creating executable content**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-creating-executable-content)
 
   This ASR rule is controlled via the following GUID: 3B576869-A4EC-4529-8536-B80A7769E899
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -271,7 +271,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block all Office applications from creating child processes**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-all-office-applications-from-creating-child-processes)
 
   This ASR rule is controlled via the following GUID: D4F940AB-401B-4EFC-AADC-AD5F3C50688A
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -281,7 +281,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block Win32 API calls from Office macro**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-win32-api-calls-from-office-macros)
 
   This ASR rule is controlled via the following GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -291,7 +291,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block Office communication apps from creating child processes**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-communication-application-from-creating-child-processes)
 
   This ASR rule is controlled via the following GUID: 26190899-1602-49e8-8b27-eb1d0a1ce869.
   - **Not configured** (*default*) - The Windows default is restored, which is to not block creation of child processes.
@@ -301,7 +301,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Warn** - For Windows 10 version 1809 or later and Windows 11, the device user receives a message that they can bypass *Block* of the setting. On devices that run earlier versions of Windows 10, the rule enforces the *Enable* behavior.
 
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-execution-of-potentially-obfuscated-scripts)
 
   This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -311,7 +311,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block JavaScript or VBScript from launching downloaded executable content**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-javascript-or-vbscript-from-launching-downloaded-executable-content)
 
    This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -320,7 +320,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block process creations originating from PSExec and WMI commands**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-process-creations-originating-from-psexec-and-wmi-commands)
 
   This ASR rule is controlled via the following GUID: d1e49aac-8f56-4280-b9ba-993a6d77406c
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -330,7 +330,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block untrusted and unsigned processes that run from USB**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-untrusted-and-unsigned-processes-that-run-from-usb)
 
   This ASR rule is controlled via the following GUID: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -340,7 +340,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block executable files from running unless they meet a prevalence, age, or trusted list criteria**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)
 
   This ASR rule is controlled via the following GUID: 01443614-cd74-433a-b99e-2ecdc07bfc25e
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
@@ -350,7 +350,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Block executable content download from email and webmail clients**  
-  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+  [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#block-executable-content-from-email-client-and-webmail)
 
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
   - **Block** - Executable content downloaded from email and webmail clients is blocked.
@@ -359,7 +359,7 @@ To learn more about Attack surface reduction rules, see [Attack surface reductio
   - **Disable** - This setting is turned off.
 
 - **Use advanced protection against ransomware**
-   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+   [Protect devices from exploits](/defender-endpoint/attack-surface-reduction-rules-reference#use-advanced-protection-against-ransomware)
 
   This ASR rule is controlled via the following GUID: c1db55ab-c21a-4637-bb3f-a12568109d35
   - **Not configured** (*default*) - The setting returns to the Windows default, which is off.
