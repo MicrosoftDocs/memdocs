@@ -65,6 +65,8 @@ landingContent:
             url: plan-design/security/enable-tls-1-2.md
           - text: CMPivot
             url: servers/manage/cmpivot.md
+          - text: Example management point deployment in an untrusted domain
+            url: servers/deploy/configure/example-management-point-deployment.md
           - text: Overview of cloud management gateway (CMG)
             url: clients/manage/cmg/overview.md
           - text: Enhanced HTTP

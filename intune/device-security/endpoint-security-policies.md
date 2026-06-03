@@ -4,7 +4,7 @@ description: Learn how to manage endpoint security in Microsoft Intune. Configur
 keywords: Intune security policies, endpoint protection Intune, configure endpoint security, device security Intune, Microsoft Defender Intune, security baselines, zero trust Intune, ransomware protection, endpoint security node, device compliance Intune, Endpoint Security Manager, attack surface reduction Intune
 author: brenduns
 ms.author: brenduns
-ms.date: 02/18/2026
+ms.date: 05/26/2026
 ms.topic: overview
 ms.collection:
 - M365-identity-device-management
@@ -40,7 +40,7 @@ To access the dashboard, sign in to the [Microsoft Intune admin center](https://
 
 The dashboard helps you quickly assess device security status and identify areas requiring attention. It displays information from multiple endpoint security areas including *Antivirus*, *Endpoint detection and response*, and *Defender for Endpoint*:
 
-- **Defender for Endpoint Connector status** - View the connection status between Intune and Defender for Endpoint. If not connected, see [Connect Microsoft Defender for Endpoint to Intune](./microsoft-defender/configure-integration.md#connect-microsoft-defender-for-endpoint-to-intune) to set up the integration. The status label also links to the Microsoft Defender portal.
+- **Defender for Endpoint Connector status** - View the connection status between Intune and Defender for Endpoint. If not connected, see [Connect Microsoft Defender for Endpoint to Intune](./microsoft-defender/configure-integration.md#connect-defender-for-endpoint-to-intune) to set up the integration. The status label also links to the Microsoft Defender portal.
 
 - **Windows devices onboarded to Defender for Endpoint** - View counts of devices onboarded and not onboarded for endpoint detection and response (EDR). Select **Deploy preconfigured policy** to onboard devices through Intune, or **Onboard devices to Defender for Endpoint** to use the Defender portal workflow.
 
@@ -105,8 +105,8 @@ Endpoint Privilege Management enforces least privilege access by allowing users 
 
 You deploy Endpoint Privilege Management by creating elevation rules that define which applications can run with administrative privileges and under what conditions. Elevation rules support multiple validation methods including file hashes, publisher certificates, and file paths. You can configure automatic elevation for trusted applications, user-confirmed elevation with optional authentication requirements, support-approved elevation where administrators review requests, or deny rules to block specific files. EPM includes detailed reporting for both managed elevations and unmanaged elevations, helping you identify elevation patterns, refine rules, and plan the transition of users from administrator to standard user accounts.
 
-> [!IMPORTANT]
-> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/add-ons.md) that requires an additional license beyond Microsoft Intune. You can license EPM as a standalone add-on or as part of the Microsoft Intune Suite. EPM policies are only available for Windows devices.
+> [!NOTE]
+> Endpoint Privilege Management is a [Microsoft Intune advanced capability](../fundamentals/advanced-capabilities.md) that requires additional licensing beyond Microsoft Intune.
 
 For more information, see [Endpoint Privilege Management](../epm/overview.md).
 
@@ -131,6 +131,9 @@ To manage tasks in the Endpoint security node of the Intune admin center, an acc
 - Have role-based access control (RBAC) permissions equal to the built-in Intune role of **Endpoint Security Manager**. This role grants access to the Intune admin center to manage security and compliance features, including security baselines, device compliance, Conditional Access, and Defender for Endpoint.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md) and the [Endpoint Security Manager](../fundamentals/role-based-access-control/ref-built-in-roles.md#endpoint-security-manager) role reference.
+
+> [!NOTE]
+> Some workloads under Endpoint Security require additional workload-specific permissions beyond the Endpoint Security Manager role. For example, viewing Endpoint Privilege Management reports requires the **View Reports** permission under **Endpoint Privilege Management Policy Authoring**. For details, see [Reports for Endpoint Privilege Management](../epm/monitor-reports.md#prerequisites).
 
 ## Choose the right policy type
 

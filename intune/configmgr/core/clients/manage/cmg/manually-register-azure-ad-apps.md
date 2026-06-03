@@ -57,7 +57,7 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
     - **Name**: A friendly name for the app. For example, `CMG-ServerApp`.
     - **Supported account types**: Leave this setting as the default option, **Accounts in this organizational directory only**.
-    - **Redirect URI**: Select: **Public client/native (mobile &desktop)** and type **http://localhost** as URI
+    - **Redirect URI**: Select: **Web** and type **http://localhost** as URI
 
 1. Select **Register** to create the app.
 
@@ -180,7 +180,7 @@ When you select **Import** from the _Server app_ window, it opens the _Import ap
 - **Client ID**: The **Application (client) ID** value of the app registration. The format is a standard GUID.
 - **Secret Key**: Copy the secret key when you register the app in Microsoft Entra ID and create the secret key.
 - **Secret Key Expiry**: Specify the same date as from the Azure portal.
-- **App ID URI**: The value is the **Application ID URI** of the app registration entry in the Microsoft Entra admin center. The format is similar to `https://ConfigMgrService`.
+- **App ID URI**: The value is the **Application ID URI** of the app registration entry in the Microsoft Entra admin center. The format is similar to `https://contoso.onmicrosoft.com/ConfigMgrService`.
 
 After entering the information, select **Verify**. Then select **OK** to close the _Import apps_ window.
 

@@ -1,7 +1,7 @@
 ---
 title: Get started with frontline worker (FLW) device management
 description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Get guidance on device use and Intune features built for FLW, like Remote Help. Also, learn about Microsoft Entra shared device mode (SDM) for FLW.
-ms.date: 08/19/2024
+ms.date: 05/28/2026
 ms.topic: how-to
 ms.reviewer: cbernier
 ms.collection:
@@ -57,14 +57,14 @@ When you have this information, the next step is to identify the platforms you u
 
 Intune has built-in features that can be used for frontline worker devices, including:
 
-- **[Windows cloud configuration](../cloud-native-endpoints/cloud-configuration.md)**
+- **[Cloud-native Windows endpoints](../cloud-native-endpoints/overview.md)**
 
-  This feature can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
+  You can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and you can secure them with Microsoft-recommended security features.
 
   For more information, go to:
 
-  - [Windows in cloud configuration overview](../cloud-native-endpoints/cloud-configuration.md)
-  - [Step-by-step setup guide](../cloud-native-endpoints/setup-cloud-configuration.md)
+  - [Learn more about cloud-native endpoints](../cloud-native-endpoints/overview.md)
+  - [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](../cloud-native-endpoints/tutorial-cloud-native-setup.md)
 
 - **[Remote Help](../../remote-help/index.md)**
 
@@ -79,7 +79,7 @@ Intune has built-in features that can be used for frontline worker devices, incl
   These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, like Microsoft Teams Rooms devices. They can be managed using Intune policies.
 
 > [!NOTE]
-> Some features may require additional licenses. For more information, go to [Intune Suite add-on capabilities](../../fundamentals/add-ons.md) or [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+> Some features may require additional licenses. For more information, go to [Microsoft Intune advanced capabilities](../../fundamentals/advanced-capabilities.md) or [Microsoft Intune licensing](../../fundamentals/licensing.md).
 
 ## Microsoft Entra shared device mode for FLW
 

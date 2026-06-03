@@ -1,11 +1,13 @@
 ---
 title: What are cloud-native Windows endpoints
 description: Learn more about cloud-native endpoints and what they are. See a list of benefits, and the effect on end users and IT administrators. Cloud-native endpoints help with remote workers and hybrid workers, and use Microsoft Intune to manage devices.
-ms.date: 05/30/2024
+ms.date: 05/28/2026
 ms.topic: overview
 ms.reviewer: ahamil, jasandys, wicale
+ms.keywords: cloud native Windows, cloud-native Windows endpoint, Intune cloud native, Windows Autopilot cloud native, cloud native endpoint setup
 ms.collection:
   - M365-identity-device-management
+  - highseo
   - intune-scenario
 ---
 
@@ -27,7 +29,7 @@ In this set of articles, you will:
 
 - ✅ **Step through a tutorial** that creates a Windows device that's cloud-native:
 
-  - [Tutorial: Get started with cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
+  - [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
 
 - ✅ **Learn more about the Microsoft Entra concepts** that are part of cloud-native endpoints, including accessing on-premises resources:
 
@@ -127,7 +129,7 @@ The [High level planning guide to move to cloud-native endpoints](planning-guide
 ## Follow the cloud-native endpoints guidance
 
 1. 🡺 **Overview: What are cloud-native endpoints?** (*You are here*)
-2. [Tutorial: Get started with cloud-native Windows endpoints](tutorial-cloud-native-setup.md)
+2. [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
 3. [Concept: Entra joined vs. Hybrid Entra joined](entra-join-types.md)
 4. [Concept: Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 5. [High level planning guide](planning-guide.md)

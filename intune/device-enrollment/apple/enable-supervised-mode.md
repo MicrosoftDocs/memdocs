@@ -30,4 +30,4 @@ Users are notified that their devices are supervised in the **Settings** app. In
 
 ## Next steps
 
-For other device management options, see [What is Microsoft Intune device management?](../../fundamentals/what-is-device-management.md)
+For other device management options, see [What is Microsoft Intune?](../../fundamentals/what-is-intune.md)

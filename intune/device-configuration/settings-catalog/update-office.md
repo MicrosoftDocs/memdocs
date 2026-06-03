@@ -28,7 +28,7 @@ This feature applies to:
 [!INCLUDE [licensing](../../includes/requirements/licensing.md)]
 :::column-end:::
 :::column span="3":::
-> Requires Microsoft Intune and a Microsoft 365 subscription. For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+> Requires Microsoft Intune and a Microsoft 365 subscription. For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing.md).
 :::column-end:::
 :::row-end:::
 

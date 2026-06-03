@@ -50,7 +50,7 @@ Devices are configured in [Microsoft Entra shared device mode](/azure/active-dir
 :::column-end:::
 :::column span="3":::
 
-> Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and [Managing specialty devices with Microsoft Intune](../../device-management/specialty-devices.md).
+> Assign valid licenses to all specialized device users. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing.md) and [Managing specialty devices with Microsoft Intune](../../device-management/specialty-devices.md).
 
 :::column-end:::
 :::row-end:::
