@@ -33,8 +33,6 @@ landingContent:
             url: 2509/36949461.md
           - text: KB 37864969 Second update rollup for Microsoft Configuration Manager version 2509
             url: 2509/37864969.md
-          - text: KB 37784287 CMG update for VMSS image deprecation
-            url: 2603/37784287.md
   - title: Configuration Manager 2503
     linkLists:
       - linkListType: overview
