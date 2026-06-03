@@ -73,35 +73,53 @@ The following features are available and supported in Microsoft GCC High and/or 
 | Mobile Threat Defense (MTD) | ✅ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the GCC High environment can be used. When you sign in to a GCC High tenant, you see the connectors that are available in these environments. |
 | Microsoft Defender for Endpoint security settings management | ✅ <br/><br/> On devices onboarded to Defender but not enrolled in Intune, you can use Intune endpoint security policies to manage Defender security settings. <br/><br/>This support extends to the US Government Community Cloud (GCC), US Government Community High (GCC High), and Department of Defense (DoD) environments. <br/><br/>For more information on this feature, go to [Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md). |
 | Platform support | ✅ <br/><br/> You can use the same operating systems - Android, Android Open Source Project (AOSP), iOS/iPadOS, Linux, macOS, and Windows. <br/><br/>- **Android (AOSP)**: There are some device restrictions. For more information, go to [Supported operating systems and browsers in Intune - AOSP](ref-supported-platforms.md#android). <br/>- **Linux**: Generally available (GA) in February 2024.|
-| Windows Autopilot device preparation | ✅ <br/><br/> Some features are available now, such as user-driven deployments, and some are still [in the planning phase](#in-the-planning-phase). For more information on the recent changes to Windows Autopilot device preparation, go to [Blog: Windows deployment with the next generation of Windows Autopilot](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/windows-deployment-with-the-next-generation-of-windows-autopilot/ba-p/4148169). <br/><br/> To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
+| Windows Autopilot device preparation | ✅ <br/><br/> Some features are available now, such as user-driven deployments, and some are still [in the planning phase](#in-the-planning-phase). For more information about Windows Autopilot solutions, go to [Compare Windows Autopilot device preparation and Windows Autopilot](/autopilot/device-preparation/compare). <br/><br/> To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
 | Log Analytics | ✅ <br/><br/> You can send Intune log data to Azure Storage, Event Hubs, or Log Analytics. <br/><br/> For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](../governance/integrate-azure-monitor.md). |
 | Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | For more information on these plans, go to [Microsoft Intune advanced capabilities](advanced-capabilities.md). <br/><br/> The following Plan 2 features support the GCC High and DoD environments: </br>- [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam.md) </br>- [Firmware-over-the-air update](../device-updates/android/manage-fota.md) </br>- [Specialty devices management](../device-management/specialty-devices.md) </br></br>  The following Microsoft Intune Suite features support the GCC High and DoD environments: </br>- [Endpoint Privilege Management](../epm/overview.md) </br>- [Advanced Analytics](../advanced-analytics/index.md)|
 
 ### In the planning phase
 
-The following features are currently not available and aren't supported in GCC High and DoD clouds. Planning is underway to support these features for GCC High and DoD. If ETAs are available, then they're listed.
+The following features are currently not available and aren't supported in GCC High and DoD clouds. Planning is underway to support these features for GCC High and DoD environments. If ETAs are available, then they're listed.
 
 | Feature | Availability |
 | --- | --- |
-| Expedited updates | For more information on this feature, go to [Windows quality updates in Microsoft Intune](../device-updates/windows/manage-quality-updates.md). |
-| Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../device-updates/windows/manage-feature-updates.md). |
-| Windows Autopilot device preparation| The following features are in the planning phase: </br></br>- Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure </br>- Self-deploying and pre-provisioning mode </br>- More admin-specified configurations delivered before allowing desktop access. </br>- Enhanced optional desktop onboarding experience inside the Windows Company Portal app </br>- The ability to associate a device with a tenant. </br></br>Provisioning modes which require Windows Autopilot registration are not supported. </br></br>To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview).|
+| Windows Autopatch | For more information on this feature, go to [What is Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). |
+| Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../device-updates/windows/manage-feature-updates). |
+| Quality updates | For more information on this feature, go to [Manage Windows quality updates](../device-updates/windows/manage-quality-updates.md)
+| Expedite updates | For more information on this feature, go to [Windows quality updates in Microsoft Intune](../device-updates/windows/configure-expedite-policy). |
+| Driver updates | For more information on this feature, go to [Configure Windows driver update policies](../device-updates/windows/configure-driver-update-policy.md). |
+| Windows Autopilot device preparation | The following features are in the planning phase: - Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure - Self-deploying and pre-provisioning mode - More admin-specified configurations delivered before allowing desktop access. - Enhanced optional desktop onboarding experience inside the Windows Company Portal app - The ability to associate a device with a tenant. Provisioning modes which require Windows Autopilot registration are not supported. To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
 | Delivery Optimization for Win32 Apps | For more information on the Delivery Optimization feature in Windows, go to [What is Delivery Optimization?](/windows/deployment/do/waas-delivery-optimization). |
-| Windows Device Health Attestation (DHA)| For more information on Device Health Attestation, go to [Device Health Attestation](/windows-server/security/device-health-attestation) |
-| BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../device-configuration/templates/configure-bios-windows.md). |
-| Device firmware configuration interface (DFCI) | For more information on this feature, go to [Device Firmware Configuration Interface (DFCI) Management](/autopilot/dfci-management).|
+| Windows Device Health Attestation (DHA) | For more information on Device Health Attestation, go to [Device Health Attestation](/windows-server/security/device-health-attestation) |
+| BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../device-configuration/templates/configure-bios-windows). |
+| Device firmware configuration interface (DFCI) | For more information on this feature, go to [Device Firmware Configuration Interface (DFCI) Management](/autopilot/dfci-management). |
+| Enterprise Application Management | For more information on this feature, go to [Microsoft Enterprise Application Management (EAM)](/app-management/deployment/enterprise-app-management.md). | 
+| Remote Help | For more information on this feature go to [Use Remote Help with Microsoft Intune](/remote-help/index.md). |
+| Cloud PKI (GCC High only) | For more information on this feature go to [Overview of Microsoft Cloud PKI for Microsoft Intune](/cloud-pki/index.md) |
+| Security Copilot | For more information on this feature go to [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot) |
 
 ### Not available
 
-The following features aren't available and won't be supported for GCC High and DoD:
+The following features aren't available and there's currently no planning underway to support these features for GCC High and DoD environments:
 
 | Feature | Availability |
 | --- | --- |
-| Chrome OS Connector | ❌ |
-| Microsoft Store for Business | ❌ |
-| On-premises Exchange Connector | ❌ |
-| Windows Subscription Activation | ❌ |
-| [TeamViewer connector](../device-management/tools/teamviewer-legacy.md) </br>or TeamViewer feature | ❌ |
+| [Apple Managed account federation](/entra/external-id/customers/how-to-apple-federation-customers) | ❌ |
+| [Chrome Enterprise Connector](../device-enrollment/configure-chrome-enterprise-connector.md) | ❌ |
+| [Windows Autopilot](/autopilot/overview) | ❌ |
+| [Windows Enterprise multi-session remote desktops (AVD)](../solutions/azure-virtual-desktop-multi-session.md) | ❌ |
+| [Windows Diagnostic Data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) | ❌ |
+| [App and driver compatibility reports for Windows updates](../device-updates/windows/monitor-compatibility.md) | ❌ |
+| [Reports for feature update policies](../device-updates/windows/monitor-feature-updates.md) | ❌ |
+| [Windows Backup for Organizations](/windows/configuration/windows-backup/?tabs=intune) | ❌ |
+| [eSIM cellular support on Windows](../device-configuration/templates/configure-esim-download-server.md) | ❌ |
+| [Windows Subscription Activation](/windows/deployment/windows-subscription-activation?pivots=windows-11) | ❌ |
+| [Microsoft Store for Business](/windows/configuration/store/?tabs=intune) | ❌ |
+| [Microsoft Connected Cache for Enterprise and Education](/windows/deployment/do/mcc-ent-edu-overview) | ❌ |
+| [ServiceNow connector](../device-management/tools/setup-servicenow.md) | ❌ |
+| [TeamViewer connector (legacy)](../device-management/tools/teamviewer-legacy.md) and [TeamViewer integration](../device-management/tools/setup-teamviewer.md) | ❌ |
+| [Intune PowerBI connector for DWH](/power-query/connectors/) | ❌ |
+| [On-premises Exchange Connector] | ❌ |
 
 ## Next steps
 
