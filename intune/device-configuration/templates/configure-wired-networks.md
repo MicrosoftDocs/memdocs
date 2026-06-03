@@ -32,7 +32,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > This feature supports the following platforms:
@@ -45,10 +45,10 @@ This article lists the steps to create a wired network profile in Intune. It als
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
