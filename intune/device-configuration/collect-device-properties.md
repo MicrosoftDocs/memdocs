@@ -1,7 +1,7 @@
 ---
 title: "Collect Device Hardware Info With the Properties Catalog"
 description: "Use the properties catalog in Microsoft Intune to collect device hardware info like BIOS version, TPM status, and disk details on managed Windows devices. Get deeper visibility into your device inventory and troubleshoot issues."
-ms.date: 06/01/2026
+ms.date: 06/03/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
@@ -114,7 +114,7 @@ When you create the policy, select any of the following property categories to c
 | CPU | Processor ID |
 | Disk Drive | Drive ID |
 | Encryptable Volume | Volume ID |
-| Local AI Agent | Agent Name<br/>Install Location<br/>Install Scope |
+| Local AI Agent | Agent Name<br/>Install Location<br/>Install Scope <br/><br/>Microsoft recommends collecting **Host process**, as OpenClaw can run in different process names, like `node.exe`, `wsl.exe`, etc. |
 | Logical Drive | Drive Identifier |
 | Memory Info | |
 | Network Adapter | Identifier |
@@ -137,10 +137,10 @@ Use the following steps to view the collected device inventory information:
 
 ## What you need to know
 
-- **Local AI Agent** helps you discover local AI agents, like OpenClaw, running on your Windows devices. After deploy the properties catalog policy and start collecting data, you can:
+- **Local AI Agent** helps you discover OpenClaw running on your Windows devices. After you deploy the properties catalog policy and start collecting data, the next steps are:
 
   - Use [Device Query](../advanced-analytics/device-query-multiple-devices.md) to view devices with a Local AI Agent.
-  - Use the [Local AI Agent Baseline - OpenClaw (Preview)](../device-security/security-baselines/ref-openclaw-settings.md) to block users from using OpenClaw.
+  - Use the [Local AI Agent Baseline - OpenClaw](../device-security/security-baselines/ref-openclaw-settings.md) to block users from using OpenClaw.
 
 - You can stop (delete) the collection of properties only at the category level. To stop collecting properties, go to the **properties catalog** profile, and remove the collection for every property in the category.
 
