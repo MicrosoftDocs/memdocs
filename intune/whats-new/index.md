@@ -49,7 +49,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-The 2605 release is currently in progress and expected to complete by end of week.
+> [!NOTE]  
+> The 2605 release is currently in progress and expected to complete by end of week.
 
 ## Week of May 26, 2026
 
