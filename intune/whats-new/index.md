@@ -19,14 +19,9 @@ You can also read:
 - Information about [how Intune service updates are released](../fundamentals/servicing-information.md)
 
 > [!NOTE]
-> Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) can take up to three days to roll out and is in the following order:
+> Each monthly [service update](../fundamentals/servicing-information.md) is rolled out gradually to help ensure quality and reliability. Updates are first validated in Microsoft internal environments, then to a small set of customer datacenters before expanding worldwide over the course of several days to a week. Some tenants might see changes before other tenants. The rollout is carefully monitored and might be paused or delayed to protect customers, which can affect timing.
 >
-> - Day 1: Asia Pacific (APAC)
-> - Day 2: Europe, Middle East, Africa (EMEA)
-> - Day 3: North America
-> - Day 4+: Intune for Government
->
-> Some features roll out over several weeks and might not be available to all customers in the first week.
+> Some features may gradually roll out over several weeks.
 >
 > For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](./in-development.md).
 >
@@ -53,6 +48,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+> [!NOTE]  
+> The 2605 release is currently in progress and expected to complete by end of week.
 
 ## Week of May 26, 2026
 
