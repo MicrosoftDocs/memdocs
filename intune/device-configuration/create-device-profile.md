@@ -111,7 +111,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [VPN](./templates/configure-vpn.md)
 - [Wi-Fi](./templates/configure-wifi.md)
 - [Windows health monitoring](./templates/configure-health-monitoring-windows.md)
-- [Wired networks (macOS)](./templates/ref-wired-network-settings-macos.md)
+- [Wired networks](./templates/configure-wired-networks.md)
 
 ---
 
