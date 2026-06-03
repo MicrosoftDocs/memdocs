@@ -3,7 +3,7 @@ title: Microsoft Intune Government Service overview
 description: Learn more about the Intune government service offerings and features. This article is designed to serve as an overview of the Microsoft Intune offering for government community cloud (GCC) High and United States Department of Defense (DoD) environments.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/11/2025
+ms.date: 06/03/2026
 ms.topic: concept-article
 ms.reviewer: pfetty
 ms.collection:
@@ -84,18 +84,18 @@ The following features are currently not available and aren't supported in GCC H
 | Feature | Availability |
 | --- | --- |
 | Windows Autopatch | For more information on this feature, go to [What is Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). |
-| Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../device-updates/windows/manage-feature-updates). |
+| Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../device-updates/windows/manage-feature-updates.md). |
 | Quality updates | For more information on this feature, go to [Manage Windows quality updates](../device-updates/windows/manage-quality-updates.md)
-| Expedite updates | For more information on this feature, go to [Windows quality updates in Microsoft Intune](../device-updates/windows/configure-expedite-policy). |
+| Expedite updates | For more information on this feature, go to [Windows quality updates in Microsoft Intune](../device-updates/windows/configure-expedite-policy.md). |
 | Driver updates | For more information on this feature, go to [Configure Windows driver update policies](../device-updates/windows/configure-driver-update-policy.md). |
 | Windows Autopilot device preparation | The following features are in the planning phase: - Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure - Self-deploying and pre-provisioning mode - More admin-specified configurations delivered before allowing desktop access. - Enhanced optional desktop onboarding experience inside the Windows Company Portal app - The ability to associate a device with a tenant. Provisioning modes which require Windows Autopilot registration are not supported. To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview). |
 | Delivery Optimization for Win32 Apps | For more information on the Delivery Optimization feature in Windows, go to [What is Delivery Optimization?](/windows/deployment/do/waas-delivery-optimization). |
 | Windows Device Health Attestation (DHA) | For more information on Device Health Attestation, go to [Device Health Attestation](/windows-server/security/device-health-attestation) |
-| BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../device-configuration/templates/configure-bios-windows). |
+| BIOS configuration policies on Windows | For more information on this feature, go to [Use BIOS configuration profiles on Windows devices in Microsoft Intune](../device-configuration/templates/configure-bios-windows.md). |
 | Device firmware configuration interface (DFCI) | For more information on this feature, go to [Device Firmware Configuration Interface (DFCI) Management](/autopilot/dfci-management). |
-| Enterprise Application Management | For more information on this feature, go to [Microsoft Enterprise Application Management (EAM)](/app-management/deployment/enterprise-app-management.md). | 
-| Remote Help | For more information on this feature go to [Use Remote Help with Microsoft Intune](/remote-help/index.md). |
-| Cloud PKI (GCC High only) | For more information on this feature go to [Overview of Microsoft Cloud PKI for Microsoft Intune](/cloud-pki/index.md) |
+| Enterprise Application Management | For more information on this feature, go to [Microsoft Enterprise Application Management (EAM)](../app-management/deployment/enterprise-app-management.md). | 
+| Remote Help | For more information on this feature go to [Use Remote Help with Microsoft Intune](../remote-help/index.md). |
+| Cloud PKI (GCC High only) | For more information on this feature go to [Overview of Microsoft Cloud PKI for Microsoft Intune](../cloud-pki/index.md) |
 | Security Copilot | For more information on this feature go to [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot) |
 
 ### Not available
