@@ -32,8 +32,7 @@ There's also a visual guide of the different enrollment options for each platfor
 
 > [!TIP]
 >
-> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
-> - For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the [Microsoft 365 admin center](https://admin.microsoft.com).
+> For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 ## Before you begin
 

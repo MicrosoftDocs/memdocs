@@ -6,6 +6,7 @@ metadata:
   ms.topic: faq
   ms.subservice: core-infra
   ms.collection: highpri
+  ms.custom: sfi-ga-nochange
 
 title: Frequently asked questions about the CMG
 summary: |
@@ -40,14 +41,17 @@ sections:
       - question: |
           Do I need to maintain or secure the Azure virtual machines?
         answer: |
-          No. The CMG is a software as a service (SaaS) solution that extends your Configuration Manager environment into the cloud. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure PaaS secures and updates the VMs. You don't need to monitor these VMs. The Azure VMs for CMG aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). For more security specific information on the underlying PaaS solution that the CMG is built on, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
-
+          No. The CMG is a software as a service (SaaS) solution that extends your Configuration Manager environment into the cloud. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure PaaS secures and updates the VMs. For more security specific information on the underlying PaaS solution that the CMG is built on, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
+          
+          > [!IMPORTANT]
+          > The CMG runs on Microsoft-managed Azure platform services. Some security or vulnerability scans that target CMG virtual machine instances can return findings that aren’t applicable or actionable, as they reflect generic checks for customer-managed infrastructure rather than Azure-managed platform services.
+          
           Since the CMG acts as a proxy for client communication, it doesn't process, keep, or store any client data. The communication path over the internet always uses HTTPS. For greater security, configure the management point for HTTPS. Also configure the site option for clients to encrypt inventory and status messages. For more information, see [Plan for security: Signing and encryption](../../../plan-design/security/plan-for-security.md#signing-and-encryption).
-
+          
       - question: |
           Do I need to update the Virtual machine if the image is deprecated?
         answer: |
-          No. The CMG VM's are deployed using template and IIS are configured, this will be broken if you manually update the VM's. Product group will fix the issue through update or the current branch releases. 
+          No. The CMG VMs are deployed using template and IIS are configured, this will be broken if you manually update the VMs. Product group will fix the issue through update or the current branch releases. 
           
       - question: |
           How can I ensure service continuity during service updates?
@@ -147,4 +151,4 @@ sections:
 
           Some people confuse the information in this blog post with the application registrations in Microsoft Entra ID that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If a Microsoft Entra Global Administrator manually created the Configuration Manager app registrations in Microsoft Entra ID, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Microsoft Entra apps](manually-register-azure-ad-apps.md).<!--10488538-->
 
-          For more information : [Migrate your apps from Azure AD Graph to Microsoft Graph](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).
+          For more information: [Migrate your apps from Azure AD Graph to Microsoft Graph](https://learn.microsoft.com/en-us/graph/migrate-azure-ad-graph-overview).

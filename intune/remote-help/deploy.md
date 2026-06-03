@@ -12,10 +12,6 @@ ms.collection:
 
 # Deploying Remote Help with Microsoft Intune
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [remote-help-overview](includes/remote-help-overview.md)]
-
 This article describes the steps to deploy Remote Help with Microsoft Intune.
 
 - [⚙️Set up your tenant](#configure-remote-help-for-your-tenant)

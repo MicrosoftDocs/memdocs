@@ -1,7 +1,7 @@
 ---
 title: Configure Recovery Lock using the settings catalog
 description: Add or create settings using the settings catalog to configure Recovery Lock on macOS devices. Use Recovery Lock to help protect your macOS devices against unauthorized reinstallation and wiping. Using Microsoft Intune, you can configure Recovery Lock settings, and deploy these settings to macOS devices in your organization.
-ms.date: 05/05/2026
+ms.date: 06/01/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
@@ -9,9 +9,6 @@ ms.collection:
 ---
 
 # Configure Recovery Lock on macOS devices in Microsoft Intune
-
-> [!NOTE]
-> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
 
 Recovery Lock helps protect your macOS devices against unauthorized reinstallation and wiping. When you add a Recovery Lock policy, Intune automatically generates a strong, random password and sets it on the device.
 

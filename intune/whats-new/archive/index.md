@@ -71,7 +71,7 @@ We've updated the Vulnerability Remediation Agent for Security Copilot, adding t
 
   When using granular RBAC configurations, ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../copilot/agents/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../copilot/agents/vulnerability-remediation-agent.md). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent's identity won't affect the agent's run history, which remains available.
 
@@ -1036,7 +1036,7 @@ Endpoint Privilege Management (EPM) elevation rules now include a new file eleva
 
 *Deny* rules support the same configuration options as other [elevation types](../../epm/create-elevation-rules.md#creating-elevation-rules-with-endpoint-privilege-management) except for child processes, which aren't used.
 
-For more information about EPM, which is available as an [Intune Suite add-on-capability](../../fundamentals/add-ons.md), see [Endpoint Privilege Management overview](../../epm/overview.md).
+For more information about EPM, which is available as an [Intune Suite add-on-capability](../../fundamentals/advanced-capabilities.md), see [Endpoint Privilege Management overview](../../epm/overview.md).
 
 ### App management
 
@@ -1163,7 +1163,7 @@ Microsoft Intune has a new icon. The Intune icon is being updated across platfor
 
 File elevation rules for Endpoint Privilege Management (EPM) now support [command line file arguments](../../epm/create-elevation-rules.md#use-file-arguments-for-elevation-rules). When an elevation rule is configured to define one or more file arguments, EPM allows that file to run in an elevated request only when one of the defined arguments is used. EPM blocks elevation of the file should a command line argument be used that isn't defined by the elevation rule. Use of file arguments in your file elevation rules can help you refine how and for what intent different files are successfully run in an elevated context by Endpoint Privilege Management.
 
-EPM is available as an [Intune Suite add-on-capability](../../fundamentals/add-ons.md).
+EPM is available as an [Intune Suite add-on-capability](../../fundamentals/advanced-capabilities.md).
 
 ### App management
 
@@ -1712,7 +1712,7 @@ With this capability, while reviewing the properties of a file elevation request
 - The risk score for the user requesting the file elevation
 - The risk score of the device from which the elevation was submitted
 
-EPM is available as an [Intune Suite add-on-capability](../../fundamentals/add-ons.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../../copilot/index.md).
+EPM is available as an [Intune Suite add-on-capability](../../fundamentals/advanced-capabilities.md). To learn more about how you can currently use Copilot in Intune, see [Microsoft Copilot in Intune](../../copilot/index.md).
 
 To learn more about Microsoft Security Copilot, see, [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot).
 
@@ -2314,7 +2314,7 @@ The resource performance scores and insights for physical devices are aimed to h
 For more information, see:
 
 - [Resource performance report](../../advanced-analytics/resource-performance.md)
-- [Microsoft Intune Suite](../../fundamentals/add-ons.md)
+- [Microsoft Intune Suite](../../fundamentals/advanced-capabilities.md)
 
 ### App management
 
@@ -2603,7 +2603,7 @@ Plan 2 capabilities:
 
 For more information, see:
 
-- [Use Microsoft Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
+- [Use Microsoft Intune Suite add-on capabilities](../../fundamentals/advanced-capabilities.md)
 - [Microsoft Intune for US Government GCC service description](../../fundamentals/government-service.md)
 
 ### Device enrollment
@@ -3494,7 +3494,7 @@ Applies to:
 
 #### GCC customers can use Remote Help for Windows and Android devices<!-- 10613615 25825071-->
 
-The [Microsoft Intune Suite](../../fundamentals/add-ons.md) includes advanced endpoint management and security features, including Remote Help.
+The [Microsoft Intune Suite](../../fundamentals/advanced-capabilities.md) includes advanced endpoint management and security features, including Remote Help.
 
 On Windows and enrolled Android Enterprise dedicated devices, you can use remote help on US Government GCC environments.
 
@@ -3530,7 +3530,7 @@ Applies to
 
 #### New elevation type for Endpoint Privilege Management<!-- 25230692 -->
 
-Endpoint Privilege Management has a new file elevation type, **support approved**. Endpoint Privilege Management is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../../fundamentals/add-ons.md).
+Endpoint Privilege Management has a new file elevation type, **support approved**. Endpoint Privilege Management is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../../fundamentals/advanced-capabilities.md).
 
 A support-approved elevation gives you a third option for both the default elevation response and the elevation type for each rule. Unlike automatic or user confirmed, a support-approved elevation request requires Intune administrators to manage which files can run as elevated on a case-by-case basis.
 
@@ -3846,7 +3846,7 @@ For more information, see [Create a notification message template](../../device-
 
 #### New Microsoft Cloud PKI service<!-- 17272901 -->
 
-Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../../fundamentals/add-ons.md). The cloud-based service provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/index.md).
+Use the Microsoft Cloud PKI service to simplify and automate certificate lifecycle management for Intune-managed devices. ​Microsoft Cloud PKI is a feature component of the Microsoft Intune Suite and is also available as a standalone [Intune add-on](../../fundamentals/advanced-capabilities.md). The cloud-based service provides a dedicated PKI infrastructure for your organization, and doesn't require on-premises servers, connectors, or hardware. Microsoft Cloud PKI automatically issues, renews, and revokes certificates for all OS platforms supporting the SCEP certificate device configuration profile. Issued certificates can be used for certificate-based authentication for Wi-Fi, VPN, and other services supporting certificate-based authentication. For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/index.md).
 
 Applies to:
 
@@ -4111,7 +4111,7 @@ Enterprise Application Management provides an Enterprise App Catalog of Win32 ap
 
 For more information, see:
 
-- [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
+- [Use Intune Suite add-on capabilities](../../fundamentals/advanced-capabilities.md)
 - [Microsoft Intune Enterprise Application Management](../../app-management/deployment/enterprise-app-management.md)
 - [Add an Enterprise App Catalog app to Microsoft Intune](../../app-management/deployment/add-enterprise-catalog-app.md)
 
@@ -4142,7 +4142,7 @@ To use Device query and battery health report in your tenant, or any of the exis
 
 For more information, see:
 
-- [Use Intune Suite add-on capabilities](../../fundamentals/add-ons.md)
+- [Use Intune Suite add-on capabilities](../../fundamentals/advanced-capabilities.md)
 - [Microsoft Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Battery health](../../advanced-analytics/battery-health.md)
 - [Device query](../../advanced-analytics/device-query.md)
@@ -4843,7 +4843,7 @@ For more information, see [Set up web based device enrollment for iOS](../../dev
 
 The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons**, and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, the add-on capabilities you're licensed to use in your tenant, and support for new billing experiences in Microsoft admin center.
 
-For more information, see [Use Intune Suite add-ons capabilities](../../fundamentals/add-ons.md).
+For more information, see [Use Intune Suite add-ons capabilities](../../fundamentals/advanced-capabilities.md).
 
 #### Remote Help for Android is now Generally available<!--17675897 -->
 
@@ -5076,7 +5076,7 @@ This integration is now generally available for Android Enterprise Dedicated and
 
 Previously, this feature was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
-For licensing details, see [Intune add-ons](../../fundamentals/add-ons.md).
+For licensing details, see [Intune add-ons](../../fundamentals/advanced-capabilities.md).
 
 ### Device enrollment
 

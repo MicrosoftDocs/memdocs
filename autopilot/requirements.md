@@ -110,7 +110,6 @@ Windows Autopilot relies on several different type of services to function prope
 After a network connection is in place, each Windows device will contact the Windows Autopilot Deployment Service. The following URLs are used:
 
 - `https://ztd.dds.microsoft.com`
-- `https://cs.dds.microsoft.com`
 - `https://login.live.com`
 
 ##### Windows Activation
@@ -230,7 +229,7 @@ To provide needed Microsoft Entra ID and MDM functionality, including automatic 
 
 > [!NOTE]
 >
-> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/licensing/assign-licenses).
+> When a Microsoft 365 subscription is used, licenses still need to be assigned to users so they can enroll device in Intune. For more information, see [assign licenses to users so they can enroll devices in Intune](/intune/fundamentals/assign-licenses).
 
 Additionally, the following are also recommended (but not required):
 

@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 04/29/2026
+ms.date: 05/18/2026
 ms.topic: how-to
 ms.reviewer: annovich
 ai-usage: ai-assisted
@@ -222,7 +222,7 @@ Create an enrollment policy for automated device enrollment. A device enrollment
     - If you select **Show**, the screen is shown during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
     - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration.
 
-1. Select **Next**.
+1. Select **Next**.  
 
 1. To save the policy, select **Create**.
 

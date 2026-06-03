@@ -5,6 +5,9 @@ ms.date: 08/12/2022
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.custom:
+  - sfi-ga-nochange
+  - sfi-ropc-nochange
 ---
 
 # Approve applications in Configuration Manager

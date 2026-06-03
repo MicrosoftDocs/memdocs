@@ -1,4 +1,4 @@
----
+﻿---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
 ms.date: 04/10/2026
@@ -30,8 +30,8 @@ appliesto:
 Use Windows Autopilot device preparation policies in the automatic flow to provision Cloud PCs at creation. This feature is generally available for:  
 
 - Windows 365 Enterprise
-- Windows 365 Frontline (dedicated)
-- Windows 365 Frontline (shared)
+- Windows 365 Flex (dedicated)
+- Windows 365 Flex (shared)
 - Windows 365 Cloud Apps  
 
 This feature is in public preview for Windows 365 Reserve.  

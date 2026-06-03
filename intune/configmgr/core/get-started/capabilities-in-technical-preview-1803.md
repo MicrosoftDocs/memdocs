@@ -6,6 +6,7 @@ ms.subservice: core-infra
 ms.topic: whats-new
 ROBOTS: NOINDEX
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Capabilities in Technical Preview 1803 for Configuration Manager

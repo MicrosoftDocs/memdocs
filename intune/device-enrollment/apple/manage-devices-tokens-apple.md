@@ -112,7 +112,7 @@ If you exceed 200,000 devices per token, you might experience sync problems. Spl
 
 ## Distribute devices
 
-Users on devices enrolled with user affinity must have an Intune license assigned. Devices enrolled without user affinity need an Intune device license, unless an Intune-licensed user is associated with the device. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and the [Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md).  
+Users on devices enrolled with user affinity must have an Intune license assigned. Devices enrolled without user affinity need an Intune device license, unless an Intune-licensed user is associated with the device. For more information, see [Microsoft Intune licensing](../../fundamentals/licensing.md) and the [Intune planning guide](../../intune-service/fundamentals/intune-planning-guide.md).  
 
 A device that is already activated needs to be wiped before it can enroll with automated device enrollment. After you wipe it but before activating it again, you can apply the enrollment policy. For more information, see [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516) (opens Apple support site).   
 

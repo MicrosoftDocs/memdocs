@@ -5,6 +5,7 @@ ms.date: 09/09/2016
 ms.subservice: mdt
 ms.topic: reference
 ms.collection: tier3
+ms.custom: sfi-ropc-nochange
 ---
 
 # UDI Reference
@@ -166,9 +167,9 @@ You use a wizard page editor to configure a wizard page in the UDI Wizard Design
 
 - [Windows Presentation Foundation](/dotnet/desktop-wpf/) version 4.0
 
-- [Microsoft Prism](https://www.codeproject.com/Articles/165370/Creating-View-Switching-Applications-with-Prism-4) version 4.0
+- [Microsoft Prism](https://github.com/MicrosoftDocs/patterns-practices/blob/master/patterns-practices/index.md) version 4.0
 
-- [Microsoft Unity Application Block](https://www.codeproject.com/articles/42524/a-basic-introduction-to-the-unity-application-bloc) (Unity) version 2.1
+- [Microsoft Unity Application Block](/previous-versions/msp-n-p/ff647202(v=pandp.10)?redirectedfrom=MSDN) (Unity) version 2.1
 
   For more information on developing custom UDI wizard page editors, see the section, "Creating Custom Wizard Page Editors", in the MDT document *User-Driven Installation Developers Guide*.
 

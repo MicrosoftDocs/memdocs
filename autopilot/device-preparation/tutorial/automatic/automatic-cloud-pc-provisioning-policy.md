@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 5 of 6 - Create a Cloud PC provisioning policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 5 of 6 - Create a Cloud PC provisioning policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 6 - Create a Cloud PC provisioning policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 5 of 6 - Create a Cloud PC provisioning policy.
 ms.date: 06/11/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Create a Cloud PC provisioning policy
+# Windows Autopilot device preparation in automatic mode for Windows 365: Create a Cloud PC provisioning policy
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
@@ -80,7 +80,7 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
       1. If unique names for Cloud PCs are desired, select **Apply device name template** under **Cloud PC naming**, and then follow the instructions to create a name template.
 
-      1. Under **Windows Autopilot (Preview)**:
+      1. Under **Windows Autopilot**:
 
          1. Next to **Autopilot Device preparation policy**, use the drop-down menu to select the automatic Windows Autopilot device preparation policy created in [Step 4: Create Windows Autopilot device preparation policy](automatic-autopilot-policy.md).
 

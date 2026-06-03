@@ -48,11 +48,11 @@ Use the following search tips to help you find the information that you need:
 
   - **Search** in the upper right corner. To search all articles, enter terms in this field. Articles in this content library automatically include one of the following search scopes: `ConfigMgr`, `Intune`, or `Autopilot`.
 
-    :::image type="content" source="media/docs-search-field.png" alt-text="Docs search field in header.":::
+    :::image type="content" source="media/use-docs/docs-search-field.png" alt-text="Docs search field in header.":::
 
   - **Filter by title** above the left table of contents. To search the current table of contents, enter terms in this field. This field only matches terms that appear in the article titles for the current node. For example, **Configuration Manager Core Infrastructure** (`learn.microsoft.com/mem/configmgr/core`) or **Intune Apps** (`https://learn.microsoft.com/mem/intune/apps/`). The last item in the search results gives you the option to search for the terms in the entire content library.
 
-    :::image type="content" source="media/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter.":::
+    :::image type="content" source="media/use-docs/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter.":::
 
 Having problems finding something? [File feedback!](#about-feedback) When you file an issue about search results, provide the search engine you're using, the keywords you tried, and the target article. This feedback helps Microsoft optimize the content for better search.
 
@@ -79,7 +79,7 @@ With many modern web browsers, you can create a custom search engine. Use this f
         >
         > The Microsoft technical documentation search engine requires a locale in the address. For example, `en-us`. You can change your entry to use a different locale.
 
-    :::image type="content" source="media/docs-search-engine.png" alt-text="Add to Microsoft Edge a custom search engine for Microsoft technical documentation.":::
+    :::image type="content" source="media/use-docs/docs-search-engine.png" alt-text="Add to Microsoft Edge a custom search engine for Microsoft technical documentation.":::
 
 After you add this search engine, type your keyword in the browser address bar, press `Tab`, then type your search terms, and press `Enter`. It will automatically search Microsoft technical documentation for your specified terms using the defined scope.
 
@@ -87,7 +87,7 @@ After you add this search engine, type your keyword in the browser address bar, 
 
 Select the **Feedback** link in the upper right of any article or go to the Feedback section at the bottom.
 
-:::image type="content" source="media/docs-feedback.png" alt-text="Screenshot of the feedback section of a Microsoft Learn article.":::
+:::image type="content" source="media/use-docs/docs-feedback.png" alt-text="Screenshot of the feedback section of a Microsoft Learn article.":::
 
 ### Types of feedback
 
@@ -122,7 +122,7 @@ To receive notifications when content changes in the documentation library, use 
 
 1. At the bottom of the list of results, select the **RSS** link.
 
-    :::image type="content" source="media/docs-search-rss.png" alt-text="Screenshot of search results and RSS link.":::
+    :::image type="content" source="media/use-docs/docs-search-rss.png" alt-text="Screenshot of search results and RSS link.":::
 
 1. Use this feed in an RSS application to receive notifications when there's a change to any of the search results. Refer to the RSS application's documentation on how to configure and tune it.
 
@@ -141,7 +141,7 @@ The Microsoft Intune product family documentation library, like most Microsoft t
 
 1. To edit the source file, select the pencil icon.
 
-    :::image type="content" source="media/docs-github-edit.png" alt-text="Screenshot of GitHub source file header.":::
+    :::image type="content" source="media/use-docs/docs-github-edit.png" alt-text="Screenshot of GitHub source file header.":::
 
 1. Make changes in the markdown source. For more information, see [How to use Markdown in Microsoft Learn articles](/contribute/markdown-reference).
 

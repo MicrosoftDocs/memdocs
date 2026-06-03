@@ -4,6 +4,7 @@ description: View the timeline for Configuration Manager devices from the admin 
 ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
+ms.custom: sfi-image-nochange
 ---
 
 # <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center

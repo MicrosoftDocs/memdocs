@@ -55,7 +55,7 @@ The first time you use a Configuration Manager console after finishing the insta
 > - **Replication links** between the CAS and child primary sites display as not upgraded. This state displays in the update installation status as *Completed with warning* for monitoring replication initialization. In the **Monitoring** workspace of the console, this state displays as *Link is being configured*.
 
 ### Early update ring
-
+<!--
 At this time, version 2603 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2603:
 
 [Version 2603 opt-in script](https://aka.ms/KB37426535_EnableEarlyRing)
@@ -81,6 +81,9 @@ The version 2603 update should now be available in the console.
 
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2603. It's not a permanent change.
+-->
+
+As of May 27, 2026, version 2603 is globally available for all customers to install.
 
 ## Pre-update checklist
 

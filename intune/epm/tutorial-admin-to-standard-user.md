@@ -13,10 +13,6 @@ ms.collection:
 
 # Use Endpoint Privilege Management to transition users from administrator to standard user
 
-[!INCLUDE [intune-add-on-note](../advanced-analytics/includes/intune-add-on-note.md)]
-
-[!INCLUDE [intune-epm-overview](./includes/intune-epm-overview.md)]
-
 A common scenario for customers who want to use Endpoint Privilege Management is to reduce the number of local administrators in their environment. This scenario adheres to the Zero Trust principle of least privilege. This document steps through the steps a customer could follow to use EPM to move users from administrators to standard users with minimal disruption.
 
 ## Phase 1: Auditing

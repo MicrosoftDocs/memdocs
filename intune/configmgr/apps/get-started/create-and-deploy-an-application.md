@@ -5,6 +5,7 @@ ms.date: 10/01/2021
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 # Create and deploy an application with Configuration Manager
 

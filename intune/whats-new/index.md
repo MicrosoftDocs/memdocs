@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 05/11/2026
+ms.date: 05/26/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -53,6 +53,37 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of May 26, 2026
+
+### Role-based access control
+
+#### Intune RBAC roles have access to Copilot in Intune<!-- 37153212 -->
+
+When Microsoft Intune is enabled as a data source in Security Copilot, by default:
+
+- The Microsoft Entra ID **Intune Administrator** role automatically inherits **Security Copilot owner** access to Copilot in Intune.
+- All the other built-in and custom Intune role-based access (RBAC) roles automatically inherit **Security Copilot contributor** access to Copilot in Intune.
+
+Intune admins can use Security Copilot capabilities in Intune without requiring more role assignments.
+
+Previously, access to Copilot in Intune required a separate role assignment in Security Copilot or a Microsoft Entra ID role, like the Intune Administrator role.
+
+This update reduces access friction and simplifies Copilot onboarding for organizations.
+
+To learn more, see:
+
+- [Microsoft Copilot in Intune](../copilot/index.md)
+- [Roles and authentication in Microsoft Security Copilot](/copilot/security/authentication)
+
+## Week of May 18, 2026
+
+### Device security
+
+#### Guidance for device-reported values in compliance reports<!-- 37725884 -->
+
+We updated documentation to clarify how to interpret device-reported values in compliance reports. Some compliance reports include a **Setting** column with values reported directly by the device, providing additional context for noncompliance in scenarios such as custom compliance and Android app configuration reporting. This update adds guidance on treating these values as informational only and highlights security considerations for reviewing device-reported data. For more information, see [Device-reported values in compliance reports](../device-security/compliance/monitor-policy.md#device-reported-values-in-compliance-reports).
+
 ## Week of May 11, 2026
 
 ### Device enrollment
@@ -293,9 +324,6 @@ For more information, see [Add an Android line-of-business app to Microsoft Intu
 >
 > - Android Enterprise
 
-> [!NOTE]
-> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
-
 #### Newly available protected apps for Intune<!-- 36921208, 36933292 -->
 
 The following protected apps are now available for Microsoft Intune:
@@ -393,9 +421,6 @@ The Recovery Lock password can be viewed in the per-setting status report > **Pa
 > Applies to:
 >
 > - macOS
-
-> [!NOTE]
-> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by mid-May 2026.
 
 #### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
 
@@ -878,7 +903,7 @@ Device query for multiple devices now includes expanded operator support, cleare
 
 Endpoint Privilege Management (EPM) elevation policies now support deployment to users on Azure Virtual Desktop (AVD) single-session virtual machines.
 
-For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../epm/deployment-planning.md).
+For information about using EPM, see [Plan and Prepare for Endpoint Privilege Management Deployment](../epm/deployment-planning.md).
 
 ### App management
 

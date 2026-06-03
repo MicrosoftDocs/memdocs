@@ -5,6 +5,7 @@ ms.date: 06/20/2022
 ms.subservice: other
 ms.topic: article
 ms.collection: tier3
+ms.custom: sfi-image-nochange
 ---
 
 # Community hub and GitHub

@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 4 of 6 - Create a Windows Autopilot device preparation policy
-description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 4 of 6 - Create a Windows Autopilot device preparation policy.
+title: Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 6 - Create a Windows Autopilot device preparation policy
+description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 - Step 4 of 6 - Create a Windows Autopilot device preparation policy.
 ms.date: 06/11/2025
 ms.topic: tutorial
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Windows Autopilot device preparation in automatic mode for Windows 365 (preview): Create a Windows Autopilot device preparation policy
+# Windows Autopilot device preparation in automatic mode for Windows 365: Create a Windows Autopilot device preparation policy
 
 Windows Autopilot device preparation in automatic mode for Windows 365 steps:
 
@@ -40,7 +40,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
-1. In the **Device preparation policies** screen, select **Create**, and then select **Automatic (Preview)**.
+1. In the **Device preparation policies** screen, select **Create**, and then select **Automatic**.
 
 1. The **Create profile** screen opens. In the **Introduction** page, select **Next**.
 

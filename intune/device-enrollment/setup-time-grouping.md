@@ -1,7 +1,7 @@
 ﻿---
 title: Set up enrollment time grouping
 description: Overview and setup of the enrollment time grouping feature in Microsoft Intune.
-ms.date: 04/29/2026
+ms.date: 05/18/2026
 ms.topic: how-to
 ms.reviewer:
 ms.collection:
@@ -27,10 +27,10 @@ This article provides an overview of enrollment time grouping, how to configure 
 
 > Enrollment time grouping is supported on the following platforms:
 >
-> - Windows 11
 > - Android Enterprise
 > - tvOS
 > - visionOS
+> - Windows 11
 
 :::column-end:::
 :::row-end:::
@@ -44,9 +44,9 @@ This article provides an overview of enrollment time grouping, how to configure 
 
 > Enrollment time grouping is supported on devices provisioned via:
 >
+> - [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
 > - [Windows Autopilot device preparation](/autopilot/device-preparation/overview)
 > - [Android Enterprise](android/guide.md)
-> - [Automated device enrollment for tvOS and visionOS](./apple/overview-automated-enrollment-apple.md)
 >
 > For Android Enterprise, enrollment time grouping is supported with the following enrollment policies:
 >
@@ -66,9 +66,9 @@ This article provides an overview of enrollment time grouping, how to configure 
 
 > The permissions you need depend on the platform you're configuring:
 >
-> - **Windows Autopilot**: Permissions to create and modify Windows Autopilot device preparation policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
-> - **tvOS and visionOS**: Permissions to create and modify tvOS and visionOS enrollment policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
-> - **Android Enterprise**: Permissions to create and modify Android Enterprise enrollment policies, and the *enrollment time device membership assignment for Android Enterprise* permission (available in custom roles under **Android Enterprise**).
+> - tvOS and visionOS automated device enrollment: Permissions to create and modify tvOS and visionOS enrollment policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**). 
+> - Windows Autopilot: Permissions to create and modify Windows Autopilot device preparation policies, and the *enrollment time device membership assignment* permission (available in custom roles under **Enrollment programs**).
+> - Android Enterprise: Permissions to create and modify Android Enterprise enrollment policies, and the *enrollment time device membership assignment for Android Enterprise* permission (available in custom roles under **Android Enterprise**).
 >
 > To add the Intune first-party app as a security group owner, you must be a Microsoft Entra Group Administrator (or hold the *microsoft.directory/groups/owners/update* permission), or be an existing owner of the security group.
 >
@@ -79,7 +79,7 @@ This article provides an overview of enrollment time grouping, how to configure 
 :::row-end:::  
 
 > [!TIP]
-> For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control/overview.md#custom-roles).
+> For more information about creating custom roles, see [Role based access control](../fundamentals/role-based-access-control/overview.md#custom-roles).  
 
 ## Step 1: Create Microsoft Entra security group
 
