@@ -3,8 +3,9 @@ title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/27/2026
+ms.date: 05/29/2026
 ms.topic: overview
+ai-usage: ai-assisted
 ms.reviewer: aanavath
   - intune-azure
 ms.collection:
@@ -111,6 +112,9 @@ The following security baseline instances are available for use with Intune. Use
 - **HoloLens 2 - Standard security baseline settings**:
   - [Version 1 - HoloLens 2 standard security](./ref-hololens2-standard-settings.md) - *January 2025*
 
+- **Local AI Agent Baseline - OpenClaw (Preview)**:
+  - [Version 1](./ref-openclaw-settings.md) - *May 2026*
+
 - **Windows 365 Security Baseline**:
   - [Version 24H1](./ref-windows-365-settings.md?pivots=win365-24h1)
   - [November 2021](./ref-windows-365-settings.md?pivots=win365-nov21)
@@ -186,4 +190,5 @@ Within the Intune security baseline policy UI, Intune provides information text 
   - [Microsoft Defender for Endpoint baseline](./ref-defender-settings.md)
   - [Microsoft 365 Apps for Enterprise security baseline (Office)](./ref-v2-office-settings.md)
   - [Microsoft Edge security baseline](./ref-edge-settings.md)
+  - [Local AI Agent Baseline - OpenClaw (Preview)](./ref-openclaw-settings.md)
   - [Windows 365 Security Baseline](./ref-windows-365-settings.md)
