@@ -1,7 +1,7 @@
 ---
 title: Device features and settings in Microsoft Intune
 description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
-ms.date: 02/10/2026
+ms.date: 06/03/2026
 ms.topic: overview
 ms.reviewer: mikedano
 ms.collection:
@@ -354,6 +354,7 @@ When you assign the profile, users get access to your corporate wired network wi
 
 This feature supports:
 
+- iOS/iPadOS
 - macOS
 - Windows
 
