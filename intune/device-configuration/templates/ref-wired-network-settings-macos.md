@@ -34,20 +34,20 @@ This article describes the settings you can configure. To learn more about Wired
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-:::column-end:::
-:::column span="3":::
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
 > - Create a [wired network device configuration profile](configure-wired-networks.md).
 > - These settings are available for all enrollment types.
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
