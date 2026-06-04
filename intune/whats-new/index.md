@@ -58,7 +58,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Remote Help for Windows updated with performance improvements  
 
-The latest version of Remote Help for Windows (version 1.0.2510071) includes general bug fixes and performance improvements to enhance reliability.  
+The latest version of Remote Help for Windows (version 5.2.1037.0) includes general bug fixes and performance improvements to enhance reliability.  
 
 ## Week of May 26, 2026
 
