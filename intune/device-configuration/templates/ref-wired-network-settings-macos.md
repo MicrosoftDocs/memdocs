@@ -1,7 +1,7 @@
 ---
 title: Configure wired network settings for Apple devices in Microsoft Intune
 description: Create or add a wired network device configuration profile for Apple devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
-ms.date: 06/03/2026
+ms.date: 06/04/2026
 ms.topic: reference
 ms.reviewer: wicale
 ms.collection:
@@ -149,16 +149,16 @@ This article describes the settings you can configure. To learn more about Wired
 
     ::: zone-end
 
+    ::: zone pivot="macos"
+
     - **Client Authentication**: Select an **Authentication method**. Your options:
 
-      ::: zone pivot="macos"
-
-      - **Username and Password**: Prompts the user for a user name and password to authenticate the connection.`
+      - **Username and Password**: Prompts the user for a user name and password to authenticate the connection.
       - **Certificates**: Select an existing SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported.
 
-      ::: zone-end
+    ::: zone-end
 
-      - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
+    - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent. Then, the real identification is sent in a secure tunnel.
 
 ## Related articles
 
