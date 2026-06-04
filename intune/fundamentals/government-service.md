@@ -3,7 +3,7 @@ title: Microsoft Intune Government Service overview
 description: Learn more about the Intune government service offerings and features. This article is designed to serve as an overview of the Microsoft Intune offering for government community cloud (GCC) High and United States Department of Defense (DoD) environments.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 06/03/2026
+ms.date: 06/04/2026
 ms.topic: concept-article
 ms.reviewer: acabello
 ms.collection:
@@ -106,7 +106,7 @@ The following features aren't available and there's currently no planning to sup
 | [Intune PowerBI connector for DWH](/power-query/connectors/) | n/a |
 | [Microsoft Connected Cache for Enterprise and Education](/windows/deployment/do/mcc-ent-edu-overview) | n/a |
 | [Microsoft Store for Business](/windows/configuration/store/?tabs=intune) | n/a |
-| [On-premises Exchange Connector] | n/a |
+| On-premises Exchange Connector | n/a |
 | [Reports for feature update policies](../device-updates/windows/monitor-feature-updates.md) | n/a |
 | [ServiceNow connector](../device-management/tools/setup-servicenow.md) | n/a |
 | [TeamViewer connector (legacy)](../device-management/tools/teamviewer-legacy.md) and [TeamViewer integration](../device-management/tools/setup-teamviewer.md) | n/a |
