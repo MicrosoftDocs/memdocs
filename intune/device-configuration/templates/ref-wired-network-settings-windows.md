@@ -178,5 +178,5 @@ This feature applies to:
 ## Related articles
 
 - Be sure to [assign this profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
-- Learn more about the [wired network settings for macOS devices](./ref-wired-network-settings-macos.md).
+- Learn more about the [wired network settings for Apple devices](./ref-wired-network-settings-macos.md).
 - Get information on the [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).

@@ -58,6 +58,8 @@ The following articles detail the specific data that Configuration Manager colle
 - [Diagnostic and usage data for 2503](levels-of-diagnostic-usage-data-collection-2503.md)
 - [Diagnostic and usage data for 2409](levels-of-diagnostic-usage-data-collection-2409.md)
 
+With version 2509, no further version-specific changes are planned to the collection of diagnostic usage data. 
+
 ## Next steps
 
 Next, learn about the diagnostics and usage data that Configuration Manager collects for its tools:
