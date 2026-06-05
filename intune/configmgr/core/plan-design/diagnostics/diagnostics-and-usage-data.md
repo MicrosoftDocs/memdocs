@@ -11,7 +11,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases.
+Configuration Manager collects diagnostics and usage data about itself, which is used by Microsoft to improve the installation experience, quality, and security of future releases. With version 2509, no further changes or updates are planned for diagnostic and usage data collection.
 
 Each Configuration Manager hierarchy enables diagnostics and usage data. It consists of SQL Server queries that run on a weekly basis on each primary site and at the central administration site (CAS). When the hierarchy uses a CAS, child primary sites replicate their data to that CAS. At the top-level site of your hierarchy, the [service connection point](../../servers/deploy/configure/about-the-service-connection-point.md) submits this information when it checks for updates. If the service connection point is in offline mode, you transfer the information by using the [service connection tool](../../servers/manage/use-the-service-connection-tool.md).
 

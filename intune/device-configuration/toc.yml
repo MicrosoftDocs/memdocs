@@ -78,7 +78,7 @@ items:
             href: ./templates/create-wifi-preshared-key.md
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
       - name: Wired networks
-        displayName: 802.1x, macos, windows
+        displayName: 802.1x, ios, ipados, macos, windows
         href: ./templates/configure-wired-networks.md
       - name: Network boundary on Windows
         href: ./templates/create-network-boundary-windows.md
@@ -284,7 +284,7 @@ items:
             displayName: wifi, wireless, apple, ios, ipados, macos
             href: ./templates/ref-wifi-settings-apple.md
           - name: Wired networks
-            displayName: apple, macos
+            displayName: apple, ios, ipados, macos
             href: ./templates/ref-wired-network-settings-macos.md
           - name: Bundle IDs for built-in apps
             displayName: apple, ios, ipados, macos
