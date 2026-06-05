@@ -17,7 +17,7 @@ landingContent:
         links:
           - text: KB 37426535 Summary of changes in 2603
             url: 2603/37426535.md
-          - text: KB 37942646 CMG update for VMSS image deprecation
+          - text: KB 37942646 CMG virtual machine scale set image update
             url: 2603/37942646.md
   - title: Configuration Manager 2509
     linkLists:
@@ -49,7 +49,7 @@ landingContent:
             url: 2503/32851084.md
           - text: KB 35958849 Cloud management gateway deployment maintenance update
             url: 2503/35958849.md
-          - text: KB 37942646 CMG update for VMSS image deprecation
+          - text: KB 37942646 CMG virtual machine scale set image update
             url: 2603/37942646.md
   - title: Configuration Manager 2409
     linkLists:
@@ -71,7 +71,7 @@ landingContent:
             url: 2409/35360093.md
           - text: KB 35958849 Cloud management gateway deployment maintenance update
             url: 2503/35958849.md
-          - text: KB 37942646 CMG update for VMSS image deprecation
+          - text: KB 37942646 CMG virtual machine scale set image update
             url: 2603/37942646.md
   - title: Configuration Manager 2403
     linkLists:
