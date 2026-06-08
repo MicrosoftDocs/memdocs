@@ -6,11 +6,13 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 ---
+
 # How to Configure Automatic Software Metering Rule Generation
+
 You configure Automatic Software Metering Rule Generation settings, in Configuration Manager, by modifying the site control file.
 
 > [!IMPORTANT]
->  This setting is shared across the whole hierarchy, and only can be configured on the CAS or a standalone primary site.
+> This setting is shared across the whole hierarchy, and only can be configured on the CAS or a standalone primary site.
 
 ### To configure automatic software metering rule generation
 
@@ -23,9 +25,88 @@ You configure Automatic Software Metering Rule Generation settings, in Configura
 4.  Commit the property changes to the site control file.
 
 ## Example
- The following example method configures various Software Metering Rule Generation settings by using the [SMS_SCI_ClientComp](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class to connect to the site control file and change properties.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
+The following example method configures various Software Metering Rule Generation settings by using the [SMS_SCI_ClientComp](../../develop/reference/core/servers/configure/sms_sci_clientcomp-server-wmi-class.md) class to connect to the site control file and change properties.
+
+For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
+
+### PowerShell
+
+```powershell
+
+function Set-AutoSoftwareMeteringRuleGeneration {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$SiteCode,
+
+        [Parameter(Mandatory=$true)]
+        [string]$EnableAutoCreateDisabledRule,
+
+        [Parameter(Mandatory=$true)]
+        [string]$NewAutoCreatePercentage,
+
+        [Parameter(Mandatory=$true)]
+        [string]$NewAutoCreateThreshold,
+
+        [string]$ProviderMachineName = $env:COMPUTERNAME
+    )
+
+    # Connect to the SMS Provider
+    $namespace = "root\sms\site_$SiteCode"
+    $conn = Get-WmiObject -Namespace $namespace -Class SMS_SiteControlFile -ComputerName $ProviderMachineName
+
+    # Refresh site control file
+    $conn.psbase.InvokeMethod("Refresh", $null)
+
+    # Query the Software Metering Agent component
+    $query = "SELECT * FROM SMS_SCI_ClientComp WHERE ClientComponentName='Software Metering Agent' AND SiteCode='$SiteCode'"
+    $components = Get-WmiObject -Namespace $namespace -Query $query -ComputerName $ProviderMachineName
+
+    foreach ($comp in $components) {
+        foreach ($prop in $comp.Props) {
+            switch ($prop.PropertyName) {
+
+                "Auto Create Disabled Rule" {
+                    Write-Host ""
+                    Write-Host $prop.PropertyName
+                    Write-Host "Current value: $($prop.Value)"
+
+                    $prop.Value = $EnableAutoCreateDisabledRule
+                    Write-Host "New value    : $EnableAutoCreateDisabledRule"
+                }
+
+                "Auto Create Percentage" {
+                    Write-Host ""
+                    Write-Host $prop.PropertyName
+                    Write-Host "Current value: $($prop.Value)"
+
+                    $prop.Value = $NewAutoCreatePercentage
+                    Write-Host "New value    : $NewAutoCreatePercentage"
+                }
+
+                "Auto Create Threshold" {
+                    Write-Host ""
+                    Write-Host $prop.PropertyName
+                    Write-Host "Current value: $($prop.Value)"
+
+                    $prop.Value = $NewAutoCreateThreshold
+                    Write-Host "New value    : $NewAutoCreateThreshold"
+                }
+            }
+        }
+
+        # Update the component in the local SCF copy
+        $comp.Put() | Out-Null
+    }
+
+    # Commit the updated SCF to the site
+    $commitParams = $conn.psbase.GetMethodParameters("CommitSCF")
+    $commitParams.SiteCode = $SiteCode
+    $conn.psbase.InvokeMethod("CommitSCF", $commitParams, $null)
+}
+```
+
+### Visual Basic Script
 
 ```vbs
 
@@ -101,6 +182,8 @@ End Sub
 
 ```
 
+### C#
+
 ```c#
 
 public void ConfigureAutomaticSWMRuleGeneration(WqlConnectionManager connection,
@@ -174,7 +257,7 @@ public void ConfigureAutomaticSWMRuleGeneration(WqlConnectionManager connection,
 
 ```
 
- The example method has the following parameters:
+The example method has the following parameters:
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -186,33 +269,39 @@ public void ConfigureAutomaticSWMRuleGeneration(WqlConnectionManager connection,
 |`newAutoCreateThreshold`|-   Managed: `String`<br />-   VBScript: `String`|Sets the auto creation threshold.|
 
 ## Compiling the Code
- This C# example requires:
+
+This C# example requires:
 
 ### Namespaces
- System
 
- System.Collections.Generic
+System
 
- System.Text
+System.Collections.Generic
 
- Microsoft.ConfigurationManagement.ManagementProvider
+System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
+Microsoft.ConfigurationManagement.ManagementProvider
+
+Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
 ### Assembly
- adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider
+adminui.wqlqueryengine
+
+microsoft.configurationmanagement.managementprovider
 
 ## Robust Programming
- For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
+
+For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
 
 ## .NET Framework Security
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
+
+For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
 
 ## See Also
- [Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)
- [About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)
- [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)
- [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)
- [SMS_SCI_Component Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)
+
+[Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)
+[About the Configuration Manager Site Control File](../../develop/core/understand/about-the-configuration-manager-site-control-file.md)
+[How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)
+[How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)
+[SMS_SCI_Component Server WMI Class](../../develop/reference/core/servers/configure/sms_sci_component-server-wmi-class.md)
