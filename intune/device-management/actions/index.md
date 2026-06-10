@@ -239,7 +239,6 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [Delete]: delete.md
 [Deprovision]: deprovision.md
 [Disable Activation Lock]: disable-activation-lock.md
-[Disable Activation Lock]: disable-activation-lock.md
 [Fresh Start]: fresh-start.md
 [Full Scan]: full-scan.md
 [Locate device]: locate.md
