@@ -236,7 +236,6 @@ Device actions in Intune empower IT pros to manage devices efficiently and secur
 [Autopilot reset]: autopilot-reset.md
 [BitLocker key rotation]: rotate-bitlocker-keys.md
 [Collect diagnostics]: collect-diagnostics.md
-[Delete]: /entra/identity/authentication/concept-authentication-passwordless
 [Delete]: delete.md
 [Deprovision]: deprovision.md
 [Disable Activation Lock]: disable-activation-lock.md
