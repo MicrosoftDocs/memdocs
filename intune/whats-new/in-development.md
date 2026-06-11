@@ -226,16 +226,6 @@ Other requirements include adding the Intune first-party app as a security group
 
 ## Device management
 
-### Custom top bar elements on Managed Home Screen <!-- 25008744 -->
-
-You'll have the option to display custom text in the top bar of the Managed Home Screen (MHS). In addition to the existing choices (serial number, device name, tenant name), you'll be able to select **Custom** and enter a free-text string of up to 63 characters. Custom strings support dynamic variables: `{{SerialNumber}}`, `{{DeviceName}}`, and `{{TenantName}}`. This is useful for kiosk scenarios such as checkout devices, departmental tagging, or any case where staff need a quick visual identifier.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise dedicated devices (COSU)
-> - Android Enterprise fully managed devices (COBO)
-
 ### Remote Help support for RemoteApp in Azure Virtual Desktop<!-- 33047374 -->  
 
 Remote Help will support RemoteApp in Azure Virtual Desktop (AVD), enabling help desk agents to securely view and control apps running within RemoteApp sessions.  
