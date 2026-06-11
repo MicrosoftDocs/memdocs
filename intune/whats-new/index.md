@@ -84,6 +84,16 @@ To learn more, see [Multiple managed accounts for app protection policies](../ap
 
 ### Device configuration
 
+### Custom top bar elements on Managed Home Screen <!-- 25008744 -->
+
+You have the option to display custom text in the top bar of the Managed Home Screen (MHS). In addition to the existing choices (serial number, device name, tenant name), you can now select **Custom** and enter a free-text string of up to 63 characters. Custom strings support dynamic variables: `{{SerialNumber}}`, `{{DeviceName}}`, and `{{TenantName}}`. This is useful for kiosk scenarios such as checkout devices, departmental tagging, or any case where staff need a quick visual identifier.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise dedicated devices (COSU)
+> - Android Enterprise fully managed devices (COBO)
+
 #### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
 
 On macOS devices, the **Disable MAC address randomization** setting is now available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices.
