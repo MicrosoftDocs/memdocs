@@ -66,6 +66,22 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../app-management/ref-protected-apps.md).
 
+#### APP Multiple Managed Accounts <!-- 3182632 -->
+
+Microsoft Intune mobile application management now supports Multiple Managed Accounts, letting users add and manage more than one managed account within the same app. App protection policies apply separately to each account, so you can tailor protection based on the account's organization or tenant. This capability helps consultants, acquisition teams, or users with multiple mailboxes stay productive without switching devices.
+
+Currently we support Multiple Managed Accounts in Microsoft Teams on iOS/iPadOS (v8.10.0 or later). Support for additional apps and platforms is coming soon.
+
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant.
+
+To learn more, see [Multiple managed accounts for app protection policies](../app-management/protection/multiple-managed-accounts.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+
 ### Device configuration
 
 #### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
