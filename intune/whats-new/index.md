@@ -397,21 +397,7 @@ To learn more about wired networks, see [Add and use wired networks settings on 
 > [!div class="checklist"]
 > Applies to:
 >
-> - iOS/iPadOS 17 and newer
-
-### Device enrollment
-
-#### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
-
-Enrollment time grouping is now generally available for Apple automated device enrollment (ADE) on iOS/iPadOS and macOS. With enrollment time grouping, you can identify a device's Microsoft Entra security group during enrollment, so policies, apps, and settings can be applied earlier in the setup process.
-
-Enrollment time grouping is supported in new Apple ADE enrollment policies. For requirements and setup details, see [Set up enrollment time grouping](../device-enrollment/setup-time-grouping.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
+> - iOS/iPadOS 17 and newer  
 
 ### Device management
 
