@@ -32,6 +32,10 @@ Weak DHE (Diffie-Hellman Ephemeral) cipher suites are now disabled on Cloud Mana
 
 Additionally, the `EnableCertPaddingCheck` registry keys are now set by default on CMG Virtual Machine Scale Set instances to mitigate CVE-2013-3900 (WinVerifyTrust Signature Validation Vulnerability).
 
+### SQL Server 2025 support
+
+SQL Server 2025 (RTM) is now a supported database platform for Configuration Manager sites, including the central administration site, primary sites, and secondary sites. SQL Server 2025 Express is also supported for secondary sites. The recommended database compatibility level for SQL Server 2025 is 160. For more information, see [Support for SQL Server versions](../configs/support-for-sql-server-versions.md).
+
 ### SQL Server Native Client dependency removed
 
 All Configuration Manager components and site roles are updated to remove the dependency on the deprecated SQL Server Native Client (sqlncli.msi). Customers can now safely uninstall sqlncli from site systems. The product no longer includes sqlncli.msi in its redistributables.
