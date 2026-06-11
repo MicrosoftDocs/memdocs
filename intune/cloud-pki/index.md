@@ -153,24 +153,28 @@ You can try out the Microsoft Cloud PKI feature in the Intune admin center durin
 - [Microsoft Intune Suite trial](https://aka.ms/MicrosoftIntunePricing)
 - [Standalone Cloud PKI trial](../fundamentals/advanced-capabilities.md)
 
-During the trial period, you can create up to six CAs in your tenant. Cloud PKI CAs created during the trial use software-backed keys, and use `System.Security.Cryptography.RSA` to generate and sign the keys. You can continue to use the CAs after purchasing a Cloud PKI license. However, the keys remain software-backed, and can't be converted to HSM backed keys. The Microsoft Intune service managed CA keys. No Azure subscription is required for Azure HSM capabilities.
+During the trial period, you can create up to three CAs in your tenant. Cloud PKI CAs created during the trial use software-backed keys, and use `System.Security.Cryptography.RSA` to generate and sign the keys. You can continue to use the CAs after purchasing a Cloud PKI license. However, the keys remain software-backed, and can't be converted to HSM backed keys. The Microsoft Intune service managed CA keys. No Azure subscription is required for Azure HSM capabilities.
 
 ## CA configuration examples
 
-Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Intune. You can use the following configurations, provided as examples, to create CAs in Microsoft Cloud PKI:
+Two-tier Cloud PKI root & issuing CAs and bring-your-own CAs can coexist in Intune. You can use the following configurations, provided as examples, to create CAs in Microsoft Cloud PKI:
 
-* One root CA with five issuing CAs
-* Three root CAs with one issuing CA each
-* Two root CAs with one issuing CA each, and two bring-your-own CAs
-* Six bring-your-own CAs
+* One root CA with two issuing CAs
+
+* One root CA with one issuing CA, and one bring-your-own CA.
+
+* Three bring-your-own CAs
 
 ## Known issues and limitations
 
 For the latest changes and additions, see [What's new in Microsoft Intune](../whats-new/index.md).
 
-* You can create up to six CAs in an Intune tenant.
-  * Licensed Cloud PKI - A total of 6 CAs can be created using Azure mHSM keys.
-  * Trial Cloud PKI - A total of 6 CAs can be created during a trial of Intune Suite or standalone Cloud PKI.
+* You can create up to three CAs in an Intune tenant.
+
+  * Licensed Cloud PKI - A total of 3 CAs can be created using Azure mHSM keys.
+    
+  * Trial Cloud PKI - A total of 3 CAs can be created during a trial of Intune Suite or standalone Cloud PKI.
+    
 * The following CA types count toward the CA capacity:
   * Cloud PKI Root CA
   * Cloud PKI Issuing CA
