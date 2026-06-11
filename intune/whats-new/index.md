@@ -100,6 +100,18 @@ For more information, see:
 >
 > - macOS 15 and later
 
+#### Managed Home Screen exit lock task mode password now requires a device configuration profile<!-- 31846021 -->
+
+You can no longer configure the Managed Home Screen exit lock task mode password by using an app configuration policy. To set or update the lock task mode password for Managed Home Screen, create or update a device configuration profile that defines the lock task mode password policy.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../app-management/configuration/configure-managed-home-screen.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
+
 #### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
 
 There's a new **Block Bluetooth sharing** setting in the [settings catalog](../device-configuration/settings-catalog/index.md) (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type > **General**). When set to **True**, the device can't share content over Bluetooth. When set to **False**, Intune doesn't change or update this setting. By default, the OS has the following behavior:
