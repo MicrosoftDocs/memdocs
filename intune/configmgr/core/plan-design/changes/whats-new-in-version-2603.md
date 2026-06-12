@@ -69,6 +69,43 @@ The Configuration Manager console In-App Feedback feature is updated to support 
 - The deprecated Asset Intelligence synchronization point site role is removed from the site roles selection UI.
 - The Software Update Health Troubleshooting Dashboard is hidden in this release due to performance issues in large environments.
 
+## New requirements
+
+### Management point requires internet access for Microsoft Entra token validation
+
+Starting in version 2603, the management point uses Microsoft Identity Service Essentials (MISE) for Microsoft Entra token validation. This change requires the management point server to have internet access. In previous versions, the management point could function without internet access.
+
+This requirement applies to environments that meet the following conditions:
+
+- The site is configured to support Microsoft Entra joined users and devices
+- Clients authenticate using Microsoft Entra tokens, typically through a cloud management gateway (CMG)
+
+> [!NOTE]
+> Environments that only use on-premises Active Directory authentication without Microsoft Entra integration aren't affected by this requirement.
+
+#### Identify the issue
+
+If the management point server can't reach the required endpoints, the `CCM_STS_ManagedBase.log` on the management point logs a `MiseAuthenticationTicketProviderException` with an underlying network error. Look for the `SocketException` or `HttpRequestException` that indicates a network connectivity failure, for example:
+
+```text
+Microsoft.Identity.ServiceEssentials.Exceptions.MiseAuthenticationTicketProviderException: MISE12034: AuthenticationTicketProvider Name:AuthenticationTicketProvider
+System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it
+```
+
+> [!IMPORTANT]
+> The `MISE12034` exception can also appear for other reasons. This section specifically addresses the case where the underlying exception indicates a network connectivity problem, such as `SocketException`, `HttpRequestException`, or a connection timeout. Verify that the error message points to a network access issue before applying the resolution below.
+
+#### Resolution: Allow access to Azure authentication endpoints
+
+Ensure that the management point server can connect to Microsoft Entra authentication endpoints in the system context. Allow the following URLs through the proxy and firewall:
+
+- `https://login.microsoftonline.com`
+- `https://sts.windows.net`
+
+If the management point server uses a proxy, configure the proxy at the system level. For more information, see [Management point proxy configuration](../network/proxy-server-support.md#management-point).
+
+For a full list of required endpoints, see [Management point internet access requirements](../network/internet-endpoints.md#management-point).
+
 ## Next steps
 
 As of May 27, 2026, version 2603 is globally available for all customers to install.
