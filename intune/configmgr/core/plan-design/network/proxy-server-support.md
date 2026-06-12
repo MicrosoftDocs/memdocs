@@ -1,7 +1,7 @@
 ---
 title: Proxy server support
 description: Learn how Configuration Manager systems use proxy servers.
-ms.date: 04/12/2022
+ms.date: 06/08/2026
 ms.subservice: core-infra
 ms.topic: how-to
 ms.collection: tier3
@@ -62,6 +62,35 @@ If you enable a Configuration Manager distribution point for Microsoft Connected
 ### Exchange Server connector
 
 This site system role connects to an Exchange Server. It uses a proxy server configuration on the computer that hosts the Exchange Server connector.
+
+### Management point
+
+<!--Starting in version 2603-->Starting in version 2603, the management point uses Microsoft Identity Service Essentials (MISE) for Microsoft Entra token validation. In environments that support Microsoft Entra joined users and devices, the management point server requires internet access to connect to Microsoft Entra authentication endpoints.
+
+> [!IMPORTANT]
+> The proxy configured in the [site system properties](#configure-the-proxy-for-a-site-system-server) doesn't apply to MISE token validation. You must configure the proxy at the system level on the management point server.
+
+To configure the proxy, run the following command at an elevated command prompt on the management point server:
+
+```cmd
+netsh winhttp set proxy <proxyservername>:<portnumber>
+```
+
+Replace `<proxyservername>` with the fully qualified domain name of the proxy server. Replace `<portnumber>` with the port number for the proxy server. For example, `proxy.domain.example.com:80`.
+
+To verify the current proxy configuration:
+
+```cmd
+netsh winhttp show proxy
+```
+
+To remove the proxy configuration and configure direct access to the internet:
+
+```cmd
+netsh winhttp reset proxy
+```
+
+For more information about this requirement and troubleshooting, see [Management point requires internet access for Microsoft Entra token validation](../changes/whats-new-in-version-2603.md#management-point-requires-internet-access-for-microsoft-entra-token-validation).
 
 ### Service connection point
 
