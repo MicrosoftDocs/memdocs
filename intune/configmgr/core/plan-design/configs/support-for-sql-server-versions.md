@@ -191,7 +191,7 @@ The following table identifies the recommended compatibility levels for Configur
 
 |SQL Server version | Supported compatibility levels | Recommended level |
 |----------------|--------------------|--------|
-| SQL Server 2025 | 160, 150, 140, 130 | 160 |
+| SQL Server 2025 | 170, 160, 150, 140, 130, 120, 110 | 170 |
 | SQL Server 2022 | 160 (since version 2603), 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2017 | 140, 130, 120, 110 | 140 |
