@@ -295,7 +295,9 @@ If there isn't an issue with the recovery environment, enter administrator crede
 
 Date added: *March 3, 2022*
 
-1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn't supported. See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
+1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring requiring per-device Terms of Use (not to be confused with the standard Terms of Use) https://learn.microsoft.com/en-us/entra/identity/conditional-access/terms-of-use#add-terms-of-use because it isn't supported. See Per-device terms of use. https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use
+
+**Terms of Use** because it isn't supported. See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
 
 1. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Windows Autopilot enrollment in cases where restrictive polices are present such as:
 
