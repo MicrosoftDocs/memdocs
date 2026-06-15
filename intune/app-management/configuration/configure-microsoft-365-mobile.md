@@ -173,15 +173,15 @@ This key can be used by managed devices and managed apps.
 
 ### Copilot with enterprise data protection
 
-Admins can now enable or disable Copilot in Microsoft 365 app by configuring the following setting in the Intune admin center. To deploy this app setting, use an [app configuration policy](./overview.md) in Intune.
-
-To manage Copilot in Microsoft 365 app, you can use the following key:
+Admins can no longer enable or disable Copilot in the Microsoft 365 app by configuring the following setting in the Intune admin center:
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.office.officemobile.BingChatEnterprise.IsAllowed    |    **true** (default) Copilot is enabled for the tenant<br>**false** disables Copilot for the tenant    |
+|    ~~com.microsoft.office.officemobile.BingChatEnterprise.IsAllowed~~    |    ~~**true** (default) Copilot is enabled for the tenant~~<br>~~**false** disables Copilot for the tenant~~    |
 
-This key can be used by managed devices and managed apps.
+Microsoft 365 is now Microsoft 365 Copilot, an AI-forward Copilot app where Copilot is the core workflow and cannot be disabled independently on the mobile app. Other Office workflows are being redirected to the OneDrive, Word, Excel, and PowerPoint apps.
+
+If you wish to restrict usage of Copilot in your organization, use the Integrated Apps settings to block it across web, desktop, and mobile. Alternatively, block the Microsoft 365 Copilot mobile app to restrict access to Copilot on mobile only.
 
 ## Next steps
 
