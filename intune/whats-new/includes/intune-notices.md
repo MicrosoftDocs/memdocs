@@ -7,6 +7,25 @@ ms.author: mandia
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Warning notifications for iOS apps running unsupported SDK versions
+
+We're continuing improvements to the Microsoft Intune mobile application management (MAM) service to ensure applications remain secure, reliable, and aligned with the latest platform capabilities. 
+
+Starting in late June 2026, users opening iOS apps built with an Intune MAM SDK version earlier than 20.8.0 will see a warning message recommending they update to a supported app version for the best experience and continued compatibility.
+
+#### How does this change affect you or your users?
+
+Users running iOS apps with an Intune MAM SDK version lower than 20.8.0 will see a warning message. The warning will appear in iOS apps such as Microsoft Teams, Outlook, Edge and OneDrive. Note that this notification is non-blocking, users can dismiss the message and continue using the app.
+
+#### How can you prepare?
+
+Notify users to update to the latest versions of Microsoft and third-party apps as soon as possible. The latest versions are available in Apple's [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
+
+If applicable, notify your helpdesk and support teams about the warning message. Additionally, as an IT admin you can use [Conditional Launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) settings to block unsupported app or SDK versions that are still in use:
+
+- The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 20.8.0.
+- The **Min app version** setting to warn or block users on older Microsoft apps. Note, this setting must be in a policy targeted to only the targeted app.
+
 ### Update to the latest Intune Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS
 
 Starting **January 19, 2026**, or soon after, we're making updates to improve the Intune mobile application management (MAM) service. To stay secure and run smoothly, this update will require iOS wrapped apps, iOS SDK integrated apps, and the Intune Company Portal for Android to be updated to the latest versions.
@@ -39,14 +58,14 @@ Plan to make the following changes before **January 19, 2026**:
 
 - For tenants with policies targeted to iOS apps: 
   - Notify your users that they need to upgrade to the latest version of the Microsoft apps. You can find the latest version of the apps in the [App store](https://www.apple.com/app-store/). For example, you can find the latest version of Microsoft Teams [here](https://apps.apple.com/app/microsoft-teams/id1113153706) and Microsoft Outlook [here](https://apps.apple.com/app/microsoft-outlook/id951937596).
-  - Additionally, you can enable the following [Conditional Launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) settings: 
+  - Additionally, you can enable the following [conditional launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) settings: 
     - The **Min SDK version** setting to block users if the app is using Intune SDK for iOS older than 20.8.0. 
     - The **Min app version** setting to warn users on older Microsoft apps. Note, this setting must be in a policy targeted to only the targeted app. 
 
 - For tenants with policies targeted to Android apps:
 
   - Notify your users that they need to upgrade to the latest version (v5.0.6726.0) of the [Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) app. 
-  - Additionally, you can enable the following [Conditional Launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) device condition setting:
+  - Additionally, you can enable the following [conditional launch](../../app-management/protection/ref-settings-ios.md#conditional-launch) device condition setting:
 
     - The **Min Company Portal version** setting to warn users using a Company Portal app version older than 5.0.6726.0.
 
