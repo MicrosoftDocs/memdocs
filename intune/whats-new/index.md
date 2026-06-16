@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/08/2026
+ms.date: 06/16/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -48,6 +48,43 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of June 15, 2026:
+
+### Device management
+
+#### Improvements to the new Intune single device page (public preview) <!-- 38223856 -->
+
+In the Intune admin center, the **Devices** > **All Devices** > select a device page is redesigned and available for you to preview. This feature was available in the [2604 service release](#preview-the-new-device-page-in-the-intune-admin-center-public-preview).
+
+After the initial 2604 release, we made the following improvements:
+
+- After you select one of the following device actions, you can temporarily view passcodes and PINs in the **Device action status** table:
+
+  - Reset passcode
+  - Recover passcode
+  - Remote Lock
+  - Rotate BitLocker Keys
+
+- Updates to Device actions:
+
+  - Device actions work as expected when [multi admin approval](../fundamentals/role-based-access-control/multi-admin-approval.md) policies are enabled.
+  - Device actions for supervised iOS devices are available when the action is supported.
+  - Admins can enable and disable **Lost mode**.
+
+- Updates to navigation:
+
+  - Tools and reports have been moved to the left navigation menu.
+  - The monitor tab is now the default landing tab.
+
+- In the **Essentials** section:
+
+  - The **Copy** button and the **User** and **Compliance** links are available.
+  - Supervised iOS devices show a badge to help identify these devices.
+
+- When preview is disabled, the feedback pane shows the correct text.
+- Comanagement information is available.
+- Admins can remove the primary user from an Azure domain joined device.
 
 ## Week of June 8, 2026 (Service release 2605)
 
