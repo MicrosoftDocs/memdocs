@@ -46,3 +46,8 @@ items:
         href: ./laps/toc.yml
       - name: Endpoint Privilege Management
         href: ../epm/toc.yml
+
+  - name: Monitor
+    items:
+      - name: Security update status dashboard
+        href: ./security-update-status-dashboard.md

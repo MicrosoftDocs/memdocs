@@ -25,7 +25,7 @@ To renew a certificate authority in Cloud PKI, ensure you meet the following pre
 :::column-end:::
 :::column span="3":::
 
-> To renew a certificate authority,, use an account with at least the following [Cloud PKI permissions]:
+> To renew a certificate authority, use an account with at least the following [Cloud PKI permissions]:
 >
 > - **Read CAs**
 > - **Create certificate authorities (CAs)**
@@ -243,7 +243,7 @@ A certification authority is eligible for renewal when it is halfway to expirati
 
 |Icon|Renewal banner | Description |
 |:-:|--|--|
-|![info-icon] | **Halfway to expiration**| Certification authority is halfway to expiration. This marks the midpoint of the certificate authority's lifecycle. Review your renewal plan based on your organization's PKI policy." |
+|![info-icon] | **Halfway to expiration**| Certification authority is halfway to expiration. This marks the midpoint of the certificate authority's lifecycle. Review your renewal plan based on your organization's PKI policy. |
 |![error-icon]| **6 months remaining**| Certification authority expires in 6 months. Renew now to ensure certificate issuance continues for SCEP, Wi-Fi, VPN, and email. |
 |![error-icon]| **90 days**| Certification authority expires in 90 days. Renew now to ensure certificate issuance continues for SCEP, Wi-Fi, VPN, and email. |
 |![error-icon]| **30 days**| Certification authority expires in 30 days. Without renewal, new certificate issuance could fail. Existing certificates stay valid until they expire. Renew now to maintain device certificate delivery. |
