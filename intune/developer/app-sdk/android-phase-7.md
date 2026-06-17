@@ -781,6 +781,55 @@ webView.setWebViewClient(mamCertTrustWebViewClient);
 ...
 ```
 
+## China App Store Privacy Compliance
+
+Some China app stores require applications to display a privacy consent dialog to users before performing operations that interact with other apps on the device. This includes registering broadcast receivers that listen for package install/uninstall events. The MAM SDK does this to listen for the presence of the Company Portal where the bulk of the MAM logic lives.
+
+If your app is distributed through China app stores that have this requirement, use the following integration to defer offline startup operations until after privacy consent is obtained.
+
+### 1. Add Manifest Flag
+
+Add the following metadata to your app's `AndroidManifest.xml`:
+
+```xml
+<application>
+    <meta-data
+        android:name="com.microsoft.intune.mam.OfflineStartupDeferredUntilAppSignal"
+        android:value="true"/>
+</application>
+```
+
+> [!NOTE]
+> This flag should only be added to APKs distributed through China app stores that require privacy consent before interacting with other apps. For APKs distributed through other stores, this flag should not be included.
+
+### 2. Signal Readiness After Privacy Dialog
+
+After the user accepts your privacy consent dialog, call the SDK to signal that offline startup operations can proceed:
+
+```kotlin
+// After user accepts privacy dialog
+MAMComponents.get(DeferredStartupManager::class.java)
+    .setOfflineStartupReady()
+```
+
+Or in Java:
+
+```java
+// After user accepts privacy dialog
+MAMComponents.get(DeferredStartupManager.class)
+    .setOfflineStartupReady();
+```
+
+### Behavior
+
+The ready state is persisted across app launches. Once `setOfflineStartupReady()` is called, subsequent launches will register the receiver immediately during app initialization.
+
+### Notes
+
+- The `setOfflineStartupReady()` method is idempotent; calling it multiple times is safe.
+- If Company Portal is already installed (online mode), calling `setOfflineStartupReady()` has no effect since the receiver isn't needed.
+- **Important**: You should always call `setOfflineStartupReady()` after your privacy dialog is accepted.
+
 ## Exit Criteria
 
 For more information, see [Quickly testing with changing policy] for ease of testing.
