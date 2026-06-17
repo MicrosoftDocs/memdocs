@@ -160,6 +160,8 @@ Advanced Analytics is built into Microsoft Intune and appears in the **Reports**
   - [Device query](device-query.md)
 - Additional capabilities:
   - [Device query for multiple devices](device-query-multiple-devices.md) under the **Devices** node in the Intune admin center
+  - [STIG audit baseline](../device-security/security-baselines/stig-audit-baseline.md) to assess Windows device compliance against Department of Defense (DoD) Security Technical Implementation Guide requirements
+
 
 ### Integrate Advanced Analytics into business processes
 

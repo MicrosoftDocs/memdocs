@@ -300,19 +300,6 @@ For a detailed breakdown of setting changes, see the blog post [Security baselin
 >
 > - Windows
 
-### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
-
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
-
-The new baseline will be available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-For information about the currently available Intune security baselines, see [Security baselines overview](../device-security/security-baselines/overview.md).
-
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
 You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) capability.

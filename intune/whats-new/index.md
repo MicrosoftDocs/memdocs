@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/16/2026
+ms.date: 06/17/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -49,7 +49,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of June 15, 2026:
+## Week of June 15, 2026
 
 ### Device management
 
@@ -85,6 +85,25 @@ After the initial 2604 release, we made the following improvements:
 - When preview is disabled, the feedback pane shows the correct text.
 - Comanagement information is available.
 - Admins can remove the primary user from an Azure domain joined device.
+
+### Device security
+
+#### Microsoft Windows 11 STIG SCAP Benchmark audit baseline<!-- 31532934 -->
+
+Intune now includes a STIG audit baseline that assesses Windows devices against the recommended configurations defined in the Security Technical Implementation Guides (STIGs) published by the Defense Information Systems Agency (DISA). The initial baseline audits against the **Microsoft Windows 11 STIG SCAP Benchmark** *Version 2, Release 7  (benchmark date: January 5, 2026)*.
+
+Unlike other Intune security baselines that configure and enforce settings, the STIG audit baseline is audit-only. It evaluates the current state of a device's configuration and generates detailed audit reports without changing any configured settings, helping organizations demonstrate compliance with DoD security recommendations. Audit results have a documented mapping to NIST XCCDF result categories for formal DISA compliance reporting, and Graph API support enables programmatic data retrieval and cross-tenant assessment aggregation.
+
+The STIG audit baseline is available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service.md) tenants and requires
+[Advanced Analytics](../advanced-analytics/index.md) licensing.
+
+For more information, see [Use STIG audit baselines to assess Windows device compliance](../device-security/security-baselines/stig-audit-baseline.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10
+> - Windows 11  
 
 ## Week of June 8, 2026 (Service release 2605)
 
