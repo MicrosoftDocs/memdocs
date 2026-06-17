@@ -5,6 +5,8 @@ items:
     href: ./configure-baselines.md
   - name: Monitor your baselines
     href: ./monitor-baselines.md
+  - name: STIG audit baseline
+    href: ./stig-audit-baseline.md
 
   - name: Baseline settings reference
     items:
