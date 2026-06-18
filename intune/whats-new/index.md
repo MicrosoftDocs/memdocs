@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/17/2026
+ms.date: 06/18/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -51,7 +51,39 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 15, 2026
 
-### Device management
+### Device enrollment  
+
+#### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
+
+Enrollment time grouping is now generally available for Apple automated device enrollment (ADE) on iOS/iPadOS and macOS. With enrollment time grouping, you can identify a device’s Microsoft Entra security group during enrollment, so policies, apps, and settings can be applied earlier in the setup process.
+
+Enrollment time grouping is supported in new Apple ADE enrollment policies. For requirements and setup details, see [Set up enrollment time grouping](../device-enrollment/setup-time-grouping.md).  
+
+### Device management  
+
+#### Android Enterprise personally owned devices with a work profile uses Android Management API (AMAPI)<!-- 36840128 -->
+
+When users enroll their personally owned Android devices in Intune, a work profile is created with a separate partition on the device for the user's work account. These devices are referred to as *personally owned devices with a work profile*.    
+
+As part of the Intune move to the [Android Management API](https://developers.google.com/android/management) (opens Android's web site), there are some updates for personally owned devices that enroll in Intune:
+
+- Web based enrollment for an improved enrollment flow and experience - Users don't have to install an app to enroll in Intune. Web enrollment is tenant wide.
+- New implementation for how Intune delivers policies - Modern update on how Intune delivers and monitors policies on Android personally owned devices with a work profile. This change also aligns with how Intune manages policies on corporate owned devices with a work profile, fully managed, and dedicated devices. You can scale your migration to targeted groups.
+
+To use these features, opt in through the Microsoft Intune admin center:
+
+- Web based enrollment: **Devices** > **Device Onboarding** > **Enrollment** > **Android**> **Personally owned devices with a work profile** > **Use web enrollment for all users enrolling into Android personally-owned work profile management**
+- Policy: **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Move to Android Management API**
+
+To learn more, see:
+
+- [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
+- [Use Android Management API for personally owned devices with work profiles](../device-enrollment/android/android-management-api-overview.md)  
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise personally owned devices with a work profile
 
 #### Improvements to the new Intune single device page (public preview) <!-- 38223856 -->
 
