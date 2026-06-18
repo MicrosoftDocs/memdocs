@@ -73,24 +73,30 @@ items:
     href: ./android/connect-managed-google-play.md
   - name: Work profile enrollment
     items:
-    - name: Work profile enrollment overview
-      href: ./android/enterprise-work-profile.md
-    - name: Personal devices
-      href: ./android/setup-personal-work-profile.md
-    - name: Corporate-owned devices
-      href: ./android/setup-corporate-work-profile.md
-  - name: Set up fully managed enrollment
-    href: ./android/setup-fully-managed.md
-  - name: Set up dedicated device enrollment
-    href: ./android/setup-dedicated.md
-  - name: Samsung Knox Mobile Enrollment
-    href: ./android/setup-samsung-knox-mobile.md
-  - name: Device staging
-    href: ./android/device-staging.md
-    displayName: COBO; staged enrollment
-  - name: Corporate-owned enrollment methods
-    href: ./android/ref-corporate-methods.md
-  - name: AOSP enrollment
+    - name: Prerequisite - Connect Intune to Android Enterprise
+      href: ./android/connect-managed-google-play.md
+    - name: Device staging overview
+      href: ./android/device-staging.md
+      displayName: COBO; staged enrollment
+    - name: Set up work profile management
+      items:
+      - name: Overview
+        href: ./android/enterprise-work-profile.md
+      - name: Work profile for personal devices
+        href: ./android/setup-personal-work-profile.md
+      - name: Android Management API for personal devices
+        href: ./android/android-management-api-overview.md
+      - name: Redo Workplace Join for Android Enterprise devices
+        href: ./android/redo-workplace-join-android.md
+      - name: Work profile for corporate-owned devices
+        href: ./android/setup-corporate-work-profile.md
+    - name: Set up enrollment for dedicated devices
+      href: ./android/setup-dedicated.md
+    - name: Set up enrollment for fully managed devices
+      href: ./android/setup-fully-managed.md
+    - name: Enroll corporate-owned devices
+      href: ./android/ref-corporate-methods.md
+  - name: AOSP enrollment solutions
     items:
     - name: Corporate-owned, userless
       href: ./android/setup-aosp-corporate-userless.md

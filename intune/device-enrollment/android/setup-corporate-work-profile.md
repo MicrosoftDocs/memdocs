@@ -228,7 +228,9 @@ Apps are automatically updated on managed devices when the app developer publish
 
 To remove an app from Android Enterprise corporate-owned work profile devices, you can either:
 - Delete the Required app deployment.
-- Create an uninstall deployment for the app.
+- Create an uninstall deployment for the app.  
+
+On corporate-owned work profile devices, the Microsoft Intune app is installed automatically and is required for device management. The Company Portal app is hidden and, if deployed, redirects users to the Intune app. The Microsoft Authenticator app is also installed automatically for authentication.  
 
 ## Limitations
 
