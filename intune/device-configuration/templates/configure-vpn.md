@@ -1,16 +1,14 @@
 ---
 title: Add VPN settings to devices in Microsoft Intune
 description: On Android device administrator, Android Enterprise, iOS, iPadOS, macOS, and Windows devices, use built-in settings to create virtual private network (VPN) connections in Microsoft Intune.
-ms.date: 02/22/2024
+ms.date: 06/18/2026
 ms.topic: how-to
-ms.reviewer: abalwan
+ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 ---
 
 # Create VPN profiles to connect to VPN servers in Intune
-
-[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 Virtual private networks (VPNs) give users secure remote access to your organization network. Devices use a VPN connection profile to start a connection with the VPN server. **VPN profiles** in Microsoft Intune assign VPN settings to users and devices in your organization. Use these settings so users can easily and securely connect to your organizational network.
 
@@ -41,33 +39,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
   - Enrolled devices that run Windows
   - Windows Holographic for Business
 
-- **For Windows 11 devices, there is an issue** between the Windows 11 client and the [Windows VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
-
-  A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
-
-  **The following changes can cause a loss of VPN functionality**:
-
-  - You change or update an existing VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
-  - Two new VPN profiles apply to the device at the same time.
-  - An active VPN profile is removed at the same time a new VPN profile is assigned.
-
-  **This issue doesn't apply and VPN connectivity remains in the following scenarios**:
-
-  - A Windows 11 device doesn't have an existing VPN profile assigned, and the devices receives one Intune VPN profile.
-  - Windows 11 devices have an existing VPN profile assigned, and are assigned another VPN profile with no other profile changes.
-  - A Windows 10 device upgrades to Windows 11, and there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
-  - Windows 11 requires that:
-
-    - All of the [IKE Security Association Parameters](./ref-vpn-settings-windows.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](./ref-vpn-settings-windows.md#child-security-association-parameters-ikev2-only) settings are configured
-
-      **OR**
-
-    - None of the [IKE Security Association Parameters](./ref-vpn-settings-windows.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](./ref-vpn-settings-windows.md#child-security-association-parameters-ikev2-only) settings are configured
-
-    If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's a loss of VPN functionality.
-
-  > [!IMPORTANT]
-  > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+[!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 ## Step 1 - Deploy your VPN app
 
@@ -83,95 +55,24 @@ To help you assign the app using Intune, go to [Add apps to Microsoft Intune](..
 
 You can create VPN profiles using the following VPN connection types:
 
-- Automatic
-  - Windows
-
-- Check Point Capsule VPN
-  - Android device administrator
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - iOS/iPadOS
-  - macOS
-  - Windows
-
-- Cisco AnyConnect
-  - Android device administrator
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS
-  - macOS
-  - Windows
-
-- Cisco (IPSec)
-  - iOS/iPadOS
-
-- Citrix SSO
-  - Android device administrator
-  - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - Android Enterprise fully managed and corporate-owned work profiles: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - iOS/iPadOS
-  - Windows
-
-- Custom VPN
-  - iOS/iPadOS
-  - macOS
-
-  Create custom VPN profiles using URI settings in [Create a profile with custom settings](./configure-custom-settings.md).
-
-- F5 Access
-  - Android device administrator
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS
-  - macOS
-  - Windows
-
-- IKEv2
-  - iOS/iPadOS
-  - Windows
-
-- L2TP
-  - Windows
-
-- Microsoft Tunnel
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS
-
-- NetMotion Mobility
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS
-  - macOS
-
-- Palo Alto Networks GlobalProtect
-  - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - iOS/iPadOS
-  - Windows
-
-- PPTP
-  - Windows
-
-- Pulse Secure
-  - Android device administrator
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS
-  - Windows
-
-- SonicWall Mobile Connect
-  - Android device administrator
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
-  - iOS/iPadOS
-  - macOS
-  - Windows
-
-- Zscaler
-  - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md)
-  - iOS/iPadOS
+| VPN connection type | Supported platforms |
+|---|---|
+| Automatic | - Windows |
+| Check Point Capsule VPN | - Android DA <br/>- Android Enterprise personally owned devices with a work profile<br/>- iOS/iPadOS<br/>- macOS<br/>- Windows <br/><br/> Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md) on: <br/><br/>- Android Enterprise fully managed and corporate-owned work profile |
+| Cisco AnyConnect | - Android DA <br/>- Android Enterprise personally owned devices with a work profile <br/> - Android Enterprise fully managed and corporate-owned work profile <br/>- iOS/iPadOS<br/>- macOS<br/>- Windows <br/><br/>|
+| Cisco (IPSec) | - iOS/iPadOS |
+| Citrix SSO | - Android DA <br/>- iOS/iPadOS <br/>- Windows <br/><br/> Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md) on: <br/><br/> - Android Enterprise personally owned devices with a work profile <br/> - Android Enterprise fully managed and corporate-owned work profiles |
+| Custom VPN | - iOS/iPadOS <br/>- macOS <br/><br/> Create custom VPN profiles using URI settings in [Create a profile with custom settings](./configure-custom-settings.md). |
+| F5 Access | - Android DA <br/>- Android Enterprise personally owned devices with a work profile <br/>- Android Enterprise fully managed and corporate-owned work profile <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| IKEv2 | - iOS/iPadOS <br/>- Windows |
+| L2TP | - Windows |
+| Microsoft Tunnel | - Android Enterprise personally owned devices with a work profile <br/>- Android Enterprise fully managed and corporate-owned work profile <br/>- iOS/iPadOS |
+| NetMotion Mobility | - Android Enterprise personally owned devices with a work profile <br/>- Android Enterprise fully managed and corporate-owned work profile <br/>- iOS/iPadOS <br/>- macOS |
+| Palo Alto Networks GlobalProtect | - iOS/iPadOS <br/>- Windows <br/><br/> Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md) on: <br/><br/> - Android Enterprise personally owned devices with a work profile <br/> - Android Enterprise fully managed and corporate-owned work profiles |
+| PPTP | - Windows |
+| Pulse Secure | - Android DA <br/>- Android Enterprise personally owned devices with a work profile <br/>- Android Enterprise fully managed and corporate-owned work profile <br/>- iOS/iPadOS <br/>- Windows |
+| SonicWall Mobile Connect | - Android DA <br/>- Android Enterprise personally owned devices with a work profile <br/>- Android Enterprise fully managed and corporate-owned work profile <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows | 
+| Zscaler | - iOS/iPadOS <br/><br/> Use [app configuration policy](../../app-management/configuration/configure-vpn-android.md) on: <br/><br/> - Android Enterprise personally owned devices with a work profile <br/> - Android Enterprise fully managed and corporate-owned work profiles |
 
 ## Step 2 - Create the profile
 
@@ -236,7 +137,37 @@ For more information about how to create and use certificate profiles in Intune,
 
 The user authenticates to the VPN server by providing a user name and password, or [derived credentials](../../device-security/certificates/derived-credentials.md).
 
-## Next steps
+## Known issue
+
+There is an issue between the Windows 11 client and the [Windows VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
+
+A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
+
+**The following changes can cause a loss of VPN functionality**:
+
+- You change or update an existing VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
+- Two new VPN profiles apply to the device at the same time.
+- An active VPN profile is removed at the same time a new VPN profile is assigned.
+
+**This issue doesn't apply and VPN connectivity remains in the following scenarios**:
+
+- A Windows 11 device doesn't have an existing VPN profile assigned, and the devices receives one Intune VPN profile.
+- Windows 11 devices have an existing VPN profile assigned, and are assigned another VPN profile with no other profile changes.
+- A Windows 10 device upgrades to Windows 11, and there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
+- Windows 11 requires that:
+
+  - All of the [IKE Security Association Parameters](./ref-vpn-settings-windows.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](./ref-vpn-settings-windows.md#child-security-association-parameters-ikev2-only) settings are configured
+
+    **OR**
+
+  - None of the [IKE Security Association Parameters](./ref-vpn-settings-windows.md#ike-security-association-parameters-ikev2-only) and [Child Security Association Parameters](./ref-vpn-settings-windows.md#child-security-association-parameters-ikev2-only) settings are configured
+
+  If you only configure one of the **IKE Security Association Parameters** or **Child Security Association Parameters** settings, then there's a loss of VPN functionality.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+
+## Related content
 
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
-- You can also create and use per-app VPNs on [Android device administrator/Android Enterprise](./configure-per-app-vpn-android.md) and [iOS/iPadOS](./configure-per-app-vpn-ios.md) devices.
+- Create and use per-app VPNs on [Android](./configure-per-app-vpn-android.md) and [iOS/iPadOS](./configure-per-app-vpn-ios.md) devices.
