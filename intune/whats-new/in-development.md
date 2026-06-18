@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 06/11/2026
+ms.date: 06/18/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -190,37 +190,7 @@ To learn more about the settings you can currently configure, see [Add Wi-Fi set
 >
 > - iOS/iPadOS  
 
-<!-- *********************************************** -->
-
-## Device enrollment
-
-### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
-
-Enrollment time grouping (ETG) will improve the Apple automated device enrollment (ADE) setup experience by providing an efficient way to group devices at enrollment time. The pre-knowledge of the security group that the device will be a member of helps in computing the applicable policies, apps, and settings for the enrolled device, so the configurations are delivered quickly at the time of enrollment.
-
-You'll be able to configure enrollment time grouping in new iOS/iPadOS and macOS enrollment policies that use these authentication methods:
-
-- iOS/iPadOS:
-  - Enroll with user affinity
-    - Setup Assistant with modern authentication
-    - Company Portal authentication method
-  - Enroll without user affinity
-    - Microsoft Entra shared mode
-    - Shared iPad
-- macOS:
-  - Enroll with user affinity
-    - Setup Assistant with modern authentication
-  - Enroll without user affinity
-
-There will be a new **Device group** tab within new iOS/iPadOS and macOS enrollment policies where you can add a Microsoft Entra security group. The group you add will map directly to the enrollment profile, and you'll be able to edit the group at any time. The new device grouping tab won't be available in existing enrollment profiles.
-
-Other requirements include adding the Intune first-party app as a security group owner, and ensuring that you have the **enrollment time device membership assignment** permission within a custom RBAC role.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS Automated Device Enrollment (ADE)
-> - macOS Automated Device Enrollment (ADE)
+<!-- *********************************************** -->  
 
 <!-- *********************************************** -->
 
@@ -234,31 +204,7 @@ Remote Help will support RemoteApp in Azure Virtual Desktop (AVD), enabling help
 
 The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
 
-For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged-in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
-
-### Android Enterprise personally owned devices with a work profile will use Android Management API (AMAPI)<!-- 36840128 -->
-
-When users enroll their personally owned Android devices in Intune, a work profile is created with a separate partition on the device for the user's work account. These devices are referred to as personally owned devices with a work profile.
-
-As part of the Intune move to the [Android Management API](https://developers.google.com/android/management) (opens Android's web site), there will be some updates for personally owned devices that enroll in Intune:
-
-- Web based enrollment for an improved enrollment flow and experience - Users won't have to install an app to enroll in Intune. Web enrollment will be tenant wide.
-- New implementation for how Intune delivers policies - Modern update on how Intune delivers and monitors policies on Android personally owned devices with a work profile. This change also aligns with how Intune manages policies on corporate owned devices with a work profile, fully managed, and dedicated devices. You can scale your migration to targeted groups.
-
-To use these features, you will need to opt in:
-
-- Web based enrollment: **Devices > Device Onboarding > Enrollment > Android > Personally owned devices with a work profile > Use web enrollment for all users enrolling into Android personally-owned work profile management**
-- Policy: **Devices > Manage devices > Configuration > Create > New policy > Android Enterprise > Move to Android Management API**
-
-To learn more, see:
-
-- [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
-- [Android Enterprise work profile management overview](../device-enrollment/android/enterprise-work-profile.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise personally owned devices with a work profile
+For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged-in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.  
 
 <!-- *********************************************** -->
 
