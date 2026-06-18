@@ -1,7 +1,7 @@
 ---
 title: Overview of Android work profile management in Microsoft Intune
 description: Learn more about Android Enterprise work profile management, a device management option for personal and corporate-owned devices enrolling in Microsoft Intune.
-ms.date: 04/05/2024
+ms.date: 06/18/2026
 ms.topic: overview
 ms.reviewer: grwilson
 ms.collection:
@@ -10,14 +10,33 @@ ms.collection:
 
 # Android Enterprise work profile management overview
 
-Microsoft Intune supports work profile management, an Android Enterprise management option that enables platform-level separation of work apps and data on enrolled devices. When an employee or student enrolls their device in Intune, they enable the creation of a *work profile*. The work profile creates a separate partition on the device for the user's work account, so that the user can switch between their personal apps and work apps easily and securely. When they leave the work profile, they return to the personal side of their device, where their personal apps and data are unaffected by Intune policies.
-
-Device users enrolling personal devices must enroll through the Intune Company Portal app, while users on corporate-owned devices must enroll through the Microsoft Intune app.
+Microsoft Intune supports work profile management, an Android Enterprise management option that enables platform-level separation of work apps and data on enrolled devices. When an employee or student enrolls their device in Intune, they enable the creation of a *work profile*. The work profile creates a separate partition on the device for the user's work account, so that the user can switch between their personal apps and work apps easily and securely. When they leave the work profile, they return to the personal side of their device, where their personal apps and data are unaffected by Intune policies.  
 
 This article provides an overview of the Android Enterprise work profile management options supported by Microsoft Intune, which include:
 
 - Work profiles for corporate-owned devices.
-- Work profiles for personal devices.
+- Work profiles for personal devices.  
+
+
+## Enrollment experience  
+
+Microsoft Intune supports multiple ways to enroll Android devices with a work profile. Depending on your organization's configuration, users can start enrollment from a web page (web-based enrollment) or through the Intune Company Portal app (app-based enrollment). 
+
+- [Work profile for personal devices](setup-personal-work-profile.md)  
+- [Work profile for corporate-owned devices](setup-corporate-work-profile.md)  
+
+See the following table for a comparison of the different enrollment methods.  
+
+| Feature/step                | Corporate-owned work profile | Personal work profile (app-based enrollment) | Personal work profile (web-based enrollment) |
+|-----------------------------|-----------------------------|--------------------------------------------|----------------------------------------------|
+| Who initiates enrollment | IT/admin or user            | User                                       | User                                         |
+| Enrollment start method | QR code/token/app           | Install Company Portal app from Google Play | Open enrollment URL in browser (Chrome/Edge) |
+| Device ownership        | Corporate                   | Personal (BYOD)                            | Personal (BYOD)                              |
+| Policy delivery method  | Android Management API                       | Custom DPC                                 | Android Management API                                        |
+| Company Portal app role | Hidden/redirects to Intune  | Required for enrollment and app catalog     | Installed for app catalog/mobile application management, not required for enrollment |
+
+
+  
 
 ## You need to know
 
@@ -53,7 +72,16 @@ Managed Google Play is an integral part of Android Enterprise app distribution a
 
 To manage and deploy apps in the Play Store, sign in to the Google Play website with your administrator credentials for Google management. From here, you can approve apps for deployment. Approved apps sync with Microsoft Intune and appear in the admin center where you can deploy and manage them. Line of business (LOB) apps developed by your organization must be published to Managed Google Play using the Google Play managed publishing console.
 
-Apps can be installed without user interaction and without requiring the user to allow app installations from unknown sources. To browse and install optional or available apps, the user can browse the Managed Google Play store on their device. For more information, see [Assign apps to Android Enterprise work profile devices with Intune](../../app-management/deployment/add-managed-google-play.md).
+Apps can be installed without user interaction and without requiring the user to allow app installations from unknown sources. To browse and install optional or available apps, the user can browse the Managed Google Play store on their device. For more information, see [Assign apps to Android Enterprise work profile devices with Intune](../../app-management/deployment/add-managed-google-play.md). 
+
+After enrollment, several apps are installed automatically.  
+
+| App | Description | App-based enrollment | Web-based enrollment |
+|-----|-------------|:--------------------:|:--------------------:|
+| Microsoft Intune | Used for device management tasks, including checking compliance status, syncing the device, collecting diagnostic logs, and contacting IT support. | ✔ | ✔ |
+| Company Portal | Used to browse, install, and manage work apps and supports mobile application management scenarios. | ✔ | ✔ |
+| Android Device Policy | Applies management policies to the work profile. This app is installed in a hidden state and users don't see it. | ✗ | ✔ |
+| Microsoft Authenticator | Provides sign-in and authentication for work apps. | ✔ | ✔ |
 
 ## App configuration
 
@@ -114,6 +142,8 @@ For more information, see [Configure a certificate profile for your devices in M
 Wi-Fi profiles are removed when the device retires from Intune and the work profile is deleted. For more information, see [How to configure Wi-Fi settings in Microsoft Intune](../../device-configuration/templates/configure-wifi.md).
 
 ## Next steps
+
+- [Android Management API for personally owned work profiles](android-management-api-overview.md)
 
 - [Enrollment deployment guide for Android](guide.md)
 

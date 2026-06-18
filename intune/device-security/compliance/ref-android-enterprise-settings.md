@@ -1,7 +1,7 @@
 ---
 title: Android Enterprise compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Android Enterprise devices in Microsoft Intune. Set password rules, choose a minimum or maximum operating system version, restrict specific apps, prevent reusing password, and more.
-ms.date: 09/04/2025
+ms.date: 06/18/2026
 ms.topic: reference
 ms.reviewer: abigailstein
 ms.collection:
@@ -223,9 +223,15 @@ This section describes the compliance profile settings available for personal de
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require that the Google Play services app is installed and enabled. The Google Play services app enables security updates, and is a base-level dependency for many security features on certified-Google devices.
 
+  > [!NOTE]
+  > This setting doesn't apply to personally owned work profile devices managed through Android Management API (web-based enrollment). Google Play Services is required for Android Management API enrollment and is always present on these devices.
+
 - **Up-to-date security provider**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
+
+  > [!NOTE]
+  > This setting doesn't apply to personally owned work profile devices managed through Android Management API (web-based enrollment). Security providers update automatically on devices managed by Android Management API.
 
 - **Play Integrity Verdict**
     Select the type of integrity checks devices must pass to stay compliant. Intune evaluates Play's integrity verdict to determine compliance. Your options:
@@ -315,7 +321,7 @@ Configure device security requirements for the personally owned work profile.
   This setting applies at the device level. If you only require a password at the work profile level, use a configuration policy. For more information, see [Android Enterprise device configuration settings](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
 > [!IMPORTANT]
-> When a personally-owned work profile is enabled, the device and work profile passcodes are combined by default so that the same passcode is used in both places. Intune enforces the higher complexity level of the two. The device user can use two separate passcodes if they go to their work profile settings and deselect **Use one lock**. To ensure that device users use two separate passcodes upon enrollment create a device configuration profile that restricts device users from using one lock.
+> When a personally owned work profile is enabled, the device and work profile passcodes are combined by default so that the same passcode is used in both places. Intune enforces the higher complexity level of the two. The device user can use two separate passcodes if they go to their work profile settings and deselect **Use one lock**. To ensure that device users use two separate passcodes upon enrollment create a device configuration profile that restricts device users from using one lock.
 >
 > 1. In the admin center, create a device configuration profile.
 > 2. For profile type, select **Device restrictions**.
