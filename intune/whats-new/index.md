@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/04/2026
+ms.date: 06/18/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -35,7 +35,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 <!-- Common categories - in this order:
 
-### Microsoft Intune Suite
+### Advanced capabilities (formerly "Microsoft Intune Suite")
 ### App management
 ### Device configuration
 ### Device enrollment
@@ -49,8 +49,565 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-> [!NOTE]  
-> The 2605 release is currently in progress and expected to complete by end of week.
+## Week of June 15, 2026
+
+### Device enrollment  
+
+#### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
+
+Enrollment time grouping is now generally available for Apple automated device enrollment (ADE) on iOS/iPadOS and macOS. With enrollment time grouping, you can identify a device’s Microsoft Entra security group during enrollment, so policies, apps, and settings can be applied earlier in the setup process.
+
+Enrollment time grouping is supported in new Apple ADE enrollment policies. For requirements and setup details, see [Set up enrollment time grouping](../device-enrollment/setup-time-grouping.md).  
+
+### Device management  
+
+#### Android Enterprise personally owned devices with a work profile uses Android Management API (AMAPI)<!-- 36840128 -->
+
+When users enroll their personally owned Android devices in Intune, a work profile is created with a separate partition on the device for the user's work account. These devices are referred to as *personally owned devices with a work profile*.    
+
+As part of the Intune move to the [Android Management API](https://developers.google.com/android/management) (opens Android's web site), there are some updates for personally owned devices that enroll in Intune:
+
+- Web based enrollment for an improved enrollment flow and experience - Users don't have to install an app to enroll in Intune. Web enrollment is tenant wide.
+- New implementation for how Intune delivers policies - Modern update on how Intune delivers and monitors policies on Android personally owned devices with a work profile. This change also aligns with how Intune manages policies on corporate owned devices with a work profile, fully managed, and dedicated devices. You can scale your migration to targeted groups.
+
+To use these features, opt in through the Microsoft Intune admin center:
+
+- Web based enrollment: **Devices** > **Device Onboarding** > **Enrollment** > **Android**> **Personally owned devices with a work profile** > **Use web enrollment for all users enrolling into Android personally-owned work profile management**
+- Policy: **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** > **Move to Android Management API**
+
+To learn more, see:
+
+- [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
+- [Use Android Management API for personally owned devices with work profiles](../device-enrollment/android/android-management-api-overview.md)  
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise personally owned devices with a work profile
+
+#### Improvements to the new Intune single device page (public preview) <!-- 38223856 -->
+
+In the Intune admin center, the **Devices** > **All Devices** > select a device page is redesigned and available for you to preview. This feature was available in the [2604 service release](#preview-the-new-device-page-in-the-intune-admin-center-public-preview).
+
+After the initial 2604 release, we made the following improvements:
+
+- After you select one of the following device actions, you can temporarily view passcodes and PINs in the **Device action status** table:
+
+  - Reset passcode
+  - Recover passcode
+  - Remote Lock
+  - Rotate BitLocker Keys
+
+- Updates to Device actions:
+
+  - Device actions work as expected when [multi admin approval](../fundamentals/role-based-access-control/multi-admin-approval.md) policies are enabled.
+  - Device actions for supervised iOS devices are available when the action is supported.
+  - Admins can enable and disable **Lost mode**.
+
+- Updates to navigation:
+
+  - Tools and reports have been moved to the left navigation menu.
+  - The monitor tab is now the default landing tab.
+
+- In the **Essentials** section:
+
+  - The **Copy** button and the **User** and **Compliance** links are available.
+  - Supervised iOS devices show a badge to help identify these devices.
+
+- When preview is disabled, the feedback pane shows the correct text.
+- Comanagement information is available.
+- Admins can remove the primary user from an Azure domain joined device.
+
+### Device security
+
+#### Microsoft Windows 11 STIG SCAP Benchmark audit baseline<!-- 31532934 -->
+
+Intune now includes a STIG audit baseline that assesses Windows devices against the recommended configurations defined in the Security Technical Implementation Guides (STIGs) published by the Defense Information Systems Agency (DISA). The initial baseline audits against the **Microsoft Windows 11 STIG SCAP Benchmark** *Version 2, Release 7  (benchmark date: January 5, 2026)*.
+
+Unlike other Intune security baselines that configure and enforce settings, the STIG audit baseline is audit-only. It evaluates the current state of a device's configuration and generates detailed audit reports without changing any configured settings, helping organizations demonstrate compliance with DoD security recommendations. Audit results have a documented mapping to NIST XCCDF result categories for formal DISA compliance reporting, and Graph API support enables programmatic data retrieval and cross-tenant assessment aggregation.
+
+The STIG audit baseline is available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service.md) tenants and requires
+[Advanced Analytics](../advanced-analytics/index.md) licensing.
+
+For more information, see [Use STIG audit baselines to assess Windows device compliance](../device-security/security-baselines/stig-audit-baseline.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 10
+> - Windows 11  
+
+## Week of June 8, 2026 (Service release 2605)
+
+### App management
+
+#### Newly available protected apps for Intune<!-- 36990464, 37246057, 37348844, 37366700, 37401822, 37401836 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Caju AI by Caju AI
+- eYACHO for Biz 7 Intune by MetaMoJi Corporation (iOS)
+- eYACHO Viewer 7 Intune by MetaMoJi Corporation (iOS)
+- Harvey AI by Harvey AI (Android)
+- Notta for Intune by Notta
+- SwiftConnect Mobile by SwiftConnect
+
+For more information about protected apps, see [Microsoft Intune protected apps](../app-management/ref-protected-apps.md).
+
+#### APP Multiple Managed Accounts <!-- 3182632 -->
+
+Microsoft Intune mobile application management now supports Multiple Managed Accounts, letting users add and manage more than one managed account within the same app. App protection policies apply separately to each account, so you can tailor protection based on the account's organization or tenant. This capability helps consultants, acquisition teams, or users with multiple mailboxes stay productive without switching devices.
+
+Currently we support Multiple Managed Accounts in Microsoft Teams on iOS/iPadOS (v8.10.0 or later). Support for additional apps and platforms is coming soon.
+
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant.
+
+To learn more, see [Multiple managed accounts for app protection policies](../app-management/protection/multiple-managed-accounts.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+
+### Device configuration
+
+### Custom top bar elements on Managed Home Screen <!-- 25008744 -->
+
+You have the option to display custom text in the top bar of the Managed Home Screen (MHS). In addition to the existing choices (serial number, device name, tenant name), you can now select **Custom** and enter a free-text string of up to 63 characters. Custom strings support dynamic variables: `{{SerialNumber}}`, `{{DeviceName}}`, and `{{TenantName}}`. This is useful for kiosk scenarios such as checkout devices, departmental tagging, or any case where staff need a quick visual identifier.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise dedicated devices (COSU)
+> - Android Enterprise fully managed devices (COBO)
+
+#### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
+
+On macOS devices, the **Disable MAC address randomization** setting is now available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices.
+
+When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+For more information, see:
+
+- [Wi-Fi profile settings for Apple devices](../device-configuration/templates/ref-wifi-settings-apple.md)
+- [Add and use Wi-Fi settings on your devices in Microsoft Intune](../device-configuration/templates/configure-wifi.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS 15 and later
+
+#### Managed Home Screen exit lock task mode password now requires a device configuration profile<!-- 31846021 -->
+
+You can no longer configure the Managed Home Screen exit lock task mode password by using an app configuration policy. To set or update the lock task mode password for Managed Home Screen, create or update a device configuration profile that defines the lock task mode password policy.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../app-management/configuration/configure-managed-home-screen.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
+
+#### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
+
+There's a new **Block Bluetooth sharing** setting in the [settings catalog](../device-configuration/settings-catalog/index.md) (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type > **General**). When set to **True**, the device can't share content over Bluetooth. When set to **False**, Intune doesn't change or update this setting. By default, the OS has the following behavior:
+
+- Fully managed and dedicated devices allow Bluetooth sharing.
+- Corporate-owned devices with a work profile block Bluetooth sharing.
+
+For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE)
+> - Android Enterprise corporate-owned fully managed (COBO)
+> - Android Enterprise corporate-owned dedicated devices (COSU)
+
+#### Use DDM to manage Apple Intelligence settings on devices running 26.4 and later<!-- 37011037 -->
+
+With the release of 26.4, Apple deprecated several intelligence-related settings in the MDM restrictions payload. To manage these settings, use the [DDM configurations released in March 2026](#new-updates-to-the-apple-settings-catalog-) instead.
+
+In the [settings catalog](../device-configuration/settings-catalog/index.md), the following **Restrictions** are now deprecated:
+
+- Allow Apple Intelligence Report
+- Allow Assistant
+- Allow Assistant User Generated Content
+- Allow Assistant While Locked
+- Allow Auto Correction
+- Allow Continuous Path Keyboard
+- Allow Definition Lookup
+- Allow Dictation
+- Allowed External Intelligence Workspace IDs
+- Allow External Intelligence Integrations
+- Allow External Intelligence Integrations Sign In
+- Allow Genmoji
+- Allow Image Playground
+- Allow Image Wand
+- Allow Keyboard Shortcuts
+- Allow Mail Smart Replies
+- Allow Mail Summary
+- Allow Notes Transcription
+- Allow Notes Transcription Summary
+- Allow Personalized Handwriting Results
+- Allow Predictive Keyboard
+- Allow Safari Summary
+- Allow Spell Check
+- Allow Visual Intelligence Summary
+- Allow Writing Tools
+- Force Assistant Profanity Filter
+- Force On Device Only Dictation
+- Force On Device Only Translation
+
+In the [device restrictions template](../device-configuration/templates/ref-device-restrictions-apple.md), the following settings are deprecated.
+
+**Built-in apps**:
+
+- Block Siri
+- Block Siri while device is locked
+- Block Siri for dictation
+- Block Siri for translation
+- Require Siri profanity filters
+- Block user-generated content in Siri
+
+**Keyboard and dictionary**:
+
+- Block word definition lookup
+- Block predictive keyboards
+- Block auto-correction
+- Block spell check
+- Block keyboard shortcuts
+- Block dictation
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+#### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
+
+For devices using Managed Home Screen (MHS), you can now silence apps whenever MHS prompts the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps can't start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You can configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature is opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps automatically return to their normal state.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../app-management/configuration/configure-managed-home-screen.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+
+#### New Microsoft Edge settings in the Windows settings catalog<!-- 38051713 -->
+
+There are new Microsoft Edge 148 settings in the Windows settings catalog. To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
+
+The new policies include:
+
+- **Microsoft Edge > Startup, home page and new tab page > Configure whether the Discover or Work feed tabs are shown on the New Tab Page**
+
+  This policy configures whether the Discover or Work feed tabs are shown on the New Tab Page. By default, both Work and Discover tabs are enabled. Your options:
+
+  - `EnableBothWorkDiscover`: If you set this value or don't configure this policy, Microsoft Edge shows both the Work and Discover feed tabs on the new tab page.
+  - `EnableOnlyWork`: Microsoft Edge shows only the Work feed tab on the new tab page.
+  - `EnableOnlyDiscover`: Microsoft Edge shows only the Discover feed tab on the new tab page.
+
+  This policy works with the **[Set the default New Tab Page feed tab to Work or Discover](/deployedge/microsoft-edge-policies/SetNTPDefaultFeedTab)** policy, which controls which feed tab is selected by default when both tabs are available.
+
+  [ConfigureNTPFeedTabVisibility](/deployedge/microsoft-edge-policies/ConfigureNTPFeedTabVisibility)
+
+- **Microsoft Edge - Default Settings (users can override) > Set the default New Tab Page feed tab to Work or Discover**
+
+  This policy sets the default feed tab on the New Tab Page to Work or Discover. Your options:
+
+  - `Work`: If you set this value or don't configure this policy, Microsoft Edge sets the default feed tab to Work.
+  - `Discover`: Microsoft Edge sets the default feed tab to Discover.
+
+  This policy only takes effect when **[Configure whether the Discover or Work feed tabs are shown on the New Tab Page](/deployedge/microsoft-edge-policies/ConfigureNTPFeedTabVisibility)** is set to `EnableBothWorkDiscover` or is not configured. If only one tab is visible, this policy has no effect.
+
+  [SetNTPDefaultFeedTab](/deployedge/microsoft-edge-policies/SetNTPDefaultFeedTab)
+
+- **Microsoft Edge > Identity and sign-in > Allow M365 authentication popups in work profiles**
+
+  This policy controls whether Microsoft Edge allows Microsoft 365 authentication pop-ups to bypass the pop-up blocker in work profiles. When users are signed in with a work account, some Microsoft 365 sites, like `microsoft.com`, `cloud.microsoft.com`, and `visualstudio.com`, might open authentication pop-ups to `login.microsoftonline.com`, `login.live.com`, or `login.microsoft.com`. These pop-ups are required to complete sign-in.
+
+  Your options:
+
+  - If you enable this policy or don't configure it, Microsoft 365 authentication pop-ups are allowed in work profiles.
+  - If you disable this policy, Microsoft 365 authentication pop-ups follow the default settings like other pop-ups. Users can choose to allow or block them, but they aren't automatically allowed.
+
+  This policy only applies to work profiles. In personal profiles, Microsoft 365 authentication pop-ups are always allowed regardless of this policy's configuration.
+
+  [M365AuthPopupsInWorkEnabled](/deployedge/microsoft-edge-policies/m365authpopupsinworkenabled)
+
+- **Microsoft Edge > Automatically open Copilot side pane with contextual insights for links opened from Outlook**
+
+  This policy controls whether Microsoft Edge automatically opens the Microsoft Copilot side pane when users open web links from Outlook emails sent from the same tenant. Starting in Microsoft Edge version 148, when users open eligible links from Outlook emails sent from the same tenant, Microsoft Edge automatically opens the Copilot side pane with contextual insights. Copilot can use the originating Outlook email as context to surface relevant insights and suggested next steps alongside the web content.
+
+  Your options:
+
+  - If you enable this policy or don't configure it, the Copilot side pane opens automatically when users open links from Outlook emails sent from the same tenant.
+  - If you disable this policy, the Copilot side pane doesn't open automatically when users open links from Outlook emails sent from the same tenant.
+
+  This feature applies only to links opened from Outlook emails sent from the same tenant and requires Microsoft Copilot to be available for the user in Microsoft Edge. This feature is disabled if the **[Control Copilot access to page context for Microsoft Entra ID profiles](/deployedge/microsoft-edge-policies/CopilotPageContext)** policy or the **[Control Copilot access to Microsoft Edge page content for Entra account user profiles when using Copilot in the Microsoft Edge sidepane](/deployedge/microsoft-edge-policies/EdgeEntraCopilotPageContext)** policy is disabled, regardless of this policy's configuration. Copilot requires access to page content to provide contextual insights.
+
+  [M365LinksAutoOpenCopilotEnabled](/deployedge/microsoft-edge-policies/M365LinksAutoOpenCopilotEnabled)
+
+- **Microsoft Edge > Enable the extended lifetime option for SharedWorkers**
+
+  Controls whether Microsoft Edge keeps a SharedWorker running briefly after all tabs using it are closed, allowing background tasks to finish.
+
+  Your options:
+
+  - If you enable or don't configure this policy, SharedWorkers can use the extended lifetime option.
+  - If you disable this policy, the extended lifetime option is ignored, even if it is requested by the page.
+
+  This policy is temporary and will be removed in a future release.
+
+  [SharedWorkerExtendedLifetimeEnabled](/deployedge/microsoft-edge-policies/sharedworkerextendedlifetimeenabled)
+
+- **Microsoft Edge > List of URL patterns for which developer tools are allowed to be opened**
+
+  This policy controls where developer tools can be used in Microsoft Edge by specifying an allowlist of URL patterns. URL patterns are matched against the URL of every frame on the page being inspected.
+
+  Your options:
+
+  - If you configure this policy and don't configure the **[List of URL patterns for which developer tools are blocked](/deployedge/microsoft-edge-policies/DeveloperToolsAvailabilityBlocklist)** policy, developer tools are available only when every frame on the page matches a pattern in this allowlist. If any frame doesn't match, developer tools are blocked for the entire page. For information on the URL format, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322).
+  - If you configure both this policy and the **[List of URL patterns for which developer tools are blocked](/deployedge/microsoft-edge-policies/DeveloperToolsAvailabilityBlocklist)** policy, this allowlist takes precedence. URLs that match this allowlist are allowed even if they also match the blocklist. URLs that match the blocklist but not this allowlist are blocked. URLs that match neither are governed by the **[Control where developer tools can be used](/deployedge/microsoft-edge-policies/DeveloperToolsAvailability)** policy.
+  - If you disable or don't configure this policy, developer tools availability is determined by the **[List of URL patterns for which developer tools are blocked](/deployedge/microsoft-edge-policies/DeveloperToolsAvailabilityBlocklist)** and **[Control where developer tools can be used](/deployedge/microsoft-edge-policies/DeveloperToolsAvailability)** policies.
+
+  This policy applies to developer tools opened for websites, extensions, and web applications. It supports up to 1,000 entries. Example value:
+
+  ```text
+  contoso.com
+  https://ssl.server.com
+  contoso.com/good_path
+  https://server.contoso.com:8080/path
+  .exact.hostname.com
+  file://*
+  ```
+
+  [DeveloperToolsAvailabilityAllowlist](/deployedge/microsoft-edge-policies/developertoolsavailabilityallowlist)
+
+- **Microsoft Edge > List of URL patterns for which developer tools are blocked**
+
+  This policy specifies URL patterns where developer tools are blocked. For information on the URL format, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). URL patterns are evaluated against the URL of every frame on the page being inspected. If any frame matches a pattern in this policy, developer tools are blocked for the entire page.
+
+  Your options:
+
+  - If you configure this policy and don't configure the **[List of URL patterns for which developer tools are allowed to be opened](/deployedge/microsoft-edge-policies/developertoolsavailabilityallowlist)** policy, developer tools are blocked when any frame matches a pattern in this policy. If no frames match, availability is determined by the **[Control where developer tools can be used](/deployedge/microsoft-edge-policies/DeveloperToolsAvailability)** policy.
+  - If you configure both this policy and the **[List of URL patterns for which developer tools are allowed to be opened](/deployedge/microsoft-edge-policies/developertoolsavailabilityallowlist)** policy, the allowlist takes precedence. URLs that match the allowlist are allowed, even if they also match this policy. URLs that match this policy (but not the allowlist) are blocked. If a URL matches neither, the **[Control where developer tools can be used](/deployedge/microsoft-edge-policies/DeveloperToolsAvailability)** policy determines availability.
+  - If you disable or don't configure this policy, developer tools availability is determined by the **[List of URL patterns for which developer tools are allowed to be opened](/deployedge/microsoft-edge-policies/developertoolsavailabilityallowlist)** and **[Control where developer tools can be used](/deployedge/microsoft-edge-policies/DeveloperToolsAvailability)** policies.
+
+  This policy supports up to 1,000 entries. Example value:
+
+  ```text
+  https://contoso.com
+  contoso.com
+  https://ssl.server.com
+  contoso.com/bad_path
+  https://server.contoso.com:8080/path
+  .exact.hostname.com
+  *
+  file://*
+  ```
+
+  [DeveloperToolsAvailabilityBlocklist](/deployedge/microsoft-edge-policies/DeveloperToolsAvailabilityBlocklist)
+
+- **Microsoft Edge > Maximum number of concurrent connections to the proxy server for WebSocket requests**
+
+  Specifies the maximum number of simultaneous connections to a proxy server for WebSocket requests. To configure limits for non-WebSocket requests, see the **[MaxConnectionsPerProxy](/deployedge/microsoft-edge-policies/MaxConnectionsPerProxy)** policy.
+
+  If you don't configure this policy, the default value of 32 is used. Some web applications maintain multiple concurrent connections, like long-lived or hanging requests. Setting a value lower than the default may cause networking delays when many such applications are open. Some proxy servers can't handle a high number of concurrent connections per client. In these cases, reducing the value of this policy might improve reliability. The supported range is 6 to 256:
+
+  - Values less than 6 are treated as 6.
+  - Values greater than 256 are treated as 256.
+
+  Modify this value only if required by your proxy server configuration or network environment.
+
+  [MaxConnectionsPerProxyForWebSocket](/deployedge/microsoft-edge-policies/MaxConnectionsPerProxyForWebSocket)
+
+- **Microsoft Edge > Controls the availability of browsing with Copilot in Microsoft Edge**
+
+  When browsing with Copilot is enabled, users can explicitly invoke it for a query. It isn't invoked automatically. Browsing with Copilot is available only on domains specified in the **[Browsing with Copilot Allowed URLs](/deployedge/microsoft-edge-policies/BrowsingWithCopilotAllowList)** policy and is blocked on domains specified in the **[Browsing with Copilot Blocked URLs](/deployedge/microsoft-edge-policies/BrowsingWithCopilotBlockList)** policy. If no domains are configured in the allow list, browsing with Copilot is effectively disabled.
+
+  This feature is available only to users with an active Microsoft 365 Copilot subscription. For more information about configuring browsing with Copilot, see [Configure browsing with Copilot](https://go.microsoft.com/fwlink/?LinkId=2341535).
+
+  Your options:
+
+  - If you enable this policy, browsing with Copilot is turned on for all users who receive the policy, and users can't turn it off.
+  - If you disable this policy, browsing with Copilot is turned off for all users who receive the policy, and users can't turn it on.
+  - If you don't configure this policy, browsing with Copilot is off by default, and users can turn it on.
+
+  [AllowBrowsingWithCopilot policy](/deployedge/microsoft-edge-policies/allowbrowsingwithcopilot)
+
+- **Microsoft Edge > Browsing with Copilot Allowed URLs**
+
+  Allows you to define a list of URLs where browsing with Copilot is available. Users can't modify this list.
+
+  Your options:
+
+  - If you enable this policy, browsing with Copilot is available only on the sites specified in the list. To allow a broader set of sites while blocking specific exceptions, configure this policy together with the **[Browsing with Copilot Blocked URLs](/deployedge/microsoft-edge-policies/BrowsingWithCopilotBlockList)** policy. For example, you can include `*` to allow all sites, and then use the block list to restrict access to specific URLs. You can define exceptions based on schemes, subdomains, ports, or origins. When multiple filters apply, the most specific match determines whether a URL is allowed or blocked. The block list takes precedence over the allow list.
+  - If you disable or don't configure this policy, browsing with Copilot is unavailable on all sites, even if the **[Controls the availability of browsing with Copilot in Microsoft Edge](/deployedge/microsoft-edge-policies/allowbrowsingwithcopilot)** policy is enabled.
+
+  Browsing with Copilot supports only HTTP and HTTPS protocols. Wildcards (`*`) are supported, and subdomains are matched even without wildcards. This policy applies only to the site origin; any path specified in the URL pattern is ignored. For guidance on formatting URL patterns, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). Example value:
+
+  ```text
+  https://www.contoso.com
+  [*.]contoso.edu
+  contoso.net
+  login.contoso.us
+  ```
+
+  [BrowsingWithCopilotAllowList](/deployedge/microsoft-edge-policies/BrowsingWithCopilotAllowList)
+
+- **Microsoft Edge > Browsing with Copilot Blocked URLs**
+
+  Controls the list of URLs where browsing with Copilot is blocked. Users can't modify this list. Use this policy to define exceptions to broader allowlists. For example, you can set **[Browsing with Copilot Allowed URLs](/deployedge/microsoft-edge-policies/BrowsingWithCopilotAllowList)** to `*` to allow all sites, and then use this policy to block access to specific URLs. This policy supports blocking by scheme, subdomain, or port. When multiple URL patterns apply, the most specific match determines whether access is allowed or blocked. Blocklist entries take precedence over allowlist entries.
+
+  If you don't configure this policy, no exceptions are applied to **[Browsing with Copilot Allowed URLs](/deployedge/microsoft-edge-policies/BrowsingWithCopilotAllowList)**. Browsing with Copilot supports only HTTP and HTTPS protocols. Wildcards (`*`) are supported, and subdomains are matched even without wildcards. URL matching is based on the site origin only; any path specified in the pattern is ignored. For information about URL pattern format, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). Example value:
+
+  ```text
+  https://www.contoso.com
+  [*.]contoso.edu
+  contoso.net
+  login.contoso.us
+  ```
+
+  [BrowsingWithCopilotBlockList](/deployedge/microsoft-edge-policies/BrowsingWithCopilotBlockList)
+
+- **Microsoft Edge > Enable the Copilot new tab page**
+
+  This policy configures the availability of the Copilot new tab page in Microsoft Edge for Business. The Copilot new tab page combines search and chat into a single input box and includes personalized cards that provide quick access to relevant files, calendar events, and suggested Copilot prompts. Users who don't have a Microsoft 365 Copilot license might experience limited relevance in Copilot prompt card content.
+
+  Most policies that customize the New Tab Page are supported on the Copilot new tab page. For a complete list of supported and unsupported policies, see [Configure the Copilot new tab page](https://go.microsoft.com/fwlink/?linkid=2330462). This policy applies only to Microsoft Entra ID profiles and controls the Copilot new tab page experience in Microsoft Edge for Business. This policy doesn't apply to the Copilot new tab page on personal Microsoft account profiles.
+
+  Your options:
+
+  - If you enable this policy, the Copilot new tab page is turned on.
+  - If you disable or don't configure this policy, the Copilot new tab page is turned off. When the policy isn't configured, users can turn it on via user settings.
+
+  [CopilotNewTabPageEnabled](/deployedge/microsoft-edge-policies/CopilotNewTabPageEnabled)
+
+- **Microsoft Edge > Manageability > Allow MAM enrollment when managed device has Purview DLP policy configured**
+
+  Controls whether Microsoft Edge allows Mobile Application Management (MAM) enrollment on managed devices when Microsoft Purview Data Loss Prevention (DLP) is configured.
+
+  Your options:
+
+  - If you enable this policy, MAM enrollment is allowed even when Purview DLP is detected on the device.
+  - If you disable or don't configure this policy, MAM enrollment is blocked when Purview DLP is detected on the device.
+
+  [MAMWithDeviceDLPEnabled](/deployedge/microsoft-edge-policies/MAMWithDeviceDLPEnabled)
+
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../device-configuration/settings-catalog/index.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### New Wired Networks device configuration profile for iOS/iPadOS<!-- 31880672 -->
+
+There's a new **802.1x Wired Networks** device configuration profile for iOS/iPadOS devices. The feature supports 802.1x Ethernet access controls, which is ideal for M-series iPads that support native resolution screen extension. It allows iPads to securely connect to hot desk docks and monitors using wired access.
+
+This profile:
+
+- Supports EAP protocols, like TLS, PEAP, and TTLS
+- Is similar to the macOS wired network profile experience
+
+This feature helps with secure enterprise deployments for iPads in education, finance, and other regulated industries.
+
+To learn more about wired networks, see [Add and use wired networks settings on your devices](../device-configuration/templates/configure-wired-networks.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS 17 and newer  
+
+### Device management
+
+#### Detect and block Shadow AI using the properties catalog, device query, and a security baseline (public preview)<!-- 37141378 -->
+
+Using Intune, you can detect and block a Local AI Agent, like OpenClaw, on Windows devices enrolled in Intune. Specifically, you can:
+
+- Use a [Properties catalog](../device-configuration/collect-device-properties.md) policy to collect the Local AI Agent entity. Admins can use this information to identify devices where OpenClaw is present or active.
+- Use [Device Query](../advanced-analytics/device-query-multiple-devices.md) to view devices with a Local AI Agent, like OpenClaw.
+- Use the [Local AI Agent Baseline - OpenClaw (Preview)](../device-security/security-baselines/ref-openclaw-settings.md) to block users from using OpenClaw.
+
+This feature is in [public preview](../fundamentals/public-preview.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Device security
+
+#### In-place renewal of Cloud PKI issuing certification authorities (CAs)<!-- 25850620 -->
+
+Microsoft Intune now supports in-place renewal of eligible Cloud PKI issuing certification authorities (CAs). Previously, renewing an issuing CA required creating a new CA and manually updating dependent SCEP certificate profiles, which increased operational overhead and configuration risk. With in-place renewal, certificate issuance continues uninterrupted for scenarios such as Wi-Fi, VPN, and email, without changes to existing SCEP profiles or device assignments.
+
+For more information, see [Renew a certification authority in Cloud PKI](../cloud-pki/renew-ca.md).
+
+#### Strict Tunnel Mode for Microsoft Tunnel on Android<!-- 17373449 -->
+
+Microsoft Tunnel now supports Strict Tunnel Mode on Android Enterprise devices. When Strict Tunnel Mode is enabled, all network traffic is forced through the VPN tunnel. If the VPN connection is unavailable or drops, all network traffic on the device is blocked until the VPN reconnects, preventing apps from accessing the public internet outside of the tunnel.
+
+Strict Tunnel Mode is available when a Microsoft Tunnel VPN profile is configured with Always-on VPN. Admins can configure an app exclusion list to allow specific apps to bypass the tunnel and connect directly to the network, regardless of VPN connection status.
+
+Strict Tunnel Mode requires devices enrolled through Android Management API (AM API). For unenrolled devices using Microsoft Tunnel for Mobile Application Management (MAM), Strict Tunnel Mode is available through the Microsoft Edge app configuration policy.
+
+For more information about Microsoft Tunnel capabilities, see [Overview of Microsoft Tunnel](../device-security/microsoft-tunnel/overview.md#capabilities).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned fully managed
+> - Android Enterprise corporate-owned work profile
+> - Android Enterprise personally owned work profile
+> - Android (MAM, unenrolled devices)
+
+#### Grant enhanced security permissions to a Mobile Threat Defense app on Android<!-- 33745497 -->
+
+A new **Mobile Threat Defense role** category is available on the Mobile Threat Defense connector configuration page in the Microsoft Intune admin center. The **Grant MTD role permissions to *\<MTD partner name\>* on enrolled Android COBO and COPE devices** toggle lets you grant enhanced security permissions to one Mobile Threat Defense partner app, such as Microsoft Defender for Endpoint or a supported third-party partner, on enrolled Android Enterprise corporate-owned fully managed (COBO) and Android Enterprise corporate-owned work profile (COPE) devices.
+
+When you turn on this toggle, the selected MTD app receives the following exemptions on targeted devices:
+
+- **Suspension** — The app is prevented from being suspended.
+- **Hibernation** — The app is prevented from entering hibernation.
+- **Power restrictions** — The app is exempt from power-related restrictions such as app standby, and can start foreground services from the background.
+- **User controls** — Users can't clear app data or force-stop the app.
+
+These exemptions help the MTD app maintain continuous threat protection without interruption from system or user actions. Only one MTD partner can hold these permissions per tenant.
+
+For Microsoft Defender for Endpoint, a second toggle is also available: **Automatically launch Microsoft Defender for Endpoint during setup on Android COBO and COPE devices**. When enabled, the Defender for Endpoint app automatically launches during device setup, allowing it to complete its initial configuration without requiring the user to manually open it.
+
+For more information, see [Mobile Threat Defense role](../device-security/mobile-threat-defense/enable-connector.md#mobile-threat-defense-toggle-options).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned fully managed
+> - Android Enterprise corporate-owned work profile
+
+#### Vulnerability Remediation Agent now uses Microsoft Entra agentic identity (public preview)<!-- 36632198 -->
+
+*This feature is rolling out to tenants gradually and may take several weeks to become available in your environment.*
+
+**The Vulnerability Remediation Agent is now available to all customers in public preview.** Previously, the agent was available only to a select group of customers in a limited preview.
+
+The [Vulnerability Remediation Agent](../copilot/agents/vulnerability-remediation-agent.md) now uses [Microsoft Entra agentic identity](/entra/agent-id/) instead of a human user identity. When you set up a new agent instance, the setup process automatically provisions an agentic identity in your tenant's Entra directory. The agent runs under the permissions delegated to this agentic user, providing a more secure and scalable identity model.
+
+**What this means for existing agents:** If you already have a Vulnerability Remediation Agent instance that uses a human user identity, your agent continues to work as-is for now. Human user identity support expires 90 days after this release, after which you must transition to an agentic identity. A banner on the agent page notifies you when agentic identity is available for your agent. For transition steps and details, see [Transition existing agents to agentic identity](../copilot/agents/vulnerability-remediation-agent.md#transition-existing-agents-to-agentic-identity).
+
+**What's new for agentic identity:**
+
+- New agent instances are provisioned with an agentic identity during setup.
+- After setup, you must delegate the required permissions to the agentic user in the Microsoft Entra and Microsoft Defender admin centers.
+- Use the **Run Readiness Check** button to verify that all required permissions are in place before running the agent.
+
+For more information, see [Agent identity](../copilot/agents/vulnerability-remediation-agent.md#agent-identity).
 
 ## Week of June 1, 2026  
 
@@ -129,7 +686,7 @@ This feature is initially available for Windows, with additional platforms to fo
 
 ## Week of April 27, 2026 (Service release 2604)
 
-### Microsoft Intune Suite
+### Advanced capabilities
 
 #### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
@@ -903,7 +1460,7 @@ Device query for multiple devices now includes expanded operator support, cleare
 
 ## Week of February 9, 2026 (Service release 2601)
 
-### Microsoft Intune Suite
+### Advanced capabilities
 
 #### Endpoint Privilege Management support on Azure Virtual Desktop<!-- 26079227 -->
 
@@ -1221,457 +1778,9 @@ For more information about available Setup Assistant skipkeys, see:
 - [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)  
 - [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
-## Week of December 1, 2025
-
-### App management
-
-#### Secure enterprise browser managed by Intune (public preview) <!-- 31609121 -->
-
-Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
-
-For more information, see [Secure Your Corporate Data in Intune with Microsoft Edge for Business](../solutions/edge-data-security/overview.md).
-
-## Week of November 17, 2025  
-
-### Device enrollment  
-
-#### Configure Windows Backup for Organizations <!--29202026 -->  
-
-*Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../device-enrollment/windows/enable-backup-restore.md). 
-
-### Device management
-
-#### Security Copilot in Intune agents are available for public preview <!-- 32766422 35360466 35100315 35320958 -->
-
-Security Copilot agents in Intune are AI-powered assistants that specialize in specific scenarios. The Intune agents are available in the Intune admin center > **Agents**, and are available for Security Copilot users.
-
-The following Intune agents are available:
-
-- The **[Change Review Agent](../copilot/agents/change-review-agent.md)** evaluates Multi Admin Approval requests for Windows PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help admins understand script behavior and associated risks.
-
-  These insights can help Intune admins make informed decisions more quickly about whether to approve or deny requests. This agent supports Intune-managed devices running Windows.
-
-- The **[Device Offboarding Agent](../copilot/agents/device-offboarding-agent.md)** identifies stale or misaligned devices across Intune and Microsoft Entra ID. It provides actionable insights and requires admin approval before offboarding any devices. This agent complements existing Intune automation by showing insights and handling ambiguous cases where automated cleanup isn't enough.
-
-  The agent supports Intune-managed devices running Windows, iOS/iPadOS, macOS, Android, and Linux. During public preview, admins can directly disable Microsoft Entra ID objects, with additional remediation steps provided as guidance.
-
-- The **[Policy Configuration Agent](../copilot/agents/policy-configuration-agent.md)** analyzes uploaded documents or industry benchmarks and automatically identifies matching Intune settings. Admins can upload their requirements, like compliance standards or internal policy documents, and the agent intelligently shows relevant settings from the Intune settings catalog.
-
-  The agent also guides you through policy creation and helps you configure each setting that best suits your organization's needs. This agent supports devices running Windows.
-
-To learn more, see:
-
-- [Security Copilot agents in Intune](../copilot/agents/index.md)
-
-#### Intune support for iVerify as a mobile threat defense partner<!-- 35838315 -->
-
-You can now use iVerify Enterprise as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:  
-
-- Android 9.0 and later
-- iOS/iPadOS 15.0 and later
-
-To learn more about this support, see [Set up iVerify Mobile Threat Defense Connector](../device-security/mobile-threat-defense/iverify.md).
-
-### Tenant administration
-
-#### Manage tasks and requests from the centralized Admin tasks node in Microsoft Intune (public preview)<!-- 3542038 -->
-
-The new **Admin tasks** node in the Intune admin center provides a centralized view to discover, organize, and act on security tasks and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
-
-The following task types are supported:
-
-- Endpoint Privilege Management file elevation requests
-- Microsoft Defender security tasks
-- Multi Admin Approval requests
-
-Intune only shows tasks you have permission to manage. When you select a task, Intune opens the same interface and workflow you'd use if managing the task from its original location. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
-
-For more information, see [Admin tasks](../device-management/admin-tasks.md).
-
-## Week of November 10, 2025 (Service release 2511)
-
-### Microsoft Intune Suite
-
-#### Scope tag enforcement for Endpoint Privilege Management elevation requests<!-- 33479826  -->
-
-When viewing Endpoint Privilege Management [elevation requests](../epm/manage-support-approvals.md#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
-
-### App management
-
-#### More volume options available in Managed Home Screen <!-- 16462284 -->
-
-Admins can now enable more volume controls in the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. In addition to the existing media volume control, this update introduces configuration settings to show or hide sliders for **call**, **ring and notification**, and **alarm** volumes.
-
-Each new option can be independently enabled through app configuration policies. When turned on, users can adjust these specific volume levels directly from the Managed Settings page within MHS, without leaving kiosk mode. This enhancement provides task workers greater flexibility to manage sound levels for different environments while keeping the device securely locked down.
-
-For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../app-management/configuration/configure-managed-home-screen.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise (dedicated and fully managed devices)
-
-#### Reset Managed Google Play store mode to Basic <!-- 33632857 -->
-
-You can now reset the Managed Google Play store layout from **Custom** back to **Basic** in the Intune admin center (**Apps** > **All apps** > **Create Managed Google Play app**).
-
-In **Basic** mode, all approved apps are automatically visible to users. In **Custom** mode, newly approved apps must be manually added to collections before they appear in the store. The new **Reset to Basic** button lets admins quickly revert to Basic mode without needing to contact support. When selected, Intune deletes all existing collections and immediately displays a success or failure message.
-
-For more information about Managed Google Play store layout options, see [Approve and deploy Android Enterprise apps in Intune](../app-management/deployment/add-managed-google-play.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android
-
-#### Updated Service Level Objectives for Enterprise App Management <!-- 30049867 -->
-
-**Service Level Objectives (SLOs)** are now available in Enterprise App Management (EAM) to provide clearer expectations for when app updates become available in the Enterprise App Catalog. SLO processing timelines begin when Intune first receives the updated app package.
-
-Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
-
-For more information, see [Enterprise App Management overview](../app-management/deployment/enterprise-app-management.md).
-
-#### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
-
-Intune adds two new values to the **Allow cut, copy and paste for** setting in Windows app protection policies (starting with Microsoft Edge) to give admins more control over data movement:
-
-- Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
-- Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
-
-These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../app-management/protection/overview.md).
-
-> [!div class="checklist"]
-> Applies to:
->
->- Windows
-
-### Device configuration
-
-#### Settings available in both Templates and Settings Catalog for Android Enterprise <!-- 34876806 -->
-
-Some settings that were only available in Templates are now also supported in the settings catalog.
-
-The [settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
-
-To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
-
-The following settings are available in the settings catalog:
-
-**General**:
-
-- Block Contact sharing via Bluetooth (work profile level)
-- Block searching of work contacts and displaying work contact caller-id in personal profile
-- Data sharing between work and personal profiles
-- Skip first use hints
-
-**Work profile password**:
-
-- Number of days until password expires
-- Number of passwords required before user can reuse a password
-- Number of sign-in failures before wiping device
-- Required password type
-  - Minimum password length
-  - Number of characters required
-  - Number of lowercase characters required
-  - Number of non-letter characters required
-  - Number of numeric characters required
-  - Number of symbol characters required
-  - Number of uppercase characters required
-- Required unlock frequency
-
-To learn more about these settings, see [Android Intune settings catalog settings list](../device-configuration/settings-catalog/ref-android-settings.md).
-
-Applies to:
-
-- Android Enterprise
-
-#### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342 -->
-
-The [Settings Catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
-
-There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
-
-- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
-
-For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](../solutions/ai/manage-ai-android.md).
-
-Applies to:
-
-- Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
-
-### Device enrollment  
-
-#### New opt-in upgrade allows existing customers to move from managed Google Play accounts to Microsoft Entra ID accounts<!-- 30675087 --> 
-
-Microsoft Intune offers a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. You are eligible for upgrade if you previously used a consumer Gmail account. This change streamlines the onboarding process by eliminating the need for a separate Gmail account and by leveraging your work account. This change is not required. To learn more about this change, see:
-
-- [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602)
-- [Connect your Intune account to your managed Google Play account](../device-enrollment/android/connect-managed-google-play.md#upgrade-to-a-managed-google-domain)
-
-#### Incomplete user enrollment report removed <!-- 26395805 -->
-
-The incomplete user enrollments report has been removed and is no longer functional in the Microsoft Intune admin center. The following corresponding APIs have also been removed from Microsoft Intune:  
-
-- getEnrollmentAbandonmentDetailsReport
-- getEnrollmentAbandonmentSummaryReport
-- getEnrollmentFailureDetailsReport
-
-Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../device-enrollment/monitor-reports.md#enrollment-failures-report).  
-
-### Device management 
-
-#### Query and results improvements to Explorer feature with Security Copilot in Intune <!--33987602-->
-
-With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../copilot/explorer.md)** feature. 
-
-When you create your queries, you have more filter options. For example:
-
-- Queries with a number operator let you choose equal, greater than, and less than values.
-- Queries that forced you to choose one option, like platform, allow you to select multiple options.
-
-In the query results, there are also more columns available to view your data.
-
-To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/explorer.md).
-
-#### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
-
-When you create a policy in Intune, you can use [assignment filters](../fundamentals/filters/overview.md) to assign a policy based on rules you create. You can create a rule using different [properties](../fundamentals/filters/ref-device-properties.md), like `deviceManagementType`.
-
-For managed devices, the Device Management Type property supports the following Android enrollment options:
-
-- Corporate-owned dedicated devices with Entra ID Shared mode
-- Corporate-owned dedicated devices without Entra ID Shared mode
-- Corporate-owned with work profile
-- Corporate-owned fully managed
-- Personally owned device with a work profile
-- AOSP user-associated devices
-- AOSP userless devices
-
-To learn more about assignment filters and the properties you can currently use, see:
-
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters/overview.md)
-- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](../fundamentals/filters/ref-device-properties.md)
-
-Applies to:
-
-- Android
-
-#### New prompts available to explore your Intune data <!-- 33787582 -->
-
-You can use Security Copilot in Intune to explore new prompts related to your data using natural language. Use these new prompts to view data on:
-
-- Users and groups
-- Role based access control (RBAC)
-- Audit logs
-
-When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
-
-Each query returns a Copilot summary to help you understand the results and offers suggestions. With this information, you can also:
-
-- Add devices or users from the results to a group so you can target apps and policies to this group.
-- Filter example queries to find or build requests that match your needs.
-
-To learn more, see [Explore Intune data with natural language and take action](../copilot/explorer.md).
-
-### Device security
-
-#### Microsoft Tunnel access by rooted Android devices is blocked by the Microsoft Defender client<!-- 30336962 -->
-
-Microsoft Tunnel uses the Microsoft Defender client app to provide Android devices access to tunnel. The latest version of the Defender for Endpoint client can now detect when a device is rooted. If a device is determined to be rooted, Defender:
-
-- Marks the device's risk category as *High*
-- Immediately drops active Tunnel connections
-- Prevents further use of Tunnel until the device is determined to no longer be rooted
-- Sends a notification to the device user about the device status
-
-This capability is a feature of the Defender client on Android and doesn't replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
-
-For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](../device-security/microsoft-tunnel/overview.md#capabilities).
-
-### Tenant administration
-
-#### Soft-deleted Microsoft Entra groups now visible in Intune <!-- 30035949 -->
-
-This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
-
-Microsoft Intune now displays soft-deleted Microsoft Entra groups in the Intune admin center. When a group is soft-deleted, its assignments no longer apply. However, if the group is restored, its previous assignments are automatically reinstated.
-
-For more information, see [Include and exclude app assignments in Microsoft Intune](../app-management/deployment/configure-assignment-scope.md).
-
-## Week of October 20, 2025 (Service release 2510)
-
-### Microsoft Intune Suite
-
-#### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
-
-Endpoint Privilege Management (EPM) has a new option for elevation rules that runs the elevated file using the user's context instead of a virtual account. The option is **Elevate as current user**.
-
-With the *Elevate as current user* elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to enter their credentials for Windows Authentication. This process supports multifactor authentication (MFA) for enhanced security.
-
-For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../epm/deployment-planning.md#important-concepts-for-endpoint-privilege-management).
-
-####  Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
-
-You can now use an Endpoint Privilege Management (EPM) dashboard that presents insights about file elevations and trends in your organization and help identify users that might be ready to be moved to run as standard users in place of running with local admin permissions.
-
-Insights provided by the dashboard include:
-
-- Users who have only unmanaged file elevations
-- Users who have both managed and unmanaged file elevations
-- User with only managed elevations
-- Frequently unmanaged elevations
-- Frequently approved by support
-- Frequently denied elevations
-
-For more information about the dashboard and these new insights, see [Overview dashboard](../epm/monitor-reports.md#elevation-report-by-user) in Reports for Endpoint Privilege Management.
-
-### Device configuration
-
-#### System Info property available in properties catalog for device inventory<!-- 30326613 -->
-
-You can create a [properties catalog](../device-configuration/collect-device-properties.md) policy that lets you collect and view hardware properties from your managed Windows devices. There's a **System Info** category that shows system-level device insights, like OS version, hardware details, and configuration state.
-
-To learn more and get started, see [properties catalog](../device-configuration/collect-device-properties.md).
-
-> [!div class="checklist"]
-> Applies to:
->
->-  Windows
-
-#### New settings available in the Android Enterprise settings catalog<!-- 31495587 34438509 34458121 -->
-
-There are new settings in the Android settings catalog. To create a new settings catalog policy and see these settings in the Intune admin center, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
-
-- **Wi-Fi Direct**
-
-  - **General** > **Block Wi-Fi Direct**: If **True**, this setting blocks Wi-Fi Direct. Wi-Fi Direct is a direct, peer-to-peer connection between devices using Wi-Fi frequencies.  If **False**, Intune doesn't change or update this setting. By default, the OS might allow Wi-Fi Direct.
-
-   > [!div class="checklist"]
-   > Applies to:
-   >
-   > - Android Enterprise corporate-owned devices with a work profile (COPE)
-   > - Android Enterprise corporate owned fully managed (COBO)
-   > - Android Enterprise corporate owned dedicated devices (COSU)
-
-- **Hide organization name**
-
-  The **General** > **Hide organization name** setting supports corporate owned single use dedicated devices. Previously, this setting was only supported on corporate-owned devices with a work profile and corporate owned fully managed devices.
-
-- Some settings that were only available in Templates are available in the settings catalog.
-
-  **General**: 
-
-  - Allow copy and paste between work and personal profiles
-  - Allow network escape hatch
-  - Allow USB storage
-  - Block access to status bar
-  - Block date and time changes
-  - Block location
-  - Block microphone adjustment
-  - Block mounting of external media
-  - Block notification windows
-  - Block screen capture (work profile-level)
-  - Block Wi-Fi setting changes
-
-To learn more about these settings, see [Android Intune settings catalog settings list](../device-configuration/settings-catalog/ref-android-settings.md).
-
-The [settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise
-
-### Device enrollment
-
-#### Edit managed Google Play organization name<!--32268351 -->
-
-Now you can edit the managed Google Play organization name directly in the Microsoft Intune admin center under **Devices** > **Android** > **Enrollment** > **Managed Google Play**. The updated name, which is validated on input, appears in the admin center. It might also appear on Android device lock screens within a message like, *This device is managed by [organization name]*. For more information, see [Connect Intune account to managed Google Play account](../device-enrollment/android/connect-managed-google-play.md).
-
-### Device management
-
-#### Settings catalog supports Windows 11 25H2 settings <!--35412243-->
-
-The release of Windows 11 25H2 includes new policy configuration service providers (CSPs). These settings are available in the [settings catalog](../device-configuration/settings-catalog/common-tasks.md) for you to configure.
-
-To learn more, see the [Microsoft Intune Settings Catalog Updated to Support New Windows 11, version 25H2 Settings](https://aka.ms/Intune/Windows25H2-settings) blog post.
-
-To get started with the settings catalog, see:
-
-- [Use the Intune settings catalog to configure settings](../device-configuration/settings-catalog/index.md)
-- [Common tasks you can complete using the settings catalog](../device-configuration/settings-catalog/common-tasks.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-#### New client version for Remote Help for macOS <!-- 35620986 -->
-
-With the new Remote Help client, version 1.0.2510071, Microsoft Intune now supports macOS 26. Earlier versions of the Remote Help client aren't compatible with macOS 26. The app is automatically updated through Microsoft AutoUpdate (MAU) if opted-in, so no action is required from you or your users. The latest client version resolves an issue that previously caused the screen to appear blank on first launch and fail to connect. For more information, see [Use Remote Help with Microsoft Intune](../remote-help/index.md?tabs=macos).
-
-### Device security
-
-#### Intune to end support for legacy Apple MDM software updates<!-- 33004946 -->
-
-With the release of iOS 26, iPadOS 26, and macOS 26, Apple has deprecated legacy mobile device management (MDM) software update commands and payloads. To align with this change, Intune will soon end support for the following MDM-based workloads:
-
-- iOS/iPadOS update policies
-- macOS update policies
-- Software update settings in:
-  - iOS/iPadOS **templates** > **Device restrictions**
-  - iOS/iPadOS **settings catalog** > **Restrictions**
-  - macOS **templates** > **Device restrictions**
-  - macOS **settings catalog** > **Restrictions**
-  - macOS **settings catalog** > **Software update**
-- Reports:
-  - iOS/iPadOS update installation failures
-  - macOS update installation failures
-  - macOS per-device software updates
-
-These functionalities [are now available through declarative device management (DDM)](../device-updates/apple/index.md), which provides a more modern and reliable approach to managing Apple software updates. For more information about this transition, see the Intune Customer Success blog [Move to declarative device management for Apple software updates](https://aka.ms/Intune/Apple-DDM-software-updates).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
-
-### Intune apps
-
-#### Newly available protected apps for Intune<!-- 33926210, 33926415, 34631356, 34631695, 34631844, 34632442  -->
-
-The following protected apps are now available for Microsoft Intune:
-
-- Total Triage by CareXM
-- Intapp by Intapp Inc.
-- ANDPAD by ANDPAD Inc.
-- ANDPAD CHAT by ANDPAD Inc.
-- ANDPAD Inspection by ANDPAD Inc.
-- ANDPAD Blueprint by ANDPAD Inc.
-
-For more information about protected apps, see [Microsoft Intune protected apps](../app-management/ref-protected-apps.md).
-
-### Monitor and troubleshoot
-
-#### Enrollment time grouping failure report generally available for Android and Windows <!-- 33290045 -->
-
-Now generally available in the Microsoft Intune admin center, the enrollment time grouping failures report shows failures, which include devices that failed to become a member of the specified static device group during one of the following processes:
-
-- Windows Autopilot device preparation provisioning
-- Enrollment of Android Enterprise fully managed devices
-- Enrollment of Android corporate-owned work profile devices 
-- Enrollment of Android Enterprise dedicated devices 
-
-The enrollment time grouping failures report is available in the admin center under **Devices** > **Monitor** > **Enrollment time grouping failures**. Recently updated information could take up to 20 minutes to appear in the report. For more information, see [Enrollment time grouping in Microsoft Intune](../device-enrollment/setup-time-grouping.md#reporting).
-
-## What's new archive
-<!-- Past announcements that are older than six months will be moved to the archive -->
-
 For previous months, see the [What's new archive](archive/index.md).
+
+<!-- Past announcements that are older than six months will be moved to the archive -->
 
 ## Notices
 

@@ -69,6 +69,9 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 > [!NOTE]
 > Devices are blocked from enrolling when there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.
 
+> [!IMPORTANT]
+> This article reflects the updated policy creation experience (**Enrollment program tokens** > **Enrollment policies**) for devices going through automated device enrollment. The older experience (**Enrollment program tokens** > **Profiles**) differs and will eventually be retired. The older experience won't receive new features, so be sure to create new policies under **Enrollment policies**. For more information, see [New iOS/iPadOS, visionOS, tvOS and macOS ADE enrollment policies experience](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531).
+
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
@@ -84,7 +87,15 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
     > [!IMPORTANT]
     > If you make changes to an existing enrollment policy, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. 
 
-1. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables visionOS settings that allow the management profile to be removed. If you enable locked enrollment, users won't be able to unenroll their device.  
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+    For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md). 
+
+1. Select **Next**.  
+
+1. On the **Configuration settings** tab, for **Locked enrollment**, select **Yes** or **No**. Locked enrollment disables visionOS settings that allow the management profile to be removed. If you enable locked enrollment, users won't be able to unenroll their device.  
 
 1. For **Await final configuration**, your options are:
       * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations.
@@ -96,11 +107,9 @@ Create a visionOS enrollment policy for userless automated device enrollment. A 
 
          This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment policies.
 
-      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment policies. 
+      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment policies.   
 
-1. Select **Next**.
-
-1. On the **Setup Assistant** tab, configure the following policy settings:
+1. Under **Setup Assistant**, configure the following policy settings:
 
     | Department setting | Description |
     |---|---|

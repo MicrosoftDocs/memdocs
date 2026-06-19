@@ -65,7 +65,7 @@ The built-in **Help Desk Operator** role includes all of the required permission
 
 Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).  
 
-The most recent version of Remote Help is **5.1.1998.0**.    
+The most recent version of Remote Help is **5.2.1037.0**.    
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 

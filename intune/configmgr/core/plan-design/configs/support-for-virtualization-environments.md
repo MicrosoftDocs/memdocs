@@ -34,7 +34,7 @@ For example, you use Microsoft Hyper-V Server 2016 to host a VM that runs Window
 
 Each virtual computer needs the same or greater hardware and software requirements that you would use for a physical Configuration Manager computer.
 
-To validate that Configuration Manager supports your virtualization environment, use the Server Virtualization Validation Program. It includes an online Virtualization Program Support Policy Wizard. For more information, see [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp.aspx).
+To validate that Configuration Manager supports your virtualization environment, use the Server Virtualization Validation Program. It includes an online Virtualization Program Support Policy Wizard. For more information, see [Windows Server Virtualization Validation Program](https://www.windowsservercatalog.com/svvp/program-home).
 
 Configuration Manager can't manage VMs if they're offline. The Configuration Manager client on the host computer can't manage an offline VM image. For example, it can't install software updates or collect hardware inventory.
 
