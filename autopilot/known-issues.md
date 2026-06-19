@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 02/10/2026
+ms.date: 06/18/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: troubleshooting
@@ -30,7 +30,21 @@ This article describes known issues that can often be resolved with configuratio
 >
 > For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/intune/configmgr/comanage/autopilot-enrollment).
 
-## Known issues
+## Known issues  
+
+### ODJ Connector configuration fails with a SeLogonAsServicePrivilege error when using a bring-your-own gMSA   
+
+Date added: *June 18, 2026*
+
+When you configure the Intune Connector for Active Directory, also known as the Offline Domain Join (ODJ) Connector, with a bring-your-own group managed service account (gMSA), enrollment or configuration might fail. The connector UI or setup logs contain an entry similar to the following example, often surfaced as a `SeLogonAsServicePrivilegeMissing` configuration error:  
+
+`System.Security.Principal.WindowsIdentity.KerbS4ULogon(String upn, SafeAccessTokenHandle& safeTokenHandle)`  
+
+This error occurs when the *Log on as a service* privilege (`SeLogonAsServicePrivilege`) is assigned to the gMSA but hasn't yet propagated to the connector host when the pre-enrollment validation runs.  
+
+The issue is resolved in build 6.2604.2000.3, which adds the opt-in `<appSettings>` key `SkipByoMsaPrivilegeCheck`. When this key is set to `true` and a bring-your-own gMSA is configured, the connector skips the `SeLogonAsServicePrivilege` pre-check (and its KerbS4ULogon call), writes a trace line confirming the skip, and proceeds with configuration.  
+
+To use the workaround, install build 6.2604.2000.3 or later. Add the **SkipByoMsaPrivilegeCheck** key with `value="true"` to the connector `<appSettings>`, and restart the configuration. The default value is `false`, so the pre-check continues to run unless you explicitly add the key.  
 
 ### Microsoft Entra hybrid join Autopilot deployments time out with error code 0x80004005
 
