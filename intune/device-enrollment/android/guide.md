@@ -3,7 +3,7 @@ title: Android device enrollment guide for Microsoft Intune
 description: Enroll Android and Android Enterprise corporate-owned work profile, personally owned devices with a work profile, fully managed, AOSP, and dedicated devices in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 04/23/2024
+ms.date: 06/16/2026
 ms.topic: article
 ms.reviewer: chmaguir, priyar
 ms.collection:
@@ -34,9 +34,9 @@ For a list of all the Intune-specific prerequisites and configurations needed to
 > [!NOTE]
 > After you create an enrollment profile and assign it to users or groups, don't rename the enrollment profile. It can prevent future enrollments. If you need to change the name of the enrollment profile, then:
 >
-> 1. Create a new enrollment profile with the new name
-> 2. Assign the new profile to the your users & devices
-> 3. Delete the old profile
+> 1. Create a new enrollment profile with the new name.  
+> 2. Assign the new profile to users & devices.  
+> 3. Delete the old profile.  
 
 ## BYOD: Android Enterprise personally owned devices with a work profile
 
@@ -68,10 +68,25 @@ This task list provides an overview. For more specific information, go to [Set u
 
 Your users must do the following steps. For the specific user experience, go to [enroll the device](../../user-help/enrollment/enroll-work-profile-android.md).
 
-1. Go to the Google Play store, and install the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
-2. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). After they sign in, your enrollment profile applies to the device.
+Depending on your organization's configuration, users enroll using web-based enrollment or the Company Portal app.
 
-    Users might have to enter more information. For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-work-profile-android.md).
+**Web-based enrollment:**
+
+1. The user navigates to the enrollment URL provided by their organization, or is redirected from the Intune Company Portal app or a productivity app such as Outlook or Teams.  
+1. The user selects **Get started**.  
+1. The user selects **Accept & continue**.  
+1. A Google Chrome browser opens prompting the user to continue.  
+1. The user signs in with their work credentials and follows the prompts to install essential apps, register their device, and create a work profile. 
+
+**App-based enrollment:**
+
+1. User goes to the Google Play store and installs the [Company Portal app](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1. User opens the Company Portal app and signs in with their organization credentials (`user@contoso.com`). After signing in, your enrollment profile applies to the device.
+
+    For more specific steps, go to [enroll the device](../../user-help/enrollment/enroll-work-profile-android.md).
+
+> [!TIP]
+> Intune is transitioning personally owned work profile management to web-based enrollment. For information on what's changing and how to prepare, see [Android Management API for personally owned work profiles](android-management-api-overview.md).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 

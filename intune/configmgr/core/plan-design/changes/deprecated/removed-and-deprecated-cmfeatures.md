@@ -26,6 +26,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Planned end of support|
 |-------|---------------------------|----------------------|
+| **Microsoft Connected Cache (MCC)** integration in Configuration Manager will be deprecated in a future release of Configuration Manager. After deprecation, no further feature development or updates will be provided for Microsoft Connected Cache within Configuration Manager. Customers should begin transitioning to the standalone version of Microsoft Connected Cache to continue receiving ongoing improvements and support. For more information, see [Microsoft Connected Cache](/windows/deployment/do/waas-microsoft-connected-cache). | June 2026 | TBD |
 | The **MDT Integration with CM and Standalone**  is no longer supported with Configuration Manager. Customers should remove MDT TS steps, followed by removing MDT integration, to avoid TS corruption and modification failures. More information on the MDT retirement [here](/troubleshoot/mem/configmgr/mdt/mdt-retirement). | Dec 2024 | The first release after Oct 10, 2025 |
 | **Office 365 Client Management dashboard add-in support statement**.<!-- 12454890 --> For more information, see [Office 365 Client Management dashboard](../../../../sum/deploy-use/office-365-dashboard.md). | April 2024 | The first release after April 1, 2025 |
 | Windows Information Protection <!-- MAXADO-6010051 --> | July 2022 | TBD |
