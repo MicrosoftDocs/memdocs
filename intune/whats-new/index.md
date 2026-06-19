@@ -1,9 +1,8 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/18/2026
+ms.date: 06/19/2026
 ms.topic: whats-new
-ms.reviewer: intuner
 ms.collection:
 - M365-identity-device-management
 ---
@@ -51,15 +50,29 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 15, 2026
 
-### Device enrollment  
+### App management
+
+#### Managed Win32 app content now requires HTTPS delivery <!-- 32909316 -->
+
+Intune now requires HTTPS delivery for managed Win32 app content. This change primarily affects organizations that use Microsoft Connected Cache and haven't configured their cache nodes for HTTPS delivery. Clients that previously pulled content from Connected Cache can still download Intune Win32 apps, but those requests bypass the cache nodes and fall back to the content delivery network (CDN). This behavior can increase internet traffic and bandwidth usage.
+
+For more information, see the blog post [How to enable HTTPS support for Microsoft Connected Cache for Enterprise and Education](https://techcommunity.microsoft.com/blog/intunecustomersuccess/how-to-enable-https-support-for-microsoft-connected-cache-for-enterprise-and-edu/4496173).
+
+For setup and validation guidance, see:
+
+- [HTTPS support for Microsoft Connected Cache overview](/windows/deployment/do/mcc-ent-https-overview)
+- [HTTPS setup on Windows](/windows/deployment/do/mcc-ent-https-windows-guide)
+- [HTTPS setup on Linux](/windows/deployment/do/mcc-ent-https-linux-guide)
+
+### Device enrollment
 
 #### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
 
-Enrollment time grouping is now generally available for Apple automated device enrollment (ADE) on iOS/iPadOS and macOS. With enrollment time grouping, you can identify a device’s Microsoft Entra security group during enrollment, so policies, apps, and settings can be applied earlier in the setup process.
+Enrollment time grouping is now generally available for Apple automated device enrollment (ADE) on iOS/iPadOS and macOS. With enrollment time grouping, you can identify a device's Microsoft Entra security group during enrollment, so policies, apps, and settings can be applied earlier in the setup process.
 
 Enrollment time grouping is supported in new Apple ADE enrollment policies. For requirements and setup details, see [Set up enrollment time grouping](../device-enrollment/setup-time-grouping.md).  
 
-### Device management  
+### Device management
 
 #### Android Enterprise personally owned devices with a work profile uses Android Management API (AMAPI)<!-- 36840128 -->
 
@@ -1156,8 +1169,8 @@ To use the Windows 11, version 25H2 security baseline, Intune admins can [create
 
 The following two settings aren't included in this baseline release and will be added in a future baseline update. Each change will be communicated to customers when available:
 
-- **Disable Internet Explorer 11 launch via COM automation** – This setting isn't included at release due to a known issue. The Windows client team is addressing the issue, and the setting will be added in a future baseline update.
-- **Configure NetBIOS settings** – This setting is pending availability in the Settings Catalog and will be added to the baseline in a future update.
+- **Disable Internet Explorer 11 launch via COM automation** - This setting isn't included at release due to a known issue. The Windows client team is addressing the issue, and the setting will be added in a future baseline update.
+- **Configure NetBIOS settings** - This setting is pending availability in the Settings Catalog and will be added to the baseline in a future update.
 
 We recommend carefully reviewing the settings in the new baseline before moving from a previous baseline version, especially if existing profiles include customizations.
 
