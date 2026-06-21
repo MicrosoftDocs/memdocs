@@ -35,6 +35,8 @@ This article provides an overview of enrollment time grouping, how to configure 
 > - Android Enterprise
 > - tvOS
 > - visionOS
+> - macOS
+> - iOS/iPadOS
 > - Windows 11
 
 :::column-end:::
