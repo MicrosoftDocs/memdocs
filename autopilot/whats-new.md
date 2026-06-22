@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 01/26/2026
+ms.date: 06/18/2026
 ms.collection:
   - M365-modern-desktop
 ms.topic: whats-new
@@ -22,7 +22,17 @@ appliesto:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/intune/use-docs#notifications) in the Intune documentation.  
+
+## New Intune connector for Active Directory update available
+
+Date added: *June 18, 2026*   
+
+We’ve updated the Intune Connector for Active Directory, also known as the Offline Domain Join (ODJ) Connector. This update is included in build 6.2604.2000.3.  
+
+The ODJ Connector configuration wizard now supports an optional `<appSettings>` key, `SkipByoMsaPrivilegeCheck` (default: `false`). When you configure the connector to use your own group managed service account (gMSA) instead of the account automatically provisioned by the connector, setting this key to `true` skips the pre-enrollment validation for the *Log on as a service* privilege (`SeLogonAsServicePrivilege`), which internally performs a [Kerberos Service-for-User (S4U)](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) logon of the gMSA.  
+
+This change unblocks configuration in environments where the required permission is assigned but hasn’t yet propagated to the connector host. The default behavior is unchanged: validation continues to run unless the key is explicitly set to `true` when a gMSA is in use.  
 
 ## Enrollment Status Page support for installing Windows security updates during Windows OOBE
 
