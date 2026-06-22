@@ -109,7 +109,7 @@ Use the following options to configure your notifications on the portal through 
 
 ### To set the policies in Intune
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 1. In the left navigation pane, navigate to **Apps** > **Protection**.
 1. Click **Create Policy** and select your desired platform, such as **iOS/iPadOS**.
 1. On the **Basics** page, add details such as **Name** and **Description**. Click **Next**.
@@ -156,7 +156,7 @@ Teams is a segmented view app, meaning it shows data for one account at a time. 
 - Admins can selectively wipe one managed account without affecting other accounts.
 - Personal account behavior is unchanged - personal accounts remain unmanaged.
 
-MMA applies to both enrolled and unenrolled device scenarios. Each managed account in Teams is subject to the app protection policy targeted to that account's user, as defined in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+MMA applies to both enrolled and unenrolled device scenarios. Each managed account in Teams is subject to the app protection policy targeted to that account's user, as defined in the [Microsoft Intune admin center].
 
 For supported app versions, key behaviors, FAQs, and troubleshooting information, see [Multiple managed accounts for app protection policies](../protection/multiple-managed-accounts.md).
 
@@ -164,3 +164,7 @@ For supported app versions, key behaviors, FAQs, and troubleshooting information
 
 - [What are app protection policies?](../protection/overview.md)
 - [App configuration policies for Microsoft Intune](./overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

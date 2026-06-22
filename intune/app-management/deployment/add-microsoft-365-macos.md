@@ -30,7 +30,7 @@ Before you begin adding Microsoft 365 apps to macOS devices, understand the foll
 
 ## Select Microsoft 365 Apps
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. Select **macOS** in the **Microsoft 365 Apps** section of the **Select app type** pane.
 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
@@ -80,3 +80,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 - To learn about adding Microsoft 365 apps to Windows devices, see [Assign Microsoft 365 Apps to Windows devices with Microsoft Intune](./add-microsoft-365-windows.md).
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](./configure-assignment-scope.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

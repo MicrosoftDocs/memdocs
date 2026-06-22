@@ -16,7 +16,7 @@ You can explicitly choose to wipe your company's corporate data from the end use
 
 ## Create an app protection policy using conditional launch actions
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Protection**.
 3. Select **Create policy** and select the platform of the device for your policy.
 4. Select **Configure required settings** to see the list of settings available to be configured for the policy.
@@ -120,3 +120,7 @@ Learn more information on Intune app protection policies, see:
 - [How to create and assign app protection policies](./create-policy.md)
 - [iOS/iPadOS app protection policy settings](./ref-settings-ios.md)
 - [Android app protection policy settings in Microsoft Intune](./ref-settings-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

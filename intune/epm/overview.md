@@ -130,7 +130,7 @@ EPM includes reports to help you prepare for, monitor, and use the service. Repo
 
 :::image type="content" source="media/overview/epm-lifecycle.png" alt-text="A diagram showing the lifecycle of deploying EPM by licensing and planning, deploying, and managing.":::
 
-Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the following high-level process:
+Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune Admin Center]. When organizations get started with EPM, they use the following high-level process:
 
 - **License EPM and Plan**
   - **License EPM** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant. For licensing information, see [Microsoft Intune advanced capabilities](../fundamentals/advanced-capabilities.md).
@@ -143,3 +143,7 @@ Endpoint Privilege Management (EPM) is administered from the [Microsoft Intune A
 
 > [!div class="nextstepaction"]
 > [Next: Plan for EPM >](./deployment-planning.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

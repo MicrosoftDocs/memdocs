@@ -63,7 +63,7 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
 > [!IMPORTANT]
 > This article reflects the updated policy creation experience (**Enrollment program tokens** > **Enrollment policies**) for devices going through automated device enrollment. The older experience (**Enrollment program tokens** > **Profiles**) differs and will eventually be retired. The older experience won't receive new features, so be sure to create new policies under **Enrollment policies**. For more information, see [New iOS/iPadOS, visionOS, tvOS and macOS ADE enrollment policies experience](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531).
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In the [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **macOS** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
@@ -231,3 +231,7 @@ Optionally, you can select a default enrollment policy. The default policy is de
 - To sync devices, distribute devices to users, and manage tokens, see [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md).
 - To renew or delete your enrollment program token, see [Set up a macOS ADE token](setup-macos-token.md).  
 - Use [Remote Device Actions in Microsoft Intune](../../device-management/actions/index.md) to remotely manage enrolled Macs.  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

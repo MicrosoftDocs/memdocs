@@ -26,7 +26,7 @@ This article describes these settings. [Use Wi-Fi on your devices](./configure-w
 
 ## Before you begin
 
-- Create an [Android Enterprise Wi-Fi device configuration profile](./configure-wifi.md) in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When you create the profile, select the following options:
+- Create an [Android Enterprise Wi-Fi device configuration profile](./configure-wifi.md) in the [Intune admin center]. When you create the profile, select the following options:
 
   - **Platform**: Select **Android Enterprise** or **Android (AOSP)**.
   - **Profile type**: Select **Templates**.
@@ -478,3 +478,7 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 - You can also create Wi-Fi profiles for [iOS/iPadOS and macOS](./ref-wifi-settings-apple.md), and [Windows](./ref-wifi-settings-windows.md).
 
 - [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).
+
+<!--links-->
+
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

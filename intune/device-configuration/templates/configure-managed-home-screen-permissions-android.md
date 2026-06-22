@@ -58,7 +58,7 @@ For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for
 
 - This article creates OEMConfig configuration profiles in Intune. Before you create OEMConfig profiles, review the [OEMConfig profiles in Microsoft Intune - Before you begin](./configure-oemconfig-android.md#before-you-begin) section for important information, as there's a 500-KB file size limit and other important information.
 - Devices must be MDM enrolled in Intune as dedicated devices or fully managed devices. For more information on the available Intune enrollment options for Android Enterprise devices, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../../device-enrollment/android/guide.md).
-- To configure this policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
+- To configure this policy, at a minimum, sign in to the Intune admin center with the **Policy and Profile manager** role. For more information on the built-in roles in Intune, go to [Role-based access control with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md).
 
 ## Step 1 - Get the app from the Managed Google Play Store
 
@@ -81,7 +81,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Samsung](#tab/samsung-app)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Knox Service Plugin** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -92,7 +92,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Zebra](#tab/zebra-mx-app)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Zebra OEMConfig Powered by MX** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -103,7 +103,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Zebra Legacy](#tab/zebra-legacy-app)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Legacy Zebra OEMConfig** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -114,7 +114,7 @@ Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 # [Honeywell](#tab/honeywell)
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+1. In the [Microsoft Intune admin center], sign in to your **Managed Google Play account**.
 2. Search for the **Honeywell UEMConnect** app, select the app, and then select **Sync**.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../../app-management/deployment/add-managed-google-play.md).
@@ -140,7 +140,7 @@ When you use the schema settings in the **Knox Service Plugin** app, the Intune 
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -195,7 +195,7 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -244,7 +244,7 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -293,7 +293,7 @@ When you use the schema settings in the **Honeywell UEMConnect** app, the Intune
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -335,3 +335,8 @@ The next time the device checks for configuration updates, the settings you conf
 ## Related articles
 
 - [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](./configure-oemconfig-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

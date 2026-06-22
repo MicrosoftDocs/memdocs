@@ -37,8 +37,8 @@ MAM allows you to manage and protect your organization's data within an applicat
 
 Intune MAM supports two configurations:
 
-- **Intune MDM + MAM**: IT administrators can manage apps using MAM on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- **Unenrolled devices with MAM managed applications**: IT administrators can manage org data and accounts in apps using MAM on unenrolled devices or devices enrolled with third-party EMM providers. To manage apps using MAM, customers should use Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information about BYOD and Microsoft's EMS, go to the [Planning guide: Personal devices vs. Organization-owned devices](../fundamentals/planning-guide.md#personal-devices-vs-organization-owned-devices).
+- **Intune MDM + MAM**: IT administrators can manage apps using MAM on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use Intune in the [Microsoft Intune admin center].
+- **Unenrolled devices with MAM managed applications**: IT administrators can manage org data and accounts in apps using MAM on unenrolled devices or devices enrolled with third-party EMM providers. To manage apps using MAM, customers should use Intune in the [Microsoft Intune admin center]. For more information about BYOD and Microsoft's EMS, go to the [Planning guide: Personal devices vs. Organization-owned devices](../fundamentals/planning-guide.md#personal-devices-vs-organization-owned-devices).
 
 Intune MAM also supports [Multiple managed accounts (MMA)](protection/multiple-managed-accounts.md), which enables users to add more than one work or school account within a supported app while maintaining separate app protection policy enforcement for each account.
 
@@ -76,7 +76,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 You can find most app-related information in the **Apps** workload, which you can access by doing the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps**.
 
     ![The Apps workload pane](media/overview/apps-workload.png)
@@ -127,3 +127,7 @@ For more information about apps, see [Add apps to Microsoft Intune](./deployment
 ## Next steps
 
 - [Add an app to Microsoft Intune](./deployment/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

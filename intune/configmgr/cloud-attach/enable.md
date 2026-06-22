@@ -46,7 +46,7 @@ Use the following steps to cloud attach your environment with the default settin
    - Azure China Cloud
       - Endpoint analytics and device upload to Microsoft Intune admin center can't be enabled for Azure China Cloud
 
-1. Select **Sign In**. Sign into your account when prompted.
+1. Select **Sign In**. Sign in to your account when prompted.
 1. Ensure that **Use default settings (recommended)** is selected, then choose **Next** and **Yes** when the app registration notice appears.
 1. Review the summary and select **Next** to cloud attach your environment and complete the wizard.
 
@@ -63,12 +63,12 @@ Use the following steps to cloud attach your environment with custom settings:
    - Azure US Government Cloud
    - Azure China Cloud
       - Endpoint analytics and device upload to Microsoft Intune admin center can't be enabled for Azure China Cloud
-1. Select **Sign In**. Sign into your account when prompted.
+1. Select **Sign In**. Sign in to your account when prompted.
 1. Choose the **Customize settings** option to enable cloud features individually.
 1. By default, Configuration Manager uses your credentials to register an app in your Microsoft Entra tenant. This app to authorize synchronization of data between your on-premises site and Intune. To use an app that you already created, select  **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. For more information, see [Import a previously created Microsoft Entra application](#bkmk_aad_app).
 
 1. Choose **Next** to continue. You may also be prompted to confirm Microsoft Entra application registration. Select **Yes** to confirm the app registration.
-1. The **Devices** section of the **Configure Upload** page, enables [tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Tenant attach uploads your Configuration Manager devices to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) cloud-based console. You can take certain actions on uploaded devices such as run queries, run scripts, install apps, or display an event timeline for the device.
+1. The **Devices** section of the **Configure Upload** page, enables [tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Tenant attach uploads your Configuration Manager devices to the [Microsoft Intune admin center] cloud-based console. You can take certain actions on uploaded devices such as run queries, run scripts, install apps, or display an event timeline for the device.
 
    **Select which devices to upload to Microsoft Endpoint Manager** has the following two options:
    - **All devices managed my Microsoft Endpoint Configuration Manager (recommended)**: Upload all devices
@@ -107,3 +107,7 @@ Learn more about the following cloud attach features:
 - [Co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - [Endpoint analytics](../../endpoint-analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - [Tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

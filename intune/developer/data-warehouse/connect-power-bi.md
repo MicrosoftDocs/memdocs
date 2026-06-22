@@ -57,7 +57,7 @@ The Power BI [Intune Compliance (Data Warehouse)](https://aka.ms/intune/dataware
 
 Alternatively, you can install the app from the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
 3. Select **Get Power BI App** to access and share pre-created Power BI reports for your tenant in the browser.
 4. Follow steps 2-10 above.
@@ -66,7 +66,7 @@ Alternatively, you can install the app from the Microsoft Intune admin center:
 
 With a client authenticated to Microsoft Entra ID, the OData URL connects to the RESTful endpoint in the Data Warehouse API that exposes the data model to your reporting client. Follow these instructions to use Power BI Desktop to connect and create your own reports. You are not limited to Power BI Desktop, but can use your favorite analytic tool with the OData URL provided the client supports OAUTH2.0 authentication and the OData v4.0 standard.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
 3. Retrieve the custom feed URL from the reporting blade, for example:<br>
     `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
@@ -96,7 +96,7 @@ If your Power BI reports use the Intune connector v1, follow these steps to migr
    Source = OData.Feed("<reporting_service_endpoint>", null, [Implementation="2.0", Query=[#"api-version"="v1.0"]])
    ```
 
-   To find your reporting service endpoint, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Reports** > **Intune Data warehouse** > **Data warehouse**. When you copy the endpoint, don't include the `api-version` segment.
+   To find your reporting service endpoint, sign in to the [Microsoft Intune admin center] and go to **Reports** > **Intune Data warehouse** > **Data warehouse**. When you copy the endpoint, don't include the `api-version` segment.
 
 6. Optionally, append the `maxHistoryDays` parameter to the endpoint to limit historical data:
 
@@ -111,3 +111,7 @@ You can find the answers to questions about your environment such as the number 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
 - Your tenant data is organized to help you pull insight from your data. For more information about how the data is organized, see [Data Warehouse Data Model](ref-data-model.md).
 - You can also access the data from a RESTful interface and incorporate the data into your own app. For more information, see [Get data from the Data Warehouse API with a REST client](setup-rest-client.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -129,7 +129,7 @@ As an Intune admin, you can edit groups, such as changing the group members, own
 
 Use the following steps to edit an existing group:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Groups** > **All groups** > *select the name of a group to edit*.
 3. Under the **Manage** menu group, select an area of the group to edit, like **Properties**, **Members**, or **Owners**. Intune displays the user interface related to that configuration option.
 
@@ -139,7 +139,7 @@ As an Intune admin, you can delete groups that are no longer needed.
 
 Use the following steps to delete an existing group:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Groups** > **All groups**.
 3. Select the checkbox for each group you want to delete, and then select **Delete** from options at the top of the *All Groups* view. Alternately, you can select the name of a group to open a single group's *Overview* page, and then select *Delete** from the top of that view.
 
@@ -150,3 +150,7 @@ Use the following steps to delete an existing group:
 
 - [Assign users licenses to Intune](../assign-licenses.md)
 - [Assign Microsoft Intune roles to groups of users for role-based access control](../role-based-access-control/assign-role.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

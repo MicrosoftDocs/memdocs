@@ -15,7 +15,7 @@ ms.collection:
 
 Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple User Enrollment method gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps.
 
-When the device owner attempts to sign into an app with their work or school account, Intune prompts them to enroll their device and provides instructions for next steps. The device user authenticates and initiates enrollment by signing into the Intune Company Portal app. From there, they're redirected to Safari and the device settings app, where they download and install the enrollment profile.
+When the device owner attempts to sign in to an app with their work or school account, Intune prompts them to enroll their device and provides instructions for next steps. The device user authenticates and initiates enrollment by signing in to the Intune Company Portal app. From there, they're redirected to Safari and the device settings app, where they download and install the enrollment profile.
 
 This article describes how to set up an enrollment profile in the Microsoft Intune admin center for Apple User Enrollment with Company Portal.
 
@@ -61,7 +61,7 @@ Additionally, review the following information:
 
 Complete these steps to create an enrollment profile for devices enrolling via user enrollment with Company Portal.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**.
 3. Under **Enrollment Options**, choose **Enrollment types**.
 4. Select **Create profile** > **iOS/iPadOS**.
@@ -105,3 +105,7 @@ The volume and cryptographic keys created to manage the work data on the device 
    * [iOS and iPadOS device restrictions](../../device-configuration/templates/ref-device-restrictions-apple.md)
    * [iOS and iPadOS device features](../../device-configuration/templates/ref-device-features-apple.md)
    * [Set up per-app Virtual Private Network (VPN)](../../device-configuration/templates/configure-per-app-vpn-ios.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

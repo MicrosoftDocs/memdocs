@@ -1,6 +1,6 @@
 ---
 title: Remove device from Company Portal website
-description: Sign into the Intune Company Portal website to unregister a personal device from work or school.
+description: Sign in to the Intune Company Portal website to unregister a personal device from work or school.
 ms.date: 11/08/2024
 ms.reviewer: jieyan
 ---

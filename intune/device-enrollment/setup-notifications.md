@@ -78,7 +78,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 > [!TIP]
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks, but only for HTTPS links.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+1. Sign in to the [Microsoft Intune admin center] as an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Windows**, **Apple**, or **Android** tab.
 3. Choose **Enrollment notifications**.
@@ -133,3 +133,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 12. In **Review + create**, review the notification details, and then select **Create**.
 
 Enrollment notifications are sent out to assigned groups when enrollment is triggered. Return to **Enrollment notifications** to view and edit notifications, or change priority level.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

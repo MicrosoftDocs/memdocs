@@ -47,7 +47,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](../fundamentals/ref-supported-platforms.md).
-- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **By platform** > **Linux**.  
+- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you see them in the [Microsoft Intune admin center] > **Devices** > **By platform** > **Linux**.  
 - Versions 2.0.2 and later of the Microsoft Identity Broker included with the Microsoft Intune app for Linux introduce a major architectural change from the previous Java‑based broker. When Linux devices update from earlier broker versions, Intune automatically re‑registers and re‑enrolls the devices and creates new Intune device IDs and Microsoft Entra device IDs for them. This behavior requires no user action, but we recommend that admins review device‑based assignments, filters, and Microsoft Entra ID group memberships that rely on device IDs to ensure that policies apply correctly.  
 
 ## End user tasks
@@ -75,3 +75,7 @@ For more device enrollment guides, see:
 - [iOS/iPadOS enrollment guide](apple/guide-ios-ipados.md)
 - [macOS enrollment guide](apple/guide-macos.md)
 - [Windows enrollment guide](windows/guide.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

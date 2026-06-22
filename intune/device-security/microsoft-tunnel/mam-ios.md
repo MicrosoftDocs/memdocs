@@ -87,7 +87,7 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
 Create an app configuration policy for apps that use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
 
@@ -148,7 +148,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 > [!NOTE]
 > If you already have an app configuration policy created for your LOB App, you can edit that policy to include Edge and the required *key/value pair* settings.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
+1. In the [Microsoft Intune admin center], go to **Apps** > **Configuration** > **Create** > **Managed Apps**.
 
 2. On the *Basics* tab:
 
@@ -160,7 +160,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 
     | Name | Description |
     | --- | --- |
-    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` <br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign into Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. <br/><br/> When the VPN reconnects, internet browsing is available again. |
+    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` <br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign in to Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. <br/><br/> When the VPN reconnects, internet browsing is available again. |
     | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly`<br/><br/> **Value**: `True` | When set to `True`, it provides **Identity switch** support to Edge. <br/><br/> When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
     | &nbsp; | &nbsp; |
     | **Federated Microsoft Entra tenants only** | &nbsp; |
@@ -185,7 +185,7 @@ An App protection policy is required to configure Microsoft Tunnel for apps that
 
 This policy provides the necessary data protection and establishes a means of delivering app configuration policy to apps. To create an app protection policy, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **+ Create policy** >  and select **iOS/iPadOS**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Apps** > **Protection** > **+ Create policy** >  and select **iOS/iPadOS**.
 2. On the *Basics* tab, enter a *Name* for the policy, and a *Description* (optional), and then select **Next**.
 3. On the *Apps* tab, for LOB apps, select **+ Select custom apps**  to open the *Select apps to target* pane. Then, on the *Select apps to target* pane:
    1. For *Bundle ID*, specify the LOB apps Bundle ID and then select **Add**.
@@ -465,3 +465,7 @@ Tunnel for MAM doesn't support:
 - [Configure Microsoft Tunnel](./install.md)
 - [Monitor Microsoft Tunnel](./monitor.md)
 - [MAM Tunnel for Android](./mam-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

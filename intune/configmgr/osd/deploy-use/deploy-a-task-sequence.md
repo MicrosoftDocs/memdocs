@@ -68,7 +68,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
         - **Required**: Configuration Manager automatically runs the task sequence according to the configured schedule. If the task sequence isn't hidden, a user can still track its deployment status. They can also use Software Center to install the task sequence before the deadline.
 
         > [!NOTE]
-        > If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
+        > If multiple users are signed in to the device, package and task sequence deployments may not appear in Software Center.
 
     - **Make available to the following**: Specify whether the task sequence is available to one of the following types:
 

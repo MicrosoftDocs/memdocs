@@ -90,7 +90,7 @@ The certificate subject name (SN) in all S/MIME certificates must include the fo
 
 ## Create a SCEP certificate profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -482,3 +482,7 @@ Consider the following before you continue:
 [Assign profiles](../../device-configuration/assign-device-profile.md)
 
 [Troubleshoot deployment of SCEP certificate profiles](/troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

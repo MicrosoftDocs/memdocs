@@ -135,7 +135,7 @@ When you're ready to use the more recent baseline version, you can create new pr
 
 Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
 
-You can view the list of available baselines in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines**. The list includes:
+You can view the list of available baselines in the [Microsoft Intune admin center], under **Endpoint security** > **Security baselines**. The list includes:
 
 - The name of each security baseline template.
 - How many profiles you have that use that type of baseline.
@@ -202,3 +202,7 @@ Within the Intune security baseline policy UI, Intune provides information text 
   - [Windows 365 Security Baseline](./ref-windows-365-settings.md)
 
 - [STIG audit baseline](./stig-audit-baseline.md) - Audit Windows devices against STIG recommendations (GCC High only)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

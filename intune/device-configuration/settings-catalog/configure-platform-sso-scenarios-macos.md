@@ -28,7 +28,7 @@ This feature applies to:
 
 - You can assign only one SSO policy to your groups. So if you already configured Platform SSO, add these scenario settings to your existing Platform SSO settings catalog policy.
 
-- To update your existing settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
+- To update your existing settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center] with an account that has the following Intune permissions:
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
@@ -48,7 +48,7 @@ In your existing Platform SSO settings catalog policy, add the **Extension Data*
 
 1. In your existing Platform SSO settings catalog policy, add **Extension Data**:
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
+    1. In the [Intune admin center] (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
@@ -79,7 +79,7 @@ Add the **Extension Data** setting to your existing Platform SSO settings catalo
 
 1. In your existing Platform SSO settings catalog policy, add **Extension Data**:
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
+    1. In the [Intune admin center] (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
@@ -112,7 +112,7 @@ The following settings are commonly recommended for configuring SSO settings, in
 
 1. In your existing Platform SSO settings catalog policy, add **Extension Data**:
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
+    1. In the [Intune admin center] (**Devices** > **Manage devices** > **Configuration**), select your existing Platform SSO settings catalog policy.
     2. In **Properties** > **Configuration settings**, select **Edit** > **Add settings**.
     3. In the settings picker, expand **Authentication**, and select **Extensible Single Sign On (SSO)**:
 
@@ -160,3 +160,9 @@ In your existing Platform SSO settings catalog policy, use the following optiona
 ## Related articles
 
 - [Platform SSO for macOS devices](./configure-platform-sso-macos.md)
+
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -23,7 +23,7 @@ Settings in this article are organized by the sections that appear in the admin 
 > [!IMPORTANT]
 > It's important to target compliance policies for dedicated devices at groups of devices, not users. Compliance policies will be evaluated against the device and will appropriately reflect the compliance state in Intune. To allow users on dedicated devices to sign in to resources protected by Conditional Access policies, consider using Android Enterprise dedicated devices with [*Microsoft Entra shared device mode*](../../device-enrollment/android/setup-dedicated.md). In scenarios with fully managed devices, or personal and corporate-owned work profiles, you can target compliance policies at groups of users or devices.
 >
-> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign into resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn more about shared device mode, see [Overview of shared device mode](/entra/identity-platform/msal-shared-devices) in the Microsoft Entra documentation.
+> Users on dedicated devices enrolled without Microsoft Entra shared device mode can't sign in to resources protected by Conditional Access policies, even if the device is compliant in Intune. To learn more about shared device mode, see [Overview of shared device mode](/entra/identity-platform/msal-shared-devices) in the Microsoft Entra documentation.
 
 <!-- Compliance policies also apply Android Enterprise dedicated devices. If a compliance policy is assigned to a dedicated device, the device may show as **Not compliant**. Conditional Access and enforcing compliance isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.  -->
 
@@ -355,7 +355,7 @@ The following device security settings apply to devices running Android 12 and l
   - The device password that unlocks the device.
   - The work profile password that allows users to access the work profile.
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity level you configure under **Work Profile Security** > **Password complexity**.
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign in to the work profile, they're prompted to update their work profile password to match the complexity level you configure under **Work Profile Security** > **Password complexity**.
 
   > [!IMPORTANT]
   >
@@ -426,7 +426,7 @@ The following work profile security settings apply to devices running Android 12
   - The device password that unlocks the device.
   - The work profile password that allows users to access the work profile.
 
-  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign into the work profile, they're prompted to update their work profile password to match the complexity you configure here.
+  If the device password complexity is too low, then the device password is automatically changed to require a high level of complexity. End users must update the device password to meet the complexity requirements. Then when they sign in to the work profile, they're prompted to update their work profile password to match the complexity you configure here.
 
    > [!IMPORTANT]
   >

@@ -37,7 +37,7 @@ An [Intune administrator](../../fundamentals/role-based-access-control/ref-built
 
 ### Step 1: Add an app from the Microsoft Store
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
+1. In the [Microsoft Intune admin center], select **Apps** > **All Apps** > **Create**.
 2. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 3. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
     The app creation experience has three steps:
@@ -241,3 +241,7 @@ Microsoft Store apps don't support the following features:
 ## Next step
 
 - [Assign apps to groups](./assign-groups.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

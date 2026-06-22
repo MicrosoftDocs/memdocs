@@ -37,7 +37,7 @@ The administrative user needs the following permissions:
 
 ## View recovery keys
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 
 1. In the admin center, select **Devices** and then **All Devices**.
 
@@ -54,3 +54,7 @@ The administrative user needs the following permissions:
 ## Next steps
 
 [Deploy BitLocker management](../protect/deploy-use/bitlocker/deploy-management-agent.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

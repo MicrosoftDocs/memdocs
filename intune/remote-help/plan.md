@@ -234,7 +234,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
-1. Open and sign in to Company Portal. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
+1. Open and sign in to Company Portal. The user must open and sign in to Company Portal for Remote Help to recognize the device is enrolled.
 
 > [!NOTE]
 > Company Portal isn't supported on devices enrolled without user affinity. To use Remote Help on these devices, you need to change your tenant settings to set **Remote Help to unenrolled devices** to **Allowed**.

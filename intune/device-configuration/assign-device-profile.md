@@ -45,7 +45,7 @@ This feature applies to:
 
 ## Assign a policy to users or groups
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
@@ -216,3 +216,7 @@ Use the following matrix to understand support for excluding groups:
 ## Related articles
 
 See [monitor device profiles](./monitor-device-profile.md) for guidance on monitoring your policies, and the devices running your policies.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

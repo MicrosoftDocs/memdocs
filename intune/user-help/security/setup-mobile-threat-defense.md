@@ -126,7 +126,7 @@ Contact your support person for help with:
 * Detecting/resolving a threat
 * Uninstalling an MTD app
 
-Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account to find your organization's IT helpdesk information.
+Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account to find your organization's IT helpdesk information.
 
 ## Next steps
 

@@ -54,7 +54,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -86,3 +86,7 @@ This article lists the steps to create a wired network profile in Intune. It als
 ## Related articles
 
 The profile is created, but might not be doing anything. Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

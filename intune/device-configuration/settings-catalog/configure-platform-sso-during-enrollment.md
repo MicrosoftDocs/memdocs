@@ -14,7 +14,7 @@ ms.collection:
 
 On macOS devices, you can configure [Platform Single Sign-On (PSSO)](configure-platform-sso-macos.md) during Automated Device Enrollment (ADE). With Platform SSO, users sign in with their Microsoft Entra account and can get immediate access to Microsoft Entra ID resources. Platform SSO also minimizes the number of times users need to enter their organizational credentials.
 
-When you add the Platform SSO policy and enable the Setup Assistant await final configuration in an ADE enrollment profile, the Platform SSO policy runs during device registration. When users arrive at the desktop, they're already signed into Microsoft Entra resources and can start using productivity apps, like Teams, immediately.
+When you add the Platform SSO policy and enable the Setup Assistant await final configuration in an ADE enrollment profile, the Platform SSO policy runs during device registration. When users arrive at the desktop, they're already signed in to Microsoft Entra resources and can start using productivity apps, like Teams, immediately.
 
 This feature:
 
@@ -83,7 +83,7 @@ This feature applies to:
 
 This policy enables the Platform SSO registration process during Setup Assistant in the ADE enrollment flow.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the settings catalog policy (**Devices > Manage devices > Configuration**):
+1. In the [Microsoft Intune admin center], create the settings catalog policy (**Devices > Manage devices > Configuration**):
 
     - If you already use Platform SSO on existing devices, update your existing Platform SSO settings catalog policy. You can apply only one Platform SSO policy to a device.
     - If you're configuring Platform SSO for the first time, follow the steps in [Platform SSO configuration guide for macOS devices using Microsoft Intune](configure-platform-sso-macos.md).
@@ -115,7 +115,7 @@ The Company Portal for macOS deploys and installs the Microsoft Enterprise SSO p
     > [!IMPORTANT]
     > Company Portal 5.2604.0 and newer is required.
 
-2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Company Portal as a line-of-business (LOB) app (**Apps > All Apps > Create**). In the **App bundle ID** list, only add the `com.microsoft.CompanyPortalMac` app bundle ID. Remove any app bundle IDs that aren't related to the Company Portal.
+2. In the [Microsoft Intune admin center], add the Company Portal as a line-of-business (LOB) app (**Apps > All Apps > Create**). In the **App bundle ID** list, only add the `com.microsoft.CompanyPortalMac` app bundle ID. Remove any app bundle IDs that aren't related to the Company Portal.
 
     - [Add macOS Line-of-Business (LOB) Apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md)
 
@@ -127,7 +127,7 @@ When Intune detects the Company Portal as a deployed policy, it sends the Compan
 
 This policy configures the enrollment profile to run during Setup Assistant with modern authentication and configures the await final configuration. These settings are required for Platform SSO to run correctly during enrollment.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the Automated Device Enrollment profile (**Devices** > **Device onboarding** > **Enrollment** > **Apple** tab):
+1. In the [Microsoft Intune admin center], create the Automated Device Enrollment profile (**Devices** > **Device onboarding** > **Enrollment** > **Apple** tab):
 
     - [Set up automated device enrollment (ADE)](../../device-enrollment/apple/setup-automated-macos.md)
 
@@ -189,3 +189,7 @@ When complete, follow the steps in this article and make sure all your policies 
 - [Platform SSO configuration guide for macOS devices using Microsoft Intune](configure-platform-sso-macos.md)
 - [Add macOS Line-of-Business (LOB) Apps to Microsoft Intune](../../app-management/deployment/add-lob-macos.md)
 - [Set up automated device enrollment (ADE)](../../device-enrollment/apple/setup-automated-macos.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

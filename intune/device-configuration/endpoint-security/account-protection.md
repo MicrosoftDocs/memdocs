@@ -23,7 +23,7 @@ Use Intune endpoint security policies for account protection to protect the iden
 > - **Identity protection** – previously available from *Devices* > *Configuration* > *Create* > *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
 > - **Account protection (Preview)** – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection (Preview)*
 
-Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center].
 
 ## Prerequisites for Account protection profiles
 
@@ -40,7 +40,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 ## Account protection profiles
 
-To configure account protection profiles, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Endpoint Security** > **Account protection** > **Create Policy***. For *Platform* select **Windows**, and then choose from the following Profiles:
+To configure account protection profiles, in the [Microsoft Intune admin center] go to **Endpoint Security** > **Account protection** > **Create Policy***. For *Platform* select **Windows**, and then choose from the following Profiles:
 
 Profiles:
 
@@ -128,3 +128,7 @@ Because the policy can contain multiple rules, consider the following points:
 ## Next steps
 
 [Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

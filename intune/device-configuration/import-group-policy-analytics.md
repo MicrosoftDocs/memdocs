@@ -32,7 +32,7 @@ This article shows you how to export your on-premises GPOs, import the GPOs into
 
 ## Before you begin
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control/overview.md).
+In the [Microsoft Intune admin center], sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control/overview.md).
 
 ## Export a GPO as an XML file
 
@@ -51,7 +51,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 ## Import GPOs and run analytics
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. Select **Import**, select your saved XML file > **Next**.
 
     You can select multiple files at the same time.
@@ -143,7 +143,7 @@ Even though Group Policy analytics can parse the CSPs, there are some things you
 
 ## Group Policy migration readiness report
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Device management** > **Group policy analytics**:
+1. In the [Microsoft Intune admin center], select **Reports** > **Device management** > **Group policy analytics**:
 
     :::image type="content" source="./media/import-group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 
@@ -174,7 +174,7 @@ Currently, the Group Policy analytics tool only supports non-ADMX settings in th
 
 ## Send product feedback
 
-You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics** > **Got feedback**.
+You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Group Policy analytics** > **Got feedback**.
 
 Examples of feedback areas:
 
@@ -202,3 +202,7 @@ At any time, you can delete imported GPOs:
 ## See also
 
 Learn more about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

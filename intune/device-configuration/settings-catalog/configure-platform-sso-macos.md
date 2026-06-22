@@ -30,10 +30,10 @@ Some benefits of Platform SSO include:
 
 - It includes the SSO app extension. You don't configure the SSO app extension separately.
 - You can go passwordless with phishing-resistant credentials that are hardware-bound to the Mac device.
-- The sign in experience is similar to signing into a Windows device with a work or school account, like users do with Windows Hello for Business.
+- The sign in experience is similar to signing in to a Windows device with a work or school account, like users do with Windows Hello for Business.
 - It helps minimize the number of times users need to enter their Microsoft Entra ID credentials.
 - It helps reduce the number of passwords users need to remember.
-- You get the benefits of Microsoft Entra join, which allows any organization user to sign into the device.
+- You get the benefits of Microsoft Entra join, which allows any organization user to sign in to the device.
 - It's included with all [Microsoft Intune licensing plans](../../fundamentals/licensing.md).
 
 ## How Platform SSO works
@@ -65,7 +65,7 @@ You configure Platform SSO using the Intune [settings catalog](../../device-conf
 
   Use Intune to add web browser apps, including [package (`.pkg`)](../../app-management/deployment/add-lob-macos.md) and [disk image (`.dmg`)](../../app-management/deployment/add-dmg-macos.md) files, and deploy the app to your macOS devices. To get started, go to [Add apps to Microsoft Intune](../../app-management/deployment/index.md).
 
-- Platform SSO uses the Intune settings catalog to configure the required settings. To create the settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
+- Platform SSO uses the Intune settings catalog to configure the required settings. To create the settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center] with an account that has the following Intune permissions:
 
   - Device Configuration **Read**, **Create**, **Update**, and **Assign** permissions
 
@@ -86,7 +86,7 @@ When you create the platform SSO policy in Intune, you need to decide the authen
 The Platform SSO policy and the authentication method you choose change how users sign in to the devices.
 
 - When you configure Platform SSO, users sign in to their macOS devices with the authentication method you configure.
-- When you don't use Platform SSO, users sign in to their macOS devices with a local account. Then, they sign into apps and websites with their Microsoft Entra ID.
+- When you don't use Platform SSO, users sign in to their macOS devices with a local account. Then, they sign in to apps and websites with their Microsoft Entra ID.
 
 In this step, use the information to learn the differences with the authentication methods and how they affect the user sign-in experience.
 
@@ -167,7 +167,7 @@ When you use password sync authentication, you can enable keyvault recovery to e
 
 To configure the Platform SSO policy, use the steps in this section to create an [Intune settings catalog](../../device-configuration/settings-catalog/index.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -358,3 +358,7 @@ When you configure Platform SSO, you might see the following errors:
 - [Use the Microsoft Enterprise SSO app extension on macOS devices](../templates/configure-enterprise-sso-plugin-macos.md)
 - [What is a Primary Refresh Token (PRT)?](/entra/identity/devices/concept-primary-refresh-token)
 - [macOS Platform single sign-on known issues and troubleshooting](/entra/identity/devices/troubleshoot-macos-platform-single-sign-on-extension)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

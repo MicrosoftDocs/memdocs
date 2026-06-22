@@ -168,7 +168,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 In the Microsoft Intune admin center, you can select a certificate connector to view information about its status: <!-- and confirm its version: -->
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 
 2. Go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 
@@ -350,3 +350,7 @@ Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you w
 - [Configure and manage PKCS certificates with Intune](../../../device-configuration/certificates/pkcs-profiles.md)
 - [Create a PKCS imported certificate profile](../../../device-configuration/certificates/imported-pfx-profiles.md#create-a-pkcs-imported-certificate-profile)
 - [Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/mem/intune/troubleshoot-certificate-connector-events)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

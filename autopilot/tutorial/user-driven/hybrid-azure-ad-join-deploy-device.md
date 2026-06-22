@@ -61,7 +61,7 @@ To start the Windows Autopilot deployment process on the device, acquire a devic
 
    1. Enter the on-premises domain credentials for the end-user.
 
-      If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Microsoft Entra end-user credentials to attempt to sign into the device at this step.
+      If on-premises domain end-user credentials are different from Microsoft Entra end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign in to the device at this step. Don't use the Microsoft Entra end-user credentials to attempt to sign in to the device at this step.
 
    1. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
@@ -79,9 +79,9 @@ To start the Windows Autopilot deployment process on the device, acquire a devic
 
       > [!NOTE]
       >
-      > Under certain circumstances, the Microsoft Entra sign-in and subsequent pages might not appear and the end-user might be automatically signed into Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Microsoft Entra ID, then the Windows Autopilot deployment will proceed on to the next step automatically.
+      > Under certain circumstances, the Microsoft Entra sign-in and subsequent pages might not appear and the end-user might be automatically signed in to Microsoft Entra ID. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed in to Microsoft Entra ID, then the Windows Autopilot deployment will proceed on to the next step automatically.
 
-9. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign-on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
+9. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign-on screen. At this point, the end-user can sign in to the device using their on-premises domain end-user credentials and start using the device.
 
 ## Deployment tips
 

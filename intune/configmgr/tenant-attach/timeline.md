@@ -60,7 +60,7 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## View the timeline
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Timeline**. By default, you're shown events from the last 24 hours.
@@ -82,3 +82,7 @@ To work around the issue, reload the **Timeline** page.
 ## Next steps
 
 [Troubleshoot the device timeline](troubleshoot-timeline.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -10,7 +10,7 @@ user-driven/hybrid-azure-ad-join-domain-join-profile.md
 
 Headings are driven by article context. -->
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -80,3 +80,7 @@ Headings are driven by article context. -->
 1. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/intune/device-configuration/create-device-profile#applicability-rules).
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then select **Create** to create the domain join profile.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

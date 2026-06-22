@@ -66,7 +66,7 @@ This feature applies to:
 
 Use the following steps to create a properties catalog profile and assign it to your Windows devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New Policy**.
 
@@ -131,7 +131,7 @@ When you create the policy, select any of the following property categories to c
 
 Use the following steps to view the collected device inventory information:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **By platform** > **Windows Devices** and select a device.
 3. In **Monitor**, select **Device Inventory**. Select a category to view the hardware information.
 
@@ -155,3 +155,7 @@ Use the following steps to view the collected device inventory information:
 ## Related content
 
 - [Intune Data Platform Schema and property info](../advanced-analytics/ref-data-platform-schema.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

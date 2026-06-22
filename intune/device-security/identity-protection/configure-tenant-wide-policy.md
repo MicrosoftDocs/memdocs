@@ -41,7 +41,7 @@ You must be an Intune Service Administrator to create or edit a Windows Hello fo
 
 ## Create a Windows Hello for Business policy for device enrollment
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Go to **Devices** > **Enrollment**.
 
@@ -135,3 +135,7 @@ Learn more about Windows Hello from the following subjects in the Windows docume
 
 - [Planning a Windows Hello for Business deployment](/windows/security/identity-protection/hello-for-business/hello-planning-guide)
 - [Windows Hello for Business Deployment Prerequisite Overview](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -78,7 +78,7 @@ You can create VPN profiles using the following VPN connection types:
 
 After the VPN app is assigned to the device, this next step creates the device configuration policy that configures the VPN connection. If your VPN app connection type uses an app configuration policy to configure the app, then skip this step.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -171,3 +171,7 @@ A device with one or more Intune VPN profiles loses its VPN connectivity when th
 
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 - Create and use per-app VPNs on [Android](./configure-per-app-vpn-android.md) and [iOS/iPadOS](./configure-per-app-vpn-ios.md) devices.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

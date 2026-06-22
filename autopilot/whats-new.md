@@ -139,7 +139,7 @@ Starting in 2310, we're making an update to the self-deployment and pre-provisio
 
 ### How to unblock devices
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -201,7 +201,7 @@ Date added: *July 3, 2023*
 
 Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Windows Autopilot devices in Intune. One step removal of a device means that the Windows Autopilot registration of a device can now be removed without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -265,7 +265,7 @@ With Intune 2208, we're updating the Windows Autopilot infrastructure to ensure 
 
 Date added: *August 3, 2022*
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector for Active Directory might not work for Windows Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector for Active Directory is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector for Active Directory doesn't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector for Active Directory might not work for Windows Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector for Active Directory is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the [Microsoft Intune admin center]. If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector for Active Directory doesn't work.
 
 ## Enroll to co-management from Windows Autopilot <!-- 11300628 -->
 
@@ -334,3 +334,7 @@ The diagnostics page is currently supported when signing in with a Work or Schoo
 - [What's new in Windows Autopilot device preparation](device-preparation/whats-new.md).
 - [What's new in Microsoft Intune](/intune/whats-new/index).
 - [What's new in Windows client](/windows/whats-new/).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

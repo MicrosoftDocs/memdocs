@@ -213,7 +213,7 @@ Avoid requiring use of a derived credential to access a process that you'll use 
 
 Before you create policies that require use of a derived credential, set up a credential issuer in the Microsoft Intune admin center. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Connectors and tokens** > **Derived Credentials**.
 
    :::image type="content" source="./media/derived-credentials/configure-provider.png" alt-text="Configure derived credentials in the Microsoft Intune admin center." lightbox="./media/derived-credentials/configure-provider.png":::
@@ -284,7 +284,7 @@ You can specify **Derived credential** for the following profile types and purpo
 
 Use derived credentials for certificate-based authentication to web sites and applications. To deliver a derived credential for app authentication:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 3. Use the following settings:
 
@@ -351,7 +351,7 @@ After you change the issuer, users are prompted to get a new derived credential 
 > [!IMPORTANT]
 > If you delete an issuer and immediately reconfigure that same issuer, you must still update profiles and devices to use derived credentials from that issuer. Derived credentials that were obtained before you delete the issuer are no longer valid.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Connectors and tokens** > **Derived Credentials**.
 3. Select **Delete** to remove the current derived credential issuer.
 4. Configure a new issuer.
@@ -367,3 +367,7 @@ After you delete an issuer and then add a new one, device users must request a n
 ## Next steps
 
 [Create device configuration profiles](../../device-configuration/create-device-profile.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

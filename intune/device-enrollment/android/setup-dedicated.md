@@ -82,7 +82,7 @@ To set up Android Enterprise dedicated device management, follow these steps:
 
 You must create an enrollment profile so that you can enroll your dedicated devices. When the profile is created, it provides you with an enrollment token in the form of a string and QR code.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices**, and then under **Device onboarding** select **Enrollment**.
 3. Select the **Android** tab.
 4. In the **Enrollment Profiles** section, choose **Corporate-owned dedicated devices**.
@@ -161,7 +161,7 @@ When applied, these actions don't have any effect on devices that are already en
 
 You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Microsoft Entra device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. Sign in to the [Microsoft Intune admin center] and choose **Groups** > **All groups** > **New group**.
 2. Complete all required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name, like *Factory 1 devices*
@@ -199,3 +199,7 @@ To remove an app from Android Enterprise dedicated devices, you can do either of
 
 - [Deploy Android apps](../../app-management/deployment/assign-groups.md)
 - [Add Android configuration policies](../../device-configuration/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

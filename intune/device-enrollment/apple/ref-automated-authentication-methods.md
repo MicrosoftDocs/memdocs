@@ -90,7 +90,7 @@ This option is the same as Setup Assistant with modern authentication, except th
 > [!NOTE]
 > If your organization uses Microsoft Defender for Endpoint, for JIT registration and compliance remediation to work as expected, make sure the Microsoft Defender for Endpoint app **isn't** the first app users open.
 
-Once the device user reaches the home screen, they can sign in to any work or school app that's configured with the SSO extension to complete Microsoft Entra registration and compliance checks. SSO signs the user into all apps that are a part of your SSO extension policy. At that point, they can also manually sign into any app that isn’t configured to use the SSO extension.
+Once the device user reaches the home screen, they can sign in to any work or school app that's configured with the SSO extension to complete Microsoft Entra registration and compliance checks. SSO signs the user into all apps that are a part of your SSO extension policy. At that point, they can also manually sign in to any app that isn’t configured to use the SSO extension.
 
 To set up JIT Registration with automated device enrollment:
 

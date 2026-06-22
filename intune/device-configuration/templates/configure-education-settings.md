@@ -22,7 +22,7 @@ This article lists the steps to create a device configuration profile  in Micros
 
 ## Create a device profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -59,3 +59,7 @@ The next time each device checks in, the policy is applied.
 See a list of the [Windows education settings](./ref-education-settings-windows.md) and their descriptions.
 
 After the [profile is assigned](../assign-device-profile.md), [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

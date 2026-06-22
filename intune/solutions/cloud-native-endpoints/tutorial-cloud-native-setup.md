@@ -132,7 +132,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
 
 To limit the configurations from this guide to the test devices that you import to Windows Autopilot, create a dynamic Microsoft Entra group. This group should automatically include the devices that import to Windows Autopilot and have the Group Tag *CloudNative*. You can then target all your configurations and applications at this group.
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center].
 
 2. Select **Groups** > **New group**. Enter the following details:
 
@@ -170,7 +170,7 @@ The enrollment status page (ESP) is the mechanism an IT pro uses to control the 
 
 Now we can create the Windows Autopilot profile and assign it to our test device. This profile tells your device to join Microsoft Entra and what settings to apply during OOBE.
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** > **Windows Autopilot** > **Deployment profiles**.
 
@@ -198,7 +198,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 The Windows Autopilot service synchronizes several times a day. You can also trigger a sync immediately so that your device is ready to test. To synchronize immediately:
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Device onboarding** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**.
 
@@ -307,7 +307,7 @@ This phase is designed to help you build out security settings for your organiza
 
 ### Microsoft Defender Antivirus (MDAV)
 
-The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center].
 
 #### [:::image type="icon" source="../../media/icons/16/intune.svg"::: **Intune admin center**](#tab/intuneadmincenter)
 
@@ -373,7 +373,7 @@ Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker
 - For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
-These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
+These settings can be enabled in the [Microsoft Intune admin center]. In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
 When you configure the following BitLocker settings, they silently enable 128-bit encryption for standard users, which is a common scenario. However, your organization might have different security requirements, so use the [BitLocker documentation](../../device-configuration/endpoint-security/encrypt-bitlocker-windows.md) for more settings.
 
@@ -445,7 +445,7 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
 
 3. In Intune, create an endpoint security policy:
 
-    1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+    1. Sign in to the [Microsoft Intune admin center].
     2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows** > **Local admin password solution (Windows LAPS)** > **Create**.
 
     For more information, go to [Create a LAPS policy in Intune](../../device-security/laps/deploy-policy.md#create-a-laps-policy).
@@ -487,7 +487,7 @@ A compliance policy reports on the health of your cloud-native Windows endpoints
 
 To create a Windows compliance policy:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Compliance** > **Create policy**.
 3. For **Platform**, select **Windows 10 and later** > **Create**.
 4. In **Basics**, enter a name for the policy and select **Next**.
@@ -670,7 +670,7 @@ Following are some settings available in the settings catalog that might be rele
 
 Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../device-configuration/templates/configure-device-restrictions.md).
 
-To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
+To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
 - **Desktop background picture URL (Desktop only)** - Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that's copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization*, and configure **Desktop background picture URL (Desktop only)**.
 
@@ -885,3 +885,7 @@ Yes, with some planning. Cloud-native devices can access on-premises resources o
 - Deploy network profiles, including [VPN](../../device-configuration/templates/ref-vpn-settings-windows.md) and [Wi-Fi](../../device-configuration/templates/ref-wifi-settings-windows.md)
 - Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
 - Security baseline for [Microsoft Edge](../../device-security/security-baselines/ref-edge-settings.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -26,7 +26,7 @@ Follow these steps to set up Shared iPad in your environment.
 
 1. Federate your Microsoft Entra instance with Apple Business or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
 2. Create an enrollment policy.
-    1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+    1. Sign in to the [Microsoft Intune admin center].
     1. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment**.
     1. Under **Bulk Enrollment Methods**, choose **Enrollment program tokens**.
     1. Choose a token, and then select **Profiles**.
@@ -144,3 +144,7 @@ The following limitations exist in Intune for Shared iPad:
 ## Next steps
 
 - [Set up iOS/iPadOS device enrollment with Apple Configurator](setup-configurator-ios.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

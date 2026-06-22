@@ -91,7 +91,7 @@ There are built-in script packages you can use to get started with Remediations.
 
 To assign the script package:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations** node, select one of the built-in script packages.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Scripts and remediations** node, select one of the built-in script packages.
 1. Select **Properties**, then next to the **Assignments** heading, select **Edit**.
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
 1. To change the **Scope tags**, select **Edit** then **Select scope tags**.
@@ -130,7 +130,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Scripts and remediations**.
 1. Choose the **Create script package** button to create a script package.
 
     :::image type="content" source="./media/deploy-remediations/remediations-create.png" alt-text="Screenshot that shows the create script package button in the Remediations page in Microsoft Intune." lightbox="./media/deploy-remediations/remediations-create.png":::
@@ -179,7 +179,7 @@ You can use the **Run remediation** device action to run a remediation script on
 
 ### How to run a Remediation script on-demand
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. On the device's  **Overview**  page, select  **...** > **Run remediation (preview).**
 4. In the **Run remediation (preview)** pane, select the **Script package** you want to run from the list. Select **View details** to see properties of the script package like detection and remediation script contents, description, and configured settings.
@@ -214,7 +214,7 @@ The client reports Remediation information at the following times:
 
 ## Monitor your script packages
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations**, you can see an overview of your detection and remediation status.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Manage devices** > **Scripts and remediations**, you can see an overview of your detection and remediation status.
 
     :::image type="content" source="./media/deploy-remediations/remediations-report-overview.png" alt-text="Screenshot that shows the Remediations report overview page in Microsoft Intune." lightbox="./media/deploy-remediations/remediations-report-overview.png":::
 
@@ -230,7 +230,7 @@ To help you easily analyze returned outputs, use the **Export** option to save t
 
 You can view the status of Remediations that are assigned or run on-demand to a device.
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
 
@@ -245,3 +245,7 @@ When you apply filters such as "Author" or "Status," or using the **Export** opt
 - Get the [PowerShell scripts](ref-remediation-scripts.md) for Remediations.
 
 - Learn more about [PowerShell script security](../../configmgr/apps/deploy-use/learn-script-security.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

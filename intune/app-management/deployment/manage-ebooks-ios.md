@@ -39,7 +39,7 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 
 ## To get and upload an Apple Business Manager location token
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, select **Create**.
 5. On the **New VPP Token** pane, specify the following information:
@@ -65,3 +65,7 @@ Choose an assignment action of **Available**, or **Required**.
 ## Next steps
 
 See [How to monitor apps](../monitor-assignments.md) for information to help you monitor book assignments.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -51,7 +51,7 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for a Windows device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge Windows APP Level 1 Basic
@@ -77,7 +77,7 @@ Level 1 configuration provides the minimum data protection for a Windows device 
 
 Level 2 configuration includes enhanced data protection controls and stricter enforcement for Windows devices.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge Windows APP Level 2 Enhanced
@@ -105,7 +105,7 @@ Level 2 configuration includes enhanced data protection controls and stricter en
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge Windows APP Level 3 High
@@ -161,7 +161,7 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for an iOS/iPadOS device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge iOS APP Level 1 Basic
@@ -213,7 +213,7 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge iOS APP Level 2 Enhanced
@@ -274,7 +274,7 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge iOS APP Level 3 High
@@ -388,7 +388,7 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for an Android device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge Android APP Level 1 Basic
@@ -444,7 +444,7 @@ Level 1 configuration provides the minimum data protection for an Android device
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge Android APP Level 2 Enhanced
@@ -508,7 +508,7 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.
 3. On the **Basics** tab, enter:
    - **Name:** Edge Android APP Level 3 High
@@ -615,3 +615,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 ## Next step
 
 Continue with [Step 3](./threat-defense-step-3.md) to integrate Mobile Threat Defense with Microsoft Edge for Business.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

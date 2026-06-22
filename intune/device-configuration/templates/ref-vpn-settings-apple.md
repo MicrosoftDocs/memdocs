@@ -177,7 +177,7 @@ Select the VPN connection type from the following list of vendors:
 - **VPN server address**: Enter the IP address or fully qualified domain name of the VPN server that devices connect to. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Authentication method**: Choose how devices authenticate to the VPN server. Your options:
   - **Certificates**: Under **Authentication certificate**, select a SCEP or PKCS certificate profile you previously created to authenticate the connection. For more information about certificate profiles, go to [How to configure certificates](../../fundamentals/certificates/overview.md). Choose the certificates that align with your deployment channel selection. If you selected the user channel, your certificate options are limited to user certificate profiles. If you selected the device channel, you have both user and device certificate profiles to choose from. However, we recommend always selecting the certificate type that aligns with the selected channel. Storing user certificates in the system keychain increases security risks.
-  - **Username and password**: End users must enter a username and password to sign into the VPN server.
+  - **Username and password**: End users must enter a username and password to sign in to the VPN server.
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
   - **Check Point Capsule VPN**

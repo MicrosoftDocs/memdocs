@@ -10,7 +10,7 @@ ms.reviewer: esmich
 > [!NOTE]
 > Managed apps are not currently supported on AOSP devices.
 
-Intune-managed apps (*managed* apps for short) are work-approved apps managed by your organization and configured to prevent intentional or unintentional data loss. When signed into a managed app with your work or school account, you might encounter your organization's requirements and restrictions for access. This article provides an overview of Intune-managed apps, how to get the ones you need for work or school, and their restrictions and requirements.
+Intune-managed apps (*managed* apps for short) are work-approved apps managed by your organization and configured to prevent intentional or unintentional data loss. When signed in to a managed app with your work or school account, you might encounter your organization's requirements and restrictions for access. This article provides an overview of Intune-managed apps, how to get the ones you need for work or school, and their restrictions and requirements.
 
 ## How do I know I have a managed app?
 
@@ -46,7 +46,7 @@ Managed apps enforce your organization's app and data-protection policies, which
 
 These policies prevent sensitive work information from being shared or leaked outside of your org. Restrictions and requirements are only enforced when using an app for work or school, such as when:
 
-* You're signed into an app with your work account.
+* You're signed in to an app with your work account.
 * You try to access work files in OneDrive, Teams, or SharePoint.
 * You're using apps in the work profile area on your device.
 
