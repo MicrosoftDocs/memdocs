@@ -24,7 +24,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 
 ## View the **App protection status** report
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **Monitor** > **App protection status**.
 
 - **User**: The name of the user.
@@ -66,3 +66,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 
 - [How to create and assign app protection policies](./create-policy.md)
 - [Intune reports](../../device-management/reports/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

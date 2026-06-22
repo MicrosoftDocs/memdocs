@@ -36,7 +36,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 Creating, updating, or deleting scope tags requires an administrator assigned the [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) :::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false"::: Microsoft Entra role. Because it's a privileged role, Microsoft recommends using it only when necessary. Administrators with a scope tag in their role assignment can't update or delete the scope tag from the master list of scope tags.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
+1. In the [Microsoft Intune admin center], choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
 4. On the **Review + create** page, choose **Create**.
@@ -47,7 +47,7 @@ Creating, updating, or deleting scope tags requires an administrator assigned th
 
 ## To assign a scope tag to a role
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
+1. In the [Microsoft Intune admin center], choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
 2. On the **Basics** page, provide an **Assignment name** and **Description**. Choose **Next**.
 3. On the **Admin Groups** page, choose **Add groups**, and select the groups that you want as part of this assignment. Users in these groups have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
 
@@ -69,7 +69,7 @@ Creating, updating, or deleting scope tags requires an administrator assigned th
 
 For objects that support scope tags, scope tags usually appear under **Properties**. For example, to assign a scope tag to a configuration profile, follow these steps:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Manage devices** > **Configuration** > choose a profile.
+1. In the [Microsoft Intune admin center], choose **Devices** > **Manage devices** > **Configuration** > choose a profile.
 
 2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
 3. Choose **Select** > **Review + save**.
@@ -156,3 +156,7 @@ To review the impact on your tenant and enable Scoped permissions:
 
 Learn how scope tags behave when there are [multiple role assignments](overview.md#multiple-role-assignments).
 Manage your [roles](overview.md) and [profiles](../../device-configuration/assign-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -149,7 +149,7 @@ You can create one or more managed installer policies to add the managed install
 
 The following procedure guides you through adding the Intune Management Extension as a managed installer for your tenant:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **App Control for Business** > select the **Managed installer** tab and then select **Create**. The *Create Managed Installer Policy* workflow opens.
+1. In the [Microsoft Intune admin center], go to **Endpoint security** > **App Control for Business** > select the **Managed installer** tab and then select **Create**. The *Create Managed Installer Policy* workflow opens.
 
    :::image type="content" source="./media/manage-app-control/add-managed-installer.png" alt-text="Screen shot of the Managed installer page, with the Add managed installer pane on the right side." lightbox="./media/manage-app-control/add-managed-installer.png" :::
 
@@ -257,7 +257,7 @@ After you create an [App Control for Business policy](#create-an-app-control-for
 
 Use the following procedure to help you create a successful App Control for Business policy. This policy is considered a *base* policy if you go on to create [supplemental policies](#use-supplemental-policy) to expand the scope of trust you define with this policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned a platform type.
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned a platform type.
 
    :::image type="content" source="./media/manage-app-control/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/manage-app-control/create-app-control-policy.png":::
 
@@ -336,7 +336,7 @@ As a result of these deployments, both supplemental policies could modify both i
 
    When you create a policy in XML format, it must reference the *Policy ID* of the base policy.
 
-2. After your App Control for Business supplemental policy is created in XML format, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab, and then select **Create Policy**.
+2. After your App Control for Business supplemental policy is created in XML format, sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab, and then select **Create Policy**.
 
 3. On **Basics**, enter the following properties:
 
@@ -473,3 +473,7 @@ Microsoft Entra hybrid-join devices require connectivity to an on-premises Domai
 ## Next Steps
 
 [Configure Endpoint security policies](./manage-policies.md#create-endpoint-security-policies)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

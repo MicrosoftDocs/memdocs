@@ -388,7 +388,7 @@ Then, when a previously unmanaged Windows device enrolls with Intune, it automat
 
 ### Create an Intune app to install the Configuration Manager client
 
-1. From the primary site server, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then, go to **Apps** > **All Apps** > **Add**.
+1. From the primary site server, sign in to the [Microsoft Intune admin center]. Then, go to **Apps** > **All Apps** > **Add**.
 
 2. For app type, select **Line-of-business app** under **Other**.
 
@@ -417,7 +417,7 @@ Then, when a previously unmanaged Windows device enrolls with Intune, it automat
 
 The following procedure deploys the app for installing the Configuration Manager client that you created in the previous procedure:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Apps** > **All Apps**, and then select **ConfigMgr Client Setup Bootstrap**. That's the app that you created to deploy the Configuration Manager client.
+1. Sign in to the [Microsoft Intune admin center]. Select **Apps** > **All Apps**, and then select **ConfigMgr Client Setup Bootstrap**. That's the app that you created to deploy the Configuration Manager client.
 
 2. Select **Properties**, and then select **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Microsoft Entra groups that have users and devices that you want to participate in co-management.
 
@@ -433,3 +433,7 @@ After you complete the configuration steps of this tutorial, you can start co-ma
 - Review the status of co-managed devices by using the [Co-management dashboard](how-to-monitor.md).
 - Use [Windows Autopilot](quickstart-autopilot.md) to provision new devices.
 - Use [Conditional Access](quickstart-conditional-access.md) and Intune compliance rules to manage user access to corporate resources.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

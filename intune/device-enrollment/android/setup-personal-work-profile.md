@@ -87,7 +87,7 @@ Users can start enrollment directly from their browser through a link in Microso
 > [!NOTE]
 > If passkeys are configured as the only accepted authentication method in your tenant, don't enable web enrollment until passkey support for web enrollment is announced. This limitation will be resolved in a future update.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Select the **Android** tab.
 1. Expand **Device onboarding** and select **Enrollment**.
@@ -99,7 +99,7 @@ Users can start enrollment directly from their browser through a link in Microso
 
 Optionally, control or restrict other enrollment methods. Apply platform restrictions if you need to block specific device types or enrollment methods, such as preventing Android device administrator enrollment. If the default settings meet your needs, you can skip this step.  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Device onboarding** and select **Enrollment**.
 1. Select the **Android** tab.
@@ -184,3 +184,7 @@ Private space is a feature introduced with Android 15 that lets people create a 
 - [Deploy Android Enterprise apps](../../app-management/deployment/add-managed-google-play.md)
 - [Add Android Enterprise configuration policies](../../device-configuration/overview.md)
 - [Configuring and troubleshooting Android Enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

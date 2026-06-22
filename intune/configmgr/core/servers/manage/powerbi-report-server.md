@@ -120,7 +120,7 @@ Using [Community hub](community-hub.md), you can share Power BI report templates
 ### Contributing a Power BI report template (PBIT) files to Community hub
 
 1. Open the Configuration Manager console and go to **Community** > **Community hub**
-1. If needed, select **Sign in** to sign into GitHub. You'll see the **Your hub** link after signing in.
+1. If needed, select **Sign in** to sign in to GitHub. You'll see the **Your hub** link after signing in.
 1. Select **Your hub** then **Add an item** to launch the **Contribute item wizard**.
 1. For the **Type**, choose **Power BI Report Template** then select **Browse**.
 1. Choose the `.pbit` file you want to contribute, then select **Open**.

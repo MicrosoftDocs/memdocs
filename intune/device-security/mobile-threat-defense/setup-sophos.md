@@ -42,7 +42,7 @@ The Sophos Mobile app authorization process follows:
 
 ## To set up Sophos Mobile integration
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > and select **Add**.
+1. Sign in to the [Microsoft Intune admin center], go to **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > and select **Add**.
 2. On the **Add Connector** page, use the dropdown and select **Sophos**. And then select **Create**.
 3. Select the link *Open the Sophos admin console*.
 4. Sign in to the [Sophos admin console](https://central.sophos.com/) with your Sophos credentials.
@@ -66,3 +66,7 @@ The Sophos Mobile app authorization process follows:
 ## Next Steps
 
 [Configure Sophos client apps](./assign-apps.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -96,7 +96,7 @@ There are some general restrictions when creating assignment filters:
 
 ## Create a filter
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Assignment filters** > **Create**.
 
     You can also create assignment filters in:
@@ -186,7 +186,7 @@ There are some general restrictions when creating assignment filters:
 
 After the assignment filter is created, it's ready to use when assigning your apps or policies.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to your apps, compliance policies, or configuration profiles. For a list of supported workloads, see [Supported workloads when creating assignment filters](ref-supported-workloads.md). Select an existing policy, or create a new policy.
+1. In the [Microsoft Intune admin center], go to your apps, compliance policies, or configuration profiles. For a list of supported workloads, see [Supported workloads when creating assignment filters](ref-supported-workloads.md). Select an existing policy, or create a new policy.
 
     For example, select **Devices** > **Compliance**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
 
@@ -218,7 +218,7 @@ When the device checks in with the Intune service, the properties defined in the
 
 After you create an assignment filter, you can filter the existing list of assignment filters by platform and by profile type (**Managed devices** or **Managed apps**).
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
     You can also go to **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
@@ -244,7 +244,7 @@ After you create an assignment filter, you can filter the existing list of assig
 
 After you assign the assignment filter to your policies, you can see all the policies that use the assignment filter.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
     You can also go to **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
@@ -258,7 +258,7 @@ After you assign the assignment filter to your policies, you can see all the pol
 
 After you create an assignment filter, you can change or update it.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
     You can also update assignment filters in **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
@@ -270,7 +270,7 @@ After you create an assignment filter, you can change or update it.
 
 ## Delete a filter
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
+1. In the [Microsoft Intune admin center], select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
     You can also delete assignment filters in **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
@@ -288,3 +288,7 @@ After you create an assignment filter, you can change or update it.
 - [Supported workloads when creating assignment filters](ref-supported-workloads.md)
 - [Assignment filter performance recommendations](performance-recommendations.md)
 - [Assignment filter reports and troubleshooting](troubleshoot.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -48,7 +48,7 @@ Once the wipe is completed, the device is in out-of-box experience.
 
 Here are the steps to perform a factory reset from Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **All devices**.
 1. Select the device you want to reset.
 1. Select **Wipe** and follow the instructions.
@@ -93,7 +93,7 @@ Once the Windows Autopilot reset action is completed, the device asks to chose r
 
 Here are the steps to perform a  Windows Autopilot reset from Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **All devices**.
 1. Select the device you want to reset.
 1. Select **Autopilot Reset** and follow the instructions.
@@ -163,3 +163,7 @@ ________________________________________________________
 [MEM-1]: ../../../device-management/actions/wipe.md
 [MEM-2]: ../../../device-management/actions/delete.md
 [MEM-3]: /entra/identity/devices/manage-stale-devices
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

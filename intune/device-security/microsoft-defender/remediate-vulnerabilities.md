@@ -83,7 +83,7 @@ Before you can manage security tasks in the Intune admin center, a security admi
 
 To manage security tasks:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Security tasks**.
 3. Choose a security task to view its details. In the task window, you can select additional links, including:
@@ -118,3 +118,7 @@ If security tasks don't appear in Intune:
 - [Monitor compliance for risk levels](./monitor.md) - Track device risk scores.
 - [Review Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) - Understand security recommendations.
 - [Learn about Mobile Threat Defense](../mobile-threat-defense/overview.md) - Explore other threat protection options for Intune.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

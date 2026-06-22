@@ -33,7 +33,7 @@ App inventory expands the existing device inventory agent on Windows devices to 
 
 To collect app inventory data, create a device configuration policy that specifies which application properties to collect and assign it to your device or user groups.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Select the following settings:
    - **Platform**: Windows 10 and later
@@ -96,7 +96,7 @@ If more than one policy targets the same device, the device merges the settings.
 
 After devices check in with the inventory policy, you can view the collected app data.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices**, and then select a device.
 3. Select **All Apps**.
 4. Select the **App Inventory** tab.
@@ -170,3 +170,7 @@ Both features can run simultaneously. App inventory doesn't disable Discovered a
 - [Discovered apps](../discovered-apps.md)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [App types in Microsoft Intune](./index.md#app-types-in-microsoft-intune)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

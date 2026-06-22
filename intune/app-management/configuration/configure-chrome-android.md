@@ -21,7 +21,7 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
 ## Add the Google Chrome app to Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create** then add the **Managed Google Play** app.
 3. Go to Managed Google Play, search with **Google Chrome** and approve.
 
@@ -33,7 +33,7 @@ For more information about adding a Managed Google Play app to Intune, see [Mana
 
 ## Add app configuration for managed AE devices
 
-1. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
+1. From the [Microsoft Intune admin center], select **Apps** > **Configuration** > **Create** > **Managed devices**.
 2. Set the following details:
     - **Name** - The name of the profile that appears in the portal.
     - **Description** - The description of the profile that appears in the portal.
@@ -103,3 +103,7 @@ Launch Google Chrome and you'll find the settings applied.
 ## Next steps
 
 - For more information about Android Enterprise fully managed devices, see [Set up Intune enrollment of Android Enterprise fully manage devices](../../device-enrollment/android/setup-fully-managed.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

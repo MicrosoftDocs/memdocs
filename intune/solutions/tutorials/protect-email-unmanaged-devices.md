@@ -36,13 +36,13 @@ This tutorial requires a test tenant with the following subscriptions:
 
 ## Sign in to Intune
 
-For this tutorial, when you sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in with the account that was created when you signed up for the Intune trial subscription. Continue to use this account to sign in to the admin center throughout this tutorial.
+For this tutorial, when you sign in to the [Microsoft Intune admin center], sign in with the account that was created when you signed up for the Intune trial subscription. Continue to use this account to sign in to the admin center throughout this tutorial.
 
 ## Create the app protection policy
 
 In this tutorial, we set up an Intune [app protection policy](../../app-management/protection/overview.md) for iOS for the Outlook app to put protections in place at the app level. We'll require a PIN to open the app in a work context. We'll also limit data sharing between apps and prevent company data from being saved to a personal location.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Apps** > **Manage Apps** > **Protection** > **Create**, and then select **iOS/iPadOS**.
 
@@ -113,7 +113,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
 
 ### Create a multi-factor authentication policy for Modern Authentication clients
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** >**Conditional access** > **Create new policy**.
 
@@ -167,7 +167,7 @@ The Conditional Access policy for Modern Authentication clients is created. Now 
 
 The process to configure this policy is similar to the previous Conditional Access policy:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
@@ -233,7 +233,7 @@ With the policies that you created in this tutorial, devices must enroll in Intu
 
 When the test policies are no longer needed, you can remove them.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Compliance**.
 
@@ -246,3 +246,7 @@ When the test policies are no longer needed, you can remove them.
 ## Next steps
 
 In this tutorial, you created app protection policies to limit what the user can do with the Outlook app, and you created Conditional Access policies to require the Outlook app and require MFA for Modern Authentication clients. To learn more about using Intune with Conditional Access to protect other apps and services, see [Learn about Conditional Access and Intune](../../device-security/conditional-access-integration/overview.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

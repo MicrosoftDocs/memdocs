@@ -78,7 +78,7 @@ In Microsoft Defender, you can use this information, including the device type, 
   - [Role based access control (RBAC) in Intune](../fundamentals/role-based-access-control/overview.md)
   - [Use RBAC and scope tags for distributed IT in Intune](../fundamentals/role-based-access-control/scope-tags.md)
 
-- You can access your Intune data in the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and Copilot in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on Copilot in Intune vs. Security Copilot, and other common questions, go to the [Microsoft Copilot in Intune FAQ](faq.md).
+- You can access your Intune data in the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) and Copilot in the [Microsoft Intune admin center]. For more information on Copilot in Intune vs. Security Copilot, and other common questions, go to the [Microsoft Copilot in Intune FAQ](faq.md).
 
 ## Enable the Security Copilot integration in Intune
 
@@ -116,7 +116,7 @@ To view the list of Intune built-in system capabilities for Intune, use the foll
 
 #### Sessions
 
-When you use prompts in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or in the Security Copilot portal, the sessions are saved. To see the saved sessions, use the following steps:
+When you use prompts in the [Microsoft Intune admin center] or in the Security Copilot portal, the sessions are saved. To see the saved sessions, use the following steps:
 
 1. In the [Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989), go to the menu at the top left > **My sessions**.
 
@@ -213,3 +213,7 @@ When you use Security Copilot to get Intune data, Security Copilot also has acce
 - [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
 - [Privacy and data security in Microsoft Security Copilot](/copilot/security/privacy-data-security)
 - [Use Microsoft Copilot in Intune](index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

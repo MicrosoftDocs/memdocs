@@ -31,7 +31,7 @@ In this article, you use Intune to add and assign an app to your company's workf
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
@@ -54,7 +54,7 @@ When you add an app to Intune, you assign that app to the users and groups that 
 
 Use the following steps to add an app to Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **All Apps** > **Create**.
+1. Sign in to the [Microsoft Intune admin center] and select **Apps** > **All Apps** > **Create**.
 2. In the **App type** drop-down box, select **Windows 10 and later** from **Microsoft 365 Apps**.
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** step and select **Next**.
@@ -69,7 +69,7 @@ After you add an app to Microsoft Intune, you can assign the app to more groups 
 
 Use the following steps to update an app assignment:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **All Apps**.
+1. Sign in to the [Microsoft Intune admin center] and select **Apps** > **All Apps**.
 2. Select the app that you want to assign to a group.
 3. Select **Properties**. Next to **Assignments**, select **Edit**.
 4. Select **Add Group** under the **Required** section. The **Select group** pane is displayed.
@@ -108,3 +108,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 9 - Create and assign an app protection policy](../protection/quickstart-create-assign-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

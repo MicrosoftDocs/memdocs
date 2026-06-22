@@ -31,7 +31,7 @@ The Windows Autopilot policy specifies how the device is configured during Windo
 
 To create a user-driven Microsoft Entra join Windows Autopilot device preparation policy, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -171,3 +171,7 @@ If multiple Windows Autopilot device preparation polices are deployed to a user,
 > [!NOTE]
 >
 > Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

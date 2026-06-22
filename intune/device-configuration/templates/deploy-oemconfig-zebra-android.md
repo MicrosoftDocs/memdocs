@@ -75,7 +75,7 @@ When you deploy the Intune profile, the Zebra OEMConfig app on the device execut
 
 In the Intune admin center, you can view the status of deployed OEMConfig profiles, and any errors or warnings.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select your Zebra OEMConfig profile > **Monitor** > **Device status**. This option shows the devices that have your OEMConfig profile assigned.
 3. Select a device > **Device configuration** > Select your Zebra OEMConfig profile. This option shows the profile settings that succeeded or failed.
 
@@ -86,3 +86,7 @@ In the Intune admin center, you can view the status of deployed OEMConfig profil
 - Learn more about [OEMConfig configuration profiles](./configure-oemconfig-android.md).
 - On Android device administrator, configure [Mobility Extensions (MX)](./configure-zebra-mx-android.md).
 - [Monitor the profile status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

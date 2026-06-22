@@ -72,7 +72,7 @@ This article describes how to link your accounts in the Microsoft Intune admin c
 
 Complete these steps to enable Android Enterprise management options in Microsoft Intune.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Android** tab.
 4. Under **Prerequisites**, choose **Managed Google Play**.  If you're using a custom Intune role, access to this option requires organization *read* and *update* permissions.
@@ -84,7 +84,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 > [!IMPORTANT]
 > - This account is used to manage the Google Admin account and associated subscriptions, as appropriate. The Microsoft Entra account must have an active mailbox to complete the validation process required by Google.
-> - We recommend using the Microsoft Entra account you're signed into to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least two owners to an enterprise for redundancy.
+> - We recommend using the Microsoft Entra account you're signed in to to create the Google Admin account. After you establish the connection, you can add and remove more administrators, if needed, in the Google admin console. Google recommends having at least two owners to an enterprise for redundancy.
 > - If the Microsoft sign-in option is missing, you might need to connect an MX record to the domain you're using for Exchange Online. For information about how to edit your domain's DNS settings, see [Add DNS records to connect your domain](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).
 
 8. Follow the onscreen prompts to finish creating a Google Admin account.
@@ -103,7 +103,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 
 If you onboarded to Microsoft Intune with a Gmail account, you can optionally upgrade your Microsoft Entra account to a managed Google domain in the Intune admin center. During this process, you link your Microsoft Entra account to Google. That way you can manage the connection between Google and Intune with your Microsoft Entra account, rather than a Gmail account.   
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune Administrator account.
+1. Sign in to the [Microsoft Intune admin center] with an Intune Administrator account.
 1. Go to **Devices** > **Enrollment**. 
 1. Select the **Android** tab.
 1. Under **Prerequisites**, choose **Managed Google Play**. 
@@ -121,7 +121,7 @@ If you onboarded to Microsoft Intune with a Gmail account, you can optionally up
 
 You can disconnect the link between Microsoft Intune and Google in the admin center. Disconnecting the account disables Android Enterprise device management for your tenant.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune Administrator account.
+1. Sign in to the [Microsoft Intune admin center] with an Intune Administrator account.
 1. [Retire](../../device-management/actions/retire.md) all of the following devices:
     - Android Enterprise personally owned work profile devices
     - Android Enterprise corporate-owned work profile devices
@@ -166,3 +166,7 @@ After you connect to a managed Google Play account, you can set up Microsoft Int
 - [Corporate-owned work profile devices](setup-corporate-work-profile.md).
 - [Dedicated devices](setup-dedicated.md).
 - [Fully managed devices](setup-fully-managed.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

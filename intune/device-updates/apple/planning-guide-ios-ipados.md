@@ -84,19 +84,19 @@ To manage updates, Apple has the following options:
 
   On iOS/iPadOS 17.0 and later, use Apple's declarative device management (DDM) to manage software updates. DDM is the modern way to manage devices with an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, & installs the update.
 
-  The DDM settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Managed software updates with the settings catalog](index.md).
+  The DDM settings are configurable in the [Microsoft Intune admin center]. For more information, go to [Managed software updates with the settings catalog](index.md).
 
 - **Software update policies**
 
   These MDM policies offer a controlled roll-out of a specific version. You can also force devices on older versions to upgrade. Admins can enter the iOS/iPadOS version to install and schedule the installation.
 
-  These settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Manage iOS/iPadOS software update policies in Intune](deprecated-mdm-policies-ios.md).
+  These settings are configurable in the [Microsoft Intune admin center]. For more information, go to [Manage iOS/iPadOS software update policies in Intune](deprecated-mdm-policies-ios.md).
 
 - **Software update deferral policies**
 
   These MDM policies hide updates for up to 90 days. They prevent users from manually updating their device to a version that isn't approved. This feature doesn't control when the updates are applied.
 
-  These settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Manage iOS/iPadOS software update policies in Intune](deprecated-mdm-policies-ios.md).
+  These settings are configurable in the [Microsoft Intune admin center]. For more information, go to [Manage iOS/iPadOS software update policies in Intune](deprecated-mdm-policies-ios.md).
 
 With these features, admins can make sure their Apple devices are running a specific software version and can control the release of updates across their devices.
 
@@ -265,3 +265,7 @@ To accomplish this task, this scenario involves two policies:
 - [Software updates planning guide and scenarios for BYOD and personal devices](../byod-planning-guide.md)
 - [Software updates planning guide for managed Android devices](../android/planning-guide.md)
 - [Software updates planning guide for managed macOS devices](planning-guide-macos.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

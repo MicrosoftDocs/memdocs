@@ -138,7 +138,7 @@ For more information about Intune built-in roles, see:
 
 By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the **Intune Administrator** Microsoft Entra role
+1. Sign in to the [Microsoft Intune admin center] as the **Intune Administrator** Microsoft Entra role
 2. Select **Tenant administration**.
 3. View the tenant details. The **MDM authority** should be set to **Microsoft Intune**.
 
@@ -146,7 +146,7 @@ If you see an orange banner that states you didn't set the MDM authority, you ca
 
 ### Set the MDM authority to Intune
 
-1. If the MDM authority isn't set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the **Intune Administrator** Microsoft Entra role.
+1. If the MDM authority isn't set, sign in to the [Microsoft Intune admin center] as the **Intune Administrator** Microsoft Entra role.
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner appears only if you didn't set the MDM authority.
 
     You can confirm the MDM Authority is set using the steps in [Confirm the MDM authority](#confirm-the-mdm-authority) (in this article).
@@ -191,3 +191,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 2 - Create a user and assign a license](tenant-administration/quickstart-create-user.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

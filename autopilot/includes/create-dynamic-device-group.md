@@ -14,7 +14,7 @@ device-preparation/tutorial/user-driven/entra-join-automatic-enrollment.md
 
 Headings are driven by article context. -->
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Groups** in the left hand pane.
 
@@ -77,3 +77,7 @@ Headings are driven by article context. -->
 > [!TIP]
 >
 > For Configuration Manager admins, device groups are similar to device based collections. Dynamic device groups are similar to query based device collections while assigned device groups are similar to direct membership device collections.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

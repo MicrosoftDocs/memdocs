@@ -18,7 +18,7 @@ Below we describe the steps an admin would go through to deregister a device fro
 
 Before a device is deregistered from Windows Autopilot, it first has to be deleted from Intune. To delete a Windows Autopilot device from Intune:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -38,7 +38,7 @@ Once the device is deleted from Intune, it can then be deregistered from Windows
 
 1. Make sure the device is deleted from Intune as described in the [Delete from Intune](#delete-from-intune) section.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -90,7 +90,7 @@ Because this behavior varies, avoid manually deleting the device from Microsoft 
 
 The device can be deregistered from Windows Autopilot in [Microsoft 365 admin center](https://admin.microsoft.com/) if using the Microsoft 365 admin center instead of Intune. To deregister a Windows Autopilot device from the Microsoft 365 admin center:
 
-1. Sign into to the [Microsoft 365 admin center](https://admin.microsoft.com/).
+1. Sign in to to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. Navigate to **Devices** > **Autopilot**.
 1. Select the device to be deregistered and then select **Delete device**.
 
@@ -98,7 +98,7 @@ The device can be deregistered from Windows Autopilot in [Microsoft 365 admin ce
 
 To deregister a Windows Autopilot device from the Microsoft Partner Center (MPC), a Cloud Solution Partner (CSP) would:
 
-1. Sign into the Microsoft Partner Center (MPC).
+1. Sign in to the Microsoft Partner Center (MPC).
 1. Navigate to **Customer** > **Devices**.
 1. Select the device to be deregistered and then select **Delete device**.
 
@@ -116,3 +116,7 @@ An OEM or CSP with integrated OEM Direct APIs can also deregister a device with 
 > [!NOTE]
 >
 > If an admin registered a device via another portal other than the Microsoft Partner Center (MPC) such as Intune or the [Microsoft 365 admin center](https://admin.microsoft.com/), the device doesn't show up in Microsoft Partner Center (MPC). For a partner to register a device in the Microsoft Partner Center (MPC), the devices first needs to be deregistered using the steps outlined in the [Deregister a device](#deregister-a-device) section.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

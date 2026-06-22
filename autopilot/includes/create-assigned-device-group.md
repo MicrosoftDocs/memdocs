@@ -10,7 +10,7 @@ device-preparation/tutorial/automatic/automatic-device group.md
 
 Headings are driven by article context. -->
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Groups** in the left hand pane.
 
@@ -122,3 +122,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         >   Status: 403 (Forbidden)
         >   ErrorCode: Authorization_RequestDenied
         >   ```
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

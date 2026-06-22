@@ -127,7 +127,7 @@ Before you use the STIG audit baseline, confirm that your environment meets the 
 
 To create a STIG audit baseline profile, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Go to **Endpoint security** > **Security baselines** to view the list of available baselines.
 
@@ -558,3 +558,7 @@ Yes. Use the Graph API to programmatically discover audit policies and retrieve 
 - [Microsoft Intune for US Government GCC High and DoD](../../fundamentals/government-service.md) - Learn about Intune's GCC High service.
 - [DISA STIGs](https://public.cyber.mil/stigs/) - Access the full STIG library from DISA.
 - [DISA SCAP benchmarks](https://public.cyber.mil/stigs/scap/) - Download the SCAP benchmark files used to generate STIG audit profiles.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -321,9 +321,6 @@ items:
           - name: Kiosk
             displayName: single app, multi app, dedicated device, windows
             href: ./templates/ref-kiosk-settings-windows.md
-          - name: Secure assessment
-            displayName: take a test, windows
-            href: ./templates/ref-education-settings-windows.md
           - name: Shared multi-user device
             displayName: windows
             href: ./templates/ref-shared-device-settings-windows.md

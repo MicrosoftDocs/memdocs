@@ -30,7 +30,7 @@ This article includes more information on the configuration file and Win32 app, 
 
 ## Prerequisites
 
-- To configure the Intune policies, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to:
+- To configure the Intune policies, at a minimum, sign in to the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to:
 
   - [Role-based access control (RBAC) with Microsoft Intune](../../fundamentals/role-based-access-control/overview.md)
   - [Built-in role permissions for Microsoft Intune](../../fundamentals/role-based-access-control/ref-built-in-roles.md)
@@ -77,7 +77,7 @@ For information on these features, go to:
 
 This policy is where you add the configuration file you created in [Step 1 with the OEM tool](#step-1---create-the-configuration-file-and-deploy-the-app).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -119,7 +119,7 @@ The next time each device checks in, the policy applies.
 
 In the Intune admin center, after you create a policy, you can monitor its status, and see any errors.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
+1. In the [Intune admin center], go to **Devices** > **Manage devices** > **Configuration** > **Policies** tab.
 2. Select the policy you want to monitor. The **Device status** report shows the status of the policy, and shows any error details for troubleshooting.
 
 For more information, go to:
@@ -143,7 +143,7 @@ This option gets the BIOS passwords, one device at a time.
 
 1. Create a custom Intune RBAC role with the **Read Bios Password** permission:
 
-    1. At a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a member of the **Intune Role Administrator** built-in Intune role.
+    1. At a minimum, sign in to the [Intune admin center] as a member of the **Intune Role Administrator** built-in Intune role.
 
         For information on the Intune built-in roles, go to:
 
@@ -207,3 +207,8 @@ For information on DFCI, go to:
 
 - [Assign the profile](../assign-device-profile.md)
 - [Monitor the profile status](../monitor-device-profile.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

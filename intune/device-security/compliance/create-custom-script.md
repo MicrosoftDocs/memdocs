@@ -91,7 +91,7 @@ Before deploying your script in production, test it in an isolated environment t
 > [!NOTE]
 > The script upload workflow doesn't support scope tags. You must be assigned the default scope tag to create, edit, or view custom compliance discovery scripts.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add**. Then choose your platform.  
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add**. Then choose your platform.  
 1. On **Basics**, enter a descriptive **Name** for the script.
 1. On **Settings**, add your script to **Detection script**. Review your script carefully. Intune doesn't validate the script for syntax or programming errors.
 1. *For Windows only* - On **Settings**, configure the following behavior for the PowerShell script:
@@ -107,3 +107,7 @@ Before deploying your script in production, test it in an isolated environment t
 - [Use custom compliance settings](./custom-settings.md)
 - [Create a JSON for custom compliance](./create-custom-json.md)
 - [Create a compliance policy](./create-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -10,7 +10,7 @@ ms.collection:
 
 # Tasks you can complete using the Settings Catalog in Intune
 
-Using the [settings catalog](index.md) in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can access many settings that manage apps and features on your devices.
+Using the [settings catalog](index.md) in the [Microsoft Intune admin center], you can access many settings that manage apps and features on your devices.
 
 This article lists and describes some of the features you can configure in the settings catalog.
 
@@ -122,3 +122,7 @@ Be sure macOS is listed as a supported platform. If some settings aren't availab
 
 - [Use the settings catalog to configure settings on Windows and macOS devices](index.md)
 - [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

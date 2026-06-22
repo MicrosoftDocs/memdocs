@@ -21,7 +21,7 @@ Surface Management Portal offers insights about the enrolled Surface devices in 
 * Track warranty and support requests.
 * Access Microsoft Surface news and resources.
 
-This article describes the main features of Microsoft Surface Management Portal. To access Surface Management Portal, sign in to the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **All services** > **Surface Management Portal**.
+This article describes the main features of Microsoft Surface Management Portal. To access Surface Management Portal, sign in to the [Microsoft Intune admin center] and go to **All services** > **Surface Management Portal**.
 
 ## Monitor
 For an overview of Surface devices, support requests, and warranty coverage in your organization, select  **Monitor**. You can drill down into any of the information, including:
@@ -58,3 +58,7 @@ If a Surface device isn't working properly, the Microsoft Surface Diagnostic Too
 * Harness the power of Surface, Windows, and Office connected together through the cloud. To learn how to plan, deploy, and manage Microsoft Surface and Surface Hub devices, see [Microsoft Surface for IT professionals](/surface/).
 
 * To get set up in Microsoft Intune quickly, step through the Intune guided scenarios. If you're new to Intune, set up your Intune tenant by following the [free trial quickstart](../../fundamentals/free-trial-sign-up.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

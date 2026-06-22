@@ -44,7 +44,7 @@ You can use the Intune admin center to manually add new user accounts to your Mi
 
 The following procedural steps can be used to add individual users to your Intune subscription. For a more complete review of creating new user accounts, see [How to create, invite, and delete users](/entra/fundamentals/how-to-create-delete-users) in the Microsoft Entra documentation.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Users** > **All users** > select **New user** > **Create new user**.
+1. In the [Microsoft Intune admin center], go to **Users** > **All users** > select **New user** > **Create new user**.
 
 2. On the **Basics** tab, configure the following user details:
    - **User principal name** - The User Principal Name (UPN) is stored in Microsoft Entra ID and is used to access services, including Microsoft Entra, Microsoft 365, and Microsoft Intune.
@@ -110,7 +110,7 @@ You can add Intune users in bulk by uploading a csv file containing the full lis
 
 **To add multiple users to Intune**:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create users** pane is displayed, which provides an option to **Download** a CSV template you can use.
 3. When your CSV template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin the import.
 
@@ -142,14 +142,14 @@ To delete users from Entra, your administrative account must have permissions eq
 
 **To delete an individual user from Intune**:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Browse to **Users** > **All users**.
 3. Select the user you want to delete.
 4. Select **Delete**.
 
 **To delete multiple users from Intune**:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Users** > **All users** > **Bulk operations** > **Bulk delete**. The *Bulk delete users* pane is displayed which provides an option to **Download** a CSV template you can use.
 3. When your CSV template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin deletion.
 
@@ -166,3 +166,7 @@ To delete users from Entra, your administrative account must have permissions eq
 
 - [Add groups to organize users and devices](../tenant-administration/add-groups.md)
 - [Assign users licenses to Intune](../assign-licenses.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

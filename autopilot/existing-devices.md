@@ -52,7 +52,7 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 If desired, an [enrollment status page](enrollment-status.md) (ESP) for Windows Autopilot can be set up using Intune.
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center].
 
 1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
 
@@ -389,3 +389,7 @@ For a detailed tutorial on configuring Windows Autopilot for existing devices, s
 ## Related content
 
 - [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-windows-autopilot-capabilities-and-expanded-partner-support/ba-p/260430).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

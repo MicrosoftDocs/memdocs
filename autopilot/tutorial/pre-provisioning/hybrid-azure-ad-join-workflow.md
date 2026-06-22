@@ -37,8 +37,8 @@ Windows Autopilot for pre-provisioned deployment uses the existing Windows insta
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
 - Connecting to a wireless network if the device isn't connected to a wired network.
-- Signing into the device with the end-user's on-premises domain credentials.
-- In certain scenarios, signing into Microsoft Entra ID with the end-user's Microsoft Entra credentials.
+- Signing in to the device with the end-user's on-premises domain credentials.
+- In certain scenarios, signing in to Microsoft Entra ID with the end-user's Microsoft Entra credentials.
 
 Windows Autopilot for pre-provisioned deployment can perform the following tasks during the deployment:
 

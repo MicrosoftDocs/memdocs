@@ -105,7 +105,7 @@ On the device where the local Windows Autopilot reset is being performed:
     1. Confirm/verify that the end user has the right to trigger Local Windows Autopilot Reset.
     1. Notify the user in case a provisioning package, created using Windows Configuration Designer, is being used as part of the process.
 
-1. To trigger the local Windows Autopilot Reset, sign into the device with an account that has local admin credentials.
+1. To trigger the local Windows Autopilot Reset, sign in to the device with an account that has local admin credentials.
 
  Once the local Windows Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 

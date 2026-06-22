@@ -77,7 +77,7 @@ Intune enrollment with Apple device enrollment has the following known issues an
 
 * Just like Company Portal enrollment, once the management profile downloads, users have a limited amount of time to go to the Settings app and install the profile. If they wait too long, they must download the management profile again to continue.
 
-* Device users may be unable to access work apps if they try signing in on their newly enrolled device while Microsoft Authenticator is still trying to deploy. Users should wait a few minutes while Authenticator catches up with the Intune service, and then try to sign into their work app again.
+* Device users may be unable to access work apps if they try signing in on their newly enrolled device while Microsoft Authenticator is still trying to deploy. Users should wait a few minutes while Authenticator catches up with the Intune service, and then try to sign in to their work app again.
 
 * Web-based device enrollment can be used without JIT registration. We recommend using the web version of Company Portal instead of Company Portal for iOS to deploy apps to the device. If you are planning to use the Company Portal app for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment.
 

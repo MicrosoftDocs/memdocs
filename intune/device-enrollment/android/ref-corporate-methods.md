@@ -79,7 +79,7 @@ Complete the steps in this section to enable the iframe. To create configuration
 #### Step 1: Add required permission
 Add the *update app sync* permission.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 admin.
 2. Select **Tenant administration** > **Roles**.
 3. Select your role from the list.
@@ -93,7 +93,7 @@ admin.
 #### Step 2: Link zero-touch account to Intune
 Link a zero-touch account with your Microsoft Intune account.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **By platform** > **Android**.
 2. Select **Device onboarding** > **Enrollment**.
 3. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.
 4. The iframe opens.  Select **Next** to begin setup.
@@ -170,3 +170,7 @@ For more information about provisioning devices with the DPC identifier method, 
 
 - [Deploy Android apps](../../app-management/deployment/assign-groups.md)
 - [Add Android configuration policies](../../device-configuration/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

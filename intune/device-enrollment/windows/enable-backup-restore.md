@@ -96,7 +96,7 @@ To enable Windows Backup for Organizations during enrollment, configure your bac
 # [Backup](#tab/backup)
 
 Complete these steps to configure the backup settings in the settings catalog.
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+1. Sign in to the [Microsoft Intune admin center] as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 1. Go to **Devices** > **Managed devices** > **Configuration**.
 1. Create a new policy.
    1. For **Platform**, select **Windows 10 and later**.
@@ -107,7 +107,7 @@ Complete these steps to configure the backup settings in the settings catalog.
 # [Restore](#tab/restore)
 
 Complete these steps to configure the restore setting for enrollment.
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+1. Sign in to the [Microsoft Intune admin center] as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Windows** tab.
 1. Under **Enrollment options**, select **Windows Backup and Restore**.
@@ -175,6 +175,6 @@ Known issues with Windows Backup for Organizations include:
   |IoTUAPCommercial |Windows 10 IoT Core Commercial (131) |
   |PPIPro |Windows 10 TeamOS (119) |
 
+<!--links-->
 
-
-
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

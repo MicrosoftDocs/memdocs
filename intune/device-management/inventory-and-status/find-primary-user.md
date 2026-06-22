@@ -65,7 +65,7 @@ For newly enrolled Microsoft Entra devices, the Microsoft Entra ID **Owner** pro
 
 Use the following steps to find the primary user of a device:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Choose **Devices** > choose a device.
 3. On the **Overview** page, you can see the primary user listed.
 
@@ -73,7 +73,7 @@ Use the following steps to find the primary user of a device:
 
 For Windows devices that are Microsoft Entra joined or Microsoft Entra hybrid joined, the primary user of a device can be updated.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Choose **Devices** > **All devices** > choose a Windows device > **Properties** > **Change primary user**.
 3. Select a new user and choose **Select**.
 
@@ -92,3 +92,7 @@ After the primary user is updated, it will also be updated in Intune and Microso
 ## Next steps
 
 [View and manage device details in Intune](device-details.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

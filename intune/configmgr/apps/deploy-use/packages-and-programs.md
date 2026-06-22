@@ -189,7 +189,7 @@ When clients receive the deployment policy, they'll display the icon in Software
         - **Required**: The package and program is deployed automatically, according to the configured schedule. In Software Center, you can track its deployment status and install it before the deadline.
 
         > [!NOTE]
-        > If multiple users are signed into the device, package and task sequence deployments may not appear in Software Center.
+        > If multiple users are signed in to the device, package and task sequence deployments may not appear in Software Center.
 
     - **Send wake-up packets**: If you set the deployment purpose to **Required** and select this option, the site first sends a wake-up packet to computers at the installation deadline time. Before you can use this option, configure computers for Wake On LAN. For more information, see [How to configure Wake on LAN](../../core/clients/deploy/configure-wake-on-lan.md).
 

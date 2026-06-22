@@ -36,7 +36,7 @@ This article describes the steps to use the administrative templates in the sett
 
 ## Create the policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -98,3 +98,7 @@ For more information about KIR, see:
 - [Restrict USB devices using the settings catalog](../../device-configuration/settings-catalog/restrict-usb.md).
 - [Create Microsoft Edge policy using the settings catalog](../../device-configuration/settings-catalog/configure-edge.md).
 - [Import custom or partner ADMX files](./import-custom-admx-templates.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

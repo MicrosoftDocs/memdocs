@@ -1,6 +1,6 @@
 ---
 title: Install work apps from Intune Company Portal app for Windows
-description: Sign into the Company Portal app for Windows to browse and install work or school-related apps on your enrolled device.
+description: Sign in to the Company Portal app for Windows to browse and install work or school-related apps on your enrolled device.
 ms.date: 10/07/2024
 ms.reviewer:
 ---
@@ -25,7 +25,7 @@ Required apps are necessary for work and school and are deployed directly to you
 
 To find out which installed apps are required:
 
-1. Sign into the Company Portal app with your work or school account.
+1. Sign in to the Company Portal app with your work or school account.
 1. Go to **Downloads & updates**.
 
     ![Screenshot of the Downloads & updates page for the Company Portal app for Windows. ](./media/install-apps-windows/windows-companyportal-02.png)
@@ -102,4 +102,4 @@ The option to uninstall apps is available in the Company Portal app for some Win
 
 ## Next steps
 
-Need additional help? Contact your support person. For contact information, sign into the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support**.
+Need additional help? Contact your support person. For contact information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support**.

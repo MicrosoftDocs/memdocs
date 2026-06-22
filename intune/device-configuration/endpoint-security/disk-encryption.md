@@ -16,7 +16,7 @@ Endpoint security Disk encryption profiles focus on only the settings that are r
 
 While you can configure the same device settings by using *Endpoint Protection* profiles for device configuration, the device configuration profiles include other categories of settings. These other settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
 
-Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center].
 
 ## Prerequisites for disk encryption policy
 
@@ -70,3 +70,7 @@ After you deploy policy to encrypt a device disk, see the following articles for
 
 - [To create a macOS encryption profile](./encrypt-filevault-macos.md#create-endpoint-security-policy)
 - [To create a Windows encryption profile](./encrypt-bitlocker-windows.md#create-endpoint-security-policy)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

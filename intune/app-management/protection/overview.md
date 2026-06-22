@@ -155,9 +155,9 @@ The following list provides the user requirements to use app protection policies
 
 - The user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../../fundamentals/assign-licenses.md) to learn how to assign Intune licenses to users.
 
-- The user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
+- The user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center]. Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-- The user must sign into the app using their Microsoft Entra account.
+- The user must sign in to the app using their Microsoft Entra account.
 
 ## App protection policies for Microsoft 365 (Office) apps
 
@@ -211,7 +211,7 @@ If a OneDrive administrator browses to **admin.onedrive.com** and selects **Devi
 
 The settings made available to the OneDrive Admin console, configure a special Intune app protection policy called the **Global** policy. This global policy applies to all users in your tenant, and has no way to control the policy targeting.
 
-Once enabled, the OneDrive and SharePoint apps for iOS/iPadOS and Android are protected with the selected settings by default. An IT Pro can edit this policy in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to add more targeted apps and to modify any policy setting.
+Once enabled, the OneDrive and SharePoint apps for iOS/iPadOS and Android are protected with the selected settings by default. An IT Pro can edit this policy in the [Microsoft Intune admin center] to add more targeted apps and to modify any policy setting.
 
 By default, there can only be one **Global** policy per tenant. However, you can use [Intune Graph APIs](../../developer/configure-graph-api-access.md) to create extra global policies per tenant, but doing so isn't recommended. Creating extra global policies isn't recommended because troubleshooting the implementation of such a policy can become complicated.
 
@@ -224,7 +224,7 @@ While the **Global** policy applies to all users in your tenant, any standard In
 
 ### Multi-identity
 
-Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. "Corporate" audiences use work and school accounts, whereas consumer audiences, such as Microsoft 365 (Office) users, would use personal accounts. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../../developer/app-sdk/index.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
+Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. "Corporate" audiences use work and school accounts, whereas consumer audiences, such as Microsoft 365 (Office) users, would use personal accounts. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../../developer/app-sdk/index.md) to only apply app protection policies to the work or school account signed in to the app. If a personal account is signed in to the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
 
 App protection policies are supported for [Multiple managed accounts (MMA)](multiple-managed-accounts.md), which lets users add more than one work or school account within a supported app, with policy enforced independently per account.
 
@@ -249,7 +249,7 @@ The Personal Identification Number (PIN) is a passcode used to verify that the c
 Intune prompts for the user's app PIN when the user is about to access "corporate" data. In multi-identity apps such as Word, Excel, or PowerPoint, the user is prompted for their PIN when they try to open a "corporate" document or file. In single-identity apps, such as line-of-business apps managed using the [Intune App Wrapping Tool](../../developer/app-sdk/integration-methods.md), the PIN is prompted at launch, because the [Intune SDK](../../developer/app-sdk/index.md) knows the user's experience in the app is always "corporate."
 
 **PIN prompt, or corporate credential prompt, frequency**<br>
-The IT admin can define the Intune app protection policy setting **Recheck the access requirements after (minutes)** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen, or corporate credential prompt, is shown again. However, important details about PIN that affect how often the user is prompted are:
+The IT admin can define the Intune app protection policy setting **Recheck the access requirements after (minutes)** in the [Microsoft Intune admin center]. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen, or corporate credential prompt, is shown again. However, important details about PIN that affect how often the user is prompted are:
 
 - **The PIN is shared among apps of the same publisher to improve usability:**<br> On iOS/iPadOS, one app PIN is shared among all apps **of the same app publisher**. For example, all Microsoft apps share the same PIN. On Android, one app PIN is shared among all apps.
 - **The *Recheck the access requirements after (minutes)* behavior after a device reboot:**<br> A timer tracks the number of minutes of inactivity that determine when to show the Intune app PIN, or corporate credential prompt next. On iOS/iPadOS, the timer is unaffected by device reboot. Thus, device reboot has no effect on the number of minutes the user remains inactive from an iOS/iPadOS app with Intune PIN (or corporate credential) policy targeted. On Android, the timer is reset on device reboot. As such, Android apps with Intune PIN (or corporate credential) policy likely prompt for an app PIN, or corporate credential prompt, regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.
@@ -439,3 +439,7 @@ Health checks allow you to configure conditional launch capabilities. To do this
 [Available Android app protection policy settings with Microsoft Intune](./ref-settings-android.md)
 
 [Available iOS/iPadOS app protection policy settings with Microsoft Intune](./ref-settings-ios.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -36,7 +36,7 @@ Use the Endpoint security node to address common security challenges:
 
 The Endpoint security dashboard provides a consolidated view of your security posture.
 
-To access the dashboard, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Overview**.
+To access the dashboard, sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Overview**.
 
 The dashboard helps you quickly assess device security status and identify areas requiring attention. It displays information from multiple endpoint security areas including *Antivirus*, *Endpoint detection and response*, and *Defender for Endpoint*:
 
@@ -269,3 +269,7 @@ Configure:
 - [Compliance policies](./compliance/overview.md)
 - [Conditional Access integration](./conditional-access-integration/overview.md)
 - [Integration with Microsoft Defender for Endpoint](./microsoft-defender/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

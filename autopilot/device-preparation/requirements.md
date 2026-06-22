@@ -250,7 +250,7 @@ The following role-based access control (RBAC) permissions are required in a rol
 
 To create a custom role with these permissions for use with Windows Autopilot device preparation:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Tenant administration** in the left hand pane.
 
@@ -321,3 +321,7 @@ To create a custom role with these permissions for use with Windows Autopilot de
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/intune/fundamentals/role-based-access-control/overview).
 
 ---
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

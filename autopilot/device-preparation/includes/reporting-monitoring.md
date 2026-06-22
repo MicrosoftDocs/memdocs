@@ -10,7 +10,7 @@ device-preparation/tutorial/automatic/automatic-monitor.md
 
 Headings are driven by article context. -->
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -29,7 +29,7 @@ Headings are driven by article context. -->
       - **App installation** - Tracks Win32 and Microsoft Store apps.
     - **Serial number** - The hardware serial number of the device.
     - **Deployment time** - The amount of time that the deployment took during the out-of-box experience (OOBE) to complete. If the deployment isn't complete, it shows **In progress**.
-    - **UPN** - The user that signed into the device during OOBE and that the Windows Autopilot device preparation policy was assigned to.
+    - **UPN** - The user that signed in to the device during OOBE and that the Windows Autopilot device preparation policy was assigned to.
 
 1. Select an individual device under **Device name**. The **Device deployment details** pane opens. The **Device deployment details** pane contains three sections:
 
@@ -63,3 +63,7 @@ Headings are driven by article context. -->
 
 > [!Important]
 > Windows 365 devices that are reprovisioned after a failed deployment will not be deleted from Intune and will remain in the Autopilot device preparation report to allow for you to download the diagnostic logs when an error occurs. To clean up the stale records, use [Intune cleanup rules](/intune/governance/configure-cleanup-rules) or delete manually.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

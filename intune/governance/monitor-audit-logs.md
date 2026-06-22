@@ -28,7 +28,7 @@ Users with the following permissions can review audit logs:
 
 You can review audit logs in the monitoring group for each Intune workload, like compliance or Conditional Access.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Tenant administration** > **Audit logs**.
 3. A list of the logs is shown. Select a log from the list to see the activity details.
 4. If there are many logs, you can:
@@ -76,3 +76,7 @@ You can also use Graph API to get two years of audit events. For more informatio
 
 - [Send log data to storage, event hubs, or log analytics](integrate-azure-monitor.md)
 - [Review client app protection logs](../app-management/protection/troubleshoot-protection-logs.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

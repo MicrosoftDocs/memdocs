@@ -431,7 +431,7 @@ Some considerations:
 
   When you create groups in the cloud, like Intune or Microsoft 365, the groups are created in Microsoft Entra ID. You might not see the Microsoft Entra ID branding, but that's what you're using.
 
-  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](tenant-administration/add-groups.md).
+  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center]. For more information, go to [add groups to organize users and devices](tenant-administration/add-groups.md).
 
   - Moving existing distribution lists (DL) to Microsoft Entra ID might be more challenging. Once they DLs are in Microsoft Entra ID, these groups are available to Intune and Microsoft 365. For more information, go to:
 
@@ -613,3 +613,7 @@ The community-based [Intune forum](https://social.technet.microsoft.com/Forums/h
 - [Protection and configuration levels](protection-configuration-levels.md)
 - [Zero Trust deployment approach](zero-trust-deployment.md)
 - [Frontline worker device management in Microsoft Intune](../solutions/frontline-worker/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

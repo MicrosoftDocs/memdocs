@@ -17,7 +17,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 ## Download and install the connector software
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
@@ -132,3 +132,7 @@ To uninstall the Certificate Connector for Microsoft Intune from a Windows Serve
 - [SCEP certificate profiles](../../../device-configuration/certificates/scep-profiles.md)
 - [PKCS certificates](../../../device-configuration/certificates/pkcs-profiles.md)
 - [Imported PKCS certificates](../../../device-configuration/certificates/imported-pfx-profiles.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

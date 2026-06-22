@@ -36,7 +36,7 @@ Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructio
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
+Sign in to the [Microsoft Intune admin center] as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
 
 ## Set up Slack for EMM on iOS devices
 
@@ -46,7 +46,7 @@ Add the iOS/iPadOS app Slack for EMM to your Intune tenant and create an app con
 
 Add Slack for EMM as a managed iOS/iPadOS app in Intune and assign your Slack users. Apps are platform-specific, so you need to add a separate Intune app for your Slack users on Android devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
+1. In [Microsoft Intune admin center], select **Apps** > **All Apps** > **Create**.
 
 2. Under **App type**, choose **iOS store app** and click **Select**.
 
@@ -65,7 +65,7 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 > [!NOTE]
 > App configuration policies for managed devices are platform-specific, so you need to add a separate policy for your Slack users on Android devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
+1. In [Microsoft Intune admin center], select **Apps** > **Configuration** > **Create** > **Managed devices**.
 
 2. For **Name**, enter "Slack app configuration policy test".
 
@@ -94,7 +94,7 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for iOS/iPadOS devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on Android devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance**, and then select **Create Policy**.
+1. In [Microsoft Intune admin center], select **Devices** > **Compliance**, and then select **Create Policy**.
 
 2. Select **iOS/iPadOS** as the **Platform**. Then, click **Create**.
 
@@ -126,7 +126,7 @@ Add the Slack Managed Google Play app to your Intune tenant and create an app co
 
 Add Slack as a Managed Google Play app in Intune and assign your Slack users. Apps are platform-specific, so you need to add a separate Intune app for your Slack users on iOS/iPadOS devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
+1. In [Microsoft Intune admin center], select **Apps** > **All Apps** > **Create**.
 
 2. Under **App type**, choose **Managed Google Play app** and click **Select**.
 
@@ -146,7 +146,7 @@ Add Slack as a Managed Google Play app in Intune and assign your Slack users. Ap
 
 Add an app configuration policy for Slack. App configuration policies for managed devices are platform-specific, so you need to add a separate policy for your Slack users on iOS/iPadOS devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Configuration** > **Create** > **Managed devices**.
+1. In [Microsoft Intune admin center], select **Apps** > **Configuration** > **Create** > **Managed devices**.
 
 2. For **Name**, enter "Slack app configuration policy test".
 
@@ -177,7 +177,7 @@ Add an app configuration policy for Slack. App configuration policies for manage
 
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, we'll create a device compliance policy for Android devices. Compliance policies are platform-specific, so you need to create a separate policy for your Slack users on iOS/iPadOS devices.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance** > **Create policy**.
+1. In [Microsoft Intune admin center], select **Devices** > **Compliance** > **Create policy**.
 
 2. Select **Android Enterprise** as the **Platform** and select **Personally-owned work profile** as the **Profile type**. Then, click **Create**.
 
@@ -213,3 +213,7 @@ In this tutorial:
 - You created Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 
 To learn more about app configuration policies, see [App configuration policies for Microsoft Intune](./overview.md). To learn more about device compliance policies, see [Set rules on devices to allow access to resources in your organization using Intune](../../device-security/compliance/overview.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
