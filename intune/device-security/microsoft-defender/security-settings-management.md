@@ -52,7 +52,6 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 The Defender for Endpoint security settings management scenario is supported in the following government tenants:
 
 - US Government Community Cloud (GCC)
-- US Government Community High (GCC High)
 - Department of Defense (DoD)
 
 For more information, see:
