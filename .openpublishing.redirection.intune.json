@@ -509,6 +509,11 @@
       "source_path": "intune/solutions/cloud-native-endpoints/cloud-configuration.md",
       "redirect_url": "/intune/solutions/cloud-native-endpoints/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-configuration/templates/ref-education-settings-windows.md",
+      "redirect_url": "/intune/device-configuration/templates/configure-education-settings",
+      "redirect_document_id": false
     }
   ]
 }
