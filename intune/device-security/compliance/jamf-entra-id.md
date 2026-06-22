@@ -154,7 +154,7 @@ Use the following to create a group, containing users of Jamf managed devices, w
 
 ## Connect Jamf Pro to Intune
 
-Jamf pro utilizes connectors in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), found at > *Tenant Administration* > *Connectors and tokens*. The process to connect Jamf Pro to Intune starts in the Jamf Pro administrative portal and utilizes a wizard that prompts for next steps.
+Jamf pro utilizes connectors in the [Microsoft Intune admin center], found at > *Tenant Administration* > *Connectors and tokens*. The process to connect Jamf Pro to Intune starts in the Jamf Pro administrative portal and utilizes a wizard that prompts for next steps.
 
 1. Sign in to your Jamf Admin portal, example: [https://tenantname.jamfcloud.com](https://tenantname.jamfcloud.com).
 1. Proceed to *Settings > Global > Device Compliance*.
@@ -172,7 +172,7 @@ Jamf pro utilizes connectors in the [Microsoft Intune admin center](https://go.m
 
    :::image type="content" source="./media/jamf-entra-id/jamf-create-connector-3a.png" alt-text="Image of the Jamf Configure Compliance Partner Open Microsoft Endpoint Manager button." lightbox="./media/jamf-entra-id/jamf-create-connector-3a.png":::
 
-1. A new browser tab opens the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. A new browser tab opens the [Microsoft Intune admin center].
 1. Proceed to *Tenant administration > Connectors and tokens > Partner compliance management*.
 1. At the top of the *Partner compliance management* page, select **Add compliance partner**.
 1. In the *Create Compliance Partner* wizard:
@@ -241,3 +241,7 @@ Second, On the affected device:
 
 - [Apply compliance policies to Jamf-managed devices](../conditional-access-integration/assign-jamf-policies.md)
 - [Data Jamf sends to Intune](../../privacy/data-sharing/ref-jamf-to-intune.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -35,7 +35,7 @@ There are two types of encryption, full disk or used space-only. Configuration o
 
 To make sure both the desired BitLocker encryption algorithm and the encryption are set before automatic encryption occurs for Windows Autopilot devices, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Endpoint security** in the left hand pane.
 
@@ -100,3 +100,7 @@ To make sure both the desired BitLocker encryption algorithm and the encryption 
 
 - [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview).
 - [Manage BitLocker policy for Windows devices with Intune](/intune/device-configuration/endpoint-security/encrypt-bitlocker-windows).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

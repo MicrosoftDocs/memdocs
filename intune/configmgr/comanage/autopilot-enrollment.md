@@ -140,7 +140,7 @@ Use these recommendations for a more successful deployment:
 
 Use the following process to configure the co-management policy in Intune:
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Go to the [Microsoft Intune admin center].
 
 1. Select the **Devices** menu, select **Enroll devices**, and then select **Windows enrollment**.
 
@@ -274,3 +274,7 @@ The enrollment status page tracks the task sequence as an app during the **Devic
 [Windows Autopilot scenarios and tutorials](/autopilot/tutorial/autopilot-scenarios)
 
 [Windows Autopilot user-driven mode](/autopilot/user-driven)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

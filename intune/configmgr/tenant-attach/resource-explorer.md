@@ -35,7 +35,7 @@ The user account needs the following permissions:
 
 ## <a name="bkmk_launch"></a> Launch resource explorer
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Resource explorer** to view hardware inventory.
@@ -64,3 +64,7 @@ To close resource explorer and return to the device information, use the `X` ico
 ## Next steps
 
 [Troubleshoot resource explorer](troubleshoot-resource-explorer.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -61,7 +61,7 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 
 ## Create a device limit restriction
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Windows**, **macOS**, **Apple mobile**, or **Android** tab.  
 3. Select **Device limit restriction**.
@@ -109,7 +109,6 @@ BYOD users who reach their device limit receive a message during enrollment expl
 
 ![Example image of device limit notification which reads, "Couldn't add your device. You have added the maximum number of devices allowed by your IT support. You must remove a device before you can add a new one.](./media/restrictions/enrollment-restrictions-ios-set-limit-notification.png)
 
+<!--links-->
 
-
-
-
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

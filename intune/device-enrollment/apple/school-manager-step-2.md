@@ -13,7 +13,7 @@ After you get your Apple token, you can create an enrollment policy for school d
 
 ## Create a policy
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In the [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Under **Bulk Enrollment Methods**, choose **Enrollment program tokens**.
@@ -84,3 +84,6 @@ This series of articles describes how to set up Microsoft Intune for devices pur
 1. 🡺 Create an Apple enrollment policy (*You are here*).
 1. [Sync and distribute devices](school-manager-step-3.md).
 
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

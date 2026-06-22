@@ -17,7 +17,7 @@ The Microsoft Intune management agent is necessary to be installed on managed ma
 
 ## How is the agent installed?
 
- The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
+ The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in [Microsoft Intune admin center]. The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
 
 ## What does the agent do?
 
@@ -54,3 +54,7 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 - The app you've created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](./assign-groups.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

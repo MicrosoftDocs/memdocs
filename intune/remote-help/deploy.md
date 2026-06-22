@@ -29,7 +29,7 @@ When planning your deployment of Remote Help, consider the following best practi
 
 - End-user guidance: Let your users know that a new remote support tool is available. Instruct them on how a support session is initiated – for example, "When you contact the IT helpdesk, they might ask you to open the Remote Help app and share a code, or you might receive a popup notification to allow screen sharing." Reassure them that the tool is secure and only authorized IT can connect, and that they must allow any screen sharing or control.  
 
-- Security monitoring: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs show who is signing into Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when a staff member leaves the support team, they're removed from the Remote Help roles to revoke their ability to use the tool.  
+- Security monitoring: Keep an eye on the usage to detect any anomalous behavior. For instance, Intune's audit logs and Entra ID sign-in logs show who is signing in to Remote Help. Unusual times or unknown helpers should be investigated. Also ensure that when a staff member leaves the support team, they're removed from the Remote Help roles to revoke their ability to use the tool.  
 
 - Updates and new features: Remote Help is evolving. Microsoft might roll out new features (for example, the ability to support more platforms or an improved web helper dashboard). Stay updated via the Intune release notes or tech community blogs. Knowing these updates can help you refine your support process.  
 
@@ -40,7 +40,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 ### Task 1: Enable Remote Help
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote Help**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Tenant administration** > **Remote Help**.
 
 1. On the **Settings** tab:  
    1. Set **Enable Remote Help** to **Enabled** to allow the use of Remote Help. By default, this setting is disabled.  
@@ -213,7 +213,7 @@ You can configure these settings using either the Microsoft Intune admin center 
 
 #### :::image type="icon" source="../media/icons/16/intune.svg"::: Intune admin center
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Manage devices** > **Configuration**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **Manage devices** > **Configuration**.
 1. Select **Create** > **macOS** > **Settings catalog**.  
 1. Enter a name and description for the profile. For example, enter *macOS Remote Help privacy permissions*. Then select **Next**.  
 1. Select **Add settings**. In the settings picker, go to **Privacy** > **Privacy Preferences Policy Control** > **Services**.  
@@ -489,3 +489,7 @@ To apply conditional access policies to Remote Help, follow these steps:
 
 > [!div class="nextstepaction"]
 > [Next: Using Remote Help >](start-session.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

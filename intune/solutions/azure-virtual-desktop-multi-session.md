@@ -89,7 +89,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 ### To configure policies
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New Policy**.
+1. Sign in to the [Microsoft Intune admin center] and choose **Devices** > **By platform** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New Policy**.
 2. For **Platform**, select **Windows 10 and later**.
 3. For **Profile type**, select **Settings catalog**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
 4. Select **Create**.
@@ -238,3 +238,7 @@ Configuration policy reports as Not applicable|Some policies aren't applicable t
 ## Next steps
 
 [Learn more about Azure Virtual Desktops](/azure/virtual-desktop/).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

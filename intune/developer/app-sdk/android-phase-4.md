@@ -307,7 +307,7 @@ The SDK may attempt to enroll the app for the given account in the MAM service; 
 The retry period will typically be 12-24 hours.
 The SDK provides the status of enrollment attempts asynchronously via notifications.
 
-2. The best time to call `registerAccountForMAM` is after the user has signed into the app and is successfully authenticated using MSAL.
+2. The best time to call `registerAccountForMAM` is after the user has signed in to the app and is successfully authenticated using MSAL.
 The account's Microsoft Entra user ID, tenant ID and authority are returned from the MSAL authentication call as part of the [`IAccount`] related to the [`IAuthenticationResult`].
     - The account comes from the `IAuthenticationResult.getAccount()` method and contains the pertinent account information.
     - The AAD ID (also known as Microsoft Entra ID or OID) comes from the `IAccount.getId()` method.

@@ -22,7 +22,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 ## Before you begin
 
-- In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as:
+- In the [Microsoft Intune admin center], sign in as:
 
   - The **Intune administrator**
 
@@ -42,7 +42,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 After you [import your GPOs](./import-group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows devices. After you review them, you can migrate the settings to a Settings Catalog policy.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
     :::image type="content" source="./media/migrate-group-policy/select-migrate-checkbox-imported-gpo.png" alt-text="Screenshot that shows how to select the Migrate checkbox next to your imported GPO in Microsoft Intune." lightbox="./media/migrate-group-policy/select-migrate-checkbox-imported-gpo.png":::
@@ -151,3 +151,7 @@ When you create the Settings Catalog profile, any settings that can be included 
 
 - [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](./import-group-policy-analytics.md)
 - [Use the settings catalog to configure settings on Windows and macOS devices](./settings-catalog/index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -1,8 +1,6 @@
 ---
 title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 05/26/2026
 ms.topic: reference
 params:
@@ -341,7 +339,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Location**: Contols the location services on the device. Your options:
+- **Location**: Controls the location services on the device. Your options:
 
   - **Device default** - Intune doesn't change or update this setting. By default, the OS allows end users to turn location services on or off.
   - **Location enabled** - Requires location services to be on and prevents end users from turning them off.

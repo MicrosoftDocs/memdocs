@@ -196,7 +196,7 @@ Yes, the Managed Apps report provides a report of apps on a specific device that
 
 ## Apps available in the Enterprise App Catalog
 
-There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](./add-enterprise-catalog-app.md#add-a-windows-catalog-app-win32-to-intune).
+There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center], see [Add a Windows catalog app (Win32) to Intune](./add-enterprise-catalog-app.md#add-a-windows-catalog-app-win32-to-intune).
 
 More apps are available on an ongoing basis in the Enterprise App Catalog.
 
@@ -1146,3 +1146,7 @@ The following table of Enterprise Apps is available within Intune:
 - [Add an Enterprise App Catalog app to Microsoft Intune](./add-enterprise-catalog-app.md)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -41,7 +41,7 @@ The steps to allow Win32 apps to run on a Windows device in S mode are the follo
 
 To create a Windows S mode supplemental policy, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **S mode supplemental policies** > **Create policy**.
 3. Before adding the **Policy file**, you must create and sign it. For more information, see:
     - [Create a WDAC policy using PowerShell tools and convert it to a binary format](/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s)
@@ -86,3 +86,7 @@ Reporting values that are shown in the Microsoft Intune admin center for S mode 
 - For more information, see [Win32 apps on s mode](/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s).
 - For more information about adding apps to Intune, see [Add apps to Microsoft Intune](./index.md).
 - For more information about Win32 apps, see [Intune Win32 app management](./win32.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

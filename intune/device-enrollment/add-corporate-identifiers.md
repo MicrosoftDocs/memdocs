@@ -180,7 +180,7 @@ You can upload a CSV file of corporate identifiers, or manually enter the corpor
 
 Upload the CSV file you created in [Step 1: Create CSV file](#step-1-create-csv-file) to add corporate identifiers.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Corporate device identifiers** tab.
 1. Choose **Add** > **Upload CSV file**.
@@ -297,3 +297,7 @@ Get-CimInstance -ClassName Win32_ComputerSystem | ForEach-Object {$_.Manufacture
 ```
 
  For more information about locating a serial number, see [Find Surface serial number](https://support.microsoft.com/surface/find-the-serial-number-on-your-microsoft-or-surface-device-6c0abc0c-2b45-247d-f959-70e504e55fa5).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -39,7 +39,7 @@ An Intune device compliance policy specifies the rules and settings that devices
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Policy and Profile manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
@@ -48,7 +48,7 @@ An Intune device compliance policy specifies the rules and settings that devices
 
 Create a device compliance policy that requires your Android users to enter a password of a specific length.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Compliance**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **Compliance**.
 1. On the **Policies** tab, select **Create policy**.
 1. For **Platform**, select **Android Enterprise**.
 
@@ -91,3 +91,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 7 - Send notifications to noncompliant devices](./quickstart-noncompliance-notification.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

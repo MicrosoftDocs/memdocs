@@ -23,7 +23,7 @@ When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a n
 
 ## App troubleshooting details
 
-You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details on the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](/troubleshoot/mem/intune/troubleshoot-app-install#app-troubleshooting-details).
+You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Intune admin center] provides these and other details on the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](/troubleshoot/mem/intune/troubleshoot-app-install#app-troubleshooting-details).
 
 ## Troubleshooting app issues by using logs
 
@@ -111,3 +111,7 @@ For more information about troubleshooting Win32 apps, see [Win32 app installati
 ## Next steps
 
 - [Troubleshoot app installation issues](/troubleshoot/mem/intune/app-management/troubleshoot-win32-app-install)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

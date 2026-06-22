@@ -43,7 +43,7 @@ Settings insight is informational. You remain responsible for evaluating each se
 
 ## View insights during baseline configuration
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
@@ -128,3 +128,7 @@ Settings insight provides supplemental peer benchmarking information during base
 
 - [Security baselines overview](../device-security/security-baselines/overview.md)
 - [Create and manage security baseline profiles in Microsoft Intune](../device-security/security-baselines/configure-baselines.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

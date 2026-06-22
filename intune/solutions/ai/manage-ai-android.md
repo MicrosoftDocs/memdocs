@@ -122,7 +122,7 @@ In this step, implement your app strategy to block or allow AI apps.
 
 With a Block strategy, no apps in the Google Play Store can be downloaded unless explicitly allowed. Use the following steps to make sure the app you want to block isn't already deployed to your devices.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Android apps**.
+1. In the [Microsoft Intune admin center], go to **Apps > Android > Android apps**.
 2. Select the app name > **Properties**.
 3. Make sure **Assignments** is not set to **Required**, not set to **Available for enrolled devices**, or not set to **Available with or without enrollment**.
 
@@ -136,7 +136,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
     If you use [Copilot](../../copilot/index.md), you can ask Copilot to check this setting for you. You can also create a new device restrictions profile to configure this setting.
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **New Policy**
+    1. In the [Microsoft Intune admin center], go to **Devices** > **Configuration** > **Create** > **New Policy**
 
     2. Configure the following properties and select **Create**:
 
@@ -151,7 +151,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
     When they're added to Intune, you can block the apps. Then they're considered managed apps.
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Create > Managed Google Play app**.
+    1. In the [Microsoft Intune admin center], go to **Apps > Android > Create > Managed Google Play app**.
     2. Select the AI app you want to block > **Sync**.
     3. In **Apps > Android > Android apps**, make sure the app is shown in the list. The sync might take a few minutes.
 
@@ -159,7 +159,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
     If the apps are already installed on devices, assigning them for **Uninstall** removes them from the devices.
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Android apps**.
+    1. In the [Microsoft Intune admin center], go to **Apps > Android > Android apps**.
     2. Select the AI app you want to uninstall > **Properties**.
     3. Select **Assignments** > **Edit**.
     4. In **Uninstall**, add a group, users, or devices.
@@ -172,7 +172,7 @@ With an Allow strategy, all apps in the Google Play Store can be downloaded.
 
 By default, no apps in the Google Play Store can be downloaded unless explicitly allowed. Use the following steps to make sure the app you want to block isn't already deployed to your devices.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Android apps**.
+1. In the [Microsoft Intune admin center], go to **Apps > Android > Android apps**.
 2. Select the AI app > **Properties**.
 3. Make sure **Assignments** is not set to **Required**, not set to **Available for enrolled devices**, or not set to **Available with or without enrollment**.
 
@@ -208,7 +208,7 @@ For the steps, see:
 
 Use the following steps to create an app configuration policy that configures your web browser app to block access to the AI websites you enter.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Configuration > Create > Managed devices**.
+1. In the [Microsoft Intune admin center], go to **Apps > Configuration > Create > Managed devices**.
 2. In **Basics**, configure the following properties:
 
     - **Name**: Enter a name for the policy, like **Block AI Websites in Edge**.
@@ -257,7 +257,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
 This setting blocks AI features from accessing on-screen content, but also disables screenshots device-wide.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
+1. In the [Microsoft Intune admin center], go to **Devices > Configuration > Create > New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
@@ -286,7 +286,7 @@ This setting blocks AI features from accessing on-screen content, but also disab
 
 For more comprehensive protection, you can also restrict screenshot abilities and other functionalities using the following settings:
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
+1. In the [Microsoft Intune admin center], go to **Devices > Configuration > Create > New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
@@ -311,7 +311,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
 9. Create a device restrictions profile to block specific AI apps. This setting isn't available in the settings catalog. So, that's why you create a separate device restrictions profile.
 
-    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
+    1. In the [Microsoft Intune admin center], go to **Devices > Configuration > Create > New policy**.
     2. Enter the following properties:
 
         - **Platform**: Select **Android Enterprise**.
@@ -333,7 +333,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
 To prevent sensitive data from being used by AI apps in the personal profile, you can configure the following settings. These settings help you manage data flow from the work profile to the personal profile.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
+1. In the [Microsoft Intune admin center], go to **Devices > Configuration > Create > New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
@@ -365,7 +365,7 @@ Gemini Nano is Google's on-device foundation model and processes AI interactions
 
 Use the following steps to disable the AICore system app.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps > Android > Create**.
+1. In the [Microsoft Intune admin center], select **Apps > Android > Create**.
 2. In **Select app type**, select **Other > Android Enterprise system app**, and then choose **Select**.
 3. In **App information**, configure the following properties, and then select **Next**:
 
@@ -401,7 +401,7 @@ Use the following steps to add, deploy, and configure the OEMConfig app and its 
 
 ### Step 1 - Add the OEMConfig app
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Create > Managed Google Play app > Select**.
+1. In the [Microsoft Intune admin center], go to **Apps > Android > Create > Managed Google Play app > Select**.
 2. Select the OEMConfig app you want to configure.
 3. Choose **Select** > **Sync**.
 
@@ -409,7 +409,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 
 ### Step 2 - Deploy the OEMConfig app
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps > Android > Android apps**.
+1. In the [Microsoft Intune admin center], go to **Apps > Android > Android apps**.
 2. Select the OEMConfig app you added.
 3. Select **Properties** > **Assignments** > **Edit**.
 4. Add your group and/or users to the following **Assignments**:
@@ -422,7 +422,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 
 ### Step 3 - Configure the OEMConfig app
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Manage devices > Configuration > Create > New policy**.
+1. In the [Microsoft Intune admin center], go to **Devices > Manage devices > Configuration > Create > New policy**.
 2. Enter the following properties:
 
    - **Platform**: Select **Android Enterprise**.
@@ -449,3 +449,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 - [Assign apps to groups in Microsoft Intune](../../app-management/deployment/assign-groups.md)
 - [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../device-configuration/templates/configure-oemconfig-android.md)
 - [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

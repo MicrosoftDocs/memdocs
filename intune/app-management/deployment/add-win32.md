@@ -37,7 +37,7 @@ Much like a standard line-of-business (LOB) app, you can add a Win32 app to Micr
 
 The following steps help you add a Windows app to Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **Windows** platform, and then select **Windows app (Win32)**.
 
@@ -260,7 +260,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-The version of your Win32 app is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
+The version of your Win32 app is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Intune admin center], select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Dependencies** page.
 
@@ -371,3 +371,7 @@ At this point, you've completed steps to add a Win32 app to Intune. For informat
 
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

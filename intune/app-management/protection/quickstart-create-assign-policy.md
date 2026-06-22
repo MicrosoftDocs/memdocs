@@ -31,7 +31,7 @@ In this article, you learn how to create and assign an app protection policy in 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Application Manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#application-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
@@ -53,7 +53,7 @@ In this article, you learn how to create and assign an app protection policy in 
 
 Use the following steps to create an app protection policy:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Windows** > **Create**.
+1. Sign in to the [Microsoft Intune admin center] and select **Apps** > **Windows** > **Create**.
 2. Enter the following details:
 
     - **Name**: *Windows content protection*
@@ -83,3 +83,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 10 - Create and assign a custom role](../../fundamentals/role-based-access-control/quickstart-custom-role.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

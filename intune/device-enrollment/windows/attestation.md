@@ -67,7 +67,7 @@ The report shows information about the device, its TPM, and whether the device s
 
 To access this report:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Device attestation status (preview)** under the **Device Management** section.
 3. Filter by **Attestation status** or **Ownership type** and select **Generate report**.
 
@@ -186,3 +186,7 @@ Additional links:
 - [TrustedPlatformModule](/powershell/module/trustedplatformmodule/?view=windowsserver2022-ps&viewFallbackFrom=win10-ps&preserve-view=true)
 
 - [Enable TPM 2.0 on your PC](https://support.microsoft.com/en-gb/windows/enable-tpm-2-0-on-your-pc-1fd5a332-360d-4f46-a1e7-ae6b0c90645c)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -113,7 +113,7 @@ If a capability isn't included in your current licenses, you can start a trial t
 
 ### Start a trial
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global or Billing administrator.  
+1. Sign in to the [Microsoft Intune admin center] as a Global or Billing administrator.  
 1. Go to **Tenant administration** > **Intune add-ons**.  
 1. Select the **All add-ons** tab and find the capability you want to try.  
 1. In the **Try or Buy** column, select **View details**, then choose **Go to Microsoft 365 admin center**.  
@@ -133,3 +133,7 @@ To try Microsoft Intune itself (rather than an advanced capability), see [Sign U
 - [Sign up or sign in to Microsoft Intune](account-sign-up.md)
 - [Sign Up for Microsoft Intune Free Trial Setup Guide](free-trial-sign-up.md)
 - [Assign Microsoft Intune licenses](assign-licenses.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

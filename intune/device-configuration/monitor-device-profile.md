@@ -27,7 +27,7 @@ This feature applies to:
 
 ## Prerequisites
 
-At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with one of the following roles, depending on your task:
+At a minimum, sign in to the [Microsoft Intune admin center] with one of the following roles, depending on your task:
 
 - **Read Only Operator**: This role can view existing policies and view reports. It can't make any changes.
 - **Policy and Profile manager**: This role can view existing policies and reports, and can make any changes.
@@ -36,7 +36,7 @@ For information on the built-in roles in Intune, and what they can do, go to [Ro
 
 ## View and filter existing policies
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Policies** tab. All of your policies are shown. You also see the platform, the type of policy, and more properties.
 
     :::image type="content" source="./media/monitor-device-profile/configuration-policy-list.png" alt-text="Screenshot that shows all the device configuration profiles, their profile type, and the last modified date in Microsoft Intune and Intune admin center." lightbox="./media/monitor-device-profile/configuration-policy-list.png":::
@@ -199,3 +199,7 @@ With your DFCI profile settings, you might see the following states:
 
 - [Common questions, issues, and resolutions with device configuration policies](./troubleshoot-device-profiles.md)
 - [Troubleshoot device configuration policies in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -30,7 +30,7 @@ This article describes how to create, renew, and delete enrollment program token
 
 The public key certificate is needed to request a trust-relationship certificate from Apple Business.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select **Add**.
@@ -98,7 +98,7 @@ Renew your enrollment program token yearly. The Intune admin center shows the to
    > [!NOTE]
    > Don't select **Download Server Token** unless you intend to renew the token. Doing so invalidates the token currently in use by Intune. If you already downloaded the token, complete the remaining steps to finish the renewal.
 
-1. After downloading the token, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. After downloading the token, go to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
@@ -121,7 +121,7 @@ You can delete an enrollment program token from Intune as long as:
 
 To delete an enrollment program token:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select the token, and then select **Devices**.
@@ -134,3 +134,7 @@ To delete an enrollment program token:
 
 - [Set up an enrollment policy for macOS](setup-automated-macos.md)
 - [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

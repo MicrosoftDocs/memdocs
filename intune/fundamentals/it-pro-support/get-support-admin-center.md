@@ -42,7 +42,7 @@ To access help and support in the admin center, you have some options:
 
 ### Use Support Assistant to resolve issues
 
-The Support Assistant uses AI to enhance your help and support experience, ensuring more efficient issue resolution. The Support Assistant is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic.
+The Support Assistant uses AI to enhance your help and support experience, ensuring more efficient issue resolution. The Support Assistant is available in the [Microsoft Intune admin center] by selecting **Troubleshoot + support** > **Help and Support**, or by selecting the question mark near your profile pic.
 
 > [!NOTE]
 > You can enable and disable the Support Assistant by choosing to opt in and opt out at any time.
@@ -188,3 +188,7 @@ Selecting either a severity **A** or **Critical** issue limits you to a phone su
 - [Use the troubleshooting portal to help users at your company](../../fundamentals/it-pro-support/help-desk-operators.md)
 - [Microsoft Intune troubleshooting documentation](/troubleshoot/mem/intune/welcome-intune)
 - [Volume licensing](https://go.microsoft.com/fwlink/p/?LinkID=282015)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

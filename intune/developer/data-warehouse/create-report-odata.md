@@ -41,7 +41,7 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 > [!Note]
 > You need permission to **Reports** in Intune. For more information, see [Authorization](ref-api-endpoints.md#authorization).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
 3. Copy the custom feed URL. For example:
 `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
@@ -112,3 +112,7 @@ You now have an interactive filter that can be used to toggle between company ow
 
 - Learn more about [creating and managing relationships](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) in the Power BI Desktop in the Power BI documentation.
 - Consult the [Intune Data Warehouse Model](ref-data-model.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

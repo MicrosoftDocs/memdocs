@@ -29,7 +29,7 @@ Before completing the tasks in this article:
 
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. After creating a token, sync Intune with Apple to see your managed devices in the admin center.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select a token from the list.
@@ -81,3 +81,7 @@ Distribute prepared Mac devices throughout your organization.
 
 - To renew or delete your enrollment program token, see [Set up a macOS ADE token](setup-macos-token.md).
 - Use [Remote Device Actions in Microsoft Intune](../../device-management/actions/index.md) to remotely manage enrolled Macs.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

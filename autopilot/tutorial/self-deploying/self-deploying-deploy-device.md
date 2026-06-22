@@ -42,7 +42,7 @@ To start the Windows Autopilot deployment process on the device, acquire a devic
 
 5. Once **Device setup** and the device ESP process completes, the Windows Autopilot self-deploying deployment is complete, and the Windows sign-on screen appears.
 
-6. At this point, the end-user can sign into the device using their Microsoft Entra credentials. When the user signs in, the user ESP and **Account setup** phase runs. Once user ESP and **Account setup** completes, the provisioning process completes, the desktop appears, and the end-user can start using the device.
+6. At this point, the end-user can sign in to the device using their Microsoft Entra credentials. When the user signs in, the user ESP and **Account setup** phase runs. Once user ESP and **Account setup** completes, the provisioning process completes, the desktop appears, and the end-user can start using the device.
 
 ## Deployment tips
 

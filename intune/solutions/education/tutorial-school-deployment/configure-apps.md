@@ -14,7 +14,7 @@ With Intune, school IT administrators have access to diverse applications to hel
 
 Applications can be assigned to groups:
 
-- If you target apps to a **group of users**, the apps will be installed on any managed devices that the users sign into.
+- If you target apps to a **group of users**, the apps will be installed on any managed devices that the users sign in to.
 - If you target apps to a **group of devices**, the apps will be installed on those devices and available to any user who signs in.
 
 ## Add apps
@@ -44,7 +44,7 @@ The addition of desktop applications to Intune should be carried out by repackag
 
 To create Microsoft Store apps in Intune:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Create**.
+1. In the [Microsoft Intune admin center], select **Apps** > **All Apps** > **Create**.
 1. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 1. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store. The app creation experience has three steps:
     - App information
@@ -62,7 +62,7 @@ For more information, see [Add Microsoft Store apps](../../../app-management/dep
 
 To create web applications in Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps** > **All Apps** > **Create**.
 1. In the **Select app type** pane, under the **Other** types, select **Windows web link**.
 1. Click **Select**. The **Add app** steps are displayed.
@@ -133,7 +133,7 @@ For more information, see [Configure VPP tokens](../../../app-management/deploym
 
 To add apps to iOS devices without using VPP in Intune for Education:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps** > **All Apps** > **Create**.
 1. In the **Select app type** pane, select **iOS store app**.
 1. Click **Select**. The **Add app** steps are displayed.
@@ -150,7 +150,7 @@ To add apps to iOS devices without using VPP in Intune for Education:
 
 To create web applications:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps** > **All Apps** > **Create**.
 1. In the **Select app type** pane, under the **Other** types, select **iOS/iPadOS web clip**.
 1. Click **Select**. The **Add app** steps are displayed.
@@ -210,7 +210,7 @@ Intune also supports deploying **[iOS/iPadOS LOB apps](../../../app-management/d
 
 To assign applications to a group of users or devices:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps** > **All Apps**.
 1. In the **Apps** pane, select the app you want to assign.
 1. In the **Manage** section of the menu, select **Properties**.
@@ -236,7 +236,7 @@ To assign applications to a group of users or devices:
 
 To assign applications to a group of users or devices:
 
-1. 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. 1. Sign in to the [Microsoft Intune admin center].
 1. Select **Apps** > **All Apps**.
 1. In the **Apps** pane, select the app you want to assign.
 1. In the **Manage** section of the menu, select **Properties**.
@@ -269,3 +269,7 @@ With the applications configured, you can now deploy students' and teachers' dev
 
 [INT-1]: /intune-education/express-configuration-intune-edu
 [INT-2]: /intune-education/add-web-apps-edu
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -113,7 +113,7 @@ The following guide makes general suggestions on which Windows Autopilot scenari
 - Windows Autopilot self-deploying mode only supports Microsoft Entra join. It doesn't support Microsoft Entra hybrid join.
 - The device is intended to be used as a kiosk device or by multiple users.
 - If the device isn't going to be assigned to a user.
-- The deployment needs to be automated as much as follow with no user interaction during the deployment process. For example, the end-user having to sign into Microsoft Entra ID during the deployment process.
+- The deployment needs to be automated as much as follow with no user interaction during the deployment process. For example, the end-user having to sign in to Microsoft Entra ID during the deployment process.
 - Windows Autopilot self-deploying mode uses [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) for authentication during the technician flow so only devices that have a supported TPM are supported. For this reason, virtual machines (VMs) aren't supported even when the VM has a virtual TPM.
 
 ### Existing devices

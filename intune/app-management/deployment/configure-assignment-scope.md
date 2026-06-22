@@ -42,7 +42,7 @@ As a result, we don't recommend assigning apps to mixed groups.
 
 To assign an app to groups by using the include and exclude assignment:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps**. The list of apps that has been added to Intune is shown.
 3. Select the app that you want to assign. A dashboard displays information about the app.
 4. Select **Properties** under the **Manage** section.
@@ -76,3 +76,7 @@ To edit assignments, in the app **Assignments** pane, select the row that contai
 
 - For more information about including and excluding group assignments for apps, see the [Microsoft Intune blog](https://aka.ms/new_app_assignment_process).
 - Learn how to [monitor app information and assignments](../monitor-assignments.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

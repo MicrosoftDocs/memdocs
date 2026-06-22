@@ -156,7 +156,7 @@ Add variables to the message to create a personalized email with dynamic content
 
 ### To create the template
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.
 1. On **Basics**, enter a friendly name for the template to help you identify it. Then select **Next**.
 
@@ -215,7 +215,7 @@ You can view notifications that you create in *Compliance policies* > *Notificat
 
 You can add optional actions when you create a compliance policy, or update an existing policy. The default mark-as-noncompliant action is added automatically and can't be removed, but you can adjust its schedule.  
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Go to **Devices** > **Compliance**.
 1. Select a policy, and then select **Properties**.
@@ -252,3 +252,7 @@ You can add optional actions when you create a compliance policy, or update an e
 ## Next steps
 
 [Monitor your policies](./monitor-policy.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

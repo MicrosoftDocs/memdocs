@@ -25,7 +25,7 @@ This article applies to:
 
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. After creating a token, sync Intune with Apple to see your managed devices in the Microsoft Intune admin center.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select a token from the list.
@@ -63,7 +63,7 @@ Complete these steps to re-enroll a device that already went through automated d
    > [!NOTE]
    > Don't select **Download Token** unless you intend to renew the token. Doing so invalidates the token currently in use by Intune. If you already downloaded the token, complete the remaining steps to finish the renewal.
 
-1. After downloading the token, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. After downloading the token, go to the [Microsoft Intune admin center].
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
@@ -91,7 +91,7 @@ You can delete an enrollment program token from Intune as long as:
 
 To delete an enrollment program token:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 1. Select the token, and then select **Devices**.
@@ -127,3 +127,7 @@ You can resolve this error by trying to download the management profile again wi
 For information about the end user experience, see:
 - [ADE end user tasks](guide-ios-ipados.md#ade-end-user-tasks)
 - [Enroll your iOS/iPadOS device](../../user-help/enrollment/enroll-automated-ios.md)  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

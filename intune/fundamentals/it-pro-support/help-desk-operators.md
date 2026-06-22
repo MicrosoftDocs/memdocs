@@ -42,7 +42,7 @@ The **Troubleshooting** pane provides the following tabs for a selected user and
 
 In the **Troubleshooting** pane provides specific details for each Intune end-user. User information can help you understand the current state of users and their devices.
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 2. Select **Troubleshooting + support** > **Troubleshoot**.
 3. Find and select a **User** by entering a display name or email.
 4. If the user has multiple devices, filter by **Device**.
@@ -182,3 +182,7 @@ You can learn more about Role-based administration control (RBAC) to define role
 Learn about any known issues in Microsoft Intune. For more information, see [Known issues in Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess).
 
 Learn how to create a support ticket a get help when you need it. [Get support](./get-support-admin-center.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

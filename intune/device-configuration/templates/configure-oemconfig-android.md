@@ -128,7 +128,7 @@ You get the OEMConfig app from the Managed Google Play Store, add the app to Int
 
 After the app is added to Intune, you create an OEMConfig profile to configure the features defined in the app.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -198,7 +198,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 After your profile is deployed, you can check its status:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**. A list of all your profiles is shown.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Configuration**. A list of all your profiles is shown.
 2. Select your OEMConfig profile. You can get more information on your profile, including successful and failed deployments:
 
     - **Overview**: Shows the profile assignment statuses. For more information on what the statuses mean, go to [Monitor device profiles in Microsoft Intune](../monitor-device-profile.md).
@@ -283,3 +283,7 @@ If you represent an OEM, and an OEMConfig application exists for your devices, b
 
 - [Monitor the profile status](../monitor-device-profile.md)
 - [Deploy OEMConfig profiles to Zebra devices in Intune](./deploy-oemconfig-zebra-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

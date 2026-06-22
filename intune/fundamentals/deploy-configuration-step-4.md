@@ -45,7 +45,7 @@ When you create device configuration profiles, you can choose from different lev
 
 This article lists the different levels of device configuration policies that organizations should use. Most of these policies focus on access to organization resources and security.
 
-Configure these features in device configuration profiles in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the Intune profiles are ready, assign them to your users and devices.
+Configure these features in device configuration profiles in the [Microsoft Intune admin center]. When the Intune profiles are ready, assign them to your users and devices.
 
 > [!TIP]
 > [Take a tour of Intune and the Microsoft Intune admin center](tutorial-admin-center-walkthrough.md).
@@ -570,3 +570,7 @@ This article is part of a five-step series that describes how to deploy Microsof
 3. [Plan for compliance policies](deploy-compliance-step-3.md)
 4. 🡺 **Configure device features** (this article)
 5. [Enroll devices](../device-enrollment/enroll-devices.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

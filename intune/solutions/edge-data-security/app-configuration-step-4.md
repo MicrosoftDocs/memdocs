@@ -66,7 +66,7 @@ Windows app configuration policies provide browser customization through managed
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Windows ACP Level 1 Basic  
@@ -121,7 +121,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 configuration adds enhanced security controls and restrictions for sensitive environments.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Windows ACP Level 2 Enhanced  
@@ -202,7 +202,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 Level 3 configuration enforces maximum security with zero-trust controls and comprehensive data-loss prevention.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Windows ACP Level 3 High  
@@ -341,7 +341,7 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Android ACP Level 1 Basic  
@@ -418,7 +418,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 configuration adds enhanced security controls and restrictions for sensitive environments.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Android ACP Level 2 Enhanced  
@@ -482,7 +482,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 Level 3 configuration enforces maximum security with zero-trust controls and comprehensive data-loss prevention.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Android ACP Level 3 High
@@ -608,7 +608,7 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge iOS ACP Level 1 Basic  
@@ -669,7 +669,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 configuration adds enhanced security controls and restrictions for sensitive environments.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge iOS ACP Level 2 Enhanced  
@@ -732,7 +732,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 Level 3 configuration enforces maximum security with zero-trust controls and comprehensive data-loss prevention.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge iOS ACP Level 3 High  
@@ -820,7 +820,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 #### Policy Dependency Check
 
-- Ensure the user is signed into Edge using their work or school (Entra ID) account, as App Configuration settings only apply within the managed work profile context.
+- Ensure the user is signed in to Edge using their work or school (Entra ID) account, as App Configuration settings only apply within the managed work profile context.
 
 
 ::: zone-end
@@ -828,3 +828,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 ## Next step
 
 Continue to [Step 5](./settings-catalog-step-5.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

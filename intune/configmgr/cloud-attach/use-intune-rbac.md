@@ -11,7 +11,7 @@ ms.collection: tier3
 <!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../fundamentals/role-based-access-control/overview.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../fundamentals/role-based-access-control/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), such as [device timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json).
+Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../fundamentals/role-based-access-control/overview.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../fundamentals/role-based-access-control/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Intune admin center], such as [device timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json).
 
 > [!IMPORTANT]
 > Currently, any enforcement of Intune role-based access control for displaying and taking actions on tenant-attached devices from the Microsoft Intune admin center is optional. We recommend all admins with cloud-connected Configuration Manager environments begin [verifying the role-based access control permissions from Intune](#bkmk_verify-intune-rbac).
@@ -53,7 +53,7 @@ To use Intune role-based access control for tenant attach rather than Configurat
 
 To enable Intune to manage user permissions for cloud-attached devices, use the following steps:
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and sign in as a user that has the **Roles/Update** permission. For more information about the permission, see [custom role permissions in Intune](../../fundamentals/role-based-access-control/create-custom-role.md).
+1. Open the [Microsoft Intune admin center] and sign in as a user that has the **Roles/Update** permission. For more information about the permission, see [custom role permissions in Intune](../../fundamentals/role-based-access-control/create-custom-role.md).
 1. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**.
 1. In the banner, select **You can also manage user permissions from Intune. Click here to learn more about this option.**
 1. The **Use Intune RBAC** flyout appears.
@@ -66,7 +66,7 @@ To enable Intune to manage user permissions for cloud-attached devices, use the 
 
 Once Intune is set to the role-based access control authority, verify the permissions for your roles. If needed, you can add these permissions to [custom roles](../../fundamentals/role-based-access-control/create-custom-role.md) you created in Intune.
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and sign in.
+1. Open the [Microsoft Intune admin center] and sign in.
 1. Select **Tenant administration** > **Roles**.
 1. Select a role, such as **Application Manager**, and review the permissions listed for **Cloud attached devices**. If needed, edit permissions for any [custom roles](../../fundamentals/role-based-access-control/create-custom-role.md) you created in Intune.
 
@@ -110,3 +110,7 @@ The **Use Intune RBAC** setting applies to all of the Configuration Manager hier
 
 - Review the [timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for a cloud-attached device
 - Run a [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) query on a cloud attached device
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

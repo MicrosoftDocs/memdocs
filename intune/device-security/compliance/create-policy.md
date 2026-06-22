@@ -85,7 +85,7 @@ For more information about using custom compliance settings, including supported
 
 ## Create the policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Go to **Devices**.
 1. Under **Manage devices**, select **Compliance**. Then choose **Create policy**.
@@ -219,3 +219,7 @@ For example, a device has three compliance policies assigned to it: one Unknown 
 ## Next steps
 
 [Monitor your policies](./monitor-policy.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

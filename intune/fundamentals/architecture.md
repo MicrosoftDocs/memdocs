@@ -45,7 +45,7 @@ Each tier is described in the following sections.
 | Component | Role |
 |---|---|
 | **Microsoft Intune service** | The cloud control plane that stores configurations and orchestrates policy delivery. |
-| **[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** | Web console for administrators. |
+| **[Microsoft Intune admin center]** | Web console for administrators. |
 | **[Microsoft Graph API](/graph/intune-concept-overview)** | Public programming interface. Every admin center action is backed by a Graph API call. |
 | **[Microsoft Intune Company Portal app and website](../app-management/configuration/configure-company-portal.md)** | User-facing surface that enrolls devices, surfaces required apps, and shows compliance status. |
 
@@ -180,3 +180,7 @@ By using co-management and tenant attach, organizations that already run Configu
 - [Cloud-native endpoints](../solutions/cloud-native-endpoints/overview.md)
 - [Microsoft Intune advanced capabilities](advanced-capabilities.md)
 - [Passwordless authentication with Microsoft Intune](../solutions/passwordless.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
