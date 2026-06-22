@@ -1,0 +1,17 @@
+# Authorized Approvers
+# Format: CODEOWNERS syntax — last matching rule wins per file.
+# Teams are resolved to individual members at runtime.
+#
+# Usage:
+#   <pattern>  @user1 @org/team @user2
+#
+# Rules:
+#   - The * catch-all should be first as the default/fallback.
+#   - Later rules override earlier ones for matching files.
+#   - To keep default owners on a specific folder, include them on that line too.
+
+# Default owners for everything unless a later match takes precedence
+* @MicrosoftDocs/msecd-org
+
+# Specific folder overrides (include default team to retain their access)
+# /compliance/ @MicrosoftDocs/msecd-org @chvukosw @k-reagle
