@@ -42,7 +42,7 @@ When you configure the Intune Connector for Active Directory, also known as the 
 
 This error occurs when the *Log on as a service* privilege (`SeLogonAsServicePrivilege`) is assigned to the gMSA but hasn't yet propagated to the connector host when the pre-enrollment validation runs.  
 
-The issue is resolved in build 6.2604.2000.3, which adds the opt-in `<appSettings>` key `SkipByoMsaPrivilegeCheck`. When this key is set to `true` and the connector is configured to use your own gMSA, the connector skips the `SeLogonAsServicePrivilege` pre-check, which internally performs a [Kerberos Service-for-User (S4U)](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) logon of the gMSA, writes a trace line confirming the skip, and proceeds with configuration.  
+The issue is resolved in build 6.2604.2000.3, which adds the opt-in `<appSettings>` key `SkipByoMsaPrivilegeCheck`. When this key is set to `true` and the connector is configured to use your own gMSA, the connector skips the `SeLogonAsServicePrivilege` pre-check, which internally performs a [Kerberos Service-for-User (S4U)](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) logon of the gMSA, writes a trace line confirming the skip, and proceeds with configuration.  
 
 To use the workaround, install build 6.2604.2000.3 or later. Add the `SkipByoMsaPrivilegeCheck` key with `value="true"` to the connector `<appSettings>`, and restart the configuration. The default value is `false`, so the pre-check continues to run unless you explicitly add the key.  
 
