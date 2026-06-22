@@ -70,7 +70,7 @@ You also need:
 
 A device enrollment policy defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment policy to enroll iOS/iPadOS devices with Apple Configurator.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple** tab.
@@ -95,7 +95,7 @@ Dynamic device groups are configured to automatically add and remove devices bas
 
 Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Apple corporate-owned, userless enrollment policy.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **All groups** > **New group**.
+1. In the [Microsoft Intune admin center], go to **Groups** > **All groups** > **New group**.
 2. Enter the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)
@@ -112,7 +112,7 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
 
 ## Export the profile as .mobileconfig to iOS/iPadOS devices
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In the [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple** tab.
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
@@ -178,3 +178,7 @@ Follow steps from [Export the profile as .mobileconfig to iOS/iPadOS devices](#e
 
 * [Create an iOS/iPadOS MDM app configuration policy](../../app-management/configuration/configure-managed-ios.md) to restrict settings on devices with specific users.
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](setup-direct-macos.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

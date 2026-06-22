@@ -19,7 +19,7 @@ The following items are considered as the version property of the app:
 
 ## Locations where you can view the app version
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the app version in the following locations:
+In the [Microsoft Intune admin center], you can view the app version in the following locations:
 
 - When you add the app to Intune, the version is displayed in the **App package file** pane. The version value will be used for the **identityVersion** property.
 
@@ -104,3 +104,6 @@ To learn more about LOB apps, see the following topics:
 - [Add apps to Microsoft Intune](./index.md)<br>
 - [Prepare line-of-business apps for app protection policies](../../developer/app-sdk/integration-methods.md)<br>
 
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

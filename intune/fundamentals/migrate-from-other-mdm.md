@@ -42,9 +42,9 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
   - **License administrator** - This Microsoft Entra role lets you assign Intune licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854). For more information on this role, see [Microsoft Entra built-in roles - License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator).
 
-  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager).
+  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Microsoft Intune admin center]. For more information on this role, see [Built-in roles for Microsoft Intune](role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager).
 
-  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](role-based-access-control/ref-built-in-roles.md#endpoint-security-manager).
+  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Microsoft Intune admin center]. For more information on this role, see [Built-in roles for Microsoft Intune](role-based-access-control/ref-built-in-roles.md#endpoint-security-manager).
 
   - **Conditional Access Administrator** - This Microsoft Entra role lets you create and assign device-based Conditional Access policies in the [Microsoft Entra admin center](https://entra.microsoft.com/). For more information on this role, see [Microsoft Entra built-in roles - Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
 
@@ -86,14 +86,14 @@ After you prepare your licenses and review the information in [Step 1 - Prepare]
     - [Configurations policy mapping](ref-policy-map-configurations.md)
     - [Miscellaneous policy mapping](ref-policy-map-miscellaneous.md)
 
-2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create your Intune policies based on the policy mappings. When you create the policies, you can assign them to your groups now, or assign them later.
+2. In the [Microsoft Intune admin center], create your Intune policies based on the policy mappings. When you create the policies, you can assign them to your groups now, or assign them later.
 
     | Basic Mobility and Security policy | Intune policy type | Intune location |
     | --- | --- | --- |
-    | [Access requirements policy mapping](ref-policy-map-access-requirements.md) | [Compliance policies](../device-security/compliance/overview.md) |  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
-    | [Configurations policy mapping](ref-policy-map-configurations.md) | [Device configuration profiles](../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-    | [Miscellaneous policy mapping](ref-policy-map-miscellaneous.md) | [Device configuration profiles](../device-configuration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-    | Basic Conditional Access policies described in: <br/><br/>-[Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up)<br/>- [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure) | [Conditional Access policies](../device-security/conditional-access-integration/overview.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** |
+    | [Access requirements policy mapping](ref-policy-map-access-requirements.md) | [Compliance policies](../device-security/compliance/overview.md) |  [Microsoft Intune admin center] > **Devices** > **Compliance** |
+    | [Configurations policy mapping](ref-policy-map-configurations.md) | [Device configuration profiles](../device-configuration/overview.md) | [Microsoft Intune admin center] > **Devices** > **Manage devices** > **Configuration** |
+    | [Miscellaneous policy mapping](ref-policy-map-miscellaneous.md) | [Device configuration profiles](../device-configuration/overview.md) | [Microsoft Intune admin center] > **Devices** > **Manage devices** > **Configuration** |
+    | Basic Conditional Access policies described in: <br/><br/>-[Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up)<br/>- [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure) | [Conditional Access policies](../device-security/conditional-access-integration/overview.md) | [Microsoft Intune admin center] > **Devices** > **Conditional Access** > **Classic policies** |
 
 ## Step 3 - Assign the policies in stages
 
@@ -107,7 +107,7 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
 
 ### Assign the policies
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select your policy > **Assignments** > **Edit**. Add your groups and **Save**. When you save, the policies are assigned.
+1. In the [Microsoft Intune admin center], select your policy > **Assignments** > **Edit**. Add your groups and **Save**. When you save, the policies are assigned.
 
     For the steps and guidance, see [Assign policies in Microsoft Intune](../device-configuration/assign-device-profile.md).
 
@@ -141,3 +141,7 @@ To summarize, you can:
 
 - [What is Intune?](what-is-intune.md)
 - [Get started with Intune](get-started.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

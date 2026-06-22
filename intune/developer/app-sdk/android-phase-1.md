@@ -138,7 +138,7 @@ The Intune App SDK for Android relies on the presence of the [Company Portal] ap
 > When the Company Portal app is not on the device, an SDK-integrated app behaves the same as a normal app that does not support Intune app protection policies.
 > Even if the Company Portal app is on the device, an SDK-integrated app behaves the same as a normal when the end user is not targeted with app protection policy.
 
-The user is ***not*** required to sign into or even launch the Company Portal app for App Protection Policy to function.
+The user is ***not*** required to sign in to or even launch the Company Portal app for App Protection Policy to function.
 
 ### Android versions
 

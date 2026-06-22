@@ -3,7 +3,7 @@ title: Graph APIs to Configure Devices in Microsoft Intune
 description: See a list of all the Graph API entities with the matching Windows CSP and offset URI on Windows 10 devices and newer used when configuring devices in Microsoft Intune. See the matching API and CSP for shared PCs, endpoint protection, Microsoft Defender for Endpoint, identity protection, Windows 10 Teams, kiosk, and Windows Update client policies.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 03/04/2019
+ms.date: 06/22/2026
 ms.topic: reference
 ms.reviewer: jamiesil
 ms.collection:
@@ -11,15 +11,13 @@ ms.collection:
 - Windows
 ---
 
-# Graph APIs and Matching Windows CSPs Used in Intune
+# Graph APIs and matching Windows CSPs used in Intune
 
 Microsoft Intune uses the [Graph API entities](/graph/api/resources/intune-graph-overview) (opens another Docs site) to configure devices (**Intune admin center** > **Devices** > **Manage devices** > **Configuration**) running Windows and later. The Graph API uses configuration service providers (CSPs) to read, set, change, and/or delete configuration settings on devices.
 
 This list applies to:
 
-- Windows 10 and later
-
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+- Windows
 
 This article lists the Graph entities and their matching Windows CSPs and offset URIs.
 
@@ -31,9 +29,9 @@ For more information on Windows configuration service providers, see the [config
 
 ## Graph API properties to CSP mapping
 
-The following list shows most of Graph API entities used by Microsoft Intune for Windows device configuration. It also shows the corresponding Windows CSP and offset URI.
+The following list shows most of the Graph API entities used by Microsoft Intune for Windows device configuration. It also shows the corresponding Windows CSP and offset URI.
 
-To see the Windows 10 versions the following APIs apply, use the Windows 10 [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
+To see the Windows versions the following APIs apply to, use the Windows [configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) (opens another Docs site).
 
 ### EditionUpgradeConfiguration.License
 **CSP**: ./Device/Vendor/MSFT/WindowsLicensing

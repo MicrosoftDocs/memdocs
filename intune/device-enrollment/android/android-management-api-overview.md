@@ -104,7 +104,7 @@ For devices already enrolled in Intune, use the Android Management API device co
 
 ### Create the device configuration profile
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -214,3 +214,7 @@ For the latest updates on rollout timeline and enforcement changes, see [New pol
 - [Android Enterprise work profile management overview](enterprise-work-profile.md)
 - [Set up enrollment of Android Enterprise personally owned work profile devices](setup-personal-work-profile.md)
 - [Redo Workplace Join for Android Enterprise devices](redo-workplace-join-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

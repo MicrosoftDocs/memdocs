@@ -137,7 +137,7 @@ Date added: *August 21, 2024*
 
 In addition to the [Devices | Monitor](reporting-monitoring.md#accessing-reports-and-near-real-time-monitoring) page, admins can now easily access the **Windows Autopilot device preparation deployment status** report from the **Monitor** tab in the **Devices | Enrollment** page. The report can be found using the following steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Navigate to **Home** > **Devices** >  **Device onboarding | Enrollment**.
 1. Select the **Monitor** tab in the **Devices | Enrollment** page.
 
@@ -164,3 +164,7 @@ Windows Autopilot device preparation is generally available. For an overview, se
 - [What's new in Windows Autopilot](../whats-new.md).
 - [What's new in Microsoft Intune](/intune/whats-new/index).
 - [What's new in Windows client](/windows/whats-new/).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

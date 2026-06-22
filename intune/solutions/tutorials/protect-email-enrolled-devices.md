@@ -34,7 +34,7 @@ This tutorial requires a test tenant with the following subscriptions:
 
 ## Sign in to Intune
 
-For this tutorial, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the account you created when you signed up for the Intune trial subscription.
+For this tutorial, sign in to the [Microsoft Intune admin center] with the account you created when you signed up for the Intune trial subscription.
 
 ## Create an email device profile
 
@@ -61,7 +61,7 @@ After you create the app protection policy, return here to continue.
 
 Set up an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. For this tutorial, you create a device compliance policy for iOS devices. Compliance policies are platform-specific, so you need a separate compliance policy for each device platform you want to evaluate.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Compliance**.
 3. On the **Policies** tab, choose **Create policy**.
@@ -116,7 +116,7 @@ The Conditional Access policy will:
 
 You can configure Conditional Access policies in either the Microsoft Entra admin center or the Microsoft Intune admin center. The following steps use the Intune admin center.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
@@ -172,9 +172,9 @@ You can configure Conditional Access policies in either the Microsoft Entra admi
 
 > [!NOTE]
 >
-> Some dependent services, like Microsoft Teams, integrate with Exchange Online resources and are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing into Microsoft Teams.
+> Some dependent services, like Microsoft Teams, integrate with Exchange Online resources and are governed by Early-bound Policy enforcement. Consequently, users must comply with Exchange policies before signing in to Microsoft Teams.
 >
-> If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing into Teams. Failure to comply with these policies affects the ability to sign into Teams.
+> If you have a Conditional Access Policy that restricts authentication requests for Exchange Online resources, users must meet the Exchange Policy requirements before signing in to Teams. Failure to comply with these policies affects the ability to sign in to Teams.
 >
 > For more information, see [Microsoft documentation on service dependencies and policy enforcement](/entra/identity/conditional-access/service-dependencies#policy-enforcement).
 
@@ -199,7 +199,7 @@ With the policies you've created, any iOS device that attempts to sign in to Mic
 
 When the test policies are no longer needed, you can remove them.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Compliance**.
 
@@ -212,3 +212,7 @@ When the test policies are no longer needed, you can remove them.
 ## Next steps
 
 In this tutorial, you created policies that require iOS devices to enroll in Intune and use the Outlook app to access Exchange Online email. To learn about using Intune with Conditional Access to protect other apps and services, see [Set up Conditional Access](../../device-security/conditional-access-integration/overview.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

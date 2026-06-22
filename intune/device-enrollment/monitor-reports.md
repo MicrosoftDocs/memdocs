@@ -25,7 +25,7 @@ This article describes each report and how to access them in the admin center. T
 ## Enrollment failures report
 Use the enrollment failures report to view enrollment failures for all users or for select users. This report shows each failed enrollment attempt along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **Monitor**.
 3. Select the **Enrollment failures** report.
 4. Select **All users** or **Select user**, depending on the scenario you're troubleshooting.
@@ -37,7 +37,7 @@ Use the enrollment failures report to view enrollment failures for all users or 
 ## Troubleshooting + support page
 Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with. To see enrollment failures for unlicensed users, select **Filter**, and then choose **User not found or licensed**.  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + support**.
+1. In the [Microsoft Intune admin center], go to **Troubleshooting + support**.
 2. Search for the user by name or email address.
 3. Select the **Enrollment failures** metric for more information about detected failures and recommended remediation steps.
 
@@ -53,10 +53,14 @@ The device enrollment page shows the enrollment policies (both enrollment restri
 
 To access report data:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **All devices**.
 2. Select an enrolled iOS/iPadOS, macOS, or Windows device.
 3. From the **Monitor** options, select **Enrollment**.  
 4. Review the report data.
 
     > [!div class="mx-imgBorder"]
     > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/restrictions/enrollment-page-report-2112.png)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

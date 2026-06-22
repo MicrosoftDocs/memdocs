@@ -31,7 +31,7 @@ This article shows you how to create the profile, and add trusted sites.
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -79,3 +79,7 @@ The next time each device checks in, the policy is applied.
 
 - After the [profile is assigned](../assign-device-profile.md), be sure to [monitor its status](../monitor-device-profile.md).
 - [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

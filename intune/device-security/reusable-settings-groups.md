@@ -66,7 +66,7 @@ Each reusable settings group includes a subset of settings from the full profile
 
 **To create a reusable settings group**:
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
+1. Open the [Microsoft Intune admin center], navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
 
 2. Select **Add** to open the *Configure reusable settings (preview)* workflow.
 
@@ -87,7 +87,7 @@ Each reusable settings group includes a subset of settings from the full profile
 
 When you edit the configuration of a reusable group, each profile that uses that group automatically updates to apply the new configuration to devices.
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
+1. Open the [Microsoft Intune admin center], navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
 
 2. Select the reusable settings group you want to edit. This opens the configuration workflow that resembles the workflow for creating a new reusable group.
 
@@ -101,7 +101,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 >
 > Inbound FQDN rules aren't natively supported. However, it's possible to use *pre-hydration* scripts to generate inbound IP entries for the rule. For more information, see [Windows Firewall dynamic keywords](/windows/security/operating-system-security/network-security/windows-firewall/dynamic-keywords) in the Windows Firewall documentation.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
+1. In the [Microsoft Intune admin center], create a new profile or select and edit an existing profile.
 
 2. On the *Configuration settings* page, select **Add** to add a new rule, or **Edit rule** to manage a previously created rule.
 
@@ -128,7 +128,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
 On the profiles Configuration settings page, use an option that supports adding one or more previously created groups.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
+1. In the [Microsoft Intune admin center], create a new profile or select and edit an existing profile.
 
 2. On the *Configuration settings* page, expand the Device Control category and select **Add** to add a new rule, or **Edit Entry** to manage a previously created rule.
 
@@ -174,3 +174,7 @@ For more information, review guidance that might be specific to the profile type
 ## Next steps
 
 [Device configuration overview](../device-configuration/overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

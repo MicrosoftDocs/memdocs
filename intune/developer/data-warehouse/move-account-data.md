@@ -21,19 +21,19 @@ To back up your Data Warehouse data, you must save your Data Warehouse data into
 
 ## Back up your trend charts from the Microsoft Intune admin center
 
-Some trend charts in your view of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) resets. You can back up these charts by running the following script in **Graph**:  
+Some trend charts in your view of the [Microsoft Intune admin center] resets. You can back up these charts by running the following script in **Graph**:  
 
 ### Terms & Conditions Acceptance reports
-1. In the[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Terms & Conditions**.
+1. In the[Microsoft Intune admin center], select **Tenant administration** > **Terms & Conditions**.
 2. For each **Terms & Condition** item that you select, select **Acceptance Report** > **Export**.
 3. Save the report locally.
 
 ### App Protection reports
-1. Select **Apps** -> **Monitor** -> **App protection status** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Select **Apps** -> **Monitor** -> **App protection status** in the [Microsoft Intune admin center].
 2. To save each report, select the download icon ( ⤓ ).
 
 ### Device Configuration charts
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Export**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Configuration** > **Export**.
 2. Using Microsoft [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), download the data behind the charts.
     - For deployment status of all device configuration profiles for all devices, see [Device deployment status](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -45,7 +45,7 @@ Some trend charts in your view of the [Microsoft Intune admin center](https://go
     > You must have a valid authentication token to access the device configuration and deployment status information.
 
 ## Device Enrollment charts
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Assignment status** > **Export**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Monitor** > **Assignment status** > **Export**.
 2. Using Microsoft [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), download the data behind the charts.
     - For enrollment status, copy this [enrollment status query](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) and paste it into [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
     - For top enrollment failures this week, copy this [enrollment failures query](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) and paste it into [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
@@ -65,3 +65,7 @@ Customer X requests an account move to begin on January 6, 2018. In response to 
 
 - Learn [what's new each week in Intune](../../whats-new/index.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
 - Read the [Microsoft Intune Blog](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -19,7 +19,7 @@ Intune has capabilities that are powered by Security Copilot. These capabilities
 
 There are two ways to access your Intune data using Copilot:
 
-- **Microsoft Copilot in Intune** (this article): Copilot is embedded in Intune and is available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The Copilot prompts and their output are in the context of Intune and your Intune and Windows 365 Cloud PC data. These capabilities access your Intune and Windows 365 Cloud PC data. They can help you manage your policies and settings, understand your security posture, and troubleshoot device issues, including Windows 365 Cloud PCs.
+- **Microsoft Copilot in Intune** (this article): Copilot is embedded in Intune and is available in the [Microsoft Intune admin center]. The Copilot prompts and their output are in the context of Intune and your Intune and Windows 365 Cloud PC data. These capabilities access your Intune and Windows 365 Cloud PC data. They can help you manage your policies and settings, understand your security posture, and troubleshoot device issues, including Windows 365 Cloud PCs.
 
   This experience has an IT admin/IT Pro focus.
 
@@ -42,7 +42,7 @@ To use Copilot in Intune, you should know the following information:
 
 - **Copilot configuration**: Before you can use the Copilot features in Intune, Security Copilot must be configured, and you must complete the first run tour in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989). For the setup tasks, see [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 
-  You can check the status in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Copilot**.
+  You can check the status in the [Microsoft Intune admin center] > **Tenant administration** > **Copilot**.
 
   :::image type="content" source="./media/index/tenant-administration-copilot-enabled.png" alt-text="Screenshot that shows Copilot is enabled in the Microsoft Intune tenant and Intune admin center." lightbox="./media/index/tenant-administration-copilot-enabled.png":::
 
@@ -81,7 +81,7 @@ To use Copilot in Intune, you should know the following information:
 
 ## Start using Copilot
 
-To access Copilot in Intune, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the banner at the top, select **Copilot**.
+To access Copilot in Intune, sign in to the [Microsoft Intune admin center]. In the banner at the top, select **Copilot**.
 
 :::image type="content" source="./media/index/copilot-banner.png" alt-text="Screenshot that shows the Intune admin center banner with the Copilot button in Microsoft Intune." lightbox="./media/index/copilot-banner.png":::
 
@@ -274,3 +274,7 @@ The following examples are some queries you can try:
 - [Use Copilot in Intune to troubleshoot devices](troubleshoot-devices.md).
 - [Use the settings catalog to create device configuration policies](../device-configuration/settings-catalog/index.md).
 - [Learn more about Intune capabilities in Microsoft Security Copilot](security-copilot.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

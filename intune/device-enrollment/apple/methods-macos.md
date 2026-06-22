@@ -63,7 +63,7 @@ The token is then automatically escrowed to Microsoft Intune. You can use a comm
 ### Monitor bootstrap escrow status
 You can monitor the escrow status for any enrolled Mac in the admin center. The *Bootstrap token escrowed* hardware property reports whether or not the bootstrap token has been escrowed in Intune. Intune reports **Yes** when the token has been successfully escrowed and **No** when the token has not been escrowed.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **By platform** > **macOS**.
 3. Select a device from your list of macOS devices.
 4. Select **Hardware**.
@@ -132,7 +132,7 @@ Intune automatically turns on supervision for user-approved devices running macO
 The device user signs in to the Company Portal app to initiate enrollment. Company Portal then opens the device's system preferences and prompts the user to install the management profile. Company Portal provides in-app instructions to help users find the profile. Users go to **System Preferences** > **Profiles** to  approve the management profile installation. Device users that don't provide approval during enrollment can return to system preferences later to give approval.
 
 ### Find out if device is user approved
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**.
+1. In the [Microsoft Intune admin center], select **Devices** > **All devices**.
 3. Choose a macOS device.
 4. From the side menu, select **Hardware**.
 5. Check the value next to **User approved enrollment**.
@@ -147,3 +147,7 @@ Use Apple Migration Assistant to back up and restore a macOS device. You can use
 ## Next steps
 
 * For user-help documentation, which provides step-by-step enrollment instructions for device users, see [Enroll your macOS device in Intune](../../user-help/enrollment/enroll-company-portal-macos.md). You can also create your own instructions if you prefer to capture your organization's branded or customized enrollment experience.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

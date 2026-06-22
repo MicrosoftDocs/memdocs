@@ -36,7 +36,7 @@ In this article, you:
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
@@ -76,7 +76,7 @@ When the device is enrolled in Intune, it starts to receive the Intune policies 
 
 ## Confirm device enrollment
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
 3. Verify that you have an additional device enrolled within Intune.
 
@@ -97,3 +97,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 6 - Set a required password length for Android devices](../../device-security/compliance/quickstart-password-compliance-android.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

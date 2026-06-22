@@ -74,7 +74,7 @@ Your users must do the following steps. For more specific information on the end
 1. Download and run [the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 2. Open the Company Portal app, and sign in with their organization account (`user@contoso.com`). Once they sign in, they must approve the enrollment policy (System preferences). When users approve, the device is enrolled, and considered managed. If they don't approve, then they're not enrolled, and won't receive your policies.
 
-The Company Portal app detects the installation of the management profile and automatically registers the device, unless it is manually closed by the user. The user must reopen the app to complete device registration. If you're using dynamic groups, which rely on device registration, it's important for users to return to the app and register. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign into will prompt them to return to Company Portal to complete device registration.
+The Company Portal app detects the installation of the management profile and automatically registers the device, unless it is manually closed by the user. The user must reopen the app to complete device registration. If you're using dynamic groups, which rely on device registration, it's important for users to return to the app and register. Plan to communicate these steps to end users. If you're using Conditional Access (CA) policies, no action is required because any CA-protected app users try to sign in to will prompt them to return to Company Portal to complete device registration.
 
 > [!TIP]
 > If you're using dynamic device groups only for Intune policy and app targeting (not Conditional Access or licensing), consider using [assignment filters](../../fundamentals/filters/overview.md) instead. Filters evaluate at check-in without depending on device registration or group membership processing, which can simplify enrollment workflows.
@@ -83,7 +83,7 @@ The Company Portal app detects the installation of the management profile and au
 
 ## Automated Device Enrollment (ADE) (supervised)
 
-Previously called Apple Device Enrollment Program (DEP). Use on devices owned by your organization. This option configures settings using Apple Business or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment policy in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this policy to the devices.
+Previously called Apple Device Enrollment Program (DEP). Use on devices owned by your organization. This option configures settings using Apple Business or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment policy in the [Microsoft Intune admin center], and push this policy to the devices.
 
 For more specific information on this enrollment type, go to [Automatically enroll macOS devices with the Apple Business or Apple School Manager](setup-automated-macos.md).
 
@@ -141,7 +141,7 @@ This task list provides an overview. For more specific information, go to [Autom
       1. **After** the device is enrolled, install the Company Portal app.
       1. Once installed, users open the Company Portal app, and sign in with their organization Microsoft Entra account (`user@contoso.com`). When they sign in, they're authenticated, and ready to receive your policies.
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apple Configurator** enrollment and create an enrollment policy. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
+- In the [Microsoft Intune admin center], go to **Apple Configurator** enrollment and create an enrollment policy. Choose to **Enroll with user affinity** (associate a user to the device), or **Enroll without user affinity** (user-less devices or shared devices).
 
   - **Enroll with user affinity**: Setup Assistant authenticates the user, and enrolls the device in Intune. Also choose if users can delete the management profile, called **Locked enrollment**.
 
@@ -211,7 +211,7 @@ This task list provides an overview. For more specific information, go to [macOS
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 - Be sure the [Apple MDM push certificate](create-mdm-push-certificate.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](create-mdm-push-certificate.md).
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment policy. Select **Enroll without user affinity** (user-less devices or shared devices). With user-less devices:
+- In the [Microsoft Intune admin center], create an enrollment policy. Select **Enroll without user affinity** (user-less devices or shared devices). With user-less devices:
 
   - Users can't use apps that require a user, including the Company Portal app. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure users don't install the Company Portal app from the Apple app store.
   - **Enroll with user affinity** is available in the UI, but it won't work. Don't select this option. If you need user affinity, then use [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article).
@@ -233,3 +233,7 @@ For more information on this enrollment option, and its prerequisites, go to [ma
 - [iOS/iPadOS enrollment guide](guide-ios-ipados.md)
 - [Linux enrollment guide](../guide-linux.md)
 - [Windows enrollment guide](../windows/guide.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

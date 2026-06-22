@@ -143,7 +143,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1 - Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a **tenant**. After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a **tenant**. After you attach your devices, you use the [Microsoft Intune admin center] to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
@@ -297,7 +297,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
 
-3. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+3. Sign in to the [Microsoft Intune admin center]. The policies you imported are shown.
 
 ### What you can't do
 
@@ -328,3 +328,7 @@ There are some policy types that can't be exported. There are some policy types 
 
 - [Get started with Intune](get-started.md)
 - [Enrollment deployment guides](../device-enrollment/guide.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

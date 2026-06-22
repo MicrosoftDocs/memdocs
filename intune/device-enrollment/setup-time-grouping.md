@@ -95,7 +95,7 @@ The following procedure describes how to create a security group in the Microsof
 
 After you configure enrollment time grouping in the enrollment policy, you can come back to this security group to add and remove devices. Any Intune administrator with the appropriate security group permissions can edit the security group.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. Go to **Groups**.
 
@@ -203,3 +203,7 @@ If unexpected behavior occurs, contact Microsoft Support with the following info
 - Approximate time stamp of the event and time zone where it happened.
 - Screenshots from the Microsoft Intune admin center or device.
 - Detailed explanation of the behavior on the device.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -30,7 +30,7 @@ The Windows Autopilot policy specifies how the device is configured during Windo
 
 To create an automatic mode for Windows 365 Windows Autopilot device preparation policy, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -121,3 +121,7 @@ To create an automatic mode for Windows 365 Windows Autopilot device preparation
 
 > [!div class="nextstepaction"]
 > [Step 5: Create a Cloud PC provisioning policy](automatic-cloud-pc-provisioning-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

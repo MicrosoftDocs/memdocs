@@ -19,7 +19,7 @@ After you enroll a device for work or school using Intune Company Portal:
 
 - You can access your org's network, email, and work files on the device.
 
-- You can install work or school apps from the Company Portal website and app, and access them by signing into your work or school account.
+- You can install work or school apps from the Company Portal website and app, and access them by signing in to your work or school account.
 
 - Your work or school email is automatically set up.
 

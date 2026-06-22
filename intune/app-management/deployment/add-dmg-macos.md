@@ -41,7 +41,7 @@ It is not recommended that multiple apps that are not dependent on each other ar
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **macOS** platform, and then select **macOS app (DMG)**.
 4. Choose **Select**. The **Add app** steps are displayed.
@@ -167,3 +167,7 @@ macOS app installation may not be successful due to any of the following reasons
 | 0x87D30131, 0x87D30132 | The app couldn't be downloaded. Sync the device to retry installing the app. | Something went wrong while downloading the app. This may happen if the network is poor or the app size is large. |
 | 0x87D30135 | The app couldn't be installed due to a device error. Sync the device to retry installing the app. | This could be due to insufficient disk space or the app could not be written to the folder. Ensure that the device can install apps to the Applications folder. |
 | 0x87D3013A | The physical resources of this disk have been exhausted. | This could be due to the hard disk running out of space or binaries of the installation files being corrupt. Fix the Hard disk space and restart the Microsoft Intune Management Extension service and try again. |
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

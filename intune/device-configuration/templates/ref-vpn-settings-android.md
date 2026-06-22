@@ -33,7 +33,7 @@ As an Intune administrator, you can create and assign VPN settings to Android de
 - **Authentication method**: Select how devices authenticate to the VPN server. Your options:
 
   - **Certificates**: Select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../../fundamentals/certificates/overview.md) lists the steps to create a certificate profile.
-  - **Username and password**: When users sign into the VPN server, they're prompted to enter their user name and password.
+  - **Username and password**: When users sign in to the VPN server, they're prompted to enter their user name and password.
 
     For more information, go to [Use derived credentials in Intune](../../device-security/certificates/derived-credentials.md).
 

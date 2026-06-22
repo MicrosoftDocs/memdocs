@@ -19,7 +19,7 @@ After the [device group](enrollment-autopilot.md) is created, a Windows Autopilo
 Windows Autopilot profiles can be created via:
 
 1. [Microsoft 365 admin center](https://admin.microsoft.com/).
-1. [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. [Microsoft Intune admin center].
 1. [Intune graph](/graph/api/resources/intune-graph-overview).
 
 For Intune managed devices, pre-provisioning, self-deploying, and co-management profiles can only be created and assigned in Intune.
@@ -28,7 +28,7 @@ For Intune managed devices, pre-provisioning, self-deploying, and co-management 
 
 Windows Autopilot deployment profiles are used to configure the Windows Autopilot devices. Up to 350 profiles can be created per tenant.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -124,7 +124,7 @@ Intune periodically checks for new devices in the assigned groups, and then begi
 
 Before deploying a device, ensure that a Windows Autopilot deployment profile is assigned to the device. To ensure the process is complete:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -144,7 +144,7 @@ Before deploying a device, ensure that a Windows Autopilot deployment profile is
 
 After the Windows Autopilot deployment profile is created, certain parts of the deployment profile can be edited.
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -170,7 +170,7 @@ If a device is registered in Windows Autopilot and a profile isn't assigned, it 
 
 If a group is assigned to multiple Windows Autopilot profiles, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there's a default profile (any Windows Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that isn't assigned to Windows Autopilot profile, then it would receive the default profile targeted to all devices. To see when a Windows Autopilot profile is created:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -186,7 +186,7 @@ If a group is assigned to multiple Windows Autopilot profiles, the device would 
 
 ## Windows Autopilot deployments report
 
-Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Windows Autopilot deployment status**. The data is available for 30 days after deployment.
+Details on each device deployed through Windows Autopilot can be seen through a report. To see the report, go to the [Microsoft Intune admin center], select **Devices** > **Monitor** > **Windows Autopilot deployment status**. The data is available for 30 days after deployment.
 
 This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Windows Autopilot pre-provisioning.
 
@@ -204,3 +204,7 @@ The following articles are tutorials on configuring and assigning a Windows Auto
 
 - [How are Windows Autopilot device profiles downloaded?](troubleshooting-faq.yml#how-are-windows-autopilot-device-profiles-downloaded-)
 - [Manually register devices with Windows Autopilot](add-devices.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

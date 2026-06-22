@@ -38,7 +38,7 @@ When viewing Admin tasks, you can only see and manage tasks permitted by your as
 
 **To review and manage tasks:**
 
-1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Admin tasks**.
+1. Open the [Microsoft Intune admin center] and go to **Tenant administration** > **Admin tasks**.
 
 2. Intune displays a consolidated list of tasks that are available to you, based on your RBAC permissions. Use the filter control to adjust the displayed tasks.
 
@@ -71,3 +71,8 @@ Tasks are removed from this view when they are removed from their source node.
 - [Microsoft Defender security tasks](../device-security/microsoft-defender/remediate-vulnerabilities.md)
 - [Use Multi Admin Approval in Intune](../fundamentals/role-based-access-control/multi-admin-approval.md)
 - [Device Offboarding Agent](../copilot/agents/device-offboarding-agent.md)
+
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -37,7 +37,7 @@ To fix this limitation, the MSA needs the **Create computer accounts** permissio
 
 If the administrator installing or configuring the Intune Connector for Active Directory doesn't have the necessary permissions to set permissions on the OUs, then the following steps need to be followed:
 
-1. Sign into a computer that has access to the **Active Directory Users and Computers** console with an account that as the necessary permissions to set permissions on OUs.
+1. Sign in to a computer that has access to the **Active Directory Users and Computers** console with an account that as the necessary permissions to set permissions on OUs.
 
 1. Open the **Active Directory Users and Computers** console by running **DSA.msc**.
 

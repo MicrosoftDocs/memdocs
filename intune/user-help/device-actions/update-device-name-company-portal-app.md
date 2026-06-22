@@ -24,7 +24,7 @@ After you rename a device, its name immediately changes in the app.
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Company Portal app for Windows highlighting the edit pencil icon and rename settings.](../compliance/media/validate-device-access-windows/company-portal-windows-rename.png)
 
-Still need help? Contact your IT support person. For contact information, sign into the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account.
+Still need help? Contact your IT support person. For contact information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account.
 
 >[!NOTE]
 >The rename action in the Company Portal app gives employees and students the chance to rename enrolled devices to something that's easy to recognize. This change only applies to the name in Company Portal, and not to the device name or management name that appears in the Microsoft Intune admin center. If you're an IT administrator and need more information about managing device details in the admin center, see:

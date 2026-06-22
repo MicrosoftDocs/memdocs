@@ -75,7 +75,7 @@ In a software update policy, you can manage when critical updates and firmware u
 
 For most organizations, Microsoft recommends you configure the settings available in a [software update policy](deprecated-mdm-policies-macos.md).
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Apple updates > macOS update policies**.
+1. In the [Microsoft Intune admin center], go to **Devices > Apple updates > macOS update policies**.
 1. Configure the following settings:
 
     - **Update policy behavior settings**
@@ -129,7 +129,7 @@ The [Intune settings catalog](../../device-configuration/settings-catalog/index.
 
 This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Manage devices > Configuration > Settings catalog > Software Update**.
+1. In the [Microsoft Intune admin center], go to **Devices > Manage devices > Configuration > Settings catalog > Software Update**.
 1. Configure the following settings:
 
     - **Allow Pre Release Installation**: False
@@ -163,7 +163,7 @@ There's also a [sample script and Intune configuration policy](https://github.co
 
 ### ✅ Use built-in reporting for update status
 
-After the update policies are deployed, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can use the reporting feature to check the status of the updates.
+After the update policies are deployed, in the [Microsoft Intune admin center], you can use the reporting feature to check the status of the updates.
 
 For each device, you can see its current state of updates (Devices > macOS > Update policies for macOS):
 
@@ -174,3 +174,7 @@ For each device, you can see its current state of updates (Devices > macOS > Upd
 - [Software updates planning guide for BYOD and personal devices in Microsoft Intune](../byod-planning-guide.md)
 - [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](../android/planning-guide.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](planning-guide-ios-ipados.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -71,7 +71,7 @@ The following settings are shown depending on the connection type you select. No
 - **Register IP addresses with internal DNS**: Select **Enable** to configure the VPN profile to dynamically register the IP addresses assigned to the VPN interface with the internal DNS. Select **Disable** to not dynamically register the IP addresses.
 
 - **Always On**: **Enable** automatically connects to the VPN connection when the following events happen:
-  - Users sign into their devices.
+  - Users sign in to their devices.
   - The network on the device changes.
   - The screen on the device turns back on after being turned off.
 

@@ -42,7 +42,7 @@ The user account needs the following permissions:
 
 ## Run a script
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Scripts**.
@@ -68,3 +68,7 @@ The user account needs the following permissions:
 [Install an application from the admin center](applications.md)
 
 [Learn more about PowerShell script security](../apps/deploy-use/learn-script-security.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

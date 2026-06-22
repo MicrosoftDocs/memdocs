@@ -58,7 +58,7 @@ Devices continue to sync in the background after provisioning. Track provisionin
 
 Windows Autopilot is a collection of technologies you can use to simplify the setup and configuration of new school devices. With this method, there's no need for imaging. To set up your devices with Windows Autopilot:
 
-- Register the device with Windows Autopilot in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or [Partner center](https://partner.microsoft.com/dashboard/home).
+- Register the device with Windows Autopilot in the [Microsoft Intune admin center] or [Partner center](https://partner.microsoft.com/dashboard/home).
 - Create and assign a Windows Autopilot deployment profile, Enrollment Status Page (ESP) profile, apps, and policies.
 
 #### [Intune](#tab/intune)
@@ -136,3 +136,7 @@ ________________________________________________________
 
 > [!div class="nextstepaction"]
 > [Next: Plan grouping >](grouping-and-targeting.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

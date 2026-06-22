@@ -15,7 +15,7 @@ Before you can enroll corporate-owned devices with Apple School Manager, you nee
 ## Get Apple token
 In the first set of steps, you download the Intune public key certificate required to create an Apple token.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
@@ -36,7 +36,7 @@ In the first set of steps, you download the Intune public key certificate requir
 1. Select the download button to download the server token (.p7m) file to your computer.
 1. Go to **Devices** and select the devices you want to assign to this token. You can sort by various device properties, like serial number. You can also select multiple devices simultaneously.
 1. Select **Edit MDM Server**. Select the MDM server you just added, and then save your changes. This step assigns devices to the token.
-1. Return to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and enter the Apple ID you used to create the token.
+1. Return to the [Microsoft Intune admin center] and enter the Apple ID you used to create the token.
 
    ![Example screenshot showing the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/school-manager/image03.png)
 
@@ -49,3 +49,7 @@ This series of articles describes how to set up Microsoft Intune for devices pur
 1. 🡺 Get an Apple token for school devices (*You are here*)
 1. [Create an Apple enrollment policy](school-manager-step-2.md)
 1. [Sync and distribute devices](school-manager-step-3.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

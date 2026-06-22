@@ -42,14 +42,14 @@ This article describes how to enable automatic mobile device management (MDM) en
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
 
 ## Enable Windows automatic enrollment
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Device onboarding** and select  **Enrollment**.
 1. Go to the **Windows** tab. Then select **Automatic Enrollment**.
@@ -130,3 +130,7 @@ For information about how to integrate and use automatic enrollment when provisi
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)
 
 If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable automatic discovery of Intune enrollment server](create-cname-autodiscovery.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

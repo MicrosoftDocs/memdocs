@@ -71,7 +71,7 @@ As an example, if you set **User device affinity threshold (minutes)** to **60**
 After Configuration Manager creates an automatic user device affinity, it continues to monitor the user device affinity thresholds. If the user's activity for the device falls below the thresholds you've set, the site removes the user device affinity. Set **User device affinity threshold (days)** to a value of at least seven days. This configuration avoids situations in which an automatically configured user device affinity might be lost while the user isn't signed in, for example, during the weekend.
 
 > [!Note]
-> Starting in Configuration Manager version 2010, the troubleshooting portal in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned user device affinity automatically based on usage are returned when searching for a user. For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../tenant-attach/client-details.md#bkmk_list).
+> Starting in Configuration Manager version 2010, the troubleshooting portal in the [Microsoft Intune admin center] allows you to search for a user and view their associated devices. Tenant attached devices that are assigned user device affinity automatically based on usage are returned when searching for a user. For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../tenant-attach/client-details.md#bkmk_list).
 
 ## Import user device affinities from a file
 
@@ -134,3 +134,7 @@ When you disable the client setting to **Automatically configure user device aff
 ## Next steps
 
 You can also use Microsoft Intune to find the primary use of an enrolled device. For more information, see [Find the primary user of an Intune device](/mem/intune-service/remote-actions/find-primary-user) in the Intune documentation.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

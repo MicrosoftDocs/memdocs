@@ -35,7 +35,7 @@ For more information about the feature, see [Security baselines in Intune](./ove
 >
 > The following information applies to profile versions released in May 2023 or later. To view information for profile versions released prior to May 2023, see [Monitor profiles for baseline versions released before May 2023](#monitor-profiles-for-baseline-versions-released-before-may-2023), later in this article.
 
-When you select a security baseline profile that you've deployed, you can gain insights into the security state of devices that received that baseline. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Microsoft 365 Apps for Enterprise Security Baseline*. Then, from the *Profiles* pane, select the profile instance for which you want to view details to open the profiles dashboard view.
+When you select a security baseline profile that you've deployed, you can gain insights into the security state of devices that received that baseline. To view these insights, sign in to the [Microsoft Intune admin center], go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Microsoft 365 Apps for Enterprise Security Baseline*. Then, from the *Profiles* pane, select the profile instance for which you want to view details to open the profiles dashboard view.
 
 :::image type="content" source="./media/monitor-baselines/view-baseline-policy-details.png" alt-text="View the dashboard for a security baseline profile.":::
 
@@ -103,7 +103,7 @@ Below the reports section of the dashboard, you can find the profiles *Propertie
 >
 > The following information applies to profile versions released before May 2023. To view information for profile versions released after May 2023, see [Monitor the baseline and your devices](#monitor-the-baseline-and-your-devices), earlier in this article.
 
-When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Security Baseline for Windows 10 and later*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane.
+When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center], go to **Endpoint security** > **Security baselines** and select a security baseline type like the *Security Baseline for Windows 10 and later*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane.
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
@@ -234,3 +234,7 @@ For more information about diagnostic information logs, see [Collect MDM logs](/
 - [Monitor device profiles](../../device-configuration/monitor-device-profile.md)
 - [Common issues and resolutions](../../device-configuration/troubleshoot-device-profiles.md).
 - [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

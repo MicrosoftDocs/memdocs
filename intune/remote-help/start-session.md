@@ -127,7 +127,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 1. Launch a session on the remote device from within the Microsoft Intune admin center:
  
-   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
+   1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
    2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
 
@@ -164,7 +164,7 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you need to sign in to authenticate your organization.
 
-1. After signing into the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.
+1. After signing in to the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.
 
 >[!NOTE]
 > If you initiate the Remote Help request from Intune, then the notification is delivered to all active users on the Azure Virtual Desktop.
@@ -176,7 +176,7 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
-   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices**. Select the macOS device on which assistance is needed.
+   1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices**. Select the macOS device on which assistance is needed.
 
    1. From the remote action bar across the top of the device view, select **New remote assistance session** and select **Remote Help**. 
 
@@ -192,7 +192,7 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 ### Enrolled macOS device
 
-1. The helper navigates to the device to connect to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. The helper navigates to the device to connect to the [Microsoft Intune admin center].  
 
   1. Sign in to the Microsoft Intune admin center and go to **Devices** > **All devices** and select the macOS device on which assistance is needed.
 
@@ -240,7 +240,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 1. Navigate to the device you're trying to help from the Microsoft Intune admin center:
 
-   a. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices**. Select the Android device on which assistance is needed.
+   a. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **All devices**. Select the Android device on which assistance is needed.
 
    b. From the remote action bar across the top of the device view, select **New remote assistance session**. Select **Remote Help**, and then select **Continue**.
 
@@ -289,3 +289,7 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 ## Next steps
 
 [Get support in the Microsoft Intune admin center.](../fundamentals/it-pro-support/get-support-admin-center.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

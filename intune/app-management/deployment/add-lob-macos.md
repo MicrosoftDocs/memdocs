@@ -34,12 +34,12 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 ## Select the app type
 
 > [!NOTE]
-> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Intune admin center. You can now upload *.pkg* files to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Intune admin center. You can now upload *.pkg* files to the [Microsoft Intune admin center].
 
 > [!IMPORTANT]
 > The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files can be used to upload macOS LOB apps to Microsoft Intune. To deploy *.dmg* or *.app* files, see [Add a macOS DMG app to Microsoft Intune](./add-dmg-macos.md).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **macOS** platform, and then select **Line-of-business app**.
 4. Choose **Select** to open the **Add app** steps.
@@ -114,3 +114,7 @@ For line-of-business (LOB) apps, if the app is assigned with Required intent and
 - Assign the app you created to the groups you choose. It now appears in the apps list. For help, see [How to assign apps to groups](./assign-groups.md).
 
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](../monitor-assignments.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

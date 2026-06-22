@@ -1,7 +1,7 @@
 ---
 title: Use Microsoft Intune to import and analyze group policies
 description: Import and analyze your group policy objects using the Group Policy analytics tool. See the policies that are supported and aren't supported in Intune.
-ms.date: 11/15/2023
+ms.date: 06/22/2026
 ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
@@ -30,9 +30,32 @@ This feature applies to:
 
 This article shows you how to export your on-premises GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](./migrate-group-policy.md).
 
-## Before you begin
+## Prerequisites
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control/overview.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platforms:
+>
+> - Windows
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
+>
+> - Intune administrator (Microsoft Entra role)
+> - A role that has the **Security baselines** and the **Device Configuration** permission.
+> 
+> For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control/overview.md).
+:::column-end:::
+:::row-end:::
 
 ## Export a GPO as an XML file
 
@@ -51,7 +74,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 ## Import GPOs and run analytics
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics**.
+1. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Group Policy analytics**.
 2. Select **Import**, select your saved XML file > **Next**.
 
     You can select multiple files at the same time.
@@ -143,7 +166,7 @@ Even though Group Policy analytics can parse the CSPs, there are some things you
 
 ## Group Policy migration readiness report
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Device management** > **Group policy analytics**:
+1. In the [Microsoft Intune admin center], select **Reports** > **Device management** > **Group policy analytics**:
 
     :::image type="content" source="./media/import-group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 
@@ -174,7 +197,7 @@ Currently, the Group Policy analytics tool only supports non-ADMX settings in th
 
 ## Send product feedback
 
-You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Group Policy analytics** > **Got feedback**.
+You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center], select **Devices** > **Manage devices** > **Group Policy analytics** > **Got feedback**.
 
 Examples of feedback areas:
 
@@ -195,10 +218,11 @@ At any time, you can delete imported GPOs:
 
     :::image type="content" source="./media/import-group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Intune admin center.":::
 
-## Next steps
+## Related content
 
 - [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](./migrate-group-policy.md)
+- Learn about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
-## See also
+<!--links-->
 
-Learn more about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

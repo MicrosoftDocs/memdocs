@@ -36,7 +36,7 @@ The available configuration parameters and the implementation of the configurati
 
 You can assign an app configuration policy to a group of end-users and devices by using a combination of [include and exclude assignments](../deployment/configure-assignment-scope.md). As part of the process to add or update an app configuration policy, you can set the assignments for the app configuration policy. When you set the assignments for the policy, you can choose to include and exclude the [groups](../../fundamentals/tenant-administration/add-groups.md) of end-users for which the policy applies. When you choose to include one or more groups, you can choose to select specific groups to include or select built-in groups. Built-in groups include **All Users**, **All Devices**, and **All Users + All Devices**.
 
-You can also use [filters](../../fundamentals/filters/overview.md) to refine the assignment scope when deploying app configuration policies for managed iOS and Android devices. You must first [create a filter](../../fundamentals/filters/overview.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **Configuration** > **Create** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode.
+You can also use [filters](../../fundamentals/filters/overview.md) to refine the assignment scope when deploying app configuration policies for managed iOS and Android devices. You must first [create a filter](../../fundamentals/filters/overview.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Intune admin center] you can assign your managed app configuration policy by selecting **Apps** > **Configuration** > **Create** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode.
 
 The app configuration policy workload provides a list of app configuration policies that have been created for your tenant. This list provides details, such as Name, Platform, Updated, Enrollment type, and Scope Tags. For additional details about a specific app configuration policy, select the policy. On the policy **Overview** pane, you can see specific details, such as the policy status based on device and based on user, as well as whether the policy has been assigned.
 
@@ -107,11 +107,11 @@ You can validate the app configuration policy using the following three methods:
 
    1. Verify the app configuration policy visibly on the device. Confirm that the targeted app is exhibiting the behavior applied in the app configuration policy.
    2. Verify via Diagnostic Logs (see the [Diagnostic Logs](#diagnostic-logs) section below).
-   3. Verify in the Microsoft Intune admin center. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *select the related app**. Then, under the **Monitor** section, select **Device install status**:
+   3. Verify in the Microsoft Intune admin center. In the [Microsoft Intune admin center], select **Apps** > **All Apps** > *select the related app**. Then, under the **Monitor** section, select **Device install status**:
       Device Install Status Report monitors the latest check-in's for all the devices the configuration policy has been targeted to.
       ![First screenshot of device install status](media/overview/device-install-status-1.png)
 
-      Additionally, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > *select a device* > **App configuration**. The **app configuration** pane will display all the assigned policies and their state:
+      Additionally, in the [Microsoft Intune admin center], select **Devices** > **All Devices** > *select a device* > **App configuration**. The **app configuration** pane will display all the assigned policies and their state:
 
       ![Screenshot of app configuration](media/overview/app-configuration.png)
 
@@ -206,3 +206,7 @@ When the logs show a configuration parameter that is confirmed to be applying bu
 ### Managed apps
 
 - Learn how to use app configuration with managed apps. See [Add app configuration policies for managed apps without device enrollment](./configure-managed-apps.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

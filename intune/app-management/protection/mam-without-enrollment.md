@@ -53,7 +53,7 @@ This task list provides an overview. For more specific information, see [Microso
 
 - Be sure your devices are [supported](../../fundamentals/ref-supported-platforms.md).
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../ref-protected-apps.md) or [configure your apps](../configuration/overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](./ref-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
+- In the [Microsoft Intune admin center], [add your apps](../ref-protected-apps.md) or [configure your apps](../configuration/overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](./ref-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
 
 - Tell users how to get different apps. For example, you can:
 
@@ -81,3 +81,7 @@ The specific tasks depend on how you tell users to install the apps.
 - [Linux enrollment guide](../../device-enrollment/guide-linux.md)
 - [macOS enrollment guide](../../device-enrollment/apple/guide-macos.md)
 - [Windows enrollment guide](../../device-enrollment/windows/guide.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -232,12 +232,12 @@
       },
       "sensitive-language-bl":{
         "exclude": [
-          "intune-service/configuration/android-pulse-secure-per-app-vpn.md"
+          "device-configuration/templates/configure-per-app-vpn-android.md"
           ]
       },
       "sensitive-language-wl":{
         "exclude": [
-          "intune-service/configuration/android-pulse-secure-per-app-vpn.md"
+          "device-configuration/templates/configure-per-app-vpn-android.md"
           ]
       }
     }

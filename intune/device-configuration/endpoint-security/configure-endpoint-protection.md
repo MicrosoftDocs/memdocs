@@ -31,7 +31,7 @@ Before you create a profile, review the following articles that detail the Endpo
 > [!IMPORTANT]
 > The macOS endpoint protection template has been deprecated. Existing policies remain unchanged, but you can no longer create new policies using this template. We recommend using the settings catalog to create new configuration policies for FileVault, Firewall, and System Policy Control (Gatekeeper) payloads. For more information, see [macOS settings catalog](../settings-catalog/index.md).
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -86,7 +86,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 ### To add custom firewall rules to an Endpoint protection profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -129,3 +129,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 ## Next steps
 
 [Monitor the profile status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

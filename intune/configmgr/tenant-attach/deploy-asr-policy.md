@@ -20,7 +20,7 @@ ms.collection: tier3
 
 ## <a name="bkmk_asr"></a> Assign Attack surface reduction policy to a collection
 
-1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In a browser, go to the [Microsoft Intune admin center].
 1. Select **Endpoint security** > **Attack surface reduction** then **Create Policy**.
 1. Create a profile with the following settings:
 
@@ -45,3 +45,7 @@ ms.collection: tier3
 - [Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)
 - [Create and deploy endpoint security Firewall policy to tenant attached devices](deploy-firewall-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

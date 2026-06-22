@@ -194,7 +194,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 ### Automatically configure elevation rules for Windows elevation rules policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**. To select a file to use for an elevation rule, choose one of the following starting paths:
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Endpoint Privilege Management**. To select a file to use for an elevation rule, choose one of the following starting paths:
 
    **Start from a Report:**
 
@@ -237,7 +237,7 @@ Use either of the following methods to create new elevation rules, which are add
 
 ### Manually configure elevation rules for Windows elevation rules policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows**, *Profile* to **Windows elevation rules policy**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
@@ -372,7 +372,7 @@ Endpoint Privilege Management uses reusable settings groups to manage the certif
 
 To create the reusable settings group for Endpoint Privilege Management:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Reusable settings (preview)** tab > and then select **Add**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Reusable settings (preview)** tab > and then select **Add**.
 
    :::image type="content" source="./media/create-elevation-rules/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/create-elevation-rules/add-reusable-settings.png":::
 
@@ -392,3 +392,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 > [!div class="nextstepaction"]
 > [Next: Use Endpoint Privilege Management to transition users from administrator to standard user >](./tutorial-admin-to-standard-user.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

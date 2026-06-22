@@ -46,7 +46,7 @@ This feature applies to:
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -86,3 +86,7 @@ The next time each device checks in, the policy is applied.
 
 - See all the settings for [Windows](./ref-shared-device-settings-windows.md) and [Windows Holographic for Business](./ref-shared-device-settings-windows-holographic.md).
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

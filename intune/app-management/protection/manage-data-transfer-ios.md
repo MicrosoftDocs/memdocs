@@ -31,7 +31,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
 
 The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [create and assign an app protection policy](./create-policy.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
+1. In the [Microsoft Intune admin center], [create and assign an app protection policy](./create-policy.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
 
 2. Deploy the apps and the email profile that you want managed through Intune or your third-party MDM solution using the following generalized steps. This experience is also covered by *Example 1*.
 
@@ -55,7 +55,7 @@ The following procedure is a general flow on how to configure the UPN setting an
 
 ### Example 1: Admin experience in Intune or third-party MDM console
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or your third-party MDM provider. Go to the section of the admin center in which you deploy application configuration settings to enrolled iOS devices.
+1. Go to the [Microsoft Intune admin center] or your third-party MDM provider. Go to the section of the admin center in which you deploy application configuration settings to enrolled iOS devices.
 
 2. In the Application Configuration section, enter the following setting for each *policy managed app* that will transfer data to iOS managed apps, except for apps that are automatically configured based on [device management type](./create-policy.md#device-management-types):
 
@@ -117,3 +117,7 @@ First,  [create and assign an app protection policy](./create-policy.md) to the 
 
 ## See also
 [What is Intune app protection policy](./overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -124,7 +124,7 @@ You can manually update a certificate connector even when it supports automatic 
 
 In the Microsoft Intune admin center, you can select a certificate connector to view information about its status:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 
 2. Go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 
@@ -502,3 +502,7 @@ This connector is a unified connector in that it includes the capabilities of bo
 ## Next steps
 
 [Review prerequisites for the Certificate Connector for Microsoft Intune](prerequisites.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

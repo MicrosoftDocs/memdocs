@@ -41,7 +41,7 @@ Devices must be enrolled before you can see them in the admin center. Enrollment
 
 ## Create Chrome Enterprise connection
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Go to **Tenant administration** > **Connectors and tokens**.
 3. Select **Chrome Enterprise** > **Connect**.
@@ -91,3 +91,7 @@ To delete the connection in the Microsoft Intune admin center:
 ## Next steps
 * View ChromeOS devices and details synced between Google Admin console and the Microsoft Intune admin center. The information can be used to monitor connections or build reports. For more information, see [View ChromeOS device information in Intune](../device-management/inventory-and-status/chrome-enterprise-details.md).
 *  Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote device actions for ChromeOS](../device-management/inventory-and-status/chrome-enterprise-details.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

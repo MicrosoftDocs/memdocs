@@ -89,7 +89,7 @@ The *collect diagnostics* action lets you collect and download managed device di
 
 The Microsoft 365 remote application diagnostics enables admins to request Intune app protection diagnostics and Microsoft 365 application diagnostics (where applicable).
 
-Admins can find this report in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
+Admins can find this report in the [Microsoft Intune admin center] by selecting **Troubleshooting + support** > **Troubleshoot** > *select a user* > **Summary** > *App protection**. This feature is exclusive to applications that are under Intune app protection management. If supported, the application specific logs are gathered and stored within dedicated storage solutions for each application.
 
 Applications with support for M365 application diagnostics:
 
@@ -122,14 +122,14 @@ Applications with support for M365 application diagnostics:
 
 Requirements to collect diagnostics from an M365 application:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Navigate to **Tenant administration** > **Device diagnostics** > Make sure the third setting is enabled.
 3. Create and deploy an Intune App Protection policy to a user. For more information, see [Create and assign app protection policies](../../app-management/protection/create-policy.md).
 4. Confirm the application has been managed by Intune App Protection policy. You can check locally on the device and/or by loading the user into the Intune Troubleshooting Pane and opening the App Protection summary page.
 
 To use the *Collect diagnostics* action:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center].
 2. Navigate to **Troubleshooting + support** > **Troubleshoot** > *select a user*.
 3. On the **Summary** page, select **App Protection** >  **Checked-in**.
 4. Find the application to collect diagnostics on and use the **"..."** option to select **Collect diagnostics**.
@@ -299,7 +299,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 
 The *collect diagnostics* action is enabled by default. You can disable the **Collect diagnostics** action for all devices by following these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
@@ -310,7 +310,7 @@ The *collect diagnostics* action is enabled by default. You can disable the **Co
 
 Windows Autopilot automatic diagnostic capture is enabled by default. You can disable Windows Autopilot automatic diagnostic capture by following these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center]
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 

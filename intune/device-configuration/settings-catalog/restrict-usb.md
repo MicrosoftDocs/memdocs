@@ -38,7 +38,7 @@ This article applies to:
 
 This policy provides an example of how to block (or allow) features that affect USB devices. Use this policy as a starting point, and then add or remove settings as needed for your organization.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -192,3 +192,7 @@ To find the GUID of your device, use the following steps:
 ## Related articles
 
 - [Use the Intune settings catalog to configure settings](index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

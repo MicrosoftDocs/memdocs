@@ -57,7 +57,7 @@ These settings are added to a device configuration profile in Intune, and then a
 >
 > [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md) is also a good resource.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -110,3 +110,7 @@ These settings are added to a device configuration profile in Intune, and then a
 [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
 
 For more information on preference files for Microsoft Edge, go to [Configure Microsoft Edge policy settings on macOS](/deployedge/configure-microsoft-edge-on-mac).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
