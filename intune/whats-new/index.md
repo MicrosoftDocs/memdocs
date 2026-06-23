@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/22/2026
+ms.date: 06/23/2026
 ms.topic: whats-new
 ms.collection:
 - M365-identity-device-management
@@ -206,22 +206,6 @@ You have the option to display custom text in the top bar of the Managed Home Sc
 >
 > - Android Enterprise dedicated devices (COSU)
 > - Android Enterprise fully managed devices (COBO)
-
-#### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
-
-On macOS devices, the **Disable MAC address randomization** setting is now available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices.
-
-When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
-
-For more information, see:
-
-- [Wi-Fi profile settings for Apple devices](../device-configuration/templates/ref-wifi-settings-apple.md)
-- [Add and use Wi-Fi settings on your devices in Microsoft Intune](../device-configuration/templates/configure-wifi.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS 15 and later
 
 #### Managed Home Screen exit lock task mode password now requires a device configuration profile<!-- 31846021 -->
 
