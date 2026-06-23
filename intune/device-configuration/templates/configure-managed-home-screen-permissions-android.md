@@ -47,10 +47,10 @@ The following table lists the permissions that you can configure for the MHS app
 
 | Permission | Samsung | Zebra | Legacy Zebra | Honeywell |
 |---|---|---|---|---|
-| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ | ✅ |
-| **Notification Permission** is required by:<br/><br/>- Notification badge | ✅ | ✅ | ✅ | n/a |
-| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ✅ | ✅ | n/a | ✅ |
-| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a | ✅ |
+| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| **Notification Permission** is required by:<br/><br/>- Notification badge | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | n/a |
+| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | n/a | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | n/a | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](./deploy-oemconfig-zebra-android.md#oemconfig-apps-for-zebra-devices).
 
