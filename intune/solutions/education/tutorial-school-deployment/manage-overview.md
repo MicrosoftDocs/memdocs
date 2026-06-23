@@ -17,7 +17,7 @@ With Intune, there are several ways to manage students' devices. Groups can be c
 
 ## Remote actions
 
-✅ Remotely trigger actions on devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Remotely trigger actions on devices
 
 Intune allows you to perform actions on devices without having to sign in to the devices. For example, you can send a command to a device to restart or to turn off, or you can locate a device.
 
@@ -41,7 +41,7 @@ To learn more about remote actions in Intune for Education, see [Remote actions]
 
 ## Remote assistance
 
-✅ View and control remote devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: View and control remote devices
 
 With devices managed by Intune, you can remotely assist students and teachers that are having issues with their devices.
 
@@ -49,7 +49,7 @@ For more information, see [Remote assistance for managed devices][EDU-2].
 
 ## Device inventory and reporting
 
-✅ View device information and reporting
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: View device information and reporting
 
 With Intune, it's possible view and report on current devices, applications, settings, and overall health. You can also download reports to review or share offline.
 

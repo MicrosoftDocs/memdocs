@@ -56,9 +56,9 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). These devices are also used in countries/regions that allow GMS.
 
-✅ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
 
-❌ If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, use Android (AOSP) enrollment.
+:::image type="icon" source="../../media/icons/16/error.svg" border="false"::: If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, use Android (AOSP) enrollment.
 
 # [Android (AOSP)](#tab/aosp)
 
@@ -68,9 +68,9 @@ For example, devices that are used for augmented or virtual reality typically do
 - Don't support GMS.
 - Are used in countries/regions that block GMS.
 
-✅ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](../../fundamentals/aosp-supported-devices.md).
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](../../fundamentals/aosp-supported-devices.md).
 
-❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
+:::image type="icon" source="../../media/icons/16/error.svg" border="false"::: If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
 
 To learn more about Android (AOSP), go to [About the Android Open Source Project](https://source.android.com/) (opens Android's web site).
 
