@@ -66,7 +66,7 @@ These recommendations focus on improving performance and reducing latency in wor
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Use the **All users** and **All devices** virtual groups instead of creating your own version of all users/all devices using Microsoft Entra dynamic groups. | ❌ Don't create your own "All users" or "All devices" dynamic groups for policy and app targeting in Intune.
+| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Use the **All users** and **All devices** virtual groups instead of creating your own version of all users/all devices using Microsoft Entra dynamic groups. | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't create your own "All users" or "All devices" dynamic groups for policy and app targeting in Intune.
 
 Larger groups take longer to sync membership updates between Microsoft Entra ID and Intune. The **All users** and **All devices** are usually the largest groups you have. If you assign Intune workloads to large Microsoft Entra groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
@@ -85,7 +85,7 @@ When using very large groups in Intune (over 100,000 members), expect some initi
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Reuse the same group objects for assigning multiple policies. | ❌ Don't create duplicate copies of the same group to target different policies. <br/><br/> ❌ Don't create dedicated "App groups" or "Policy groups". |
+| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Reuse the same group objects for assigning multiple policies. | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't create duplicate copies of the same group to target different policies. <br/><br/> :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't create dedicated "App groups" or "Policy groups". |
 
 Behind the scenes, Intune converts Microsoft Entra group members to assignment targeting messages for each user and device. This process is highly optimized when the group objects are the same.
 
@@ -105,7 +105,7 @@ The admin adds individual user or devices into these groups. These app groups dr
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Be careful with large group nesting changes in Microsoft Entra ID.| ❌ Don't make large group nesting changes all at once. |
+| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Be careful with large group nesting changes in Microsoft Entra ID.| :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't make large group nesting changes all at once. |
 
 A large group membership change in Microsoft Entra ID can generate bursts of targeting changes in Intune. These bursts can delay targeting of other assignments in your environment.
 
@@ -119,7 +119,7 @@ This recommendation also applies when groups are "unnested". For more informatio
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Use assignment filters to achieve the correct user+device combination for targeting. | ❌ Don't mix user groups and device groups when using Include and Exclude groups. |
+| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Use assignment filters to achieve the correct user+device combination for targeting. | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't mix user groups and device groups when using Include and Exclude groups. |
 
 This recommendation is also a support statement. We don't recommend or support creating assignments to user groups and excluding a device group from that assignment, or vice-versa.
 
@@ -131,7 +131,7 @@ Instead of mixed exclusions, we recommend assigning to a user group. Then, use a
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Use filters for simple device properties (OS type, manufacturer, model, ownership, device category). | ❌ Don't use dynamic groups for simple device properties when the group is only used by Intune. |
+| :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Use filters for simple device properties (OS type, manufacturer, model, ownership, device category). | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: Don't use dynamic groups for simple device properties when the group is only used by Intune. |
 
 Dynamic device groups that use simple property rules (like `device.deviceOSType -eq "Windows"` or `device.deviceOwnership -eq "Company"`) introduce additional processing steps without benefit when the group is only consumed by Intune. Assignment filters evaluate the same properties at device check-in — directly, without requiring group membership evaluation.
 
