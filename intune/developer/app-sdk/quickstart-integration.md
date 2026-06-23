@@ -36,7 +36,7 @@ You _**must**_ first register your app with Microsoft Intune and agree to the re
 Until registration has been finished and confirmed by the Microsoft Intune team, Intune administrators won't have the option to apply app protection policy to your app's deep link. Microsoft will also add your app to its Microsoft Intune Partners page. There, the app's icon will be displayed to show that it supports Intune app protection policies.
 
 ### The registration process
-To begin the registration process, and if you aren't already working with a Microsoft contact, fill out the [Microsoft Intune App Partner Questionnaire](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR80SNPjnVA1KsGiZ89UxSdVUMEpZNUFEUzdENENOVEdRMjM5UEpWWjJFVi4u).
+To begin the registration process, and if you aren't already working with a Microsoft contact, fill out the [Microsoft Intune App Partner Questionnaire](https://aka.ms/IntuneAppPartner).
 
 We'll use the email addresses listed in your questionnaire response to reach out and continue the registration process. Additionally, we use your registration email address to contact you if we have any concerns.
 
