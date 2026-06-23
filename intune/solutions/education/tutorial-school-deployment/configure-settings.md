@@ -20,7 +20,7 @@ Settings can be assigned to groups:
 
 ## Introduction
 
-✅ Learn about the different types of settings
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Learn about the different types of settings
 
 ::: zone pivot="windows"
 
@@ -87,7 +87,7 @@ With Express Configuration, you can get Intune for Education up and running in j
 
 ## Device settings
 
-✅ Configure settings and assign them to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure settings and assign them to devices
 
 ::: zone pivot="windows"
 
@@ -162,7 +162,7 @@ For more information, see [iOS device settings in Intune for Education](/intune-
 
 ## Update policies
 
-✅ Configure update policies and assign to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure update policies and assign to devices
 
 ::: zone pivot="windows"
 
@@ -231,7 +231,7 @@ For more information about the other update options in the Intune console, see [
 
 ## Security policies
 
-✅ Configure security policies and assign them to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure security policies and assign them to devices
 
 ::: zone pivot="windows"
 
@@ -323,7 +323,7 @@ Common areas for security include:
 
 ## Storage policies
 
-✅ Configure storage policies and assign them to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure storage policies and assign them to devices
 
 In the educational sector, devices with limited storage capacity are sometimes deployed due to cost and portability considerations. It is essential to manage storage effectively to ensure that Windows devices remain up to date at all times. Storage Sense is a Windows feature that helps automatically free up disk space by deleting unnecessary files. For more information about Storage Sense, see [Configure Storage Sense](/windows/configuration/storage/storage-sense).
 

@@ -1,7 +1,7 @@
 ---
 title: "Configure Wi-Fi Settings for Apple Devices in Intune"
 description: Add or create a Wi-Fi configuration profile on iOS/iPadOS and macOS devices using Wi-Fi configuration settings in Microsoft Intune. Configure the connection details, authentication methods, SSIDs, security types, and proxy settings.
-ms.date: 05/25/2026
+ms.date: 06/23/2026
 ms.topic: article
 ms.reviewer: wicale
 ms.collection:
@@ -57,7 +57,6 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 - **Wi-Fi type**: Select **Basic**.
 
 ::: zone pivot="ios-ipados"
-
 - **Network name**: Enter a name for this Wi-Fi connection. Users see this name when they browse the list of available connections on their device.
 
 ::: zone-end
@@ -78,6 +77,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 
     For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
+::: zone pivot="ios-ipados"
 - **Disable MAC address randomization**: Devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
 
   Your options:
@@ -87,19 +87,11 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
   - **No**: Enables MAC address randomization on devices. Users can't turn it off. When devices connect to a new network, devices present a randomized MAC address, instead of the physical MAC address.
 
   This setting applies to:
-
-  ::: zone pivot="ios-ipados"
   
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
-  ::: zone-end
-
-  ::: zone pivot="macos"
-
-  - macOS 15 and newer
-
-  ::: zone-end
+::: zone-end
 
 ## Enterprise profiles
 
@@ -162,7 +154,6 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
     ::: zone-end
 
     ::: zone pivot="ios-ipados"
-
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../../device-security/certificates/derived-credentials.md).
@@ -224,6 +215,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
+::: zone pivot="ios-ipados"
 - **Disable MAC address randomization**: Devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. Randomized MAC addresses also break functionality that relies on a static MAC address, including network access control (NAC).
 
   Your options:
@@ -234,18 +226,10 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
   This setting applies to:
 
-  ::: zone pivot="ios-ipados"
-
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
-  ::: zone-end
-
-  ::: zone pivot="macos"
-
-  - macOS 15 and newer
-
-  ::: zone-end
+::: zone-end
 
 ## Related articles
 
