@@ -3,8 +3,6 @@ title: Platform SSO scenarios for macOS devices
 description: Use Microsoft Intune to configure common Platform SSO scenarios for macOS devices. You can enable Kerberos SSO to on-premises Active Directory and cloud-based Microsoft Entra ID, use Touch ID biometric policy with Secure Enclave authentication, and enable SSO on non-Microsoft apps. You can also configure end user experience settings.
 ms.date: 05/11/2026
 ms.topic: how-to
-appliesto:
-- ✅ macOS
 ms.reviewer: arnab, veenasoman
 ms.collection:
 - M365-identity-device-management
