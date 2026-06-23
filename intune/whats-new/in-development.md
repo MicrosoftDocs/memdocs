@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 06/18/2026
+ms.date: 06/23/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -189,6 +189,22 @@ To learn more about the settings you can currently configure, see [Add Wi-Fi set
 > Applies to:
 >
 > - iOS/iPadOS  
+
+### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
+
+On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices.
+
+When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+For more information, see:
+
+- [Wi-Fi profile settings for Apple devices](../device-configuration/templates/ref-wifi-settings-apple.md)
+- [Add and use Wi-Fi settings on your devices in Microsoft Intune](../device-configuration/templates/configure-wifi.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS 15 and later
 
 <!-- *********************************************** -->  
 

@@ -9,7 +9,7 @@ author: scottbreenmsft
 
 # Avoiding policy conflicts
 
-✅ Ensure policies apply effectively to devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Ensure policies apply effectively to devices
 
 Devices and users targeted with the same setting from different policies cause conflicts. When conflicts occur, Intune generates an error and doesn't apply either setting. As a result, it's important to avoid or resolve conflicts to ensure the correct configuration is applied. Use the steps in this document when creating new policies to avoid or resolve policy conflicts.
 

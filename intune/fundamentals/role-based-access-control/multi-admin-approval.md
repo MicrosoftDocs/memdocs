@@ -1,7 +1,7 @@
 ---
 title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
-ms.date: 04/27/2026
+ms.date: 06/15/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: davidra
