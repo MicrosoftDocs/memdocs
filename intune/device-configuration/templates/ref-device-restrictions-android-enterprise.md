@@ -108,9 +108,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../../device-management/actions/wipe.md) |
   | --- | --- | --- | --- |
-  | **Corporate-owned devices with work profile** (COPE) | ✅ factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
-  | **Fully managed** (COBO) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
-  | **Dedicate** (COSU) | ❌ no factory reset protection | ✅ factory reset protection | ❌ no factory reset protection |
+  | **Corporate-owned devices with work profile** (COPE) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection |
+  | **Fully managed** (COBO) | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection |
+  | **Dedicate** (COSU) | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection |
 
   For background and guidance, see **[Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)**.
 
