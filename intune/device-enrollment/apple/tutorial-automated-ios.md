@@ -32,12 +32,12 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 ## Step 1: Add MDM server
 Create an MDM server profile for Microsoft Intune in Apple Business. The token you download in this step will enable the connection between Microsoft Intune and Apple Business in a later step.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 1. Go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select **Apple mobile**.  
 1. Select **Enrollment program tokens**.
-1. Select **Create**.
+1. Select **Create**.  
 1. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.
 1. Select **Download your public key** to download the server's public key certificate (a .pem file) to your local drive.
 1. Select **Create a token via Apple Business** and sign in to Apple Business with your company Apple ID.
@@ -73,27 +73,31 @@ Create an enrollment policy for corporate-owned iOS/iPadOS devices. A device enr
 
 1. On the **Basics** page, enter *TestPolicy* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users don't see these details.
 
-1. Select **Next**.
+1. Select **Next**.  
 
-1. Decide if you want your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users don't need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+    For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md). 
+
+1. Select **Next**.  
+
+1. On the **Configuration settings** tab, decide if you want your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users don't need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
 
    * If you chose to enroll with User Affinity, the **Select where users must authenticate** option appears. Decide if you want to Authenticate with Company Portal or Apple Setup Assistant (legacy), or Setup Assistant with modern authentication. For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](ref-automated-authentication-methods.md).
 
 1. If you chose to enroll with User Affinity and Authenticate with Company Portal, the **Install Company Portal with VPP** option appears. If you install the Company Portal with a VPP token, your user won't have to enter an Apple ID and Password to download the Company Portal from the app store during enrollment. Choose **Use Token:** under **Install Company Portal with VPP** to select a VPP token that has free licenses of the Company Portal available. If you don't want to use VPP to deploy the Company Portal, choose **Don't use VPP**.
 
-   * If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you want to run the Company Portal in Single App Mode until Authentication. With this setting, you can ensure the user doesn't have access to other apps until they finish the corporate enrollment. If you want to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**.
-
-1. Under **Device Management Settings**, choose **Yes** for **Supervised**. Supervision gives you more management options and disables Apple Activation Lock by default. Microsoft recommends using automated device enrollment as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
+   * If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you want to run the Company Portal in Single App Mode until Authentication. With this setting, you can ensure the user doesn't have access to other apps until they finish the corporate enrollment. If you want to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**.  
 
 1. Choose **Yes** under **Locked enrollment** to ensure your users can't remove device management from their corporate device.  
 
-1. By default, Apple names the device with the device type, such as *iPad*. If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
+1. By default, Apple names the device with the device type, such as *iPad*. If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.  
 
-1. Choose **Next**.
+1. Under **Setup Assistant**, enter *Tutorial department* for **Department Name**. This string is what users see when they tap **About configuration** during device activation.  
 
-1. On the **Setup Assistant** page, enter *Tutorial department* for **Department Name**. This string is what users see when they tap **About configuration** during device activation.
-
-1. Under **Department Phone**, enter a phone number. This number appears when users tap the **Need help** button during activation.
+1. For **Department Phone**, enter a phone number. This number appears when users tap the **Need help** button during activation.
 
 1. You can **Show** or **Hide** various screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.
 
@@ -120,3 +124,7 @@ You've set up management and syncing between Apple and Intune, and assigned a po
 ## Related configurations   
 
 In addition to assigning devices to your MDM server and creating an enrollment policy, you can optionally use Apple access management settings in Apple Business (or Apple School Manager) to configure service access for Apple accounts on organization-owned devices. Microsoft Intune enforces these settings after enrollment. For more information, see [Configure service access for Apple accounts](setup-account-service-access.md).  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

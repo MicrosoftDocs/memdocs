@@ -28,7 +28,7 @@ These settings are only used on devices that run Samsung Knox Standard.
 
 ## Create an allowed or blocked app list
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -79,3 +79,7 @@ The next time each targeted device checks in, the app settings are applied.
 ## Related articles
 
 The profile is created, but might not be doing anything yet. Be sure to [assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

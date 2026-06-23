@@ -25,7 +25,7 @@ To selectively remove company app data, create a wipe request by using the steps
 
 ## Create a device based wipe request
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **App selective wipe** > **Create wipe request**.
 
    The **Create wipe request** pane is displayed.
@@ -48,7 +48,7 @@ The service creates and tracks a separate wipe request for each protected app on
 
 By adding a user to the User-level wipe you'll automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **App selective wipe** > **User-Level Wipe**
 3. Select **Add**. The **Select user** pane displays.
 4. Choose the user whose app data you would like to wipe > **Select**.
@@ -92,3 +92,7 @@ User wipes will remain in the list until removed by an administrator. To remove 
 [What's app protection policy](./overview.md)
 
 [What's app management](../overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

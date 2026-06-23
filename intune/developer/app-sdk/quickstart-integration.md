@@ -108,7 +108,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 ## Line-of-business app version numbers
 
-Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
+Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Intune admin center] in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
 
 ### Full version number
 
@@ -168,7 +168,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 If your app is using its own custom Microsoft Entra settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**.
 
-Once you have registered your app within an Azure tenant, and it's showing up under **All Applications**, you must give your app access to the Intune Mobile App Management service. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
+Once you have registered your app within an Azure tenant, and it's showing up under **All Applications**, you must give your app access to the Intune Mobile App Management service. In the [Microsoft Intune admin center]:
 
 1. Go to the **Microsoft Entra ID** blade.
 2. Under **App registrations**, go to the listing set up for the application.
@@ -193,3 +193,7 @@ The badge is a briefcase icon and can be seen in the samples below:
 * An image manipulation application that can read **.eps** files, or an Adobe application that can read **.ai** files.
 
 * You can find the [Intune app badge assets and guidelines](https://github.com/msintuneappsdk/intune-app-partner-badge) on the Microsoft Intune GitHub.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

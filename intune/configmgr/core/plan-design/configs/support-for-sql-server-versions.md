@@ -74,6 +74,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 | SQL Version | Minimum Required Update | Supported Site Types | Notes |
 |------------|-------------------------|--------------------------|-------|
+| **SQL Server 2025** | RTM | CAS, Primary, Secondary | Support added in **version 2603**. CU must be supported by SQL lifecycle. |
 | **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. Support for SQL 2022 Compatibility Level (160) added in **version 2603** <!--17536046-->. CU must be supported by SQL lifecycle. |
 | **SQL Server 2019** | Cumulative Update 5 (CU5) or later | CAS, Primary, Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
 | **SQL Server 2017** | Cumulative Update 2 (CU2) or later | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
@@ -103,6 +104,7 @@ You can use this version with the minimum service pack and cumulative update sup
 
 | SQL Version | Minimum Required Update | Supported Site Types | Notes |
 |------------|-------------------------|--------------------------|-------|
+| **SQL Server 2025 Express** | RTM | Secondary | Support added in **version 2603**. CU must be supported by SQL lifecycle. |
 | **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. Support for SQL 2022 Compatibility Level (160) added in **version 2603**. |
 | **SQL Server 2019 Express** | Cumulative Update 5 (CU5) or later | Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
 | **SQL Server 2017 Express** | Cumulative Update 2 (CU2) or later | Secondary | CU must be supported by SQL lifecycle. |
@@ -189,6 +191,7 @@ The following table identifies the recommended compatibility levels for Configur
 
 |SQL Server version | Supported compatibility levels | Recommended level |
 |----------------|--------------------|--------|
+| SQL Server 2025 | 170, 160, 150, 140, 130, 120, 110 | 170 |
 | SQL Server 2022 | 160 (since version 2603), 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2017 | 140, 130, 120, 110 | 140 |

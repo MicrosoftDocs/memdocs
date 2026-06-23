@@ -9,7 +9,7 @@ device-preparation/tutorial/user-driven/entra-join-user-group.md
 
 Headings are driven by article context. -->
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Groups** in the left hand pane.
 
@@ -59,3 +59,7 @@ Headings are driven by article context. -->
         > The linked article is in regards to creating dynamic membership rules in Microsoft Entra ID. However, dynamic user groups in Intune are also dynamic user groups in Microsoft Entra ID, so the rule syntax is the same.
 
     1. Select **Create** to finish creating user group.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

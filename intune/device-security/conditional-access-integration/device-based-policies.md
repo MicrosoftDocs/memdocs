@@ -62,7 +62,7 @@ Device-based Conditional Access uses compliance status signals from Intune to en
 
 ## Create the Conditional Access policy
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
@@ -120,3 +120,7 @@ Device-based Conditional Access uses compliance status signals from Intune to en
 
 - [App-based Conditional Access with Intune](./app-based-policies.md)
 - [Troubleshooting Intune Conditional Access](/troubleshoot/mem/intune/device-protection/troubleshoot-conditional-access)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

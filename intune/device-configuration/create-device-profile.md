@@ -42,13 +42,13 @@ This feature applies to:
 
 ## Prerequisites
 
-- At a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
+- At a minimum, sign in to the [Microsoft Intune admin center] with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control/overview.md).
 
 - Enroll your devices in Intune. To learn more about your enrollment options, see [Microsoft Intune enrollment guide](../device-enrollment/guide.md).
 
 ## Create the profile
 
-In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**. You have the following options:
+In the [Intune admin center], select **Devices**. You have the following options:
 
 :::image type="content" source="./media/create-device-profile/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune." lightbox="./media/create-device-profile/devices-overview.png":::
 
@@ -226,3 +226,9 @@ When creating profiles, consider the following recommendations:
 
 - [Assign the profile](./assign-device-profile.md).
 - [Monitor its status](./monitor-device-profile.md).
+
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

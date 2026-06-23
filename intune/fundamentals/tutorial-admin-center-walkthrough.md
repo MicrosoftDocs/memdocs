@@ -13,7 +13,7 @@ ms.collection:
 
 # Tutorial: Walkthrough Microsoft Intune Admin Center
 
-Microsoft Intune provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
+Microsoft Intune provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Intune admin center] is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
 
 > [!NOTE]
 > Microsoft Intune is a single, integrated endpoint management platform for managing all your endpoints. The Microsoft Intune admin center integrates Microsoft Configuration Manager and Microsoft Intune.
@@ -35,7 +35,7 @@ Before setting up Microsoft Intune, review the following requirements:
 
 Follow the steps below to better understand Intune in the Microsoft Intune admin center. Once you complete the tour, you'll have a better understanding of some of the major areas of Intune.
 
-1. Open a browser and sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If you are new to Intune, use your free trial subscription.
+1. Open a browser and sign in to the [Microsoft Intune admin center]. If you are new to Intune, use your free trial subscription.
 
     :::image type="content" source="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-01.png" alt-text="Screenshot of the Microsoft Intune admin center - Home page." lightbox="./media/tutorial-admin-center-walkthrough/tutorial-walkthrough-mem-01.png":::
 
@@ -233,3 +233,7 @@ After exploring the admin center, try the step-by-step Intune tasks to enroll a 
 
 > [!div class="nextstepaction"]
 > [Try Intune tasks](try-overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

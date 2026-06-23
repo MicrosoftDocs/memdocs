@@ -43,7 +43,7 @@ The following table lists the various options when *assigning* apps to users and
 
 ## Assign an app
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps**.
 3. In the **Apps** pane, select the app you want to assign.
 4. In the **Manage** section of the menu, select **Properties**.
@@ -204,3 +204,7 @@ Default values for the setting are prepopulated for new assignments as follows:
 ## Next steps
 
 To learn more about monitoring app assignments, see [How to monitor apps](../monitor-assignments.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

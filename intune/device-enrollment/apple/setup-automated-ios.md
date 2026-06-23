@@ -82,7 +82,10 @@ Create an enrollment policy for automated device enrollment. A device enrollment
 > [!NOTE]
 > Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to   **Devices**.
+> [!IMPORTANT]
+> This article reflects the updated policy creation experience (**Enrollment program tokens** > **Enrollment policies**) for devices going through automated device enrollment. The older experience (**Enrollment program tokens** > **Profiles**) differs and will eventually be retired. The older experience won't receive new features, so be sure to create new policies under **Enrollment policies**. For more information, see [New iOS/iPadOS, visionOS, tvOS and macOS ADE enrollment policies experience](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531).
+
+1. In [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
@@ -97,7 +100,15 @@ Create an enrollment policy for automated device enrollment. A device enrollment
     > [!IMPORTANT]
     > If you make changes to an existing enrollment policy, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.
 
-1. In the **User Affinity** list, select an option that determines whether devices with this policy must enroll with or without an assigned user.
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+    For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md). 
+
+1. Select **Next**.  
+
+1. On the **Configuration settings** tab, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:  
 
     - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps. Enrolling with user affinity is also referred to as enrolling with a *user*.
     - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices. Enrolling without user affinity is also referred to as enrolling *userless*.
@@ -105,9 +116,7 @@ Create an enrollment policy for automated device enrollment. A device enrollment
       In some situations, you might want to associate a primary user with devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../../app-management/configuration/configure-managed-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     - **Enroll with Microsoft Entra ID shared mode**: Select this option to enroll devices that will be in shared mode.
 
-1. If you selected **Enroll with User Affinity** for the **User Affinity** field, you have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](ref-automated-authentication-methods.md).
-
-   ![Screenshot of authentication method options.](./media/setup-automated-ios/authentication-method.png)
+1. If you selected **Enroll with User Affinity** for the **User Affinity** field, you have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](ref-automated-authentication-methods.md).  
 
     Your options:
 
@@ -130,8 +139,6 @@ Create an enrollment policy for automated device enrollment. A device enrollment
 
 1. If you want devices using this policy to be supervised, select **Yes** in the **Supervised** list.
 
-    :::image type="content" source="./media/setup-automated-ios/supervisedmode.png" alt-text="Screenshot that shows the Supervised option.":::
-
     Supervised devices give you more management options and disabled Activation Lock by default. We recommend that you use ADE as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices. Apple Shared iPad for Business devices must be supervised.  
 
     Users are notified that their devices are supervised in the **Settings** app. In the app at the top of their screen, a static message tells them **This iPhone is supervised and managed by *`<your organization>`***.
@@ -139,7 +146,7 @@ Create an enrollment policy for automated device enrollment. A device enrollment
      > [!NOTE]
      > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](https://support.apple.com/guide/apple-configurator-mac).
 
-1. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device. If you're setting up devices in Microsoft Entra ID shared mode, select **Yes**.
+1. For **Locked enrollment**, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device. If you're setting up devices in Microsoft Entra ID shared mode, select **Yes**.
 
     Locked enrollment works a little differently, at first, on devices not originally purchased through Apple Business but later added to be a part of automated device enrollment: users on these devices can see the remove management button in the Settings app for the first 30 days after activating their device. After that provisional period, this option is hidden. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859) (opens Apple Configurator Help docs).
 
@@ -206,11 +213,9 @@ Create an enrollment policy for automated device enrollment. A device enrollment
  1. Under **Apply device name template**, select **Yes** .
  2. In the **Device Name Template** box, enter the template you want to use to construct device names. The template can include the device type and serial number. It can't contain more than 63 characters, including the variables. Example: `{{DEVICETYPE}}-{{SERIAL}}`
 
-1. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option sends a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, select **Yes**, and then enter your carrier's activation server URL.
+1. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option sends a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate a cellular data plan, select **Yes**, and then enter your carrier's activation server URL.  
 
-1. Select **Next**.
-
-1. On the **Setup Assistant** tab, configure the following policy settings:
+1. Under **Setup Assistant**, configure the following policy settings:
 
     | Department setting | Description |
     |---|---|
@@ -288,9 +293,9 @@ Before devices can be enrolled, you need to assign an enrollment policy to them.
 >[!NOTE]
 >You can also assign serial numbers to policies in the **Apple Serial Numbers** pane.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
-1. Select the **Apple** tab.
+1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
 2. Select an enrollment token.
 3. Select **Devices**.
@@ -323,3 +328,7 @@ Hide both screens on devices running iOS/iPadOS 14.5 and later. If you want to r
 - To sync devices, assign enrollment policies, and distribute devices to users, see [Manage ADE devices](manage-devices-tokens-apple.md).
 - To renew or delete your enrollment program token, see [Set up an ADE token](setup-apple-token.md).
 - For troubleshooting, see [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

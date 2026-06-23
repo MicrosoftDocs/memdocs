@@ -159,7 +159,7 @@ Policies support the use of a single script. However, each script can check mult
 
 To identify settings that aren't compliant for a device:
 
-- [In the Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that aren't compliant with policy. Go to **Reports** > **Device compliance**, select the **Reports** tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
+- In the [Microsoft Intune admin center], you can identify devices that aren't compliant with policy. Go to **Reports** > **Device compliance**, select the **Reports** tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
 
 The admin center displays a separate line for each setting that isn't compliant on a device.
 
@@ -193,3 +193,7 @@ To refresh compliance status after making changes on a Linux device, see [Refres
 ## Next steps
 
 - [Create a compliance policy](./create-policy.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -24,7 +24,7 @@ The following steps are required to enable and trigger local Windows Autopilot R
 
 To create a configuration profile that sets the **DisableAutomaticReDeploymentCredentials** policy and enables local Windows Autopilot Reset in Intune, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -100,7 +100,7 @@ To trigger a local Windows Autopilot Reset on a device, follow these steps:
 
 1. From the Windows device lock screen, enter the keystroke <kbd>CTRL</kbd> + <kbd>WIN</kbd> + <kbd>R</kbd>.
 
-1. To trigger the local Windows Autopilot Reset, sign into the device with an account that has local administrator credentials.
+1. To trigger the local Windows Autopilot Reset, sign in to the device with an account that has local administrator credentials.
 
 Once the local Windows Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
@@ -111,3 +111,7 @@ For more information on local Windows Autopilot Reset, see the following article
 - [Reset devices with local Windows Autopilot Reset](../../windows-autopilot-reset.md#reset-devices-with-local-windows-autopilot-reset).
 - [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 - [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -61,7 +61,7 @@ The following compliance partners are supported as generally available:
 :::column-end:::
 :::column span="3":::
 
-> - Microsoft Intune subscription with access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> - Microsoft Intune subscription with access to the [Microsoft Intune admin center].
 > - Intune licenses assigned to device users.
 
 :::column-end:::
@@ -94,7 +94,7 @@ Enable support for a device compliance partner to use compliance state data from
 
 ### Add a compliance partner to Intune
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 
 1. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** > **Add Compliance Partner**.
 
@@ -116,7 +116,7 @@ Your configuration now appears on the **Partner compliance management** page.
 
 ### Modify the configuration for a compliance partner
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 
 1. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations appear by platform type.
 
@@ -187,3 +187,7 @@ Use your partner's documentation to create compliance policies for devices.
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_10/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Microsoft Entra Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 - [Ivanti Neurons for MDM](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

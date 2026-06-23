@@ -60,7 +60,10 @@ Create an automated device enrollment policy in the admin center. The policy def
 
 At the end of this procedure, you can assign this policy to Microsoft Entra device groups.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+> [!IMPORTANT]
+> This article reflects the updated policy creation experience (**Enrollment program tokens** > **Enrollment policies**) for devices going through automated device enrollment. The older experience (**Enrollment program tokens** > **Profiles**) differs and will eventually be retired. The older experience won't receive new features, so be sure to create new policies under **Enrollment policies**. For more information, see [New iOS/iPadOS, visionOS, tvOS and macOS ADE enrollment policies experience](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531).
+
+1. In the [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **macOS** tab.
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
@@ -75,9 +78,17 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
      >[!TIP]
      > You can use the name field to create a dynamic group in Microsoft Entra ID, and assign devices to the enrollment policy automatically. Use the policy name to define the *enrollmentProfileName* parameter. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
-1. Select **Next**.
+1. Select **Next**.  
 
-1. On the **Management Settings** page, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+    For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md). 
+
+1. Select **Next**.  
+
+1. On the **Configuration settings** tab, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:
 
     * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices. Enrolling without user affinity is also referred to as enrolling *userless*.
     * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option. Enrolling with user affinity is also referred to as enrolling with a *user*.
@@ -114,18 +125,13 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
        * Enrollment with Setup Assistant (legacy)
        * Enrollment without user device affinity
 
-1. You can enforce **Locked enrollment** to prevent users from unenrolling their devices from Intune. Select **Yes** to disable the Mac settings in System Preferences and Terminal that allow users to remove the management policy. After the device enrolls, you can't change this setting without wiping the device.
+1. You can enforce **Locked enrollment** to prevent users from unenrolling their devices from Intune. Select **Yes** to disable the Mac settings in System Preferences and Terminal that allow users to remove the management policy. After the device enrolls, you can't change this setting without wiping the device.  
 
-1. Select **Next**.
-
-1. Optionally, on the **Account Settings** page, you can configure the local administrator and user accounts on targeted Macs.
+1. Optionally, under **Account settings**, configure the local administrator and user accounts on targeted Macs.
 
    When a supported macOS device enrolls with Intune through an automated device enrollment (ADE) policy that configures the local administrator, the device is enabled for macOS local account configuration with the Microsoft local admin password solution (LAPS). With this capability, newly enrolled devices receive a unique local administrator account that has a strong, encrypted, and randomized admin password (15 alphanumeric characters), which is also stored and encrypted by Intune. After enrollment, Intune automatically rotates a LAPS-managed administrator password every six months by default and supports look up and manual rotation of the admin password by Intune administrators with sufficient permissions.
 
-   For information about configuring and then managing this capability, [Setup macOS account configuration with LAPS](../../device-security/laps/setup-macos.md).
-
-   > [!div class="mx-imgBorder"]
-   > ![Image of admin center showing new Account settings section in the macOS automated device enrollment policy.](./media/setup-automated-macos/macos-account-settings-intune.png)
+   For information about configuring and then managing this capability, see [Setup macOS account configuration with LAPS](../../device-security/laps/setup-macos.md).  
 
    The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this policy, see [local administrator account](../../device-security/laps/setup-macos.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
@@ -154,17 +160,16 @@ At the end of this procedure, you can assign this policy to Microsoft Entra devi
    * **Authentication method**: Select **Setup Assistant with modern authentication** or **Setup Assistant (legacy)**.
    * **Await final configuration**: Select **Yes**.
 
-   Local accounts depend on the await final configuration feature when they're being created. As a result, if you configure any local admin or user account settings, this setting is always enabled. Even if you don't touch the await final configuration setting, it's always enabled in the background and applied to the enrollment policy.
+   Local accounts depend on the await final configuration feature when they're being created. As a result, if you configure any local admin or user account settings, this setting is always enabled. Even if you don't touch the await final configuration setting, it's always enabled in the background and applied to the enrollment policy.  
 
-1. Select **Next**.
-
-1. On the **Setup Assistant** page, configure the Setup Assistant experience.
+1. Under **Setup Assistant**, configure the Setup Assistant experience.
     1. Enter your department information so that users know who to contact for support:
         * **Department Name**: This name appears when device users select **About Configuration** during activation.
         * **Department Phone**: This phone number appears when device users select **Need Help** during activation.
     2. Select the Setup Assistant screens you want to show or hide during device setup. For a description of all screens, [see Setup Assistant screen reference](#setup-assistant-screen-reference) (in this article). Your options:
         * **Hide**: The screen doesn't appear to users during device setup. After device setup, the user can go to their device settings to set up the feature.
-        * **Show**: The screen appears to users during device setup. The user can still skip screens that don't require immediate action. After device setup, the user can go to their device settings to set up the feature.
+        * **Show**: The screen appears to users during device setup. The user can still skip screens that don't require immediate action. After device setup, the user can go to their device settings to set up the feature.  
+
 1. Select **Next**.  
 
 1. Review the summary of changes, and then select **Create** to finish creating the policy.
@@ -208,7 +213,7 @@ The following table describes the Setup Assistant screens shown during automated
 
 ## Assign an enrollment policy to devices
 
-Assign an enrollment policy to Apple devices.
+Assign an enrollment policy to macOS devices.
 
 1. Return to **Enrollment program tokens** and select a token.
 1. Select **Devices**.
@@ -226,3 +231,7 @@ Optionally, you can select a default enrollment policy. The default policy is de
 - To sync devices, distribute devices to users, and manage tokens, see [Manage macOS ADE devices and tokens](manage-devices-tokens-macos.md).
 - To renew or delete your enrollment program token, see [Set up a macOS ADE token](setup-macos-token.md).  
 - Use [Remote Device Actions in Microsoft Intune](../../device-management/actions/index.md) to remotely manage enrolled Macs.  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

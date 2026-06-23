@@ -118,11 +118,11 @@ Initiate enrollment on the Intune Company Portal website. For this process, you 
     1. Select **Profile Downloaded**.
     2. Select **Install** and follow the onscreen instructions to install the profile.
 
-1. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **Profile** > **Management Profile** > **Single Sign On Extension**. Authenticator should be listed as the SSO extension.
+1. Wait until Microsoft Authenticator is installed on the device before signing in to a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **Profile** > **Management Profile** > **Single Sign On Extension**. Authenticator should be listed as the SSO extension.
 
 1. Sign in to a work app, such as Microsoft Teams, with your work account.
 
-1. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, recheck the device settings.
+1. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed in to for pending action items. When you're done making changes, recheck the device settings.
 
 ## Determine based on user choice
 

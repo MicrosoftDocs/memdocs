@@ -14,7 +14,7 @@ After you assign Microsoft Intune permission to manage your Apple School Manager
 
 ## Start a sync
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), return to **Enrollment program tokens**.
+1. In the [Microsoft Intune admin center], return to **Enrollment program tokens**.
 1. Select a token in the list.
 1. Select **Devices** > **Sync**.
 
@@ -56,3 +56,7 @@ This series of articles describes how to set up Microsoft Intune for devices pur
 1. [Get an Apple token for school devices](school-manager-step-1.md)
 1. [Create an Apple enrollment policy](school-manager-step-2.md)
 1. 🡺 Sync and distribute devices (*You are here*)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -26,7 +26,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
 ## Import the script
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Scripts and remediations** > **Platform scripts** tab > **Add** > **Linux**:
 
     :::image type="content" source="./media/configure-custom-settings-linux/add-linux-script.png" alt-text="Screenshot that shows how to select devices, scripts, add, and select Linux from the drop-down list to add a custom Bash script in Microsoft Intune.":::
@@ -68,3 +68,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 ## Next steps
 
 You can also run shell scripts on [macOS](../../device-management/tools/run-shell-scripts-macos.md) and [Windows](../../device-management/tools/management-extension-windows.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

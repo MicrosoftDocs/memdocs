@@ -60,7 +60,7 @@ This article guides you through these steps.
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **eSIM cellular profiles** > **Add**.
 3. Select the CSV file that has your activation codes.
 4. Select **OK** to save your changes.
@@ -110,7 +110,7 @@ Create a device group that includes the eSIM capable devices. [Add groups](../..
 
 Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **eSIM cellular profiles**.
 3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
 4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
@@ -128,7 +128,7 @@ eSIM activation codes are used once. After Intune installs an activation code on
 
 After you assign the profile, you can monitor the deployment status of a subscription pool.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
 3. Select a subscription, and review the **Deployment Status**.
 
@@ -199,3 +199,7 @@ The eSIM profile is also removed when:
 ## Resources
 
 [Configure device profiles](../overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

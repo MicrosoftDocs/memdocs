@@ -45,7 +45,7 @@ To get started with this feature, use the following steps:
 
 ### Review Configuration Manager client health in Intune
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the menu under **Troubleshooting + support**, go to the **Troubleshoot** page.
 
@@ -58,3 +58,7 @@ To get started with this feature, use the following steps:
 
 > [!TIP]
 > Intune-enrolled devices connect to the cloud service three times a day, approximately every eight hours.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

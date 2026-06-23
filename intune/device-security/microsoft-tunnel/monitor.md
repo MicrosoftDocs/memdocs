@@ -11,11 +11,11 @@ ms.collection:
 
 # Monitor Microsoft Tunnel
 
-After installation of Microsoft Tunnel, you can view the server configuration and server health in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+After installation of Microsoft Tunnel, you can view the server configuration and server health in the [Microsoft Intune admin center].
 
 ## Use the admin center UI
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
+Sign in to [Microsoft Intune admin center], and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
 Next, select a server and then open the **Health check** tab to view that servers health status metrics. By default, each metric uses predefined threshold values that determine the status. The following metrics [support customization of these thresholds](#manage-health-status-thresholds):
 
@@ -122,7 +122,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 :::image type="content" source="./media/monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status thresholds.":::
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
+1. Sign in to [Microsoft Intune admin center] and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
 2. Select **Configure thresholds**.
 
@@ -153,7 +153,7 @@ The health status trend charts are available for the following metrics:
 
 To view trend charts:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status** > *Select a server*, and then select **Trends**
 
@@ -222,7 +222,7 @@ You can collect and upload verbose logs from an event before opening a support i
 
 **To use this capability**:
 
-1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a *server* > and then select the **Logs** tab.
+1. Open the [Microsoft Intune admin center] go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a *server* > and then select the **Logs** tab.
 
 2. On the *Logs* tab, locate the *Send verbose server logs* section and select **Send logs**.
 
@@ -325,3 +325,7 @@ If this issue persists, consider automating the restart command by using the cro
 ## Related content
 
 [Reference for Microsoft Tunnel](./ref-file-commands.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

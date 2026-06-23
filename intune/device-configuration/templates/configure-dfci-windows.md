@@ -74,7 +74,7 @@ This profile includes the DFCI settings you configure.
 > [!TIP]
 > Configuring and assigning DFCI profiles can lock the device beyond repair. So, pay attention to the values you configure.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -182,3 +182,7 @@ When the DFCI policy is applied, local users can't change settings configured by
 
 - [Assign the profile](../assign-device-profile.md)
 - [Monitor the profile status](../monitor-device-profile.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

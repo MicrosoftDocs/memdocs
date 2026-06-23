@@ -16,7 +16,7 @@ The *built-in* app type makes it easy for you to assign curated managed apps, su
 > [!NOTE]
 > Built-in apps are not supported on Android Enterprise devices. For more information about Android Enterprise supported apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](./add-managed-google-play.md) and [Manage Android Enterprise system apps in Microsoft Intune](../configuration/manage-system-apps-android.md).
 
-In earlier versions of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), Intune provided several default managed Microsoft 365 apps, such as Outlook and OneDrive. The app types for these managed apps were tagged as *Managed iOS Store App* or *Managed Android App*. Instead of using these app types, we recommend that you use the built-in app type. By using the built-in app type, you have the additional flexibility to edit and delete Microsoft 365 apps.
+In earlier versions of the [Microsoft Intune admin center], Intune provided several default managed Microsoft 365 apps, such as Outlook and OneDrive. The app types for these managed apps were tagged as *Managed iOS Store App* or *Managed Android App*. Instead of using these app types, we recommend that you use the built-in app type. By using the built-in app type, you have the additional flexibility to edit and delete Microsoft 365 apps.
 
 >[!NOTE]
 >Default Microsoft 365 apps that are tagged as *Managed iOS Store* and *Managed Android App* are removed from the app list when all assignments are deleted.
@@ -25,7 +25,7 @@ In earlier versions of the [Microsoft Intune admin center](https://go.microsoft.
 
 To add a built-in app to your available apps in Microsoft Intune, do the following:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Other** types, select **Built-In app**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -69,3 +69,7 @@ You can modify information about the built-in app. This information helps you to
 ## Next steps
 
 - You can now assign the apps to the groups that you choose. For more information, see [Assign apps to groups](./assign-groups.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

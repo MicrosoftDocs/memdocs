@@ -42,7 +42,7 @@ When a device isn't compliant, a common action is to email the device user. You 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
-> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> Sign in to the [Microsoft Intune admin center] with the following role:
 > - Built-in **[Policy and Profile manager](../../fundamentals/role-based-access-control/ref-built-in-roles.md#policy-and-profile-manager)** Microsoft Intune role
 :::column-end:::
 :::row-end:::
@@ -51,7 +51,7 @@ When a device isn't compliant, a common action is to email the device user. You 
 
 To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template are shown in the email sent to your users.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Compliance**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Devices** > **Compliance**.
 2. Select the **Notifications** tab and then select **Create notification**.
 3. Enter the following information for the **Basics** step:
    - **Name**: *Contoso Admin*
@@ -81,7 +81,7 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 The following steps create a compliance policy for Windows devices:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Compliance**.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Compliance**.
 2. On the **Policies** tab, choose **Create policy**.
 3. Under **Platform**, select **Windows 10 and later**.
 4. Select **Create**.
@@ -103,7 +103,7 @@ After you create a noncompliance policy, set an action for when a device is out 
 
 The following steps show how to create an action for noncompliance for Windows devices:
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance**.
+1. In the [Microsoft Intune admin center], select **Devices** > **By platform** > **Windows** > **Manage devices** > **Compliance**.
 2. Select your Windows compliance policy from the list.
 3. Select **Properties**.
 4. Next to the **Action for noncompliance** section, choose **Edit**.
@@ -117,7 +117,7 @@ The following steps show how to create an action for noncompliance for Windows d
 
 You can assign the compliance policy to a specific group of users or to all users. When Intune recognizes that a device is noncompliant, it notifies the user that they must update their device to meet the compliance policy. Use the following steps to assign the policy.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Compliance** and select the **Windows compliance** policy that you created earlier.
+1. In the [Microsoft Intune admin center], go to **Devices** > **Compliance** and select the **Windows compliance** policy that you created earlier.
 2. Select **Properties**.
 3. Next to **Assignments**, select **Edit**.
 4. In the **Assign to** drop-down box, select **All Users**. Any user that has a **Windows 10 and later** device that doesn't meet this compliance policy is notified.
@@ -137,3 +137,7 @@ To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 8 - Add and assign a client app](../../app-management/deployment/quickstart-add-assign.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

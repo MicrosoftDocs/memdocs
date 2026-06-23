@@ -53,7 +53,7 @@ This article applies to:
 
 This section shows you how to create, search, and configure Microsoft Edge settings using the settings catalog.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
 
@@ -72,7 +72,7 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
     :::image type="content" source="./media/configure-edge/settings-catalog-search-edge.png" alt-text="Screenshot that shows Microsoft Edge settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/settings-catalog-search-edge.png":::
 
-    Select the **Microsoft Edge** category. The settings with `(User)` in the name apply to all users signed into the device. The other settings apply to the device, even if no one is signed in.
+    Select the **Microsoft Edge** category. The settings with `(User)` in the name apply to all users signed in to the device. The other settings apply to the device, even if no one is signed in.
 
     :::image type="content" source="./media/configure-edge/settings-catalog-edge-user-device.png" alt-text="Screenshot that shows Microsoft Edge user and device settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/settings-catalog-edge-user-device.png":::
 
@@ -108,3 +108,7 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 - [Download Microsoft Edge for your business](https://aka.ms/EdgeEnterprise)
 - [Manage web access by using Microsoft Edge with Microsoft Intune](../../app-management/configuration/configure-edge-ios-android.md)
 - [Deploy Microsoft Edge app using Microsoft Intune](../../app-management/deployment/add-edge-windows.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

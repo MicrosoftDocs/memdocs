@@ -30,15 +30,15 @@ All future versions, starting with 2303 will not have the Community hub node in 
    - If you don't wish to share, you can use contributions from others without having a GitHub account.
 
 > [!IMPORTANT]
-> Configuration Manager versions 2006 and earlier can’t sign into GitHub but can still download items. Using Community hub on Windows Server requires the WebView2 console extension and Configuration Manager version 2010 or later. <!--9082812-->
+> Configuration Manager versions 2006 and earlier can’t sign in to GitHub but can still download items. Using Community hub on Windows Server requires the WebView2 console extension and Configuration Manager version 2010 or later. <!--9082812-->
 
 [!INCLUDE [Community hub security role information](includes/community-hub-security-roles.md)]
 
 ## Join the Community hub to contribute content
 
 1. Go to the **Community hub** node in the **Community** workspace.
-1. Select **Your hub** and you'll be prompted to sign into GitHub. If you don't have an account, you'll be redirected to GitHub where you can create one. A GitHub account is only required to contribute and share content from the **Your hub** page.
-1. Once you've signed into GitHub, select the **Join** button to join the Community hub.
+1. Select **Your hub** and you'll be prompted to sign in to GitHub. If you don't have an account, you'll be redirected to GitHub where you can create one. A GitHub account is only required to contribute and share content from the **Your hub** page.
+1. Once you've signed in to GitHub, select the **Join** button to join the Community hub.
 
    ![Join Configuration Manager's Community hub](./media/3555935-join-community-hub.png)
 
@@ -91,7 +91,7 @@ Method 1:
 1. From the item you want to delete, select **Delete** in the far-right column.
 
 Method 2: </br> </br>
-If the pull request was never completed (merged) into the GitHub repository, then you can just close the pull request. Ensure that you're signed into GitHub with the same GitHub account that you used to create the pull request.
+If the pull request was never completed (merged) into the GitHub repository, then you can just close the pull request. Ensure that you're signed in to GitHub with the same GitHub account that you used to create the pull request.
 
 ## <a name="bkmk_brand"></a> Personalization and organization branding of contributed content
 <!--8928812-->

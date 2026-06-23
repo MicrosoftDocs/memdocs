@@ -36,7 +36,7 @@ Microsoft established Service Level Objectives (SLOs) to provide predictable tim
 
 The following steps help you add a Windows App Catalog app to Intune:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, select the **Windows** platform, and then select **Enterprise App Catalog app**.
 4. Choose **Select** to add the app type.
@@ -66,7 +66,7 @@ The **App information** step provides the fields:
 - **Show this as a featured app in the Company Portal**: Featured apps are prominently placed in the Company Portal so that users can quickly get to them.
 - **Information URL**: Link end-users to a website or documentation that has more information about the app. The information URL is visible to users in the Company Portal.
 - **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL is visible to users in the Company Portal.
-- **Developer**: The name of the company or individual that developed the app. This information is visible to people signed into the Intune admin center.
+- **Developer**: The name of the company or individual that developed the app. This information is visible to people signed in to the Intune admin center.
 - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name is visible to people signed in to the Intune admin center.​
 - **Notes**: Add more notes about the app. Notes are visible to people signed in to the admin center.
 - **Logo**: Upload a logo associated with the app. This logo appears next to the app throughout the Company Portal.​
@@ -232,7 +232,7 @@ The **Rules format** provides the following options:
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
+When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center], select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Scope tags** step.
 
@@ -312,3 +312,7 @@ When Multi-Admin Approval (MAA) is enabled for your tenant, there are some limit
 - [App relationship viewer](./win32.md#app-relationship-viewer)
 - [Monitor app information and assignments with Microsoft Intune](../monitor-assignments.md)
 - [Troubleshoot Win32 app issues](./troubleshoot-win32.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

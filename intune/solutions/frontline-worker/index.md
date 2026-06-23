@@ -45,7 +45,7 @@ When you're planning for FLW devices (including rugged devices) and how you mana
 
 - Determine the **sign-in/sign-out experience** and how user switching happens, including device hand-off. For example, before cradling the device for charging, you might want users to sign out of apps.
 
-  Intune has built-in features that allow users to sign in as a guest, sign in with their Microsoft Entra organization credentials, or only sign into apps. There are also features that use single sign-on and single sign-out for your apps. This article provides more details about these features.
+  Intune has built-in features that allow users to sign in as a guest, sign in with their Microsoft Entra organization credentials, or only sign in to apps. There are also features that use single sign-on and single sign-out for your apps. This article provides more details about these features.
 
 - Determine the **starting app experience**. For example, users can sign in to the device and then launch an app, or users can get the device and have an app automatically start.
 

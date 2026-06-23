@@ -189,7 +189,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a trusted certificate profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -246,7 +246,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
  [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select  and go to **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -402,3 +402,7 @@ Platforms:
 - [Use SCEP for certificates](../../fundamentals/certificates/scep-infrastructure.md)
 - [Issue PKCS certificates from a Symantec PKI manager web service](../../fundamentals/certificates/digicert-pkcs.md).
 - [Troubleshoot PKCS certificate profiles](/troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

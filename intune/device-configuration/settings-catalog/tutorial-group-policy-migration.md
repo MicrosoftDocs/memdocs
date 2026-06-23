@@ -22,7 +22,7 @@ In this walkthrough, you:
 
 > [!div class="checklist"]
 >
-> - Get introduced to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> - Get introduced to the [Microsoft Intune admin center].
 > - Create user groups and create device groups.
 > - Compare the settings in Intune with on-premises ADMX settings.
 > - Create different settings catalog policies, and configure the settings that target the different groups.
@@ -86,7 +86,7 @@ This feature applies to:
 ## Open the Intune admin center
 
 1. Open a Chromium-based web browser, like Microsoft Edge.
-2. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Sign in with the following account:
+2. Go to the [Microsoft Intune admin center]. Sign in with the following account:
 
     **User**: Enter the administrator account of your Microsoft 365 tenant subscription.
     **Password**: Enter its password.
@@ -115,7 +115,7 @@ For more information, go to [Common questions, issues, and resolutions with devi
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, like a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. In the [Intune admin center], select **Groups** > **New group**.
 
 2. Enter the following settings:
 
@@ -192,11 +192,11 @@ In these next steps, you create security groups, and add users to these groups. 
   - West coast IT administrators
   - East coast IT administrators
 
-The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com) and [Microsoft Entra admin center](https://entra.microsoft.com). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, then use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)**.
+The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com) and [Microsoft Entra admin center](https://entra.microsoft.com). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, then use the [Microsoft Intune admin center]**.
 
 ### Review group membership
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All users** > select the name of any existing user.
+1. In the [Intune admin center], select **Users** > **All users** > select the name of any existing user.
 2. Review some of the information you can add or change. For example, look at the **Properties** you can configure, like Job Title, Department, City, Office location, and more. You can use these properties in your dynamic queries when you create dynamic groups.
 3. Select **Groups** to see the membership of this user. You can also remove the user from a group.
 4. Select some of the other options to see more information, and what you can do. For example, look at the assigned license, the user's devices, and more.
@@ -209,7 +209,7 @@ In the Intune admin center, you created new security groups, and added existing 
 
 In this section, we create a settings catalog policy in Intune, look at some settings in on-premises **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+1. In the [Intune admin center], select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -360,4 +360,9 @@ When no longer needed, you can:
 
 ## Summary
 
-In this tutorial, you got more familiar with the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created settings catalog policies in Intune to configure different settings. You also compared using ADMX templates on-premises and in the cloud with Intune.
+In this tutorial, you got more familiar with the [Microsoft Intune admin center], used the query builder to create dynamic groups, and created settings catalog policies in Intune to configure different settings. You also compared using ADMX templates on-premises and in the cloud with Intune.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

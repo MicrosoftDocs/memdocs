@@ -205,6 +205,8 @@ items:
         href: ./protection/wipe-corporate-data.md
       - name: Quiet time policies
         href: ./protection/configure-quiet-time.md
+      - name: Multiple managed accounts
+        href: ./protection/multiple-managed-accounts.md
 
   - name: Monitor apps
     items:

@@ -28,7 +28,7 @@ There are three quiet time policy types available. The following table describes
 
 To create a quiet time policy, use the following steps:
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 2. Select **Apps** > **Quiet Time** > **Policies**.
 3. Select **Create policy**.
 4. Select **Policy Type**. You can choose the **Date Range** or the **Days of the week** policy types. For more information, see, [Quiet time policy types](#quiet-time-policy-types).
@@ -104,3 +104,6 @@ The **Days of week** policy has the **Allday**, **Certain Hours**, and **End Use
 
 :::image type="content" source="./media/configure-quiet-time/apps-quiet-time-policies-02.png" alt-text="Screenshot of the Microsoft Intune quiet time - Configure days of the week policy" border="true":::
 
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

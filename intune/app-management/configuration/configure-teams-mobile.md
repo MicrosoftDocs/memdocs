@@ -1,7 +1,7 @@
 ---
 title: Manage Teams for iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Teams for iOS and Android to ensure team collaboration experiences are always accessed with safeguards in place.
-ms.date: 06/12/2025
+ms.date: 06/10/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
@@ -109,7 +109,7 @@ Use the following options to configure your notifications on the portal through 
 
 ### To set the policies in Intune
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center].
 1. In the left navigation pane, navigate to **Apps** > **Protection**.
 1. Click **Create Policy** and select your desired platform, such as **iOS/iPadOS**.
 1. On the **Basics** page, add details such as **Name** and **Description**. Click **Next**.
@@ -146,7 +146,25 @@ For more information about app configuration policies and app protection policie
 - [App configuration policies for Microsoft Intune](./overview.md)
 - [App protection policies overview](../protection/overview.md)
 
+## Multiple managed accounts
+
+Teams for iOS supports the Multiple managed accounts (MMA) feature in Intune mobile application management (MAM). MMA enables users to add and manage more than one work or school account within Teams while maintaining independent app protection policy enforcement for each account.
+
+Teams is a segmented view app, meaning it shows data for one account at a time. Users switch between accounts within the app, and the app protection policy for the active account applies. With MMA:
+
+- Each managed account has its own PIN, conditional launch, and data transfer restrictions enforced independently.
+- Admins can selectively wipe one managed account without affecting other accounts.
+- Personal account behavior is unchanged - personal accounts remain unmanaged.
+
+MMA applies to both enrolled and unenrolled device scenarios. Each managed account in Teams is subject to the app protection policy targeted to that account's user, as defined in the [Microsoft Intune admin center].
+
+For supported app versions, key behaviors, FAQs, and troubleshooting information, see [Multiple managed accounts for app protection policies](../protection/multiple-managed-accounts.md).
+
 ## Next steps
 
 - [What are app protection policies?](../protection/overview.md)
 - [App configuration policies for Microsoft Intune](./overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

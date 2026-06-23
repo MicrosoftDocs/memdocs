@@ -1,0 +1,57 @@
+name: Approver Review
+
+permissions:
+  pull-requests: write
+  contents: read
+  statuses: write
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, labeled]
+  issue_comment:
+    types:
+      - created
+      - edited
+
+concurrency:
+  # Separate groups per event type so that issue_comment runs do not cancel
+  # pull_request_target runs (and vice versa). The required check_run is only
+  # produced by pull_request_target runs, so cross-event cancellation can leave
+  # the required check stuck at "cancelled" even though policy ran successfully.
+  group: require-writer-review-${{ github.event.pull_request.number || github.event.issue.number }}-${{ github.event_name }}
+  # Only cancel high-frequency issue_comment runs. pull_request_target events
+  # queue (at most 1 running + 1 pending per group), so supersession does not
+  # produce a misleading red "cancelled" check on the PR's visible head SHA.
+  cancel-in-progress: ${{ github.event_name == 'issue_comment' }}
+
+jobs:
+  policy:
+    # Job-skip policy — the two trigger families are treated differently:
+    #
+    # pull_request_target events MUST never be skipped at the job level. They
+    # are the only events that publish the required check on the PR head SHA.
+    # A skipped reusable-workflow caller job surfaces as "Approver Review /
+    # policy", whereas a job that runs surfaces "Approver Review / policy /
+    # gate" — skipping some PR events would produce two different required-check
+    # names. The gate derives label qualification from live PR state (not the
+    # event payload), so running on non-qualifying PR events is an idempotent
+    # no-op and keeps a single check name.
+    #
+    # issue_comment events fire for EVERY comment on EVERY issue/PR in the repo
+    # (and again on every edit). The vast majority are not PRMerger commands,
+    # and the gate's own confirmation/hold-off comments would otherwise re-
+    # trigger it in a feedback loop. These runs never publish the required
+    # head-SHA check, so filtering them out is safe for branch protection. Only
+    # start an issue_comment run when a human posts a '#'-command on a PR.
+    if: >-
+      (github.repository_owner == 'MicrosoftDocs' || github.repository_owner == 'microsoftgraph')
+      && (
+        github.event_name != 'issue_comment'
+        || (
+          github.event.issue.pull_request != null
+          && startsWith(github.event.comment.body, '#')
+          && github.event.comment.user.type != 'Bot'
+        )
+      )
+    uses: MicrosoftDocs/defender-docs/.github/workflows/MSecD-Shared-RequireWriterReview.yml@workflows-test
+    secrets: inherit

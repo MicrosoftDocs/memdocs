@@ -28,7 +28,7 @@ For an overview of the Windows Autopilot device preparation in automatic mode fo
 
 To create a Cloud PC provisioning policy for use with Windows Autopilot device preparation in automatic mode for Windows 365, follow these steps:
 
-1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -128,3 +128,7 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
 
 > [!div class="nextstepaction"]
 > [Step 6: Monitor the deployment](automatic-monitor.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

@@ -31,7 +31,7 @@ Conditional Access is evaluated after authentication is completed. It isn't inte
 
 ## Conditional Access compliance
 
-Protecting organizational data requires preventing access from unprotected devices. Data Loss Prevention (DLP) is only effective when data can't be accessed from systems that don't meet your organization’s minimum security requirements.
+Protecting organizational data requires preventing access from unprotected devices. Data Loss Prevention (DLP) is only effective when data can't be accessed from systems that don't meet your organization's minimum security requirements.
 
 App protection policies (APP) work with Conditional Access to ensure that protected resources can only be accessed from managed or APP-protected applications, such as Microsoft Edge for Business. This enables end users on personal Windows, Android, and iOS devices to access Microsoft Entra resources without full device management.
 
@@ -53,7 +53,7 @@ This solution uses three Conditional Access policies to secure Microsoft Edge fo
 
 Use this policy to secure browser access from Windows, Android, and iOS devices that rely on app protection policies instead of full device management.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level1-Users` group:
     - **Name:** CA Edge Level 1 – Basic  
@@ -76,7 +76,7 @@ Use this policy to secure browser access from Windows, Android, and iOS devices 
 
 Level 2 adds continuous verification with risk-based signals and requires that devices are both compliant and protected by app protection policies.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level2-Users` group:
 
@@ -107,7 +107,7 @@ Level 2 adds continuous verification with risk-based signals and requires that d
 
 Level 3 enforces the strictest access posture by allowing only managed, compliant devices to reach Microsoft 365 resources while applying more safeguards for risky sign-ins.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level3-Users` group:
 
@@ -141,7 +141,7 @@ Level 3 enforces the strictest access posture by allowing only managed, complian
 
 Use this companion policy to ensure that desktop applications on Windows devices are only available when the device meets your management and compliance requirements.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+1. Go to the [Microsoft Intune admin center].
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy and assign it to the `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` groups:
 
@@ -169,3 +169,7 @@ Use this companion policy to ensure that desktop applications on Windows devices
 ## Next step
 
 Continue with [Step 2](./protection-policies-step-2.md) to create an app protection policy.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

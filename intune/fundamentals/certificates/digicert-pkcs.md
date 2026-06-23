@@ -196,7 +196,7 @@ The certificate profile OID is associated with a certificate profile template in
 
 ## Create a PKCS certificate profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create**.
 
@@ -245,3 +245,7 @@ Logs for the Certificate Connector for Microsoft Intune are available as Event l
 ## Related content
 
 Use the information in this article with the information in [What are Microsoft Intune device profiles?](../../device-configuration/overview.md) to manage your organization's devices and the certificates on them.
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

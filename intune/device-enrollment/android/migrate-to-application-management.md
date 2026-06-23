@@ -46,7 +46,7 @@ There are two ways to utilize mobile application management in Intune: with devi
 > The Intune Company Portal app must be installed on devices. It enables device users to receive app protection policies.
 
 ## Step 1: Configure policies for mobile application management
-Create mobile application management policies in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Within these policies you can, for example, allow or block app features such as *copy and paste*. For more app protection settings and capabilities in Intune, see:
+Create mobile application management policies in the [Microsoft Intune admin center]. Within these policies you can, for example, allow or block app features such as *copy and paste*. For more app protection settings and capabilities in Intune, see:
 * [Android app protection policy settings in Microsoft Intune](../../app-management/protection/ref-settings-android.md): Describes the settings you can configure in an app protection policy.
 * [Intune protected apps](../../app-management/ref-protected-apps.md#microsoft-apps): Lists apps that support app protection policies.
 
@@ -84,7 +84,7 @@ Removing an enrolled device from Intune can have the following effect:
 
 ### Retire device in admin center
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Go to **Devices** > **By platform** > **Android**.
 3. Select **Android devices**.
 3. Select the name of the device that you want to retire. You can add an **OS** filter to make it easier to see all Android device administrator devices in your tenant.
@@ -142,3 +142,7 @@ This section describes how to fix issues encountered when switching from Android
 * [App management capabilities by platform](../../app-management/overview.md#app-management-capabilities-by-platform)
 * [Troubleshooting app protection policy user issues](/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam)
 * [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](../../app-management/protection/mam-without-enrollment.md#mam)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

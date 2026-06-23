@@ -151,7 +151,7 @@ macOS devices with user affinity can be targeted for profiles and apps using use
 
   To limit the configurations from this guide to the test devices that you import through Apple Business Manager, create a dynamic Microsoft Entra group. You can then target all your configurations and apps to this group.
 
-  1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Open the [Microsoft Intune admin center].
   2. Select **Groups** > **New Group**, and enter the following details:
 
       - **Group type**: Select **Security**.
@@ -208,7 +208,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
 
-  To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
+  To create these policies, in the [Microsoft Intune admin center], go to:
 
   - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Authentication > Extensible Single Sign On (SSO)**: Add and configure the following settings:
 
@@ -332,7 +332,7 @@ This section focuses on the different endpoint security features in Microsoft In
 > [!NOTE]
 > To confirm you're enforcing the proper device controls, work with your team that manages your Entra Conditional Access policies.
 
-You can create compliance and Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+You can create compliance and Conditional Access policies in the [Microsoft Intune admin center].
 
 For more information, go to:
 
@@ -362,7 +362,7 @@ For more information, go to:
 
 So, you can configure FileVault, check for compliance, and deploy the policies to your devices.
 
-To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
+To create these policies, in the [Microsoft Intune admin center], go to:
 
 - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Full Disk Encryption**
 - **Devices > Manage devices > Compliance > Create policy > System security > Require encryption of data storage on device**
@@ -378,7 +378,7 @@ The **firewall** is an application firewall and helps prevent incoming attacks. 
 
 So, you can configure the firewall, check for compliance, and deploy the policies to your devices.
 
-To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
+To create these policies, in the [Microsoft Intune admin center], go to:
 
 - **Devices > Manage devices > Configuration > Create > **New policy** > Settings catalog**:
   - Networking > Firewall
@@ -397,7 +397,7 @@ For more information about the macOS firewall, go to:
 
 So, you can configure Gatekeeper, check for compliance, and deploy the policies to your devices.
 
-To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
+To create these policies, in the [Microsoft Intune admin center], go to:
 
 - **Devices > Manage devices > Configuration > Create > **New policy** > Settings catalog > System policy > System Policy Control**:
   - **Allow Identified Developer**: Select **True**.
@@ -423,7 +423,7 @@ When you configure these settings, you enforce and restrict the behavior in the 
 
 - **Option 1 - macOS 14.0 and newer devices (recommended)** - On macOS 14.0 and newer devices, use the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) to create a [managed software updates policy](../../device-updates/apple/index.md). This feature uses Apple's declarative device management (DDM), and is the recommended approach to update macOS devices.
 
-  Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you configure the following settings:
+  Specifically, in the [Microsoft Intune admin center], you configure the following settings:
 
   - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Declarative Device Management > Software Update**
 
@@ -437,7 +437,7 @@ When you configure these settings, you enforce and restrict the behavior in the 
 
 - **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) and an Intune [software updates policy](../../device-updates/apple/index.md). These features use Apple's MDM settings.
 
-  Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can configure the following settings:
+  Specifically, in the [Microsoft Intune admin center], you can configure the following settings:
 
   - **Devices > Manage updates > Apple updates > macOS updates policy**
 
@@ -493,7 +493,7 @@ Using the [Intune settings catalog](../../device-configuration/settings-catalog/
 
 ✅ **Use the macOS Evaluation Utility**
 
-The Mac Evaluation Utility confirms that your Mac has the configuration and settings recommended by Apple. To access the Mac Evaluation Utility, sign into [Apple Seed for IT](https://beta.apple.com/for-it) (opens Apple's website) > **Resources**.
+The Mac Evaluation Utility confirms that your Mac has the configuration and settings recommended by Apple. To access the Mac Evaluation Utility, sign in to [Apple Seed for IT](https://beta.apple.com/for-it) (opens Apple's website) > **Resources**.
 
 ## Phase 4 - Apply organization specific customizations
 
@@ -731,3 +731,7 @@ For more information, go to [Tutorial: Configure Apple Business Manager for auto
 - [macOS platform guide](../../fundamentals/platform-guide-macos.md)
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](../../fundamentals/what-is-intune.md)
 - [macOS account configuration with LAPS](../../device-security/laps/setup-macos.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

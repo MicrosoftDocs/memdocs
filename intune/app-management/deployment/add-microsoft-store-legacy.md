@@ -19,7 +19,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 ## Add an app to Intune
 You can add a Microsoft Store app to Intune by doing the following:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app (Legacy)**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -54,3 +54,7 @@ The app that you've created is displayed in the apps list, where you can assign 
 ## Next steps
 
 - [Assign apps to groups](./assign-groups.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

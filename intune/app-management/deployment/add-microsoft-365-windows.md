@@ -12,7 +12,7 @@ ms.collection:
 
 # Add Microsoft 365 Apps to Windows Devices Using Microsoft Intune
 
-Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](./index.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](./index.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the [Microsoft Intune admin center].
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus was renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we commonly refer to it as **Microsoft 365 Apps**.
@@ -39,7 +39,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 ## Select Microsoft 365 Apps
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Apps** > **All Apps** > **Create**.
 3. Select **Windows 10 and later** in the **Microsoft 365 Apps** section of the **Select app type** pane.
 4. Choose **Select**. The **Add Microsoft 365 Apps** steps are displayed.
@@ -225,3 +225,7 @@ The following tables list common error codes you might encounter and their meani
 ## Next steps
 
 - To assign the app suite to more groups, see [Assign apps to groups](./assign-groups.md).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

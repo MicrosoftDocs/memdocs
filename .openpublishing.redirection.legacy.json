@@ -2652,12 +2652,12 @@
     },
     {
       "source_path_from_root": "/intune/intune/configuration/education-settings-windows.md",
-      "redirect_url": "/intune/device-configuration/templates/ref-education-settings-windows",
+      "redirect_url": "/intune/device-configuration/templates/configure-education-settings",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune-service/configuration/education-settings-windows.md",
-      "redirect_url": "/intune/device-configuration/templates/ref-education-settings-windows",
+      "redirect_url": "/intune/device-configuration/templates/configure-education-settings",
       "redirect_document_id": false
     },
     {

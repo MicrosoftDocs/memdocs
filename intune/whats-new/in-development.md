@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 05/11/2026
+ms.date: 06/18/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -44,11 +44,35 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ### Scope tags support for Endpoint Privilege Management reports<!-- 34639681 -->
 
-We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
+We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewer's assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
 <!-- ***********************************************-->
 
 ## App management
+
+### Auto-update for Enterprise App Management applications <!-- 33727305  -->
+
+You'll be able to automatically keep Enterprise App Management (EAM) applications up to date using Microsoft Intune. When you enable auto-update for an EAM app with a required assignment, Intune will detect when a newer version is available in the EAM catalog and automatically update the app on targeted devices.
+
+Auto-update for EAM apps will help you:
+
+- Simplify app lifecycle management by eliminating manual packaging and supersedence workflows.
+- Reduce operational overhead at scale by removing the long tail of update maintenance.
+- Keep devices secure with reliable, timely application updates.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows  
+
+### Enterprise App Management support for GCC High and DoD<!-- 24875296 -->
+
+Enterprise App Management (EAM) in Microsoft Intune will extend to GCC High (GCCH) and DoD cloud environments. Government customers will be able to use the EAM enterprise catalog to discover, deploy, and keep prepackaged Microsoft and third-party apps up to date without manual repackaging. EAM in sovereign clouds uses a secure cross-cloud integration model that maintains the compliance boundaries and authentication requirements expected for government tenants. This brings cloud-native app management, including faster deployment and reduced packaging overhead, to GCCH and DoD organizations.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 ### Multiple managed accounts for app protection policies <!-- 3182632 -->
 
@@ -64,178 +88,167 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 ## Device configuration
 
-### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
+### New Android Enterprise settings in the Intune settings catalog<!-- 24964827, 24964854, 24964861, 24964848, 33982123, 33982122, 33982129, 33982130, 33982131, 33982127, 30798336, 37087237, 24964874, 24964888, 33982120, 31576322, 32195504, 35028596 -->
 
-On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. You'll be able to use this setting to disable MAC address randomization on managed macOS devices.
+The settings catalog lists all the settings you can configure in a device policy, and all in one place. The following new Android Enterprise settings are available in the Microsoft Intune settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type).
 
-When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. But, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+#### Communication and calling
 
-To learn more, see:
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 24964827 --> **Block cell broadcast** | When set to **True**, the device is prevented from receiving cell broadcast messages, such as emergency alerts. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow the reception of cell broadcast messages. | COBO, COSU, and COPE |
+| <!-- 24964854 --> **Block SMS** | When set to **True**, the device is prevented from sending or receiving SMS messages, restricting text communication. When set to **False** (default), the device follows the default SMS behavior of the OS. | COBO, COSU, and COPE |
+| <!-- 24964861 --> **Block outgoing calls** | When set to **True**, users are prevented from making outgoing calls on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow outgoing calls. | COBO, COSU, and COPE |
 
-- [Wi-Fi profiles settings list](../device-configuration/templates/ref-wifi-settings-apple.md)
-- [Learn more about Wi-Fi profiles in Intune](../device-configuration/templates/configure-wifi.md)
+#### Connectivity and networking
 
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS 15 and later
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 24964848 --> **Block mobile networks configuration** | **True** prevents users from configuring or modifying mobile network settings on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow users to adjust mobile network settings. | COBO, COSU, and COPE |
+| <!-- 33982123 --> **Block configuring VPN** | When set to **True**, users can't add, edit, or remove VPN configurations on the device. When set to **False** or not configured, the device follows the default VPN configuration behavior of the OS. Found in the **Connectivity** category. To configure, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**, choose **Android Enterprise** as the platform, select the corporate-owned device type, and choose **Settings catalog** as the profile type. Search for **Block configuring VPN** and add it to your policy. | COBO, COSU, and COPE |
+| <!-- 33982122 --> **Block network reset** | When set to **True**, the device won't reset network settings even if a reset is attempted. When set to **False** (default), the device follows the default network reset behavior of the OS. | COBO, COSU, and COPE |
+| <!-- 33982129 --> **Block airplane mode** | When set to **True**, the device is prevented from enabling airplane mode. When set to **False**, the device follows the default airplane mode behavior of the OS. | COBO, COSU, and COPE |
+| <!-- 33982130 --> **Block ultra wideband** | When set to **True**, the device prevents ultra wideband functionality, restricting user access to the setting. When set to **False** (default), the device follows the default ultra wideband behavior of the OS. Supported on Android 14 and above. | COBO, COSU, and COPE |
+| <!-- 33982131 --> **Block cellular 2G** | When set to **True**, the device prevents cellular 2G functionality, restricting user access to the setting. When set to **False** (default), the device follows the default cellular 2G behavior of the OS. Supported on Android 14 and above. | COBO, COSU, and COPE |
+| <!-- 33982127 --> **Select minimum Wi-Fi security level** | Select the minimum Wi-Fi security level required for the device to connect to Wi-Fi networks. Options are **Open network security**, **Personal network security**, **Enterprise network security**, and **Enterprise 192-bit network security**. The default is **Open network security**, which allows the device to connect to all types of Wi-Fi networks. Supported on Android 13 and later. | COBO, COSU, and COPE |
+| <!-- 30798336 --> **Allow selection of a preferential network service** | When set to **True**, the device gives priority to the specified network service over other available options, such as an enterprise slice on 5G networks. When set to **False**, the device connects using its default network selection process. | COBO, COSU, and COPE |
 
-### New Wired Networks device configuration profile for iOS/iPadOS<!-- 31880672 -->
+#### eSIM management
 
-There will be a new **802.1x Wired Networks** device configuration profile for iOS/iPadOS devices. The feature will support 802.1x Ethernet access controls, which is ideal for M-series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 37087237 --> **Block users from adding eSIM profiles** | When set to **True**, users can't add eSIM profiles to the device. When set to **False** (default), users can add eSIM profiles based on the default behavior of the OS. | COBO, COSU, and COPE |
 
-This profile will:
+#### Device personalization and display
 
-- Support EAP protocols, like TLS, PEAP, and TTLS
-- Be similar to the macOS wired network profile experience
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 24964874 --> **Block wallpaper changes** | When set to **True**, users are prevented from changing the wallpaper on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow users to change the wallpaper. | COBO, COSU, and COPE |
+| <!-- 24964888 --> **Block user icon changes** | When set to **True**, users are prevented from changing their user icon or profile image on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow users to modify their user icon. | COBO, COSU, and COPE |
 
-This feature will help with secure enterprise deployments for iPads in education, finance, and other regulated industries.
+#### Printing
 
-To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../device-configuration/templates/configure-wired-networks.md).
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 33982120 --> **Block printing** | When set to **True**, the device is prevented from printing documents. When set to **False** (default), the device follows the default printing behavior of the OS. | COBO, COSU, and COPE |
 
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS 17 and newer
+#### Security and work profile
 
-### New Block Bluetooth sharing setting in the Android Enterprise settings catalog<!-- 35027842 -->
+| Setting | Description | Applies to |
+|---|---|---|
+| <!-- 31576322 --> **Block one lock for device and work profile** | When set to **True**, forces users to use two different passwords for their lock screen and work profile. When set to **False**, Intune doesn't change or update this setting. By default, the OS might allow users to have the same password. | COPE |
+| <!-- 32195504 --> **Allow widgets from work profile apps** | When set to **True**, allows users to access widgets exposed by apps in the work profile on the device's home screen. When set to **False**, prevents access to these widgets. By default, the OS might allow widget access. | COPE |
+| <!-- 35028596 --> **Block apps from exposing app functions** | This setting controls whether managed apps can expose app functions (programmatic actions that other apps and on-device assistants or AI agents can invoke inside the app). When set to **True**, apps on fully managed devices and apps in the work profile on corporate-owned devices are blocked from exposing app functions. When set to **False** (default OS behavior), apps are allowed to expose app functions. | COBO, COSU, and COPE |
 
-The [Settings catalog](../device-configuration/settings-catalog/index.md) lists all the settings you can configure in a device policy, all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../device-configuration/settings-catalog/index.md).
+**Platform key:**
 
-There will be a new **Block Bluetooth sharing** setting (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type). When set to **True**, the device can't share content over Bluetooth. When set to **False**, fully managed and dedicated devices allow Bluetooth sharing, while corporate-owned work profile devices block Bluetooth sharing.
+- **COBO**: Android Enterprise corporate-owned fully managed
+- **COSU**: Android Enterprise corporate-owned dedicated devices
+- **COPE**: Android Enterprise corporate-owned devices with a work profile (at work profile level)
 
-For a list of existing settings you can configure in the settings catalog, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise corporate-owned devices with a work profile (COPE)
-> - Android Enterprise corporate-owned fully managed (COBO)
-> - Android Enterprise corporate-owned dedicated devices (COSU)
-
-<!-- *********************************************** -->
-
-## Device enrollment
-
-### Enrollment time grouping for new Apple ADE enrollment policies generally available<!-- 17474465, 28230551 -->
-
-Enrollment time grouping (ETG) will improve the Apple automated device enrollment (ADE) setup experience by providing an efficient way to group devices at enrollment time. The pre-knowledge of the security group that the device will be a member of helps in computing the applicable policies, apps, and settings for the enrolled device, so the configurations are delivered quickly at the time of enrollment.
-
-You'll be able to configure enrollment time grouping in new iOS/iPadOS and macOS enrollment policies that use these authentication methods:
-
-- iOS/iPadOS:
-  - Enroll with user affinity
-    - Setup Assistant with modern authentication
-    - Company Portal authentication method
-  - Enroll without user affinity
-    - Microsoft Entra shared mode
-    - Shared iPad
-- macOS:
-  - Enroll with user affinity
-    - Setup Assistant with modern authentication
-  - Enroll without user affinity
-
-There will be a new **Device group** tab within new iOS/iPadOS and macOS enrollment policies where you can add a Microsoft Entra security group. The group you add will map directly to the enrollment profile, and you'll be able to edit the group at any time. The new device grouping tab won't be available in existing enrollment profiles.
-
-Other requirements include adding the Intune first-party app as a security group owner, and ensuring that you have the **enrollment time device membership assignment** permission within a custom RBAC role.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS Automated Device Enrollment (ADE)
-> - macOS Automated Device Enrollment (ADE)
-
-<!-- *********************************************** -->
-
-## Device management
-
-### Agentic identity for the Policy Configuration Agent (public preview)<!-- 37369520 -->
-
-The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
-
-For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.
-
-### Silence apps on Managed Home Screen to prevent session PIN bypass<!-- 34929486 -->
-
-For devices using Managed Home Screen (MHS), you'll be able to silence apps whenever MHS is prompting the user for authentication, such as during sign-in or at the session PIN screen. When silenced, apps won't be able to start activities, display notifications, appear in recent apps, or trigger toasts, dialogs, or device ringing. You'll be able to configure an allowlist of apps that remain unsilenced during the locked state, ensuring that critical communications like calls aren't interrupted. This feature will be opt-in and configurable, allowing your organization to tailor the experience to its operational needs. Once the device is unlocked, all apps will automatically return to their normal state.
+For a list of all settings you can currently configure, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
 
 > [!div class="checklist"]
 > Applies to:
 >
 > - Android Enterprise
 
-### Android Enterprise personally owned devices with a work profile will use Android Management API (AMAPI)<!-- 36840128 -->
+### Enforce Routes capability in iOS/iPadOS and macOS VPN profiles<!-- 28869584 -->
 
-When users enroll their personally owned Android devices in Intune, a work profile is created with a separate partition on the device for the user's work account. These devices are referred to as personally owned devices with a work profile.
+Microsoft Intune will support Apple's **[Enforce Routes](https://developer.apple.com/documentation/networkextension/nevpnprotocol/enforceroutes)** feature in iOS/iPadOS and macOS VPN profiles.
 
-As part of the Intune move to the [Android Management API](https://developers.google.com/android/management) (opens Android's web site), there will be some updates for personally owned devices that enroll in Intune:
+This feature helps prevent situations where VPN traffic accidentally or maliciously goes outside the VPN tunnel, like what happens with de-cloaking risks. It ensures VPN routing aligns with Apple's platform semantics.
 
-- Web based enrollment for an improved enrollment flow and experience - Users won't have to install an app to enroll in Intune. Web enrollment will be tenant wide.
-- New implementation for how Intune delivers policies - Modern update on how Intune delivers and monitors policies on Android personally owned devices with a work profile. This change also aligns with how Intune manages policies on corporate owned devices with a work profile, fully managed, and dedicated devices. You can scale your migration to targeted groups.
+When you configure this feature in Intune, routing behavior is defined using **Include all networks** and **Exclude local networks** settings. Intune automatically derives the appropriate **Enforce Routes** configuration based on these selections to ensure consistent and predictable device behavior.
 
-To use these features, you will need to opt-in:
+To learn more about VPN profiles in Intune, see:
 
-- Web based enrollment: **Devices > Device Onboarding > Enrollment > Android > Personally owned devices with a work profile > Use web enrollment for all users enrolling into Android personally-owned work profile management**
-- Policy: **Devices > Manage devices > Configuration > Create > New policy > Android Enterprise > Move to Android Management API**
-
-To learn more, see:
-
-- [New policy implementation and web enrollment for Android personally owned work profile blog](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-policy-implementation-and-web-enrollment-for-android-personally-owned-work-p/4370417)
-- [Android Enterprise work profile management overview](../device-enrollment/android/enterprise-work-profile.md)
+- [Create VPN profiles to connect to VPN servers in Intune](../device-configuration/templates/configure-vpn.md)
+- [Add VPN settings to Apple devices in Microsoft Intune](../device-configuration/templates/ref-vpn-settings-apple.md)
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise personally owned devices with a work profile
+> - iOS/iPadOS
+> - macOS
 
-### Grant enhanced security permissions to a Mobile Threat Defense app on Android Enterprise devices<!-- 33745497 -->
+### Support for WPA3-Personal in iOS/iPadOS Wi-Fi profiles<!-- 36602689 -->
 
-Google is introducing a new Mobile Threat Defense (MTD) capability for Android that allows MTD apps to operate with enhanced security permissions on managed devices. With this update, you'll be able to use the [MTD connector](../device-security/mobile-threat-defense/enable-connector.md) in the Microsoft Intune admin center to grant these permissions to one MTD app of your choice, such as Microsoft Defender for Endpoint or a supported third-party partner.
+Microsoft Intune will support **WPA3-Personal** as a security-type option when configuring Wi-Fi device configuration profiles for iOS/iPadOS. Admins will be able to select WPA3-Personal alongside existing options such as WPA2-Personal.
 
-On devices where these permissions are configured, the MTD app gains additional capabilities, including exemptions from app suspension, hibernation, and user-initiated restrictions.
+This feature:
+
+- Allows managed iOS/iPadOS devices to connect to networks that require the stronger WPA3 protocol.
+- Brings iOS/iPadOS in line with the latest Wi-Fi Alliance security standards and helps organizations meet evolving network-security requirements.
+
+Support for WPA3 on Windows, Android, and macOS platforms and for WPA3-Enterprise will be available in a future release (no ETA).
+
+To learn more about the settings you can currently configure, see [Add Wi-Fi settings to Apple devices in Microsoft Intune](../device-configuration/templates/ref-wifi-settings-apple.md).
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise corporate-owned devices with a work profile (COPE)
-> - Android Enterprise fully managed (COBO)
+> - iOS/iPadOS  
+
+<!-- *********************************************** -->  
+
+<!-- *********************************************** -->
+
+## Device management
+
+### Remote Help support for RemoteApp in Azure Virtual Desktop<!-- 33047374 -->  
+
+Remote Help will support RemoteApp in Azure Virtual Desktop (AVD), enabling help desk agents to securely view and control apps running within RemoteApp sessions.  
+
+### Agentic identity for the Policy Configuration Agent (public preview)<!-- 37369520 -->
+
+The Intune Policy Configuration Agent will update to use a Microsoft Entra agentic identity instead of a human user identity. This enables the agent to run policy configuration actions securely and independently.
+
+For existing agents, admins will be able to transition to an agentic identity from the agent's **Settings** tab by selecting **Create new identity**. After the identity is provisioned, the agent will now run on behalf of the logged-in user and the information will be scoped by the permissions of that account. For new agents, an agentic identity will be auto provisioned at setup.  
 
 <!-- *********************************************** -->
 
 ## Device security
 
-### Strict Tunnel Mode for Microsoft Tunnel on Android<!-- 17373449 -->
+### Audit mode for the Microsoft Defender Antivirus template for Linux<!-- 37284585 -->
 
-Microsoft Tunnel will add support for Strict Tunnel Mode on Android Enterprise devices enrolled through Android Management API (AM API). When Strict Tunnel Mode is enabled, all network traffic is forced through the VPN tunnel. If the VPN connection is unavailable or drops, all network traffic on the device is blocked, preventing apps from accessing the public internet outside of the tunnel. Devices enrolled through the legacy EMM API work profile don't support Strict Tunnel Mode until migrated to AM API.
+We'll soon add a new **Audit** value to the **Enforcement level** setting in the Microsoft Defender Antivirus template for Linux, which is part of Intune's Endpoint Security Antivirus policy. When you set **Enforcement level** to **Audit**, the antivirus engine detects threats in real time but doesn't automatically remediate them. Malware detections are reported as alerts in the Microsoft Defender portal through real-time scanning, without quarantining the malicious files. This gives you visibility into the threat landscape before you turn on full protection.
 
-Admins will be able to configure an app exclusion list. Apps on the exclusion list always bypass the VPN and connect directly to the network, regardless of VPN connection status.
-
-Strict Tunnel Mode will be available as a configuration option when a [Microsoft Tunnel VPN profile](../device-security/microsoft-tunnel/install.md) is configured with **Always On** VPN. For unenrolled devices using [Microsoft Tunnel for Mobile Application Management](../device-security/microsoft-tunnel/mam-android.md), Strict Tunnel Mode will also be supported, blocking network traffic when the MAM Tunnel connection is unavailable.
+The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../device-configuration/endpoint-security/antivirus.md), and for devices managed only by Defender through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) scenario (MDE attach).
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise personally owned work profile
-> - Android Enterprise corporate-owned work profile
-> - Android Enterprise corporate-owned fully managed
-> - Android (MAM, unenrolled devices)
+> - Linux  
 
-### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
+### Mark Windows devices noncompliant when prohibited AI agents are discovered<!-- 37387056 -->
 
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
+Automatically mark Windows devices as noncompliant when prohibited local AI agents, such as OpenClaw, are discovered on the device. As an admin, you'll be able to configure a list of prohibited agents in a Windows compliance policy. When a prohibited agent is detected, the device reports as noncompliant and Conditional Access takes effect. The device returns to a compliant state once the agent is removed.
 
-The new baseline will be available for [US Government Community Cloud High (GCC High)](../fundamentals/government-service.md) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 35894711 -->
+
+An updated security baseline for **Microsoft 365 Apps for Enterprise** will be available in Microsoft Intune. This baseline aligns with the most recent Microsoft 365 Apps security guidance and includes updated policy recommendations to help protect against evolving threats.
+
+This new baseline will be version **v2512**, skipping the previously published version found in the Security Compliance Toolkit (v2412). Once available, review the new baseline carefully before adopting it.
+
+The following three settings won't be available in this baseline release and are expected to be added in a future update. However, the parent setting to these three, (**VBA Macro Notification Settings** set to *Disable all except digitally signed macros*) will continue to be included in the 2512 update:
+
+- **Require macros to be signed by a trusted publisher**: Pending availability in the Settings Catalog.
+- **Block certificates originating from the current user store only**: Pending availability in the Settings Catalog.
+- **Require Extended Key Usage (EKU) for code signing**: Pending availability in the Settings Catalog.
+
+Existing profiles won't automatically upgrade. To use the latest version, [create a new baseline profile](../device-security/security-baselines/configure-baselines.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../device-security/security-baselines/configure-baselines.md#update-a-baseline-profile-to-the-latest-version).
+
+For a detailed breakdown of setting changes, see the blog post [Security baseline for M365 Apps for enterprise v2512](https://techcommunity.microsoft.com/blog/Microsoft-Security-Baselines/security-baseline-for-m365-apps-for-enterprise-v2512/4487213).
 
 > [!div class="checklist"]
 > Applies to:
 >
 > - Windows
 
-For information about the currently available Intune security baselines, see [Security baselines overview](../device-security/security-baselines/overview.md).
-
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
-You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) capability.
+You'll be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../device-security/microsoft-defender/security-settings-management.md) capability.
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../device-configuration/endpoint-security/attack-surface-reduction.md).
 
@@ -246,17 +259,6 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 > - Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
-
-### In-place renewal of Cloud PKI issuing certification authorities (CAs)<!-- 25850620 -->
-
-Currently, Microsoft Intune requires you to create a new Cloud PKI issuing CA and manually update dependent SCEP certificate profiles when an issuing CA nears expiration. This process can increase operational overhead and introduce configuration risk.
-
-Soon, you'll be able to renew eligible Cloud PKI issuing CAs in place. This update will help maintain uninterrupted certificate issuance and support continued certificate-based access for scenarios such as Wi-Fi, VPN, and email, without requiring changes to existing SCEP profiles or device assignments.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Cloud PKI
 
 ### Custom compliance settings for macOS<!-- 35392462 -->
 
@@ -300,34 +302,6 @@ Benefits of CC include:
 <!-- ## Intune apps -->
 
 <!-- *********************************************** -->
-
-## Monitor and troubleshoot
-
-### Intune Data Warehouse (beta) connector deprecation in Power BI<!-- 37106409 -->
-
-The Intune Data Warehouse (beta) connector in Power BI will be retired. If you use Power BI reports that rely on this connector, you'll need to transition to Intune connector v2 or the OData Feed connector before the retirement completes.
-
-Power BI reports created after November 2025 already use connector v2. Reports created before November 2025 may still use the beta connector and will need to be updated.
-
-The transition will begin in late April 2026 and occur gradually over two weeks. After the transition completes, data access through the beta connector will no longer be available.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-> - iOS/iPadOS
-> - macOS
-> - Android
-
-### Reporting considerations for compliance policies<!-- 37266708 -->
-
-Intune will add new guidance to the compliance policy reporting documentation to help clarify expected reporting behaviors. This documentation update will address common questions about how compliance policy reports reflect device state, including:
-
-- Check-in dependency: Compliance policy reports are updated when a device checks in with the Intune service. Reporting data refreshes during device check-in and policy refresh cycles and might not immediately reflect recent assignment or targeting changes.
-- Multi-user devices: Compliance reports display the compliance state for the last user who checked in on the device. If multiple users sign in to a shared device, the report can reflect the last known compliance state for a previous user.
-- Pending status: A device might appear in a **Pending** state if it has not yet checked in to receive or report compliance policy status. This status can persist in reports until the next reporting cycle completes.
-- Multiple records: Policy reports can show multiple records for a single device, such as separate entries associated with user and system contexts. This behavior can occur when different users sign in to the same device or when automatic device check-ins occur.
-- Summary vs. detail differences: Summary report views and detailed device lists can update on different cadences. As a result, aggregated summary values might temporarily differ from detailed report entries.
 
 <!-- *********************************************** -->
 

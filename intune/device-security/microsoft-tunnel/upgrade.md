@@ -1,8 +1,9 @@
 ---
 title: Upgrade the Microsoft Tunnel Gateway server software
 description: Understand how Microsoft Tunnel Gateway upgrades to new versions of the tunnel software for Microsoft Intune.
-ms.date: 05/05/2026
+ms.date: 06/11/2026
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.reviewer: ochukwunyere
 ms.collection:
 - M365-identity-device-management
@@ -74,7 +75,7 @@ You can view information about the status of Microsoft Tunnel servers, including
 
 For sites that don't support automatic upgrade, you can also view when upgrades to a new version are available.
 
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**. Select a server and then open the **Health check** tab to view the following information about it:
+Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**. Select a server and then open the **Health check** tab to view the following information about it:
 
 - **Server version** - The status of the Tunnel Gateway Server software, in the context of the most recent version available.
 
@@ -92,7 +93,7 @@ To understand when an upgrade is available for servers, use the [Health check](#
 
 ### To approve an upgrade
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+1. Sign in to [Microsoft Intune admin center] > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
 2. Select the site with an **Upgrade type** of **Manual**.
 
@@ -128,7 +129,20 @@ After an update releases, it rolls out to tenants over the following days. This 
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
 
-### May 13, 2026 
+### May 27, 2026
+
+Version Number: 20260527.1
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:1a814670dd9848ddb3ee7831fefa39f195f854c7e03c825b9fb9e4631544940f
+- **serverImageDigest**: sha256:89242bab502fe0b49023a48fc0a8ef20b9ca6ef0336b852aa8166fd7b542a590
+
+Changes in this release:
+
+- Package and security updates
+
+### May 13, 2026
 
 Version Number: 20260513.1
 
@@ -138,9 +152,10 @@ Image hash values:
 - **serverImageDigest**: sha256:a27cd376fbdcdfe54aeaa0f0b662f59da6630faa0a28856c7170feaf8def5d18
 
 Changes in this release:
+
 - Package and security updates
 
-### May 7, 2026 
+### May 7, 2026
 
 Version Number: 20260507.2
 
@@ -150,9 +165,10 @@ Image hash values:
 - **serverImageDigest**: sha256:f53affd23ba2fa9fc5fbcc0d1446c7a1437541b6bacfe246d62aa8ce34c1e3a6
 
 Changes in this release:
+
 - Package updates
 
-### March 30, 2026 
+### March 30, 2026
 
 Version Number: 20260330.1
 
@@ -162,9 +178,10 @@ Image hash values:
 - **serverImageDigest**: sha256:dd62c292528e8e5aa4e7b84418efa42fd3830ec0db40467947cde8125aa17d7e
 
 Changes in this release:
+
 - Major bug fixes  
   
-### February 5, 2026 
+### February 5, 2026
 
 Version Number: 20251219.1-01
 
@@ -174,9 +191,13 @@ Image hash values:
 - **serverImageDigest**: sha256:34aee0978f7cb991d2c6baa5adc27b052e54d6cb0d73b637cccd0d565addf619
 
 Changes in this release:
+
 - Minor bug fixes  
 
-### November 26, 2025 
+<!-- Archive of past releases that are older than 6 months. 
+Update versions were first made available with the Sept 15, 2025 update.
+
+### November 26, 2025
 
 Version Number: 20251126.1
 
@@ -186,7 +207,8 @@ Image hash values:
 - **serverImageDigest**: sha256:3c8bb39920694f6be510801f49ea61faa297d7df8b8618c1c49374f69fcf9cb2
 
 Changes in this release:
-- Minor bug fixes   
+
+- Minor bug fixes
 
 ### November 12, 2025
 
@@ -198,9 +220,9 @@ Image hash values:
 - **serverImageDigest**: sha256:8a59825275e41555a9ee3bf8e6e38f5db07dac953a8bd067673330ed536e1432
 
 Changes in this release:
+
 - Package updates to resolve CVEs
 - Bug fixes to address server health banner on UX issue 
-
 
 ### October 29, 2025
 
@@ -212,9 +234,9 @@ Image hash values:
 - **serverImageDigest**: sha256:a8f1d5c7d734516e40ee3c2ead88d785ad25c5886ded095ce6dc74cf62b9916f
 
 Changes in this release:
+
 - Contains various package updates and a major bugfix for the UI
 
-  
 ### October 7, 2025
 
 Version Number: 20250815.1
@@ -225,6 +247,7 @@ Image hash values:
 - **serverImageDigest**: sha256:6772cfe5f32a741864732254b26b40b13d8544294d739cc9dc79b964e433f069
 
 Changes in this release:
+
 - Minor bug fixes
 
 ### Sept 15, 2025
@@ -237,6 +260,7 @@ Image hash values:
 - **serverImageDigest**: sha256:44685069ca08ea6f6781d9d35eff4a616c93fb5aa985b7f05dff4700887b698c
 
 Changes in this release:
+
 - Minor bug fixes
 
 ### July 21, 2025
@@ -247,6 +271,7 @@ Image hash values:
 - **serverImageDigest**: sha256:6c235570c7a8741cb6fc95823f04b8163ae11229e9a4b9c170993b03b4e17ddd
 
 Changes in this release:
+
 - Minor bug fixes
 
 ### July 1, 2025
@@ -257,14 +282,12 @@ Image hash values:
 - **serverImageDigest**: sha256:9d666fb8d363b978f50978c2cfb427cf6851102cd7db1a1a7e75a50420c22277
 
 Changes in this release:
+
 - Minor bug fixes
 
 ## Related content
 
 [Reference for Microsoft Tunnel](./ref-file-commands.md)
-
-<!-- Archive of past releases that are older than 6 months. 
-Update versions were first made available with the Sept 15, 2025 update.
 
 ### May 21, 2025
 
@@ -796,3 +819,7 @@ Changes in this release:
 The initial public preview release of Microsoft Tunnel.
 
 End of archive -->
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

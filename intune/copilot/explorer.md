@@ -26,7 +26,7 @@ You can also use the query output to add users or devices to groups, and create 
 - To explore your data using this capability:
 
   - Security Copilot must be enabled in your tenant.
-  - Sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has access to Security Copilot with a **Copilot owner** or **Copilot contributor** role.
+  - Sign in to the [Microsoft Intune admin center] with an account that has access to Security Copilot with a **Copilot owner** or **Copilot contributor** role.
 
   To learn more about the prerequisites for using Microsoft Copilot in Intune, see [Microsoft Copilot in Intune overview](index.md).
 
@@ -40,7 +40,7 @@ There are also built-in examples that help you understand the kinds of questions
 
 ### 1 - Start exploring
 
-In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Explorer**. When it opens, you see a prompt input.
+In the [Microsoft Intune admin center], select **Explorer**. When it opens, you see a prompt input.
 
 :::image type="content" source="./media/explorer/admin-center-explorer.png" alt-text="Select the Copilot Explorer in the Microsoft Intune admin center." lightbox="./media/explorer/admin-center-explorer.png":::
 
@@ -108,3 +108,7 @@ This data exploration capability is constantly improving. We continue to add mor
 - [Use Microsoft Copilot in Intune to troubleshoot ](troubleshoot-devices.md).
 - [Use the settings catalog to create device configuration policies](../device-configuration/settings-catalog/index.md).
 - [Learn about privacy and data security in Security Copilot](security-copilot.md#privacy-and-data-security-in-security-copilot).
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

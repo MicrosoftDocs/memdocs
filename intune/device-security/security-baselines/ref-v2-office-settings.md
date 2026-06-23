@@ -131,7 +131,7 @@ For more information about the following settings that are included in this base
 
 - **VBA Macro Notification Settings (User)**\
   Baseline default: *Enabled*
-  - Baseline default: *Disable all with notification*
+  - Baseline default: *Disable all except digitally signed macros*
 
 #### Application Settings > Security > Trust Center > Trusted Locations
 

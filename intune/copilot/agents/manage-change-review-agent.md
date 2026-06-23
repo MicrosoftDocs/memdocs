@@ -23,7 +23,7 @@ Before you start, review the requirements in the [Change Review Agent overview](
 
 After configuration, manage the agent from the Change Review Agent pane.
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**. The agent includes the following three tabs:
+In the [Microsoft Intune admin center], select **Agents** > **Change Review Agent**. The agent includes the following three tabs:
 
 - **Overview** - View the agent's current status, suggestions for the top Multi Admin Approval requests, and the records of recent agent activity.
 - **Suggestions** - Here you'll find the full list of suggestions for assessed approval requests.
@@ -80,7 +80,7 @@ The agent doesn't support scheduled runs and must be started manually each time 
 
 **To manually run the Change Review Agent:**
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
+1. In the [Microsoft Intune admin center], go to **Agents** > **Change Review Agent**.
 2. Select **Run**, located above the agent's tab selection.
 
 ## Manage agent suggestions
@@ -152,3 +152,7 @@ The agent cannot proceed because the request violates Microsoft's Responsible AI
 - [Change Review Agent in Intune](change-review-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
 - [Security Copilot in Intune - An overview](../index.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

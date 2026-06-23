@@ -46,7 +46,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 ## How to create a policy set
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 2. Select **Devices** > **Policy Sets** > **Policy sets** > **Create**.
 3. On the **Basics** page, add the following values:
     - **Policy set name** - Provide a name for this policy set.
@@ -118,3 +118,7 @@ Policy sets, new to 1910, have the following known issues.
 ## Next steps
 
 - [Enroll devices in Microsoft Intune](../index.yml)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

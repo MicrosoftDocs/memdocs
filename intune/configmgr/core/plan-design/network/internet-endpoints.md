@@ -1,7 +1,7 @@
 ---
 title: Internet access requirements
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 04/08/2022
+ms.date: 06/08/2026
 ms.subservice: core-infra
 ms.topic: reference
 ms.collection: tier3
@@ -122,6 +122,24 @@ For more information, see the following articles:
 For more information on the cloud management gateway (CMG), see [Plan for CMG](../../clients/manage/cmg/data-flow.md).
 
 [!INCLUDE [Internet endpoints for cloud services](includes/internet-endpoints-cloud-services.md)]
+
+## Management point
+
+<!--Starting in version 2603-->Starting in version 2603, the management point requires internet access to validate Microsoft Entra tokens using Microsoft Identity Service Essentials (MISE). This requirement applies to environments that support Microsoft Entra joined users and devices, especially when using a cloud management gateway (CMG).
+
+Allow the management point server to access the following endpoints:
+
+**Azure public cloud:**
+
+- `https://login.microsoftonline.com`
+- `https://sts.windows.net`
+
+**Azure US Government cloud:**
+
+- `https://login.microsoftonline.us`
+- `https://sts.windows.net`
+
+For more information, see [Management point requires internet access for Microsoft Entra token validation](../changes/whats-new-in-version-2603.md#management-point-requires-internet-access-for-microsoft-entra-token-validation).
 
 ## Software updates
 

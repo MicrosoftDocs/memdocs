@@ -47,7 +47,7 @@ Before the Windows Autopilot profiles are downloaded from Intune as JSON files, 
 
 To install the necessary modules to download the Windows Autopilot profiles as a JSON file, follow these steps:
 
-1. Sign into the Configuration Manager site server or other device that can access Intune.
+1. Sign in to the Configuration Manager site server or other device that can access Intune.
 
 1. On the device, open a PowerShell window as an administrator by right-clicking on the **Start** menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
 

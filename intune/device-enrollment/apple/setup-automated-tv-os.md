@@ -61,7 +61,10 @@ This article describes how to create a tvOS enrollment policy for Apple automate
 
 Create a tvOS enrollment policy for userless automated device enrollment. A device enrollment policy defines the settings applied to a group of devices during enrollment. 
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+> [!IMPORTANT]
+> This article reflects the updated policy creation experience (**Enrollment program tokens** > **Enrollment policies**) for devices going through automated device enrollment. The older experience (**Enrollment program tokens** > **Profiles**) differs and will eventually be retired. The older experience won't receive new features, so be sure to create new policies under **Enrollment policies**. For more information, see [New iOS/iPadOS, visionOS, tvOS and macOS ADE enrollment policies experience](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-iosipados-visionos-tvos-and-macos-ade-enrollment-policies-experience/4393531).
+
+1. In [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
@@ -76,7 +79,15 @@ Create a tvOS enrollment policy for userless automated device enrollment. A devi
    > [!IMPORTANT]
    > If you make changes to an existing enrollment policy, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated.  
 
-1. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables tvOS settings that allow the management profile to be removed. If you enable locked enrollment, users won't be able to unenroll their device.  
+1. On the **Device group** tab, optionally select a Microsoft Entra security group to use for enrollment time grouping. The group maps directly to this enrollment policy, and you can edit it after policy creation.
+
+   Only static Microsoft Entra security groups are available for selection. To configure this setting, you must have the *enrollment time device membership assignment* permission in a custom RBAC role (under **Enrollment programs**).
+
+    For more information about how enrollment time grouping works, see [Enrollment time grouping in Microsoft Intune](../setup-time-grouping.md).  
+
+1. Select **Next**.  
+
+1. On the **Configuration settings** tab, for **Locked enrollment**, select **Yes** or **No**. Locked enrollment disables tvOS settings that allow the management profile to be removed. If you enable locked enrollment, users won't be able to unenroll their device.  
 
 1. For **Await final configuration**, your options are:
       * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations.
@@ -90,16 +101,14 @@ Create a tvOS enrollment policy for userless automated device enrollment. A devi
 
       * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users might be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment policies.  
 
-1. Select **Next**.
-
-1. On the **Setup Assistant** tab, configure the following policy settings:
+1. Under **Setup Assistant**, configure the following policy settings:
 
     | Department setting | Description |
     |---|---|
     | **Department** | Appears when users tap **About Configuration** during activation. |
     |    **Department Phone**     | Appears when users tap the **Need Help** button during activation. |  
 
-1. Select **Next**.
+1. Select **Next**.  
 
 1. To save the policy, select **Create**.
 
@@ -122,7 +131,7 @@ Before devices can be enrolled, you need to assign an enrollment policy to them.
 >[!NOTE]
 >You can also assign serial numbers to policies in the **Apple Serial Numbers** pane.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
+1. In [Microsoft Intune admin center], go to **Devices**.
 1. Expand **Device onboarding**, and then select **Enrollment**.
 1. Select the **Apple mobile** tab.
 1. Choose **Enrollment program tokens**.
@@ -159,3 +168,7 @@ You can also set a policy as default from your list of enrollment policies.
 - Devices can receive custom configuration profiles uploaded as .plist files. For more information, see [Create a custom configuration policy](../../device-configuration/templates/configure-custom-settings.md).  
  
 - Available remote device actions are the same as those available to iOS/iPadOS ADE devices. For more information, see [Remote device actions](../../device-management/actions/index.md).  
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

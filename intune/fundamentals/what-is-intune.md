@@ -15,7 +15,7 @@ Supported platforms include Android, iOS/iPadOS, Linux, macOS, tvOS, visionOS, a
 
 ## What Intune does
 
-Intune covers the full lifecycle of a managed device and the apps that run on it: enrolling devices, configuring settings, securing endpoints, deploying and protecting apps, and keeping everything up to date. You manage all of it from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), a web-based console. Every admin center action is backed by a [Microsoft Graph API](/graph/intune-concept-overview) call, so you can automate the same operations through a public programming interface.
+Intune covers the full lifecycle of a managed device and the apps that run on it: enrolling devices, configuring settings, securing endpoints, deploying and protecting apps, and keeping everything up to date. You manage all of it from the [Microsoft Intune admin center], a web-based console. Every admin center action is backed by a [Microsoft Graph API](/graph/intune-concept-overview) call, so you can automate the same operations through a public programming interface.
 
 Intune is built around three pillars: the **identities** that sign in, the **devices** they sign in from, and the **apps** they use to get work done. Identity runs on Microsoft Entra ID. Device and app posture flow back to Microsoft Entra Conditional Access, which gates access to corporate resources based on real, up-to-date signals.
 
@@ -75,3 +75,7 @@ For details, see [Microsoft Copilot in Intune](../copilot/index.md).
 - [Microsoft Intune core concepts](core-concepts.md)
 - [Microsoft Intune architecture](architecture.md)
 - [Microsoft Intune advanced capabilities](advanced-capabilities.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

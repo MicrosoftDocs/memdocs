@@ -55,9 +55,7 @@ The following table lists details about each of the services.
 |---------|---------|---------|---------|---------|---------|
 |Cloud management with<br>Microsoft Entra discovery | Multiple | Public, Private | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | Import, Create |
 
-<a name='about-azure-ad-apps'>
-
-### About Microsoft Entra apps
+### <a name='about-azure-ad-apps'></a> About Microsoft Entra apps
 
 Different Azure services require distinct configurations, which you make in the Azure portal. Additionally, the apps for each service can require separate permissions to Azure resources.
 

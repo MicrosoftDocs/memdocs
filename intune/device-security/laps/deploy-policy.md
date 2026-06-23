@@ -60,7 +60,7 @@ To create or manage LAPS policy, your account must have applicable rights from t
 
 Before you create a policy, you can review details about the available settings in the [Windows LAPS CSP](/windows-server/identity/laps/laps-management-policy-settings#windows-laps-csp) documentation.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Account protection**, and then select **Create Policy**.
+1. Sign in to the [Microsoft Intune admin center] and go to **Endpoint security** > **Account protection**, and then select **Create Policy**.
 
    :::image type="content" source="./media/deploy-policy/create-laps-policy.png" alt-text="Screen shot that shows where in the admin center you create a LAPS policy." lightbox="./media/deploy-policy/create-laps-policy.png":::
 
@@ -100,7 +100,7 @@ When your account has permissions equivalent to the *Security baselines* permiss
 
 For more information, see [Role based access controls for LAPS](./overview.md#role-based-access-controls-for-laps).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account. Intune displays that devices Overview pane.
+1. In the [Microsoft Intune admin center], go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account. Intune displays that devices Overview pane.
 
 2. On the device Overview pane, you can view *Device actions status*. Previously requested actions and pending actions display, including the time of the request, and if the action failed or was successful. In the following example screenshot, a device has had its Local Admin account Password successfully rotated.
 
@@ -124,7 +124,7 @@ Create and assign a custom role in Microsoft Entra ID that grants these permissi
 
 For more information, see [Role based access controls for LAPS](./overview.md#role-based-access-controls-for-laps).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** > select a Windows device to open its Overview pane.
+1. In the [Microsoft Intune admin center], go to **Devices** > **All devices** > select a Windows device to open its Overview pane.
 
    From the overview pane, you can view the devices *Device actions status*. The status displays current and past actions, such as password rotation.
 
@@ -163,7 +163,7 @@ See [Role based access controls for LAPS](./overview.md#role-based-access-contro
 
 ### To rotate a password
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**, and select the Windows device with the account you want to rotate.
+1. In the [Microsoft Intune admin center], go to **Devices** > **All devices**, and select the Windows device with the account you want to rotate.
 
 2. While viewing the device details, expand the ellipsis (…) on the right side of the menu bar to reveal the available options, and then select Rotate Local admin password.
 
@@ -210,3 +210,7 @@ To resolve conflicts, you must either remove policy assignments from the device,
 - [Introduction to Intune policy for LAPS](./overview.md)
 - [View reports for LAPS](./monitor.md)
 - [Account protection policy for endpoint security in Intune](../../device-configuration/endpoint-security/account-protection.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

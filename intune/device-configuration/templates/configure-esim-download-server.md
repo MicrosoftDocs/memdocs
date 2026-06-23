@@ -114,7 +114,7 @@ Create a device group that includes the eSIM capable devices. [Add groups](../..
 
 This profile uses the FQDN of your mobile operator's download server (SM-DP+), and enables eSIM on the devices.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 
@@ -169,3 +169,7 @@ This profile uses the FQDN of your mobile operator's download server (SM-DP+), a
 ## Related articles
 
 [Configure device profiles](../overview.md)
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

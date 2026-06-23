@@ -47,7 +47,7 @@ Microsoft provides global technical, pre sales, billing, and subscription suppor
 
 Follow these steps to obtain support in Microsoft Intune provides many tools that can help you troubleshoot Windows devices:
 
-- Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Sign in to the [Microsoft Intune admin center].
 - Select **Troubleshooting + support** > **Help and support**.
     :::image type="content" source="./media/troubleshoot-overview/advanced-support.png" alt-text="Screenshot that shows how to obtain support from Microsoft Intune." lightbox="./media/troubleshoot-overview/advanced-support.png":::
 - Select the required support scenario: Configuration Manager, Intune, Co-management, or Windows 365.
@@ -79,3 +79,7 @@ ________________________________________________________
 [MEM-8]: /troubleshoot/mem/intune/troubleshoot-csp-custom-settings
 [MEM-9]: /autopilot/troubleshooting-faq#troubleshooting-windows-autopilot-overview
 [MEM-10]: ../../../device-management/actions/collect-diagnostics.md
+
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

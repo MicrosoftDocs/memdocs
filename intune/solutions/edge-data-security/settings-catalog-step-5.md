@@ -69,7 +69,7 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.  
 3. For **Platform**, choose **Windows 10 and later**. For **Profile type**, choose **Settings catalog**.  
 4. Select **Create**.  
@@ -91,12 +91,12 @@ Level 1 configuration provides foundational browser security controls while main
 | Microsoft Edge\Content settings | Configure cookies | Disabled | [Configure cookies](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) |
 | Microsoft Edge\Content settings | Default pop-up window setting | Do not allow any site to show popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
 | Microsoft Edge\Content settings | Default notification setting | Do not allow any site to show desktop notifications (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
-| Microsoft Edge\Content settings | Default geolocation setting | Don’t allow any site to track users’ physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
+| Microsoft Edge\Content settings | Default geolocation setting | Don't allow any site to track users' physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
 | Microsoft Edge\Content settings | Allow or block video capture | Enabled | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) |
 | Microsoft Edge\Content settings | Allow or block audio capture | Enabled | [Allow or block audio capture](/deployedge/microsoft-edge-browser-policies/audiocaptureallowed) |
 | Microsoft Edge\Privacy & data protection | Block tracking of users' web-browsing activity | Strict (3) | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) |
 | Microsoft Edge\Privacy & data protection | Allow personalization of ads, search and news by sending browsing history to Microsoft | Disabled | [Allow personalization of ads, search and news by sending browsing history to Microsoft](/deployedge/microsoft-edge-browser-policies/personalizationreportingenabled) |
-| Microsoft Edge\Privacy & data protection | Enable network prediction | Don’t predict network actions on any network connection (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
+| Microsoft Edge\Privacy & data protection | Enable network prediction | Don't predict network actions on any network connection (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
 | Microsoft Edge\Privacy & data protection | Enable search suggestions | Disabled | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) |
 | Microsoft Edge\Privacy & data protection | Send required and optional diagnostic data about browser usage | Off (0) | [Send required and optional diagnostic data about browser usage](/deployedge/microsoft-edge-browser-policies/diagnosticdata) |
 | Microsoft Edge\Privacy & data protection | Disable saving browser history | Enabled | [Disable saving browser history](/deployedge/microsoft-edge-browser-policies/savingbrowserhistorydisabled) |
@@ -157,7 +157,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 builds on the Level 1 by duplicating its configuration and adding enhanced controls and advanced privacy protection.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 1 – Enterprise basic security – Windows Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -165,7 +165,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
    - **Name:** Edge Windows Level 2 Enhanced 
    - **Description:** Enhanced browser security including Application Bound Encryption, extension controls, and advanced privacy settings.  
 6. Select **Save**. This action takes you back to the **Windows configuration** page.  
-7. Find your new Level 2 policy in the policy list. If it doesn’t appear, select **Refresh**.  
+7. Find your new Level 2 policy in the policy list. If it doesn't appear, select **Refresh**.  
 8. When the policy appears, select the context menu (**⋯**) next to the policy name, and then select **Edit**.  
 9. On the **Basics** tab, verify that the name and description are correct, and then select **Next**.  
 10. On the **Settings** tab, all Level 1 settings are already included. You can locate more settings using one of the following options:  
@@ -235,7 +235,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 Level 3 builds on the Level 2 configuration by duplicating its policy and applying more high-security controls such as URL allowlisting, stricter data protection, and site isolation.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 2 – Enterprise enhanced security – Windows Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -243,7 +243,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
    - **Name:** Edge Windows Level 3 High
    - **Description:** High-security browser configuration including URL allowlisting, site isolation, and maximum data protection.  
 6. Select **Save**. This action takes you back to the **Windows configuration** page.  
-7. Find your new Level 3 policy in the policy list. If it doesn’t appear, select **Refresh**.  
+7. Find your new Level 3 policy in the policy list. If it doesn't appear, select **Refresh**.  
 8. When the policy appears, select the context menu (**⋯**) next to the policy name, and then select **Edit**.  
 9. On the **Basics** tab, verify that the name and description are correct, and then select **Next**.  
 10. On the **Settings** tab, all Level 2 settings are already included. You can locate more or modified settings using one of the following options:  
@@ -296,7 +296,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 After deploying all Windows security levels, validate that the policies have applied correctly and that each configuration behaves as expected on a test device.
 
 - **Policy verification:**  
-  In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Manage devices** > **Configuration**, and locate the policies for each level.  
+  In the [Microsoft Intune admin center], go to **Devices** > **Windows** > **Manage devices** > **Configuration**, and locate the policies for each level.  
   Select a policy, and then choose **Device assignment status** to confirm that all assigned devices show a status of *Succeeded*.  
   You can also review **Per setting status** to verify individual policy settings applied successfully.  
   On a test device, open Microsoft Edge and go to `edge://policy` to confirm that key settings appear as **Active** and not **Error**.
@@ -319,7 +319,7 @@ After deploying all Windows security levels, validate that the policies have app
   Confirm that InPrivate mode is forced, Application Guard isolation is active, and all optional features (Collections, Games, Sidebar, Drop, Wallet, Copilot) are disabled.
 
 If any settings do not apply, sync the device from the **Company Portal** app or verify group assignments (`SEB-Level1-Devices`, `SEB-Level2-Devices`, or `SEB-Level3-Devices`).  
-For extra confirmation, monitor **edge://policy** and the **Device configuration report** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to ensure the expected number of policies are active per level.
+For extra confirmation, monitor **edge://policy** and the **Device configuration report** in the [Microsoft Intune admin center] to ensure the expected number of policies are active per level.
 
 ::: zone-end
 
@@ -351,7 +351,7 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 
 Level 1 establishes foundational browser protections for enrolled macOS devices using Microsoft Edge. This level focuses on essential data-boundary, privacy, and network-security controls.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Devices** > **macOS** > **Managed devices** > **Configuration** > **Create** > **New policy**.  
 3. In the **Create a profile** window, verify that **Platform** is set to **macOS** (this option is pre-selected and cannot be changed).  
 4. For **Profile type**, choose **Settings catalog**, and then select **Create**.  
@@ -400,7 +400,7 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 
 Level 2 builds on the Level 1 by duplicating its configuration and adding enhanced controls and advanced privacy protection.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 1 – Enterprise basic security – macOS Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -438,7 +438,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 Level 3 builds on the Level 2 configuration by duplicating its policy and applying extra high-security controls such as URL allowlisting, stricter data protection, and site isolation.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center].  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 2 – Enterprise enhanced security – macOS Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -496,3 +496,6 @@ After deploying Settings Catalog policies:
 ## Next step
 
 Continue to [Step 6](./end-user-experience-step-6.md) to understand the Microsoft Edge for Business end user experience.
+<!--links-->
+
+[Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431

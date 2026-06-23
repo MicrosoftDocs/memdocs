@@ -25,7 +25,7 @@ To help keep the apps more secure and up to date once installed, the Company Por
 > The Company Portal app can only be installed automatically on devices using Intune that are already enrolled using direct enrollment or Automated Device Enrollment. For personal device or manual enrollment, the Company Portal app must be downloaded and installed to initiate enrollment. See [Instruct users to download and install Company Portal](#instruct-users-to-download-and-install-company-portal).
 ## Instruct users to download and install Company Portal
 
-You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing into the Company Portal, see [Enroll your macOS device using the Company Portal app](../../user-help/enrollment/enroll-company-portal-macos.md).
+You can instruct users to download, install, and sign in to Company Portal for macOS. For instructions on downloading, installing, and signing in to the Company Portal, see [Enroll your macOS device using the Company Portal app](../../user-help/enrollment/enroll-company-portal-macos.md).
 
 > [!NOTE]
 > The Intune Company Portal for macOS installs the universal version of the app that runs natively on Apple Silicon Macs. The same app installs the x64 version on Intel Mac machines.
@@ -53,13 +53,13 @@ Company Portal for macOS can be downloaded and installed using the [macOS Shell 
 > [!NOTE]
 > The script will require internet access when it runs to download the current version of the Company Portal for macOS.
 
-## Signing into the Company Portal for macOS when using Setup Assistant with Modern Authentication
+## Signing in to the Company Portal for macOS when using Setup Assistant with Modern Authentication
 
 When creating an Automated Device Enrollment profile, you can choose the **Setup Assistant with modern authentication** authentication method. The user has to authenticate using Microsoft Entra credentials during the setup assistant screens. This will require an additional Microsoft Entra login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The Company Portal can be installed in any of the three ways documented here for Setup Assistant with modern authentication.
 
 Use one of the ways documented above to deploy the macOS Company Portal to the devices enrolling with Setup Assistant with modern authentication so that the end user can authenticate and complete Microsoft Entra registration.
 
-Users must sign into the Company Portal to complete Microsoft Entra authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the enrollment and reach the home screen of the macOS device. If the tenant has multifactor authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during Setup Assistant. Multifactor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
+Users must sign in to the Company Portal to complete Microsoft Entra authentication and gain access to resources protected by Conditional Access. User affinity is established when users complete the enrollment and reach the home screen of the macOS device. If the tenant has multifactor authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during Setup Assistant. Multifactor authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
 For more information about configuring Setup Assistant with modern authentication for macOS, see [Create an Apple enrollment policy](../../device-enrollment/apple/setup-automated-macos.md#create-an-enrollment-policy).
 
