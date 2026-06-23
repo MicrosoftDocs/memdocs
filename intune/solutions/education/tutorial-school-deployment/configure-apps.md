@@ -19,7 +19,7 @@ Applications can be assigned to groups:
 
 ## Add apps
 
-✅ Add applications to your inventory
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Add applications to your inventory
 
 ::: zone pivot="windows"
 
@@ -202,7 +202,7 @@ Intune also supports deploying **[iOS/iPadOS LOB apps](../../../app-management/d
 
 ## Assign apps
 
-✅ Assign apps from your inventory to groups
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assign apps from your inventory to groups
 
 ::: zone pivot="windows"
 

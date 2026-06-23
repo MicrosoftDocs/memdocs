@@ -34,7 +34,7 @@ The Microsoft Intune service can be managed in different ways.
 
 ## Prerequisites
 
-✅ Check out the requirements for device management
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Check out the requirements for device management
 
 Before configuring settings with Intune, consider the following prerequisites:
 
@@ -54,7 +54,7 @@ The Intune service can be configured in different ways, depending on the needs o
 
 ### Configure enrollment restrictions
 
-✅ Restrict which devices can be managed
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Restrict which devices can be managed
 
 With enrollment restrictions, you control which devices can enroll and be managed by Intune. For example, you can prevent the enrollment of personal devices.
 
@@ -75,7 +75,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ### Optional configuration
 
-✅ Configure optional tenant configuration
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure optional tenant configuration
 
 - Customize branding according to organization policies. For more information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../../../app-management/configuration/configure-company-portal.md).
 - Create Terms and conditions according to organization policies. For more information, see [Terms and conditions for user access](../../../device-enrollment/create-terms-and-conditions.md).
@@ -84,7 +84,7 @@ For more information, see [Create a device platform restriction][MEM-2].
 
 ### Configure Windows enrollment
 
-✅ Configure which users can enroll Windows devices
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure which users can enroll Windows devices
 
 1. Sign in to the [Microsoft Intune admin center].
 1. Select **Devices** > **Enroll devices** > **Automatic Enrollment**.
@@ -99,7 +99,7 @@ For more information, see [Enable Windows automatic enrollment](../../../device-
 
 ### Disable Windows Hello for Business
 
-✅ Disable functionality typically inaccessible to students
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Disable functionality typically inaccessible to students
 
 Windows Hello for Business is a biometric authentication feature that allows users to sign in to their devices using a PIN, password, or fingerprint. Windows Hello for Business is enabled by default on Windows devices, and to set it up, users must perform for multifactor authentication (MFA). As a result, this feature might not be ideal for students, who don't have MFA enabled.
 
@@ -124,7 +124,7 @@ For more information how to enable Windows Hello for Business on specific device
 
 ### Configure Intune data collection policy
 
-✅ Configure Endpoint analytics
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure Endpoint analytics
 
 Intune needs permission to collect data for Endpoint analytics on Windows devices.
 
@@ -146,7 +146,7 @@ For more information on data collection, see [Endpoint analytics data collection
 
 ### Configure Windows data
 
-✅ Configure tenant Windows data settings
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Configure tenant Windows data settings
 
 Intune needs permission to collect certain data for Windows update reports on Windows devices.
 
@@ -161,7 +161,7 @@ For more information, see [Enable use of Windows diagnostic data by Intune](../.
 
 ### Configure Windows device diagnostics
 
-✅ Allow remote retrieval of diagnostic information
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Allow remote retrieval of diagnostic information
 
 1. Sign in to the [Microsoft Intune admin center].
 1. Select **Tenant administration** > **Device diagnostics**.

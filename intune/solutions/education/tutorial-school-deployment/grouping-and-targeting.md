@@ -10,7 +10,7 @@ zone_pivot_groups: platforms-windows-ios
 
 # Plan Education device grouping and targeting
 
-✅ Organize devices and users
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Organize devices and users
 
 By organizing devices, students, classrooms, or learning curricula into groups, you can provide students with the resources and configurations they need.
 
@@ -37,7 +37,7 @@ Beyond the defaults, groups can be customized to suit various needs. For example
 
 ## Choose grouping methods
 
-✅ Select the best option for grouping
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Select the best option for grouping
 
 The way you target configuration and apps can depend on many factors and the enrollment type.
 
@@ -47,10 +47,10 @@ The following table provides guidance about which Windows device grouping option
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
-| Windows Autopilot user driven | Fastest application during enrollment | ✔️ *Device dynamic group* based on [a Windows Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ *User dynamic group*✔️ Assigned groups |
-| Windows Autopilot self-deploying mode | Fastest application during enrollment | ✔️ *Device dynamic group* based on [a Windows Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>✔️ Assigned groups |
-| All enrollment types | Fastest application during enrollment | ✔️ *All devices* group</br>✔️ *All devices* group with a filter |
-| All enrollment types | Applies after enrollment | ✔️ *Device dynamic group* based on other attributes |
+| Windows Autopilot user driven | Fastest application during enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *Device dynamic group* based on [a Windows Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *User dynamic group*:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assigned groups |
+| Windows Autopilot self-deploying mode | Fastest application during enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *Device dynamic group* based on [a Windows Autopilot *Group Tag*](/autopilot/enrollment-autopilot), manufacturer or model <br/>:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assigned groups |
+| All enrollment types | Fastest application during enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *All devices* group</br>:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *All devices* group with a filter |
+| All enrollment types | Applies after enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *Device dynamic group* based on other attributes |
 
 ::: zone-end
 
@@ -60,10 +60,10 @@ The following table provides guidance about which iOS device grouping options to
 
 | Enrollment type | Behavior | Best grouping options |
 | --- | --- | --- |
-| Automated device enrollment | Fastest application during enrollment | ✔️ *All devices* group</br>✔️ *All devices* group with a filter |
-| Automated device enrollment with user affinity | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
-| Company portal | Fastest application during enrollment | ✔️ Assigned or dynamic user groups |
-| All enrollment types | Applies after enrollment | ✔️ Device dynamic group</br>✔️ Assigned device groups |
+| Automated device enrollment | Fastest application during enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *All devices* group</br>:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: *All devices* group with a filter |
+| Automated device enrollment with user affinity | Fastest application during enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assigned or dynamic user groups |
+| Company portal | Fastest application during enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assigned or dynamic user groups |
+| All enrollment types | Applies after enrollment | :::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Device dynamic group</br>:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Assigned device groups |
 
 ::: zone-end
 
@@ -74,7 +74,7 @@ The following table provides guidance about which iOS device grouping options to
 
 ## Create groups and filters
 
-✅ Create your organization groups
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Create your organization groups
 
 With your enrollment and grouping plan in place, you can create your groups.
 
@@ -97,7 +97,7 @@ With your enrollment and grouping plan in place, you can create your groups.
 
 ## Example groups
 
-✅ See examples of common grouping by enrollment type
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: See examples of common grouping by enrollment type
 
 This section includes targeting methods commonly seen in Education organizations.
 

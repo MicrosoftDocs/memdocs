@@ -1,7 +1,7 @@
 ---
 title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
-ms.date: 06/19/2026
+ms.date: 06/23/2026
 ms.topic: whats-new
 ms.collection:
 - M365-identity-device-management
@@ -47,6 +47,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of June 22, 2026
+
+## Tenant administration
+
+#### Multi Admin Approval now enforces on API calls made by automation<!-- 37629074 -->
+
+Multi Admin Approval (MAA) now applies to API calls made by automation through the Microsoft Graph API, not just interactive admin actions. If your tenant has MAA access policies configured and you use service principals, automation scripts, or third-party applications to modify protected Intune resources, those calls are now subject to the same approval workflow as interactive operations.
+
+Calls that don't include the required approval headers return an HTTP 403 error. To maintain your automation, update your scripts to follow the MAA approval workflow. If an immediate code change isn't feasible for applications that use app-auth tokens, you can exclude specific applications from enforcement using the new Exclusions tab in the access policy wizard.
+
+For more information, see [Use Multi Admin Approval with the Microsoft Graph API](../fundamentals/role-based-access-control/multi-admin-approval-graph-api.md).
 
 ## Week of June 15, 2026
 
@@ -194,22 +206,6 @@ You have the option to display custom text in the top bar of the Managed Home Sc
 >
 > - Android Enterprise dedicated devices (COSU)
 > - Android Enterprise fully managed devices (COBO)
-
-#### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
-
-On macOS devices, the **Disable MAC address randomization** setting is now available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices.
-
-When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
-
-For more information, see:
-
-- [Wi-Fi profile settings for Apple devices](../device-configuration/templates/ref-wifi-settings-apple.md)
-- [Add and use Wi-Fi settings on your devices in Microsoft Intune](../device-configuration/templates/configure-wifi.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS 15 and later
 
 #### Managed Home Screen exit lock task mode password now requires a device configuration profile<!-- 31846021 -->
 
