@@ -5,7 +5,7 @@ ms.date: 04/06/2026
 ms.topic: how-to
 ms.author: brenduns
 author: brenduns
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
