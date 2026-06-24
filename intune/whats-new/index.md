@@ -1336,11 +1336,11 @@ The new policies include:
 
 - **Allow precise geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are allowed to access the user's high-accuracy geolocation without prompting for permission. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal setting is used.
 
-  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards (*) are supported.
 
 - **Block geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are blocked from requesting or accessing the user's geolocation. These sites can't prompt the user for location permissions. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal browser setting is used.
 
-  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](https://go.microsoft.com/fwlink/?linkid=2095322). Wildcards (*) are supported.
 
 **Windows Backup and Restore**:
 

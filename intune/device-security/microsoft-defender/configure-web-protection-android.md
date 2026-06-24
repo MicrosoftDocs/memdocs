@@ -4,7 +4,7 @@ description: Use Intune policy to manage Microsoft Defender for Endpoint web pro
 ms.date: 05/22/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -159,7 +159,7 @@ To configure web protection on devices, use the following procedures to create a
 
   - [Microsoft Defender for Endpoint Conditional Access](/defender-endpoint/conditional-access)
 
-  - [Microsoft Defender for Endpoint risk dashboard](/defender-endpoint/security-operations-dashboard)
+  - [Security Operations Guide for Defender for Endpoint](/defender-endpoint/mde-sec-ops-guide)
 
 <!--links-->
 
