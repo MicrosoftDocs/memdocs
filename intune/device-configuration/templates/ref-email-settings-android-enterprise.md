@@ -1,7 +1,7 @@
 ---
 title: Android Enterprise email settings in Microsoft Intune
 description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Microsoft Entra ID. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Enterprise personally owned devices with a work profile using Microsoft Intune.
-ms.date: 04/15/2024
+ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: sheetg
 ms.collection:
@@ -12,21 +12,41 @@ ms.collection:
 
 This article describes the different email settings you can control on Android Enterprise personally owned devices with a work profile. As part of your mobile device management (MDM) solution, use these settings to configure an Exchange email server, use SSL to encrypt emails, and more. The email profile uses the email app on the device, and allows users to connect to their organization email.
 
-This feature applies to:
-
-- Android Enterprise personally owned devices with a work profile (BYOD)
-
-On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../../app-management/configuration/configure-managed-android.md). For Android device administrator, go to [Android device settings to configure email](./ref-email-settings-android.md).
-
 As an Intune administrator, you can create and assign email settings to Android Enterprise personally owned devices with a work profile. To learn more about email profiles in Intune, go to [configure email settings](./configure-email.md).
 
-## Before you begin
+## Prerequisites
 
-- Deploy your email app. For more information, go to [Configure email apps](./configure-email.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platform:
+> - Android Enterprise personally owned devices with a work profile (BYOD)
+>
+> On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use [app configuration policies](../../app-management/configuration/configure-managed-android.md).
+:::column-end:::
+:::row-end:::
 
-  - If your profile uses Gmail and you want to use modern authentication, then you might have to deploy the Google Chrome app to the work profile.
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::column-end:::
+:::row-end:::
 
-- Create an [Android Enterprise email device configuration profile](./configure-email.md) > **Personally-owned work profile**.
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
+> - Deploy your [email app](./configure-email.md). If your profile uses Gmail and you want to use modern authentication, you might need to deploy the Google Chrome app to the work profile.
+> - Create an [Android Enterprise email device configuration profile](./configure-email.md) > **Personally-owned work profile**.
+:::column-end:::
+:::row-end:::
 
 ## Android Enterprise
 
@@ -53,5 +73,4 @@ As an Intune administrator, you can create and assign email settings to Android 
 ## Related articles
 
 - [Assign the profile](../assign-device-profile.md) and [monitor its status](../monitor-device-profile.md).
-
 - Create email profiles for [Android Samsung Knox](./ref-email-settings-android.md), [iOS/iPadOS](./ref-email-settings-ios.md), and [Windows](./ref-email-settings-windows.md) devices.
