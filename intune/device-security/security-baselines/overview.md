@@ -3,7 +3,7 @@ title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 06/09/2026
+ms.date: 06/24/2026
 ms.topic: overview
 ai-usage: ai-assisted
 ms.reviewer: aanavath
@@ -94,7 +94,8 @@ The following security baseline instances are available for use with Intune. Use
   > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**:
-  - [Version 2306 (Office baseline)](./ref-v2-office-settings.md?pivots=v2023) *Released in November 2023*
+  - [Version 2512 (Office baseline)](./ref-v2-office-settings.md?pivots=v2512) *Released in June 2026*
+  - [Version 2306 (Office baseline)](./ref-v2-office-settings.md?pivots=v2306) *Released in November 2023*
   - [May 2023 (Office baseline)](./ref-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**:

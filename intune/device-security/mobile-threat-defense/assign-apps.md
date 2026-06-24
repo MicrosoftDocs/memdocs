@@ -3,7 +3,8 @@ title: Add and assign MTD apps to Microsoft Intune
 description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authenticator app, and iOS configuration policy in Microsoft Intune
 author: brenduns
 ms.author: brenduns
-ms.date: 06/02/2025
+ms.date: 06/24/2026
+ai-usage: ai-assisted
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
@@ -187,6 +188,10 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 See the instructions for [using Microsoft Intune app configuration policies for iOS](../../app-management/configuration/configure-managed-ios.md) to add the Trend Micro Mobile Security as a Service app configuration policy.
 
+### Trustd Mobile app configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../../app-management/configuration/configure-managed-ios.md) to add the Trustd Mobile iOS app configuration policy.
+
 ### Zimperium app configuration policy
 
 - **Android Enterprise**:
@@ -230,6 +235,7 @@ Choose the section that corresponds to your MTD provider:
 - [Sophos Mobile](#assigning-sophos)
 - [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
 - [Trellix Mobile Security](#assigning-trellix-mobile-security)
+- [Trustd Mobile](#assigning-trustd-mobile)
 - [Zimperium](#assigning-zimperium)
 
 ### Assigning Better Mobile
@@ -335,6 +341,14 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md). Use this [Trellix Mobile Security app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
+
+### Assigning Trustd Mobile
+
+- **Android**:
+  - See the instructions for [adding Android store apps to Microsoft Intune](../../app-management/deployment/add-store-android.md). Use this [Trustd Mobile app store URL](https://play.google.com/store/apps/details?id=app.traced) for the **Appstore URL**.
+
+- **iOS**:
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../../app-management/deployment/add-store-ios.md). Use this [Trustd Mobile app store URL](https://apps.apple.com/app/trustd-mobile-security/id1519403888) for the **Appstore URL**.
 
 ### Assigning Zimperium
 
