@@ -3,7 +3,7 @@ title: Mobile Threat Defense with Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
 author: brenduns
 ms.author: brenduns
-ms.date: 05/26/2026
+ms.date: 06/24/2026
 ai-usage: ai-assisted
 ms.topic: overview
 ms.reviewer: ilwu
@@ -145,5 +145,6 @@ Learn how to protect access to company resources based on device, network, and a
 - [Symantec Endpoint Protection Mobile](./symantec.md) - *(Android, iOS/iPadOS)*
 - [Trellix Mobile Security](./trellix.md) - *(Android, iOS/iPadOS)*
 - [Trend Micro Mobile Security as a Service](./trend-micro.md) - *(Android, iOS/iPadOS)*
+- [Trustd Mobile](./trustd-mobile.md) - *(Android, iOS/iPadOS)*
 - [Windows Security Center](../../app-management/protection/enable-mam-windows.md) - *(Windows)* - *For information about the Windows versions that support this connector, see [Data protection for Windows MAM](../../app-management/protection/enable-mam-windows.md).*
 - [Zimperium](./zimperium.md) - *(Android, iOS/iPadOS)*

@@ -1,7 +1,7 @@
 ---
 title: Add an Enterprise App Catalog App to Microsoft Intune
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
-ms.date: 04/14/2026
+ms.date: 06/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: dguilory
@@ -13,7 +13,7 @@ ms.collection:
 
 # Add an Enterprise App Catalog App to Microsoft Intune
 
-The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](./win32.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility.
 
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM), which is part of Microsoft Intune Suite and available for trial and purchase. For more information, see [Microsoft Intune advanced capabilities](../../fundamentals/advanced-capabilities.md).
@@ -249,7 +249,7 @@ You can select the **Required**, **Available for enrolled devices**, or **Uninst
 > For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app fails to install.
 
 1. For the specific app, select an assignment type:
-    - **Required**: The app is installed on devices in the selected groups.
+    - **Required**: The app is installed on devices in the selected groups. You can enable **auto-update** for required assignments so Intune automatically updates the app on targeted devices when a newer version is available in the Enterprise App Catalog. For more information, see [Auto-update for Enterprise App Catalog apps](./enterprise-app-management.md#auto-update-for-enterprise-app-catalog-apps).
     - **Available for enrolled devices**: Users install the app from the company portal app or the company portal website.
     - **Uninstall**: The app is uninstalled from devices in the selected groups.
 2. Select **Add group** and assign the groups that use this app.

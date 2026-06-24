@@ -1,7 +1,7 @@
 ---
 title: Third-party device compliance partners support in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune.
-ms.date: 02/27/2026
+ms.date: 06/24/2026
 ms.topic: overview
 ms.reviewer: ilwu-microsoft
 ms.collection:
@@ -52,6 +52,13 @@ The following compliance partners are supported as generally available:
 > [!NOTE]
 > If you offer an MDM product and want to onboard as a device compliance partner, fill out the form: [Intune partner compliance onboarding](https://aka.ms/IntunePartnerComplianceOnboarding).
 
+## Self-service onboarding for compliance partners
+
+Microsoft Intune supports self-service onboarding for compliance partners. Partners can onboard and publish their own compliance connectors for use with Intune. After a partner makes a connector available, you can configure it from within the Intune admin center when adding a compliance partner, as described later in this article.    
+
+> [!NOTE]
+> The availability of specific partners depends on whether the partner has completed the onboarding process and published their connector for use with Intune.  
+
 ## Requirements
 
 :::row:::
@@ -88,6 +95,8 @@ You also need:
 - A subscription to the device compliance partner.
 - Check your compliance partner's documentation for prerequisites.  
 
+For self-service onboarded compliance partners, obtain the Microsoft Entra application ID from the compliance partner before you begin configuration.  
+
 ## Configure Intune to work with a device compliance partner
 
 Enable support for a device compliance partner to use compliance state data from that partner with your Conditional Access policies.
@@ -102,7 +111,8 @@ Enable support for a device compliance partner to use compliance state data from
 
 1. On **Basics**, expand the **Compliance partner** dropdown and select the partner you want to add.
 
-   - To use Omnissa Workspace ONE UEM as the compliance partner for iOS or Android platforms, select **Omnissa Workspace ONE UEM**.
+   - To use Omnissa Workspace ONE UEM as the compliance partner for iOS or Android platforms, select **Omnissa Workspace ONE UEM**.  
+   - To configure a self-service onboarded partner, select **Custom MDM Compliance Partner**. Then enter the **Custom MDM Compliance Partner Entra Application ID** provided by your compliance partner. If the application ID isn't associated with a valid onboarded compliance partner, the configuration can't be completed.  
 
    Next, select the dropdown for **Platform**, and select the platform.
 

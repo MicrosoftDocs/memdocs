@@ -1,12 +1,13 @@
 ---
 title: Using Remote Help on Windows to Assist Authenticated Users 
 description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
-ms.date: 10/16/2025
+ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer: Karawang
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
+ai-usage: ai-assisted
 ---
 
 # Using Remote Help with Microsoft Intune
@@ -158,16 +159,19 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 1. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. If a helper performs elevated actions on a user's device and the sharer ends the session, at the end of the session the sharer is automatically signed out.
 
-#### Provide help on an AVD
+#### Provide help in Azure Virtual Desktop desktop and RemoteApp sessions  
 
-If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple users on the device, you must follow the process described in this section to give help:
+In an Azure Virtual Desktop (AVD) desktop session, helpers can access and control a user's entire remote desktop. In an AVD RemoteApp session, helpers can only view and interact with the published app the user is running, not the full desktop.  
 
-1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you need to sign in to authenticate your organization.
+Although helpers can initiate Remote Help from the Intune admin center for AVD desktop sessions, the request is broadcast to all active users on the host. AVD RemoteApp sessions can't be directly targeted from the Intune admin center. In both scenarios, use the security code method to connect to the correct user session.  
 
-1. After signing in to the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you need to share with the person who has requested assistance active on the AVD. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.
+1. Open the Remote Help app on your device and sign in with your organizational account.
 
->[!NOTE]
-> If you initiate the Remote Help request from Intune, then the notification is delivered to all active users on the Azure Virtual Desktop.
+1. Under **Give help**, select **Get a security code**. Give the generated security code to the sharer requesting assistance.
+
+1. The sharer enters the security code to establish the connection:  
+   - AVD desktop session: Open Remote Help in the active AVD session and enter the security code.  
+   - AVD RemoteApp session: Launch Remote Help within the RemoteApp session and enter the security code. After the connection is established, helpers can view and interact only with the published app available in that session.  
 
 >[!NOTE]
 > The restart option isn't available for helpdesk agents remotely helping AVD.
@@ -188,7 +192,7 @@ If you're trying to help an Azure Virtual Desktop (AVD) that could have multiple
 
 1. After the sharer navigates to the Remote Help session, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
 
-1. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. The sharer can choose to **Allow** or to **Decline** the request.
+1. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. The sharer can choose to **Allow** or to **Decline** the request.  
 
 ### Enrolled macOS device
 

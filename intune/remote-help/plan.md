@@ -1,7 +1,7 @@
 ---
 title: Plan for Remote Help with Microsoft Intune
 description: Learn about the requirements and capabilities of Remote Help with Microsoft Intune on Windows, macOS, and Android Enterprise.
-ms.date: 10/16/2025
+ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer: karawang
 ms.subservice: suite
@@ -148,7 +148,7 @@ Each platform has specific prerequisites and capabilities.
 
 - Windows x86, x64, and ARM64
 - Windows 365
-- Azure Virtual Desktop
+- Azure Virtual Desktop (desktop and RemoteApp sessions)  
 
 There are optional Windows updates for higher notification reliability:
 
@@ -160,7 +160,7 @@ There are optional Windows updates for higher notification reliability:
 
 The Intune management extension is required on the sharer's device for the remote launch feature. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information about the Intune management extension, see [Intune management extension](../device-management/tools/management-extension-windows.md).  
 
-We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [How to provide help on an AVD](start-session.md#provide-help-on-an-avd). 
+We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [Provide help in Azure Virtual Desktop desktop and RemoteApp sessions](start-session.md#provide-help-in-azure-virtual-desktop-desktop-and-remoteapp-sessions). 
 
 ### [:::image type="icon" source="../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 

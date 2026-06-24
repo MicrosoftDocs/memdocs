@@ -68,6 +68,10 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WPA/WPA2 - Personal**: Enter the password in **Pre-shared key** (PSK). When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+  ::: zone pivot="ios-ipados"
+  - **WPA2/WPA3 - Personal**: Enter the password in **Pre-shared key** (PSK). When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+  - **WPA3 - Personal**: Enter the password in **Pre-shared key** (PSK). When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+  ::: zone-end
   - **WEP**
 
 - **Proxy settings**: Your options:
