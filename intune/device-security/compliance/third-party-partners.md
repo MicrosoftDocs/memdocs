@@ -39,7 +39,7 @@ The following compliance partners are supported as generally available:
 - Fleet
 - IBM MaaS360
 - Jamf Pro
-- Kandji
+- Iru
 - Ivanti Neurons for MDM
 - Ivanti EPMM
 - mobiconnect
@@ -145,7 +145,7 @@ To enable a device compliance partner to work with Intune, you must complete con
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [CLOMO MDM](https://support.clomo.com/?page_id=61477)
 - [Fleet](https://fleetdm.com/guides/entra-conditional-access-integration)
-- [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
+- [Iru Endpoint Management](https://docs.iru.com/en/endpoint/integrations/microsoft-device-compliance/getting-started-with-microsoft-device-compliance#getting-started-with-microsoft-device-compliance)
 - [mobiconnect](https://help.mobi-connect.net/function/function_category/c0119/?func_os=ios-ipados)
 - [Omnissa Workspace ONE UEM](https://docs.omnissa.com/bundle/WorkspaceONE-UEM-Managing-DevicesVSaaS/page/ConditionalAccessMicrosoftEntraID.html)
 - [Scalefusion](https://help.scalefusion.com/docs/microsoft-intune-partner-compliance)
