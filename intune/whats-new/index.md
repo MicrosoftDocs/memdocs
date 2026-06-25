@@ -50,6 +50,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 22, 2026
 
+### App management
+
+#### Microsoft Intune app for Android requires version 2025.11.01 or later<!-- 30154210 -->
+
+The minimum supported version of the Microsoft Intune app for Android is now version `2025.11.01`. This change took effect on May 1, 2026. Users running an older version might experience sign-in failures.
+
+Most users have app updates set to automatic and receive the updated app without taking any action. Users not running a supported version should update the Microsoft Intune app to the latest version to resolve any sign-in issues.
+
+To check which devices are affected, go to **Apps** > **Monitor** > **Discovered apps** and find the Microsoft Intune app to identify devices running older versions.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
+
 ## Tenant administration
 
 #### Multi Admin Approval now enforces on API calls made by automation<!-- 37629074 -->
