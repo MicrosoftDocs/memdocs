@@ -75,7 +75,7 @@ To enable web-based enrollment for your tenant, see [Enable web-based enrollment
 
 ## Set up enrollment
 
-Complete these steps to set up enrollment for Android Enterprise devices in BYOD scenarios. The following steps cover web-based enrollment, which is the recommended method. App-based enrollment through Company Portal works by default and requires no additional configuration, but is being phased out. Configuring device platform restrictions is optional and only needed if you want to restrict or customize enrollment behavior beyond the defaults.
+Complete these steps to set up enrollment for Android Enterprise devices in BYOD scenarios. The following steps cover web-based enrollment, which is the recommended method. App-based enrollment through Company Portal works by default and requires no additional configuration. Configuring device platform restrictions is optional and only needed if you want to restrict or customize enrollment behavior beyond the defaults.
 
 > [!NOTE]
 > Device enrollment managers can enroll up to 10 devices per account.
