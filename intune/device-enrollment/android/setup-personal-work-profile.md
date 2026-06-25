@@ -75,7 +75,7 @@ To enable web-based enrollment for your tenant, see [Enable web-based enrollment
 
 ## Set up enrollment
 
-Complete these steps to set up enrollment for Android Enterprise devices in BYOD scenarios. Web-based enrollment is the recommended method for personally owned work profile devices. Configuring device platform restrictions is optional and only needed if you want to restrict or customize enrollment behavior beyond the defaults.
+Complete these steps to set up enrollment for Android Enterprise devices in BYOD scenarios. The following steps cover web-based enrollment, which is the recommended method. App-based enrollment through Company Portal works by default and requires no additional configuration, but is being phased out. Configuring device platform restrictions is optional and only needed if you want to restrict or customize enrollment behavior beyond the defaults.
 
 > [!NOTE]
 > Device enrollment managers can enroll up to 10 devices per account.
@@ -111,6 +111,11 @@ Optionally, control or restrict other enrollment methods. Apply platform restric
 1. Configure platform settings for **Android Enterprise (work profile)**. Your options:
    - **Platform**: Select **Allow** to permit enrollment with Android Enterprise work profile. Select **Block** to prevent work profile enrollment. If you block work profile, devices enroll using the Android device administrator management solution, unless device administrator enrollment is also blocked.
    - **Personally owned**: Select **Allow** to permit personal devices to enroll with a work profile. Personal devices are allowed by default. Select **Block** to prevent personal devices from enrolling with a work profile. Android devices that don't support Android Enterprise enroll using the Android device administrator solution, unless device administrator enrollment is blocked.
+
+   > [!IMPORTANT]
+   > The **Personally owned** setting configured as **Block** doesn't apply to [Android Management API (AMAPI)](android-management-api-overview.md) devices and isn't reliable for devices running Android 12 and later that use Custom DPC enrollment. If you're using this setting to prevent personally owned work profile enrollment, consider one of the following alternatives:
+   > - Use a corporate-owned management method: Enroll devices as [corporate-owned work profile](setup-corporate-work-profile.md) devices instead of personally owned.
+   > - Restrict enrollment by user group: Configure the enrollment restriction to block Android Enterprise work profile enrollment for all users. Then create a higher-priority restriction that allows enrollment for an approved group only. This way controls enrollment through group membership rather than the **Personally owned** setting.
 
    Any device that supports Android Enterprise personal work profiles also supports the Android device administrator management solution, so if you don't want Android device administrator to be a part of enrollments, make sure to block the platform. For more information, see [device platform restrictions](../create-platform-restrictions.md#best-practice---android-platform-restrictions).
 
@@ -148,7 +153,7 @@ For more information and screenshots of the end user experience, see [Enroll dev
 
 Intune automatically installs the following apps on enrolled devices:
 
-- Microsoft Intune: Handles device management tasks, including checking compliance, syncing policies, collecting diagnostic logs, and contacting IT support.
+- Microsoft Intune: User-facing app for device management tasks, including checking compliance, syncing policies, collecting diagnostic logs, and contacting IT support.
 - Company Portal: Used for browsing and installing work apps and supports MAM scenarios.
 - Android Device Policy: Enforces Android Management API policies on web-based enrollments. Installed in a hidden state. Users don't see it.
 - Microsoft Authenticator: Provides single sign-on (SSO) for the user's work account.
