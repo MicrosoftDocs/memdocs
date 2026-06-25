@@ -38,7 +38,7 @@ Intune provides reset functionalities that enable IT administrators to remotely 
 
 ### Factory reset (wipe)
 
-✅ Return a device to original settings
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Return a device to original settings
 
 A factory reset, or a wipe, reverts a device to the original settings when it was purchased. All settings, applications, and data installed on the device after purchase are removed. By default, the device is also removed from Intune management.
 
@@ -83,7 +83,7 @@ Consider using factory reset in the following example scenarios:
 
 ### Windows Autopilot Reset
 
-✅ Return a device to original settings but maintain enrollment
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Return a device to original settings but maintain enrollment
 
 Windows Autopilot Reset is ideal when all data on a device needs to be wiped, but the device remains enrolled in your tenant.
 
@@ -125,7 +125,7 @@ Consider using Windows Autopilot reset in the following example scenarios:
 
 ## Wiping and deleting a device
 
-✅ Wipe and remove a device from management
+:::image type="icon" source="../../../media/icons/16/check.svg" border="false"::: Wipe and remove a device from management
 
 There are scenarios that require a device to be deleted from your tenant, for example:
 

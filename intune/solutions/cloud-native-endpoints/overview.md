@@ -25,22 +25,22 @@ Organizations are focusing on supporting remote and hybrid workers. With cloud-n
 
 In this set of articles, you will:
 
-- ✅ **Learn about cloud-native endpoints** and the benefits to organizations and end users (this article).
+- :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Learn about cloud-native endpoints** and the benefits to organizations and end users (this article).
 
-- ✅ **Step through a tutorial** that creates a Windows device that's cloud-native:
+- :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Step through a tutorial** that creates a Windows device that's cloud-native:
 
   - [Tutorial: Set up cloud-native Windows endpoints with Microsoft Intune](tutorial-cloud-native-setup.md)
 
-- ✅ **Learn more about the Microsoft Entra concepts** that are part of cloud-native endpoints, including accessing on-premises resources:
+- :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Learn more about the Microsoft Entra concepts** that are part of cloud-native endpoints, including accessing on-premises resources:
 
   - [Entra joined vs. Hybrid Entra joined](entra-join-types.md)
   - [Cloud-native endpoints and on-premises resources](on-premises-resources.md)
 
-- ✅ **Get guidance and advice** on moving your workloads and your organization to become cloud-native:
+- :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get guidance and advice** on moving your workloads and your organization to become cloud-native:
 
   - [High level planning guide to move to cloud-native endpoints](planning-guide.md)
 
-- ✅ **Read about some scenarios** that can affect your cloud-native migration:
+- :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Read about some scenarios** that can affect your cloud-native migration:
 
   - [Known issues and important information](troubleshoot.md)
 

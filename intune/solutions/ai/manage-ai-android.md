@@ -88,7 +88,7 @@ On Android devices, AI is available in several ways:
 
 ## Block AI apps
 
-✅ **Goal - End users can't install AI apps from the Google Play Store**
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Goal - End users can't install AI apps from the Google Play Store**
 
 AI apps like ChatGPT, Copilot, Perplexity, and Claude can be installed from the Google Play Store. You can use Intune to block these apps from being installed on your devices.
 
@@ -184,7 +184,7 @@ It's possible the app was installed manually by the user or through another MDM 
 
 ## Block AI Websites
 
-✅ **Goal - Block AI websites in web browser apps**
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Goal - Block AI websites in web browser apps**
 
 You can use Intune app configuration policies to block access to AI websites in web browser apps, like Microsoft Edge and Chrome. Only the websites you enter are blocked. So, you can also use this approach to only allow specific AI websites. If you use multiple browsers, you need to create a separate policy for each web browser app.
 
@@ -234,7 +234,7 @@ Use the following steps to create an app configuration policy that configures yo
 
 ## Block Screen-Driven AI Experiences
 
-✅ **Goal - Block features that can read on-screen content**
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Goal - Block features that can read on-screen content**
 
 AI features can read on-screen content, and can provide insights & recommendations from screenshots and content displayed on the screen. Some of these features are built into the OS, like Circle to Search, and some are provided by assistant apps.
 
@@ -352,7 +352,7 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 
 ## Disable On-Device AI System App
 
-✅ **Goal - Block Google's local AI processing**
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Goal - Block Google's local AI processing**
 
 Gemini Nano is Google's on-device foundation model and processes AI interactions on the device. It enables AI summary and message reply capabilities in Messages, Recorder, GBoard, and other services. You can use Intune to disable the AICore system app.
 
@@ -382,7 +382,7 @@ Use the following steps to disable the AICore system app.
 
 ## Disable OEM-Specific AI Capabilities
 
-✅ **Goal - Turn off OEM‑provided AI features**
+:::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Goal - Turn off OEM‑provided AI features**
 
 OEMs can include their own AI features and capabilities on the device, like the Samsung Galaxy AI experiences through the Knox Service Plugin. These features are typically managed through the OEM's OEMConfig app. Using Intune, you can configure the OEMConfig app to manage these AI features.
 

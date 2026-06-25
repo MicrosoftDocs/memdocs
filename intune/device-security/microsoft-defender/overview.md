@@ -3,7 +3,7 @@ title: Integrate Microsoft Defender for Endpoint with Intune for Device Complian
 description: Integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mobile Threat Defense (MTD) solution to enforce device compliance and prevent security breaches.
 ms.date: 03/24/2026
 ms.topic: article
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ai-usage: ai-assisted
 
 ms.collection:

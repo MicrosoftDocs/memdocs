@@ -214,7 +214,7 @@ Modernizing workloads and adopting cloud-native endpoints requires changes to op
 
 When reviewing your endpoints and workloads, break down the transition into phases. This section provides an overview on some recommended phases your organization can use. These phases can be repeated as many times as needed.
 
-### ✅ Phase 1: Get info on your workloads
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 1: Get info on your workloads
 
 This phase is the information gathering phase. It helps you establish the scope of what you must consider for your organization to transition to cloud-native. It involves defining exactly what services, products, and applications involved with each workload in your environment.
 
@@ -239,7 +239,7 @@ In this phase:
 
     Based on each defined end-state, you may discover or define that cloud-enabling a service or application is difficult or blocked. This situation can happen for different reasons, including technical or financial limitations. These limitations need to be clear and be understood. You need to review their impact and determine how to move each workload to be cloud-native friendly.
 
-### ✅ Phase 2: Prioritize any blockers
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 2: Prioritize any blockers
 
 After you've identified the key workloads and their end-state blockers, then:
 
@@ -263,7 +263,7 @@ After you've identified the key workloads and their end-state blockers, then:
 
     For more guidance and tips, go to the [Microsoft Intune planning guide](../../fundamentals/planning-guide.md). It applies to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
 
-### ✅ Phase 3: Transition your workloads
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 3: Transition your workloads
 
 In this phase, you're ready to implement your changes.
 
@@ -271,7 +271,7 @@ In this phase, you're ready to implement your changes.
 
 2. After the first set of workloads support cloud-native endpoints, identify more workloads, and continue the process.
 
-### ✅ Phase 4: Prepare your users
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 4: Prepare your users
 
 Users have different experiences for receiving, deploying, and being supported on their devices. Administrators should:
 
@@ -283,7 +283,7 @@ Users have different experiences for receiving, deploying, and being supported o
 
 The following phases are a high-level approach for organizations to move their environment to support cloud-native Windows endpoints. These phases are parallel to transitioning endpoints and user workloads. They may depend on certain workloads being partially or fully transitioned to support cloud-native Windows endpoints.
 
-### ✅ Phase 1: Define endpoints, dependencies, and milestones
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 1: Define endpoints, dependencies, and milestones
 
 This phase is the first step for your organization migration to be fully cloud-native. Review what you currently have, define success criteria, and start planning how your devices will be added to Microsoft Entra.
 
@@ -323,7 +323,7 @@ This phase is the first step for your organization migration to be fully cloud-n
     - [Windows Autopilot overview](/autopilot/overview)
     - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
-### ✅ Phase 2: Enable endpoint cloud hybrid identity (optional)
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 2: Enable endpoint cloud hybrid identity (optional)
 
 To be fully cloud-native, Microsoft recommends existing Windows endpoints be reset as part of a hardware refresh cycle. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
 
@@ -341,7 +341,7 @@ For more information, go to:
 > [!NOTE]
 > Microsoft doesn't have a migration utility to convert existing endpoints from on-premises domain joined or hybrid Microsoft Entra joined to Microsoft Entra joined. Microsoft recommends these devices be reset and redeployed as part of a hardware refresh.
 
-### ✅ Phase 3: Cloud attach Configuration Manager (optional)
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 3: Cloud attach Configuration Manager (optional)
 
 If you use Configuration Manager, then cloud attach your environment to Microsoft Intune. If you don't use Configuration Manager, then skip this step.
 
@@ -349,7 +349,7 @@ When you cloud attach, you can remotely manage your client endpoints, co-manage 
 
 For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../fundamentals/tutorial-admin-center-walkthrough.md).
 
-### ✅ Phase 4: Create a Microsoft Entra joined proof of concept
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 4: Create a Microsoft Entra joined proof of concept
 
 This critical phase can start at any time. It helps identify potential issues, unknown issues, and validates overall functionality and resolutions to those issues. As with all POCs, the goal is to prove and validate functionality in an actual enterprise environment instead of a lab environment.
 
@@ -386,7 +386,7 @@ Important steps for this phase include:
 
     - Use the milestones and success criteria previously established for each workload. They'll help determine the progress and scope of the POC.
 
-### ✅ Phase 5: Microsoft Entra join your existing Windows endpoints
+### :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: Phase 5: Microsoft Entra join your existing Windows endpoints
 
 This phase transitions new Windows endpoint provisioning to Microsoft Entra joined. Once all blockers and issues have been resolved, you can move existing devices to be fully cloud-native. You have the following options:
 

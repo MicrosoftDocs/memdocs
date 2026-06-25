@@ -1,8 +1,9 @@
 ---
 title: Default configuration of Intune's Windows security baselines
 description: View the default setting configuration of the various Microsoft Intune security baselines for Windows.
-ms.date: 04/03/2026
+ms.date: 06/23/2026
 ms.topic: reference
+ai-usage: ai-assisted
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
@@ -53,6 +54,12 @@ To learn more about using security baselines, see:
 ## Security Baseline for Windows, version 25H2
 
 The settings in this baseline are taken from the Windows 11 **version 25H2** security baseline as found in the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/en-us/download/details.aspx?id=55319) from the Microsoft Download Center, and include only the settings that apply to Windows devices managed through Intune. When available, the setting name links to the source Configuration Service Provider (CSP), and then displays that settings default configuration in the baseline.
+
+> [!NOTE]
+> The **Disable Internet Explorer 11 Launch Via COM Automation** setting was added to the version 25H2 baseline in the June 2026 service update, after the baseline first released. Profiles you created before this update don't apply the new setting automatically:
+>
+> - For a profile you deployed before this update, edit the profile and save it. The setting appears with its baseline default value, and Intune deploys the change to the assigned groups at the next device check-in. If you don't edit and save the profile, the setting doesn't take effect.
+> - Profiles that you create with the version 25H2 baseline, or that you update to version 25H2, include the setting by default.
 
 ### Administrative Templates
 
@@ -364,6 +371,10 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-fileexplorer?WT.mc_id=Portal-fx#turnoffheapterminationoncorruption)
 
 #### Windows Components > Internet Explorer
+
+- **Disable Internet Explorer 11 Launch Via COM Automation**\
+  Baseline default: *Enabled*\
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#disableinternetexplorerlaunchviacom)
 
 - **Prevent bypassing SmartScreen Filter warnings**\
   Baseline default: *Enabled*\
