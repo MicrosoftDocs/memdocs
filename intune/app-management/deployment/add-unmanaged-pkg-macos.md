@@ -129,7 +129,7 @@ You can select either the **Required** or **Available** group assignments for th
 2. Select **Next** to display the **Review + create** page.
 
 > [!NOTE]
-> When you upload a new version of an available app to Intune, users must select **Install** or **Reinstall** in Company Portal to update the app on their device.
+> When you upload a new version of an available app to Intune, users do not need to take any action. It installs automatically.
 
 ## Step 7 – Review + create
 
