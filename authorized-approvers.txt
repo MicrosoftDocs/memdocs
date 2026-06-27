@@ -18,4 +18,4 @@
 
 # /compliance/ @MicrosoftDocs/msecd-org @chvukosw @k-reagle
 
-/configmgr/ @umair0204 @Yupiter2005 @hugowu-github @qiani @MandiOhlinger @Brenduns @paolomatarazzo @MicrosoftDocs/msecd-org
+# /configmgr/ @MicrosoftDocs/msecd-org @umair0204 @Yupiter2005 @hugowu-github @qiani 
