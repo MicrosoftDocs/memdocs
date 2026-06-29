@@ -264,8 +264,8 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
     c. During an unattended control session, the screen of the device you're connected to is blocked due to security and privacy reasons, and the user is notified if they interact with it. If the user interacts with the blocked screen, they'll receive a notification letting them know that you're currently accessing the device. When the notification is shown, you and the end user won't be able to take any action for 30 seconds when this screen will close.
 
-      > [!TIP]
-      > We recommend limiting your activities to nonsensitive operations during an unattended control session, even with the screen of the device you're connected to blocked to the end user.  
+      > [!IMPORTANT]
+      > Do not perform sensitive operations during an unattended control session. On devices that use unattended access, do not install  or allowlist any apps that can record or mirror the screen. 
 
 1. At the end of the session, select **Leave** to end the session from the admin console.
 

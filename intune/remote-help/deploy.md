@@ -271,8 +271,9 @@ Content-Type: application/json
 
 To protect user privacy on the device, both the Android OS and device OEMs require certain permissions to be granted to the Remote Help app.
 
-> [!NOTE]
-> We don't recommend installing or allowlist apps capable of screen recording or mirroring if you intend to use unattended mode in your organization for risky operations.
+ > [!IMPORTANT]
+ > On devices that use unattended access, do not install or allowlist any apps that can record or mirror the screen. We also recommend that you avoid performing sensitive operations during an unattended control session.
+
 
 ##### Camera
 
