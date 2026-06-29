@@ -48,7 +48,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->  
 
-## Week of June 22, 2026 (Service release 2606)  
+## Week of June 29, 2026 (Service release 2606)  
 
 ### App management  
 
