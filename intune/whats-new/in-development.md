@@ -1,7 +1,7 @@
 ---
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-ms.date: 06/23/2026
+ms.date: 06/29/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -48,110 +48,11 @@ We're fixing how scope tags work with Endpoint Privilege Management (EPM) report
 
 <!-- ***********************************************-->
 
-## App management
-
-### Auto-update for Enterprise App Management applications <!-- 33727305  -->
-
-You'll be able to automatically keep Enterprise App Management (EAM) applications up to date using Microsoft Intune. When you enable auto-update for an EAM app with a required assignment, Intune will detect when a newer version is available in the EAM catalog and automatically update the app on targeted devices.
-
-Auto-update for EAM apps will help you:
-
-- Simplify app lifecycle management by eliminating manual packaging and supersedence workflows.
-- Reduce operational overhead at scale by removing the long tail of update maintenance.
-- Keep devices secure with reliable, timely application updates.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows  
-
-### Enterprise App Management support for GCC High and DoD<!-- 24875296 -->
-
-Enterprise App Management (EAM) in Microsoft Intune will extend to GCC High (GCCH) and DoD cloud environments. Government customers will be able to use the EAM enterprise catalog to discover, deploy, and keep prepackaged Microsoft and third-party apps up to date without manual repackaging. EAM in sovereign clouds uses a secure cross-cloud integration model that maintains the compliance boundaries and authentication requirements expected for government tenants. This brings cloud-native app management, including faster deployment and reduced packaging overhead, to GCCH and DoD organizations.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-### Multiple managed accounts for app protection policies <!-- 3182632 -->
-
-The Multiple Managed Accounts (MMA) feature for Intune mobile application management (MAM) will enable users to add and manage more than one managed account within a single app. With MMA, app protection policies will be enforced independently for each account, as defined by the admin. This capability will be especially useful for scenarios such as consultants working across organizations, company acquisitions, or users managing multiple mailboxes within the same tenant.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - Android
+<!-- ## App management -->
 
 <!-- *********************************************** -->
 
 ## Device configuration
-
-### New Android Enterprise settings in the Intune settings catalog<!-- 24964827, 24964854, 24964861, 24964848, 33982123, 33982122, 33982129, 33982130, 33982131, 33982127, 30798336, 37087237, 24964874, 24964888, 33982120, 31576322, 32195504, 35028596 -->
-
-The settings catalog lists all the settings you can configure in a device policy, and all in one place. The following new Android Enterprise settings are available in the Microsoft Intune settings catalog (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type).
-
-#### Communication and calling
-
-| Setting | Description | Applies to |
-|---|---|---|
-| <!-- 24964827 --> **Block cell broadcast** | When set to **True**, the device is prevented from receiving cell broadcast messages, such as emergency alerts. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow the reception of cell broadcast messages. | COBO, COSU, and COPE |
-| <!-- 24964854 --> **Block SMS** | When set to **True**, the device is prevented from sending or receiving SMS messages, restricting text communication. When set to **False** (default), the device follows the default SMS behavior of the OS. | COBO, COSU, and COPE |
-| <!-- 24964861 --> **Block outgoing calls** | When set to **True**, users are prevented from making outgoing calls on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow outgoing calls. | COBO, COSU, and COPE |
-
-#### Connectivity and networking
-
-| Setting | Description | Applies to |
-|---|---|---|
-| <!-- 24964848 --> **Block mobile networks configuration** | **True** prevents users from configuring or modifying mobile network settings on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow users to adjust mobile network settings. | COBO, COSU, and COPE |
-| <!-- 33982123 --> **Block configuring VPN** | When set to **True**, users can't add, edit, or remove VPN configurations on the device. When set to **False** or not configured, the device follows the default VPN configuration behavior of the OS. Found in the **Connectivity** category. To configure, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**, choose **Android Enterprise** as the platform, select the corporate-owned device type, and choose **Settings catalog** as the profile type. Search for **Block configuring VPN** and add it to your policy. | COBO, COSU, and COPE |
-| <!-- 33982122 --> **Block network reset** | When set to **True**, the device won't reset network settings even if a reset is attempted. When set to **False** (default), the device follows the default network reset behavior of the OS. | COBO, COSU, and COPE |
-| <!-- 33982129 --> **Block airplane mode** | When set to **True**, the device is prevented from enabling airplane mode. When set to **False**, the device follows the default airplane mode behavior of the OS. | COBO, COSU, and COPE |
-| <!-- 33982130 --> **Block ultra wideband** | When set to **True**, the device prevents ultra wideband functionality, restricting user access to the setting. When set to **False** (default), the device follows the default ultra wideband behavior of the OS. Supported on Android 14 and above. | COBO, COSU, and COPE |
-| <!-- 33982131 --> **Block cellular 2G** | When set to **True**, the device prevents cellular 2G functionality, restricting user access to the setting. When set to **False** (default), the device follows the default cellular 2G behavior of the OS. Supported on Android 14 and above. | COBO, COSU, and COPE |
-| <!-- 33982127 --> **Select minimum Wi-Fi security level** | Select the minimum Wi-Fi security level required for the device to connect to Wi-Fi networks. Options are **Open network security**, **Personal network security**, **Enterprise network security**, and **Enterprise 192-bit network security**. The default is **Open network security**, which allows the device to connect to all types of Wi-Fi networks. Supported on Android 13 and later. | COBO, COSU, and COPE |
-| <!-- 30798336 --> **Allow selection of a preferential network service** | When set to **True**, the device gives priority to the specified network service over other available options, such as an enterprise slice on 5G networks. When set to **False**, the device connects using its default network selection process. | COBO, COSU, and COPE |
-
-#### eSIM management
-
-| Setting | Description | Applies to |
-|---|---|---|
-| <!-- 37087237 --> **Block users from adding eSIM profiles** | When set to **True**, users can't add eSIM profiles to the device. When set to **False** (default), users can add eSIM profiles based on the default behavior of the OS. | COBO, COSU, and COPE |
-
-#### Device personalization and display
-
-| Setting | Description | Applies to |
-|---|---|---|
-| <!-- 24964874 --> **Block wallpaper changes** | When set to **True**, users are prevented from changing the wallpaper on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow users to change the wallpaper. | COBO, COSU, and COPE |
-| <!-- 24964888 --> **Block user icon changes** | When set to **True**, users are prevented from changing their user icon or profile image on the device. When set to **False** (default), Intune doesn't change or update this setting, and the OS might allow users to modify their user icon. | COBO, COSU, and COPE |
-
-#### Printing
-
-| Setting | Description | Applies to |
-|---|---|---|
-| <!-- 33982120 --> **Block printing** | When set to **True**, the device is prevented from printing documents. When set to **False** (default), the device follows the default printing behavior of the OS. | COBO, COSU, and COPE |
-
-#### Security and work profile
-
-| Setting | Description | Applies to |
-|---|---|---|
-| <!-- 31576322 --> **Block one lock for device and work profile** | When set to **True**, forces users to use two different passwords for their lock screen and work profile. When set to **False**, Intune doesn't change or update this setting. By default, the OS might allow users to have the same password. | COPE |
-| <!-- 32195504 --> **Allow widgets from work profile apps** | When set to **True**, allows users to access widgets exposed by apps in the work profile on the device's home screen. When set to **False**, prevents access to these widgets. By default, the OS might allow widget access. | COPE |
-| <!-- 35028596 --> **Block apps from exposing app functions** | This setting controls whether managed apps can expose app functions (programmatic actions that other apps and on-device assistants or AI agents can invoke inside the app). When set to **True**, apps on fully managed devices and apps in the work profile on corporate-owned devices are blocked from exposing app functions. When set to **False** (default OS behavior), apps are allowed to expose app functions. | COBO, COSU, and COPE |
-
-**Platform key:**
-
-- **COBO**: Android Enterprise corporate-owned fully managed
-- **COSU**: Android Enterprise corporate-owned dedicated devices
-- **COPE**: Android Enterprise corporate-owned devices with a work profile (at work profile level)
-
-For a list of all settings you can currently configure, see [Android Enterprise device settings list in the Intune settings catalog](../device-configuration/settings-catalog/ref-android-settings.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise
 
 ### Enforce Routes capability in iOS/iPadOS and macOS VPN profiles<!-- 28869584 -->
 
@@ -171,24 +72,6 @@ To learn more about VPN profiles in Intune, see:
 >
 > - iOS/iPadOS
 > - macOS
-
-### Support for WPA3-Personal in iOS/iPadOS Wi-Fi profiles<!-- 36602689 -->
-
-Microsoft Intune will support **WPA3-Personal** as a security-type option when configuring Wi-Fi device configuration profiles for iOS/iPadOS. Admins will be able to select WPA3-Personal alongside existing options such as WPA2-Personal.
-
-This feature:
-
-- Allows managed iOS/iPadOS devices to connect to networks that require the stronger WPA3 protocol.
-- Brings iOS/iPadOS in line with the latest Wi-Fi Alliance security standards and helps organizations meet evolving network-security requirements.
-
-Support for WPA3 on Windows, Android, and macOS platforms and for WPA3-Enterprise will be available in a future release (no ETA).
-
-To learn more about the settings you can currently configure, see [Add Wi-Fi settings to Apple devices in Microsoft Intune](../device-configuration/templates/ref-wifi-settings-apple.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS  
 
 ### Disable MAC address randomization on macOS Wi-Fi profiles<!-- 8457343 -->
 
@@ -211,10 +94,6 @@ For more information, see:
 <!-- *********************************************** -->
 
 ## Device management
-
-### Remote Help support for RemoteApp in Azure Virtual Desktop<!-- 33047374 -->  
-
-Remote Help will support RemoteApp in Azure Virtual Desktop (AVD), enabling help desk agents to securely view and control apps running within RemoteApp sessions.  
 
 ### Agentic identity for the Policy Configuration Agent (public preview)<!-- 37369520 -->
 
@@ -240,27 +119,6 @@ The Microsoft Defender Antivirus template for Linux is supported for devices [ma
 ### Mark Windows devices noncompliant when prohibited AI agents are discovered<!-- 37387056 -->
 
 Automatically mark Windows devices as noncompliant when prohibited local AI agents, such as OpenClaw, are discovered on the device. As an admin, you'll be able to configure a list of prohibited agents in a Windows compliance policy. When a prohibited agent is detected, the device reports as noncompliant and Conditional Access takes effect. The device returns to a compliant state once the agent is removed.
-
-### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 35894711 -->
-
-An updated security baseline for **Microsoft 365 Apps for Enterprise** will be available in Microsoft Intune. This baseline aligns with the most recent Microsoft 365 Apps security guidance and includes updated policy recommendations to help protect against evolving threats.
-
-This new baseline will be version **v2512**, skipping the previously published version found in the Security Compliance Toolkit (v2412). Once available, review the new baseline carefully before adopting it.
-
-The following three settings won't be available in this baseline release and are expected to be added in a future update. However, the parent setting to these three, (**VBA Macro Notification Settings** set to *Disable all except digitally signed macros*) will continue to be included in the 2512 update:
-
-- **Require macros to be signed by a trusted publisher**: Pending availability in the Settings Catalog.
-- **Block certificates originating from the current user store only**: Pending availability in the Settings Catalog.
-- **Require Extended Key Usage (EKU) for code signing**: Pending availability in the Settings Catalog.
-
-Existing profiles won't automatically upgrade. To use the latest version, [create a new baseline profile](../device-security/security-baselines/configure-baselines.md#create-a-profile-for-a-security-baseline) or [update an existing profile to the latest version](../device-security/security-baselines/configure-baselines.md#update-a-baseline-profile-to-the-latest-version).
-
-For a detailed breakdown of setting changes, see the blog post [Security baseline for M365 Apps for enterprise v2512](https://techcommunity.microsoft.com/blog/Microsoft-Security-Baselines/security-baseline-for-m365-apps-for-enterprise-v2512/4487213).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 

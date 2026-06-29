@@ -67,7 +67,7 @@ The data columns shown in the tables are:
 |----|------|----------|----|-----------|-------|
 | 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`*.dm.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25`<br><br>`Azure Front Door Endpoints:`<br>` 13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/23, 150.171.97.0/24, 2620:1ec:40::/48, 2620:1ec:49::/48, 2620:1ec:4a::/47` | **TCP:** 80, 443 |
 | 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
-| 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft<.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<br>`swdin02-mscdn.manage.microsoft.com`<br>`aam-content-cdn.manage.microsoft.com` | **TCP:** 80, 443 |
+| 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft<.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<br>`swdin02-mscdn.manage.microsoft.com`<br>`aam-content-cdn.manage.microsoft.com`(this endpoint is only for Enterprise App Catalog apps) | **TCP:** 80, 443 |
 | 97 | Consumer Outlook.com, OneDrive, Device authentication, and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> | **TCP:** 443 |
 | 190 | Endpoint discovery | Default<BR>Required | False | `go.microsoft.com` | **TCP:** 80, 443 |
 | 189 | Dependency - Feature Deployment | Default<BR>Required | False |`config.edge.skype.com`<BR>`ecs.office.com`<BR> | **TCP:** 443 |
@@ -102,7 +102,7 @@ In this section, the following tables list the Intune dependencies and the ports
 
 | ID  | Desc | Category | ER    | Addresses | Ports |
 |-----|------|----------|-------|-----------|-------|
-| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>`intunecdnpeasd.manage.microsoft.com`<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
+| 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.manage.microsoft.com` | **TCP:** 443 |
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../app-management/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
@@ -308,9 +308,9 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 |Region | CDN | Port |
 |-------|-----|------|
-|North America | `macsidecar.manage.microsoft.com`<br>`macsidecarprod.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Europe | `macsidecareu.manage.microsoft.com`<br>`macsidecarprodeu.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Asia Pacific| `macsidecarap.manage.microsoft.com`<br>`macsidecarprodap.azureedge.net`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |**TCP:** 443 |
+|North America | `macsidecar.manage.microsoft.com` | **TCP:** 443 |
+|Europe | `macsidecareu.manage.microsoft.com` | **TCP:** 443 |
+|Asia Pacific| `macsidecarap.manage.microsoft.com` |**TCP:** 443 |
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
@@ -323,9 +323,9 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 |Region | CDN | Port |
 |-----|--------------|-----|
-| North America | `naprodimedatapri.azureedge.net`<br>`naprodimedatasec.azureedge.net`<br>`naprodimedatahotfix.azureedge.net`<br>`imeswda-afd-primary.manage.microsoft.com`<br>`imeswda-afd-secondary.manage.microsoft.com`<br>`imeswda-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-|Europe | `euprodimedatapri.azureedge.net`<br>`euprodimedatasec.azureedge.net`<br>`euprodimedatahotfix.azureedge.net`<br>`imeswdb-afd-primary.manage.microsoft.com`<br>`imeswdb-afd-secondary.manage.microsoft.com`<br>`imeswdb-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
-| Asia Pacific | `approdimedatapri.azureedge.net`<br>`approdimedatasec.azureedge.net`<br>`approdimedatahotfix.azureedge.net`<br>`imeswdc-afd-primary.manage.microsoft.com`<br>`imeswdc-afd-secondary.manage.microsoft.com`<br>`imeswdc-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
+| North America | `imeswda-afd-primary.manage.microsoft.com`<br>`imeswda-afd-secondary.manage.microsoft.com`<br>`imeswda-afd-hotfix.manage.microsoft.com` | **TCP:** 443 |
+|Europe | `imeswdb-afd-primary.manage.microsoft.com`<br>`imeswdb-afd-secondary.manage.microsoft.com`<br>`imeswdb-afd-hotfix.manage.microsoft.com` | **TCP:** 443 |
+| Asia Pacific | `imeswdc-afd-primary.manage.microsoft.com`<br>`imeswdc-afd-secondary.manage.microsoft.com`<br>`imeswdc-afd-hotfix.manage.microsoft.com` | **TCP:** 443 |
 
 For diagnostic data used to monitor the health of the client side components:
 
@@ -443,9 +443,6 @@ aam-content-cdn.manage.microsoft.com
 adl.windows.com
 aka.ms
 api.flightproxy.skype.com
-approdimedatahotfix.azureedge.net
-approdimedatapri.azureedge.net
-approdimedatasec.azureedge.net
 browser.pipe.aria.microsoft.com
 cdn.oneget.org
 certauth.enterpriseregistration.windows.net
@@ -461,9 +458,6 @@ edge.skype.com
 ekcert.spserv.microsoft.com
 ekop.intel.com
 enterpriseregistration.windows.net
-euprodimedatahotfix.azureedge.net
-euprodimedatapri.azureedge.net
-euprodimedatasec.azureedge.net
 fd.api.orgmsg.microsoft.com
 ftpm.amd.com
 go-amer.trouter.communications.svc.cloud.microsoft
@@ -471,7 +465,6 @@ go-apac.trouter.communications.svc.cloud.microsoft
 go-eu.trouter.communications.svc.cloud.microsoft
 go.microsoft.com
 graph.windows.net
-intunecdnpeasd.azureedge.net
 intunemaape1.eus.attest.azure.net
 intunemaape2.eus2.attest.azure.net
 intunemaape3.cus.attest.azure.net
@@ -498,9 +491,6 @@ licensing.mp.microsoft.com
 login.live.com
 login.microsoftonline.com
 manage.microsoft.com
-naprodimedatahotfix.azureedge.net
-naprodimedatapri.azureedge.net
-naprodimedatasec.azureedge.net
 purchase.md.mp.microsoft.com
 remoteassistanceprodacs.communication.azure.com
 remoteassistanceprodacseu.communication.azure.com
