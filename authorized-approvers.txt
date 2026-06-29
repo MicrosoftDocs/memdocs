@@ -16,6 +16,6 @@
 # Specific folder overrides (include default team to retain their approval)
 # /FOLDER/ @MicrosoftDocs/msecd-org OPTIONAL_APPROVERS
 
-# /compliance/ @MicrosoftDocs/msecd-org @chvukosw @k-reagle
+/compliance/ @MicrosoftDocs/msecd-org @chvukosw @k-reagle
 
-# /configmgr/ @MicrosoftDocs/msecd-org @umair0204 @Yupiter2005 @hugowu-github @qiani 
+/configmgr/ @MicrosoftDocs/msecd-org @umair0204 @Yupiter2005 @hugowu-github @qiani 
