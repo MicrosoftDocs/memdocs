@@ -719,8 +719,6 @@ To learn more about Copilot in Intune and to get started, see [Microsoft Copilot
 
 Apple released iOS 26 and iPadOS 26. With this release, Microsoft Intune—including the Intune Company Portal and app protection policies (APP, also known as MAM)—now requires iOS/iPadOS 17 or later.
 
-For more information on this change, see [Plan for change: Intune is moving to support iOS/iPadOS 17 and later](../index.md#plan-for-change-intune-is-moving-to-support-iosipados-17-and-later).
-
 > [!NOTE]
 > Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
 
@@ -731,8 +729,6 @@ For more information on this change, see [Plan for change: Intune is moving to s
 #### Intune supports macOS 14.x as the minimum version<!--33412147 -->
 
 Apple released macOS 26 (Tahoe). With this release, Microsoft Intune, the Company Portal app, and the Intune MDM agent now require macOS 14 (Sonoma) or later.
-
-For more information on this change, see [Plan for change: Intune is moving to support macOS 14 and later](../index.md#plan-for-change-intune-is-moving-to-support-macos-14-and-higher-later-this-year).
 
 > [!NOTE]
 > macOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, see [Support statement](https://aka.ms/Intune/macOS/ADE-DE-support).
