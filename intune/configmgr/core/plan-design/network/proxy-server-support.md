@@ -55,9 +55,9 @@ The cloud management gateway (CMG) connection point is an on-premises role that 
 
 ### Distribution point
 
-<!-- 5856396 -->
+<!-- 10404718 -->
 
-If you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through an unauthenticated proxy server for internet access. For more information, see [Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md).
+If you enable a Configuration Manager distribution point for Microsoft Connected Cache, it can communicate through a proxy server for internet access starting from [Configuration Manager version 2603](../../../hotfix/2603/37426535.md) or after installing [KB33247081](../../../hotfix/2509/33247081.md). Previous releases require a direct internet connection or a proxy that supports relative URIs. For more information, see [Microsoft Connected Cache](../hierarchy/microsoft-connected-cache.md).
 
 ### Exchange Server connector
 
