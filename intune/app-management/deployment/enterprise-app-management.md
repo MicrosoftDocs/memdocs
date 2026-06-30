@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
-ms.date: 01/07/2026
+ms.date: 06/03/2026
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -13,6 +13,47 @@ ms.collection:
 # Microsoft Intune Enterprise Application Management
 
 Microsoft Intune Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](./create-win32-package.md) and hosted by Microsoft.
+
+## Prerequisites
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Public cloud
+> - Sovereign cloud environments:
+>   - U.S. Government Community Cloud (GCC) High
+>   - U.S. Department of Defense (DoD)
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+
+>[!INCLUDE [additional-licensing](../../includes/licensing/additional-licensing.md)]
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+
+>The Enterprise App Catalog is available for Windows apps.
+>
+>[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
+:::column-end:::
+:::row-end:::
 
 ## Benefits of Enterprise App Management
 
@@ -54,31 +95,62 @@ The Enterprise App Catalog includes apps that self update. Intune ensures the ap
 > [!IMPORTANT]
 > Self-updating apps might require that your tenant has network rules configured to allow an update from the app vendor.
 
-## Prerequisites
+## Auto-update for Enterprise App Catalog apps
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+You can automatically keep Enterprise App Catalog apps up to date with Microsoft Intune. When auto-update is enabled for an Enterprise App Catalog app with a required assignment, Intune detects when a newer version is available in the catalog and automatically updates the app on targeted devices. You don't need to create a new app or configure a supersedence relationship for each update.
 
-:::column-end:::
-:::column span="3":::
+Auto-update helps you:
 
->[!INCLUDE [additional-licensing](../../includes/licensing/additional-licensing.md)]
-:::column-end:::
-:::row-end:::
+- Simplify app lifecycle management by removing manual packaging and supersedence steps.
+- Reduce operational overhead at scale by eliminating the long tail of update maintenance.
+- Keep devices secure with reliable, timely application updates.
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+**Requirements and scope:**
 
-:::column-end:::
-:::column span="3":::
+- Auto-update applies to Enterprise App Catalog apps only.
+- Auto-update applies to apps with a **Required** assignment. Apps assigned as **Available for enrolled devices** continue to use the existing update workflow.
+- Supported on Windows 10 and Windows 11 devices.
 
->The Enterprise App Catalog is available for Windows apps.
->
->[!INCLUDE [windows-10-support](../../includes/windows-10-support.md)]
-:::column-end:::
-:::row-end:::
+To learn how to enable auto-update when you add or edit an Enterprise App Catalog app, see [Step 6: Assignments](./add-enterprise-catalog-app.md#step-6-assignments).
+
+> [!NOTE]
+> If you prefer to review updates before they're applied, you can continue to use [Guided update supersedence](./update-enterprise-supersedence.md) instead of enabling auto-update.
+
+### Limitations and known issues
+
+Before you enable auto-update for an Enterprise App Catalog app, review the following limitations.
+
+#### No rollback or automatic uninstall remediation
+
+Auto-update apps don't provide rollback or automatic uninstall remediation. If a version must be removed or remediated from devices, you must take manual action outside the auto-update flow (for example, by assigning an **Uninstall** intent or deploying a remediation script).
+
+#### Malicious version revocation
+
+If Microsoft detects a malicious app version in the Enterprise App Catalog, Microsoft removes the app from the catalog and posts a notification in the Microsoft Intune admin center. You're still responsible for identifying impacted devices and taking remediation action.
+
+#### Catalog cache lag
+
+Enterprise App Catalog data is cached for up to one hour, so the catalog might show an outdated version during that window. If a version is revoked because of a security issue, devices can remain exposed for up to one hour before the updated catalog state is reflected. Microsoft notifies customers when a revocation occurs, but you're responsible for identifying devices with the revoked version and remediating them.
+
+#### No rollout rings or phased deployment
+
+Auto-update doesn't support rollout rings or deployment plans for staged update deployment. When a new version is available, it goes out to all targeted devices at the same time rather than through phased deployment groups.
+
+#### Reporting reflects latest state only
+
+Auto-update app reporting stores only the latest reported state per device. If a device reports enforcement or detection activity, the app install status reflects the current reported state. Intune doesn't retain a full history of prior version states or prior actions at the device level.
+
+#### Version changes during device processing
+
+Devices might report that they attempted an auto-update action (enforcement or detection) and return status after that action. If the app version changes while devices are still processing, reporting can show status for devices at different points in the update flow. Not all devices check in after the latest version is released.
+
+#### Not supported as a blocking app in ESP or Autopilot device preparation
+
+You can't add an auto-update Enterprise App Catalog app as a blocking app in the Enrollment Status Page (ESP) or Autopilot device preparation.
+
+#### Conflicts with other app types
+
+Auto-update apps can conflict with other app types that target the same app. This conflict scenario isn't supported. For example, if a line-of-business app assignment installs version 2 while an auto-update app manages the same app, devices can enter a race condition where the installed version changes between the two versions. To avoid conflicts, manage each app through a single deployment type.
 
 ## Frequently asked questions (FAQ)
 
@@ -155,7 +227,9 @@ You can use Microsoft's Graph API to work with applications in Enterprise App Ca
 
 ### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
-Updates are shown in Intune by selecting **Apps** > **Enterprise App Catalog apps with updates**. The updates aren't applied automatically. You still need to go in and create a new app with supersedence relationship.
+Yes, when auto-update is enabled. For Enterprise App Catalog apps with a **Required** assignment, you can turn on auto-update so Intune applies new versions from the catalog automatically. For more information, see [Auto-update for Enterprise App Catalog apps](#auto-update-for-enterprise-app-catalog-apps).
+
+If auto-update isn't enabled, available updates are shown in Intune by selecting **Apps** > **Enterprise App Catalog apps with updates**. In that case, the updates aren't applied automatically and you create a new app with a supersedence relationship. For more information, see [Guided update supersedence](./update-enterprise-supersedence.md).
 
 ### Can you get licensed applications from this catalog?
 

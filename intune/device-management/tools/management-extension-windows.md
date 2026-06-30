@@ -123,6 +123,8 @@ The IME is removed from the device under the following conditions:
 - No PowerShell scripts or Win32 apps are assigned to the groups the user or device belongs to.
 - The device can't check in with the Intune service. For example, there's no internet access or no access to Windows Push Notification Services (WNS).
 - The device is in S mode. The Intune management extension doesn't support devices running in S mode.
+- Ensure the configuration file located at `C:\Program Files (x86)\Microsoft Intune Management Extension\Microsoft.Management.Services.IntuneWindowsAgent.exe.config` has not been corrupted or manually altered.
+- Confirm whether the app was installed using a method outside of Intune’s automatic installation (e.g., script, manual install, or repackaging). The only supported mechanism is automatic installation as devices sync with the Intune service.
 - On Windows devices, if the proxy is configured only at the user level (and not machine-wide), make sure a user is signed in to the device. Alternatively, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). For more information, see [bitsadmin util and setieproxy](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy).
 
 To check if the device is automatically enrolled:

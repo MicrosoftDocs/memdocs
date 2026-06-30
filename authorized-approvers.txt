@@ -13,5 +13,9 @@
 # Default owners for everything unless a later match takes precedence
 * @MicrosoftDocs/msecd-org
 
-# Specific folder overrides (include default team to retain their access)
-# /compliance/ @MicrosoftDocs/msecd-org @chvukosw @k-reagle
+# Specific folder overrides (include default team to retain their approval)
+# /FOLDER/ @MicrosoftDocs/msecd-org OPTIONAL_APPROVERS
+
+/compliance/ @MicrosoftDocs/msecd-org @chvukosw @k-reagle
+
+/configmgr/ @MicrosoftDocs/msecd-org @umair0204 @Yupiter2005 @hugowu-github @qiani 
