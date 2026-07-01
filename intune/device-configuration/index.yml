@@ -8,8 +8,6 @@ metadata:
   description: Configure device settings, SSO, endpoint security, and certificates in Microsoft Intune using the settings catalog and templates.
   ms.topic: landing-page
   ms.date: 05/04/2026
-  author: paolomatarazzo
-  ms.author: paoloma
 
 # linkListType: architecture | concept | deploy | download | get-started |
 #   how-to-guide | learn | overview | quickstart | reference | tutorial |

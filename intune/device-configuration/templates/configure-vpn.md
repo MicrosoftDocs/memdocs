@@ -4,8 +4,6 @@ description: On Android device administrator, Android Enterprise, iOS, iPadOS, m
 ms.date: 06/18/2026
 ms.topic: how-to
 ms.reviewer: wicale
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create VPN profiles to connect to VPN servers in Intune

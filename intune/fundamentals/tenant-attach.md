@@ -1,8 +1,7 @@
 ---
 title: Use Microsoft Intune policies with tenant attached Configuration Manager devices
 description: Use tenant attach to add Configuration Manager devices to Microsoft Intune and then deploy Intune policies to those devices.
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 10/10/2024
 ms.topic: how-to
 ms.collection:

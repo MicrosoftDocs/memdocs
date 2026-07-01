@@ -1,13 +1,9 @@
 ---
 title: iOS/iPadOS device enrollment guide for  Microsoft Intune
 description: Enroll iOS and iPadOS devices using user and device enrollment, automated device enrollment (DEP), and Apple Configurator in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 06/09/2025
 ms.topic: article
 ms.reviewer: auherrin, dregan, annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enrollment guide: Enroll Apple mobile devices in Microsoft Intune

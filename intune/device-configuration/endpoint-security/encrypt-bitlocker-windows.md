@@ -4,9 +4,6 @@ description: Use Microsoft Intune policy to manage BitLocker encryption on Windo
 ms.date: 11/26/2025
 ms.topic: how-to
 ms.reviewer: annovich; aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Encrypt Windows devices with BitLocker using Intune

@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for Android Developer Integration and Testing Gu
 description: Get started with Intune before incorporating Intune mobile app management (MAM) into your Android app.
 ms.date: 11/17/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - Android
@@ -417,7 +416,7 @@ After you completed all the [Exit Criteria], continue to [Stage 4: MAM Integrati
 [MAM SDK GitHub issues]:https://github.com/microsoftconnect/ms-intune-app-sdk-android/issues
 
 <!-- Class links -->
-[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
+[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/MAMActivity.html
 
 <!-- 3rd party links -->
 [ProGuard]:https://www.guardsquare.com/products/proguard

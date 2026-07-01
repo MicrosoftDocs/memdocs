@@ -3,10 +3,7 @@ title: Connect to the Data Warehouse With Power BI
 description: You can download a file for use with Microsoft Power BI that allows you to load interactive, dynamically generated reports for your Microsoft Intune tenant.
 ms.date: 03/31/2026
 ms.topic: reference
-ms.reviewer: jamiesil
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Connect to the Data Warehouse With Power BI

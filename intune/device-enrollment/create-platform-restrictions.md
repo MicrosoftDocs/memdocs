@@ -4,8 +4,6 @@ description: Restrict personally owned devices, and specific device platforms an
 ms.date: 07/1/2024
 ms.topic: how-to
 ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create device platform restrictions

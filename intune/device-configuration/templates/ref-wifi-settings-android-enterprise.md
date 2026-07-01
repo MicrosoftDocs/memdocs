@@ -6,8 +6,6 @@ ms.topic: reference
 params:
   siblings_only: true
 ms.reviewer: abalwan, cchristenson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Wi-Fi settings list for Android devices in Microsoft Intune

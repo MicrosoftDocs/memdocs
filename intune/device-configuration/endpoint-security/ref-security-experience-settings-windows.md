@@ -3,9 +3,6 @@ title: Antivirus policy settings for Windows Security experience policy for Micr
 description: Endpoint security Antivirus policy settings for the Windows Security app in Microsoft Intune
 ms.date: 03/28/2025
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---

@@ -1,13 +1,9 @@
 ---
 title: Miscellaneous policy mapping from Basic Mobility and Security to Intune
 description: A detailed miscellaneous policy map between Basic Mobility and Security access requirements and Intune.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 12/03/2025
 ms.topic: reference
 ms.reviewer: dagerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Miscellaneous policy mapping from Basic Mobility and Security to Intune

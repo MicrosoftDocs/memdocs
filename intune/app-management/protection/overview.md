@@ -6,8 +6,6 @@ ms.topic: overview
 ms.reviewer: beflamm
 ms.custom: intune-azure, get-started
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # App Protection Policies Overview

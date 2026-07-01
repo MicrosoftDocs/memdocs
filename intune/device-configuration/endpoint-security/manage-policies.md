@@ -3,9 +3,6 @@ title: Manage endpoint security policies in Microsoft Intune
 description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Intune.
 ms.date: 12/04/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---

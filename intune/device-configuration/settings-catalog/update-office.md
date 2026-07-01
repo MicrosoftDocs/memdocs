@@ -4,8 +4,6 @@ description: Use settings catalog in Microsoft Intune to update Microsoft 365 ap
 ms.date: 04/30/2026
 ms.topic: how-to
 ms.reviewer: mayurjadhav
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set the Microsoft 365 apps update channel using the settings catalog in Microsoft Intune

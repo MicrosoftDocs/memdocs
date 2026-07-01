@@ -1,8 +1,6 @@
 ---
 title: Deploy Intune policies to manage Windows LAPS
 description: Create policies to manage the Windows Local Administrator Policy Solution (LAPS) on Windows devices that enrolled with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 07/22/2025
 ms.topic: how-to
 ms.reviewer: laarrizz

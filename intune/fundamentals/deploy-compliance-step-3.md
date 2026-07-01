@@ -5,8 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 11/22/2023
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 <!-- >
 # Configure compliance policies

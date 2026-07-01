@@ -1,14 +1,8 @@
 ---
 title: Check Point Harmony Mobile Mobile Threat Defense Intune
 description: How to set up Check Point Harmony Mobile Threat Defense with Microsoft Intune control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Check Point Harmony Mobile Threat Defense connector with Intune

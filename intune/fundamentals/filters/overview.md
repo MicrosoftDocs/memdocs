@@ -4,8 +4,6 @@ description: Create assignment filters in Microsoft Intune to target policies ba
 ms.date: 05/19/2026
 ms.topic: how-to
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune

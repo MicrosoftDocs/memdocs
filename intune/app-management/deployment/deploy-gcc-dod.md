@@ -3,9 +3,6 @@ title: Apps for GCC High and DoD Environments
 description: Learn about apps involving GCC High and DoD environments using Microsoft Intune.
 ms.date: 11/18/2024
 ms.topic: how-to
-ms.reviewer: bryanke
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Deploying Apps Using Intune on the GCC High and DoD Environments

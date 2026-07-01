@@ -3,7 +3,6 @@ title: Add Microsoft Store Apps to Intune (Legacy)
 description: Learn about adding Microsoft Store (legacy) apps to Intune.
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Store

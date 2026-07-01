@@ -4,10 +4,6 @@ description: Manage custom compliance settings for Linux and Windows devices by 
 ms.date: 05/15/2024
 ms.topic: concept-article
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune

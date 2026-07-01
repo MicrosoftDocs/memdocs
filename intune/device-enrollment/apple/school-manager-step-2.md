@@ -3,9 +3,6 @@ title: Apple School Manager - create enrollment policy
 description: Learn how to create the enrollment policy in Intune for Apple School Manager enrollment.
 ms.date: 04/29/2026
 ms.topic: how-to
-ms.reviewer: annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create an Apple enrollment policy for school devices

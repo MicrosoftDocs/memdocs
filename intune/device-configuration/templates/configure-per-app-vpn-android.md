@@ -4,8 +4,6 @@ description: Use a custom profile for per-app VPN profiles on Android device adm
 ms.date: 05/06/2026
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create a per-app VPN profile for Android DA devices in Microsoft Intune

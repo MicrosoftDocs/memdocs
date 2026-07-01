@@ -4,8 +4,6 @@ description: Add or create a custom profile to use the OMA-URI settings for devi
 ms.date: 06/25/2024
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use custom settings for Windows client devices in Intune

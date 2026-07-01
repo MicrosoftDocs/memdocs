@@ -5,8 +5,6 @@ services: microsoft-intune
 ms.topic: how-to
 ms.date: 01/20/2026
 
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 10 - Create and assign a custom RBAC role in Microsoft Intune

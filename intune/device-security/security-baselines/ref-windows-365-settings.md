@@ -3,10 +3,6 @@ title: Settings list for the Windows 365 Cloud PC security baseline in Intune
 description: View a list of the settings in the Microsoft Intune security baseline for Windows 365 Cloud PC. This list includes the default values for settings as found in the default configuration of the baseline.
 ms.date: 09/10/2024
 ms.topic: reference
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 zone_pivot_groups: windows-365-versions
 ---
 

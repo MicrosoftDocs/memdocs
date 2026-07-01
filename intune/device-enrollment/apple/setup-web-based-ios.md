@@ -4,8 +4,6 @@ description: Set up web-based device enrollment to manage user-owned iOS/iPadOS 
 ms.date: 09/23/2024
 ms.topic: install-set-up-deploy
 ms.reviewer: rishitasarin
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up web based device enrollment for iOS

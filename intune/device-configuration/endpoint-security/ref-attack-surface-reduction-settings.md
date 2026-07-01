@@ -3,9 +3,6 @@ title: Intune endpoint security Attack surface reduction settings
 description: Details about the settings in the endpoint security Attack surface reduction policies in Microsoft Intune.
 ms.date: 03/28/2025
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: aanavath
 
 ---

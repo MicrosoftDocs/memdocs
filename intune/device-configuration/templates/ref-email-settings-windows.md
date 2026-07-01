@@ -4,8 +4,6 @@ description: Create a device configuration email profile that that uses Exchange
 ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Email profile settings for Windows devices in Microsoft Intune

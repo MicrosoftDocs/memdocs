@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 06/22/2026
 ms.topic: how-to
 ms.reviewer: heenamac
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use the Take a Test app on Windows devices in Microsoft Intune

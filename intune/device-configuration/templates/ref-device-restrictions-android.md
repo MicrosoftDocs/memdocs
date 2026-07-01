@@ -4,8 +4,6 @@ description: See a list of all the Android device administrator settings you can
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: anuragjain
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android device administrator and Samsung Knox Standard device restriction settings in Intune

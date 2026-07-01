@@ -3,9 +3,6 @@ title: macOS Antivirus policy settings for Microsoft Defender Antivirus for Intu
 description: See a list of the settings in the Microsoft Defender Antivirus profile for macOS. This profile is s part of Endpoint security Antivirus policy for macOS in Microsoft Intune.
 ms.date: 09/12/2024
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 ---
 

@@ -4,8 +4,6 @@ description: Learn about the transition to Android Management API for personally
 ms.date: 06/18/2026
 ms.topic: overview
 ms.reviewer: priyar, grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use Android Management API for personally owned devices with work profiles

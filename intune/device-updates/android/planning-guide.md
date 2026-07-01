@@ -3,7 +3,7 @@ title: Admin checklist for Android software updates in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for Android devices using Microsoft Intune. See tasks and settings that can manage updates on corporate owned Android Enterprise devices.
 ms.date: 05/29/2024
 ms.topic: how-to
-ms.reviewer: ahamil, talima, mandia
+ms.reviewer: ahamil, talima
 ---
 
 # Software updates planning guide for managed Android Enterprise devices in Microsoft Intune

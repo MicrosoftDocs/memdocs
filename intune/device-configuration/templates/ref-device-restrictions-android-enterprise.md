@@ -6,8 +6,6 @@ ms.topic: reference
 params:
   siblings_only: true
 ms.reviewer: cchristenson, arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android template device settings list to restrict features using Intune
@@ -108,9 +106,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   | Enrollment method | Settings > Factory data reset | Settings > Recovery/bootloader | Intune [wipe](../../device-management/actions/wipe.md) |
   | --- | --- | --- | --- |
-  | **Corporate-owned devices with work profile** (COPE) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection |
-  | **Fully managed** (COBO) | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection |
-  | **Dedicate** (COSU) | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: factory reset protection | :::image type="icon" source="../../media/icons/16/error.svg" border="false"::: no factory reset protection |
+  | **Corporate-owned devices with work profile** (COPE) | ![check-icon] factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
+  | **Fully managed** (COBO) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
+  | **Dedicate** (COSU) | ![error-icon] no factory reset protection | ![check-icon] factory reset protection | ![error-icon] no factory reset protection |
 
   For background and guidance, see **[Factory reset protection (FRP) enforcement behavior for Android Enterprise](/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced)**.
 
@@ -1219,3 +1217,9 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 <!--links-->
 
 [Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+<!-- icons -->
+
+[check-icon]: ../../media/icons/16/check.svg
+[error-icon]: ../../media/icons/16/error.svg
+[info-icon]: ../../media/icons/16/info-gray.svg

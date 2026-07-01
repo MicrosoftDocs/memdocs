@@ -4,8 +4,6 @@ description: Learn how to create an email device profile in Microsoft Intune for
 ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 11 - Create an email device profile for iOS/iPadOS in Microsoft Intune

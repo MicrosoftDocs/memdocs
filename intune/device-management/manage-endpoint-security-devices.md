@@ -7,8 +7,7 @@ ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ---
 
 # Manage devices with endpoint security in Microsoft Intune

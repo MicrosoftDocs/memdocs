@@ -4,8 +4,6 @@ description: Add a Windows Health Monitoring profile to collect endpoint analyti
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use Windows Health Monitoring profile on Windows devices in Microsoft Intune

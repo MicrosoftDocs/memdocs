@@ -1,8 +1,6 @@
 ---
 title: Protect data and devices with Microsoft Intune
 description: Learn about the Intune capabilities that can help you protect your devices and data against unauthorized access and other threats.
-author: brenduns
-ms.author: brenduns
 ms.date: 02/17/2026
 ms.topic: overview
 ms.reviewer: davidra

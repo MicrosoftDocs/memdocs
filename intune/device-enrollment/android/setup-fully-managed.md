@@ -4,8 +4,6 @@ description: Set up enrollment in Intune for devices using the Android Enterpris
 ms.date: 05/19/2026
 ms.topic: how-to
 ms.reviewer: grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up enrollment for Android Enterprise fully managed devices

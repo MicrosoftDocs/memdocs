@@ -4,8 +4,6 @@ description: After you import your Windows group policy objects in Microsoft Int
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create a Settings Catalog policy using your imported GPOs in Microsoft Intune

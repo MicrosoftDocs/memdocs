@@ -4,8 +4,6 @@ description: Restrict the number of devices allowed to enroll in Microsoft Intun
 ms.date: 05/15/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create device limit restrictions in Intune  

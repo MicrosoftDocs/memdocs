@@ -4,8 +4,6 @@ description: Learn how to enroll Android devices in Microsoft Intune with the Kn
 ms.date: 12/01/2023
 ms.topic: how-to
 ms.reviewer: abigailstein
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enroll devices in Microsoft Intune with Samsung Knox Mobile Enrollment

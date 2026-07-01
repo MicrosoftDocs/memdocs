@@ -3,9 +3,6 @@ title: Manage account protection settings with endpoint security policies in Mic
 description: Use Microsoft Intune endpoint security account protection policies to protect the identity and accounts of users.
 ms.date: 10/01/2025
 ms.topic: article
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: juidaewo
 
 ---

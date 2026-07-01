@@ -3,9 +3,6 @@ title: Microsoft Intune endpoint security disk encryption policy
 description: Configure and deploy Microsoft Intune endpoint security policy disk encryption policies for BitLocker and FileVault.
 ms.date: 09/23/2024
 ms.topic: article
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: aanavath
 
 ---

@@ -4,8 +4,6 @@ description: In this tutorial you will configure Slack to use Intune for EMM and
 ms.date: 06/07/2024
 ms.topic: tutorial
 ms.reviewer: bryanke
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Tutorial: Configure Slack to Use Intune for EMM and App Configuration

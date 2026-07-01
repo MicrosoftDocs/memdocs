@@ -4,8 +4,6 @@ description: See all the settings to configure iOS, iPadOS, and macOS devices fo
 ms.date: 02/10/2026
 ms.topic: reference
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: platforms-apple
 ---
 

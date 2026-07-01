@@ -5,8 +5,6 @@ ms.date: 06/22/2026
 ms.topic: reference
 ms.reviewer: mikedano
 suite: ems
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows Holographic for Business device settings to allow or restrict features using Intune

@@ -4,9 +4,6 @@ description: Use Microsoft Intune endpoint security policies to configure and de
 ms.date: 05/18/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---

@@ -4,10 +4,6 @@ description: Overview of Microsoft Intune device compliance, including tenant-wi
 ms.date: 05/14/2024
 ms.topic: concept-article
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune

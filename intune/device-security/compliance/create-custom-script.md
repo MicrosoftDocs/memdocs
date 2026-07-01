@@ -4,10 +4,6 @@ description: Create scripts for Linux or Windows devices to discover the setting
 ms.date: 09/04/2025
 ms.topic: concept-article
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Custom compliance discovery scripts for Microsoft Intune

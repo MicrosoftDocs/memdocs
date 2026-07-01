@@ -4,8 +4,6 @@ description: Add or create settings using the settings catalog to configure Reco
 ms.date: 06/01/2026
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure Recovery Lock on macOS devices in Microsoft Intune

@@ -3,10 +3,6 @@ title: Prerequisites for the Certificate Connector for Microsoft Intune
 description: Review the software and network prerequisites for use of the Certificate Connector for Microsoft Intune.
 ms.date: 10/09/2024
 ms.topic: checklist
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Prerequisites for the Certificate Connector for Microsoft Intune

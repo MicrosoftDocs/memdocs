@@ -8,8 +8,6 @@ metadata:
   description: Run remote actions, manage scripts and remediations, view device inventory, and export reports in Microsoft Intune.
   ms.topic: landing-page
   ms.date: 05/04/2026
-  ms.author: paoloma
-  author: paolomatarazzo
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 

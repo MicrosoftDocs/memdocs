@@ -1,13 +1,9 @@
 ---
 title: Android Enterprise security configurations for personally-owned work profiles
 description: Review example configurations of basic, enhanced, and high security for devices with Android Enterprise personally-owned work profiles.
-author: brenduns
-ms.author: brenduns
 ms.date: 03/26/2025
 ms.topic: reference
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Enterprise personally-owned work profile security configuration examples

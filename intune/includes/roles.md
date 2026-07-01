@@ -1,8 +1,6 @@
 ---
-author: paolomatarazzo
 ms.topic: include
 ms.date: 05/05/2026
-ms.author: paoloma
 ---
 
 <!-- This include file can be used as copy-paste reference for links to Intune roles documentation. The intent is to provide a single source of truth for links to those articles. That also explains the use absolute links in this file, which might look inconsistent with the relative links used in other articles. -->
