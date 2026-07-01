@@ -12,7 +12,7 @@ ms.collection:
 
 # China endpoints for Microsoft Intune
 
-This page lists the China endpoints needed for proxy settings in your Intune deployments.
+This page lists the China endpoints that are needed for proxy settings in your Intune deployments.
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
