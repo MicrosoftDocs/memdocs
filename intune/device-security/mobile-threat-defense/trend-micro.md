@@ -1,14 +1,8 @@
 ---
 title: Trend Micro Mobile Security and Microsoft Intune
 description: How to set up Trend Micro Mobile Threat Defense with with Microsoft Intune to control mobile device access to your corporate resources
-author: brenduns
-ms.author: brenduns
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Use Trend Micro Mobile Security as a Service with Microsoft Intune

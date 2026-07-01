@@ -3,8 +3,6 @@ title: Understand Microsoft Intune Management Extension
 description: Understand Microsoft Intune management extension for Windows.
 ms.date: 04/07/2026
 ms.topic: how-to
-author: nicholasswhite
-ms.author: nwhite
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management

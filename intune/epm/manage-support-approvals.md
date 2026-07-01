@@ -1,16 +1,8 @@
 ---
 title: Use EPM support approvals for file elevation requests with Intune
 description: Manage support approvals for elevation requests when you use Endpoint Privilege Management for Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 04/27/2026
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Support approved file elevations for Endpoint Privilege Management

@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 06/23/2026
-ms.author: mandia
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs. -->

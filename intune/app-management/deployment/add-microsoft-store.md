@@ -3,9 +3,6 @@ title: Add Microsoft Store Apps to Microsoft Intune
 description: Learn about adding Microsoft Store apps to Microsoft Intune.
 ms.date: 06/07/2024
 ms.topic: how-to
-ms.reviewer: bryanke
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add Microsoft Store Apps to Microsoft Intune

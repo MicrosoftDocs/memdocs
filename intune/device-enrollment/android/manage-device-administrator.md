@@ -4,8 +4,6 @@ description: Use Android device administrator with Intune to manage devices.
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.reviewer: esalter
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android device administrator enrollment

@@ -3,10 +3,7 @@ title: Set up an iOS/iPadOS ADE token in Intune
 description: Create, renew, and delete Apple enrollment program tokens in Microsoft Intune for automated device enrollment on iOS/iPadOS.
 ms.date: 04/15/2026
 ms.topic: how-to
-ms.reviewer: annovich
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up automated device enrollment token for Apple mobile  

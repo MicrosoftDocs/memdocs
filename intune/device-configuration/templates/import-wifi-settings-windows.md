@@ -4,8 +4,6 @@ description: Export Wi-Fi settings from a Windows device as an XML file using th
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Import Wi-Fi settings for Windows devices in Intune

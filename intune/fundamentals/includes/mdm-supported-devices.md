@@ -1,6 +1,4 @@
 ---
-author: MandiOhlinger
-ms.author: mandia
 ms.topic: include
 ms.date: 04/27/2026
 ---

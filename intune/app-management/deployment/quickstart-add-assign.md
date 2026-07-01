@@ -3,7 +3,6 @@ title: Add and Assign an App
 description: Learn how to add and assign apps to user groups in Microsoft Intune. Ensure your workforce has access to the apps they need.
 ms.date: 01/20/2026
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Add

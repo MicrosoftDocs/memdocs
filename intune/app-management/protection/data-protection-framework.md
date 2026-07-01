@@ -5,8 +5,6 @@ ms.date: 06/12/2025
 ms.topic: concept-article
 ms.reviewer: beflamm
 ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Data Protection Framework Using App Protection Policies

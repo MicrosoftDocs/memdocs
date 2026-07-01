@@ -2,8 +2,6 @@
 title: Intune Data Storage and Processing Overview
 description: Learn how Microsoft Intune stores and processes personal data, including storage locations, data residency, and retention policies.
 ms.date: 5/5/2026
-author: paolomatarazzo
-ms.author: paoloma
 ms.topic: overview
 ms.reviewer: bradyw
 ms.collection:

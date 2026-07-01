@@ -1,13 +1,9 @@
 ---
 title: Set the mobile device management authority
 description: Learn about how to set the mobile device management authority in Microsoft Intune and some key considerations.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/24/2024
 ms.topic: how-to
 ms.reviewer: dagerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set the mobile device management authority

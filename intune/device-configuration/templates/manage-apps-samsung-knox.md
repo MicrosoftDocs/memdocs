@@ -3,8 +3,6 @@ title: Allow or block apps for Samsung Knox Standard devices
 description: Create a custom profile to allow and block apps for Samsung Knox Standard Android device administrator devices using Microsoft Intune.
 ms.date: 02/18/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use custom policies in Microsoft Intune to allow and block apps for Samsung Knox Standard devices

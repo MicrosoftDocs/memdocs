@@ -4,8 +4,6 @@ description: Configure your  Windows Holographic for Business devices as single-
 ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows Holographic for Business device settings to run as a kiosk in Intune

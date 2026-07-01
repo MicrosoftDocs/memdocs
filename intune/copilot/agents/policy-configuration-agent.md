@@ -3,8 +3,6 @@ title: Learn about Policy Configuration Agent and set it up
 description: Learn about the Policy Configuration Agent in Microsoft Intune, its prerequisites, how it works, and how to set it up. The agent is a generative AI feature that helps create Intune policies based on uploaded documents or benchmarks. The Policy Configuration Agent is a feature of Security Copilot in Intune.
 ms.date: 11/18/2025
 ms.topic: overview
-author: mandiohlinger
-ms.author: mandia
 ms.reviewer: aanavath, jubaptis
 ---
 

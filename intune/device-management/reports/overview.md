@@ -3,12 +3,9 @@ title: Microsoft Intune Reports
 description: Intune provides specific report types with focused views that contain consistent and timely data.
 ms.date: 05/18/2026
 author: nicholasswhite
-ms.author: nwhite
 ms.topic: how-to
 ai-usage: ai-assisted
 ms.reviewer: jlynn
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Reports

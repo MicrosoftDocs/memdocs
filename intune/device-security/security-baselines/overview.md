@@ -1,16 +1,11 @@
 ---
 title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
-ms.date: 06/24/2026
+ms.date: 06/09/2026
 ms.topic: overview
 ai-usage: ai-assisted
 ms.reviewer: aanavath
   - intune-azure
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Use security baselines to help secure Windows devices you manage with Microsoft Intune

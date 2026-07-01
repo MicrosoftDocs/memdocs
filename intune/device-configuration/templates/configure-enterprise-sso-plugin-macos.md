@@ -4,8 +4,6 @@ description: Learn more about the Microsoft Enterprise single sign-on (SSO) app 
 ms.date: 05/01/2024
 ms.topic: how-to
 ms.reviewer: miepping, tbc, alessanc
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use the Microsoft Enterprise SSO plug-in on macOS devices

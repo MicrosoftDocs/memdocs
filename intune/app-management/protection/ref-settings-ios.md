@@ -4,8 +4,6 @@ description: This article describes the iOS/iPadOS app protection policy (APP) s
 ms.date: 11/18/2025
 ms.topic: article
 ms.reviewer: demerson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # iOS App Protection Policy Settings

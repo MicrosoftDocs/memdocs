@@ -3,13 +3,7 @@ title: Deploy and configure Microsoft Defender for Endpoint on Android
 description: Learn how to deploy and configure Microsoft Defender for Endpoint on Android devices using Microsoft Intune, including app configuration policies, always-on VPN, and low-touch onboarding.
 ms.date: 04/06/2026
 ms.topic: how-to
-ms.author: brenduns
-author: brenduns
-ms.reviewer: laarrizz
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Deploy and configure Microsoft Defender for Endpoint on Android

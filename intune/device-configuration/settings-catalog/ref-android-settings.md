@@ -6,8 +6,6 @@ ms.topic: reference
 params:
   siblings_only: true
 ms.reviewer: cchristenson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Intune settings catalog settings list

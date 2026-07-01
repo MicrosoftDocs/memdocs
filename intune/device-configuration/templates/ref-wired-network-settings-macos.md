@@ -4,8 +4,6 @@ description: Create or add a wired network device configuration profile for Appl
 ms.date: 06/04/2026
 ms.topic: reference
 ms.reviewer: wicale
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: platforms-apple
 ---
 

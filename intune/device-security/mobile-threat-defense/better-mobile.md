@@ -1,14 +1,8 @@
 ---
 title: Better Mobile Threat Defense with Intune
 description: How to set up the Better Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
-author: brenduns
-ms.author: brenduns
 ms.date: 06/02/2025
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Better Mobile Threat Defense connector with Intune

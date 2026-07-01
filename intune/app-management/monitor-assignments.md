@@ -4,8 +4,6 @@ description: After you assign an app to users or devices, use this information t
 ms.date: 03/19/2026
 ms.topic: how-to
 ms.reviewer: bryanke
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Monitor app information and assignments with Microsoft Intune

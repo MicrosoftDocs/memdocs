@@ -1,14 +1,8 @@
 ---
 title: Lookout Mobile Endpoint with Microsoft Intune
 description: How to set up Lookout Mobile Threat Defense (MTD) How to set up to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 07/31/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Lookout Mobile Endpoint Security connector with Intune

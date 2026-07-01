@@ -1,8 +1,6 @@
 ---
-author: brenduns
 ms.topic: include
 ms.date: 08/19/2024
-ms.author: brenduns
 ---
 
 #### Endpoint detection and response

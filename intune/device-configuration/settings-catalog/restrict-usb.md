@@ -4,8 +4,6 @@ description: Use the settings catalog in Microsoft Intune to restrict USB device
 ms.date: 04/30/2026
 ms.topic: how-to
 ms.reviewer: mayurjadhav, kufang
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Restrict USB devices and allow specific USB devices using the settings catalog in Microsoft Intune

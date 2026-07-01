@@ -4,8 +4,6 @@ description: Get an Apple MDM Push certificate to manage iOS/iPadOS devices with
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Get an Apple MDM push certificate

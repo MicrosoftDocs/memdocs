@@ -3,7 +3,6 @@ title: Add Win32 app supersedence
 description: Learn how to create supersedence relationships between Win32 apps in Microsoft Intune to update or replace existing apps with newer versions.
 ms.date: 04/06/2026
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.custom:
 ms.collection:
 - M365-identity-device-management

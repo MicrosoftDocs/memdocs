@@ -4,8 +4,6 @@ description: Move Android devices from device administrator to personally owned 
 ms.date: 06/18/2024
 ms.topic: how-to
 ms.reviewer: esalter
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Move Android devices from device administrator to personally owned work profile management

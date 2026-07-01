@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
 ms.reviewer: acabello
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Deployment guide: Manage devices running Windows  

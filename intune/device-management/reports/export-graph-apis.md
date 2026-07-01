@@ -3,12 +3,9 @@ title: Use Graph APIs to Export Intune Reports
 description: Learn about exporting Intune reports using Graph APIs.
 ms.topic: how-to
 author: nicholasswhite
-ms.author: nwhite
 ms.date: 02/28/2025
 ms.reviewer: davidra
 #ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Export Intune Reports Using Graph APIs

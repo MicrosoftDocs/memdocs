@@ -2,8 +2,6 @@
 
 title: Plan Education device enrollment
 description: Plan enrollment for Education devices in Intune.
-author: scottbreenmsft
-ms.author: scbree
 ms.date: 5/2/2024
 ms.topic: tutorial
 searchScope:

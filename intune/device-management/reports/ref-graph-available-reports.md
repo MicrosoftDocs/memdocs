@@ -3,13 +3,10 @@ title: Intune Graph API - Reports and Properties
 description: Learn about Intune reports and properties provided via Graph API.
 ms.date: 05/26/2026
 author: nicholasswhite
-ms.author: nwhite
 ms.topic: article
 ai-usage: ai-assisted
 ms.reviewer: davidra
 #ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Reports and Properties Available Using Graph API

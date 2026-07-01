@@ -1,11 +1,7 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 02/09/2026
-ms.author: mandia
 ---
-
-<!-- This include file is used in the VPN settings lists for all platforms in /configuration. 5.18.2023 - mandia: MS Tunnel doesn't apply to macOS.-->
 
 Some Microsoft 365 services, such as Outlook, might not perform well using third party or partner VPNs. If you're using a third party or partner VPN, and experience a latency or performance issue, then remove the VPN.
 

@@ -4,8 +4,6 @@ description: Add an xml or plist file that includes key information about your a
 ms.date: 08/22/2024
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add a property list file to macOS devices using Microsoft Intune

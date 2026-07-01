@@ -4,9 +4,6 @@ description: Configure and deploy policies and use reports for devices you manag
 ms.date: 05/13/2026
 ms.topic: reference
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---

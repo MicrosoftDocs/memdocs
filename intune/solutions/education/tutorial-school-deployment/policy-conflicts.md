@@ -3,8 +3,6 @@ title: Avoid policy conflicts
 description: Learn how to avoid policy conflicts when creating and deploying new policies.
 ms.date: 7/11/2024
 ms.topic: tutorial
-ms.author: scbree
-author: scottbreenmsft
 ---
 
 # Avoiding policy conflicts

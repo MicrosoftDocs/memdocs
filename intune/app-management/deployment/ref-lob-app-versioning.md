@@ -3,8 +3,6 @@ title: Line-of-Business App Versioning in Intune
 description: Introduces how app versions are used in Intune when an app is added or updated.
 ms.date: 11/18/2024
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Line-of-Business App Versioning

@@ -4,8 +4,6 @@ description: Overview of the different Microsoft Intune device profiles. Get inf
 ms.date: 06/03/2026
 ms.topic: overview
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune

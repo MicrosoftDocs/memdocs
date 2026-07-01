@@ -3,8 +3,6 @@ title: Security Copilot Agents in Intune
 description: Discover how Microsoft Security Copilot enhances Microsoft Intune through AI-powered security agents. Learn about available agents and explore their capabilities.
 ms.date: 11/10/2025
 ms.topic: overview
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer: 
 ---
 

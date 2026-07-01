@@ -1,8 +1,6 @@
 ---
 title: Intune operated by 21Vianet in China
 description: Intune operated by 21Vianet in China.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 10/16/2025
 ms.topic: article
 ms.reviewer: amsaeedi, acabello

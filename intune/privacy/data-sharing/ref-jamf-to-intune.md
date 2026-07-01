@@ -4,10 +4,6 @@ description: Review the list of data that Jamf Pro sends to Microsoft Intune whe
 ms.date: 12/07/2023
 ms.topic: reference
 ms.reviewer: elocholi
-ms.collection:
-- M365-identity-device-management
-- privacy
-- sub-data-privacy
 ---
 
 

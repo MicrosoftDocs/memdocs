@@ -4,8 +4,6 @@ description: Learn how to configure a Universal Print policy using the settings 
 ms.date: 05/13/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create a Universal Print policy in Microsoft Intune

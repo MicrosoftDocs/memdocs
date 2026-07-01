@@ -2,7 +2,6 @@
 title: FAQ for Microsoft Copilot in Intune
 description: Get answers to common questions when using Copilot in Microsoft Intune, including accessing Copilot, licensing, and more.
 ms.date: 05/26/2026
-ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: ankurgoyal, rashok
 ms.collection:

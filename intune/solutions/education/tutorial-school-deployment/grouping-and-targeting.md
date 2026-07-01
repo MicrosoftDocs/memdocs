@@ -3,8 +3,6 @@ title: Plan Education device grouping and targeting
 description: Plan how you'll group devices and users and target policies and applications.
 ms.date: 05/19/2026
 ms.topic: tutorial
-ms.author: scbree
-author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
 ---
 

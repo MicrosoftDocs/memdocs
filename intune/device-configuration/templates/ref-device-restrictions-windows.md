@@ -4,8 +4,6 @@ description: See a list of all the settings and their descriptions for creating 
 ms.date: 10/14/2025
 ms.topic: reference
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows device settings to allow or restrict features using Intune

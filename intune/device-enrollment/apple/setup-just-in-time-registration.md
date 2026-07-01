@@ -4,8 +4,6 @@ description: Set up JIT registration in Intune for devices enrolling via a suppo
 ms.date: 07/22/2024
 ms.topic: install-set-up-deploy
 ms.reviewer: rishitasarin
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up just-in-time registration in Microsoft Intune

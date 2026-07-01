@@ -3,11 +3,6 @@ title: Manually configure Jamf Pro integration with Microsoft Intune
 description: Manually configure Jamf Pro integration with Intune when you can't use the Jamf Cloud Connector.
 ms.date: 09/20/2023
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Manually Integrate Jamf Pro with Intune for compliance

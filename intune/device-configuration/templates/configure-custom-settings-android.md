@@ -4,8 +4,6 @@ description: Add or create a custom profile for Android device administrator (DA
 ms.date: 02/18/2025
 ms.topic: how-to
 ms.reviewer: anuragjain
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use custom settings for Android device administrator devices in Microsoft Intune

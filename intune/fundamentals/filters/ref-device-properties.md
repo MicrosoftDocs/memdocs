@@ -4,8 +4,6 @@ description: Reference guide for device and app properties, operators, and rule 
 ms.date: 02/24/2026
 ms.topic: reference
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune

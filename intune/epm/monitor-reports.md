@@ -4,12 +4,6 @@ description: View reports for managed and unmanaged file elevations when you use
 ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Reports for Endpoint Privilege Management

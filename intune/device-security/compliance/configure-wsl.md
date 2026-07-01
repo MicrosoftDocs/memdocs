@@ -4,10 +4,6 @@ description: Evaluate WSL attributes on a host device for compliance.
 ms.date: 11/19/2024
 ms.topic: how-to
 ms.reviewer: arnab
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Evaluate compliance for Windows Subsystem for Linux  

@@ -4,8 +4,6 @@ description: Use the settings catalog in Microsoft Intune to configure common fe
 ms.date: 03/24/2026
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav, beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Tasks you can complete using the Settings Catalog in Intune

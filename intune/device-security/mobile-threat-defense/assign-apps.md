@@ -1,15 +1,8 @@
 ---
 title: Add and assign MTD apps to Microsoft Intune
 description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authenticator app, and iOS configuration policy in Microsoft Intune
-author: brenduns
-ms.author: brenduns
-ms.date: 06/24/2026
-ai-usage: ai-assisted
+ms.date: 06/02/2025
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Add and assign Mobile Threat Defense (MTD) apps with Intune

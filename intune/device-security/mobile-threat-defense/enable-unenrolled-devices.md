@@ -1,14 +1,8 @@
 ---
 title: Enable the Mobile Threat Defense connector for unenrolled devices
 description: Enable the Mobile Threat Defense connector in Microsoft Intune for unenrolled devices.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices

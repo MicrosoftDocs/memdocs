@@ -4,10 +4,6 @@ description: View the device compliance settings for macOS devices that you can 
 ms.date: 09/5/2025
 ms.topic: article
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Device compliance settings for macOS in Intune

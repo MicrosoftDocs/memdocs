@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 04/15/2025
 ms.topic: install-set-up-deploy
 ms.reviewer: cchristenson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Deployment guide: Manage Android devices in Microsoft Intune

@@ -3,11 +3,7 @@ title: Monitor Microsoft Defender for Endpoint with Microsoft Intune
 description: Learn how to monitor device compliance and onboarding status for Microsoft Defender for Endpoint with Microsoft Intune in the admin center.
 ms.date: 04/28/2026
 ms.topic: how-to
-ms.reviewer: laarrizz
 ms.custom: msecd-doc-authoring-1012
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Monitor device status for Microsoft Defender for Endpoint with Microsoft Intune

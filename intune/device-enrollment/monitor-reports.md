@@ -4,8 +4,6 @@ description: Monitor and troubleshoot issues with enrollment restrictions and en
 ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # View enrollment reports  

@@ -1,9 +1,6 @@
 ---
 title: Microsoft Intune Account Moves Overview
 description: Learn what an Intune account move is, why moves happen, and how the process affects your tenant before, during, and after the maintenance window.
-author: paolomatarazzo
-ms.author: paoloma
-ms.service: microsoft-intune
 ms.topic: concept-article
 ms.custom: msecd-doc-authoring-1012
 ms.date: 05/21/2026

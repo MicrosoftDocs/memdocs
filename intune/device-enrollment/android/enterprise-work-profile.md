@@ -4,8 +4,6 @@ description: Learn more about Android Enterprise work profile management, a devi
 ms.date: 06/18/2026
 ms.topic: overview
 ms.reviewer: grwilson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Enterprise work profile management overview

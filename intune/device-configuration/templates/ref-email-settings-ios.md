@@ -4,8 +4,6 @@ description: See a list of all the email settings you can configure and add to i
 ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: beflamm, sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add email settings for iOS and iPadOS devices in Microsoft Intune
