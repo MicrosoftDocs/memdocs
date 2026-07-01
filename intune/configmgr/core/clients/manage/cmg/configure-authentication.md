@@ -104,7 +104,7 @@ To securely forward client requests, the CMG connection point requires a secure 
 > [!NOTE]
 > The CMG connection point doesn't require a client authentication certificate in the following scenarios:
 > - Clients use Microsoft Entra authentication.
-- Clients use Configuration Manager token-based authentication.
+> - Clients use Configuration Manager token-based authentication.
 > - The Management Points enabled for CMG traffic are configured for Enhanced HTTP.
 
 For more information, see [Enable management point for HTTPS](#enable-management-point-for-https).
