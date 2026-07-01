@@ -3,7 +3,6 @@ title: What are cloud-native Windows endpoints
 description: Learn more about cloud-native endpoints and what they are. See a list of benefits, and the effect on end users and IT administrators. Cloud-native endpoints help with remote workers and hybrid workers, and use Microsoft Intune to manage devices.
 ms.date: 05/28/2026
 ms.topic: overview
-ms.reviewer: ahamil, jasandys, wicale
 ms.keywords: cloud native Windows, cloud-native Windows endpoint, Intune cloud native, Windows Autopilot cloud native, cloud native endpoint setup
 ms.collection:
   - M365-identity-device-management

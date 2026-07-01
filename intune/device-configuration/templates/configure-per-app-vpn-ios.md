@@ -4,8 +4,6 @@ description: See the prerequisites, create a group for the virtual private netwo
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune

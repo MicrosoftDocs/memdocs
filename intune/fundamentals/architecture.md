@@ -1,8 +1,6 @@
 ---
 title: Microsoft Intune architecture
 description: Reference architecture for a Microsoft Intune deployment, including cloud and on-premises components and Microsoft and third-party integrations.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/12/2026
 ms.topic: concept-article
 ms.reviewer: davidra

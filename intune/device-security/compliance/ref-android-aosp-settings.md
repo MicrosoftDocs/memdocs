@@ -4,10 +4,6 @@ description: View the device compliance settings for Android (AOSP) that you can
 ms.date: 09/04/2025
 ms.topic: concept-article
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Device compliance settings for Android (AOSP) in Intune

@@ -4,8 +4,6 @@ description: Learn how to redo Workplace Join (re-WPJ) on an Android Enterprise 
 ms.date: 06/18/2026
 ms.topic: how-to
 ms.reviewer: grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Redo Workplace Join for Android Enterprise devices

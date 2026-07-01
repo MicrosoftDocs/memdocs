@@ -4,8 +4,6 @@ description: Learn how to manage frontline worker devices using iOS and iPadOS d
 ms.date: 03/28/2024
 ms.topic: how-to
 ms.reviewer: cbernier
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Frontline worker for iOS/iPadOS devices in Microsoft Intune

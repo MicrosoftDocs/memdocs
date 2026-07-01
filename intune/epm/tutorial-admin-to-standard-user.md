@@ -3,12 +3,6 @@ title: Use Endpoint Privilege Management to transition users from administrator 
 description: Understand the steps and phases for using Endpoint Privilege Management to transition users from administrators to standard users.
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Use Endpoint Privilege Management to transition users from administrator to standard user

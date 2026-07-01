@@ -4,8 +4,6 @@ description: Learn how to selectively wipe data using app protection policy cond
 ms.date: 01/16/2025
 ms.topic: how-to
 ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Selectively Wipe Data Using App Protection Policy Conditional Launch Actions in Intune

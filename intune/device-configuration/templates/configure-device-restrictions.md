@@ -4,8 +4,6 @@ description: Add a device configuration profile to restrict features on Android 
 ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure device restriction settings in Microsoft Intune

@@ -3,10 +3,7 @@ title: Create an Intune Report From the OData Feed With Power BI
 description: Create a treemap visualization using Power BI Desktop with an interactive filter from the Intune Data Warehouse API.
 ms.date: 03/31/2026
 ms.topic: reference
-ms.reviewer: jamiesil
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create an Intune Report From the OData Feed With Power BI

@@ -4,8 +4,6 @@ description: See common issues and resolutions when using StageNow on Android de
 ms.date: 06/27/2024
 ms.topic: troubleshooting
 ms.reviewer: jieyan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Troubleshoot and see potential issues on Android Zebra devices in Microsoft Intune

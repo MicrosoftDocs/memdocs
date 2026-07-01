@@ -4,8 +4,6 @@ description: This topic describes the app protection policy (APP) for extensions
 ms.date: 01/06/2025
 ms.topic: article
 ms.reviewer: demerson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Protecting Application Extensions

@@ -5,8 +5,6 @@ ms.date: 05/16/2024
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Policies for Microsoft 365 Apps

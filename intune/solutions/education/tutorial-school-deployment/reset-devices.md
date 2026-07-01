@@ -4,8 +4,6 @@ description: Learn about the reset and wipe options for Windows devices using In
 ms.date: 5/2/2024
 ms.topic: tutorial
 zone_pivot_groups: platforms-windows-ios
-author: scottbreenmsft
-ms.author: scbree
 ---
 
 # Reset and wipe devices

@@ -1,14 +1,8 @@
 ---
 title: Zimperium MTD connector with Microsoft Intune
 description: How to set up Zimperium Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
-author: brenduns
-ms.author: brenduns
 ms.date: 09/30/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Zimperium Mobile Threat Defense connector with Intune

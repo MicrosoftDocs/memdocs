@@ -1,14 +1,8 @@
 ---
 title: SentinelOne MTD connector with Microsoft Intune
 description: How to set up SentinelOne Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # SentinelOne Mobile Threat Defense connector with Intune

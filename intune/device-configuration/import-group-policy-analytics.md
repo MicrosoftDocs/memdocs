@@ -4,8 +4,6 @@ description: Import and analyze your group policy objects using the Group Policy
 ms.date: 06/22/2026
 ms.topic: how-to
 ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Import and analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune

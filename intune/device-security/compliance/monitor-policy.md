@@ -4,10 +4,6 @@ description: Use the device compliance dashboard to understand overall device co
 ms.date: 05/19/2026
 ms.topic: how-to
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 # Monitor results of your Intune device compliance policies
 

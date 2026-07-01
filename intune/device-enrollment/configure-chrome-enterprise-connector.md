@@ -4,8 +4,6 @@ description: Learn how to connect the Google Admin Console to Microsoft Intune s
 ms.date: 10/26/2022
 ms.topic: how-to
 ms.reviewer: shsivak
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure Chrome Enterprise connector

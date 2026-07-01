@@ -6,8 +6,6 @@ ms.topic: reference
 ms.reviewer: abalwan
 params:
   siblings_only: true
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android Enterprise device settings to configure VPN in Intune

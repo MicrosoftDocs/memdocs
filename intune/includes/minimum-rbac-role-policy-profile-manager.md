@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 02/09/2026
-ms.author: mandia
 ---
 
 <!-- This include file is used in the device configuration profile articles in /configuration. Can be used for any profile type that uses Policy and Profile Manager role-->

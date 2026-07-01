@@ -4,8 +4,6 @@ description: Export iOS, iPadOS, and macOS settings from Apple Configurator or A
 ms.date: 02/09/2026
 ms.topic: article
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: platforms-apple
 ---
 

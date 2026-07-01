@@ -1,9 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 11/11/2025
-ms.author: mandia
-ms.custom: include file
 ---
 
 <!-- This include file is used in the manage-ai-android guide in /memdocs. -->

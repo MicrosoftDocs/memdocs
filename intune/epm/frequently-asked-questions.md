@@ -3,12 +3,6 @@ title: Frequently asked questions for Endpoint Privilege Management
 description: A list of frequently asked questions for customers deploying Microsoft Intune Endpoint Privilege Management
 ms.date: 1/26/2026
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Frequently asked questions for Endpoint Privilege Management

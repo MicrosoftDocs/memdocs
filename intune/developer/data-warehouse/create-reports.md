@@ -3,10 +3,7 @@ title: Use the Intune Data Warehouse
 description: Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment.
 ms.date: 03/31/2026
 ms.topic: reference
-ms.reviewer: jamiesil
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use the Microsoft Intune Data Warehouse

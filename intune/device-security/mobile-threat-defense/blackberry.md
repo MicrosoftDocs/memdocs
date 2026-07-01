@@ -1,14 +1,8 @@
 ---
 title: BlackBerry Protect Mobile MTD and Intune
 description: How to set up CylancePROTECT Mobile (BlackBerry) with Microsoft Intune to control mobile device access to your corporate resources
-author: brenduns
-ms.author: brenduns
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Use BlackBerry Protect Mobile with Intune

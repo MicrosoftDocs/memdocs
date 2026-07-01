@@ -1,14 +1,8 @@
 ---
 title: Add Mobile Threat Defense apps to unenrolled devices
 description: Add Mobile Threat Defense apps to unenrolled devices by device users.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Add Mobile Threat Defense apps to unenrolled devices

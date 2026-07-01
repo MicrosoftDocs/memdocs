@@ -2,8 +2,7 @@
 title: Distributed IT with multiple admins
 description: Learn about scaling guidelines for Microsoft Intune when you have a large number of local admins who need to manage their own users/devices and policies within the same tenant. Use Microsoft Intune's Role Based Access Control to manage access.
 
-author: brenduns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 05/28/2025
 ms.topic: article
 ms.reviewer: dagerrit

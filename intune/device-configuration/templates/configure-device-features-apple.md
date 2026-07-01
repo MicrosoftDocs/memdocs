@@ -4,8 +4,6 @@ description: Add or create an iOS, iPadOS, or macOS device profile. Configure se
 ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: beflamm, arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add iOS, iPadOS, or macOS device feature settings in Intune

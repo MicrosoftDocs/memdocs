@@ -1,12 +1,8 @@
 ---
 title: Configure a custom domain name
 description: Add a custom domain name for your Microsoft Intune subscription
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/21/2025
 ms.topic: article
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure a custom domain name

@@ -4,8 +4,6 @@ description: Set up enrollment for macOS devices in Intune.
 ms.date: 05/15/2024
 ms.topic: overview
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up enrollment for macOS devices in Intune

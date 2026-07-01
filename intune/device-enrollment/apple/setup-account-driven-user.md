@@ -4,8 +4,6 @@ description: Set up account driven Apple User Enrollment for personal devices en
 ms.date: 06/12/2025
 ms.topic: how-to
 ms.reviewer: rishitasarin
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up account driven Apple User Enrollment

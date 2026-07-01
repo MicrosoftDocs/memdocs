@@ -4,8 +4,6 @@ description: Add Bash scripts to create a custom Linux profile in Microsoft Intu
 ms.date: 01/09/2025
 ms.topic: how-to
 ms.reviewer: arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use custom Bash scripts to configure Linux devices in Microsoft Intune

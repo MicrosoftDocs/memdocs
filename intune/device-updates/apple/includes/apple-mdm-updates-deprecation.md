@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 02/13/2026
-ms.author: paoloma
 ---
 
 <!-- This include file is used in the Apple software updates docs that mention MDM. -->

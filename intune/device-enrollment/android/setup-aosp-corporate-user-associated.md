@@ -4,8 +4,6 @@ description: Set up Intune for corporate-owned user-associated devices built on 
 ms.date: 05/15/2025
 ms.topic: how-to
 ms.reviewer: jieyan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices

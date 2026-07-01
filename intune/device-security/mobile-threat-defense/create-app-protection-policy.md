@@ -1,14 +1,8 @@
 ---
 title: Create Mobile Threat Defense (MTD) app protection policy with Intune
 description: Create Mobile Threat Defense (MTD) app protection policy with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Create Mobile Threat Defense app protection policy with Intune

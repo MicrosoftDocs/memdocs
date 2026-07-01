@@ -4,8 +4,6 @@ description: Set up Intune for personal devices and bring-your-own-device scenar
 ms.date: 06/18/2026
 ms.topic: how-to
 ms.reviewer: grwilso
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up enrollment of Android Enterprise personally owned work profile devices

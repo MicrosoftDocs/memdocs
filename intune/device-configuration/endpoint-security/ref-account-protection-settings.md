@@ -3,9 +3,6 @@ title: Intune endpoint security Account protection (Preview) policy settings
 description: Endpoint security Account protection policy settings in Microsoft Intune
 ms.date: 07/23/2024
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: juidaewo
 
 ---

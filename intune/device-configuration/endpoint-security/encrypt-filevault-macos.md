@@ -4,9 +4,6 @@ description: Use Microsoft Intune policy to configure and manage FileVault disk 
 ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: beflamm 
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Encrypt macOS devices with FileVault using Intune

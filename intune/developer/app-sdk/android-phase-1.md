@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for Android Developer Integration and Testing Gu
 description: Plan the integration to incorporate Intune mobile app management (MAM) into your Android app.
 ms.date: 06/12/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - Android

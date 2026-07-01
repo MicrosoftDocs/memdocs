@@ -4,8 +4,6 @@ description: Use Microsoft Intune to manage and use devices running Android Ente
 ms.date: 06/23/2026
 ms.topic: how-to
 ms.reviewer: akritis
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune

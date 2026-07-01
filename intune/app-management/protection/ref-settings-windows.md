@@ -4,8 +4,6 @@ description: This article describes the app protection policy (APP) settings for
 ms.date: 11/06/2025
 ms.topic: article
 ms.reviewer: demerson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # App Protection Policy Settings for Windows

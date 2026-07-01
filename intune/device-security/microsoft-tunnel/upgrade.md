@@ -4,10 +4,6 @@ description: Understand how Microsoft Tunnel Gateway upgrades to new versions of
 ms.date: 06/11/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune

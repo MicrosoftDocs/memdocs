@@ -4,10 +4,6 @@ description: List of data that Intune sends to Google when Android enterprise de
 ms.date: 06/26/2025
 ms.topic: reference
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
-- privacy
-- sub-data-privacy
 ---
 
 # Data Intune sends to Google

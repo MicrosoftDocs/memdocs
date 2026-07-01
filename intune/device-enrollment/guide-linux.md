@@ -1,13 +1,9 @@
 ---
 title: Linux device enrollment guide for Microsoft Intune
 description: Enroll Linux devices in Intune using the Intune app. Set an overview of the administrator and end user tasks to enroll devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 03/31/2026
 ms.topic: article
 ms.reviewer: arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 

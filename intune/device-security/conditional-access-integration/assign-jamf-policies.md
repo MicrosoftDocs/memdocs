@@ -3,11 +3,6 @@ title: Use Intune compliance and Microsoft Entra Conditional Access policies wit
 description: Create Intune compliance policies and Microsoft Entra Conditional Access to help secure Jamf-managed devices.
 ms.date: 08/30/2023
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Enforce compliance on Macs managed with Jamf Pro

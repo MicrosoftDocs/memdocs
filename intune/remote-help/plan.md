@@ -4,9 +4,6 @@ description: Learn about the requirements and capabilities of Remote Help with M
 ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer: karawang
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Planning for Remote Help with Microsoft Intune

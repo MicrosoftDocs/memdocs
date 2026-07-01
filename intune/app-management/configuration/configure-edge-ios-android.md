@@ -5,7 +5,7 @@ ms.date: 02/03/2026
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
-- Microsoft 365-identity-device-management
+- M365-identity-device-management
 - Android
 - FocusArea_Apps_SpecificApp
 ---

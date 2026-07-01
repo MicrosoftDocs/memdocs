@@ -3,9 +3,6 @@ title: Get Started With the Microsoft Intune App SDK
 description: Quickly enable your mobile app for mobile application management (MAM) with Microsoft Intune.
 ms.date: 04/01/2025
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Get Started With the Microsoft Intune App SDK

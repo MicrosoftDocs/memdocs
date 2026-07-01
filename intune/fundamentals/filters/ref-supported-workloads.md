@@ -4,8 +4,6 @@ description: Learn which apps, compliance policies, and device configuration pro
 ms.date: 03/31/2026
 ms.topic: reference
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # List of platforms, policies, and app types supported by assignment filters in Microsoft Intune

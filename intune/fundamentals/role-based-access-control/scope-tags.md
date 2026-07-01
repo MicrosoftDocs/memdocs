@@ -4,8 +4,6 @@ description: Use role-based access control (RBAC) and scope tags to filter confi
 ms.date: 04/09/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use role-based access control (RBAC) and scope tags for distributed IT

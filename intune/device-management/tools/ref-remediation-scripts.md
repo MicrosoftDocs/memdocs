@@ -3,8 +3,6 @@ title: PowerShell Scripts for Remediations
 description: PowerShell script reference for Remediations.
 ms.date: 04/30/2024
 ms.topic: reference
-author: nicholasswhite
-ms.author: nwhite
 ---
 
 # PowerShell Scripts for Remediations

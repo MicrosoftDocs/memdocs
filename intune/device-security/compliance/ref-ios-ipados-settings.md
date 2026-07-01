@@ -4,10 +4,6 @@ description: View the device compliance settings for iOS/iPadOS that you can man
 ms.date: 09/04/2025
 ms.topic: reference
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Device compliance settings for iOS/iPadOS in Intune

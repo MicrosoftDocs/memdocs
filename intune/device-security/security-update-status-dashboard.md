@@ -4,7 +4,6 @@ description: Learn how the Security update status dashboard helps administrators
 author: sccmavenger
 ms.author: dannygu
 ms.reviewer: paoloma
-ms.service: microsoft-intune
 ms.topic: concept-article
 ms.date: 06/15/2026
 ---

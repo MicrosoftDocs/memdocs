@@ -2,8 +2,6 @@
 title: Overview of Windows LAPS with Microsoft Intune
 description: Learn how you can use Microsoft Microsoft Intune and application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, back up accounts and passwords to Microsoft Entra ID, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
 
-author: brenduns
-ms.author: brenduns
 ms.date: 05/29/2025
 ms.topic: how-to
 ms.reviewer: laarrizz

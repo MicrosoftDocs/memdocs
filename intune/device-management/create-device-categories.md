@@ -3,11 +3,7 @@ title: Categorize devices into groups in Intune
 description: Categorize Intune-managed devices into groups for easier management in the admin center.
 ms.date: 05/19/2026
 ms.topic: how-to
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Categorize devices into groups  

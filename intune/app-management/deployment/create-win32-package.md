@@ -3,7 +3,6 @@ title: Prepare a Win32 App to Be Uploaded to Microsoft Intune
 description: Learn how to prepare a Win32 app to be uploaded to Microsoft Intune.
 ms.date: 02/06/2026
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Win32

@@ -4,8 +4,6 @@ description: Add a settings catalog platform single sign-on (PSSO) policy to an 
 ms.date: 06/01/2026
 ms.topic: how-to
 ms.reviewer: iye, arnab
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure Platform Single Sign-On (PSSO) during Automated Device Enrollment for macOS devices

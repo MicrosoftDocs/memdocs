@@ -3,9 +3,6 @@ title: Windows Antivirus policy settings from Windows security settings for tena
 description: Review the settings in the *Windows Security experience* profile for tenant attached devices. To use this Endpoint security Antivirus policy, you must first configure tenant attach for Configuration Manager for Microsoft Intune.
 ms.date: 03/28/2025
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---

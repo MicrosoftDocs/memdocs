@@ -4,8 +4,6 @@ description: Add or create settings using the settings catalog to configure Micr
 ms.date: 04/30/2026
 ms.topic: how-to
 ms.reviewer: mayurjadhav
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure Microsoft Edge policy settings in Microsoft Intune

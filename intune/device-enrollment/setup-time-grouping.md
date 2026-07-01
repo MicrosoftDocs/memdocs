@@ -4,8 +4,6 @@ description: Overview and setup of the enrollment time grouping feature in Micro
 ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enrollment time grouping in Microsoft Intune  

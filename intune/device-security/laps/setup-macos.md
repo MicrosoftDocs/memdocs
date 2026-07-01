@@ -4,10 +4,6 @@ description: Set up macOS account configuration with LAPS through automatic devi
 ms.date: 04/01/2026
 ms.topic: how-to
 ms.reviewer: annovich
-author: lenewsad
-ms.author: lanewsad
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure support for macOS ADE local account configuration with LAPS in Microsoft Intune

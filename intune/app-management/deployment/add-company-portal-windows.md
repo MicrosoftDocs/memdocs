@@ -3,7 +3,6 @@ title: Manually Add the Windows Company Portal App
 description: Learn how your workforce can manually add the Windows Company Portal app to their PC from the Microsoft Store.
 ms.date: 01/06/2026
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows

@@ -5,9 +5,7 @@ author: beflamm
 ms.author: beflamm
 ms.topic: reference
 ms.date: 11/13/2024
-ms.reviewer: beflamm, mandia
-ms.collection:
-- M365-identity-device-management
+ms.reviewer: paoloma
 ---
 
 # Apple device configuration list in the Intune settings catalog

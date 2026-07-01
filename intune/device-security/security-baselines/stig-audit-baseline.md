@@ -1,15 +1,9 @@
 ---
 title: Use Security Technical Implementation Guide audit baselines to assess Windows device compliance in Microsoft Intune
 description: Learn how to use the Security Technical Implementation Guide security baseline in Microsoft Intune to assess Windows device compliance against Security Technical Implementation Guide recommendations for Department of Defense organizations.
-author: brenduns
-ms.author: brenduns
 ms.date: 06/09/2026
 ms.topic: how-to
 ai.usage: ai-assisted
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Use STIG audit baselines to assess Windows device compliance in Microsoft Intune

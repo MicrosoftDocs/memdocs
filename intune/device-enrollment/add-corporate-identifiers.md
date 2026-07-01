@@ -4,8 +4,6 @@ description: Add corporate identifiers (enrollment method, IMEI, and serial numb
 ms.date: 04/11/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Identify devices as corporate-owned  

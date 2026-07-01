@@ -6,8 +6,6 @@ ms.author: nwhite
 ms.date: 01/20/2026
 ms.topic: concept-article
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Prerequisites and tasks to try and evaluate Microsoft Intune for free

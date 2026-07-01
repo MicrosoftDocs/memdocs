@@ -7,8 +7,6 @@ ms.date: 11/14/2019
 ms.topic: archived
 
 ms.reviewer: derriw
-ms.collection:
-- M365-identity-device-management
 ---
 
 # How to configure Intune settings for the iOS/iPadOS Classroom app

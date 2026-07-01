@@ -3,8 +3,6 @@ title: Use the Change Review Agent
 description: Learn how to use the Change Review Agent in Microsoft Intune.
 ms.date: 04/27/2026
 ms.topic: how-to
-author: brenduns
-ms.author: brenduns
 ms.reviewer: zinebtakafi
 ---
 

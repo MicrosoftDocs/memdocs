@@ -4,8 +4,6 @@ description: Add a Windows Network Boundary policy to Windows devices using Micr
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use a network boundary to add trusted sites on Windows devices in Microsoft Intune

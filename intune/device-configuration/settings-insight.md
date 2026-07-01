@@ -1,13 +1,10 @@
 ---
 title: Settings insight
 description: Settings insight provides peer benchmarking information during security baseline configuration, showing when organizations similar to yours use Microsoft's recommended default values.
-author: BrenDuns
-ms.author: brenduns
+ms.author: lanewsad
 ms.date: 02/10/2026
 ms.topic: overview
 ms.reviewer: Lavanya.lakshman
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Settings insight
