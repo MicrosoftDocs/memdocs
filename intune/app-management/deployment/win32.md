@@ -3,7 +3,6 @@ title: Win32 App Management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
 ms.date: 02/06/2026
 ms.topic: overview
-ms.reviewer: bryanke
 ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management

@@ -2,7 +2,6 @@
 title: Copilot in Intune shows device information and helps troubleshoot
 description: Microsoft Security Copilot in Intune can help you get information about your devices, compare devices, and get error information. Use this information to help you manage and troubleshoot device issues.
 ms.date: 05/26/2026
-ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: ankurgoyal, zadvor, rashok
 ms.collection:

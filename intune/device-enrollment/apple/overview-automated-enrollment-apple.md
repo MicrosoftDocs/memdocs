@@ -3,10 +3,7 @@ title: Overview of Apple Automated Device Enrollment for iOS/iPadOS in Intune
 description: Learn about automated device enrollment (ADE) for Apple mobile devices in Microsoft Intune, including supported scenarios, key features, and how to get started.
 ms.date: 04/29/2026
 ms.topic: concept-article
-ms.reviewer: annovich
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Overview of Apple Automated Device Enrollment for Apple mobile   

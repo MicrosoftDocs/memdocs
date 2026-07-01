@@ -3,7 +3,6 @@ title: Add Web Apps to Microsoft Intune
 description: Learn about adding web apps (client-server applications) to Microsoft Intune.
 ms.date: 11/18/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Web

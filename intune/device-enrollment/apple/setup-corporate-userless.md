@@ -4,8 +4,6 @@ description: Set up Intune for corporate-owned userless iOS/iPadOS devices.
 ms.date: 02/17/2025
 ms.topic: how-to
 ms.reviewer: tranamst
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up Intune enrollment for Apple corporate-owned userless devices

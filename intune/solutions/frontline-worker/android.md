@@ -4,8 +4,6 @@ description: Learn how to manage frontline worker devices using Android devices 
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: cbernier
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Frontline worker for Android devices in Microsoft Intune

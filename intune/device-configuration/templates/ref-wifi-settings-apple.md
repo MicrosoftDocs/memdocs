@@ -4,8 +4,6 @@ description: Add or create a Wi-Fi configuration profile on iOS/iPadOS and macOS
 ms.date: 06/23/2026
 ms.topic: article
 ms.reviewer: wicale
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: platforms-apple
 ---
 

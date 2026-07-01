@@ -1,8 +1,6 @@
 ---
 title: Microsoft Intune advanced capabilities
 description: Microsoft Intune advanced capabilities deliver advanced endpoint management and security. Learn what they are, which licenses include them, and how to get them.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/20/2026
 ms.topic: overview
 ms.reviewer: aanavath

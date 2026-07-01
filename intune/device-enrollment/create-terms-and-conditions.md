@@ -3,8 +3,6 @@ title: Set terms and conditions in Microsoft Intune
 description: Set terms and conditions that users see in the Company Portal for Intune.
 ms.date: 01/27/2025
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Terms and conditions for user access

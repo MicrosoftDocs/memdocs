@@ -4,8 +4,6 @@ description: Permissions reference for built-in roles for Microsoft Intune.
 ms.date: 02/04/2026
 ms.topic: reference
 
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Built-in role permissions for Microsoft Intune

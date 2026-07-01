@@ -4,8 +4,6 @@ description: Create an email device configuration profile in Microsoft Intune, a
 ms.date: 02/19/2025
 ms.topic: how-to
 ms.reviewer: sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add email settings to devices using Intune

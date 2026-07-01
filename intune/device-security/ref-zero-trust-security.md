@@ -3,8 +3,6 @@ title:  Configure Microsoft Intune for increased security
 description:  Learn how to improve your security posture with Microsoft Intune.
 ms.topic: reference
 ms.date: 04/28/2026
-ms.author: brenduns
-author: brenduns
 ms.reviewer: ramical
 ms.collection:
 - tier 1

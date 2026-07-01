@@ -3,10 +3,6 @@ title: Settings list for the Microsoft Edge security baseline in Intune
 description: View a list of the settings in the Microsoft Intune security baseline for Microsoft Edge browser. This list includes the default values for settings as found in the default configuration of the baseline.
 ms.date: 01/09/2025
 ms.topic: reference
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 zone_pivot_groups: edge-baseline-versions
 ---
 

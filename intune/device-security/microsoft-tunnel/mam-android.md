@@ -4,7 +4,6 @@ description: Add support for Mobile Application Management (MAM) for Android to 
 ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management

@@ -4,8 +4,6 @@ description: Learn the Intune settings you can use to control device settings an
 ms.date: 04/16/2024
 ms.topic: reference
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Microsoft Intune Windows 8.1 device restriction settings

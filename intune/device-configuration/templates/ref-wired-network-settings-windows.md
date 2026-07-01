@@ -4,8 +4,6 @@ description: Create or add a wired network device configuration profile for Wind
 ms.date: 06/25/2024
 ms.topic: reference
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add wired network settings for Windows devices in Microsoft Intune

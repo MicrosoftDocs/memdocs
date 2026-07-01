@@ -4,8 +4,6 @@ description: Create or add a wired network device configuration profile or polic
 ms.date: 06/04/2026
 ms.topic: how-to
 ms.reviewer: wicale
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add and use wired networks settings on your devices in Microsoft Intune

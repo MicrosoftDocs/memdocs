@@ -4,10 +4,6 @@ description: Use a third-party device compliance partner as a source of complian
 ms.date: 06/24/2026
 ms.topic: overview
 ms.reviewer: ilwu-microsoft
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Support third-party device compliance partners in Intune

@@ -2,13 +2,9 @@
 title: Create a user in Intune and assign a license
 description: Learn how to create a user in Microsoft Intune and assign an Intune license to this user.
 services: microsoft-intune
-author: paolomatarazzo
-ms.author: paoloma
 ms.topic: how-to
 ms.date: 01/20/2026
 ms.reviewer: jlynn
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 2 - Create a user in Intune and assign the user a license

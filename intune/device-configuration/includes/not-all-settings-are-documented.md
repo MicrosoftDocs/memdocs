@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 02/09/2026
-ms.author: mandia
 ---
 
 <!-- This include file is used in the Android, Apple, and Windows reference device configuration template settings lists in /configuration. -->

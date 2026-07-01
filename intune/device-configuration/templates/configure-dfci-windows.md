@@ -4,8 +4,6 @@ description: Learn more about the Device Firmware Configuration Interface (DFCI)
 ms.date: 06/23/2026
 ms.topic: how-to
 ms.reviewer: madakeva
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune

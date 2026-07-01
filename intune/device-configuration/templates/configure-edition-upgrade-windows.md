@@ -4,8 +4,6 @@ description: Use Microsoft Intune to upgrade Windows 10/11 client devices to a d
 ms.date: 04/22/2024
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Upgrade Windows editions or switch out of S mode on devices using Microsoft Intune

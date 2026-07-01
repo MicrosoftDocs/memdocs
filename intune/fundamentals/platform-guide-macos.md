@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 07/31/2025
 ms.topic: install-set-up-deploy
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Deployment guide: Manage macOS devices in Microsoft Intune

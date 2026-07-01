@@ -4,8 +4,6 @@ description: See a list of all the settings, and what they do when upgrading a W
 ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows device settings to upgrade editions or enable S mode in Intune

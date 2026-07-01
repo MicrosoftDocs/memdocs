@@ -4,8 +4,6 @@ description: Utilize Apple device enrollment to enroll and manage user-owned iOS
 ms.date: 12/08/2025
 ms.topic: concept-article
 ms.reviewer: rishitasarin
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Overview of Apple device enrollment in Microsoft Intune

@@ -1,9 +1,6 @@
 ---
 title: Microsoft Intune Licensing Plans and Options
 description: Microsoft Intune licensing options, plans, and the capabilities included with each Intune plan and Microsoft 365 license tier.
-author: paolomatarazzo
-ms.author: paoloma
-ms.reviewer: paoloma
 ms.date: 05/13/2026
 ms.topic: overview
 ms.collection: M365-identity-device-management

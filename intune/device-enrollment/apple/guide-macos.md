@@ -1,13 +1,9 @@
 ---
 title: macOS device enrollment guide for  Microsoft Intune
 description: Enroll macOS devices using device enrollment, automated device enrollment (DEP), and Apple Configurator enrollment options in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 05/19/2026
 ms.topic: article
 ms.reviewer: auherrin, dregan, annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enrollment guide: Enroll macOS devices in Microsoft Intune

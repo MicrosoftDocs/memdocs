@@ -1,8 +1,6 @@
 ---
 title: What is Microsoft Intune?
 description: Microsoft Intune is a cloud-based endpoint management service that secures and manages devices and apps. Learn what it does and how it works.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 05/06/2026
 ms.topic: overview
 ---

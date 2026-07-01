@@ -4,8 +4,6 @@ description: Create a domain join device configuration profile for Microsoft Ent
 ms.date: 10/22/2025
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configuration Domain Join settings for Microsoft Entra hybrid joined devices in Microsoft Intune

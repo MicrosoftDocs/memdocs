@@ -4,8 +4,6 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.date: 05/28/2026
 ms.topic: how-to
 ms.reviewer: cbernier
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Frontline worker device management overview in Microsoft Intune

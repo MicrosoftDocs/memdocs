@@ -3,8 +3,6 @@ title:  Configure Microsoft Intune for increased tenant security
 description:  Secure your tenant with Microsoft Intune to support your Zero Trust journey.
 ms.topic: reference
 ms.date: 10/20/2025
-ms.author: brenduns
-author: brenduns
 ms.reviewer: ramical
 ms.collection:
 - tier 1

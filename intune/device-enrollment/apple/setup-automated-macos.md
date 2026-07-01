@@ -5,8 +5,6 @@ ms.date: 05/18/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up automated device enrollment for macOS   

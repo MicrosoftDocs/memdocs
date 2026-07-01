@@ -4,8 +4,6 @@ description: Learn more about system extensions and kernel extensions for macOS 
 ms.date: 09/11/2024
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add macOS system and kernel extensions in Intune

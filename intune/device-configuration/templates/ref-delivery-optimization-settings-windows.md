@@ -4,8 +4,6 @@ description: Delivery Optimization settings for Windows devices that you can dep
 ms.date: 04/22/2025
 ms.topic: reference
 ms.reviewer: davguy
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Delivery Optimization settings for Windows devices in Intune

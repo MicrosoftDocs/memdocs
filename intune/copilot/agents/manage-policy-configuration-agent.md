@@ -3,8 +3,6 @@ title: Use the Policy Configuration Agent to create policies
 description: Learn how to use the Policy Configuration Agent in Microsoft Intune to create policies. You can create policies on files you uploaded, natural language prompts, or industry baselines. The Policy Configuration Agent is a feature of Security Copilot in Intune.
 ms.date: 11/17/2025
 ms.topic: how-to
-author: mandiohlinger
-ms.author: mandia
 ms.reviewer: aanavath
 ---
 

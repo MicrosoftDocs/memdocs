@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for Android Developer Integration and Testing Gu
 description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
 ms.date: 06/12/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - Android
@@ -324,4 +323,4 @@ If you need to test your application under Robolectric, the recommended workarou
 [Enroll Android devices]:../../device-enrollment/android/guide.md
 
 <!-- Class links -->
-[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMActivity.html
+[MAMActivity]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/client/app/MAMActivity.html

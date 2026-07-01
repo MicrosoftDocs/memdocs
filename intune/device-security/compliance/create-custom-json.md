@@ -4,10 +4,6 @@ description: Create the JSON file that defines custom settings and values for us
 ms.date: 08/15/2025
 ms.topic: concept-article
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Custom compliance JSON files for Microsoft Intune

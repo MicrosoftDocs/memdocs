@@ -1,15 +1,9 @@
 ---
 title: Mobile Threat Defense with Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
-author: brenduns
-ms.author: brenduns
-ms.date: 06/24/2026
+ms.date: 05/26/2026
 ai-usage: ai-assisted
 ms.topic: overview
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Mobile Threat Defense integration with Microsoft Intune

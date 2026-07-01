@@ -1,14 +1,8 @@
 ---
 title: Set up Jamf Mobile Threat Protection integration with Microsoft Intune
 description: How to set up the Jamf Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 06/30/2025
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Integrate Jamf Mobile Threat Protection with Intune

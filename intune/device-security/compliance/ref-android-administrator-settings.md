@@ -4,10 +4,6 @@ description: View the device compliance settings that are available for Android 
 ms.date: 09/04/2025
 ms.topic: article
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Device compliance settings for Android device administrator in Intune

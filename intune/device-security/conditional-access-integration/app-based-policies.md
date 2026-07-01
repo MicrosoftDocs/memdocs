@@ -4,10 +4,6 @@ description: Learn about using app-based Conditional Access policies with Micros
 ms.date: 09/18/2023
 ms.topic: how-to
 ms.reviewer: elocholi
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Use app-based Conditional Access policies with Intune

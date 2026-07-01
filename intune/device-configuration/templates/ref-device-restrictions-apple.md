@@ -4,8 +4,6 @@ description: Add, configure, or create settings on iOS, iPadOS, and macOS device
 ms.date: 05/14/2026
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
-ms.collection:
-- M365-identity-device-management
 zone_pivot_groups: platforms-apple
 ---
 

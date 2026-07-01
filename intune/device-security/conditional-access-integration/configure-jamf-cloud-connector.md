@@ -3,11 +3,6 @@ title: Configure the Jamf Pro Cloud Connector to integrate Jamf Pro with Microso
 description: Use the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune.
 ms.date: 08/30/2023
 ms.topic: integration
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- conditional-access
-- sub-device-compliance
 ---
 
 # Configure the Jamf Cloud Connector to integrate with Microsoft Intune

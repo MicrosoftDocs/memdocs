@@ -3,9 +3,6 @@ title: Intune Data Warehouse Application-Only Authentication
 description: This topic describes Data Warehouse application-only authentication for Microsoft Intune.
 ms.date: 11/18/2024
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Data Warehouse Application-Only Authentication

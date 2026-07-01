@@ -3,7 +3,6 @@ title: Troubleshoot Win32 Apps in Microsoft Intune
 description: Learn about the most common methods to troubleshoot Win32 app issues with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: troubleshooting
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Win32

@@ -4,8 +4,6 @@ description: Add or create Wi-Fi configuration profile using Wi-Fi settings for 
 ms.date: 05/15/2025
 ms.topic: reference
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for Windows devices in Intune

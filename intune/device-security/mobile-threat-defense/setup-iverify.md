@@ -1,14 +1,8 @@
 ---
 title: Set up iVerify Enterprise Mobile Threat Defense with Intune
 description: How to set up iVerify Enterprise Mobile Security with Microsoft Intune to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 12/02/2025
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Integrate iVerify Enterprise with Microsoft Intune

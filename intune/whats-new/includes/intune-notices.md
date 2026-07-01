@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 10/14/2025
-ms.author: mandia
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.

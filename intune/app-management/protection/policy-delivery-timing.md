@@ -5,8 +5,6 @@ ms.date: 05/20/2024
 ms.topic: concept-article
 ms.reviewer: beflamm
 ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Understand App Protection Policy delivery timing

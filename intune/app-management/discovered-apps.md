@@ -5,8 +5,6 @@ ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.custom:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Discovered Apps

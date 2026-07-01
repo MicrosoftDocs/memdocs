@@ -3,8 +3,6 @@ title: "Collect Device Hardware Info With the Properties Catalog"
 description: "Use the properties catalog in Microsoft Intune to collect device hardware info like BIOS version, TPM status, and disk details on managed Windows devices. Get deeper visibility into your device inventory and troubleshoot issues."
 ms.date: 06/03/2026
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ms.reviewer: abbystarr, madisoncooks
 ---
 

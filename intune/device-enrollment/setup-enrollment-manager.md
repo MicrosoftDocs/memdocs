@@ -4,8 +4,6 @@ description: Use the device enrollment manager account to enroll devices in Intu
 ms.date: 06/18/2025
 ms.topic: how-to
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add device enrollment managers

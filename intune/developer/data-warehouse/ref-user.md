@@ -3,9 +3,6 @@ title: User - Intune Data Warehouse
 description: Reference topic for the User category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Reference for User entity

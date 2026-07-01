@@ -4,10 +4,6 @@ description: See a list of all the settings you can use when setting compliance 
 ms.date: 06/18/2026
 ms.topic: reference
 ms.reviewer: abigailstein
-ms.collection:
-- M365-identity-device-management
-- compliance
-- sub-device-compliance
 ---
 
 # Device compliance settings for Android Enterprise in Intune

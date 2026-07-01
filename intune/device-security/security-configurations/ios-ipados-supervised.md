@@ -1,13 +1,9 @@
 ---
 title: iOS/iPadOS supervised device security configurations
 description: Review example supervised device security configurations of basic, enhanced, and high security for iOS devices.
-author: brenduns
-ms.author: brenduns
 ms.date: 03/20/2025
 ms.topic: reference
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # iOS/iPadOS supervised device security configurations examples

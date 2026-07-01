@@ -2,7 +2,6 @@
 title: Security Copilot in Microsoft Intune
 description: You can use Security Copilot to get information about your Intune data, including devices, apps, policies, and groups managed in Intune. You can also compare policies, get device specific details, and get target info for policies.
 ms.date: 09/17/2025
-ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.reviewer: ankurgoyal, rashok
 ms.collection:

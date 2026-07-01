@@ -1,15 +1,9 @@
 ---
 title: Enable Mobile Threat Defense connector in Microsoft Intune
 description: Enable the connector between your Mobile Threat Defense (MTD) partner and Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 05/26/2026
 ai-usage: ai-assisted
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Enable the Mobile Threat Defense connector in Microsoft Intune

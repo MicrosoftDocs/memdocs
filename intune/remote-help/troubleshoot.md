@@ -4,9 +4,6 @@ description: Use the troubleshooting and monitoring information for Remote Help 
 ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: Karawang
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Troubleshoot and Monitor Remote Help
