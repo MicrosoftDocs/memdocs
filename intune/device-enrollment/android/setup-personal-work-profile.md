@@ -75,14 +75,14 @@ To enable web-based enrollment for your tenant, see [Enable web-based enrollment
 
 ## Set up enrollment
 
-Complete these steps to set up enrollment for Android Enterprise devices in BYOD scenarios. The following steps cover web-based enrollment, which is the recommended method. App-based enrollment through Company Portal works by default and requires no additional configuration. Configuring device platform restrictions is optional and only needed if you want to restrict or customize enrollment behavior beyond the defaults.
+Complete these steps to set up enrollment for Android Enterprise devices in BYOD scenarios. Whether users enroll through the web-based flow or through the Company Portal app, you first create an enrollment profile. Web-based enrollment is the recommended method and requires an extra step within the profile to enable it. For app-based enrollment through Company Portal, create the same enrollment profile, but don't select the web enrollment option. Configuring device platform restrictions is optional and only needed if you want to restrict or customize enrollment behavior beyond the defaults.
 
 > [!NOTE]
 > Device enrollment managers can enroll up to 10 devices per account.
 
-### Enable web-based enrollment
+### Create an enrollment profile
 
-Users can start enrollment directly from their browser through a link in Microsoft Teams, Outlook, Intune Company Portal, or a URL you provide.
+Users can start enrollment directly through Microsoft Teams, Outlook, Intune Company Portal, or a URL you provide.
 
 > [!NOTE]
 > If passkeys are configured as the only accepted authentication method in your tenant, don't enable web enrollment until passkey support for web enrollment is announced. This limitation will be resolved in a future update.
@@ -92,7 +92,7 @@ Users can start enrollment directly from their browser through a link in Microso
 1. Select the **Android** tab.
 1. Expand **Device onboarding** and select **Enrollment**.
 1. Under **Enrollment Profiles**, select **Personally owned devices with a work profile**.
-1. Select **Use web enrollment for all users enrolling into Android personally owned work profile management**.
+1. Optionally, and recommended if you don't use passkeys as the only authentication method, select **Use web enrollment for all users enrolling into Android personally owned work profile management** to enable web-based enrollment.
 1. Select **Save**.
 
 ### Configure device platform restrictions  
@@ -177,6 +177,7 @@ Private space is a feature introduced with Android 15 that lets people create a 
 ### Web-based enrollment
 
 - If passkeys are configured as the only accepted authentication method in your tenant, users can't complete web enrollment. This limitation will be resolved in a future update. Don't enable web enrollment until passkey support is announced.
+- If MFA requires a phone call that the user must answer on the device they're enrolling, web enrollment might break. To work around this problem, have the user authenticate on a secondary device, or use SMS instead of a phone call. This limitation will be resolved in a future update.
 - Microsoft Teams and Outlook are the supported productivity app entry points for web enrollment. Other Microsoft 365 apps aren't currently supported as enrollment entry points.
 - Microsoft Entra Terms of Use (TOU) before work profile creation aren't supported for Android web enrollment without also requiring them across all Intune scenarios.
 - After web enrollment, both the Microsoft Intune app (for device management) and Company Portal (for app management) are installed in the work profile of the device. If Company Portal isn't visible, verify it was installed successfully.
