@@ -9062,12 +9062,12 @@
     },
     {
       "source_path_from_root": "/intune/intune-service/fundamentals/whats-new-archive.md",
-      "redirect_url": "/intune/whats-new/archive/index",
+      "redirect_url": "/intune/whats-new/archive",
       "redirect_document_id": false
     },
     {
       "source_path_from_root": "/intune/intune/fundamentals/whats-new-archive.md",
-      "redirect_url": "/intune/whats-new/archive/index",
+      "redirect_url": "/intune/whats-new/archive",
       "redirect_document_id": false
     },
     {

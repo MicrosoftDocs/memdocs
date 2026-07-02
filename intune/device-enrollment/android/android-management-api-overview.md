@@ -158,7 +158,7 @@ Take these actions before the migration to Android Management API to ensure a sm
 
 ### Replace custom configuration policies
 
-[Intune ended support for custom configuration policies for personally owned work profile devices](../../whats-new/archive/index.md#intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devices). Custom policies don't work with Android Management API. Replace all custom policies with equivalent built-in policies.
+[Intune ended support for custom configuration policies for personally owned work profile devices](../../whats-new/archive.md#intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devices). Custom policies don't work with Android Management API. Replace all custom policies with equivalent built-in policies.
 
 For help with the replacement settings, see [Replace custom policies with built-in settings](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414). If the setting is available in the [settings catalog](../../device-configuration/settings-catalog/index.md), then create a settings catalog policy. If the setting isn't available in the settings catalog, then use the [device restrictions template](../../device-configuration/templates/ref-device-restrictions-android-enterprise.md).
 
