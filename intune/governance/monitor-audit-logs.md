@@ -29,7 +29,7 @@ You can review audit logs in the monitoring group for each Intune workload, like
 3. A list of the logs is shown. Select a log from the list to see the activity details.
 4. If there are many logs, you can:
 
-    1. Select **Date** and enter a start and end date. This date range can show logs for the previous month, week, or day.
+    1. Select **Date** and enter a start and end date. This date range can show logs for the previous year, month, week, or day.
 
         :::image type="content" source="./media/monitor-audit-logs/audit-logs-date-range.png" alt-text="Filter audit logs by date in Microsoft Intune and Intune admin center.":::
 
