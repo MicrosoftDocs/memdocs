@@ -7,8 +7,6 @@ ms.date: 05/12/2026
 ms.topic: article
 ms.reviewer: priyar
 ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Specialty device management

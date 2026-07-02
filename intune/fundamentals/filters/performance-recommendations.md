@@ -4,8 +4,6 @@ description: Optimize Microsoft Intune performance with assignment filters. Lear
 ms.date: 05/19/2026
 ms.topic: article
 ms.reviewer: mattcall
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments

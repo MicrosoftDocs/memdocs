@@ -6,8 +6,6 @@ ms.author: nwhite
 ms.date: 01/27/2026
 ms.topic: how-to
 ms.reviewer: tycast
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 1 - Sign up for a free trial and configure a Microsoft Intune tenant

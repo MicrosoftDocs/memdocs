@@ -4,9 +4,6 @@ description: Learn how to enroll a Windows device into Microsoft Intune. Follow 
 services: microsoft-intune
 ms.date: 01/20/2026
 ms.topic: how-to
-ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Step 5 - Enroll a Windows device in Microsoft Intune

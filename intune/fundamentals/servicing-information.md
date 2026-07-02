@@ -1,13 +1,9 @@
 ---
 title: Microsoft Intune servicing information and details
 description: Learn more about the frequency of the Microsoft Intune service updates, the release cadence, and how to check your tenant release version.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 04/10/2025
 ms.topic: overview
 ms.reviewer: acabello
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Service information for Microsoft Intune release updates

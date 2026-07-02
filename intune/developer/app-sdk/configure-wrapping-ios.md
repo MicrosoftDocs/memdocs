@@ -3,7 +3,6 @@ title: Wrap iOS Apps With the Intune App Wrapping Tool
 description: Learn how to wrap your iOS apps without changing the code of the app itself. Prepare the apps so you can apply mobile app management policies.
 ms.date: 11/17/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS

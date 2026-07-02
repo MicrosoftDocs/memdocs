@@ -3,7 +3,6 @@ title: Microsoft Intune App SDK for Android Developer Integration and Testing Gu
 description: Understand app configuration features when incorporating Intune mobile app management (MAM) into your Android app.
 ms.date: 06/12/2025
 ms.topic: reference
-ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - Android
@@ -230,5 +229,5 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [Android's `RestrictionsManager`]:https://developer.android.com/reference/android/content/RestrictionsManager
 
 <!-- Class links -->
-[MAMAppConfigManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html
-[MAMAppConfig]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html
+[MAMAppConfigManager]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/appconfig/MAMAppConfigManager.html
+[MAMAppConfig]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/com/microsoft/intune/mam/policy/appconfig/MAMAppConfig.html

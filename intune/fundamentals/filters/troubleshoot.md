@@ -4,8 +4,6 @@ description: Learn how to use assignment filter reports to troubleshoot policies
 ms.date: 11/19/2025
 ms.topic: how-to
 ms.reviewer: mattcall, abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Assignment filter reports and troubleshooting in Microsoft Intune

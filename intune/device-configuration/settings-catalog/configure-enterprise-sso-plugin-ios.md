@@ -4,8 +4,6 @@ description: Learn more about the Microsoft Enterprise single sign-on (SSO) plug
 ms.date: 07/14/2025
 ms.topic: how-to
 ms.reviewer: miepping, tbc, alessanc
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices

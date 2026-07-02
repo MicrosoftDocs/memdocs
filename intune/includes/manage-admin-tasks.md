@@ -1,6 +1,4 @@
 ---
-author: brenduns
-ms.author: brenduns
 ms.reviewer: davidra
 ms.service: microsoft-intune
 ms.topic: include

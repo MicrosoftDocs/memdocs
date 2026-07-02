@@ -3,9 +3,6 @@ title: Manage attack surface reduction settings with Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune.
 ms.date: 03/06/2026
 ms.topic: article
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---

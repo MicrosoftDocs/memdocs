@@ -4,10 +4,6 @@ description: Use Intune policy to manage Microsoft Defender for Endpoint web pro
 ms.date: 05/22/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: laarrizz
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint web protection on Android devices managed by Intune

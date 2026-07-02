@@ -4,8 +4,6 @@ description: Learn more about the BIOS configuration profile that can manage tra
 ms.date: 06/06/2024
 ms.topic: how-to
 ms.reviewer: madakeva
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use BIOS configuration profiles on Windows devices in Microsoft Intune

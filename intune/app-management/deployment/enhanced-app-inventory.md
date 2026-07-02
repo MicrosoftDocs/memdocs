@@ -4,8 +4,6 @@ description: Use app inventory in Microsoft Intune to collect detailed applicati
 ms.date: 04/15/2026
 ms.topic: how-to
 ai-usage: ai-generated
-ms.collection:
-- M365-identity-device-management
 ---
 
 # App inventory for Windows devices in Microsoft Intune

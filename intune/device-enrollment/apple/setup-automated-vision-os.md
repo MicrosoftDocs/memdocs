@@ -3,10 +3,7 @@ title: Set up automated device enrollment (ADE) for visionOS
 description: Learn how to enroll corporate-owned Apple Vision Pro devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
 ms.date: 04/29/2026
 ms.topic: how-to
-ms.reviewer: annovich
 ai-usage: ai-assisted
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up automated device enrollment for visionOS

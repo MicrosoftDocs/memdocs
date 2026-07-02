@@ -3,7 +3,6 @@ title: Add and assign the Windows Company Portal app for Intune managed devices
 description: Add and assign the Windows Company Portal app to Intune managed devices.
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows

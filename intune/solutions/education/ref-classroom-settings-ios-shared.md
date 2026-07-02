@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 12/06/2018
 ms.topic: archived
 ms.reviewer: heenamac
-ms.collection:
-- M365-identity-device-management
 ---
 
 

@@ -4,8 +4,6 @@ description: See the steps to create a Wi-Fi device configuration profile in Mic
 ms.date: 07/22/2024
 ms.topic: how-to
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune

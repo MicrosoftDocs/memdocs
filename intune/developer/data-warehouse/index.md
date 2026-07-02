@@ -3,9 +3,6 @@ title:  Intune Data Warehouse API
 description: You can use the Intune Data Warehouse API to build reports that provide insight into your enterprise mobile environment.
 ms.date: 10/30/2024
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Microsoft Intune Data Warehouse API

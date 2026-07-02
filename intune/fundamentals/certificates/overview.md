@@ -3,10 +3,6 @@ title: Types of certificate that are supported by Microsoft Intune
 description: Learn about Microsoft Intune's support for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS) certificates.
 ms.date: 10/04/2024
 ms.topic: overview
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Use certificates for authentication in Microsoft Intune

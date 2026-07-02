@@ -4,8 +4,6 @@ description: Learn how to troubleshoot Windows devices from Intune and contact M
 ms.date: 05/02/2024
 zone_pivot_groups: platforms-windows-ios
 ms.topic: tutorial
-ms.author: scbree
-author: scottbreenmsft
 ---
 
 # Troubleshoot devices

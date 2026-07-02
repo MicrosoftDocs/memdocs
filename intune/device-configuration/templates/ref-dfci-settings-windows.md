@@ -4,8 +4,6 @@ description: See a list of all the DFCI profile settings and their descriptions 
 ms.date: 06/23/2026
 ms.topic: reference
 ms.reviewer: madakeva
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Device Firmware Configuration Interface (DFCI) profile settings in Microsoft Intune

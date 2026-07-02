@@ -4,8 +4,6 @@ description: Learn how to enroll Android Enterprise dedicated, fully managed, or
 ms.date: 12/04/2025
 ms.topic: how-to
 ms.reviewer: grwilson
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Enroll your Android Enterprise dedicated, fully managed, or corporate-owned with work profile devices

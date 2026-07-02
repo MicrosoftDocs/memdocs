@@ -4,8 +4,6 @@ description: Get the app bundle ID in Microsoft Intune for Android, iOS/iPadOS, 
 ms.date: 04/30/2024
 ms.topic: how-to
 ms.reviewer:
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Get the App Bundle ID for Your Policies in Microsoft Intune

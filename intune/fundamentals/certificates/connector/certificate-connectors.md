@@ -1,16 +1,9 @@
 ---
 title: Certificate connectors for Microsoft Intune
 description: Learn about certificate connectors for Simple Certificate Enrollment Protocol (SCEP) or Public Key Cryptography Standards (PKCS) certificates and certificate profiles with Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/13/2022
 ms.topic: how-to
 ROBOTS: NOINDEX
-ms.reviewer: wicale
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Certificate connectors for Microsoft Intune

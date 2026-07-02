@@ -3,9 +3,6 @@ title: Windows Antivirus policy settings from Microsoft Defender Antivirus for t
 description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices managed by Configuration Manager. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune after you configure tenant attach for Configuration Manager.
 ms.date: 09/17/2024
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: mattcall
 
 ---

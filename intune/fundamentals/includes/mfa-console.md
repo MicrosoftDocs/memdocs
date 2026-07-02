@@ -1,8 +1,6 @@
 ---
-author: brenduns
 ms.topic: include
 ms.date: 10/02/2024
-ms.author: brenduns
 ---
 
 > [!IMPORTANT]

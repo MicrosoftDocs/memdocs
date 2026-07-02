@@ -4,8 +4,6 @@ description: You can add, upload, or import custom and third-party partner ADMX 
 ms.date: 09/04/2025
 ms.topic: how-to
 ms.reviewer: mikedano, kabalu
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)

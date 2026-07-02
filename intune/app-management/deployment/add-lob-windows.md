@@ -4,7 +4,6 @@ description: Learn how to add a Windows line-of-business (LOB) app using Microso
 ms.date: 04/14/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Windows

@@ -4,8 +4,6 @@ description: Add or create a profile to use custom settings for Windows 10/11 cl
 ms.date: 02/05/2026
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Create a profile with custom settings in Intune

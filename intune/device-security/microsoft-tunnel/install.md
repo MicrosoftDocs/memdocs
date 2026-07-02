@@ -4,10 +4,6 @@ description: Install and configure Microsoft Tunnel Gateway on a Linux server to
 ms.date: 05/26/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Configure Microsoft Tunnel for Intune

@@ -3,9 +3,6 @@ title:  Intune Data Warehouse Collections
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
 ms.date: 10/02/2025
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Intune Data Warehouse Collections

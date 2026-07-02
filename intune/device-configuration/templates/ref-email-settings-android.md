@@ -4,8 +4,6 @@ description: Create device configuration email profiles that use Exchange server
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: sheetg
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android device administrator settings that configure email in Intune

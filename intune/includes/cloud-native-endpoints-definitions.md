@@ -1,12 +1,7 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 05/30/2024
-ms.author: mandia
-ms.custom: include file
 ---
-
-<!-- This include file is used in the cloud native endpoint guides in /memdocs. -->
 
 When reading about cloud native endpoints, you see the following terms:
 

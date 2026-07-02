@@ -1,14 +1,8 @@
 ---
 title: Set up Check Point Harmony integration with Intune
 description: How to set up CheckPoint Harmony Mobile Threat Defense (MTD) with Microsoft Intune to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Integrate Check Point Harmony Mobile with Intune

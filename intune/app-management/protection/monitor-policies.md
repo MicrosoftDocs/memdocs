@@ -4,8 +4,6 @@ description: This article describes how to monitor app protection policies in In
 ms.date: 06/16/2024
 ms.topic: how-to
 ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
 ---
 
 # How to Monitor App Protection Policies

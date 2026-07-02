@@ -3,11 +3,6 @@ title: List of settings for the Microsoft 365 Apps for Enterprise security basel
 description: View a list of the settings in the Microsoft Intune security baseline for Microsoft Office apps. This list includes the default values for settings as found in the default configuration of the baseline.
 ms.date: 06/24/2026
 ms.topic: reference
-ai-usage: ai-assisted
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 zone_pivot_groups: m365-app-baseline-versions
 ---
 
@@ -42,7 +37,7 @@ The details that display in this article are based on baseline version you selec
 - A list of each setting with its configuration as found in the default instance of that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you've created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
@@ -1555,10 +1550,10 @@ For more information about the following settings that are included in this base
 ::: zone pivot="office-may-2023"
 <!-- May 2023: only -->
 
-- **Don’t allow Dynamic Data Exchange (DDE) server launch in Excel (User)**\
+- **Don't allow Dynamic Data Exchange (DDE) server launch in Excel (User)**\
   Baseline default: *Enabled*
 
-- **Don’t allow Dynamic Data Exchange (DDE) server lookup in Excel (User)**\
+- **Don't allow Dynamic Data Exchange (DDE) server lookup in Excel (User)**\
   Baseline default: *Enabled*
 
 ::: zone-end

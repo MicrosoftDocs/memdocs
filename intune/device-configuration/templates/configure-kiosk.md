@@ -4,8 +4,6 @@ description: Configure your Windows 10/11 and Windows Holographic for Business d
 ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune

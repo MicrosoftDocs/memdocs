@@ -1,13 +1,9 @@
 ---
 title: Move from Basic Mobility and Security to Intune-Migration Guide
 description: Follow this migration guide to move your mobile device management from Microsoft 365 Basic Mobility and Security to Intune. Includes policy mapping and license assignment steps.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 01/22/2026
 ms.topic: how-to
 ms.reviewer: jamiesil, dagerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Move to Intune from Microsoft 365 Basic Mobility and Security

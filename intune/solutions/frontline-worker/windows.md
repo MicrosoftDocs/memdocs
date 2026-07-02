@@ -4,8 +4,6 @@ description: Learn how to manage frontline worker devices using Windows devices 
 ms.date: 05/29/2025
 ms.topic: how-to
 ms.reviewer: cbernier
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Frontline worker for Windows devices in Microsoft Intune

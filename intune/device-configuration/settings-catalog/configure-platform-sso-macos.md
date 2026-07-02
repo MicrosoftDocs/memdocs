@@ -4,8 +4,6 @@ description: Use Microsoft Intune to configure Platform SSO and deploy the confi
 ms.date: 06/22/2026
 ms.topic: how-to
 ms.reviewer: arnab, veenasoman
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure Platform SSO for macOS devices in Microsoft Intune
@@ -91,16 +89,16 @@ In this step, use the information to learn the differences with the authenticati
 > [!TIP]
 > Microsoft recommends using **Secure Enclave** as the authentication method when configuring Platform SSO.
 
-| Feature | Secure Enclave | Smart Card | Password |
-|---|---|---|---|
-|**Passwordless (phishing resistant)**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|
-|**TouchID supported for unlock**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
-|**Can be used as passkey**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|
-|**MFA mandatory for setup** </br></br> Multifactor authentication (MFA) is always recommended|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|
-|**Local Mac password synced with Entra ID**|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
-|**Supported on macOS 13.x +**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/error.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
-|**Supported on macOS 14.x +**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
-|**Optionally, allow new users to log in with Entra ID credentials (macOS 14.x +)**|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|:::image type="icon" source="../../media/icons/16/check.svg" border="false":::|
+| Feature                                                                                       | Secure Enclave | Smart Card    | Password      |
+|-----------------------------------------------------------------------------------------------|----------------|---------------|---------------|
+| **Passwordless (phishing resistant)**                                                         | ![check-icon]  | ![check-icon] | ![error-icon] |
+| **TouchID supported for unlock**                                                              | ![check-icon]  | ![check-icon] | ![check-icon] |
+| **Can be used as passkey**                                                                    | ![check-icon]  | ![error-icon] | ![error-icon] |
+| **MFA mandatory for setup** </br></br> Multifactor authentication (MFA) is always recommended | ![check-icon]  | ![check-icon] | ![error-icon] |
+| **Local Mac password synced with Entra ID**                                                   | ![error-icon]  | ![error-icon] | ![check-icon] |
+| **Supported on macOS 13.x +**                                                                 | ![check-icon]  | ![error-icon] | ![check-icon] |
+| **Supported on macOS 14.x +**                                                                 | ![check-icon]  | ![check-icon] | ![check-icon] |
+| **Optionally, allow new users to log in with Entra ID credentials (macOS 14.x +)**            | ![check-icon]  | ![check-icon] | ![check-icon] |
 
 # [Secure Enclave (recommended)](#tab/secure-enclave)
 
@@ -360,3 +358,9 @@ When you configure Platform SSO, you might see the following errors:
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+<!-- icons -->
+
+[check-icon]: ../../media/icons/16/check.svg
+[error-icon]: ../../media/icons/16/error.svg
+[info-icon]: ../../media/icons/16/info-gray.svg

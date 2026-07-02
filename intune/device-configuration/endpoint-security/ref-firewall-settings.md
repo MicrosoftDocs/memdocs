@@ -3,9 +3,6 @@ title: Intune endpoint security firewall settings
 description: Endpoint security firewall policy settings for Windows and macOS in Microsoft Intune
 ms.date: 08/19/2024
 ms.topic: reference
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ms.reviewer: laarrizz
 
 ---

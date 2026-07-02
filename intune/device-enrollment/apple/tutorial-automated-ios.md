@@ -4,9 +4,6 @@ description: In this tutorial, you'll set up Apple corporate device enrollment f
 ms.date: 03/05/2025
 ms.topic: tutorial
 Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business.
-ms.reviewer: annovich
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business

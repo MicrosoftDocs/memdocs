@@ -1,8 +1,6 @@
 ---
 title: Use reusable groups of settings policies in Microsoft Intune
 description: Manage groups of settings for Intune profiles as a single object and then add that settings group object to multiple profile instances. Later changes you make to the settings groups  automatically apply to each profile that includes the reusable settings group.
-author: brenduns
-ms.author: brenduns
 ms.date: 09/18/2024
 ms.topic: how-to
 ms.collection:

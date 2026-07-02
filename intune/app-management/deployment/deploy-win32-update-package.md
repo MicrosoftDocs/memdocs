@@ -4,7 +4,6 @@ description: Learn how to deploy a Windows update package (.msu file) in Intune.
 ms.date: 04/14/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: bryanke
 ms.custom:
 ms.collection:
 - M365-identity-device-management

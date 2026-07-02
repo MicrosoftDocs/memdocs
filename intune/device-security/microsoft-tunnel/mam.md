@@ -3,7 +3,6 @@ title: Learn about using Microsoft Tunnel with Mobile Application Management
 description: Use Microsoft Tunnel for MAM with Android and iOS devices. Tunnel for MAM expands access to your organizational resources for devices that aren't or can't enroll with Microsoft Intune.
 ms.date: 10/10/2024
 ms.topic: article
-ms.reviewer: ochukwunyere
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management

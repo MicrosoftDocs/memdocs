@@ -3,9 +3,6 @@ title: Bulk enrollment for Windows devices
 description: Create a bulk enrollment package for Microsoft Intune
 ms.date: 09/29/2025
 ms.topic: how-to
-ms.reviewer: maholdaa
-ms.collection:
-- M365-identity-device-management
 ---
 # Bulk enrollment for Windows devices   
 

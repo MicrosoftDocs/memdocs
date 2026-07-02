@@ -3,12 +3,6 @@ title: Creating elevation rules with Endpoint Privilege Management
 description: View guidance on how to create strong file elevation rules with Microsoft Intune Endpoint Privilege Management
 ms.date: 10/20/2025
 ms.topic: how-to
-ms.reviewer: mikedano
-ms.subservice: suite
-ms.collection:
-- tier 1
-- M365-identity-device-management
-- sub-intune-suite
 ---
 
 # Creating elevation rules with Endpoint Privilege Management

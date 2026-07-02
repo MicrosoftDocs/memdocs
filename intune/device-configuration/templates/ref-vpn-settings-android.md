@@ -4,8 +4,6 @@ description: See all the settings to create VPN connections on Android device ad
 ms.date: 06/09/2025
 ms.topic: reference
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Android device administrator settings that configure VPN in Intune

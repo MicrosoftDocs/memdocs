@@ -3,10 +3,6 @@ title: Monitor the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Monitor the status of Microsoft Tunnel Gateway, a VPN server that runs on Linux. Microsoft Tunnel enables your Intune managed cloud-based devices to reach your on-premises infrastructure.
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.reviewer: ochukwunyere
-ms.collection:
-- M365-identity-device-management
-- sub-infrastructure
 ---
 
 # Monitor Microsoft Tunnel

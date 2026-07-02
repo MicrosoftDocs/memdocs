@@ -3,8 +3,6 @@ title: Passwordless authentication with Microsoft Intune
 description: Learn how Microsoft Intune supports passwordless authentication across devices. Explore key methods and plan your deployment.
 ms.date: 04/13/2026
 ms.topic: concept-article
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer:
 ms.custom:
   - ai-assisted

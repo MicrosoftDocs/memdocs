@@ -3,11 +3,7 @@ title: Configure Microsoft Defender for Endpoint with Intune and onboard devices
 description: Connect Microsoft Defender for Endpoint to Intune, onboard devices by platform, and configure compliance and Conditional Access policies that use device risk levels to control access to corporate resources.
 ms.date: 05/26/2026
 ms.topic: how-to
-ms.reviewer: laarrizz
 ai.usage: ai-assisted 
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Configure Microsoft Defender for Endpoint with Intune and onboard devices

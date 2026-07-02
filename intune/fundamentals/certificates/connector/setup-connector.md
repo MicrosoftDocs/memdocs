@@ -1,14 +1,8 @@
 ---
 title: Install the Certificate Connector for Microsoft Intune
 description: Learn how to install and configure the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 10/09/2024
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
-- certificates
-- sub-certificates
 ---
 
 # Install the Certificate Connector for Microsoft Intune

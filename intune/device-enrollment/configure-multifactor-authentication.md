@@ -7,8 +7,6 @@ ms.topic: how-to
 
 ROBOTS:
 ms.reviewer: damionw
-ms.collection:
-- M365-identity-device-management
 ---
 # Require multifactor authentication for Intune device enrollments  
 

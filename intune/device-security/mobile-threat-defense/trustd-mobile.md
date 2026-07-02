@@ -1,8 +1,6 @@
 ---
 title: Trustd Mobile Threat Defense with Microsoft Intune
 description: Set up Trustd Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
-author: brenduns
-ms.author: brenduns
 ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer: ilwu

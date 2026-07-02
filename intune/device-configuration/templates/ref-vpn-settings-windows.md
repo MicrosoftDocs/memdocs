@@ -4,8 +4,6 @@ description: Learn and read about all the available VPN settings in Microsoft In
 ms.date: 10/14/2025
 ms.topic: reference
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Windows and Windows Holographic device settings to add VPN connections using Intune

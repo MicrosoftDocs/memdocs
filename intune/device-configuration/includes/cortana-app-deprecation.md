@@ -1,8 +1,6 @@
 ---
-author: MandiOhlinger
 ms.topic: include
 ms.date: 10/17/2023
-ms.author: mandia
 ---
 
 > [!NOTE]

@@ -3,11 +3,6 @@ title: Default configuration of Intune's Windows security baselines
 description: View the default setting configuration of the various Microsoft Intune security baselines for Windows.
 ms.date: 06/23/2026
 ms.topic: reference
-ai-usage: ai-assisted
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 zone_pivot_groups: windows-mdm-versions
 ---
 <!-- Pivot details:
@@ -40,7 +35,7 @@ The details that display in this article are based on baseline version you selec
 - A list of each setting with its configuration as found in the default instance of that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation or other related content from the relevant product group that provides context and possibly additional details for a settings use.
 
-When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
+When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you've created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.

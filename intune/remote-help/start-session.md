@@ -4,10 +4,6 @@ description: Use the Remote Help app to provide remote assistance to authenticat
 ms.date: 06/24/2026
 ms.topic: how-to
 ms.reviewer: Karawang
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-ai-usage: ai-assisted
 ---
 
 # Using Remote Help with Microsoft Intune

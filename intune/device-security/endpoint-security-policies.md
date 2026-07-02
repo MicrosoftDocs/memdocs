@@ -2,8 +2,6 @@
 title: Endpoint security in Microsoft Intune
 description: Learn how to manage endpoint security in Microsoft Intune. Configure security policies, deploy baselines, and integrate with Defender for Endpoint to protect devices.
 keywords: Intune security policies, endpoint protection Intune, configure endpoint security, device security Intune, Microsoft Defender Intune, security baselines, zero trust Intune, ransomware protection, endpoint security node, device compliance Intune, Endpoint Security Manager, attack surface reduction Intune
-author: brenduns
-ms.author: brenduns
 ms.date: 05/26/2026
 ms.topic: overview
 ms.collection:

@@ -1,8 +1,6 @@
 ---
 title: Using Windows virtual machines with Microsoft Intune
-description: This article describes the general guidelines for using Windows 10/11 virtual machines with Microsoft Intune
-author: MandiOhlinger
-ms.author: mandia
+description: This article describes the general guidelines for using Windows virtual machines with Microsoft Intune
 ms.date: 02/13/2025
 ms.topic: article
 ms.reviewer: priyar

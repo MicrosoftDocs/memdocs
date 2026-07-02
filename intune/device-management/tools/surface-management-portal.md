@@ -1,12 +1,10 @@
 ---
 title: Overview of Microsoft Surface Management Portal
 description: Learn more about the features and capabilities of Microsoft Surface Management Portal.
-author: Lenewsad
+author: lenewsad
 ms.author: lanewsad
 ms.date: 10/28/2021
 ms.topic: concept-article
-ms.collection:
-- M365-identity-device-management
 ---
 
 # What is Microsoft Surface Management Portal?

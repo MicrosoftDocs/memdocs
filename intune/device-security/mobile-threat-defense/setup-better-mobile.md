@@ -1,14 +1,8 @@
 ---
 title: Set up Better Mobile integration with Intune
 description: Integrate the third-party mobile threat defense solution of Better Mobile with Microsoft Intune.
-author: brenduns
-ms.author: brenduns
 ms.date: 07/19/2024
 ms.topic: how-to
-ms.reviewer: ilwu
-ms.collection:
-- M365-identity-device-management
-- sub-mtd-apps
 ---
 
 # Integrate Better Mobile with Intune

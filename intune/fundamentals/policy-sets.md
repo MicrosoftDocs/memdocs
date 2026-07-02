@@ -6,8 +6,6 @@ ms.author: nwhite
 ms.date: 04/10/2024
 ms.topic: article
 ms.reviewer: DaGerrit
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use Policy Sets to Group Collections of Management Objects

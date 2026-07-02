@@ -4,8 +4,6 @@ description: Add or create a VPN configuration profile using virtual private net
 ms.date: 04/16/2024
 ms.topic: reference
 ms.reviewer: abalwan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Add VPN settings on Windows 8.1 devices in Microsoft Intune

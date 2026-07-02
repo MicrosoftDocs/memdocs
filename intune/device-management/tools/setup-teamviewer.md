@@ -5,8 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 04/07/2026
 ms.topic: how-to
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use the TeamViewer integration in Microsoft Intune  

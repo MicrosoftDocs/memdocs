@@ -1,15 +1,9 @@
 ---
 title: Settings list for the Local AI Agent Baseline - OpenClaw security baseline in Intune
 description: View the settings in the Microsoft Intune security baseline for Local AI Agent Baseline - OpenClaw. This list includes the default values for settings as found in the default configuration of the baseline.
-author: brenduns
-ms.author: brenduns
 ms.date: 05/29/2026
 ms.topic: reference
 ai-usage: ai-assisted
-ms.reviewer: aanavath
-ms.collection:
-- M365-identity-device-management
-- sub-secure-endpoints
 ---
 
 # Local AI Agent Baseline - OpenClaw security baseline settings reference for Microsoft Intune

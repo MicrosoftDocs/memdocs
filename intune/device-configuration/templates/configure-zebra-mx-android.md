@@ -4,8 +4,6 @@ description: Use Microsoft Intune to manage and use Zebra devices running Androi
 ms.date: 06/27/2024
 ms.topic: how-to
 ms.reviewer: jieyan
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use and manage Zebra devices with Zebra Mobility Extensions in Microsoft Intune

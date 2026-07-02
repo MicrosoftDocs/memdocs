@@ -4,8 +4,6 @@ description: Learn how to use Intune in environments without Google Mobile Servi
 ms.date: 10/28/2024
 ms.topic: how-to
 ms.reviewer: priyar
-ms.collection:
-- M365-identity-device-management
 ---
 
 # How to Use Intune in Environments Without Google Mobile Services

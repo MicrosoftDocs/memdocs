@@ -4,8 +4,6 @@ description: Set up a greeting page for users signing in and enrolling Windows d
 ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: madakeva, davguy
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Set up the Enrollment Status Page

@@ -4,7 +4,6 @@ description: Learn about how to add a Android line-of-business (LOB) app to Micr
 ms.date: 05/11/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - Android

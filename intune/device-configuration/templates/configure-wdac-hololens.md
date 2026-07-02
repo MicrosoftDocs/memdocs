@@ -4,8 +4,6 @@ description: Configure the Windows Defender Application Control (WDAC) CSP to al
 ms.date: 06/06/2024
 ms.topic: how-to
 ms.reviewer: mikedano
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Use WDAC and Windows PowerShell to allow or blocks apps on HoloLens 2 devices with Microsoft Intune

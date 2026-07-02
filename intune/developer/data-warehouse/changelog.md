@@ -3,9 +3,6 @@ title: Intune Data Warehouse Change Log
 description: This topic provides a list of changes for the Microsoft Intune Data Warehouse API.
 ms.date: 11/18/2024
 ms.topic: reference
-ms.reviewer: jamiesil
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Change Log for the Intune Data Warehouse API

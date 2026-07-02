@@ -4,7 +4,6 @@ description: Learn how to add, assign, and manage Win32 apps with Microsoft Intu
 ms.date: 04/14/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
 - FocusArea_Apps_Win32

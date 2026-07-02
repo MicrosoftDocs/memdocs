@@ -4,8 +4,6 @@ description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX,
 ms.date: 03/03/2026
 ms.topic: how-to
 ms.reviewer: abigailstein
-ms.collection:
-- M365-identity-device-management
 ---
 
 # Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune
@@ -47,10 +45,10 @@ The following table lists the permissions that you can configure for the MHS app
 
 | Permission | Samsung | Zebra | Legacy Zebra | Honeywell |
 |---|---|---|---|---|
-| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| **Notification Permission** is required by:<br/><br/>- Notification badge | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | n/a |
-| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | n/a | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | n/a | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ![check-icon] | ![check-icon] | ![check-icon] | ![check-icon] |
+| **Notification Permission** is required by:<br/><br/>- Notification badge | ![check-icon] | ![check-icon] | ![check-icon] | n/a |
+| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ![check-icon] | ![check-icon] | n/a | ![check-icon] |
+| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ![check-icon] | ![check-icon] | n/a | ![check-icon] |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](./deploy-oemconfig-zebra-android.md#oemconfig-apps-for-zebra-devices).
 
@@ -140,7 +138,7 @@ When you use the schema settings in the **Knox Service Plugin** app, the Intune 
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center].
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -195,7 +193,7 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center].
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -244,7 +242,7 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center].
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -293,7 +291,7 @@ When you use the schema settings in the **Honeywell UEMConnect** app, the Intune
 
 **Create the policy**:
 
-1. Sign in to the [Intune admin center].
+1. Sign in to the [Microsoft Intune admin center].
 
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 3. Enter the following properties:
@@ -339,4 +337,9 @@ The next time the device checks for configuration updates, the settings you conf
 <!--links-->
 
 [Microsoft Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
-[Intune admin center]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+<!-- icons -->
+
+[check-icon]: ../../media/icons/16/check.svg
+[error-icon]: ../../media/icons/16/error.svg
+[info-icon]: ../../media/icons/16/info-gray.svg
