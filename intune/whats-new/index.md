@@ -247,10 +247,6 @@ For details about the available Defender settings, see [Set preferences for Micr
 > 
 > - Linux
 
-#### Onboard MDM compliance partners with bring-your-own connector functionality <!-- 36970541 -->  
-
-We're introducing bring-your-own connector functionality for MDM compliance partners. Partners can build, test, and onboard their own compliance connectors using standardized documentation, contracts, and validation hooks provided by Microsoft Intune, without requiring engineer-driven coordination for each integration. As an admin, you can explicitly opt in to a partner connector by supplying the vendor's information in the Microsoft Intune admin center. This self-service model speeds up partner onboarding, reduces deployment time, and expands the set of partner compliance solutions you can integrate with your Intune environment. For more information, see [Self-service onboarding for compliance partners](../device-security/compliance/third-party-partners.md#self-service-onboarding-for-compliance-partners).  
-
 #### New setting added to the Windows security baseline version 25H2<!-- 37402270  -->
 
 The Intune security baseline for Windows, version 25H2, is updated to include one new setting, **Disable Internet Explorer 11 Launch Via COM Automation**, with a baseline default of **Enabled**.
