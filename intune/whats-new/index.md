@@ -14,7 +14,7 @@ Learn what's new each week in Microsoft Intune.
 You can also read:
 
 - [**Important notices**](#notices)
-- [Past releases](archive/index.md) in the What's new archive
+- [Past releases](archive.md) in the What's new archive
 - Information about [how Intune service updates are released](../fundamentals/servicing-information.md)
 
 > [!NOTE]
@@ -2024,7 +2024,7 @@ For more information about available Setup Assistant skipkeys, see:
 - [Set up automated device enrollment for iOS/iPadOS](../device-enrollment/apple/setup-automated-ios.md#setup-assistant-screen-reference)  
 - [Set up automated device enrollment for macOS](../device-enrollment/apple/setup-automated-macos.md#setup-assistant-screen-reference)
 
-For previous months, see the [What's new archive](archive/index.md).
+For previous months, see the [What's new archive](archive.md).
 
 <!-- Past announcements that are older than six months will be moved to the archive -->
 
