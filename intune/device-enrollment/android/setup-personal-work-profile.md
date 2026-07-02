@@ -86,11 +86,17 @@ Create an enrollment profile for personally owned work profile devices. The same
 > If passkeys are configured as the only accepted authentication method in your tenant, don't enable web enrollment until passkey support for web enrollment is announced. This limitation will be resolved in a future update.
 
 1. Sign in to the [Microsoft Intune admin center].
+
 1. Go to **Devices**.
+
 1. Expand **Device onboarding** and select **Enrollment**.
+
 1. Select the **Android** tab.
+
 1. Under **Enrollment Profiles**, select **Personally owned devices with a work profile**.
+
 1. Select **Use web enrollment for all users enrolling into Android personally owned work profile management** to enable web-based enrollment. If passkeys are your only authentication method, leave this unselected and rely on Company Portal app-based enrollment instead.
+
 1. Select **Save**. Enabling web-based enrollment applies at the tenant level and can't be reversed.
 
 ### Configure device platform restrictions  
@@ -98,14 +104,23 @@ Create an enrollment profile for personally owned work profile devices. The same
 Use this section only if you need to control or restrict other enrollment methods, such as blocking Android device administrator enrollment. If the default settings meet your needs, skip this step.  
 
 1. Sign in to the [Microsoft Intune admin center].
+
 1. Go to **Devices**.
+
 1. Expand **Device onboarding** and select **Enrollment**.
+
 1. Select the **Android** tab.
+
 1. In the **Enrollment options** section, choose **Device platform restriction**.
+
 1. Select the **Android restrictions** tab.
+
 1. Select **Create restriction**.
+
 1. On the **Basics** page, enter a name and description for the restriction so that you can distinguish it from other restrictions in the admin center. Device users don't see these details.
+
 1. Select **Next** to continue to **Platform settings**.
+
 1. Configure platform settings for **Android Enterprise (work profile)**. Your options:
    - **Platform**: Select **Allow** to permit enrollment with Android Enterprise work profile. Select **Block** to prevent work profile enrollment. If you block work profile, devices enroll using the Android device administrator management solution, unless device administrator enrollment is also blocked.
    - **Personally owned**: Select **Allow** to permit personal devices to enroll with a work profile. Personal devices are allowed by default. Select **Block** to prevent personal devices from enrolling with a work profile. Android devices that don't support Android Enterprise enroll using the Android device administrator solution, unless device administrator enrollment is blocked.
@@ -123,10 +138,15 @@ Use this section only if you need to control or restrict other enrollment method
    [!INCLUDE [android_device_administrator_support](../../includes/android-device-administrator-support.md)]
 
 1. Select **Next** to continue to **Scope tags**.
+
 1. If needed, apply one or more scope tags to limit visibility and management of restrictions to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control and scope tags for distributed IT](../../fundamentals/role-based-access-control/scope-tags.md).
+
 1. Select **Next** to continue to **Assignments**.
+
 1. Assign the restriction to all users, or select specific groups.
+
 1. Select **Next** to continue to **Review + create**.
+
 1. Review your choices, and then select **Create** to finish creating the restriction.
 
 ## Enroll devices  
