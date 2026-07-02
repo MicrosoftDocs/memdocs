@@ -26,8 +26,6 @@ Intune supports two enrollment methods for personally owned work profile devices
 | Company Portal app | Custom DPC | Company Portal app | Being phased out. Migrates to web-based enrollment when enabled. |
 | Web-based enrollment | Android Management API | Browser (URL/redirect) | Default for new tenants and after migration from Custom DPC. Company Portal not required for enrollment. |
 
-To enable web-based enrollment for your tenant, see [Enable web-based enrollment](android-management-api-overview.md#enable-web-based-enrollment).
-
 ## Requirements
 
 :::row:::
@@ -93,7 +91,7 @@ Create an enrollment profile for personally owned work profile devices. The same
 1. Select the **Android** tab.
 1. Under **Enrollment Profiles**, select **Personally owned devices with a work profile**.
 1. Select **Use web enrollment for all users enrolling into Android personally owned work profile management** to enable web-based enrollment. If passkeys are your only authentication method, leave this unselected and rely on Company Portal app-based enrollment instead.
-1. Select **Save**.
+1. Select **Save**. Enabling web-based enrollment applies at the tenant level and can't be reversed.
 
 ### Configure device platform restrictions  
 
