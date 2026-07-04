@@ -11,7 +11,7 @@ description: You can create a software metering rule in Configuration Manager by
 
 You create a software metering rule, in Configuration Manager, by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.
 
-### To create software metering rule
+### To create a software metering rule
 
 1.  Set up a connection to the SMS Provider.
 
@@ -82,7 +82,7 @@ function New-CMSWMRRule {
 
 ### VBScript
 
-```vb
+```vbs
 Sub CreateSWMRule(connection,              _
                   newProductName,          _
                   newFileName,             _

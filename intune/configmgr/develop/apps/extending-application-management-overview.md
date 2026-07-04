@@ -28,7 +28,7 @@ In conceptualizing a custom deployment type, it might be useful to consider the 
 
 1.  Create a Custom SDK Assembly
 
-    The custom SDK assembly contains an interface implementation of both the Hosting Technology and Installer Technology. The AssemblySuffix should correspond to whatever is specified for AssemblySuffix attribute in the DeploymentTechnology.xml file, for example Microsoft.ConfigurationManagement.ApplicationManagement.\<_AssemblySuffix_>.dll.
+    The custom SDK assembly contains an interface implementation of both the Hosting Technology and Installer Technology. The AssemblySuffix should correspond to whatever is specified for AssemblySuffix attribute in the DeploymentTechnology.xml file, for example Microsoft.ConfigurationManagement.ApplicationManagement.\<*AssemblySuffix*>.dll.
     1.  Deployment Technology - The DeploymentTechnology class is the object that is registered with the Configuration Manager Application Model SDK. When implementing a new deployment technology you must implement a class that derives from this class. The new class instance will define the deployment technology used to deploy a specific application to devices.
 
     2.  Hosting Technology - The HostingTechnology class is used to define run time interaction and configuration for technologies.
@@ -95,7 +95,7 @@ The client extension is accomplished through extending WMI and adding a custom h
 
         3.  InstallerTechnology.xml - A digest of the Installer Technology
 
-        4.  The custom SDK Assembly (Microsoft.ConfigurationManagement.ApplicationManagement.\<_AssemblySuffix_>.dll) - Contains interface implementation of both the Hosting Technology and Installer Technology Note: the AssemblySuffix should correspond to whatever is specified for AssemblySuffix attribute in the DeploymentTechnology.xml file.
+        4.  The custom SDK Assembly (Microsoft.ConfigurationManagement.ApplicationManagement.\<*AssemblySuffix*>.dll) - Contains interface implementation of both the Hosting Technology and Installer Technology. Note: the AssemblySuffix should correspond to whatever is specified for the AssemblySuffix attribute in the DeploymentTechnology.xml file.
 
         5.  HostingApplication.zip - Optional. Importable application that represents the Hosting Application, which includes content (if any). This should be created using the Export feature on the Applications node, in the Configuration Manager console.
 

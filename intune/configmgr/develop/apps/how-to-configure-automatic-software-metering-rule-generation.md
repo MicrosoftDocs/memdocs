@@ -12,7 +12,7 @@ ms.collection: tier3
 You configure Automatic Software Metering Rule Generation settings, in Configuration Manager, by modifying the site control file.
 
 > [!IMPORTANT]
-> This setting is shared across the whole hierarchy, and only can be configured on the CAS or a standalone primary site.
+> This setting is shared across the whole hierarchy, and can be configured only on the CAS or a standalone primary site.
 
 ### To configure automatic software metering rule generation
 
@@ -39,15 +39,16 @@ function Set-AutoSoftwareMeteringRuleGeneration {
         [Parameter(Mandatory=$true)]
         [string]$SiteCode,
 
-        [Parameter(Mandatory=$true)]
-        [string]$EnableAutoCreateDisabledRule,
+        [Parameter(Mandatory = $true)]
+        [ValidateSet(0, 1)]
+        [int]$EnableAutoCreateDisabledRule,
 
-        [Parameter(Mandatory=$true)]
-        [string]$NewAutoCreatePercentage,
+        [Parameter(Mandatory = $true)]
+        [ValidateRange(0, 100)]
+        [int]$NewAutoCreatePercentage,
 
-        [Parameter(Mandatory=$true)]
-        [string]$NewAutoCreateThreshold,
-
+        [Parameter(Mandatory = $true)]
+        [int]$NewAutoCreateThreshold,
         [string]$ProviderMachineName = $env:COMPUTERNAME
     )
 
