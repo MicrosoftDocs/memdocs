@@ -11,9 +11,9 @@ ms.collection: tier3
 
 The following code samples show how to set up the calling code for the code examples that are used throughout the Configuration Manager Software Development Kit (SDK).
 
-Replace the SNIPPETMETHOD snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.
+Replace the SNIPPETMETHODNAME snippet with the snippet that you want to run. In most cases you will need to make changes, such as adding parameters, to make the code work.
 
-For more information about remote Windows Management Instrumentation (WMI) connections, see [Connecting to WMI on a Remote Computer](/windows/win32/wmisdk/connecting-to-wmi-on-a-remote-computer.md).
+For more information about remote Windows Management Instrumentation (WMI) connections, see [Connecting to WMI on a Remote Computer](/windows/win32/wmisdk/connecting-to-wmi-on-a-remote-computer).
 
 ## Examples
 
@@ -59,6 +59,7 @@ function Connect-SMSProvider {
             ComputerName = $Server
             Namespace    = "root\sms"
             ErrorAction  = 'Stop'
+            Class        = "SMS_ProviderLocation"
         }
         if ($Credential) { $rootSmsParams.Credential = $Credential }
 
@@ -66,19 +67,22 @@ function Connect-SMSProvider {
 
         # Find provider location
         $providerLocations = $smsRoot.InstancesOf("SMS_ProviderLocation")
-        $localProvider = $providerLocations | Where-Object ProviderForLocalSite
+        $localProvider = $providerLocations | Where-Object ProviderForLocalSite | Select-Object -First 1
+        if (-not $localProvider) {
+            throw "No SMS_ProviderLocation found for the local site."
+        }
         $siteNamespace = "root\sms\site_$($localProvider.SiteCode)"
 
         $siteParams = @{
             ComputerName = $localProvider.Machine
             Namespace    = $siteNamespace
+            Class        = 'SMS_Site'
             ErrorAction  = 'Stop'
         }
         if ($Credential) { $siteParams.Credential = $Credential }
 
-        Get-WmiObject @siteParams
-
-        return $null
+        $siteInfo = Get-WmiObject @siteParams
+        return $siteInfo
     }
     catch {
         Write-Host "Couldn't connect: $($_.Exception.Message)"
@@ -95,7 +99,6 @@ function SNIPPETMETHODNAME {
     Write-Host "Connected successfully. Insert your code here."
 }
 #endregion
-
 ```
 
 ```vbs
@@ -184,7 +187,6 @@ Function Connect(server, userName, userPassword)
         Next
     Set Connect = null ' Failed to connect.
 End Function
-
 ```
 
 ```c#
